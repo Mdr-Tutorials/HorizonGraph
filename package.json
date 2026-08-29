@@ -6,8 +6,8 @@
     "gen": "pnpm -C tools gen",
     "validate": "pnpm -C tools validate",
     "build:data": "pnpm -C tools build",
-    "build": "pnpm gen && pnpm validate && pnpm build:data && pnpm -C web build",
-    "build:site": "pnpm -C web build",
+    "build:web": "pnpm -C web build",
+    "build": "pnpm gen && pnpm validate && pnpm build:data && pnpm build:web",
     "dev": "pnpm build:data && pnpm -C web dev"
   }
 }
