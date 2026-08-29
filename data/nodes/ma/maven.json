@@ -1,0 +1,21 @@
+{
+  "id": "maven",
+  "name": "Maven",
+  "aliases": ["Apache Maven"],
+  "type": "tool",
+  "ecosystems": ["jvm-ecosystem", "cicd-ecosystem"],
+  "domains": ["programming-languages", "devops"],
+  "abstraction_level": "application_tool",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "tool" },
+    { "relation_type": "depends_on", "target_id": "jvm" },
+    { "relation_type": "depends_on", "target_id": "java" }
+  ],
+  "summary": "Java 生态的构建与依赖管理工具。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2004-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://maven.apache.org"
+}

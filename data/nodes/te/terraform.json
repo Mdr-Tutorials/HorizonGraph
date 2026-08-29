@@ -1,0 +1,32 @@
+{
+  "id": "terraform",
+  "name": "Terraform",
+  "display_primary": "Terraform",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "iac-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "hashicorp"
+    }
+  ],
+  "summary": "用声明式配置创建、变更云资源的基础设施即代码工具。",
+  "importance": 4,
+  "official_site": "https://www.terraform.io",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

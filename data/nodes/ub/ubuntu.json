@@ -1,0 +1,46 @@
+{
+  "id": "ubuntu",
+  "name": "Ubuntu",
+  "aliases": [
+    "Ubuntu"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "canonical"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "posix"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "systemd"
+    }
+  ],
+  "summary": "Canonical 的 Linux 发行版，云镜像的默认选择。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://ubuntu.com",
+  "first_released": "2004-10-20"
+}

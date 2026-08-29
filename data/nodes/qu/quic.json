@@ -1,0 +1,39 @@
+{
+  "id": "quic",
+  "name": "QUIC",
+  "display_primary": "QUIC",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "transport-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "udp"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tls"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "tcp"
+    }
+  ],
+  "summary": "跑在 UDP 上的传输协议，握手与多路复用不再队头阻塞。",
+  "importance": 5,
+  "official_site": "https://datatracker.ietf.org/doc/rfc9000/",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

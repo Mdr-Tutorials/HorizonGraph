@@ -1,0 +1,27 @@
+{
+  "id": "idempotency",
+  "name": "Idempotency",
+  "display_primary": "幂等",
+  "display_secondary": "Idempotency",
+  "aliases": [
+    "幂等性"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "enterprise_industry"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "同一请求执行一次与多次，可观察结果相同。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

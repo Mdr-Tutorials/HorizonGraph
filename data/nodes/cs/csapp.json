@@ -1,0 +1,39 @@
+{
+  "id": "csapp",
+  "name": "Computer Systems: A Programmer's Perspective",
+  "display_primary": "CSAPP",
+  "display_secondary": "计算机系统：程序员的视角",
+  "aliases": [
+    "计算机系统：程序员的视角",
+    "深入理解计算机系统"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "randal-bryant"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "david-ohallaron"
+    }
+  ],
+  "summary": "从程序员视角贯通比特、机器、链接与系统的经典教材。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://csapp.cs.cmu.edu"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "linux-kernel",
+  "name": "Linux Kernel",
+  "aliases": [
+    "Linux 内核"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "linus-torvalds"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "virtual-memory"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "syscall"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "scheduler"
+    }
+  ],
+  "summary": "开源操作系统内核，今日主导服务器、云与嵌入式基础设施。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1991-09-17",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://kernel.org"
+}

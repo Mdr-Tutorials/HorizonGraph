@@ -1,0 +1,28 @@
+{
+  "id": "perplexity",
+  "name": "Perplexity",
+  "display_primary": "Perplexity",
+  "display_secondary": "Perplexity",
+  "aliases": [
+    "Perplexity"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "以检索增强问答为产品的 AI 搜索公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.perplexity.ai"
+}

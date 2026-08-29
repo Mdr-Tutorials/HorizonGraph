@@ -1,0 +1,31 @@
+{
+  "id": "shader",
+  "name": "Shader",
+  "display_primary": "着色器",
+  "display_secondary": "Shader",
+  "aliases": [
+    "着色器程序"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "graphics-api-ecosystem"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "graphics-pipeline"
+    }
+  ],
+  "summary": "跑在 GPU 上的小程序，决定顶点如何动、像素什么颜色。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "aws",
+  "name": "Amazon Web Services",
+  "display_primary": "AWS",
+  "aliases": [
+    "亚马逊云",
+    "Amazon Web Services"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "公有云份额领先的基础设施提供商。",
+  "importance": 5,
+  "official_site": "https://aws.amazon.com",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

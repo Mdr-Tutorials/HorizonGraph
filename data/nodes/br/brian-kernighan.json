@@ -1,0 +1,27 @@
+{
+  "id": "brian-kernighan",
+  "name": "Brian Kernighan",
+  "display_primary": "Brian Kernighan",
+  "display_secondary": "布莱恩·柯尼汉",
+  "aliases": [
+    "布莱恩·柯尼汉"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "K&R C 与大量 Unix 工具的作者之一。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

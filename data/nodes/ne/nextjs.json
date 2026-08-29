@@ -1,0 +1,43 @@
+{
+  "id": "nextjs",
+  "name": "Next.js",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "modern-web-frameworks-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "vercel"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "react"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "typescript"
+    }
+  ],
+  "summary": "Vercel 的 React 全栈框架。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://nextjs.org",
+  "first_released": "2016-10-25"
+}

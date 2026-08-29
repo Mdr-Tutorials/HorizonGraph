@@ -1,0 +1,38 @@
+{
+  "id": "erlang",
+  "name": "Erlang",
+  "aliases": [
+    "Erlang/OTP"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "distributed-systems",
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "ericsson"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "concurrency-theory",
+      "context": "Actor 并发模型与 supervision 树的工程化"
+    }
+  ],
+  "summary": "爱立信为电信交换发明的并发函数式语言。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.erlang.org",
+  "first_released": "1986-01-01"
+}

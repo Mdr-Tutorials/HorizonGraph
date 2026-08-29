@@ -1,0 +1,31 @@
+{
+  "id": "bytedance",
+  "name": "ByteDance",
+  "display_primary": "ByteDance",
+  "display_secondary": "字节跳动",
+  "aliases": [
+    "字节跳动",
+    "字节"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "短视频起家的科技公司，抖音、豆包与火山引擎的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.bytedance.com"
+}

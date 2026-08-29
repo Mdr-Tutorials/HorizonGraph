@@ -1,0 +1,29 @@
+{
+  "id": "same-origin-policy",
+  "name": "Same-Origin Policy",
+  "display_primary": "同源策略",
+  "display_secondary": "Same-Origin Policy",
+  "aliases": [
+    "同源策略"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "协议、主机与端口一致才共享 DOM 与 Cookie，Web 安全的底线。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "openmmlab",
+  "name": "OpenMMLab",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "computer-vision",
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "sensetime"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pytorch"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "商汤开源的视觉算法工具箱体系。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://openmmlab.com"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "zero-trust",
+  "name": "Zero Trust",
+  "display_primary": "零信任",
+  "display_secondary": "Zero Trust",
+  "aliases": [
+    "零信任网络"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "zero-trust-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "默认不信任网络位置，每次请求都要认证、授权与加密。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

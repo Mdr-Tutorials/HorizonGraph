@@ -1,0 +1,35 @@
+{
+  "id": "cuda",
+  "name": "CUDA",
+  "display_primary": "CUDA",
+  "aliases": [],
+  "type": "architecture",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "high-performance-computing",
+    "machine-learning"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtual-machine"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia"
+    },
+    {
+      "relation_type": "powers",
+      "target_id": "nvidia-h100"
+    }
+  ],
+  "summary": "NVIDIA GPU 的并行计算平台与编程模型。",
+  "importance": 5,
+  "official_site": "https://developer.nvidia.com/cuda-zone",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

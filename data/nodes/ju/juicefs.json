@@ -1,0 +1,41 @@
+{
+  "id": "juicefs",
+  "name": "JuiceFS",
+  "display_primary": "JuiceFS",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "cloud_native",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "juicedata"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "posix"
+    },
+    {
+      "relation_type": "powers",
+      "target_id": "metabit"
+    }
+  ],
+  "summary": "面向云的 POSIX 分布式文件系统，元数据与对象存储分离。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2021-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://juicefs.com"
+}

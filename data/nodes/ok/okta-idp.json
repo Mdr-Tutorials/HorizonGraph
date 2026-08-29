@@ -1,0 +1,40 @@
+{
+  "id": "okta-idp",
+  "name": "Okta IdP",
+  "aliases": [
+    "Okta"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "iam-ecosystem",
+    "zero-trust-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "okta"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oauth"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "zero-trust"
+    }
+  ],
+  "summary": "Okta 的身份提供商与 SSO 服务。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "display_primary": "Okta"
+}

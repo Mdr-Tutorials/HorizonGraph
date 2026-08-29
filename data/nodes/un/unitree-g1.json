@@ -1,0 +1,39 @@
+{
+  "id": "unitree-g1",
+  "name": "Unitree G1",
+  "aliases": [
+    "宇树 G1"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "unitree"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pytorch"
+    }
+  ],
+  "summary": "宇树的人形机器人平台。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.unitree.com"
+}

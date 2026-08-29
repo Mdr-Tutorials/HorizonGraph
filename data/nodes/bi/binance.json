@@ -1,0 +1,28 @@
+{
+  "id": "binance",
+  "name": "Binance",
+  "display_primary": "Binance",
+  "display_secondary": "币安",
+  "aliases": [
+    "币安"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "全球交易量领先的加密货币交易所。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.binance.com"
+}

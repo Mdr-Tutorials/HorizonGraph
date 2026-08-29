@@ -1,0 +1,28 @@
+{
+  "id": "cisco",
+  "name": "Cisco",
+  "display_primary": "Cisco",
+  "display_secondary": "思科",
+  "aliases": [
+    "思科"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "networking_security"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "企业网络设备公司，交换机与路由器的长期主导者。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.cisco.com"
+}

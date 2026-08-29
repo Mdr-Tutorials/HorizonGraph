@@ -1,0 +1,30 @@
+{
+  "id": "qualcomm",
+  "name": "Qualcomm",
+  "display_primary": "Qualcomm",
+  "display_secondary": "高通",
+  "aliases": [
+    "高通"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "arm-ecosystem",
+    "mobile-network-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "手机 SoC 与调制解调器公司，Snapdragon 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.qualcomm.com"
+}

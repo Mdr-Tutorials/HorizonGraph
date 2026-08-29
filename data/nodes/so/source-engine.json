@@ -1,0 +1,35 @@
+{
+  "id": "source-engine",
+  "name": "Source",
+  "aliases": [
+    "Source Engine",
+    "Source 2"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "unreal-engine-ecosystem",
+    "graphics_gaming"
+  ],
+  "domains": [
+    "game-development",
+    "graphics"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "valve"
+    }
+  ],
+  "summary": "Valve 的 Source 游戏引擎家族。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "display_primary": "Source",
+  "official_site": "https://www.valvesoftware.com"
+}

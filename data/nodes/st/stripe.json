@@ -1,0 +1,29 @@
+{
+  "id": "stripe",
+  "name": "Stripe",
+  "display_primary": "Stripe",
+  "display_secondary": "Stripe",
+  "aliases": [
+    "Stripe"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "quantitative-finance",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "互联网支付基础设施公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://stripe.com"
+}

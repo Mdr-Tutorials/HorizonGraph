@@ -1,0 +1,28 @@
+{
+  "id": "tokyo-electron",
+  "name": "Tokyo Electron",
+  "display_primary": "Tokyo Electron",
+  "display_secondary": "东京电子",
+  "aliases": [
+    "东京电子"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "半导体制造设备公司，与 ASML 同处设备层。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.tel.com"
+}

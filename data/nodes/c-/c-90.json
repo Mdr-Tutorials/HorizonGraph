@@ -1,0 +1,36 @@
+{
+  "id": "c-90",
+  "name": "C90",
+  "display_primary": "C90",
+  "aliases": [
+    "C89",
+    "ANSI C",
+    "ISO/IEC 9899:1990"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "c"
+    }
+  ],
+  "summary": "C 的首个国际标准，确立函数原型与标准库。",
+  "status": "historical",
+  "importance": 4,
+  "official_site": "https://www.open-std.org/jtc1/sc22/wg14/",
+  "first_released": "1990-12-01"
+}

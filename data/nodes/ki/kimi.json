@@ -1,0 +1,37 @@
+{
+  "id": "kimi",
+  "name": "Kimi",
+  "aliases": [
+    "Kimi",
+    "月之暗面模型"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "moonshot-ai"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    }
+  ],
+  "summary": "月之暗面的长上下文大模型族。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://kimi.moonshot.cn"
+}

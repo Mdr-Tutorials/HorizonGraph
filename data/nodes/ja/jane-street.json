@@ -1,0 +1,28 @@
+{
+  "id": "jane-street",
+  "name": "Jane Street",
+  "display_primary": "Jane Street",
+  "display_secondary": "Jane Street",
+  "aliases": [
+    "Jane Street"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "以 OCaml 技术栈著称的量化交易公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.janestreet.com"
+}

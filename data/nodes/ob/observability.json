@@ -1,0 +1,28 @@
+{
+  "id": "observability",
+  "name": "Observability",
+  "display_primary": "可观测性",
+  "display_secondary": "Observability",
+  "aliases": [
+    "可观测性"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用指标、日志与追踪从系统外部推断内部状态。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

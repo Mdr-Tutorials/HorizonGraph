@@ -20,6 +20,7 @@
     { "value": "python-ecosystem", "en": "Python Ecosystem", "zh": "Python 生态", "parents": ["languages_runtimes"] },
     { "value": "go-ecosystem", "en": "Go Ecosystem", "zh": "Go 生态", "parents": ["languages_runtimes"] },
     { "value": "native-cpp-ecosystem", "en": "Native C/C++ Ecosystem", "zh": "原生 C/C++ 生态", "parents": ["languages_runtimes"] },
+    { "value": "llvm-ecosystem", "en": "LLVM Ecosystem", "zh": "LLVM 生态", "parents": ["languages_runtimes"] },
 
     { "value": "linux-gnu-ecosystem", "en": "Linux/GNU Ecosystem", "zh": "Linux/GNU 生态", "parents": ["operating_systems"], "maintainers": ["Linux Foundation"] },
     { "value": "windows-ecosystem", "en": "Windows Ecosystem", "zh": "Windows 生态", "parents": ["operating_systems"] },

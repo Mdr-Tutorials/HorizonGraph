@@ -1,0 +1,27 @@
+{
+  "id": "consensus",
+  "name": "Consensus",
+  "display_primary": "共识",
+  "display_secondary": "Consensus",
+  "aliases": [
+    "分布式共识"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "一组节点在故障与延迟下对同一日志达成一致。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

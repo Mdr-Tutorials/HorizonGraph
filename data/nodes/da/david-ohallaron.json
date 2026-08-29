@@ -1,0 +1,27 @@
+{
+  "id": "david-ohallaron",
+  "name": "David R. O'Hallaron",
+  "display_primary": "David R. O'Hallaron",
+  "display_secondary": "大卫·奥哈拉伦",
+  "aliases": [
+    "大卫·奥哈拉伦"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "CMU 教授，CSAPP 作者之一。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

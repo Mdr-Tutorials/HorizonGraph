@@ -1,0 +1,38 @@
+{
+  "id": "firefox",
+  "name": "Firefox",
+  "aliases": [
+    "Firefox",
+    "火狐"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mozilla"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "html"
+    }
+  ],
+  "summary": "Mozilla 的开源浏览器。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.mozilla.org",
+  "first_released": "2004-11-09"
+}

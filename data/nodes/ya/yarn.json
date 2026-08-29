@@ -1,0 +1,32 @@
+{
+  "id": "yarn",
+  "name": "Yarn",
+  "aliases": [
+    "Yarn"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs"
+    }
+  ],
+  "summary": "Meta 开源的 Node 包管理器。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2016-10-11",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://yarnpkg.com"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "bpf",
+  "name": "BPF",
+  "display_primary": "BPF",
+  "display_secondary": "Berkeley Packet Filter",
+  "aliases": [
+    "Berkeley Packet Filter",
+    "经典 BPF",
+    "cBPF"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    }
+  ],
+  "summary": "最初为抓包过滤设计的内核字节码机，eBPF 的前身。",
+  "status": "historical",
+  "origin": "curated",
+  "first_released": "1992-12-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

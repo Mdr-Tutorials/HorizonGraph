@@ -1,0 +1,37 @@
+{
+  "id": "iflytek-spark",
+  "name": "iFLYTEK Spark",
+  "aliases": [
+    "星火大模型",
+    "讯飞星火"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "iflytek"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    }
+  ],
+  "summary": "科大讯飞的星火认知大模型族。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://xinghuo.xfyun.cn"
+}

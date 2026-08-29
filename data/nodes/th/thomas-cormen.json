@@ -1,0 +1,27 @@
+{
+  "id": "thomas-cormen",
+  "name": "Thomas H. Cormen",
+  "display_primary": "Thomas H. Cormen",
+  "display_secondary": "托马斯·科尔曼",
+  "aliases": [
+    "托马斯·科尔曼"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "CLRS 算法导论作者之一。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

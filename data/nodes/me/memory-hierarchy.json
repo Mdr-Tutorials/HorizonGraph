@@ -1,0 +1,28 @@
+{
+  "id": "memory-hierarchy",
+  "name": "Memory Hierarchy",
+  "display_primary": "内存层次",
+  "display_secondary": "Memory Hierarchy",
+  "aliases": [
+    "存储层次"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "寄存器、缓存、内存、盘之间容量与延迟的金字塔。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

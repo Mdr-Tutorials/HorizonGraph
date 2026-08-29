@@ -1,0 +1,30 @@
+{
+  "id": "smic-7nm",
+  "name": "SMIC 7nm",
+  "aliases": [
+    "中芯 7nm"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "smic"
+    }
+  ],
+  "summary": "中芯国际的 7nm 级先进制程节点。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

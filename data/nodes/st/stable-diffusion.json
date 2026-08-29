@@ -1,0 +1,38 @@
+{
+  "id": "stable-diffusion",
+  "name": "Stable Diffusion",
+  "aliases": [
+    "Stable Diffusion"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "computer-vision"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "stability-ai"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pytorch"
+    }
+  ],
+  "summary": "开源文生图扩散模型族。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://stability.ai",
+  "first_released": "2022-08-22"
+}

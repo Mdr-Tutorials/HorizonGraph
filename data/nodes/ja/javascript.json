@@ -1,0 +1,30 @@
+{
+  "id": "javascript",
+  "name": "JavaScript",
+  "display_primary": "JavaScript",
+  "aliases": [
+    "JS",
+    "ECMAScript"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "浏览器内生语言，经 Node 成为全栈与工具链语言。",
+  "importance": 5,
+  "official_site": "https://tc39.es"
+}

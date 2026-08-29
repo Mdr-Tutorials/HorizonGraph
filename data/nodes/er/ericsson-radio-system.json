@@ -1,0 +1,38 @@
+{
+  "id": "ericsson-radio-system",
+  "name": "Ericsson Radio System",
+  "aliases": [
+    "Radio System"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "mobile-network-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "ericsson"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "5g-ran"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "nokia-airscale"
+    }
+  ],
+  "summary": "爱立信的 5G 无线接入系统。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

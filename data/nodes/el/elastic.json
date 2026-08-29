@@ -1,0 +1,28 @@
+{
+  "id": "elastic",
+  "name": "Elastic",
+  "display_primary": "Elastic",
+  "display_secondary": "Elastic",
+  "aliases": [
+    "Elastic"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Elasticsearch 与 ELK 的商业公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.elastic.co"
+}

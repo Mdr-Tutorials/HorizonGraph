@@ -1,0 +1,29 @@
+{
+  "id": "atlassian",
+  "name": "Atlassian",
+  "display_primary": "Atlassian",
+  "display_secondary": "Atlassian",
+  "aliases": [
+    "Atlassian"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "cicd-ecosystem",
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Jira 与 Confluence 的研发公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.atlassian.com"
+}

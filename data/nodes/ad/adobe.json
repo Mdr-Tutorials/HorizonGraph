@@ -1,0 +1,29 @@
+{
+  "id": "adobe",
+  "name": "Adobe",
+  "display_primary": "Adobe",
+  "display_secondary": "Adobe",
+  "aliases": [
+    "Adobe"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "graphics",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "创意软件公司，Photoshop、PDF 与 Figma 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.adobe.com"
+}

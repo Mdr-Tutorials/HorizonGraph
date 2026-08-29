@@ -1,0 +1,35 @@
+{
+  "id": "wps",
+  "name": "WPS Office",
+  "aliases": [
+    "WPS"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "kingsoft"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux"
+    }
+  ],
+  "summary": "金山的办公套件，覆盖桌面与 Web 端。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.wps.cn"
+}

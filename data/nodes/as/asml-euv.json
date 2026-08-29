@@ -1,0 +1,31 @@
+{
+  "id": "asml-euv",
+  "name": "ASML EUV",
+  "aliases": [
+    "EUV 光刻机"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "asml"
+    }
+  ],
+  "summary": "ASML 的 EUV 光刻机，先进制程唯一量产来源。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.asml.com"
+}

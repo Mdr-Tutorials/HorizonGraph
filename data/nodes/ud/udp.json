@@ -1,0 +1,34 @@
+{
+  "id": "udp",
+  "name": "User Datagram Protocol",
+  "display_primary": "UDP",
+  "display_secondary": "用户数据报协议",
+  "aliases": [
+    "用户数据报协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "transport-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ip"
+    }
+  ],
+  "summary": "无连接的用户数据报传输，牺牲可靠换低延迟。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1980-08-28",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.rfc-editor.org/rfc/rfc768"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "salesforce",
+  "name": "Salesforce",
+  "display_primary": "Salesforce",
+  "display_secondary": "Salesforce",
+  "aliases": [
+    "Salesforce"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "CRM 云软件公司，Slack 与 Tableau 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.salesforce.com"
+}

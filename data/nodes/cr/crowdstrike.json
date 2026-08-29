@@ -1,0 +1,28 @@
+{
+  "id": "crowdstrike",
+  "name": "CrowdStrike",
+  "display_primary": "CrowdStrike",
+  "display_secondary": "CrowdStrike",
+  "aliases": [
+    "CrowdStrike"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "终端检测与响应公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.crowdstrike.com"
+}

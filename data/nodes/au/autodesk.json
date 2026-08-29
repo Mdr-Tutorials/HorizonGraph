@@ -1,0 +1,28 @@
+{
+  "id": "autodesk",
+  "name": "Autodesk",
+  "display_primary": "Autodesk",
+  "display_secondary": "Autodesk",
+  "aliases": [
+    "Autodesk"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "设计与工程软件公司，AutoCAD 与 Maya 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.autodesk.com"
+}

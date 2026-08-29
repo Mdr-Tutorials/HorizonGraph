@@ -1,0 +1,21 @@
+{
+  "id": "bigmodel-open-platform",
+  "name": "Zhipu BigModel",
+  "display_primary": "BigModel",
+  "display_secondary": "智谱开放平台",
+  "aliases": ["智谱开放平台", "bigmodel.cn", "Z.ai Open Platform"],
+  "type": "product",
+  "ecosystems": ["llm-agent-ecosystem"],
+  "domains": ["machine-learning", "cloud-infrastructure"],
+  "abstraction_level": "application_tool",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "maas" },
+    { "relation_type": "developed_by", "target_id": "zhipu-ai" }
+  ],
+  "summary": "智谱的模型开放平台，提供 GLM 系列 API 与智能体开发工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://open.bigmodel.cn"
+}

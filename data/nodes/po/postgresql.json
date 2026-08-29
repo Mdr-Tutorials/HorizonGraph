@@ -1,0 +1,37 @@
+{
+  "id": "postgresql",
+  "name": "PostgreSQL",
+  "display_primary": "PostgreSQL",
+  "aliases": [
+    "Postgres"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "acid"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "sql"
+    }
+  ],
+  "summary": "功能完整的开源关系库，扩展与 SQL 标准靠得近。",
+  "description": "SQL 方言不单独建节点：PostgreSQL 用 PL/pgSQL，Oracle 是 PL/SQL，SQL Server 是 T-SQL。方言差异写进各宿主数据库的叙述中。",
+  "importance": 5,
+  "official_site": "https://www.postgresql.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

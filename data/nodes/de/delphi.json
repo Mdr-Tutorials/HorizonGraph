@@ -1,0 +1,29 @@
+{
+  "id": "delphi",
+  "name": "Delphi",
+  "display_primary": "Delphi",
+  "aliases": [
+    "Object Pascal",
+    "Delphi/Object Pascal"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "Object Pascal 的 RAD 产品化，原生编译的桌面与行业软件语言。",
+  "importance": 3,
+  "official_site": "https://www.embarcadero.com/products/delphi"
+}

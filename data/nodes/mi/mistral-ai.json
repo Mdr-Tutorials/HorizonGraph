@@ -1,0 +1,28 @@
+{
+  "id": "mistral-ai",
+  "name": "Mistral AI",
+  "display_primary": "Mistral AI",
+  "display_secondary": "Mistral AI",
+  "aliases": [
+    "Mistral AI"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "欧洲开源大模型公司，Mixtral 的研发方。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://mistral.ai"
+}

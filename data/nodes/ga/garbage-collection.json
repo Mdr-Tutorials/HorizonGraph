@@ -1,0 +1,28 @@
+{
+  "id": "garbage-collection",
+  "name": "Garbage Collection",
+  "display_primary": "GC",
+  "display_secondary": "垃圾回收",
+  "aliases": [
+    "垃圾回收"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "运行时自动回收不可达内存，换来暂停与吞吐的权衡。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

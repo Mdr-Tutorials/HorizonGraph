@@ -1,0 +1,27 @@
+{
+  "id": "continuous-integration",
+  "name": "Continuous Integration",
+  "display_primary": "CI",
+  "display_secondary": "持续集成",
+  "aliases": [
+    "持续集成"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cicd-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "programming-paradigm"
+    }
+  ],
+  "summary": "每次提交都自动构建与测试，把集成失败提前到分钟级。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "kingsoft",
+  "name": "Kingsoft",
+  "display_primary": "Kingsoft",
+  "display_secondary": "金山",
+  "aliases": [
+    "金山",
+    "金山软件"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "办公软件公司，WPS 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.kingsoft.com"
+}

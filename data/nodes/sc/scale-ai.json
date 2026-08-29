@@ -1,0 +1,28 @@
+{
+  "id": "scale-ai",
+  "name": "Scale AI",
+  "display_primary": "Scale AI",
+  "display_secondary": "Scale AI",
+  "aliases": [
+    "Scale AI"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "数据标注与模型评测公司，训练数据供应链的枢纽。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://scale.com"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "pdd",
+  "name": "PDD Holdings",
+  "display_primary": "PDD",
+  "display_secondary": "拼多多",
+  "aliases": [
+    "拼多多",
+    "Temu"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "enterprise_industry"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "电商平台公司，拼多多与 Temu 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.pddholdings.com"
+}

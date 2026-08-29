@@ -1,0 +1,28 @@
+{
+  "id": "anatoly-yakovenko",
+  "name": "Anatoly Yakovenko",
+  "display_primary": "Anatoly Yakovenko",
+  "display_secondary": "阿纳托利·雅科文科",
+  "aliases": [
+    "阿纳托利·雅科文科",
+    "Toly"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Solana 联合创始人，提出 Proof of History。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

@@ -1,0 +1,30 @@
+{
+  "id": "sony",
+  "name": "Sony",
+  "display_primary": "Sony",
+  "display_secondary": "索尼",
+  "aliases": [
+    "索尼"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "graphics_gaming",
+    "hardware_iot"
+  ],
+  "domains": [
+    "graphics",
+    "game-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "消费电子与娱乐公司，PlayStation 与图像传感器的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.sony.com"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "github",
+  "name": "GitHub",
+  "display_primary": "GitHub",
+  "aliases": [],
+  "type": "organization",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "以 Git 为中心的代码托管与协作平台，现属微软。",
+  "importance": 5,
+  "official_site": "https://github.com",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

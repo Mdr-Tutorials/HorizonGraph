@@ -1,0 +1,41 @@
+{
+  "id": "cilium",
+  "name": "Cilium",
+  "display_primary": "Cilium",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "networking",
+    "security",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ebpf"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kubernetes"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "service-mesh"
+    }
+  ],
+  "summary": "基于 eBPF 的云原生网络与安全框架，常作 Kubernetes CNI。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://cilium.io"
+}

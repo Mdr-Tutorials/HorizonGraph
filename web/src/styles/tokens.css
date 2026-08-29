@@ -71,3 +71,8 @@ body {
 a {
   text-decoration-color: var(--c-ink);
 }
+
+/* 两段式术语：主名与副名间距恒定，不依赖模板空白符 */
+.text-secondary-name {
+  margin-left: 0.375rem;
+}

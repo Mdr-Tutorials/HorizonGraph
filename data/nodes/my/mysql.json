@@ -1,0 +1,36 @@
+{
+  "id": "mysql",
+  "name": "MySQL",
+  "aliases": [
+    "MySQL"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "oracle"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "postgresql"
+    }
+  ],
+  "summary": "Oracle 旗下的开源关系数据库。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.mysql.com",
+  "first_released": "1995-05-23"
+}

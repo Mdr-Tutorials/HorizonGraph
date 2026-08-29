@@ -1,0 +1,37 @@
+{
+  "id": "loongarch",
+  "name": "LoongArch",
+  "aliases": [
+    "龙架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "risc-v-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "systems-programming",
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "loongson"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "risc-v"
+    }
+  ],
+  "summary": "龙芯自研指令集架构，与三大 ISA 并列。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.loongson.cn"
+}

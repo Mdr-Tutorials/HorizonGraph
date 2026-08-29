@@ -1,0 +1,18 @@
+{
+  "id": "linus-torvalds",
+  "name": "Linus Torvalds",
+  "display_primary": "Linus Torvalds",
+  "display_secondary": "林纳斯·托瓦兹",
+  "aliases": ["林纳斯·托瓦兹", "Linus", "托瓦兹"],
+  "type": "person",
+  "ecosystems": ["linux-gnu-ecosystem", "git-ecosystem"],
+  "domains": ["systems-programming"],
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "person" }
+  ],
+  "summary": "Linux 内核与 Git 的创造者，开源软件工程的核心人物。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5
+}

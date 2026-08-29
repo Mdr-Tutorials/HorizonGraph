@@ -1,0 +1,40 @@
+{
+  "id": "alipay",
+  "name": "Alipay",
+  "aliases": [
+    "支付宝"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "quantitative-finance",
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "ant-group"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "public-key-cryptography"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tls"
+    }
+  ],
+  "summary": "支付宝，第三方支付与账务清算平台。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.alipay.com"
+}

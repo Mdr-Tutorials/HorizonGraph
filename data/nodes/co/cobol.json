@@ -1,0 +1,28 @@
+{
+  "id": "cobol",
+  "name": "COBOL",
+  "display_primary": "COBOL",
+  "aliases": [
+    "COmmon Business-Oriented Language"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "面向商业数据处理的语言，主机核心账务至今仍在运行。",
+  "importance": 3,
+  "official_site": "https://www.gnu.org/software/gnucobol/"
+}

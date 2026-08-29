@@ -1,0 +1,32 @@
+{
+  "id": "swift",
+  "name": "Swift",
+  "display_primary": "Swift",
+  "aliases": [
+    "Swift 语言"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "ios-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    }
+  ],
+  "summary": "Apple 平台主语言，用协议与值类型替代 Objective-C。",
+  "importance": 4,
+  "official_site": "https://www.swift.org"
+}

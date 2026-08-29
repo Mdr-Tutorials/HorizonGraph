@@ -1,0 +1,35 @@
+{
+  "id": "jd-cloud",
+  "name": "JD Cloud",
+  "aliases": [
+    "京东云"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "jd"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kubernetes"
+    }
+  ],
+  "summary": "京东云，零售供应链技术对外输出。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.jdcloud.com"
+}

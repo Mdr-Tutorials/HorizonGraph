@@ -1,0 +1,28 @@
+{
+  "id": "xai",
+  "name": "xAI",
+  "display_primary": "xAI",
+  "display_secondary": "xAI",
+  "aliases": [
+    "xAI"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Grok 系列大模型的研发公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://x.ai"
+}

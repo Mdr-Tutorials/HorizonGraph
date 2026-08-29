@@ -1,0 +1,27 @@
+{
+  "id": "randal-bryant",
+  "name": "Randal E. Bryant",
+  "display_primary": "Randal E. Bryant",
+  "display_secondary": "兰迪·布莱恩特",
+  "aliases": [
+    "兰迪·布莱恩特"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "CMU 教授，CSAPP 作者之一。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

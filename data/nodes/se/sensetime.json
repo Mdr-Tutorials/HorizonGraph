@@ -1,0 +1,30 @@
+{
+  "id": "sensetime",
+  "name": "SenseTime",
+  "display_primary": "SenseTime",
+  "display_secondary": "商汤科技",
+  "aliases": [
+    "商汤",
+    "商汤科技"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "computer-vision",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "计算机视觉起家的中国 AI 公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.sensetime.com"
+}

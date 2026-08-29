@@ -1,0 +1,29 @@
+{
+  "id": "palantir",
+  "name": "Palantir",
+  "display_primary": "Palantir",
+  "display_secondary": "Palantir",
+  "aliases": [
+    "Palantir"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "enterprise-apps-ecosystem",
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "面向政府和企业的数据分析平台公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.palantir.com"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "amd",
+  "name": "AMD",
+  "display_primary": "AMD",
+  "display_secondary": "AMD",
+  "aliases": [
+    "AMD",
+    "超微半导体"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "x86-ecosystem",
+    "gpu-computing"
+  ],
+  "domains": [
+    "systems-programming",
+    "graphics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "CPU 与 GPU 公司，x86-64 与 Radeon 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.amd.com"
+}

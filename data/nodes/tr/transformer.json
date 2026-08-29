@@ -1,0 +1,28 @@
+{
+  "id": "transformer",
+  "name": "Transformer",
+  "display_primary": "Transformer",
+  "aliases": [
+    "变换器架构"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "用自注意力并行建模序列的架构，大模型的骨架。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

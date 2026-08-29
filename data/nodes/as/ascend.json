@@ -1,0 +1,44 @@
+{
+  "id": "ascend",
+  "name": "Ascend",
+  "aliases": [
+    "昇腾"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "gpu"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "huawei"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "nvidia-h100"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "tpu"
+    }
+  ],
+  "summary": "华为昇腾 NPU 产品线，国产 AI 算力主力。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://e.huawei.com"
+}

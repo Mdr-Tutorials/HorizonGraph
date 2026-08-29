@@ -99,7 +99,7 @@ for (const file of walk(DATA_NODES)) {
   let n: Node;
   try { n = JSON.parse(readFileSync(file, "utf8")); }
   catch { err(`${rel0}: JSON 解析失败`); continue; }
-  const m = rel0.match(/^data\/nodes\/([a-z0-9]{2})\/(.+)\.json$/);
+  const m = rel0.match(/^data\/nodes\/([a-z0-9-]{1,2})\/(.+)\.json$/);
   if (!m) err(`${rel0}: 路径不符合 data/nodes/<id前两字符>/<id>.json`);
   else {
     if (m[1] !== n.id?.slice(0, 2)) err(`${rel0}: 分片目录与 id 前缀不一致`);

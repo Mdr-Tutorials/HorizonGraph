@@ -1,0 +1,39 @@
+{
+  "id": "react",
+  "name": "React",
+  "display_primary": "React",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "virtual-dom"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "用组件与状态描述 UI 的前端库，差分更新页面。",
+  "importance": 5,
+  "official_site": "https://react.dev",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

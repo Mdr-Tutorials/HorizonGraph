@@ -1,0 +1,39 @@
+{
+  "id": "cursor",
+  "name": "Cursor",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "editor-ide-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "programming-languages"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anysphere"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "vscode"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "typescript"
+    }
+  ],
+  "summary": "AI 原生代码编辑器，模型介入编辑循环。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://cursor.com"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "cppreference",
+  "name": "cppreference",
+  "display_primary": "cppreference",
+  "aliases": [
+    "C++ Reference"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "documentation"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cpp"
+    }
+  ],
+  "summary": "C 与 C++ 标准库与语言的社区权威速查手册。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://en.cppreference.com"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "anthropic",
+  "name": "Anthropic",
+  "display_primary": "Anthropic",
+  "display_secondary": "Anthropic",
+  "aliases": [
+    "Anthropic"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Claude 系列大模型的研发公司，对齐路线的代表。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.anthropic.com"
+}

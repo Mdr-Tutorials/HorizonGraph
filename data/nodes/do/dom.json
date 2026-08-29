@@ -1,0 +1,30 @@
+{
+  "id": "dom",
+  "name": "Document Object Model",
+  "display_primary": "DOM",
+  "aliases": [
+    "文档对象模型"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "programming-paradigm"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "html"
+    }
+  ],
+  "summary": "把 HTML 变成可脚本操作的树，前端框架都在对它做差分。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

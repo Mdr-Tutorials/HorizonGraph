@@ -1,0 +1,36 @@
+{
+  "id": "openssl",
+  "name": "OpenSSL",
+  "display_primary": "OpenSSL",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "tls"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "public-key-cryptography"
+    }
+  ],
+  "summary": "实现 TLS 与公钥算法的开源密码库。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1998-12-23",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.openssl.org"
+}

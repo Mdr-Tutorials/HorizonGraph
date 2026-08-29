@@ -1,0 +1,28 @@
+{
+  "id": "cerebras",
+  "name": "Cerebras",
+  "display_primary": "Cerebras",
+  "display_secondary": "Cerebras",
+  "aliases": [
+    "Cerebras"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "晶圆级 AI 训练芯片公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.cerebras.ai"
+}

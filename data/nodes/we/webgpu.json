@@ -1,0 +1,28 @@
+{
+  "id": "webgpu",
+  "name": "WebGPU",
+  "display_primary": "WebGPU",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "graphics-api-ecosystem"
+  ],
+  "domains": [
+    "graphics",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "浏览器里的现代 GPU API，对标 Vulkan 的 Web 入口。",
+  "importance": 4,
+  "official_site": "https://www.w3.org/TR/webgpu/",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

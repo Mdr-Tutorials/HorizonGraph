@@ -1,0 +1,51 @@
+{
+  "id": "bitcoin",
+  "name": "Bitcoin",
+  "display_primary": "Bitcoin",
+  "display_secondary": "比特币",
+  "aliases": [
+    "比特币",
+    "BTC"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "merkle-tree"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "public-key-cryptography"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "consensus"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "proof-of-work"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "ethereum"
+    }
+  ],
+  "summary": "第一条公链，用工作量证明给转账排序并发行货币。",
+  "importance": 5,
+  "official_site": "https://bitcoin.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

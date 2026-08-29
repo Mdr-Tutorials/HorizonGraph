@@ -1,0 +1,29 @@
+{
+  "id": "assembly",
+  "name": "Assembly",
+  "display_primary": "Assembly",
+  "aliases": [
+    "汇编",
+    "ASM",
+    "汇编语言"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "指令集架构的助记符层，与具体 CPU 绑定的一类语言。",
+  "importance": 4
+}

@@ -1,0 +1,30 @@
+{
+  "id": "tencent",
+  "name": "Tencent",
+  "display_primary": "Tencent",
+  "display_secondary": "腾讯",
+  "aliases": [
+    "腾讯"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "enterprise_industry"
+  ],
+  "domains": [
+    "machine-learning",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "社交与游戏起家的科技集团，微信与混元的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.tencent.com"
+}

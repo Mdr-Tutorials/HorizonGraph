@@ -1,0 +1,28 @@
+{
+  "id": "python",
+  "name": "Python",
+  "display_primary": "Python",
+  "aliases": [
+    "Python 语言"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "python-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "通用动态语言，数据科学与自动化的默认选择。",
+  "importance": 5,
+  "official_site": "https://www.python.org"
+}

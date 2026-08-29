@@ -1,0 +1,27 @@
+{
+  "id": "virtual-memory",
+  "name": "Virtual Memory",
+  "display_primary": "虚拟内存",
+  "display_secondary": "Virtual Memory",
+  "aliases": [
+    "虚存"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用页表把进程地址空间与物理页框解耦，支撑隔离与换页。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "charles-leiserson",
+  "name": "Charles E. Leiserson",
+  "display_primary": "Charles E. Leiserson",
+  "display_secondary": "查尔斯·雷瑟尔森",
+  "aliases": [
+    "查尔斯·雷瑟尔森"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "CLRS 作者之一，Cilk 与缓存 Oblivious 算法贡献者。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

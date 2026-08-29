@@ -1,0 +1,29 @@
+{
+  "id": "fix-protocol",
+  "name": "FIX Protocol",
+  "display_primary": "FIX",
+  "aliases": [
+    "Financial Information eXchange"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "quantitative-finance",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "证券与期货电子交易的会话与消息标准。",
+  "importance": 4,
+  "official_site": "https://www.fixtrading.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

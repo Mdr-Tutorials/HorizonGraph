@@ -1,0 +1,28 @@
+{
+  "id": "suse",
+  "name": "SUSE",
+  "display_primary": "SUSE",
+  "display_secondary": "SUSE",
+  "aliases": [
+    "SUSE"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "欧洲企业 Linux 发行商。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.suse.com"
+}

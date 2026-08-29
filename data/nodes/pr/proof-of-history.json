@@ -1,0 +1,29 @@
+{
+  "id": "proof-of-history",
+  "name": "Proof of History",
+  "display_primary": "PoH",
+  "display_secondary": "历史证明",
+  "aliases": [
+    "历史证明",
+    "Proof of History"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "用连续哈希链证明事件顺序与时间流逝的密码学时钟。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5
+}

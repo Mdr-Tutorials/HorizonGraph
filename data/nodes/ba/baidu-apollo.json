@@ -1,0 +1,37 @@
+{
+  "id": "baidu-apollo",
+  "name": "Apollo",
+  "aliases": [
+    "Apollo",
+    "百度 Apollo"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "robotics-ecosystem",
+    "embedded-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "baidu"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux"
+    }
+  ],
+  "summary": "百度的自动驾驶开放平台。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.apollo.auto"
+}

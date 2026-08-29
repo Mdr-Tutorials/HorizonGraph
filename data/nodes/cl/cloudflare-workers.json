@@ -1,0 +1,45 @@
+{
+  "id": "cloudflare-workers",
+  "name": "Cloudflare Workers",
+  "aliases": [
+    "Workers"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "public-cloud-ecosystem",
+    "webassembly-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "cloudflare"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "v8"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "wasm"
+    }
+  ],
+  "summary": "Cloudflare 的边缘计算运行时，跑在 V8 isolate 上。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://workers.cloudflare.com"
+}

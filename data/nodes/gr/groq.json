@@ -1,0 +1,28 @@
+{
+  "id": "groq",
+  "name": "Groq",
+  "display_primary": "Groq",
+  "display_secondary": "Groq",
+  "aliases": [
+    "Groq"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "LPU 推理芯片公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://groq.com"
+}

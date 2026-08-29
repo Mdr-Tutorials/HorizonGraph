@@ -1,0 +1,37 @@
+{
+  "id": "arista-eos",
+  "name": "Arista EOS",
+  "aliases": [
+    "Arista EOS",
+    "Extensible Operating System"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "networking_security",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "arista"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux"
+    }
+  ],
+  "summary": "Arista 的可扩展操作系统，Linux 上的交换代理。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "display_primary": "EOS"
+}

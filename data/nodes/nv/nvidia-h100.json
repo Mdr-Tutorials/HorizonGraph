@@ -1,0 +1,43 @@
+{
+  "id": "nvidia-h100",
+  "name": "NVIDIA H100",
+  "display_primary": "H100",
+  "aliases": [
+    "Hopper H100",
+    "NVIDIA Hopper"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "gpu"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cuda"
+    }
+  ],
+  "summary": "Hopper 架构数据中心 GPU，面向大模型训练与推理。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2022-03-22",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.nvidia.com/en-us/data-center/h100/"
+}

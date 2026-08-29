@@ -1,0 +1,41 @@
+{
+  "id": "k-and-r",
+  "name": "The C Programming Language",
+  "display_primary": "K&R",
+  "display_secondary": "C 程序设计语言",
+  "aliases": [
+    "C 程序设计语言",
+    "K&R C",
+    "The C Programming Language"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "brian-kernighan"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "dennis-ritchie"
+    }
+  ],
+  "summary": "C 语言原作者的教材，以简洁范例定义了 K&R 风格。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1978-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.cs.princeton.edu/~bwk/cbook.html"
+}

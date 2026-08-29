@@ -1,0 +1,27 @@
+{
+  "id": "virtual-dom",
+  "name": "Virtual DOM",
+  "display_primary": "虚拟 DOM",
+  "display_secondary": "Virtual DOM",
+  "aliases": [
+    "虚拟 DOM"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "programming-paradigm"
+    }
+  ],
+  "summary": "用轻量树描述 UI，差分后再打补丁到真实 DOM。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

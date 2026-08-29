@@ -1,0 +1,25 @@
+{
+  "id": "solana-labs",
+  "name": "Solana Labs",
+  "display_primary": "Solana Labs",
+  "aliases": [],
+  "type": "organization",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Solana 协议的核心研发公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://solanalabs.com"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "two-sigma",
+  "name": "Two Sigma",
+  "display_primary": "Two Sigma",
+  "display_secondary": "Two Sigma",
+  "aliases": [
+    "Two Sigma"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "以机器学习驱动的量化投资公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.twosigma.com"
+}

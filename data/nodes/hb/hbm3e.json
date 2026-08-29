@@ -1,0 +1,35 @@
+{
+  "id": "hbm3e",
+  "name": "HBM3E",
+  "aliases": [
+    "HBM3E"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "hardware_iot",
+    "gpu-computing"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "sk-hynix"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "nvidia-h100"
+    }
+  ],
+  "summary": "SK 海力士的第五代高带宽内存。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

@@ -1,0 +1,30 @@
+{
+  "id": "cloudflare",
+  "name": "Cloudflare",
+  "display_primary": "Cloudflare",
+  "display_secondary": "Cloudflare",
+  "aliases": [
+    "Cloudflare"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "public-cloud-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "边缘网络与安全公司，CDN、WAF 与 Workers 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.cloudflare.com"
+}

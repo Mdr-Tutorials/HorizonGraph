@@ -1,0 +1,28 @@
+{
+  "id": "juicedata",
+  "name": "Juicedata",
+  "display_primary": "Juicedata",
+  "display_secondary": "果子数据",
+  "aliases": [
+    "果子数据"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "JuiceFS 的研发公司，提供云原生分布式文件存储。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://juicefs.com/en/about-us"
+}

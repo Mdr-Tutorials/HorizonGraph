@@ -1,0 +1,29 @@
+{
+  "id": "iflytek",
+  "name": "iFlytek",
+  "display_primary": "iFlytek",
+  "display_secondary": "科大讯飞",
+  "aliases": [
+    "科大讯飞",
+    "讯飞"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "语音识别起家的中国 AI 公司，星火大模型的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.iflytek.com"
+}

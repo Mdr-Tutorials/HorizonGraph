@@ -1,0 +1,32 @@
+{
+  "id": "tls",
+  "name": "Transport Layer Security",
+  "display_primary": "TLS",
+  "aliases": [
+    "SSL"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "public-key-cryptography"
+    }
+  ],
+  "summary": "为字节流提供保密、完整与身份，HTTPS 的加密层。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ownership",
+  "name": "Ownership",
+  "display_primary": "所有权",
+  "display_secondary": "Ownership",
+  "aliases": [
+    "所有权系统"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "rust-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "编译期跟踪值的唯一持有者，从而在无 GC 时保证内存安全。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

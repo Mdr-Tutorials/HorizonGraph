@@ -1,0 +1,29 @@
+{
+  "id": "snowflake",
+  "name": "Snowflake",
+  "display_primary": "Snowflake",
+  "display_secondary": "Snowflake",
+  "aliases": [
+    "Snowflake"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "database-ecosystem",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "云数据仓库公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.snowflake.com"
+}

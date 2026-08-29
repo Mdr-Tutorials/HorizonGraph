@@ -1,0 +1,34 @@
+{
+  "id": "zte-unirran",
+  "name": "UniRAN",
+  "aliases": [
+    "ZTE UniRAN"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "mobile-network-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "zte"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "5g-ran"
+    }
+  ],
+  "summary": "中兴的统一多模无线接入产品线。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

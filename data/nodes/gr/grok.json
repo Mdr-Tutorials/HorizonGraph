@@ -1,0 +1,36 @@
+{
+  "id": "grok",
+  "name": "Grok",
+  "aliases": [
+    "Grok"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "xai"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    }
+  ],
+  "summary": "xAI 的对话大模型族，实时接入 X 数据流。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://x.ai"
+}

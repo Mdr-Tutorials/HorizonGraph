@@ -1,0 +1,46 @@
+{
+  "id": "arm",
+  "name": "ARM",
+  "display_primary": "ARM",
+  "aliases": [
+    "AArch64",
+    "ARM64"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "arm-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems",
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "x86-64"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "risc-v"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "arm-holdings"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "loongarch"
+    }
+  ],
+  "summary": "手机与能效服务器的 RISC 指令集家族。",
+  "importance": 5,
+  "official_site": "https://www.arm.com",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

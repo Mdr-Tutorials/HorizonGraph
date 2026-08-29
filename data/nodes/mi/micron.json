@@ -1,0 +1,28 @@
+{
+  "id": "micron",
+  "name": "Micron",
+  "display_primary": "Micron",
+  "display_secondary": "美光",
+  "aliases": [
+    "美光"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "存储芯片公司，DRAM 与 NAND 的供应方。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.micron.com"
+}

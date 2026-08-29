@@ -1,0 +1,29 @@
+{
+  "id": "arista",
+  "name": "Arista Networks",
+  "display_primary": "Arista Networks",
+  "display_secondary": "Arista",
+  "aliases": [
+    "Arista"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "networking_security",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "数据中心交换机公司，云厂商骨干网的常见选择。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.arista.com"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "posix",
+  "name": "POSIX",
+  "display_primary": "POSIX",
+  "aliases": [
+    "可移植操作系统接口",
+    "IEEE Std 1003"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "操作系统 API 与 Shell 的可移植标准，Unix 兼容的公约。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1988-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://pubs.opengroup.org/onlinepubs/9699919799/"
+}

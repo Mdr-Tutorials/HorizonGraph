@@ -1,0 +1,32 @@
+{
+  "id": "windows-nt",
+  "name": "Windows NT Kernel",
+  "display_primary": "NT Kernel",
+  "display_secondary": "Windows NT 内核",
+  "aliases": [
+    "Windows NT 内核"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "windows-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "Windows 的现代内核，与 Linux 对照的另一套调度与 I/O 模型。",
+  "importance": 3,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

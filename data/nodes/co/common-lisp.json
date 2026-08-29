@@ -1,0 +1,20 @@
+{
+  "id": "common-lisp",
+  "name": "Common Lisp",
+  "aliases": ["Common Lisp", "CL 语言"],
+  "type": "language",
+  "ecosystems": ["languages_runtimes"],
+  "domains": ["programming-languages"],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "language" },
+    { "relation_type": "competes_with", "target_id": "scheme" }
+  ],
+  "summary": "标准化的大型 Lisp 方言，AI 寒冬前的主流。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1984-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://common-lisp.net"
+}

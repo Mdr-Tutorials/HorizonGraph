@@ -1,0 +1,28 @@
+{
+  "id": "cambricon",
+  "name": "Cambricon",
+  "display_primary": "Cambricon",
+  "display_secondary": "寒武纪",
+  "aliases": [
+    "寒武纪"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "中国 AI 芯片公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.cambricon.com"
+}

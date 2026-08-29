@@ -1,0 +1,37 @@
+{
+  "id": "hyperos",
+  "name": "HyperOS",
+  "aliases": [
+    "澎湃 OS",
+    "小米 HyperOS"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "android-ecosystem",
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "xiaomi"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux-kernel"
+    }
+  ],
+  "summary": "小米澎湃 OS，MIUI 的继任系统。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.mi.com"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "linux-man-pages",
+  "name": "Linux man-pages",
+  "display_primary": "man-pages",
+  "display_secondary": "Linux 手册页",
+  "aliases": [
+    "Linux 手册页",
+    "man pages"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "documentation"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux"
+    }
+  ],
+  "summary": "Linux 系统调用、C 库与配置文件的权威手册页项目。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.kernel.org/doc/man-pages/"
+}

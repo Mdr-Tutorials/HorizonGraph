@@ -1,0 +1,29 @@
+{
+  "id": "baidu",
+  "name": "Baidu",
+  "display_primary": "Baidu",
+  "display_secondary": "百度",
+  "aliases": [
+    "百度"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "搜索起家的中国科技公司，文心大模型的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.baidu.com"
+}

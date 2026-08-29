@@ -1,0 +1,47 @@
+{
+  "id": "pytorch",
+  "name": "PyTorch",
+  "display_primary": "PyTorch",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "python-ecosystem",
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cuda"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "backpropagation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "动态图优先的深度学习框架，研究与生产都在用。",
+  "importance": 5,
+  "official_site": "https://pytorch.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

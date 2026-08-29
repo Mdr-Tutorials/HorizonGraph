@@ -1,0 +1,38 @@
+{
+  "id": "unreal-engine",
+  "name": "Unreal Engine",
+  "display_primary": "Unreal Engine",
+  "aliases": [
+    "虚幻引擎"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "unreal-engine-ecosystem",
+    "graphics_gaming"
+  ],
+  "domains": [
+    "game-development",
+    "graphics"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cpp"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "epic-games"
+    }
+  ],
+  "summary": "以 C++ 为核心的高保真游戏引擎，也在影视与仿真里用。",
+  "importance": 4,
+  "official_site": "https://www.unrealengine.com",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

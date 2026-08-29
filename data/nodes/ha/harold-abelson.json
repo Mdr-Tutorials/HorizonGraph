@@ -1,0 +1,27 @@
+{
+  "id": "harold-abelson",
+  "name": "Harold Abelson",
+  "display_primary": "Harold Abelson",
+  "display_secondary": "哈罗德·阿贝尔森",
+  "aliases": [
+    "哈罗德·阿贝尔森"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "MIT 教授，SICP 作者之一。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

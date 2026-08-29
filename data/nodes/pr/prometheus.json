@@ -1,0 +1,28 @@
+{
+  "id": "prometheus",
+  "name": "Prometheus",
+  "display_primary": "Prometheus",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "cloud_native",
+    "kubernetes-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "拉模型的指标监控系统，云原生可观测性的默认选择。",
+  "importance": 4,
+  "official_site": "https://prometheus.io",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

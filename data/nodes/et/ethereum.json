@@ -1,0 +1,43 @@
+{
+  "id": "ethereum",
+  "name": "Ethereum",
+  "display_primary": "Ethereum",
+  "display_secondary": "以太坊",
+  "aliases": [
+    "以太坊",
+    "ETH"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "distributed-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "consensus"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "proof-of-stake"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "solana"
+    }
+  ],
+  "summary": "通用智能合约链，账户与 EVM 构成世界计算机叙事。",
+  "importance": 5,
+  "official_site": "https://ethereum.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

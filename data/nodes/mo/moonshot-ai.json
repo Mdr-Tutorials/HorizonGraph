@@ -1,0 +1,29 @@
+{
+  "id": "moonshot-ai",
+  "name": "Moonshot AI",
+  "display_primary": "Moonshot AI",
+  "display_secondary": "月之暗面",
+  "aliases": [
+    "月之暗面",
+    "Kimi"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Kimi 长上下文大模型的研发公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.moonshot.cn"
+}

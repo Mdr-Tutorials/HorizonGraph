@@ -1,0 +1,42 @@
+{
+  "id": "kotlin",
+  "name": "Kotlin",
+  "aliases": [],
+  "type": "language",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "jetbrains"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "jvm"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "java"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "scala"
+    }
+  ],
+  "summary": "JetBrains 的 JVM 静态语言，Android 官方首选。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://kotlinlang.org",
+  "first_released": "2016-02-15"
+}

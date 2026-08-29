@@ -1,0 +1,28 @@
+{
+  "id": "coinbase",
+  "name": "Coinbase",
+  "display_primary": "Coinbase",
+  "display_secondary": "Coinbase",
+  "aliases": [
+    "Coinbase"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "美国持牌加密货币交易所。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.coinbase.com"
+}

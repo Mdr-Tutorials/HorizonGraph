@@ -1,0 +1,42 @@
+{
+  "id": "dji-sdk",
+  "name": "DJI SDK",
+  "aliases": [
+    "Onboard SDK",
+    "Payload SDK"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "robotics-ecosystem",
+    "embedded-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "dji"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cpp"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux"
+    }
+  ],
+  "summary": "大疆的机载与载荷开发套件。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "display_primary": "DJI SDK",
+  "official_site": "https://developer.dji.com"
+}

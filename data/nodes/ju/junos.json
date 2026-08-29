@@ -1,0 +1,35 @@
+{
+  "id": "junos",
+  "name": "Junos OS",
+  "aliases": [
+    "Junos OS"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "networking_security"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "juniper"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ip"
+    }
+  ],
+  "summary": "Juniper 的网络操作系统，FreeBSD 底座。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "display_primary": "Junos"
+}

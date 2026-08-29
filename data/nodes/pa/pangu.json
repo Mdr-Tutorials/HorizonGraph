@@ -1,0 +1,35 @@
+{
+  "id": "pangu",
+  "name": "Pangu",
+  "aliases": [
+    "盘古大模型"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "huawei"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    }
+  ],
+  "summary": "华为的盘古行业大模型族。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

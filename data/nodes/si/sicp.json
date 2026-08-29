@@ -1,0 +1,39 @@
+{
+  "id": "sicp",
+  "name": "Structure and Interpretation of Computer Programs",
+  "display_primary": "SICP",
+  "display_secondary": "计算机程序的构造和解释",
+  "aliases": [
+    "计算机程序的构造和解释",
+    "魔法书"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "harold-abelson"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "gerald-sussman"
+    }
+  ],
+  "summary": "用 Scheme 讲授抽象、元语言与计算本质的 MIT 经典教材。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1985-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://sarabander.github.io/sicp/"
+}

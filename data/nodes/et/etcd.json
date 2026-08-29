@@ -1,0 +1,35 @@
+{
+  "id": "etcd",
+  "name": "etcd",
+  "display_primary": "etcd",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "kubernetes-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "raft"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "cncf"
+    }
+  ],
+  "summary": "带 Raft 的分布式键值存储，Kubernetes 的集群状态源。",
+  "importance": 4,
+  "official_site": "https://etcd.io",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

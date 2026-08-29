@@ -1,0 +1,40 @@
+{
+  "id": "rust",
+  "name": "Rust",
+  "display_primary": "Rust",
+  "aliases": [
+    "Rust 语言"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "rust-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "llvm"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ownership"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "zig"
+    }
+  ],
+  "summary": "以所有权保证内存安全的系统语言，无垃圾回收。",
+  "importance": 5,
+  "official_site": "https://www.rust-lang.org"
+}

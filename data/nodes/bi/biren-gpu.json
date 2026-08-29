@@ -1,0 +1,39 @@
+{
+  "id": "biren-gpu",
+  "name": "Biren BR100",
+  "aliases": [
+    "壁仞 GPU",
+    "BR100"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "gpu"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "biren"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "nvidia-h100"
+    }
+  ],
+  "summary": "壁仞的双芯通用 GPU 训练卡系列。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

@@ -1,0 +1,39 @@
+{
+  "id": "xdp",
+  "name": "XDP",
+  "display_primary": "XDP",
+  "display_secondary": "eXpress Data Path",
+  "aliases": [
+    "eXpress Data Path"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ebpf"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    }
+  ],
+  "summary": "在网卡驱动最早路径用 eBPF 处理数据包，用于 DDoS 缓解与负载均衡。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.kernel.org/doc/html/latest/networking/af_xdp.html"
+}

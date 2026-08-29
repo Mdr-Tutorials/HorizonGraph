@@ -1,0 +1,22 @@
+{
+  "id": "gpt",
+  "name": "GPT",
+  "display_primary": "GPT",
+  "display_secondary": "生成式预训练变换器",
+  "aliases": ["生成式预训练变换器", "Generative Pre-trained Transformer", "ChatGPT 系列"],
+  "type": "model_family",
+  "ecosystems": ["llm-agent-ecosystem"],
+  "domains": ["machine-learning", "natural-language-processing"],
+  "abstraction_level": "framework_library",
+  "description": "OpenAI 的大模型家族。注：ChatGPT 是其驱动的对话产品，独立实体（后续试点建节点）。",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "llm" },
+    { "relation_type": "developed_by", "target_id": "openai" }
+  ],
+  "summary": "OpenAI 的大模型家族，GPT 系列驱动 ChatGPT 等产品。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://openai.com"
+}

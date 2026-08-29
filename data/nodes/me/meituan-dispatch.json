@@ -1,0 +1,43 @@
+{
+  "id": "meituan-dispatch",
+  "name": "Meituan Dispatch",
+  "aliases": [
+    "美团超脑",
+    "美团配送调度"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "enterprise_industry"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meituan"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "raft"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "redis"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kubernetes"
+    }
+  ],
+  "summary": "美团即时配送调度系统，大规模实时撮合。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

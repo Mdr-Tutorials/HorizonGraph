@@ -1,0 +1,28 @@
+{
+  "id": "fortinet",
+  "name": "Fortinet",
+  "display_primary": "Fortinet",
+  "display_secondary": "Fortinet",
+  "aliases": [
+    "Fortinet"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "防火墙与统一威胁管理设备公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.fortinet.com"
+}

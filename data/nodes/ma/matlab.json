@@ -1,0 +1,20 @@
+{
+  "id": "matlab",
+  "name": "MATLAB",
+  "aliases": ["MATLAB"],
+  "type": "tool",
+  "ecosystems": ["ai_data_science", "enterprise_industry"],
+  "domains": ["machine-learning", "high-performance-computing"],
+  "abstraction_level": "application_tool",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "tool" }
+  ],
+  "summary": "矩阵计算商业环境，工科教学与仿真的标准工具。",
+  "description": "MATLAB 是 MathWorks 的商业软件，工科信号处理与控制理论教学的事实标准；Simulink 是其仿真子系统。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1984-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.mathworks.com"
+}

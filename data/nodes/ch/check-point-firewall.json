@@ -1,0 +1,39 @@
+{
+  "id": "check-point-firewall",
+  "name": "Check Point Firewall",
+  "aliases": [
+    "FireWall-1"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "check-point"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ip"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "fortigate"
+    }
+  ],
+  "summary": "Check Point 的状态检测防火墙。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "display_primary": "Check Point"
+}

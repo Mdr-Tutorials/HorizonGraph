@@ -1,0 +1,29 @@
+{
+  "id": "netease",
+  "name": "NetEase",
+  "display_primary": "NetEase",
+  "display_secondary": "网易",
+  "aliases": [
+    "网易"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "graphics_gaming",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "game-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "游戏与互联网公司，游戏引擎与有道的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.163.com"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "jane-street-core",
+  "name": "Jane Street Core",
+  "aliases": [
+    "janestreet core",
+    "Base/Core"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "fintech-ecosystem",
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "quantitative-finance"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "jane-street"
+    }
+  ],
+  "summary": "Jane Street 开源的 OCaml 工业标准库。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "display_primary": "Core",
+  "official_site": "https://opensource.janestreet.com"
+}

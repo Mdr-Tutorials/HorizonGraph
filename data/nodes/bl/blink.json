@@ -1,0 +1,35 @@
+{
+  "id": "blink",
+  "name": "Blink",
+  "display_primary": "Blink",
+  "aliases": [
+    "Blink 引擎"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "browser-engine-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dom"
+    }
+  ],
+  "summary": "Chromium 的渲染引擎，把 DOM 与 CSS 变成图层与像素。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

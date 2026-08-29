@@ -1,0 +1,26 @@
+{
+  "id": "acid",
+  "name": "ACID",
+  "display_primary": "ACID",
+  "aliases": [
+    "事务四性质"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "原子性、一致性、隔离性、持久性，事务正确性的四条约束。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

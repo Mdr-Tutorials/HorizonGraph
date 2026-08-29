@@ -1,0 +1,29 @@
+{
+  "id": "hashicorp",
+  "name": "HashiCorp",
+  "display_primary": "HashiCorp",
+  "display_secondary": "HashiCorp",
+  "aliases": [
+    "HashiCorp"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "iac-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Terraform、Vault 与 Consul 的研发公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.hashicorp.com"
+}

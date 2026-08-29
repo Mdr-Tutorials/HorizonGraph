@@ -1,0 +1,28 @@
+{
+  "id": "biren",
+  "name": "Biren",
+  "display_primary": "Biren",
+  "display_secondary": "壁仞",
+  "aliases": [
+    "壁仞"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "中国 GPU 公司，面向训练与推理加速卡。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.birentech.com"
+}

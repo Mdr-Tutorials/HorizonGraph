@@ -1,0 +1,42 @@
+{
+  "id": "sles",
+  "name": "SLES",
+  "aliases": [
+    "SUSE Linux"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "suse"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "ubuntu"
+    }
+  ],
+  "summary": "SUSE Linux Enterprise Server，企业 RPM 发行版。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "display_primary": "SLES",
+  "display_secondary": "SUSE Linux Enterprise Server",
+  "official_site": "https://www.suse.com"
+}

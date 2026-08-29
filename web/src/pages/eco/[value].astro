@@ -18,7 +18,7 @@ const data = has(`dist/site/ecosystems/${value}.json`) ? json(`dist/site/ecosyst
 const ecoLabel = (v: string) => vocab.entries.find((e: any) => e.value === v);
 const members = (data?.members ?? [])
   .map((i: number) => {
-    const l = labelOf(nodes[i]?.[0] ?? "", nodes[i]?.[1], nodes[i]?.[10] ?? [], nodes[i]?.[12] ?? "", nodes[i]?.[13] ?? "");
+    const l = labelOf(nodes[i]?.[0] ?? "", nodes[i]?.[1], nodes[i]?.[10] ?? [], nodes[i]?.[12] ?? "", nodes[i]?.[13] ?? "", nodes[i]?.[2]);
     return {
       id: ids[i],
       primary: l.primary,

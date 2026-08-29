@@ -1,0 +1,28 @@
+{
+  "id": "oauth",
+  "name": "OAuth",
+  "display_primary": "OAuth",
+  "aliases": [
+    "OAuth 2.0"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "iam-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "让应用在不拿到密码的情况下获得有限授权。",
+  "importance": 5,
+  "official_site": "https://oauth.net/2/",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

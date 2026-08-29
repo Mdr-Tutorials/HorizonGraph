@@ -1,0 +1,29 @@
+{
+  "id": "anysphere",
+  "name": "Anysphere",
+  "display_primary": "Anysphere",
+  "display_secondary": "Anysphere",
+  "aliases": [
+    "Anysphere"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Cursor 的研发公司，代码智能体的代表厂商。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://cursor.com"
+}

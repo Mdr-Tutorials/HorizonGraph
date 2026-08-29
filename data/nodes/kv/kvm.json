@@ -1,0 +1,33 @@
+{
+  "id": "kvm",
+  "name": "KVM",
+  "display_primary": "KVM",
+  "aliases": [
+    "Kernel-based Virtual Machine"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "virtualization-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    }
+  ],
+  "summary": "Linux 把内核变成 hypervisor 的模块，云虚拟机的底座之一。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

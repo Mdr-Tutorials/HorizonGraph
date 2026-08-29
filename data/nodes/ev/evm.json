@@ -1,0 +1,35 @@
+{
+  "id": "evm",
+  "name": "Ethereum Virtual Machine",
+  "display_primary": "EVM",
+  "display_secondary": "以太坊虚拟机",
+  "aliases": [
+    "以太坊虚拟机",
+    "Ethereum Virtual Machine"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtual-machine"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ethereum"
+    }
+  ],
+  "summary": "以太坊的栈式虚拟机，智能合约的执行环境。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2015-07-30",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://ethereum.org/en/developers/docs/evm/"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "vercel",
+  "name": "Vercel",
+  "display_primary": "Vercel",
+  "display_secondary": "Vercel",
+  "aliases": [
+    "Vercel"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Next.js 与前端云部署平台的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://vercel.com"
+}

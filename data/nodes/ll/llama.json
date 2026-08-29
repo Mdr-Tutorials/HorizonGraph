@@ -1,0 +1,36 @@
+{
+  "id": "llama",
+  "name": "LLAMA",
+  "aliases": [
+    "Llama"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    }
+  ],
+  "summary": "Meta 的开源 LLM 族，开源生态的基座。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "first_released": "2023-02-24"
+}

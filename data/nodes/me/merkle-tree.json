@@ -1,0 +1,28 @@
+{
+  "id": "merkle-tree",
+  "name": "Merkle Tree",
+  "display_primary": "默克尔树",
+  "display_secondary": "Merkle Tree",
+  "aliases": [
+    "哈希树"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "叶子哈希层层向上，用根承诺整棵数据，证明成员资格。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

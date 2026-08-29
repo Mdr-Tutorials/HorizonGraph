@@ -1,0 +1,26 @@
+{
+  "id": "php",
+  "name": "PHP",
+  "display_primary": "PHP",
+  "aliases": [],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "为服务端网页而生的语言，WordPress 等支撑巨大存量。",
+  "importance": 4,
+  "official_site": "https://www.php.net"
+}

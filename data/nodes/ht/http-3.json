@@ -1,0 +1,36 @@
+{
+  "id": "http-3",
+  "name": "HTTP/3",
+  "display_primary": "HTTP/3",
+  "aliases": [
+    "H3"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "networking",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "http"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "quic"
+    }
+  ],
+  "summary": "把 HTTP 语义搬到 QUIC 上，消除 TCP 队头阻塞。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

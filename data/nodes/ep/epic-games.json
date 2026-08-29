@@ -1,0 +1,30 @@
+{
+  "id": "epic-games",
+  "name": "Epic Games",
+  "display_primary": "Epic Games",
+  "display_secondary": "Epic Games",
+  "aliases": [
+    "Epic Games",
+    "Epic"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "unreal-engine-ecosystem"
+  ],
+  "domains": [
+    "game-development",
+    "graphics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "虚幻引擎与 Fortnite 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.epicgames.com"
+}

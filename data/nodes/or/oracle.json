@@ -1,0 +1,30 @@
+{
+  "id": "oracle",
+  "name": "Oracle",
+  "display_primary": "Oracle",
+  "display_secondary": "甲骨文",
+  "aliases": [
+    "甲骨文"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "企业软件与数据库公司，Java 与 MySQL 的控制者。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.oracle.com"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "git",
+  "name": "Git",
+  "display_primary": "Git",
+  "aliases": [
+    "Git 版本控制"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "linus-torvalds"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "git-object-model"
+    }
+  ],
+  "summary": "分布式版本控制系统，以快照与有向无环图管理源码历史。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2005-04-07",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://git-scm.com"
+}

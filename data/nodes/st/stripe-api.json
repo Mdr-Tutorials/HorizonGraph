@@ -1,0 +1,45 @@
+{
+  "id": "stripe-api",
+  "name": "Stripe API",
+  "aliases": [
+    "Stripe Payments"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "quantitative-finance",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "stripe"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "idempotency"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "http"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tls"
+    }
+  ],
+  "summary": "Stripe 的互联网支付接口。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "display_primary": "Stripe",
+  "official_site": "https://stripe.com"
+}

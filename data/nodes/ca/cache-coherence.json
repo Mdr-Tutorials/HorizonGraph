@@ -1,0 +1,27 @@
+{
+  "id": "cache-coherence",
+  "name": "Cache Coherence",
+  "display_primary": "缓存一致性",
+  "display_secondary": "Cache Coherence",
+  "aliases": [
+    "缓存一致性"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "多核各自缓存同一缓存行时，如何看到彼此的写入。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

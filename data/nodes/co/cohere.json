@@ -1,0 +1,28 @@
+{
+  "id": "cohere",
+  "name": "Cohere",
+  "display_primary": "Cohere",
+  "display_secondary": "Cohere",
+  "aliases": [
+    "Cohere"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "面向企业的大模型公司，检索与 Agent 是主线。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://cohere.com"
+}

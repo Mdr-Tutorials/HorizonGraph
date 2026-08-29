@@ -1,0 +1,43 @@
+{
+  "id": "github-actions",
+  "name": "GitHub Actions",
+  "display_primary": "GitHub Actions",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "git-ecosystem",
+    "cicd-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "github"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "continuous-integration"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "git"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "gitlab-ci"
+    }
+  ],
+  "summary": "仓库里用 YAML 描述的 CI/CD，和 GitHub 托管绑在一起。",
+  "importance": 4,
+  "official_site": "https://github.com/features/actions",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

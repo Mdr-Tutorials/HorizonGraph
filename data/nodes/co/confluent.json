@@ -1,0 +1,28 @@
+{
+  "id": "confluent",
+  "name": "Confluent",
+  "display_primary": "Confluent",
+  "display_secondary": "Confluent",
+  "aliases": [
+    "Confluent"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Apache Kafka 的商业化公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.confluent.io"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "meta",
+  "name": "Meta",
+  "display_primary": "Meta",
+  "display_secondary": "脸书",
+  "aliases": [
+    "脸书",
+    "Facebook"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "web_frontend",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "社交起家的科技公司，React、PyTorch 与 Llama 的源头。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.meta.com"
+}

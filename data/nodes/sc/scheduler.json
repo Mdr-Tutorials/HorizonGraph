@@ -1,0 +1,27 @@
+{
+  "id": "scheduler",
+  "name": "Scheduler",
+  "display_primary": "调度器",
+  "display_secondary": "Scheduler",
+  "aliases": [
+    "CPU 调度"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "决定下一毫秒哪条线程占用 CPU 的内核策略。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

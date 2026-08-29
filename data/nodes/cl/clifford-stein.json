@@ -1,0 +1,27 @@
+{
+  "id": "clifford-stein",
+  "name": "Clifford Stein",
+  "display_primary": "Clifford Stein",
+  "display_secondary": "克利福德·斯坦",
+  "aliases": [
+    "克利福德·斯坦"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "CLRS 算法导论作者之一。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

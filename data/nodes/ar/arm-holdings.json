@@ -1,0 +1,30 @@
+{
+  "id": "arm-holdings",
+  "name": "Arm",
+  "display_primary": "Arm",
+  "display_secondary": "Arm",
+  "aliases": [
+    "Arm",
+    "ARM Holdings"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "arm-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "ARM 指令集与 IP 核的授权公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.arm.com"
+}

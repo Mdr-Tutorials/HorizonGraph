@@ -1,0 +1,29 @@
+{
+  "id": "risc-v",
+  "name": "RISC-V",
+  "display_primary": "RISC-V",
+  "aliases": [
+    "RISC-V ISA"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "risc-v-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems",
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    }
+  ],
+  "summary": "开放指令集，模块化扩展，正在嵌入式与学术核中铺开。",
+  "importance": 4,
+  "official_site": "https://riscv.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

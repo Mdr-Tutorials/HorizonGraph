@@ -1,0 +1,29 @@
+{
+  "id": "interrupt",
+  "name": "Interrupt",
+  "display_primary": "中断",
+  "display_secondary": "Interrupt",
+  "aliases": [
+    "中断"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "systems-programming",
+    "embedded-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "设备或异常打断当前指令流，强迫 CPU 进入处理例程。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

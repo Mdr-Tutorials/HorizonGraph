@@ -25,7 +25,7 @@ async function show(tid: string) {
   if (!tid) {
     missing.value = true;
     node.value = null;
-    blocks.value = [];
+    rows.value = [];
     loading.value = false;
     return;
   }
@@ -69,10 +69,8 @@ function href(en: Row["entry"]) {
   return `${B}${en.kind === 0 ? "cat" : "term"}/${en.id}`;
 }
 const navRows = computed(() => rows.value.filter((r) => r.label === "属于"));
-const verRows = computed(() =>
-  rows.value.filter((r) => r.label === "版本" || (r.label === "包含" && /^\d+$/.test(r.entry.id.split("/").pop() ?? "")))
-);
-const kinRows = computed(() => rows.value.filter((r) => r.label === "包含" && !verRows.value.includes(r)));
+const verRows = computed(() => rows.value.filter((r) => r.label === "版本"));
+const kinRows = computed(() => rows.value.filter((r) => r.label === "包含" && r.entry.kind === 0));
 const relRows = computed(
   () => rows.value.filter((r) => !navRows.value.includes(r) && !verRows.value.includes(r) && !kinRows.value.includes(r))
 );
@@ -127,10 +125,14 @@ function toggle() {
         </h2>
         <ul class="mt-2">
           <li v-for="r in verRows" :key="r.entry.id" class="py-1">
-            <a :href="href(r.entry)" class="w-fit hover:underline no-underline">
+            <a v-if="r.entry.id !== id" :href="href(r.entry)" class="w-fit hover:underline no-underline">
               <span class="font-term font-semibold" :class="TXT[r.entry.realm] ?? TXT.technical">{{ r.entry.primary }}</span>
               <span v-if="r.entry.secondary" class="font-term text-sm text-secondary-name">{{ r.entry.secondary }}</span>
             </a>
+            <span v-else class="w-fit">
+              <span class="font-term font-semibold" :class="TXT[r.entry.realm] ?? TXT.technical">{{ r.entry.primary }}</span>
+              <span v-if="r.entry.secondary" class="font-term text-sm text-secondary-name">{{ r.entry.secondary }}</span>
+            </span>
           </li>
         </ul>
       </div>
@@ -155,8 +157,8 @@ function toggle() {
       </h2>
       <ul class="mt-2">
         <li v-for="r in visible()" :key="r.label + r.entry.id" class="py-1">
-          <a :href="href(r.entry)" class="w-fit hover:underline no-underline">
-            <span class="inline-block w-16 text-sm text-ink-3">{{ r.label }}</span>
+          <a :href="href(r.entry)" class="inline-flex items-baseline gap-3 w-fit hover:underline no-underline">
+            <span class="w-16 shrink-0 text-sm text-ink-3">{{ r.label }}</span>
             <span class="font-term font-semibold" :class="TXT[r.entry.realm] ?? TXT.technical">{{ r.entry.primary }}</span>
             <span v-if="r.entry.secondary" class="font-term text-sm text-secondary-name">{{ r.entry.secondary }}</span>
           </a>

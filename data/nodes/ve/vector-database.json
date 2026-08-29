@@ -1,0 +1,29 @@
+{
+  "id": "vector-database",
+  "name": "Vector Database",
+  "display_primary": "向量数据库",
+  "display_secondary": "Vector Database",
+  "aliases": [
+    "向量库"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "按嵌入向量做近邻检索的存储，RAG 的数据面。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

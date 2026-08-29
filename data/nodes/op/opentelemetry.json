@@ -1,0 +1,32 @@
+{
+  "id": "opentelemetry",
+  "name": "OpenTelemetry",
+  "display_primary": "OpenTelemetry",
+  "aliases": [
+    "OTel"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "observability"
+    }
+  ],
+  "summary": "指标、日志、追踪的统一埋点与导出规范。",
+  "importance": 4,
+  "official_site": "https://opentelemetry.io",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

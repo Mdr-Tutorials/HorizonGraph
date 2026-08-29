@@ -1,0 +1,21 @@
+{
+  "id": "pandas",
+  "name": "pandas",
+  "aliases": ["pandas"],
+  "type": "library",
+  "ecosystems": ["python-ecosystem", "big-data-ecosystem"],
+  "domains": ["databases", "machine-learning"],
+  "abstraction_level": "framework_library",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "library" },
+    { "relation_type": "depends_on", "target_id": "numpy" },
+    { "relation_type": "depends_on", "target_id": "python" }
+  ],
+  "summary": "Python 的 DataFrame 数据分析库。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2008-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://pandas.pydata.org"
+}

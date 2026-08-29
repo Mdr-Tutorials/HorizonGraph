@@ -1,0 +1,36 @@
+{
+  "id": "binance-exchange",
+  "name": "Binance",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "web3-blockchain-ecosystem",
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "quantitative-finance"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "binance"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "coinbase-exchange"
+    }
+  ],
+  "summary": "币安的全球加密资产交易所。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "display_primary": "币安",
+  "display_secondary": "Binance"
+}

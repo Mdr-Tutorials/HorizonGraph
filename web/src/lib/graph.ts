@@ -31,7 +31,7 @@ export function nodeOf(b: Bundle, i: number) {
   const name = String(n[0] ?? "");
   const abbr = String(n[1] ?? "");
   const aliases = (n[10] ?? []) as string[];
-  const l = labelOf(name, abbr, aliases, String(n[12] ?? ""), String(n[13] ?? ""));
+  const l = labelOf(name, abbr, aliases, String(n[12] ?? ""), String(n[13] ?? ""), type);
   return {
     primary: l.primary,
     secondary: l.secondary,
@@ -67,14 +67,42 @@ export type Row = { label: string; entry: Entry };
 export function rowsOf(b: Bundle, i: number): Row[] {
   const rows: Row[] = [];
   const rels: string[] = b.manifest.relations;
-  for (const e of b.edges)
-    if (e[0] === i)
-      rows.push({ label: b.manifest.relation_display?.[rels[e[1]]]?.zh ?? rels[e[1]], entry: entryOf(b, e[2]) });
-  for (const e of b.reverse[String(i)] ?? [])
-    rows.push({ label: b.manifest.relation_inverse?.[rels[e[0]]] ?? rels[e[0]], entry: entryOf(b, e[1]) });
+  const vOf = rels.indexOf("version_of");
+  const families = b.edges.filter((e) => e[0] === i && e[1] === vOf).map((e) => e[2]);
+  const slice = families.length > 0;
+  const seen = new Set<string>();
+  const push = (label: string, idx: number) => {
+    const key = `${label}:${idx}`;
+    if (seen.has(key)) return;
+    if (idx === i && label !== "版本") return;
+    seen.add(key);
+    rows.push({ label, entry: entryOf(b, idx) });
+  };
+
+  for (const e of b.edges) {
+    if (e[0] !== i) continue;
+    const rel = rels[e[1]];
+    if (rel === "version_of" || rel === "part_of") {
+      push("属于", e[2]);
+      continue;
+    }
+    if (rel === "is_instance_of" && slice) continue;
+    push(b.manifest.relation_display?.[rel]?.zh ?? rel, e[2]);
+  }
+  for (const e of b.reverse[String(i)] ?? []) {
+    const rel = rels[e[0]];
+    push(rel === "version_of" ? "版本" : (b.manifest.relation_inverse?.[rel] ?? rel), e[1]);
+  }
+  if (slice) {
+    for (const f of families)
+      for (const e of b.reverse[String(f)] ?? [])
+        if (e[0] === vOf) push("版本", e[1]);
+  }
+
   return rows.sort(
     (a, x) =>
       ORDER.indexOf(a.label) - ORDER.indexOf(x.label) ||
+      (a.label === "版本" ? (a.entry.id < x.entry.id ? -1 : 1) : 0) ||
       x.entry.importance - a.entry.importance ||
       (a.entry.id < x.entry.id ? -1 : 1)
   );

@@ -1,0 +1,35 @@
+{
+  "id": "c-17",
+  "name": "C17",
+  "display_primary": "C17",
+  "aliases": [
+    "C18",
+    "ISO/IEC 9899:2018"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "c"
+    }
+  ],
+  "summary": "C11 的勘误整合版，不引入新语言特性。",
+  "status": "active",
+  "importance": 3,
+  "official_site": "https://www.open-std.org/jtc1/sc22/wg14/",
+  "first_released": "2018-06-01"
+}

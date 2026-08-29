@@ -1,0 +1,21 @@
+{
+  "id": "linux",
+  "name": "Linux",
+  "display_primary": "Linux",
+  "aliases": ["GNU/Linux", "Linux 操作系统"],
+  "type": "product",
+  "ecosystems": ["linux-gnu-ecosystem"],
+  "domains": ["systems-programming"],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "product" },
+    { "relation_type": "depends_on", "target_id": "linux-kernel" }
+  ],
+  "summary": "以 Linux 内核为核心的开源操作系统家族，广泛用于服务器、桌面与嵌入式。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1991-09-17",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://kernel.org"
+}

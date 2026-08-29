@@ -1,0 +1,28 @@
+{
+  "id": "ruby",
+  "name": "Ruby",
+  "display_primary": "Ruby",
+  "aliases": [
+    "Ruby 语言"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "以程序员幸福感著称的动态语言，Rails 定义了其 Web 时代。",
+  "importance": 3,
+  "official_site": "https://www.ruby-lang.org"
+}

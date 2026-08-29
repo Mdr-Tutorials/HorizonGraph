@@ -1,0 +1,29 @@
+{
+  "id": "palo-alto-networks",
+  "name": "Palo Alto Networks",
+  "display_primary": "Palo Alto Networks",
+  "display_secondary": "Palo Alto Networks",
+  "aliases": [
+    "Palo Alto Networks"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "zero-trust-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "下一代防火墙与云安全公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.paloaltonetworks.com"
+}

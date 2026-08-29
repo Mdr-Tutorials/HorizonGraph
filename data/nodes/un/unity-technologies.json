@@ -1,0 +1,28 @@
+{
+  "id": "unity-technologies",
+  "name": "Unity Technologies",
+  "display_primary": "Unity Technologies",
+  "display_secondary": "Unity Technologies",
+  "aliases": [
+    "Unity Technologies"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "unity-ecosystem"
+  ],
+  "domains": [
+    "game-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Unity 引擎的商业公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://unity.com"
+}

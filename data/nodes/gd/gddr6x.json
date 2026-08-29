@@ -1,0 +1,31 @@
+{
+  "id": "gddr6x",
+  "name": "GDDR6X",
+  "aliases": [
+    "GDDR6X"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "graphics",
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "micron"
+    }
+  ],
+  "summary": "美光独供的高带宽显存代际。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

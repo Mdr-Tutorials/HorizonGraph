@@ -1,0 +1,31 @@
+{
+  "id": "gcc",
+  "name": "GCC",
+  "display_primary": "GCC",
+  "display_secondary": "GNU 编译器套件",
+  "aliases": [
+    "GNU Compiler Collection",
+    "GNU 编译器套件"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "native-cpp-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "compilers"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "GNU 的 C/C++ 等语言编译器套件，系统软件的默认工具链之一。",
+  "importance": 5,
+  "official_site": "https://gcc.gnu.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

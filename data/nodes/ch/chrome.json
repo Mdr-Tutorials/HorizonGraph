@@ -1,0 +1,53 @@
+{
+  "id": "chrome",
+  "name": "Google Chrome",
+  "display_primary": "Chrome",
+  "aliases": [
+    "谷歌浏览器"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "blink"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "v8"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "html"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "http"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "firefox"
+    }
+  ],
+  "summary": "市场份额最大的浏览器，Blink 与 V8 的出货通道。",
+  "importance": 5,
+  "official_site": "https://www.google.com/chrome/",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

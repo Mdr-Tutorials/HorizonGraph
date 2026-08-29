@@ -1,0 +1,28 @@
+{
+  "id": "stability-ai",
+  "name": "Stability AI",
+  "display_primary": "Stability AI",
+  "display_secondary": "Stability AI",
+  "aliases": [
+    "Stability AI"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "computer-vision"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Stable Diffusion 的研发公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://stability.ai"
+}

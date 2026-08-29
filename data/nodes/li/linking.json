@@ -1,0 +1,28 @@
+{
+  "id": "linking",
+  "name": "Linking",
+  "display_primary": "链接",
+  "display_secondary": "Linking",
+  "aliases": [
+    "链接器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "compilers",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把目标文件的符号与重定位拼成可执行映像或动态库。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

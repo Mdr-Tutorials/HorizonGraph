@@ -1,0 +1,28 @@
+{
+  "id": "jd",
+  "name": "JD.com",
+  "display_primary": "JD",
+  "display_secondary": "京东",
+  "aliases": [
+    "京东"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "enterprise_industry"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "零售与物流科技公司，以自建供应链系统著称。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.jd.com"
+}

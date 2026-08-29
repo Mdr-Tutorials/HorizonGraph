@@ -1,0 +1,39 @@
+{
+  "id": "pinduoduo",
+  "name": "Pinduoduo",
+  "aliases": [
+    "拼多多",
+    "Temu"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "enterprise_industry"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "pdd"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "redis"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kubernetes"
+    }
+  ],
+  "summary": "拼多多的电商交易平台，Temu 是其海外版。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

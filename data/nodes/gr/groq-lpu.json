@@ -1,0 +1,39 @@
+{
+  "id": "groq-lpu",
+  "name": "Groq LPU",
+  "aliases": [
+    "LPU"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "gpu"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "groq"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "tpu"
+    }
+  ],
+  "summary": "Groq 的张量流式推理处理器。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://groq.com"
+}

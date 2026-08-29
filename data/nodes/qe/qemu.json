@@ -1,0 +1,30 @@
+{
+  "id": "qemu",
+  "name": "QEMU",
+  "display_primary": "QEMU",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "virtualization-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kvm"
+    }
+  ],
+  "summary": "机器模拟器与虚拟化前端，常与 KVM 搭配跑云主机。",
+  "importance": 4,
+  "official_site": "https://www.qemu.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

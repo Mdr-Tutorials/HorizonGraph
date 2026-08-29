@@ -1,0 +1,28 @@
+{
+  "id": "valve",
+  "name": "Valve",
+  "display_primary": "Valve",
+  "display_secondary": "Valve",
+  "aliases": [
+    "Valve"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "game-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Steam 与 Source 引擎的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.valvesoftware.com"
+}

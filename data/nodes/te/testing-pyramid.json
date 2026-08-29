@@ -1,0 +1,27 @@
+{
+  "id": "testing-pyramid",
+  "name": "Test Pyramid",
+  "display_primary": "测试金字塔",
+  "display_secondary": "Test Pyramid",
+  "aliases": [
+    "测试金字塔"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "programming-paradigm"
+    }
+  ],
+  "summary": "底层大量快测、顶层少量慢测，控制反馈速度与成本。",
+  "importance": 3,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

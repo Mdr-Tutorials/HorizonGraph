@@ -1,0 +1,28 @@
+{
+  "id": "meituan",
+  "name": "Meituan",
+  "display_primary": "Meituan",
+  "display_secondary": "美团",
+  "aliases": [
+    "美团"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "enterprise_industry"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "本地生活平台，大规模即时配送系统的运营方。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.meituan.com"
+}

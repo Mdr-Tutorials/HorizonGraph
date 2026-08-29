@@ -1,0 +1,28 @@
+{
+  "id": "kuaishou",
+  "name": "Kuaishou",
+  "display_primary": "Kuaishou",
+  "display_secondary": "快手",
+  "aliases": [
+    "快手"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "短视频与直播公司，可灵等生成模型的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.kuaishou.com"
+}

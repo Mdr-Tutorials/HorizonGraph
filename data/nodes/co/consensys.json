@@ -1,0 +1,28 @@
+{
+  "id": "consensys",
+  "name": "Consensys",
+  "display_primary": "Consensys",
+  "display_secondary": "Consensys",
+  "aliases": [
+    "Consensys"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "以太坊基础设施公司，MetaMask 与 Infura 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://consensys.io"
+}

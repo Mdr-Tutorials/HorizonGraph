@@ -1,0 +1,33 @@
+{
+  "id": "tour-of-go",
+  "name": "A Tour of Go",
+  "display_primary": "A Tour of Go",
+  "display_secondary": "Go 语言之旅",
+  "aliases": [
+    "Go 语言之旅"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "go-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tutorial"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "summary": "Go 官方交互式入门，在浏览器里跑通语法与并发。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://go.dev/tour/"
+}

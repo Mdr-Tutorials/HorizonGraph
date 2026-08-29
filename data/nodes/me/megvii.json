@@ -1,0 +1,28 @@
+{
+  "id": "megvii",
+  "name": "Megvii",
+  "display_primary": "Megvii",
+  "display_secondary": "旷视",
+  "aliases": [
+    "旷视"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "computer-vision"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "计算机视觉公司，Face++ 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.megvii.com"
+}

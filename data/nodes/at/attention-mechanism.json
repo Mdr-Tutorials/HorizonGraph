@@ -1,0 +1,35 @@
+{
+  "id": "attention-mechanism",
+  "name": "Attention Mechanism",
+  "display_primary": "注意力机制",
+  "display_secondary": "Attention Mechanism",
+  "aliases": [
+    "注意力机制",
+    "注意力",
+    "Attention"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "description": "让模型对输入的不同位置分配不同权重的机制，是 Transformer 的核心组件。GLM-5 集成的 DeepSeek Sparse Attention（DSA）是其稀疏化变体；GLM-5.3-Flash 的混合稀疏+线性注意力同属此谱系。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "transformer"
+    }
+  ],
+  "summary": "对输入位置加权聚焦的机制，Transformer 与 LLM 的核心。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5
+}

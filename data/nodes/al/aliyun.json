@@ -1,0 +1,45 @@
+{
+  "id": "aliyun",
+  "name": "Alibaba Cloud",
+  "aliases": [
+    "阿里云"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "object-storage"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kvm"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux-kernel"
+    }
+  ],
+  "summary": "阿里云，中国份额领先的公有云平台。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "display_primary": "阿里云",
+  "display_secondary": "Alibaba Cloud",
+  "official_site": "https://www.aliyun.com"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "cpp-23",
+  "name": "C++23",
+  "display_primary": "C++23",
+  "aliases": [
+    "ISO/IEC 14882:2024"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "cpp"
+    }
+  ],
+  "summary": "现行 C++ 标准：expected、print 与 import std。",
+  "status": "active",
+  "importance": 5,
+  "official_site": "https://isocpp.org/std/status",
+  "tags": [
+    "cpp23"
+  ],
+  "first_released": "2024-10-19"
+}

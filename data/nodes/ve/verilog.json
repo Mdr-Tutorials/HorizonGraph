@@ -1,0 +1,35 @@
+{
+  "id": "verilog",
+  "name": "Verilog",
+  "aliases": [
+    "Verilog HDL"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "hardware_iot",
+    "arm-ecosystem",
+    "risc-v-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems",
+    "systems-programming"
+  ],
+  "abstraction_level": "theoretical",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vhdl"
+    }
+  ],
+  "summary": "数字硬件描述语言，芯片流片前的建模语言。",
+  "description": "SystemVerilog 是其超集（验证 + 综合扩展），不另开节点，差异写在此处。Verilog 建模的对象流向 TSMC N3 / SMIC 7nm 的制造侧。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1984-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

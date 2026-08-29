@@ -3,17 +3,60 @@
   "name": "GLM",
   "display_primary": "GLM",
   "display_secondary": "通用语言模型",
-  "aliases": ["通用语言模型", "General Language Model"],
-  "type": "model_family",
-  "ecosystems": ["llm-agent-ecosystem"],
-  "domains": ["machine-learning", "natural-language-processing"],
-  "abstraction_level": "framework_library",
-  "relations": [
-    { "relation_type": "is_instance_of", "target_id": "llm" },
-    { "relation_type": "developed_by", "target_id": "zhipu-ai" },
-    { "relation_type": "powers", "target_id": "zhipu-qingyan" }
+  "aliases": [
+    "通用语言模型",
+    "General Language Model"
   ],
-  "summary": "智谱 AI 研发的通用大模型家族，GLM-4 起具备智能体能力。",
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "description": "GLM 系列由智谱 AI 研发，开源许可 Apache-2.0。GLM-5 代达到 744B 总参 / 40B 激活（MoE），预训练语料 28.5T tokens，集成 DeepSeek Sparse Attention（DSA）稀疏注意力，使用自研 slime 异步强化学习框架做后训练。官方版本线为 GLM-4.5 → 4.7 → 5 → 5.1 → 5.2 → 5.3；GLM-4.6 虽存在但官方叙事已跳过。GLM-5.3-Flash（320B-A18B，混合稀疏+线性注意力）是独立基座而非尺寸变体。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "zhipu-ai"
+    },
+    {
+      "relation_type": "powers",
+      "target_id": "zhipu-qingyan"
+    },
+    {
+      "relation_type": "powers",
+      "target_id": "bigmodel-open-platform"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "attention-mechanism"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "llama"
+    }
+  ],
+  "tags": [
+    "inference",
+    "training",
+    "open-source"
+  ],
+  "summary": "智谱 AI 研发的开源通用大模型家族，当前旗舰 GLM-5.3。",
   "status": "active",
   "origin": "curated",
   "last_reviewed": "2026-08-29",

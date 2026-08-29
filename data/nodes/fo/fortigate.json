@@ -1,0 +1,39 @@
+{
+  "id": "fortigate",
+  "name": "FortiGate",
+  "aliases": [
+    "FortiGate"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "fortinet"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ip"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tls"
+    }
+  ],
+  "summary": "Fortinet 的防火墙与统一威胁管理设备。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

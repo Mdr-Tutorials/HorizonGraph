@@ -1,0 +1,28 @@
+{
+  "id": "service-mesh",
+  "name": "Service Mesh",
+  "display_primary": "服务网格",
+  "display_secondary": "Service Mesh",
+  "aliases": [
+    "服务网格"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "kubernetes-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "把服务间流量、重试与 mTLS 下沉到边车或 eBPF 数据面。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

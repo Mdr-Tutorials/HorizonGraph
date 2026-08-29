@@ -1,0 +1,30 @@
+{
+  "id": "supermicro",
+  "name": "Supermicro",
+  "display_primary": "Supermicro",
+  "display_secondary": "超微电脑",
+  "aliases": [
+    "超微电脑",
+    "超微"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "gpu-computing",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "AI 与数据中心服务器整机厂商。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.supermicro.com"
+}

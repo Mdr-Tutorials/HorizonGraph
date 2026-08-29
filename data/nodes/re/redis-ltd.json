@@ -1,0 +1,28 @@
+{
+  "id": "redis-ltd",
+  "name": "Redis Ltd.",
+  "display_primary": "Redis Ltd.",
+  "display_secondary": "Redis 公司",
+  "aliases": [
+    "Redis 公司"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Redis 内存数据库的商业公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://redis.io"
+}

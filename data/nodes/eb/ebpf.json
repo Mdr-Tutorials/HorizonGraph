@@ -1,0 +1,40 @@
+{
+  "id": "ebpf",
+  "name": "eBPF",
+  "display_primary": "eBPF",
+  "aliases": [
+    "extended BPF",
+    "扩展 BPF"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "systems-programming",
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "bpf"
+    }
+  ],
+  "summary": "Linux 内核中的安全沙箱虚拟机，可在内核态动态加载程序。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://ebpf.io"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "solana",
+  "name": "Solana",
+  "display_primary": "Solana",
+  "aliases": [
+    "Solana 区块链"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "distributed-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "solana-labs"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anatoly-yakovenko"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "proof-of-history"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "sealevel"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "sbpf"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "rust"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "consensus"
+    }
+  ],
+  "summary": "高吞吐 L1 区块链，用可验证时钟与并行运行时压低确认延迟。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2020-03-16",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://solana.com"
+}

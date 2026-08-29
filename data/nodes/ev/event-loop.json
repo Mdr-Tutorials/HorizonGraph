@@ -1,0 +1,28 @@
+{
+  "id": "event-loop",
+  "name": "Event Loop",
+  "display_primary": "事件循环",
+  "display_secondary": "Event Loop",
+  "aliases": [
+    "事件循环"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    }
+  ],
+  "summary": "单线程里用队列驱动回调与微任务，撑起浏览器与 Node 的并发。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

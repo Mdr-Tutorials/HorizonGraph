@@ -1,0 +1,35 @@
+{
+  "id": "proof-of-work",
+  "name": "Proof of Work",
+  "display_primary": "工作量证明",
+  "display_secondary": "Proof of Work",
+  "aliases": [
+    "工作量证明",
+    "PoW"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "consensus"
+    }
+  ],
+  "summary": "用算力竞赛决定出块权的共识机制。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2008-10-31",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://bitcoin.org/bitcoin.pdf"
+}

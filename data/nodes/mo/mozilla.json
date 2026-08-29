@@ -1,0 +1,29 @@
+{
+  "id": "mozilla",
+  "name": "Mozilla",
+  "display_primary": "Mozilla",
+  "display_secondary": "Mozilla",
+  "aliases": [
+    "Mozilla"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Firefox 的商业公司，开源浏览器的长期维护者。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.mozilla.org"
+}

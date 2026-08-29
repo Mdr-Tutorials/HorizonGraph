@@ -1,0 +1,27 @@
+{
+  "id": "dennis-ritchie",
+  "name": "Dennis Ritchie",
+  "display_primary": "Dennis Ritchie",
+  "display_secondary": "丹尼斯·里奇",
+  "aliases": [
+    "丹尼斯·里奇"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "C 语言与 Unix 的共同创造者。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

@@ -1,0 +1,45 @@
+{
+  "id": "wechat",
+  "name": "WeChat",
+  "aliases": [
+    "微信"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "enterprise_industry"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "tencent"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "http"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tls"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oauth"
+    }
+  ],
+  "summary": "微信超级应用，小程序是它的开发者平台。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "display_primary": "微信",
+  "display_secondary": "WeChat",
+  "official_site": "https://weixin.qq.com"
+}

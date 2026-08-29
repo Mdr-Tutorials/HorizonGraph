@@ -1,0 +1,44 @@
+{
+  "id": "scala",
+  "name": "Scala",
+  "aliases": [
+    "Scala 语言"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "distributed-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "jvm"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "java",
+      "context": "Java 互操作是 Scala 生态的底座"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "programming-paradigm",
+      "context": "函数式与面向对象的混合范式落地"
+    }
+  ],
+  "summary": "JVM 上的函数式与面向对象混合语言，Spark 的母语。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2004-01-20",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.scala-lang.org"
+}

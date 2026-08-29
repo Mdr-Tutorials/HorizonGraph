@@ -1,0 +1,35 @@
+{
+  "id": "cpp-11",
+  "name": "C++11",
+  "display_primary": "C++11",
+  "aliases": [
+    "C++0x",
+    "ISO/IEC 14882:2011"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "cpp"
+    }
+  ],
+  "summary": "现代 C++ 起点：移动语义、lambda、auto 与线程库。",
+  "status": "active",
+  "importance": 5,
+  "official_site": "https://isocpp.org/std/status",
+  "first_released": "2011-09-01"
+}

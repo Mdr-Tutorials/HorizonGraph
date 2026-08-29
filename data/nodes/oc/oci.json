@@ -1,0 +1,28 @@
+{
+  "id": "oci",
+  "name": "Open Container Initiative",
+  "display_primary": "OCI",
+  "aliases": [
+    "OCI 运行时规范"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "容器镜像与运行时的行业规范，Docker 与 Kubernetes 的公约。",
+  "importance": 4,
+  "official_site": "https://opencontainers.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "crowdstrike-falcon",
+  "name": "Falcon",
+  "aliases": [
+    "CrowdStrike Falcon"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "crowdstrike"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "windows-nt"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux"
+    }
+  ],
+  "summary": "CrowdStrike 的终端检测与响应平台。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "display_primary": "Falcon"
+}

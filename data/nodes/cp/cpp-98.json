@@ -1,0 +1,34 @@
+{
+  "id": "cpp-98",
+  "name": "C++98",
+  "display_primary": "C++98",
+  "aliases": [
+    "ISO/IEC 14882:1998"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "cpp"
+    }
+  ],
+  "summary": "C++ 首个国际标准，写入模板、异常、命名空间与 STL。",
+  "status": "historical",
+  "importance": 4,
+  "official_site": "https://isocpp.org/std/status",
+  "first_released": "1998-09-01"
+}

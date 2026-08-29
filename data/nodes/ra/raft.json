@@ -1,0 +1,35 @@
+{
+  "id": "raft",
+  "name": "Raft",
+  "display_primary": "Raft",
+  "display_secondary": "Raft 共识算法",
+  "aliases": [
+    "Raft 共识算法",
+    "Raft 算法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "consensus"
+    }
+  ],
+  "summary": "通过选举与复制日志达成强一致的共识算法。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2014-06-19",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://raft.github.io"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "julia",
+  "name": "Julia",
+  "aliases": [
+    "Julia 语言"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "languages_runtimes",
+    "ai_data_science"
+  ],
+  "domains": [
+    "programming-languages",
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "python",
+      "context": "科学计算赛道"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "r"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "matlab"
+    }
+  ],
+  "summary": "科学计算语言，想要 Python 的易用与 C 的速度。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2012-02-14",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://julialang.org"
+}

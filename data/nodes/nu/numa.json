@@ -1,0 +1,28 @@
+{
+  "id": "numa",
+  "name": "NUMA",
+  "display_primary": "NUMA",
+  "display_secondary": "非一致内存访问",
+  "aliases": [
+    "非一致内存访问"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "high-performance-computing",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "内存访问延迟随节点距离变化，绑核与分配必须感知拓扑。",
+  "importance": 3,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

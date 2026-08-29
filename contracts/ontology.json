@@ -18,6 +18,13 @@
     { "id": "metric", "name": "Metric", "aliases": ["度量", "指标", "性能指标"], "summary": "量化与性能指标的分类根。", "parents": ["meta-concept"], "relations": [], "entity_type": "metric", "importance": 4 },
     { "id": "model-family", "name": "Model Family", "aliases": ["大模型", "模型族", "算法族"], "summary": "AI 大模型与算法族的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "model_family", "importance": 5 },
     { "id": "product", "name": "Product", "aliases": ["产品", "商业产品"], "summary": "商业软硬件产品与服务的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "product", "importance": 4 },
+    { "id": "hardware-product", "name": "Hardware Product", "aliases": ["硬件产品"], "summary": "芯片、整机与加速卡等可采购硬件。", "parents": ["product"], "relations": [] },
+    { "id": "saas", "name": "SaaS", "aliases": ["软件即服务"], "summary": "面向终端用户的完整在线应用，按订阅交付。", "parents": ["product"], "relations": [] },
+    { "id": "maas", "name": "MaaS", "aliases": ["模型即服务", "Model as a Service"], "summary": "以 API 出售模型推理或微调，产品即模型调用本身。", "parents": ["product"], "relations": [] },
+    { "id": "textbook", "name": "Textbook", "aliases": ["教材", "教科书"], "summary": "有稳定版次、被课程广泛采用的技术书籍。", "parents": ["product"], "relations": [] },
+    { "id": "tutorial", "name": "Tutorial", "aliases": ["教程"], "summary": "官方入门或长篇系列教程，有稳定入口。", "parents": ["product"], "relations": [] },
+    { "id": "course", "name": "Course", "aliases": ["课程"], "summary": "有课时结构的系统课程。", "parents": ["product"], "relations": [] },
+    { "id": "documentation", "name": "Documentation", "aliases": ["文档", "手册"], "summary": "语言或系统的权威参考手册。", "parents": ["product"], "relations": [] },
     { "id": "organization", "name": "Organization", "aliases": ["组织", "机构", "公司"], "summary": "公司、基金会与标准组织的分类根。", "parents": ["meta-organization"], "relations": [], "entity_type": "organization", "importance": 4 },
     { "id": "person", "name": "Person", "aliases": ["人物"], "summary": "产业与技术人物的分类根。", "parents": ["meta-organization"], "relations": [], "entity_type": "person", "importance": 3 },
 

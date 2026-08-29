@@ -1,0 +1,28 @@
+{
+  "id": "check-point",
+  "name": "Check Point",
+  "display_primary": "Check Point",
+  "display_secondary": "Check Point",
+  "aliases": [
+    "Check Point"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "网络安全公司，防火墙软件的早期主导者。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.checkpoint.com"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "citadel",
+  "name": "Citadel",
+  "display_primary": "Citadel",
+  "display_secondary": "Citadel",
+  "aliases": [
+    "Citadel"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "对冲基金与做市集团，量化技术栈的代表雇主。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.citadel.com"
+}

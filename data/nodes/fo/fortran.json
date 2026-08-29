@@ -1,0 +1,28 @@
+{
+  "id": "fortran",
+  "name": "Fortran",
+  "display_primary": "Fortran",
+  "aliases": [
+    "FORTRAN"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "为科学计算设计的数组语言，HPC 与数值库的历史内核。",
+  "importance": 3,
+  "official_site": "https://fortran-lang.org"
+}

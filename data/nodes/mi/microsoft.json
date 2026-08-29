@@ -1,0 +1,29 @@
+{
+  "id": "microsoft",
+  "name": "Microsoft",
+  "display_primary": "Microsoft",
+  "display_secondary": "微软",
+  "aliases": [
+    "微软"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "dotnet-ecosystem",
+    "windows-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "Windows 与 .NET 的东家，TypeScript 与 GitHub 的控制者。",
+  "importance": 5,
+  "official_site": "https://www.microsoft.com",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

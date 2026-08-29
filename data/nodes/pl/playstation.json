@@ -1,0 +1,38 @@
+{
+  "id": "playstation",
+  "name": "PlayStation",
+  "aliases": [
+    "PlayStation",
+    "PS5"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "graphics_gaming",
+    "hardware_iot"
+  ],
+  "domains": [
+    "game-development",
+    "graphics"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "sony"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "x86-64"
+    }
+  ],
+  "summary": "索尼的主机游戏平台。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.playstation.com"
+}

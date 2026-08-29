@@ -1,0 +1,40 @@
+{
+  "id": "elasticsearch",
+  "name": "Elasticsearch",
+  "aliases": [
+    "Elasticsearch"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "elastic"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "jvm"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vector-database"
+    }
+  ],
+  "summary": "Elastic 的分布式搜索与分析引擎。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.elastic.co/elasticsearch/",
+  "first_released": "2010-02-08"
+}

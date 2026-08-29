@@ -1,0 +1,36 @@
+{
+  "id": "x86-64",
+  "name": "x86-64",
+  "display_primary": "x86-64",
+  "aliases": [
+    "AMD64",
+    "x64"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "x86-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "amd"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "intel"
+    }
+  ],
+  "summary": "桌面与服务器占主导的 CISC 指令集，CSAPP 的实验机器。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

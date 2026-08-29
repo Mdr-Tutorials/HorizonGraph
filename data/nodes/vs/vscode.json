@@ -1,0 +1,43 @@
+{
+  "id": "vscode",
+  "name": "VS Code",
+  "aliases": [
+    "Visual Studio Code",
+    "VSCode"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "typescript"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "cursor"
+    }
+  ],
+  "summary": "微软的开源代码编辑器，Electron 上的主力 IDE。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "display_primary": "VS Code",
+  "official_site": "https://code.visualstudio.com",
+  "first_released": "2015-04-29"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "jvm",
+  "name": "Java Virtual Machine",
+  "display_primary": "JVM",
+  "display_secondary": "Java 虚拟机",
+  "aliases": [
+    "Java 虚拟机"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtual-machine"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "oracle"
+    }
+  ],
+  "summary": "Java 字节码的运行时，靠 JIT 与垃圾回收把托管代码跑上硬件。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

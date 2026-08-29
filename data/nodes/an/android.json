@@ -1,0 +1,45 @@
+{
+  "id": "android",
+  "name": "Android",
+  "aliases": [
+    "安卓"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "android-ecosystem",
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "harmonyos"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "hyperos"
+    }
+  ],
+  "summary": "Google 的移动操作系统，Linux 内核上的应用生态。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.android.com",
+  "first_released": "2008-09-23"
+}

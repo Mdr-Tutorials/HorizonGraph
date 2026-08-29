@@ -1,0 +1,35 @@
+{
+  "id": "tomahawk",
+  "name": "Tomahawk",
+  "aliases": [
+    "Broadcom Tomahawk"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "networking_security",
+    "hardware_iot"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "broadcom"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "nvidia-h100"
+    }
+  ],
+  "summary": "博通的 Tomahawk 交换芯片系列。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

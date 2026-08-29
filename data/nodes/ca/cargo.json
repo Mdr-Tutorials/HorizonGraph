@@ -1,0 +1,19 @@
+{
+  "id": "cargo",
+  "name": "Cargo",
+  "aliases": ["Rust Cargo", "Cargo 包管理器"],
+  "type": "tool",
+  "ecosystems": ["rust-ecosystem"],
+  "domains": ["systems-programming", "devops"],
+  "abstraction_level": "application_tool",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "tool" },
+    { "relation_type": "depends_on", "target_id": "rust" }
+  ],
+  "summary": "Rust 官方构建与包管理器。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://doc.rust-lang.org/cargo/"
+}

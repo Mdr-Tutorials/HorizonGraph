@@ -1,0 +1,28 @@
+{
+  "id": "juniper",
+  "name": "Juniper Networks",
+  "display_primary": "Juniper",
+  "display_secondary": "瞻博网络",
+  "aliases": [
+    "瞻博网络"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "networking_security"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "运营商与数据中心网络设备公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.juniper.net"
+}

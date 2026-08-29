@@ -1,0 +1,34 @@
+{
+  "id": "ocaml",
+  "name": "OCaml",
+  "aliases": [
+    "OCaml 语言"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "languages_runtimes",
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "quantitative-finance"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "jane-street-core"
+    }
+  ],
+  "summary": "ML 语言的工业落点，Jane Street 的主技术栈。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1996-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://ocaml.org"
+}

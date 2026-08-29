@@ -1,0 +1,29 @@
+{
+  "id": "naver",
+  "name": "Naver",
+  "display_primary": "Naver",
+  "display_secondary": "Naver",
+  "aliases": [
+    "Naver"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "韩国搜索与互联网公司，HyperCLOVA 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.navercorp.com"
+}

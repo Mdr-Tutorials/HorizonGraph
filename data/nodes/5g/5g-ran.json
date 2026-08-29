@@ -1,0 +1,30 @@
+{
+  "id": "5g-ran",
+  "name": "5G RAN",
+  "aliases": [
+    "5G 无线接入网"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "mobile-network-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ip"
+    }
+  ],
+  "summary": "5G 无线接入网的基站与无线架构。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

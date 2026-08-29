@@ -1,0 +1,28 @@
+{
+  "id": "zscaler",
+  "name": "Zscaler",
+  "display_primary": "Zscaler",
+  "display_secondary": "Zscaler",
+  "aliases": [
+    "Zscaler"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "zero-trust-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "零信任安全接入云公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.zscaler.com"
+}

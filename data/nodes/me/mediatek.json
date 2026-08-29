@@ -1,0 +1,29 @@
+{
+  "id": "mediatek",
+  "name": "MediaTek",
+  "display_primary": "MediaTek",
+  "display_secondary": "联发科",
+  "aliases": [
+    "联发科"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "arm-ecosystem",
+    "android-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "手机与电视 SoC 公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.mediatek.com"
+}

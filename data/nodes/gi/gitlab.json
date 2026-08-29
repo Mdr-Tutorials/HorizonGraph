@@ -1,0 +1,29 @@
+{
+  "id": "gitlab",
+  "name": "GitLab",
+  "display_primary": "GitLab",
+  "display_secondary": "GitLab",
+  "aliases": [
+    "GitLab"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "git-ecosystem",
+    "cicd-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "代码托管与 DevOps 平台公司，GitHub 的主要对手。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://about.gitlab.com"
+}

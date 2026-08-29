@@ -1,0 +1,27 @@
+{
+  "id": "git-object-model",
+  "name": "Git Object Model",
+  "display_primary": "Git 对象模型",
+  "display_secondary": "Git Object Model",
+  "aliases": [
+    "blob tree commit"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "blob、tree、commit、tag 构成内容寻址的快照图。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

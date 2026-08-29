@@ -1,0 +1,27 @@
+{
+  "id": "syscall",
+  "name": "System Call",
+  "display_primary": "系统调用",
+  "display_secondary": "syscall",
+  "aliases": [
+    "系统调用"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用户态进入内核的受控门：开文件、mmap、clone 都走这里。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

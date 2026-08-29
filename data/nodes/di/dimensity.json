@@ -1,0 +1,39 @@
+{
+  "id": "dimensity",
+  "name": "Dimensity",
+  "aliases": [
+    "天玑"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "arm-ecosystem",
+    "android-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mediatek"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "arm"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "snapdragon"
+    }
+  ],
+  "summary": "联发科的天玑移动 SoC 产品线。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

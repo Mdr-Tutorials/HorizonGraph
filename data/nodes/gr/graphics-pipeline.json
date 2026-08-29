@@ -1,0 +1,27 @@
+{
+  "id": "graphics-pipeline",
+  "name": "Graphics Pipeline",
+  "display_primary": "图形管线",
+  "display_secondary": "Graphics Pipeline",
+  "aliases": [
+    "渲染管线"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "graphics-api-ecosystem"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "顶点进、像素出：变换、光栅、着色、测试按固定阶段推进。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

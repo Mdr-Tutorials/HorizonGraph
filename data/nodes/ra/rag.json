@@ -1,0 +1,28 @@
+{
+  "id": "rag",
+  "name": "Retrieval-Augmented Generation",
+  "display_primary": "RAG",
+  "display_secondary": "检索增强生成",
+  "aliases": [
+    "检索增强生成"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "先检索再生成，把外部文档接到语言模型的上下文里。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

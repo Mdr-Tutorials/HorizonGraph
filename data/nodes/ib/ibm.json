@@ -1,0 +1,30 @@
+{
+  "id": "ibm",
+  "name": "IBM",
+  "display_primary": "IBM",
+  "display_secondary": "IBM",
+  "aliases": [
+    "IBM",
+    "国际商业机器"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "cloud_native",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "企业计算公司，Red Hat 与大型机的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://www.ibm.com"
+}

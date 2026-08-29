@@ -1,0 +1,28 @@
+{
+  "id": "minimax",
+  "name": "MiniMax",
+  "display_primary": "MiniMax",
+  "display_secondary": "MiniMax",
+  "aliases": [
+    "MiniMax"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "海螺与语音生成大模型的研发公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.minimax.io"
+}

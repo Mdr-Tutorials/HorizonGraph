@@ -1,0 +1,33 @@
+{
+  "id": "pdf",
+  "name": "PDF",
+  "aliases": [
+    "便携文档格式"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "w3c-standards-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "adobe"
+    }
+  ],
+  "summary": "Adobe 发明的便携文档格式，ISO 32000 标准。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.iso.org/standard/75839.html",
+  "first_released": "1993-06-15"
+}

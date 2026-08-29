@@ -1,0 +1,28 @@
+{
+  "id": "workday",
+  "name": "Workday",
+  "display_primary": "Workday",
+  "display_secondary": "Workday",
+  "aliases": [
+    "Workday"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "人力资源与财务云软件公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.workday.com"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "metabit",
+  "name": "Metabit",
+  "display_primary": "Metabit",
+  "display_secondary": "乾象投资",
+  "aliases": [
+    "乾象投资",
+    "Metabit Trading"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "quantitative-finance",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "以 AI 为核心的量化投资机构，在云上构建投研平台。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://juicefs.com/zh-cn/quantitative-trading/metabit-with-juicefs"
+}

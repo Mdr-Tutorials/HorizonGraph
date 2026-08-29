@@ -1,0 +1,29 @@
+{
+  "id": "html",
+  "name": "HTML",
+  "display_primary": "HTML",
+  "aliases": [
+    "超文本标记语言"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "w3c-standards-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "描述网页结构的标记语言，浏览器把它变成 DOM。",
+  "importance": 5,
+  "official_site": "https://html.spec.whatwg.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

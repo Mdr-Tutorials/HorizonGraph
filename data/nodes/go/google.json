@@ -1,0 +1,31 @@
+{
+  "id": "google",
+  "name": "Google",
+  "display_primary": "Google",
+  "display_secondary": "谷歌",
+  "aliases": [
+    "谷歌",
+    "Alphabet"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "cloud_native",
+    "web_frontend"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "搜索起家的科技公司，Android、Chrome、Go 与 Kubernetes 的源头。",
+  "importance": 5,
+  "official_site": "https://www.google.com",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

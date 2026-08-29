@@ -1,0 +1,19 @@
+{
+  "id": "prolog",
+  "name": "Prolog",
+  "aliases": ["Prolog 语言"],
+  "type": "language",
+  "ecosystems": ["languages_runtimes"],
+  "domains": ["programming-languages", "formal-methods"],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "language" },
+    { "relation_type": "implements", "target_id": "programming-paradigm", "context": "逻辑编程范式的代表实现" }
+  ],
+  "summary": "逻辑编程语言，早期 AI 的主角。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1972-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

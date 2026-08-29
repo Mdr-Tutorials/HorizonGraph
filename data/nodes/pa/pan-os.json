@@ -1,0 +1,39 @@
+{
+  "id": "pan-os",
+  "name": "PAN-OS",
+  "aliases": [
+    "PAN-OS"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "palo-alto-networks"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tls"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux"
+    }
+  ],
+  "summary": "Palo Alto 的下一代防火墙操作系统。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

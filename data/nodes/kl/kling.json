@@ -1,0 +1,39 @@
+{
+  "id": "kling",
+  "name": "Kling",
+  "aliases": [
+    "可灵"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "kuaishou"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pytorch"
+    }
+  ],
+  "summary": "快手的可灵视频生成大模型族。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

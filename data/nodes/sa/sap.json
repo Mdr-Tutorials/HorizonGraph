@@ -1,0 +1,28 @@
+{
+  "id": "sap",
+  "name": "SAP",
+  "display_primary": "SAP",
+  "display_secondary": "SAP",
+  "aliases": [
+    "SAP"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "德国企业软件公司，ERP 的事实标准之一。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.sap.com"
+}

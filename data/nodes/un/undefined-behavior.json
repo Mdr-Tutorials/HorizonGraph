@@ -1,0 +1,28 @@
+{
+  "id": "undefined-behavior",
+  "name": "Undefined Behavior",
+  "display_primary": "UB",
+  "display_secondary": "未定义行为",
+  "aliases": [
+    "未定义行为"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "compilers"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "标准拒绝规定的程序状态，编译器可任意优化甚至消除检查。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

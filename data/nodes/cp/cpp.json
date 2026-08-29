@@ -1,13 +1,33 @@
 {
   "id": "cpp",
   "name": "C++",
-  "aliases": ["C++ 语言", "Cplusplus", "cpp 语言"],
+  "aliases": [
+    "C++ 语言",
+    "Cplusplus",
+    "cpp 语言"
+  ],
   "type": "language",
-  "ecosystems": ["native-cpp-ecosystem"],
-  "domains": ["systems-programming", "programming-languages"],
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "language" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "rust"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "memory-model"
+    }
   ],
   "summary": "系统级静态编译语言，兼顾性能抽象与底层控制。",
   "status": "active",

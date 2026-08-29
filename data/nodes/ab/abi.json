@@ -1,0 +1,28 @@
+{
+  "id": "abi",
+  "name": "Application Binary Interface",
+  "display_primary": "ABI",
+  "display_secondary": "应用二进制接口",
+  "aliases": [
+    "应用二进制接口"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "compilers",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "函数如何传参、谁清栈、符号如何命名的机器级公约。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

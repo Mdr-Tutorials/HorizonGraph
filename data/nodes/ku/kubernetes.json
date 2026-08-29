@@ -1,0 +1,42 @@
+{
+  "id": "kubernetes",
+  "name": "Kubernetes",
+  "display_primary": "Kubernetes",
+  "aliases": [
+    "k8s"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "etcd"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "cncf"
+    }
+  ],
+  "summary": "容器编排系统，声明式管理集群中的工作负载与网络。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2014-06-07",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://kubernetes.io"
+}

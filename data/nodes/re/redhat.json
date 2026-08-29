@@ -1,0 +1,30 @@
+{
+  "id": "redhat",
+  "name": "Red Hat",
+  "display_primary": "Red Hat",
+  "display_secondary": "红帽",
+  "aliases": [
+    "红帽"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "systems-programming",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "企业 Linux 与 OpenShift 公司，现属 IBM。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.redhat.com"
+}

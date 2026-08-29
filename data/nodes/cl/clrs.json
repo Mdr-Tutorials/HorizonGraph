@@ -1,0 +1,46 @@
+{
+  "id": "clrs",
+  "name": "Introduction to Algorithms",
+  "display_primary": "CLRS",
+  "display_secondary": "算法导论",
+  "aliases": [
+    "算法导论",
+    "Introduction to Algorithms"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "thomas-cormen"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "charles-leiserson"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "ronald-rivest"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "clifford-stein"
+    }
+  ],
+  "summary": "覆盖算法设计与分析的标准教材，以四位作者姓氏缩写得名。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/"
+}

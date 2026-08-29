@@ -1,0 +1,47 @@
+{
+  "id": "docker",
+  "name": "Docker",
+  "display_primary": "Docker",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cgroup"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "namespace"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "docker-inc"
+    }
+  ],
+  "summary": "把进程、文件系统与网络打成容器的开发者工具。",
+  "importance": 5,
+  "official_site": "https://www.docker.com",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

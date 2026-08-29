@@ -1,0 +1,42 @@
+{
+  "id": "transformers",
+  "name": "Transformers",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "huggingface"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pytorch"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    }
+  ],
+  "summary": "Hugging Face 的模型库，预训练权重的通用加载器。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://huggingface.co/docs/transformers"
+}

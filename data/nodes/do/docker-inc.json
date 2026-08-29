@@ -1,0 +1,29 @@
+{
+  "id": "docker-inc",
+  "name": "Docker, Inc.",
+  "display_primary": "Docker, Inc.",
+  "display_secondary": "Docker 公司",
+  "aliases": [
+    "Docker 公司"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "virtualization-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "容器开发者工具 Docker 的商业公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.docker.com"
+}

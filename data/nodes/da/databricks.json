@@ -1,0 +1,30 @@
+{
+  "id": "databricks",
+  "name": "Databricks",
+  "display_primary": "Databricks",
+  "display_secondary": "Databricks",
+  "aliases": [
+    "Databricks"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "湖仓一体与 Spark 商业化公司，MosaicML 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.databricks.com"
+}

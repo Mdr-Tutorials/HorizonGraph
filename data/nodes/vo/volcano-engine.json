@@ -1,0 +1,35 @@
+{
+  "id": "volcano-engine",
+  "name": "Volcano Engine",
+  "aliases": [
+    "火山引擎"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "bytedance"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kubernetes"
+    }
+  ],
+  "summary": "字节跳动旗下云平台，推荐与视频能力对外。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.volcengine.com"
+}

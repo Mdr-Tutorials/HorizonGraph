@@ -1,0 +1,40 @@
+{
+  "id": "cohere-command",
+  "name": "Command",
+  "aliases": [
+    "Command"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "cohere"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "rag"
+    }
+  ],
+  "summary": "Cohere 的企业生成模型族，主打检索增强。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://cohere.com"
+}

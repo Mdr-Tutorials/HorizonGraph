@@ -18,7 +18,7 @@ const cat = taxonomy.find((t) => t.id === id);
 const children = taxonomy.filter((t) => (t.parents ?? []).includes(id));
 const instances = (cat?.instances ?? [])
   .map((i: number) => {
-    const l = labelOf(nodes[i]?.[0] ?? "", nodes[i]?.[1], nodes[i]?.[10] ?? [], nodes[i]?.[12] ?? "", nodes[i]?.[13] ?? "");
+    const l = labelOf(nodes[i]?.[0] ?? "", nodes[i]?.[1], nodes[i]?.[10] ?? [], nodes[i]?.[12] ?? "", nodes[i]?.[13] ?? "", nodes[i]?.[2]);
     return {
       id: ids[i],
       primary: l.primary,

@@ -1,0 +1,27 @@
+{
+  "id": "ronald-rivest",
+  "name": "Ronald L. Rivest",
+  "display_primary": "Ronald L. Rivest",
+  "display_secondary": "罗纳德·李维斯特",
+  "aliases": [
+    "罗纳德·李维斯特"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "networking_security"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "CLRS 作者之一，RSA 算法共同发明人。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

@@ -1,0 +1,28 @@
+{
+  "id": "sql",
+  "name": "SQL",
+  "display_primary": "SQL",
+  "aliases": [
+    "Structured Query Language"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "关系数据库的声明式查询与模式语言，方言林立。",
+  "importance": 5,
+  "official_site": "https://www.iso.org/standard/76583.html"
+}

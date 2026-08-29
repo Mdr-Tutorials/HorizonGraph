@@ -1,0 +1,27 @@
+{
+  "id": "public-key-cryptography",
+  "name": "Public-Key Cryptography",
+  "display_primary": "公钥密码",
+  "display_secondary": "Public-Key Cryptography",
+  "aliases": [
+    "非对称密码"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "加密与签名用不同的钥匙，TLS 与区块链账户都建立在它上面。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

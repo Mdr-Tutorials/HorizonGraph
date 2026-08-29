@@ -1,0 +1,34 @@
+{
+  "id": "cpp-14",
+  "name": "C++14",
+  "display_primary": "C++14",
+  "aliases": [
+    "ISO/IEC 14882:2014"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "cpp"
+    }
+  ],
+  "summary": "C++11 的小幅增强：泛型 lambda、变量模板与 make_unique。",
+  "status": "active",
+  "importance": 4,
+  "official_site": "https://isocpp.org/std/status",
+  "first_released": "2014-12-15"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "tcp",
+  "name": "Transmission Control Protocol",
+  "display_primary": "TCP",
+  "aliases": [
+    "传输控制协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "transport-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ip"
+    }
+  ],
+  "summary": "面向连接的可靠字节流，拥塞控制长在内核里。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

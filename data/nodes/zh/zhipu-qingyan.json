@@ -7,7 +7,7 @@
   "domains": ["machine-learning", "natural-language-processing"],
   "abstraction_level": "application_tool",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "product" },
+    { "relation_type": "is_instance_of", "target_id": "saas" },
     { "relation_type": "developed_by", "target_id": "zhipu-ai" }
   ],
   "summary": "智谱 AI 的消费级对话助手，由 GLM 系列模型驱动。",

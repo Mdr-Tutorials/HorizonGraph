@@ -1,0 +1,28 @@
+{
+  "id": "baichuan",
+  "name": "Baichuan AI",
+  "display_primary": "Baichuan AI",
+  "display_secondary": "百川智能",
+  "aliases": [
+    "百川智能"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "百川系列大模型的研发公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.baichuan-ai.com"
+}

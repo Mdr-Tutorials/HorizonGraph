@@ -1,0 +1,41 @@
+{
+  "id": "snowflake-data-cloud",
+  "name": "Snowflake",
+  "aliases": [
+    "Snowflake 数据云"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "snowflake"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "s3"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "acid"
+    }
+  ],
+  "summary": "Snowflake 的云数据仓库服务。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.snowflake.com"
+}

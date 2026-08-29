@@ -1,0 +1,33 @@
+{
+  "id": "photoshop",
+  "name": "Photoshop",
+  "aliases": [
+    "PS"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "graphics",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "adobe"
+    }
+  ],
+  "summary": "Adobe 的位图图像编辑软件。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.adobe.com",
+  "first_released": "1990-02-19"
+}

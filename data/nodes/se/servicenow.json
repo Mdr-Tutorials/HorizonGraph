@@ -1,0 +1,28 @@
+{
+  "id": "servicenow",
+  "name": "ServiceNow",
+  "display_primary": "ServiceNow",
+  "display_secondary": "ServiceNow",
+  "aliases": [
+    "ServiceNow"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "企业工作流与 IT 服务管理云公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.servicenow.com"
+}

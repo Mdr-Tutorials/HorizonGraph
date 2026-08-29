@@ -1,0 +1,33 @@
+{
+  "id": "namespace",
+  "name": "Linux Namespaces",
+  "display_primary": "namespace",
+  "display_secondary": "命名空间",
+  "aliases": [
+    "Linux 命名空间"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    }
+  ],
+  "summary": "把 PID、挂载、网络等隔离成容器的内核原语。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

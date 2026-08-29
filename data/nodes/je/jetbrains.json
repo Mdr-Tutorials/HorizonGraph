@@ -1,0 +1,28 @@
+{
+  "id": "jetbrains",
+  "name": "JetBrains",
+  "display_primary": "JetBrains",
+  "display_secondary": "JetBrains",
+  "aliases": [
+    "JetBrains"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "IDE 公司，IntelliJ、PyCharm 与 Kotlin 的东家。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.jetbrains.com"
+}

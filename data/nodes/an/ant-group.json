@@ -1,0 +1,29 @@
+{
+  "id": "ant-group",
+  "name": "Ant Group",
+  "display_primary": "Ant Group",
+  "display_secondary": "蚂蚁集团",
+  "aliases": [
+    "蚂蚁集团",
+    "蚂蚁金服"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "支付宝背后的金融科技集团。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.antgroup.com"
+}

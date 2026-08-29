@@ -1,0 +1,28 @@
+{
+  "id": "memory-model",
+  "name": "Memory Model",
+  "display_primary": "内存模型",
+  "display_secondary": "Memory Model",
+  "aliases": [
+    "内存模型"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    }
+  ],
+  "summary": "并发下读写如何可见、重排到何处为止的语言规则。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

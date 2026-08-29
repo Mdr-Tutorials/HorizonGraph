@@ -1,0 +1,32 @@
+{
+  "id": "tpu",
+  "name": "Tensor Processing Unit",
+  "display_primary": "TPU",
+  "aliases": [
+    "张量处理单元"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "Google 为矩阵运算定制的加速芯片，训练与推理都能跑。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

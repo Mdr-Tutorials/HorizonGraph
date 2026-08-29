@@ -1,0 +1,27 @@
+{
+  "id": "process",
+  "name": "Process",
+  "display_primary": "进程",
+  "display_secondary": "Process",
+  "aliases": [
+    "进程与线程"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    }
+  ],
+  "summary": "资源与地址空间的隔离单位；线程共享其内存但各有栈与现场。",
+  "importance": 5,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "cgroup",
+  "name": "cgroup",
+  "display_primary": "cgroup",
+  "display_secondary": "控制组",
+  "aliases": [
+    "控制组",
+    "cgroups"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    }
+  ],
+  "summary": "Linux 用来限制与计量一组进程的 CPU、内存与 IO。",
+  "importance": 4,
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

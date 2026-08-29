@@ -1,0 +1,38 @@
+{
+  "id": "nokia-airscale",
+  "name": "AirScale",
+  "aliases": [
+    "Nokia AirScale"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "mobile-network-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nokia"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "5g-ran"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "zte-unirran"
+    }
+  ],
+  "summary": "诺基亚的 5G 基站无线接入产品线。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3
+}

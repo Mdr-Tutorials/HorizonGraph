@@ -1,0 +1,30 @@
+{
+  "id": "vulkan",
+  "name": "Vulkan",
+  "display_primary": "Vulkan",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "graphics-api-ecosystem"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "graphics-pipeline"
+    }
+  ],
+  "summary": "Khronos 的显式图形与计算 API，把同步和内存交给应用。",
+  "importance": 4,
+  "official_site": "https://www.vulkan.org",
+  "last_reviewed": "2026-08-29",
+  "origin": "curated",
+  "status": "active"
+}

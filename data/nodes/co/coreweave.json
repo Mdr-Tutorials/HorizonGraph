@@ -1,0 +1,30 @@
+{
+  "id": "coreweave",
+  "name": "CoreWeave",
+  "display_primary": "CoreWeave",
+  "display_secondary": "CoreWeave",
+  "aliases": [
+    "CoreWeave"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "gpu-computing",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "面向 GPU 训练与推理的专用云。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.coreweave.com"
+}

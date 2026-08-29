@@ -43,7 +43,7 @@
 - 日期一律 `YYYY-MM-DD`
 - summary：中文，50 字以内
 - name：英文/官方原名；中文译名与俗称进 aliases
-- 术语显示全站统一两段式（主名 + 副名，样式仅字号随位置变化）：`display_primary` / `display_secondary` 手动优先，设置任一即完全接管两段；未设置时推导——有中文名（首个含中文的别名）主名 = 中文名、副名 = 英文名；无中文名时主名 = 英文简称（无简称用英文名）、副名 = 英文全称（主名即全称则留空）
+- 术语显示全站统一两段式（主名 + 副名，样式仅字号随位置变化）：`display_primary` / `display_secondary` 手动优先，设置任一即完全接管两段；未设置时——组织类主名 = 英文/官方原名、副名 = 首个中文别名；其余有中文名则主名 = 中文名、副名 = 英文名；无中文名则主名 = 英文简称（无简称用英文名）、副名 = 英文全称（主名即全称则留空）
 - aliases 中第一个中文别名即显示主名，录入时把最佳中文名排在最前
 - description：Markdown，L2 懒加载
 - official_site：官方规范、标准提案或权威主页
@@ -52,6 +52,7 @@
 
 - 身份由 id 承担，id 跨全图唯一；name/abbreviation/aliases 允许同名，同名异物是正常现象
 - 名称易混或冲突时，slug 自带限定词：`glm-llm-zhipu`（智谱大模型）、`glm-stat-model`（统计模型）、`apache-spark`、`spark-framework`
+- 先例：公司本体与产品同名时产品加限定词——`gitlab-ci`、`mongodb-database`、`snowflake-data-cloud`、`okta-idp`、`coinbase-exchange`、`binance-exchange`、`palantir-foundry`、`datadog-platform`、`coreweave-cloud`、`metabit-platform`；多义专名按生态分词——`baidu-apollo`（为 GraphQL Apollo 留 `apollo-graphql`）、`iflytek-spark`（`spark` 留给 Apache Spark）、`jane-street-core`、`deepseek-llm`
 - 搜索命中多个节点时返回全部命中，以 type、生态、summary 区分；检索层动态匹配，不设消歧登记
 - 同词同物（重复实体）由审校合并；slug 与别名近似检测列入百万级批量管线
 
@@ -73,7 +74,11 @@
 ## 8. 邻域展示契约
 
 - 邻域单表示：不渲染画布、不画边
-- 词条页全部关系收于单一“关系”栏，每行 = 关系名 + 客体术语（两段式），正向用 display、反向用 inverse_display
+- 词条页「属于 / 版本 / 子分类」三块并列，其余进「关系」栏；每行 = 关系名 + 客体术语（两段式）
+- 「属于」汇集 is_instance_of、version_of 母体、part_of，同一栏可多项
+- 持有 version_of 的节点：「属于」显示母体，「版本」显示同一母体下的全部版本（含自身，按 id 字典序；当前项禁用链接）；is_instance_of 分类挂载不进「属于」
+- 「子分类」只收本体节点的反向包含，数据节点的 part_of 反向进「关系」
+
 - 排序：关系优先级，同级按 importance 降序、id 字典序；超过阈值折叠
 - 引用态词条只显示主名与副名；完整信息只在词条自身页面出现
 - 页面元素只保留内容相关项：无装饰边框、无底色面板、无意义文案；结构靠间距与字重表达
@@ -85,3 +90,12 @@
 1. 在 ontology.json 增加节点：类型根必填 entity_type，中间分类按需覆写，超根声明数组
 2. 子分类以 `parents` 数组指向上级，多亲 DAG——一个分类可属多个上级；挂载一致性由 CI 校验（源 type ∈ 目标分类生效 entity_type 集合，生效集为各 parent 链的并集）；CI 校验无环
 3. ontology.json 语义化版本号随变更提升：新增分类为 minor，结构调整（移动/删除）为 major
+
+## 10. 理论域挂载规则
+
+本体理论域分类（type-system、deep-learning、distributed-systems、concurrency-theory、programming-paradigm）按源类型分流：
+
+- 源是 concept / metric → `is_instance_of`（attention-mechanism → deep-learning）
+- 源是工程工件（language / framework / library / tool / architecture / product…）→ `implements`（haskell implements type-system、prolog implements programming-paradigm、erlang implements concurrency-theory）
+
+反方向不落图：理论对工件的约束写在理论节点叙述里，「被实现」由 build 从 implements 的 inverse 渲染。

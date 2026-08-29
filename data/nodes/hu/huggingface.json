@@ -1,0 +1,29 @@
+{
+  "id": "huggingface",
+  "name": "Hugging Face",
+  "display_primary": "Hugging Face",
+  "display_secondary": "Hugging Face",
+  "aliases": [
+    "Hugging Face"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "开源模型与数据集的托管平台公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://huggingface.co"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "metabit-platform",
+  "name": "MetaBit Platform",
+  "aliases": [
+    "MetaBit Platform"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "quantitative-finance"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "metabit"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "juicefs"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kubernetes"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pytorch"
+    }
+  ],
+  "summary": "Metabit 的量化研究与交易云平台。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "display_primary": "MetaBit"
+}

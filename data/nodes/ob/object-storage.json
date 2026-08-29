@@ -1,0 +1,29 @@
+{
+  "id": "object-storage",
+  "name": "Object Storage",
+  "display_primary": "对象存储",
+  "display_secondary": "Object Storage",
+  "aliases": [
+    "对象存储"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "以对象为原子、经 HTTP 寻址的海量存储模型。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Object_storage"
+}

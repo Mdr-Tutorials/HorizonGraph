@@ -5,10 +5,13 @@ export function labelOf(
   abbr: string | undefined,
   aliases: string[],
   displayPrimary?: string,
-  displaySecondary?: string
+  displaySecondary?: string,
+  type?: string
 ): { primary: string; secondary: string } {
   if (displayPrimary) return { primary: displayPrimary, secondary: displaySecondary ?? "" };
   const zh = (aliases ?? []).find((a) => CJK.test(a));
+  if (type === "organization")
+    return { primary: name, secondary: zh && zh !== name ? zh : "" };
   if (zh) return { primary: zh, secondary: name };
   if (abbr && abbr !== name) return { primary: abbr, secondary: name };
   return { primary: name, secondary: "" };

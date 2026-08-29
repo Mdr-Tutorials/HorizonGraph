@@ -45,7 +45,7 @@ export async function search(q: string): Promise<{ terms: Hit[]; nav: Hit[] }> {
       if (String(id).includes(query)) score += 6;
       if (score > 0) {
         const rec = b.nodes[idx] ?? [];
-        const l = labelOf(String(name), abbr, aliases ?? [], String(rec[12] ?? ""), String(rec[13] ?? ""));
+        const l = labelOf(String(name), abbr, aliases ?? [], String(rec[12] ?? ""), String(rec[13] ?? ""), String(type ?? ""));
         hits.push({
           idx,
           id,

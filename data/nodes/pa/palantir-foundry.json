@@ -1,0 +1,36 @@
+{
+  "id": "palantir-foundry",
+  "name": "Foundry",
+  "aliases": [
+    "Palantir Foundry"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "enterprise-apps-ecosystem",
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "palantir"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "Palantir 的企业数据操作系统平台。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.palantir.com"
+}

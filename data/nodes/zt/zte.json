@@ -1,0 +1,29 @@
+{
+  "id": "zte",
+  "name": "ZTE",
+  "display_primary": "ZTE",
+  "display_secondary": "中兴",
+  "aliases": [
+    "中兴",
+    "中兴通讯"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "mobile-network-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "电信设备与终端公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.zte.com.cn"
+}

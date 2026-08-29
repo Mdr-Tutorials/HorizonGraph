@@ -1,0 +1,38 @@
+{
+  "id": "delta-lake",
+  "name": "Delta Lake",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "databricks"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "acid"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "s3"
+    }
+  ],
+  "summary": "Databricks 的湖仓存储层，给对象存储加 ACID。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://delta.io"
+}

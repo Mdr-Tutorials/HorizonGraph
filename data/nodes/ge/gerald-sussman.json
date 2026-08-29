@@ -1,0 +1,27 @@
+{
+  "id": "gerald-sussman",
+  "name": "Gerald Jay Sussman",
+  "display_primary": "Gerald Jay Sussman",
+  "display_secondary": "杰拉尔德·杰伊·萨斯曼",
+  "aliases": [
+    "杰拉尔德·杰伊·萨斯曼"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "MIT 教授，SICP 作者之一。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 4
+}

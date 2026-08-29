@@ -1,0 +1,38 @@
+{
+  "id": "haskell",
+  "name": "Haskell",
+  "aliases": [
+    "Haskell 语言"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "formal-methods"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "type-system",
+      "context": "Haskell 是现代类型系统理论的工程化标本"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "ocaml"
+    }
+  ],
+  "summary": "惰性纯函数式语言，类型系统的学术标杆。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "1990-01-01",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://www.haskell.org"
+}

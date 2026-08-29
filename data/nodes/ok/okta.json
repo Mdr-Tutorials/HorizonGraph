@@ -1,0 +1,29 @@
+{
+  "id": "okta",
+  "name": "Okta",
+  "display_primary": "Okta",
+  "display_secondary": "Okta",
+  "aliases": [
+    "Okta"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "iam-ecosystem",
+    "zero-trust-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "身份与访问管理云公司。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 3,
+  "official_site": "https://www.okta.com"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "wasi",
+  "name": "WebAssembly System Interface",
+  "display_primary": "WASI",
+  "display_secondary": "WebAssembly 系统接口",
+  "aliases": [
+    "WebAssembly 系统接口"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "webassembly-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "wasm"
+    }
+  ],
+  "summary": "Wasm 的系统接口，让模块调用文件、时钟与套接字。",
+  "status": "active",
+  "origin": "curated",
+  "first_released": "2019-03-27",
+  "last_reviewed": "2026-08-29",
+  "importance": 4,
+  "official_site": "https://wasi.dev"
+}
