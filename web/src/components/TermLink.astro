@@ -1,5 +1,6 @@
 ---
-// 全站统一的术语行：主名（tone 色加粗）+ 副名（紫色）；行距由使用方 li 控制
+// 术语链接（自由 href，生态/分类页用）：主名（tone 色）+ 副名（紫色）
+// 术语样式唯一真源：改字重/字体/间距只改这里与 web/src/lib/ui.ts
 const { href, primary, secondary, tone = "ink" } = Astro.props as {
   href: string;
   primary: string;
@@ -14,6 +15,6 @@ const TONE: Record<string, string> = {
 };
 ---
 <a href={href} class="inline-block w-fit py-1 text-ink-2 hover:text-accent hover:underline no-underline">
-  <span class={`font-term font-semibold ${TONE[tone] ?? TONE.ink}`}>{primary}</span>
+  <span class={`font-term font-medium ${TONE[tone] ?? TONE.ink}`}>{primary}</span>
   {secondary && <span class="font-term text-sm text-secondary-name">{secondary}</span>}
 </a>

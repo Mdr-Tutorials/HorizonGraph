@@ -89,7 +89,7 @@ onUnmounted(() => {
             @click="go(h)"
             @mousemove="sel = i"
           >
-            <span class="font-term font-semibold" :class="TXT[h.realm] ?? TXT.technical">{{ h.primary }}</span>
+            <span class="font-term font-medium" :class="TXT[h.realm] ?? TXT.technical">{{ h.primary }}</span>
             <span v-if="h.secondary" class="font-term text-sm text-secondary-name">{{ h.secondary }}</span>
           </button>
         </template>
@@ -103,7 +103,7 @@ onUnmounted(() => {
             @click="go(h)"
             @mousemove="sel = hits.terms.length + i"
           >
-            <span class="font-term font-semibold" :class="TXT[h.realm] ?? TXT.technical">{{ h.primary }}</span>
+            <span class="font-term font-medium" :class="TXT[h.realm] ?? TXT.technical">{{ h.primary }}</span>
             <span v-if="h.secondary" class="font-term text-sm text-secondary-name">{{ h.secondary }}</span>
           </button>
         </template>

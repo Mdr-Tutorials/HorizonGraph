@@ -22,15 +22,15 @@
 :root {
   color-scheme: dark;
   --c-page: #0c0e12;
-  --c-ink: #e8ebf1;
-  --c-ink-2: #a9b0bd;
-  --c-ink-3: #747c8b;
-  --c-line: #222733;
-  --c-secondary-name: #a491f2;
-  --c-realm-tech: #3987e5;
-  --c-realm-industry: #e06a38;
-  --c-realm-concept: #199e70;
-  --c-accent: #3987e5;
+  --c-ink: #f2f4f8;
+  --c-ink-2: #c3c9d4;
+  --c-ink-3: #8b93a3;
+  --c-line: #2a3040;
+  --c-secondary-name: #cdadff;
+  --c-realm-tech: #82b4ff;
+  --c-realm-industry: #ff9e5e;
+  --c-realm-concept: #2ee6a4;
+  --c-accent: #82b4ff;
 }
 
 :root[data-theme="light"] {
@@ -75,4 +75,11 @@ a {
 /* 两段式术语：主名与副名间距恒定，不依赖模板空白符 */
 .text-secondary-name {
   margin-left: 0.375rem;
+}
+
+/* 词条网格：列数随视口自适应（每列最小 16rem，弹性填满） */
+.term-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
+  gap: 0 1.5rem;
 }

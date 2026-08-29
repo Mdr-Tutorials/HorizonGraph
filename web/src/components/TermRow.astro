@@ -1,4 +1,7 @@
 ---
+// 全站统一的术语引用：主名（realm 色见 ui.ts TXT）+ 副名（紫色）
+// 术语样式唯一真源：改字重/字体/间距只改这里与 web/src/lib/ui.ts
+import { TXT } from "../lib/ui";
 const { id, primary, secondary, realm } = Astro.props as {
   id: string;
   primary: string;
@@ -6,13 +9,8 @@ const { id, primary, secondary, realm } = Astro.props as {
   realm?: string;
 };
 const B = import.meta.env.BASE_URL;
-const TXT: Record<string, string> = {
-  technical: "text-realm-tech",
-  industrial: "text-realm-industry",
-  conceptual: "text-realm-concept",
-};
 ---
 <a href={`${B}term/${id}`} class="inline-block w-fit py-1 hover:underline no-underline">
-  <span class={`font-term font-semibold ${TXT[realm ?? "technical"] ?? TXT.technical}`}>{primary}</span>
+  <span class={`font-term font-medium ${TXT[realm ?? "technical"] ?? TXT.technical}`}>{primary}</span>
   {secondary && <span class="font-term text-sm text-secondary-name">{secondary}</span>}
 </a>

@@ -113,7 +113,7 @@ function toggle() {
         <ul class="mt-2">
           <li v-for="r in navRows" :key="r.entry.id" class="py-1">
             <a :href="href(r.entry)" class="w-fit hover:underline no-underline">
-              <span class="font-term font-semibold text-realm-concept">{{ r.entry.primary }}</span>
+              <span class="font-term font-medium text-realm-concept">{{ r.entry.primary }}</span>
               <span v-if="r.entry.secondary" class="font-term text-sm text-secondary-name">{{ r.entry.secondary }}</span>
             </a>
           </li>
@@ -126,11 +126,11 @@ function toggle() {
         <ul class="mt-2">
           <li v-for="r in verRows" :key="r.entry.id" class="py-1">
             <a v-if="r.entry.id !== id" :href="href(r.entry)" class="w-fit hover:underline no-underline">
-              <span class="font-term font-semibold" :class="TXT[r.entry.realm] ?? TXT.technical">{{ r.entry.primary }}</span>
+              <span class="font-term font-medium" :class="TXT[r.entry.realm] ?? TXT.technical">{{ r.entry.primary }}</span>
               <span v-if="r.entry.secondary" class="font-term text-sm text-secondary-name">{{ r.entry.secondary }}</span>
             </a>
             <span v-else class="w-fit">
-              <span class="font-term font-semibold" :class="TXT[r.entry.realm] ?? TXT.technical">{{ r.entry.primary }}</span>
+              <span class="font-term font-medium" :class="TXT[r.entry.realm] ?? TXT.technical">{{ r.entry.primary }}</span>
               <span v-if="r.entry.secondary" class="font-term text-sm text-secondary-name">{{ r.entry.secondary }}</span>
             </span>
           </li>
@@ -143,7 +143,7 @@ function toggle() {
         <ul class="mt-2">
           <li v-for="r in kinRows" :key="r.entry.id" class="py-1">
             <a :href="href(r.entry)" class="w-fit hover:underline no-underline">
-              <span class="font-term font-semibold text-realm-concept">{{ r.entry.primary }}</span>
+              <span class="font-term font-medium text-realm-concept">{{ r.entry.primary }}</span>
               <span v-if="r.entry.secondary" class="font-term text-sm text-secondary-name">{{ r.entry.secondary }}</span>
             </a>
           </li>
@@ -155,11 +155,11 @@ function toggle() {
       <h2 class="text-sm font-semibold text-ink-2">
         关系<span class="font-mono text-xs font-normal text-ink-3 ml-2">{{ relRows.length }}</span>
       </h2>
-      <ul class="mt-2">
+      <ul class="term-grid mt-2">
         <li v-for="r in visible()" :key="r.label + r.entry.id" class="py-1">
           <a :href="href(r.entry)" class="inline-flex items-baseline gap-3 w-fit hover:underline no-underline">
             <span class="w-16 shrink-0 text-sm text-ink-3">{{ r.label }}</span>
-            <span class="font-term font-semibold" :class="TXT[r.entry.realm] ?? TXT.technical">{{ r.entry.primary }}</span>
+            <span class="font-term font-medium" :class="TXT[r.entry.realm] ?? TXT.technical">{{ r.entry.primary }}</span>
             <span v-if="r.entry.secondary" class="font-term text-sm text-secondary-name">{{ r.entry.secondary }}</span>
           </a>
         </li>

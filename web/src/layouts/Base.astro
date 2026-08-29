@@ -10,36 +10,45 @@ import "@fontsource/mona-sans/600.css";
 import "@fontsource/mona-sans/700.css";
 import "../styles/tokens.css";
 import SearchPalette from "../components/SearchPalette.vue";
-import { Search, SunMoon } from "@lucide/astro";
+import { Search, SunMoon, Info } from "@lucide/astro";
 const { title = "HorizonGraph" } = Astro.props;
 const B = import.meta.env.BASE_URL;
 const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/harmony-sc-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/harmony-sc-700.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}`;
 ---
+
 <!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <style set:html={fontCss} />
+    <style set:html={fontCss}></style>
     <script is:inline>
       const t = localStorage.getItem("hg-theme");
       if (t) document.documentElement.dataset.theme = t;
       requestAnimationFrame(() => {
-        const mac = /Mac|iP(hone|ad|od)/.test(navigator.platform || navigator.userAgent);
-        document.querySelectorAll(".hg-mod").forEach((el) => (el.textContent = mac ? "⌘" : "Ctrl"));
+        const mac = /Mac|iP(hone|ad|od)/.test(
+          navigator.platform || navigator.userAgent,
+        );
+        document
+          .querySelectorAll(".hg-mod")
+          .forEach((el) => (el.textContent = mac ? "⌘" : "Ctrl"));
       });
     </script>
   </head>
   <body class="bg-page text-ink min-h-screen antialiased">
     <header class="px-6 lg:px-10 pt-6 flex items-center gap-5">
-      <a href={B} class="font-brand text-4xl leading-none no-underline text-ink">HorizonGraph</a>
+      <a href={B} class="font-brand text-4xl leading-none no-underline text-ink"
+        >HorizonGraph</a
+      >
       <button
         id="hg-search"
         class="ml-auto inline-flex items-baseline gap-1 text-sm text-ink-2 hover:text-ink cursor-pointer bg-transparent border-0 p-0"
       >
         <Search size={15} class="self-center" />
-        <span>搜索</span><span class="font-mono pl-2 text-xs text-ink-3"><span class="hg-mod">⌘</span>&#8201;K</span>
+        <span>搜索</span><span class="font-mono pl-2 text-xs text-ink-3"
+          ><span class="hg-mod">⌘</span>&#8201;K</span
+        >
       </button>
       <button
         id="hg-theme"
@@ -48,17 +57,73 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
       >
         <SunMoon size={15} />
       </button>
+      <button
+        id="hg-info"
+        class="text-ink-3 hover:text-ink-2 cursor-pointer bg-transparent border-0 p-0"
+        aria-label="关于"
+      >
+        <Info size={15} />
+      </button>
     </header>
     <main class="px-6 lg:px-10 py-10">
       <slot />
     </main>
     <SearchPalette client:load />
+    <dialog
+      id="hg-info-dialog"
+      class="fixed m-auto w-fit max-w-[90vw] rounded-lg border border-line bg-page p-6 text-ink shadow-lg backdrop:bg-black/40 open:flex open:flex-col open:gap-4"
+    >
+      <div class="flex items-baseline justify-between gap-10">
+        <a
+          href={B}
+          class="font-brand text-4xl leading-none no-underline text-ink"
+          >HorizonGraph</a
+        >
+        <button
+          id="hg-info-close"
+          class="text-ink-3 hover:text-ink cursor-pointer bg-transparent border-0 p-0"
+          aria-label="关闭"
+        >
+          ×
+        </button>
+      </div>
+      <p class="text-sm text-ink-2 m-0">
+        面向大学生与从业者的计算机领域知识图谱。感谢 <a
+          href="https://github.com/metapursuit"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-ink-2 hover:text-ink underline underline-offset-2">MetaPursuit</a
+        > 对本项目的支持。
+      </p>
+      <p class="text-sm text-ink-2 m-0">
+        By <a
+          href="https://github.com/Minsecrus"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-ink-2 hover:text-ink underline underline-offset-2">Minsecrus</a
+        > · <a
+          href="https://github.com/Mdr-Tutorials/HorizonGraph"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-ink-2 hover:text-ink underline underline-offset-2">GitHub</a>
+      </p>
+    </dialog>
     <script is:inline>
+      const infoBtn = document.getElementById("hg-info");
+      const infoDialog = document.getElementById("hg-info-dialog");
+      infoBtn?.addEventListener("click", () => infoDialog?.showModal());
+      infoDialog?.addEventListener("click", (e) => {
+        if (e.target === infoDialog) infoDialog.close();
+      });
+      document
+        .getElementById("hg-info-close")
+        ?.addEventListener("click", () => infoDialog?.close());
       document.getElementById("hg-theme")?.addEventListener("click", () => {
         const el = document.documentElement;
         const light =
           el.dataset.theme === "light" ||
-          (!el.dataset.theme && matchMedia("(prefers-color-scheme: light)").matches);
+          (!el.dataset.theme &&
+            matchMedia("(prefers-color-scheme: light)").matches);
         el.dataset.theme = light ? "dark" : "light";
         localStorage.setItem("hg-theme", el.dataset.theme);
       });
