@@ -1,0 +1,35 @@
+{
+  "version": "0.4.0",
+  "note": "分类骨架：全部非叶子节点在此，数据平面不出现。层级用 parents 数组（多亲 DAG，一个分类可属多个上级）；锚点间元叙事为普通关系边。生效 entity_type 沿 parent 祖先解析。",
+  "nodes": [
+    { "id": "meta-concept", "name": "Theory, Concept & Metric", "aliases": ["理论概念", "理论与度量"], "summary": "理论、范式与度量概念的顶层骨架。", "relations": [ { "relation_type": "governs", "target_id": "meta-architecture" } ], "entity_type": ["concept", "metric"], "importance": 5 },
+    { "id": "meta-architecture", "name": "Architecture", "aliases": ["系统架构", "物理与逻辑组织"], "summary": "软硬件系统物理与逻辑组织方式的顶层骨架。", "relations": [ { "relation_type": "depends_on", "target_id": "meta-protocol" } ], "entity_type": ["architecture"], "importance": 5 },
+    { "id": "meta-protocol", "name": "Protocol & Specification", "aliases": ["协议与规范"], "summary": "通信、交互与数据交换标准约定的顶层骨架。", "relations": [], "entity_type": ["protocol"], "importance": 5 },
+    { "id": "meta-organization", "name": "Organization & Person", "aliases": ["产业主体", "机构与人物"], "summary": "研发与推动技术的企业、实验室与基金会的顶层骨架。", "relations": [], "entity_type": ["organization", "person"], "importance": 5 },
+    { "id": "meta-artifact", "name": "Artifact & Product", "aliases": ["产品与实体", "工件"], "summary": "可运行软件、硬件、模型与工具的顶层骨架。", "relations": [ { "relation_type": "developed_by", "target_id": "meta-organization" }, { "relation_type": "implements", "target_id": "meta-protocol" }, { "relation_type": "implements", "target_id": "meta-architecture" } ], "entity_type": ["language", "framework", "library", "tool", "model_family", "product"], "importance": 5 },
+
+    { "id": "theory", "name": "Theory & Paradigm", "aliases": ["理论", "理论与范式"], "summary": "理论、定理、范式与方法论概念的分类根。", "parents": ["meta-concept"], "relations": [], "entity_type": "concept", "importance": 5 },
+    { "id": "protocol", "name": "Protocol", "aliases": ["协议", "通信协议"], "summary": "通信与数据交换协议的分类根。", "parents": ["meta-protocol"], "relations": [], "entity_type": "protocol", "importance": 5 },
+    { "id": "language", "name": "Programming Language", "aliases": ["编程语言", "语言"], "summary": "编程语言与 DSL 的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "language", "importance": 5 },
+    { "id": "framework", "name": "Framework", "aliases": ["框架", "应用框架"], "summary": "应用与系统框架的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "framework", "importance": 5 },
+    { "id": "library", "name": "Library", "aliases": ["库", "类库", "组件库"], "summary": "工具库、SDK 与组件的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "library", "importance": 5 },
+    { "id": "tool", "name": "Tool", "aliases": ["工具", "工具链"], "summary": "CLI、构建与运维工具的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "tool", "importance": 5 },
+    { "id": "platform", "name": "Platform & Architecture", "aliases": ["平台与体系结构", "体系结构", "执行环境"], "summary": "执行环境、虚拟机与硬件体系结构的分类根。", "parents": ["meta-architecture"], "relations": [], "entity_type": "architecture", "importance": 5 },
+    { "id": "metric", "name": "Metric", "aliases": ["度量", "指标", "性能指标"], "summary": "量化与性能指标的分类根。", "parents": ["meta-concept"], "relations": [], "entity_type": "metric", "importance": 4 },
+    { "id": "model-family", "name": "Model Family", "aliases": ["大模型", "模型族", "算法族"], "summary": "AI 大模型与算法族的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "model_family", "importance": 5 },
+    { "id": "product", "name": "Product", "aliases": ["产品", "商业产品"], "summary": "商业软硬件产品与服务的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "product", "importance": 4 },
+    { "id": "organization", "name": "Organization", "aliases": ["组织", "机构", "公司"], "summary": "公司、基金会与标准组织的分类根。", "parents": ["meta-organization"], "relations": [], "entity_type": "organization", "importance": 4 },
+    { "id": "person", "name": "Person", "aliases": ["人物"], "summary": "产业与技术人物的分类根。", "parents": ["meta-organization"], "relations": [], "entity_type": "person", "importance": 3 },
+
+    { "id": "transport-protocol", "name": "Transport Protocol", "aliases": ["传输协议", "传输层协议"], "summary": "传输层与端到端传输协议。", "parents": ["protocol"], "relations": [] },
+    { "id": "application-protocol", "name": "Application Protocol", "aliases": ["应用层协议"], "summary": "应用层协议与会话协议。", "parents": ["protocol"], "relations": [] },
+    { "id": "distributed-systems", "name": "Distributed Systems", "aliases": ["分布式系统"], "summary": "分布式系统的理论与设计域，governs 边的典型目标。", "parents": ["theory"], "relations": [] },
+    { "id": "concurrency-theory", "name": "Concurrency Theory", "aliases": ["并发理论", "并发"], "summary": "并发与并行计算理论。", "parents": ["theory"], "relations": [] },
+    { "id": "programming-paradigm", "name": "Programming Paradigm", "aliases": ["编程范式", "范式"], "summary": "编程范式与方法论。", "parents": ["theory"], "relations": [] },
+    { "id": "type-system", "name": "Type System", "aliases": ["类型系统", "类型论"], "summary": "类型系统与类型理论。", "parents": ["theory"], "relations": [] },
+    { "id": "deep-learning", "name": "Deep Learning", "aliases": ["深度学习"], "summary": "深度学习理论与方法。", "parents": ["theory"], "relations": [] },
+    { "id": "llm", "name": "Large Language Model", "aliases": ["大语言模型", "LLM"], "summary": "大语言模型族。", "parents": ["model-family"], "relations": [], "importance": 5 },
+    { "id": "gpu", "name": "GPU", "aliases": ["图形处理器", "GPU 硬件"], "summary": "GPU 硬件产品线，实例为 product 类型。", "parents": ["platform"], "relations": [], "entity_type": "product", "importance": 5 },
+    { "id": "virtual-machine", "name": "Virtual Machine & Runtime", "aliases": ["虚拟机", "运行时"], "summary": "虚拟机与语言运行时环境。", "parents": ["platform"], "relations": [], "importance": 4 }
+  ]
+}

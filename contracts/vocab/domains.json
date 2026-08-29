@@ -1,0 +1,26 @@
+{
+  "version": "0.1.0",
+  "policy": "登记制：新词随数据 PR 同步登记。CI 双向校验：数据出现未登记 value 即失败；登记项连续多个周期未被引用则告警。节点字段存储 value，en/zh 供展示。",
+  "entries": [
+    { "value": "systems-programming", "en": "Systems Programming", "zh": "系统编程" },
+    { "value": "compilers", "en": "Compilers", "zh": "编译器" },
+    { "value": "distributed-systems", "en": "Distributed Systems", "zh": "分布式系统" },
+    { "value": "machine-learning", "en": "Machine Learning", "zh": "机器学习" },
+    { "value": "natural-language-processing", "en": "Natural Language Processing", "zh": "自然语言处理" },
+    { "value": "computer-vision", "en": "Computer Vision", "zh": "计算机视觉" },
+    { "value": "databases", "en": "Databases", "zh": "数据库" },
+    { "value": "networking", "en": "Networking", "zh": "网络" },
+    { "value": "security", "en": "Security", "zh": "安全" },
+    { "value": "graphics", "en": "Graphics", "zh": "图形学" },
+    { "value": "game-development", "en": "Game Development", "zh": "游戏开发" },
+    { "value": "embedded-systems", "en": "Embedded Systems", "zh": "嵌入式系统" },
+    { "value": "web-development", "en": "Web Development", "zh": "Web 开发" },
+    { "value": "devops", "en": "DevOps", "zh": "运维与交付" },
+    { "value": "cloud-infrastructure", "en": "Cloud Infrastructure", "zh": "云基础设施" },
+    { "value": "high-performance-computing", "en": "High-Performance Computing", "zh": "高性能计算" },
+    { "value": "programming-languages", "en": "Programming Languages", "zh": "程序设计语言" },
+    { "value": "quantitative-finance", "en": "Quantitative Finance", "zh": "量化金融" },
+    { "value": "formal-methods", "en": "Formal Methods", "zh": "形式化方法" },
+    { "value": "human-computer-interaction", "en": "Human-Computer Interaction", "zh": "人机交互" }
+  ]
+}

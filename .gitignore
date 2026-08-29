@@ -1,0 +1,7 @@
+node_modules/
+dist/
+tools/src/contracts.gen.ts
+web/src/generated/
+*.log
+.DS_Store
+web/.astro/

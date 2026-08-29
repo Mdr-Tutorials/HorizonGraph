@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0",
+  "policy": "登记制：新词随数据 PR 同步登记，CI 双向校验同 domains。value 即展示值。",
+  "entries": [
+    { "value": "cpp20", "zh": "C++20" },
+    { "value": "cpp23", "zh": "C++23" },
+    { "value": "metaprogramming", "zh": "元编程" },
+    { "value": "generics", "zh": "泛型" },
+    { "value": "compiler", "zh": "编译器" },
+    { "value": "async", "zh": "异步" },
+    { "value": "concurrency", "zh": "并发" },
+    { "value": "memory-model", "zh": "内存模型" },
+    { "value": "inference", "zh": "推理" },
+    { "value": "training", "zh": "训练" },
+    { "value": "embedding", "zh": "嵌入表示" },
+    { "value": "quantization", "zh": "量化" },
+    { "value": "vectorization", "zh": "向量化" },
+    { "value": "batching", "zh": "批处理" },
+    { "value": "zero-copy", "zh": "零拷贝" },
+    { "value": "jit", "zh": "即时编译" },
+    { "value": "gc", "zh": "垃圾回收" },
+    { "value": "wasi", "zh": "WASI" },
+    { "value": "open-source", "zh": "开源" }
+  ]
+}

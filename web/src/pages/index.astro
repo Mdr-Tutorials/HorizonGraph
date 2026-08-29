@@ -1,0 +1,30 @@
+---
+import Base from "../layouts/Base.astro";
+import TermLink from "../components/TermLink.astro";
+import { readFileSync } from "node:fs";
+import { Boxes, Globe } from "@lucide/astro";
+
+const wv = JSON.parse(readFileSync(new URL("../../../dist/site/worldview.json", import.meta.url), "utf8"));
+const ecoVocab = JSON.parse(readFileSync(new URL("../../../contracts/vocab/ecosystems.json", import.meta.url), "utf8"));
+const B = import.meta.env.BASE_URL;
+const roots = ecoVocab.entries.filter((e: any) => !(e.parents ?? []).length);
+---
+<Base title="HorizonGraph">
+  <section>
+    <h2 class="flex items-center gap-2 text-sm font-semibold text-ink-2"><Boxes size={15} />五维骨架</h2>
+    <ul class="mt-2">
+      {wv.anchors.map((a: any) => (
+        <li><TermLink href={`${B}cat/${a.id}`} primary={a.zh || a.name} secondary={a.name} tone="concept" /></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="flex items-center gap-2 text-sm font-semibold text-ink-2"><Globe size={15} />十大生态圈</h2>
+    <ul class="mt-2">
+      {roots.map((e: any) => (
+        <li><TermLink href={`${B}eco/${e.value}`} primary={e.zh} secondary={e.en} tone="tech" /></li>
+      ))}
+    </ul>
+  </section>
+</Base>

@@ -1,0 +1,17 @@
+{
+  "id": "zhipu-ai",
+  "name": "Zhipu AI",
+  "aliases": ["智谱 AI", "智谱华章", "Zhipu"],
+  "type": "organization",
+  "ecosystems": ["llm-agent-ecosystem"],
+  "domains": ["machine-learning"],
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "organization" }
+  ],
+  "summary": "源自清华 KEG 的大模型公司，GLM 系列的研发方。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://zhipuai.cn"
+}

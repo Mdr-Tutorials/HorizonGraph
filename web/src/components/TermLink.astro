@@ -1,0 +1,19 @@
+---
+// 全站统一的术语行：主名（tone 色加粗）+ 副名（紫色）；行距由使用方 li 控制
+const { href, primary, secondary, tone = "ink" } = Astro.props as {
+  href: string;
+  primary: string;
+  secondary?: string;
+  tone?: string;
+};
+const TONE: Record<string, string> = {
+  ink: "text-ink",
+  tech: "text-realm-tech",
+  industry: "text-realm-industry",
+  concept: "text-realm-concept",
+};
+---
+<a href={href} class="inline-block w-fit py-1 text-ink-2 hover:text-accent hover:underline no-underline">
+  <span class={`font-term font-semibold ${TONE[tone] ?? TONE.ink}`}>{primary}</span>
+  {secondary && <span class="font-term text-sm text-secondary-name">{secondary}</span>}
+</a>

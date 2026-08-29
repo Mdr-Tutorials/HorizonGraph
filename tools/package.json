@@ -1,0 +1,19 @@
+{
+  "name": "@horizon/tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gen": "tsx src/gen/generate.ts",
+    "validate": "tsx src/validate/run.ts",
+    "build": "tsx src/build/run.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "@lobehub/webfont-harmony-sans-sc": "^1.0.0",
+    "subset-font": "^2.6.0"
+  }
+}

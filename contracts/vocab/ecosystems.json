@@ -1,0 +1,78 @@
+{
+  "version": "0.1.0",
+  "policy": "树形注册表：10 个根（宏观层）为闭集，变更走 major 版本；根以下深度开放、随数据 PR 登记。parents 可多亲（DAG）；CI 校验无环且所有链路终于根。节点字段 ecosystems 只声明所属圈层，任意层级可命名，祖先与宏观归属由 build 派生。blurb / maintainers 可选，供生态页叙事。生态与本体的分界：生态回答“谁在这个圈里”，本体回答“这是什么”；成员含组织、人物等产业主体时建生态，清一色同类型实体优先考虑本体分类。",
+  "entries": [
+    { "value": "languages_runtimes", "en": "Languages & Runtimes", "zh": "编程语言与运行时", "parents": [] },
+    { "value": "operating_systems", "en": "Operating Systems & Kernels", "zh": "操作系统与内核", "parents": [] },
+    { "value": "cloud_native", "en": "Cloud Native & Infrastructure", "zh": "云原生与基础设施", "parents": [] },
+    { "value": "web_frontend", "en": "Web & Frontend Platforms", "zh": "Web 与前端技术平台", "parents": [] },
+    { "value": "ai_data_science", "en": "AI, Data Science & Databases", "zh": "AI、数据科学与数据库", "parents": [] },
+    { "value": "hardware_iot", "en": "Hardware, Embedded & IoT", "zh": "硬件架构、嵌入式与 IoT", "parents": [] },
+    { "value": "graphics_gaming", "en": "Graphics & Game Development", "zh": "图形渲染与游戏开发", "parents": [] },
+    { "value": "networking_security", "en": "Networking & Security", "zh": "网络通信与网络安全", "parents": [] },
+    { "value": "devops_tooling", "en": "Software Engineering & DevOps Tooling", "zh": "软件工程与 DevOps 工具链", "parents": [] },
+    { "value": "enterprise_industry", "en": "Enterprise & Industry Applications", "zh": "企业与行业应用", "parents": [] },
+
+    { "value": "jvm-ecosystem", "en": "JVM & Java Ecosystem", "zh": "JVM 生态", "parents": ["languages_runtimes"] },
+    { "value": "dotnet-ecosystem", "en": ".NET Ecosystem", "zh": ".NET 生态", "parents": ["languages_runtimes"] },
+    { "value": "node-js-ecosystem", "en": "Node.js & JavaScript Ecosystem", "zh": "Node.js 与 JavaScript 生态", "parents": ["languages_runtimes"] },
+    { "value": "rust-ecosystem", "en": "Rust Ecosystem", "zh": "Rust 生态", "parents": ["languages_runtimes"] },
+    { "value": "python-ecosystem", "en": "Python Ecosystem", "zh": "Python 生态", "parents": ["languages_runtimes"] },
+    { "value": "go-ecosystem", "en": "Go Ecosystem", "zh": "Go 生态", "parents": ["languages_runtimes"] },
+    { "value": "native-cpp-ecosystem", "en": "Native C/C++ Ecosystem", "zh": "原生 C/C++ 生态", "parents": ["languages_runtimes"] },
+
+    { "value": "linux-gnu-ecosystem", "en": "Linux/GNU Ecosystem", "zh": "Linux/GNU 生态", "parents": ["operating_systems"], "maintainers": ["Linux Foundation"] },
+    { "value": "windows-ecosystem", "en": "Windows Ecosystem", "zh": "Windows 生态", "parents": ["operating_systems"] },
+    { "value": "macos-darwin-ecosystem", "en": "macOS/Darwin Ecosystem", "zh": "macOS/Darwin 生态", "parents": ["operating_systems"] },
+    { "value": "android-ecosystem", "en": "Android Ecosystem", "zh": "Android 生态", "parents": ["operating_systems"] },
+    { "value": "ios-ecosystem", "en": "iOS Ecosystem", "zh": "iOS 生态", "parents": ["operating_systems"] },
+    { "value": "rtos-ecosystem", "en": "RTOS Ecosystem", "zh": "实时操作系统生态", "parents": ["operating_systems"] },
+    { "value": "harmonyos-ecosystem", "en": "HarmonyOS Ecosystem", "zh": "HarmonyOS 生态", "parents": ["operating_systems"] },
+
+    { "value": "kubernetes-ecosystem", "en": "Kubernetes Ecosystem", "zh": "Kubernetes 生态", "parents": ["cloud_native"] },
+    { "value": "public-cloud-ecosystem", "en": "Public Cloud Ecosystem", "zh": "公有云生态", "parents": ["cloud_native"] },
+    { "value": "iac-ecosystem", "en": "Infrastructure as Code Ecosystem", "zh": "基础设施即代码生态", "parents": ["cloud_native"] },
+    { "value": "virtualization-ecosystem", "en": "Virtualization Ecosystem", "zh": "虚拟化生态", "parents": ["cloud_native"] },
+
+    { "value": "w3c-standards-ecosystem", "en": "W3C Standards Ecosystem", "zh": "W3C 标准生态", "parents": ["web_frontend"] },
+    { "value": "webassembly-ecosystem", "en": "WebAssembly Ecosystem", "zh": "WebAssembly 生态", "parents": ["web_frontend", "languages_runtimes"] },
+    { "value": "browser-engine-ecosystem", "en": "Browser Engine Ecosystem", "zh": "浏览器引擎生态", "parents": ["web_frontend"] },
+    { "value": "pwa-ecosystem", "en": "PWA Ecosystem", "zh": "PWA 生态", "parents": ["web_frontend"] },
+    { "value": "modern-web-frameworks-ecosystem", "en": "Modern Web Frameworks Ecosystem", "zh": "现代 Web 框架生态", "parents": ["web_frontend"] },
+
+    { "value": "open-source-ai-ecosystem", "en": "Open-Source AI Ecosystem", "zh": "开源 AI 生态", "parents": ["ai_data_science"] },
+    { "value": "llm-agent-ecosystem", "en": "LLM & Agent Ecosystem", "zh": "大模型与 Agent 生态", "parents": ["ai_data_science"] },
+    { "value": "dl-framework-ecosystem", "en": "Deep Learning Frameworks Ecosystem", "zh": "深度学习框架生态", "parents": ["ai_data_science"] },
+    { "value": "big-data-ecosystem", "en": "Big Data Ecosystem", "zh": "大数据生态", "parents": ["ai_data_science"] },
+    { "value": "database-ecosystem", "en": "Database Ecosystem", "zh": "数据库生态", "parents": ["ai_data_science"] },
+
+    { "value": "x86-ecosystem", "en": "x86 Ecosystem", "zh": "x86 生态", "parents": ["hardware_iot"] },
+    { "value": "arm-ecosystem", "en": "ARM Ecosystem", "zh": "ARM 生态", "parents": ["hardware_iot"] },
+    { "value": "risc-v-ecosystem", "en": "RISC-V Ecosystem", "zh": "RISC-V 生态", "parents": ["hardware_iot"] },
+    { "value": "embedded-ecosystem", "en": "Embedded Ecosystem", "zh": "嵌入式生态", "parents": ["hardware_iot"] },
+    { "value": "robotics-ecosystem", "en": "Robotics Ecosystem", "zh": "机器人生态", "parents": ["hardware_iot"] },
+    { "value": "gpu-computing", "en": "GPU Computing Ecosystem", "zh": "GPU 计算生态", "parents": ["hardware_iot", "ai_data_science"] },
+
+    { "value": "unreal-engine-ecosystem", "en": "Unreal Engine Ecosystem", "zh": "Unreal Engine 生态", "parents": ["graphics_gaming"] },
+    { "value": "unity-ecosystem", "en": "Unity Ecosystem", "zh": "Unity 生态", "parents": ["graphics_gaming"] },
+    { "value": "graphics-api-ecosystem", "en": "Graphics APIs Ecosystem", "zh": "图形 API 生态", "parents": ["graphics_gaming"] },
+    { "value": "rendering-ecosystem", "en": "3D Rendering Ecosystem", "zh": "3D 渲染生态", "parents": ["graphics_gaming"] },
+
+    { "value": "tcp-ip-ecosystem", "en": "TCP/IP Ecosystem", "zh": "TCP/IP 生态", "parents": ["networking_security"] },
+    { "value": "mobile-network-ecosystem", "en": "5G/6G Ecosystem", "zh": "移动网络生态", "parents": ["networking_security"] },
+    { "value": "cryptography-pki-ecosystem", "en": "Cryptography & PKI Ecosystem", "zh": "密码学与 PKI 生态", "parents": ["networking_security"] },
+    { "value": "zero-trust-ecosystem", "en": "Zero Trust Ecosystem", "zh": "零信任生态", "parents": ["networking_security"] },
+    { "value": "cybersecurity-ecosystem", "en": "Cybersecurity Ecosystem", "zh": "网络安全生态", "parents": ["networking_security"] },
+    { "value": "web3-blockchain-ecosystem", "en": "Web3 & Blockchain Ecosystem", "zh": "Web3 与区块链生态", "parents": ["networking_security"] },
+
+    { "value": "git-ecosystem", "en": "Git Ecosystem", "zh": "Git 生态", "parents": ["devops_tooling"] },
+    { "value": "cicd-ecosystem", "en": "CI/CD Ecosystem", "zh": "CI/CD 生态", "parents": ["devops_tooling"] },
+    { "value": "static-analysis-testing-ecosystem", "en": "Static Analysis & Testing Ecosystem", "zh": "静态分析与测试生态", "parents": ["devops_tooling"] },
+    { "value": "editor-ide-ecosystem", "en": "Editor & IDE Ecosystem", "zh": "编辑器与 IDE 生态", "parents": ["devops_tooling"] },
+
+    { "value": "enterprise-apps-ecosystem", "en": "Enterprise Apps (ERP/CRM) Ecosystem", "zh": "企业应用生态", "parents": ["enterprise_industry"] },
+    { "value": "iam-ecosystem", "en": "Identity & Access Management Ecosystem", "zh": "身份认证生态", "parents": ["enterprise_industry"] },
+    { "value": "collaboration-ecosystem", "en": "Collaboration Platform Ecosystem", "zh": "协同办公生态", "parents": ["enterprise_industry"] },
+    { "value": "fintech-ecosystem", "en": "FinTech Ecosystem", "zh": "金融科技生态", "parents": ["enterprise_industry"] }
+  ]
+}

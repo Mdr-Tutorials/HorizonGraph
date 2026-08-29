@@ -1,0 +1,13 @@
+{
+  "name": "horizongraph",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "gen": "pnpm -C tools gen",
+    "validate": "pnpm -C tools validate",
+    "build:data": "pnpm -C tools build",
+    "build": "pnpm gen && pnpm validate && pnpm build:data && pnpm -C web build",
+    "build:site": "pnpm -C web build",
+    "dev": "pnpm build:data && pnpm -C web dev"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "glm",
+  "name": "GLM",
+  "display_primary": "GLM",
+  "display_secondary": "通用语言模型",
+  "aliases": ["通用语言模型", "General Language Model"],
+  "type": "model_family",
+  "ecosystems": ["llm-agent-ecosystem"],
+  "domains": ["machine-learning", "natural-language-processing"],
+  "abstraction_level": "framework_library",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "llm" },
+    { "relation_type": "developed_by", "target_id": "zhipu-ai" },
+    { "relation_type": "powers", "target_id": "zhipu-qingyan" }
+  ],
+  "summary": "智谱 AI 研发的通用大模型家族，GLM-4 起具备智能体能力。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://open.bigmodel.cn"
+}

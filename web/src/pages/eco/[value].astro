@@ -1,0 +1,89 @@
+---
+import Base from "../../layouts/Base.astro";
+import TermRow from "../../components/TermRow.astro";
+import { REALM_OF } from "../../generated/contracts.gen";
+import { labelOf } from "../../lib/ui";
+import { json, has } from "../../lib/server";
+
+export function getStaticPaths() {
+  return json("contracts/vocab/ecosystems.json").entries.map((e: any) => ({ params: { value: e.value } }));
+}
+
+const { value } = Astro.params;
+const B = import.meta.env.BASE_URL;
+const ids: string[] = json("dist/graph/ids.json");
+const nodes: any[][] = json("dist/graph/nodes.json");
+const vocab = json("contracts/vocab/ecosystems.json");
+const data = has(`dist/site/ecosystems/${value}.json`) ? json(`dist/site/ecosystems/${value}.json`) : null;
+const ecoLabel = (v: string) => vocab.entries.find((e: any) => e.value === v);
+const members = (data?.members ?? [])
+  .map((i: number) => {
+    const l = labelOf(nodes[i]?.[0] ?? "", nodes[i]?.[1], nodes[i]?.[10] ?? [], nodes[i]?.[12] ?? "", nodes[i]?.[13] ?? "");
+    return {
+      id: ids[i],
+      primary: l.primary,
+      secondary: l.secondary,
+      realm: REALM_OF[nodes[i]?.[2]] ?? "technical",
+      importance: nodes[i]?.[4] ?? 0,
+    };
+  })
+  .sort((a: any, b: any) => b.importance - a.importance || (a.id < b.id ? -1 : 1));
+---
+<Base title={`${data?.zh ?? value} · 生态 · HorizonGraph`}>
+  <h1 class="text-2xl font-semibold flex items-baseline gap-3 flex-wrap">
+    <span class="font-term text-realm-tech">{data?.zh ?? value}</span>
+    {data?.en && <span class="font-term text-base font-normal text-secondary-name">{data.en}</span>}
+  </h1>
+  {data?.blurb && <p class="mt-4 leading-7 text-ink-2">{data.blurb}</p>}
+  {data?.maintainers?.length ? <p class="mt-2 text-sm text-ink-3">主导：{data.maintainers.join("、")}</p> : null}
+  {(data?.parents ?? []).length > 0 && (
+    <section class="mt-8">
+      <h2 class="text-sm font-semibold text-ink-2">
+        父生态<span class="font-mono text-xs font-normal text-ink-3 ml-2">{data!.parents.length}</span>
+      </h2>
+      <ul class="mt-2">
+        {data!.parents.map((p: string) => {
+          const pe = ecoLabel(p);
+          return (
+            <li>
+              <a href={`${B}eco/${p}`} class="inline-block w-fit py-1 hover:underline no-underline">
+                <span class="font-term font-semibold text-realm-tech">{pe?.zh ?? p}</span>
+                {pe?.en && <span class="font-term text-sm text-secondary-name">{pe.en}</span>}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  )}
+  {(data?.children ?? []).length > 0 && (
+    <section class="mt-8">
+      <h2 class="text-sm font-semibold text-ink-2">
+        子生态<span class="font-mono text-xs font-normal text-ink-3 ml-2">{data!.children.length}</span>
+      </h2>
+      <ul class="mt-2">
+        {data!.children.map((c: string) => {
+          const ce = ecoLabel(c);
+          return (
+            <li>
+              <a href={`${B}eco/${c}`} class="inline-block w-fit py-1 hover:underline no-underline">
+                <span class="font-term font-semibold text-realm-tech">{ce?.zh ?? c}</span>
+                {ce?.en && <span class="font-term text-sm text-secondary-name">{ce.en}</span>}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  )}
+  <section class="mt-8">
+    <h2 class="text-sm font-semibold text-ink-2">
+      成员<span class="font-mono text-xs font-normal text-ink-3 ml-2">{members.length}</span>
+    </h2>
+    <ul class="mt-2">
+      {members.map((m: any) => (
+        <li><TermRow {...m} /></li>
+      ))}
+    </ul>
+  </section>
+</Base>

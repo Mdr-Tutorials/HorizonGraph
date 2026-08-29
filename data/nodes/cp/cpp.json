@@ -1,0 +1,18 @@
+{
+  "id": "cpp",
+  "name": "C++",
+  "aliases": ["C++ 语言", "Cplusplus", "cpp 语言"],
+  "type": "language",
+  "ecosystems": ["native-cpp-ecosystem"],
+  "domains": ["systems-programming", "programming-languages"],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "language" }
+  ],
+  "summary": "系统级静态编译语言，兼顾性能抽象与底层控制。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-08-29",
+  "importance": 5,
+  "official_site": "https://isocpp.org/"
+}

@@ -1,0 +1,330 @@
+{
+  "schema_version": "3.5.0",
+  "source_of_truth": "TechTermSchema 唯一来源，tools/src/gen 从本文件生成 TS 类型与校验 schema。",
+  "layers": {
+    "L0": "首屏必载：搜索预览、悬浮卡片、邻域面板",
+    "L2": "懒加载：description，词条详情页点击后加载"
+  },
+  "enums": {
+    "EntityType": {
+      "meta_concept": "分类骨架节点，仅存在于 contracts/ontology.json，数据平面禁止出现",
+      "concept": "具象理论/特性概念，如 Closure、CAP Theorem、注意力机制",
+      "protocol": "通信/数据协议，如 HTTP/3、QUIC、FIX",
+      "language": "编程语言与 DSL，如 Rust、C++、SQL",
+      "framework": "应用/系统框架，如 Spring Boot、React",
+      "library": "工具库/SDK/组件，如 Tokio、PyTorch",
+      "tool": "CLI/构建/运维工具，如 Docker、pnpm、GCC",
+      "architecture": "执行环境/硬件体系/虚拟机架构，如 JVM、WebAssembly、RISC-V",
+      "metric": "量化与性能指标，如 FPS、Latency、TPS",
+      "model_family": "AI 大模型与算法族，如 GLM、Llama、GPT",
+      "product": "商业软硬件产品与服务，如 NVIDIA H100、AWS EC2",
+      "organization": "公司、基金会与标准组织，如 智谱 AI、CNCF、W3C",
+      "person": "产业与技术人物，如 Linus Torvalds"
+    },
+    "Realm": {
+      "conceptual": "概念与度量：meta_concept / concept / metric",
+      "technical": "技术工件：language / protocol / framework / library / tool / architecture / model_family / product",
+      "industrial": "产业主体：organization / person"
+    },
+    "AbstractionLevel": {
+      "theoretical": "理论/数学/范式层",
+      "hardware": "硬件/芯片/物理层",
+      "kernel_os": "内核/操作系统/驱动层",
+      "runtime_vm": "运行时/虚拟机/语言标准层",
+      "framework_library": "框架/类库/中间件层",
+      "application_tool": "应用/产品/工具交互层"
+    },
+    "Status": {
+      "active": "现役",
+      "emerging": "前沿/萌芽",
+      "deprecated": "已废弃（deprecated_at 必填）",
+      "historical": "历史遗产"
+    },
+    "Origin": {
+      "curated": "人工撰写或人工校验",
+      "ai_draft": "AI 生成待审，L0 存根，信任降级展示"
+    }
+  },
+  "fields": {
+    "id": {
+      "type": "string",
+      "layer": "L0",
+      "constraint": "全小写 kebab-case slug（规范见 conventions.md）；与本体节点共享 id 空间；发布后保持不变；文件路径 data/nodes/<id前两字符>/<id>.json"
+    },
+    "name": {
+      "type": "string",
+      "layer": "L0",
+      "note": "英文/官方原名"
+    },
+    "abbreviation": {
+      "type": "string",
+      "layer": "L0",
+      "note": "高频缩写，高权重检索命中"
+    },
+    "display_primary": {
+      "type": "string",
+      "layer": "L0",
+      "note": "显示主名；设置任一显示字段即完全接管两段显示，缺省按 conventions 推导"
+    },
+    "display_secondary": {
+      "type": "string",
+      "layer": "L0",
+      "note": "显示副名；仅在 display_primary 存在时生效"
+    },
+    "aliases": {
+      "type": "string[]",
+      "layer": "L0",
+      "constraint": "中文译名/俗称/别名；跨节点唯一，并与他节点的 name/abbreviation 做冲突检测"
+    },
+    "type": {
+      "type": "EntityType",
+      "layer": "L0"
+    },
+    "ecosystems": {
+      "type": "string[]",
+      "layer": "L0",
+      "constraint": "取值登记于 contracts/vocab/ecosystems.json，可命名任意层级；只声明所属圈层，祖先与宏观归属由 build 沿树派生"
+    },
+    "domains": {
+      "type": "string[]",
+      "layer": "L0",
+      "constraint": "取值登记于 contracts/vocab/domains.json 的 value"
+    },
+    "abstraction_level": {
+      "type": "AbstractionLevel",
+      "layer": "L0",
+      "note": "仅对 technical realm 有意义"
+    },
+    "relations": {
+      "type": "RelationEdge[]",
+      "layer": "L0",
+      "shape": {
+        "relation_type": "contracts/relations.json 的键",
+        "target_id": "目标节点 id；分类边指向 ontology.json 节点，其余指向数据节点",
+        "context": "可选：关系发生的具体场景说明"
+      },
+      "constraint": "仅存规范方向边；(relation_type, target_id) 组合唯一"
+    },
+    "tags": {
+      "type": "string[]",
+      "layer": "L0",
+      "constraint": "取值登记于 contracts/vocab/tags.json 的 value"
+    },
+    "summary": {
+      "type": "string",
+      "layer": "L0",
+      "constraint": "中文，50 字以内"
+    },
+    "description": {
+      "type": "string",
+      "layer": "L2",
+      "note": "Markdown；ai_draft 存根可缺省"
+    },
+    "status": {
+      "type": "Status",
+      "layer": "L0"
+    },
+    "origin": {
+      "type": "Origin",
+      "layer": "L0"
+    },
+    "first_released": {
+      "type": "date",
+      "layer": "L0",
+      "format": "YYYY-MM-DD"
+    },
+    "deprecated_at": {
+      "type": "date",
+      "layer": "L0",
+      "format": "YYYY-MM-DD",
+      "constraint": "status 为 deprecated 时必填"
+    },
+    "last_reviewed": {
+      "type": "date",
+      "layer": "L0",
+      "format": "YYYY-MM-DD",
+      "note": "数据核对时间，页面展示核对于 YYYY-MM"
+    },
+    "importance": {
+      "type": "integer",
+      "layer": "L0",
+      "constraint": "1–5；锚定标准见 conventions.md"
+    },
+    "official_site": {
+      "type": "uri",
+      "layer": "L0",
+      "note": "官方规范、标准提案或权威主页"
+    }
+  },
+  "types": {
+    "concept": {
+      "realm": "conceptual",
+      "summary": "具象理论、定理、特性与方法论概念",
+      "examples": ["Closure", "CAP Theorem", "Attention Mechanism"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required",
+        "abstraction_level": "optional", "ecosystems": "optional"
+      }
+    },
+    "metric": {
+      "realm": "conceptual",
+      "summary": "量化与性能指标",
+      "examples": ["FPS", "Latency", "TPS"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required",
+        "abstraction_level": "optional", "ecosystems": "optional"
+      }
+    },
+    "language": {
+      "realm": "technical",
+      "summary": "编程语言与 DSL",
+      "examples": ["Rust", "C++", "SQL"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "protocol": {
+      "realm": "technical",
+      "summary": "通信与数据协议",
+      "examples": ["HTTP/3", "QUIC", "FIX"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "framework": {
+      "realm": "technical",
+      "summary": "应用与系统框架",
+      "examples": ["Spring Boot", "React", "Next.js"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "library": {
+      "realm": "technical",
+      "summary": "工具库、SDK 与组件",
+      "examples": ["Tokio", "PyTorch", "Tailwind CSS"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "tool": {
+      "realm": "technical",
+      "summary": "CLI、构建与运维工具",
+      "examples": ["Docker", "pnpm", "GCC"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "architecture": {
+      "realm": "technical",
+      "summary": "执行环境、虚拟机与硬件体系结构",
+      "examples": ["JVM", "WebAssembly", "RISC-V"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "model_family": {
+      "realm": "technical",
+      "summary": "AI 大模型与算法族",
+      "examples": ["GLM", "Llama", "GPT"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "product": {
+      "realm": "technical",
+      "summary": "商业软硬件产品与服务",
+      "examples": ["NVIDIA H100", "AWS EC2", "ChatGPT"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "organization": {
+      "realm": "industrial",
+      "summary": "公司、基金会与标准组织",
+      "examples": ["智谱 AI", "CNCF", "W3C"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "optional", "ecosystems": "optional",
+        "abstraction_level": "forbidden"
+      }
+    },
+    "person": {
+      "realm": "industrial",
+      "summary": "产业与技术人物",
+      "examples": ["Linus Torvalds"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "optional", "ecosystems": "optional",
+        "abstraction_level": "forbidden"
+      }
+    }
+  },
+  "applicability_default": "optional",
+  "ontology_node": {
+    "note": "meta_concept 节点只存在于 contracts/ontology.json，实例列表由 build 派生",
+    "shape": {
+      "id": "required，slug；与数据节点共享 id 空间；根分类与锚点 slug 保留（见 conventions.md）",
+      "name": "required",
+      "aliases": "required，可为空数组",
+      "summary": "required，中文 50 字以内",
+      "parents": "数组，多亲 DAG——一个分类可属多个上级；锚点为空数组；生效 entity_type 为各 parent 链的并集",
+      "relations": "required，可为空数组；与数据节点同一 RelationEdge 形状，锚点间元叙事为普通关系边",
+      "entity_type": "类型根必填；超根声明数组；中间分类按需覆写；未声明时取各 parent 链生效集的并集",
+      "importance": "optional，导航权重",
+      "last_reviewed": "optional，本体整体带版本号"
+    }
+  },
+  "cross_file_rules": [
+    "relations[].relation_type 必须是 contracts/relations.json 的键",
+    "关系表达全图统一为 relations 数组，不设 parents、worldview 等其他边载体",
+    "ecosystems / domains / tags 取值必须命中 contracts/vocab/ 对应文件的 value",
+    "ecosystems 注册表无环，所有链路终于宏观根；节点的宏观归属与祖先由 build 派生",
+    "is_instance_of 的 target_id 必须存在于 ontology.json，且源节点 type 属于目标分类生效的 entity_type 集合",
+    "数据平面文件被 is_instance_of / specializes 指向时 CI 失败",
+    "id 跨全图唯一；name/abbreviation/aliases 允许同名，同名异物由检索层区分",
+    "契约目录不含派生物"
+  ]
+}

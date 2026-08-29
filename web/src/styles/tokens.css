@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-page: var(--c-page);
+  --color-ink: var(--c-ink);
+  --color-ink-2: var(--c-ink-2);
+  --color-ink-3: var(--c-ink-3);
+  --color-line: var(--c-line);
+  --color-secondary-name: var(--c-secondary-name);
+  --color-realm-tech: var(--c-realm-tech);
+  --color-realm-industry: var(--c-realm-industry);
+  --color-realm-concept: var(--c-realm-concept);
+  --color-accent: var(--c-accent);
+}
+
+@theme {
+  --font-mono: ui-monospace, "Cascadia Code", Consolas, "SF Mono", Menlo, monospace;
+  --font-brand: "Allura", "Fredoka", "Mona Sans", system-ui, sans-serif;
+  --font-term: "Fredoka", "HarmonyOS Sans SC", "Mona Sans", system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  --c-page: #0c0e12;
+  --c-ink: #e8ebf1;
+  --c-ink-2: #a9b0bd;
+  --c-ink-3: #747c8b;
+  --c-line: #222733;
+  --c-secondary-name: #a491f2;
+  --c-realm-tech: #3987e5;
+  --c-realm-industry: #e06a38;
+  --c-realm-concept: #199e70;
+  --c-accent: #3987e5;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --c-page: #fcfcfb;
+  --c-ink: #0b0b0b;
+  --c-ink-2: #52514e;
+  --c-ink-3: #898781;
+  --c-line: #e1e0d9;
+  --c-secondary-name: #5b46ad;
+  --c-realm-tech: #1c5cab;
+  --c-realm-industry: #b8430f;
+  --c-realm-concept: #0e7d57;
+  --c-accent: #1c5cab;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    color-scheme: light;
+    --c-page: #fcfcfb;
+    --c-ink: #0b0b0b;
+    --c-ink-2: #52514e;
+    --c-ink-3: #898781;
+    --c-line: #e1e0d9;
+    --c-secondary-name: #5b46ad;
+    --c-realm-tech: #1c5cab;
+    --c-realm-industry: #b8430f;
+    --c-realm-concept: #0e7d57;
+    --c-accent: #1c5cab;
+  }
+}
+
+body {
+  font-family: "Mona Sans", system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* 下划线恒为墨色，不随文字/状态变色 */
+a {
+  text-decoration-color: var(--c-ink);
+}

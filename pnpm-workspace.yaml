@@ -1,0 +1,6 @@
+packages:
+  - tools
+  - web
+allowBuilds:
+  esbuild: true
+  sharp: true

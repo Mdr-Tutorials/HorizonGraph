@@ -1,0 +1,134 @@
+{
+  "version": "1.2.0",
+  "policy": {
+    "storage": "数据平面仅存规范方向（canonical_owner 一侧）；反向视图由 build 派生",
+    "self_loops": "全部禁止；自举属叙事，写入 description；试点批次后复核",
+    "duplicate_edges": "同一节点内 (relation_type, target_id) 重复即 CI 失败",
+    "mirror_check": "对称关系仅存一份，镜像双存即 CI 失败",
+    "classification_edges": ["is_instance_of"],
+    "merge_review": "13 条全量入表；试点后依据录入分歧做合并评审，重点评审 depends_on 与 bases_for 的边界"
+  },
+  "display": {
+    "is_instance_of": { "zh": "属于", "en": "instance of" },
+    "governs": { "zh": "约束", "en": "governs" },
+    "implements": { "zh": "实现", "en": "implements" },
+    "depends_on": { "zh": "依赖", "en": "depends on" },
+    "competes_with": { "zh": "竞争", "en": "competes with" },
+    "extends": { "zh": "扩展", "en": "extends" },
+    "bases_for": { "zh": "基座", "en": "base for" },
+    "embeds": { "zh": "内嵌", "en": "embeds" },
+    "part_of": { "zh": "组成", "en": "part of" },
+    "version_of": { "zh": "版本", "en": "version of" },
+    "deprecated_by": { "zh": "被替代", "en": "deprecated by" },
+    "developed_by": { "zh": "开发者", "en": "developed by" },
+    "powers": { "zh": "驱动", "en": "powers" }
+  },
+  "relations": {
+    "is_instance_of": {
+      "classification": true,
+      "canonical_owner": "实例方（叶子节点持有边，指向上级分类）",
+      "symmetric": false,
+      "inverse_display": { "zh": "实例", "en": "instances" },
+      "domain": ["concept", "protocol", "language", "framework", "library", "tool", "architecture", "metric", "model_family", "product", "organization", "person"],
+      "range": ["meta_concept"],
+      "target_source": "contracts/ontology.json",
+      "decision": "分类挂载：节点属于某分类（HTTP/3 → Transport Protocol）。与 implements 的分界：is_instance_of 表“属于”，implements 表“把某个概念或规范工程化做出来”。目标必须是本体节点（类型根或中间分类），且源节点 type 属于目标分类生效的 entity_type 集合。锚点为纯叙事超根，词条直接挂锚点时 CI 报错并指向对应类型根。"
+    },
+    "governs": {
+      "canonical_owner": "理论方（约束者持有边）",
+      "symmetric": false,
+      "inverse_display": { "zh": "受约束于", "en": "governed_by" },
+      "domain": ["concept", "metric"],
+      "range": ["meta_concept", "concept", "architecture"],
+      "decision": "理论对设计域的约束指导（CAP Theorem governs Distributed Systems）。源是概念或度量，目标是被约束的领域分类、具象概念或具体架构。"
+    },
+    "implements": {
+      "canonical_owner": "实现方（工程工件持有边）",
+      "symmetric": false,
+      "inverse_display": { "zh": "被实现", "en": "implemented_by" },
+      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["concept", "meta_concept", "protocol", "architecture"],
+      "decision": "把概念、规范或架构形态落地为具体工件（QUIC implements 某传输规范语义；JuiceFS implements POSIX）。与 extends 分界：implements 的目标是概念性存在，extends 的目标是可独立运行的实体。"
+    },
+    "depends_on": {
+      "canonical_owner": "使用方（依赖者持有边）",
+      "symmetric": false,
+      "inverse_display": { "zh": "依赖方", "en": "dependents" },
+      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "decision": "直接硬依赖：移除目标后源无法构建或运行（Tokio depends_on Rust）。四重近邻判定的锚点：depends_on 表直接调用/链接关系，由使用方自上而下声明。"
+    },
+    "competes_with": {
+      "canonical_owner": "对称关系，存于 id 字典序较小一侧",
+      "symmetric": true,
+      "inverse_display": { "zh": "竞争", "en": "competes_with" },
+      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "decision": "同生态位的替代关系（Bun competes_with Node.js）。仅存一份，双向可遍历。"
+    },
+    "extends": {
+      "canonical_owner": "扩展方（超集持有边）",
+      "symmetric": false,
+      "inverse_display": { "zh": "被扩展", "en": "extended_by" },
+      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "decision": "超集扩展：目标可独立存在，源向后兼容地扩展其能力（TypeScript extends JavaScript）。"
+    },
+    "bases_for": {
+      "canonical_owner": "基座方（支撑者持有边）",
+      "symmetric": false,
+      "inverse_display": { "zh": "基于", "en": "based_on" },
+      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "decision": "底座支撑叙事：目标因源获得存在理由或性能特征，但无直接调用链（DPDK bases_for HFT Trading Engine）。自底向上声明；与 depends_on 的分界在“是否存在直接 API 依赖”。试点重点评审对象。"
+    },
+    "embeds": {
+      "canonical_owner": "封装方（容器持有边）",
+      "symmetric": false,
+      "inverse_display": { "zh": "内嵌于", "en": "embedded_in" },
+      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["architecture", "library", "language"],
+      "decision": "分发物物理内置完整第三方组件（Node.js embeds V8 Engine）。双方独立存在，一方打包另一方。"
+    },
+    "part_of": {
+      "canonical_owner": "成员方（组成部分持有边）",
+      "symmetric": false,
+      "inverse_display": { "zh": "包含", "en": "has_part" },
+      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "decision": "同一体系内的组成关系（C++ Concepts part_of C++20 Standard）。判定锚点：成员离开整体即失去定义语境。与 embeds 分界：part_of 双方属同一体系，embeds 是跨体系的物理封装。生态归属走 ecosystems 字段。"
+    },
+    "version_of": {
+      "canonical_owner": "切片方（版本节点持有边，指向母体）",
+      "symmetric": false,
+      "inverse_display": { "zh": "版本", "en": "versions" },
+      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "decision": "时间与版本维度的切分（C++23 version_of C++；GLM-4.5 version_of GLM）。判定：源与目标同 type，目标是家族或母体，源是其某个版本，且源已通过独立生态位判定。与 part_of 分界：part_of 是空间组成，version_of 是时间切片。与 extends 分界：extends 是超集扩展，version_of 是母体在时间轴上的投影。版本页渲染为母体差异视图，时间线由 first_released 排序，版本先后不另设后继边；搜索中版本折叠于母体名下。"
+    },
+    "deprecated_by": {
+      "canonical_owner": "被废弃方（旧者持有边）",
+      "symmetric": false,
+      "inverse_display": { "zh": "替代", "en": "deprecates" },
+      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "decision": "演进替代（Bower deprecated_by npm）。由被替代者持有；源节点 status 应为 deprecated 且 deprecated_at 必填。标准版本序列走 version_of 加 first_released 排序，旧标准通常保持 active 或 historical，不挂 deprecated_by。"
+    },
+    "developed_by": {
+      "canonical_owner": "作品方（被研发者持有边）",
+      "symmetric": false,
+      "inverse_display": { "zh": "开发了", "en": "developed" },
+      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["organization", "person"],
+      "decision": "研发归属（GLM-4 developed_by 智谱 AI）。目标限于组织与人物。"
+    },
+    "powers": {
+      "canonical_owner": "赋能方（底层技术持有边）",
+      "symmetric": false,
+      "inverse_display": { "zh": "驱动", "en": "powered_by" },
+      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["product", "organization"],
+      "decision": "底层技术对商业实体的赋能（JuiceFS powers MetaBit Platform）。自底向上；与 bases_for 分界：powers 的目标必须是商业产品或组织。"
+    }
+  }
+}

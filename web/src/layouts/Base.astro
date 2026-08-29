@@ -1,0 +1,67 @@
+---
+import "@fontsource/allura/400.css";
+import "@fontsource/fredoka/400.css";
+import "@fontsource/fredoka/500.css";
+import "@fontsource/fredoka/600.css";
+import "@fontsource/fredoka/700.css";
+import "@fontsource/mona-sans/400.css";
+import "@fontsource/mona-sans/500.css";
+import "@fontsource/mona-sans/600.css";
+import "@fontsource/mona-sans/700.css";
+import "../styles/tokens.css";
+import SearchPalette from "../components/SearchPalette.vue";
+import { Search, SunMoon } from "@lucide/astro";
+const { title = "HorizonGraph" } = Astro.props;
+const B = import.meta.env.BASE_URL;
+const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/harmony-sc-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/harmony-sc-700.woff2) format("woff2");font-weight:700;font-style:normal;font-display:swap}`;
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <style set:html={fontCss} />
+    <script is:inline>
+      const t = localStorage.getItem("hg-theme");
+      if (t) document.documentElement.dataset.theme = t;
+      requestAnimationFrame(() => {
+        const mac = /Mac|iP(hone|ad|od)/.test(navigator.platform || navigator.userAgent);
+        document.querySelectorAll(".hg-mod").forEach((el) => (el.textContent = mac ? "⌘" : "Ctrl"));
+      });
+    </script>
+  </head>
+  <body class="bg-page text-ink min-h-screen antialiased">
+    <header class="px-6 lg:px-10 pt-6 flex items-center gap-5">
+      <a href={B} class="font-brand text-4xl leading-none no-underline text-ink">HorizonGraph</a>
+      <button
+        id="hg-search"
+        class="ml-auto inline-flex items-baseline gap-1 text-sm text-ink-2 hover:text-ink cursor-pointer bg-transparent border-0 p-0"
+      >
+        <Search size={15} class="self-center" />
+        <span>搜索</span><span class="font-mono pl-2 text-xs text-ink-3"><span class="hg-mod">⌘</span>&#8201;K</span>
+      </button>
+      <button
+        id="hg-theme"
+        class="text-ink-3 hover:text-ink-2 cursor-pointer bg-transparent border-0 p-0"
+        aria-label="切换主题"
+      >
+        <SunMoon size={15} />
+      </button>
+    </header>
+    <main class="px-6 lg:px-10 py-10">
+      <slot />
+    </main>
+    <SearchPalette client:load />
+    <script is:inline>
+      document.getElementById("hg-theme")?.addEventListener("click", () => {
+        const el = document.documentElement;
+        const light =
+          el.dataset.theme === "light" ||
+          (!el.dataset.theme && matchMedia("(prefers-color-scheme: light)").matches);
+        el.dataset.theme = light ? "dark" : "light";
+        localStorage.setItem("hg-theme", el.dataset.theme);
+      });
+    </script>
+  </body>
+</html>
