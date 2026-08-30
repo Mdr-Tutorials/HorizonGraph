@@ -31,5 +31,6 @@
   "status": "active",
   "origin": "curated",
   "last_reviewed": "2026-08-29",
-  "importance": 3
+  "importance": 3,
+  "display_primary": "HyperCLOVA"
 }

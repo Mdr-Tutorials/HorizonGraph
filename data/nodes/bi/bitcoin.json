@@ -44,8 +44,9 @@
   ],
   "summary": "第一条公链，用工作量证明给转账排序并发行货币。",
   "importance": 5,
+  "popular": 85,
   "official_site": "https://bitcoin.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

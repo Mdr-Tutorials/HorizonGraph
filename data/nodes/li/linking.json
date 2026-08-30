@@ -22,7 +22,8 @@
   ],
   "summary": "把目标文件的符号与重定位拼成可执行映像或动态库。",
   "importance": 4,
-  "last_reviewed": "2026-08-29",
+  "popular": 55,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

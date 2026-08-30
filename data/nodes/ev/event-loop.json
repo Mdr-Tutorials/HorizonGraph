@@ -22,7 +22,8 @@
   ],
   "summary": "单线程里用队列驱动回调与微任务，撑起浏览器与 Node 的并发。",
   "importance": 5,
-  "last_reviewed": "2026-08-29",
+  "popular": 65,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

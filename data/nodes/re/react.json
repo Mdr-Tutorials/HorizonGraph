@@ -32,8 +32,9 @@
   ],
   "summary": "用组件与状态描述 UI 的前端库，差分更新页面。",
   "importance": 5,
+  "popular": 96,
   "official_site": "https://react.dev",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

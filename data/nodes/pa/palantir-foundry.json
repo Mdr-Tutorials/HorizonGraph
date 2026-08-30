@@ -5,10 +5,7 @@
     "Palantir Foundry"
   ],
   "type": "product",
-  "ecosystems": [
-    "enterprise-apps-ecosystem",
-    "big-data-ecosystem"
-  ],
+  "ecosystems": [],
   "domains": [
     "databases"
   ],

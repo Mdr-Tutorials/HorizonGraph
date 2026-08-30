@@ -27,8 +27,9 @@
   ],
   "summary": "Web 的应用层协议，请求方法与状态码构成资源操作。",
   "importance": 5,
+  "popular": 97,
   "official_site": "https://httpwg.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

@@ -32,7 +32,8 @@
   "status": "active",
   "origin": "curated",
   "first_released": "1990-01-01",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
+  "popular": 48,
   "official_site": "https://www.haskell.org"
 }

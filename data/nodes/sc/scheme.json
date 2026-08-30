@@ -1,19 +1,29 @@
 {
   "id": "scheme",
   "name": "Scheme",
-  "aliases": ["Scheme 语言"],
+  "aliases": [
+    "Scheme 语言"
+  ],
   "type": "language",
-  "ecosystems": ["languages_runtimes"],
-  "domains": ["programming-languages"],
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "language" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
   ],
   "summary": "极简 Lisp 方言，SICP 的教学语言。",
   "status": "active",
   "origin": "curated",
   "first_released": "1975-01-01",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
+  "popular": 40,
   "official_site": "https://schemers.org"
 }

@@ -23,7 +23,8 @@
   ],
   "summary": "协议、主机与端口一致才共享 DOM 与 Cookie，Web 安全的底线。",
   "importance": 5,
-  "last_reviewed": "2026-08-29",
+  "popular": 62,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

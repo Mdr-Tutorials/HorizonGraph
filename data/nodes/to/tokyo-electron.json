@@ -1,10 +1,10 @@
 {
   "id": "tokyo-electron",
   "name": "Tokyo Electron",
-  "display_primary": "Tokyo Electron",
-  "display_secondary": "东京电子",
+  "display_primary": "东京电子",
+  "display_secondary": "Tokyo Electron",
   "aliases": [
-    "东京电子"
+    "Tokyo Electron"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "半导体制造设备公司，与 ASML 同处设备层。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.tel.com"
 }

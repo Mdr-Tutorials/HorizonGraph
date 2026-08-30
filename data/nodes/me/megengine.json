@@ -35,7 +35,8 @@
   "summary": "旷视开源的深度学习框架。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
+  "popular": 22,
   "official_site": "https://www.megengine.org.cn"
 }

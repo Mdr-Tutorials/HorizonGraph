@@ -1,11 +1,11 @@
 {
   "id": "supermicro",
   "name": "Supermicro",
-  "display_primary": "Supermicro",
-  "display_secondary": "超微电脑",
+  "display_primary": "超微电脑",
+  "display_secondary": "Supermicro",
   "aliases": [
-    "超微电脑",
-    "超微"
+    "超微",
+    "Supermicro"
   ],
   "type": "organization",
   "ecosystems": [
@@ -24,7 +24,7 @@
   "summary": "AI 与数据中心服务器整机厂商。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
   "official_site": "https://www.supermicro.com"
 }

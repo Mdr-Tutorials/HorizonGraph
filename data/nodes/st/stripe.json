@@ -2,7 +2,7 @@
   "id": "stripe",
   "name": "Stripe",
   "display_primary": "Stripe",
-  "display_secondary": "Stripe",
+  "display_secondary": "",
   "aliases": [
     "Stripe"
   ],

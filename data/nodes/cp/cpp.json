@@ -32,7 +32,8 @@
   "summary": "系统级静态编译语言，兼顾性能抽象与底层控制。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 93,
   "official_site": "https://isocpp.org/"
 }

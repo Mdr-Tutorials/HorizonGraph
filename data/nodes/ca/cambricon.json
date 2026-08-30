@@ -1,10 +1,10 @@
 {
   "id": "cambricon",
   "name": "Cambricon",
-  "display_primary": "Cambricon",
-  "display_secondary": "寒武纪",
+  "display_primary": "寒武纪",
+  "display_secondary": "Cambricon",
   "aliases": [
-    "寒武纪"
+    "Cambricon"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "中国 AI 芯片公司。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.cambricon.com"
 }

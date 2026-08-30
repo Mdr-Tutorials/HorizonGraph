@@ -35,7 +35,8 @@
   "summary": "基于 eBPF 的云原生网络与安全框架，常作 Kubernetes CNI。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
+  "popular": 45,
   "official_site": "https://cilium.io"
 }

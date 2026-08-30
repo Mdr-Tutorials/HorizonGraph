@@ -35,8 +35,9 @@
   "summary": "JetBrains 的 JVM 静态语言，Android 官方首选。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 72,
   "official_site": "https://kotlinlang.org",
   "first_released": "2016-02-15"
 }

@@ -1,21 +1,38 @@
 {
   "id": "groovy",
   "name": "Groovy",
-  "aliases": ["Groovy 语言"],
+  "aliases": [
+    "Groovy 语言"
+  ],
   "type": "language",
-  "ecosystems": ["jvm-ecosystem"],
-  "domains": ["programming-languages", "devops"],
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "devops"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "language" },
-    { "relation_type": "depends_on", "target_id": "jvm" },
-    { "relation_type": "competes_with", "target_id": "java" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "jvm"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "java"
+    }
   ],
   "summary": "JVM 动态语言，Gradle 构建脚本的 DSL。",
   "status": "active",
   "origin": "curated",
   "first_released": "2007-01-02",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
+  "popular": 42,
   "official_site": "https://groovy-lang.org"
 }

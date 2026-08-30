@@ -1,10 +1,10 @@
 {
   "id": "mediatek",
   "name": "MediaTek",
-  "display_primary": "MediaTek",
-  "display_secondary": "联发科",
+  "display_primary": "联发科",
+  "display_secondary": "MediaTek",
   "aliases": [
-    "联发科"
+    "MediaTek"
   ],
   "type": "organization",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "手机与电视 SoC 公司。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.mediatek.com"
 }

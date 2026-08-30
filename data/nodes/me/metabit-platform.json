@@ -5,9 +5,7 @@
     "MetaBit Platform"
   ],
   "type": "product",
-  "ecosystems": [
-    "fintech-ecosystem"
-  ],
+  "ecosystems": [],
   "domains": [
     "quantitative-finance"
   ],

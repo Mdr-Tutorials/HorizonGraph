@@ -30,6 +30,7 @@
   "summary": "字节的豆包大模型族，火山引擎对外交付。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
-  "importance": 5
+  "last_reviewed": "2026-08-30",
+  "importance": 5,
+  "popular": 98
 }

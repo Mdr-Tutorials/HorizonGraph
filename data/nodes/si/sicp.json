@@ -33,7 +33,8 @@
   "status": "active",
   "origin": "curated",
   "first_released": "1985-01-01",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 68,
   "official_site": "https://sarabander.github.io/sicp/"
 }

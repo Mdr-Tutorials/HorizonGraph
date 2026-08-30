@@ -31,7 +31,8 @@
   "summary": "龙芯自研指令集架构，与三大 ISA 并列。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
+  "popular": 30,
   "official_site": "https://www.loongson.cn"
 }

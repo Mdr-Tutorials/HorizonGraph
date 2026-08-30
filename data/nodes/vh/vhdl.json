@@ -22,6 +22,7 @@
   "status": "active",
   "origin": "curated",
   "first_released": "1987-01-01",
-  "last_reviewed": "2026-08-29",
-  "importance": 3
+  "last_reviewed": "2026-08-30",
+  "importance": 3,
+  "popular": 40
 }

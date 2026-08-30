@@ -74,6 +74,7 @@
     { "value": "enterprise-apps-ecosystem", "en": "Enterprise Apps (ERP/CRM) Ecosystem", "zh": "企业应用生态", "parents": ["enterprise_industry"] },
     { "value": "iam-ecosystem", "en": "Identity & Access Management Ecosystem", "zh": "身份认证生态", "parents": ["enterprise_industry"] },
     { "value": "collaboration-ecosystem", "en": "Collaboration Platform Ecosystem", "zh": "协同办公生态", "parents": ["enterprise_industry"] },
-    { "value": "fintech-ecosystem", "en": "FinTech Ecosystem", "zh": "金融科技生态", "parents": ["enterprise_industry"] }
+    { "value": "fintech-ecosystem", "en": "FinTech Ecosystem", "zh": "金融科技生态", "parents": ["enterprise_industry"] },
+    { "value": "platform-commerce-ecosystem", "en": "E-commerce & Internet Platform Ecosystem", "zh": "电商与互联网平台生态", "parents": ["enterprise_industry"] }
   ]
 }

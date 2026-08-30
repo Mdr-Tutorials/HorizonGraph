@@ -2,8 +2,7 @@
   "id": "deepseek-llm",
   "name": "DeepSeek",
   "aliases": [
-    "深度求索",
-    "DeepSeek"
+    "深度求索"
   ],
   "type": "model_family",
   "ecosystems": [
@@ -37,5 +36,6 @@
   "origin": "curated",
   "last_reviewed": "2026-08-29",
   "importance": 5,
-  "official_site": "https://www.deepseek.com"
+  "official_site": "https://www.deepseek.com",
+  "display_primary": "DeepSeek"
 }

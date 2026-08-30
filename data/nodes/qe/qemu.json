@@ -23,8 +23,9 @@
   ],
   "summary": "机器模拟器与虚拟化前端，常与 KVM 搭配跑云主机。",
   "importance": 4,
+  "popular": 55,
   "official_site": "https://www.qemu.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

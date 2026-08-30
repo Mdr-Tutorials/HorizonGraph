@@ -24,7 +24,8 @@
   "summary": "面向 eBPF 的高级追踪语言，用于内核与应用的动态观测。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
+  "popular": 25,
   "official_site": "https://github.com/bpftrace/bpftrace"
 }

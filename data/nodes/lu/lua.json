@@ -1,19 +1,32 @@
 {
   "id": "lua",
   "name": "Lua",
-  "aliases": ["Lua 语言"],
+  "aliases": [
+    "Lua 语言"
+  ],
   "type": "language",
-  "ecosystems": ["languages_runtimes", "unity-ecosystem"],
-  "domains": ["programming-languages", "game-development", "web-development"],
+  "ecosystems": [
+    "languages_runtimes",
+    "unity-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "game-development",
+    "web-development"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "language" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
   ],
   "summary": "轻量嵌入式脚本语言，游戏与网关的胶水。",
   "status": "active",
   "origin": "curated",
   "first_released": "1993-07-28",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
+  "popular": 55,
   "official_site": "https://www.lua.org"
 }

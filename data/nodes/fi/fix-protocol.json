@@ -22,8 +22,9 @@
   ],
   "summary": "证券与期货电子交易的会话与消息标准。",
   "importance": 4,
+  "popular": 42,
   "official_site": "https://www.fixtrading.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

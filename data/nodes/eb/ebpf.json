@@ -34,7 +34,8 @@
   "summary": "Linux 内核中的安全沙箱虚拟机，可在内核态动态加载程序。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 72,
   "official_site": "https://ebpf.io"
 }

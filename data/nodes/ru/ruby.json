@@ -12,7 +12,7 @@
   "abstraction_level": "runtime_vm",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "ecosystems": [
     "languages_runtimes"
   ],
@@ -24,5 +24,6 @@
   ],
   "summary": "以程序员幸福感著称的动态语言，Rails 定义了其 Web 时代。",
   "importance": 3,
+  "popular": 68,
   "official_site": "https://www.ruby-lang.org"
 }

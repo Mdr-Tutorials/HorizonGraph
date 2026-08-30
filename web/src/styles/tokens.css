@@ -77,6 +77,11 @@ a {
   margin-left: 0.375rem;
 }
 
+/* 条目不折行；放不下时由脚本测量内容宽度后横跨多列 */
+.term-grid li {
+  white-space: nowrap;
+}
+
 /* 词条网格：列数随视口自适应（每列最小 16rem，弹性填满） */
 .term-grid {
   display: grid;

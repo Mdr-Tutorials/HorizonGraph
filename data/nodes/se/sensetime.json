@@ -1,11 +1,11 @@
 {
   "id": "sensetime",
   "name": "SenseTime",
-  "display_primary": "SenseTime",
-  "display_secondary": "商汤科技",
+  "display_primary": "商汤科技",
+  "display_secondary": "SenseTime",
   "aliases": [
     "商汤",
-    "商汤科技"
+    "SenseTime"
   ],
   "type": "organization",
   "ecosystems": [
@@ -24,7 +24,7 @@
   "summary": "计算机视觉起家的中国 AI 公司。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
   "official_site": "https://www.sensetime.com"
 }

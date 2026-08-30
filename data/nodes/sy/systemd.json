@@ -27,8 +27,9 @@
   ],
   "summary": "多数发行版的 init 与服务管理器，用单元文件描述依赖。",
   "importance": 4,
+  "popular": 62,
   "official_site": "https://systemd.io",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

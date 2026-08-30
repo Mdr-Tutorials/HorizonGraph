@@ -21,8 +21,9 @@
   ],
   "summary": "浏览器里的现代 GPU API，对标 Vulkan 的 Web 入口。",
   "importance": 4,
+  "popular": 55,
   "official_site": "https://www.w3.org/TR/webgpu/",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

@@ -1,10 +1,10 @@
 {
   "id": "netease",
   "name": "NetEase",
-  "display_primary": "NetEase",
-  "display_secondary": "网易",
+  "display_primary": "网易",
+  "display_secondary": "NetEase",
   "aliases": [
-    "网易"
+    "NetEase"
   ],
   "type": "organization",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "游戏与互联网公司，游戏引擎与有道的东家。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.163.com"
 }

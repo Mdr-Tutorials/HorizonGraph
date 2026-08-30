@@ -22,8 +22,9 @@
   ],
   "summary": "开放指令集，模块化扩展，正在嵌入式与学术核中铺开。",
   "importance": 4,
+  "popular": 65,
   "official_site": "https://riscv.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

@@ -1,19 +1,30 @@
 {
   "id": "ada",
   "name": "Ada",
-  "aliases": ["Ada 语言"],
+  "aliases": [
+    "Ada 语言"
+  ],
   "type": "language",
-  "ecosystems": ["languages_runtimes"],
-  "domains": ["formal-methods", "embedded-systems"],
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "formal-methods",
+    "embedded-systems"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "language" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
   ],
   "summary": "军工与航空安全关键系统的语言。",
   "status": "active",
   "origin": "curated",
   "first_released": "1980-01-01",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
+  "popular": 35,
   "official_site": "https://www.adaic.org"
 }

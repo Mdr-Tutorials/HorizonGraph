@@ -3,19 +3,34 @@
   "name": "GLM-5.3",
   "aliases": [],
   "type": "model_family",
-  "ecosystems": ["llm-agent-ecosystem"],
-  "domains": ["machine-learning", "natural-language-processing"],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
   "abstraction_level": "framework_library",
   "description": "当前旗舰：与 GLM-5.2 共享基座（744B-A40B），全部提升来自后训练；Z.ai Code Bench 较 5.2 提升 50%，Terminal Bench 3.0 与 Agents' Last Exam 开源 SOTA，CyberGym 漏洞挖掘 SOTA。1M 上下文，推理档位 low/high/max 常开。文本输入专用（多模态走 GLM-5.3-Flash，320B-A18B 独立基座，混合稀疏+线性注意力，mHC 结构）。",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "llm" },
-    { "relation_type": "version_of", "target_id": "glm" },
-    { "relation_type": "developed_by", "target_id": "zhipu-ai" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "glm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "zhipu-ai"
+    }
   ],
   "summary": "GLM 当前旗舰：共享 5.2 基座，后训练带来代码能力跃升。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-08-29",
   "importance": 5,
-  "official_site": "https://docs.z.ai/guides/llm/glm-5.3"
+  "official_site": "https://docs.z.ai/guides/llm/glm-5.3",
+  "display_primary": "GLM-5.3"
 }

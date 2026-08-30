@@ -21,7 +21,8 @@
   ],
   "summary": "blob、tree、commit、tag 构成内容寻址的快照图。",
   "importance": 4,
-  "last_reviewed": "2026-08-29",
+  "popular": 45,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

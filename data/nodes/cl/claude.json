@@ -1,9 +1,7 @@
 {
   "id": "claude",
   "name": "Claude",
-  "aliases": [
-    "Claude"
-  ],
+  "aliases": [],
   "type": "model_family",
   "ecosystems": [
     "llm-agent-ecosystem"
@@ -42,8 +40,10 @@
   "summary": "Anthropic 的对话大模型族，以安全对齐为主线。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
   "official_site": "https://www.anthropic.com/claude",
-  "first_released": "2023-03-14"
+  "first_released": "2023-03-14",
+  "popular": 98,
+  "display_primary": "Claude"
 }

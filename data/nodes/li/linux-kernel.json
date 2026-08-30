@@ -42,7 +42,8 @@
   "status": "active",
   "origin": "curated",
   "first_released": "1991-09-17",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 97,
   "official_site": "https://kernel.org"
 }

@@ -5,9 +5,7 @@
     "Workday"
   ],
   "type": "product",
-  "ecosystems": [
-    "enterprise-apps-ecosystem"
-  ],
+  "ecosystems": [],
   "domains": [
     "web-development"
   ],

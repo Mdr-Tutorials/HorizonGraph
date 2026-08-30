@@ -1,10 +1,10 @@
 {
   "id": "megvii",
   "name": "Megvii",
-  "display_primary": "Megvii",
-  "display_secondary": "旷视",
+  "display_primary": "旷视",
+  "display_secondary": "Megvii",
   "aliases": [
-    "旷视"
+    "Megvii"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "计算机视觉公司，Face++ 的东家。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.megvii.com"
 }

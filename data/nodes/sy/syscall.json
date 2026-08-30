@@ -21,7 +21,8 @@
   ],
   "summary": "用户态进入内核的受控门：开文件、mmap、clone 都走这里。",
   "importance": 5,
-  "last_reviewed": "2026-08-29",
+  "popular": 55,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

@@ -1,17 +1,30 @@
 {
   "id": "cap-theorem",
   "name": "CAP Theorem",
-  "aliases": ["CAP 定理", "布鲁尔定理", "Brewer's Theorem"],
+  "aliases": [
+    "CAP 定理",
+    "布鲁尔定理",
+    "Brewer's Theorem"
+  ],
   "type": "concept",
-  "domains": ["distributed-systems"],
+  "domains": [
+    "distributed-systems"
+  ],
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "distributed-systems" },
-    { "relation_type": "governs", "target_id": "distributed-systems" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "distributed-systems"
+    }
   ],
   "summary": "分布式系统在一致性、可用性与分区容忍间最多取其二。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 55,
   "official_site": "https://en.wikipedia.org/wiki/CAP_theorem"
 }

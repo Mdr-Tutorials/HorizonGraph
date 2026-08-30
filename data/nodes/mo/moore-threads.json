@@ -1,10 +1,10 @@
 {
   "id": "moore-threads",
   "name": "Moore Threads",
-  "display_primary": "Moore Threads",
-  "display_secondary": "摩尔线程",
+  "display_primary": "摩尔线程",
+  "display_secondary": "Moore Threads",
   "aliases": [
-    "摩尔线程"
+    "Moore Threads"
   ],
   "type": "organization",
   "ecosystems": [
@@ -24,7 +24,7 @@
   "summary": "中国 GPU 公司，图形与计算卡的研发方。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.mthreads.com"
 }

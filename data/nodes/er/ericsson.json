@@ -1,10 +1,10 @@
 {
   "id": "ericsson",
   "name": "Ericsson",
-  "display_primary": "Ericsson",
-  "display_secondary": "爱立信",
+  "display_primary": "爱立信",
+  "display_secondary": "Ericsson",
   "aliases": [
-    "爱立信"
+    "Ericsson"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "电信设备公司，移动网络基础设施的供应方。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.ericsson.com"
 }

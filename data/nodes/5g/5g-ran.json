@@ -25,6 +25,7 @@
   "summary": "5G 无线接入网的基站与无线架构。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
-  "importance": 4
+  "last_reviewed": "2026-08-30",
+  "importance": 4,
+  "popular": 40
 }

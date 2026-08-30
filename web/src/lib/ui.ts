@@ -8,7 +8,8 @@ export function labelOf(
   displaySecondary?: string,
   type?: string
 ): { primary: string; secondary: string } {
-  if (displayPrimary) return { primary: displayPrimary, secondary: displaySecondary ?? "" };
+  if (displayPrimary)
+    return { primary: displayPrimary, secondary: displaySecondary && displaySecondary !== displayPrimary ? displaySecondary : "" };
   const zh = (aliases ?? []).find((a) => CJK.test(a));
   if (type === "organization")
     return { primary: name, secondary: zh && zh !== name ? zh : "" };

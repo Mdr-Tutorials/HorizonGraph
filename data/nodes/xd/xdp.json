@@ -33,7 +33,8 @@
   "summary": "在网卡驱动最早路径用 eBPF 处理数据包，用于 DDoS 缓解与负载均衡。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
+  "popular": 35,
   "official_site": "https://www.kernel.org/doc/html/latest/networking/af_xdp.html"
 }

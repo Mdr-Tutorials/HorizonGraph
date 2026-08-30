@@ -12,7 +12,7 @@
   "abstraction_level": "runtime_vm",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "ecosystems": [
     "dotnet-ecosystem"
   ],
@@ -36,5 +36,6 @@
   ],
   "summary": ".NET 旗舰语言，覆盖云服务、桌面与 Unity。",
   "importance": 5,
+  "popular": 88,
   "official_site": "https://learn.microsoft.com/dotnet/csharp/"
 }

@@ -39,6 +39,7 @@ export function nodeOf(b: Bundle, i: number) {
     abbr,
     type,
     summary: String(n[3] ?? ""),
+    popular: Number(n[14] ?? 0),
     importance: Number(n[4] ?? 0),
     status: String(n[5] ?? ""),
     first: String(n[6] ?? ""),
@@ -52,6 +53,37 @@ export function nodeOf(b: Bundle, i: number) {
 }
 
 export type Entry = ReturnType<typeof nodeOf> & { idx: number; id: string };
+
+// ---------- 生态链：node-ecosystems.json（自顶向下全链）与生态词表（中文名） ----------
+let ecoChains: Promise<string[][]> | null = null;
+let ecoVocab: Promise<Record<string, { zh: string; en: string }>> | null = null;
+
+function loadEcoVocab(): Promise<Record<string, { zh: string; en: string }>> {
+  ecoVocab ??= (async () => {
+    const B = import.meta.env.BASE_URL;
+    const j = await fetch(B + "eco-vocab.json").then((r) => r.json());
+    return Object.fromEntries((j.entries as any[]).map((e) => [e.value, { zh: e.zh, en: e.en ?? "" }]));
+  })();
+  return ecoVocab;
+}
+
+export async function ecoChainsOf(i: number): Promise<string[][]> {
+  ecoChains ??= (async () => {
+    const B = import.meta.env.BASE_URL;
+    const [chains, names] = await Promise.all([
+      fetch(B + "graph/node-ecosystems.json").then((r) => r.json()),
+      loadEcoVocab(),
+    ]);
+    nodeEcoNames = names;
+    return chains as string[][];
+  })();
+  return (await ecoChains)[i] ?? [];
+}
+
+let nodeEcoNames: Record<string, { zh: string; en: string }> = {};
+export function ecoNameOf(v: string): { zh: string; en: string } {
+  return nodeEcoNames[v] ?? { zh: v, en: "" };
+}
 
 export function entryOf(b: Bundle, i: number): Entry {
   return { ...nodeOf(b, i), idx: i, id: b.ids[i] };

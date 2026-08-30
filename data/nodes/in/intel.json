@@ -1,10 +1,10 @@
 {
   "id": "intel",
   "name": "Intel",
-  "display_primary": "Intel",
-  "display_secondary": "英特尔",
+  "display_primary": "英特尔",
+  "display_secondary": "Intel",
   "aliases": [
-    "英特尔"
+    "Intel"
   ],
   "type": "organization",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "x86 CPU 的主导厂商，数据中心与 PC 处理器的东家。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
   "official_site": "https://www.intel.com"
 }

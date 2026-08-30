@@ -127,6 +127,8 @@ for (const { n, file } of nodes.values()) {
   if (n.summary && Array.from(String(n.summary)).length > 50) err(`${file}: summary 超过 50 字`);
   if (n.importance !== undefined && !(Number.isInteger(n.importance) && n.importance >= 1 && n.importance <= 5))
     err(`${file}: importance 须为 1-5 整数`);
+  if (n.popular !== undefined && !(Number.isInteger(n.popular) && n.popular >= 1 && n.popular <= 100))
+    err(`${file}: popular 须为 1-100 整数`);
   for (const d of [n.first_released, n.deprecated_at, n.last_reviewed])
     if (d !== undefined && !DATE.test(d)) err(`${file}: 日期 ${d} 须为 YYYY-MM-DD`);
   if (n.status === "deprecated" && !n.deprecated_at) err(`${file}: status=deprecated 须填 deprecated_at`);

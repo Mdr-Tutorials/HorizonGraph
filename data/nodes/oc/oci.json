@@ -21,8 +21,9 @@
   ],
   "summary": "容器镜像与运行时的行业规范，Docker 与 Kubernetes 的公约。",
   "importance": 4,
+  "popular": 55,
   "official_site": "https://opencontainers.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

@@ -36,7 +36,8 @@
   "summary": "Hugging Face 的模型库，预训练权重的通用加载器。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 72,
   "official_site": "https://huggingface.co/docs/transformers"
 }

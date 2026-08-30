@@ -22,7 +22,8 @@
   ],
   "summary": "并发下读写如何可见、重排到何处为止的语言规则。",
   "importance": 5,
-  "last_reviewed": "2026-08-29",
+  "popular": 40,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

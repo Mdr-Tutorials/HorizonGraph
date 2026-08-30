@@ -1,22 +1,44 @@
 {
   "id": "gradle",
   "name": "Gradle",
-  "aliases": ["Gradle"],
+  "aliases": [
+    "Gradle"
+  ],
   "type": "tool",
-  "ecosystems": ["jvm-ecosystem", "cicd-ecosystem", "android-ecosystem"],
-  "domains": ["programming-languages", "devops"],
+  "ecosystems": [
+    "jvm-ecosystem",
+    "cicd-ecosystem",
+    "android-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "devops"
+  ],
   "abstraction_level": "application_tool",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "tool" },
-    { "relation_type": "depends_on", "target_id": "groovy" },
-    { "relation_type": "depends_on", "target_id": "jvm" },
-    { "relation_type": "competes_with", "target_id": "maven" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "groovy"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "jvm"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "maven"
+    }
   ],
   "summary": "Android 与 JVM 的声明式构建系统。",
   "status": "active",
   "origin": "curated",
   "first_released": "2008-01-01",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
+  "popular": 68,
   "official_site": "https://gradle.org"
 }

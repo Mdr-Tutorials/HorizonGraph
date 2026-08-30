@@ -13,7 +13,7 @@
   "abstraction_level": "runtime_vm",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "ecosystems": [
     "go-ecosystem"
   ],
@@ -33,5 +33,6 @@
   ],
   "summary": "语法极简、自带并发的静态语言，云原生基础设施的首选之一。",
   "importance": 4,
+  "popular": 82,
   "official_site": "https://go.dev"
 }

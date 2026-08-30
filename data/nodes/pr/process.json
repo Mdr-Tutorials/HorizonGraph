@@ -21,7 +21,8 @@
   ],
   "summary": "资源与地址空间的隔离单位；线程共享其内存但各有栈与现场。",
   "importance": 5,
-  "last_reviewed": "2026-08-29",
+  "popular": 65,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

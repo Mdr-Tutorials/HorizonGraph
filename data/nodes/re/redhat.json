@@ -1,10 +1,10 @@
 {
   "id": "redhat",
   "name": "Red Hat",
-  "display_primary": "Red Hat",
-  "display_secondary": "红帽",
+  "display_primary": "红帽",
+  "display_secondary": "Red Hat",
   "aliases": [
-    "红帽"
+    "Red Hat"
   ],
   "type": "organization",
   "ecosystems": [
@@ -24,7 +24,7 @@
   "summary": "企业 Linux 与 OpenShift 公司，现属 IBM。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
   "official_site": "https://www.redhat.com"
 }

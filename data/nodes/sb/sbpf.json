@@ -29,6 +29,7 @@
   "summary": "Solana 链上程序的字节码虚拟机，从 eBPF 分叉而来。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
-  "importance": 4
+  "last_reviewed": "2026-08-30",
+  "importance": 4,
+  "popular": 15
 }

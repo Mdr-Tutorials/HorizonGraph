@@ -1,10 +1,10 @@
 {
   "id": "01-ai",
   "name": "01.AI",
-  "display_primary": "01.AI",
-  "display_secondary": "零一万物",
+  "display_primary": "零一万物",
+  "display_secondary": "01.AI",
   "aliases": [
-    "零一万物"
+    "01.AI"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "Yi 系列开源大模型的研发公司。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.lingyiwanwu.com"
 }

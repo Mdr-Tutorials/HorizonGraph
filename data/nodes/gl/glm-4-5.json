@@ -1,20 +1,37 @@
 {
   "id": "glm-4-5",
   "name": "GLM-4.5",
-  "aliases": ["GLM-4.5 系列"],
+  "aliases": [
+    "GLM-4.5 系列"
+  ],
   "type": "model_family",
-  "ecosystems": ["llm-agent-ecosystem"],
-  "domains": ["machine-learning", "natural-language-processing"],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
   "abstraction_level": "framework_library",
   "description": "GLM-5 之前的基线版本：355B 总参 / 32B 激活（MoE），预训练 23T tokens。GLM-5 相对它做了参数规模与语料的双重扩展。另有 GLM-4.5V 多模态变体与 GLM-4.5-Air 等衍生尺寸（不开节点，属尺寸变体）。",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "llm" },
-    { "relation_type": "version_of", "target_id": "glm" },
-    { "relation_type": "developed_by", "target_id": "zhipu-ai" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "glm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "zhipu-ai"
+    }
   ],
   "summary": "GLM-5 前的基线版本，355B-A32B MoE 架构。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-08-29",
-  "importance": 3
+  "importance": 3,
+  "display_primary": "GLM-4.5"
 }

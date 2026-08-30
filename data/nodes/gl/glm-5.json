@@ -3,20 +3,38 @@
   "name": "GLM-5",
   "aliases": [],
   "type": "model_family",
-  "ecosystems": ["llm-agent-ecosystem"],
-  "domains": ["machine-learning", "natural-language-processing"],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
   "abstraction_level": "framework_library",
   "description": "面向复杂系统工程与长程智能体任务的开源旗舰（Apache-2.0）：744B-A40B MoE，预训练 28.5T tokens，集成 DeepSeek Sparse Attention（DSA），以 slime 异步强化学习框架完成后训练，口号 From Vibe Coding to Agentic Engineering。",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "llm" },
-    { "relation_type": "version_of", "target_id": "glm" },
-    { "relation_type": "developed_by", "target_id": "zhipu-ai" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "glm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "zhipu-ai"
+    }
   ],
-  "tags": ["open-source", "inference"],
+  "tags": [
+    "open-source",
+    "inference"
+  ],
   "summary": "开源旗舰 GLM-5：744B-A40B，DSA 稀疏注意力，面向智能体工程。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-08-29",
   "importance": 5,
-  "official_site": "https://github.com/zai-org/GLM-5"
+  "official_site": "https://github.com/zai-org/GLM-5",
+  "display_primary": "GLM-5"
 }

@@ -5,9 +5,7 @@
     "Stripe Payments"
   ],
   "type": "product",
-  "ecosystems": [
-    "fintech-ecosystem"
-  ],
+  "ecosystems": [],
   "domains": [
     "quantitative-finance",
     "web-development"

@@ -66,9 +66,9 @@ const relIdx = new Map(relKeys.map((k, i) => [k, i]));
 // ---------- L0 记录（与 ids 对齐）：[name, abbr, type, summary, importance, status, first, ecosystems, kind] ----------
 const records = allIds.map((id) => {
   const o = ontoMap.get(id);
-  if (o) return [o.name, "", "meta_concept", o.summary, o.importance ?? 0, "", "", [], 0, "", o.aliases ?? [], "", "", ""];
+  if (o) return [o.name, "", "meta_concept", o.summary, o.importance ?? 0, "", "", [], 0, "", o.aliases ?? [], "", "", "", 0];
   const n = nodeMap.get(id)!;
-  return [n.name, n.abbreviation ?? "", n.type, n.summary, n.importance, n.status, n.first_released ?? "", n.ecosystems ?? [], 1, n.abstraction_level ?? "", n.aliases ?? [], n.official_site ?? "", n.display_primary ?? "", n.display_secondary ?? ""];
+  return [n.name, n.abbreviation ?? "", n.type, n.summary, n.importance, n.status, n.first_released ?? "", n.ecosystems ?? [], 1, n.abstraction_level ?? "", n.aliases ?? [], n.official_site ?? "", n.display_primary ?? "", n.display_secondary ?? "", n.popular ?? 0];
 });
 
 // ---------- 边表：[src_idx, rel_idx, tgt_idx, ctx_idx|-1]，上下文入池 ----------
@@ -96,11 +96,12 @@ for (const k of Object.keys(reverseRaw).sort()) {
   reverse[k] = reverseRaw[k].sort((a, b) => a[0] - b[0] || a[1] - b[1]);
 }
 
-// ---------- version_of 折叠（搜索用） ----------
+// ---------- version_of 折叠（搜索用）；版本节点不进分类实例与生态成员列表 ----------
 const vOf = new Map<number, number>();
 for (const n of dataNodes)
   for (const e of n.relations ?? [])
     if (e.relation_type === "version_of") vOf.set(idx.get(n.id)!, idx.get(e.target_id)!);
+const isVersion = (i: number) => vOf.has(i);
 
 // ---------- 搜索分片：[idx, id, name, abbr, aliases, type, importance, version_parent_idx] ----------
 const SHARDS = 16;
@@ -108,7 +109,7 @@ const shards: any[][] = Array.from({ length: SHARDS }, () => []);
 for (const n of dataNodes) {
   const i = idx.get(n.id)!;
   shards[parseInt(sha1(n.id)[0], 16)].push([
-    i, n.id, n.name, n.abbreviation ?? "", n.aliases ?? [], n.type, n.importance, vOf.get(i) ?? -1,
+    i, n.id, n.name, n.abbreviation ?? "", n.aliases ?? [], n.type, n.importance, vOf.get(i) ?? -1, n.popular ?? 0,
   ]);
 }
 for (const s of shards) s.sort((a, b) => (a[1] < b[1] ? -1 : 1));
@@ -137,6 +138,7 @@ const taxonomy = onto.map((o) => ({
   entity_types: eff(o.id),
   instances: dataNodes
     .filter((n) => (n.relations ?? []).some((e: any) => e.relation_type === "is_instance_of" && e.target_id === o.id))
+    .filter((n) => !isVersion(idx.get(n.id)!))
     .map((n) => idx.get(n.id)!)
     .sort((a, b) => a - b),
 }));
@@ -145,7 +147,8 @@ const taxonomy = onto.map((o) => ({
 const ecoEntries: any[] = ecoJ.entries;
 const membersOf: Record<string, number[]> = {};
 for (const n of dataNodes)
-  for (const e of n.ecosystems ?? []) (membersOf[e] ??= []).push(idx.get(n.id)!);
+  if (!isVersion(idx.get(n.id)!))
+    for (const e of n.ecosystems ?? []) (membersOf[e] ??= []).push(idx.get(n.id)!);
 const descendants = (v: string): string[] => {
   const out: string[] = [];
   const seen = new Set<string>([v]);
@@ -180,6 +183,40 @@ for (const e of ecoEntries) {
     member_count: members.length,
   });
 }
+
+// ---------- 节点生态链：自顶向下去重路径（多亲 DAG 拆为多链，根在前） ----------
+const ecoParents: Record<string, string[]> = {};
+for (const e of ecoEntries) ecoParents[e.value] = (e.parents ?? []).slice().sort();
+const chainsOf = (v: string, seen = new Set<string>()): string[][] => {
+  const ps = ecoParents[v] ?? [];
+  if (ps.length === 0) return [[v]];
+  const out: string[][] = [];
+  for (const p of ps) {
+    if (seen.has(p)) continue;
+    seen.add(p);
+    for (const chain of chainsOf(p, seen)) out.push([...chain, v]);
+  }
+  return out;
+};
+const nodeEcosystems: string[][] = [];
+for (const n of dataNodes) {
+  const chains: string[][] = [];
+  const seenChain = new Set<string>();
+  for (const e of n.ecosystems ?? [])
+    for (const chain of chainsOf(e)) {
+      const key = chain.join(">");
+      if (!seenChain.has(key)) {
+        seenChain.add(key);
+        chains.push(chain);
+      }
+    }
+  nodeEcosystems[idx.get(n.id)!] = chains;
+}
+write("graph/node-ecosystems.json", nodeEcosystems);
+// 生态词表随产物发布，供 SPA 词条页「生态」栏取中文名
+write("eco-vocab.json", ecoJ);
+// 词表副本给前端 fetch（SPA public 目录即 dist）
+write("contracts-vocab/ecosystems.json", ecoJ);
 
 // ---------- 世界观图（由 relations 的 domain/range 派生元关系） ----------
 const anchors = onto.filter((o) => (o.parents ?? []).length === 0);
@@ -229,7 +266,7 @@ for (let s = 0; s < SHARDS; s++) write(`l2/shard-${s.toString(16)}.json`, l2Shar
 write("search/manifest.json", {
   shards: SHARDS,
   strategy: "sha1(id) 首个十六进制位",
-  record: "[idx, id, name, abbr, aliases, type, importance, version_parent_idx]",
+  record: "[idx, id, name, abbr, aliases, type, importance, version_parent_idx, popular]",
   files: Array.from({ length: SHARDS }, (_, i) => `shard-${i.toString(16)}.json`),
 });
 shards.forEach((s, i) => write(`search/shard-${i.toString(16)}.json`, s));

@@ -22,7 +22,8 @@
   ],
   "summary": "把服务间流量、重试与 mTLS 下沉到边车或 eBPF 数据面。",
   "importance": 4,
-  "last_reviewed": "2026-08-29",
+  "popular": 52,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

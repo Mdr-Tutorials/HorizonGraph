@@ -33,8 +33,9 @@
   ],
   "summary": "把 V8 拉到服务器的 JS 运行时，用事件循环处理 I/O。",
   "importance": 5,
+  "popular": 90,
   "official_site": "https://nodejs.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

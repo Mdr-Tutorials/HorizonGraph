@@ -1,11 +1,11 @@
 {
   "id": "sk-hynix",
   "name": "SK hynix",
-  "display_primary": "SK hynix",
-  "display_secondary": "SK 海力士",
+  "display_primary": "SK 海力士",
+  "display_secondary": "SK hynix",
   "aliases": [
-    "SK 海力士",
-    "海力士"
+    "海力士",
+    "SK hynix"
   ],
   "type": "organization",
   "ecosystems": [
@@ -24,7 +24,7 @@
   "summary": "存储芯片公司，HBM 供应的关键一环。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
   "official_site": "https://www.skhynix.com"
 }

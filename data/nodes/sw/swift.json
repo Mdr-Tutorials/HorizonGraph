@@ -12,7 +12,7 @@
   "abstraction_level": "runtime_vm",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "ecosystems": [
     "ios-ecosystem"
   ],
@@ -28,5 +28,6 @@
   ],
   "summary": "Apple 平台主语言，用协议与值类型替代 Objective-C。",
   "importance": 4,
+  "popular": 72,
   "official_site": "https://www.swift.org"
 }

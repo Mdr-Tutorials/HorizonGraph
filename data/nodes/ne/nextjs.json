@@ -36,8 +36,9 @@
   "summary": "Vercel 的 React 全栈框架。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 78,
   "official_site": "https://nextjs.org",
   "first_released": "2016-10-25"
 }

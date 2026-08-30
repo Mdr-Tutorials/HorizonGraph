@@ -24,7 +24,8 @@
   ],
   "summary": "把 HTML 变成可脚本操作的树，前端框架都在对它做差分。",
   "importance": 5,
-  "last_reviewed": "2026-08-29",
+  "popular": 70,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

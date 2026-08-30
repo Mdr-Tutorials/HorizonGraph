@@ -22,8 +22,9 @@
   ],
   "summary": "描述网页结构的标记语言，浏览器把它变成 DOM。",
   "importance": 5,
+  "popular": 95,
   "official_site": "https://html.spec.whatwg.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

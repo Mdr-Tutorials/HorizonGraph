@@ -1,10 +1,10 @@
 {
   "id": "dji",
   "name": "DJI",
-  "display_primary": "DJI",
-  "display_secondary": "大疆",
+  "display_primary": "大疆",
+  "display_secondary": "DJI",
   "aliases": [
-    "大疆"
+    "DJI"
   ],
   "type": "organization",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "消费与行业无人机公司。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
   "official_site": "https://www.dji.com"
 }

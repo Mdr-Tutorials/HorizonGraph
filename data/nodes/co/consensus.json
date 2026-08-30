@@ -21,7 +21,8 @@
   ],
   "summary": "一组节点在故障与延迟下对同一日志达成一致。",
   "importance": 5,
-  "last_reviewed": "2026-08-29",
+  "popular": 60,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

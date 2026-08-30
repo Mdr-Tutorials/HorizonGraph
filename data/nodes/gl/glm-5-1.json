@@ -3,18 +3,33 @@
   "name": "GLM-5.1",
   "aliases": [],
   "type": "model_family",
-  "ecosystems": ["llm-agent-ecosystem"],
-  "domains": ["machine-learning", "natural-language-processing"],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
   "abstraction_level": "framework_library",
   "description": "GLM-5 代的首个迭代版：智能体工程旗舰，SWE-Bench Pro 时点 SOTA，可维持数百轮、数千次工具调用的长程迭代。",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "llm" },
-    { "relation_type": "version_of", "target_id": "glm" },
-    { "relation_type": "developed_by", "target_id": "zhipu-ai" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "glm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "zhipu-ai"
+    }
   ],
   "summary": "智能体工程旗舰，SWE-Bench Pro 时点 SOTA。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-08-29",
-  "importance": 4
+  "importance": 4,
+  "display_primary": "GLM-5.1"
 }

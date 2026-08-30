@@ -24,6 +24,7 @@
   "summary": "用连续哈希链证明事件顺序与时间流逝的密码学时钟。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
-  "importance": 5
+  "last_reviewed": "2026-08-30",
+  "importance": 5,
+  "popular": 25
 }

@@ -35,8 +35,9 @@
   "summary": "大疆的机载与载荷开发套件。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
+  "popular": 30,
   "display_primary": "DJI SDK",
   "official_site": "https://developer.dji.com"
 }

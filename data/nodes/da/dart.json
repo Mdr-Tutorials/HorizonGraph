@@ -1,20 +1,36 @@
 {
   "id": "dart",
   "name": "Dart",
-  "aliases": ["Dart 语言"],
+  "aliases": [
+    "Dart 语言"
+  ],
   "type": "language",
-  "ecosystems": ["languages_runtimes", "android-ecosystem", "ios-ecosystem"],
-  "domains": ["programming-languages", "web-development"],
+  "ecosystems": [
+    "languages_runtimes",
+    "android-ecosystem",
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "web-development"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "language" },
-    { "relation_type": "developed_by", "target_id": "google" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
   ],
   "summary": "Flutter 的语言，客户端跨平台的现代选择。",
   "status": "active",
   "origin": "curated",
   "first_released": "2011-10-10",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
+  "popular": 62,
   "official_site": "https://dart.dev"
 }

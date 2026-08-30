@@ -1,10 +1,10 @@
 {
   "id": "nvidia",
   "name": "NVIDIA",
-  "display_primary": "NVIDIA",
-  "display_secondary": "英伟达",
+  "display_primary": "英伟达",
+  "display_secondary": "NVIDIA",
   "aliases": [
-    "英伟达"
+    "NVIDIA"
   ],
   "type": "organization",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "GPU 与加速计算公司，CUDA 生态的主导者。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
   "official_site": "https://www.nvidia.com"
 }

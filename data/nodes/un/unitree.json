@@ -1,11 +1,11 @@
 {
   "id": "unitree",
   "name": "Unitree",
-  "display_primary": "Unitree",
-  "display_secondary": "宇树",
+  "display_primary": "宇树",
+  "display_secondary": "Unitree",
   "aliases": [
     "宇树科技",
-    "宇树"
+    "Unitree"
   ],
   "type": "organization",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "四足与人形机器人公司。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.unitree.com"
 }

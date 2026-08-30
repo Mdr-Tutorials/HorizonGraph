@@ -1,11 +1,11 @@
 {
   "id": "tsmc",
   "name": "TSMC",
-  "display_primary": "TSMC",
-  "display_secondary": "台积电",
+  "display_primary": "台积电",
+  "display_secondary": "TSMC",
   "aliases": [
-    "台积电",
-    "台湾积体电路制造"
+    "台湾积体电路制造",
+    "TSMC"
   ],
   "type": "organization",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "全球领先的晶圆代工厂，先进制程的制造层。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
   "official_site": "https://www.tsmc.com"
 }

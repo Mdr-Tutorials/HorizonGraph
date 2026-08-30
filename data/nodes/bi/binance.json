@@ -1,10 +1,10 @@
 {
   "id": "binance",
   "name": "Binance",
-  "display_primary": "Binance",
-  "display_secondary": "币安",
+  "display_primary": "币安",
+  "display_secondary": "Binance",
   "aliases": [
-    "币安"
+    "Binance"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "全球交易量领先的加密货币交易所。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.binance.com"
 }

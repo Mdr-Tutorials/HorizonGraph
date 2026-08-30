@@ -1,9 +1,8 @@
 {
   "id": "llama",
   "name": "LLAMA",
-  "aliases": [
-    "Llama"
-  ],
+  "display_primary": "Llama",
+  "aliases": [],
   "type": "model_family",
   "ecosystems": [
     "llm-agent-ecosystem"

@@ -1,20 +1,33 @@
 {
   "id": "k-lang",
   "name": "q/kdb+",
-  "aliases": ["q 语言", "k 语言", "kdb+"],
+  "aliases": [
+    "q 语言",
+    "k 语言",
+    "kdb+"
+  ],
   "type": "language",
-  "ecosystems": ["fintech-ecosystem"],
-  "domains": ["databases", "quantitative-finance"],
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "quantitative-finance"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "language" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
   ],
   "summary": "kdb+ 的时序流式数据库查询语言。",
   "description": "q/kdb+ 的语法根在 APL 系数组语言（k 是核心，q 是可读层）。量化行业高频与时序数据的专用板，Jane Street / Citadel 同行普遍在用。",
   "status": "active",
   "origin": "curated",
   "first_released": "2003-01-01",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
+  "popular": 42,
   "official_site": "https://kx.com"
 }

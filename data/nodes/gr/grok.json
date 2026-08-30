@@ -30,7 +30,9 @@
   "summary": "xAI 的对话大模型族，实时接入 X 数据流。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
-  "official_site": "https://x.ai"
+  "official_site": "https://x.ai",
+  "popular": 85,
+  "display_primary": "Grok"
 }

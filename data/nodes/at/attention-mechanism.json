@@ -30,6 +30,7 @@
   "summary": "对输入位置加权聚焦的机制，Transformer 与 LLM 的核心。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
-  "importance": 5
+  "last_reviewed": "2026-08-30",
+  "importance": 5,
+  "popular": 80
 }

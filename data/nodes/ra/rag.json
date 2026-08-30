@@ -22,7 +22,8 @@
   ],
   "summary": "先检索再生成，把外部文档接到语言模型的上下文里。",
   "importance": 4,
-  "last_reviewed": "2026-08-29",
+  "popular": 75,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

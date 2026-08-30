@@ -1,10 +1,10 @@
 {
   "id": "baichuan",
   "name": "Baichuan AI",
-  "display_primary": "Baichuan AI",
-  "display_secondary": "百川智能",
+  "display_primary": "百川智能",
+  "display_secondary": "Baichuan AI",
   "aliases": [
-    "百川智能"
+    "Baichuan AI"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "百川系列大模型的研发公司。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.baichuan-ai.com"
 }

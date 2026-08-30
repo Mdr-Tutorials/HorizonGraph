@@ -1,19 +1,33 @@
 {
   "id": "pip",
   "name": "pip",
-  "aliases": ["pip"],
+  "aliases": [
+    "pip"
+  ],
   "type": "tool",
-  "ecosystems": ["python-ecosystem"],
-  "domains": ["programming-languages", "devops"],
+  "ecosystems": [
+    "python-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "devops"
+  ],
   "abstraction_level": "application_tool",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "tool" },
-    { "relation_type": "depends_on", "target_id": "python" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
   ],
   "summary": "Python 官方包安装器。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 78,
   "official_site": "https://pip.pypa.io"
 }

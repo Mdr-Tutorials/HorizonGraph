@@ -32,8 +32,9 @@
   ],
   "summary": "跑在 UDP 上的传输协议，握手与多路复用不再队头阻塞。",
   "importance": 5,
+  "popular": 68,
   "official_site": "https://datatracker.ietf.org/doc/rfc9000/",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

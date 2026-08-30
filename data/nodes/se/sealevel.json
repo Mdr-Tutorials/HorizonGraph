@@ -26,6 +26,7 @@
   "summary": "Solana 的并行智能合约运行时，按账户读写声明调度交易。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
-  "importance": 4
+  "last_reviewed": "2026-08-30",
+  "importance": 4,
+  "popular": 30
 }

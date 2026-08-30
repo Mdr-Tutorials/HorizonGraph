@@ -1,20 +1,35 @@
 {
   "id": "numpy",
   "name": "NumPy",
-  "aliases": ["NumPy"],
+  "aliases": [
+    "NumPy"
+  ],
   "type": "library",
-  "ecosystems": ["python-ecosystem", "ai_data_science"],
-  "domains": ["databases", "high-performance-computing"],
+  "ecosystems": [
+    "python-ecosystem",
+    "ai_data_science"
+  ],
+  "domains": [
+    "databases",
+    "high-performance-computing"
+  ],
   "abstraction_level": "framework_library",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "library" },
-    { "relation_type": "depends_on", "target_id": "python" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
   ],
   "summary": "Python 的 N 维数组与向量化计算基座。",
   "status": "active",
   "origin": "curated",
   "first_released": "2006-01-01",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 85,
   "official_site": "https://numpy.org"
 }

@@ -1,20 +1,34 @@
 {
   "id": "fsharp",
   "name": "F#",
-  "aliases": ["F# 语言", "FSharp"],
+  "aliases": [
+    "F# 语言",
+    "FSharp"
+  ],
   "type": "language",
-  "ecosystems": ["dotnet-ecosystem"],
-  "domains": ["programming-languages"],
+  "ecosystems": [
+    "dotnet-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "language" },
-    { "relation_type": "developed_by", "target_id": "microsoft" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
   ],
   "summary": ".NET 上的函数式优先语言。",
   "status": "active",
   "origin": "curated",
   "first_released": "2005-01-01",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
+  "popular": 40,
   "official_site": "https://fsharp.org"
 }

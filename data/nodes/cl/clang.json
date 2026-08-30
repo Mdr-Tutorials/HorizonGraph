@@ -32,8 +32,9 @@
   ],
   "summary": "LLVM 的 C/C++ 前端，诊断信息以清晰著称。",
   "importance": 5,
+  "popular": 66,
   "official_site": "https://clang.llvm.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

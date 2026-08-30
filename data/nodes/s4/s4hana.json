@@ -5,9 +5,7 @@
     "S/4HANA"
   ],
   "type": "product",
-  "ecosystems": [
-    "enterprise-apps-ecosystem"
-  ],
+  "ecosystems": [],
   "domains": [
     "databases"
   ],

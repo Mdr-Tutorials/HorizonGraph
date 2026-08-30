@@ -1,20 +1,33 @@
 {
   "id": "clojure",
   "name": "Clojure",
-  "aliases": ["Clojure 语言"],
+  "aliases": [
+    "Clojure 语言"
+  ],
   "type": "language",
-  "ecosystems": ["jvm-ecosystem"],
-  "domains": ["programming-languages"],
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "language" },
-    { "relation_type": "depends_on", "target_id": "jvm" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "jvm"
+    }
   ],
   "summary": "JVM 上的 Lisp 方言，不可变数据与并发叙事。",
   "status": "active",
   "origin": "curated",
   "first_released": "2007-10-16",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
+  "popular": 40,
   "official_site": "https://clojure.org"
 }

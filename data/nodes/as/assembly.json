@@ -14,7 +14,7 @@
   "abstraction_level": "runtime_vm",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "ecosystems": [
     "hardware_iot"
   ],
@@ -25,5 +25,6 @@
     }
   ],
   "summary": "指令集架构的助记符层，与具体 CPU 绑定的一类语言。",
-  "importance": 4
+  "importance": 4,
+  "popular": 50
 }

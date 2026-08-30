@@ -1,10 +1,10 @@
 {
   "id": "stepfun",
   "name": "StepFun",
-  "display_primary": "StepFun",
-  "display_secondary": "阶跃星辰",
+  "display_primary": "阶跃星辰",
+  "display_secondary": "StepFun",
   "aliases": [
-    "阶跃星辰"
+    "StepFun"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "Step 系列多模态大模型的研发公司。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.stepfun.com"
 }

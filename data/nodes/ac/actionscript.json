@@ -1,19 +1,33 @@
 {
   "id": "actionscript",
   "name": "ActionScript",
-  "aliases": ["ActionScript"],
+  "aliases": [
+    "ActionScript"
+  ],
   "type": "language",
-  "ecosystems": ["web_frontend"],
-  "domains": ["web-development", "programming-languages"],
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development",
+    "programming-languages"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "language" },
-    { "relation_type": "competes_with", "target_id": "javascript" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "javascript"
+    }
   ],
   "summary": "Flash 的脚本语言，Web 富应用的历史主角。",
   "status": "historical",
   "origin": "curated",
   "first_released": "1998-01-01",
-  "last_reviewed": "2026-08-29",
-  "importance": 2
+  "last_reviewed": "2026-08-30",
+  "importance": 2,
+  "popular": 30
 }

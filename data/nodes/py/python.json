@@ -12,7 +12,7 @@
   "abstraction_level": "runtime_vm",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "ecosystems": [
     "python-ecosystem"
   ],
@@ -24,5 +24,6 @@
   ],
   "summary": "通用动态语言，数据科学与自动化的默认选择。",
   "importance": 5,
+  "popular": 98,
   "official_site": "https://www.python.org"
 }

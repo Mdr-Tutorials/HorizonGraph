@@ -20,7 +20,8 @@
   ],
   "summary": "原子性、一致性、隔离性、持久性，事务正确性的四条约束。",
   "importance": 5,
-  "last_reviewed": "2026-08-29",
+  "popular": 66,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

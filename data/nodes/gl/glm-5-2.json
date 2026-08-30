@@ -3,18 +3,33 @@
   "name": "GLM-5.2",
   "aliases": [],
   "type": "model_family",
-  "ecosystems": ["llm-agent-ecosystem"],
-  "domains": ["machine-learning", "natural-language-processing"],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
   "abstraction_level": "framework_library",
   "description": "1M 上下文版本：引入 IndexShare（1M 上下文下单 token FLOPs 降 2.9 倍）；Terminal-Bench 2.1 得 81.0（5.1 为 62.0）、SWE-bench Pro 62.1，时点最强开源模型，接近 Claude Opus 4.8 的 85.0。",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "llm" },
-    { "relation_type": "version_of", "target_id": "glm" },
-    { "relation_type": "developed_by", "target_id": "zhipu-ai" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "glm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "zhipu-ai"
+    }
   ],
   "summary": "GLM-5.2：1M 上下文 + IndexShare，时点最强开源模型。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-08-29",
-  "importance": 5
+  "importance": 5,
+  "display_primary": "GLM-5.2"
 }

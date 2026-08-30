@@ -38,8 +38,9 @@
   "summary": "Google 的移动操作系统，Linux 内核上的应用生态。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 96,
   "official_site": "https://www.android.com",
   "first_released": "2008-09-23"
 }

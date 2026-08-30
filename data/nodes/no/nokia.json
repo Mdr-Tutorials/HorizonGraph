@@ -1,10 +1,10 @@
 {
   "id": "nokia",
   "name": "Nokia",
-  "display_primary": "Nokia",
-  "display_secondary": "诺基亚",
+  "display_primary": "诺基亚",
+  "display_secondary": "Nokia",
   "aliases": [
-    "诺基亚"
+    "Nokia"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "电信设备公司，5G 无线与核心网的供应方。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.nokia.com"
 }

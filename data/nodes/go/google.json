@@ -1,11 +1,11 @@
 {
   "id": "google",
   "name": "Google",
-  "display_primary": "Google",
-  "display_secondary": "谷歌",
+  "display_primary": "谷歌",
+  "display_secondary": "Google",
   "aliases": [
-    "谷歌",
-    "Alphabet"
+    "Alphabet",
+    "Google"
   ],
   "type": "organization",
   "ecosystems": [
@@ -25,7 +25,7 @@
   "summary": "搜索起家的科技公司，Android、Chrome、Go 与 Kubernetes 的源头。",
   "importance": 5,
   "official_site": "https://www.google.com",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

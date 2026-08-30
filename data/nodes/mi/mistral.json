@@ -33,5 +33,6 @@
   "origin": "curated",
   "last_reviewed": "2026-08-29",
   "importance": 4,
-  "official_site": "https://mistral.ai"
+  "official_site": "https://mistral.ai",
+  "display_primary": "Mistral"
 }

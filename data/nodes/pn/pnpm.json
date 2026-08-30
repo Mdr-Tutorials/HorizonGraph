@@ -25,7 +25,8 @@
   "summary": "用硬链接省磁盘的 Node 包管理器。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
+  "popular": 60,
   "official_site": "https://pnpm.io"
 }

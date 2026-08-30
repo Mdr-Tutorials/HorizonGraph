@@ -1,8 +1,8 @@
 {
   "id": "kimi",
   "name": "Kimi",
+  "display_primary": "Kimi",
   "aliases": [
-    "Kimi",
     "月之暗面模型"
   ],
   "type": "model_family",

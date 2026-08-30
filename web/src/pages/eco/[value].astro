@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import MemberBrowser from "../../components/MemberBrowser.vue";
 import TermRow from "../../components/TermRow.astro";
 import { REALM_OF } from "../../generated/contracts.gen";
 import { labelOf } from "../../lib/ui";
@@ -18,16 +19,24 @@ const data = has(`dist/site/ecosystems/${value}.json`) ? json(`dist/site/ecosyst
 const ecoLabel = (v: string) => vocab.entries.find((e: any) => e.value === v);
 const members = (data?.members ?? [])
   .map((i: number) => {
-    const l = labelOf(nodes[i]?.[0] ?? "", nodes[i]?.[1], nodes[i]?.[10] ?? [], nodes[i]?.[12] ?? "", nodes[i]?.[13] ?? "", nodes[i]?.[2]);
+    const n = nodes[i] ?? [];
+    const l = labelOf(n[0] ?? "", n[1], n[10] ?? [], n[12] ?? "", n[13] ?? "", n[2]);
     return {
       id: ids[i],
       primary: l.primary,
       secondary: l.secondary,
-      realm: REALM_OF[nodes[i]?.[2]] ?? "technical",
-      importance: nodes[i]?.[4] ?? 0,
+      realm: REALM_OF[n[2]] ?? "technical",
+      type: String(n[2] ?? ""),
+      popular: Number(n[14] ?? 0),
+      first_released: String(n[6] ?? ""),
+      href: `${B}term/${ids[i]}`,
     };
-  })
-  .sort((a: any, b: any) => b.importance - a.importance || (a.id < b.id ? -1 : 1));
+  });
+// SSR 降级列表（noscript 内）：popular 未填时即 id 序，供爬虫与无 JS 环境
+const membersSorted = members
+  .slice()
+  .sort((a: any, b: any) => b.popular - a.popular || (a.id < b.id ? -1 : 1))
+  .map((m: any) => ({ id: m.id, primary: m.primary, secondary: m.secondary, realm: m.realm }));
 ---
 <Base title={`${data?.zh ?? value} · 生态 · HorizonGraph`}>
   <h1 class="text-2xl font-semibold flex items-baseline gap-3 flex-wrap">
@@ -76,14 +85,11 @@ const members = (data?.members ?? [])
       </ul>
     </section>
   )}
-  <section class="mt-8">
-    <h2 class="text-sm font-semibold text-ink-2">
-      成员<span class="font-mono text-xs font-normal text-ink-3 ml-2">{members.length}</span>
-    </h2>
-    <ul class:list={[members.length > 3 && "term-grid", "mt-2"]}>
-      {members.map((m: any) => (
+  <MemberBrowser client:load members={members} heading="成员">
+    <ul class="term-grid mt-2">
+      {membersSorted.map((m: any) => (
         <li><TermRow {...m} /></li>
       ))}
     </ul>
-  </section>
+  </MemberBrowser>
 </Base>

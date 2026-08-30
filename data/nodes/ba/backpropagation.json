@@ -21,7 +21,8 @@
   ],
   "summary": "沿计算图回传梯度，深度网络能训练的算法基础。",
   "importance": 5,
-  "last_reviewed": "2026-08-29",
+  "popular": 60,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

@@ -34,5 +34,6 @@
   "last_reviewed": "2026-08-29",
   "importance": 5,
   "official_site": "https://stability.ai",
-  "first_released": "2022-08-22"
+  "first_released": "2022-08-22",
+  "display_primary": "Stable Diffusion"
 }

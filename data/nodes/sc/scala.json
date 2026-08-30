@@ -38,7 +38,8 @@
   "status": "active",
   "origin": "curated",
   "first_released": "2004-01-20",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 65,
   "official_site": "https://www.scala-lang.org"
 }

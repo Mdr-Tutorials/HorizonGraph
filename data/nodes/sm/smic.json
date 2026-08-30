@@ -1,10 +1,10 @@
 {
   "id": "smic",
   "name": "SMIC",
-  "display_primary": "SMIC",
-  "display_secondary": "中芯国际",
+  "display_primary": "中芯国际",
+  "display_secondary": "SMIC",
   "aliases": [
-    "中芯国际"
+    "SMIC"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "中国大陆主要晶圆代工厂。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.smics.com"
 }

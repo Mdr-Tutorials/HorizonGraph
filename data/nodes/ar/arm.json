@@ -39,8 +39,9 @@
   ],
   "summary": "手机与能效服务器的 RISC 指令集家族。",
   "importance": 5,
+  "popular": 81,
   "official_site": "https://www.arm.com",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

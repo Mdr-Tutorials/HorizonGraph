@@ -150,6 +150,11 @@
       "layer": "L0",
       "constraint": "1–5；锚定标准见 conventions.md"
     },
+    "popular": {
+      "type": "integer",
+      "layer": "L0",
+      "constraint": "1–100；全局视野的影响力/知名度，与教学重要性的 importance 正交，锚点示例见 conventions.md；可选，未填视作未知（不参与影响力档位筛选）"
+    },
     "official_site": {
       "type": "uri",
       "layer": "L0",

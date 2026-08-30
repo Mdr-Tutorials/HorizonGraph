@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import MemberBrowser from "../../components/MemberBrowser.vue";
 import TermRow from "../../components/TermRow.astro";
 import { REALM_OF } from "../../generated/contracts.gen";
 import { labelOf } from "../../lib/ui";
@@ -18,16 +19,19 @@ const cat = taxonomy.find((t) => t.id === id);
 const children = taxonomy.filter((t) => (t.parents ?? []).includes(id));
 const instances = (cat?.instances ?? [])
   .map((i: number) => {
-    const l = labelOf(nodes[i]?.[0] ?? "", nodes[i]?.[1], nodes[i]?.[10] ?? [], nodes[i]?.[12] ?? "", nodes[i]?.[13] ?? "", nodes[i]?.[2]);
+    const n = nodes[i] ?? [];
+    const l = labelOf(n[0] ?? "", n[1], n[10] ?? [], n[12] ?? "", n[13] ?? "", n[2]);
     return {
       id: ids[i],
       primary: l.primary,
       secondary: l.secondary,
-      realm: REALM_OF[nodes[i]?.[2]] ?? "technical",
-      importance: nodes[i]?.[4] ?? 0,
+      realm: REALM_OF[n[2]] ?? "technical",
+      type: String(n[2] ?? ""),
+      popular: Number(n[14] ?? 0),
+      first_released: String(n[6] ?? ""),
+      href: `${B}term/${ids[i]}`,
     };
-  })
-  .sort((a: any, b: any) => b.importance - a.importance || (a.id < b.id ? -1 : 1));
+  });
 ---
 <Base title={`${cat?.zh || cat?.name || id} · 分类 · HorizonGraph`}>
   <h1 class="text-2xl font-semibold flex items-baseline gap-3 flex-wrap">
@@ -73,15 +77,12 @@ const instances = (cat?.instances ?? [])
     </section>
   )}
   {instances.length > 0 && (
-    <section class="mt-8">
-      <h2 class="text-sm font-semibold text-ink-2">
-        实例<span class="font-mono text-xs font-normal text-ink-3 ml-2">{instances.length}</span>
-      </h2>
-      <ul class:list={[instances.length > 3 && "term-grid", "mt-2"]}>
+    <MemberBrowser client:load members={instances} heading="实例">
+      <ul class="term-grid mt-2">
         {instances.map((m: any) => (
           <li><TermRow {...m} /></li>
         ))}
       </ul>
-    </section>
+    </MemberBrowser>
   )}
 </Base>

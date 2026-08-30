@@ -13,7 +13,7 @@
   "abstraction_level": "runtime_vm",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "ecosystems": [
     "node-js-ecosystem",
     "web_frontend"
@@ -26,5 +26,6 @@
   ],
   "summary": "浏览器内生语言，经 Node 成为全栈与工具链语言。",
   "importance": 5,
+  "popular": 98,
   "official_site": "https://tc39.es"
 }

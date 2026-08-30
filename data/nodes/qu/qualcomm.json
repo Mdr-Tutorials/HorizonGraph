@@ -1,10 +1,10 @@
 {
   "id": "qualcomm",
   "name": "Qualcomm",
-  "display_primary": "Qualcomm",
-  "display_secondary": "高通",
+  "display_primary": "高通",
+  "display_secondary": "Qualcomm",
   "aliases": [
-    "高通"
+    "Qualcomm"
   ],
   "type": "organization",
   "ecosystems": [
@@ -24,7 +24,7 @@
   "summary": "手机 SoC 与调制解调器公司，Snapdragon 的东家。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
   "official_site": "https://www.qualcomm.com"
 }

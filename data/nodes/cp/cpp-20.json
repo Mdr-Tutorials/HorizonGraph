@@ -1,7 +1,8 @@
 {
   "id": "cpp-20",
   "name": "C++20",
-  "aliases": ["C++20 标准", "ISO/IEC 14882:2020"],
+  "display_primary": "C++20",
+  "aliases": ["ISO/IEC 14882:2020"],
   "type": "language",
   "ecosystems": ["native-cpp-ecosystem"],
   "domains": ["systems-programming", "programming-languages"],

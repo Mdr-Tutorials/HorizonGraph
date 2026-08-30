@@ -6,8 +6,7 @@
   ],
   "type": "language",
   "ecosystems": [
-    "languages_runtimes",
-    "fintech-ecosystem"
+    "languages_runtimes"
   ],
   "domains": [
     "programming-languages",
@@ -28,7 +27,8 @@
   "status": "active",
   "origin": "curated",
   "first_released": "1996-01-01",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
+  "popular": 45,
   "official_site": "https://ocaml.org"
 }

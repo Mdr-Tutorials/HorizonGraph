@@ -1,15 +1,15 @@
 {
   "id": "amazon",
   "name": "Amazon",
-  "display_primary": "Amazon",
-  "display_secondary": "亚马逊",
+  "display_primary": "亚马逊",
+  "display_secondary": "Amazon",
   "aliases": [
-    "亚马逊"
+    "Amazon"
   ],
   "type": "organization",
   "ecosystems": [
     "public-cloud-ecosystem",
-    "enterprise_industry"
+    "platform-commerce-ecosystem"
   ],
   "domains": [
     "cloud-infrastructure"
@@ -23,7 +23,7 @@
   "summary": "电商与云计算集团，AWS 的母公司。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
   "official_site": "https://www.amazon.com"
 }

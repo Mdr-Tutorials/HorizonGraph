@@ -22,7 +22,8 @@
   ],
   "summary": "标准拒绝规定的程序状态，编译器可任意优化甚至消除检查。",
   "importance": 4,
-  "last_reviewed": "2026-08-29",
+  "popular": 40,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

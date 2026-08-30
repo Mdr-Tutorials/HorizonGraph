@@ -5,10 +5,7 @@
     "Okta"
   ],
   "type": "product",
-  "ecosystems": [
-    "iam-ecosystem",
-    "zero-trust-ecosystem"
-  ],
+  "ecosystems": [],
   "domains": [
     "security"
   ],

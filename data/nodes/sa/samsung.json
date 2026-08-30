@@ -1,10 +1,10 @@
 {
   "id": "samsung",
   "name": "Samsung",
-  "display_primary": "Samsung",
-  "display_secondary": "三星",
+  "display_primary": "三星",
+  "display_secondary": "Samsung",
   "aliases": [
-    "三星"
+    "Samsung"
   ],
   "type": "organization",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "消费电子与存储芯片集团，HBM 与代工的东家。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
   "official_site": "https://www.samsung.com"
 }

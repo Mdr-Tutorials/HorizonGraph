@@ -1,10 +1,10 @@
 {
   "id": "broadcom",
   "name": "Broadcom",
-  "display_primary": "Broadcom",
-  "display_secondary": "博通",
+  "display_primary": "博通",
+  "display_secondary": "Broadcom",
   "aliases": [
-    "博通"
+    "Broadcom"
   ],
   "type": "organization",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "半导体与基础设施软件公司，VMware 的收购方。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
   "official_site": "https://www.broadcom.com"
 }

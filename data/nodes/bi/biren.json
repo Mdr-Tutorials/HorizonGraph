@@ -1,10 +1,10 @@
 {
   "id": "biren",
   "name": "Biren",
-  "display_primary": "Biren",
-  "display_secondary": "壁仞",
+  "display_primary": "壁仞",
+  "display_secondary": "Biren",
   "aliases": [
-    "壁仞"
+    "Biren"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "中国 GPU 公司，面向训练与推理加速卡。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.birentech.com"
 }

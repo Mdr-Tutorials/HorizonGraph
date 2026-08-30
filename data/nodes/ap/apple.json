@@ -1,10 +1,10 @@
 {
   "id": "apple",
   "name": "Apple",
-  "display_primary": "Apple",
-  "display_secondary": "苹果",
+  "display_primary": "苹果",
+  "display_secondary": "Apple",
   "aliases": [
-    "苹果"
+    "Apple"
   ],
   "type": "organization",
   "ecosystems": [
@@ -24,7 +24,7 @@
   "summary": "消费电子与操作系统公司，Darwin 与 Swift 的东家。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
   "official_site": "https://www.apple.com"
 }

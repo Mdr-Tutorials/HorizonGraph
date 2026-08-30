@@ -29,7 +29,8 @@
   ],
   "summary": "Chromium 的渲染引擎，把 DOM 与 CSS 变成图层与像素。",
   "importance": 4,
-  "last_reviewed": "2026-08-29",
+  "popular": 68,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

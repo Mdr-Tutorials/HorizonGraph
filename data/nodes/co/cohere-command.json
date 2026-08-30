@@ -36,5 +36,6 @@
   "origin": "curated",
   "last_reviewed": "2026-08-29",
   "importance": 3,
-  "official_site": "https://cohere.com"
+  "official_site": "https://cohere.com",
+  "display_primary": "Command"
 }

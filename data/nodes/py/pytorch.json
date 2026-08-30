@@ -40,8 +40,9 @@
   ],
   "summary": "动态图优先的深度学习框架，研究与生产都在用。",
   "importance": 5,
+  "popular": 92,
   "official_site": "https://pytorch.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

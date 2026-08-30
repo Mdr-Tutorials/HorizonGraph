@@ -27,7 +27,8 @@
   "summary": "Python 官方入门教程，覆盖语法、标准库与惯用法。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
+  "popular": 70,
   "official_site": "https://docs.python.org/3/tutorial/"
 }

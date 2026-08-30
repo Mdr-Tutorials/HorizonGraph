@@ -1,10 +1,10 @@
 {
   "id": "loongson",
   "name": "Loongson",
-  "display_primary": "Loongson",
-  "display_secondary": "龙芯",
+  "display_primary": "龙芯",
+  "display_secondary": "Loongson",
   "aliases": [
-    "龙芯"
+    "Loongson"
   ],
   "type": "organization",
   "ecosystems": [
@@ -22,7 +22,7 @@
   "summary": "中国 CPU 公司，LoongArch 指令集的东家。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.loongson.cn"
 }

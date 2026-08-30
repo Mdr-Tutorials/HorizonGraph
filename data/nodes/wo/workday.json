@@ -2,7 +2,7 @@
   "id": "workday",
   "name": "Workday",
   "display_primary": "Workday",
-  "display_secondary": "Workday",
+  "display_secondary": "",
   "aliases": [
     "Workday"
   ],

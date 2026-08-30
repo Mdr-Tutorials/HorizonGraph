@@ -25,8 +25,9 @@
   ],
   "summary": "指标、日志、追踪的统一埋点与导出规范。",
   "importance": 4,
+  "popular": 52,
   "official_site": "https://opentelemetry.io",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

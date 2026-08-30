@@ -32,7 +32,8 @@
   "status": "active",
   "origin": "curated",
   "first_released": "2005-04-07",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 94,
   "official_site": "https://git-scm.com"
 }

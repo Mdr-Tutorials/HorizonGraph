@@ -26,7 +26,8 @@
   "summary": "C 与 C++ 标准库与语言的社区权威速查手册。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
+  "popular": 75,
   "official_site": "https://en.cppreference.com"
 }

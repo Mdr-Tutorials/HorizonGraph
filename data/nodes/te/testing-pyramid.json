@@ -21,7 +21,8 @@
   ],
   "summary": "底层大量快测、顶层少量慢测，控制反馈速度与成本。",
   "importance": 3,
-  "last_reviewed": "2026-08-29",
+  "popular": 40,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

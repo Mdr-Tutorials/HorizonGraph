@@ -40,8 +40,9 @@
   ],
   "summary": "把进程、文件系统与网络打成容器的开发者工具。",
   "importance": 5,
+  "popular": 94,
   "official_site": "https://www.docker.com",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

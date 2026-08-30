@@ -25,7 +25,8 @@
   ],
   "summary": "跑在 GPU 上的小程序，决定顶点如何动、像素什么颜色。",
   "importance": 5,
-  "last_reviewed": "2026-08-29",
+  "popular": 50,
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

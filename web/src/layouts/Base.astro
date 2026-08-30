@@ -128,5 +128,36 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
         localStorage.setItem("hg-theme", el.dataset.theme);
       });
     </script>
+    <script>
+      // 术语网格溢出处理：不折行的条目放不下时自动横跨多列
+      let raf = 0;
+      function fixTermGrids() {
+        document.querySelectorAll("ul.term-grid").forEach((ul) => {
+          const cols = getComputedStyle(ul).gridTemplateColumns.split(" ").length;
+          for (const li of ul.children) {
+            li.style.gridColumn = "";
+            if (li.scrollWidth <= li.clientWidth) continue;
+            for (let s = 2; s <= cols; s++) {
+              li.style.gridColumn = "span " + s;
+              if (li.scrollWidth <= li.clientWidth) break;
+            }
+          }
+        });
+      }
+      const schedule = () => {
+        if (!raf)
+          raf = requestAnimationFrame(() => {
+            raf = 0;
+            fixTermGrids();
+          });
+      };
+      addEventListener("resize", schedule);
+      document.fonts?.ready?.then(schedule);
+      new MutationObserver(schedule).observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
+      fixTermGrids();
+    </script>
   </body>
 </html>

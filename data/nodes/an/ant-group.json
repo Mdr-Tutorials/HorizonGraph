@@ -1,11 +1,11 @@
 {
   "id": "ant-group",
   "name": "Ant Group",
-  "display_primary": "Ant Group",
-  "display_secondary": "蚂蚁集团",
+  "display_primary": "蚂蚁集团",
+  "display_secondary": "Ant Group",
   "aliases": [
-    "蚂蚁集团",
-    "蚂蚁金服"
+    "蚂蚁金服",
+    "Ant Group"
   ],
   "type": "organization",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "支付宝背后的金融科技集团。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 4,
   "official_site": "https://www.antgroup.com"
 }

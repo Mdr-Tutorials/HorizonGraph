@@ -1,10 +1,10 @@
 {
   "id": "sony",
   "name": "Sony",
-  "display_primary": "Sony",
-  "display_secondary": "索尼",
+  "display_primary": "索尼",
+  "display_secondary": "Sony",
   "aliases": [
-    "索尼"
+    "Sony"
   ],
   "type": "organization",
   "ecosystems": [
@@ -24,7 +24,7 @@
   "summary": "消费电子与娱乐公司，PlayStation 与图像传感器的东家。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 3,
   "official_site": "https://www.sony.com"
 }

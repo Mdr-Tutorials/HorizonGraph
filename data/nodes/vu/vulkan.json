@@ -23,8 +23,9 @@
   ],
   "summary": "Khronos 的显式图形与计算 API，把同步和内存交给应用。",
   "importance": 4,
+  "popular": 66,
   "official_site": "https://www.vulkan.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

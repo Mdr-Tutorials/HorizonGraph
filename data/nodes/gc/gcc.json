@@ -24,8 +24,9 @@
   ],
   "summary": "GNU 的 C/C++ 等语言编译器套件，系统软件的默认工具链之一。",
   "importance": 5,
+  "popular": 81,
   "official_site": "https://gcc.gnu.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

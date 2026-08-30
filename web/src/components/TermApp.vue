@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from "vue";
 import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-vue-next";
-import { loadBundle, rowsOf, nodeOf, type Bundle, type Row } from "../lib/graph";
+import { loadBundle, rowsOf, nodeOf, ecoChainsOf, ecoNameOf, type Bundle, type Row } from "../lib/graph";
 import { loadDesc } from "../lib/l2";
 import { TXT } from "../lib/ui";
 
@@ -9,6 +9,7 @@ const B = import.meta.env.BASE_URL;
 const id = ref("");
 const node = ref<ReturnType<typeof nodeOf> | null>(null);
 const rows = ref<Row[]>([]);
+const ecoChains = ref<string[][]>([]);
 const desc = ref("");
 const missing = ref(false);
 const loading = ref(true);
@@ -34,6 +35,7 @@ async function show(tid: string) {
   missing.value = i < 0;
   node.value = i >= 0 ? nodeOf(bundle, i) : null;
   rows.value = i >= 0 ? rowsOf(bundle, i) : [];
+  ecoChains.value = i >= 0 ? await ecoChainsOf(i) : [];
   desc.value = "";
   expanded.value = false;
   loading.value = false;
@@ -68,6 +70,12 @@ onUnmounted(() => {
 function href(en: Row["entry"]) {
   return `${B}${en.kind === 0 ? "cat" : "term"}/${en.id}`;
 }
+const ecoRows = computed(() =>
+  ecoChains.value.map((chain, ci) => ({ chain, key: ci, label: chain[chain.length - 1] }))
+);
+function ecoZh(v: string): string {
+  return ecoNameOf(v).zh;
+}
 const navRows = computed(() => rows.value.filter((r) => r.label === "属于"));
 const verRows = computed(() => rows.value.filter((r) => r.label === "版本"));
 const kinRows = computed(() => rows.value.filter((r) => r.label === "包含" && r.entry.kind === 0));
@@ -80,6 +88,18 @@ function visible() {
 function toggle() {
   expanded.value = !expanded.value;
 }
+// 知名度档位:81-100 极高 / 61-80 高 / 41-60 中 / 1-40 低;0 = 未标定不显示
+const POPULAR_BANDS: [number, string][] = [
+  [81, "极高知名度"],
+  [61, "高知名度"],
+  [41, "中知名度"],
+  [1, "低知名度"],
+];
+const popularBand = computed(() => {
+  const p = node.value?.popular ?? 0;
+  if (!p) return "";
+  return POPULAR_BANDS.find(([min]) => p >= min)![1];
+});
 </script>
 
 <template>
@@ -100,10 +120,22 @@ function toggle() {
           rel="noopener"
           class="inline-flex items-center text-accent hover:underline no-underline"
         >
-          <ArrowUpRight :size="15" />
+          <ArrowUpRight :size="15" class="translate-y-0.5" />
         </a>
       </h1>
-      <p v-if="node.aliases.length" class="mt-2 text-sm text-ink-2">{{ node.aliases.join(" · ") }}</p>
+      <p class="mt-2 text-sm text-ink-3 flex items-baseline gap-4 flex-wrap">
+        <span v-if="popularBand" class="inline-flex items-baseline gap-1.5">
+          <span class="font-mono text-sm text-ink-2">{{ node.popular }}</span>
+          <span>{{ popularBand }}</span>
+        </span>
+        <span v-if="node.aliases.length" class="group relative inline-flex items-baseline gap-1.5">
+          <span class="font-mono text-xs">{{ node.aliases.length }}</span>
+          <span class="cursor-default">别名</span>
+          <span
+            class="pointer-events-none absolute left-0 top-full z-10 mt-1 hidden w-max max-w-[70vw] rounded border border-line bg-page px-2.5 py-1.5 text-sm text-ink-2 shadow-lg group-hover:block"
+          >{{ node.aliases.join(" · ") }}</span>
+        </span>
+      </p>
     </header>
     <p class="mt-5 leading-7">{{ node.summary }}</p>
 
@@ -146,6 +178,19 @@ function toggle() {
               <span class="font-term font-medium text-realm-concept">{{ r.entry.primary }}</span>
               <span v-if="r.entry.secondary" class="font-term text-sm text-secondary-name">{{ r.entry.secondary }}</span>
             </a>
+          </li>
+        </ul>
+      </div>
+      <div v-if="ecoRows.length">
+        <h2 class="text-sm font-semibold text-ink-2">
+          生态<span class="font-mono text-xs font-normal text-ink-3 ml-2">{{ ecoChains.length }}</span>
+        </h2>
+        <ul class="mt-2">
+          <li v-for="c in ecoRows" :key="c.key" class="py-1">
+            <template v-for="(v, vi) in c.chain" :key="v">
+              <a :href="`${B}eco/${v}`" class="font-term font-medium text-realm-tech w-fit hover:underline no-underline whitespace-nowrap">{{ ecoZh(v) }}</a>
+              <span v-if="vi < c.chain.length - 1" class="text-ink-3">&nbsp;→&nbsp;</span>
+            </template>
           </li>
         </ul>
       </div>

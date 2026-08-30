@@ -31,8 +31,9 @@
   ],
   "summary": "给 JavaScript 加上静态类型的超集，编译回 JS 运行。",
   "importance": 5,
+  "popular": 85,
   "official_site": "https://www.typescriptlang.org",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "origin": "curated",
   "status": "active"
 }

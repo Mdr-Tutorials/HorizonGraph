@@ -1,11 +1,11 @@
 {
   "id": "alibaba",
   "name": "Alibaba",
-  "display_primary": "Alibaba",
-  "display_secondary": "阿里巴巴",
+  "display_primary": "阿里巴巴",
+  "display_secondary": "Alibaba",
   "aliases": [
-    "阿里巴巴",
-    "阿里"
+    "阿里",
+    "Alibaba"
   ],
   "type": "organization",
   "ecosystems": [
@@ -25,7 +25,7 @@
   "summary": "电商起家的科技集团，阿里云与通义千问的东家。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-08-30",
   "importance": 5,
   "official_site": "https://www.alibabagroup.com"
 }
