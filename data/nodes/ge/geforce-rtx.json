@@ -1,0 +1,34 @@
+{
+  "id": "geforce-rtx",
+  "name": "GeForce RTX",
+  "display_primary": "GeForce RTX",
+  "display_secondary": "GeForce RTX",
+  "aliases": [
+    "RTX"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing",
+    "graphics_gaming"
+  ],
+  "domains": [
+    "graphics",
+    "game-development"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "gpu"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia"
+    }
+  ],
+  "summary": "NVIDIA 游戏显卡品牌线，RT 光追与 DLSS 的载体。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,37 @@
+{
+  "id": "apple-m1",
+  "name": "Apple M1",
+  "display_primary": "Apple M1",
+  "display_secondary": "Apple M1",
+  "aliases": [
+    "M1"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "macos-darwin-ecosystem",
+    "arm-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "apple-silicon"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    }
+  ],
+  "summary": "第一块 Apple Silicon，ARM PC 的转折点。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

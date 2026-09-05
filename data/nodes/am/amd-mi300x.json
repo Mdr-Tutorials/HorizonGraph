@@ -1,0 +1,41 @@
+{
+  "id": "amd-mi300x",
+  "name": "AMD Instinct MI300X",
+  "display_primary": "MI300X",
+  "display_secondary": "AMD Instinct MI300X",
+  "aliases": [
+    "MI300X"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing",
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "gpu"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "amd"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "nvidia-h100"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "nvidia-b200"
+    }
+  ],
+  "summary": "AMD 对抗 H100 的 AI 卡，192GB 大显存打法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

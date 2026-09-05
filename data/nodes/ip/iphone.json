@@ -1,0 +1,28 @@
+{
+  "id": "iphone",
+  "name": "iPhone",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    }
+  ],
+  "summary": "重新定义智能手机的产品，移动时代的定价者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

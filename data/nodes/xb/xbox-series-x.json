@@ -1,0 +1,32 @@
+{
+  "id": "xbox-series-x",
+  "name": "Xbox Series X",
+  "display_primary": "Xbox Series X",
+  "display_secondary": "Xbox Series X",
+  "aliases": [
+    "XSX"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "game-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "微软现役旗舰主机，Game Pass 战略的硬件支点。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

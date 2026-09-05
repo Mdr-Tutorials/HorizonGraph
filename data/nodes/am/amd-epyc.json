@@ -1,0 +1,37 @@
+{
+  "id": "amd-epyc",
+  "name": "AMD EPYC",
+  "display_primary": "霄龙",
+  "display_secondary": "AMD EPYC",
+  "aliases": [
+    "霄龙"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "x86-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "intel-xeon"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "amd"
+    }
+  ],
+  "summary": "AMD 的服务器 CPU，以核心数掀翻机房格局。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

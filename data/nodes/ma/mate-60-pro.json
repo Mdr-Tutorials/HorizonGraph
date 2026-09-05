@@ -1,0 +1,32 @@
+{
+  "id": "mate-60-pro",
+  "name": "HUAWEI Mate 60 Pro",
+  "display_primary": "Mate 60 Pro",
+  "display_secondary": "HUAWEI Mate 60 Pro",
+  "aliases": [
+    "Mate 60 Pro"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "huawei"
+    }
+  ],
+  "summary": "麒麟回归的标志性整机，2023 产业话题之王。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

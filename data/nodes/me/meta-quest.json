@@ -1,0 +1,37 @@
+{
+  "id": "meta-quest",
+  "name": "Meta Quest",
+  "display_primary": "Quest",
+  "display_secondary": "Meta Quest",
+  "aliases": [
+    "Quest"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "human-computer-interaction",
+    "game-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vision-pro"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "卖得最好的 VR 头显家族，元宇宙战争的幸存者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

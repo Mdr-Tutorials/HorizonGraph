@@ -1,0 +1,36 @@
+{
+  "id": "nintendo-switch",
+  "name": "Nintendo Switch",
+  "display_primary": "Switch",
+  "display_secondary": "Nintendo Switch",
+  "aliases": [
+    "Switch"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "game-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "steam-deck"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nintendo"
+    }
+  ],
+  "summary": "主机掌机一体的混合形态，现象级长寿平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,33 @@
+{
+  "id": "loongson-3a6000",
+  "name": "Loongson 3A6000",
+  "display_primary": "龙芯 3A6000",
+  "display_secondary": "Loongson 3A6000",
+  "aliases": [
+    "龙芯 3A6000"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "systems-programming",
+    "industry-landscape"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "loongson"
+    }
+  ],
+  "summary": "自主指令集 LoongArch 的性能里程碑。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

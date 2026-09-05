@@ -1,0 +1,40 @@
+{
+  "id": "playstation-5",
+  "name": "PlayStation 5",
+  "display_primary": "PS5",
+  "display_secondary": "PlayStation 5",
+  "aliases": [
+    "PS5"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "game-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "playstation"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "xbox-series-x"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "sony"
+    }
+  ],
+  "summary": "索尼现役主机，SSD 改变游戏装载体验。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

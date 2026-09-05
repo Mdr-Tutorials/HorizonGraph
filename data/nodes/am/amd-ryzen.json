@@ -1,0 +1,36 @@
+{
+  "id": "amd-ryzen",
+  "name": "AMD Ryzen",
+  "display_primary": "锐龙",
+  "display_secondary": "AMD Ryzen",
+  "aliases": [
+    "锐龙"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "x86-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "intel-core"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "amd"
+    }
+  ],
+  "summary": "Zen 架构的消费线，把 AMD 带回桌面战场。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

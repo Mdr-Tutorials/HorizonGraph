@@ -1,0 +1,33 @@
+{
+  "id": "intel-xeon",
+  "name": "Intel Xeon",
+  "display_primary": "至强",
+  "display_secondary": "Intel Xeon",
+  "aliases": [
+    "至强"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "x86-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "intel"
+    }
+  ],
+  "summary": "数据中心 CPU 的老牌标准件，服务器机房的常客。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,33 @@
+{
+  "id": "kunpeng-920",
+  "name": "Kunpeng 920",
+  "display_primary": "鲲鹏 920",
+  "display_secondary": "Kunpeng 920",
+  "aliases": [
+    "鲲鹏 920"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "arm-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "huawei"
+    }
+  ],
+  "summary": "华为的 ARM 服务器芯片，国产算力多元路线之一。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

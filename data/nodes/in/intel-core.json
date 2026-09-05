@@ -1,0 +1,32 @@
+{
+  "id": "intel-core",
+  "name": "Intel Core",
+  "display_primary": "酷睿",
+  "display_secondary": "Intel Core",
+  "aliases": [
+    "酷睿"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "x86-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "intel"
+    }
+  ],
+  "summary": "英特尔消费级 CPU 品牌，桌面与笔记本主力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

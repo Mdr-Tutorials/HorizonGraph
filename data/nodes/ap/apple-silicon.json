@@ -1,0 +1,33 @@
+{
+  "id": "apple-silicon",
+  "name": "Apple Silicon",
+  "display_primary": "Apple Silicon",
+  "display_secondary": "Apple Silicon",
+  "aliases": [
+    "苹果自研芯片"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "macos-darwin-ecosystem",
+    "arm-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    }
+  ],
+  "summary": "苹果自研芯片家族，Mac 全面转向 ARM 的载体。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

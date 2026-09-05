@@ -1,0 +1,41 @@
+{
+  "id": "ascend-910b",
+  "name": "Ascend 910B",
+  "display_primary": "昇腾 910B",
+  "display_secondary": "Ascend 910B",
+  "aliases": [
+    "昇腾 910B"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing",
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "ascend"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "nvidia-a100"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "huawei"
+    }
+  ],
+  "summary": "实体清单后的国产 AI 算力主力，昇腾生态核心。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

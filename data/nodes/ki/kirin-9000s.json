@@ -1,0 +1,37 @@
+{
+  "id": "kirin-9000s",
+  "name": "Kirin 9000s",
+  "display_primary": "麒麟 9000s",
+  "display_secondary": "Kirin 9000s",
+  "aliases": [
+    "麒麟 9000s"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "hardware_iot",
+    "arm-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "huawei"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mate-60-pro"
+    }
+  ],
+  "summary": "制裁阴影下回归的国产 7nm SoC，Mate 60 的心脏。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

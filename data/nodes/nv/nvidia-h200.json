@@ -1,0 +1,37 @@
+{
+  "id": "nvidia-h200",
+  "name": "NVIDIA H200",
+  "display_primary": "H200",
+  "display_secondary": "NVIDIA H200",
+  "aliases": [
+    "H200"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing",
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "gpu"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "nvidia-h100"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia"
+    }
+  ],
+  "summary": "H100 的显存升级版，141GB HBM3e 推理利器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

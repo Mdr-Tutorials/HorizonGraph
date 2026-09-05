@@ -1,0 +1,32 @@
+{
+  "id": "nvidia-jetson",
+  "name": "NVIDIA Jetson",
+  "aliases": [
+    "Jetson"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "embedded-ecosystem",
+    "gpu-computing"
+  ],
+  "domains": [
+    "embedded-systems",
+    "machine-learning"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia"
+    }
+  ],
+  "summary": "边缘 AI 模组家族，把推理塞进机器人和摄像头。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

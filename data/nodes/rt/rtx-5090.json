@@ -1,0 +1,37 @@
+{
+  "id": "rtx-5090",
+  "name": "GeForce RTX 5090",
+  "display_primary": "RTX 5090",
+  "display_secondary": "GeForce RTX 5090",
+  "aliases": [
+    "5090"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing",
+    "graphics_gaming"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "gpu"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "geforce-rtx"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia"
+    }
+  ],
+  "summary": "Blackwell 消费旗舰，32GB 显存的桌面怪兽。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

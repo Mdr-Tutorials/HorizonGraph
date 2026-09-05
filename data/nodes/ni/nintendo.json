@@ -1,0 +1,25 @@
+{
+  "id": "nintendo",
+  "name": "Nintendo",
+  "aliases": [
+    "任天堂"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "game-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "百年游戏帝国，Switch 与第一方玩法的定义者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,38 @@
+{
+  "id": "rtx-4090",
+  "name": "GeForce RTX 4090",
+  "display_primary": "RTX 4090",
+  "display_secondary": "GeForce RTX 4090",
+  "aliases": [
+    "4090"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "gpu-computing",
+    "graphics_gaming"
+  ],
+  "domains": [
+    "graphics",
+    "machine-learning"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "gpu"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "geforce-rtx"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia"
+    }
+  ],
+  "summary": "Ada 世代消费旗舰，个人炼金玩家的门槛卡。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}
