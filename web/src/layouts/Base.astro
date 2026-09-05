@@ -10,6 +10,7 @@ import "@fontsource/mona-sans/600.css";
 import "@fontsource/mona-sans/700.css";
 import "../styles/tokens.css";
 import SearchPalette from "../components/SearchPalette.vue";
+import TermApp from "../components/TermApp.vue";
 import { Search, SunMoon, Info } from "@lucide/astro";
 const { title = "HorizonGraph" } = Astro.props;
 const B = import.meta.env.BASE_URL;
@@ -66,7 +67,10 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
       </button>
     </header>
     <main class="px-6 lg:px-10 py-10">
-      <slot />
+      <div id="hg-static-slot">
+        <slot />
+      </div>
+      <TermApp client:load />
     </main>
     <SearchPalette client:load />
     <dialog
@@ -134,6 +138,7 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
       function fixTermGrids() {
         document.querySelectorAll("ul.term-grid").forEach((ul) => {
           const cols = getComputedStyle(ul).gridTemplateColumns.split(" ").length;
+          if (cols <= 1) return;
           for (const li of ul.children) {
             li.style.gridColumn = "";
             if (li.scrollWidth <= li.clientWidth) continue;
@@ -158,6 +163,16 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
         subtree: true,
       });
       fixTermGrids();
+
+      // 空闲时静默预热图数据，为词条点击提供 0ms 纯内存秒开
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(() => {
+          const B = document.querySelector("a.font-brand")?.getAttribute("href") || "/";
+          ["graph/ids.json", "graph/nodes.json", "graph/edges.json", "graph/reverse.json", "graph/manifest.json", "graph/node-ecosystems.json", "eco-vocab.json"].forEach((f) => {
+            fetch(B + f);
+          });
+        });
+      }
     </script>
   </body>
 </html>

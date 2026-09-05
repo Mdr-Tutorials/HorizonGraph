@@ -16,10 +16,16 @@ const loading = ref(true);
 const expanded = ref(false);
 let bundle: Bundle | null = null;
 
+let initialTitle = "";
+
 function currentId(): string {
+  if (typeof location === "undefined") return "";
   const m = location.pathname.match(/\/term\/([^/]+)/);
   return m ? decodeURIComponent(m[1]) : "";
 }
+
+const active = computed(() => !!id.value || (loading.value && !!currentId()));
+
 async function show(tid: string) {
   loading.value = true;
   id.value = tid;
@@ -45,27 +51,66 @@ async function show(tid: string) {
     desc.value = await loadDesc(tid);
   }
 }
+
+function navigate(tid: string, updateHistory = false) {
+  const slot = document.getElementById("hg-static-slot");
+  if (tid) {
+    if (slot) slot.style.display = "none";
+    if (updateHistory) {
+      history.pushState(null, "", `${B}term/${tid}`);
+    }
+    show(tid);
+  } else {
+    if (slot) slot.style.display = "";
+    id.value = "";
+    node.value = null;
+    rows.value = [];
+    missing.value = false;
+    loading.value = false;
+    if (initialTitle) document.title = initialTitle;
+  }
+}
+
 function onClick(e: MouseEvent) {
+  if (e.defaultPrevented) return;
+  if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
   const a = (e.target as HTMLElement).closest("a");
   if (!a) return;
-  const m = a.getAttribute("href")?.match(/\/term\/([^/?#]+)/);
+  const href = a.getAttribute("href");
+  if (!href) return;
+  const m = href.match(/\/term\/([^/?#]+)/);
   if (!m) return;
   e.preventDefault();
   const tid = decodeURIComponent(m[1]);
-  history.pushState(null, "", `${B}term/${tid}`);
-  show(tid);
+  navigate(tid, true);
 }
+
 function onPop() {
-  show(currentId());
+  navigate(currentId(), false);
 }
+
+function onCustomNav(e: Event) {
+  const tid = (e as CustomEvent).detail?.id;
+  if (tid) navigate(tid, true);
+}
+
 onMounted(() => {
-  show(currentId());
+  initialTitle = document.title;
+  const tid = currentId();
+  if (tid) {
+    navigate(tid, false);
+  } else {
+    loading.value = false;
+  }
   addEventListener("popstate", onPop);
   document.addEventListener("click", onClick);
+  addEventListener("hg-term-nav", onCustomNav as EventListener);
 });
+
 onUnmounted(() => {
   removeEventListener("popstate", onPop);
   document.removeEventListener("click", onClick);
+  removeEventListener("hg-term-nav", onCustomNav as EventListener);
 });
 function href(en: Row["entry"]) {
   return `${B}${en.kind === 0 ? "cat" : "term"}/${en.id}`;
@@ -103,12 +148,13 @@ const popularBand = computed(() => {
 </script>
 
 <template>
-  <p v-if="loading" class="font-mono text-sm text-ink-3 py-24 text-center">loading</p>
-  <div v-else-if="missing" class="py-24 text-center">
-    <p class="font-mono text-ink-2">{{ id || "404" }}</p>
-    <p class="mt-2 text-sm text-ink-3">未找到词条 · <a :href="B" class="text-accent hover:underline">返回首页</a></p>
-  </div>
-  <article v-else-if="node">
+  <div v-if="active">
+    <p v-if="loading" class="font-mono text-sm text-ink-3 py-24 text-center">loading</p>
+    <div v-else-if="missing" class="py-24 text-center">
+      <p class="font-mono text-ink-2">{{ id || "404" }}</p>
+      <p class="mt-2 text-sm text-ink-3">未找到词条 · <a :href="B" class="text-accent hover:underline">返回首页</a></p>
+    </div>
+    <article v-else-if="node">
     <header>
       <h1 class="text-2xl font-semibold flex items-baseline gap-3 flex-wrap">
         <span class="font-term" :class="TXT[node.realm] ?? TXT.technical">{{ node.primary }}</span>
@@ -220,5 +266,6 @@ const popularBand = computed(() => {
     </section>
 
     <p v-if="desc" class="mt-10 pt-6 border-t border-line text-sm leading-7 text-ink-2 whitespace-pre-line">{{ desc }}</p>
-  </article>
+    </article>
+  </div>
 </template>

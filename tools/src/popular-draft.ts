@@ -24,25 +24,25 @@ const P: Record<string, number> = {
   nextjs: 78, openmmlab: 40, "proof-of-history": 25, "public-key-cryptography": 65, "testing-pyramid": 40,
   "undefined-behavior": 40, "virtual-memory": 55, wasm: 70, "windows-nt": 85,
   // 语言 — 极高档/高档
-  python: 98, javascript: 98, java: 95, html: 95, c: 93, "c++": 93, sql: 92, "c#": 88, typescript: 85, go: 82, php: 81, rust: 81,
+  python: 98, javascript: 98, java: 95, html: 95, c: 97, "c++": 97, sql: 92, "c#": 88, typescript: 85, go: 82, php: 81, rust: 81,
   kotlin: 72, swift: 72, ruby: 68, r: 66, scala: 65, dart: 62, perl: 55,
   // 语言 — 中档/低档
-  lua: 55, julia: 52, fortran: 48, cobol: 48, haskell: 48, ocaml: 45, erlang: 45, verilog: 45, prolog: 42, groovy: 42, clojure: 40, elixir: 38, vhdl: 40, scheme: 40, "common-lisp": 35, ada: 35, delphi: 35, "visual-basic": 38, actionscript: 30, gdscript: 30, carbon: 25, zig: 30, scratch: 45, assembly: 50, "q-kdb": 42,
+  lua: 65, julia: 52, fortran: 48, cobol: 48, haskell: 48, ocaml: 45, erlang: 45, verilog: 45, prolog: 42, groovy: 42, clojure: 40, elixir: 38, vhdl: 40, scheme: 40, "common-lisp": 35, ada: 35, delphi: 35, "visual-basic": 38, actionscript: 30, gdscript: 30, carbon: 25, zig: 30, scratch: 90, assembly: 50, "q-kdb": 42,
   // C/C++ 版本:跟随普及度
   "c++11": 70, "c++17": 65, "c++98": 45, "c++03": 40, "c++14": 50, "c++20": 48, "c++23": 35, "c++26": 25,
   c11: 45, c99: 48, c90: 42, c17: 38, c23: 28,
   // 教材/文档(用户校准)
-  csapp: 85, "k-r": 80, sicp: 68, "the-rust-book": 65, cppreference: 75, "python-tutorial": 70, "a-tour-of-go": 60, clrs: 55, "man-pages": 50,
+  csapp: 85, clrs: 88, "k-r": 80, sicp: 68, "the-rust-book": 65, cppreference: 75, "python-tutorial": 70, "a-tour-of-go": 60, "man-pages": 50,
   // 架构
-  "linux-kernel": 97, android: 96, "nt-kernel": 85, jvm: 85, "x86-64": 82, arm: 81, v8: 82, cuda: 78, ebpf: 72, webassembly: 70, harmonyos: 70, blink: 68, "risc-v": 65, kvm: 55, loongarch: 30, evm: 50, sealevel: 30, "5g-ran": 40, bpf: 55, cgroup: 58, namespace: 58, xdp: 35, sbpf: 15,
+  "linux-kernel": 97, android: 96, "nt-kernel": 85, jvm: 85, "x86-64": 82, arm: 81, v8: 82, cuda: 78, ebpf: 72, webassembly: 70, harmonyos: 90, blink: 68, "risc-v": 65, kvm: 55, loongarch: 30, evm: 50, sealevel: 30, "5g-ran": 40, bpf: 55, cgroup: 58, namespace: 58, xdp: 35, sbpf: 15,
   // 协议
-  http: 97, tcp: 92, ip: 92, tls: 90, pdf: 81, oauth: 82, bitcoin: 85, ethereum: 82, quic: 68, "http-3": 66, vulkan: 66, posix: 62, oci: 55, "fix-protocol": 42, udp: 88, wasi: 45, webgpu: 55, solana: 60,
+  http: 97, tcp: 92, ip: 92, tls: 90, pdf: 91, oauth: 82, bitcoin: 85, ethereum: 72, quic: 68, "http-3": 66, vulkan: 66, posix: 62, oci: 55, "fix-protocol": 42, udp: 88, wasi: 45, webgpu: 55, solana: 60,
   // 框架/库
   react: 96, kubernetes: 90, vscode: 98, nodejs: 90, pytorch: 92, openssl: 85, numpy: 85, pandas: 83, nextjs: 78, cilium: 45, "delta-lake": 50, transformers: 72, openmmlab: 40, megengine: 22, "dji-sdk": 30, core: 40, opentelemetry: 52,
   // 工具
-  git: 94, docker: 94, llvm: 82, gcc: 81, matlab: 80, gradle: 68, maven: 65, clang: 66, terraform: 66, cargo: 66, npm: 78, pip: 78, pnpm: 60, yarn: 58, qemu: 55, systemd: 62, nodejs: 90, bpftrace: 25,
+  git: 94, docker: 94, llvm: 82, gcc: 81, matlab: 80, gradle: 68, maven: 65, clang: 66, terraform: 66, cargo: 66, npm: 78, pip: 78, pnpm: 60, yarn: 72, qemu: 55, systemd: 62, nodejs: 90, bpftrace: 25,
   // 产品
-  chrome: 95, firefox: 78, "h-100": 85, snapdragon: 80, photoshop: 85, postgresql: 82, mysql: 82, redis: 78, mongodb: 72, elasticsearch: 75, prometheus: 70, slack: 75, jira: 72, cursor: 74, autocad: 78, "unreal-engine": 76, unity: 74, ubuntu: 78, etcd: 52, "s3": 80, claude: 92, "wps-office": 60, "wps": 60, wechat: 95, alipay: 85, "zhi-pu-qing-yan": 45, "s-4hana": 46, "now-platform": 44, "sales-cloud": 46, foundry: 44, datadog: 68, snowflake: 72, "hyped-os": 0, hyperos: 45, "meta-mask": 45, metamask: 45, "juice-filesystem": 0, juicefs: 35, "ksqldb": 30, "cppreference": 75,
+  chrome: 95, firefox: 78, "h-100": 85, snapdragon: 80, photoshop: 85, postgresql: 82, mysql: 82, redis: 78, mongodb: 72, elasticsearch: 75, prometheus: 70, slack: 75, jira: 72, cursor: 74, autocad: 78, "unreal-engine": 76, unity: 74, ubuntu: 78, etcd: 52, "s3": 80, claude: 92, "wps-office": 60, "wps": 60, wechat: 100, alipay: 85, "zhi-pu-qing-yan": 45, "s-4hana": 46, "now-platform": 44, "sales-cloud": 46, foundry: 44, datadog: 68, snowflake: 72, "hyped-os": 0, hyperos: 45, "meta-mask": 45, metamask: 45, "juice-filesystem": 0, juicefs: 35, "ksqldb": 30, "cppreference": 75,
   "github-actions": 72, "gitlab-ci": 55, "cloudflare-workers": 50, "openshift": 52, "aws-ec2": 0,
   // 公司 — 极高档
   google: 98, microsoft: 96, apple: 95, amazon: 94, nvidia: 94, meta: 92, github: 93, ibm: 88, intel: 90, tsmc: 90, oracle: 88, qualcomm: 86, amd: 85, huawei: 88, tencent: 88, alibaba: 88, bytedance: 84, baidu: 84, openai: 96, anthropic: 88, "samsung": 85, sony: 82, deepseek: 84,

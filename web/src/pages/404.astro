@@ -1,7 +1,16 @@
 ---
 import Base from "../layouts/Base.astro";
-import TermApp from "../components/TermApp.vue";
+const B = import.meta.env.BASE_URL;
 ---
 <Base title="HorizonGraph">
-  <TermApp client:load />
+  <div id="hg-not-found" class="py-24 text-center" style="display: none;">
+    <p class="font-mono text-ink-2">404</p>
+    <p class="mt-2 text-sm text-ink-3">未找到页面 · <a href={B} class="text-accent hover:underline">返回首页</a></p>
+  </div>
+  <script is:inline>
+    if (!location.pathname.includes("/term/")) {
+      const el = document.getElementById("hg-not-found");
+      if (el) el.style.display = "block";
+    }
+  </script>
 </Base>

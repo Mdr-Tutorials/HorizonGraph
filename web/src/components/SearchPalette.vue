@@ -35,7 +35,13 @@ async function run() {
 }
 function go(h: Hit) {
   close();
-  location.href = `${B}${h.kind === 0 ? "cat" : "term"}/${h.id}`;
+  const target = `${B}${h.kind === 0 ? "cat" : "term"}/${h.id}`;
+  if (h.kind !== 0) {
+    history.pushState(null, "", target);
+    window.dispatchEvent(new CustomEvent("hg-term-nav", { detail: { id: h.id } }));
+  } else {
+    location.href = target;
+  }
 }
 function onKey(e: KeyboardEvent) {
   if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
