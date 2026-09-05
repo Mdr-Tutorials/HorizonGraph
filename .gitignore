@@ -6,3 +6,4 @@ web/src/generated/
 .DS_Store
 web/.astro/
 .tmp-roadmap/
+.zcode/
