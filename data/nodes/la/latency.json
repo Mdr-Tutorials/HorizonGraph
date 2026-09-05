@@ -1,0 +1,25 @@
+{
+  "id": "latency",
+  "name": "Latency",
+  "display_primary": "延迟",
+  "display_secondary": "Latency",
+  "aliases": [
+    "延迟"
+  ],
+  "type": "metric",
+  "domains": [
+    "networking",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "请求发出到响应的等待，P99 比均值更诚实。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

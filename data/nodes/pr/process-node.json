@@ -1,0 +1,25 @@
+{
+  "id": "process-node",
+  "name": "Process Node",
+  "display_primary": "制程节点",
+  "display_secondary": "Process Node",
+  "aliases": [
+    "制程",
+    "工艺节点"
+  ],
+  "type": "concept",
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "以数字命名晶体管工艺代际，7nm/5nm/3nm 的行话。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

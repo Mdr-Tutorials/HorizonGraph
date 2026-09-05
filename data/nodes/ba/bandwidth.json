@@ -1,0 +1,25 @@
+{
+  "id": "bandwidth",
+  "name": "Bandwidth",
+  "display_primary": "带宽",
+  "display_secondary": "Bandwidth",
+  "aliases": [
+    "带宽"
+  ],
+  "type": "metric",
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "单位时间的数据通过量，HBM 与网卡的核心参数。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

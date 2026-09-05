@@ -1,0 +1,23 @@
+{
+  "id": "flops",
+  "name": "FLOPS",
+  "aliases": [
+    "每秒浮点运算"
+  ],
+  "type": "metric",
+  "domains": [
+    "high-performance-computing",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "每秒浮点运算次数，算力的通用计量语言。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

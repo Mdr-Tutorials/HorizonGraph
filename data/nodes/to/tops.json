@@ -1,0 +1,23 @@
+{
+  "id": "tops",
+  "name": "TOPS",
+  "aliases": [
+    "每秒万亿次运算"
+  ],
+  "type": "metric",
+  "domains": [
+    "machine-learning",
+    "embedded-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "每秒万亿次整数运算，NPU 与端侧算力的计量。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

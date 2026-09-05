@@ -1,0 +1,23 @@
+{
+  "id": "pue",
+  "name": "PUE",
+  "aliases": [
+    "电能使用效率"
+  ],
+  "type": "metric",
+  "domains": [
+    "cloud-infrastructure",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "数据中心总能耗与 IT 能耗之比，越接近 1 越省。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

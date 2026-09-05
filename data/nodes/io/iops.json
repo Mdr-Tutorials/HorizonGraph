@@ -1,0 +1,21 @@
+{
+  "id": "iops",
+  "name": "IOPS",
+  "aliases": [],
+  "type": "metric",
+  "domains": [
+    "databases",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "每秒读写操作次数，SSD 与存储阵列的成绩单。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

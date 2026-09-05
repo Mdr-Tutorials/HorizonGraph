@@ -15,6 +15,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "process-node"
     }
   ],
   "summary": "集成度约一年半翻倍的经验律，半个世纪的引擎。",

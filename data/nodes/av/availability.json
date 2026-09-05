@@ -1,0 +1,26 @@
+{
+  "id": "availability",
+  "name": "Availability",
+  "display_primary": "可用性",
+  "display_secondary": "Availability",
+  "aliases": [
+    "可用性",
+    "几个9"
+  ],
+  "type": "metric",
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "99.9% 到 99.999% 的承诺，每个 9 都贵一个量级。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

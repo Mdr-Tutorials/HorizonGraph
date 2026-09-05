@@ -1,0 +1,24 @@
+{
+  "id": "tdp",
+  "name": "TDP",
+  "abbreviation": "TDP",
+  "aliases": [
+    "热设计功耗"
+  ],
+  "type": "metric",
+  "domains": [
+    "embedded-systems",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "热设计功耗，散热器选型的第一参数。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

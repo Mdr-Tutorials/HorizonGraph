@@ -1,0 +1,25 @@
+{
+  "id": "throughput",
+  "name": "Throughput",
+  "display_primary": "吞吐量",
+  "display_secondary": "Throughput",
+  "aliases": [
+    "吞吐量"
+  ],
+  "type": "metric",
+  "domains": [
+    "networking",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "单位时间完成的处理量，容量规划的第一问。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}
