@@ -1,0 +1,24 @@
+{
+  "id": "effective-java",
+  "name": "Effective Java",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    }
+  ],
+  "summary": "Joshua Bloch 的 Java 最佳实践，进阶必读。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

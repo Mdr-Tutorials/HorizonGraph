@@ -1,0 +1,28 @@
+{
+  "id": "usb",
+  "name": "USB",
+  "aliases": [
+    "Universal Serial Bus",
+    "通用串行总线"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "embedded-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "从鼠标到显卡的外设统一接口标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

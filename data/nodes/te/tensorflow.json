@@ -23,6 +23,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "google"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cuda"
     }
   ],
   "summary": "谷歌出品的深度学习框架，生产部署生态完整。",

@@ -1,0 +1,27 @@
+{
+  "id": "automata",
+  "name": "Automata",
+  "display_primary": "自动机",
+  "display_secondary": "Automata",
+  "aliases": [
+    "自动机",
+    "有限状态机",
+    "状态机"
+  ],
+  "type": "concept",
+  "domains": [
+    "formal-methods",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "状态与转移的数学模型，词法分析与正则引擎的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

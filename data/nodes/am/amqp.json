@@ -1,0 +1,35 @@
+{
+  "id": "amqp",
+  "name": "AMQP",
+  "aliases": [
+    "Advanced Message Queuing Protocol"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tcp"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "message-queue"
+    }
+  ],
+  "summary": "企业级消息队列线协议，RabbitMQ 的原生语言。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.amqp.org"
+}

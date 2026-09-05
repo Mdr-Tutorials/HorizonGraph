@@ -20,6 +20,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "protocol-buffers"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "messagepack"
     }
   ],
   "summary": "轻量数据交换格式，API 载荷与配置的事实标准。",

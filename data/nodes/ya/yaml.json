@@ -1,0 +1,29 @@
+{
+  "id": "yaml",
+  "name": "YAML",
+  "aliases": [
+    "Yet Another Markup Language"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cloud_native",
+    "devops_tooling"
+  ],
+  "domains": [
+    "web-development",
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "人类友好的配置序列化格式，K8s 与 CI 的事实标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://yaml.org"
+}

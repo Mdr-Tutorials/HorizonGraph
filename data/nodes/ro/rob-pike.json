@@ -1,0 +1,29 @@
+{
+  "id": "rob-pike",
+  "name": "Rob Pike",
+  "display_primary": "Rob Pike",
+  "display_secondary": "罗勃·派克",
+  "aliases": [
+    "罗勃·派克"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "go-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Unix 与 Go 的共同创造者，UTF-8 发明人之一。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

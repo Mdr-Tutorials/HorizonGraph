@@ -1,0 +1,29 @@
+{
+  "id": "unlicense",
+  "name": "Unlicense",
+  "display_primary": "Unlicense",
+  "display_secondary": "Unlicense",
+  "aliases": [
+    "Unlicense 协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "公有领域贡献模板，放弃一切版权主张。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2,
+  "official_site": "https://unlicense.org"
+}

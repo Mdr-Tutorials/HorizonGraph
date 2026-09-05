@@ -1,0 +1,27 @@
+{
+  "id": "onnx",
+  "name": "ONNX",
+  "aliases": [
+    "Open Neural Network Exchange"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "跨框架模型交换标准，推理部署的通用格式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://onnx.ai"
+}

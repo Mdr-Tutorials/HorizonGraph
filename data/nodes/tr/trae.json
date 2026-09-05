@@ -20,6 +20,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "bytedance"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "vscode"
     }
   ],
   "summary": "字节跳动的免费 AI IDE，国内版集成豆包模型。",

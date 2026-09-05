@@ -1,0 +1,31 @@
+{
+  "id": "babel",
+  "name": "Babel",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs"
+    }
+  ],
+  "summary": "JavaScript 编译器，把新语法降级到旧环境运行。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://babeljs.io"
+}

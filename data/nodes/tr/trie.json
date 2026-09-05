@@ -1,0 +1,25 @@
+{
+  "id": "trie",
+  "name": "Trie",
+  "display_primary": "前缀树",
+  "display_secondary": "Trie",
+  "aliases": [
+    "前缀树",
+    "字典树"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "按字符逐级分叉的前缀树，搜索提示与路由表常用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

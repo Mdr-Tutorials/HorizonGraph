@@ -1,0 +1,28 @@
+{
+  "id": "telnet",
+  "name": "Telnet",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tcp"
+    }
+  ],
+  "summary": "明文远程登录协议，被 SSH 取代仍活在网络设备里。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

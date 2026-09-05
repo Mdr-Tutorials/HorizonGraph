@@ -1,0 +1,25 @@
+{
+  "id": "union-find",
+  "name": "Union-Find",
+  "display_primary": "并查集",
+  "display_secondary": "Union-Find",
+  "aliases": [
+    "并查集",
+    "不相交集合"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "带路径压缩与按秩合并的不相交集合结构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

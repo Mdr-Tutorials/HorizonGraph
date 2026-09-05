@@ -1,0 +1,36 @@
+{
+  "id": "coap",
+  "name": "CoAP",
+  "aliases": [
+    "Constrained Application Protocol"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "embedded-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "udp"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "mqtt"
+    }
+  ],
+  "summary": "受限设备的类 REST 轻量协议，跑在 UDP 上。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

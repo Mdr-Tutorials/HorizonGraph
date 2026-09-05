@@ -1,0 +1,26 @@
+{
+  "id": "zhang-rujing",
+  "name": "Zhang Rujing",
+  "display_primary": "张汝京",
+  "display_secondary": "Zhang Rujing",
+  "aliases": [
+    "张汝京",
+    "Richard Chang"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "中芯国际创始人，中国晶圆代工的开拓者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

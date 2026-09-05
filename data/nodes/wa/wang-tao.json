@@ -1,0 +1,27 @@
+{
+  "id": "wang-tao",
+  "name": "Wang Tao",
+  "display_primary": "汪滔",
+  "display_secondary": "Wang Tao",
+  "aliases": [
+    "汪滔",
+    "Frank Wang"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "embedded-ecosystem",
+    "robotics-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "大疆创新创始人，把中国无人机做到全球垄断。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

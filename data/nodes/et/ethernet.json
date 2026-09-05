@@ -1,0 +1,28 @@
+{
+  "id": "ethernet",
+  "name": "Ethernet",
+  "display_primary": "以太网",
+  "display_secondary": "Ethernet",
+  "aliases": [
+    "以太网"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "有线局域网的链路层标准，从同轴电缆走到万兆。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

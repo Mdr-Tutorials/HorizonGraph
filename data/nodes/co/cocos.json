@@ -1,0 +1,32 @@
+{
+  "id": "cocos",
+  "name": "Cocos",
+  "aliases": [
+    "Cocos Creator",
+    "Cocos2d-x"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "game-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "unity"
+    }
+  ],
+  "summary": "国产游戏引擎代表，小程序与手游生态强势。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.cocos.com"
+}

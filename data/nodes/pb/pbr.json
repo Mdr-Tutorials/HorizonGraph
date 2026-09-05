@@ -1,0 +1,28 @@
+{
+  "id": "pbr",
+  "name": "Physically Based Rendering",
+  "display_primary": "PBR",
+  "display_secondary": "Physically Based Rendering",
+  "aliases": [
+    "PBR",
+    "基于物理的渲染"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "rendering-ecosystem"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "以物理量描述材质与光照的渲染方法论。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -26,6 +26,14 @@
     {
       "relation_type": "competes_with",
       "target_id": "mongodb-database"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "consistent-hashing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "bloom-filter"
     }
   ],
   "summary": "无主多副本宽列存储，写吞吐与线性扩展见长。",

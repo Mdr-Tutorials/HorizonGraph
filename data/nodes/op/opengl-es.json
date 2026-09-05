@@ -1,0 +1,32 @@
+{
+  "id": "opengl-es",
+  "name": "OpenGL ES",
+  "aliases": [
+    "OpenGL for Embedded Systems"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "graphics-api-ecosystem",
+    "embedded-ecosystem"
+  ],
+  "domains": [
+    "graphics",
+    "embedded-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "graphics-pipeline"
+    }
+  ],
+  "summary": "面向移动与嵌入设备的 OpenGL 裁剪版，WebGL 的母体。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

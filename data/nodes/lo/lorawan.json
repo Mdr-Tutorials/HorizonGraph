@@ -1,0 +1,27 @@
+{
+  "id": "lorawan",
+  "name": "LoRaWAN",
+  "aliases": [
+    "LoRa"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "embedded-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "远距离低功耗广域网协议，表计与传感器常用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

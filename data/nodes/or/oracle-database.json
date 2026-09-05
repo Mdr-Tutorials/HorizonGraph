@@ -1,0 +1,28 @@
+{
+  "id": "oracle-database",
+  "name": "Oracle Database",
+  "aliases": [
+    "Oracle 数据库"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "老牌商业关系数据库，金融与电信行业的常青树。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://www.oracle.com/database/"
+}

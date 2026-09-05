@@ -1,0 +1,34 @@
+{
+  "id": "agpl",
+  "name": "GNU AGPL",
+  "display_primary": "AGPL",
+  "display_secondary": "GNU AGPL",
+  "aliases": [
+    "AGPL 协议",
+    "Affero GPL"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "extends",
+      "target_id": "gpl"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "GPL 加网络服务条款，SaaS 化使用也须开源。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.gnu.org/licenses/agpl-3.0.html"
+}

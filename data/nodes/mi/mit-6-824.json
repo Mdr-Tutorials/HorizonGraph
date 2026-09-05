@@ -1,0 +1,29 @@
+{
+  "id": "mit-6-824",
+  "name": "MIT 6.824",
+  "display_primary": "MIT 6.824",
+  "display_secondary": "Distributed Systems",
+  "aliases": [
+    "6.824",
+    "MIT 分布式系统课程"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "course"
+    }
+  ],
+  "summary": "MIT 分布式系统课程，以 Raft 与 Go 实验闻名。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

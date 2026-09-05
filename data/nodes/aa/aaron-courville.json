@@ -1,0 +1,27 @@
+{
+  "id": "aaron-courville",
+  "name": "Aaron Courville",
+  "display_primary": "Aaron Courville",
+  "display_secondary": "阿隆·库尔维尔",
+  "aliases": [
+    "阿隆·库尔维尔"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "蒙特利尔大学教授，花书第三作者，生成模型的早期推手。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

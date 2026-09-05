@@ -16,6 +16,14 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "saas"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "github"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "gitlab"
     }
   ],
   "summary": "国内最大的代码托管平台，开源中国旗下。",

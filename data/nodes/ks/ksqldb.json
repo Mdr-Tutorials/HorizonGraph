@@ -23,6 +23,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "jvm"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "kafka"
     }
   ],
   "summary": "Confluent 的流式 SQL 引擎。",

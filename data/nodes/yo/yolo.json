@@ -1,0 +1,30 @@
+{
+  "id": "yolo",
+  "name": "YOLO",
+  "aliases": [
+    "You Only Look Once"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "computer-vision"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "model-family"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "object-detection"
+    }
+  ],
+  "summary": "单阶段实时目标检测模型族，速度的代名词。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

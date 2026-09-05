@@ -1,0 +1,28 @@
+{
+  "id": "sebastian-raschka",
+  "name": "Sebastian Raschka",
+  "display_primary": "Sebastian Raschka",
+  "display_secondary": "塞巴斯蒂安·拉施卡",
+  "aliases": [
+    "塞巴斯蒂安·拉施卡"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "ai_data_science",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "《机器学习》鸢尾花书作者，PyTorch Lightning 创造者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

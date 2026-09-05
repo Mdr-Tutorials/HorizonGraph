@@ -1,0 +1,30 @@
+{
+  "id": "ble",
+  "name": "Bluetooth LE",
+  "abbreviation": "BLE",
+  "aliases": [
+    "BLE",
+    "蓝牙低功耗",
+    "Bluetooth Low Energy"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "embedded-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "蓝牙低功耗模式，穿戴与传感设备的主力连接。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

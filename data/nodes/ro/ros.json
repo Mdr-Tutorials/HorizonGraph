@@ -19,6 +19,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cpp"
     }
   ],
   "summary": "机器人软件的事实标准框架，话题与服务消息总线。",

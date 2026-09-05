@@ -1,0 +1,31 @@
+{
+  "id": "glsl",
+  "name": "GLSL",
+  "aliases": [
+    "OpenGL Shading Language"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "graphics-api-ecosystem",
+    "rendering-ecosystem"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "opengl"
+    }
+  ],
+  "summary": "OpenGL 的着色语言，写顶点与片元着色器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

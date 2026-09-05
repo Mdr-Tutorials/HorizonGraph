@@ -1,0 +1,28 @@
+{
+  "id": "yann-lecun",
+  "name": "Yann LeCun",
+  "display_primary": "Yann LeCun",
+  "display_secondary": "杨立昆",
+  "aliases": [
+    "杨立昆"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "computer-vision"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "卷积神经网络之父，Meta 首席 AI 科学家。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

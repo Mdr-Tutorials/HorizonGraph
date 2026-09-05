@@ -1,0 +1,36 @@
+{
+  "id": "regex",
+  "name": "Regular Expression",
+  "abbreviation": "regex",
+  "display_primary": "正则表达式",
+  "display_secondary": "Regular Expression",
+  "aliases": [
+    "正则表达式",
+    "regexp",
+    "regex"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "automata"
+    }
+  ],
+  "summary": "声明式文本模式匹配 DSL，各语言运行时标配。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "ecosystems": [
+    "languages_runtimes"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "np-complete",
+  "name": "NP-Complete",
+  "display_primary": "NP 完全",
+  "display_secondary": "NP-Complete",
+  "aliases": [
+    "NP 完全",
+    "NP 完全问题"
+  ],
+  "type": "concept",
+  "domains": [
+    "formal-methods",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "最难的一类判定问题，遇到它就该想近似解了。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,27 @@
+{
+  "id": "lei-jun",
+  "name": "Lei Jun",
+  "display_primary": "雷军",
+  "display_secondary": "Lei Jun",
+  "aliases": [
+    "雷军",
+    "Jun Lei"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "platform-commerce-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "小米创始人，互联网手机模式与生态链的推手。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

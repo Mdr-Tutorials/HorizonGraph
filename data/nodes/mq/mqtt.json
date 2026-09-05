@@ -1,0 +1,38 @@
+{
+  "id": "mqtt",
+  "name": "MQTT",
+  "aliases": [
+    "Message Queuing Telemetry Transport"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "embedded-ecosystem",
+    "hardware_iot",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tcp"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "message-queue"
+    }
+  ],
+  "summary": "轻量发布订阅协议，物联网消息的事实标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://mqtt.org"
+}

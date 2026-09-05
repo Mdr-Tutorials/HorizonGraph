@@ -22,6 +22,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "linux"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "qiu-bojun"
     }
   ],
   "summary": "金山的办公套件，覆盖桌面与 Web 端。",

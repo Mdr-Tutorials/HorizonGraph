@@ -1,0 +1,25 @@
+{
+  "id": "huffman",
+  "name": "Huffman Coding",
+  "display_primary": "霍夫曼编码",
+  "display_secondary": "Huffman Coding",
+  "aliases": [
+    "霍夫曼编码",
+    "哈夫曼编码"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "按频率分配变长前缀码的贪心最优编码。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

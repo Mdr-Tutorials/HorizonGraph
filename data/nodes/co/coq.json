@@ -1,0 +1,25 @@
+{
+  "id": "coq",
+  "name": "Coq",
+  "aliases": [],
+  "type": "language",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "formal-methods"
+  ],
+  "abstraction_level": "theoretical",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "交互式定理证明器，机器可验证的数学证明。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://coq.inria.fr"
+}

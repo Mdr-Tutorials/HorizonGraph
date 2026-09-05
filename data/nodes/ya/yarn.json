@@ -20,6 +20,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "nodejs"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
     }
   ],
   "summary": "Meta 开源的 Node 包管理器。",

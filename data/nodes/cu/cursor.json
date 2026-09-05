@@ -36,6 +36,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "windsurf"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "vscode"
     }
   ],
   "summary": "AI 原生代码编辑器，模型介入编辑循环。",

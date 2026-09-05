@@ -1,0 +1,28 @@
+{
+  "id": "smb",
+  "name": "SMB",
+  "aliases": [
+    "Server Message Block",
+    "Samba"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "windows-ecosystem",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "Windows 局域网文件共享协议，Samba 让它跨平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

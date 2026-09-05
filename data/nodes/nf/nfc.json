@@ -1,0 +1,28 @@
+{
+  "id": "nfc",
+  "name": "NFC",
+  "aliases": [
+    "Near Field Communication",
+    "近场通信"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "embedded-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "近场通信，门禁、支付与碰一碰配对的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

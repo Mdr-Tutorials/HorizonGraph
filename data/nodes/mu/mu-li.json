@@ -1,0 +1,28 @@
+{
+  "id": "mu-li",
+  "name": "Mu Li",
+  "display_primary": "Mu Li",
+  "display_secondary": "李沐",
+  "aliases": [
+    "李沐"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "ai_data_science",
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "《动手学深度学习》作者，论文精读系列的视频布道者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

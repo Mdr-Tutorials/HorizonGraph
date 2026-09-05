@@ -1,0 +1,30 @@
+{
+  "id": "professional-javascript",
+  "name": "Professional JavaScript for Web Developers",
+  "display_primary": "JavaScript 高级程序设计",
+  "display_secondary": "Professional JavaScript for Web Developers",
+  "aliases": [
+    "JavaScript 高级程序设计",
+    "红宝书",
+    "前端红宝书"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    }
+  ],
+  "summary": "Nicholas Zakas 的 JS 圣经，中文社区称前端红宝书。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

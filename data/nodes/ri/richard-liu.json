@@ -1,0 +1,26 @@
+{
+  "id": "richard-liu",
+  "name": "Richard Liu",
+  "display_primary": "刘强东",
+  "display_secondary": "Richard Liu",
+  "aliases": [
+    "刘强东",
+    "Liu Qiangdong"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "platform-commerce-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "京东创始人，自建物流的重模式电商代表。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

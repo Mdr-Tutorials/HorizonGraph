@@ -1,0 +1,29 @@
+{
+  "id": "ios",
+  "name": "iOS",
+  "aliases": [],
+  "type": "architecture",
+  "ecosystems": [
+    "ios-ecosystem",
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    }
+  ],
+  "summary": "苹果移动操作系统，App Store 分发的封闭生态。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

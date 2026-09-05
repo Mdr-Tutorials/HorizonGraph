@@ -1,0 +1,28 @@
+{
+  "id": "blas",
+  "name": "BLAS",
+  "aliases": [
+    "Basic Linear Algebra Subprograms"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "high-performance-computing",
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    }
+  ],
+  "summary": "线性代数运算的事实标准接口，数值计算的奠基石。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.netlib.org/blas/"
+}

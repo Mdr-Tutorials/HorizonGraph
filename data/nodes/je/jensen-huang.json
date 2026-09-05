@@ -1,0 +1,28 @@
+{
+  "id": "jensen-huang",
+  "name": "Jensen Huang",
+  "display_primary": "Jensen Huang",
+  "display_secondary": "黄仁勋",
+  "aliases": [
+    "黄仁勋"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "NVIDIA 创始人兼 CEO，把 GPU 带进深度学习时代。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

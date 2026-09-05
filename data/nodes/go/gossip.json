@@ -1,0 +1,26 @@
+{
+  "id": "gossip",
+  "name": "Gossip Protocol",
+  "display_primary": "Gossip 协议",
+  "display_secondary": "Gossip Protocol",
+  "aliases": [
+    "Gossip 协议",
+    "八卦协议",
+    "流言算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "像传闲话一样指数扩散消息，集群成员管理的常用解。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

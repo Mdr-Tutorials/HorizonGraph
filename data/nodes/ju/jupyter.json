@@ -1,0 +1,28 @@
+{
+  "id": "jupyter",
+  "name": "Project Jupyter",
+  "aliases": [
+    "Jupyter Notebook"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "python-ecosystem",
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "交互式笔记本，数据科学工作流的默认界面。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://jupyter.org"
+}

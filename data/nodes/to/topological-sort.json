@@ -1,0 +1,24 @@
+{
+  "id": "topological-sort",
+  "name": "Topological Sort",
+  "display_primary": "拓扑排序",
+  "display_secondary": "Topological Sort",
+  "aliases": [
+    "拓扑排序"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "给 DAG 排线性序，构建系统与任务调度的依赖基础。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

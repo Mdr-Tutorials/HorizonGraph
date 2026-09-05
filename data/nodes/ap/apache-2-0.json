@@ -1,0 +1,40 @@
+{
+  "id": "apache-2-0",
+  "name": "Apache License 2.0",
+  "display_primary": "Apache-2.0",
+  "display_secondary": "Apache License 2.0",
+  "aliases": [
+    "Apache-2.0",
+    "Apache 协议",
+    "Apache 2.0"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "competes_with",
+      "target_id": "mit"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "gpl-3-0"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "带专利授权与商标条款的企业级宽松许可。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://www.apache.org/licenses/LICENSE-2.0",
+  "first_released": "2004-01-21"
+}

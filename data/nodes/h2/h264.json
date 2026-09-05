@@ -1,0 +1,29 @@
+{
+  "id": "h264",
+  "name": "H.264",
+  "aliases": [
+    "AVC",
+    "Advanced Video Coding"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "graphics_gaming"
+  ],
+  "domains": [
+    "graphics",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "最通行的视频编解码标准，兼容性之王。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,25 @@
+{
+  "id": "dfs",
+  "name": "Depth-First Search",
+  "display_primary": "深度优先搜索",
+  "display_secondary": "DFS",
+  "aliases": [
+    "深度优先搜索",
+    "DFS"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "一条路走到底的图遍历，连通性与拓扑排序的基础。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

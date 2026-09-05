@@ -1,0 +1,34 @@
+{
+  "id": "lgpl",
+  "name": "GNU LGPL",
+  "display_primary": "LGPL",
+  "display_secondary": "GNU LGPL",
+  "aliases": [
+    "LGPL 协议",
+    "宽通用公共许可证"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "extends",
+      "target_id": "gpl"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "宽松版 GPL，库被链接时不传染调用它的主程序。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.gnu.org/licenses/lgpl-3.0.html"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "mdns",
+  "name": "mDNS",
+  "aliases": [
+    "Multicast DNS"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "udp"
+    }
+  ],
+  "summary": "零配置局域网组播名字解析，Bonjour 的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

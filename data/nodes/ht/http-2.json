@@ -1,0 +1,37 @@
+{
+  "id": "http-2",
+  "name": "HTTP/2",
+  "aliases": [
+    "HTTP 2.0"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "http"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tcp"
+    }
+  ],
+  "summary": "多路复用与头部压缩，HTTP 的二进制化大版本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://httpwg.org/specs/rfc9113.html"
+}

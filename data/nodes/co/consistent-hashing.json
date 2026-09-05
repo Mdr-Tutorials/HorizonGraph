@@ -1,0 +1,25 @@
+{
+  "id": "consistent-hashing",
+  "name": "Consistent Hashing",
+  "display_primary": "一致性哈希",
+  "display_secondary": "Consistent Hashing",
+  "aliases": [
+    "一致性哈希"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "环形哈希空间，节点增删只迁移相邻数据。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,28 @@
+{
+  "id": "satoshi-nakamoto",
+  "name": "Satoshi Nakamoto",
+  "display_primary": "Satoshi Nakamoto",
+  "display_secondary": "中本聪",
+  "aliases": [
+    "中本聪"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "比特币白皮书作者，真实身份至今成谜。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

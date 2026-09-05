@@ -1,0 +1,27 @@
+{
+  "id": "wireguard",
+  "name": "WireGuard",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "极简高性能的内核级 VPN 协议，只用现代加密套件。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.wireguard.com"
+}

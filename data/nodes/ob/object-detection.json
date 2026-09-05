@@ -1,0 +1,24 @@
+{
+  "id": "object-detection",
+  "name": "Object Detection",
+  "display_primary": "目标检测",
+  "display_secondary": "Object Detection",
+  "aliases": [
+    "目标检测"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-vision"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "定位并识别图中多个物体的视觉任务。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

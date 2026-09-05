@@ -1,0 +1,33 @@
+{
+  "id": "wecom",
+  "name": "WeCom",
+  "display_primary": "企业微信",
+  "display_secondary": "WeCom",
+  "aliases": [
+    "企业微信"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "tencent"
+    }
+  ],
+  "summary": "腾讯的企业微信，与微信互通的企业内外协同。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://work.weixin.qq.com"
+}

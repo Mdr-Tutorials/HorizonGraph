@@ -1,0 +1,35 @@
+{
+  "id": "rasterization",
+  "name": "Rasterization",
+  "display_primary": "光栅化",
+  "display_secondary": "Rasterization",
+  "aliases": [
+    "光栅化"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "rendering-ecosystem"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "graphics-pipeline"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "ray-tracing"
+    }
+  ],
+  "summary": "把三角形打碎成像素的经典渲染范式，实时渲染主流。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

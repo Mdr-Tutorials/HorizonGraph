@@ -36,6 +36,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "kotlin"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "james-gosling"
     }
   ],
   "summary": "运行于 JVM 的静态面向对象语言，企业后端的主力。",

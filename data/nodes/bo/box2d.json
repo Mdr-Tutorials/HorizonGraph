@@ -1,0 +1,25 @@
+{
+  "id": "box2d",
+  "name": "Box2D",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "game-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    }
+  ],
+  "summary": "经典 2D 刚体物理引擎，Angry Birds 的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://box2d.org"
+}

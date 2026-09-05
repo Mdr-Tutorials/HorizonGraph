@@ -1,0 +1,28 @@
+{
+  "id": "tla-plus",
+  "name": "TLA+",
+  "aliases": [
+    "TLA+"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "formal-methods",
+    "distributed-systems"
+  ],
+  "abstraction_level": "theoretical",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "Lamport 的规格说明语言，数学化描述并发系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://lamport.azurewebsites.net/tla/tla.html"
+}

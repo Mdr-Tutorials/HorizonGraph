@@ -1,0 +1,27 @@
+{
+  "id": "pony-ma",
+  "name": "Pony Ma",
+  "display_primary": "马化腾",
+  "display_secondary": "Pony Ma",
+  "aliases": [
+    "马化腾",
+    "Pony"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "platform-commerce-ecosystem",
+    "collaboration-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "腾讯创始人，QQ 与微信帝国的缔造者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -29,6 +29,10 @@
     {
       "relation_type": "powers",
       "target_id": "metabit"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "s3"
     }
   ],
   "summary": "面向云的 POSIX 分布式文件系统，元数据与对象存储分离。",

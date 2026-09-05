@@ -1,0 +1,27 @@
+{
+  "id": "ian-goodfellow",
+  "name": "Ian Goodfellow",
+  "display_primary": "Ian Goodfellow",
+  "display_secondary": "伊恩·古德费洛",
+  "aliases": [
+    "伊恩·古德费洛"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "生成对抗网络（GAN）的发明者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

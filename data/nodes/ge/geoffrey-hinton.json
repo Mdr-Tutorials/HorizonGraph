@@ -1,0 +1,27 @@
+{
+  "id": "geoffrey-hinton",
+  "name": "Geoffrey Hinton",
+  "display_primary": "Geoffrey Hinton",
+  "display_secondary": "杰弗里·辛顿",
+  "aliases": [
+    "杰弗里·辛顿"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "深度学习之父，反向传播的推广与图思想的先驱。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

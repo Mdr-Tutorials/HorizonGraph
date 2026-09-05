@@ -1,0 +1,25 @@
+{
+  "id": "ssa",
+  "name": "SSA",
+  "display_primary": "SSA",
+  "display_secondary": "Static Single Assignment",
+  "aliases": [
+    "Static Single Assignment",
+    "静态单一赋值"
+  ],
+  "type": "concept",
+  "domains": [
+    "compilers"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "每个变量只赋值一次的 IR 形态，现代优化的基石。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

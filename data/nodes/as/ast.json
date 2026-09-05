@@ -1,0 +1,25 @@
+{
+  "id": "ast",
+  "name": "AST",
+  "display_primary": "抽象语法树",
+  "display_secondary": "AST",
+  "aliases": [
+    "Abstract Syntax Tree",
+    "抽象语法树"
+  ],
+  "type": "concept",
+  "domains": [
+    "compilers"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "源码结构的树形抽象，编译器与 LSP 的通用中间体。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,25 @@
+{
+  "id": "heap",
+  "name": "Heap",
+  "display_primary": "堆",
+  "display_secondary": "Heap",
+  "aliases": [
+    "堆",
+    "优先队列"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "完全二叉树组织的优先队列，Top-K 与调度器的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -26,6 +26,10 @@
     {
       "relation_type": "implements",
       "target_id": "zero-trust"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "authentication"
     }
   ],
   "summary": "Okta 的身份提供商与 SSO 服务。",

@@ -31,6 +31,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "typescript"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "react"
     }
   ],
   "summary": "Vercel 的 React 全栈框架。",

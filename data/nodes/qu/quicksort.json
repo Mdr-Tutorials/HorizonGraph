@@ -1,0 +1,24 @@
+{
+  "id": "quicksort",
+  "name": "Quicksort",
+  "display_primary": "快速排序",
+  "display_secondary": "Quicksort",
+  "aliases": [
+    "快速排序"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "分治排序的事实标准，平均 O(n log n) 且常数小。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

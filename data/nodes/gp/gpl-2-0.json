@@ -1,0 +1,34 @@
+{
+  "id": "gpl-2-0",
+  "name": "GNU GPL v2.0",
+  "display_primary": "GPL-2.0",
+  "display_secondary": "GNU GPL v2.0",
+  "aliases": [
+    "GPLv2",
+    "GPL-2.0"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "version_of",
+      "target_id": "gpl"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "Linux 内核采用的经典 GPL 版本，无专利条款。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+}

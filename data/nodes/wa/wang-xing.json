@@ -1,0 +1,26 @@
+{
+  "id": "wang-xing",
+  "name": "Wang Xing",
+  "display_primary": "王兴",
+  "display_secondary": "Wang Xing",
+  "aliases": [
+    "王兴",
+    "Xing Wang"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "platform-commerce-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "美团创始人，从校内网到本地生活超级平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

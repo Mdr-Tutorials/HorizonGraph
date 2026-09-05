@@ -1,0 +1,24 @@
+{
+  "id": "alan-turing",
+  "name": "Alan Turing",
+  "display_primary": "Alan Turing",
+  "display_secondary": "艾伦·图灵",
+  "aliases": [
+    "艾伦·图灵"
+  ],
+  "type": "person",
+  "domains": [
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "图灵机的提出者，计算机科学与人工智能的理论奠基人。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

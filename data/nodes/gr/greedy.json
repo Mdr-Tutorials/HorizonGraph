@@ -1,0 +1,24 @@
+{
+  "id": "greedy",
+  "name": "Greedy Algorithm",
+  "display_primary": "贪心算法",
+  "display_secondary": "Greedy Algorithm",
+  "aliases": [
+    "贪心算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "每步取局部最优，要求问题具备贪心选择性质。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

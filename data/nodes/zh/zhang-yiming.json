@@ -1,0 +1,27 @@
+{
+  "id": "zhang-yiming",
+  "name": "Zhang Yiming",
+  "display_primary": "张一鸣",
+  "display_secondary": "Zhang Yiming",
+  "aliases": [
+    "张一鸣",
+    "Yiming"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "platform-commerce-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "字节跳动创始人，推荐算法驱动的产品帝国缔造者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

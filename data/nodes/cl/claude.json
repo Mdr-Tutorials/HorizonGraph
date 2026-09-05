@@ -39,6 +39,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "gemini"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mcp"
     }
   ],
   "summary": "Anthropic 的对话大模型族，以安全对齐为主线。",

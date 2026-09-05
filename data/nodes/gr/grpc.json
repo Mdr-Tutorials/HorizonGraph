@@ -28,6 +28,14 @@
     {
       "relation_type": "depends_on",
       "target_id": "protocol-buffers"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "http-2"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "rest"
     }
   ],
   "summary": "基于 HTTP/2 与 Protobuf 的高性能 RPC 框架。",

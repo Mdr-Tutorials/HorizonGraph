@@ -1,0 +1,25 @@
+{
+  "id": "big-o",
+  "name": "Big-O Notation",
+  "display_primary": "大 O 表示法",
+  "display_secondary": "Big-O Notation",
+  "aliases": [
+    "大 O 表示法",
+    "时间复杂度"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "描述算法耗时随规模增长的上界，复杂度分析通用语。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

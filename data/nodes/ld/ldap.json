@@ -1,0 +1,31 @@
+{
+  "id": "ldap",
+  "name": "LDAP",
+  "aliases": [
+    "Lightweight Directory Access Protocol"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "iam-ecosystem",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tcp"
+    }
+  ],
+  "summary": "目录服务访问协议，企业账号体系的地基。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,30 @@
+{
+  "id": "socks",
+  "name": "SOCKS",
+  "aliases": [
+    "SOCKS5"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tcp"
+    }
+  ],
+  "summary": "会话层代理协议，SOCKS5 增加认证与 UDP 支持。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

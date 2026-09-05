@@ -1,0 +1,31 @@
+{
+  "id": "ray-tracing",
+  "name": "Ray Tracing",
+  "display_primary": "光线追踪",
+  "display_secondary": "Ray Tracing",
+  "aliases": [
+    "光线追踪"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "rendering-ecosystem"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "graphics-pipeline"
+    }
+  ],
+  "summary": "反向追踪光路的渲染范式，物理真实但算力昂贵。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

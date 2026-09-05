@@ -1,0 +1,27 @@
+{
+  "id": "lean",
+  "name": "Lean",
+  "aliases": [
+    "Lean 4"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "formal-methods"
+  ],
+  "abstraction_level": "theoretical",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "定理证明与通用编程兼修，mathlib 社区活跃。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://lean-lang.org"
+}

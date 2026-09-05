@@ -1,0 +1,31 @@
+{
+  "id": "stun",
+  "name": "STUN",
+  "aliases": [
+    "Session Traversal Utilities for NAT"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "udp"
+    }
+  ],
+  "summary": "让 NAT 后的设备发现自己的公网地址，打洞第一步。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

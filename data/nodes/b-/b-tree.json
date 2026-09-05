@@ -1,0 +1,30 @@
+{
+  "id": "b-tree",
+  "name": "B-Tree",
+  "display_primary": "B 树",
+  "display_secondary": "B-Tree",
+  "aliases": [
+    "B 树",
+    "B+树",
+    "B-Tree"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "lsm-tree"
+    }
+  ],
+  "summary": "自平衡多路搜索树，数据库索引与文件系统的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

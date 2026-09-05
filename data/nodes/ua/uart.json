@@ -1,0 +1,27 @@
+{
+  "id": "uart",
+  "name": "UART",
+  "aliases": [
+    "Universal Asynchronous Receiver-Transmitter"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "embedded-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "异步串行收发总线，嵌入式调试的第一入口。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

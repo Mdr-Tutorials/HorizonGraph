@@ -1,0 +1,25 @@
+{
+  "id": "hash-table",
+  "name": "Hash Table",
+  "display_primary": "哈希表",
+  "display_secondary": "Hash Table",
+  "aliases": [
+    "哈希表",
+    "散列表"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "用哈希函数把键映射进桶，均摊 O(1) 读写。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

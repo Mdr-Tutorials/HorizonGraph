@@ -1,0 +1,27 @@
+{
+  "id": "wang-jian",
+  "name": "Wang Jian",
+  "display_primary": "王坚",
+  "display_secondary": "Wang Jian",
+  "aliases": [
+    "王坚",
+    "Dr. Wang"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "public-cloud-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "阿里云之父，从心理学教授到中国云计算的旗手。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

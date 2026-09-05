@@ -26,6 +26,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "alibaba"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
     }
   ],
   "summary": "阿里开源的 Java RPC 与微服务框架，国内微服务常客。",

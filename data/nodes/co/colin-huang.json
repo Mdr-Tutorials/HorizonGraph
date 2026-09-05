@@ -1,0 +1,26 @@
+{
+  "id": "colin-huang",
+  "name": "Colin Huang",
+  "display_primary": "黄峥",
+  "display_secondary": "Colin Huang",
+  "aliases": [
+    "黄峥",
+    "Huang Zheng"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "platform-commerce-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "拼多多创始人，社交裂变与极致性价比的打法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

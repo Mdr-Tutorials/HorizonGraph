@@ -15,6 +15,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
     }
   ],
   "summary": "高吞吐 LLM 推理引擎，PagedAttention 的出处。",

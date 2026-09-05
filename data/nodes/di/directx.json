@@ -1,0 +1,40 @@
+{
+  "id": "directx",
+  "name": "DirectX",
+  "aliases": [
+    "Direct3D"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "graphics-api-ecosystem",
+    "rendering-ecosystem"
+  ],
+  "domains": [
+    "graphics",
+    "game-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "graphics-pipeline"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vulkan"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "微软的多媒体与图形 API 家族，Windows 游戏的地基。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

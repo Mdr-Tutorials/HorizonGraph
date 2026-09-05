@@ -1,0 +1,28 @@
+{
+  "id": "guido-van-rossum",
+  "name": "Guido van Rossum",
+  "display_primary": "Guido van Rossum",
+  "display_secondary": "吉多·范罗苏姆",
+  "aliases": [
+    "吉多·范罗苏姆",
+    "Python 之父"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "python-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Python 之父，终身仁慈独裁者（BDFL）的代名词。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

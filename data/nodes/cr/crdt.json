@@ -1,0 +1,29 @@
+{
+  "id": "crdt",
+  "name": "CRDT",
+  "display_primary": "CRDT",
+  "display_secondary": "无冲突复制数据类型",
+  "aliases": [
+    "无冲突复制数据类型",
+    "Conflict-free Replicated Data Type"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "operational-transformation"
+    }
+  ],
+  "summary": "交换合并即收敛的复制数据结构，协同编辑的数学底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

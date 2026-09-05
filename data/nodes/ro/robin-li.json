@@ -1,0 +1,27 @@
+{
+  "id": "robin-li",
+  "name": "Robin Li",
+  "display_primary": "李彦宏",
+  "display_secondary": "Robin Li",
+  "aliases": [
+    "李彦宏",
+    "Li Yanhong"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "platform-commerce-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "百度创始人，中文搜索与自动驾驶的长期投入者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

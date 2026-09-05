@@ -1,0 +1,27 @@
+{
+  "id": "jack-ma",
+  "name": "Jack Ma",
+  "display_primary": "马云",
+  "display_secondary": "Jack Ma",
+  "aliases": [
+    "马云",
+    "Ma Yun"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "platform-commerce-ecosystem",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "阿里巴巴创始人，中国电子商务的开荒者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

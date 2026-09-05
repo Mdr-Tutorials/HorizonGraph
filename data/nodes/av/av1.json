@@ -1,0 +1,30 @@
+{
+  "id": "av1",
+  "name": "AV1",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "graphics_gaming"
+  ],
+  "domains": [
+    "graphics",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "h264"
+    }
+  ],
+  "summary": "开放免版税的新一代视频编码，压缩率领先。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

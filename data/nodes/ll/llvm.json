@@ -23,6 +23,10 @@
     {
       "relation_type": "bases_for",
       "target_id": "rust"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ir"
     }
   ],
   "summary": "可复用的编译器基础设施，Clang 与 rustc 的后端。",

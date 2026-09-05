@@ -1,0 +1,26 @@
+{
+  "id": "opus",
+  "name": "Opus",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development",
+    "graphics"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "WebRTC 默认音频编解码，低延迟与高质量兼得。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.opus-codec.org"
+}

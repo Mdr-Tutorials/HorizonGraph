@@ -18,6 +18,14 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "stun"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "turn"
     }
   ],
   "summary": "浏览器间直连的实时音视频与数据通道标准。",

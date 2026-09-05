@@ -28,6 +28,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "kubernetes"
     }
   ],
   "summary": "红帽的 Kubernetes 企业发行版。",

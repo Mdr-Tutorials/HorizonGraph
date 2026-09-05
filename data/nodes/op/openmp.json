@@ -1,0 +1,25 @@
+{
+  "id": "openmp",
+  "name": "OpenMP",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "high-performance-computing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "共享内存并行的编译指令标准，一行 pragma 并行循环。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.openmp.org"
+}

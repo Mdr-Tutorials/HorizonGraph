@@ -1,0 +1,36 @@
+{
+  "id": "rdp",
+  "name": "RDP",
+  "aliases": [
+    "Remote Desktop Protocol",
+    "远程桌面协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "windows-ecosystem",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tcp"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vnc"
+    }
+  ],
+  "summary": "微软的远程桌面协议，Windows 运维的日常。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,28 @@
+{
+  "id": "deepin",
+  "name": "deepin",
+  "aliases": [
+    "深度操作系统",
+    "Deepin"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "operating_systems",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    }
+  ],
+  "summary": "以桌面体验见长的国产社区 Linux 发行版。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

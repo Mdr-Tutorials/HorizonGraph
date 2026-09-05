@@ -1,0 +1,30 @@
+{
+  "id": "avro",
+  "name": "Avro",
+  "aliases": [
+    "Apache Avro"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "protocol-buffers"
+    }
+  ],
+  "summary": "带 schema 演进的序列化格式，Kafka 生态标配。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

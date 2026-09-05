@@ -18,6 +18,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "founded_by",
+      "target_id": "lei-jun"
     }
   ],
   "summary": "消费电子公司，手机、IoT 与自研芯片的东家。",

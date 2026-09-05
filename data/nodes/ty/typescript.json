@@ -27,6 +27,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "microsoft"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anders-hejlsberg"
     }
   ],
   "summary": "给 JavaScript 加上静态类型的超集，编译回 JS 运行。",

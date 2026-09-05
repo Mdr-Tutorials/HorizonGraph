@@ -1,0 +1,30 @@
+{
+  "id": "solidity",
+  "name": "Solidity",
+  "aliases": [],
+  "type": "language",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "evm"
+    }
+  ],
+  "summary": "以太坊智能合约语言，编译到 EVM 字节码。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://soliditylang.org"
+}

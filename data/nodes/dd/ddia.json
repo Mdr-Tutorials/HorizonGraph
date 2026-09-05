@@ -1,0 +1,30 @@
+{
+  "id": "ddia",
+  "name": "Designing Data-Intensive Applications",
+  "display_primary": "DDIA",
+  "display_secondary": "Designing Data-Intensive Applications",
+  "aliases": [
+    "DDIA",
+    "数据密集型应用系统设计"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    }
+  ],
+  "summary": "Martin Kleppmann 的数据系统圣经，后端工程师必读。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

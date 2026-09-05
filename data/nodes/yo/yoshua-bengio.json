@@ -1,0 +1,27 @@
+{
+  "id": "yoshua-bengio",
+  "name": "Yoshua Bengio",
+  "display_primary": "Yoshua Bengio",
+  "display_secondary": "约书亚·本吉奥",
+  "aliases": [
+    "约书亚·本吉奥"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "深度学习三巨头之一，序列建模与注意力思想的奠基人。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

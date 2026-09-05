@@ -1,0 +1,26 @@
+{
+  "id": "donald-knuth",
+  "name": "Donald Knuth",
+  "display_primary": "Donald Knuth",
+  "display_secondary": "唐纳德·克努特",
+  "aliases": [
+    "唐纳德·克努特",
+    "高德纳"
+  ],
+  "type": "person",
+  "domains": [
+    "compilers",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "《计算机程序设计艺术》作者，TeX 排版系统创造者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -28,6 +28,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "selenium"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs"
     }
   ],
   "summary": "微软的跨浏览器自动化与 E2E 测试框架，多语言 API。",

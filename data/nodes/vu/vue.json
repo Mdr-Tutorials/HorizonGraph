@@ -25,6 +25,10 @@
     {
       "relation_type": "implements",
       "target_id": "virtual-dom"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "evan-you"
     }
   ],
   "summary": "渐进式前端框架，响应式数据绑定与单文件组件。",

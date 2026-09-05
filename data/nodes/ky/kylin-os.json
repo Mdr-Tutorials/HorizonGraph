@@ -1,0 +1,35 @@
+{
+  "id": "kylin-os",
+  "name": "Kylin OS",
+  "display_primary": "麒麟操作系统",
+  "display_secondary": "Kylin OS",
+  "aliases": [
+    "银河麒麟",
+    "麒麟操作系统",
+    "Kylin"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "operating_systems",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "uos"
+    }
+  ],
+  "summary": "银河麒麟，党政与信创市场的主流国产操作系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

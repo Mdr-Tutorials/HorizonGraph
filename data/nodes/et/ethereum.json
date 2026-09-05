@@ -32,6 +32,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "solana"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "vitalik-buterin"
     }
   ],
   "summary": "通用智能合约链，账户与 EVM 构成世界计算机叙事。",

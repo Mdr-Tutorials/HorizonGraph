@@ -1,0 +1,28 @@
+{
+  "id": "xml",
+  "name": "XML",
+  "aliases": [
+    "Extensible Markup Language",
+    "可扩展标记语言"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "w3c-standards-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "带标签的标记数据格式，文档与 SOAP 时代的基石。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

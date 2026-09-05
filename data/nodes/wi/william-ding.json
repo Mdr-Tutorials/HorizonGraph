@@ -1,0 +1,26 @@
+{
+  "id": "william-ding",
+  "name": "William Ding",
+  "display_primary": "丁磊",
+  "display_secondary": "William Ding",
+  "aliases": [
+    "丁磊",
+    "Ding Lei"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "platform-commerce-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "网易创始人，邮箱、游戏与有道多线布局。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

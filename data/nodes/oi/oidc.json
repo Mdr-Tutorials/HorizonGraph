@@ -1,0 +1,39 @@
+{
+  "id": "oidc",
+  "name": "OIDC",
+  "aliases": [
+    "OpenID Connect"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "iam-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "oauth"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "authentication"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "saml"
+    }
+  ],
+  "summary": "OAuth 2.0 之上的身份层，现代登录的事实标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://openid.net/developers/how-connect-works/"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "gpl",
+  "name": "GNU General Public License",
+  "display_primary": "GPL",
+  "display_secondary": "GNU GPL",
+  "aliases": [
+    "GPL 协议",
+    "GNU GPL",
+    "通用公共许可证"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "competes_with",
+      "target_id": "mit"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "强著佐权许可家族，衍生作品必须同协议开源。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://www.gnu.org/licenses/"
+}

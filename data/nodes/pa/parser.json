@@ -1,0 +1,25 @@
+{
+  "id": "parser",
+  "name": "Parser",
+  "display_primary": "语法分析器",
+  "display_secondary": "Parser",
+  "aliases": [
+    "语法分析器",
+    "解析器"
+  ],
+  "type": "concept",
+  "domains": [
+    "compilers"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "按文法把 token 流组织成语法树。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

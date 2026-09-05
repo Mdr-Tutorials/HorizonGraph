@@ -1,0 +1,25 @@
+{
+  "id": "lsm-tree",
+  "name": "LSM-Tree",
+  "display_primary": "LSM 树",
+  "display_secondary": "LSM-Tree",
+  "aliases": [
+    "LSM 树",
+    "日志结构合并树"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "先写内存再批量落盘，用读放大换顺序写吞吐。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

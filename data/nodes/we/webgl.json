@@ -22,6 +22,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "webgpu"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "graphics-pipeline"
     }
   ],
   "summary": "浏览器里的 OpenGL ES，Web 3D 渲染的第一代标准。",

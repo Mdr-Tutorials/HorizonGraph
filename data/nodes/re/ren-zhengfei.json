@@ -1,0 +1,25 @@
+{
+  "id": "ren-zhengfei",
+  "name": "Ren Zhengfei",
+  "display_primary": "任正非",
+  "display_secondary": "Ren Zhengfei",
+  "aliases": [
+    "任正非"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "华为创始人，带领华为穿越制裁的军人企业家。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

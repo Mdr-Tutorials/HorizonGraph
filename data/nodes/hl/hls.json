@@ -1,0 +1,31 @@
+{
+  "id": "hls",
+  "name": "HLS",
+  "aliases": [
+    "HTTP Live Streaming"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "http"
+    }
+  ],
+  "summary": "苹果的 HTTP 切片流媒体协议，直播点播通吃。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

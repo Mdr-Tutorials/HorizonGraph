@@ -20,6 +20,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "guido-van-rossum"
     }
   ],
   "summary": "通用动态语言，数据科学与自动化的默认选择。",

@@ -1,0 +1,28 @@
+{
+  "id": "toml",
+  "name": "TOML",
+  "aliases": [
+    "Tom's Obvious Minimal Language"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "web-development",
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "语义清晰的配置文件格式，Rust 与 Python 项目常用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://toml.io"
+}

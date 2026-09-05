@@ -1,12 +1,12 @@
 {
-  "version": "1.2.0",
+  "version": "1.4.0",
   "policy": {
     "storage": "数据平面仅存规范方向（canonical_owner 一侧）；反向视图由 build 派生",
     "self_loops": "全部禁止；自举属叙事，写入 description；试点批次后复核",
     "duplicate_edges": "同一节点内 (relation_type, target_id) 重复即 CI 失败",
     "mirror_check": "对称关系仅存一份，镜像双存即 CI 失败",
     "classification_edges": ["is_instance_of"],
-    "merge_review": "13 条全量入表；试点后依据录入分歧做合并评审，重点评审 depends_on 与 bases_for 的边界"
+    "merge_review": "15 条全量入表；试点后依据录入分歧做合并评审，重点评审 depends_on 与 bases_for、competes_with 与 alternative_to 的边界"
   },
   "display": {
     "is_instance_of": { "zh": "属于", "en": "instance of" },
@@ -14,6 +14,7 @@
     "implements": { "zh": "实现", "en": "implements" },
     "depends_on": { "zh": "依赖", "en": "depends on" },
     "competes_with": { "zh": "竞争", "en": "competes with" },
+    "alternative_to": { "zh": "替代方案", "en": "alternative to" },
     "extends": { "zh": "扩展", "en": "extends" },
     "bases_for": { "zh": "基座", "en": "base for" },
     "embeds": { "zh": "内嵌", "en": "embeds" },
@@ -21,6 +22,7 @@
     "version_of": { "zh": "版本", "en": "version of" },
     "deprecated_by": { "zh": "被替代", "en": "deprecated by" },
     "developed_by": { "zh": "开发者", "en": "developed by" },
+    "founded_by": { "zh": "创始人", "en": "founded by" },
     "powers": { "zh": "驱动", "en": "powers" }
   },
   "relations": {
@@ -65,6 +67,14 @@
       "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
       "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
       "decision": "同生态位的替代关系（Bun competes_with Node.js）。仅存一份，双向可遍历。"
+    },
+    "alternative_to": {
+      "canonical_owner": "对称关系，存于 id 字典序较小一侧",
+      "symmetric": true,
+      "inverse_display": { "zh": "替代方案", "en": "alternatives" },
+      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product", "organization", "person"],
+      "range": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product", "organization", "person"],
+      "decision": "同类可选、社区惯于对比的『替代方案』关系，补足 competes_with 覆盖不到的两侧：概念/度量/组织/人物之间的对比（Paxos 对 Raft、GitHub 对 GitLab），以及跨类型对比（架构风格 REST 对 GraphQL）。与 competes_with 的分界：competes_with 表工程工件之间同生态位的市场竞争；alternative_to 表认知层面的可比选；同一对节点两者不得并存（CI 强制）。对称关系存字典序较小侧，禁止镜像双存。"
     },
     "extends": {
       "canonical_owner": "扩展方（超集持有边）",
@@ -121,6 +131,14 @@
       "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
       "range": ["organization", "person"],
       "decision": "研发归属（GLM-4 developed_by 智谱 AI）。目标限于组织与人物。"
+    },
+    "founded_by": {
+      "canonical_owner": "公司方（组织持有边，指向创始人）",
+      "symmetric": false,
+      "inverse_display": { "zh": "创立", "en": "founded" },
+      "domain": ["organization"],
+      "range": ["person"],
+      "decision": "创始归属（腾讯 founded_by 马化腾）。由组织持有边指向创始人个人；与 developed_by 的分界：developed_by 表作品的亲手研发归属，founded_by 表组织的创立归属——创始人不因其身份自动成为产品研发者。"
     },
     "powers": {
       "canonical_owner": "赋能方（底层技术持有边）",

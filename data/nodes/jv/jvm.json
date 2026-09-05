@@ -22,6 +22,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "oracle"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "garbage-collection"
     }
   ],
   "summary": "Java 字节码的运行时，靠 JIT 与垃圾回收把托管代码跑上硬件。",

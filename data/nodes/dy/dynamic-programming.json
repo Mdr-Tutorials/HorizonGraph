@@ -1,0 +1,25 @@
+{
+  "id": "dynamic-programming",
+  "name": "Dynamic Programming",
+  "display_primary": "动态规划",
+  "display_secondary": "Dynamic Programming",
+  "aliases": [
+    "动态规划",
+    "DP"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "把重叠子问题的解存表复用，状态转移方程是核心。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

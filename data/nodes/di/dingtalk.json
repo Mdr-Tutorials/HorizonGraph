@@ -1,0 +1,37 @@
+{
+  "id": "dingtalk",
+  "name": "DingTalk",
+  "display_primary": "钉钉",
+  "display_secondary": "DingTalk",
+  "aliases": [
+    "钉钉"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "feishu"
+    }
+  ],
+  "summary": "阿里的企业协同平台，组织管理与考勤的代名词。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://www.dingtalk.com"
+}

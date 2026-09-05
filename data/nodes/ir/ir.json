@@ -1,0 +1,25 @@
+{
+  "id": "ir",
+  "name": "Intermediate Representation",
+  "display_primary": "中间表示",
+  "display_secondary": "IR",
+  "aliases": [
+    "IR",
+    "中间表示"
+  ],
+  "type": "concept",
+  "domains": [
+    "compilers"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "编译器前端的统一语言，优化发生在这一层。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

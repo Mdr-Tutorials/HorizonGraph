@@ -1,0 +1,35 @@
+{
+  "id": "ecc",
+  "name": "ECC",
+  "aliases": [
+    "椭圆曲线密码",
+    "Elliptic Curve Cryptography"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "public-key-cryptography"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "rsa"
+    }
+  ],
+  "summary": "椭圆曲线上的非对称密码，同安全强度密钥更短。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,27 @@
+{
+  "id": "soap",
+  "name": "SOAP",
+  "aliases": [
+    "Simple Object Access Protocol"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "基于 XML 的企业 Web 服务协议，REST 的前辈。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

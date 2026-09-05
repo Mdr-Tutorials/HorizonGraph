@@ -1,0 +1,31 @@
+{
+  "id": "nfs",
+  "name": "NFS",
+  "aliases": [
+    "Network File System",
+    "网络文件系统"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "smb"
+    }
+  ],
+  "summary": "Unix 世界的主流网络文件系统协议。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

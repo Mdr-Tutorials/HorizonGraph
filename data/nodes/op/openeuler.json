@@ -1,0 +1,28 @@
+{
+  "id": "openeuler",
+  "name": "openEuler",
+  "aliases": [
+    "欧拉"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "operating_systems",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    }
+  ],
+  "summary": "华为开源的企业级 Linux 发行版，社区化运营。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.openeuler.org"
+}

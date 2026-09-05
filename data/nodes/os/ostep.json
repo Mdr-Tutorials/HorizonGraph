@@ -1,0 +1,30 @@
+{
+  "id": "ostep",
+  "name": "Operating Systems: Three Easy Pieces",
+  "display_primary": "OSTEP",
+  "display_secondary": "Operating Systems: Three Easy Pieces",
+  "aliases": [
+    "OSTEP",
+    "操作系统导论"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    }
+  ],
+  "summary": "免费开放的操作系统教材，中文社区人手一册。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "zhou-zhihua",
+  "name": "Zhou Zhihua",
+  "display_primary": "Zhou Zhihua",
+  "display_secondary": "周志华",
+  "aliases": [
+    "周志华"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "《机器学习》作者，南京大学教授，AI 学科带头人。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

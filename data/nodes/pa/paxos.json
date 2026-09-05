@@ -1,0 +1,32 @@
+{
+  "id": "paxos",
+  "name": "Paxos",
+  "display_primary": "Paxos",
+  "display_secondary": "Paxos",
+  "aliases": [
+    "Paxos 算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "consensus"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "raft"
+    }
+  ],
+  "summary": "Leslie Lamport 的共识算法，工程可实现的版本是 Raft。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

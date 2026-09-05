@@ -1,0 +1,31 @@
+{
+  "id": "acme",
+  "name": "ACME",
+  "aliases": [
+    "Automatic Certificate Management Environment"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "x509"
+    }
+  ],
+  "summary": "证书签发自动化协议，Let's Encrypt 的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://datatracker.ietf.org/doc/html/rfc8555"
+}

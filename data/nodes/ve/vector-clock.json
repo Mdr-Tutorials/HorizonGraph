@@ -1,0 +1,24 @@
+{
+  "id": "vector-clock",
+  "name": "Vector Clock",
+  "display_primary": "向量时钟",
+  "display_secondary": "Vector Clock",
+  "aliases": [
+    "向量时钟"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "多副本事件因果排序的计数器数组，Dynamo 系常用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

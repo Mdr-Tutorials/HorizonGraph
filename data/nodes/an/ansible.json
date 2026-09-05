@@ -24,6 +24,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "redhat"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
     }
   ],
   "summary": "SSH 推送式的自动化配置管理，YAML 描述编排。",

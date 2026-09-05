@@ -30,6 +30,10 @@
     {
       "relation_type": "bases_for",
       "target_id": "cursor"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "electron"
     }
   ],
   "summary": "微软的开源代码编辑器，Electron 上的主力 IDE。",

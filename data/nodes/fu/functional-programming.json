@@ -15,6 +15,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "programming-paradigm"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "oop"
     }
   ],
   "summary": "纯函数与不可变数据，用组合代替可变状态。",

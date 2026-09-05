@@ -1,0 +1,27 @@
+{
+  "id": "qiu-bojun",
+  "name": "Qiu Bojun",
+  "display_primary": "Qiu Bojun",
+  "display_secondary": "求伯君",
+  "aliases": [
+    "求伯君"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "WPS 与金山软件创始人，中国第一代程序员代表。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

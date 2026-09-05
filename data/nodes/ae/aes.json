@@ -1,0 +1,31 @@
+{
+  "id": "aes",
+  "name": "AES",
+  "aliases": [
+    "Advanced Encryption Standard",
+    "高级加密标准"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "encryption"
+    }
+  ],
+  "summary": "对称分组加密的全球标准，128/192/256 位密钥。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

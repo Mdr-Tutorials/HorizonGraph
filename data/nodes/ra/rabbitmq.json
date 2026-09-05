@@ -19,6 +19,10 @@
     {
       "relation_type": "implements",
       "target_id": "message-queue"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "amqp"
     }
   ],
   "summary": "AMQP 消息代理，路由灵活的经典企业级消息中间件。",

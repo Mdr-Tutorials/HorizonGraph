@@ -1,0 +1,28 @@
+{
+  "id": "vitalik-buterin",
+  "name": "Vitalik Buterin",
+  "display_primary": "Vitalik Buterin",
+  "display_secondary": "维塔利克·布特林",
+  "aliases": [
+    "维塔利克·布特林",
+    "V 神"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "以太坊联合创始人，智能合约时代的推手。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

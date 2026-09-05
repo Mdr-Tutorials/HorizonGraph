@@ -1,0 +1,25 @@
+{
+  "id": "page-rank",
+  "name": "PageRank",
+  "display_primary": "PageRank",
+  "display_secondary": "PageRank",
+  "aliases": [
+    "网页排名算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "networking",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "按入链权重迭代打分网页，谷歌起家的算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,27 @@
+{
+  "id": "ilya-sutskever",
+  "name": "Ilya Sutskever",
+  "display_primary": "Ilya Sutskever",
+  "display_secondary": "伊利亚·苏茨克维",
+  "aliases": [
+    "伊利亚·苏茨克维"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "OpenAI 联合创始人，GPT 路线的关键推手。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

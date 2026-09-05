@@ -20,6 +20,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "nodejs"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "yarn"
     }
   ],
   "summary": "用硬链接省磁盘的 Node 包管理器。",

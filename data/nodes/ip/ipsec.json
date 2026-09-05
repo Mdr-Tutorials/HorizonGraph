@@ -1,0 +1,32 @@
+{
+  "id": "ipsec",
+  "name": "IPsec",
+  "aliases": [
+    "IP Security"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "wireguard"
+    }
+  ],
+  "summary": "IP 层加密认证协议族，传统站点到站点互联首选。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

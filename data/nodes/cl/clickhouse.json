@@ -1,0 +1,30 @@
+{
+  "id": "clickhouse",
+  "name": "ClickHouse",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem",
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "competes_with",
+      "target_id": "duckdb"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "列式 OLAP 数据库，实时分析场景的性能怪兽。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://clickhouse.com"
+}

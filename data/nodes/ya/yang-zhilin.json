@@ -1,0 +1,26 @@
+{
+  "id": "yang-zhilin",
+  "name": "Yang Zhilin",
+  "display_primary": "杨植麟",
+  "display_secondary": "Yang Zhilin",
+  "aliases": [
+    "杨植麟",
+    "Kimmy Yang"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "月之暗面创始人，Kimi 幕后推手，清华系 AI 学者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

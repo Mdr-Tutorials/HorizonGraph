@@ -1,0 +1,26 @@
+{
+  "id": "a-star",
+  "name": "A*",
+  "display_primary": "A*",
+  "display_secondary": "A-Star",
+  "aliases": [
+    "A-Star",
+    "A 星算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "带启发式函数的最短路搜索，游戏寻路的事实标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -24,6 +24,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "postgresql"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "b-tree"
     }
   ],
   "summary": "Oracle 旗下的开源关系数据库。",

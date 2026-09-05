@@ -17,6 +17,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "observability"
     }
   ],
   "summary": "拉模型的指标监控系统，云原生可观测性的默认选择。",

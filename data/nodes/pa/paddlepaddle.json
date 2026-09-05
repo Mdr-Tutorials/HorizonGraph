@@ -1,0 +1,42 @@
+{
+  "id": "paddlepaddle",
+  "name": "PaddlePaddle",
+  "display_primary": "PaddlePaddle",
+  "display_secondary": "飞桨",
+  "aliases": [
+    "飞桨"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "dl-framework-ecosystem",
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "pytorch"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "tensorflow"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "baidu"
+    }
+  ],
+  "summary": "百度开源的深度学习框架，国产 AI 基建的旗手。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.paddlepaddle.org.cn"
+}

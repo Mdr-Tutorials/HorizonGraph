@@ -1,0 +1,25 @@
+{
+  "id": "two-phase-commit",
+  "name": "Two-Phase Commit",
+  "display_primary": "两阶段提交",
+  "display_secondary": "Two-Phase Commit",
+  "aliases": [
+    "两阶段提交",
+    "2PC"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "先询问再提交的原子提交协议，协调者单点是软肋。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

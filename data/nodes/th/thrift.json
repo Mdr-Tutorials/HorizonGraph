@@ -1,0 +1,30 @@
+{
+  "id": "thrift",
+  "name": "Thrift",
+  "aliases": [
+    "Apache Thrift"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "Facebook 出品的跨语言 RPC 与序列化框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

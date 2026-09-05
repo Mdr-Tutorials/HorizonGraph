@@ -1,0 +1,24 @@
+{
+  "id": "divide-and-conquer",
+  "name": "Divide and Conquer",
+  "display_primary": "分治",
+  "display_secondary": "Divide and Conquer",
+  "aliases": [
+    "分治"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "拆成独立子问题分别求解再合并，快排归并同源。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

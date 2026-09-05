@@ -1,0 +1,34 @@
+{
+  "id": "bsd-2",
+  "name": "BSD 2-Clause License",
+  "display_primary": "BSD-2",
+  "display_secondary": "BSD 2-Clause License",
+  "aliases": [
+    "BSD-2-Clause",
+    "简化 BSD 协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "competes_with",
+      "target_id": "bsd-3"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "极简两条款 BSD，保留声明后近乎自由使用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://opensource.org/license/bsd-2-clause"
+}

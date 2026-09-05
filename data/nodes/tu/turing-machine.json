@@ -1,0 +1,29 @@
+{
+  "id": "turing-machine",
+  "name": "Turing Machine",
+  "display_primary": "图灵机",
+  "display_secondary": "Turing Machine",
+  "aliases": [
+    "图灵机"
+  ],
+  "type": "concept",
+  "domains": [
+    "formal-methods",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alan-turing"
+    }
+  ],
+  "summary": "可计算性的数学模型，一切通用计算机的理论源头。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,25 @@
+{
+  "id": "kmp",
+  "name": "KMP",
+  "display_primary": "KMP",
+  "display_secondary": "KMP 算法",
+  "aliases": [
+    "KMP 算法",
+    "字符串匹配"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "利用失配表避免主串回溯的字符串匹配算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

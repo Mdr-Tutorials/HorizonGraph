@@ -1,0 +1,27 @@
+{
+  "id": "andrew-ng",
+  "name": "Andrew Ng",
+  "display_primary": "Andrew Ng",
+  "display_secondary": "吴恩达",
+  "aliases": [
+    "吴恩达"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "深度学习公开课的全球布道者，Coursera 联合创始人。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

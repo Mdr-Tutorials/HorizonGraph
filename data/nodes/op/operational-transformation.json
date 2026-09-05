@@ -1,0 +1,25 @@
+{
+  "id": "operational-transformation",
+  "name": "Operational Transformation",
+  "display_primary": "操作变换",
+  "display_secondary": "Operational Transformation",
+  "aliases": [
+    "操作变换",
+    "OT 算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "变换并发操作保一致，Google Docs 与 CRDT 的前浪。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

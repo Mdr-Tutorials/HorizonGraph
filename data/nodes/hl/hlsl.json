@@ -1,0 +1,31 @@
+{
+  "id": "hlsl",
+  "name": "HLSL",
+  "aliases": [
+    "High-Level Shading Language"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "graphics-api-ecosystem",
+    "rendering-ecosystem"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "directx"
+    }
+  ],
+  "summary": "DirectX 的着色语言，Windows 游戏渲染的主力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

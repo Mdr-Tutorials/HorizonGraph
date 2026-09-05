@@ -1,0 +1,30 @@
+{
+  "id": "mit",
+  "name": "MIT License",
+  "display_primary": "MIT",
+  "display_secondary": "MIT License",
+  "aliases": [
+    "MIT 协议",
+    "MIT 许可证"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "最宽松的主流许可，保留版权声明即可自由使用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://opensource.org/license/mit"
+}

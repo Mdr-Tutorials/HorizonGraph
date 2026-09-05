@@ -1,0 +1,27 @@
+{
+  "id": "pro-git",
+  "name": "Pro Git",
+  "aliases": [
+    "Pro Git 第二版"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    }
+  ],
+  "summary": "Scott Chacon 的 Git 权威书，官方免费开放。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://git-scm.com/book"
+}

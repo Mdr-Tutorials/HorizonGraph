@@ -1,0 +1,25 @@
+{
+  "id": "zoom",
+  "name": "Zoom",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    }
+  ],
+  "summary": "疫情时代崛起的视频会议霸主。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://zoom.us"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "macos",
+  "name": "macOS",
+  "aliases": [],
+  "type": "architecture",
+  "ecosystems": [
+    "macos-darwin-ecosystem",
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "windows-nt"
+    }
+  ],
+  "summary": "苹果桌面操作系统，Darwin 内核与开发者的主力机。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

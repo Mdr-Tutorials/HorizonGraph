@@ -18,6 +18,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "founded_by",
+      "target_id": "colin-huang"
     }
   ],
   "summary": "电商平台公司，拼多多与 Temu 的东家。",

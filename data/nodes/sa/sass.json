@@ -1,0 +1,31 @@
+{
+  "id": "sass",
+  "name": "Sass",
+  "aliases": [
+    "SCSS"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "css"
+    }
+  ],
+  "summary": "CSS 预处理语言，变量、嵌套与 mixin 的超集。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://sass-lang.com"
+}

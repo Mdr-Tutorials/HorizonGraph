@@ -1,0 +1,27 @@
+{
+  "id": "zhang-xiaolong",
+  "name": "Zhang Xiaolong",
+  "display_primary": "张小龙",
+  "display_secondary": "Zhang Xiaolong",
+  "aliases": [
+    "张小龙",
+    "Allen Zhang"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "platform-commerce-ecosystem",
+    "collaboration-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "微信之父，Foxmail 创始人，腾讯高级副总裁。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

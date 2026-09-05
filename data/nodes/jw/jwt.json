@@ -1,0 +1,28 @@
+{
+  "id": "jwt",
+  "name": "JWT",
+  "aliases": [
+    "JSON Web Token"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "iam-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "自包含的签名令牌格式，无状态会话与 API 授权标配。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://jwt.io"
+}

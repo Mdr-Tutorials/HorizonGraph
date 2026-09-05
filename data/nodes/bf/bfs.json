@@ -1,0 +1,29 @@
+{
+  "id": "bfs",
+  "name": "Breadth-First Search",
+  "display_primary": "广度优先搜索",
+  "display_secondary": "BFS",
+  "aliases": [
+    "广度优先搜索",
+    "BFS"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "dfs"
+    }
+  ],
+  "summary": "逐层扩散的图遍历，无权图最短路的标准解。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

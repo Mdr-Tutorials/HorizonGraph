@@ -20,6 +20,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "tool"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "llvm"
     }
   ],
   "summary": "GNU 的 C/C++ 等语言编译器套件，系统软件的默认工具链之一。",

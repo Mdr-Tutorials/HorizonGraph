@@ -1,0 +1,24 @@
+{
+  "id": "skip-list",
+  "name": "Skip List",
+  "display_primary": "跳表",
+  "display_secondary": "Skip List",
+  "aliases": [
+    "跳表"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "多层链表实现的概率平衡结构，Redis zset 的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

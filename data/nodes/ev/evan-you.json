@@ -1,0 +1,28 @@
+{
+  "id": "evan-you",
+  "name": "Evan You",
+  "display_primary": "Evan You",
+  "display_secondary": "尤雨溪",
+  "aliases": [
+    "尤雨溪"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Vue 与 Vite 的创造者，独立开源开发者的标杆。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

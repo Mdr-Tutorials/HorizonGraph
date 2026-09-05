@@ -1,0 +1,27 @@
+{
+  "id": "liang-wenfeng",
+  "name": "Liang Wenfeng",
+  "display_primary": "梁文锋",
+  "display_secondary": "Liang Wenfeng",
+  "aliases": [
+    "梁文锋",
+    "Wenfeng Liang"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "DeepSeek 创始人，以开源与低成本震动全球 AI 圈。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

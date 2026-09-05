@@ -33,6 +33,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "hyperos"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "ios"
     }
   ],
   "summary": "Google 的移动操作系统，Linux 内核上的应用生态。",

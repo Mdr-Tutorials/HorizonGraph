@@ -1,0 +1,32 @@
+{
+  "id": "mdn",
+  "name": "MDN Web Docs",
+  "aliases": [
+    "MDN"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "web_frontend",
+    "w3c-standards-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "documentation"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mozilla"
+    }
+  ],
+  "summary": "Web 技术的权威文档库，前端开发的事实手册。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://developer.mozilla.org"
+}

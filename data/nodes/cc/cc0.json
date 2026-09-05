@@ -1,0 +1,34 @@
+{
+  "id": "cc0",
+  "name": "CC0 1.0",
+  "display_primary": "CC0",
+  "display_secondary": "CC0 1.0",
+  "aliases": [
+    "CC0 协议",
+    "知识共享零许可"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "competes_with",
+      "target_id": "unlicense"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "知识共享的公有领域贡献宣告，数据集常用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://creativecommons.org/publicdomain/zero/1.0/"
+}

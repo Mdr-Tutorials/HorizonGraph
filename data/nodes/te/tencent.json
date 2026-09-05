@@ -19,6 +19,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "founded_by",
+      "target_id": "pony-ma"
     }
   ],
   "summary": "社交与游戏起家的科技集团，微信与混元的东家。",

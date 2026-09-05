@@ -1,0 +1,32 @@
+{
+  "id": "totp",
+  "name": "TOTP",
+  "aliases": [
+    "Time-based One-Time Password",
+    "动态口令"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "iam-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "authentication"
+    }
+  ],
+  "summary": "基于时间的一次性口令，两步验证器 App 的核心。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -22,6 +22,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "brendan-eich"
     }
   ],
   "summary": "浏览器内生语言，经 Node 成为全栈与工具链语言。",

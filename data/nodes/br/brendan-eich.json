@@ -1,0 +1,28 @@
+{
+  "id": "brendan-eich",
+  "name": "Brendan Eich",
+  "display_primary": "Brendan Eich",
+  "display_secondary": "布兰登·艾克",
+  "aliases": [
+    "布兰登·艾克"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "十天造出 JavaScript，Mozilla 联合创始人。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

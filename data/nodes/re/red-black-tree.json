@@ -1,0 +1,24 @@
+{
+  "id": "red-black-tree",
+  "name": "Red-Black Tree",
+  "display_primary": "红黑树",
+  "display_secondary": "Red-Black Tree",
+  "aliases": [
+    "红黑树"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "自平衡二叉搜索树，C++ map 与 Java TreeMap 的内核。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

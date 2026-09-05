@@ -1,0 +1,25 @@
+{
+  "id": "minimum-spanning-tree",
+  "name": "Minimum Spanning Tree",
+  "display_primary": "最小生成树",
+  "display_secondary": "Minimum Spanning Tree",
+  "aliases": [
+    "最小生成树",
+    "MST"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "Kruskal 与 Prim 两大解法，连通全网的最小边权和。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,26 @@
+{
+  "id": "lru",
+  "name": "LRU",
+  "display_primary": "LRU",
+  "display_secondary": "最近最少使用",
+  "aliases": [
+    "LRU 缓存",
+    "最近最少使用"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "最近最少使用淘汰策略，哈希表加双向链表做到 O(1)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,35 @@
+{
+  "id": "d2l",
+  "name": "Dive into Deep Learning",
+  "display_primary": "动手学深度学习",
+  "display_secondary": "Dive into Deep Learning",
+  "aliases": [
+    "动手学深度学习",
+    "d2l"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "ai_data_science",
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mu-li"
+    }
+  ],
+  "summary": "代码与理论并行的深度学习教材，李沐团队开源力作。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://d2l.ai"
+}

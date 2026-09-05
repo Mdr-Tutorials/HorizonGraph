@@ -1,0 +1,34 @@
+{
+  "id": "feishu",
+  "name": "Feishu",
+  "display_primary": "飞书",
+  "display_secondary": "Feishu",
+  "aliases": [
+    "飞书",
+    "Lark"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "bytedance"
+    }
+  ],
+  "summary": "字节的全家桶协同办公平台，文档与 IM 一体。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://www.feishu.cn"
+}

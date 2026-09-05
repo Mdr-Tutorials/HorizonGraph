@@ -18,6 +18,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "ashish-vaswani"
     }
   ],
   "summary": "用自注意力并行建模序列的架构，大模型的骨架。",

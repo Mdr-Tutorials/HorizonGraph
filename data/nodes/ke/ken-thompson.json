@@ -1,0 +1,29 @@
+{
+  "id": "ken-thompson",
+  "name": "Ken Thompson",
+  "display_primary": "Ken Thompson",
+  "display_secondary": "肯·汤普逊",
+  "aliases": [
+    "肯·汤普逊"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "go-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Unix 之父、B 语言发明人，图灵奖得主。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

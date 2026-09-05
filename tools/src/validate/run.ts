@@ -175,12 +175,16 @@ for (const { n, file } of nodes.values()) {
     if (!target) { err(`${file}: 死边 ${pair}（目标不存在）`); continue; }
     if (!spec.range.includes(target.n.type)) err(`${file}: ${rt} 的 range 不含目标类型 ${target.n.type}`);
     if (rt === "version_of" && target.n.type !== t) err(`${file}: version_of 要求源与目标同 type`);
-    if (rt === "competes_with") {
-      if (n.id > tid) err(`${file}: competes_with 应存于字典序较小一侧`);
+    if (rt === "competes_with" || rt === "alternative_to") {
+      if (n.id > tid) err(`${file}: ${rt} 应存于字典序较小一侧`);
       const back = (target.n.relations ?? []).some(
-        (b: any) => b.relation_type === "competes_with" && b.target_id === n.id
+        (b: any) => b.relation_type === rt && b.target_id === n.id
       );
-      if (back) err(`${file}: competes_with 与 ${tid} 镜像双存`);
+      if (back) err(`${file}: ${rt} 与 ${tid} 镜像双存`);
+      const twin = rt === "competes_with" ? "alternative_to" : "competes_with";
+      const twinHere = (n.relations ?? []).some((b: any) => b.relation_type === twin && b.target_id === tid);
+      const twinThere = (target.n.relations ?? []).some((b: any) => b.relation_type === twin && b.target_id === n.id);
+      if (twinHere || twinThere) err(`${file}: ${n.id} 与 ${tid} 同时存在 competes_with 与 alternative_to`);
     }
     if (rt === "deprecated_by" && n.status !== "deprecated")
       err(`${file}: deprecated_by 要求源 status=deprecated 且填 deprecated_at`);

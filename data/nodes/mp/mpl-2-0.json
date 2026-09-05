@@ -1,0 +1,35 @@
+{
+  "id": "mpl-2-0",
+  "name": "Mozilla Public License 2.0",
+  "display_primary": "MPL-2.0",
+  "display_secondary": "Mozilla Public License 2.0",
+  "aliases": [
+    "MPL-2.0",
+    "MPL 协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mozilla"
+    }
+  ],
+  "summary": "文件级著佐权的中间派，Mozilla 系出品。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.mozilla.org/en-US/MPL/2.0/",
+  "first_released": "2012-01-02"
+}

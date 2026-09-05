@@ -1,0 +1,24 @@
+{
+  "id": "merge-sort",
+  "name": "Merge Sort",
+  "display_primary": "归并排序",
+  "display_secondary": "Merge Sort",
+  "aliases": [
+    "归并排序"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "稳定的分治排序，外部排序与求逆序对的基础。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

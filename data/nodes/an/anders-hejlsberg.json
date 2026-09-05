@@ -1,0 +1,24 @@
+{
+  "id": "anders-hejlsberg",
+  "name": "Anders Hejlsberg",
+  "display_primary": "Anders Hejlsberg",
+  "display_secondary": "安德斯·海尔斯伯格",
+  "aliases": [
+    "安德斯·海尔斯伯格"
+  ],
+  "type": "person",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Turbo Pascal、C# 与 TypeScript 的首席设计师。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

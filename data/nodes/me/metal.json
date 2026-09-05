@@ -1,0 +1,38 @@
+{
+  "id": "metal",
+  "name": "Metal",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "graphics-api-ecosystem",
+    "rendering-ecosystem"
+  ],
+  "domains": [
+    "graphics"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "graphics-pipeline"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vulkan"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    }
+  ],
+  "summary": "苹果统一的低开销图形与计算 API。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://developer.apple.com/metal/"
+}

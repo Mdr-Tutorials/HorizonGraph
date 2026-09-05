@@ -1,0 +1,35 @@
+{
+  "id": "gpl-3-0",
+  "name": "GNU GPL v3.0",
+  "display_primary": "GPL-3.0",
+  "display_secondary": "GNU GPL v3.0",
+  "aliases": [
+    "GPLv3",
+    "GPL-3.0"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "version_of",
+      "target_id": "gpl"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "加入专利保护与反 Tivoization 的 GPL 现行版。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "first_released": "2007-06-29"
+}

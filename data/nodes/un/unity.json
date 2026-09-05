@@ -26,6 +26,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "unity-technologies"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "unreal-engine"
     }
   ],
   "summary": "组件化的跨平台游戏引擎，C# 脚本与巨大资源商店。",

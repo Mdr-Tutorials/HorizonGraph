@@ -1,0 +1,37 @@
+{
+  "id": "doubao-app",
+  "name": "Doubao",
+  "display_primary": "豆包",
+  "display_secondary": "Doubao",
+  "aliases": [
+    "豆包"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "bytedance"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "ernie-bot"
+    }
+  ],
+  "summary": "字节跳动的 C 端 AI 助手，国内月活领先。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

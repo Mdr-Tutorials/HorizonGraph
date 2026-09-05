@@ -1,0 +1,31 @@
+{
+  "id": "turn",
+  "name": "TURN",
+  "aliases": [
+    "Traversal Using Relays around NAT"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "udp"
+    }
+  ],
+  "summary": "打洞失败时的媒体中继兜底，WebRTC 最后一环。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

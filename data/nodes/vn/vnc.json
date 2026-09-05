@@ -1,0 +1,31 @@
+{
+  "id": "vnc",
+  "name": "VNC",
+  "aliases": [
+    "Virtual Network Computing"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tcp"
+    }
+  ],
+  "summary": "跨平台远程桌面，RFB 协议的图形化共享。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

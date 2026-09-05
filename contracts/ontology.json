@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.6.0",
   "note": "分类骨架：全部非叶子节点在此，数据平面不出现。层级用 parents 数组（多亲 DAG，一个分类可属多个上级）；锚点间元叙事为普通关系边。生效 entity_type 沿 parent 祖先解析。",
   "nodes": [
     { "id": "meta-concept", "name": "Theory, Concept & Metric", "aliases": ["理论概念", "理论与度量"], "summary": "理论、范式与度量概念的顶层骨架。", "relations": [ { "relation_type": "governs", "target_id": "meta-architecture" } ], "entity_type": ["concept", "metric"], "importance": 5 },
@@ -30,11 +30,14 @@
 
     { "id": "transport-protocol", "name": "Transport Protocol", "aliases": ["传输协议", "传输层协议"], "summary": "传输层与端到端传输协议。", "parents": ["protocol"], "relations": [] },
     { "id": "application-protocol", "name": "Application Protocol", "aliases": ["应用层协议"], "summary": "应用层协议与会话协议。", "parents": ["protocol"], "relations": [] },
+    { "id": "license", "name": "License", "aliases": ["许可证", "开源协议"], "summary": "软件与数据的许可文本标准，约束使用、修改与再分发。", "parents": ["protocol"], "relations": [], "importance": 3 },
     { "id": "distributed-systems", "name": "Distributed Systems", "aliases": ["分布式系统"], "summary": "分布式系统的理论与设计域，governs 边的典型目标。", "parents": ["theory"], "relations": [] },
     { "id": "concurrency-theory", "name": "Concurrency Theory", "aliases": ["并发理论", "并发"], "summary": "并发与并行计算理论。", "parents": ["theory"], "relations": [] },
     { "id": "programming-paradigm", "name": "Programming Paradigm", "aliases": ["编程范式", "范式"], "summary": "编程范式与方法论。", "parents": ["theory"], "relations": [] },
     { "id": "type-system", "name": "Type System", "aliases": ["类型系统", "类型论"], "summary": "类型系统与类型理论。", "parents": ["theory"], "relations": [] },
     { "id": "deep-learning", "name": "Deep Learning", "aliases": ["深度学习"], "summary": "深度学习理论与方法。", "parents": ["theory"], "relations": [] },
+    { "id": "algorithm", "name": "Algorithm", "aliases": ["算法"], "summary": "解决计算问题的有限步骤与复杂度分析方法。", "parents": ["theory"], "relations": [], "importance": 4 },
+    { "id": "data-structure", "name": "Data Structure", "aliases": ["数据结构"], "summary": "组织与存储数据的方式，算法效率的物质基础。", "parents": ["theory"], "relations": [], "importance": 4 },
     { "id": "llm", "name": "Large Language Model", "aliases": ["大语言模型", "LLM"], "summary": "大语言模型族。", "parents": ["model-family"], "relations": [], "importance": 5 },
     { "id": "gpu", "name": "GPU", "aliases": ["图形处理器", "GPU 硬件"], "summary": "GPU 硬件产品线，实例为 product 类型。", "parents": ["platform"], "relations": [], "entity_type": "product", "importance": 5 },
     { "id": "virtual-machine", "name": "Virtual Machine & Runtime", "aliases": ["虚拟机", "运行时"], "summary": "虚拟机与语言运行时环境。", "parents": ["platform"], "relations": [], "importance": 4 }

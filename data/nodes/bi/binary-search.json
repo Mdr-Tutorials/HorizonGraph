@@ -1,0 +1,24 @@
+{
+  "id": "binary-search",
+  "name": "Binary Search",
+  "display_primary": "二分查找",
+  "display_secondary": "Binary Search",
+  "aliases": [
+    "二分查找"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "有序数据上 O(log n) 定位，边界细节最易写错。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

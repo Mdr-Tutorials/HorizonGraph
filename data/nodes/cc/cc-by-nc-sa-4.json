@@ -1,0 +1,30 @@
+{
+  "id": "cc-by-nc-sa-4",
+  "name": "CC BY-NC-SA 4.0",
+  "display_primary": "CC BY-NC-SA 4.0",
+  "display_secondary": "署名-非商业-相同方式共享",
+  "aliases": [
+    "知识共享署名-非商业性-相同方式共享 4.0"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "license"
+    }
+  ],
+  "summary": "署名、非商业、相同方式共享——本站数据采用的许可。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "first_released": "2013-11-25"
+}

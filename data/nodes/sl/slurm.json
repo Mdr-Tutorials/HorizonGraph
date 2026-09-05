@@ -1,0 +1,26 @@
+{
+  "id": "slurm",
+  "name": "Slurm",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "high-performance-computing",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "HPC 集群作业调度器，超算中心的管家。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://slurm.schedmd.com"
+}

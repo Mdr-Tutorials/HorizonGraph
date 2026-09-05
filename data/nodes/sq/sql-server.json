@@ -1,0 +1,31 @@
+{
+  "id": "sql-server",
+  "name": "Microsoft SQL Server",
+  "aliases": [
+    "SQL Server",
+    "MSSQL"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "微软的商业数据库，.NET 企业栈的老搭档。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

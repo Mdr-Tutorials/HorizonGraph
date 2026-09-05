@@ -1,0 +1,30 @@
+{
+  "id": "saml",
+  "name": "SAML",
+  "aliases": [
+    "Security Assertion Markup Language"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "iam-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "authentication"
+    }
+  ],
+  "summary": "企业 SSO 的 XML 断言协议，政企场景常青。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

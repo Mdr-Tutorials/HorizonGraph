@@ -40,6 +40,18 @@
     {
       "relation_type": "competes_with",
       "target_id": "ethereum"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ecc"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sha-2"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "satoshi-nakamoto"
     }
   ],
   "summary": "第一条公链，用工作量证明给转账排序并发行货币。",

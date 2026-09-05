@@ -1,0 +1,27 @@
+{
+  "id": "messagepack",
+  "name": "MessagePack",
+  "aliases": [
+    "msgpack"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "二进制化的 JSON 替代，更小更快的序列化。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2,
+  "official_site": "https://msgpack.org"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "dijkstra",
+  "name": "Dijkstra",
+  "display_primary": "Dijkstra",
+  "display_secondary": "Dijkstra 算法",
+  "aliases": [
+    "Dijkstra 算法",
+    "最短路算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "networking",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "非负权最短路的经典解，贪心加优先队列。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

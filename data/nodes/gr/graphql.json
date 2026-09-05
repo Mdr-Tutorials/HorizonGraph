@@ -19,6 +19,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "grpc"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "rest"
     }
   ],
   "summary": "客户端按需描述数据的 API 查询语言与运行时规范。",

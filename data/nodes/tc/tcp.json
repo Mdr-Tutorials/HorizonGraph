@@ -21,6 +21,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "ip"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "udp"
     }
   ],
   "summary": "面向连接的可靠字节流，拥塞控制长在内核里。",

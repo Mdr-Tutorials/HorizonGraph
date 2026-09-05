@@ -1,0 +1,32 @@
+{
+  "id": "zstd",
+  "name": "Zstandard",
+  "aliases": [
+    "Zstd"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "devops_tooling",
+    "cloud_native"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "兼顾压缩率与速度的现代压缩算法，Redis 与内核都内置。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://facebook.github.io/zstd/"
+}

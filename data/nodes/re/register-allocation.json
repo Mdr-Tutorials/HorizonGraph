@@ -1,0 +1,24 @@
+{
+  "id": "register-allocation",
+  "name": "Register Allocation",
+  "display_primary": "寄存器分配",
+  "display_secondary": "Register Allocation",
+  "aliases": [
+    "寄存器分配"
+  ],
+  "type": "concept",
+  "domains": [
+    "compilers"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把无限变量塞进有限寄存器的经典图着色问题。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

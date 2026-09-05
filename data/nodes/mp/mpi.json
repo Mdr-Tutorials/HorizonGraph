@@ -1,0 +1,28 @@
+{
+  "id": "mpi",
+  "name": "MPI",
+  "aliases": [
+    "Message Passing Interface"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "high-performance-computing",
+    "distributed-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "超算集群的消息传递标准，HPC 并行的通用语。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.mpi-forum.org"
+}

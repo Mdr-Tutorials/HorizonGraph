@@ -19,6 +19,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "baidu"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
     }
   ],
   "summary": "百度开源的 OCR 工具库，多语言文字识别首选之一。",

@@ -1,0 +1,28 @@
+{
+  "id": "ecs",
+  "name": "Entity Component System",
+  "display_primary": "ECS",
+  "display_secondary": "Entity Component System",
+  "aliases": [
+    "ECS",
+    "实体组件系统"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "graphics_gaming"
+  ],
+  "domains": [
+    "game-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "数据导向的游戏架构，组合优于继承的极致形态。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,30 @@
+{
+  "id": "hibernate",
+  "name": "Hibernate",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    }
+  ],
+  "summary": "Java 世界的老牌 ORM，JPA 的参考实现。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://hibernate.org"
+}
