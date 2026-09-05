@@ -23,6 +23,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "ant-group"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "newsql"
     }
   ],
   "summary": "蚂蚁自研的分布式数据库，扛过双十一洪峰。",

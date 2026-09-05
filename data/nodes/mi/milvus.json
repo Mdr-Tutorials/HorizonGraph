@@ -16,6 +16,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vector-database"
     }
   ],
   "summary": "开源向量数据库，AI 相似度检索的基础设施。",

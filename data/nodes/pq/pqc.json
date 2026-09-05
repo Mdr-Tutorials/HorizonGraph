@@ -18,6 +18,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cryptography"
     }
   ],
   "summary": "抗量子计算机的新一代密码算法，NIST 已定标。",

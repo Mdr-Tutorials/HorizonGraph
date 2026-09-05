@@ -15,6 +15,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "model-family"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
     }
   ],
   "summary": "蛋白质结构预测模型族，AI4Science 的里程碑。",
