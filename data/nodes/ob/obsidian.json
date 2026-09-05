@@ -1,0 +1,25 @@
+{
+  "id": "obsidian",
+  "name": "Obsidian",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "本地 Markdown 双链笔记，插件生态繁荣的知识库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://obsidian.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "gdpr",
+  "name": "GDPR",
+  "display_primary": "GDPR",
+  "display_secondary": "通用数据保护条例",
+  "aliases": [
+    "通用数据保护条例"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "iam-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "欧盟数据保护条例，全球隐私立法的模板。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,27 @@
+{
+  "id": "chiplet",
+  "name": "Chiplet",
+  "display_primary": "Chiplet",
+  "display_secondary": "芯粒",
+  "aliases": [
+    "芯粒"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把大芯片拆成小芯粒互连，摩尔定律的续命术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

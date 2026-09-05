@@ -1,0 +1,25 @@
+{
+  "id": "product-manager",
+  "name": "Product Manager",
+  "display_primary": "产品经理",
+  "display_secondary": "Product Manager",
+  "aliases": [
+    "产品经理",
+    "PM"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "定义做什么与为什么，需求与工程之间的翻译官。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

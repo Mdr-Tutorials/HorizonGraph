@@ -1,0 +1,30 @@
+{
+  "id": "von-neumann-architecture",
+  "name": "Von Neumann Architecture",
+  "display_primary": "冯·诺依曼架构",
+  "display_secondary": "Von Neumann Architecture",
+  "aliases": [
+    "冯·诺依曼架构",
+    "存储程序架构"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-history",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "von-neumann"
+    }
+  ],
+  "summary": "指令与数据同存的存储程序架构，至今仍是主流蓝图。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

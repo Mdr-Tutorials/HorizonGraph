@@ -1,0 +1,27 @@
+{
+  "id": "eda",
+  "name": "EDA",
+  "display_primary": "EDA",
+  "display_secondary": "电子设计自动化",
+  "aliases": [
+    "电子设计自动化"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "芯片设计的软件工具链，三巨头垄断的市场。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

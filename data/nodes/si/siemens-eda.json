@@ -1,0 +1,32 @@
+{
+  "id": "siemens-eda",
+  "name": "Siemens EDA",
+  "display_primary": "Siemens EDA",
+  "display_secondary": "Siemens EDA",
+  "aliases": [
+    "Mentor Graphics",
+    "明导"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "synopsys"
+    }
+  ],
+  "summary": "原 Mentor Graphics，被西门子收编的三巨头之一。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

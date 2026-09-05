@@ -1,0 +1,37 @@
+{
+  "id": "unix",
+  "name": "Unix",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "computer-history",
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "bell-labs"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "ken-thompson"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "dennis-ritchie"
+    }
+  ],
+  "summary": "一切现代操作系统的精神源头，『一切皆文件』。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

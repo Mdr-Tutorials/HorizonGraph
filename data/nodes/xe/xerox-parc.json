@@ -1,0 +1,25 @@
+{
+  "id": "xerox-parc",
+  "name": "Xerox PARC",
+  "display_primary": "施乐 PARC",
+  "display_secondary": "Xerox PARC",
+  "aliases": [
+    "施乐帕克研究中心",
+    "帕洛阿尔托研究中心"
+  ],
+  "type": "organization",
+  "domains": [
+    "computer-history"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "发明 GUI、以太网与激光打印的研究圣地。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,25 @@
+{
+  "id": "quantum-supremacy",
+  "name": "Quantum Supremacy",
+  "display_primary": "量子霸权",
+  "display_secondary": "Quantum Supremacy",
+  "aliases": [
+    "量子霸权",
+    "量子优越性"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantum-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "量子机器首次超越经典，谷歌 2019 年的宣称。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

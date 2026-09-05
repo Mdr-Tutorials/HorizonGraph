@@ -1,0 +1,24 @@
+{
+  "id": "frontend-engineer",
+  "name": "Frontend Engineer",
+  "display_primary": "前端工程师",
+  "display_secondary": "Frontend Engineer",
+  "aliases": [
+    "前端工程师"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把设计变成可交互界面，浏览器兼容与性能的管家。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

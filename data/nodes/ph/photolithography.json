@@ -1,0 +1,27 @@
+{
+  "id": "photolithography",
+  "name": "Photolithography",
+  "display_primary": "光刻",
+  "display_secondary": "Photolithography",
+  "aliases": [
+    "光刻"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用光把电路印上硅片，精度由波长决定。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

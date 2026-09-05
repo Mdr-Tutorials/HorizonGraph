@@ -1,0 +1,25 @@
+{
+  "id": "richard-stallman",
+  "name": "Richard Stallman",
+  "display_primary": "Richard Stallman",
+  "display_secondary": "理查德·斯托曼",
+  "aliases": [
+    "理查德·斯托曼",
+    "RMS"
+  ],
+  "type": "person",
+  "domains": [
+    "computer-history"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "GNU 与自由软件运动发起人，copyleft 思想源头。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

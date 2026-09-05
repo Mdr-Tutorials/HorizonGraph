@@ -1,0 +1,24 @@
+{
+  "id": "trapped-ion-qubit",
+  "name": "Trapped-Ion Qubit",
+  "display_primary": "离子阱量子比特",
+  "display_secondary": "Trapped-Ion Qubit",
+  "aliases": [
+    "离子阱量子比特"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantum-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "保真度高但门速慢的另一条量子路线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

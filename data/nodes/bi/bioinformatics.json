@@ -1,0 +1,25 @@
+{
+  "id": "bioinformatics",
+  "name": "Bioinformatics",
+  "display_primary": "生物信息学",
+  "display_secondary": "Bioinformatics",
+  "aliases": [
+    "生物信息学"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用计算解读生命序列，交叉学科的桥梁。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

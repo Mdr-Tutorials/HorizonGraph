@@ -1,0 +1,25 @@
+{
+  "id": "von-neumann",
+  "name": "John von Neumann",
+  "display_primary": "冯·诺依曼",
+  "display_secondary": "John von Neumann",
+  "aliases": [
+    "冯·诺依曼",
+    "约翰·冯·诺伊曼"
+  ],
+  "type": "person",
+  "domains": [
+    "computer-history"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "存储程序计算机架构的奠基人，博弈论共同开创者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

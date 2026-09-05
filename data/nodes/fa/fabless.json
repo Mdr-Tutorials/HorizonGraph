@@ -1,0 +1,27 @@
+{
+  "id": "fabless",
+  "name": "Fabless",
+  "display_primary": "Fabless",
+  "display_secondary": "无厂设计",
+  "aliases": [
+    "无厂设计"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "只设计不建厂，高通与英伟达的共同选择。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

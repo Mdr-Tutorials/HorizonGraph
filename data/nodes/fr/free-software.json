@@ -1,0 +1,29 @@
+{
+  "id": "free-software",
+  "name": "Free Software",
+  "display_primary": "自由软件",
+  "display_secondary": "Free Software",
+  "aliases": [
+    "自由软件"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-history",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "open-source"
+    }
+  ],
+  "summary": "自由而非免费：运行、研究、修改、再分发的四自由。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

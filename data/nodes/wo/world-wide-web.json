@@ -1,0 +1,34 @@
+{
+  "id": "world-wide-web",
+  "name": "World Wide Web",
+  "display_primary": "万维网",
+  "display_secondary": "World Wide Web",
+  "aliases": [
+    "万维网",
+    "WWW"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend",
+    "w3c-standards-ecosystem"
+  ],
+  "domains": [
+    "computer-history",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "tim-berners-lee"
+    }
+  ],
+  "summary": "超文本链接的信息空间，跑在互联网上的那层。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

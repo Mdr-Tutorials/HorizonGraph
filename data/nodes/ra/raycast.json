@@ -1,0 +1,26 @@
+{
+  "id": "raycast",
+  "name": "Raycast",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "human-computer-interaction",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "macOS 的启动器与效率平台，Alfred 的现代继任。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.raycast.com"
+}

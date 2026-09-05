@@ -1,0 +1,28 @@
+{
+  "id": "embodied-ai",
+  "name": "Embodied AI",
+  "display_primary": "具身智能",
+  "display_secondary": "Embodied AI",
+  "aliases": [
+    "具身智能"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "让模型住进身体与世界交互，大模型的下一站。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

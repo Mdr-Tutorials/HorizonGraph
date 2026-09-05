@@ -1,0 +1,24 @@
+{
+  "id": "douglas-engelbart",
+  "name": "Douglas Engelbart",
+  "display_primary": "Douglas Engelbart",
+  "display_secondary": "道格拉斯·恩格尔巴特",
+  "aliases": [
+    "道格拉斯·恩格尔巴特"
+  ],
+  "type": "person",
+  "domains": [
+    "computer-history"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "鼠标发明人，『增强人类智力』的先知。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

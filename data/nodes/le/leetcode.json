@@ -1,0 +1,27 @@
+{
+  "id": "leetcode",
+  "name": "LeetCode",
+  "aliases": [
+    "力扣"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "career-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    }
+  ],
+  "summary": "算法刷题平台，技术面试的事实准备标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://leetcode.cn"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "digital-twin",
+  "name": "Digital Twin",
+  "display_primary": "数字孪生",
+  "display_secondary": "Digital Twin",
+  "aliases": [
+    "数字孪生"
+  ],
+  "type": "concept",
+  "domains": [
+    "industry-landscape",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "物理实体的实时数字镜像，仿真与运维的新范式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,25 @@
+{
+  "id": "grace-hopper",
+  "name": "Grace Hopper",
+  "display_primary": "Grace Hopper",
+  "display_secondary": "格蕾丝·霍珀",
+  "aliases": [
+    "格蕾丝·霍珀"
+  ],
+  "type": "person",
+  "domains": [
+    "computer-history",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "编译器之母，Cobol 推动者与『第一只 bug』典故主角。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

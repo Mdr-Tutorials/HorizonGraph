@@ -1,0 +1,24 @@
+{
+  "id": "quantum-gate",
+  "name": "Quantum Gate",
+  "display_primary": "量子门",
+  "display_secondary": "Quantum Gate",
+  "aliases": [
+    "量子门"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantum-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "操纵量子态的基本单元，经典逻辑门的量子对应。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

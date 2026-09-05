@@ -1,0 +1,31 @@
+{
+  "id": "cadence",
+  "name": "Cadence",
+  "display_primary": "Cadence",
+  "display_secondary": "楷登电子",
+  "aliases": [
+    "楷登电子"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "synopsys"
+    }
+  ],
+  "summary": "EDA 三巨头之一，模拟与硬件验证强项。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

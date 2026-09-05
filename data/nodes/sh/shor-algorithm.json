@@ -1,0 +1,25 @@
+{
+  "id": "shor-algorithm",
+  "name": "Shor's Algorithm",
+  "display_primary": "Shor 算法",
+  "display_secondary": "Shor's Algorithm",
+  "aliases": [
+    "Shor 算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantum-computing",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "多项式时间分解大整数，悬在 RSA 头上的剑。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

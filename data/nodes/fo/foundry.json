@@ -1,0 +1,27 @@
+{
+  "id": "foundry",
+  "name": "Foundry",
+  "display_primary": "晶圆代工",
+  "display_secondary": "Foundry",
+  "aliases": [
+    "晶圆代工"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "只做代工不卖芯片的商业模式，台积电的定义。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

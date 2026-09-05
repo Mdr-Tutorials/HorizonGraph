@@ -1,0 +1,25 @@
+{
+  "id": "gsoc",
+  "name": "GSoC",
+  "display_primary": "GSoC",
+  "display_secondary": "Google Summer of Code",
+  "aliases": [
+    "谷歌编程之夏"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "Google Summer of Code，开源贡献的带薪首秀。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

@@ -1,0 +1,24 @@
+{
+  "id": "quantum-entanglement",
+  "name": "Quantum Entanglement",
+  "display_primary": "量子纠缠",
+  "display_secondary": "Quantum Entanglement",
+  "aliases": [
+    "量子纠缠"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantum-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "跨空间的关联态，量子算法的资源与谜题。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

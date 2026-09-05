@@ -1,0 +1,25 @@
+{
+  "id": "bci",
+  "name": "BCI",
+  "display_primary": "脑机接口",
+  "display_secondary": "BCI",
+  "aliases": [
+    "脑机接口",
+    "Brain-Computer Interface"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "大脑与机器直连，Neuralink 的长期赌注。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

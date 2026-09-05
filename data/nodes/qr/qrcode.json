@@ -1,0 +1,24 @@
+{
+  "id": "qrcode",
+  "name": "QR Code",
+  "display_primary": "二维码",
+  "display_secondary": "QR Code",
+  "aliases": [
+    "二维码"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "方块点阵码，中国线上线下生活的连接器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

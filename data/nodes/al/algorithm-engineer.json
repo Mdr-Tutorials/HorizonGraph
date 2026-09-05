@@ -1,0 +1,24 @@
+{
+  "id": "algorithm-engineer",
+  "name": "Algorithm Engineer",
+  "display_primary": "算法工程师",
+  "display_secondary": "Algorithm Engineer",
+  "aliases": [
+    "算法工程师"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "训练调优模型与算法，论文与数据集之间迁徙。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

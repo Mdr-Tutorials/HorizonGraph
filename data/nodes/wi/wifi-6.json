@@ -1,0 +1,34 @@
+{
+  "id": "wifi-6",
+  "name": "Wi-Fi 6",
+  "display_primary": "Wi-Fi 6",
+  "display_secondary": "Wi-Fi 6",
+  "aliases": [
+    "802.11ax"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "networking",
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "wifi"
+    }
+  ],
+  "summary": "第六代 Wi-Fi，OFDMA 与 1024-QAM 高效并发。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

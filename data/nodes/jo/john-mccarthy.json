@@ -1,0 +1,25 @@
+{
+  "id": "john-mccarthy",
+  "name": "John McCarthy",
+  "display_primary": "John McCarthy",
+  "display_secondary": "约翰·麦卡锡",
+  "aliases": [
+    "约翰·麦卡锡"
+  ],
+  "type": "person",
+  "domains": [
+    "computer-history",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "人工智能一词的提出者，Lisp 的创造者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

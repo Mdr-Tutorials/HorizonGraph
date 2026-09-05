@@ -1,0 +1,27 @@
+{
+  "id": "postman",
+  "name": "Postman",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "devops_tooling",
+    "web_frontend"
+  ],
+  "domains": [
+    "devops",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "最流行的 API 调试与文档平台，接口调试的代名词。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://www.postman.com"
+}

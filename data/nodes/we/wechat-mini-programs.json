@@ -1,0 +1,28 @@
+{
+  "id": "wechat-mini-programs",
+  "name": "WeChat Mini Programs",
+  "display_primary": "小程序",
+  "display_secondary": "WeChat Mini Programs",
+  "aliases": [
+    "小程序",
+    "微信小程序"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "platform-commerce-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "免安装的轻应用形态，长在超级 App 里的生态。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

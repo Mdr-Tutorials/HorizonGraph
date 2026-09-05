@@ -1,0 +1,26 @@
+{
+  "id": "sre",
+  "name": "SRE",
+  "display_primary": "站点可靠性工程师",
+  "display_secondary": "SRE",
+  "aliases": [
+    "站点可靠性工程师",
+    "Site Reliability Engineer",
+    "可靠性工程师"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用软件工程方法管运维，SLO 与错误预算的裁判。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,25 @@
+{
+  "id": "moore-law",
+  "name": "Moore's Law",
+  "display_primary": "摩尔定律",
+  "display_secondary": "Moore's Law",
+  "aliases": [
+    "摩尔定律"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-history",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "集成度约一年半翻倍的经验律，半个世纪的引擎。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

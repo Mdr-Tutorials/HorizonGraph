@@ -1,0 +1,29 @@
+{
+  "id": "harvard-architecture",
+  "name": "Harvard Architecture",
+  "display_primary": "哈佛架构",
+  "display_secondary": "Harvard Architecture",
+  "aliases": [
+    "哈佛架构"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-history",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "von-neumann-architecture"
+    }
+  ],
+  "summary": "指令与数据分存分道，单片机的常见选择。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

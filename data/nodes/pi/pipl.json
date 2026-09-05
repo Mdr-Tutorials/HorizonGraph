@@ -1,0 +1,25 @@
+{
+  "id": "pipl",
+  "name": "PIPL",
+  "display_primary": "PIPL",
+  "display_secondary": "个人信息保护法",
+  "aliases": [
+    "个人信息保护法"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "中国个人信息保护的基石法律，2021 年施行。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

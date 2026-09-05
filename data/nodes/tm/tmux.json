@@ -1,0 +1,25 @@
+{
+  "id": "tmux",
+  "name": "tmux",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "devops_tooling",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "终端复用器，断线不死的远程开发标配。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

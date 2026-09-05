@@ -1,0 +1,24 @@
+{
+  "id": "qubit",
+  "name": "Qubit",
+  "display_primary": "量子比特",
+  "display_secondary": "Qubit",
+  "aliases": [
+    "量子比特"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantum-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "同时处于 0 与 1 叠加态，量子计算的记账单位。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,24 @@
+{
+  "id": "antitrust",
+  "name": "Antitrust",
+  "display_primary": "反垄断",
+  "display_secondary": "Antitrust",
+  "aliases": [
+    "反垄断"
+  ],
+  "type": "concept",
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "拆解平台垄断的法律工具，大厂头上的剑。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

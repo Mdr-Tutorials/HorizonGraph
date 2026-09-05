@@ -1,0 +1,25 @@
+{
+  "id": "arpanet",
+  "name": "ARPANET",
+  "display_primary": "ARPANET",
+  "display_secondary": "ARPANET",
+  "aliases": [
+    "阿帕网"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-history",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "互联网的直系祖先，分组交换的首次规模化。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

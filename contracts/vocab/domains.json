@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "policy": "登记制：新词随数据 PR 同步登记。CI 双向校验：数据出现未登记 value 即失败；登记项连续多个周期未被引用则告警。节点字段存储 value，en/zh 供展示。",
   "entries": [
     { "value": "systems-programming", "en": "Systems Programming", "zh": "系统编程" },
@@ -21,6 +21,10 @@
     { "value": "programming-languages", "en": "Programming Languages", "zh": "程序设计语言" },
     { "value": "quantitative-finance", "en": "Quantitative Finance", "zh": "量化金融" },
     { "value": "formal-methods", "en": "Formal Methods", "zh": "形式化方法" },
-    { "value": "human-computer-interaction", "en": "Human-Computer Interaction", "zh": "人机交互" }
+    { "value": "human-computer-interaction", "en": "Human-Computer Interaction", "zh": "人机交互" },
+    { "value": "career-development", "en": "Career Development", "zh": "职业发展" },
+    { "value": "quantum-computing", "en": "Quantum Computing", "zh": "量子计算" },
+    { "value": "computer-history", "en": "Computer History", "zh": "计算机历史" },
+    { "value": "industry-landscape", "en": "Industry Landscape", "zh": "产业格局" }
   ]
 }

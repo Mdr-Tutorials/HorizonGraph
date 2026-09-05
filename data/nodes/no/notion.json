@@ -1,0 +1,29 @@
+{
+  "id": "notion",
+  "name": "Notion",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "obsidian"
+    }
+  ],
+  "summary": "块编辑器一体化的协作工作区，All-in-One 的代表。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://www.notion.com"
+}

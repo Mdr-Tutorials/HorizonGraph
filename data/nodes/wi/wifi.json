@@ -1,0 +1,28 @@
+{
+  "id": "wifi",
+  "name": "Wi-Fi",
+  "aliases": [
+    "无线局域网",
+    "802.11"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "无线局域网标准族，掌管名字的联盟与 IEEE 标准并行。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

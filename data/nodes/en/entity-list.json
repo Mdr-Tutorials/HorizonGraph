@@ -1,0 +1,24 @@
+{
+  "id": "entity-list",
+  "name": "Entity List",
+  "display_primary": "实体清单",
+  "display_secondary": "Entity List",
+  "aliases": [
+    "实体清单"
+  ],
+  "type": "concept",
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "美国出口管制的黑名单，华为与中芯的枷锁。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

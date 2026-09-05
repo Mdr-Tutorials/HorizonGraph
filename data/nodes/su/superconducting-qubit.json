@@ -1,0 +1,28 @@
+{
+  "id": "superconducting-qubit",
+  "name": "Superconducting Qubit",
+  "display_primary": "超导量子比特",
+  "display_secondary": "Superconducting Qubit",
+  "aliases": [
+    "超导量子比特"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantum-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "trapped-ion-qubit"
+    }
+  ],
+  "summary": "谷歌与 IBM 的路线，极低温下的约瑟夫森结。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

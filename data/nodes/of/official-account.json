@@ -1,0 +1,28 @@
+{
+  "id": "official-account",
+  "name": "WeChat Official Account",
+  "display_primary": "公众号",
+  "display_secondary": "WeChat Official Account",
+  "aliases": [
+    "公众号",
+    "微信公众号"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "platform-commerce-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "机构的自媒体账号体系，内容分发的微信入口。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

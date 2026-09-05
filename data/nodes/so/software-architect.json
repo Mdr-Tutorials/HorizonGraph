@@ -1,0 +1,24 @@
+{
+  "id": "software-architect",
+  "name": "Software Architect",
+  "display_primary": "软件架构师",
+  "display_secondary": "Software Architect",
+  "aliases": [
+    "软件架构师"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在约束里画系统蓝图，用取舍换长期演化空间。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

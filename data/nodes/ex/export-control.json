@@ -1,0 +1,24 @@
+{
+  "id": "export-control",
+  "name": "Export Control",
+  "display_primary": "出口管制",
+  "display_secondary": "Export Control",
+  "aliases": [
+    "出口管制"
+  ],
+  "type": "concept",
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "芯片与算力的跨境红线，科技地缘的硬约束。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,29 @@
+{
+  "id": "internet",
+  "name": "Internet",
+  "display_primary": "互联网",
+  "display_secondary": "Internet",
+  "aliases": [
+    "互联网",
+    "因特网"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "computer-history"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "网络之网，TCP/IP 存活的全球最大实验场。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

@@ -1,0 +1,25 @@
+{
+  "id": "dual-licensing",
+  "name": "Dual Licensing",
+  "display_primary": "双许可",
+  "display_secondary": "Dual Licensing",
+  "aliases": [
+    "双许可"
+  ],
+  "type": "concept",
+  "domains": [
+    "industry-landscape",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "同一代码开源与商业许可并行，MySQL 的打法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

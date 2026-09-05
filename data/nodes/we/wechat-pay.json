@@ -1,0 +1,33 @@
+{
+  "id": "wechat-pay",
+  "name": "WeChat Pay",
+  "display_primary": "微信支付",
+  "display_secondary": "WeChat Pay",
+  "aliases": [
+    "微信支付"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "platform-commerce-ecosystem",
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "tencent"
+    }
+  ],
+  "summary": "长在微信里的支付，扫码时代的基础设施。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

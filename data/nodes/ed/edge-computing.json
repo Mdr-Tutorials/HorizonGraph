@@ -1,0 +1,29 @@
+{
+  "id": "edge-computing",
+  "name": "Edge Computing",
+  "display_primary": "边缘计算",
+  "display_secondary": "Edge Computing",
+  "aliases": [
+    "边缘计算"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "hardware_iot"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "算力下沉到离数据源近的地方，延迟与带宽的解药。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

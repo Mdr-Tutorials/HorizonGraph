@@ -1,0 +1,24 @@
+{
+  "id": "quantum-superposition",
+  "name": "Quantum Superposition",
+  "display_primary": "量子叠加",
+  "display_secondary": "Quantum Superposition",
+  "aliases": [
+    "量子叠加"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantum-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "多状态并存的叠加，量子并行性的来源。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

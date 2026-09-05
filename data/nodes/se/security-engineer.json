@@ -1,0 +1,24 @@
+{
+  "id": "security-engineer",
+  "name": "Security Engineer",
+  "display_primary": "安全工程师",
+  "display_secondary": "Security Engineer",
+  "aliases": [
+    "安全工程师"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "攻防两端的建设者，从渗透测试到合规落地。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

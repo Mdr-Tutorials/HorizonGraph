@@ -1,0 +1,24 @@
+{
+  "id": "data-engineer",
+  "name": "Data Engineer",
+  "display_primary": "数据工程师",
+  "display_secondary": "Data Engineer",
+  "aliases": [
+    "数据工程师"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "搭建采集清洗入仓的管道，喂饱下游分析。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

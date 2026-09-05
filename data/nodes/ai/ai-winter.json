@@ -1,0 +1,26 @@
+{
+  "id": "ai-winter",
+  "name": "AI Winter",
+  "display_primary": "AI 寒冬",
+  "display_secondary": "AI Winter",
+  "aliases": [
+    "AI 寒冬",
+    "人工智能寒冬"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-history",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "期望与资金的两轮退潮，神经网络前的漫长等待。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,26 @@
+{
+  "id": "qa-engineer",
+  "name": "QA Engineer",
+  "display_primary": "测试工程师",
+  "display_secondary": "QA Engineer",
+  "aliases": [
+    "测试工程师",
+    "QA",
+    "测试"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "质量守门人，从手工用例到自动化测试的进化。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

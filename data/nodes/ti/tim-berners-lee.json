@@ -1,0 +1,29 @@
+{
+  "id": "tim-berners-lee",
+  "name": "Tim Berners-Lee",
+  "display_primary": "Tim Berners-Lee",
+  "display_secondary": "蒂姆·伯纳斯-李",
+  "aliases": [
+    "蒂姆·伯纳斯-李"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "web_frontend",
+    "w3c-standards-ecosystem"
+  ],
+  "domains": [
+    "computer-history",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "万维网的发明者，HTTP 与 HTML 的缔造者。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

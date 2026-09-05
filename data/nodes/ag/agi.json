@@ -1,0 +1,28 @@
+{
+  "id": "agi",
+  "name": "AGI",
+  "display_primary": "AGI",
+  "display_secondary": "通用人工智能",
+  "aliases": [
+    "通用人工智能"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "从营销词到路线图，定义尚未收敛的终点站。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

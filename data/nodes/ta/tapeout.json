@@ -1,0 +1,27 @@
+{
+  "id": "tapeout",
+  "name": "Tapeout",
+  "display_primary": "流片",
+  "display_secondary": "Tapeout",
+  "aliases": [
+    "流片"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "设计定稿送厂掩膜制造，一次流片动辄千万。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

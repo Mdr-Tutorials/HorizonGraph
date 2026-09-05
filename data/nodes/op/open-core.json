@@ -1,0 +1,25 @@
+{
+  "id": "open-core",
+  "name": "Open Core",
+  "display_primary": "Open Core",
+  "display_secondary": "Open Core",
+  "aliases": [
+    "开放核心"
+  ],
+  "type": "concept",
+  "domains": [
+    "industry-landscape",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "核心开源增值闭源，Confluent 与 Elastic 的路线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

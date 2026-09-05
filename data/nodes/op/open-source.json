@@ -1,0 +1,25 @@
+{
+  "id": "open-source",
+  "name": "Open Source",
+  "display_primary": "开源",
+  "display_secondary": "Open Source",
+  "aliases": [
+    "开源"
+  ],
+  "type": "concept",
+  "domains": [
+    "devops",
+    "computer-history"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "1998 年从自由软件分流的实用主义旗帜。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

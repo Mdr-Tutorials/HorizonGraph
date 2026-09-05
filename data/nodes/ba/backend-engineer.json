@@ -1,0 +1,24 @@
+{
+  "id": "backend-engineer",
+  "name": "Backend Engineer",
+  "display_primary": "后端工程师",
+  "display_secondary": "Backend Engineer",
+  "aliases": [
+    "后端工程师"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在服务器侧建模业务与数据，稳定性与扩展性负责人。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

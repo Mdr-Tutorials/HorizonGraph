@@ -1,0 +1,28 @@
+{
+  "id": "browser-extension",
+  "name": "Browser Extension",
+  "display_primary": "浏览器扩展",
+  "display_secondary": "Browser Extension",
+  "aliases": [
+    "浏览器扩展",
+    "插件"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "给浏览器装能力的标准机制，Manifest V3 变局中心。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

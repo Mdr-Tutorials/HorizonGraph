@@ -1,0 +1,24 @@
+{
+  "id": "bell-labs",
+  "name": "Bell Labs",
+  "display_primary": "贝尔实验室",
+  "display_secondary": "Bell Labs",
+  "aliases": [
+    "贝尔实验室"
+  ],
+  "type": "organization",
+  "domains": [
+    "computer-history"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "晶体管、Unix 与 C 的诞生地，工业研究黄金标本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

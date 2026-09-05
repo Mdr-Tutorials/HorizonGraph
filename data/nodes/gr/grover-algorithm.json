@@ -1,0 +1,24 @@
+{
+  "id": "grover-algorithm",
+  "name": "Grover's Algorithm",
+  "display_primary": "Grover 算法",
+  "display_secondary": "Grover's Algorithm",
+  "aliases": [
+    "Grover 算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantum-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "平方级加速无序搜索，对称密码的减速警报。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,25 @@
+{
+  "id": "acm-icpc",
+  "name": "ACM-ICPC",
+  "display_primary": "ACM-ICPC",
+  "display_secondary": "ACM-ICPC",
+  "aliases": [
+    "ICPC",
+    "ACM 竞赛"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "大学生程序设计竞赛，算法能力的顶级试炼场。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

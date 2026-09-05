@@ -1,0 +1,25 @@
+{
+  "id": "alphafold",
+  "name": "AlphaFold",
+  "aliases": [],
+  "type": "model_family",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "model-family"
+    }
+  ],
+  "summary": "蛋白质结构预测模型族，AI4Science 的里程碑。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,28 @@
+{
+  "id": "unionpay",
+  "name": "UnionPay",
+  "display_primary": "中国银联",
+  "display_secondary": "UnionPay",
+  "aliases": [
+    "中国银联",
+    "银联"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "银行卡跨行清算网络，支付宝微信之前的老基础设施。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

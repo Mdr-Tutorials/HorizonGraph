@@ -1,0 +1,24 @@
+{
+  "id": "fullstack-engineer",
+  "name": "Full-Stack Engineer",
+  "display_primary": "全栈工程师",
+  "display_secondary": "Full-Stack Engineer",
+  "aliases": [
+    "全栈工程师"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "前后端通吃的小团队多面手，广度换深度的取舍。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

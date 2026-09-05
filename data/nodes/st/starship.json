@@ -1,0 +1,25 @@
+{
+  "id": "starship",
+  "name": "Starship",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "Rust 写的极速可定制提示符，全 Shell 通用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2,
+  "official_site": "https://starship.rs"
+}

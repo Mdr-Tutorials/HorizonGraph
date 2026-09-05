@@ -1,0 +1,25 @@
+{
+  "id": "fairchild-eight",
+  "name": "Traitorous Eight",
+  "display_primary": "仙童八叛逆",
+  "display_secondary": "Traitorous Eight",
+  "aliases": [
+    "仙童八叛逆",
+    "八叛逆"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-history"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "离开肖克利的八位年轻人，硅谷由此得名。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

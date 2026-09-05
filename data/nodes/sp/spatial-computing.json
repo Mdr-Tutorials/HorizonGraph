@@ -1,0 +1,24 @@
+{
+  "id": "spatial-computing",
+  "name": "Spatial Computing",
+  "display_primary": "空间计算",
+  "display_secondary": "Spatial Computing",
+  "aliases": [
+    "空间计算"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把数字内容放进三维空间，Vision Pro 的叙事。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

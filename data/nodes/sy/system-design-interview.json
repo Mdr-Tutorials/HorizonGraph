@@ -1,0 +1,24 @@
+{
+  "id": "system-design-interview",
+  "name": "System Design Interview",
+  "display_primary": "系统设计面试",
+  "display_secondary": "System Design Interview",
+  "aliases": [
+    "系统设计面试"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用开放题考察架构取舍，高级岗位的核心回合。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

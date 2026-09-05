@@ -1,0 +1,25 @@
+{
+  "id": "dba",
+  "name": "DBA",
+  "display_primary": "数据库管理员",
+  "display_secondary": "DBA",
+  "aliases": [
+    "数据库管理员",
+    "Database Administrator"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "数据库的医生，备份优化与故障恢复的最后一道防线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

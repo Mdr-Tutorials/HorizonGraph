@@ -1,0 +1,28 @@
+{
+  "id": "6g",
+  "name": "6G",
+  "display_primary": "6G",
+  "display_secondary": "6G",
+  "aliases": [
+    "第六代移动通信"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "mobile-network-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "2030 前后的愿景网络：空天地一体与太赫兹。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}
