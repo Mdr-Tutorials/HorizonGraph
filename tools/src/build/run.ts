@@ -260,7 +260,22 @@ write("graph/manifest.json", {
   relation_display: relDisplay,
   relation_inverse: relInverse,
   contexts,
-  counts: { ids: allIds.length, data_nodes: dataNodes.length, ontology: onto.length, edges: edges.length },
+  counts: (() => {
+    const byType: Record<string, number> = {};
+    for (const n of dataNodes) byType[n.type] = (byType[n.type] ?? 0) + 1;
+    const byRelation: Record<string, number> = {};
+    for (const [, r] of edges) byRelation[relKeys[r]] = (byRelation[relKeys[r]] ?? 0) + 1;
+    const desc = (o: Record<string, number>) => Object.fromEntries(Object.entries(o).sort((a, b) => b[1] - a[1]));
+    return {
+      ids: allIds.length,
+      data_nodes: dataNodes.length,
+      ontology: onto.length,
+      edges: edges.length,
+      ecosystems: ecoJ.entries.length,
+      by_type: desc(byType),
+      by_relation: desc(byRelation),
+    };
+  })(),
 });
 for (let s = 0; s < SHARDS; s++) write(`l2/shard-${s.toString(16)}.json`, l2Shards[s]);
 write("search/manifest.json", {

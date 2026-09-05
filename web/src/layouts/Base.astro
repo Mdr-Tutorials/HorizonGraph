@@ -111,11 +111,36 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
           rel="noopener noreferrer"
           class="text-ink-2 hover:text-ink underline underline-offset-2">GitHub</a>
       </p>
+      <div id="hg-stats" class="m-0 text-sm text-ink-2" hidden></div>
     </dialog>
     <script is:inline>
       const infoBtn = document.getElementById("hg-info");
       const infoDialog = document.getElementById("hg-info-dialog");
-      infoBtn?.addEventListener("click", () => infoDialog?.showModal());
+      let statsLoaded = false;
+      infoBtn?.addEventListener("click", async () => {
+        infoDialog?.showModal();
+        if (statsLoaded) return;
+        statsLoaded = true;
+        try {
+          const B = document.querySelector("a.font-brand")?.getAttribute("href") || "/";
+          const m = await (await fetch(B + "graph/manifest.json")).json();
+          const c = m.counts ?? {};
+          const T = { concept: "概念", metric: "度量", language: "编程语言", protocol: "协议", framework: "框架", library: "库", tool: "工具", architecture: "架构", model_family: "模型族", product: "产品", organization: "组织", person: "人物" };
+          const row = (k, v) =>
+            `<span class="whitespace-nowrap">${k} <b class="font-mono font-semibold text-ink">${v}</b></span>`;
+          const el = document.getElementById("hg-stats");
+          if (!el) return;
+          const types = Object.entries(c.by_type ?? {}).map(([k, v]) => row(T[k] ?? k, v)).join("");
+          const rels = Object.entries(c.by_relation ?? {}).map(([k, v]) => row(m.relation_display?.[k]?.zh ?? k, v)).join("");
+          el.innerHTML =
+            `<p class="m-0 font-mono">数据节点 <b class="font-semibold text-ink">${c.data_nodes ?? "—"}</b> · 关系边 <b class="font-semibold text-ink">${c.edges ?? "—"}</b> · 本体分类 <b class="font-semibold text-ink">${c.ontology ?? "—"}</b> · 生态 <b class="font-semibold text-ink">${c.ecosystems ?? "—"}</b></p>` +
+            (types ? `<p class="m-0 flex flex-wrap gap-x-4 gap-y-1">${types}</p>` : "") +
+            (rels ? `<p class="m-0 flex flex-wrap gap-x-4 gap-y-1">${rels}</p>` : "");
+          el.hidden = false;
+        } catch {
+          statsLoaded = false;
+        }
+      });
       infoDialog?.addEventListener("click", (e) => {
         if (e.target === infoDialog) infoDialog.close();
       });
