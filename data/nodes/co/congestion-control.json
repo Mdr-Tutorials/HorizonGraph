@@ -1,0 +1,27 @@
+{
+  "id": "congestion-control",
+  "name": "Congestion Control",
+  "display_primary": "拥塞控制",
+  "display_secondary": "Congestion Control",
+  "aliases": [
+    "拥塞控制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "探路限速防拥塌，BBR 与 CUBIC 的博弈场。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

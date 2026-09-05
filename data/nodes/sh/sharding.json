@@ -1,0 +1,26 @@
+{
+  "id": "sharding",
+  "name": "Sharding",
+  "display_primary": "分库分表",
+  "display_secondary": "Sharding",
+  "aliases": [
+    "分库分表",
+    "分片"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "把大表水平拆到多库多实例，跨片事务是代价。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

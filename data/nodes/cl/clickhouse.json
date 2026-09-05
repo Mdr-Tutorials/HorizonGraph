@@ -19,6 +19,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "column-store"
     }
   ],
   "summary": "列式 OLAP 数据库，实时分析场景的性能怪兽。",

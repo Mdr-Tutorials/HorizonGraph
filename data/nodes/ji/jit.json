@@ -1,0 +1,27 @@
+{
+  "id": "jit",
+  "name": "JIT",
+  "display_primary": "JIT",
+  "display_secondary": "即时编译",
+  "aliases": [
+    "即时编译"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "tags": [
+    "jit"
+  ],
+  "summary": "运行时编译热点路径，把解释器跑出编译速度。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

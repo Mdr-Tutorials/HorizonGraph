@@ -1,0 +1,22 @@
+{
+  "id": "mmlu",
+  "name": "MMLU",
+  "display_primary": "MMLU",
+  "display_secondary": "MMLU",
+  "aliases": [],
+  "type": "metric",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "57 学科选择题基准，大模型知识面的通用标尺。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

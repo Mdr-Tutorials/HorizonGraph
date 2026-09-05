@@ -1,0 +1,33 @@
+{
+  "id": "btrfs",
+  "name": "Btrfs",
+  "display_primary": "Btrfs",
+  "display_secondary": "Btrfs",
+  "aliases": [],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "alternative_to",
+      "target_id": "ext4"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "zfs"
+    }
+  ],
+  "summary": "写时复制文件系统，快照校验和子卷一体。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,28 @@
+{
+  "id": "sbom",
+  "name": "SBOM",
+  "display_primary": "SBOM",
+  "display_secondary": "软件物料清单",
+  "aliases": [
+    "软件物料清单"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "软件成分的完整清单，供应链安全的账本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

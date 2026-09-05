@@ -1,0 +1,27 @@
+{
+  "id": "nat",
+  "name": "NAT",
+  "display_primary": "NAT",
+  "display_secondary": "网络地址转换",
+  "aliases": [
+    "网络地址转换"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "私网地址与公网端口的转换，IPv4 延寿功臣。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ceph",
+  "name": "Ceph",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "统一块、对象与文件的开源分布式存储。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://ceph.io"
+}

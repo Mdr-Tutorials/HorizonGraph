@@ -1,0 +1,27 @@
+{
+  "id": "mitre-attack",
+  "name": "MITRE ATT&CK",
+  "display_primary": "ATT&CK",
+  "display_secondary": "MITRE ATT&CK",
+  "aliases": [
+    "ATT&CK 框架"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "攻击战术与技术的知识库，蓝军红旗的通用语言。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

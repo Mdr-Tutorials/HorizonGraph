@@ -1,0 +1,24 @@
+{
+  "id": "lora",
+  "name": "LoRA",
+  "display_primary": "LoRA",
+  "display_secondary": "低秩适配",
+  "aliases": [
+    "低秩适配"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "冻住大模型只训低秩小矩阵，微调的性价比之王。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

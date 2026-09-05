@@ -1,0 +1,27 @@
+{
+  "id": "lakehouse",
+  "name": "Lakehouse",
+  "display_primary": "湖仓一体",
+  "display_secondary": "Lakehouse",
+  "aliases": [
+    "湖仓一体"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "湖上建仓，开放表格式统一分析与 AI 负载。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

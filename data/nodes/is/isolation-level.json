@@ -1,0 +1,24 @@
+{
+  "id": "isolation-level",
+  "name": "Isolation Level",
+  "display_primary": "事务隔离级别",
+  "display_secondary": "Isolation Level",
+  "aliases": [
+    "事务隔离级别"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "从读未提交到串行化，一致性与并发度的调节旋钮。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

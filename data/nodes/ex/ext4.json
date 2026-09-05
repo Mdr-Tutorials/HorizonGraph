@@ -1,0 +1,25 @@
+{
+  "id": "ext4",
+  "name": "ext4",
+  "display_primary": "ext4",
+  "display_secondary": "ext4",
+  "aliases": [],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "Linux 默认文件系统，久经考验的日志式老将。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

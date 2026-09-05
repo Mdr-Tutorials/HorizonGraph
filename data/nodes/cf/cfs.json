@@ -1,0 +1,32 @@
+{
+  "id": "cfs",
+  "name": "CFS",
+  "display_primary": "CFS",
+  "display_secondary": "完全公平调度器",
+  "aliases": [
+    "Completely Fair Scheduler",
+    "完全公平调度器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "eevdf"
+    }
+  ],
+  "summary": "Linux 的经典公平调度器，红黑树挑最小虚运行时。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,26 @@
+{
+  "id": "epoll",
+  "name": "epoll",
+  "display_primary": "epoll",
+  "display_secondary": "epoll",
+  "aliases": [],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "万级连接的事件通知机制，Nginx 与 Redis 的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

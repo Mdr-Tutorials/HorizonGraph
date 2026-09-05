@@ -1,0 +1,27 @@
+{
+  "id": "fuzzing",
+  "name": "Fuzzing",
+  "display_primary": "模糊测试",
+  "display_secondary": "Fuzzing",
+  "aliases": [
+    "模糊测试"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "喂随机与变异输入找崩溃，内存漏洞的自动猎手。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

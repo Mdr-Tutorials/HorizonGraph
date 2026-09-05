@@ -1,0 +1,25 @@
+{
+  "id": "cubic",
+  "name": "CUBIC",
+  "display_primary": "CUBIC",
+  "display_secondary": "CUBIC",
+  "aliases": [],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "Linux 默认的拥塞控制，三次函数窗口增长。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

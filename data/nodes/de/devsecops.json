@@ -1,0 +1,27 @@
+{
+  "id": "devsecops",
+  "name": "DevSecOps",
+  "display_primary": "DevSecOps",
+  "display_secondary": "DevSecOps",
+  "aliases": [],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "cicd-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把安全左移进流水线，依赖扫描与 SAST 常态化。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,28 @@
+{
+  "id": "dpo",
+  "name": "DPO",
+  "display_primary": "DPO",
+  "display_secondary": "直接偏好优化",
+  "aliases": [
+    "直接偏好优化"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "rlhf"
+    }
+  ],
+  "summary": "绕开奖励模型直接拟合偏好，RLHF 的简化路线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

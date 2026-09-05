@@ -19,6 +19,10 @@
     {
       "relation_type": "extends",
       "target_id": "mysql"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mvcc"
     }
   ],
   "summary": "PingCAP 的分布式 NewSQL 数据库，MySQL 兼容。",

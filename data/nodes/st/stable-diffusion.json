@@ -26,6 +26,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "pytorch"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "diffusion-model"
     }
   ],
   "summary": "开源文生图扩散模型族。",

@@ -1,0 +1,28 @@
+{
+  "id": "mev",
+  "name": "MEV",
+  "display_primary": "MEV",
+  "display_secondary": "矿工可提取价值",
+  "aliases": [
+    "矿工可提取价值"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "区块内排序权变现的暗利润，链上博弈灰区。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

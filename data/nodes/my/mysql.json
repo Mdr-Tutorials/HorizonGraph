@@ -28,6 +28,10 @@
     {
       "relation_type": "implements",
       "target_id": "b-tree"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "wal"
     }
   ],
   "summary": "Oracle 旗下的开源关系数据库。",

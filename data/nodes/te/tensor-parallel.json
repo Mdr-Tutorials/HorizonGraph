@@ -1,0 +1,25 @@
+{
+  "id": "tensor-parallel",
+  "name": "Tensor Parallelism",
+  "display_primary": "张量并行",
+  "display_secondary": "Tensor Parallelism",
+  "aliases": [
+    "张量并行"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "把矩阵切到多卡算，大模型放不下单卡时的解法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

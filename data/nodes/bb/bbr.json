@@ -1,0 +1,33 @@
+{
+  "id": "bbr",
+  "name": "BBR",
+  "display_primary": "BBR",
+  "display_secondary": "BBR",
+  "aliases": [],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "cubic"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "以带宽时延积建模的拥塞控制，弱网提速明显。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

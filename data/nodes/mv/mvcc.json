@@ -1,0 +1,28 @@
+{
+  "id": "mvcc",
+  "name": "MVCC",
+  "display_primary": "MVCC",
+  "display_secondary": "多版本并发控制",
+  "aliases": [
+    "多版本并发控制"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "concurrency-control"
+    }
+  ],
+  "summary": "读写互不阻塞的多版本快照机制，InnoDB 与 PG 的心脏。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

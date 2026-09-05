@@ -1,0 +1,30 @@
+{
+  "id": "optimism",
+  "name": "Optimism",
+  "aliases": [
+    "OP Mainnet"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "zksync"
+    }
+  ],
+  "summary": "OP Stack 孵化 Superchain 生态的以太坊 L2。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

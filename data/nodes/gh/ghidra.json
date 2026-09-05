@@ -1,0 +1,29 @@
+{
+  "id": "ghidra",
+  "name": "Ghidra",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "ida"
+    }
+  ],
+  "summary": " NSA 开源的逆向工程平台，免费界的天花板。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://ghidra-sre.org"
+}

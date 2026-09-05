@@ -1,0 +1,33 @@
+{
+  "id": "doh",
+  "name": "DoH",
+  "display_primary": "DoH",
+  "display_secondary": "DNS over HTTPS",
+  "aliases": [
+    "DNS over HTTPS"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "https"
+    }
+  ],
+  "summary": "把 DNS 查询装进 HTTPS，防劫持也防窥探。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,25 @@
+{
+  "id": "concurrency-control",
+  "name": "Concurrency Control",
+  "display_primary": "并发控制",
+  "display_secondary": "Concurrency Control",
+  "aliases": [
+    "并发控制"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "让并发操作不破坏正确性的锁与无锁技术总称。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

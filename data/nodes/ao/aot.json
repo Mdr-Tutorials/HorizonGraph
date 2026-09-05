@@ -1,0 +1,28 @@
+{
+  "id": "aot",
+  "name": "AOT",
+  "display_primary": "AOT",
+  "display_secondary": "提前编译",
+  "aliases": [
+    "提前编译"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "jit"
+    }
+  ],
+  "summary": "构建期编译成机器码，启动快与体积小的取舍。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

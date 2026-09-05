@@ -1,0 +1,28 @@
+{
+  "id": "ida",
+  "name": "IDA Pro",
+  "display_primary": "IDA Pro",
+  "display_secondary": "IDA Pro",
+  "aliases": [
+    "IDA"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "逆向工程的事实标准，反编译质量的天花板。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

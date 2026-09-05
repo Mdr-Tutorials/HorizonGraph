@@ -23,6 +23,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "google"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "jit"
     }
   ],
   "summary": "Google 的 JavaScript 引擎，Chrome 与 Node.js 的执行核心。",

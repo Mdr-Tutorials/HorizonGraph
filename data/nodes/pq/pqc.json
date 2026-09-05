@@ -1,0 +1,28 @@
+{
+  "id": "pqc",
+  "name": "PQC",
+  "display_primary": "PQC",
+  "display_secondary": "后量子密码",
+  "aliases": [
+    "后量子密码",
+    "Post-Quantum Cryptography"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "抗量子计算机的新一代密码算法，NIST 已定标。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

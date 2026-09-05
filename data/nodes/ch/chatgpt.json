@@ -27,6 +27,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "ernie-bot"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "rlhf"
     }
   ],
   "summary": "OpenAI 的对话式 AI 产品，把大模型带给大众。",

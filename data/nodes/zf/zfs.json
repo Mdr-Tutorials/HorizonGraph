@@ -1,0 +1,25 @@
+{
+  "id": "zfs",
+  "name": "ZFS",
+  "display_primary": "ZFS",
+  "display_secondary": "ZFS",
+  "aliases": [],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "存储池化的文件系统，校验和与快照的行业标杆。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

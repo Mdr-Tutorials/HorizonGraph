@@ -1,0 +1,23 @@
+{
+  "id": "humaneval",
+  "name": "HumanEval",
+  "display_primary": "HumanEval",
+  "display_secondary": "HumanEval",
+  "aliases": [],
+  "type": "metric",
+  "domains": [
+    "machine-learning",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "函数级代码生成基准，pass@k 衡量正确性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,28 @@
+{
+  "id": "zksync",
+  "name": "zkSync",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "zk-snark"
+    }
+  ],
+  "summary": "用零知识证明做Validity Rollup 的以太坊 L2。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

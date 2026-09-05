@@ -1,0 +1,24 @@
+{
+  "id": "row-store",
+  "name": "Row Store",
+  "display_primary": "行式存储",
+  "display_secondary": "Row Store",
+  "aliases": [
+    "行式存储"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "按行组织数据，点查与事务的原生形态。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

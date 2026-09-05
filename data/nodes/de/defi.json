@@ -1,0 +1,28 @@
+{
+  "id": "defi",
+  "name": "DeFi",
+  "display_primary": "DeFi",
+  "display_secondary": "去中心化金融",
+  "aliases": [
+    "去中心化金融"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web3-blockchain-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "链上重构金融：AMM、借贷与稳定币的乐高。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

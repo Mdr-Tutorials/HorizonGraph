@@ -1,0 +1,28 @@
+{
+  "id": "supply-chain-attack",
+  "name": "Supply Chain Attack",
+  "display_primary": "供应链攻击",
+  "display_secondary": "Supply Chain Attack",
+  "aliases": [
+    "供应链攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "从依赖与构建环节投毒，xz 后门是当代标本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

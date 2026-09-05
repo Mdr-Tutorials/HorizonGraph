@@ -1,0 +1,25 @@
+{
+  "id": "data-parallel",
+  "name": "Data Parallelism",
+  "display_primary": "数据并行",
+  "display_secondary": "Data Parallelism",
+  "aliases": [
+    "数据并行"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "切数据复制模型，多卡训练的第一根杠杆。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

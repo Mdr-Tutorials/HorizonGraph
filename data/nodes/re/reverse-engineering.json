@@ -1,0 +1,27 @@
+{
+  "id": "reverse-engineering",
+  "name": "Reverse Engineering",
+  "display_primary": "逆向工程",
+  "display_secondary": "Reverse Engineering",
+  "aliases": [
+    "逆向工程"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "从二进制还原逻辑，安全研究与互操作的边界艺术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

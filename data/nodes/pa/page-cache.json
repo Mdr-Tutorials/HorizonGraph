@@ -1,0 +1,27 @@
+{
+  "id": "page-cache",
+  "name": "Page Cache",
+  "display_primary": "页缓存",
+  "display_secondary": "Page Cache",
+  "aliases": [
+    "页缓存"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "内核把磁盘页缓存在内存，读写少走一次盘。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

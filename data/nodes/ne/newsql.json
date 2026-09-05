@@ -1,0 +1,23 @@
+{
+  "id": "newsql",
+  "name": "NewSQL",
+  "display_primary": "NewSQL",
+  "display_secondary": "NewSQL",
+  "aliases": [],
+  "type": "concept",
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "兼具 NoSQL 扩展性与 ACID 的分布式数据库流派。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

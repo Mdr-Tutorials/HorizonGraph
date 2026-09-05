@@ -1,0 +1,24 @@
+{
+  "id": "erasure-coding",
+  "name": "Erasure Coding",
+  "display_primary": "纠删码",
+  "display_secondary": "Erasure Coding",
+  "aliases": [
+    "纠删码"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用数学冗余替代多副本，同等容错省一半空间。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

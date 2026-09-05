@@ -1,0 +1,29 @@
+{
+  "id": "sdn",
+  "name": "SDN",
+  "display_primary": "SDN",
+  "display_secondary": "软件定义网络",
+  "aliases": [
+    "软件定义网络"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "networking",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "控制面与转发面分离，网络变成可编程的。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

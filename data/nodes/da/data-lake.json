@@ -1,0 +1,27 @@
+{
+  "id": "data-lake",
+  "name": "Data Lake",
+  "display_primary": "数据湖",
+  "display_secondary": "Data Lake",
+  "aliases": [
+    "数据湖"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "原样存下一切原始数据，结构与半结构通吃。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

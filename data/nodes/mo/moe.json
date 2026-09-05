@@ -1,0 +1,25 @@
+{
+  "id": "moe",
+  "name": "MoE",
+  "display_primary": "MoE",
+  "display_secondary": "混合专家",
+  "aliases": [
+    "混合专家",
+    "Mixture of Experts"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "每次只激活部分专家，稀疏撑起万亿参数。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

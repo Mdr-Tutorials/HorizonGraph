@@ -1,0 +1,30 @@
+{
+  "id": "zero-copy",
+  "name": "Zero Copy",
+  "display_primary": "零拷贝",
+  "display_secondary": "Zero Copy",
+  "aliases": [
+    "零拷贝"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "tags": [
+    "zero-copy"
+  ],
+  "summary": "跳过内核与用户态之间的数据搬运，sendfile 与 mmap。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,27 @@
+{
+  "id": "data-warehouse",
+  "name": "Data Warehouse",
+  "display_primary": "数据仓库",
+  "display_secondary": "Data Warehouse",
+  "aliases": [
+    "数据仓库"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "面向分析的主题化集成数据存储，BI 的地基。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

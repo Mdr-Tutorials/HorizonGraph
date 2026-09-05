@@ -1,0 +1,24 @@
+{
+  "id": "vectorized-execution",
+  "name": "Vectorized Execution",
+  "display_primary": "向量化执行",
+  "display_secondary": "Vectorized Execution",
+  "aliases": [
+    "向量化执行"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "批处理代替逐行解释，分析引擎的提速关键。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

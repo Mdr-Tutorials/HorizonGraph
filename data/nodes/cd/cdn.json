@@ -1,0 +1,29 @@
+{
+  "id": "cdn",
+  "name": "CDN",
+  "display_primary": "CDN",
+  "display_secondary": "内容分发网络",
+  "aliases": [
+    "内容分发网络"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把内容推到离用户最近的边缘，静态分发的标配。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

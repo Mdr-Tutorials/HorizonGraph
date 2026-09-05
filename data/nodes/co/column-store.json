@@ -1,0 +1,28 @@
+{
+  "id": "column-store",
+  "name": "Column Store",
+  "display_primary": "列式存储",
+  "display_secondary": "Column Store",
+  "aliases": [
+    "列式存储"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "row-store"
+    }
+  ],
+  "summary": "按列组织数据，分析查询只读需要的列。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

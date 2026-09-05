@@ -25,6 +25,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "sql"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mvcc"
     }
   ],
   "summary": "功能完整的开源关系库，扩展与 SQL 标准靠得近。",

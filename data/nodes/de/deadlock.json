@@ -1,0 +1,25 @@
+{
+  "id": "deadlock",
+  "name": "Deadlock",
+  "display_primary": "死锁",
+  "display_secondary": "Deadlock",
+  "aliases": [
+    "死锁"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "互相持锁循环等待，破坏环路等待条件即可预防。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

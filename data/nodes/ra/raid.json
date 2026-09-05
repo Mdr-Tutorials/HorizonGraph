@@ -1,0 +1,25 @@
+{
+  "id": "raid",
+  "name": "RAID",
+  "display_primary": "RAID",
+  "display_secondary": "磁盘阵列",
+  "aliases": [
+    "磁盘阵列",
+    "冗余磁盘阵列"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "多盘组合出容量、速度与冗余的经典方案族。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

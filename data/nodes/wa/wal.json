@@ -1,0 +1,25 @@
+{
+  "id": "wal",
+  "name": "WAL",
+  "display_primary": "预写日志",
+  "display_secondary": "WAL",
+  "aliases": [
+    "预写日志",
+    "Write-Ahead Logging"
+  ],
+  "type": "concept",
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "先记日志再改数据，崩溃恢复与复制的基石。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

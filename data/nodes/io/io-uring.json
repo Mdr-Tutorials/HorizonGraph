@@ -1,0 +1,25 @@
+{
+  "id": "io-uring",
+  "name": "io_uring",
+  "display_primary": "io_uring",
+  "display_secondary": "io_uring",
+  "aliases": [],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "Linux 最快的异步 IO 接口，提交与完成两个环。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

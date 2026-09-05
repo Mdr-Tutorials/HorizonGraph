@@ -1,0 +1,25 @@
+{
+  "id": "scaling-law",
+  "name": "Scaling Law",
+  "display_primary": "Scaling Law",
+  "display_secondary": "缩放定律",
+  "aliases": [
+    "缩放定律",
+    "规模定律"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "算力数据参数与损失的幂律，军备竞赛的理论纲领。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

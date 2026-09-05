@@ -1,0 +1,24 @@
+{
+  "id": "diffusion-model",
+  "name": "Diffusion Model",
+  "display_primary": "扩散模型",
+  "display_secondary": "Diffusion Model",
+  "aliases": [
+    "扩散模型"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "从噪声逐步去噪生成，图像生成的当主流派。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

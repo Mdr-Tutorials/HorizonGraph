@@ -18,6 +18,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "sqlite"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "column-store"
     }
   ],
   "summary": "嵌入式列式分析数据库，本地 OLAP 里的 SQLite。",

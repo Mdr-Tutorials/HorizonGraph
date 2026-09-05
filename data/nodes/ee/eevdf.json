@@ -1,0 +1,25 @@
+{
+  "id": "eevdf",
+  "name": "EEVDF",
+  "display_primary": "EEVDF",
+  "display_secondary": "EEVDF",
+  "aliases": [],
+  "type": "concept",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "接替 CFS 的调度器，虚拟截止时间更公平。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}
