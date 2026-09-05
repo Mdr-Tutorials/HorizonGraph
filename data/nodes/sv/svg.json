@@ -1,0 +1,28 @@
+{
+  "id": "svg",
+  "name": "SVG",
+  "aliases": [
+    "可缩放矢量图形"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "web_frontend",
+    "graphics-api-ecosystem"
+  ],
+  "domains": [
+    "graphics",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "XML 矢量图形格式，图标与插画的 Web 标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 4
+}

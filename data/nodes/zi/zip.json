@@ -1,0 +1,24 @@
+{
+  "id": "zip",
+  "name": "ZIP",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "最通用的压缩打包格式，跨平台的默认语言。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 4
+}

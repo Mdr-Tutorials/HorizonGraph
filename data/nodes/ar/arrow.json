@@ -1,0 +1,27 @@
+{
+  "id": "arrow",
+  "name": "Apache Arrow",
+  "aliases": [
+    "Arrow"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "machine-learning"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "内存列式数据标准，零拷贝跨系统交换。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 3
+}

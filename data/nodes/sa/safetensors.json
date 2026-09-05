@@ -1,0 +1,31 @@
+{
+  "id": "safetensors",
+  "name": "safetensors",
+  "aliases": [
+    "安全张量格式"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "developed_by",
+      "target_id": "huggingface"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "无需反序列化即可安全加载的模型权重格式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 3
+}

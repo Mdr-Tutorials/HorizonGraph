@@ -1,0 +1,28 @@
+{
+  "id": "parquet",
+  "name": "Apache Parquet",
+  "aliases": [
+    "Parquet"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "machine-learning"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "列式存储格式，大数据与湖仓的表标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 4
+}

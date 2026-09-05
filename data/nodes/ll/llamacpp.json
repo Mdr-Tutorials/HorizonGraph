@@ -18,6 +18,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "cpp"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "gguf"
     }
   ],
   "summary": "纯 C/C++ 的本地 LLM 推理引擎，CPU 与边缘设备友好。",

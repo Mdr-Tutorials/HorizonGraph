@@ -1,0 +1,29 @@
+{
+  "id": "latex",
+  "name": "LaTeX",
+  "display_primary": "LaTeX",
+  "display_secondary": "LaTeX",
+  "aliases": [
+    "LaTeX 排版"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "学术排版的标记语言，公式与论文的行业标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 4,
+  "official_site": "https://www.latex-project.org"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "png",
+  "name": "PNG",
+  "aliases": [
+    "Portable Network Graphics"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "graphics",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "无损图像格式，截图与透明通道的标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 4
+}

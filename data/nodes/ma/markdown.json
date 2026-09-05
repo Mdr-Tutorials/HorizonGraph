@@ -1,0 +1,28 @@
+{
+  "id": "markdown",
+  "name": "Markdown",
+  "aliases": [
+    "MD"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "web_frontend",
+    "devops_tooling"
+  ],
+  "domains": [
+    "web-development",
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "轻量标记语言，README 与笔记的事实标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 5
+}

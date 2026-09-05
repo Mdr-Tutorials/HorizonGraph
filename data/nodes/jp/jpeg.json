@@ -1,0 +1,31 @@
+{
+  "id": "jpeg",
+  "name": "JPEG",
+  "aliases": [
+    "JPG"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "graphics",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "alternative_to",
+      "target_id": "webp"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "有损图像压缩标准，照片三十年的默认格式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 4
+}

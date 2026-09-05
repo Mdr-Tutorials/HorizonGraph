@@ -1,0 +1,28 @@
+{
+  "id": "gzip",
+  "name": "gzip",
+  "aliases": [
+    "GZIP"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling",
+    "web_frontend"
+  ],
+  "domains": [
+    "devops",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "Deflate 压缩的实现，HTTP 传输压缩的老将。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 3
+}

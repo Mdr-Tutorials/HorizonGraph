@@ -1,0 +1,28 @@
+{
+  "id": "tar",
+  "name": "tar",
+  "aliases": [
+    "tape archive"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "systems-programming"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "Unix 打包格式，把一堆文件卷成一个 tarball。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 3
+}

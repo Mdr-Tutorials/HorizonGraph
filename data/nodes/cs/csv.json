@@ -1,0 +1,27 @@
+{
+  "id": "csv",
+  "name": "CSV",
+  "aliases": [
+    "逗号分隔值"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "machine-learning"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "最原始的表格交换格式，Excel 与 pandas 都认。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 4
+}

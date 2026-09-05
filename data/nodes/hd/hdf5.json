@@ -1,0 +1,27 @@
+{
+  "id": "hdf5",
+  "name": "HDF5",
+  "aliases": [
+    "层次数据格式"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "科学计算的层级数据容器，权重与数据集常用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 3
+}
