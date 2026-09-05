@@ -1,0 +1,29 @@
+{
+  "id": "llamacpp",
+  "name": "llama.cpp",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cpp"
+    }
+  ],
+  "summary": "纯 C/C++ 的本地 LLM 推理引擎，CPU 与边缘设备友好。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://github.com/ggml-org/llama.cpp"
+}

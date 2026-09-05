@@ -1,0 +1,31 @@
+{
+  "id": "csp",
+  "name": "CSP",
+  "display_primary": "CSP",
+  "display_secondary": "Content Security Policy",
+  "aliases": [
+    "Content Security Policy",
+    "内容安全策略"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "声明页面允许加载与执行的来源，收窄注入攻击面。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.w3.org/TR/CSP/"
+}

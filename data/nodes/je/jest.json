@@ -1,0 +1,39 @@
+{
+  "id": "jest",
+  "name": "Jest",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "static-analysis-testing-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "unit-testing"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vitest"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "零配置 JavaScript 测试框架，快照与 mock 开箱即用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://jestjs.io"
+}

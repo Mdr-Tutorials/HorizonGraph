@@ -1,0 +1,29 @@
+{
+  "id": "pwa",
+  "name": "PWA",
+  "display_primary": "PWA",
+  "display_secondary": "渐进式 Web 应用",
+  "aliases": [
+    "Progressive Web App",
+    "渐进式 Web 应用"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "pwa-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "可安装、离线可用的 Web 应用形态，Service Worker 支撑。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

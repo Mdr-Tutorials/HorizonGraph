@@ -1,0 +1,26 @@
+{
+  "id": "top-p",
+  "name": "Top-P Sampling",
+  "display_primary": "Top-P 采样",
+  "display_secondary": "Top-P (Nucleus) Sampling",
+  "aliases": [
+    "Top-p 采样",
+    "核采样",
+    "Nucleus Sampling"
+  ],
+  "type": "metric",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "只从累计概率前 p 的候选中采样，平衡质量与多样性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

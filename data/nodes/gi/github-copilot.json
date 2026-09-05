@@ -1,0 +1,33 @@
+{
+  "id": "github-copilot",
+  "name": "GitHub Copilot",
+  "aliases": [
+    "Copilot"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "editor-ide-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "github"
+    }
+  ],
+  "summary": "最早规模化的 AI 代码补全与助手，长在编辑器里。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://github.com/features/copilot"
+}

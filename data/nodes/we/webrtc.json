@@ -1,0 +1,29 @@
+{
+  "id": "webrtc",
+  "name": "WebRTC",
+  "aliases": [
+    "Web Real-Time Communication"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "浏览器间直连的实时音视频与数据通道标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://webrtc.org"
+}

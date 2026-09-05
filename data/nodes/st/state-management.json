@@ -1,0 +1,28 @@
+{
+  "id": "state-management",
+  "name": "State Management",
+  "display_primary": "状态管理",
+  "display_secondary": "State Management",
+  "aliases": [
+    "状态管理"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在组件之外集中管理共享状态的模式与工具总称。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

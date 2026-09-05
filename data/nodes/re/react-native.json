@@ -1,0 +1,34 @@
+{
+  "id": "react-native",
+  "name": "React Native",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "react"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "用 React 写原生移动应用，桥接原生组件渲染。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://reactnative.dev"
+}

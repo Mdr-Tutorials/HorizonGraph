@@ -1,0 +1,34 @@
+{
+  "id": "svelte",
+  "name": "Svelte",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vue"
+    }
+  ],
+  "summary": "编译时框架，无虚拟 DOM，构建期消掉运行时开销。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://svelte.dev"
+}

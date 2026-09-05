@@ -1,0 +1,33 @@
+{
+  "id": "mt-manager",
+  "name": "MT Manager",
+  "display_primary": "MT管理器",
+  "display_secondary": "MT Manager",
+  "aliases": [
+    "MT管理器"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "android-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "android"
+    }
+  ],
+  "summary": "安卓平台的文件管理与 APK 逆向修改神器，玩机圈标配。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://mt2.cn/"
+}

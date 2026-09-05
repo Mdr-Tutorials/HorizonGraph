@@ -1,0 +1,24 @@
+{
+  "id": "design-patterns",
+  "name": "Design Patterns",
+  "display_primary": "设计模式",
+  "display_secondary": "Design Patterns",
+  "aliases": [
+    "设计模式"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "面向常见场景的可复用对象交互方案目录。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

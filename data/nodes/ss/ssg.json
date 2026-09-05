@@ -1,0 +1,29 @@
+{
+  "id": "ssg",
+  "name": "SSG",
+  "display_primary": "SSG",
+  "display_secondary": "Static Site Generation",
+  "aliases": [
+    "静态站点生成",
+    "Static Site Generation"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "构建期生成静态 HTML，托管便宜且加载飞快。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

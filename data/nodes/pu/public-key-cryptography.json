@@ -17,6 +17,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cryptography"
     }
   ],
   "summary": "加密与签名用不同的钥匙，TLS 与区块链账户都建立在它上面。",

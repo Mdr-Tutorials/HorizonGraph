@@ -1,0 +1,39 @@
+{
+  "id": "https",
+  "name": "HTTPS",
+  "aliases": [
+    "Hypertext Transfer Protocol Secure",
+    "HTTP over TLS",
+    "安全超文本传输协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tls"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "http"
+    }
+  ],
+  "summary": "在 TLS 之上跑 HTTP，Web 流量的默认加密形态。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

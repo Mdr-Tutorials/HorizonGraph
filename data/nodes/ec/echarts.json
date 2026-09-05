@@ -1,0 +1,30 @@
+{
+  "id": "echarts",
+  "name": "ECharts",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development",
+    "graphics"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    }
+  ],
+  "summary": "百度开源、Apache 顶级的可视化图表库，国内事实标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://echarts.apache.org"
+}

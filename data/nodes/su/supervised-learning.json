@@ -1,0 +1,28 @@
+{
+  "id": "supervised-learning",
+  "name": "Supervised Learning",
+  "display_primary": "监督学习",
+  "display_secondary": "Supervised Learning",
+  "aliases": [
+    "监督学习"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "machine-learning"
+    }
+  ],
+  "summary": "用带标签的数据学出输入到输出的映射。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

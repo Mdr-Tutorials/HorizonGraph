@@ -1,0 +1,33 @@
+{
+  "id": "tokio",
+  "name": "Tokio",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "rust-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "rust"
+    }
+  ],
+  "tags": [
+    "async"
+  ],
+  "summary": "Rust 事实标准的异步运行时，事件驱动非阻塞 I/O。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://tokio.rs"
+}

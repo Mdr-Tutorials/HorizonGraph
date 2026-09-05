@@ -1,0 +1,39 @@
+{
+  "id": "grpc",
+  "name": "gRPC",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "cloud_native",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "http"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "protocol-buffers"
+    }
+  ],
+  "summary": "基于 HTTP/2 与 Protobuf 的高性能 RPC 框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://grpc.io"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "json",
+  "name": "JSON",
+  "aliases": [
+    "JavaScript Object Notation"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "protocol-buffers"
+    }
+  ],
+  "summary": "轻量数据交换格式，API 载荷与配置的事实标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://www.json.org"
+}

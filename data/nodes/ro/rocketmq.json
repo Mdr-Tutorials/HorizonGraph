@@ -1,0 +1,36 @@
+{
+  "id": "rocketmq",
+  "name": "RocketMQ",
+  "aliases": [
+    "Apache RocketMQ"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "cloud_native",
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "message-queue"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    }
+  ],
+  "summary": "阿里开源的分布式消息中间件，交易级可靠性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://rocketmq.apache.org"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "encryption",
+  "name": "Encryption",
+  "display_primary": "加密",
+  "display_secondary": "Encryption",
+  "aliases": [
+    "加密"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cryptography"
+    }
+  ],
+  "summary": "用密钥把明文变密文，对称与非对称是两大路线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

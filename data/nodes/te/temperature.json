@@ -1,0 +1,25 @@
+{
+  "id": "temperature",
+  "name": "Temperature",
+  "display_primary": "温度",
+  "display_secondary": "Temperature",
+  "aliases": [
+    "温度",
+    "采样温度"
+  ],
+  "type": "metric",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "控制采样随机性的参数，越高越发散、越低越确定。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

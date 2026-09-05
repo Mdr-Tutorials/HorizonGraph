@@ -1,0 +1,35 @@
+{
+  "id": "esbuild",
+  "name": "esbuild",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "web_frontend",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "webpack"
+    }
+  ],
+  "summary": "Go 编写的极速 JS 打包器，数量级快于同类工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://esbuild.github.io"
+}

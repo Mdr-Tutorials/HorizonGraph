@@ -1,0 +1,25 @@
+{
+  "id": "pagination",
+  "name": "Pagination",
+  "display_primary": "分页",
+  "display_secondary": "Pagination",
+  "aliases": [
+    "分页"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "大数据集按页返回，offset 与 cursor 两种主流方案。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

@@ -1,0 +1,29 @@
+{
+  "id": "zhihu",
+  "name": "Zhihu",
+  "display_primary": "知乎",
+  "display_secondary": "Zhihu",
+  "aliases": [
+    "知乎"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "platform-commerce-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "中文互联网最大的问答社区，技术讨论重镇之一。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.zhihu.com"
+}

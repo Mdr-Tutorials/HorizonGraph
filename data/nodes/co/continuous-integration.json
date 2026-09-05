@@ -17,6 +17,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "programming-paradigm"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cicd"
     }
   ],
   "summary": "每次提交都自动构建与测试，把集成失败提前到分钟级。",

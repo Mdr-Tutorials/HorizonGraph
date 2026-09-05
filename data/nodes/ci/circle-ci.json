@@ -1,0 +1,39 @@
+{
+  "id": "circle-ci",
+  "name": "CircleCI",
+  "aliases": [
+    "Circle CI"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "cicd-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "cicd"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "github-actions"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "gitlab-ci"
+    }
+  ],
+  "summary": "云原生 CI/CD SaaS，以缓存与并行加速流水线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://circleci.com"
+}

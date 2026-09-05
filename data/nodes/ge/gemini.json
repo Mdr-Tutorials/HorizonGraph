@@ -1,0 +1,34 @@
+{
+  "id": "gemini",
+  "name": "Gemini",
+  "aliases": [],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "谷歌的多模态大模型族，长上下文与原生多模态。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

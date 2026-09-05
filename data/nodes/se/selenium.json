@@ -1,0 +1,30 @@
+{
+  "id": "selenium",
+  "name": "Selenium",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "static-analysis-testing-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "e2e-testing"
+    }
+  ],
+  "summary": "老牌浏览器自动化与 E2E 测试工具，多语言 WebDriver。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.selenium.dev"
+}

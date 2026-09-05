@@ -1,0 +1,27 @@
+{
+  "id": "n8n",
+  "name": "n8n",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "可自托管的可视化工作流自动化，原生融合 AI 节点。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://n8n.io"
+}

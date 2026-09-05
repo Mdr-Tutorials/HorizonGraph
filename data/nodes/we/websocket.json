@@ -1,0 +1,32 @@
+{
+  "id": "websocket",
+  "name": "WebSocket",
+  "aliases": [
+    "Web Sockets"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "networking",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tcp"
+    }
+  ],
+  "summary": "HTTP 升级出的全双工长连接，实时推送的标准通道。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://datatracker.ietf.org/doc/html/rfc6455"
+}

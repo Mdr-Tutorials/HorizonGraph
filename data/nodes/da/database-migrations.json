@@ -1,0 +1,30 @@
+{
+  "id": "database-migrations",
+  "name": "Database Migration",
+  "display_primary": "数据库迁移",
+  "display_secondary": "Database Migration",
+  "aliases": [
+    "数据库迁移",
+    "Schema 迁移"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "databases",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把表结构变更版本化，可在各环境可重放地升级。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

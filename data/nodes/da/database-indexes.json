@@ -1,0 +1,28 @@
+{
+  "id": "database-indexes",
+  "name": "Database Index",
+  "display_primary": "数据库索引",
+  "display_secondary": "Database Index",
+  "aliases": [
+    "数据库索引",
+    "索引"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用额外存储结构换查询速度，B+ 树与倒排是主流。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,28 @@
+{
+  "id": "reinforcement-learning",
+  "name": "Reinforcement Learning",
+  "display_primary": "强化学习",
+  "display_secondary": "Reinforcement Learning",
+  "aliases": [
+    "强化学习"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "machine-learning"
+    }
+  ],
+  "summary": "智能体靠试错与奖励信号学出最优策略。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

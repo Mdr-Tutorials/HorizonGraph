@@ -1,0 +1,37 @@
+{
+  "id": "threejs",
+  "name": "Three.js",
+  "aliases": [
+    "Three"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "web_frontend",
+    "graphics-api-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "graphics"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "webgl"
+    }
+  ],
+  "summary": "最流行的 Web 3D 库，把 WebGL 封装成场景对象。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://threejs.org"
+}

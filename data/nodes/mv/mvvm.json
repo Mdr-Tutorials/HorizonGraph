@@ -1,0 +1,26 @@
+{
+  "id": "mvvm",
+  "name": "MVVM",
+  "display_primary": "MVVM",
+  "display_secondary": "Model-View-ViewModel",
+  "aliases": [
+    "Model-View-ViewModel",
+    "模型-视图-视图模型"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "以视图模型绑定视图与数据，前端框架的常见骨架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

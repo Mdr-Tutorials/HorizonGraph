@@ -1,0 +1,32 @@
+{
+  "id": "gitops",
+  "name": "GitOps",
+  "display_primary": "GitOps",
+  "display_secondary": "GitOps",
+  "aliases": [
+    "GitOps"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cicd-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cicd"
+    }
+  ],
+  "summary": "以 Git 为唯一事实源，拉式同步集群期望状态。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

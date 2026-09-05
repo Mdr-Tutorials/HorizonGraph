@@ -1,0 +1,26 @@
+{
+  "id": "dependency-injection",
+  "name": "Dependency Injection",
+  "display_primary": "依赖注入",
+  "display_secondary": "Dependency Injection",
+  "aliases": [
+    "依赖注入",
+    "DI"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把依赖由外部传入而非内部构造，解耦且易测试。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

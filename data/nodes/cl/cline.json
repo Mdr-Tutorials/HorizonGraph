@@ -1,0 +1,27 @@
+{
+  "id": "cline",
+  "name": "Cline",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "editor-ide-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "开源 IDE 插件式编程 Agent，可接多家模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://cline.bot"
+}

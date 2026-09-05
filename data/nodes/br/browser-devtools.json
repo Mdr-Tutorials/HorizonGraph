@@ -1,0 +1,39 @@
+{
+  "id": "browser-devtools",
+  "name": "Browser DevTools",
+  "display_primary": "浏览器开发者工具",
+  "display_secondary": "Browser DevTools",
+  "aliases": [
+    "DevTools",
+    "F12 开发者工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "web_frontend",
+    "browser-engine-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "chrome"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "firefox"
+    }
+  ],
+  "summary": "浏览器内置的检查、调试与性能分析工具集。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

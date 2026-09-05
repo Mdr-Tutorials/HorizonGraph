@@ -1,0 +1,30 @@
+{
+  "id": "tauri",
+  "name": "Tauri",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "rust-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "rust"
+    }
+  ],
+  "summary": "系统 WebView + Rust 后端的轻量桌面应用框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://tauri.app"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "e2e-testing",
+  "name": "E2E Testing",
+  "display_primary": "端到端测试",
+  "display_secondary": "E2E Testing",
+  "aliases": [
+    "端到端测试",
+    "E2E 测试",
+    "End-to-End Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "testing-pyramid"
+    }
+  ],
+  "summary": "像用户一样操作真实界面，覆盖完整业务路径。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

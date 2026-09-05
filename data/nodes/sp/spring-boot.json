@@ -1,0 +1,33 @@
+{
+  "id": "spring-boot",
+  "name": "Spring Boot",
+  "aliases": [
+    "Spring Boot"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "devops"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    }
+  ],
+  "summary": "约定优于配置的 Java 微服务框架，Spring 生态的事实入口。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://spring.io/projects/spring-boot"
+}

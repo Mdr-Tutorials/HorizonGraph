@@ -1,0 +1,31 @@
+{
+  "id": "openapi",
+  "name": "OpenAPI Specification",
+  "aliases": [
+    "OpenAPI",
+    "Swagger 规范",
+    "OAS"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "cloud_native"
+  ],
+  "domains": [
+    "web-development",
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "RESTful API 的机器可读描述标准，文档与代码生成。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://spec.openapis.org"
+}

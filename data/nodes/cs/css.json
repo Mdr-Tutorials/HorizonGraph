@@ -1,0 +1,29 @@
+{
+  "id": "css",
+  "name": "CSS",
+  "aliases": [
+    "Cascading Style Sheets",
+    "层叠样式表"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "web_frontend",
+    "w3c-standards-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "描述文档外观的样式语言，选择器与层叠是核心。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://www.w3.org/Style/CSS/"
+}

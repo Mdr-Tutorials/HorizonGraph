@@ -1,0 +1,31 @@
+{
+  "id": "xss",
+  "name": "XSS",
+  "display_primary": "XSS",
+  "display_secondary": "Cross-Site Scripting",
+  "aliases": [
+    "Cross-Site Scripting",
+    "跨站脚本攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把恶意脚本注入页面执行，输入转义与 CSP 是主防线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://owasp.org/www-community/attacks/xss/"
+}

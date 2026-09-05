@@ -1,0 +1,31 @@
+{
+  "id": "bilibili",
+  "name": "Bilibili",
+  "display_primary": "哔哩哔哩",
+  "display_secondary": "Bilibili",
+  "aliases": [
+    "B站",
+    "哔哩哔哩"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "platform-commerce-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "graphics"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "弹幕视频社区，技术与知识内容的中文主阵地。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.bilibili.com"
+}

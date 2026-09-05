@@ -32,6 +32,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "gitlab-ci"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "jenkins"
     }
   ],
   "summary": "仓库里用 YAML 描述的 CI/CD，和 GitHub 托管绑在一起。",

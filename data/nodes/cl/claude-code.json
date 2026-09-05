@@ -1,0 +1,35 @@
+{
+  "id": "claude-code",
+  "name": "Claude Code",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "github-copilot"
+    }
+  ],
+  "summary": "终端里的 AI 编程代理，读写代码、跑命令、开 PR。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://docs.anthropic.com/en/docs/claude-code"
+}

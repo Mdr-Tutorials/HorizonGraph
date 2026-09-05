@@ -1,0 +1,29 @@
+{
+  "id": "deveco-studio",
+  "name": "DevEco Studio",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "harmonyos-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "huawei"
+    }
+  ],
+  "summary": "华为面向 HarmonyOS 全场景开发的一站式 IDE。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 2
+}

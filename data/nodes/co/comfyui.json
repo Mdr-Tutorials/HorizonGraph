@@ -1,0 +1,30 @@
+{
+  "id": "comfyui",
+  "name": "ComfyUI",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "graphics"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "stable-diffusion"
+    }
+  ],
+  "summary": "节点式生成式 AI 工作流引擎，图像生成的乐高。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.comfy.org"
+}

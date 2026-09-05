@@ -1,0 +1,29 @@
+{
+  "id": "ssr",
+  "name": "SSR",
+  "display_primary": "SSR",
+  "display_secondary": "Server-Side Rendering",
+  "aliases": [
+    "服务端渲染",
+    "Server-Side Rendering"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "服务器直接渲染出 HTML，首屏与 SEO 更友好。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

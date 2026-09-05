@@ -1,0 +1,26 @@
+{
+  "id": "mvc",
+  "name": "MVC",
+  "display_primary": "MVC",
+  "display_secondary": "Model-View-Controller",
+  "aliases": [
+    "Model-View-Controller",
+    "模型-视图-控制器"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把数据、展示与输入控制分层的老牌 UI 架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

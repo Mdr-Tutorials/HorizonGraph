@@ -1,0 +1,33 @@
+{
+  "id": "dynamodb",
+  "name": "Amazon DynamoDB",
+  "aliases": [
+    "DynamoDB"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "aws"
+    }
+  ],
+  "summary": "AWS 全托管 KV 与文档数据库，任意规模毫秒级延迟。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://aws.amazon.com/dynamodb/"
+}

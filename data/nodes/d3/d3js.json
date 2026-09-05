@@ -1,0 +1,32 @@
+{
+  "id": "d3js",
+  "name": "D3.js",
+  "aliases": [
+    "D3",
+    "Data-Driven Documents"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    }
+  ],
+  "summary": "数据驱动文档的可视化基石库，SVG 与 DOM 直接操控。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://d3js.org"
+}

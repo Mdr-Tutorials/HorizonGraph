@@ -1,0 +1,30 @@
+{
+  "id": "ros",
+  "name": "ROS",
+  "aliases": [
+    "Robot Operating System",
+    "机器人操作系统"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "robotics-ecosystem",
+    "embedded-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems",
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    }
+  ],
+  "summary": "机器人软件的事实标准框架，话题与服务消息总线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.ros.org"
+}

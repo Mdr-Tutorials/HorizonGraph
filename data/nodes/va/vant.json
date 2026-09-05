@@ -1,0 +1,29 @@
+{
+  "id": "vant",
+  "name": "Vant",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "vue"
+    }
+  ],
+  "summary": "有赞出品的轻量移动端 Vue 组件库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://vant-ui.github.io"
+}

@@ -28,6 +28,14 @@
     {
       "relation_type": "depends_on",
       "target_id": "typescript"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "github-copilot"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "windsurf"
     }
   ],
   "summary": "AI 原生代码编辑器，模型介入编辑循环。",

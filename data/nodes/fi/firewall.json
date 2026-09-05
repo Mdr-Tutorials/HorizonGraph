@@ -1,0 +1,29 @@
+{
+  "id": "firewall",
+  "name": "Firewall",
+  "display_primary": "防火墙",
+  "display_secondary": "Firewall",
+  "aliases": [
+    "防火墙"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "按规则控制网络边界流量，从包过滤演进到下一代。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

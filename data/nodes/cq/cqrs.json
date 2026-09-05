@@ -1,0 +1,28 @@
+{
+  "id": "cqrs",
+  "name": "CQRS",
+  "display_primary": "CQRS",
+  "display_secondary": "Command Query Responsibility Segregation",
+  "aliases": [
+    "Command Query Responsibility Segregation",
+    "命令查询职责分离"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "读写模型分离各自优化，常与事件溯源搭配使用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

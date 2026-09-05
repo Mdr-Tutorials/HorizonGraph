@@ -1,0 +1,33 @@
+{
+  "id": "webgl",
+  "name": "WebGL",
+  "aliases": [
+    "Web Graphics Library"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "graphics-api-ecosystem"
+  ],
+  "domains": [
+    "graphics",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "webgpu"
+    }
+  ],
+  "summary": "浏览器里的 OpenGL ES，Web 3D 渲染的第一代标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://www.khronos.org/webgl/"
+}

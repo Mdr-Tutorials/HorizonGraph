@@ -1,0 +1,28 @@
+{
+  "id": "unsupervised-learning",
+  "name": "Unsupervised Learning",
+  "display_primary": "无监督学习",
+  "display_secondary": "Unsupervised Learning",
+  "aliases": [
+    "无监督学习"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "machine-learning"
+    }
+  ],
+  "summary": "从无标签数据里找结构：聚类、降维与密度估计。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,37 @@
+{
+  "id": "cassandra",
+  "name": "Apache Cassandra",
+  "aliases": [
+    "Cassandra"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem",
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "dynamodb"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "mongodb-database"
+    }
+  ],
+  "summary": "无主多副本宽列存储，写吞吐与线性扩展见长。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://cassandra.apache.org"
+}

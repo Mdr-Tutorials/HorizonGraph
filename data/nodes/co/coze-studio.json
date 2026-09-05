@@ -1,0 +1,36 @@
+{
+  "id": "coze-studio",
+  "name": "Coze Studio",
+  "aliases": [
+    "扣子",
+    "Coze"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "bytedance"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "dify"
+    }
+  ],
+  "summary": "字节开源的 Agent 搭建平台，零代码编排_bot 与工作流。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.coze.com"
+}

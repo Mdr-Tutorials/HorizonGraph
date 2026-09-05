@@ -1,0 +1,40 @@
+{
+  "id": "kafka",
+  "name": "Apache Kafka",
+  "aliases": [
+    "Kafka"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "rabbitmq"
+    },
+    {
+      "relation_type": "powers",
+      "target_id": "confluent"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "rocketmq"
+    }
+  ],
+  "summary": "分布式分区日志平台，高吞吐事件流与回放的事实标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://kafka.apache.org"
+}

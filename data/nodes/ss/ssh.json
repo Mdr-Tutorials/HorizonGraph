@@ -1,0 +1,30 @@
+{
+  "id": "ssh",
+  "name": "SSH",
+  "aliases": [
+    "Secure Shell"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "devops_tooling",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "devops",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "加密的远程登录与运维通道，22 端口的事实标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://www.openssh.com"
+}

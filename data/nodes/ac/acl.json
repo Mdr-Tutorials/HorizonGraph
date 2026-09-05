@@ -1,0 +1,28 @@
+{
+  "id": "acl",
+  "name": "ACL",
+  "display_primary": "ACL",
+  "display_secondary": "Access Control List",
+  "aliases": [
+    "Access Control List",
+    "访问控制列表"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "逐条列出主体对客体的权限，防火墙与文件系统通用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

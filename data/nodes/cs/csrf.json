@@ -1,0 +1,31 @@
+{
+  "id": "csrf",
+  "name": "CSRF",
+  "display_primary": "CSRF",
+  "display_secondary": "Cross-Site Request Forgery",
+  "aliases": [
+    "Cross-Site Request Forgery",
+    "跨站请求伪造"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "借用户已登录身份伪造请求，靠令牌与 SameSite 防御。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://owasp.org/www-community/attacks/csrf"
+}

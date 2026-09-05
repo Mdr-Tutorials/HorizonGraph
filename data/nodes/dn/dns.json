@@ -1,0 +1,32 @@
+{
+  "id": "dns",
+  "name": "DNS",
+  "aliases": [
+    "Domain Name System",
+    "域名系统"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "udp"
+    }
+  ],
+  "summary": "把域名翻译成 IP 的分布式查询系统，UDP 53 承载查询。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://datatracker.ietf.org/doc/html/rfc1034"
+}

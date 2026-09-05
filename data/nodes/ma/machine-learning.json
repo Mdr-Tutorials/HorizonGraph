@@ -1,0 +1,28 @@
+{
+  "id": "machine-learning",
+  "name": "Machine Learning",
+  "display_primary": "机器学习",
+  "display_secondary": "Machine Learning",
+  "aliases": [
+    "机器学习",
+    "ML"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "从数据中自动学规律做预测，不必写死规则。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

@@ -1,0 +1,29 @@
+{
+  "id": "rate-limiting",
+  "name": "Rate Limiting",
+  "display_primary": "限流",
+  "display_secondary": "Rate Limiting",
+  "aliases": [
+    "限流",
+    "速率限制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "控制单位时间请求量，保护服务不被突发流量打垮。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

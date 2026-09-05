@@ -1,0 +1,30 @@
+{
+  "id": "replication",
+  "name": "Replication",
+  "display_primary": "复制",
+  "display_secondary": "Replication",
+  "aliases": [
+    "复制",
+    "主从复制",
+    "数据复制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "把数据抄到多副本换可用与读扩展，一致性是代价。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

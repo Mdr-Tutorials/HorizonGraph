@@ -1,0 +1,30 @@
+{
+  "id": "axios",
+  "name": "Axios",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "http"
+    }
+  ],
+  "summary": "基于 Promise 的 HTTP 客户端，拦截器与取消好用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://axios-http.com"
+}

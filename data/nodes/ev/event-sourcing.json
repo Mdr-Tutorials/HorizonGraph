@@ -1,0 +1,27 @@
+{
+  "id": "event-sourcing",
+  "name": "Event Sourcing",
+  "display_primary": "事件溯源",
+  "display_secondary": "Event Sourcing",
+  "aliases": [
+    "事件溯源"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "以不可变事件为唯一事实，状态由重放事件得出。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

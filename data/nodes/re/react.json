@@ -28,6 +28,18 @@
     {
       "relation_type": "developed_by",
       "target_id": "meta"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vue"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "svelte"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "solidjs"
     }
   ],
   "summary": "用组件与状态描述 UI 的前端库，差分更新页面。",

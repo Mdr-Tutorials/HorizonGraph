@@ -1,0 +1,29 @@
+{
+  "id": "authorization",
+  "name": "Authorization",
+  "display_primary": "授权",
+  "display_secondary": "Authorization",
+  "aliases": [
+    "授权",
+    "鉴权"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "iam-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "决定你能做什么：RBAC、ACL 与策略引擎的主战场。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

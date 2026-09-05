@@ -1,0 +1,34 @@
+{
+  "id": "cors",
+  "name": "CORS",
+  "display_primary": "CORS",
+  "display_secondary": "Cross-Origin Resource Sharing",
+  "aliases": [
+    "Cross-Origin Resource Sharing",
+    "跨域资源共享"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "same-origin-policy"
+    }
+  ],
+  "summary": "在同源策略之上放开受控跨域读取的浏览器机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

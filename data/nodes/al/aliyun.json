@@ -32,6 +32,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "azure"
     }
   ],
   "summary": "阿里云，中国份额领先的公有云平台。",

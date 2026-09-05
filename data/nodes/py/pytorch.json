@@ -36,6 +36,14 @@
     {
       "relation_type": "developed_by",
       "target_id": "meta"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "tensorflow"
     }
   ],
   "summary": "动态图优先的深度学习框架，研究与生产都在用。",

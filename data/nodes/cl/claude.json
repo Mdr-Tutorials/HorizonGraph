@@ -35,6 +35,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "grok"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "gemini"
     }
   ],
   "summary": "Anthropic 的对话大模型族，以安全对齐为主线。",

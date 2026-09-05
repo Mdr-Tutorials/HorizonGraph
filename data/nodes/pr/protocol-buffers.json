@@ -1,0 +1,34 @@
+{
+  "id": "protocol-buffers",
+  "name": "Protocol Buffers",
+  "aliases": [
+    "protobuf",
+    "Protobuf"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cloud_native",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "二进制序列化格式，gRPC 的默认接口描述语言。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://protobuf.dev"
+}

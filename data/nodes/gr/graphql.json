@@ -1,0 +1,30 @@
+{
+  "id": "graphql",
+  "name": "GraphQL",
+  "aliases": [],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "grpc"
+    }
+  ],
+  "summary": "客户端按需描述数据的 API 查询语言与运行时规范。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://graphql.org"
+}

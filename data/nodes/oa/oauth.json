@@ -17,6 +17,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "authorization"
     }
   ],
   "summary": "让应用在不拿到密码的情况下获得有限授权。",

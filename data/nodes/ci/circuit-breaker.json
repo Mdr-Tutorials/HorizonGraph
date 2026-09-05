@@ -1,0 +1,28 @@
+{
+  "id": "circuit-breaker",
+  "name": "Circuit Breaker",
+  "display_primary": "熔断器",
+  "display_secondary": "Circuit Breaker",
+  "aliases": [
+    "熔断器",
+    "熔断"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "依赖故障时快速失败并自动恢复，阻止雪崩蔓延。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

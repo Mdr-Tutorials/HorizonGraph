@@ -1,0 +1,29 @@
+{
+  "id": "load-balancing",
+  "name": "Load Balancing",
+  "display_primary": "负载均衡",
+  "display_secondary": "Load Balancing",
+  "aliases": [
+    "负载均衡"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把流量分摊到多台后端，四层与七层是两大流派。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

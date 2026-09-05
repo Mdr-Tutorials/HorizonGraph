@@ -1,0 +1,28 @@
+{
+  "id": "rest",
+  "name": "REST",
+  "aliases": [
+    "Representational State Transfer",
+    "表述性状态转移"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "以资源为中心的 API 架构风格，HTTP 动词语义化。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+}

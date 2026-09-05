@@ -1,0 +1,35 @@
+{
+  "id": "cypress",
+  "name": "Cypress",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "static-analysis-testing-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "devops",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "e2e-testing"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "playwright"
+    }
+  ],
+  "summary": "浏览器内运行的 E2E 测试框架，调试体验出名。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.cypress.io"
+}

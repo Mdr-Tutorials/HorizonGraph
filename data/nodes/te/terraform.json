@@ -21,6 +21,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "hashicorp"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "iac"
     }
   ],
   "summary": "用声明式配置创建、变更云资源的基础设施即代码工具。",

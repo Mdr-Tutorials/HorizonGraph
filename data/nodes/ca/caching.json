@@ -1,0 +1,28 @@
+{
+  "id": "caching",
+  "name": "Caching",
+  "display_primary": "缓存",
+  "display_secondary": "Caching",
+  "aliases": [
+    "缓存"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把热点数据放到更近的层，用一致性换读性能。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

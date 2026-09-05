@@ -1,0 +1,24 @@
+{
+  "id": "closures",
+  "name": "Closure",
+  "display_primary": "闭包",
+  "display_secondary": "Closure",
+  "aliases": [
+    "闭包"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "函数连同其捕获的词法环境一起存在的语言特性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,25 @@
+{
+  "id": "functional-programming",
+  "name": "Functional Programming",
+  "display_primary": "函数式编程",
+  "display_secondary": "Functional Programming",
+  "aliases": [
+    "函数式编程",
+    "FP"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "programming-paradigm"
+    }
+  ],
+  "summary": "纯函数与不可变数据，用组合代替可变状态。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

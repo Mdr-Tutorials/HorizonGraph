@@ -1,0 +1,30 @@
+{
+  "id": "jenkins",
+  "name": "Jenkins",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "cicd-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "cicd"
+    }
+  ],
+  "summary": "老牌自托管 CI 服务器，插件生态无所不能。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.jenkins.io"
+}

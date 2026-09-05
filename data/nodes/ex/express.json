@@ -1,0 +1,32 @@
+{
+  "id": "express",
+  "name": "Express",
+  "aliases": [
+    "Express.js"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs"
+    }
+  ],
+  "summary": "最经典的 Node.js Web 框架，中间件模型的开山之作。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://expressjs.com"
+}

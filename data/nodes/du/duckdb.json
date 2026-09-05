@@ -1,0 +1,29 @@
+{
+  "id": "duckdb",
+  "name": "DuckDB",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "sqlite"
+    }
+  ],
+  "summary": "嵌入式列式分析数据库，本地 OLAP 里的 SQLite。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://duckdb.org"
+}

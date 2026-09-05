@@ -1,0 +1,40 @@
+{
+  "id": "nestjs",
+  "name": "NestJS",
+  "aliases": [
+    "Nest.js"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "typescript"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "express"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dependency-injection"
+    }
+  ],
+  "summary": "受 Angular 启发的 Node.js 企业框架，DI 与模块化架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://nestjs.com"
+}

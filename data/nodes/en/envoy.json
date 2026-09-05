@@ -1,0 +1,31 @@
+{
+  "id": "envoy",
+  "name": "Envoy",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "networking",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "istio"
+    }
+  ],
+  "summary": "云原生边缘与服务代理，Istio 数据面的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.envoyproxy.io"
+}

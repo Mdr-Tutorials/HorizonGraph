@@ -1,0 +1,31 @@
+{
+  "id": "accessibility",
+  "name": "Accessibility",
+  "display_primary": "无障碍",
+  "display_secondary": "Accessibility",
+  "aliases": [
+    "无障碍",
+    "可访问性",
+    "a11y"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "让残障用户也能用：语义化、键盘导航与读屏适配。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://www.w3.org/WAI/"
+}

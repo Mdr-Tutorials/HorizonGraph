@@ -1,0 +1,32 @@
+{
+  "id": "nginx",
+  "name": "Nginx",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "cloud_native",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "devops",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "load-balancing"
+    }
+  ],
+  "summary": "高性能 Web 服务器与反向代理，兼做负载均衡。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5,
+  "official_site": "https://nginx.org"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "rabbitmq",
+  "name": "RabbitMQ",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems",
+    "devops"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "message-queue"
+    }
+  ],
+  "summary": "AMQP 消息代理，路由灵活的经典企业级消息中间件。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.rabbitmq.com"
+}

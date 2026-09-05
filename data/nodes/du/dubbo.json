@@ -1,0 +1,37 @@
+{
+  "id": "dubbo",
+  "name": "Dubbo",
+  "aliases": [
+    "Apache Dubbo"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "networking",
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "grpc"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    }
+  ],
+  "summary": "阿里开源的 Java RPC 与微服务框架，国内微服务常客。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://dubbo.apache.org"
+}

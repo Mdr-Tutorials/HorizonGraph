@@ -1,0 +1,24 @@
+{
+  "id": "type-inference",
+  "name": "Type Inference",
+  "display_primary": "类型推断",
+  "display_secondary": "Type Inference",
+  "aliases": [
+    "类型推断"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "编译器自动推导表达式类型，省标注而不失检查。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

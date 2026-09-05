@@ -1,0 +1,31 @@
+{
+  "id": "integration-testing",
+  "name": "Integration Testing",
+  "display_primary": "集成测试",
+  "display_secondary": "Integration Testing",
+  "aliases": [
+    "集成测试"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "testing-pyramid"
+    }
+  ],
+  "summary": "验证模块与外部依赖协作是否正确，数量居中。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

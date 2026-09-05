@@ -1,0 +1,29 @@
+{
+  "id": "iam",
+  "name": "IAM",
+  "display_primary": "IAM",
+  "display_secondary": "Identity and Access Management",
+  "aliases": [
+    "Identity and Access Management",
+    "身份与访问管理"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "iam-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "管理身份与权限的平台层，云厂商与 SaaS 的标配能力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

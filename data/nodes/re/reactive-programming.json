@@ -1,0 +1,24 @@
+{
+  "id": "reactive-programming",
+  "name": "Reactive Programming",
+  "display_primary": "响应式编程",
+  "display_secondary": "Reactive Programming",
+  "aliases": [
+    "响应式编程"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "programming-paradigm"
+    }
+  ],
+  "summary": "以数据流与变化传播组织异步逻辑的范式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

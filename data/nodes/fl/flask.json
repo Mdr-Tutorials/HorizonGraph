@@ -1,0 +1,30 @@
+{
+  "id": "flask",
+  "name": "Flask",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "python-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "微内核 Python Web 框架，按需拼装扩展。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://flask.palletsprojects.com"
+}

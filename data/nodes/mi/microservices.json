@@ -1,0 +1,29 @@
+{
+  "id": "microservices",
+  "name": "Microservices",
+  "display_primary": "微服务",
+  "display_secondary": "Microservices",
+  "aliases": [
+    "微服务",
+    "微服务架构"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "按业务边界拆分服务独立部署，代价是分布式复杂性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

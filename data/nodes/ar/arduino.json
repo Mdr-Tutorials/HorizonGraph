@@ -1,0 +1,26 @@
+{
+  "id": "arduino",
+  "name": "Arduino",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "embedded-ecosystem",
+    "hardware_iot"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "开源电子原型平台，把单片机开发降到入门级。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://www.arduino.cc"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "osi-model",
+  "name": "OSI Model",
+  "display_primary": "OSI 模型",
+  "display_secondary": "OSI Model",
+  "aliases": [
+    "OSI 模型",
+    "OSI 七层模型",
+    "Open Systems Interconnection"
+  ],
+  "type": "concept",
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把网络通信分七层的参考模型，教学与排障的通用语言。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

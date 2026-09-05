@@ -1,0 +1,34 @@
+{
+  "id": "tensorflow",
+  "name": "TensorFlow",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "dl-framework-ecosystem",
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "谷歌出品的深度学习框架，生产部署生态完整。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.tensorflow.org"
+}

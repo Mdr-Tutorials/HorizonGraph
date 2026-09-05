@@ -1,0 +1,27 @@
+{
+  "id": "grafana",
+  "name": "Grafana",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "cloud_native",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "可视化与告警面板，指标、日志、追踪统一查看。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://grafana.com"
+}

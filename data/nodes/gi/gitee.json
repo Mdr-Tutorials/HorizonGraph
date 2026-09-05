@@ -1,0 +1,27 @@
+{
+  "id": "gitee",
+  "name": "Gitee",
+  "aliases": [
+    "码云"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    }
+  ],
+  "summary": "国内最大的代码托管平台，开源中国旗下。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://gitee.com"
+}

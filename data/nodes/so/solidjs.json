@@ -1,0 +1,36 @@
+{
+  "id": "solidjs",
+  "name": "SolidJS",
+  "aliases": [
+    "Solid"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vue"
+    }
+  ],
+  "summary": "细粒度响应式的声明式 UI 库，性能对标原生。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.solidjs.com"
+}

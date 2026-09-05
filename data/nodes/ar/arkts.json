@@ -1,0 +1,35 @@
+{
+  "id": "arkts",
+  "name": "ArkTS",
+  "aliases": [
+    "方舟开发框架语言"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "harmonyos-ecosystem",
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "typescript"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "huawei"
+    }
+  ],
+  "summary": "HarmonyOS 应用开发语言，TypeScript 的约束子集扩展。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3
+}

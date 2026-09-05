@@ -1,0 +1,26 @@
+{
+  "id": "oop",
+  "name": "OOP",
+  "display_primary": "面向对象编程",
+  "display_secondary": "OOP",
+  "aliases": [
+    "面向对象编程",
+    "Object-Oriented Programming",
+    "面向对象"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "programming-paradigm"
+    }
+  ],
+  "summary": "以封装、继承、多态组织代码的对象范式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

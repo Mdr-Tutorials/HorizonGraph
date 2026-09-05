@@ -1,0 +1,34 @@
+{
+  "id": "memcached",
+  "name": "Memcached",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "caching"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "redis"
+    }
+  ],
+  "summary": "纯内存 KV 缓存，多线程简单直接，Redis 的前辈。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://memcached.org"
+}

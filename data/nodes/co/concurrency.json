@@ -1,0 +1,28 @@
+{
+  "id": "concurrency",
+  "name": "Concurrency",
+  "display_primary": "并发",
+  "display_secondary": "Concurrency",
+  "aliases": [
+    "并发"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    }
+  ],
+  "tags": [
+    "concurrency"
+  ],
+  "summary": "多任务交替推进的组织方式，与并行相区分。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

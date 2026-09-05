@@ -1,0 +1,27 @@
+{
+  "id": "windsurf",
+  "name": "Windsurf",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "editor-ide-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "代理式 AI IDE，以 Cascade 智能体流著称。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://windsurf.com"
+}

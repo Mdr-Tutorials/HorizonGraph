@@ -1,0 +1,31 @@
+{
+  "id": "qt",
+  "name": "Qt",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "native-cpp-ecosystem",
+    "embedded-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cpp"
+    }
+  ],
+  "summary": "跨平台 C++ GUI 框架，桌面与嵌入式界面常青树。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.qt.io"
+}

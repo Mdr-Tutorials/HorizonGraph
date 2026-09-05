@@ -1,0 +1,28 @@
+{
+  "id": "cicd",
+  "name": "CI/CD",
+  "display_primary": "CI/CD",
+  "display_secondary": "持续集成与持续交付",
+  "aliases": [
+    "持续集成与持续交付",
+    "持续集成/持续部署"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cicd-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "从提交到生产全自动：持续集成、交付与部署的合称。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

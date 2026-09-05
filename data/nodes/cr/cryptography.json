@@ -1,0 +1,27 @@
+{
+  "id": "cryptography",
+  "name": "Cryptography",
+  "display_primary": "密码学",
+  "display_secondary": "Cryptography",
+  "aliases": [
+    "密码学"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "研究加密、签名与哈希的数学基础与工程构造。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

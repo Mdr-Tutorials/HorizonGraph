@@ -1,0 +1,30 @@
+{
+  "id": "tailwind-css",
+  "name": "Tailwind CSS",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "css"
+    }
+  ],
+  "summary": "原子化 CSS 工具集，类名组合直接表达样式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://tailwindcss.com"
+}

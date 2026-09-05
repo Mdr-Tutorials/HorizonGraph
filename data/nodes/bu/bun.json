@@ -1,0 +1,38 @@
+{
+  "id": "bun",
+  "name": "Bun",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "web-development",
+    "devops"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "zig"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "nodejs"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "deno"
+    }
+  ],
+  "summary": "Zig 编写的一体化 JS 工具包：运行时、打包、测试。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://bun.com"
+}

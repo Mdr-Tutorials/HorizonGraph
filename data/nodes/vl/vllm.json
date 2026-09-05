@@ -1,0 +1,26 @@
+{
+  "id": "vllm",
+  "name": "vLLM",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    }
+  ],
+  "summary": "高吞吐 LLM 推理引擎，PagedAttention 的出处。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://docs.vllm.ai"
+}

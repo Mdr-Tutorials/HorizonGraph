@@ -1,0 +1,36 @@
+{
+  "id": "ant-design",
+  "name": "Ant Design",
+  "aliases": [
+    "AntD"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "web_frontend",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "react"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "ant-group"
+    }
+  ],
+  "summary": "蚂蚁的企业级 React 组件库，中后台的默认答案。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://ant.design"
+}

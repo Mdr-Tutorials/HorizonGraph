@@ -1,0 +1,28 @@
+{
+  "id": "nosql",
+  "name": "NoSQL",
+  "display_primary": "NoSQL",
+  "display_secondary": "非关系型数据库",
+  "aliases": [
+    "NoSQL 数据库",
+    "非关系型数据库"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "放开关系模型换水平扩展与灵活模式的数据层总称。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

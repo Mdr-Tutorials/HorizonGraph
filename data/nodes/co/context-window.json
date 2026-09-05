@@ -1,0 +1,25 @@
+{
+  "id": "context-window",
+  "name": "Context Window",
+  "display_primary": "上下文窗口",
+  "display_secondary": "Context Window",
+  "aliases": [
+    "上下文窗口"
+  ],
+  "type": "metric",
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "模型单次能处理的 token 上限，决定长文本能力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,28 @@
+{
+  "id": "message-queue",
+  "name": "Message Queue",
+  "display_primary": "消息队列",
+  "display_secondary": "Message Queue",
+  "aliases": [
+    "消息队列",
+    "MQ"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "生产者与消费者解耦的异步通道，削峰与广播靠它。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

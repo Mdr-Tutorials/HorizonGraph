@@ -1,0 +1,38 @@
+{
+  "id": "fastapi",
+  "name": "FastAPI",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "python-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "openapi"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "flask"
+    }
+  ],
+  "summary": "类型注解驱动的异步 Python API 框架，自动生成文档。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://fastapi.tiangolo.com"
+}

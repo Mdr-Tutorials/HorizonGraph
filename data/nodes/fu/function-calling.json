@@ -1,0 +1,29 @@
+{
+  "id": "function-calling",
+  "name": "Function Calling",
+  "display_primary": "函数调用",
+  "display_secondary": "Function Calling",
+  "aliases": [
+    "工具调用",
+    "函数调用"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "模型按 schema 输出结构化调用，连接外部工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

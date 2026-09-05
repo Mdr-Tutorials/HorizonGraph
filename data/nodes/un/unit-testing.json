@@ -1,0 +1,31 @@
+{
+  "id": "unit-testing",
+  "name": "Unit Testing",
+  "display_primary": "单元测试",
+  "display_secondary": "Unit Testing",
+  "aliases": [
+    "单元测试"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "testing-pyramid"
+    }
+  ],
+  "summary": "隔离验证最小代码单元，快、量多、常跑在本地。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

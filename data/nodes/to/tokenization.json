@@ -1,0 +1,26 @@
+{
+  "id": "tokenization",
+  "name": "Tokenization",
+  "display_primary": "标记化",
+  "display_secondary": "Tokenization",
+  "aliases": [
+    "标记化",
+    "分词"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "把文本切成模型最小处理单元 token 的预处理。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

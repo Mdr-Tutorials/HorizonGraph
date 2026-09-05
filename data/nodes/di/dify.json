@@ -1,0 +1,27 @@
+{
+  "id": "dify",
+  "name": "Dify",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "开源 LLM 应用开发平台，可视化编排 Agent 与 RAG。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://dify.ai"
+}

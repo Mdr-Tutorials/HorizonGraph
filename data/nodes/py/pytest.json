@@ -1,0 +1,36 @@
+{
+  "id": "pytest",
+  "name": "pytest",
+  "aliases": [
+    "PyTest"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "python-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "unit-testing"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "Python 测试事实标准，fixture 与参数化好用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://docs.pytest.org"
+}

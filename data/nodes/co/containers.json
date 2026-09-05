@@ -1,0 +1,29 @@
+{
+  "id": "containers",
+  "name": "Containers",
+  "display_primary": "容器",
+  "display_secondary": "Containers",
+  "aliases": [
+    "容器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "virtualization-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用内核隔离打包进程，比虚拟机轻的标准化部署单元。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

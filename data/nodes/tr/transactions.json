@@ -1,0 +1,29 @@
+{
+  "id": "transactions",
+  "name": "Transaction",
+  "display_primary": "事务",
+  "display_secondary": "Transaction",
+  "aliases": [
+    "事务",
+    "数据库事务"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "把多步读写包成全成或全败的原子执行单元。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

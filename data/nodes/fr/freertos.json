@@ -1,0 +1,28 @@
+{
+  "id": "freertos",
+  "name": "FreeRTOS",
+  "aliases": [
+    "FreeRTOS"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "rtos-ecosystem",
+    "embedded-ecosystem"
+  ],
+  "domains": [
+    "embedded-systems"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    }
+  ],
+  "summary": "微控制器实时操作系统，物联网设备的市场主流。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.freertos.org"
+}

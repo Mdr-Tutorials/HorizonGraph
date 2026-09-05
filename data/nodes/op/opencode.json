@@ -1,0 +1,27 @@
+{
+  "id": "opencode",
+  "name": "OpenCode",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "开源终端编程 Agent，社区驱动的 Claude Code 替代。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://opencode.ai"
+}

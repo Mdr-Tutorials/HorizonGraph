@@ -36,6 +36,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "docker-inc"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "containers"
     }
   ],
   "summary": "把进程、文件系统与网络打成容器的开发者工具。",

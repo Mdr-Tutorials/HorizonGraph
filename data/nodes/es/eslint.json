@@ -1,0 +1,31 @@
+{
+  "id": "eslint",
+  "name": "ESLint",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "devops_tooling",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs"
+    }
+  ],
+  "summary": "可插拔的 JavaScript 静态检查器，团队规范的事实标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://eslint.org"
+}

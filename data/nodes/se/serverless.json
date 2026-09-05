@@ -1,0 +1,29 @@
+{
+  "id": "serverless",
+  "name": "Serverless",
+  "display_primary": "Serverless",
+  "display_secondary": "无服务器架构",
+  "aliases": [
+    "无服务器架构"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "按请求付费、平台管扩缩容，函数是最小部署单位。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -1,0 +1,33 @@
+{
+  "id": "embeddings",
+  "name": "Embeddings",
+  "display_primary": "嵌入",
+  "display_secondary": "Embeddings",
+  "aliases": [
+    "嵌入",
+    "向量嵌入",
+    "Embedding"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "tags": [
+    "embedding"
+  ],
+  "summary": "把离散对象映射成稠密向量，语义检索的基础。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}

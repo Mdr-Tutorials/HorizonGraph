@@ -16,6 +16,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "transactions"
     }
   ],
   "summary": "原子性、一致性、隔离性、持久性，事务正确性的四条约束。",

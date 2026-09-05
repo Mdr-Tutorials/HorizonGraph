@@ -1,0 +1,30 @@
+{
+  "id": "iac",
+  "name": "IaC",
+  "display_primary": "IaC",
+  "display_secondary": "Infrastructure as Code",
+  "aliases": [
+    "Infrastructure as Code",
+    "基础设施即代码"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "iac-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用代码声明与管理基础设施，可评审、可重放。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4
+}

@@ -5,3 +5,4 @@ web/src/generated/
 *.log
 .DS_Store
 web/.astro/
+.tmp-roadmap/

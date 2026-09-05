@@ -1,0 +1,38 @@
+{
+  "id": "astro",
+  "name": "Astro",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ssg"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "nextjs"
+    }
+  ],
+  "summary": "内容优先的 Web 框架，默认零 JS、岛屿架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://astro.build"
+}

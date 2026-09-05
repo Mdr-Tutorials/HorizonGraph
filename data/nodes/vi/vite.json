@@ -1,0 +1,35 @@
+{
+  "id": "vite",
+  "name": "Vite",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "webpack"
+    }
+  ],
+  "summary": "基于原生 ESM 的前端构建工具，开发服务器秒级冷启动。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 4,
+  "official_site": "https://vite.dev"
+}

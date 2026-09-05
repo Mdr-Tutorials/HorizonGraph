@@ -19,6 +19,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "redis-ltd"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "caching"
     }
   ],
   "summary": "内存数据结构服务器，缓存、锁与流的默认组件。",

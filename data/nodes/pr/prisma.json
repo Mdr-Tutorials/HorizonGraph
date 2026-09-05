@@ -1,0 +1,31 @@
+{
+  "id": "prisma",
+  "name": "Prisma",
+  "aliases": [],
+  "type": "library",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "typescript"
+    }
+  ],
+  "summary": "schema 优先的类型安全 ORM，Node.js 数据层的常见选择。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://www.prisma.io"
+}

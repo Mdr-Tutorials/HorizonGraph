@@ -1,0 +1,26 @@
+{
+  "id": "open-webui",
+  "name": "Open WebUI",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "自托管的模型对话前端，配 Ollama 的常见搭档。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://openwebui.com"
+}

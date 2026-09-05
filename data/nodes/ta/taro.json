@@ -1,0 +1,30 @@
+{
+  "id": "taro",
+  "name": "Taro",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "web_frontend",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "jd"
+    }
+  ],
+  "summary": "京东多端统一框架，一套代码编译到小程序与 RN。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 3,
+  "official_site": "https://docs.taro.zone"
+}

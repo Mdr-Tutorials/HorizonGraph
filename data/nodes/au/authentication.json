@@ -1,0 +1,29 @@
+{
+  "id": "authentication",
+  "name": "Authentication",
+  "display_primary": "认证",
+  "display_secondary": "Authentication",
+  "aliases": [
+    "认证",
+    "身份认证"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "iam-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "验证你是谁：密码、MFA、证书与通行密钥都属于它。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-05",
+  "importance": 5
+}
