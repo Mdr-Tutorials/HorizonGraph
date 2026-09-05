@@ -1,0 +1,24 @@
+{
+  "id": "rocky-linux",
+  "name": "Rocky Linux",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "CentOS 创始人发起的 RHEL 兼容重建版。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 3
+}

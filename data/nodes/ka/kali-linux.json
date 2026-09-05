@@ -1,0 +1,29 @@
+{
+  "id": "kali-linux",
+  "name": "Kali Linux",
+  "display_primary": "Kali Linux",
+  "display_secondary": "Kali Linux",
+  "aliases": [
+    "Kali"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "渗透测试专用发行版，安全工具全家桶预装。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 4
+}

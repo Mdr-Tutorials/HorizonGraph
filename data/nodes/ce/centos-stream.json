@@ -1,0 +1,24 @@
+{
+  "id": "centos-stream",
+  "name": "CentOS Stream",
+  "aliases": [],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "RHEL 的上游滚动预览版，接替经典 CentOS。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 2
+}

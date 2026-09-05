@@ -1,0 +1,31 @@
+{
+  "id": "centos",
+  "name": "CentOS",
+  "aliases": [
+    "CentOS Linux"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "deprecated_by",
+      "target_id": "centos-stream"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "曾是 RHEL 的免费重建版，转向 Stream 后停更。",
+  "status": "deprecated",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 4,
+  "deprecated_at": "2021-12-31"
+}

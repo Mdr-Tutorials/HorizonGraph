@@ -1,0 +1,26 @@
+{
+  "id": "opensuse",
+  "name": "openSUSE",
+  "aliases": [
+    "OpenSUSE"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "SUSE 的社区发行版，YaST 管理工具出名。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 3
+}

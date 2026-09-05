@@ -1,0 +1,30 @@
+{
+  "id": "almalinux",
+  "name": "AlmaLinux",
+  "aliases": [
+    "AlmaLinux OS"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "competes_with",
+      "target_id": "rocky-linux"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "CloudLinux 扶持的 RHEL 兼容发行版。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 3
+}

@@ -1,0 +1,26 @@
+{
+  "id": "linux-mint",
+  "name": "Linux Mint",
+  "aliases": [
+    "Mint"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "对新手友好的 Ubuntu 衍生桌面发行版。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 2
+}

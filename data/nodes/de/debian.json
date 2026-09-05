@@ -1,0 +1,34 @@
+{
+  "id": "debian",
+  "name": "Debian",
+  "aliases": [
+    "Debian GNU/Linux"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "bases_for",
+      "target_id": "ubuntu"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "kali-linux"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "社区驱动的基石发行版，Ubuntu 与 Kali 的底座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-06",
+  "importance": 5
+}
