@@ -1,0 +1,37 @@
+{
+  "id": "rollup",
+  "name": "Rollup",
+  "display_primary": "Rollup",
+  "display_secondary": "基于 ES 模块的高效 JavaScript 打包器",
+  "aliases": [
+    "Rollup 打包器"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "vite"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "webpack"
+    }
+  ],
+  "summary": "专注于 ES 模块与高效 Tree-shaking 的静态打包器，Vite 生产构建核心依赖。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

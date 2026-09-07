@@ -1,0 +1,41 @@
+{
+  "id": "autogen",
+  "name": "AutoGen",
+  "display_primary": "AutoGen",
+  "display_secondary": "微软多 Agent 对话式协作框架",
+  "aliases": [
+    "Microsoft AutoGen"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "crewai"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "微软开源的多智能体协同框架，通过可对话 Agent 的自主交互解决复杂多步任务。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

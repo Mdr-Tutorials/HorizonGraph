@@ -1,0 +1,42 @@
+{
+  "id": "tensorrt-llm",
+  "name": "TensorRT-LLM",
+  "display_primary": "TensorRT-LLM",
+  "display_secondary": "NVIDIA 大语言模型推理加速库",
+  "aliases": [
+    "TRT-LLM"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "gpu-computing",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tensorrt"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vllm"
+    }
+  ],
+  "summary": "NVIDIA 专为大语言模型打造的加速库，提供 In-flight Batching 与专用算子。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

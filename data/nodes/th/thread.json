@@ -1,0 +1,32 @@
+{
+  "id": "thread",
+  "name": "Thread",
+  "display_primary": "线程",
+  "display_secondary": "Thread",
+  "aliases": [
+    "线程",
+    "内核线程"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "process"
+    }
+  ],
+  "summary": "操作系统进行 CPU 调度的最小基本执行单元，同一进程内的线程共享虚拟内存。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

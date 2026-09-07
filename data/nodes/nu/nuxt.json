@@ -1,0 +1,33 @@
+{
+  "id": "nuxt",
+  "name": "Nuxt",
+  "display_primary": "Nuxt",
+  "display_secondary": "基于 Vue 的直观全栈 Web 开发框架",
+  "aliases": [
+    "Nuxt.js",
+    "Nuxt 框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "vue"
+    }
+  ],
+  "summary": "基于 Vue 3 的直观开源全栈框架，开箱即用支持通用渲染、静态生成与文件路由。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

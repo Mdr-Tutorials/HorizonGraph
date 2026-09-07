@@ -1,0 +1,42 @@
+{
+  "id": "jax",
+  "name": "JAX",
+  "display_primary": "JAX",
+  "display_secondary": "高性能数组转换与自动求导框架",
+  "aliases": [
+    "Google JAX"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dl-framework-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "pytorch"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "Google 开源的高性能机器学习框架，将 NumPy 程序经 XLA 编译到硬件。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

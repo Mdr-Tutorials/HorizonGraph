@@ -1,0 +1,33 @@
+{
+  "id": "lstm",
+  "name": "Long Short-Term Memory",
+  "display_primary": "LSTM",
+  "display_secondary": "长短期记忆网络",
+  "aliases": [
+    "长短期记忆网络",
+    "LSTM 网络"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "rnn"
+    }
+  ],
+  "summary": "通过遗忘门、输入门与输出门解决循环网络长期依赖与梯度消失的变体。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

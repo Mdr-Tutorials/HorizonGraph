@@ -1,0 +1,29 @@
+{
+  "id": "base",
+  "name": "BASE Model",
+  "display_primary": "BASE",
+  "display_secondary": "基本可用、软状态与最终一致性",
+  "aliases": [
+    "BASE 理论",
+    "BASE 原则",
+    "最终一致性模型"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "基本可用、软状态与最终一致性，与 ACID 相对的分布式最终一致性理论。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

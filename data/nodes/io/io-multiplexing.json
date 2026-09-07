@@ -1,0 +1,31 @@
+{
+  "id": "io-multiplexing",
+  "name": "I/O Multiplexing",
+  "display_primary": "I/O 多路复用",
+  "display_secondary": "I/O Multiplexing",
+  "aliases": [
+    "I/O 多路复用",
+    "IO 多路复用",
+    "多路复用"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "operating_systems",
+    "networking_security"
+  ],
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "允许单个线程同时监控多个文件描述符就绪状态的高性能网络 I/O 架构模型。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

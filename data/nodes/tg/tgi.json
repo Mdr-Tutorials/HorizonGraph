@@ -1,0 +1,38 @@
+{
+  "id": "tgi",
+  "name": "Text Generation Inference",
+  "display_primary": "TGI",
+  "display_secondary": "Text Generation Inference",
+  "aliases": [
+    "文本生成推理工具",
+    "Hugging Face TGI"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "huggingface"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vllm"
+    }
+  ],
+  "summary": "Hugging Face 开源的生产级大语言模型部署工具包，支持张量并行与流式输出。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 3
+}

@@ -1,0 +1,37 @@
+{
+  "id": "mutex",
+  "name": "Mutual Exclusion Lock",
+  "display_primary": "互斥锁",
+  "display_secondary": "Mutex",
+  "aliases": [
+    "互斥锁",
+    "互斥量",
+    "Mutex"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "semaphore"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "spinlock"
+    }
+  ],
+  "summary": "防止多个线程同时访问共享临界区资源的排他性同步原语。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

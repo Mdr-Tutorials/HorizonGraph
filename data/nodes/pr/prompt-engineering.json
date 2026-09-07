@@ -1,0 +1,28 @@
+{
+  "id": "prompt-engineering",
+  "name": "Prompt Engineering",
+  "display_primary": "提示工程",
+  "display_secondary": "Prompt Engineering",
+  "aliases": [
+    "提示工程",
+    "提示词工程"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "结构化设计与优化输入提示以引导大语言模型产生准确预期输出的方法体系。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

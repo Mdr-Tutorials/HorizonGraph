@@ -25,5 +25,8 @@
   "popular": 40,
   "last_reviewed": "2026-08-30",
   "origin": "curated",
-  "status": "active"
+  "status": "active",
+  "tags": [
+    "memory-model"
+  ]
 }

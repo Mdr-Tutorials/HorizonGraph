@@ -1,0 +1,37 @@
+{
+  "id": "turbopack",
+  "name": "Turbopack",
+  "display_primary": "Turbopack",
+  "display_secondary": "基于 Rust 构建的增量打包器",
+  "aliases": [
+    "Turbopack"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "vercel"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "vite"
+    }
+  ],
+  "summary": "Vercel 基于 Rust 研发的高性能增量打包器，为 Next.js 带来极速热更新体验。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

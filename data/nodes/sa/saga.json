@@ -1,0 +1,32 @@
+{
+  "id": "saga",
+  "name": "Saga",
+  "display_primary": "Saga",
+  "display_secondary": "分布式长事务模式",
+  "aliases": [
+    "Saga 模式",
+    "Saga 分布式事务"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "two-phase-commit"
+    }
+  ],
+  "summary": "将分布式长事务拆分为一系列本地事务及其补偿操作的最终一致性事务模式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

@@ -1,0 +1,37 @@
+{
+  "id": "shadcn-ui",
+  "name": "shadcn/ui",
+  "display_primary": "shadcn/ui",
+  "display_secondary": "基于 Radix UI 与 Tailwind CSS 的组件模式",
+  "aliases": [
+    "shadcn ui"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "modern-web-frameworks-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tailwind-css"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "react"
+    }
+  ],
+  "summary": "通过代码直接复制粘贴至项目中的现代化 UI 组件库模式，彻底重构组件复用方式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

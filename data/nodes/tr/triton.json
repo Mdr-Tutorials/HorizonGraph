@@ -1,0 +1,35 @@
+{
+  "id": "triton",
+  "name": "OpenAI Triton",
+  "display_primary": "Triton",
+  "display_secondary": "OpenAI GPU 编程语言与编译器",
+  "aliases": [
+    "OpenAI Triton",
+    "Triton 语言"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "gpu-computing",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "OpenAI 开发的高生产率语言与编译器，无需 CUDA C++ 即可编写高性能 GPU 算子。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

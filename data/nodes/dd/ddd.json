@@ -1,0 +1,33 @@
+{
+  "id": "ddd",
+  "name": "Domain-Driven Design",
+  "display_primary": "DDD",
+  "display_secondary": "领域驱动设计",
+  "aliases": [
+    "领域驱动设计",
+    "Domain-Driven Design"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "enterprise_industry",
+    "devops_tooling"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "microservices"
+    }
+  ],
+  "summary": "以业务领域核心模型为驱动、通过限界上下文划分微服务边界的软件设计方法论。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

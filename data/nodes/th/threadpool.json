@@ -1,0 +1,29 @@
+{
+  "id": "threadpool",
+  "name": "Thread Pool",
+  "display_primary": "线程池",
+  "display_secondary": "Thread Pool",
+  "aliases": [
+    "线程池",
+    "Thread Pool"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes",
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    }
+  ],
+  "summary": "预先创建并维护多个工作线程以复用资源、异步执行排队任务的并发池化管理模式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

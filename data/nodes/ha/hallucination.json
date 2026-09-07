@@ -1,0 +1,30 @@
+{
+  "id": "hallucination",
+  "name": "Hallucination",
+  "display_primary": "幻觉",
+  "display_secondary": "大模型幻觉",
+  "aliases": [
+    "幻觉",
+    "大模型幻觉",
+    "AI 幻觉"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "大语言模型生成的看似符合语法与逻辑、实则脱离输入事实或世界常识的虚假输出。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

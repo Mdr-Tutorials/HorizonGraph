@@ -1,0 +1,41 @@
+{
+  "id": "actix-web",
+  "name": "Actix Web",
+  "display_primary": "Actix Web",
+  "display_secondary": "极速高性能 Rust Web 框架",
+  "aliases": [
+    "Actix Web 框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "rust-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "systems-programming"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "axum"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tokio"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "rust"
+    }
+  ],
+  "summary": "Rust 生态以严苛性能与超高吞吐著称的工业级异步 Web 应用框架。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

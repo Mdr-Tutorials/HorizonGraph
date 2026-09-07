@@ -1,0 +1,29 @@
+{
+  "id": "speculative-decoding",
+  "name": "Speculative Decoding",
+  "display_primary": "推测解码",
+  "display_secondary": "Speculative Decoding",
+  "aliases": [
+    "推测解码",
+    "投机采样",
+    "Speculative Sampling"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "使用轻量草稿模型生成候选 Token，由目标大模型单步并行验证加速自回归推理。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

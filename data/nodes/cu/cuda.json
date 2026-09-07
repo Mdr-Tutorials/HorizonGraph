@@ -24,6 +24,10 @@
     {
       "relation_type": "powers",
       "target_id": "nvidia-h100"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "triton"
     }
   ],
   "summary": "NVIDIA GPU 的并行计算平台与编程模型。",

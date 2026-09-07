@@ -1,0 +1,37 @@
+{
+  "id": "axum",
+  "name": "Axum",
+  "display_primary": "Axum",
+  "display_secondary": "基于 Tokio 的高性能模块化 Rust Web 框架",
+  "aliases": [
+    "Axum 框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "rust-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "systems-programming"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tokio"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "rust"
+    }
+  ],
+  "summary": "Tokio 官方维护的高人体工程学与模块化 Web 框架，深入集成 Tower 生态。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

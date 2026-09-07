@@ -1,0 +1,36 @@
+{
+  "id": "celery",
+  "name": "Celery",
+  "display_primary": "Celery",
+  "display_secondary": "分布式异步任务队列与作业调度器",
+  "aliases": [
+    "Celery 任务队列"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "python-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "redis"
+    }
+  ],
+  "summary": "Python 生态事实标准的简单、灵活且可靠的分布式任务队列与异步作业调度系统。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

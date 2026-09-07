@@ -1,0 +1,28 @@
+{
+  "id": "semaphore",
+  "name": "Semaphore",
+  "display_primary": "信号量",
+  "display_secondary": "Semaphore",
+  "aliases": [
+    "信号量",
+    "PV 操作"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    }
+  ],
+  "summary": "通过原子计数器与等待队列控制有限数量共享资源并发访问的经典同步机制。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

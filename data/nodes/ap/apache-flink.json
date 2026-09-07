@@ -1,0 +1,33 @@
+{
+  "id": "apache-flink",
+  "name": "Apache Flink",
+  "display_primary": "Flink",
+  "display_secondary": "Apache Flink",
+  "aliases": [
+    "Flink",
+    "Apache Flink"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "apache-spark"
+    }
+  ],
+  "summary": "提供有状态计算与精确一次语义的低延迟分布式流处理框架，流计算事实标准。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

@@ -1,0 +1,42 @@
+{
+  "id": "flash-attention",
+  "name": "FlashAttention",
+  "display_primary": "FlashAttention",
+  "display_secondary": "快速显存高效的精确注意力机制内核",
+  "aliases": [
+    "闪存注意力",
+    "FlashAttention 内核"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "vllm"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "sglang"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cuda"
+    }
+  ],
+  "summary": "利用 SRAM 分块平铺消除 HBM 读写瓶颈的 IO 感知精确注意力算子实现。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

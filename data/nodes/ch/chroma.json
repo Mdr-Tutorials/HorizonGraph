@@ -1,0 +1,39 @@
+{
+  "id": "chroma",
+  "name": "Chroma",
+  "display_primary": "Chroma",
+  "display_secondary": "轻量级 AI 原生嵌入向量数据库",
+  "aliases": [
+    "ChromaDB",
+    "Chroma 向量库"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem",
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "milvus"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "qdrant"
+    }
+  ],
+  "summary": "开源的轻量级向量嵌入数据库，以极简 API 专为大模型应用与 RAG 检索设计。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

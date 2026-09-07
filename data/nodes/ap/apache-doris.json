@@ -1,0 +1,38 @@
+{
+  "id": "apache-doris",
+  "name": "Apache Doris",
+  "display_primary": "Doris",
+  "display_secondary": "Apache Doris",
+  "aliases": [
+    "Doris",
+    "Apache Doris"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem",
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "clickhouse"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "starrocks"
+    }
+  ],
+  "summary": "基于 MPP 架构的高性能实时分析型数据库，提供极速查询与高并发点查能力。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

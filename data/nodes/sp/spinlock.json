@@ -1,0 +1,27 @@
+{
+  "id": "spinlock",
+  "name": "Spinlock",
+  "display_primary": "自旋锁",
+  "display_secondary": "Spinlock",
+  "aliases": [
+    "自旋锁"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "operating_systems"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    }
+  ],
+  "summary": "线程在获取锁失败时通过忙等待循环持续轮询而不放弃 CPU 的轻量级同步锁。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

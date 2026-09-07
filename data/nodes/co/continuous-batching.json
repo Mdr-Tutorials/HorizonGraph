@@ -1,0 +1,32 @@
+{
+  "id": "continuous-batching",
+  "name": "Continuous Batching",
+  "display_primary": "连续批处理",
+  "display_secondary": "Continuous Batching",
+  "aliases": [
+    "连续批处理",
+    "迭代级批处理",
+    "In-flight Batching"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "tags": [
+    "batching"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "在迭代级粒度动态插入新请求与退出完成请求，极大消除静态批处理气泡。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

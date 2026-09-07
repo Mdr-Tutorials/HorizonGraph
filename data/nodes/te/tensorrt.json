@@ -1,0 +1,37 @@
+{
+  "id": "tensorrt",
+  "name": "NVIDIA TensorRT",
+  "display_primary": "TensorRT",
+  "display_secondary": "NVIDIA 高性能深度学习推理 SDK",
+  "aliases": [
+    "TensorRT 推理引擎"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cuda"
+    }
+  ],
+  "summary": "NVIDIA 开发的高性能深度学习推理优化器与运行时，包含层融合与精度校准。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

@@ -1,0 +1,31 @@
+{
+  "id": "compiler",
+  "name": "Compiler",
+  "display_primary": "编译器",
+  "display_secondary": "Compiler",
+  "aliases": [
+    "编译器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers",
+    "programming-languages"
+  ],
+  "tags": [
+    "compiler"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将高级源语言翻译为目标代码、机器码或中间表示的语言处理系统。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

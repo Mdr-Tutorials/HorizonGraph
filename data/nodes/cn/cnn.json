@@ -1,0 +1,37 @@
+{
+  "id": "cnn",
+  "name": "Convolutional Neural Network",
+  "display_primary": "CNN",
+  "display_secondary": "卷积神经网络",
+  "aliases": [
+    "卷积神经网络",
+    "Convolutional Neural Network"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "computer-vision"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "rnn"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "transformer"
+    }
+  ],
+  "summary": "利用卷积核与池化提取局部空间特征的神经网络架构，计算机视觉基石。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

@@ -1,0 +1,30 @@
+{
+  "id": "inverted-index",
+  "name": "Inverted Index",
+  "display_primary": "倒排索引",
+  "display_secondary": "Inverted Index",
+  "aliases": [
+    "倒排索引",
+    "反向索引",
+    "Inverted Index"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "将文档中提取的词项映射到包含该词项文档列表的搜索引擎核心索引数据结构。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

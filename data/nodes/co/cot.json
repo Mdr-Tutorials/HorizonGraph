@@ -1,0 +1,33 @@
+{
+  "id": "cot",
+  "name": "Chain of Thought",
+  "display_primary": "思维链",
+  "display_secondary": "Chain of Thought",
+  "aliases": [
+    "思维链",
+    "CoT",
+    "Chain of Thought"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "prompt-engineering"
+    }
+  ],
+  "summary": "通过引入中间推理步骤提示大模型展开渐进式推理以解决复杂问题的提示策略。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

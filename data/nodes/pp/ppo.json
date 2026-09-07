@@ -1,0 +1,28 @@
+{
+  "id": "ppo",
+  "name": "Proximal Policy Optimization",
+  "display_primary": "PPO",
+  "display_secondary": "近端策略优化",
+  "aliases": [
+    "近端策略优化",
+    "Proximal Policy Optimization"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "OpenAI 提出的强化学习策略梯度算法，大模型 RLHF 阶段核心算法。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

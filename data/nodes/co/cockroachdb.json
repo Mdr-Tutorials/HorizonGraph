@@ -1,0 +1,38 @@
+{
+  "id": "cockroachdb",
+  "name": "CockroachDB",
+  "display_primary": "CockroachDB",
+  "display_secondary": "云原生分布式强一致 SQL 数据库",
+  "aliases": [
+    "CockroachDB 数据库",
+    "蟑螂数据库"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "raft"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "tidb"
+    }
+  ],
+  "summary": "基于 Raft 与 Spanner 设计理念的高可用、多副本强一致云原生分布式 SQL 数据库。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

@@ -1,0 +1,33 @@
+{
+  "id": "zustand",
+  "name": "Zustand",
+  "display_primary": "Zustand",
+  "display_secondary": "React 极简轻量 Hook 状态管理库",
+  "aliases": [
+    "Zustand 状态库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "modern-web-frameworks-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "react"
+    }
+  ],
+  "summary": "基于 Hook 的轻量 React 状态管理方案，无需 Provider，极简易用。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

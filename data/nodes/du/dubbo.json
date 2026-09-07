@@ -30,6 +30,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "java"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "spring-cloud"
     }
   ],
   "summary": "阿里开源的 Java RPC 与微服务框架，国内微服务常客。",

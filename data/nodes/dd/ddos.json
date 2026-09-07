@@ -1,0 +1,31 @@
+{
+  "id": "ddos",
+  "name": "Distributed Denial of Service",
+  "display_primary": "DDoS",
+  "display_secondary": "分布式拒绝服务攻击",
+  "aliases": [
+    "分布式拒绝服务攻击",
+    "DDoS 攻击",
+    "泛洪攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "利用多个受控主机协同向目标发送海量伪造请求以耗尽网络带宽或系统资源的攻击。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

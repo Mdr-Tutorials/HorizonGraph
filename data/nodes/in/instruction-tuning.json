@@ -1,0 +1,33 @@
+{
+  "id": "instruction-tuning",
+  "name": "Instruction Tuning",
+  "display_primary": "指令微调",
+  "display_secondary": "Instruction Tuning",
+  "aliases": [
+    "指令微调",
+    "指令对齐"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "fine-tuning"
+    }
+  ],
+  "summary": "使用自然语言指令格式的数据集微调预训练模型，提升遵循用户意图能力。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

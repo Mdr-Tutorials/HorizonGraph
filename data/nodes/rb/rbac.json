@@ -1,0 +1,29 @@
+{
+  "id": "rbac",
+  "name": "Role-Based Access Control",
+  "display_primary": "RBAC",
+  "display_secondary": "基于角色的访问控制",
+  "aliases": [
+    "基于角色的访问控制",
+    "RBAC 模型"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "enterprise_industry",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将权限分配给预设角色、再将角色赋予用户的事实标准企业访问控制模型。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

@@ -35,6 +35,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "react"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "nuxt"
     }
   ],
   "summary": "Vercel 的 React 全栈框架。",

@@ -1,0 +1,32 @@
+{
+  "id": "vectorization",
+  "name": "Vectorization",
+  "display_primary": "向量化",
+  "display_secondary": "Vectorization",
+  "aliases": [
+    "向量化",
+    "SIMD 并行"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "high-performance-computing",
+    "systems-programming"
+  ],
+  "tags": [
+    "vectorization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "利用 CPU/GPU 的 SIMD 单指令多数据指令集并行执行多项运算的硬件加速技术。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

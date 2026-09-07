@@ -1,0 +1,31 @@
+{
+  "id": "metaprogramming",
+  "name": "Metaprogramming",
+  "display_primary": "元编程",
+  "display_secondary": "Metaprogramming",
+  "aliases": [
+    "元编程",
+    "宏编程"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "tags": [
+    "metaprogramming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "programming-paradigm"
+    }
+  ],
+  "summary": "编写能够将其他程序当作自身数据进行读取、生成、分析或转换的代码范式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

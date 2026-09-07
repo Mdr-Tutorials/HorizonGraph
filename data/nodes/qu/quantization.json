@@ -1,0 +1,33 @@
+{
+  "id": "quantization",
+  "name": "Model Quantization",
+  "display_primary": "模型量化",
+  "display_secondary": "Model Quantization",
+  "aliases": [
+    "模型量化",
+    "量化",
+    "网络量化"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "tags": [
+    "quantization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "将浮点权重与激活值转换为低比特整数表示（INT8/INT4/FP8）以降低开销。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

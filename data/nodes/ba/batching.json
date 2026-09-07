@@ -1,0 +1,32 @@
+{
+  "id": "batching",
+  "name": "Batching",
+  "display_primary": "批处理",
+  "display_secondary": "Batch Processing",
+  "aliases": [
+    "批处理",
+    "批处理技术"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "distributed-systems",
+    "machine-learning"
+  ],
+  "tags": [
+    "batching"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将多个独立请求或计算任务汇聚成批次集中执行以摊销通信与启动开销的模式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

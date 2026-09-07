@@ -1,0 +1,33 @@
+{
+  "id": "abac",
+  "name": "Attribute-Based Access Control",
+  "display_primary": "ABAC",
+  "display_secondary": "基于属性的访问控制",
+  "aliases": [
+    "基于属性的访问控制",
+    "ABAC 授权"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "enterprise_industry",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "rbac"
+    }
+  ],
+  "summary": "根据主体、客体、操作与环境属性组合及策略动态判定权限的细粒度授权模型。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

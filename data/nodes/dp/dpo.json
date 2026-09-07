@@ -18,6 +18,10 @@
     {
       "relation_type": "alternative_to",
       "target_id": "rlhf"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "ppo"
     }
   ],
   "summary": "绕开奖励模型直接拟合偏好，RLHF 的简化路线。",

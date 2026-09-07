@@ -1,0 +1,29 @@
+{
+  "id": "cas",
+  "name": "Compare-and-Swap",
+  "display_primary": "CAS",
+  "display_secondary": "比较并交换",
+  "aliases": [
+    "比较并交换",
+    "CAS 原语"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    }
+  ],
+  "summary": "比较内存位置内容与预期值并在相同时原子写入新值的硬件级无锁原子指令。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

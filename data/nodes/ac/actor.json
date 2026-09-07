@@ -1,0 +1,33 @@
+{
+  "id": "actor",
+  "name": "Actor Model",
+  "display_primary": "Actor",
+  "display_secondary": "Actor 并发模型",
+  "aliases": [
+    "Actor 模型",
+    "Actor Model"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "csp"
+    }
+  ],
+  "summary": "将计算视为独立实体通过异步消息传递通信、无共享状态的并发模型。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

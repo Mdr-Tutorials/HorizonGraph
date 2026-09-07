@@ -1,0 +1,33 @@
+{
+  "id": "crewai",
+  "name": "CrewAI",
+  "display_primary": "CrewAI",
+  "display_secondary": "多智能体角色协同编排框架",
+  "aliases": [
+    "CrewAI 框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "基于角色扮演与任务委派的多智能体协同框架，赋能自主团队工作流编排。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 3
+}

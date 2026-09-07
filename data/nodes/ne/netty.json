@@ -1,0 +1,41 @@
+{
+  "id": "netty",
+  "name": "Netty",
+  "display_primary": "Netty",
+  "display_secondary": "异步事件驱动的高性能 Java 网络应用框架",
+  "aliases": [
+    "Netty 框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "dubbo"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "grpc"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    }
+  ],
+  "summary": "Java 生态事实标准的高性能异步事件驱动网络通信框架，Dubbo 与 gRPC 的底座。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

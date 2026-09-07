@@ -1,0 +1,33 @@
+{
+  "id": "llamaindex",
+  "name": "LlamaIndex",
+  "display_primary": "LlamaIndex",
+  "display_secondary": "LLM 数据上下文编排框架",
+  "aliases": [
+    "GPT Index"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "用于连接私有数据与大语言模型的检索增强生成（RAG）与 Agent 数据框架。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

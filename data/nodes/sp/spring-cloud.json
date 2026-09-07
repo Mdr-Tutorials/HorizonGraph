@@ -1,0 +1,33 @@
+{
+  "id": "spring-cloud",
+  "name": "Spring Cloud",
+  "display_primary": "Spring Cloud",
+  "display_secondary": "Java 生态分布式微服务治理体系",
+  "aliases": [
+    "Spring Cloud 微服务"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "spring-boot"
+    }
+  ],
+  "summary": "为开发者提供配置管理、服务发现、断路器与智能路由等分布式微服务通用模式工具。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

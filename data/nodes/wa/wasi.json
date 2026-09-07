@@ -32,5 +32,8 @@
   "last_reviewed": "2026-08-30",
   "importance": 4,
   "popular": 45,
-  "official_site": "https://wasi.dev"
+  "official_site": "https://wasi.dev",
+  "tags": [
+    "wasi"
+  ]
 }

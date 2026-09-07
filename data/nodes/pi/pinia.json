@@ -1,0 +1,37 @@
+{
+  "id": "pinia",
+  "name": "Pinia",
+  "display_primary": "Pinia",
+  "display_secondary": "Vue 官方推荐的新一代状态管理库",
+  "aliases": [
+    "Pinia 状态库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "modern-web-frameworks-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "vue"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "redux"
+    }
+  ],
+  "summary": "Vue 官方推荐的状态管理库，轻量且类型安全，支持 Composition API。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

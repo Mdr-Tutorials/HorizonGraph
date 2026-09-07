@@ -1,0 +1,42 @@
+{
+  "id": "deepspeed",
+  "name": "DeepSpeed",
+  "display_primary": "DeepSpeed",
+  "display_secondary": "微软大规模模型优化库",
+  "aliases": [
+    "DeepSpeed 优化库"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dl-framework-ecosystem",
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pytorch"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "megatron-lm"
+    }
+  ],
+  "summary": "微软开源的深度学习分布式训练与推理优化库，核心为 ZeRO 内存消除技术。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

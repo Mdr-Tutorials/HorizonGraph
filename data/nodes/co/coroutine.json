@@ -1,0 +1,34 @@
+{
+  "id": "coroutine",
+  "name": "Coroutine",
+  "display_primary": "协程",
+  "display_secondary": "Coroutine",
+  "aliases": [
+    "协程",
+    "纤程",
+    "微线程"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "thread"
+    }
+  ],
+  "summary": "用户空间协作式多任务调度实体，拥有独立的调用栈但切换开销远小于线程。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

@@ -1,0 +1,30 @@
+{
+  "id": "qdrant",
+  "name": "Qdrant",
+  "display_primary": "Qdrant",
+  "display_secondary": "基于 Rust 构建的高性能开源向量数据库",
+  "aliases": [
+    "Qdrant 向量数据库"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "database-ecosystem",
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "采用 Rust 编写的开源向量数据库，提供精确过滤与高效近似最近邻检索。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

@@ -1,0 +1,33 @@
+{
+  "id": "rnn",
+  "name": "Recurrent Neural Network",
+  "display_primary": "RNN",
+  "display_secondary": "循环神经网络",
+  "aliases": [
+    "循环神经网络",
+    "Recurrent Neural Network"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "transformer"
+    }
+  ],
+  "summary": "引入时间维度隐藏状态循环传递的神经网络，序列数据建模先驱。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

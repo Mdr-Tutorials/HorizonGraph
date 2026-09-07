@@ -1,0 +1,38 @@
+{
+  "id": "cutlass",
+  "name": "CUTLASS",
+  "display_primary": "CUTLASS",
+  "display_secondary": "CUDA C++ 线性代数模板库",
+  "aliases": [
+    "NVIDIA CUTLASS"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "gpu-computing",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cuda"
+    }
+  ],
+  "summary": "NVIDIA 开源的 CUDA C++ 模板抽象集合，用于构建高性能矩阵乘法与卷积。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 3
+}

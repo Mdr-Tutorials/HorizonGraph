@@ -1,0 +1,32 @@
+{
+  "id": "generics",
+  "name": "Generics",
+  "display_primary": "泛型",
+  "display_secondary": "Generics",
+  "aliases": [
+    "泛型",
+    "参数化多态",
+    "Parametric Polymorphism"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
+  "tags": [
+    "generics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "允许代码使用未指定类型进行定义的参数化多态机制，兼具灵活性与类型安全。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 4
+}

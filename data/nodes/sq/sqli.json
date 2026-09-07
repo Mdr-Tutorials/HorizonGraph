@@ -1,0 +1,31 @@
+{
+  "id": "sqli",
+  "name": "SQL Injection",
+  "display_primary": "SQL 注入",
+  "display_secondary": "SQL Injection",
+  "aliases": [
+    "SQL 注入",
+    "SQLi",
+    "SQL 注入漏洞"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将未过滤的恶意 SQL 代码片段拼接到数据库查询中以越权读取或篡改数据的经典漏洞。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}

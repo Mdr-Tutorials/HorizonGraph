@@ -1,0 +1,43 @@
+{
+  "id": "bert",
+  "name": "BERT",
+  "display_primary": "BERT",
+  "display_secondary": "Bidirectional Encoder Representations from Transformers",
+  "aliases": [
+    "双向编码器表示",
+    "BERT 模型"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "natural-language-processing",
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "model-family"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "transformer"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "gpt"
+    }
+  ],
+  "summary": "基于 Transformer Encoder 的预训练语言模型，开创 NLP 预训练范式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-07",
+  "importance": 5
+}
