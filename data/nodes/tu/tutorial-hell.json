@@ -1,0 +1,26 @@
+{
+  "id": "tutorial-hell",
+  "name": "Tutorial Hell",
+  "display_primary": "教程地狱",
+  "display_secondary": "Tutorial Hell",
+  "aliases": [
+    "做题家陷阱",
+    "教学依赖综合征"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "长期被动观看教学视频与抄写代码，产生虚假精通感却始终无法独立构建项目的技能停滞陷阱。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

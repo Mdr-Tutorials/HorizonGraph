@@ -1,0 +1,26 @@
+{
+  "id": "indie-hacking",
+  "name": "Indie Hacking",
+  "display_primary": "独立开发",
+  "display_secondary": "Indie Hacking",
+  "aliases": [
+    "独立开发者",
+    "单人微型创业"
+  ],
+  "type": "concept",
+  "domains": [
+    "personal-finance",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "不依赖大厂雇佣，由单人端到端完成痛点洞察、轻量开发、海外收单与运营闭环的生存方式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

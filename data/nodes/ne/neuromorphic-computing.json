@@ -1,0 +1,26 @@
+{
+  "id": "neuromorphic-computing",
+  "name": "Neuromorphic Computing",
+  "display_primary": "神经拟态",
+  "display_secondary": "Neuromorphic Computing",
+  "aliases": [
+    "类脑计算",
+    "脉冲神经网络计算"
+  ],
+  "type": "concept",
+  "domains": [
+    "high-performance-computing",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "模仿人脑神经元电脉冲通信机制构建、具备超低静态功耗与事件驱动特性的架构。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

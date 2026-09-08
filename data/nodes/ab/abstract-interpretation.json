@@ -1,0 +1,25 @@
+{
+  "id": "abstract-interpretation",
+  "name": "Abstract Interpretation",
+  "display_primary": "抽象解释",
+  "display_secondary": "Abstract Interpretation",
+  "aliases": [
+    "抽象解释理论"
+  ],
+  "type": "concept",
+  "domains": [
+    "compilers",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将程序执行状态空间投影逼近至有限数学格上、证明程序语义性质的高阶静态分析理论。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

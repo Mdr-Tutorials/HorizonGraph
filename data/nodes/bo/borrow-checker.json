@@ -1,0 +1,29 @@
+{
+  "id": "borrow-checker",
+  "name": "Borrow Checker",
+  "display_primary": "借用检查",
+  "display_secondary": "Borrow Checker",
+  "aliases": [
+    "借用检查器"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "ownership"
+    }
+  ],
+  "summary": "依据共享只读、可变排他的互斥准则，在编译期静态杜绝数据竞态与空悬指针的算法。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

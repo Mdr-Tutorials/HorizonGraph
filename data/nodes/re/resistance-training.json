@@ -1,0 +1,25 @@
+{
+  "id": "resistance-training",
+  "name": "Resistance Training",
+  "display_primary": "抗阻训练",
+  "display_secondary": "Resistance Training",
+  "aliases": [
+    "力量训练",
+    "负重抗阻"
+  ],
+  "type": "concept",
+  "domains": [
+    "health-ergonomics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "通过负重力量运动强化后背竖脊肌、臀桥与核心力量，是对抗久坐脊椎崩溃最硬核的处方。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

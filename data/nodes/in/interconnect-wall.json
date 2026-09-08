@@ -1,0 +1,26 @@
+{
+  "id": "interconnect-wall",
+  "name": "Interconnect Wall",
+  "display_primary": "互联墙",
+  "display_secondary": "Interconnect Wall",
+  "aliases": [
+    "网络互联墙"
+  ],
+  "type": "concept",
+  "domains": [
+    "high-performance-computing",
+    "networking",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "跨芯片与跨机柜网络通信速率滞后导致的分布式算力扩展瓶颈。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,25 @@
+{
+  "id": "managing-up",
+  "name": "Managing Up",
+  "display_primary": "向上管理",
+  "display_secondary": "Managing Up",
+  "aliases": [
+    "向上协同",
+    "预期管理"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "主动对齐上级商业目标、管理交付预期、争取组织资源并将技术重构转化为商业价值的能力。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

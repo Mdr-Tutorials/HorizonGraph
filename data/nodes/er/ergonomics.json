@@ -1,0 +1,26 @@
+{
+  "id": "ergonomics",
+  "name": "Ergonomics",
+  "display_primary": "人体工学",
+  "display_secondary": "Ergonomics",
+  "aliases": [
+    "工效学",
+    "人机工程学"
+  ],
+  "type": "concept",
+  "domains": [
+    "health-ergonomics",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "优化工作装备与坐姿视线，最大限度降低高强度久坐脑力工作者肌肉骨骼慢性损伤的学科。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,26 @@
+{
+  "id": "leverage",
+  "name": "Leverage",
+  "display_primary": "个人杠杆",
+  "display_secondary": "Career Leverage",
+  "aliases": [
+    "认知杠杆",
+    "代码杠杆"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "personal-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "借助软件无边际成本复制、资本协作与传播媒介，将单位工时产出放大百千倍的不对称支点。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

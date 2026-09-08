@@ -1,0 +1,27 @@
+{
+  "id": "fixed-point",
+  "name": "Fixed-Point Combinator",
+  "display_primary": "不动点理论",
+  "display_secondary": "Fixed-Point Theory",
+  "aliases": [
+    "不动点",
+    "Y组合子",
+    "Fixed-Point"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "作用于自身仍保持不变的数学解；递归函数在语义学上具备良定义的存在性基础。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

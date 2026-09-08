@@ -1,0 +1,25 @@
+{
+  "id": "non-compete",
+  "name": "Non-Compete Agreement",
+  "display_primary": "竞业限制",
+  "display_secondary": "Non-Compete",
+  "aliases": [
+    "竞业禁止",
+    "竞业协议"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "用人单位限制离职员工加入竞对的法律约定；从业者需明晰补偿金生效要件与合法边界。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

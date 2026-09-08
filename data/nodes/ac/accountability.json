@@ -1,0 +1,26 @@
+{
+  "id": "accountability",
+  "name": "Accountability",
+  "display_primary": "终极责任",
+  "display_secondary": "Accountability",
+  "aliases": [
+    "责任承担",
+    "终极担保"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "算法不坐牢、模型不担责；面对生产灾难与法律合规底线时，人类作为唯一兜底者的终极属性。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,26 @@
+{
+  "id": "attention",
+  "name": "Attention Capital",
+  "display_primary": "专注力资本",
+  "display_secondary": "Attention Capital",
+  "aliases": [
+    "深度专注力",
+    "注意力资产"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition",
+    "health-ergonomics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "抵御快餐多巴胺碎片劫持、能够沉浸数小时从事长程高难度深度工作（Deep Work）的稀缺财富。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

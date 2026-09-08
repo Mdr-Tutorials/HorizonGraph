@@ -1,0 +1,25 @@
+{
+  "id": "ecological-niche",
+  "name": "Ecological Niche",
+  "display_primary": "生态位",
+  "display_secondary": "Professional Niche",
+  "aliases": [
+    "职业生态位"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "个人在行业分工、组织系统及技术栈生态中不可替代的差异化独特生存位势。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

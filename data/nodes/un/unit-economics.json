@@ -1,0 +1,25 @@
+{
+  "id": "unit-economics",
+  "name": "Unit Economics",
+  "display_primary": "单位经济学",
+  "display_secondary": "Unit Economics",
+  "aliases": [
+    "单体经济模型"
+  ],
+  "type": "concept",
+  "domains": [
+    "industry-landscape",
+    "personal-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "衡量商业模式在最小产出单元（如单用户、单Token）上收支利润的度量框架。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

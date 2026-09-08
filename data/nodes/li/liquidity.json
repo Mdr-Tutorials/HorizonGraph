@@ -1,0 +1,24 @@
+{
+  "id": "liquidity",
+  "name": "Liquidity",
+  "display_primary": "资产流动性",
+  "display_secondary": "Asset Liquidity",
+  "aliases": [
+    "流动性"
+  ],
+  "type": "concept",
+  "domains": [
+    "personal-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "资产在不承担显著折价损失的前提下，迅速转换变现为可用现金的敏捷程度。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

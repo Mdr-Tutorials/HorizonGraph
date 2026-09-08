@@ -1,0 +1,26 @@
+{
+  "id": "ai4s",
+  "name": "AI for Science",
+  "display_primary": "科学智能",
+  "display_secondary": "AI for Science",
+  "aliases": [
+    "AI4S",
+    "人工智能驱动科学研究"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "利用机器学习模型逼近自然法则、加速微观分子与宏观物理科学探索的范式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

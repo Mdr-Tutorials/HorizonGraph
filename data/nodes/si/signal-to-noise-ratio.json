@@ -1,0 +1,24 @@
+{
+  "id": "signal-to-noise-ratio",
+  "name": "Signal-to-Noise Ratio",
+  "display_primary": "信噪比",
+  "display_secondary": "SNR in Information",
+  "aliases": [
+    "信息信噪比"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在海量算法推荐与焦虑营销中识别核心硬核技术、滤除碎片噪音的信息环境管理能力。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

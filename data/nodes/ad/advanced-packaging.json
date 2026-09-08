@@ -1,0 +1,30 @@
+{
+  "id": "advanced-packaging",
+  "name": "Advanced Packaging",
+  "display_primary": "先进封装",
+  "display_secondary": "Advanced Packaging",
+  "aliases": [
+    "2.5D/3D封装",
+    "晶圆级封装"
+  ],
+  "type": "concept",
+  "domains": [
+    "high-performance-computing",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "chiplet"
+    }
+  ],
+  "summary": "超越单芯片物理微缩极限，在微米级中介层上集成异构芯粒的工艺。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

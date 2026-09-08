@@ -1,0 +1,29 @@
+{
+  "id": "generational-hypothesis",
+  "name": "Generational Hypothesis",
+  "display_primary": "分代假说",
+  "display_secondary": "Weak Generational Hypothesis",
+  "aliases": [
+    "弱分代假说"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "garbage-collection"
+    }
+  ],
+  "summary": "绝大多数程序对象朝生夕死的经验法则，将堆划分为新生代与老年代以削减停顿的基石。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

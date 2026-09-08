@@ -1,0 +1,26 @@
+{
+  "id": "monad",
+  "name": "Monad",
+  "display_primary": "单子",
+  "display_secondary": "Monad",
+  "aliases": [
+    "单子模式",
+    "自函子范畴上的幺半群"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "范畴论在计算中的投影，将纯函数计算与副作用安全封装、串联组合的经典代数抽象。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

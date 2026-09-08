@@ -1,0 +1,25 @@
+{
+  "id": "antifragility",
+  "name": "Antifragility",
+  "display_primary": "反脆弱",
+  "display_secondary": "Antifragility",
+  "aliases": [
+    "反脆弱性"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "不仅不畏惧外界混乱、压力与突发震荡，反而能在波动与危机中实现进化壮大的超强特质。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

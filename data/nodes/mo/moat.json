@@ -1,0 +1,26 @@
+{
+  "id": "moat",
+  "name": "Moat",
+  "display_primary": "护城河",
+  "display_secondary": "Economic Moat",
+  "aliases": [
+    "经济护城河",
+    "竞争壁垒"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "长期防御外部竞争对手侵蚀、阻断低水平内卷替代的结构性竞争优势与壁垒组合。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

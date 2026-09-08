@@ -1,0 +1,27 @@
+{
+  "id": "macro-cycles",
+  "name": "Macro Cycles",
+  "display_primary": "周期规律",
+  "display_secondary": "Macro Cycles",
+  "aliases": [
+    "行业周期",
+    "康波周期",
+    "技术炒作周期"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "资本流动、技术演进与人才就业的盛衰交替节律；顺应周期方能破除行业波动焦虑。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

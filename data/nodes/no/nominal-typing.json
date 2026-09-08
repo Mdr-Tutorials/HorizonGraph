@@ -1,0 +1,29 @@
+{
+  "id": "nominal-typing",
+  "name": "Nominal Typing",
+  "display_primary": "名义类型",
+  "display_secondary": "Nominal Type System",
+  "aliases": [
+    "标称类型",
+    "显式类型"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "structural-typing"
+    }
+  ],
+  "summary": "仅依据显式声明的类型名称判定类型相容性的机制，如 Java 与 C++。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

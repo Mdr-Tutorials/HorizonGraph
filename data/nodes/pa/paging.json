@@ -1,0 +1,25 @@
+{
+  "id": "paging",
+  "name": "Paging",
+  "display_primary": "分页机制",
+  "display_secondary": "Paging",
+  "aliases": [
+    "内存分页",
+    "虚拟内存分页"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "操作系统将物理内存划分为固定大小页框以消除外部碎片的经典内存离散管理机制。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

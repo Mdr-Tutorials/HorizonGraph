@@ -1,0 +1,25 @@
+{
+  "id": "game-theory",
+  "name": "Game Theory",
+  "display_primary": "博弈论",
+  "display_secondary": "Game Theory",
+  "aliases": [
+    "策略博弈"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "多方理性决策主体在规则与激励约束下追求自身效益最大化时的策略互动与制衡科学。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,26 @@
+{
+  "id": "fast-variables",
+  "name": "Fast Variables",
+  "display_primary": "快变量",
+  "display_secondary": "Fast Variables",
+  "aliases": [
+    "应用快变量",
+    "短半衰期知识"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "更迭速度快、半衰期短的应用表层工具与语法糖，宜查表即用而不宜耗费过度心力死记。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

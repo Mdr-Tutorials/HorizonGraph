@@ -1,0 +1,25 @@
+{
+  "id": "power-wall",
+  "name": "Power Wall",
+  "display_primary": "功耗墙",
+  "display_secondary": "Power Wall",
+  "aliases": [
+    "能耗墙"
+  ],
+  "type": "concept",
+  "domains": [
+    "high-performance-computing",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "芯片散热能力与数据中心供电极限对处理器频率与密度的物理约束。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,26 @@
+{
+  "id": "tail-call",
+  "name": "Tail Call Optimization",
+  "display_primary": "尾调用优化",
+  "display_secondary": "Tail Call Optimization",
+  "aliases": [
+    "尾递归优化",
+    "TCO"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "compilers"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "函数最后一步直接调用函数时直接复用当前栈帧、支持无限递归不耗尽栈的运行时技术。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

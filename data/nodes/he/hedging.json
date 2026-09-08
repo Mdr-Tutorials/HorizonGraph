@@ -1,0 +1,25 @@
+{
+  "id": "hedging",
+  "name": "Hedging",
+  "display_primary": "风险对冲",
+  "display_secondary": "Risk Hedging",
+  "aliases": [
+    "对冲策略"
+  ],
+  "type": "concept",
+  "domains": [
+    "personal-finance",
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "配置负相关资产或发展第二技能曲线，化解单点行业衰退或意外裁员的灭顶风险。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

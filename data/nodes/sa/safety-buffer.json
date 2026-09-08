@@ -1,0 +1,25 @@
+{
+  "id": "safety-buffer",
+  "name": "Safety Buffer",
+  "display_primary": "安全备用金",
+  "display_secondary": "Emergency Fund",
+  "aliases": [
+    "应急备用金",
+    "安全气囊"
+  ],
+  "type": "concept",
+  "domains": [
+    "personal-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "强制隔离开设、能够无条件覆盖全家 6 至 12 个月日常刚性开支的保本防波堤资金。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

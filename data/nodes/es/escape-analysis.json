@@ -1,0 +1,25 @@
+{
+  "id": "escape-analysis",
+  "name": "Escape Analysis",
+  "display_primary": "逃逸分析",
+  "display_secondary": "Escape Analysis",
+  "aliases": [
+    "对象逃逸分析"
+  ],
+  "type": "concept",
+  "domains": [
+    "compilers",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "静态判定对象指针是否逃逸出当前函数栈或线程，决定栈上分配与锁消除的优化技术。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

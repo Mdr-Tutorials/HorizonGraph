@@ -1,0 +1,27 @@
+{
+  "id": "curry-howard",
+  "name": "Curry-Howard Correspondence",
+  "display_primary": "柯里-霍华德同构",
+  "display_secondary": "Curry-Howard Isomorphism",
+  "aliases": [
+    "命题即类型",
+    "Propositions-as-Types",
+    "柯里霍华德同构"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "揭示命题即类型、证明即程序、证明化简即程序求值的逻辑与计算终极对称性。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

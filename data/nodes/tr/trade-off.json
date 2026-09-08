@@ -1,0 +1,26 @@
+{
+  "id": "trade-off",
+  "name": "Trade-Off",
+  "display_primary": "权衡妥协",
+  "display_secondary": "Trade-Off",
+  "aliases": [
+    "工程妥协",
+    "取舍之道"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "工程现实中没有完美解，在吞吐、延迟、成本、复杂度之间理性放弃次要诉求的决策精髓。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

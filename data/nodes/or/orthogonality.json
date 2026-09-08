@@ -1,0 +1,26 @@
+{
+  "id": "orthogonality",
+  "name": "Orthogonality",
+  "display_primary": "正交性",
+  "display_secondary": "Orthogonality",
+  "aliases": [
+    "概念正交",
+    "正交设计"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "系统内部各特性相互独立解耦、变更某一特性不会在其他维度引发意外副作用的原则。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,26 @@
+{
+  "id": "intent",
+  "name": "Intent",
+  "display_primary": "主观意图",
+  "display_secondary": "Human Intent",
+  "aliases": [
+    "人类意图",
+    "目标设定"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "当语法与繁琐实现被机器完全接管后，人类独存且不可替代的定义真问题与价值取向的源头。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

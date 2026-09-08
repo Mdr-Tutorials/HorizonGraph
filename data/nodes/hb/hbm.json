@@ -1,0 +1,26 @@
+{
+  "id": "hbm",
+  "name": "HBM",
+  "display_primary": "高带宽显存",
+  "display_secondary": "High Bandwidth Memory",
+  "aliases": [
+    "HBM显存",
+    "高带宽内存"
+  ],
+  "type": "concept",
+  "domains": [
+    "high-performance-computing",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "通过 3D 硅通孔垂直堆叠 DRAM、提供 TB/s 级吞吐的显存架构。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,31 @@
+{
+  "id": "abstract-data-type",
+  "name": "Abstract Data Type",
+  "abbreviation": "ADT",
+  "display_primary": "抽象数据类型",
+  "display_secondary": "Abstract Data Type",
+  "aliases": [
+    "ADT",
+    "抽象数据型"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "algebraic-data-type"
+    }
+  ],
+  "summary": "仅通过对外操作接口定义行为、隐藏具体底层实现的数据结构数学模型。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,25 @@
+{
+  "id": "xerophthalmia",
+  "name": "Dry Eye Syndrome",
+  "display_primary": "干眼症",
+  "display_secondary": "Xerophthalmia",
+  "aliases": [
+    "干眼病",
+    "视疲劳综合征"
+  ],
+  "type": "concept",
+  "domains": [
+    "health-ergonomics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "长期紧盯荧光屏导致眨眼频次骤降、泪膜蒸发过快引发的慢性进行性眼表病变。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

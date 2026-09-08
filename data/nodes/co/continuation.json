@@ -1,0 +1,30 @@
+{
+  "id": "continuation",
+  "name": "Continuation",
+  "display_primary": "延续",
+  "display_secondary": "Continuation",
+  "aliases": [
+    "续体",
+    "计算的未来"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "compilers"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "cps"
+    }
+  ],
+  "summary": "代表程序在某一点等待接收计算结果的剩余全部流程，将控制流完全具象化的高阶抽象。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

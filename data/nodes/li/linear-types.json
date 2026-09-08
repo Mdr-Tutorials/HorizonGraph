@@ -1,0 +1,25 @@
+{
+  "id": "linear-types",
+  "name": "Linear Types",
+  "display_primary": "线性类型",
+  "display_secondary": "Linear Logic & Types",
+  "aliases": [
+    "线性类型系统"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "基于线性逻辑，强制要求每个值在生命周期内必须且只能被精确消费一次的类型系统。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

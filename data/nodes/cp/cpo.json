@@ -1,0 +1,27 @@
+{
+  "id": "cpo",
+  "name": "CPO",
+  "display_primary": "光电共封",
+  "display_secondary": "Co-Packaged Optics",
+  "aliases": [
+    "共封装光学",
+    "光电共封装"
+  ],
+  "type": "concept",
+  "domains": [
+    "high-performance-computing",
+    "networking",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将光学引擎与计算芯片封装在同一基板上以降低功耗的高速互联方案。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

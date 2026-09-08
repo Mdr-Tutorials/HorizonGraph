@@ -1,0 +1,26 @@
+{
+  "id": "cps",
+  "name": "Continuation-Passing Style",
+  "display_primary": "CPS变换",
+  "display_secondary": "Continuation-Passing Style",
+  "aliases": [
+    "续体传递风格",
+    "CPS"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "compilers"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将函数调用改写为显式传入下一个待执行延续的编程与编译控制流规整技术。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

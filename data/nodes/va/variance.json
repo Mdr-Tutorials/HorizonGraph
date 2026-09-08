@@ -1,0 +1,25 @@
+{
+  "id": "variance",
+  "name": "Variance",
+  "display_primary": "型变",
+  "display_secondary": "Type Variance",
+  "aliases": [
+    "协变与逆变",
+    "Covariance and Contravariance"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "约束复杂复合类型在子类型继承中的方向保持性（协变、逆变与不变）。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

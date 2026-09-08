@@ -1,0 +1,24 @@
+{
+  "id": "mental-model",
+  "name": "Mental Model",
+  "display_primary": "心智模型",
+  "display_secondary": "Mental Model",
+  "aliases": [
+    "思维模型"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "跨学科提炼的高阶认知透镜（如第一性原理、反向思维、二阶效应），用于简化真实复杂性。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

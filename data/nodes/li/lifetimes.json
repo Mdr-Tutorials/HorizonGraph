@@ -1,0 +1,26 @@
+{
+  "id": "lifetimes",
+  "name": "Lifetimes",
+  "display_primary": "静态生命周期",
+  "display_secondary": "Lifetimes in Rust",
+  "aliases": [
+    "生命周期参数",
+    "生命周期"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "编译器静态推演并验证引用生存期绝对小于底层宿主资源有效存续区间的形式化理论。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

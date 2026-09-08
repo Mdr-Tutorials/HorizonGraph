@@ -1,0 +1,25 @@
+{
+  "id": "source-tracing",
+  "name": "Source Tracing",
+  "display_primary": "溯源习惯",
+  "display_secondary": "Source Tracing",
+  "aliases": [
+    "源码溯源",
+    "一手信息源"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "跳过二次二手转述，直接阅读 RFC 规范、官方设计提案、学术论文与底层源码的求知路径。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

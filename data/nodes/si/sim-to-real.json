@@ -1,0 +1,25 @@
+{
+  "id": "sim-to-real",
+  "name": "Sim-to-Real",
+  "display_primary": "虚实迁移",
+  "display_secondary": "Simulation to Reality",
+  "aliases": [
+    "仿真到真实迁移"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning",
+    "embedded-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "将高仿真虚拟环境中训练出的控制策略平滑泛化到物理实体机器人的技术。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

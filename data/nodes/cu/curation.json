@@ -1,0 +1,26 @@
+{
+  "id": "curation",
+  "name": "Curation",
+  "display_primary": "系统策展",
+  "display_secondary": "Curation",
+  "aliases": [
+    "知识策展",
+    "品味鉴赏"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在生成式 AI 大规模泛滥代码与垃圾信息的时代，负责去粗取精、架构统筹的高级鉴别力。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

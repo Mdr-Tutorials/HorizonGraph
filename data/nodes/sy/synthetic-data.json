@@ -1,0 +1,26 @@
+{
+  "id": "synthetic-data",
+  "name": "Synthetic Data",
+  "display_primary": "合成数据",
+  "display_secondary": "Synthetic Data",
+  "aliases": [
+    "人造数据",
+    "AI生成数据"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "由算法规则或大模型反思推演生成、用于扩增预训练与强化学习的高质量人造语料。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

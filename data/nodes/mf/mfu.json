@@ -1,0 +1,25 @@
+{
+  "id": "mfu",
+  "name": "MFU",
+  "display_primary": "算力利用率",
+  "display_secondary": "Model FLOPs Utilization",
+  "aliases": [
+    "模型算力利用率"
+  ],
+  "type": "metric",
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "大模型训练或推理实际达到的算力吞吐占硬件理论峰值算力的百分比。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

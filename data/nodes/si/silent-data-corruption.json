@@ -1,0 +1,26 @@
+{
+  "id": "silent-data-corruption",
+  "name": "Silent Data Corruption",
+  "display_primary": "静默损坏",
+  "display_secondary": "Silent Data Corruption",
+  "aliases": [
+    "静默数据损坏",
+    "SDC"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "芯片晶体管翻转或存储介质退化导致的、未触发任何系统报错的隐秘数据畸变现象。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

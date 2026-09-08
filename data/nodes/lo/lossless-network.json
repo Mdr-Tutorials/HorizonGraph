@@ -1,0 +1,26 @@
+{
+  "id": "lossless-network",
+  "name": "Lossless Network",
+  "display_primary": "无损网络",
+  "display_secondary": "Lossless Network",
+  "aliases": [
+    "无损以太网"
+  ],
+  "type": "concept",
+  "domains": [
+    "networking",
+    "distributed-systems",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "结合 PFC 与 ECN 拥塞控制、确保大规模并行计算集群零丢包的网络体系。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

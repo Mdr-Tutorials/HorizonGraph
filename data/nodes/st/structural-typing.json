@@ -1,0 +1,25 @@
+{
+  "id": "structural-typing",
+  "name": "Structural Typing",
+  "display_primary": "结构类型",
+  "display_secondary": "Structural Type System",
+  "aliases": [
+    "形状类型",
+    "静态鸭子类型"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "仅凭属性与方法签名集合是否满足形状判定相容性的机制，如 TypeScript 与 Go。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

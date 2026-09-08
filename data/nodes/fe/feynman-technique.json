@@ -1,0 +1,25 @@
+{
+  "id": "feynman-technique",
+  "name": "Feynman Technique",
+  "display_primary": "费曼法",
+  "display_secondary": "Feynman Technique",
+  "aliases": [
+    "费曼技巧",
+    "费曼学习法"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "通过向非专业人士通俗转述复杂技术、用输出倒逼输入以检测并弥补自身认知漏洞的方法。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

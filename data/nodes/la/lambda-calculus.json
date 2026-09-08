@@ -1,0 +1,26 @@
+{
+  "id": "lambda-calculus",
+  "name": "Lambda Calculus",
+  "display_primary": "λ演算",
+  "display_secondary": "Lambda Calculus",
+  "aliases": [
+    "Lambda Calculus",
+    "拉姆达演算"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "邱奇创立的极简函数定义与替换形式模型，图灵完备，现代函数式语言基石。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,24 @@
+{
+  "id": "rejection-sampling",
+  "name": "Rejection Sampling",
+  "display_primary": "拒绝采样",
+  "display_secondary": "Rejection Sampling",
+  "aliases": [
+    "拒绝采样微调"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "对大模型批量采样的输出候选集依据规则或打分模型筛选留优的高效对齐后训练法。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

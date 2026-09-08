@@ -1,0 +1,29 @@
+{
+  "id": "subtyping",
+  "name": "Subtyping",
+  "display_primary": "子类型",
+  "display_secondary": "Subtyping",
+  "aliases": [
+    "子类型多态",
+    "包含多态"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "generics"
+    }
+  ],
+  "summary": "类型间基于安全可替换性建立的偏序关系，面向对象类型系统的理论根基。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

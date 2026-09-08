@@ -1,0 +1,26 @@
+{
+  "id": "confidential-computing",
+  "name": "Confidential Computing",
+  "display_primary": "机密计算",
+  "display_secondary": "Confidential Computing",
+  "aliases": [
+    "可信执行环境",
+    "TEE计算"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "利用基于硬件的安全隔离飞地（TEE），确保数据在内存计算过程中不被窥探。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

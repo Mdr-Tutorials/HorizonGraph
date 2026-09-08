@@ -1,0 +1,25 @@
+{
+  "id": "passive-income",
+  "name": "Passive Income",
+  "display_primary": "被动收入",
+  "display_secondary": "Passive Income",
+  "aliases": [
+    "资产性收入",
+    "睡后收入"
+  ],
+  "type": "concept",
+  "domains": [
+    "personal-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "脱离实时体力与时间捆绑，由独立软件许可、知识版权与生息资产自动产生的持续收益。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

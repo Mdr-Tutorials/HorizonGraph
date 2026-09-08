@@ -1,0 +1,25 @@
+{
+  "id": "polymorphism",
+  "name": "Polymorphism",
+  "display_primary": "多态性",
+  "display_secondary": "Type Polymorphism",
+  "aliases": [
+    "多态",
+    "类型多态"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "使同一段代码或操作符能处理多种不同类型数据的统一类型抽象机制。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,25 @@
+{
+  "id": "compensation",
+  "name": "Physical Compensation",
+  "display_primary": "肌肉代偿",
+  "display_secondary": "Compensation Pattern",
+  "aliases": [
+    "病理代偿",
+    "骨骼代偿"
+  ],
+  "type": "concept",
+  "domains": [
+    "health-ergonomics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "某处核心肌群因长期静止退化时，邻近关节与韧带过度负荷补位引发的恶性劳损链条。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

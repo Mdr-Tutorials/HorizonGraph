@@ -1,0 +1,26 @@
+{
+  "id": "zkp",
+  "name": "Zero-Knowledge Proof",
+  "display_primary": "零知识证明",
+  "display_secondary": "Zero-Knowledge Proof",
+  "aliases": [
+    "ZKP",
+    "零知识验证"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在不向验证者透露任何输入细节的前提下，数学上严密证明计算正确性的密码原语。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

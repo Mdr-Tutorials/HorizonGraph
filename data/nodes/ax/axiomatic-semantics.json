@@ -1,0 +1,26 @@
+{
+  "id": "axiomatic-semantics",
+  "name": "Axiomatic Semantics",
+  "display_primary": "公理语义",
+  "display_secondary": "Axiomatic Semantics",
+  "aliases": [
+    "霍尔逻辑",
+    "Hoare Logic"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "基于霍尔三元组前置条件与后置条件断言，直接证明程序满足正确性规约的语义体系。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

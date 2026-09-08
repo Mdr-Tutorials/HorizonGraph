@@ -1,0 +1,26 @@
+{
+  "id": "neural-operator",
+  "name": "Neural Operator",
+  "display_primary": "神经算子",
+  "display_secondary": "Neural Operator",
+  "aliases": [
+    "傅里叶神经算子",
+    "FNO"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "能够直接在无限维函数空间学习映射、将偏微分方程求解加速百千倍的神经网络。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

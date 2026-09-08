@@ -1,0 +1,27 @@
+{
+  "id": "operational-semantics",
+  "name": "Operational Semantics",
+  "display_primary": "操作语义",
+  "display_secondary": "Operational Semantics",
+  "aliases": [
+    "小步语义",
+    "大步语义",
+    "结构化操作语义"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "通过在抽象机上定义状态迁移转换规则，精确刻画程序每一步执行推演的语义学体系。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

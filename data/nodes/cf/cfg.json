@@ -1,0 +1,29 @@
+{
+  "id": "cfg",
+  "name": "Control Flow Graph",
+  "display_primary": "控制流图",
+  "display_secondary": "Control Flow Graph",
+  "aliases": [
+    "CFG"
+  ],
+  "type": "concept",
+  "domains": [
+    "compilers",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "ssa"
+    }
+  ],
+  "summary": "以不可分割基本块为节点、控制跳转路径为有向边的程序流拓扑结构，编译优化的基底。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

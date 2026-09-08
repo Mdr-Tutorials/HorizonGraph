@@ -1,0 +1,25 @@
+{
+  "id": "formal-verification",
+  "name": "Formal Verification",
+  "display_primary": "形式化验证",
+  "display_secondary": "Formal Verification",
+  "aliases": [
+    "形式化证明"
+  ],
+  "type": "concept",
+  "domains": [
+    "formal-methods",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "利用数理逻辑严密证明软硬件设计完全满足形式化规格、绝无死锁与越界漏洞的工程。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

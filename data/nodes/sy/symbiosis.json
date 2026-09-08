@@ -1,0 +1,26 @@
+{
+  "id": "symbiosis",
+  "name": "Human-AI Symbiosis",
+  "display_primary": "人机共生",
+  "display_secondary": "Symbiosis",
+  "aliases": [
+    "人机协同进化",
+    "共生智能"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将机器智能视为人类外挂式大脑与执行延伸，在共生中完成从业者角色重塑与跃迁的新形态。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

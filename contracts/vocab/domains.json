@@ -25,6 +25,9 @@
     { "value": "career-development", "en": "Career Development", "zh": "职业发展" },
     { "value": "quantum-computing", "en": "Quantum Computing", "zh": "量子计算" },
     { "value": "computer-history", "en": "Computer History", "zh": "计算机历史" },
-    { "value": "industry-landscape", "en": "Industry Landscape", "zh": "产业格局" }
+    { "value": "industry-landscape", "en": "Industry Landscape", "zh": "产业格局" },
+    { "value": "learning-cognition", "en": "Learning & Cognition", "zh": "学习与认知" },
+    { "value": "health-ergonomics", "en": "Health & Ergonomics", "zh": "健康与人体工学" },
+    { "value": "personal-finance", "en": "Personal Finance", "zh": "个人财务" }
   ]
 }

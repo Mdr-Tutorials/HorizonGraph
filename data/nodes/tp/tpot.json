@@ -1,0 +1,26 @@
+{
+  "id": "tpot",
+  "name": "TPOT",
+  "display_primary": "每词延迟",
+  "display_secondary": "Time Per Output Token",
+  "aliases": [
+    "生成延迟",
+    "词生成耗时"
+  ],
+  "type": "metric",
+  "domains": [
+    "machine-learning",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "大语言模型在自回归解码阶段生成单个 Token 的平均耗时。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

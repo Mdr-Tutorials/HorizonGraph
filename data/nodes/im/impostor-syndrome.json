@@ -1,0 +1,26 @@
+{
+  "id": "impostor-syndrome",
+  "name": "Impostor Syndrome",
+  "display_primary": "冒名综合征",
+  "display_secondary": "Impostor Syndrome",
+  "aliases": [
+    "冒充者综合征",
+    "骗子综合征"
+  ],
+  "type": "concept",
+  "domains": [
+    "health-ergonomics",
+    "learning-cognition"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "即便取得显著成就，内心仍固执认为自己只是侥幸的欺世盗名者、随时会被拆穿的心理偏差。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

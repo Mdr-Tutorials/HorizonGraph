@@ -1,0 +1,33 @@
+{
+  "id": "affine-types",
+  "name": "Affine Types",
+  "display_primary": "仿射类型",
+  "display_secondary": "Affine Logic & Types",
+  "aliases": [
+    "仿射类型系统"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "linear-types"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "ownership"
+    }
+  ],
+  "summary": "约束每个绑定的值在生命周期内至多被消费一次的类型系统，Rust 所有权的数学源头。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

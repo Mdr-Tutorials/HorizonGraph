@@ -1,0 +1,29 @@
+{
+  "id": "memory-wall",
+  "name": "Memory Wall",
+  "display_primary": "显存墙",
+  "display_secondary": "Memory Wall",
+  "aliases": [
+    "内存墙"
+  ],
+  "type": "concept",
+  "domains": [
+    "high-performance-computing",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "speculative-decoding"
+    }
+  ],
+  "summary": "内存带宽与容量增速落后于处理器算力增速带来的物理吞吐瓶颈。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

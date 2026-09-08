@@ -1,0 +1,26 @@
+{
+  "id": "homomorphic-encryption",
+  "name": "Homomorphic Encryption",
+  "display_primary": "同态加密",
+  "display_secondary": "Homomorphic Encryption",
+  "aliases": [
+    "全同态加密",
+    "FHE"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "对密文进行特定算术操作后解密所得结果与直接在明文上操作一致的密码技术。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

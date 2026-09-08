@@ -1,0 +1,25 @@
+{
+  "id": "dependent-types",
+  "name": "Dependent Types",
+  "display_primary": "依值类型",
+  "display_secondary": "Dependent Typing",
+  "aliases": [
+    "依赖类型"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "type-system"
+    }
+  ],
+  "summary": "允许类型直接依赖并包含运行时的具体值，将断言推入编译期绝对证明的系统。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

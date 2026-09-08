@@ -1,0 +1,27 @@
+{
+  "id": "liquid-cooling",
+  "name": "Liquid Cooling",
+  "display_primary": "液冷技术",
+  "display_secondary": "Liquid Cooling",
+  "aliases": [
+    "液冷散热",
+    "浸没式液冷",
+    "冷板式液冷"
+  ],
+  "type": "concept",
+  "domains": [
+    "cloud-infrastructure",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "采用冷却液体循环直接导出高密度算力机柜高额废热的散热基础设施。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

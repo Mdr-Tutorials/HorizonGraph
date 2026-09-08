@@ -1,0 +1,25 @@
+{
+  "id": "prm",
+  "name": "Process Reward Model",
+  "display_primary": "过程奖励",
+  "display_secondary": "Process Reward Model",
+  "aliases": [
+    "PRM",
+    "过程监督模型"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "对复杂推理思维链中的每一个中间步骤单独给出反馈打分的强化学习奖励模型。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

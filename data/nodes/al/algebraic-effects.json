@@ -1,0 +1,25 @@
+{
+  "id": "algebraic-effects",
+  "name": "Algebraic Effects",
+  "display_primary": "代数效应",
+  "display_secondary": "Algebraic Effects and Handlers",
+  "aliases": [
+    "效应系统",
+    "可恢复异常"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将副作用请求与具体处理逻辑彻底解耦、支持原位挂起与恢复执行的高级效应范式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

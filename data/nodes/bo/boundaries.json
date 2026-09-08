@@ -1,0 +1,26 @@
+{
+  "id": "boundaries",
+  "name": "Psychological Boundaries",
+  "display_primary": "心理边界感",
+  "display_secondary": "Personal Boundaries",
+  "aliases": [
+    "边界感",
+    "工作生活界限"
+  ],
+  "type": "concept",
+  "domains": [
+    "health-ergonomics",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "果断划定工作与个人生活的物理与数字边界，断然阻断无序通讯蚕食私人休整的自我防护机制。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

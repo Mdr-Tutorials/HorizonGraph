@@ -1,0 +1,26 @@
+{
+  "id": "slow-variables",
+  "name": "Slow Variables",
+  "display_primary": "慢变量",
+  "display_secondary": "Slow Variables",
+  "aliases": [
+    "底层慢变量",
+    "长半衰期知识"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "知识体系中半衰期极长、底层通用、终身受益的核心基石（如体系结构、操作系统）。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

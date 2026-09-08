@@ -1,0 +1,26 @@
+{
+  "id": "compound-interest",
+  "name": "Compound Interest",
+  "display_primary": "复利法则",
+  "display_secondary": "Compound Interest",
+  "aliases": [
+    "复利效应",
+    "指数增长"
+  ],
+  "type": "concept",
+  "domains": [
+    "personal-finance",
+    "learning-cognition"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将收益与新增知识持续并入本金、在时间长河中产生非线性指数级增长的数学铁律。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

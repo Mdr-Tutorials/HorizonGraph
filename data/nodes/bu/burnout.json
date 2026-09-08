@@ -1,0 +1,26 @@
+{
+  "id": "burnout",
+  "name": "Burnout",
+  "display_primary": "职业倦怠",
+  "display_secondary": "Job Burnout",
+  "aliases": [
+    "身心枯竭",
+    "精神耗竭"
+  ],
+  "type": "concept",
+  "domains": [
+    "health-ergonomics",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "长期在高压与缺乏正向反馈环境下工作导致的情感麻木、生理衰竭与效能感彻底丧失。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

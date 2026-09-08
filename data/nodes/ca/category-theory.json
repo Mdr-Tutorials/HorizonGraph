@@ -1,0 +1,25 @@
+{
+  "id": "category-theory",
+  "name": "Category Theory",
+  "display_primary": "范畴论",
+  "display_secondary": "Category Theory",
+  "aliases": [
+    "范畴学"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "研究对象与态射组合结构的数学理论，为函子、单子与高级类型提供代数语义。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

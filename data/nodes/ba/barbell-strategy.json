@@ -1,0 +1,25 @@
+{
+  "id": "barbell-strategy",
+  "name": "Barbell Strategy",
+  "display_primary": "杠铃策略",
+  "display_secondary": "Barbell Strategy",
+  "aliases": [
+    "杠铃式配置"
+  ],
+  "type": "concept",
+  "domains": [
+    "personal-finance",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "一端锁死极度保守的基础底线（健康、慢变量、储蓄），另一端极度开放下注高潜力前沿。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

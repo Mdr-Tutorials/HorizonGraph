@@ -1,0 +1,25 @@
+{
+  "id": "metacognition",
+  "name": "Metacognition",
+  "display_primary": "元认知",
+  "display_secondary": "Metacognition",
+  "aliases": [
+    "元思考",
+    "反思认知"
+  ],
+  "type": "concept",
+  "domains": [
+    "learning-cognition"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "对自身思考过程的自我意识、反思监控与动态调优能力，终身自学的核心发动机。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

@@ -1,0 +1,26 @@
+{
+  "id": "checkpointing",
+  "name": "Checkpointing",
+  "display_primary": "检查点机制",
+  "display_secondary": "Checkpointing",
+  "aliases": [
+    "检查点保存",
+    "状态快照保存"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    }
+  ],
+  "summary": "定期将分布式训练或计算状态全量序列化落盘，以便故障宕机后快速回滚断点续跑。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

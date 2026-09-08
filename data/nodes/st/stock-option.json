@@ -1,0 +1,26 @@
+{
+  "id": "stock-option",
+  "name": "Stock Option",
+  "display_primary": "期权激励",
+  "display_secondary": "Stock Option",
+  "aliases": [
+    "员工期权",
+    "股权激励"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "personal-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在约定周期内以固定行权价购买公司股票的权利；含归属期与回购机制等核心权益规则。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

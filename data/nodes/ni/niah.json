@@ -1,0 +1,25 @@
+{
+  "id": "niah",
+  "name": "Needle in a Haystack",
+  "display_primary": "大海捞针",
+  "display_secondary": "Needle In A Haystack",
+  "aliases": [
+    "NIAH测试",
+    "大海捞针测试"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "将关键事实碎片隐匿于超长上下文中检索，测试大模型长程注意力保真度的评测范式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

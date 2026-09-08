@@ -1,0 +1,25 @@
+{
+  "id": "denotational-semantics",
+  "name": "Denotational Semantics",
+  "display_primary": "指称语义",
+  "display_secondary": "Denotational Semantics",
+  "aliases": [
+    "指称语义学"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将语法成分直接映射为拓扑域与偏序格中的数学对象与不动点的组合式语义体系。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

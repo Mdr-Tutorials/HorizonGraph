@@ -1,0 +1,26 @@
+{
+  "id": "flow-state",
+  "name": "Flow State",
+  "display_primary": "心流状态",
+  "display_secondary": "Flow State",
+  "aliases": [
+    "心流",
+    "极致专注"
+  ],
+  "type": "concept",
+  "domains": [
+    "health-ergonomics",
+    "learning-cognition"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "当技术挑战与个人能力达到精密平衡时，浑然忘却时间流逝的高效创造力精神体验。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

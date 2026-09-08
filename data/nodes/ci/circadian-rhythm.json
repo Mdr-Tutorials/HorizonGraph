@@ -1,0 +1,25 @@
+{
+  "id": "circadian-rhythm",
+  "name": "Circadian Rhythm",
+  "display_primary": "昼夜节律",
+  "display_secondary": "Circadian Rhythm",
+  "aliases": [
+    "生物钟",
+    "睡眠节律"
+  ],
+  "type": "concept",
+  "domains": [
+    "health-ergonomics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "受光照与褪黑素严格调控的人体生理时钟；抵御屏幕夜间蓝光造成的内分泌紊乱与失眠。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

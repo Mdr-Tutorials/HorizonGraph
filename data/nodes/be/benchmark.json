@@ -1,0 +1,26 @@
+{
+  "id": "benchmark",
+  "name": "Benchmark",
+  "display_primary": "基准测试",
+  "display_secondary": "Benchmark",
+  "aliases": [
+    "基准评测",
+    "性能基准"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在标准化、可重复的严苛工作负载下定量评估软硬件系统或模型能力的度量实验套件。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}

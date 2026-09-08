@@ -1,0 +1,25 @@
+{
+  "id": "ttft",
+  "name": "TTFT",
+  "display_primary": "首字延迟",
+  "display_secondary": "Time to First Token",
+  "aliases": [
+    "首 Token 延迟"
+  ],
+  "type": "metric",
+  "domains": [
+    "machine-learning",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "大语言模型接收到 Prompt 后输出第一个 Token 所需的端到端耗时。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 4
+}

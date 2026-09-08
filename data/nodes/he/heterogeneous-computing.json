@@ -1,0 +1,25 @@
+{
+  "id": "heterogeneous-computing",
+  "name": "Heterogeneous Computing",
+  "display_primary": "异构计算",
+  "display_secondary": "Heterogeneous Computing",
+  "aliases": [
+    "异构并行计算"
+  ],
+  "type": "concept",
+  "domains": [
+    "high-performance-computing",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "统筹 CPU、GPU、NPU 等多种架构计算单元协同完成计算密集任务的范式。",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08",
+  "importance": 5
+}
