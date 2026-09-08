@@ -1,0 +1,28 @@
+{
+  "id": "pan",
+  "name": "Personal Area Network",
+  "display_primary": "个人局域网",
+  "display_secondary": "PAN",
+  "aliases": [
+    "PAN网络",
+    "个域网"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "围绕个人工作空间数十米范围内（如蓝牙、Zigbee等）互联个人数字设备的微型网络。",
+  "importance": 3,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

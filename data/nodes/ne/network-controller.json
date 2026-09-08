@@ -1,0 +1,29 @@
+{
+  "id": "network-controller",
+  "name": "Network Controller",
+  "display_primary": "网络控制器",
+  "display_secondary": "Network Controller",
+  "aliases": [
+    "SDN控制器",
+    "无线控制器AC"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "集中式管理大规模网络设备配置、信道规划、安全策略与转发拓扑的软件或硬件控制系统。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

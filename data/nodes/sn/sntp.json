@@ -1,0 +1,29 @@
+{
+  "id": "sntp",
+  "name": "Simple Network Time Protocol",
+  "display_primary": "简单网络时间协议",
+  "display_secondary": "SNTP",
+  "aliases": [
+    "SNTP协议",
+    "简单网络时间同步"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "简化版网络时间同步协议，适用于不需要完整NTP复杂统计滤波算法的嵌入式终端时钟校准。",
+  "importance": 3,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

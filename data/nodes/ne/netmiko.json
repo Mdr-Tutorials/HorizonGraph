@@ -1,0 +1,29 @@
+{
+  "id": "netmiko",
+  "name": "Netmiko",
+  "display_primary": "Netmiko",
+  "display_secondary": "Netmiko Library",
+  "aliases": [
+    "Netmiko网络自动化库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "python-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "devops"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    }
+  ],
+  "summary": "基于Paramiko专为多厂商网络设备定制的Python SSH自动化管理库。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

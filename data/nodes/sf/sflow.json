@@ -1,0 +1,29 @@
+{
+  "id": "sflow",
+  "name": "sFlow",
+  "display_primary": "sFlow",
+  "display_secondary": "Sampled Flow",
+  "aliases": [
+    "sFlow协议",
+    "采样流监控"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "采用芯片级硬件数据包随机采样技术，对超高速千兆/万兆以太网交换网络进行流量监控的开放协议。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

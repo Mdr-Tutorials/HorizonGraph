@@ -1,0 +1,29 @@
+{
+  "id": "quad9",
+  "name": "Quad9",
+  "display_primary": "Quad9",
+  "display_secondary": "Quad9 DNS",
+  "aliases": [
+    "Quad9 DNS",
+    "Quad9基金会"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "总部位于瑞士的非营利公共DNS组织，运营9.9.9.9解析服务，自动阻断恶意威胁并保护用户隐私。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

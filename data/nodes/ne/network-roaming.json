@@ -1,0 +1,28 @@
+{
+  "id": "network-roaming",
+  "name": "Network Roaming",
+  "display_primary": "无线漫游",
+  "display_secondary": "Roaming",
+  "aliases": [
+    "无线AP漫游",
+    "终端漫游切换"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "无线客户端在不同AP覆盖区域移动时，无需断开业务平滑无缝切换BSSID连接的技术。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

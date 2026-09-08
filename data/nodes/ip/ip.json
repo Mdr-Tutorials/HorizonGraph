@@ -3,8 +3,8 @@
   "name": "Internet Protocol",
   "display_primary": "IP",
   "aliases": [
-    "IPv4",
-    "IPv6"
+    "IP协议",
+    "网际协议"
   ],
   "type": "protocol",
   "ecosystems": [
@@ -23,7 +23,7 @@
   "summary": "尽最大努力转发分组的网络层，不保证顺序与到达。",
   "importance": 5,
   "popular": 92,
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-09-08",
   "origin": "curated",
   "status": "active"
 }

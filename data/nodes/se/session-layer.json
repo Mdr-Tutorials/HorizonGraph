@@ -1,0 +1,32 @@
+{
+  "id": "session-layer",
+  "name": "Session Layer",
+  "display_primary": "会话层",
+  "display_secondary": "Session Layer",
+  "aliases": [
+    "OSI会话层",
+    "L5会话层"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "osi-model"
+    }
+  ],
+  "summary": "OSI参考模型的第五层，负责在通信双方之间建立、管理、同步并终止会话连接。",
+  "importance": 3,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

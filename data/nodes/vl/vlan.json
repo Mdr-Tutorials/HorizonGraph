@@ -1,0 +1,29 @@
+{
+  "id": "vlan",
+  "name": "VLAN",
+  "display_primary": "VLAN",
+  "display_secondary": "Virtual LAN",
+  "aliases": [
+    "虚拟局域网",
+    "802.1Q"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "IEEE 802.1Q标准在单一物理以太网交换网络上逻辑划分多个独立广播域的二层隔离技术。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

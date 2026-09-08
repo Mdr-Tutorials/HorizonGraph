@@ -1,0 +1,28 @@
+{
+  "id": "wlan",
+  "name": "Wireless Local Area Network",
+  "display_primary": "无线局域网",
+  "display_secondary": "WLAN",
+  "aliases": [
+    "WLAN网络",
+    "无线LAN"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "以无线电射频信号作为传输介质，实现局部区域内移动计算设备互联的局域网络。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

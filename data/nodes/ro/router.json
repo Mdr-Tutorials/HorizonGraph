@@ -1,0 +1,29 @@
+{
+  "id": "router",
+  "name": "Router",
+  "display_primary": "路由器",
+  "display_secondary": "Router",
+  "aliases": [
+    "网络路由器",
+    "核心路由器"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    }
+  ],
+  "summary": "工作在网络层，根据IP地址路由表进行路径计算与跨子网数据包快速交换转发的设备。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "least-connections",
+  "name": "Least Connections",
+  "display_primary": "最小连接数算法",
+  "display_secondary": "Least Connections",
+  "aliases": [
+    "最少连接调度",
+    "LC算法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "负载均衡器动态监测并把新请求优先分发至当前并发活动连接数最少的后端服务器的算法。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "presentation-layer",
+  "name": "Presentation Layer",
+  "display_primary": "表示层",
+  "display_secondary": "Presentation Layer",
+  "aliases": [
+    "OSI表示层",
+    "L6表示层"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "osi-model"
+    }
+  ],
+  "summary": "OSI参考模型的第六层，负责不同系统间数据表示格式的转换、编码、加密与数据压缩。",
+  "importance": 3,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

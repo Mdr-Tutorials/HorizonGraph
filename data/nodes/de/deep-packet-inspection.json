@@ -1,0 +1,29 @@
+{
+  "id": "deep-packet-inspection",
+  "name": "Deep Packet Inspection",
+  "display_primary": "深度包检测",
+  "display_secondary": "DPI",
+  "aliases": [
+    "深度包检测",
+    "DPI技术"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "超越传统报头五元组，深入解析数据包应用层有效载荷以识别业务类型、阻断威胁的内容检测技术。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

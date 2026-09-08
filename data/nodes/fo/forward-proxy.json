@@ -1,0 +1,28 @@
+{
+  "id": "forward-proxy",
+  "name": "Forward Proxy",
+  "display_primary": "正向代理",
+  "display_secondary": "Forward Proxy",
+  "aliases": [
+    "客户端代理",
+    "出向代理"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "代表内部局域网客户端向外部互联网发起请求并隐藏客户端真实身份的代理服务器模式。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

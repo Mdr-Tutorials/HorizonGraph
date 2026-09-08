@@ -1,0 +1,29 @@
+{
+  "id": "nslookup",
+  "name": "nslookup",
+  "display_primary": "nslookup",
+  "display_secondary": "nslookup",
+  "aliases": [
+    "nslookup命令",
+    "DNS查询工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "用于向域名服务器发送交互式查询请求以检索主机DNS解析记录（A/CNAME/MX）的排障诊断工具。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

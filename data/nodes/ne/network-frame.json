@@ -1,0 +1,28 @@
+{
+  "id": "network-frame",
+  "name": "Ethernet Frame",
+  "display_primary": "数据帧",
+  "display_secondary": "Ethernet Frame",
+  "aliases": [
+    "以太网帧",
+    "二层数据帧"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "数据链路层的协议数据单元PDU，包含目标MAC、源MAC、类型标签、有效载荷与FCS校验。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

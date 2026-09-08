@@ -1,0 +1,30 @@
+{
+  "id": "spine-leaf",
+  "name": "Spine-Leaf Architecture",
+  "display_primary": "叶脊网络架构",
+  "display_secondary": "Spine-Leaf",
+  "aliases": [
+    "Spine-Leaf架构",
+    "二层扁平Fabric"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    }
+  ],
+  "summary": "现代数据中心扁平两层交换架构，所有Leaf节点均连接到全部Spine节点，东西向延迟恒定。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

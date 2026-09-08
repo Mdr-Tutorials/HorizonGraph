@@ -1,0 +1,29 @@
+{
+  "id": "circuit-level-gateway",
+  "name": "Circuit-Level Gateway",
+  "display_primary": "电路级网关",
+  "display_secondary": "Circuit-Level Gateway",
+  "aliases": [
+    "电路网关",
+    "会话层网关"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在OSI会话层验证TCP握手与虚电路连接合法性，中继合法数据而不逐包深度检查负载的防火墙。",
+  "importance": 3,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

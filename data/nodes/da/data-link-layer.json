@@ -1,0 +1,32 @@
+{
+  "id": "data-link-layer",
+  "name": "Data Link Layer",
+  "display_primary": "数据链路层",
+  "display_secondary": "Data Link Layer",
+  "aliases": [
+    "OSI数据链路层",
+    "L2链路层"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "osi-model"
+    }
+  ],
+  "summary": "OSI参考模型的第二层，负责在相邻节点间建立逻辑连接、成帧传输与物理MAC寻址。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

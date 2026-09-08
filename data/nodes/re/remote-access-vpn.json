@@ -1,0 +1,29 @@
+{
+  "id": "remote-access-vpn",
+  "name": "Remote Access VPN",
+  "display_primary": "远程访问VPN",
+  "display_secondary": "Remote Access VPN",
+  "aliases": [
+    "拨号VPN",
+    "客户端接入VPN"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "允许移动办公员工或出差人员通过安装客户端软件，从外部公网安全加密连接进入公司内网。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

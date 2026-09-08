@@ -1,0 +1,28 @@
+{
+  "id": "mpls",
+  "name": "MPLS",
+  "display_primary": "MPLS",
+  "display_secondary": "Multi-Protocol Label Switching",
+  "aliases": [
+    "多协议标签交换"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "在二层帧头与三层包头间插入固定简短标签进行快速硬件标签交换转发的高性能承载技术。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

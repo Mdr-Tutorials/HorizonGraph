@@ -1,0 +1,29 @@
+{
+  "id": "mpls-vpn",
+  "name": "MPLS VPN",
+  "display_primary": "MPLS-VPN",
+  "display_secondary": "BGP/MPLS IP VPN",
+  "aliases": [
+    "MPLS专用网",
+    "运营商MPLS专线"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    }
+  ],
+  "summary": "运营商利用MPLS标签交换与BGP路由分发在共享骨干网络上为不同企业租户构建的专用互联网络。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

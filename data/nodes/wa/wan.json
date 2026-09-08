@@ -1,0 +1,28 @@
+{
+  "id": "wan",
+  "name": "Wide Area Network",
+  "display_primary": "广域网",
+  "display_secondary": "WAN",
+  "aliases": [
+    "WAN网络",
+    "远程广域网"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "跨越广阔地理区域（如跨城市、跨国甚至全球）将多个局域网互联的大型通信网络。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

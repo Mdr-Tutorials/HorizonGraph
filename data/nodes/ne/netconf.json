@@ -1,0 +1,29 @@
+{
+  "id": "netconf",
+  "name": "NETCONF",
+  "display_primary": "NETCONF",
+  "display_secondary": "Network Configuration Protocol",
+  "aliases": [
+    "网络配置协议",
+    "RFC 6241"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "IETF标准网络管理协议，基于SSH/TLS使用XML编码RPC对网络设备进行配置下发与状态监控。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "cloud-computing",
+  "name": "Cloud Computing",
+  "display_primary": "云计算",
+  "display_secondary": "Cloud Computing",
+  "aliases": [
+    "云技术",
+    "云服务"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "通过网络按需弹性提供可配置计算资源共享池（服务器、存储、网络）并按用量计费的计算范式。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

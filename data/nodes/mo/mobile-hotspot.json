@@ -1,0 +1,28 @@
+{
+  "id": "mobile-hotspot",
+  "name": "Mobile Hotspot",
+  "display_primary": "移动热点",
+  "display_secondary": "Mobile Hotspot",
+  "aliases": [
+    "网络共享",
+    "便携式热点"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将智能手机或专用CPE接收到的蜂窝数据连接转换并通过Wi-Fi共享给周边其他设备的技术。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

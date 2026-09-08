@@ -1,0 +1,29 @@
+{
+  "id": "opendns",
+  "name": "OpenDNS",
+  "display_primary": "OpenDNS",
+  "display_secondary": "Cisco OpenDNS",
+  "aliases": [
+    "思科OpenDNS"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "思科旗下全球大型公共递归DNS服务，内置内容过滤、反钓鱼与恶意域名拦截等网络安全防护能力。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

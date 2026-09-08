@@ -1,0 +1,28 @@
+{
+  "id": "supernetting",
+  "name": "Supernetting",
+  "display_primary": "超网划分",
+  "display_secondary": "Supernetting",
+  "aliases": [
+    "路由汇聚",
+    "超网聚合"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将多个连续的小规模IP子网路由前缀聚合成单一宏观路由的路由表压缩优化技术。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

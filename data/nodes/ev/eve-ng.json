@@ -1,0 +1,28 @@
+{
+  "id": "eve-ng",
+  "name": "EVE-NG",
+  "display_primary": "EVE-NG",
+  "display_secondary": "Emulated Virtual Environment Next Generation",
+  "aliases": [
+    "Emulated Virtual Environment Next Generation"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "基于Linux KVM无客户端Web界面运行多厂商网络操作系统与服务器镜像的现代化虚拟实验平台。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

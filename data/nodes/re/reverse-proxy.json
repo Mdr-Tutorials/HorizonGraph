@@ -1,0 +1,28 @@
+{
+  "id": "reverse-proxy",
+  "name": "Reverse Proxy",
+  "display_primary": "反向代理",
+  "display_secondary": "Reverse Proxy",
+  "aliases": [
+    "服务端反代",
+    "反向代理网关"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "部署在内部服务端前方，接收外部公网请求并将其分发给后端服务器集群的前置代理架构。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

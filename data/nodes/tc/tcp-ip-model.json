@@ -1,0 +1,32 @@
+{
+  "id": "tcp-ip-model",
+  "name": "TCP/IP Model",
+  "display_primary": "TCP/IP模型",
+  "display_secondary": "TCP/IP Model",
+  "aliases": [
+    "网际互联参考模型",
+    "四层网络模型"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "network-layer"
+    }
+  ],
+  "summary": "定义网络接口层、网际层、传输层与应用层的四层互联网分层协议通信参考模型。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

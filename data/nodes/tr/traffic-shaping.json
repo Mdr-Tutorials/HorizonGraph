@@ -1,0 +1,28 @@
+{
+  "id": "traffic-shaping",
+  "name": "Traffic Shaping",
+  "display_primary": "流量整形",
+  "display_secondary": "Traffic Shaping",
+  "aliases": [
+    "流量平滑",
+    "流量整形控制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "采用令牌桶或漏桶算法对突发不规则的网络输出流量进行缓存队列排队以平滑发送速率的机制。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

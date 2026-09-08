@@ -1,0 +1,27 @@
+{
+  "id": "vlsm",
+  "name": "VLSM",
+  "display_primary": "VLSM",
+  "display_secondary": "Variable Length Subnet Mask",
+  "aliases": [
+    "可变长子网掩码"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在同一主网地址空间内根据各子网实际主机规模分配不同长度子网掩码的编址优化技术。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

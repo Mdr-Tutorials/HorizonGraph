@@ -1,0 +1,28 @@
+{
+  "id": "static-routing",
+  "name": "Static Routing",
+  "display_primary": "静态路由",
+  "display_secondary": "Static Routing",
+  "aliases": [
+    "静态路由选择",
+    "手工路由"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "网络管理员通过手动配置写入路由器转发表且不随拓扑自适应变化的固定网络路由条目。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

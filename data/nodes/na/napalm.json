@@ -1,0 +1,29 @@
+{
+  "id": "napalm",
+  "name": "NAPALM",
+  "display_primary": "NAPALM",
+  "display_secondary": "Network Automation Library",
+  "aliases": [
+    "NAPALM网络自动化库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "python-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "devops"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    }
+  ],
+  "summary": "跨多厂商网络设备提供统一定义API接口的Python自动化运维库。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

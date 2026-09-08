@@ -1,0 +1,29 @@
+{
+  "id": "modem",
+  "name": "Modem",
+  "display_primary": "调制解调器",
+  "display_secondary": "Modem",
+  "aliases": [
+    "宽带猫",
+    "光猫"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    }
+  ],
+  "summary": "在计算机数字脉冲信号与模拟传输介质（电话线/同轴电缆/光纤）之间进行调制与解调的设备。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

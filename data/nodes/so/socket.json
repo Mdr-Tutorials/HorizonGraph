@@ -1,0 +1,29 @@
+{
+  "id": "socket",
+  "name": "Network Socket",
+  "display_primary": "网络套接字",
+  "display_secondary": "Socket",
+  "aliases": [
+    "套接字接口",
+    "网络通信端点"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "操作系统为应用程序提供的网络通信抽象端点，由IP地址、传输层端口与协议类型唯一确定。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

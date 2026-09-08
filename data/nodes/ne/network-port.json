@@ -1,0 +1,28 @@
+{
+  "id": "network-port",
+  "name": "Network Port",
+  "display_primary": "网络端口",
+  "display_secondary": "Port",
+  "aliases": [
+    "协议端口",
+    "传输层端口"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "传输层16位数字标识符（0-65535），用于在同一主机IP上区分不同的网络通信应用程序。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

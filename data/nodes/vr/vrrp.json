@@ -1,0 +1,28 @@
+{
+  "id": "vrrp",
+  "name": "VRRP",
+  "display_primary": "VRRP",
+  "display_secondary": "Virtual Router Redundancy Protocol",
+  "aliases": [
+    "虚拟路由器冗余协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "公有标准的网关冗余容错协议，将多台物理路由器虚拟为单一默认网关并在主故障时自动接管。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

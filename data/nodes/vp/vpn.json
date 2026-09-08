@@ -1,0 +1,29 @@
+{
+  "id": "vpn",
+  "name": "Virtual Private Network",
+  "display_primary": "虚拟专用网络",
+  "display_secondary": "VPN",
+  "aliases": [
+    "虚拟专用网",
+    "VPN技术"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "利用隧道封装、身份认证与数据加密技术在公用互联网基础设施上构建的逻辑加密专网。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

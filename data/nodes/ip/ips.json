@@ -1,0 +1,30 @@
+{
+  "id": "ips",
+  "name": "Intrusion Prevention System",
+  "display_primary": "入侵防御系统",
+  "display_secondary": "IPS",
+  "aliases": [
+    "IPS系统",
+    "网络入侵防御"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "串联部署在网络主传输路径上，不仅能检测恶意流量攻击，还能实时直接丢弃报文予以主动阻断。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

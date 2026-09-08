@@ -1,0 +1,33 @@
+{
+  "id": "ipv4",
+  "name": "IPv4",
+  "display_primary": "IPv4",
+  "display_secondary": "Internet Protocol v4",
+  "aliases": [
+    "网际协议第4版",
+    "互联网协议第四版"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "ip"
+    }
+  ],
+  "summary": "采用32位点分十进制地址格式的第四版互联网核心寻址与报文分组通信协议。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

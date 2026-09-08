@@ -1,0 +1,29 @@
+{
+  "id": "vxlan",
+  "name": "VXLAN",
+  "display_primary": "VXLAN",
+  "display_secondary": "Virtual Extensible LAN",
+  "aliases": [
+    "虚拟扩展局域网"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "RFC 7348网络虚拟化叠加协议，将二层以太网帧封装在三层UDP报文中跨物理网络透传。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

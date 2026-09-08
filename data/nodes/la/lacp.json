@@ -1,0 +1,29 @@
+{
+  "id": "lacp",
+  "name": "Link Aggregation Control Protocol",
+  "display_primary": "链路聚合控制协议",
+  "display_secondary": "LACP",
+  "aliases": [
+    "LACP协议",
+    "802.3ad"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "IEEE 802.3ad定义的控制协议，用于动态自动协商与维护两台网络设备间的端口聚合链路。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

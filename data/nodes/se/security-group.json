@@ -1,0 +1,30 @@
+{
+  "id": "security-group",
+  "name": "Security Group",
+  "display_primary": "安全组",
+  "display_secondary": "Security Group",
+  "aliases": [
+    "云主机安全组",
+    "虚拟防火墙策略"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "networking",
+    "cloud-infrastructure",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "云服务提供商为云主机虚拟机提供的分布式有状态虚拟防火墙，精细控制网卡的出入站访问规则。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

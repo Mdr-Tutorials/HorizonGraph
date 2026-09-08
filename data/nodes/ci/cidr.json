@@ -1,0 +1,28 @@
+{
+  "id": "cidr",
+  "name": "CIDR",
+  "display_primary": "CIDR",
+  "display_secondary": "Classless Inter-Domain Routing",
+  "aliases": [
+    "无类别域间路由",
+    "斜线记法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "废除传统A/B/C类网络硬性划分，以可变前缀长度斜线记法分配IP地址的现代路由机制。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

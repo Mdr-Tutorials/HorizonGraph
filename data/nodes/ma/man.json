@@ -1,0 +1,28 @@
+{
+  "id": "man",
+  "name": "Metropolitan Area Network",
+  "display_primary": "城域网",
+  "display_secondary": "MAN",
+  "aliases": [
+    "MAN网络",
+    "城市城域网"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "覆盖范围介于局域网与广域网之间，通常覆盖一个城市或大型大学园区的宽带骨干网。",
+  "importance": 3,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

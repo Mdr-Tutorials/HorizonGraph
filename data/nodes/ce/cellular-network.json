@@ -1,0 +1,28 @@
+{
+  "id": "cellular-network",
+  "name": "Cellular Network",
+  "display_primary": "蜂窝网络",
+  "display_secondary": "Cellular Network",
+  "aliases": [
+    "移动蜂窝网",
+    "移动通信网"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "mobile-network-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将覆盖区域划分为六边形基站小区并实现频率复用与终端越区漫游的移动无线电通信网。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

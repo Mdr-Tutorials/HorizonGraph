@@ -1,0 +1,30 @@
+{
+  "id": "netstat",
+  "name": "netstat",
+  "display_primary": "netstat",
+  "display_secondary": "Network Statistics",
+  "aliases": [
+    "netstat命令",
+    "网络状态统计"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "operating_systems"
+  ],
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "命令行网络诊断工具，用于显示操作系统当前所有活动套接字连接、监听端口、路由表与接口统计。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

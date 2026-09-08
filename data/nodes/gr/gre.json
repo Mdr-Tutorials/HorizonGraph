@@ -1,0 +1,29 @@
+{
+  "id": "gre",
+  "name": "Generic Routing Encapsulation",
+  "display_primary": "通用路由封装",
+  "display_secondary": "GRE",
+  "aliases": [
+    "GRE协议",
+    "GRE隧道"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "RFC 2784无状态点对点隧道协议，可将任意三层网络协议数据报文封装在IP报文中跨网络透传。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

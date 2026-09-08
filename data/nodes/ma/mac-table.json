@@ -1,0 +1,28 @@
+{
+  "id": "mac-table",
+  "name": "MAC Address Table",
+  "display_primary": "MAC地址表",
+  "display_secondary": "MAC Table",
+  "aliases": [
+    "CAM表",
+    "交换机转发表"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "交换机内部维护的记录目的MAC地址与对应物理交换端口映射关系的高速硬件查找表。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "failover",
+  "name": "Failover",
+  "display_primary": "故障转移",
+  "display_secondary": "Failover",
+  "aliases": [
+    "故障倒换",
+    "主备容灾切换"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "当主网络设备、服务器或链路发生故障时，自动将流量无缝切换至热备用冗余系统的容灾机制。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ospf",
+  "name": "OSPF",
+  "display_primary": "OSPF",
+  "display_secondary": "Open Shortest Path First",
+  "aliases": [
+    "开放最短路径优先",
+    "OSPF路由协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "基于Dijkstra最短路径树算法的大规模企业级内部网关链路状态路由协议。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

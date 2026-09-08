@@ -1,0 +1,29 @@
+{
+  "id": "comptia-security-plus",
+  "name": "CompTIA Security+",
+  "display_primary": "CompTIA Security+",
+  "display_secondary": "Security+",
+  "aliases": [
+    "Security+认证"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "career-development",
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "全球广泛认可的国际中立网络安全基准认证，考察核心安全原理、风险评估与安全运维防御实战。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

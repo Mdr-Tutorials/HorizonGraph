@@ -1,0 +1,28 @@
+{
+  "id": "ifconfig",
+  "name": "ifconfig",
+  "display_primary": "ifconfig",
+  "display_secondary": "Interface Config",
+  "aliases": [
+    "ifconfig命令"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "Unix/Linux系统配置与查询网络接口参数（IP、掩码与状态）的命令行工具。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

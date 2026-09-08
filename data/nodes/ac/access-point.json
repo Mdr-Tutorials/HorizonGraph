@@ -1,0 +1,29 @@
+{
+  "id": "access-point",
+  "name": "Wireless Access Point",
+  "display_primary": "无线接入点",
+  "display_secondary": "Access Point",
+  "aliases": [
+    "无线AP",
+    "AP设备"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    }
+  ],
+  "summary": "桥接无线客户端终端射频信号与有线骨干以太网的局域网无线收发接入网关设备。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

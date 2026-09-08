@@ -1,0 +1,30 @@
+{
+  "id": "ids",
+  "name": "Intrusion Detection System",
+  "display_primary": "入侵检测系统",
+  "display_secondary": "IDS",
+  "aliases": [
+    "IDS系统",
+    "网络入侵检测"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "旁路部署在网络中，实时捕获并分析流量特征以识别已知攻击、恶意行为并触发报警的安全系统。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

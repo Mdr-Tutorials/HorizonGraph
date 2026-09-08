@@ -1,0 +1,29 @@
+{
+  "id": "network-hub",
+  "name": "Network Hub",
+  "display_primary": "集线器",
+  "display_secondary": "Network Hub",
+  "aliases": [
+    "以太网集线器",
+    "网络集线器"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    }
+  ],
+  "summary": "工作在物理层的多端口信号放大中继设备，将接收到的比特无条件广播转发至所有其他端口。",
+  "importance": 3,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "physical-layer",
+  "name": "Physical Layer",
+  "display_primary": "物理层",
+  "display_secondary": "Physical Layer",
+  "aliases": [
+    "OSI物理层",
+    "L1物理层"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "osi-model"
+    }
+  ],
+  "summary": "OSI参考模型的第一层，负责在物理传输介质上传输非结构化的原始比特流与电气信号。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

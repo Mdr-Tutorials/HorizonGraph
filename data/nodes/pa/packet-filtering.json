@@ -1,0 +1,29 @@
+{
+  "id": "packet-filtering",
+  "name": "Packet Filtering",
+  "display_primary": "包过滤",
+  "display_secondary": "Packet Filtering",
+  "aliases": [
+    "包过滤防火墙",
+    "无状态包过滤"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "第一代无状态防火墙技术，依据预设规则对数据包首部五元组（IP/端口/协议）逐包匹配放行或丢弃。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

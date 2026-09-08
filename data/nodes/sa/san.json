@@ -1,0 +1,29 @@
+{
+  "id": "san",
+  "name": "Storage Area Network",
+  "display_primary": "存储区域网络",
+  "display_secondary": "SAN",
+  "aliases": [
+    "SAN网络",
+    "存储网络"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "专门通过光纤通道或以太网连接服务器与块级外部存储设备的高速独立专用网络。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

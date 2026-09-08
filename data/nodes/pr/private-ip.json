@@ -1,0 +1,28 @@
+{
+  "id": "private-ip",
+  "name": "Private IP Address",
+  "display_primary": "私有IP地址",
+  "display_secondary": "Private IP",
+  "aliases": [
+    "内网IP",
+    "私网地址"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "RFC 1918预留给企业或家庭局域网内部使用、在公共互联网上不可被直接路由的IP地址段。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

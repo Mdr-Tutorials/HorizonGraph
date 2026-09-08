@@ -1,0 +1,32 @@
+{
+  "id": "application-layer",
+  "name": "Application Layer",
+  "display_primary": "应用层",
+  "display_secondary": "Application Layer",
+  "aliases": [
+    "OSI应用层",
+    "L7应用层"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "osi-model"
+    }
+  ],
+  "summary": "OSI参考模型的第七层，直接为用户的应用程序提供网络通信接口与分布式信息服务。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

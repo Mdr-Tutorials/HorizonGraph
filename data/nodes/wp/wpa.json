@@ -1,0 +1,31 @@
+{
+  "id": "wpa",
+  "name": "Wi-Fi Protected Access",
+  "display_primary": "WPA",
+  "display_secondary": "Wi-Fi Protected Access",
+  "aliases": [
+    "WPA安全协议",
+    "WPA2",
+    "WPA3"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "Wi-Fi联盟制定的无线局域网身份安全认证与通信加密标准族，包含WPA2与WPA3。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

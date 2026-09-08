@@ -1,0 +1,29 @@
+{
+  "id": "netflow",
+  "name": "NetFlow",
+  "display_primary": "NetFlow",
+  "display_secondary": "NetFlow Protocol",
+  "aliases": [
+    "NetFlow协议",
+    "思科NetFlow"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "思科开发的网络遥测协议，用于对IP会话流五元组及流量吞吐数据进行高效采集与导出分析。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "z-wave",
+  "name": "Z-Wave",
+  "display_primary": "Z-Wave",
+  "display_secondary": "Z-Wave",
+  "aliases": [
+    "Z-Wave协议",
+    "Z-Wave智能家居"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "networking",
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "专为智能家居控制设计的Sub-GHz低功耗抗干扰无线Mesh网状网络通信协议标准。",
+  "importance": 3,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

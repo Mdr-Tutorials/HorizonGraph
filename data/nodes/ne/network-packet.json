@@ -1,0 +1,28 @@
+{
+  "id": "network-packet",
+  "name": "Network Packet",
+  "display_primary": "网络数据包",
+  "display_secondary": "Packet",
+  "aliases": [
+    "IP分组",
+    "数据包"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "网络层传输的格式化数据单位，包含用于寻址和控制的IP报头以及承载的有效负载。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

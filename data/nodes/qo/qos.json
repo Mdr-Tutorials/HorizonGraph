@@ -1,0 +1,28 @@
+{
+  "id": "qos",
+  "name": "Quality of Service",
+  "display_primary": "服务质量",
+  "display_secondary": "QoS",
+  "aliases": [
+    "QoS保障",
+    "网络服务质量"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在有限网络资源下，通过优先级调度与带宽预留确保音视频等关键业务延迟与抖动的控制技术。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "stp",
+  "name": "Spanning Tree Protocol",
+  "display_primary": "生成树协议",
+  "display_secondary": "STP",
+  "aliases": [
+    "STP协议",
+    "802.1D"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "IEEE 802.1D网络协议，通过阻塞冗余交换机端口消除二层物理环路并提供链路备份。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

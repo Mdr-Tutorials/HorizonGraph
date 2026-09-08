@@ -1,0 +1,30 @@
+{
+  "id": "ccna",
+  "name": "CCNA",
+  "display_primary": "CCNA",
+  "display_secondary": "Cisco Certified Network Associate",
+  "aliases": [
+    "思科认证网络工程师",
+    "Cisco Certified Network Associate"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "career-development",
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "思科公司推出的入门级网络工程师专业认证，考察路由交换、无线安全与网络自动化基础。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

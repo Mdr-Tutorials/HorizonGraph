@@ -1,0 +1,33 @@
+{
+  "id": "restconf",
+  "name": "RESTCONF",
+  "display_primary": "RESTCONF",
+  "display_secondary": "RESTCONF Protocol",
+  "aliases": [
+    "RESTCONF协议",
+    "RFC 8040"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "netconf"
+    }
+  ],
+  "summary": "基于HTTP提供RESTful接口，以JSON或XML操作YANG数据的网络管理协议。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

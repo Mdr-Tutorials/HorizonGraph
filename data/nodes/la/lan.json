@@ -1,0 +1,28 @@
+{
+  "id": "lan",
+  "name": "Local Area Network",
+  "display_primary": "局域网",
+  "display_secondary": "LAN",
+  "aliases": [
+    "LAN网络",
+    "本地局域网"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在有限地理范围内（如家庭、办公室或机房）互联计算机的高速私有数据通信网络。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

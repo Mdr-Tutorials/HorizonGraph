@@ -1,0 +1,28 @@
+{
+  "id": "link-aggregation",
+  "name": "Link Aggregation",
+  "display_primary": "链路聚合",
+  "display_secondary": "Link Aggregation",
+  "aliases": [
+    "端口聚合",
+    "以太通道"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将多个物理以太网交换端口捆绑为一个高带宽逻辑通道以提升传输吞吐并提供冗余容错。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

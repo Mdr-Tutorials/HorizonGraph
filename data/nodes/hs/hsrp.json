@@ -1,0 +1,28 @@
+{
+  "id": "hsrp",
+  "name": "HSRP",
+  "display_primary": "HSRP",
+  "display_secondary": "Hot Standby Router Protocol",
+  "aliases": [
+    "热备份路由器协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "思科专有的网关冗余协议，在局域网多台路由器间选举活跃与备份网关以实现网关热备切换。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

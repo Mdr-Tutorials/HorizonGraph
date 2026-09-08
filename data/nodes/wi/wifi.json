@@ -2,7 +2,7 @@
   "id": "wifi",
   "name": "Wi-Fi",
   "aliases": [
-    "无线局域网",
+    "Wi-Fi网络",
     "802.11"
   ],
   "type": "protocol",
@@ -23,6 +23,6 @@
   "summary": "无线局域网标准族，掌管名字的联盟与 IEEE 标准并行。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-09-08",
   "importance": 4
 }

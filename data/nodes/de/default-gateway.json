@@ -1,0 +1,28 @@
+{
+  "id": "default-gateway",
+  "name": "Default Gateway",
+  "display_primary": "默认网关",
+  "display_secondary": "Default Gateway",
+  "aliases": [
+    "缺省网关",
+    "默认路由跳"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "主机在转发目的IP未匹配本地子网的外网数据包时，将报文递送给的首选下一跳路由器接口。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

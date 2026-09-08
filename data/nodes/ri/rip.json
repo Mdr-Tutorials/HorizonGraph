@@ -1,0 +1,29 @@
+{
+  "id": "rip",
+  "name": "Routing Information Protocol",
+  "display_primary": "路由信息协议",
+  "display_secondary": "RIP",
+  "aliases": [
+    "RIP协议",
+    "RIP路由协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "基于Bellman-Ford距离矢量算法、以跳数作为选路开销度量的经典小型内部网关路由协议。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

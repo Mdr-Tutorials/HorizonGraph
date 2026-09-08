@@ -1,0 +1,28 @@
+{
+  "id": "glbp",
+  "name": "GLBP",
+  "display_primary": "GLBP",
+  "display_secondary": "Gateway Load Balancing Protocol",
+  "aliases": [
+    "网关负载均衡协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "思科专有的网关冗余与流量分摊协议，在提供冗余热备的同时并发利用多台网关实现出向负载均衡。",
+  "importance": 3,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

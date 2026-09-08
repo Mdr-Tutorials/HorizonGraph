@@ -1,0 +1,29 @@
+{
+  "id": "round-robin",
+  "name": "Round-Robin Scheduling",
+  "display_primary": "轮询调度算法",
+  "display_secondary": "Round Robin",
+  "aliases": [
+    "轮询算法",
+    "RR调度"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "按照固定循环顺序将进入的客户端请求逐一分发给后端可用服务器集群的经典负载均衡算法。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

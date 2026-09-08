@@ -1,0 +1,28 @@
+{
+  "id": "eigrp",
+  "name": "EIGRP",
+  "display_primary": "EIGRP",
+  "display_secondary": "Enhanced Interior Gateway Routing Protocol",
+  "aliases": [
+    "增强型内部网关路由协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "思科开发的高级距离矢量路由协议，基于DUAL弥散更新算法实现无环路超快速网络收敛。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

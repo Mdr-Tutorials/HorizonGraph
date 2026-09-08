@@ -1,0 +1,28 @@
+{
+  "id": "pat",
+  "name": "Port Address Translation",
+  "display_primary": "端口地址转换",
+  "display_secondary": "PAT",
+  "aliases": [
+    "PAT协议",
+    "NAT重载"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "通过动态映射不同传输层端口号，将内网多个私有IP地址并发复用转换为单一公网IP的技术。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

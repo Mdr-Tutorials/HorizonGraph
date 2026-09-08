@@ -1,0 +1,32 @@
+{
+  "id": "network-layer",
+  "name": "Network Layer",
+  "display_primary": "网络层",
+  "display_secondary": "Network Layer",
+  "aliases": [
+    "OSI网络层",
+    "L3网络层"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "osi-model"
+    }
+  ],
+  "summary": "OSI参考模型的第三层，负责端到端逻辑IP寻址、路由计算选择与数据包分组转发。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

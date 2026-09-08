@@ -12,7 +12,8 @@
     "cybersecurity-ecosystem"
   ],
   "domains": [
-    "security"
+    "security",
+    "networking"
   ],
   "relations": [
     {
@@ -23,6 +24,6 @@
   "summary": "逐条列出主体对客体的权限，防火墙与文件系统通用。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-09-08",
   "importance": 3
 }

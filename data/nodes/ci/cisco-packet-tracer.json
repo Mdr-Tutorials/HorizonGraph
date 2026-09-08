@@ -1,0 +1,29 @@
+{
+  "id": "cisco-packet-tracer",
+  "name": "Cisco Packet Tracer",
+  "display_primary": "Cisco Packet Tracer",
+  "display_secondary": "Packet Tracer",
+  "aliases": [
+    "思科模拟器",
+    "Packet Tracer"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "思科官方出品的可视化跨平台网络仿真教学软件，提供丰富网络硬件拖拽连线与协议模拟实验。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

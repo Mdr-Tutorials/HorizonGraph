@@ -1,0 +1,29 @@
+{
+  "id": "network-switch",
+  "name": "Network Switch",
+  "display_primary": "交换机",
+  "display_secondary": "Network Switch",
+  "aliases": [
+    "以太网交换机",
+    "二层交换机"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-product"
+    }
+  ],
+  "summary": "工作在数据链路层（或多层），基于硬件MAC地址表在端口之间实现低延迟全双工数据帧交换。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "stateful-inspection",
+  "name": "Stateful Inspection",
+  "display_primary": "状态检测",
+  "display_secondary": "Stateful Inspection",
+  "aliases": [
+    "状态化检测防火墙",
+    "动态连接跟踪"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "防火墙全程监控并记录TCP三次握手等通信连接状态，依据会话状态表动态评估并放行后续报文。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

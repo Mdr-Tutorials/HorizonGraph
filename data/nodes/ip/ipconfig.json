@@ -1,0 +1,28 @@
+{
+  "id": "ipconfig",
+  "name": "ipconfig",
+  "display_primary": "ipconfig",
+  "display_secondary": "ipconfig",
+  "aliases": [
+    "ipconfig命令"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "windows-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "Windows控制台网络配置诊断工具，用于查看各网卡当前IP/子网掩码/网关配置并刷新DNS缓存。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

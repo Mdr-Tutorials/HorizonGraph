@@ -1,0 +1,29 @@
+{
+  "id": "nat64",
+  "name": "NAT64",
+  "display_primary": "NAT64",
+  "display_secondary": "NAT64",
+  "aliases": [
+    "NAT64转换",
+    "IPv6到IPv4转换"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "配合DNS64工作，允许纯IPv6网络主机透明访问公网IPv4服务器的有状态网络地址转换协议。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

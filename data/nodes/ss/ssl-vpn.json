@@ -1,0 +1,30 @@
+{
+  "id": "ssl-vpn",
+  "name": "SSL VPN",
+  "display_primary": "SSL-VPN",
+  "display_secondary": "TLS/SSL VPN",
+  "aliases": [
+    "TLS VPN",
+    "Web安全网关"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "基于标准TLS/SSL应用层安全协议，允许远程用户通过浏览器或轻量客户端安全访问企业内网。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "subnet-mask",
+  "name": "Subnet Mask",
+  "display_primary": "子网掩码",
+  "display_secondary": "Subnet Mask",
+  "aliases": [
+    "网络掩码",
+    "掩码"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "与IP地址配合使用的32位点分二进制掩码，指明IP地址中哪些位代表网络号、哪些位代表主机号。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

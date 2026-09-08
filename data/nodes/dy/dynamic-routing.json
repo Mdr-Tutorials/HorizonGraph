@@ -1,0 +1,28 @@
+{
+  "id": "dynamic-routing",
+  "name": "Dynamic Routing",
+  "display_primary": "动态路由",
+  "display_secondary": "Dynamic Routing",
+  "aliases": [
+    "动态路由协议",
+    "自适应路由"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "路由器通过运行动态路由算法在邻居节点间交换拓扑信息并实时计算更新路由表的机制。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "public-ip",
+  "name": "Public IP Address",
+  "display_primary": "公网IP地址",
+  "display_secondary": "Public IP",
+  "aliases": [
+    "公有IP",
+    "公网地址"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "由国际互联网络组织统一分配登记、在全球互联网中具有唯一性且可直接寻址路由的IP。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

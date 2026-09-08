@@ -1,0 +1,28 @@
+{
+  "id": "client-server",
+  "name": "Client-Server Architecture",
+  "display_primary": "客户机-服务器架构",
+  "display_secondary": "C/S Architecture",
+  "aliases": [
+    "CS架构",
+    "主从网络架构"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "集中式网络架构模式，客户端主动向具备特定服务能力的服务端发起请求并获得响应。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

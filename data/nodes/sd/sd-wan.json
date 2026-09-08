@@ -1,0 +1,28 @@
+{
+  "id": "sd-wan",
+  "name": "SD-WAN",
+  "display_primary": "SD-WAN",
+  "display_secondary": "Software-Defined WAN",
+  "aliases": [
+    "软件定义广域网"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "将软件定义网络SDN技术应用于广域网，智能动态调度多链路宽带流量的企业网络方案。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

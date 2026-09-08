@@ -1,0 +1,33 @@
+{
+  "id": "gcp",
+  "name": "Google Cloud Platform",
+  "display_primary": "Google Cloud Platform",
+  "display_secondary": "GCP",
+  "aliases": [
+    "谷歌云平台",
+    "Google Cloud"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "谷歌提供的涵盖计算、全球VPC虚拟网络、大数据分析与企业级AI的全球公共云基础设施平台。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

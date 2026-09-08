@@ -1,0 +1,27 @@
+{
+  "id": "devops",
+  "name": "DevOps",
+  "display_primary": "DevOps",
+  "display_secondary": "Development and Operations",
+  "aliases": [
+    "开发运维一体化"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "结合软件开发与信息系统运维的一组文化理念与工程实践，旨在缩短系统交付周期并保证高可用。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

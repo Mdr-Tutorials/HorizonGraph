@@ -1,0 +1,30 @@
+{
+  "id": "ngfw",
+  "name": "Next-Generation Firewall",
+  "display_primary": "下一代防火墙",
+  "display_secondary": "NGFW",
+  "aliases": [
+    "NGFW防火墙",
+    "应用识别防火墙"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "深度融合应用层流量识别、内建IPS防御、SSL解密与威胁情报于一体的现代化高性能安全网关。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

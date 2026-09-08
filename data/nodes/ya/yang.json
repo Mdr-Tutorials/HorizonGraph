@@ -1,0 +1,29 @@
+{
+  "id": "yang",
+  "name": "YANG",
+  "display_primary": "YANG",
+  "display_secondary": "YANG Data Modeling",
+  "aliases": [
+    "YANG数据建模语言",
+    "RFC 6020"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "RFC 6020定义的网络配置与状态数据结构建模语言。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

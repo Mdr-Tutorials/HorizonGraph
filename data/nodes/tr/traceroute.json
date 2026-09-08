@@ -1,0 +1,29 @@
+{
+  "id": "traceroute",
+  "name": "Traceroute",
+  "display_primary": "Traceroute",
+  "display_secondary": "Traceroute",
+  "aliases": [
+    "路由追踪",
+    "Tracert"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "通过递增发送具有不同TTL值的探测包，追踪并记录数据包从源到目标沿途经过所有路由器跳数的工具。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

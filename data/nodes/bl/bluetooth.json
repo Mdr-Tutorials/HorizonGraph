@@ -1,0 +1,30 @@
+{
+  "id": "bluetooth",
+  "name": "Bluetooth",
+  "display_primary": "蓝牙",
+  "display_secondary": "Bluetooth",
+  "aliases": [
+    "蓝牙技术",
+    "经典蓝牙"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "networking",
+    "embedded-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "工作在2.4GHz ISM频段的短距离经典无线电通信标准，广泛用于移动设备间音频与数据传输。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

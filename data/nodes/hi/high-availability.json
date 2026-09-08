@@ -1,0 +1,29 @@
+{
+  "id": "high-availability",
+  "name": "High Availability",
+  "display_primary": "高可用性",
+  "display_secondary": "High Availability",
+  "aliases": [
+    "高可用系统",
+    "HA高可用"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "cloud-infrastructure"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "系统通过消除单点故障、冗余备份与自动恢复设计，在长时间内保持业务持续提供服务的能力。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

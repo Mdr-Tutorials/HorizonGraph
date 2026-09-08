@@ -1,0 +1,29 @@
+{
+  "id": "dos",
+  "name": "Denial of Service",
+  "display_primary": "拒绝服务攻击",
+  "display_secondary": "DoS",
+  "aliases": [
+    "DoS攻击",
+    "网络拒绝服务"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "攻击者通过滥用协议缺陷或发送过量请求耗尽目标服务器计算与网络资源，使其无法响应正常请求。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "three-tier-network",
+  "name": "Three-Tier Network Architecture",
+  "display_primary": "经典三层网络架构",
+  "display_secondary": "Three-Tier Architecture",
+  "aliases": [
+    "核心-汇聚-接入架构",
+    "园区网三层架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    }
+  ],
+  "summary": "经典层次化园区网络设计，自顶向下分为高速核心层、策略汇聚层与终端接入层。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

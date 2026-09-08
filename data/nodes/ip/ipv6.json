@@ -1,0 +1,33 @@
+{
+  "id": "ipv6",
+  "name": "IPv6",
+  "display_primary": "IPv6",
+  "display_secondary": "Internet Protocol v6",
+  "aliases": [
+    "网际协议第6版",
+    "互联网协议第六版"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "ip"
+    }
+  ],
+  "summary": "采用128位冒号十六进制地址、拥有海量空间并原生支持自动配置的下一代互联网核心协议。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

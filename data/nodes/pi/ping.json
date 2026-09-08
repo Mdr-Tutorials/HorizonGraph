@@ -1,0 +1,29 @@
+{
+  "id": "ping",
+  "name": "Ping",
+  "display_primary": "Ping",
+  "display_secondary": "Ping",
+  "aliases": [
+    "Ping命令",
+    "网络Ping"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "利用ICMP Echo请求与应答报文检测目标主机网络连通性并测量往返时延RTT的基础排障命令。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

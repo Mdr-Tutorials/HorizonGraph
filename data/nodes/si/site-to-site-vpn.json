@@ -1,0 +1,29 @@
+{
+  "id": "site-to-site-vpn",
+  "name": "Site-to-Site VPN",
+  "display_primary": "站点到站点VPN",
+  "display_secondary": "Site-to-Site VPN",
+  "aliases": [
+    "网关到网关VPN",
+    "分支互联VPN"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在不同分支机构的网关路由器或防火墙之间建立加密隧道，将多个分散局域网互联为统一内网。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

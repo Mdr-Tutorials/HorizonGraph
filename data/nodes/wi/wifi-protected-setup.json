@@ -1,0 +1,29 @@
+{
+  "id": "wifi-protected-setup",
+  "name": "Wi-Fi Protected Setup",
+  "display_primary": "Wi-Fi保护设置",
+  "display_secondary": "WPS",
+  "aliases": [
+    "WPS配网",
+    "一键Wi-Fi加密配置"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "旨在简化家庭用户无线网络安全配置的PIN码或物理按键快速配对配网技术标准。",
+  "importance": 3,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

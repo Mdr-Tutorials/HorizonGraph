@@ -1,0 +1,30 @@
+{
+  "id": "nmap",
+  "name": "Nmap",
+  "display_primary": "Nmap",
+  "display_secondary": "Network Mapper",
+  "aliases": [
+    "Network Mapper",
+    "端口扫描器"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "业界领先的开源网络探测与安全审计扫描工具，支持主机存活发现、端口扫描与操作系统指纹识别。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

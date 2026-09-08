@@ -1,0 +1,28 @@
+{
+  "id": "mac-address",
+  "name": "MAC Address",
+  "display_primary": "MAC地址",
+  "display_secondary": "MAC Address",
+  "aliases": [
+    "物理地址",
+    "网卡物理地址"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "烧录在网络适配器ROM中的48位全球唯一硬件介质访问控制地址，供二层寻址使用。",
+  "importance": 5,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}

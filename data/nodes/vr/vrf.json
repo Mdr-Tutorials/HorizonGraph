@@ -1,0 +1,28 @@
+{
+  "id": "vrf",
+  "name": "Virtual Routing and Forwarding",
+  "display_primary": "VRF",
+  "display_secondary": "Virtual Routing and Forwarding",
+  "aliases": [
+    "虚拟路由转发",
+    "VRF技术"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "在单台物理路由器上虚拟化出多个相互完全隔离的独立路由转发表以支持多租户重叠IP。",
+  "importance": 4,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-09-08"
+}
