@@ -18,6 +18,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "nvidia-h100"
     }
   ],
   "summary": "GPU 与加速计算公司，CUDA 生态的主导者。",

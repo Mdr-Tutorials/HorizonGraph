@@ -26,6 +26,10 @@
       "target_id": "cuda"
     },
     {
+      "relation_type": "integrates_with",
+      "target_id": "cuda"
+    },
+    {
       "relation_type": "implements",
       "target_id": "backpropagation"
     },
@@ -44,6 +48,31 @@
     {
       "relation_type": "competes_with",
       "target_id": "tensorflow"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "matrix-multiplication",
+      "context": "提供矩阵乘法运算；具体接口和执行设备由实现决定。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "gradient-descent",
+      "context": "优化器、损失模块及正则化组件提供相应训练能力，需按任务选择。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "loss-function",
+      "context": "优化器、损失模块及正则化组件提供相应训练能力，需按任务选择。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "cross-entropy",
+      "context": "优化器、损失模块及正则化组件提供相应训练能力，需按任务选择。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "regularization",
+      "context": "优化器、损失模块及正则化组件提供相应训练能力，需按任务选择。"
     }
   ],
   "summary": "动态图优先的深度学习框架，研究与生产都在用。",

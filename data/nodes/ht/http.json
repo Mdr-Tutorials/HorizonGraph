@@ -23,6 +23,11 @@
     {
       "relation_type": "depends_on",
       "target_id": "tcp"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ietf",
+      "context": "相关标准由 IETF 工作组按其标准流程制定和维护。"
     }
   ],
   "summary": "Web 的应用层协议，请求方法与状态码构成资源操作。",

@@ -17,6 +17,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "w3c",
+      "context": "相关规范由 W3C 对应工作组按其标准流程推进。"
     }
   ],
   "summary": "浏览器里的现代 GPU API，对标 Vulkan 的 Web 入口。",

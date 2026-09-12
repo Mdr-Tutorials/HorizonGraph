@@ -1,0 +1,42 @@
+{
+  "id": "stack",
+  "name": "Stack",
+  "display_primary": "栈",
+  "display_secondary": "Stack",
+  "aliases": [
+    "栈",
+    "堆栈",
+    "LIFO"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "顺序存储实现可用数组保存元素；不是唯一实现方式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linked-list",
+      "context": "链式实现可用链接组织元素；不是唯一实现方式。"
+    }
+  ],
+  "summary": "遵循后进先出规则的抽象数据结构，支持入栈与出栈。",
+  "description": "栈的核心是后进先出：最近压入的元素先弹出。它可以由数组或链表实现，用于迭代式深度优先搜索、表达式求值与回溯。这里讨论数据结构；程序运行时的调用栈是相关的具体应用。\n\n参考：[权威资料](https://xlinux.nist.gov/dads/HTML/stack.html)。",
+  "importance": 5,
+  "official_site": "https://xlinux.nist.gov/dads/HTML/stack.html",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

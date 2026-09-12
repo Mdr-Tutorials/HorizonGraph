@@ -1,0 +1,63 @@
+{
+  "id": "nccl",
+  "name": "NVIDIA Collective Communications Library",
+  "display_primary": "NCCL",
+  "display_secondary": "NVIDIA 集合通信库",
+  "abbreviation": "NCCL",
+  "aliases": [
+    "NVIDIA集合通信库",
+    "英伟达集合通信库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "high-performance-computing",
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cuda",
+      "context": "NCCL 的 GPU 通信与 CUDA 执行流和设备编程模型集成。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia",
+      "context": "由 NVIDIA 开发的集合通信库。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nvlink",
+      "context": "在硬件、驱动和拓扑支持时选用此互联路径；不是所有部署的必需项。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pcie",
+      "context": "在硬件、驱动和拓扑支持时选用此互联路径；不是所有部署的必需项。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "infiniband",
+      "context": "在硬件、驱动和拓扑支持时选用此互联路径；不是所有部署的必需项。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "pytorch",
+      "context": "torch.distributed 提供 NCCL 后端，用于 CUDA GPU 分布式计算。"
+    }
+  ],
+  "summary": "面向 NVIDIA GPU 的集合通信库，支撑多卡与多机计算。",
+  "description": "NCCL 提供 AllReduce、AllGather 等集合通信及点对点通信，常用于同步梯度和模型并行中的张量交换。它与 CUDA 执行流集成，并可根据硬件条件使用 PCIe、NVLink、InfiniBand 或网络套接字。特定互联并不是所有 NCCL 部署的硬依赖。\n\n参考：[权威资料](https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/overview.html)。",
+  "importance": 4,
+  "official_site": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/overview.html",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

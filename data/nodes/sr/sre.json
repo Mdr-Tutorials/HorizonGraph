@@ -16,6 +16,16 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slo",
+      "context": "用明确服务目标安排可靠性投入与改进优先级。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "error-budget",
+      "context": "根据预算消耗协调发布节奏与可靠性工作。"
     }
   ],
   "summary": "用软件工程方法管运维，SLO 与错误预算的裁判。",

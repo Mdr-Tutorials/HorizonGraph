@@ -23,6 +23,11 @@
     {
       "relation_type": "depends_on",
       "target_id": "python"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ai-agent",
+      "context": "提供构建基于大模型的智能体及工具协作流程的能力。"
     }
   ],
   "summary": "基于角色扮演与任务委派的多智能体协同框架，赋能自主团队工作流编排。",

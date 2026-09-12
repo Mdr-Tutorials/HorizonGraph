@@ -18,6 +18,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "language"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "w3c",
+      "context": "相关规范由 W3C 对应工作组按其标准流程推进。"
     }
   ],
   "summary": "XML 矢量图形格式，图标与插画的 Web 标准。",

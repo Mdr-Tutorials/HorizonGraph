@@ -1,0 +1,46 @@
+{
+  "id": "context-engineering",
+  "name": "Context Engineering",
+  "display_primary": "上下文工程",
+  "display_secondary": "Context Engineering",
+  "aliases": [
+    "上下文工程",
+    "语境工程"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-window",
+      "context": "依据模型可接收的上下文范围分配信息空间并选择保留内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-memory",
+      "context": "从持久状态中选择与当前任务相关的信息放入模型上下文。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rag",
+      "context": "通过检索按需获取外部资料并组织进模型上下文。"
+    }
+  ],
+  "summary": "组织指令、历史、工具结果和检索内容，构造模型所需上下文。",
+  "description": "上下文工程管理一次模型调用可见的信息，包括指令、检索资料、对话状态和工具反馈。常见工作有筛选、压缩、排序与按需加载，目标是在有限上下文中保留对任务有用的信息。来源可信度与工具权限也需要单独处理。\n\n参考：[权威资料](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)。",
+  "importance": 4,
+  "official_site": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

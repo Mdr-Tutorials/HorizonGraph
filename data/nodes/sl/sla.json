@@ -1,0 +1,38 @@
+{
+  "id": "sla",
+  "name": "Service Level Agreement",
+  "display_primary": "SLA",
+  "display_secondary": "服务等级协议",
+  "abbreviation": "SLA",
+  "aliases": [
+    "服务等级协议",
+    "服务水平协议"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slo",
+      "context": "服务协议可纳入明确的服务表现目标，并约定范围和未达标处理。"
+    }
+  ],
+  "summary": "约定服务等级及未达标时相应处理方式的服务协议。",
+  "description": "SLA 是提供方与使用方之间关于服务表现的约定，通常包含测量口径、目标、适用范围与未达标后的处理。SLO 是目标，SLI 是测量指标；三者可以相互关联，但不能只凭一个可用性数字判断完整服务约定。\n\n参考：[权威资料](https://sre.google/sre-book/service-level-objectives/)。",
+  "importance": 4,
+  "official_site": "https://sre.google/sre-book/service-level-objectives/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

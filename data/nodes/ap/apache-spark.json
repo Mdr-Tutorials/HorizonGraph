@@ -20,6 +20,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "framework"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "apache-software-foundation",
+      "context": "项目在 Apache 基金会框架下由对应社区与项目管理委员会治理。"
     }
   ],
   "summary": "专为大规模数据处理而设计的通用分布式内存批处理与分析计算引擎。",

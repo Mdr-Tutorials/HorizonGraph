@@ -1,0 +1,57 @@
+{
+  "id": "apache-iceberg",
+  "name": "Apache Iceberg",
+  "display_primary": "Apache Iceberg",
+  "aliases": [
+    "Iceberg",
+    "Iceberg表格式"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "parquet",
+      "context": "表中的数据文件可以采用 Parquet；也支持其他数据文件格式。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "acid",
+      "context": "通过表元数据提交与快照管理提供事务性表更新和隔离读取语义。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "delta-lake",
+      "context": "比较湖仓分析表的事务、演进与多引擎访问方案。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "apache-spark",
+      "context": "Spark 可以通过 Iceberg 集成读写 Iceberg 表。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "apache-software-foundation",
+      "context": "项目在 Apache 基金会框架下由对应社区与项目管理委员会治理。"
+    }
+  ],
+  "summary": "以快照和元数据管理分析表的开放表格式，支持多引擎访问。",
+  "description": "Iceberg 在 Parquet 等数据文件之上定义表元数据、快照与提交规则，使多个计算引擎可以访问同一张分析表。它支持模式演进和分区演进。表格式、数据文件格式和执行查询的计算引擎属于不同层次。\n\n参考：[权威资料](https://iceberg.apache.org/docs/latest/)。",
+  "importance": 4,
+  "official_site": "https://iceberg.apache.org/docs/latest/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

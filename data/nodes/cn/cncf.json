@@ -17,6 +17,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "linux-foundation",
+      "context": "CNCF 属于 Linux 基金会旗下的基金会，具有自身的社区和治理机制。"
     }
   ],
   "summary": "托管 Kubernetes 等云原生项目的基金会。",

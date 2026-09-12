@@ -17,6 +17,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "loss-function",
+      "context": "从可微训练目标出发按链式法则回传参数梯度。"
     }
   ],
   "summary": "沿计算图回传梯度，深度网络能训练的算法基础。",

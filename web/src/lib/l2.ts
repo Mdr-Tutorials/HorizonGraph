@@ -12,7 +12,8 @@ export async function loadDesc(id: string): Promise<string> {
   const i = b.ids.indexOf(id);
   if (i < 0 || cache.has(i)) return cache.get(i) ?? "";
   const h = await sha1hex(id);
-  const shard: any[] = await fetch(`${import.meta.env.BASE_URL}l2/shard-${parseInt(h[0], 16)}.json`).then((r) => r.json());
+  // 构建端使用十六进制分片名（0–9、a–f），请求时保留同一命名。
+  const shard: any[] = await fetch(`${import.meta.env.BASE_URL}l2/shard-${h[0]}.json`).then((r) => r.json());
   for (const rec of shard)
     if (rec[0] === i) {
       cache.set(i, rec[1] ?? "");

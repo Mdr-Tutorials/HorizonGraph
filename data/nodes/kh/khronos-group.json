@@ -1,0 +1,33 @@
+{
+  "id": "khronos-group",
+  "name": "Khronos Group",
+  "display_primary": "Khronos Group",
+  "display_secondary": "科纳斯组织",
+  "aliases": [
+    "Khronos",
+    "科纳斯组织"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "graphics-api-ecosystem",
+    "gpu-computing"
+  ],
+  "domains": [
+    "graphics",
+    "high-performance-computing",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "制定图形、计算与相关跨平台开放接口标准的产业联盟。",
+  "description": "Khronos 通过成员协作制定跨平台标准，相关接口包括 OpenGL、OpenGL ES、Vulkan 与 WebGL。标准说明应用与实现如何交互，实际驱动和运行时由具体厂商或项目提供。WebGPU 的标准工作由 W3C 承担。\n\n参考：[权威资料](https://www.khronos.org/about/)。",
+  "importance": 4,
+  "official_site": "https://www.khronos.org/about/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

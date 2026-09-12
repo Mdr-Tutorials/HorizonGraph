@@ -14,6 +14,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "在有序数组上利用随机访问定位中点并缩小搜索区间。"
     }
   ],
   "summary": "有序数据上 O(log n) 定位，边界细节最易写错。",

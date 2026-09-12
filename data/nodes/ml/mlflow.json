@@ -1,0 +1,40 @@
+{
+  "id": "mlflow",
+  "name": "MLflow",
+  "display_primary": "MLflow",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "dl-framework-ecosystem",
+    "python-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "machine-learning",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "pytorch",
+      "context": "MLflow 的 PyTorch 集成可记录、保存和加载相应模型。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "databricks",
+      "context": "项目最初由 Databricks 发起，后续由开源社区共同发展。"
+    }
+  ],
+  "summary": "管理实验记录、模型制品和模型生命周期的开源平台。",
+  "description": "MLflow 可以记录训练运行的参数、指标和制品，帮助比较实验，并通过模型注册管理版本与相关元数据。它也提供模型部署及其他 AI 工程能力。记录与管理训练结果不同于执行底层训练计算，常需与 PyTorch 等框架配合。\n\n参考：[权威资料](https://mlflow.org/docs/latest/ml/)；[实验追踪](https://mlflow.org/docs/latest/tracking)。",
+  "importance": 4,
+  "official_site": "https://mlflow.org/docs/latest/ml/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

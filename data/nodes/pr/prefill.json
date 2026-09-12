@@ -1,0 +1,42 @@
+{
+  "id": "prefill",
+  "name": "LLM Prefill",
+  "display_primary": "预填充",
+  "display_secondary": "LLM Prefill",
+  "aliases": [
+    "预填充",
+    "Prefill",
+    "提示词预填充"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kv-cache",
+      "context": "带缓存的自回归 Transformer 推理在处理输入前缀时建立初始键值状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "matrix-multiplication",
+      "context": "Transformer 预填充阶段用矩阵运算并行处理输入 token。"
+    }
+  ],
+  "summary": "处理输入上下文并建立初始状态的自回归模型推理阶段。",
+  "description": "在常见带 KV Cache 的自回归 Transformer 推理中，预填充处理输入 token 并计算相应键值缓存，之后进入逐步解码。它对首 token 延迟有重要影响；实际首 token 延迟还包括排队、调度和其他服务开销。\n\n参考：[权威资料](https://huggingface.co/blog/kv-cache)。",
+  "importance": 4,
+  "official_site": "https://huggingface.co/blog/kv-cache",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

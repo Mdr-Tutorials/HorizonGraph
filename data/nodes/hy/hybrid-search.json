@@ -1,0 +1,42 @@
+{
+  "id": "hybrid-search",
+  "name": "Hybrid Search",
+  "display_primary": "混合检索",
+  "display_secondary": "Hybrid Search",
+  "aliases": [
+    "混合检索",
+    "混合搜索"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "natural-language-processing",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bm25",
+      "context": "典型方案用 BM25 提供词项匹配候选，再与语义检索结果融合。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hnsw",
+      "context": "向量检索支路可以选择 HNSW 索引；其他向量索引同样可用。"
+    }
+  ],
+  "summary": "融合词项与向量等多种检索结果，兼顾精确匹配与语义。",
+  "description": "混合检索先利用不同检索器产生候选，再用排名融合或经过校准的分数合并结果。典型组合是 BM25 与向量检索，但不强制使用某一种向量索引。不同检索器的原始分数通常不能直接相加，结果仍应通过任务数据评估。\n\n参考：[权威资料](https://www.elastic.co/docs/solutions/search/hybrid-search)。",
+  "importance": 4,
+  "official_site": "https://www.elastic.co/docs/solutions/search/hybrid-search",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

@@ -24,6 +24,14 @@
       "target_id": "etcd"
     },
     {
+      "relation_type": "runs_on",
+      "target_id": "linux"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "containerd"
+    },
+    {
       "relation_type": "developed_by",
       "target_id": "google"
     },

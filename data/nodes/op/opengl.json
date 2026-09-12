@@ -23,6 +23,11 @@
     {
       "relation_type": "competes_with",
       "target_id": "vulkan"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "khronos-group",
+      "context": "相关图形接口或着色语言规范由 Khronos 工作组维护。"
     }
   ],
   "summary": "跨平台图形 API 的老前辈，Vulkan 的前身与基座。",

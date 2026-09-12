@@ -1,0 +1,37 @@
+{
+  "id": "hnsw",
+  "name": "Hierarchical Navigable Small World",
+  "display_primary": "HNSW",
+  "display_secondary": "Hierarchical Navigable Small World",
+  "abbreviation": "HNSW",
+  "aliases": [
+    "分层可导航小世界图"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "natural-language-processing",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "embeddings",
+      "context": "语义检索场景把嵌入向量作为待索引与查询的对象；算法也可处理其他向量。"
+    }
+  ],
+  "summary": "使用分层邻近图加速高维向量近似最近邻检索的算法。",
+  "description": "HNSW 用多层邻近图组织向量，先在高层快速定位，再向下细化候选。搜索宽度等参数影响召回率、延迟与内存开销。它寻找近似近邻，不保证每次返回精确最近邻；Milvus 等向量数据库提供相关索引实现。\n\n参考：[权威资料](https://arxiv.org/abs/1603.09320)；[Milvus HNSW 索引](https://milvus.io/docs/hnsw.md)。",
+  "importance": 4,
+  "official_site": "https://arxiv.org/abs/1603.09320",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

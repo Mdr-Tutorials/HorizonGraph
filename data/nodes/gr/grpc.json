@@ -36,6 +36,11 @@
     {
       "relation_type": "alternative_to",
       "target_id": "rest"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "exponential-backoff",
+      "context": "连接失败后的重连采用带上限和抖动的退避过程。"
     }
   ],
   "summary": "基于 HTTP/2 与 Protobuf 的高性能 RPC 框架。",

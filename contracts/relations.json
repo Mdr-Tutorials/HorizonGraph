@@ -1,18 +1,20 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "policy": {
     "storage": "数据平面仅存规范方向（canonical_owner 一侧）；反向视图由 build 派生",
     "self_loops": "全部禁止；自举属叙事，写入 description；试点批次后复核",
     "duplicate_edges": "同一节点内 (relation_type, target_id) 重复即 CI 失败",
     "mirror_check": "对称关系仅存一份，镜像双存即 CI 失败",
     "classification_edges": ["is_instance_of"],
-    "merge_review": "15 条全量入表；试点后依据录入分歧做合并评审，重点评审 depends_on 与 bases_for、competes_with 与 alternative_to 的边界"
+    "merge_review": "关系全量入表；试点后依据录入分歧做合并评审，重点评审 depends_on 与 bases_for、competes_with 与 alternative_to、uses 与 implements 的边界"
   },
   "display": {
     "is_instance_of": { "zh": "属于", "en": "instance of" },
     "governs": { "zh": "约束", "en": "governs" },
     "implements": { "zh": "实现", "en": "implements" },
     "depends_on": { "zh": "依赖", "en": "depends on" },
+    "uses": { "zh": "使用", "en": "uses" },
+    "stewarded_by": { "zh": "治理方", "en": "stewarded by" },
     "competes_with": { "zh": "竞争", "en": "competes with" },
     "alternative_to": { "zh": "替代方案", "en": "alternative to" },
     "extends": { "zh": "扩展", "en": "extends" },
@@ -23,7 +25,12 @@
     "deprecated_by": { "zh": "被替代", "en": "deprecated by" },
     "developed_by": { "zh": "开发者", "en": "developed by" },
     "founded_by": { "zh": "创始人", "en": "founded by" },
-    "powers": { "zh": "驱动", "en": "powers" }
+    "powers": { "zh": "驱动", "en": "powers" },
+    "implemented_by": { "zh": "实现者", "en": "implemented by" },
+    "runs_on": { "zh": "运行于", "en": "runs on" },
+    "integrates_with": { "zh": "集成", "en": "integrates with" },
+    "provides": { "zh": "提供", "en": "provides" },
+    "composed_of": { "zh": "组成", "en": "composed of" }
   },
   "relations": {
     "is_instance_of": {
@@ -59,6 +66,22 @@
       "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
       "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
       "decision": "直接硬依赖：移除目标后源无法构建或运行（Tokio depends_on Rust）。四重近邻判定的锚点：depends_on 表直接调用/链接关系，由使用方自上而下声明。"
+    },
+    "uses": {
+      "canonical_owner": "使用方持有边，指向采用的方法、指标或技术",
+      "symmetric": false,
+      "inverse_display": { "zh": "使用方", "en": "used by" },
+      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "decision": "有具体应用依据的方法或能力使用（BFS uses Queue；SLO uses SLI）。context 必须说明使用场景，不能仅因主题相近而连边。硬软件依赖走 depends_on，把概念或规范工程化走 implements，官方组件互操作走 integrates_with；不得为同一事实重复存边。可选实现必须在 context 中限定，不表示所有部署都需要目标。"
+    },
+    "stewarded_by": {
+      "canonical_owner": "项目、标准或组织持有边，指向正式治理或托管机构",
+      "symmetric": false,
+      "inverse_display": { "zh": "治理项目", "en": "stewards" },
+      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product", "organization"],
+      "range": ["organization"],
+      "decision": "标准制修订、项目社区治理或基金会正式托管归属（CSS stewarded_by W3C；Apache Spark stewarded_by ASF；CNCF stewarded_by Linux Foundation）。context 必须写明职责；不表示该机构亲自编写代码、拥有全部版权或发明技术。原始研发归属用 developed_by，普通会员、赞助与资金支持不足以建立本关系。"
     },
     "competes_with": {
       "canonical_owner": "对称关系，存于 id 字典序较小一侧",
@@ -139,6 +162,41 @@
       "domain": ["organization"],
       "range": ["person"],
       "decision": "创始归属（腾讯 founded_by 马化腾）。由组织持有边指向创始人个人；与 developed_by 的分界：developed_by 表作品的亲手研发归属，founded_by 表组织的创立归属——创始人不因其身份自动成为产品研发者。"
+    },
+    "implemented_by": {
+      "canonical_owner": "抽象方（语言或规范持有边）", "symmetric": false,
+      "inverse_display": { "zh": "实现", "en": "implements" },
+      "domain": ["language", "protocol", "architecture", "concept"],
+      "range": ["language", "framework", "library", "tool", "architecture", "product"],
+      "decision": "抽象语言、协议或概念由具体实现承载。"
+    },
+    "runs_on": {
+      "canonical_owner": "运行方（软件持有边）", "symmetric": false,
+      "inverse_display": { "zh": "承载", "en": "hosts" },
+      "domain": ["language", "framework", "library", "tool", "product"],
+      "range": ["architecture", "product"],
+      "decision": "软件或服务运行于操作系统、运行时或硬件平台。"
+    },
+    "integrates_with": {
+      "canonical_owner": "集成方持有边", "symmetric": true,
+      "inverse_display": { "zh": "集成", "en": "integrates with" },
+      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "decision": "存在官方或稳定生态集成，但不是硬依赖。仅存字典序较小一侧。"
+    },
+    "provides": {
+      "canonical_owner": "提供方（组织持有边）", "symmetric": false,
+      "inverse_display": { "zh": "提供者", "en": "provided by" },
+      "domain": ["organization"],
+      "range": ["product", "framework", "library", "tool", "architecture", "model_family"],
+      "decision": "组织提供产品、服务或开源项目。"
+    },
+    "composed_of": {
+      "canonical_owner": "整体持有边", "symmetric": false,
+      "inverse_display": { "zh": "属于组成", "en": "part of" },
+      "domain": ["concept", "protocol", "framework", "library", "architecture", "product"],
+      "range": ["concept", "protocol", "framework", "library", "architecture", "product"],
+      "decision": "整体由若干独立组件或概念组成。"
     },
     "powers": {
       "canonical_owner": "赋能方（底层技术持有边）",

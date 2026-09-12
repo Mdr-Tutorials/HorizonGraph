@@ -31,6 +31,11 @@
     {
       "relation_type": "depends_on",
       "target_id": "cuda"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "nvlink",
+      "context": "H100 SXM 等支持 NVLink 的系统形态采用此互联，实际连接取决于产品形态。"
     }
   ],
   "summary": "Hopper 架构数据中心 GPU，面向大模型训练与推理。",

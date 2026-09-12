@@ -1,0 +1,40 @@
+{
+  "id": "langgraph",
+  "name": "LangGraph",
+  "display_primary": "LangGraph",
+  "aliases": [],
+  "type": "framework",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ai-agent",
+      "context": "可将模型决策、工具操作与确定性步骤编排为有状态执行图。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-memory",
+      "context": "通过状态、检查点与存储接口承载短期及长期记忆。"
+    }
+  ],
+  "summary": "以状态图编排任务的运行框架，支持持久执行和人工介入。",
+  "description": "LangGraph 用状态、节点和边组织执行，可结合确定性步骤与模型决策。持久化检查点支持任务恢复和人工介入，也可承载短期与长期记忆。它能与 LangChain 集成，也能独立使用；Python 与 JavaScript 生态均有实现。\n\n参考：[权威资料](https://docs.langchain.com/oss/python/langgraph/overview)；[JavaScript 实现](https://docs.langchain.com/oss/javascript/langgraph/overview)。",
+  "importance": 4,
+  "official_site": "https://docs.langchain.com/oss/python/langgraph/overview",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

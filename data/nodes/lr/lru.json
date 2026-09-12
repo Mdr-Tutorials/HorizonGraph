@@ -16,6 +16,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linked-list",
+      "context": "常见 LRU 缓存以双向链表维护最近使用顺序，并配合哈希表定位节点。"
     }
   ],
   "summary": "最近最少使用淘汰策略，哈希表加双向链表做到 O(1)。",

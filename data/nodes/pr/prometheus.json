@@ -21,6 +21,16 @@
     {
       "relation_type": "implements",
       "target_id": "observability"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sli",
+      "context": "用采集指标及 PromQL 表达式计算具体 SLI。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slo",
+      "context": "可按 SLO 和预算消耗规则配置监测与告警。"
     }
   ],
   "summary": "拉模型的指标监控系统，云原生可观测性的默认选择。",

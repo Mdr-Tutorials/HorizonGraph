@@ -18,6 +18,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "apache-software-foundation",
+      "context": "项目在 Apache 基金会框架下由对应社区与项目管理委员会治理。"
     }
   ],
   "summary": "列式存储格式，大数据与湖仓的表标准。",

@@ -1,0 +1,30 @@
+{
+  "id": "matrix-multiplication",
+  "name": "Matrix Multiplication",
+  "display_primary": "矩阵乘法",
+  "display_secondary": "Matrix Multiplication",
+  "aliases": [
+    "矩阵乘法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "dl-framework-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "按行列内积组合矩阵的运算，连接线性代数与高性能计算。",
+  "description": "形状为 m×k 与 k×n 的矩阵相乘，得到 m×n 的矩阵，每个元素是相应行列的内积。它不同于逐元素相乘。NumPy 的 matmul、BLAS 的 GEMM 和 GPU 内核都提供相关计算，是注意力与低秩适配的重要计算环节。\n\n参考：[权威资料](https://numpy.org/doc/stable/reference/generated/numpy.matmul.html)。",
+  "importance": 5,
+  "official_site": "https://numpy.org/doc/stable/reference/generated/numpy.matmul.html",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

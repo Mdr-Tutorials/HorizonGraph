@@ -1,0 +1,37 @@
+{
+  "id": "backpressure",
+  "name": "Backpressure",
+  "display_primary": "背压",
+  "display_secondary": "Backpressure",
+  "aliases": [
+    "背压",
+    "反压"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "queue",
+      "context": "采用缓冲队列的实现可依据队列容量和消费者需求限制上游生产。"
+    }
+  ],
+  "summary": "下游通过反馈限制上游发送速度，避免缓冲与任务持续堆积。",
+  "description": "当消费者处理速度不足时，背压通过需求信号、暂停读取或受控缓冲等机制将压力传回生产者。它关注上下游速率协调，与固定配额限流有所区别。Reactive Streams 使用需求驱动的协议约束异步数据流。\n\n参考：[权威资料](https://www.reactive-streams.org/)；[Flink 背压监控](https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/monitoring/back_pressure/)。",
+  "importance": 4,
+  "official_site": "https://www.reactive-streams.org/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

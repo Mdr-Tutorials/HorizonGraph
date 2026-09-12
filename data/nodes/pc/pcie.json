@@ -1,0 +1,34 @@
+{
+  "id": "pcie",
+  "name": "PCI Express",
+  "display_primary": "PCIe",
+  "display_secondary": "PCI Express",
+  "abbreviation": "PCIe",
+  "aliases": [
+    "高速外设组件互连",
+    "PCI-E"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "hardware_iot",
+    "gpu-computing"
+  ],
+  "domains": [
+    "high-performance-computing",
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "连接处理器、GPU、网卡和存储设备的高速串行互联标准。",
+  "description": "PCI Express 通过点对点串行链路连接主机与外设，可按链路宽度组合多条通道。标准代际、通道数与拓扑共同影响实际带宽。GPU 数据传输和 PCIe 形态的 NVMe 存储都使用它，但 NVMe 还存在其他传输方式。\n\n参考：[权威资料](https://pcisig.com/specifications)。",
+  "importance": 4,
+  "official_site": "https://pcisig.com/specifications",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

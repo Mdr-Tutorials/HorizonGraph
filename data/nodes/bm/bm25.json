@@ -1,0 +1,38 @@
+{
+  "id": "bm25",
+  "name": "Okapi BM25",
+  "display_primary": "BM25",
+  "display_secondary": "Okapi BM25",
+  "abbreviation": "BM25",
+  "aliases": [
+    "Okapi BM25",
+    "BM25算法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "natural-language-processing",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inverted-index",
+      "context": "典型全文检索实现利用倒排列表获取匹配文档和词项统计。"
+    }
+  ],
+  "summary": "结合词频、逆文档频率和长度归一化的文本相关性评分。",
+  "description": "BM25 是基于词项匹配的检索排序方法，通过词频饱和和文档长度归一化计算相关性。它适合精确词项、专有名词等检索，可与语义向量检索联合使用。Elasticsearch 将 BM25 用作默认文本相似度算法。\n\n参考：[权威资料](https://www.elastic.co/docs/reference/elasticsearch/index-settings/similarity)。",
+  "importance": 4,
+  "official_site": "https://www.elastic.co/docs/reference/elasticsearch/index-settings/similarity",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "ai-agent",
+  "name": "AI Agent",
+  "display_primary": "AI 智能体",
+  "display_secondary": "AI Agent",
+  "aliases": [
+    "AI 智能体",
+    "智能体",
+    "人工智能代理",
+    "Agent"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "function-calling",
+      "context": "基于大模型的工具型智能体可用结构化函数调用选择并执行外部操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-memory",
+      "context": "需要延续任务或跨会话保留信息的智能体采用显式记忆机制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-engineering",
+      "context": "基于大模型的实现需要为每轮调用组织指令、状态和反馈。"
+    }
+  ],
+  "summary": "根据目标感知环境并选择行动的系统，常结合模型与工具。",
+  "description": "智能体围绕目标观察环境、选择动作并根据反馈继续执行。在基于大模型的系统中，模型可以决定工具调用和后续步骤；预先固定执行路径的工作流则由程序显式控制。是否自主规划、保留状态或跨会话记忆，需要看具体设计。\n\n参考：[权威资料](https://www.anthropic.com/engineering/building-effective-agents)。",
+  "importance": 5,
+  "official_site": "https://www.anthropic.com/engineering/building-effective-agents",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "python-software-foundation",
+  "name": "Python Software Foundation",
+  "display_primary": "Python 软件基金会",
+  "display_secondary": "Python Software Foundation",
+  "aliases": ["PSF"],
+  "type": "organization",
+  "ecosystems": ["python-ecosystem"],
+  "domains": ["programming-languages"],
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "organization" },
+    { "relation_type": "provides", "target_id": "cpython" }
+  ],
+  "summary": "维护 Python 社区基础设施与 CPython 治理的非营利基金会。",
+  "importance": 5,
+  "official_site": "https://www.python.org/psf/",
+  "last_reviewed": "2026-09-08",
+  "origin": "curated",
+  "status": "active"
+}

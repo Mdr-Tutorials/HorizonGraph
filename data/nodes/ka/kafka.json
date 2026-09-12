@@ -29,6 +29,11 @@
     {
       "relation_type": "competes_with",
       "target_id": "rocketmq"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "apache-software-foundation",
+      "context": "项目在 Apache 基金会框架下由对应社区与项目管理委员会治理。"
     }
   ],
   "summary": "分布式分区日志平台，高吞吐事件流与回放的事实标准。",

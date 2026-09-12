@@ -1,0 +1,37 @@
+{
+  "id": "error-budget",
+  "name": "Error Budget",
+  "display_primary": "错误预算",
+  "display_secondary": "Error Budget",
+  "aliases": [
+    "错误预算",
+    "故障预算"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "cloud_native",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slo",
+      "context": "基于所选 SLO 和统计窗口计算允许的不良事件额度。"
+    }
+  ],
+  "summary": "在既定服务目标和统计窗口内允许的不良事件额度。",
+  "description": "当 SLO 以良好事件比例定义时，错误预算比例为一减目标比例，再结合事件总数得到允许的不良事件数量。预算消耗可以指导发布节奏和可靠性投入。不同指标或统计窗口的预算不能直接混用。\n\n参考：[权威资料](https://sre.google/workbook/implementing-slos/)。",
+  "importance": 4,
+  "official_site": "https://sre.google/workbook/implementing-slos/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

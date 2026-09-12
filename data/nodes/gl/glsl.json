@@ -21,6 +21,11 @@
     {
       "relation_type": "part_of",
       "target_id": "opengl"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "khronos-group",
+      "context": "相关图形接口或着色语言规范由 Khronos 工作组维护。"
     }
   ],
   "summary": "OpenGL 的着色语言，写顶点与片元着色器。",

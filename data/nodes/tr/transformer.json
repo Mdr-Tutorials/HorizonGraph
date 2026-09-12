@@ -22,6 +22,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "ashish-vaswani"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "attention-mechanism"
     }
   ],
   "summary": "用自注意力并行建模序列的架构，大模型的骨架。",

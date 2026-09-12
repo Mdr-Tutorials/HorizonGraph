@@ -1,0 +1,42 @@
+{
+  "id": "elt",
+  "name": "Extract, Load, Transform",
+  "display_primary": "ELT",
+  "display_secondary": "抽取、加载、转换",
+  "abbreviation": "ELT",
+  "aliases": [
+    "抽取加载转换"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "etl",
+      "context": "比较数据加载到目标平台之前或之后执行转换的流程选择。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-warehouse",
+      "context": "常见实现利用目标仓库的计算能力执行加载后的转换。"
+    }
+  ],
+  "summary": "先将抽取的数据加载到目标平台，再利用平台计算能力转换。",
+  "description": "ELT 先把源数据载入目标数据平台，再执行转换，常见于具备弹性计算能力的数据仓库和湖仓系统。它允许保留原始数据并重复加工，但仍需要权限、质量与资源管理。dbt 常承担其中的转换环节。\n\n参考：[权威资料](https://www.databricks.com/discover/etl)；[dbt 与转换](https://docs.getdbt.com/docs/introduction)。",
+  "importance": 4,
+  "official_site": "https://www.databricks.com/discover/etl",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

@@ -32,6 +32,26 @@
     {
       "relation_type": "implements",
       "target_id": "inverted-index"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "bm25",
+      "context": "提供对应文本、向量或结果排序能力；索引和检索流程需显式配置。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "hnsw",
+      "context": "提供对应文本、向量或结果排序能力；索引和检索流程需显式配置。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "hybrid-search",
+      "context": "提供对应文本、向量或结果排序能力；索引和检索流程需显式配置。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "reranking",
+      "context": "提供对应文本、向量或结果排序能力；索引和检索流程需显式配置。"
     }
   ],
   "summary": "Elastic 的分布式搜索与分析引擎。",

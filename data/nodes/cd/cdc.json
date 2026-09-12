@@ -1,0 +1,42 @@
+{
+  "id": "cdc",
+  "name": "Change Data Capture",
+  "display_primary": "CDC",
+  "display_secondary": "变更数据捕获",
+  "abbreviation": "CDC",
+  "aliases": [
+    "变更数据捕获"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wal",
+      "context": "日志型 CDC 可读取数据库预写日志或等价变更日志；也存在其他捕获方法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kafka",
+      "context": "Debezium 等 CDC 管线可以把捕获的变更事件交给 Kafka 向下游分发。"
+    }
+  ],
+  "summary": "识别源数据的新增、修改与删除，并向下游传播这些变化。",
+  "description": "CDC 通过日志读取、触发器或查询等方式捕获变化。日志型实现常结合初始快照和后续增量流，用于数据库同步、缓存更新和实时分析。CDC 是一种机制，Kafka 可以传递捕获后的事件，但 Kafka 本身不自动捕获任意数据库的变化。\n\n参考：[权威资料](https://debezium.io/documentation/reference/stable/architecture.html)。",
+  "importance": 4,
+  "official_site": "https://debezium.io/documentation/reference/stable/architecture.html",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

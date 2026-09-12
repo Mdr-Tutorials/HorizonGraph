@@ -1,0 +1,36 @@
+{
+  "id": "nvlink",
+  "name": "NVIDIA NVLink",
+  "display_primary": "NVLink",
+  "display_secondary": "NVIDIA NVLink",
+  "aliases": [
+    "NVLink互联"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "gpu-computing"
+  ],
+  "domains": [
+    "high-performance-computing",
+    "machine-learning"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "nvidia",
+      "context": "由 NVIDIA 研发的处理器互联技术。"
+    }
+  ],
+  "summary": "NVIDIA 的高速互联技术，用于 GPU 等处理器间的数据交换。",
+  "description": "NVLink 为兼容处理器提供高带宽互联，并可结合交换组件扩展连接规模。它常服务于大模型训练与推理中的多 GPU 协作。实际连接、带宽和支持方式取决于设备型号与系统设计，不能只根据 GPU 名称推断互联拓扑。\n\n参考：[权威资料](https://www.nvidia.com/en-us/data-center/nvlink/)。",
+  "importance": 4,
+  "official_site": "https://www.nvidia.com/en-us/data-center/nvlink/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

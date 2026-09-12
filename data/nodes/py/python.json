@@ -24,6 +24,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "guido-van-rossum"
+    },
+    {
+      "relation_type": "implemented_by",
+      "target_id": "cpython"
     }
   ],
   "summary": "通用动态语言，数据科学与自动化的默认选择。",

@@ -1,0 +1,20 @@
+{
+  "id": "cpython",
+  "name": "CPython",
+  "display_primary": "CPython",
+  "aliases": ["Python 参考实现"],
+  "type": "architecture",
+  "ecosystems": ["python-ecosystem"],
+  "domains": ["programming-languages"],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "virtual-machine" },
+    { "relation_type": "developed_by", "target_id": "python-software-foundation" }
+  ],
+  "summary": "Python 语言的主流参考实现，包含解释器与标准库。",
+  "importance": 5,
+  "official_site": "https://www.python.org/",
+  "last_reviewed": "2026-09-08",
+  "origin": "curated",
+  "status": "active"
+}

@@ -19,6 +19,11 @@
     {
       "relation_type": "alternative_to",
       "target_id": "dfs"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "queue",
+      "context": "标准广度优先遍历用先进先出队列维护待访问顶点。"
     }
   ],
   "summary": "逐层扩散的图遍历，无权图最短路的标准解。",

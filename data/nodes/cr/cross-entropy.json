@@ -1,0 +1,31 @@
+{
+  "id": "cross-entropy",
+  "name": "Cross-Entropy",
+  "display_primary": "交叉熵",
+  "display_secondary": "Cross-Entropy",
+  "aliases": [
+    "交叉熵",
+    "交叉熵损失",
+    "Cross Entropy"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "dl-framework-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "衡量目标分布与预测分布差异的量，常用作分类损失。",
+  "description": "交叉熵 H(p,q) = −Σ p(x) log q(x)，度量以预测分布 q 描述目标分布 p 的代价。目标为单个类别时，对应正确类别预测概率的负对数。PyTorch 的 CrossEntropyLoss 接收未归一化的 logits；一般不应先手动做 softmax 再传入。\n\n参考：[权威资料](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)。",
+  "importance": 4,
+  "official_site": "https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

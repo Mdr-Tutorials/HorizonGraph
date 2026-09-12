@@ -18,6 +18,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backpressure",
+      "context": "具备流控的消息系统可在消费者积压时限制生产者；并非所有消息系统行为相同。"
     }
   ],
   "summary": "生产者与消费者解耦的异步通道，削峰与广播靠它。",

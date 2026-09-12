@@ -18,6 +18,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ieee",
+      "context": "其基础无线局域网技术对应 IEEE 802.11；Wi-Fi 品牌认证由其他组织负责。"
     }
   ],
   "summary": "无线局域网标准族，掌管名字的联盟与 IEEE 标准并行。",

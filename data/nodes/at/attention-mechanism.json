@@ -25,6 +25,11 @@
     {
       "relation_type": "part_of",
       "target_id": "transformer"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "matrix-multiplication",
+      "context": "缩放点积注意力用矩阵乘法计算查询与键的相关性并聚合值。"
     }
   ],
   "summary": "对输入位置加权聚焦的机制，Transformer 与 LLM 的核心。",

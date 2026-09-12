@@ -1,0 +1,37 @@
+{
+  "id": "prompt-injection",
+  "name": "Prompt Injection",
+  "display_primary": "提示注入",
+  "display_secondary": "Prompt Injection",
+  "aliases": [
+    "提示注入",
+    "提示词注入"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rag",
+      "context": "间接注入可借 RAG 返回的不可信文档传入恶意指令；RAG 本身不等于提示注入。"
+    }
+  ],
+  "summary": "让模型把不可信输入当成指令，从而偏离原定任务的攻击方式。",
+  "description": "提示注入可直接出现在用户输入中，也可藏在检索文档或工具返回等外部内容中。它利用模型共同处理指令与数据的边界，可能影响回答或工具行为。输入筛选并不能单独解决问题，应结合来源隔离、权限限制与必要的人工确认。\n\n参考：[权威资料](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)。",
+  "importance": 4,
+  "official_site": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

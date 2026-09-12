@@ -14,6 +14,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linked-list",
+      "context": "以多层有序链接组织节点，底层保留完整有序序列。"
     }
   ],
   "summary": "多层链表实现的概率平衡结构，Redis zset 的底座。",

@@ -1,0 +1,33 @@
+{
+  "id": "ietf",
+  "name": "Internet Engineering Task Force",
+  "display_primary": "IETF",
+  "display_secondary": "互联网工程任务组",
+  "abbreviation": "IETF",
+  "aliases": [
+    "互联网工程任务组"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "tcp-ip-ecosystem",
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "security",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "以开放协作流程制定和演进互联网技术标准的组织。",
+  "description": "IETF 通过工作组、公开讨论与审查推进互联网标准，工作涉及 HTTP、QUIC、TLS 等技术。其标准文档通常以 RFC 发布，但 RFC 存在不同来源和状态，并非所有 RFC 都是 IETF 标准。\n\n参考：[权威资料](https://www.ietf.org/about/)。",
+  "importance": 5,
+  "official_site": "https://www.ietf.org/about/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

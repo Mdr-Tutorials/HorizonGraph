@@ -17,6 +17,14 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "s3"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "ec2"
     }
   ],
   "summary": "公有云份额领先的基础设施提供商。",

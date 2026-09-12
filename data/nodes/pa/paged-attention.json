@@ -1,0 +1,39 @@
+{
+  "id": "paged-attention",
+  "name": "PagedAttention",
+  "display_primary": "PagedAttention",
+  "aliases": [
+    "分页注意力"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kv-cache",
+      "context": "管理注意力键值缓存的块分配、映射与共享。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "paging",
+      "context": "借鉴逻辑块到物理块的分页映射思想，作用于推理缓存而非操作系统换页。"
+    }
+  ],
+  "summary": "以分页方式组织 KV Cache，减少推理服务中的显存浪费。",
+  "description": "PagedAttention 将 KV Cache 的逻辑块映射到可不连续的物理块，使缓存能按需分配，并支持合适场景下的块共享。它借鉴虚拟内存的分页思想，最初在 vLLM 中实现；这里的分页是推理缓存管理，不能直接等同于操作系统换页。\n\n参考：[权威资料](https://arxiv.org/abs/2309.06180)。",
+  "importance": 4,
+  "official_site": "https://arxiv.org/abs/2309.06180",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

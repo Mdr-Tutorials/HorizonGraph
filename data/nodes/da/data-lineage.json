@@ -1,0 +1,31 @@
+{
+  "id": "data-lineage",
+  "name": "Data Lineage",
+  "display_primary": "数据血缘",
+  "display_secondary": "Data Lineage",
+  "aliases": [
+    "数据血缘"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "记录数据来源、处理步骤和去向，支撑追踪与变更影响分析。",
+  "description": "数据血缘描述数据集经过哪些作业生成、被哪些下游使用，并可细化到字段层面。设计时的声明血缘与实际运行采集的血缘承担不同作用。它能帮助追溯来源和分析影响，但不自动保证数据正确或符合业务要求。\n\n参考：[权威资料](https://openlineage.io/docs/spec/object-model/)。",
+  "importance": 4,
+  "official_site": "https://openlineage.io/docs/spec/object-model/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

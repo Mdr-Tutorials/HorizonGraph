@@ -28,6 +28,11 @@
     {
       "relation_type": "depends_on",
       "target_id": "cuda"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "matrix-multiplication",
+      "context": "提供矩阵乘法运算；具体接口和执行设备由实现决定。"
     }
   ],
   "summary": "NVIDIA 开源的 CUDA C++ 模板抽象集合，用于构建高性能矩阵乘法与卷积。",

@@ -24,6 +24,11 @@
     {
       "relation_type": "alternative_to",
       "target_id": "qdrant"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "hnsw",
+      "context": "提供 HNSW 向量索引及构建和查询参数。"
     }
   ],
   "summary": "开源向量数据库，AI 相似度检索的基础设施。",

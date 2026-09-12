@@ -1,0 +1,36 @@
+{
+  "id": "agent-memory",
+  "name": "Agent Memory",
+  "display_primary": "智能体记忆",
+  "display_secondary": "Agent Memory",
+  "aliases": [
+    "智能体记忆",
+    "Agent记忆"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rag",
+      "context": "需要从持久知识中按需取回信息时，可以用检索增强方式补充当前上下文。"
+    }
+  ],
+  "summary": "保存和检索交互信息，使智能体能延续任务或跨会话利用经验。",
+  "description": "短期记忆通常保存当前任务状态和会话历史，长期记忆则跨会话保存事实、偏好或经验。记忆可以存入数据库并在需要时选择性读取，并不都以向量形式存储。应用保存的记忆也不同于模型权重中形成的知识。\n\n参考：[权威资料](https://docs.langchain.com/oss/python/concepts/memory)。",
+  "importance": 4,
+  "official_site": "https://docs.langchain.com/oss/python/concepts/memory",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

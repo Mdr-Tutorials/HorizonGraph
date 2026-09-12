@@ -1,0 +1,62 @@
+{
+  "id": "apache-airflow",
+  "name": "Apache Airflow",
+  "display_primary": "Apache Airflow",
+  "aliases": [
+    "Airflow"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "python-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python",
+      "context": "工作流定义与平台的核心实现依托 Python。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "etl",
+      "context": "通过任务和依赖编排抽取、转换与加载步骤，具体计算由任务执行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "elt",
+      "context": "可调度先加载后转换的数据管线。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "apache-spark",
+      "context": "官方 Spark provider 可提交和管理 Spark 作业。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "data-lineage",
+      "context": "可通过官方 OpenLineage provider 采集和发送任务运行的数据血缘。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "apache-software-foundation",
+      "context": "项目在 Apache 基金会框架下由对应社区与项目管理委员会治理。"
+    }
+  ],
+  "summary": "用代码定义、调度和监控工作流的开源平台。",
+  "description": "Airflow 使用 Python 定义任务及其依赖，通过调度器和执行组件组织任务运行。它适合有明确任务边界的数据处理与机器学习工作流，也可调度 Spark 等系统上的任务。Airflow 的调度职责与持续处理数据流的计算引擎需要区分。\n\n参考：[权威资料](https://airflow.apache.org/docs/apache-airflow/stable/index.html)。",
+  "importance": 4,
+  "official_site": "https://airflow.apache.org/docs/apache-airflow/stable/index.html",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

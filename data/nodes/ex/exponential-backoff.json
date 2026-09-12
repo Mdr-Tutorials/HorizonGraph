@@ -1,0 +1,37 @@
+{
+  "id": "exponential-backoff",
+  "name": "Exponential Backoff",
+  "display_primary": "指数退避",
+  "display_secondary": "Exponential Backoff",
+  "aliases": [
+    "指数退避",
+    "指数回退"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "idempotency",
+      "context": "重试有副作用的操作时，可用幂等设计避免重复执行造成额外影响。"
+    }
+  ],
+  "summary": "失败重试时按指数增长等待间隔，以缓解持续竞争或服务压力。",
+  "description": "指数退避在后续重试中逐步增加等待时间，通常配合上限、重试次数限制和随机抖动。抖动减少多个客户端同时再次发起请求的风险。是否重试还需要依据错误性质、超时预算以及操作是否可安全重复。\n\n参考：[权威资料](https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html)；[重试与抖动](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/)。",
+  "importance": 4,
+  "official_site": "https://docs.aws.amazon.com/sdkref/latest/guide/feature-retry-behavior.html",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

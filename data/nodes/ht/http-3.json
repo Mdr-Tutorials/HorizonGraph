@@ -26,6 +26,11 @@
     {
       "relation_type": "depends_on",
       "target_id": "quic"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ietf",
+      "context": "相关标准由 IETF 工作组按其标准流程制定和维护。"
     }
   ],
   "summary": "把 HTTP 语义搬到 QUIC 上，消除 TCP 队头阻塞。",

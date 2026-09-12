@@ -17,6 +17,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "matrix-multiplication",
+      "context": "提供矩阵乘法运算；具体接口和执行设备由实现决定。"
     }
   ],
   "summary": "线性代数运算的事实标准接口，数值计算的奠基石。",

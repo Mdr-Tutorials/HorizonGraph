@@ -18,6 +18,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ieee",
+      "context": "以太网相关 IEEE 802.3 标准由 IEEE 802.3 工作组推进。"
     }
   ],
   "summary": "有线局域网的链路层标准，从同轴电缆走到万兆。",

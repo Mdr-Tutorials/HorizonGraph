@@ -1,0 +1,30 @@
+{
+  "id": "linked-list",
+  "name": "Linked List",
+  "display_primary": "链表",
+  "display_secondary": "Linked List",
+  "aliases": [
+    "链表"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "用链接连接节点的线性结构，适合局部插入与删除。",
+  "description": "链表通过节点间的链接组织元素，不要求节点在内存中连续。已知操作位置及必要的前驱链接时，可以局部修改链接完成插入或删除；按序号定位一般仍需遍历。栈、队列与 LRU 缓存都可以采用链表实现。\n\n参考：[权威资料](https://xlinux.nist.gov/dads/HTML/linkedList.html)。",
+  "importance": 5,
+  "official_site": "https://xlinux.nist.gov/dads/HTML/linkedList.html",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

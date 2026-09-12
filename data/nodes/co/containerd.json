@@ -1,0 +1,21 @@
+{
+  "id": "containerd",
+  "name": "containerd",
+  "display_primary": "containerd",
+  "aliases": ["容器运行时"],
+  "type": "tool",
+  "ecosystems": ["cloud_native", "kubernetes-ecosystem"],
+  "domains": ["cloud-infrastructure", "devops"],
+  "abstraction_level": "framework_library",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "tool" },
+    { "relation_type": "implements", "target_id": "oci" },
+    { "relation_type": "developed_by", "target_id": "cncf" }
+  ],
+  "summary": "管理容器生命周期的工业级核心运行时。",
+  "importance": 5,
+  "official_site": "https://containerd.io/",
+  "last_reviewed": "2026-09-08",
+  "origin": "curated",
+  "status": "active"
+}

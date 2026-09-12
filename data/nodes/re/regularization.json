@@ -1,0 +1,29 @@
+{
+  "id": "regularization",
+  "name": "Regularization",
+  "display_primary": "正则化",
+  "display_secondary": "Regularization",
+  "aliases": [
+    "正则化"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "dl-framework-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    }
+  ],
+  "summary": "通过约束模型或训练过程改善泛化、抑制过拟合的方法。",
+  "description": "正则化在拟合数据之外加入限制或偏好。L2 正则通过惩罚较大的参数控制复杂度；早停等方法也属于广义正则化。正则强度需要结合验证数据选择，并非越强越好，也不能代替数据质量检查。\n\n参考：[权威资料](https://developers.google.com/machine-learning/crash-course/overfitting/regularization)。",
+  "importance": 4,
+  "official_site": "https://developers.google.com/machine-learning/crash-course/overfitting/regularization",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

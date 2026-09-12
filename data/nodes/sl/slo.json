@@ -1,0 +1,38 @@
+{
+  "id": "slo",
+  "name": "Service Level Objective",
+  "display_primary": "SLO",
+  "display_secondary": "服务等级目标",
+  "abbreviation": "SLO",
+  "aliases": [
+    "服务等级目标",
+    "服务水平目标"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sli",
+      "context": "在明确的统计范围内为所选服务指标规定目标。"
+    }
+  ],
+  "summary": "在规定统计范围或时间窗口内为服务指标设定的目标。",
+  "description": "SLO 把服务指标转化为明确目标，例如一段时间内成功请求的比例。它需要同时定义指标、阈值与统计范围，可用于安排可靠性改进。内部 SLO 与对外服务承诺中的 SLA 可以相关，但含义不同。\n\n参考：[权威资料](https://sre.google/sre-book/service-level-objectives/)。",
+  "importance": 5,
+  "official_site": "https://sre.google/sre-book/service-level-objectives/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

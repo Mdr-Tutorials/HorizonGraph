@@ -1,0 +1,38 @@
+{
+  "id": "document-chunking",
+  "name": "Document Chunking",
+  "display_primary": "文档分块",
+  "display_secondary": "Document Chunking",
+  "aliases": [
+    "文档分块",
+    "文本分块",
+    "Chunking"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "natural-language-processing",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tokenization",
+      "context": "按 token 数限制片段长度时需要分词计数；按字符或文档结构分块不必如此。"
+    }
+  ],
+  "summary": "把长文档切成适合索引、检索和上下文输入的片段。",
+  "description": "文档分块按长度、段落、标题或语义边界拆分文档，并保留来源与位置等元数据。块过大可能稀释检索相关性，过小可能丢失必要上下文。它与分词不同：分词决定模型处理单位，分块决定检索和组织文档的单位。\n\n参考：[权威资料](https://docs.langchain.com/oss/python/integrations/splitters/index)。",
+  "importance": 4,
+  "official_site": "https://docs.langchain.com/oss/python/integrations/splitters/index",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

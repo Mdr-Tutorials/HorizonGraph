@@ -1,0 +1,35 @@
+{
+  "id": "array",
+  "name": "Array",
+  "display_primary": "数组",
+  "display_secondary": "Array",
+  "aliases": [
+    "数组"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "linked-list",
+      "context": "对比随机访问、局部修改、内存布局与额外链接成本。"
+    }
+  ],
+  "summary": "按整数下标访问元素的基础数据结构，常用连续存储实现。",
+  "description": "数组把元素映射到整数下标；常见连续存储实现支持常数时间随机访问。中间插入或删除通常需要移动后续元素。动态数组还需要考虑扩容成本；数组的抽象接口与某门语言的具体列表实现应分别理解。\n\n参考：[权威资料](https://xlinux.nist.gov/dads/HTML/array.html)。",
+  "importance": 5,
+  "official_site": "https://xlinux.nist.gov/dads/HTML/array.html",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

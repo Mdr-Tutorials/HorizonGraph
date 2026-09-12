@@ -15,6 +15,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nccl",
+      "context": "NVIDIA GPU 上的常见实现使用 NCCL 交换梯度或中间张量，其他后端也可实现该并行策略。"
     }
   ],
   "summary": "把矩阵切到多卡算，大模型放不下单卡时的解法。",

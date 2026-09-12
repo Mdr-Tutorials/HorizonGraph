@@ -151,6 +151,8 @@ for (const { n, file } of nodes.values()) {
     seenPair.add(pair);
     if (tid === n.id) { err(`${file}: 自环边 ${pair}`); continue; }
     const spec = rel[rt];
+    if ((rt === "uses" || rt === "stewarded_by") && (typeof e.context !== "string" || !e.context.trim()))
+      err(`${file}: ${rt} 必须提供非空 context，说明使用场景或治理职责`);
     if (!spec.domain.includes(t)) { err(`${file}: ${rt} 的 domain 不含类型 ${t}`); continue; }
 
     if (rt === "is_instance_of") {

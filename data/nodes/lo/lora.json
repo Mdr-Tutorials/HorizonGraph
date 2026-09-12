@@ -14,6 +14,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "matrix-multiplication",
+      "context": "用两个低秩矩阵的乘积表示权重增量。"
     }
   ],
   "summary": "冻住大模型只训低秩小矩阵，微调的性价比之王。",

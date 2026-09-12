@@ -18,6 +18,31 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "document-chunking",
+      "context": "面向长文档的 RAG 常先分块再索引；其他数据源可使用不同组织方式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "embeddings",
+      "context": "采用稠密向量检索时，用嵌入表达查询和文档；RAG 也支持纯词项检索。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hybrid-search",
+      "context": "可选的检索方案，通过融合词项与语义检索改善候选覆盖。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reranking",
+      "context": "可选的检索后处理，在生成前重新排列候选资料。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vector-database",
+      "context": "采用向量检索时可使用向量数据库保存和搜索嵌入；并非所有 RAG 都需要。"
     }
   ],
   "summary": "先检索再生成，把外部文档接到语言模型的上下文里。",

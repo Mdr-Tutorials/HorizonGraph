@@ -15,6 +15,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "stack",
+      "context": "迭代式深度优先遍历用显式栈保存后续访问状态。"
     }
   ],
   "summary": "一条路走到底的图遍历，连通性与拓扑排序的基础。",

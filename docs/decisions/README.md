@@ -31,3 +31,4 @@
 | [0018](0018-homonym-disambiguation.md) | 同名消歧：id 承担身份 | 已接受 | 2026-08-29 |
 | [0019](0019-alternative-to-relation.md) | alternative_to 替代方案关系 | 已接受 | 2026-09-05 |
 | [0020](0020-founded-by-relation.md) | founded_by 创始关系 | 已接受 | 2026-09-05 |
+| [0021](0021-method-use-and-stewardship.md) | 方法使用与项目治理关系 | 已接受 | 2026-09-12 |

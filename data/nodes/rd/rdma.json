@@ -1,0 +1,37 @@
+{
+  "id": "rdma",
+  "name": "Remote Direct Memory Access",
+  "display_primary": "RDMA",
+  "display_secondary": "远程直接内存访问",
+  "abbreviation": "RDMA",
+  "aliases": [
+    "远程直接内存访问"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "networking_security",
+    "gpu-computing"
+  ],
+  "domains": [
+    "networking",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "zero-copy",
+      "context": "在注册的应用缓冲区之间直接搬运数据，减少中间缓冲区复制。"
+    }
+  ],
+  "summary": "让网络适配器直接访问授权内存区域、降低数据搬运开销的机制。",
+  "description": "RDMA 在建立访问权限和注册内存等准备之后，让适配器直接完成远端内存读写或相关数据传输，减少常规路径中的处理器参与和复制。它可由 InfiniBand、RoCE 或 iWARP 等技术承载，并非某一种物理网络的同义词。\n\n参考：[权威资料](https://docs.nvidia.com/rdma-aware-networks-programming-user-manual-1-7.pdf)。",
+  "importance": 4,
+  "official_site": "https://docs.nvidia.com/rdma-aware-networks-programming-user-manual-1-7.pdf",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

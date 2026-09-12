@@ -1,0 +1,48 @@
+{
+  "id": "decode",
+  "name": "Autoregressive Decoding",
+  "display_primary": "自回归解码",
+  "display_secondary": "Autoregressive Decoding",
+  "aliases": [
+    "自回归解码",
+    "Decode",
+    "逐Token解码",
+    "自回归生成"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "gpu-computing"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kv-cache",
+      "context": "采用缓存的自回归解码复用历史键值，减少前缀重复计算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "temperature",
+      "context": "启用采样时可用温度调整候选 token 的概率分布。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "top-p",
+      "context": "核采样解码按累计概率筛选下一 token 的候选集合。"
+    }
+  ],
+  "summary": "根据已有上下文逐步生成后续 token 的模型推理过程。",
+  "description": "常见自回归解码反复执行预测、选取下一个 token 和更新状态。带 KV Cache 的实现复用历史键值，避免每一步重新计算整个前缀。采样温度与 top-p 影响输出选择；逐 token 延迟还受批处理、内存访问和调度影响。\n\n参考：[权威资料](https://huggingface.co/blog/kv-cache)；[Transformers 生成策略](https://huggingface.co/docs/transformers/generation_strategies)。",
+  "importance": 4,
+  "official_site": "https://huggingface.co/blog/kv-cache",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

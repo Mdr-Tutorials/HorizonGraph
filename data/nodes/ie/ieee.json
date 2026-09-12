@@ -1,0 +1,33 @@
+{
+  "id": "ieee",
+  "name": "Institute of Electrical and Electronics Engineers",
+  "display_primary": "IEEE",
+  "display_secondary": "电气电子工程师学会",
+  "abbreviation": "IEEE",
+  "aliases": [
+    "电气电子工程师学会"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "networking_security",
+    "hardware_iot"
+  ],
+  "domains": [
+    "networking",
+    "embedded-systems",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "涵盖电气、电子与计算技术的专业组织，并开展技术标准工作。",
+  "description": "IEEE 开展专业交流、出版与技术标准活动。其标准协会及相关工作组推进 IEEE 802 等标准：802.3 涉及以太网，802.11 涉及无线局域网。无线协议标准与 Wi-Fi 品牌认证不是同一项职责。\n\n参考：[权威资料](https://standards.ieee.org/about/)；[IEEE 802 工作组](https://www.ieee802.org/802SC.shtml)。",
+  "importance": 5,
+  "official_site": "https://standards.ieee.org/about/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "reranking",
+  "name": "Reranking",
+  "display_primary": "重排",
+  "display_secondary": "Reranking",
+  "aliases": [
+    "重排",
+    "重排序",
+    "Rerank"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "natural-language-processing",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "对初次召回的候选再次评分，改善最终结果的相关性排序。",
+  "description": "重排在初次检索之后，对较小的候选集合重新评分。语义重排常使用同时读取查询与候选文档的模型，以增加计算换取更细致的相关性判断。最终效果受初次召回限制：未进入候选集合的文档无法被重排找回。\n\n参考：[权威资料](https://www.elastic.co/docs/solutions/search/ranking/semantic-reranking)。",
+  "importance": 4,
+  "official_site": "https://www.elastic.co/docs/solutions/search/ranking/semantic-reranking",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

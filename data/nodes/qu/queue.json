@@ -1,0 +1,46 @@
+{
+  "id": "queue",
+  "name": "Queue",
+  "display_primary": "队列",
+  "display_secondary": "Queue",
+  "aliases": [
+    "队列",
+    "FIFO"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "顺序存储实现可用数组保存元素；不是唯一实现方式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linked-list",
+      "context": "链式实现可用链接组织元素；不是唯一实现方式。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "stack",
+      "context": "比较先进先出与后进先出的访问顺序。"
+    }
+  ],
+  "summary": "遵循先进先出规则的抽象数据结构，支持入队与出队。",
+  "description": "队列通常从队尾加入元素、从队首移除元素。广度优先搜索利用这一顺序逐层访问顶点。数组与链表都可以实现队列；分布式消息队列还会增加持久化、确认和重试等语义，不能直接等同于内存队列。\n\n参考：[权威资料](https://xlinux.nist.gov/dads/HTML/queue.html)。",
+  "importance": 5,
+  "official_site": "https://xlinux.nist.gov/dads/HTML/queue.html",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

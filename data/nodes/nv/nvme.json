@@ -17,6 +17,11 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pcie",
+      "context": "NVMe over PCIe 使用本机 PCIe 传输；NVMe 还支持其他传输形式。"
     }
   ],
   "summary": "面向 PCIe 的存储命令集，SSD 高速时代的协议。",

@@ -31,6 +31,11 @@
     {
       "relation_type": "depends_on",
       "target_id": "python"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ai-agent",
+      "context": "提供构建基于大模型的智能体及工具协作流程的能力。"
     }
   ],
   "summary": "微软开源的多智能体协同框架，通过可对话 Agent 的自主交互解决复杂多步任务。",

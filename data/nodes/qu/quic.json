@@ -28,6 +28,11 @@
     {
       "relation_type": "competes_with",
       "target_id": "tcp"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ietf",
+      "context": "相关标准由 IETF 工作组按其标准流程制定和维护。"
     }
   ],
   "summary": "跑在 UDP 上的传输协议，握手与多路复用不再队头阻塞。",

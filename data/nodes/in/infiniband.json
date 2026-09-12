@@ -1,0 +1,37 @@
+{
+  "id": "infiniband",
+  "name": "InfiniBand",
+  "display_primary": "InfiniBand",
+  "aliases": [
+    "无限带宽互连",
+    "IB互联"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "networking_security",
+    "gpu-computing"
+  ],
+  "domains": [
+    "networking",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "rdma",
+      "context": "其传输体系原生提供远程直接内存访问能力。"
+    }
+  ],
+  "summary": "面向高性能计算的低延迟交换互联，原生支持 RDMA。",
+  "description": "InfiniBand 定义了面向高性能集群的互联体系，包括链路、交换与传输等层面，并原生支持 RDMA。它可用于跨服务器计算通信和存储访问。NCCL 等通信库能够利用兼容的 InfiniBand 网络，但应用也可以选择其他网络。\n\n参考：[权威资料](https://infinibandta.org/about-infiniband/)。",
+  "importance": 4,
+  "official_site": "https://infinibandta.org/about-infiniband/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}

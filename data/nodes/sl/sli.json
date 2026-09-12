@@ -1,0 +1,43 @@
+{
+  "id": "sli",
+  "name": "Service Level Indicator",
+  "display_primary": "SLI",
+  "display_secondary": "服务等级指标",
+  "abbreviation": "SLI",
+  "aliases": [
+    "服务等级指标",
+    "服务水平指标"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "cloud_native",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "availability",
+      "context": "可把服务成功提供结果的比例选作用户体验指标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "latency",
+      "context": "可用请求延迟或满足延迟阈值的请求比例描述用户体验。"
+    }
+  ],
+  "summary": "从用户体验出发量化服务表现的指标，如成功率或请求延迟。",
+  "description": "SLI 指明观察什么服务表现以及如何测量，例如满足延迟阈值的请求占比。指标定义应包含事件范围和测量口径。它为设定 SLO 提供观测依据；并非所有监控指标都适合作为用户体验指标。\n\n参考：[权威资料](https://sre.google/sre-book/service-level-objectives/)。",
+  "importance": 4,
+  "official_site": "https://sre.google/sre-book/service-level-objectives/",
+  "last_reviewed": "2026-09-12",
+  "origin": "ai_draft",
+  "status": "active"
+}
