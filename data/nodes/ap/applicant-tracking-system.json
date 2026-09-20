@@ -1,0 +1,31 @@
+{
+  "id": "applicant-tracking-system",
+  "name": "Applicant Tracking System",
+  "display_primary": "候选人跟踪系统",
+  "display_secondary": "Applicant Tracking System · ATS",
+  "abbreviation": "ATS",
+  "aliases": [
+    "候选人跟踪系统",
+    "申请人跟踪系统",
+    "应聘者跟踪系统",
+    "招聘管理系统",
+    "ATS"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-concept"
+    }
+  ],
+  "summary": "集中管理职位申请、候选记录和招聘流程的软件系统类别。",
+  "description": "候选人跟踪系统（Applicant Tracking System，ATS）是管理招聘信息与流程的软件类别，常用于接收申请、保存候选人资料、安排面试、汇总反馈和跟踪状态。这里描述的是系统类别，具体厂商产品可以另建产品节点。\n\n不同 ATS 的配置和能力差异很大。有些系统支持解析、搜索、筛选或自动化功能，但不能由 ATS 这个名称推出所有简历都由算法评分或自动淘汰。流程权限与最终判断仍需结合组织的实际设置理解。\n\n参考：[Greenhouse：候选人跟踪系统](https://www.greenhouse.com/resources/glossary/what-is-an-applicant-tracking-system-ats)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.greenhouse.com/resources/glossary/what-is-an-applicant-tracking-system-ats"
+}

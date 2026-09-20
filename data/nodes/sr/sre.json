@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
     },
     {
       "relation_type": "uses",
@@ -26,11 +26,17 @@
       "relation_type": "uses",
       "target_id": "error-budget",
       "context": "根据预算消耗协调发布节奏与可靠性工作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "observability",
+      "context": "运行服务时通过指标、日志和追踪了解服务状态，辅助告警、故障定位与改进。"
     }
   ],
-  "summary": "用软件工程方法管运维，SLO 与错误预算的裁判。",
+  "summary": "用软件工程方法改进服务可靠性、运行效率与故障应对的岗位。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "站点可靠性工程师（Site Reliability Engineer，SRE）把软件工程方法用于服务运行，工作可包括自动化、容量规划、监控、事件响应和可靠性改进。目标之一是减少重复性运维劳动，使系统在增长时仍可维护。\n\nSRE 通常利用服务等级目标（SLO）与错误预算沟通可靠性和变更速度之间的取舍，并通过可观测性理解系统状态。值班安排、职责边界和投入比例取决于组织；Google SRE 文档提供一种实践体系，不能据此给所有公司规定同一岗位模式。\n\n参考：[Google SRE：Introduction](https://sre.google/sre-book/introduction/)。"
 }

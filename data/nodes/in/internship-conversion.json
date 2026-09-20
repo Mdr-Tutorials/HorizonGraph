@@ -1,0 +1,40 @@
+{
+  "id": "internship-conversion",
+  "name": "Internship Conversion",
+  "display_primary": "实习转正",
+  "display_secondary": "Internship Conversion",
+  "aliases": [
+    "实习转正",
+    "实习留用",
+    "实习转全职",
+    "Return Offer",
+    "Conversion to Full-Time"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-progression"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "project-experience",
+      "context": "实习留用评估可考察实习项目中的工作成果、协作和能力证据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hiring-review",
+      "context": "组织采用录用评审时，可汇总实习期间的工作反馈评估正式任职匹配。"
+    }
+  ],
+  "summary": "根据实习表现与岗位需要评估并提供后续正式任职机会的过程。",
+  "description": "实习转正通常指实习结束前后，组织根据实习表现与岗位需要评估是否提供后续正式任职机会。招聘语境中的 Return Offer 常用于表达向实习生提供回归或全职机会，但具体含义仍要看原文。\n\n这不同于已入职员工通过试用期。实习经历可以提供实际工作表现的证据，但实习岗位本身不保证留用。正式机会可能仍附带资格、毕业或开始日期等条件，具体以项目说明和录用文件为准；Amazon 的学生实习介绍也将全职机会表述为可能结果。\n\n参考：[Amazon：学生实习及全职机会](https://www.amazon.jobs/teams/internships-for-students)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.amazon.jobs/teams/internships-for-students"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "sharpe-ratio",
+  "name": "Sharpe Ratio",
+  "display_primary": "夏普比率",
+  "display_secondary": "Sharpe Ratio",
+  "aliases": [
+    "夏普比率",
+    "夏普率",
+    "夏普比例"
+  ],
+  "type": "metric",
+  "domains": [
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-metric"
+    }
+  ],
+  "summary": "收益相对基准的平均差额与该差额标准差之比，用于评估风险调整表现。",
+  "description": "夏普比率用一个收益差额序列的平均值除以其标准差。常见做法以同期无风险收益为参照，但计算时仍需说明具体基准、观察区间、收益频率以及是否扣除费用。\n\n分母为零时该比率不能按通常方式计算。年化需要与数据频率及序列相关性假设一致，不能无条件套用平方根缩放。夏普比率把波动作为风险度量，不直接刻画最大回撤、流动性或尾部损失，适合与其他指标一起解释。\n\n参考：[William F. Sharpe：The Sharpe Ratio](https://web.stanford.edu/~wfsharpe/art/sr/sr.htm)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://web.stanford.edu/~wfsharpe/art/sr/sr.htm"
+}

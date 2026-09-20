@@ -36,13 +36,16 @@ export async function search(q: string): Promise<{ terms: Hit[]; nav: Hit[] }> {
       if (vp >= 0) parentOf.set(idx, vp);
       let score = 0;
       const n = String(name).toLowerCase();
+      const aliasNames = (aliases ?? []).map((a: string) => String(a).toLowerCase());
       if (n.startsWith(query)) score += 30;
       else if (n.includes(query)) score += 15;
       const ab = String(abbr ?? "").toLowerCase();
       if (ab === query) score += 25;
       else if (ab.startsWith(query)) score += 18;
-      if ((aliases ?? []).some((a: string) => String(a).toLowerCase().includes(query))) score += 8;
+      if (aliasNames.some((a: string) => a.includes(query))) score += 8;
       if (String(id).includes(query)) score += 6;
+      // 完整名称、缩写或别名优先于前缀命中，例如 OC 应排在 OCaml 前。
+      if (n === query || ab === query || String(id) === query || aliasNames.includes(query)) score += 100;
       if (score > 0) {
         const rec = b.nodes[idx] ?? [];
         const l = labelOf(String(name), abbr, aliases ?? [], String(rec[12] ?? ""), String(rec[13] ?? ""), String(type ?? ""));

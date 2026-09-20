@@ -32,3 +32,6 @@
 | [0019](0019-alternative-to-relation.md) | alternative_to 替代方案关系 | 已接受 | 2026-09-05 |
 | [0020](0020-founded-by-relation.md) | founded_by 创始关系 | 已接受 | 2026-09-05 |
 | [0021](0021-method-use-and-stewardship.md) | 方法使用与项目治理关系 | 已接受 | 2026-09-12 |
+| [0022](0022-recruitment-context-relations.md) | 招聘语境中的评估、准备、描述与沟通关系 | 已接受 | 2026-09-20 |
+| [0023](0023-organization-appellation-relation.md) | 企业合称的指代关系 | 已接受 | 2026-09-20 |
+| [0024](0024-career-quant-and-company-boundaries.md) | 职业扩展中的评估偏差与母子公司关系 | 已接受 | 2026-09-20 |

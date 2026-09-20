@@ -1,0 +1,41 @@
+{
+  "id": "nowcoder",
+  "name": "Nowcoder",
+  "display_primary": "牛客",
+  "display_secondary": "Nowcoder",
+  "aliases": [
+    "牛客",
+    "牛客网"
+  ],
+  "type": "product",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-platform"
+    },
+    {
+      "relation_type": "prepares_for",
+      "target_id": "coding-interview",
+      "context": "其编程题库和练习环境可用于练习问题分析与代码实现，不保证覆盖实际面试题。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "online-assessment",
+      "context": "企业笔试产品将在线组卷、作答和评估等招聘测评环节做成软件服务。"
+    }
+  ],
+  "summary": "提供题库练习、求职交流、职位信息及企业笔面试服务的招聘平台。",
+  "description": "牛客面向求职者提供编程练习、面经交流和职位信息，也面向企业提供在线笔面试等招聘服务。学习备考与企业评估是平台中的不同使用场景。\n\n题库可以用于练习编程和理解题型；实际应聘流程、题目与工具使用规则仍由招聘方决定。\n\n参考：[牛客官方介绍](https://www.nowcoder.com/nowcoder/about)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://www.nowcoder.com/nowcoder/about",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "recruiter",
+  "name": "Recruiter",
+  "display_primary": "招聘专员",
+  "display_secondary": "Recruiter",
+  "aliases": [
+    "招聘专员",
+    "招聘人员",
+    "招聘顾问",
+    "Talent Acquisition Specialist"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "applicant-tracking-system",
+      "context": "团队采用 ATS 时，用它记录申请、安排流程并协调面试反馈。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "job-description",
+      "context": "与用人团队确认岗位需求及筛选标准时，以职位描述为依据。"
+    }
+  ],
+  "summary": "负责寻找、筛选和沟通候选人，并协调招聘流程的角色。",
+  "description": "招聘专员（Recruiter）围绕人员需求寻找候选人、进行初步沟通，并协调申请、面试和录用相关工作。角色可以属于企业内部招聘团队，也可以在外部招聘服务机构工作。\n\nRecruiter 通常与用人经理确认岗位要求并维护候选人沟通，但不因此拥有全部录用或薪酬审批权。ATS 可以帮助记录申请和流程状态，职位描述提供职责与要求的依据。招聘专员是人力资源分工中的一种角色，不能与所有 HR 工作等同。\n\n参考：[美国劳工统计局：人力资源专员与招聘职责](https://www.bls.gov/ooh/business-and-financial/human-resources-specialists.htm)；[Greenhouse：候选人跟踪系统](https://www.greenhouse.com/resources/glossary/what-is-an-applicant-tracking-system-ats)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.bls.gov/ooh/business-and-financial/human-resources-specialists.htm"
+}

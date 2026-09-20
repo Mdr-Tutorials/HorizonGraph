@@ -1,0 +1,31 @@
+{
+  "id": "sign-on-bonus",
+  "name": "Sign-on Bonus",
+  "display_primary": "签约奖金",
+  "display_secondary": "Sign-on Bonus",
+  "aliases": [
+    "签约奖金",
+    "签字费",
+    "入职奖金",
+    "Signing Bonus",
+    "Sign on Bonus",
+    "Sign-on"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "employment-terms"
+    }
+  ],
+  "summary": "为接受录用或加入公司而安排的特定激励，通常不作为持续性年薪。",
+  "description": "签约奖金（Sign-on Bonus，也称 Signing Bonus）是与接受录用或入职相关的激励，通常为一次性安排，也可能分期支付。它可以作为薪酬协商的一部分，与基本工资和周期性绩效奖金分别约定。\n\n比较多年薪酬时，应按实际支付期间列示，避免把只在入职阶段支付的金额当成每年都有。付款时间、服务期限以及提前离开是否需要返还，取决于具体协议和适用规则，不能仅凭“签字费”这一俗称推断。\n\n参考：[Harvard：录用条件与签约奖金](https://careerservices.fas.harvard.edu/resources/hes-evaluating-and-negotiating-job-offers-2/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://careerservices.fas.harvard.edu/resources/hes-evaluating-and-negotiating-job-offers-2/"
+}

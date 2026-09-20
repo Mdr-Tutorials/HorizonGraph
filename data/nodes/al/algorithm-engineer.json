@@ -13,12 +13,28 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pytorch",
+      "context": "采用 PyTorch 的机器学习岗位可用它实现训练、评估和模型保存。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "loss-function",
+      "context": "训练预测模型时用损失函数量化目标与预测之间的差异。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gradient-descent",
+      "context": "采用梯度优化的模型训练中，根据梯度迭代更新参数。"
     }
   ],
-  "summary": "训练调优模型与算法，论文与数据集之间迁徙。",
+  "summary": "围绕业务问题设计、评估与实现算法，机器学习岗位还涉及模型训练与调优。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "算法工程师围绕具体问题设计和评估算法，岗位范围可涉及搜索、推荐、优化或机器学习等方向。使用机器学习方法的岗位还需要处理数据、目标函数、训练与效果评估。\n\n这里的 PyTorch、损失函数和梯度下降关系限定在采用相关训练方法的岗位场景，不能推广到所有算法工作。\n\n参考：[PyTorch 训练流程示例](https://docs.pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html)。"
 }

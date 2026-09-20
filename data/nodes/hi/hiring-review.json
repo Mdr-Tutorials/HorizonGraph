@@ -1,0 +1,40 @@
+{
+  "id": "hiring-review",
+  "name": "Hiring Review",
+  "display_primary": "录用评审",
+  "display_secondary": "Hiring Review",
+  "aliases": [
+    "录用评审",
+    "招聘评审",
+    "Hiring Committee",
+    "Hiring Debrief",
+    "面试评审"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "job-description",
+      "context": "以岗位职责和任职要求为评审标准，组织并比较候选人的面试证据。"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "project-experience",
+      "context": "结合面试记录评估项目经历中体现的能力与贡献，而不是仅统计项目数量。"
+    }
+  ],
+  "summary": "汇总岗位标准与面试证据，形成候选人录用判断的评审过程。",
+  "description": "录用评审汇总面试记录和其他岗位相关证据，对照事先明确的要求讨论候选人的能力与适配情况。它可以采用招聘委员会、面试复盘会或其他内部评议形式，并不要求每家公司设立同名组织。\n\n评审应区分观察到的证据、尚未验证的信息以及判断分歧。能力评审与薪酬、预算或编制审批可能是不同环节，因此评审通过不自动等于书面 Offer 已发出。Hiring Committee 在部分资料中也缩写为 HC，检索和阅读时需与 Headcount 的语境区分。\n\n参考：[Greenhouse：结构化招聘与评审](https://www.greenhouse.com/blog/structured-hiring-process-the-foundation-of-high-performing-teams-the-recruiting-roadshow)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.greenhouse.com/blog/structured-hiring-process-the-foundation-of-high-performing-teams-the-recruiting-roadshow"
+}

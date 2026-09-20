@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.8.0",
   "policy": {
     "storage": "数据平面仅存规范方向（canonical_owner 一侧）；反向视图由 build 派生",
     "self_loops": "全部禁止；自举属叙事，写入 description；试点批次后复核",
@@ -14,6 +14,13 @@
     "implements": { "zh": "实现", "en": "implements" },
     "depends_on": { "zh": "依赖", "en": "depends on" },
     "uses": { "zh": "使用", "en": "uses" },
+    "assesses": { "zh": "考察", "en": "assesses" },
+    "prepares_for": { "zh": "用于准备", "en": "prepares for" },
+    "describes": { "zh": "描述", "en": "describes" },
+    "discusses": { "zh": "沟通内容", "en": "discusses" },
+    "refers_to": { "zh": "指代", "en": "refers to" },
+    "subsidiary_of": { "zh": "母公司", "en": "subsidiary of" },
+    "can_bias": { "zh": "可能引入偏差", "en": "can bias" },
     "stewarded_by": { "zh": "治理方", "en": "stewarded by" },
     "competes_with": { "zh": "竞争", "en": "competes with" },
     "alternative_to": { "zh": "替代方案", "en": "alternative to" },
@@ -33,6 +40,24 @@
     "composed_of": { "zh": "组成", "en": "composed of" }
   },
   "relations": {
+    "subsidiary_of": {
+      "requires_context": true,
+      "canonical_owner": "子公司持有边，指向其直接母公司",
+      "symmetric": false,
+      "inverse_display": { "zh": "子公司", "en": "subsidiaries" },
+      "domain": ["organization"],
+      "range": ["organization"],
+      "decision": "具有来源依据的直接母子公司关系。context 说明法律主体、关系时间或重组背景；不传递存储间接控股关系。公司更名走同一节点的显示名与 aliases，产品归属走 provides，项目治理走 stewarded_by，企业合称走 refers_to。"
+    },
+    "can_bias": {
+      "requires_context": true,
+      "canonical_owner": "偏差机制持有边，指向可能受影响的评估方法或指标",
+      "symmetric": false,
+      "inverse_display": { "zh": "偏差来源", "en": "potential bias from" },
+      "domain": ["concept"],
+      "range": ["concept", "metric"],
+      "decision": "有具体因果机制的评估偏差，如前视偏差使历史回测使用当时不可获得的信息。context 必须指出机制与受影响的评估结果；不表示问题必然发生，不用于泛化相关、方法使用或理论约束。"
+    },
     "is_instance_of": {
       "classification": true,
       "canonical_owner": "实例方（叶子节点持有边，指向上级分类）",
@@ -68,6 +93,7 @@
       "decision": "直接硬依赖：移除目标后源无法构建或运行（Tokio depends_on Rust）。四重近邻判定的锚点：depends_on 表直接调用/链接关系，由使用方自上而下声明。"
     },
     "uses": {
+      "requires_context": true,
       "canonical_owner": "使用方持有边，指向采用的方法、指标或技术",
       "symmetric": false,
       "inverse_display": { "zh": "使用方", "en": "used by" },
@@ -76,12 +102,58 @@
       "decision": "有具体应用依据的方法或能力使用（BFS uses Queue；SLO uses SLI）。context 必须说明使用场景，不能仅因主题相近而连边。硬软件依赖走 depends_on，把概念或规范工程化走 implements，官方组件互操作走 integrates_with；不得为同一事实重复存边。可选实现必须在 context 中限定，不表示所有部署都需要目标。"
     },
     "stewarded_by": {
+      "requires_context": true,
       "canonical_owner": "项目、标准或组织持有边，指向正式治理或托管机构",
       "symmetric": false,
       "inverse_display": { "zh": "治理项目", "en": "stewards" },
       "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product", "organization"],
       "range": ["organization"],
       "decision": "标准制修订、项目社区治理或基金会正式托管归属（CSS stewarded_by W3C；Apache Spark stewarded_by ASF；CNCF stewarded_by Linux Foundation）。context 必须写明职责；不表示该机构亲自编写代码、拥有全部版权或发明技术。原始研发归属用 developed_by，普通会员、赞助与资金支持不足以建立本关系。"
+    },
+    "assesses": {
+      "canonical_owner": "评估活动持有边，指向被考察的知识、方法或能力",
+      "symmetric": false,
+      "requires_context": true,
+      "inverse_display": { "zh": "考察场景", "en": "assessed in" },
+      "domain": ["concept"],
+      "range": ["concept", "metric"],
+      "decision": "评估活动考察候选人对目标知识或方法的理解和运用（编程面试 assesses 大 O 记号）。必须用 context 限定题型、岗位或评估目标；不表示每家公司都考察此项，也不评价具体个人。目标限数据词条；实际工作中采用技术走 uses。"
+    },
+    "prepares_for": {
+      "canonical_owner": "准备资源或方法持有边，指向准备参加的评估活动",
+      "symmetric": false,
+      "requires_context": true,
+      "inverse_display": { "zh": "准备资源", "en": "preparation resources" },
+      "domain": ["concept", "product", "tool"],
+      "range": ["concept"],
+      "decision": "资源或方法可用于准备某种评估活动（LeetCode prepares_for 编程面试）。context 写明具体练习能力或材料，不保证通过，不表示招聘方使用此平台，也不等同于面试考察内容。"
+    },
+    "describes": {
+      "canonical_owner": "文书、材料或记录持有边，指向其描述的内容",
+      "symmetric": false,
+      "requires_context": true,
+      "inverse_display": { "zh": "描述于", "en": "described in" },
+      "domain": ["concept", "product"],
+      "range": ["concept", "metric"],
+      "decision": "文书或记录承载目标的说明（简历 describes 项目经历；职位描述 describes 岗位角色）。context 说明记录的内容与适用情况；不推导已验证、被录用或必然包含。文件所写的对象不因此成为文件的组成部分。"
+    },
+    "discusses": {
+      "canonical_owner": "沟通活动持有边，指向讨论的内容",
+      "symmetric": false,
+      "requires_context": true,
+      "inverse_display": { "zh": "沟通场景", "en": "discussed in" },
+      "domain": ["concept"],
+      "range": ["concept", "metric"],
+      "decision": "沟通活动涉及目标议题（OC discusses 薪酬包）。context 必须限定沟通内容；不推导流程先后、审批完成或双方已达成一致。考察能力用 assesses，书面记载用 describes。"
+    },
+    "refers_to": {
+      "canonical_owner": "称谓持有边，指向该释义中所指的组织",
+      "symmetric": false,
+      "requires_context": true,
+      "inverse_display": { "zh": "相关称谓", "en": "referred to as" },
+      "domain": ["concept"],
+      "range": ["organization"],
+      "decision": "企业合称等称谓在特定释义中指代组织（BAT 的 ByteDance 释义 refers_to 字节跳动）。context 必须明确释义及所指对象；多义缩写以限定 id 分开建模，不把不同释义的成员混为同一集合。本关系不表示所有权、隶属、治理、研发、当前招聘或合作关系。单一组织的同义名仍使用 aliases；不得仅因主题相近而连边。"
     },
     "competes_with": {
       "canonical_owner": "对称关系，存于 id 字典序较小一侧",

@@ -1,0 +1,40 @@
+{
+  "id": "star-method",
+  "name": "STAR Method",
+  "display_primary": "STAR 方法",
+  "display_secondary": "STAR Method",
+  "aliases": [
+    "STAR 方法",
+    "STAR",
+    "STAR 法则",
+    "STAR 面试法"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "prepares_for",
+      "target_id": "behavioral-interview",
+      "context": "用于梳理可讲述的真实经历，明确本人承担的任务、行动和结果。"
+    },
+    {
+      "relation_type": "prepares_for",
+      "target_id": "hr-interview",
+      "context": "当 HR 面包含行为经历问题时，可用 STAR 组织回答；并非所有 HR 沟通都采用这种题型。"
+    }
+  ],
+  "summary": "按情境、任务、行动、结果组织经历叙述的方法，常用于行为面试准备。",
+  "description": "STAR 分别代表 Situation（情境）、Task（任务）、Action（行动）和 Result（结果）。它帮助候选人交代背景、本人目标、具体行动与实际结果。\n\n在行为面试准备中，可据此梳理项目或工作案例，并保留可追问的细节。结果可以包括未达目标后的反思；该方法不是保证通过的回答模板。\n\n参考：[亚马逊面试准备：STAR 方法](https://amazon.jobs/content/en/how-we-hire/sde-ii-interview-prep)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://amazon.jobs/content/en/how-we-hire/sde-ii-interview-prep",
+  "abbreviation": "STAR"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "open-source-contribution",
+  "name": "Open Source Contribution",
+  "display_primary": "开源贡献",
+  "display_secondary": "Open Source Contribution",
+  "aliases": [
+    "开源贡献",
+    "开源项目贡献"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-material"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "参与采用 Git 管理源代码或文档的项目时，使用提交和分支记录改动；并非所有贡献都需要提交代码。"
+    }
+  ],
+  "summary": "向开源项目提交代码、文档、测试、问题报告或其他协作成果的实践。",
+  "description": "开源贡献包括代码修改，也包括文档、测试、问题报告、设计和社区协助。具体参与方式由项目的贡献指南和协作约定决定。\n\n用于求职展示时，应说明贡献解决的问题、自己的工作和可查阅记录。贡献数量或提交次数不能直接替代对工作内容与质量的理解。\n\n参考：[Open Source Guides：如何贡献](https://opensource.guide/how-to-contribute/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://opensource.guide/how-to-contribute/",
+  "tags": [
+    "open-source"
+  ]
+}

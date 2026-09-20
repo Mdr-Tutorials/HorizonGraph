@@ -1,0 +1,35 @@
+{
+  "id": "employee-onboarding",
+  "name": "Employee Onboarding",
+  "display_primary": "入职适应",
+  "display_secondary": "Employee Onboarding",
+  "aliases": [
+    "入职适应",
+    "入职流程",
+    "入职培训",
+    "新员工入职",
+    "Onboarding"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-progression"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "job-description",
+      "context": "岗位导入时借助职位描述澄清职责、合作范围及预期工作成果。"
+    }
+  ],
+  "summary": "帮助新成员完成入职准备、理解职责并融入团队工作的过程。",
+  "description": "入职适应（Onboarding）帮助新成员从接受录用过渡到能够有效工作，可能包括入职手续、设备与账号准备、组织介绍、团队协作和岗位培训。它既涉及行政安排，也涉及对工作目标和合作方式的理解。\n\n入职适应不必在到岗当天全部完成，也不与法定或约定的试用期等同。不同组织的时长与方法会不同；GitLab 的公开流程展示了文档、任务清单和岗位学习的结合。职位描述可以作为澄清职责和初期预期的依据。\n\n参考：[GitLab：入职适应](https://handbook.gitlab.com/handbook/company/culture/all-remote/onboarding/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/handbook/company/culture/all-remote/onboarding/"
+}

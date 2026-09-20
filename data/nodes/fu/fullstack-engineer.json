@@ -13,12 +13,23 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "在 Web 全栈项目中实现前端交互；是否也在服务端使用由技术栈决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "通过 HTTP 连接 Web 客户端与服务端接口。"
     }
   ],
-  "summary": "前后端通吃的小团队多面手，广度换深度的取舍。",
+  "summary": "跨前端与后端承担功能交付，协调界面、接口和数据处理。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "全栈工程师跨前端和后端参与功能交付，需要理解界面如何调用接口、服务如何处理业务以及数据如何流转。具体负责范围取决于产品规模与团队分工。\n\nWeb 场景中的前后端分别可参考 [MDN 前端核心模块](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core) 与 [MDN 服务端开发入门](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction)。"
 }

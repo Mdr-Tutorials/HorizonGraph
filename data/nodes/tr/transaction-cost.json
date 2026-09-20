@@ -1,0 +1,29 @@
+{
+  "id": "transaction-cost",
+  "name": "Transaction Cost",
+  "display_primary": "交易成本",
+  "display_secondary": "Transaction Cost",
+  "aliases": [
+    "交易成本",
+    "交易费用",
+    "交易摩擦",
+    "Transaction Costs"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    }
+  ],
+  "summary": "执行交易产生的显性费用与隐性成本，口径需按市场和模型明确。",
+  "description": "交易成本是为完成交易付出的成本。显性项目可以包括佣金及市场收取的费用；分析隐性执行成本时，还可能考虑买卖价差、市场冲击和成交价格相对参考价格的偏离。\n\n具体口径取决于市场、经纪商、订单与分析方法。滑点模型可能已经反映部分价差或冲击，汇总时需避免重复计算同一成本。回测中遗漏费用或采用过于理想的成交条件，会使净表现难以代表可实现结果。\n\n参考：[QuantConnect：交易费用模型](https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/transaction-fees/key-concepts)；[QuantConnect：滑点模型](https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/slippage/key-concepts)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/transaction-fees/key-concepts"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "internal-transfer",
+  "name": "Internal Transfer",
+  "display_primary": "内部转岗",
+  "display_secondary": "Internal Transfer",
+  "aliases": [
+    "内部转岗",
+    "内部流动",
+    "内部调岗",
+    "Internal Mobility",
+    "Internal Job Transfer"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-progression"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "job-description",
+      "context": "评估转入岗位时，以目标职位描述明确职责和任职要求。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hiring-review",
+      "context": "采用内部招聘评审的组织，可通过岗位评估判断内部申请人与新职位的匹配。"
+    }
+  ],
+  "summary": "在同一组织内部更换团队、岗位或职责范围的职业流动。",
+  "description": "内部转岗是组织内的人员流动，可能更换团队、职位族、工作地点或职责范围。它可以通过内部申请与评估开展，也可能由业务调整推动，实际程序取决于组织和适用规则。\n\n转岗不必伴随职级上升，因此应与晋升分开理解。评估通常需要明确目标岗位要求、能力匹配和交接安排；GitLab 的内部招聘流程是一种公开实例。转岗后的薪酬、职级和入职学习是否调整，需要查看具体决定。\n\n参考：[GitLab：内部招聘流程](https://handbook.gitlab.com/handbook/hiring/talent-acquisition-framework/internal-hiring-process/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/handbook/hiring/talent-acquisition-framework/internal-hiring-process/"
+}

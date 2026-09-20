@@ -1,0 +1,30 @@
+{
+  "id": "netflix",
+  "name": "Netflix",
+  "display_primary": "Netflix",
+  "display_secondary": "Netflix",
+  "aliases": [
+    "Netflix",
+    "奈飞",
+    "网飞",
+    "Netflix, Inc.",
+    "Netflix 公司"
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "以影视娱乐服务和内容为主要业务的公司，也是 FAANG 历史合称的成员。",
+  "description": "Netflix 是以影视娱乐服务和内容为主要业务的公司，中文常称奈飞或网飞。本节点表示公司主体，不把同名的观看应用或订阅服务作为另一种公司别名来建模。\n\n在 FAANG 这一历史企业与股票合称中，N 代表 Netflix。该成员身份说明称谓所指对象，并不代表与其他成员存在共同法人、所有权关系或统一招聘标准。\n\n参考：[Netflix：公司介绍](https://about.netflix.com/en)；[Nasdaq：FAANG 的历史成员释义](https://www.nasdaq.com/articles/faang-stocks%3A-a-year-in-review-what-to-buy-in-2020-2019-12-23)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://about.netflix.com/en"
+}

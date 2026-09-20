@@ -1,0 +1,45 @@
+{
+  "id": "engineering-manager",
+  "name": "Engineering Manager",
+  "display_primary": "工程经理",
+  "display_secondary": "Engineering Manager · EM",
+  "abbreviation": "EM",
+  "aliases": [
+    "工程经理",
+    "研发经理",
+    "工程管理岗位",
+    "EM"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "career-dual-ladder",
+      "context": "在采用双通道的组织辅导成员职业发展时，结合专业和管理路径帮助讨论兴趣、能力与岗位需要。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "performance-review",
+      "context": "承担人员管理时，通过绩效回顾、反馈与发展讨论支持团队成员成长。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hiring-review",
+      "context": "为团队招聘且采用集体评审时，参与证据汇总和录用判断。"
+    }
+  ],
+  "summary": "通过人员发展、团队协作和工程组织工作支持团队交付成果的管理岗位。",
+  "description": "工程经理（Engineering Manager，EM）对工程团队的人员发展、协作和工作成效承担管理责任，常见工作包括反馈辅导、招聘、绩效管理、规划协调以及帮助团队解决障碍。\n\nEM 仍需理解工程问题，但具体编码投入和技术决策分工随组织而异。它与产品经理、软件架构师及用人经理不能简单互换：用人经理是招聘中的角色，工程经理可能在招聘自己团队时承担这一角色。转入管理路径意味着职责变化，不只是技术头衔升级。\n\n参考：[GitLab：工程经理职责](https://handbook.gitlab.com/job-description-library/engineering/development/management/engineering-manager/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/job-description-library/engineering/development/management/engineering-manager/"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "job-level",
+  "name": "Job Level",
+  "display_primary": "职级",
+  "display_secondary": "Job Level",
+  "aliases": [
+    "职级",
+    "岗位级别",
+    "职位级别",
+    "Job Grade"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "employment-terms"
+    }
+  ],
+  "summary": "组织按职责范围、工作复杂度与影响程度划分岗位层次的体系。",
+  "description": "职级用来区分岗位的责任范围、复杂度和预期贡献，通常与职位族、职业通道及薪酬区间共同使用。它帮助组织解释同类岗位在不同层次的要求。\n\n职级编号和名称属于具体组织的体系。比较岗位时需要对照实际职责，不能直接把两家公司的数字或“高级”称谓视作相同。\n\n参考：[GitLab：组织结构与岗位框架](https://handbook.gitlab.com/handbook/company/structure/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/handbook/company/structure/"
+}

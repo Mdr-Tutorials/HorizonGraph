@@ -13,12 +13,23 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "etl",
+      "context": "在先转换再入仓的管线中组织数据抽取、清洗与加载。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "elt",
+      "context": "目标系统适合承担转换计算时，可先加载原始数据再进行转换。"
     }
   ],
-  "summary": "搭建采集清洗入仓的管道，喂饱下游分析。",
+  "summary": "建设数据采集、转换与存储管线，为分析和业务应用提供可用数据。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "数据工程师建设和维护数据管线，处理多来源数据的采集、转换与存储，并关注数据质量和可用性。ETL 和 ELT 是可选的数据处理组织方式，适用方案取决于来源、目标系统与处理需求。\n\n参考：[AWS：ETL 与 ELT](https://aws.amazon.com/what-is/etl/)。"
 }

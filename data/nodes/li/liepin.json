@@ -1,0 +1,37 @@
+{
+  "id": "liepin",
+  "name": "猎聘",
+  "display_primary": "猎聘",
+  "display_secondary": "Liepin",
+  "aliases": [
+    "猎聘",
+    "猎聘网",
+    "Liepin"
+  ],
+  "type": "product",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-platform"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "experienced-hiring",
+      "context": "提供职位发现、候选人查找与联系等社会招聘环节，具体评估由招聘方组织。"
+    }
+  ],
+  "summary": "连接求职者、企业招聘方与猎头，提供职位信息和人才匹配服务的平台。",
+  "description": "猎聘提供职位浏览与人才招聘服务，连接求职者、企业招聘人员和猎头等参与者。技术岗位可以按具体职责、地点与要求继续筛选。\n\n本节点描述招聘平台产品。平台上的职位条件与沟通对象应逐项阅读，不能从平台品牌推导某个职位的录用标准或薪酬。\n\n参考：[猎聘官方职位与服务入口](https://www.liepin.com/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.liepin.com/",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

@@ -13,12 +13,28 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "trade-off",
+      "context": "评审架构方案时，对照约束比较可靠性、成本、复杂度及演进空间。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "availability",
+      "context": "对有连续服务要求的系统，用可用性目标评估容错与恢复设计。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "latency",
+      "context": "对有响应时间要求的系统，用延迟指标评估调用路径及架构方案。"
     }
   ],
-  "summary": "在约束里画系统蓝图，用取舍换长期演化空间。",
+  "summary": "结合系统需求与约束设计软件结构，并评估关键技术取舍的岗位。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "软件架构师围绕系统目标和约束设计主要组件、交互方式与演进方向，并说明关键决策的理由。工作涉及需求澄清、技术评估、设计评审和跨团队沟通，也需要关注方案在实现与运行中的反馈。\n\n架构师并不必然是人员管理岗位，架构工作也可以由多位工程师共同承担。可用性、延迟、安全、成本与可维护性之间常存在取舍。AWS Well-Architected 等评审框架提供检查系统设计的方法，具体架构仍须适配业务和运行环境。\n\n参考：[AWS：Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)。"
 }

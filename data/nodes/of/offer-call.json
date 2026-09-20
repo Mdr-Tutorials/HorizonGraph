@@ -1,0 +1,56 @@
+{
+  "id": "offer-call",
+  "name": "Offer Call",
+  "display_primary": "录用沟通电话",
+  "display_secondary": "Offer Call",
+  "aliases": [
+    "录用沟通电话",
+    "OC",
+    "录用电话",
+    "Offer 电话",
+    "开奖"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "job-offer",
+      "context": "电话可说明拟录用岗位及后续通知安排；是否已发出书面 Offer 需单独确认。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "total-compensation",
+      "context": "部分 OC 会介绍薪酬方案或询问期待，内容与成熟程度随招聘流程变化。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "employment-intent-confirmation",
+      "context": "可能询问候选人的加入意愿、时间偏好和待澄清事项。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "offer-approval",
+      "context": "招聘方可解释内部审批是否仍在进行；有电话沟通不推导审批已经完成。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "employment-letter-of-intent",
+      "context": "采用意向书流程的招聘方可说明文书的发放安排与下一步事项。"
+    }
+  ],
+  "summary": "招聘方通过电话沟通录用意向、岗位待遇与后续安排的环节，常简称 OC。",
+  "description": "OC 在招聘社区通常指 Offer Call。招聘方可能在电话中说明录用意向、薪酬方案、候选人的意愿及后续手续；具体内容与书面通知的先后随公司流程变化。\n\n“开奖”有时用于描述获知结果或薪酬，但不是正式流程名称。一次 OC 不应被自动解释为审批已完成、书面文件已发送或候选人已经接受。\n\n参考：[哈佛：如何处理初次 Offer Call](https://careerservices.fas.harvard.edu/resources/hes-evaluating-and-negotiating-job-offers-2/)；[牛客社区：OC 缩写的实际用法](https://www.nowcoder.com/feed/main/detail/206a6d22e0064b2c8f1eddc9a30f66b9)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://careerservices.fas.harvard.edu/resources/hes-evaluating-and-negotiating-job-offers-2/",
+  "abbreviation": "OC"
+}

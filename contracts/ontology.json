@@ -1,5 +1,5 @@
 {
-  "version": "0.6.0",
+  "version": "0.8.0",
   "note": "分类骨架：全部非叶子节点在此，数据平面不出现。层级用 parents 数组（多亲 DAG，一个分类可属多个上级）；锚点间元叙事为普通关系边。生效 entity_type 沿 parent 祖先解析。",
   "nodes": [
     { "id": "meta-concept", "name": "Theory, Concept & Metric", "aliases": ["理论概念", "理论与度量"], "summary": "理论、范式与度量概念的顶层骨架。", "relations": [ { "relation_type": "governs", "target_id": "meta-architecture" } ], "entity_type": ["concept", "metric"], "importance": 5 },
@@ -38,6 +38,15 @@
     { "id": "deep-learning", "name": "Deep Learning", "aliases": ["深度学习"], "summary": "深度学习理论与方法。", "parents": ["theory"], "relations": [] },
     { "id": "algorithm", "name": "Algorithm", "aliases": ["算法"], "summary": "解决计算问题的有限步骤与复杂度分析方法。", "parents": ["theory"], "relations": [], "importance": 4 },
     { "id": "data-structure", "name": "Data Structure", "aliases": ["数据结构"], "summary": "组织与存储数据的方式，算法效率的物质基础。", "parents": ["theory"], "relations": [], "importance": 4 },
+    { "id": "quantitative-method", "name": "Quantitative Research Concepts", "aliases": ["量化研究概念"], "summary": "量化研究中的信号、历史模拟、验证方法与执行假设。", "parents": ["theory"], "relations": [], "importance": 4 },
+    { "id": "quantitative-metric", "name": "Quantitative Performance Metrics", "aliases": ["量化绩效指标"], "summary": "衡量投资或交易策略表现与风险的指标。", "parents": ["metric"], "relations": [], "importance": 4 },
+    { "id": "career-concept", "name": "Career & Recruitment Concepts", "aliases": ["职业与招聘"], "summary": "职业角色、招聘流程、申请材料、录用条件与职业发展的导航入口。", "parents": ["theory"], "relations": [], "importance": 4 },
+    { "id": "career-progression", "name": "Career Progression", "aliases": ["职业发展"], "summary": "入职适应、内部流动、绩效、晋升与职业发展路径。", "parents": ["career-concept"], "relations": [], "importance": 4 },
+    { "id": "career-role", "name": "Career Role", "aliases": ["职业岗位"], "summary": "按职责与能力分工定义的职业角色。", "parents": ["career-concept"], "relations": [], "importance": 4 },
+    { "id": "recruitment-process", "name": "Recruitment Processes & Methods", "aliases": ["招聘流程与方法"], "summary": "招聘与求职中的渠道、评估、审批及沟通方法。", "parents": ["career-concept"], "relations": [], "importance": 4 },
+    { "id": "career-material", "name": "Recruitment Materials & Evidence", "aliases": ["招聘材料与经历"], "summary": "岗位文书、候选记录及展示职业能力的材料与经历。", "parents": ["career-concept"], "relations": [], "importance": 4 },
+    { "id": "employment-terms", "name": "Employment Terms & Staffing", "aliases": ["录用条件与编制"], "summary": "招聘与任职中的人员编制、职级及薪酬概念。", "parents": ["career-concept"], "relations": [], "importance": 3 },
+    { "id": "recruitment-platform", "name": "Recruitment Platform", "aliases": ["招聘平台"], "summary": "连接求职者与招聘方、提供职位或招聘服务的产品。", "parents": ["product"], "relations": [], "importance": 4 },
     { "id": "llm", "name": "Large Language Model", "aliases": ["大语言模型", "LLM"], "summary": "大语言模型族。", "parents": ["model-family"], "relations": [], "importance": 5 },
     { "id": "gpu", "name": "GPU", "aliases": ["图形处理器", "GPU 硬件"], "summary": "GPU 硬件产品线，实例为 product 类型。", "parents": ["platform"], "relations": [], "entity_type": "product", "importance": 5 },
     { "id": "virtual-machine", "name": "Virtual Machine & Runtime", "aliases": ["虚拟机", "运行时"], "summary": "虚拟机与语言运行时环境。", "parents": ["platform"], "relations": [], "importance": 4 }

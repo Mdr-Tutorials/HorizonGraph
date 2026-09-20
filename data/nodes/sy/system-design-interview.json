@@ -13,12 +13,38 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "trade-off",
+      "context": "通过比较满足同一需求的方案，解释成本、复杂度、延迟与可靠性的取舍。"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "load-balancing",
+      "context": "设计多实例服务时，可讨论请求分配、扩容及失败处理。"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "transactions",
+      "context": "涉及多步数据更新时，可讨论事务边界与一致性要求。"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "availability",
+      "context": "有可靠性要求的题目可讨论故障对服务可用性的影响。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "project-experience",
+      "context": "结合候选人参与的系统追问约束、设计选择及演化过程。"
     }
   ],
-  "summary": "用开放题考察架构取舍，高级岗位的核心回合。",
+  "summary": "通过开放式设计问题，考察需求澄清、系统建模和架构取舍能力的面试。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "系统设计面试通常从开放问题出发，讨论需求、数据模型、容量、可靠性和组件之间的配合。评估重点是解释约束和取舍，而不是背诵一套固定架构。\n\n不同岗位与级别的讨论深度不同。缓存、负载均衡或事务等主题应按题目需要选用，不是每场面试的必选清单。\n\n参考：[亚马逊软件开发面试主题](https://amazon.jobs/content/en-gb/how-we-hire/interview-prep/software-development-topics)；[微软技术面试说明](https://careers.microsoft.com/v2/global/en/hiring-tips/technical-interviewing)。"
 }

@@ -14,12 +14,28 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sql",
+      "context": "管理关系型数据库时，使用 SQL 查询、管理和诊断数据操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "query-optimization",
+      "context": "处理慢查询与资源瓶颈时，分析执行计划并优化查询或索引。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "replication",
+      "context": "数据库采用复制架构时，维护副本状态并处理复制相关的可用性问题。"
     }
   ],
-  "summary": "数据库的医生，备份优化与故障恢复的最后一道防线。",
+  "summary": "管理数据库的可用性、访问、安全、备份恢复及运行性能的岗位。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "数据库管理员（Database Administrator，DBA）负责数据库的日常运行与维护，工作通常涉及账号和权限、备份恢复、可用性、容量以及性能问题处理。职责会随数据库产品、托管方式和团队分工变化。\n\nDBA 与数据库架构师、数据工程师会协作，但三者侧重点不同：DBA 关注数据库运行，架构工作关注结构与设计，数据工程关注数据管线和交付。关系型数据库场景可使用 SQL 与查询优化；采用复制方案时还要理解复制延迟和故障处理。\n\n参考：[美国劳工统计局：数据库管理员与架构师](https://www.bls.gov/ooh/computer-and-information-technology/database-administrators.htm)。"
 }

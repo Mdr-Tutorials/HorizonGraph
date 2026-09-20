@@ -1,0 +1,40 @@
+{
+  "id": "candidate-rediscovery",
+  "name": "Candidate Rediscovery",
+  "display_primary": "候选人重新匹配",
+  "display_secondary": "Candidate Rediscovery",
+  "aliases": [
+    "候选人重新匹配",
+    "候选人再发现",
+    "人才再发现",
+    "捞人",
+    "被捞"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "candidate-pool",
+      "context": "从已保留的申请或联系记录中寻找适合当前开放岗位的人选。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "employment-intent-confirmation",
+      "context": "重新联系后可核对候选人当前是否仍考虑机会，以及时间和岗位偏好是否变化。"
+    }
+  ],
+  "summary": "根据新的岗位需求，从既有候选资料中重新查找、匹配并联系合适人选。",
+  "description": "候选人重新匹配是从已有候选资料中寻找适合当前岗位的人选，例如重新查看过去的申请或联系记录，再核对现有技能与求职意愿。\n\n招聘社区里的“捞人”也可能泛指主动找候选人，此处作为检索俗称收录。被重新联系并不说明原有评估结果、当前岗位条件或录用结论已经确定。\n\n参考：[Greenhouse：从现有候选库重新发现人才](https://www.greenhouse.com/uk/blog/find-talent-faster-and-easier-with-greenhouse-talent-filtering-and-talent-rediscovery)。\n\n俗称用例：[求职社区中的部门重新联系](https://www.nowcoder.com/feed/main/detail/efd7f7f7ea0d40db9ca137c215891db1)；社区记录不代表企业正式政策。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.greenhouse.com/uk/blog/find-talent-faster-and-easier-with-greenhouse-talent-filtering-and-talent-rediscovery"
+}

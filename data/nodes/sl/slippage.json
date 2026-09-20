@@ -1,0 +1,28 @@
+{
+  "id": "slippage",
+  "name": "Slippage",
+  "display_primary": "滑点",
+  "display_secondary": "Slippage",
+  "aliases": [
+    "滑点",
+    "成交滑点",
+    "交易滑点"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    }
+  ],
+  "summary": "成交价格相对于预期或参考价格的偏离，可有利也可不利。",
+  "description": "滑点描述实际或模拟成交价与选定参考价格的差异。参考价格可能是下单时的报价或模型预期价格，比较时必须说明基准、买卖方向与数量；价格偏离对交易方既可能有利，也可能不利。\n\n流动性、订单规模、市场变化及执行延迟都可能影响结果。回测通常通过滑点模型近似这种差异，模型假设并非真实成交的保证。滑点与佣金不是同一项目，也不应在已经包含相关影响的成本模型中再次机械相加。\n\n参考：[QuantConnect：滑点模型](https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/slippage/key-concepts)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/slippage/key-concepts"
+}

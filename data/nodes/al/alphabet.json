@@ -1,0 +1,29 @@
+{
+  "id": "alphabet",
+  "name": "Alphabet",
+  "display_primary": "Alphabet",
+  "display_secondary": "Alphabet",
+  "aliases": [
+    "Alphabet",
+    "Alphabet Inc.",
+    "Alphabet 公司",
+    "谷歌母公司"
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "2015 年重组中设立、以 Google 等业务为旗下公司的控股公司。",
+  "description": "Alphabet 是 Google 在 2015 年公布并实施公司重组后设立的上市控股主体。Google 成为其子公司；Alphabet 与 Google 是不同层次的公司主体，不能仅把两者理解为同一公司的新旧名称。\n\n按近期公开文件中的控股链，Google LLC 由 XXVI Holdings 直接持有，后者由 Alphabet 持有；图谱分别连接这两个层级。金融资料中的 Google 股票或 FAANG 的 G 经常指向上市主体 Alphabet，具体产品、技术和招聘资料则仍可能使用 Google 名称。\n\n参考：[Google：2015 年 Alphabet 重组公告](https://blog.google/alphabet/google-alphabet/)；[FCC：2026 年公开通知披露的控股链](https://docs.fcc.gov/public/attachments/DA-26-155A1.pdf)；[Alphabet：2025 年末主要子公司清单](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/googexhibit2101q42025.htm)；[Nasdaq：FAANG 的历史成员释义](https://www.nasdaq.com/articles/faang-stocks%3A-a-year-in-review-what-to-buy-in-2020-2019-12-23)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 5,
+  "official_site": "https://abc.xyz/"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "internship-recruitment",
+  "name": "Internship Recruitment",
+  "display_primary": "实习招聘",
+  "display_secondary": "Internship Recruitment",
+  "aliases": [
+    "实习招聘",
+    "实习生招聘"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coding-interview",
+      "context": "软件开发实习的评估可包含编程题，具体以实习项目的面试安排为准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "employment-intent-confirmation",
+      "context": "沟通候选人的实习时间、地点偏好及参与意愿，以匹配项目安排。"
+    }
+  ],
+  "summary": "为具有实践学习与阶段性工作安排的实习岗位选拔候选人的招聘活动。",
+  "description": "实习招聘围绕特定实习岗位选择候选人，常需要核对在读状态、可参与时间和岗位技能。日常实习、暑期实习等项目的资格与持续时间并不一致。\n\n技术实习也可能考察编程或项目经历。招聘信息中明确的实习安排与后续全职机会应分别理解，参加实习本身不表示已经获得毕业后的岗位。\n\n参考：[微软大学实习项目](https://careers.microsoft.com/v2/global/en/universityinternship)；[微软学生面试说明](https://careers.microsoft.com/v2/global/en/hiring-tips/student-interviewing)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://careers.microsoft.com/v2/global/en/universityinternship"
+}

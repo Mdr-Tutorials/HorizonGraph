@@ -1,0 +1,53 @@
+{
+  "id": "flag-facebook-linkedin-amazon-google",
+  "name": "FLAG (Facebook, LinkedIn, Amazon, Google)",
+  "display_primary": "FLAG（科技公司合称）",
+  "display_secondary": "Facebook, LinkedIn, Amazon, Google",
+  "abbreviation": "FLAG",
+  "aliases": [
+    "FLAG（科技公司合称）",
+    "FLAG",
+    "FLAG 四大",
+    "FLAG四大",
+    "Facebook LinkedIn Amazon Google",
+    "Facebook, LinkedIn, Amazon, Google",
+    "脸书领英亚马逊谷歌"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-concept"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "meta",
+      "context": "FLAG 的 F 来自公司旧名 Facebook；该公司于 2021-10-28 宣布采用 Meta 名称。此处指公司主体，Facebook 社交产品的名称另行区分。"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "linkedin-company",
+      "context": "FLAG 展开为 Facebook、LinkedIn、Amazon、Google 时，L 指作为雇主的 LinkedIn 公司，而非同名职业社交平台产品。"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "amazon",
+      "context": "限定在 Facebook、LinkedIn、Amazon、Google 这一释义中，A 指亚马逊。"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "google",
+      "context": "限定在 Facebook、LinkedIn、Amazon、Google 这一释义中，G 指谷歌。"
+    }
+  ],
+  "summary": "求职语境中的四家公司合称，F 沿用现名 Meta 的公司旧名。",
+  "description": "FLAG 是求职讨论中对 Facebook、LinkedIn、Amazon、Google 四家公司的合称，芝加哥大学的 IT 行业求职指南也采用这一展开方式。这里的 A 指 Amazon，L 指 LinkedIn 公司；它是对雇主的非正式并称，不表示统一招聘流程或固定排名。\n\n2021 年 10 月 28 日，Facebook 公司宣布采用 Meta 名称；官方同时说明应用及其品牌名称不会随之更改。因此，FLAG 中的 F 保留历史名称的来源，所指公司可标为 Meta（原 Facebook 公司）。这个简称与当前公司名称可以并存，公司更名并不自动产生一个通行的新缩写。\n\n参考：[芝加哥大学 IT 行业求职指南，第 4 页](https://grad.uchicago.edu/wp-content/uploads/2021/03/IT-Industry-Guide-.pdf)；[Meta 公司更名公告](https://about.fb.com/news/2021/10/facebook-company-is-now-meta/)；[Meta 2021 年创始人公开信](https://about.fb.com/news/2021/10/founders-letter/amp/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3
+}

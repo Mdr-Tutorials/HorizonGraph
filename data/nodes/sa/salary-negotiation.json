@@ -1,0 +1,71 @@
+{
+  "id": "salary-negotiation",
+  "name": "Salary Negotiation",
+  "display_primary": "薪酬沟通",
+  "display_secondary": "Salary Negotiation",
+  "aliases": [
+    "薪酬沟通",
+    "谈薪",
+    "薪资谈判",
+    "薪酬协商",
+    "薪资开奖",
+    "开奖"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "total-compensation",
+      "context": "核对现金、奖金和权益等组成，以及金额对应的周期和条件。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "job-level",
+      "context": "在组织按职级设置薪酬范围时，可澄清级别与岗位责任的对应。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "job-offer",
+      "context": "围绕拟议或已收到的录用方案澄清条款，沟通本身不代表已达成一致。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "base-salary",
+      "context": "薪酬协商涉及该项目时，确认金额或数量、支付时间及附带条件，避免把目标值等同于保证收入。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "compensation-bonus",
+      "context": "薪酬协商涉及该项目时，确认金额或数量、支付时间及附带条件，避免把目标值等同于保证收入。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "sign-on-bonus",
+      "context": "薪酬协商涉及该项目时，确认金额或数量、支付时间及附带条件，避免把目标值等同于保证收入。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "restricted-stock-unit",
+      "context": "薪酬协商涉及该项目时，确认金额或数量、支付时间及附带条件，避免把目标值等同于保证收入。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "equity-vesting",
+      "context": "协商权益奖励时，明确归属条件、时间表及离职后的处理方式。"
+    }
+  ],
+  "summary": "围绕岗位报酬组成、期望与可协商条件进行的信息确认和讨论。",
+  "description": "薪酬沟通包括了解岗位方案、说明期望以及讨论可调整的条件。沟通可以发生在招聘初期，也可以在收到录用通知后，是否可协商取决于岗位和组织安排。\n\n求职社区中的“开奖”常指第一次获知给出的薪酬，“谈薪”则还包括后续澄清与协商。这些俗称并不定义一套统一审批或发放流程。\n\n参考：[哈佛：薪酬沟通的时机与内容](https://careerservices.fas.harvard.edu/resources/gsas-evaluating-and-negotiating-job-offers/)；[求职社区：开奖与谈薪用语示例](https://blog.51cto.com/u_15177525/4540919)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://careerservices.fas.harvard.edu/resources/gsas-evaluating-and-negotiating-job-offers/"
+}

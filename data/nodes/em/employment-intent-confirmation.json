@@ -1,0 +1,33 @@
+{
+  "id": "employment-intent-confirmation",
+  "name": "Employment Intent Confirmation",
+  "display_primary": "入职意向确认",
+  "display_secondary": "Employment Intent Confirmation",
+  "aliases": [
+    "入职意向确认",
+    "入职意愿确认",
+    "求职意向沟通"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "job-offer",
+      "context": "核对候选人对具体岗位机会的意愿与待澄清事项，区分继续考虑与明确接受。"
+    }
+  ],
+  "summary": "招聘双方核对加入意愿、岗位偏好与可开始时间等信息的沟通。",
+  "description": "入职意向确认用于了解候选人是否考虑该机会、希望进一步了解什么，以及时间和地点等安排是否匹配。它可能出现在招聘沟通、OC 或收到录用通知后的讨论中。\n\n“愿意继续了解”“有加入意向”与明确接受某份录用方案表达的信息不同。记录时应写清问题与回答，避免把意向沟通简化成已接受 Offer。\n\n参考：[哈佛：收到 Offer 后的考虑与回应](https://careerservices.fas.harvard.edu/resources/gsas-evaluating-and-negotiating-job-offers/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://careerservices.fas.harvard.edu/resources/gsas-evaluating-and-negotiating-job-offers/"
+}

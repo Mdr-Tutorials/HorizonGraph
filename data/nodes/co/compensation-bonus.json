@@ -1,0 +1,32 @@
+{
+  "id": "compensation-bonus",
+  "name": "Compensation Bonus",
+  "display_primary": "薪酬奖金",
+  "display_secondary": "Compensation Bonus",
+  "aliases": [
+    "薪酬奖金",
+    "奖金",
+    "绩效奖金",
+    "年终奖",
+    "Annual Bonus",
+    "Performance Bonus",
+    "Bonus"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "employment-terms"
+    }
+  ],
+  "summary": "固定工资之外按合同、计划或绩效等条件安排的奖励性报酬。",
+  "description": "薪酬奖金是固定工资之外的奖励性报酬，可能与个人、团队或公司表现相关，也可能按照约定提供保证金额。绩效奖金和年终奖是常见形式，但名称本身不能确定计算方式或发放条件。\n\n比较薪酬时要区分目标奖金、保证奖金和实际发放金额，并说明对应考核周期。奖金可以按年或其他周期安排，不等同于入职签约激励；一个 Offer 中也未必包含所有形式。\n\n参考：[Harvard：评估薪酬项目](https://careerservices.fas.harvard.edu/resources/harvard-college-evaluating-and-negotiating-job-and-internship-offers/)；[GitLab：薪酬组成](https://handbook.gitlab.com/handbook/total-rewards/compensation/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://careerservices.fas.harvard.edu/resources/harvard-college-evaluating-and-negotiating-job-and-internship-offers/"
+}

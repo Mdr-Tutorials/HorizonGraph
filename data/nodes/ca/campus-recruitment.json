@@ -1,0 +1,43 @@
+{
+  "id": "campus-recruitment",
+  "name": "Campus Recruitment",
+  "display_primary": "校园招聘",
+  "display_secondary": "Campus Recruitment",
+  "aliases": [
+    "校园招聘",
+    "校招",
+    "应届生招聘"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "online-assessment",
+      "context": "安排在线测评的校招项目可借此评估基础能力；并非所有岗位都有笔试。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coding-interview",
+      "context": "软件开发类校招可通过编程题观察问题分析、实现与测试能力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "employee-referral",
+      "context": "开放员工推荐的校招项目可通过内推发现候选人；申请资格与评估仍由招聘项目决定。"
+    }
+  ],
+  "summary": "面向应届毕业生等早期职业人群组织的招聘，通常按毕业届次设置申请范围。",
+  "description": "校园招聘通常围绕毕业届次组织岗位申请与人才选拔，可通过学校、企业招聘网站或招聘平台开展。具体毕业时间范围、岗位和考核环节由各招聘项目说明。\n\n技术岗位可能安排在线笔试、编程面试或项目讨论。实习招聘与毕业生全职招聘可以互相衔接，也可能独立进行；不能由“校招”一词推导固定时间表或转正结果。\n\n参考：[微软学生与毕业生机会](https://careers.microsoft.com/v2/global/en/students)；[微软早期职业面试说明](https://careers.microsoft.com/v2/global/en/hiring-tips/student-interviewing)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://careers.microsoft.com/v2/global/en/students"
+}

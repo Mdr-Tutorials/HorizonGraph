@@ -151,8 +151,8 @@ for (const { n, file } of nodes.values()) {
     seenPair.add(pair);
     if (tid === n.id) { err(`${file}: 自环边 ${pair}`); continue; }
     const spec = rel[rt];
-    if ((rt === "uses" || rt === "stewarded_by") && (typeof e.context !== "string" || !e.context.trim()))
-      err(`${file}: ${rt} 必须提供非空 context，说明使用场景或治理职责`);
+    if (spec.requires_context && (typeof e.context !== "string" || !e.context.trim()))
+      err(`${file}: ${rt} 必须提供非空 context，说明关系的具体场景`);
     if (!spec.domain.includes(t)) { err(`${file}: ${rt} 的 domain 不含类型 ${t}`); continue; }
 
     if (rt === "is_instance_of") {
@@ -214,6 +214,8 @@ for (const o of onto.values()) {
     }
     if (rt === "is_instance_of") { err(`ontology ${o.id}: is_instance_of 只能由数据节点持有`); continue; }
     const spec = rel[rt];
+    if (spec.requires_context && (typeof e.context !== "string" || !e.context.trim()))
+      err(`ontology ${o.id}: ${rt} 必须提供非空 context，说明关系的具体场景`);
     if (!eff.some((t) => spec.domain.includes(t))) {
       err(`ontology ${o.id}: ${rt} 的 domain 与生效类型 ${eff.join("/") || "无"} 不符`);
       continue;

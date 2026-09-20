@@ -15,12 +15,23 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "integration-testing",
+      "context": "验证接口与组件协作时采用集成测试，检查跨模块行为。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "e2e-testing",
+      "context": "验证完整关键用户流程时采用端到端测试，覆盖系统整体行为。"
     }
   ],
-  "summary": "质量守门人，从手工用例到自动化测试的进化。",
+  "summary": "设计并执行质量验证，发现缺陷并改进软件交付过程的岗位。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "测试或质量保障工程师围绕软件需求与风险设计测试计划、用例和验证流程，执行检查、记录缺陷并跟踪修复。工作既可能包含手工探索，也可能包含自动化测试及测试基础设施建设。\n\nQA 的范围可以包含过程质量，不能只理解为在发布前点击界面。测试工程师也不独自承担全部软件质量责任。集成测试用于检查组件协作，端到端测试用于验证关键用户流程；具体测试组合应由系统风险、成本和团队分工决定。\n\n参考：[美国劳工统计局：软件开发与测试职责](https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm)。"
 }

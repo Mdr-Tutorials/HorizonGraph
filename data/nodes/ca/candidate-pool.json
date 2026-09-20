@@ -1,0 +1,31 @@
+{
+  "id": "candidate-pool",
+  "name": "Candidate Pool",
+  "display_primary": "候选池",
+  "display_secondary": "Candidate Pool",
+  "aliases": [
+    "候选池",
+    "候选人池",
+    "人才池",
+    "人才库",
+    "Talent Pool",
+    "泡池子"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-material"
+    }
+  ],
+  "summary": "为当前或未来岗位保留并组织候选资料的集合，可用于后续匹配与联系。",
+  "description": "候选池把已有申请者或潜在人选的资料组织起来，便于在当前或未来岗位需要时检索。具体记录可包括简历、技能信息和既往沟通情况，范围取决于组织的招聘系统。\n\n求职社区说“泡池子”通常是在描述等待进一步匹配或处理的状态，并不说明一定通过面试或会被录用。候选资料集合与某个人的流程结果需要分别理解。\n\n参考：[Workable：招聘系统中的候选资料与人才池](https://resources.workable.com/hr-terms/ats-vs-crm)。\n\n俗称用例：[求职者对等待与重新匹配的描述](https://www.nowcoder.com/discuss/536944341198123008)；社区经历只说明用词，不作为企业统一流程依据。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://resources.workable.com/hr-terms/ats-vs-crm"
+}

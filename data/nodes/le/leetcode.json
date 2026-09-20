@@ -16,12 +16,23 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "saas"
+    },
+    {
+      "relation_type": "prepares_for",
+      "target_id": "coding-interview",
+      "context": "通过编程题练习算法分析与实现，不表示招聘方使用该平台或题目相同。"
+    },
+    {
+      "relation_type": "prepares_for",
+      "target_id": "online-assessment",
+      "context": "可用于软件岗位编程测评前的编码练习；实际评估规则由招聘方确定。"
     }
   ],
-  "summary": "算法刷题平台，技术面试的事实准备标准。",
+  "summary": "提供编程题目与在线练习环境，可用于算法学习和编程面试准备的平台。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-09-20",
   "importance": 4,
-  "official_site": "https://leetcode.cn"
+  "official_site": "https://leetcode.cn",
+  "description": "LeetCode 提供编程题目与在线练习环境，求职者可以用它练习问题分析、代码实现和算法思路。题目练习是面试准备的一部分，还需要能够说明条件、验证结果并解释复杂度。\n\n参考：[LeetCode 官方入口](https://leetcode.com/)。"
 }

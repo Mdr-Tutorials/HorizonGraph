@@ -1,0 +1,27 @@
+{
+  "id": "project-experience",
+  "name": "Project Experience",
+  "display_primary": "项目经历",
+  "display_secondary": "Project Experience",
+  "aliases": [
+    "项目经历",
+    "项目经验"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-material"
+    }
+  ],
+  "summary": "围绕具体项目记录问题、个人职责、实施过程与结果的实践经历。",
+  "description": "项目经历可以来自工作、课程、个人实践或开源协作。理解一段经历时，需要说明当时的问题、约束、本人负责的部分和结果，区分团队整体产出与个人贡献。\n\n技术面试常会追问方案选择和验证方式。可运行的成果、设计说明、测试与提交记录能够为叙述提供具体依据。\n\n参考：[微软技术面试说明](https://careers.microsoft.com/v2/global/en/hiring-tips/technical-interviewing)；[GitHub 项目展示指南](https://docs.github.com/en/account-and-profile/tutorials/using-your-github-profile-to-enhance-your-resume)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://careers.microsoft.com/v2/global/en/hiring-tips/technical-interviewing"
+}

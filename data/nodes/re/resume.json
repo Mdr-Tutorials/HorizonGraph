@@ -1,0 +1,49 @@
+{
+  "id": "resume",
+  "name": "Resume",
+  "display_primary": "简历",
+  "display_secondary": "Resume",
+  "aliases": [
+    "简历",
+    "求职简历",
+    "个人简历",
+    "Résumé"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-material"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "project-experience",
+      "context": "用项目目标、个人承担的任务和结果概括相关经历。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "open-source-contribution",
+      "context": "有相关贡献时可列出修复、文档或协作成果，并提供可查阅的项目记录。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "career-portfolio",
+      "context": "可附作品集入口，让招聘方继续查看与岗位相关的成果。"
+    },
+    {
+      "relation_type": "prepares_for",
+      "target_id": "internal-transfer",
+      "context": "需要内部申请材料时，简历可汇总与目标岗位相关的经历和能力证据。"
+    }
+  ],
+  "summary": "概括教育、经历与相关能力，供招聘方初步了解候选人的申请材料。",
+  "description": "简历是对教育背景、经历与相关能力的精炼说明，内容需要与目标岗位有关，并能在后续沟通中解释。项目部分可写清任务、个人贡献和结果。\n\n技术求职可附作品集或代码展示入口，帮助读者进一步查看具体成果。简历中的陈述与链接是了解经历的线索，仍需要结合面试或作品核实。\n\n参考：[哈佛简历指南](https://careerservices.fas.harvard.edu/resources/create-a-strong-resume/)；[GitHub 求职展示指南](https://docs.github.com/en/account-and-profile/tutorials/using-your-github-profile-to-enhance-your-resume)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://careerservices.fas.harvard.edu/resources/create-a-strong-resume/"
+}

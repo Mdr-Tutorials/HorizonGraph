@@ -1,0 +1,46 @@
+{
+  "id": "machine-learning-engineer",
+  "name": "Machine Learning Engineer",
+  "display_primary": "机器学习工程师",
+  "display_secondary": "Machine Learning Engineer · MLE",
+  "abbreviation": "MLE",
+  "aliases": [
+    "机器学习工程师",
+    "ML Engineer",
+    "机器学习工程岗",
+    "MLE"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "machine-learning",
+      "context": "构建预测或生成能力时使用机器学习模型及其训练、评估方法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "out-of-sample-validation",
+      "context": "交付预测模型前，用保留数据评估泛化能力，避免只依据训练表现判断效果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "observability",
+      "context": "运营在线模型服务时观察服务状态及模型表现变化，辅助诊断与维护。"
+    }
+  ],
+  "summary": "构建、评估并部署机器学习系统，维护模型在生产环境中的表现。",
+  "description": "机器学习工程师（Machine Learning Engineer，MLE）把机器学习方法用于可运行的软件系统，工作可包括训练和评估模型、组织数据与训练管线、部署推理服务以及监控上线后的表现。模型精度、运行成本、延迟与可靠性需要结合使用场景考虑。\n\nMLE 与数据科学家、算法工程师和软件工程师存在职责交集。部分岗位偏模型开发，部分偏平台与部署，不能把 MLE 固定解释为只负责上线。Google Cloud 的职业能力说明将模型构建、评估、生产化及持续监控共同列入这一角色。\n\n参考：[Google Cloud：机器学习工程师职责](https://cloud.google.com/learn/certification/machine-learning-engineer)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://cloud.google.com/learn/certification/machine-learning-engineer"
+}

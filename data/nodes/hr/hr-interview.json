@@ -1,0 +1,44 @@
+{
+  "id": "hr-interview",
+  "name": "HR Interview",
+  "display_primary": "HR 面试",
+  "display_secondary": "HR Interview",
+  "aliases": [
+    "HR 面试",
+    "HR 面",
+    "HR面",
+    "人力资源面试"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "project-experience",
+      "context": "可通过候选人的项目与工作经历了解动机、协作方式和职责匹配。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "employment-intent-confirmation",
+      "context": "核对候选人对岗位的兴趣、地点偏好与可到岗时间。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "total-compensation",
+      "context": "部分 HR 沟通会询问薪酬期望或介绍方案，具体阶段随企业安排变化。"
+    }
+  ],
+  "summary": "由招聘或人力资源人员参与，了解经历、求职意愿及岗位匹配信息的面试沟通。",
+  "description": "HR 面试描述的是招聘或人力资源人员参与的沟通环节，可能涉及经历、求职动机、行为案例、薪酬期望与时间安排。它可以发生在不同阶段，不能一律视为最后一轮。\n\nHR 面与行为面试不是同一分类维度：前者强调参与角色，后者强调提问方式。一次 HR 面可能包含行为问题，也可能主要核对信息。\n\n参考：[哈佛：招聘人员询问薪酬期望的时机](https://careerservices.fas.harvard.edu/resources/gsas-evaluating-and-negotiating-job-offers/)；[快手校招流程的历史示例（高校发布）](https://yjs.hznu.edu.cn/c/2020-08-19/2442534.shtml)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://careerservices.fas.harvard.edu/resources/gsas-evaluating-and-negotiating-job-offers/"
+}

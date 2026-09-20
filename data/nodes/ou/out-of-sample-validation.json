@@ -1,0 +1,37 @@
+{
+  "id": "out-of-sample-validation",
+  "name": "Out-of-Sample Validation",
+  "display_primary": "样本外验证",
+  "display_secondary": "Out-of-Sample Validation · OOS",
+  "abbreviation": "OOS",
+  "aliases": [
+    "样本外验证",
+    "样本外检验",
+    "Out-of-Sample Testing",
+    "Out of Sample",
+    "OOS"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backtesting",
+      "context": "量化策略在保留的历史时段做样本外验证时，可用回测执行既定规则，避免根据该时段结果反复调参。"
+    }
+  ],
+  "summary": "用未参与拟合或方案选择的数据评估模型及策略的泛化表现。",
+  "description": "样本外验证使用未参与模型拟合或方案选择的数据评估表现。它用于检查在已见数据上得到的规律能否适用于新的数据；训练集、用于调参的验证集和最终测试集承担不同任务。\n\n在时间序列与量化研究中，应尊重信息发生和可获得的顺序，避免把未来记录混入过去的训练。若根据测试结果反复修改策略，这些数据便参与了选择，不能继续当作独立的最终检验。滚动划分或保留后续时段可以用于验证，但并不消除市场变化的不确定性。\n\n参考：[scikit-learn：数据划分与时间序列验证](https://scikit-learn.org/stable/modules/cross_validation.html)；[QuantConnect：回测研究指南](https://www.quantconnect.com/docs/v2/cloud-platform/backtesting/research-guide)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://scikit-learn.org/stable/modules/cross_validation.html"
+}

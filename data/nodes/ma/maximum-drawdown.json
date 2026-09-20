@@ -1,0 +1,30 @@
+{
+  "id": "maximum-drawdown",
+  "name": "Maximum Drawdown",
+  "display_primary": "最大回撤",
+  "display_secondary": "Maximum Drawdown · MDD",
+  "abbreviation": "MDD",
+  "aliases": [
+    "最大回撤",
+    "最大回撤率",
+    "Max Drawdown",
+    "MDD"
+  ],
+  "type": "metric",
+  "domains": [
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-metric"
+    }
+  ],
+  "summary": "指定观察区间内净值从既有峰值到后续谷值的最大相对跌幅。",
+  "description": "最大回撤衡量指定区间内净值经历的最大峰谷跌幅。对正净值序列 V，先取截至每个时点的历史峰值 P，再计算 (P - V) / P，并在区间内取最大值；这里用非负百分比表示损失幅度。\n\n结果依赖起止时间、数据频率、费用与净值计算口径。它描述一次最严重的历史下行路径，不等同于波动率，也不告诉你恢复需要多久。某些系统用负数显示回撤，因此比较结果时还需核对符号约定。\n\n参考：[QuantConnect：回测结果与回撤](https://www.quantconnect.com/docs/v2/local-platform/backtesting/results)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.quantconnect.com/docs/v2/local-platform/backtesting/results"
+}

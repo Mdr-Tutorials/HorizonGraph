@@ -1,0 +1,56 @@
+{
+  "id": "faang-facebook-apple-amazon-netflix-google",
+  "name": "FAANG (Facebook, Apple, Amazon, Netflix, Google)",
+  "display_primary": "FAANG",
+  "display_secondary": "FAANG (Facebook, Apple, Amazon, Netflix, Google) · FAANG",
+  "abbreviation": "FAANG",
+  "aliases": [
+    "FAANG",
+    "FAANG 五大",
+    "FAANG五大",
+    "Facebook Apple Amazon Netflix Google",
+    "脸书苹果亚马逊奈飞谷歌"
+  ],
+  "type": "concept",
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "meta",
+      "context": "F 的历史展开为 Facebook；公司于 2021-10-28 公布 Meta 名称，此处指公司而非 Facebook 产品。"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "apple",
+      "context": "本节点采用 Facebook、Apple、Amazon、Netflix、Google 的 FAANG 释义，第一个 A 指 Apple。"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "amazon",
+      "context": "本节点采用 Facebook、Apple、Amazon、Netflix、Google 的 FAANG 释义，第二个 A 指 Amazon。"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "netflix",
+      "context": "FAANG 历史展开中的 N 指 Netflix 公司。"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "alphabet",
+      "context": "金融语境中 G 沿用 Google 名称，对应上市主体 Alphabet；Google LLC 经 XXVI Holdings 间接归属于 Alphabet。"
+    }
+  ],
+  "summary": "五家科技与娱乐公司的历史合称，沿用 Facebook 与 Google 名称。",
+  "description": "FAANG 由 Facebook、Apple、Amazon、Netflix 和 Google 的首字母组成，常见于历史市场报道，也被借用于科技企业讨论。它与含 LinkedIn 的 FLAG 是不同组合，不应把二者的成员混合。\n\nFacebook 公司在 2021 年采用 Meta 名称，F 的历史展开仍可保留。金融语境中 G 对应上市主体 Alphabet，Google 是其子公司；本节点按这一口径连接五个组织，并在边中注明历史名称。FAANG 不是独立组织，也不构成统一的岗位、薪酬或招聘制度。\n\n参考：[Nasdaq：FAANG 的历史成员释义](https://www.nasdaq.com/articles/faang-stocks%3A-a-year-in-review-what-to-buy-in-2020-2019-12-23)；[Meta：公司更名公告](https://about.fb.com/news/2021/10/facebook-company-is-now-meta/)；[Google：2015 年 Alphabet 重组公告](https://blog.google/alphabet/google-alphabet/)；[FCC：2026 年公开通知披露的控股链](https://docs.fcc.gov/public/attachments/DA-26-155A1.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://www.nasdaq.com/articles/faang-stocks%3A-a-year-in-review-what-to-buy-in-2020-2019-12-23"
+}

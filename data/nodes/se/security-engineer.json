@@ -13,12 +13,23 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "iam",
+      "context": "负责身份安全或权限设计时，使用身份与访问管理控制资源访问。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "observability",
+      "context": "在检测与响应场景中利用日志、指标和追踪等信号观察异常并定位事件。"
     }
   ],
-  "summary": "攻防两端的建设者，从渗透测试到合规落地。",
+  "summary": "分析安全风险，设计和维护防护措施并参与安全事件处理的岗位。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "安全工程师围绕系统、应用或基础设施识别安全风险，设计与落实防护措施，并参与安全验证和事件处理。岗位可偏应用安全、基础设施安全、检测响应或身份安全，不能用单一工具概括全部职责。\n\n安全分析与安全工程在实际团队中可能重叠，工程岗位通常还需要把防护要求落实为可运行的机制。身份与访问管理用于限制主体能访问什么资源；观测和日志分析可为异常检测、调查与响应提供证据，具体方式取决于系统环境。\n\n参考：[美国劳工统计局：信息安全分析师](https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm)。"
 }

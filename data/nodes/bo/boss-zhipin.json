@@ -1,0 +1,37 @@
+{
+  "id": "boss-zhipin",
+  "name": "BOSS直聘",
+  "display_primary": "BOSS直聘",
+  "display_secondary": "BOSS Zhipin",
+  "aliases": [
+    "BOSS直聘",
+    "BOSS 直聘",
+    "BOSS Zhipin"
+  ],
+  "type": "product",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-platform"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "experienced-hiring",
+      "context": "通过职位推荐和直接沟通支持社会招聘的人岗连接环节，不代表平台替所有雇主完成招聘决策。"
+    }
+  ],
+  "summary": "以职位推荐和求职者与招聘方直接沟通为主要方式的在线招聘产品。",
+  "description": "BOSS直聘通过职位与人选推荐、直接聊天等方式连接求职者和招聘方，服务于不同类型的岗位与人群。求职者可在进一步面试前沟通岗位需求和自身情况。\n\n这里收录的是招聘产品，平台上的具体雇主、职位与招聘进度属于各自的信息，不由平台名称统一决定。\n\n参考：[BOSS直聘官方公司与产品介绍](https://ir.zhipin.com/zh-hans/about-us/company-profile)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://ir.zhipin.com/zh-hans/about-us/company-profile",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

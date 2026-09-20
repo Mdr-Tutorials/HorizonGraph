@@ -1,0 +1,45 @@
+{
+  "id": "data-scientist",
+  "name": "Data Scientist",
+  "display_primary": "数据科学家",
+  "display_secondary": "Data Scientist · DS",
+  "abbreviation": "DS",
+  "aliases": [
+    "数据科学家",
+    "数据科学岗",
+    "DS"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "machine-learning",
+      "context": "采用预测或模式识别模型解决问题的数据科学工作使用机器学习；描述性分析不必采用它。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "out-of-sample-validation",
+      "context": "评估预测模型时，使用未参与拟合或选择的保留数据检查泛化表现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "采用 Python 的团队可用它整理数据、编写分析与建模程序。"
+    }
+  ],
+  "summary": "通过统计、编程与建模分析数据，为研究或业务问题提供证据的岗位。",
+  "description": "数据科学家（Data Scientist，DS）从问题定义、数据整理和探索分析出发，运用统计或机器学习建立模型、评估结果并解释发现。产出可以是实验结论、预测模型或支持决策的分析，工作并不都以训练复杂模型为目标。\n\nDS 与数据分析师、机器学习工程师的职责可能重叠。前者通常更侧重分析与指标解释，机器学习工程师通常更侧重模型的工程交付；实际分工取决于团队。涉及预测模型时，样本外验证用于检查对未参与拟合的数据是否仍有效。\n\n参考：[美国劳工统计局：数据科学家](https://www.bls.gov/ooh/math/data-scientists.htm)；[scikit-learn：数据划分与时间序列验证](https://scikit-learn.org/stable/modules/cross_validation.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.bls.gov/ooh/math/data-scientists.htm"
+}

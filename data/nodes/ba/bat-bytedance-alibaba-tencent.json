@@ -1,0 +1,48 @@
+{
+  "id": "bat-bytedance-alibaba-tencent",
+  "name": "BAT (ByteDance, Alibaba, Tencent)",
+  "display_primary": "BAT（字节、阿里、腾讯）",
+  "display_secondary": "ByteDance, Alibaba, Tencent",
+  "abbreviation": "BAT",
+  "aliases": [
+    "BAT（字节、阿里、腾讯）",
+    "字节阿里腾讯",
+    "字节跳动、阿里巴巴、腾讯",
+    "字节跳动阿里巴巴腾讯",
+    "BAT",
+    "ByteDance Alibaba Tencent",
+    "ByteDance, Alibaba, Tencent"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-concept"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "bytedance",
+      "context": "限定在 BAT 展开为 ByteDance、Alibaba、Tencent 的释义中，B 指字节跳动；传统 B = Baidu 的释义不适用此边。"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "alibaba",
+      "context": "在 BAT（ByteDance、Alibaba、Tencent）这一企业合称中，A 指阿里巴巴。"
+    },
+    {
+      "relation_type": "refers_to",
+      "target_id": "tencent",
+      "context": "在 BAT（ByteDance、Alibaba、Tencent）这一企业合称中，T 指腾讯。"
+    }
+  ],
+  "summary": "BAT 的一种用法，指字节跳动、阿里巴巴与腾讯三家互联网企业。",
+  "description": "BAT（ByteDance、Alibaba、Tencent）是一种把字节跳动、阿里巴巴与腾讯并列简称的用法，B 在这里指 ByteDance。它是非正式称谓，不代表三家公司组成一个法人、集团或采用统一招聘流程。\n\n传统资料中的 BAT 通常展开为 Baidu、Alibaba、Tencent，即百度、阿里巴巴和腾讯；2023 年的社区讨论中也能见到 B 指 ByteDance 的说法。两种释义的差别在 B，阅读招聘与行业讨论时应结合上下文，不能把字节跳动的解释直接代入历史资料。社区记录在此仅用于说明称谓用法，不代表行业已经统一更改定义。\n\n参考：[2021 年研究论文中的传统 BAT 释义](https://arxiv.org/abs/2103.01590)；[2023 年关于 B 指 ByteDance 的社区用语示例](https://www.reddit.com/r/ChineseLanguage/comments/11fjvk2)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 2
+}

@@ -1,0 +1,30 @@
+{
+  "id": "equity-vesting",
+  "name": "Equity Vesting",
+  "display_primary": "股权归属",
+  "display_secondary": "Equity Vesting",
+  "aliases": [
+    "股权归属",
+    "归属期",
+    "归属计划",
+    "Vesting",
+    "Vesting Schedule"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "employment-terms"
+    }
+  ],
+  "summary": "按照任职时间或其他约定条件逐步取得权益奖励的机制。",
+  "description": "股权归属（Vesting）规定权益奖励在满足何种条件后成为员工已取得的权益。条件可以涉及持续任职时间或绩效，计划也可能设置首批归属门槛（cliff）以及后续分批归属安排。\n\n具体时间表不固定为某一种年限或比例。员工期权归属后，通常还需按计划行权才能购买股票；RSU 的归属与交付也可能分开。比较权益奖励时，应分别理解授予数量、归属条件、离职处理和实际取得资产的步骤。\n\n参考：[GitLab：员工期权](https://handbook.gitlab.com/handbook/total-rewards/stock-options/)；[Fidelity：RSU 与归属、交付](https://www.fidelity.com/webxpress/help/topics_nb/learn_rsus.shtml)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/handbook/total-rewards/stock-options/"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "base-salary",
+  "name": "Base Salary",
+  "display_primary": "基本工资",
+  "display_secondary": "Base Salary",
+  "aliases": [
+    "基本工资",
+    "固定工资",
+    "基础薪资",
+    "Base Pay",
+    "Base"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "employment-terms"
+    }
+  ],
+  "summary": "按约定周期支付的固定薪资部分，区别于奖金及权益激励。",
+  "description": "基本工资（Base Salary）指薪酬安排中的固定薪资部分，通常以年、月等周期表达，用来与可变奖金和权益激励区分。讨论数字时需要说明币种、周期及税前税后口径。\n\n基本工资不是总包，也不能仅根据月薪乘十二就推断全部固定年收入；支付月数和其他固定项目需查看具体约定。不同地区对工资组成的用语可能不同，本节点使用招聘与薪酬沟通中的一般含义。\n\n参考：[GitLab：薪酬组成](https://handbook.gitlab.com/handbook/total-rewards/compensation/)；[Harvard：录用条件与签约奖金](https://careerservices.fas.harvard.edu/resources/hes-evaluating-and-negotiating-job-offers-2/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/handbook/total-rewards/compensation/"
+}

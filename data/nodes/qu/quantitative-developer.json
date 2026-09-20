@@ -1,0 +1,58 @@
+{
+  "id": "quantitative-developer",
+  "name": "Quantitative Developer",
+  "display_primary": "量化开发工程师",
+  "display_secondary": "Quantitative Developer · QD",
+  "abbreviation": "QD",
+  "aliases": [
+    "量化开发工程师",
+    "量化开发",
+    "量化开发岗",
+    "QD",
+    "Quant Developer",
+    "Quant Dev"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "采用 Python 的量化开发岗位用它构建研究工具、数据处理流程和可维护的生产代码；Citadel 的数据策略团队明确使用这一技术。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpp",
+      "context": "采用 C++ 的自动化交易系统团队可用它开发和优化系统软件；Citadel Securities 将 C++ 列为量化开发岗位可选语言之一。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "etl",
+      "context": "负责另类数据基础设施且采用先转换后加载流程的量化开发岗位，用 ETL 抽取、清洗并装载研究数据；其他管线可采用不同处理顺序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cicd",
+      "context": "采用持续集成与交付的量化开发团队用 CI/CD 验证和交付工具或系统代码；Citadel 的数据策略岗位把它列为相关 DevOps 实践。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backtesting",
+      "context": "开发量化研究平台的岗位可实现回测引擎、数据接口及结果校验，具体职责取决于团队。"
+    }
+  ],
+  "summary": "为量化研究与交易开发工具、数据管线及系统，推进研究成果的工程实现。",
+  "description": "量化开发工程师（Quantitative Developer，QD）为量化研究和交易工作开发软件，可涉及研究工具、数据基础设施、实验工作流和自动化交易系统。职责通常包括与量化研究员（QR）确认需求，设计、实现、测试和部署软件，并改进数据质量、运行可靠性或代码性能。\n\nQD 的岗位范围随团队而异：有的偏研究平台与数据管线，有的偏交易系统实现。Python、C++、ETL 与 CI/CD 关系分别限定在采用这些语言或流程的场景，不能把所有 QD 等同于只做 C++ 低延迟开发。QR 也会编程，QD 也需要理解研究目标和定量方法；应通过具体职位描述判断分工。\n\n参考：[Citadel 量化开发职责](https://www.citadel.com/careers/details/quantitative-developer-data-strategies-group/)；[Citadel Securities 量化开发与研究工程职责](https://www.citadelsecurities.com/careers/details/quantitative-developer-research-engineer/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.citadel.com/careers/details/quantitative-developer-data-strategies-group/"
+}

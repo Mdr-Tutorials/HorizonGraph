@@ -13,12 +13,28 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "Web 页面开发中使用 HTML 表达内容结构与语义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "css",
+      "context": "Web 页面开发中使用 CSS 设置样式、布局与响应式表现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "Web 交互开发中使用 JavaScript 处理事件和页面行为。"
     }
   ],
-  "summary": "把设计变成可交互界面，浏览器兼容与性能的管家。",
+  "summary": "构建用户可交互的界面，处理页面结构、样式、行为与可访问性。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "前端工程师将界面需求实现为可交互的软件。在 Web 场景中，HTML 组织内容，CSS 定义表现，JavaScript 处理交互；还需要考虑可访问性、兼容性与性能。\n\n具体框架随团队和产品变化，基础技术与框架经验应分别理解。\n\n参考：[MDN 前端核心学习模块](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core)。"
 }

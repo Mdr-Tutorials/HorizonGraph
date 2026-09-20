@@ -1,0 +1,39 @@
+{
+  "id": "team-matching",
+  "name": "Team Matching",
+  "display_primary": "团队匹配",
+  "display_secondary": "Team Matching",
+  "aliases": [
+    "团队匹配",
+    "Team Match",
+    "定组",
+    "选组"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "job-description",
+      "context": "需要与团队沟通时，可围绕目标岗位的具体职责、项目和能力要求确认匹配。"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "project-experience",
+      "context": "双向沟通时，可通过候选人的项目经历了解其技能与团队工作的适配程度。"
+    }
+  ],
+  "summary": "结合候选人能力、意愿和团队需要，确定拟加入团队的过程。",
+  "description": "团队匹配把候选人的经历、技能和兴趣与具体团队的岗位需要相对应，可能包含团队介绍、双向沟通或内部安排。它帮助明确实际工作内容与合作对象，不只是重复一次通用技术面试。\n\n匹配出现的时间因项目而异：Snowflake 的 GenSWE 招聘介绍将其列为面试环节，Roblox 的早期职业项目则介绍入职前的团队偏好与安排。进入匹配阶段不能单独证明已获录用或确定入职日期；应结合具体招聘项目与书面信息理解。\n\n参考：[Snowflake：GenSWE 团队匹配](https://careers.snowflake.com/us/en/generalsoftwareengineeringprogram)；[Roblox：Early Careers 团队匹配问答](https://careers.roblox.com/early-career)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://careers.snowflake.com/us/en/generalsoftwareengineeringprogram"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "total-compensation",
+  "name": "Total Compensation",
+  "display_primary": "薪酬包",
+  "display_secondary": "Total Compensation",
+  "aliases": [
+    "薪酬包",
+    "总包",
+    "薪酬总包",
+    "年薪总包",
+    "Total Package",
+    "TC"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "employment-terms"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "stock-option",
+      "context": "采用员工期权激励的方案中，期权可作为权益组成；其价值和实现条件与现金工资不同。"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "base-salary",
+      "context": "包含该项目的薪酬方案中，它属于总包的一部分；是否提供、估值口径与支付条件以具体方案为准。"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "compensation-bonus",
+      "context": "包含该项目的薪酬方案中，它属于总包的一部分；是否提供、估值口径与支付条件以具体方案为准。"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "sign-on-bonus",
+      "context": "包含该项目的薪酬方案中，它属于总包的一部分；是否提供、估值口径与支付条件以具体方案为准。"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "restricted-stock-unit",
+      "context": "包含该项目的薪酬方案中，它属于总包的一部分；是否提供、估值口径与支付条件以具体方案为准。"
+    }
+  ],
+  "summary": "对岗位现金、可变薪酬及权益等报酬组成的合称，具体口径需明确。",
+  "description": "薪酬包（Total Compensation，TC）合并说明岗位的报酬组成，可能包括基本工资、奖金、签约激励与股权类安排。使用“总包”时需要明确统计周期、税前税后口径，以及是否包含福利、目标奖金或权益估值。\n\n组成项目并不保证同年以现金到账。一次性签约奖金应与持续性报酬区分，权益需要按适用的归属和交付条件理解。员工期权与 RSU 是不同形式，比较时不能把期权授予数量或股票市值直接当作固定工资。\n\n参考：[GitLab：薪酬组成](https://handbook.gitlab.com/handbook/total-rewards/compensation/)；[Harvard：评估薪酬项目](https://careerservices.fas.harvard.edu/resources/harvard-college-evaluating-and-negotiating-job-and-internship-offers/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://handbook.gitlab.com/handbook/total-rewards/compensation/",
+  "abbreviation": "TC"
+}

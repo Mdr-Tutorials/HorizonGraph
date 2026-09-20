@@ -5,7 +5,9 @@
   "display_secondary": "Stock Option",
   "aliases": [
     "员工期权",
-    "股权激励"
+    "股权激励",
+    "期权激励",
+    "Employee Stock Option"
   ],
   "type": "concept",
   "domains": [
@@ -15,12 +17,18 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "employment-terms"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "equity-vesting",
+      "context": "采用归属安排的员工期权计划，通过任职或其他条件确定可取得的期权权益；行权另受计划约束。"
     }
   ],
-  "summary": "在约定周期内以固定行权价购买公司股票的权利；含归属期与回购机制等核心权益规则。",
+  "summary": "按计划条件以约定行权价购买公司股票的员工激励权利。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "description": "本节点的期权激励指员工股票期权：公司授予员工在计划条件满足后，以约定行权价购买一定数量公司股票的权利。授予期权、期权归属以及行权购买股票是不同步骤，持有期权不等于已经拥有对应股票。\n\n员工期权与 RSU 都可用于权益激励，但前者通常需要支付行权价，后者按计划在归属后交付股票或现金等价物。期权的期限、离职后可行权时间以及股份流动性取决于具体文件；不能假定必然升值、可随时出售或存在统一回购安排。\n\n参考：[GitLab：员工期权](https://handbook.gitlab.com/handbook/total-rewards/stock-options/)；[Fidelity：RSU 与归属、交付](https://www.fidelity.com/webxpress/help/topics_nb/learn_rsus.shtml)。"
 }

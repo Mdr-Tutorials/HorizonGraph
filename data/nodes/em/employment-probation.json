@@ -1,0 +1,29 @@
+{
+  "id": "employment-probation",
+  "name": "Employment Probation",
+  "display_primary": "试用期",
+  "display_secondary": "Employment Probation",
+  "aliases": [
+    "试用期",
+    "试用",
+    "Probation Period",
+    "Probationary Period"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "employment-terms"
+    }
+  ],
+  "summary": "任职初期按适用规则约定、用于考察岗位适配等事项的期间。",
+  "description": "试用期是任职初期依适用规则约定的一段期间，通常用于进一步了解岗位适配与工作表现。是否可以约定、期限、待遇与解除条件具有法域差异，应区分当地制度和企业内部说法。\n\n在中国大陆劳动合同语境中，试用期包含在劳动合同期限内，不能把试用说成尚未建立劳动关系的独立阶段。试用期也不同于学生实习或入职培训。本节点不提供跨地区统一期限，具体权利义务应按适用规则和合同核对。\n\n参考：[中国政府网：初入职场的劳动合同与试用期](https://app.www.gov.cn/govdata/gov/202109/20/476076/article.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://app.www.gov.cn/govdata/gov/202109/20/476076/article.html"
+}

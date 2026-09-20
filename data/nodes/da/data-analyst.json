@@ -1,0 +1,35 @@
+{
+  "id": "data-analyst",
+  "name": "Data Analyst",
+  "display_primary": "数据分析师",
+  "display_secondary": "Data Analyst · DA",
+  "abbreviation": "DA",
+  "aliases": [
+    "数据分析师",
+    "数据分析岗",
+    "DA"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sql",
+      "context": "分析保存在关系数据库中的业务数据时，用 SQL 查询、连接并汇总记录。"
+    }
+  ],
+  "summary": "整理和分析数据、建立指标与报告，帮助理解业务表现的岗位。",
+  "description": "数据分析师（Data Analyst，DA）把业务问题转换为可检查的数据问题，进行数据清理、口径确认、汇总分析和结果展示。报告、仪表盘和对异常变化的解释是常见产出，沟通指标含义与限制也是职责的一部分。\n\nDA 不等同于只制作报表，也不要求每个岗位都训练机器学习模型。与数据科学家、数据工程师的边界应结合职位描述判断。在关系数据库保存业务数据的场景中，SQL 可用于查询和聚合；分析质量还取决于数据定义与问题本身。\n\n参考：[Microsoft：数据分析师职业路径](https://learn.microsoft.com/en-us/training/career-paths/data-analyst)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://learn.microsoft.com/en-us/training/career-paths/data-analyst"
+}

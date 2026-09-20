@@ -1,0 +1,39 @@
+{
+  "id": "offer-approval",
+  "name": "Offer Approval",
+  "display_primary": "Offer 审批",
+  "display_secondary": "Offer Approval",
+  "aliases": [
+    "Offer 审批",
+    "录用审批",
+    "Offer审批",
+    "录用通知审批"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "headcount",
+      "context": "组织采用编制控制时，可核对拟录用岗位是否对应可用的获批名额。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "job-level",
+      "context": "采用岗位分级的组织可按拟定职级核对职责及薪酬规则，具体审批项由企业定义。"
+    }
+  ],
+  "summary": "组织在发出录用方案前，按内部规则核准相关条件的工作流程。",
+  "description": "Offer 审批是组织内部对拟议录用方案的核准流程，可以涉及招聘负责人、业务或其他授权人员。审批是否存在、参与者和顺序取决于企业配置。\n\n例如 Greenhouse 支持需要审批及无需审批的发放流程，也支持多名审批人。候选人界面中的“审批中”只说明当前所展示的状态，不足以推导固定等待时间。\n\n参考：[Greenhouse：Offer 审批流程](https://support.greenhouse.io/hc/en-us/articles/360035625832-Offer-approval-overview)；[GitLab：获批编制](https://handbook.gitlab.com/handbook/finance/financial-planning-and-analysis/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://support.greenhouse.io/hc/en-us/articles/360035625832-Offer-approval-overview"
+}

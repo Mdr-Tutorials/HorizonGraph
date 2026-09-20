@@ -1,0 +1,33 @@
+{
+  "id": "xxvi-holdings",
+  "name": "XXVI Holdings",
+  "display_primary": "XXVI Holdings",
+  "display_secondary": "XXVI Holdings",
+  "aliases": [
+    "XXVI Holdings",
+    "XXVI Holdings Inc.",
+    "XXVI 控股",
+    "Google 直接母公司"
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "subsidiary_of",
+      "target_id": "alphabet",
+      "context": "FCC 2026-02-13 通知披露的截至 2025-04-25 信息显示，Alphabet 持有 XXVI Holdings 全部股权及超过 99% 的表决权；2025 年末主要子公司清单继续列示 XXVI Holdings。"
+    }
+  ],
+  "summary": "位于 Google LLC 与 Alphabet 之间的控股公司。",
+  "description": "XXVI Holdings 是 Alphabet 集团中的控股主体。FCC 在 2026 年公开的文件披露其持有 Google LLC 的全部股权与表决权，而 Alphabet 持有 XXVI Holdings 的全部股权；相关控股信息在该文件中的基准日为 2025 年 4 月 25 日。\n\nAlphabet 的 2025 年末主要子公司清单同时列有 Google LLC 和 XXVI Holdings。保留这一节点可以区分 Google 的直接母公司与集团上市母公司，而不把间接控股简化为直接持有，也不因此把控股公司视为一个独立的招聘品牌。\n\n参考：[FCC：2026 年公开通知披露的控股链](https://docs.fcc.gov/public/attachments/DA-26-155A1.pdf)；[Alphabet：2025 年末主要子公司清单](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/googexhibit2101q42025.htm)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 2
+}

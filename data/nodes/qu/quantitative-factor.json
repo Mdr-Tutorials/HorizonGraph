@@ -1,0 +1,30 @@
+{
+  "id": "quantitative-factor",
+  "name": "Quantitative Factor",
+  "display_primary": "量化因子",
+  "display_secondary": "Quantitative Factor",
+  "aliases": [
+    "量化因子",
+    "量化因子信号",
+    "因子信号",
+    "Alpha Factor",
+    "Risk Factor"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    }
+  ],
+  "summary": "在量化分析中描述资产特征、风险暴露或预测信号的可计算变量。",
+  "description": "量化因子是研究中用来刻画资产或市场特征的变量，可用于排序、预测、风险解释或组合构建。价值、动量和质量是常见因子主题；如何把主题转为可计算数值，需要明确数据、时间窗口与处理规则。\n\n风险因子侧重解释共同收益变化，预测信号侧重检验对未来结果的预测能力，两者不能自动等同。发现历史相关性并不证明因果或未来收益。检验因子时还要考虑样本外表现、数据可得时间、交易成本与多次尝试带来的选择偏差。\n\n参考：[MSCI：因子及因子指数](https://www.msci.com/research-and-insights/blog-post/what-is-factor-investing)；[QuantConnect：回测研究指南](https://www.quantconnect.com/docs/v2/cloud-platform/backtesting/research-guide)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.msci.com/research-and-insights/blog-post/what-is-factor-investing"
+}

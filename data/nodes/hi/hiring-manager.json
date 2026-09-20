@@ -1,0 +1,40 @@
+{
+  "id": "hiring-manager",
+  "name": "Hiring Manager",
+  "display_primary": "用人经理",
+  "display_secondary": "Hiring Manager · HM",
+  "abbreviation": "HM",
+  "aliases": [
+    "用人经理",
+    "招聘经理（用人方）",
+    "用人负责人",
+    "HM"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "job-description",
+      "context": "定义岗位需求和候选人评估标准时，使用职位描述明确职责及能力要求。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hiring-review",
+      "context": "采用集体评审的招聘流程中，通过汇总面试证据的评审协作形成录用判断。"
+    }
+  ],
+  "summary": "代表用人团队明确岗位需要并参与候选人评估和录用决策的角色。",
+  "description": "用人经理（Hiring Manager，HM）代表有人员需求的团队明确岗位职责、能力要求和预期工作成果，参与候选人评估并对团队匹配提出判断。许多场景中该角色也是入职后的直属经理，但并非所有组织都如此安排。\n\nHM 与招聘专员承担不同职责：用人方关注业务与团队需要，招聘专员协调候选人来源和流程。录用决定可能还需评审、编制或薪酬审批，不能把 HM 的积极反馈等同于正式录用。这里的角色也不专指人力资源部门的招聘团队经理。\n\n参考：[GitLab：招聘流程](https://handbook.gitlab.com/handbook/hiring/)；[Greenhouse：结构化招聘与评审](https://www.greenhouse.com/blog/structured-hiring-process-the-foundation-of-high-performing-teams-the-recruiting-roadshow)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/handbook/hiring/"
+}

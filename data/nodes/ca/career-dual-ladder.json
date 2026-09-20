@@ -1,0 +1,35 @@
+{
+  "id": "career-dual-ladder",
+  "name": "Dual Career Ladder",
+  "display_primary": "职业双通道",
+  "display_secondary": "Dual Career Ladder",
+  "aliases": [
+    "职业双通道",
+    "双通道职业发展",
+    "IC与管理双通道",
+    "技术与管理双通道",
+    "Dual Career Path"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-progression"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "job-level",
+      "context": "采用双通道的组织可通过职级描述各路径的职责范围，具体对照由本组织定义。"
+    }
+  ],
+  "summary": "为专业贡献与人员管理分别提供发展路径的组织设计。",
+  "description": "职业双通道为个人贡献者和人员管理者提供不同的发展路径，使专业人才可以在不转为直属经理的情况下扩大职责与影响。工程组织中常表现为高级专业岗位和工程管理岗位两条路线。\n\n双通道不表示所有级别一一对应，也不保证同名岗位的薪酬相同。GitLab 的工程职业发展说明提供了一种实例，强调兴趣、能力与岗位需要。路径之间可以发生转换，但转换需要适应相应职责，不能把人员管理当作专业成长的唯一终点。\n\n参考：[GitLab：工程职业发展](https://handbook.gitlab.com/handbook/engineering/careers/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/handbook/engineering/careers/"
+}

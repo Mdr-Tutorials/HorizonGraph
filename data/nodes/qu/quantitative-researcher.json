@@ -1,0 +1,61 @@
+{
+  "id": "quantitative-researcher",
+  "name": "Quantitative Researcher",
+  "display_primary": "量化研究员",
+  "display_secondary": "Quantitative Researcher · QR",
+  "abbreviation": "QR",
+  "aliases": [
+    "量化研究员",
+    "量化研究岗",
+    "QR",
+    "Quant Researcher"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "machine-learning",
+      "context": "采用机器学习的量化研究中，从市场或另类数据构建预测模型，检验研究假设与信号；并非所有策略都采用机器学习。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "采用 Python 的研究团队用它处理数据、实现分析工具和编写研究代码；Citadel 的量化研究岗位将 Python 列为可选编程语言之一。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ocaml",
+      "context": "Jane Street 的量化研究介绍说明研究人员会编写策略实现代码，主要使用 OCaml；这一语言选择限定于该团队的工作语境。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "quantitative-factor",
+      "context": "研究因子策略时，将资产特征或信号转为可计算变量并检验其解释或预测能力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backtesting",
+      "context": "检验交易或投资规则的历史表现时，使用历史模拟并明确数据与成交假设。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "out-of-sample-validation",
+      "context": "比较模型或策略时，使用未参与拟合与方案选择的数据检查泛化表现。"
+    }
+  ],
+  "summary": "运用统计、建模与编程分析数据，提出并验证投资或交易研究假设的岗位。",
+  "description": "量化研究员（Quantitative Researcher，QR）围绕金融市场和投资问题分析数据、提出假设、建立模型并评估结果。工作可包括发现和检验信号、评估数据质量、设计研究实验，以及把研究结论用于投资或交易策略。部分团队使用机器学习处理大规模或复杂数据，具体研究方法取决于问题。\n\nQR 通常也需要编写研究或策略代码，并与量化开发工程师（QD）及投资团队协作。两者的侧重点有别：QR 更关注研究假设和模型有效性，QD 更关注工具、基础设施和系统实现；实际职责会重叠，应结合具体职位描述理解。Python 是部分团队的选择，Jane Street 的研究介绍则强调 OCaml。\n\n参考：[Citadel 量化研究员职责](https://www.citadel.com/careers/details/quantitative-researcher-data-strategies-group/)；[Jane Street 量化研究介绍](https://www.janestreet.com/quantitative-research/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.janestreet.com/quantitative-research/"
+}

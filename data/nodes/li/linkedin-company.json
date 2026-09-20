@@ -1,0 +1,39 @@
+{
+  "id": "linkedin-company",
+  "name": "LinkedIn Corporation",
+  "display_primary": "领英公司",
+  "display_secondary": "LinkedIn Corporation",
+  "aliases": [
+    "领英公司",
+    "LinkedIn",
+    "LinkedIn 公司",
+    "LinkedIn Corporation",
+    "领英"
+  ],
+  "type": "organization",
+  "domains": [
+    "career-development",
+    "industry-landscape"
+  ],
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "linkedin",
+      "context": "LinkedIn 公司提供同名职业社交平台以及面向职业连接与招聘等场景的产品服务。"
+    }
+  ],
+  "summary": "提供 LinkedIn 职业社交平台及相关商业服务的公司。",
+  "description": "LinkedIn Corporation（领英公司）是提供 LinkedIn 职业社交平台及相关商业服务的公司主体。其官方公司介绍分别提供公司主页、产品与服务、新闻和品牌资料入口，业务服务包括招聘、营销与销售等场景。\n\n在 FLAG 这一求职合称中，L 指作为雇主的 LinkedIn 公司。LinkedIn 同时也是面向用户的职业社交平台名称：公司属于组织，平台属于产品，阅读岗位与服务资料时应区分这两个对象。\n\n参考：[LinkedIn 公司介绍](https://about.linkedin.com/)；[LinkedIn 商业产品与服务](https://business.linkedin.com/)；[芝加哥大学 IT 行业求职指南，第 4 页](https://grad.uchicago.edu/wp-content/uploads/2021/03/IT-Industry-Guide-.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://about.linkedin.com/"
+}

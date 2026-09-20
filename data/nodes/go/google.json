@@ -4,8 +4,8 @@
   "display_primary": "谷歌",
   "display_secondary": "Google",
   "aliases": [
-    "Alphabet",
-    "Google"
+    "Google",
+    "谷歌"
   ],
   "type": "organization",
   "ecosystems": [
@@ -20,12 +20,18 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "subsidiary_of",
+      "target_id": "xxvi-holdings",
+      "context": "FCC 2026-02-13 通知披露的截至 2025-04-25 控股信息显示，XXVI Holdings 持有 Google LLC 的全部股权及表决权；Alphabet 的 2025 年末主要子公司清单仍列示这两个主体。"
     }
   ],
   "summary": "搜索起家的科技公司，Android、Chrome、Go 与 Kubernetes 的源头。",
   "importance": 5,
   "official_site": "https://www.google.com",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-09-20",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Google（谷歌）是以搜索等互联网业务起家的科技公司，也是多个软件与平台项目的来源。2015 年的重组设立 Alphabet 为上市控股主体，Google 则作为其子公司继续存在。\n\nAlphabet 不是 Google 的简单改名或同义别名。近期公开文件披露 Google LLC 由 XXVI Holdings 直接持有，后者由 Alphabet 持有，因此图谱保留中间控股层。本节点继续承载 Google 原有技术关系，阅读证券与招聘资料时仍需辨认具体主体。\n\n参考：[Google：2015 年 Alphabet 重组公告](https://blog.google/alphabet/google-alphabet/)；[FCC：2026 年公开通知披露的控股链](https://docs.fcc.gov/public/attachments/DA-26-155A1.pdf)；[Alphabet：2025 年末主要子公司清单](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/googexhibit2101q42025.htm)。"
 }

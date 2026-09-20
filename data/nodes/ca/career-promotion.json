@@ -1,0 +1,39 @@
+{
+  "id": "career-promotion",
+  "name": "Career Promotion",
+  "display_primary": "晋升",
+  "display_secondary": "Career Promotion",
+  "aliases": [
+    "晋升",
+    "升职",
+    "职级晋升",
+    "Promotion"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-progression"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "job-level",
+      "context": "采用职级体系的组织，以目标级别的职责与影响范围作为晋升评估参照。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "performance-review",
+      "context": "需要表现证据的晋升流程可参考绩效评估，评估结果本身不保证晋升。"
+    }
+  ],
+  "summary": "经过组织评估与决定，进入更高职责范围或级别的任职变化。",
+  "description": "晋升通常指进入更高职责范围或级别，可能体现为影响范围、复杂度、决策责任或管理责任的变化。判断标准应来自组织的职级和岗位要求，不能只凭任职时间或头衔差异推断。\n\n绩效证据可以支持晋升评估，但做好当前工作不自动等于已经满足下一层级要求。GitLab 的公开流程强调已体现的贡献与岗位标准；其他组织的程序可能不同。晋升与加薪、内部转岗相关，却不是同一件事。\n\n参考：[GitLab：晋升与转岗](https://handbook.gitlab.com/handbook/people-group/promotions-transfers/)；[GitLab：工程职业发展](https://handbook.gitlab.com/handbook/engineering/careers/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/handbook/people-group/promotions-transfers/"
+}

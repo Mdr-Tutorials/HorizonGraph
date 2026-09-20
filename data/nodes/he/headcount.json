@@ -1,0 +1,31 @@
+{
+  "id": "headcount",
+  "name": "Headcount",
+  "display_primary": "人员编制",
+  "display_secondary": "Headcount",
+  "aliases": [
+    "人员编制",
+    "HC",
+    "招聘名额",
+    "招聘编制",
+    "人头数"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "employment-terms"
+    }
+  ],
+  "summary": "原指人数，招聘语境中常用于讨论规划或获批的人员编制与可招名额。",
+  "description": "Headcount 原义是人员数量；招聘交流中的 HC 常指某团队规划或获得批准的编制。需要区分现有人数、规划人数和当前可用于招聘的空缺。\n\n企业的人力计划可能同时包含现有岗位、新增岗位与离职补缺。“还有 HC”应结合具体部门和招聘状态理解，不能直接等同于页面上可见的职位条数。\n\n参考：[GitLab：人员计划与获批编制](https://handbook.gitlab.com/handbook/finance/financial-planning-and-analysis/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://handbook.gitlab.com/handbook/finance/financial-planning-and-analysis/",
+  "abbreviation": "HC"
+}

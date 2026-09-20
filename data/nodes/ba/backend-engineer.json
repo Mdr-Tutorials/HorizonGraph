@@ -13,12 +13,23 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "开发 Web 接口时处理 HTTP 请求和响应，接口协议由具体系统决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sql",
+      "context": "在使用关系型数据库的业务系统中，用 SQL 查询或修改业务数据。"
     }
   ],
-  "summary": "在服务器侧建模业务与数据，稳定性与扩展性负责人。",
+  "summary": "设计与实现服务端业务、接口及数据处理，并关注系统可靠性和性能。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "后端工程师承担服务端业务逻辑、接口与数据处理工作。在 Web 服务场景中，需要理解请求响应、数据读写与访问控制，并根据业务约束选择实现方式。\n\n岗位要求应结合具体职位描述阅读；以下技术关系描述常见工作场景，不表示每个后端岗位都使用同一套技术。\n\n参考：[MDN 服务端开发入门](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction)。"
 }

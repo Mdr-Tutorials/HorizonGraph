@@ -1,0 +1,54 @@
+{
+  "id": "coding-interview",
+  "name": "Coding Interview",
+  "display_primary": "编程面试",
+  "display_secondary": "Coding Interview",
+  "aliases": [
+    "编程面试",
+    "代码面试",
+    "手写代码面试",
+    "手撕代码"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "array",
+      "context": "数组题可观察下标、遍历、边界处理及数据组织能力。"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "linked-list",
+      "context": "链表题可观察链接更新、边界情况和结构不变量。"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "hash-table",
+      "context": "查找或去重题可考察哈希表的选用及时间、空间取舍。"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "big-o",
+      "context": "讨论不同算法随输入规模增长的时间与空间成本。"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "unit-testing",
+      "context": "代码完成后可通过正常、边界和异常输入验证函数行为。"
+    }
+  ],
+  "summary": "通过分析问题、编写代码和验证结果，考察候选人编程与解决问题能力的面试。",
+  "description": "编程面试通常围绕具体问题展开，观察候选人如何澄清条件、选择方案、实现代码并验证结果。面试可能使用共享编辑器、白板或其他工具。\n\n数据结构、复杂度分析与测试是可考察的内容。具体题目并非固定题单，准备时需要能解释方案的适用条件与取舍。\n\n参考：[微软技术面试：编程、设计与测试](https://careers.microsoft.com/v2/global/en/hiring-tips/technical-interviewing)；[亚马逊软件开发技术主题](https://amazon.jobs/content/en-gb/how-we-hire/interview-prep/software-development-topics)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://careers.microsoft.com/v2/global/en/hiring-tips/technical-interviewing"
+}

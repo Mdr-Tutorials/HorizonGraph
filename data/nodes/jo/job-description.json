@@ -1,0 +1,150 @@
+{
+  "id": "job-description",
+  "name": "Job Description",
+  "display_primary": "职位描述",
+  "display_secondary": "Job Description",
+  "aliases": [
+    "职位描述",
+    "JD",
+    "岗位描述",
+    "岗位说明书"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-material"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "job-level",
+      "context": "采用职级体系的职位描述可标明级别及对应职责范围；岗位名称本身不能替代级别定义。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "backend-engineer",
+      "context": "面向后端工程师的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "frontend-engineer",
+      "context": "面向前端工程师的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "fullstack-engineer",
+      "context": "面向全栈工程师的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "algorithm-engineer",
+      "context": "面向算法工程师的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "data-engineer",
+      "context": "面向数据工程师的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "dba",
+      "context": "面向数据库管理员的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "embedded-engineer",
+      "context": "面向嵌入式工程师的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "qa-engineer",
+      "context": "面向测试工程师的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "security-engineer",
+      "context": "面向安全工程师的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "software-architect",
+      "context": "面向软件架构师的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "product-manager",
+      "context": "面向产品经理的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "sre",
+      "context": "面向站点可靠性工程师的职位描述用于说明该岗位的职责和任职要求；此边不表示特定企业当前有职位空缺。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "quantitative-researcher",
+      "context": "面向量化研究员的职位描述说明研究方向、数据与建模职责以及编程要求，具体范围随团队而异。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "quantitative-developer",
+      "context": "面向量化开发工程师的职位描述说明研究工具、数据平台或交易系统的开发职责及技术要求，具体分工随团队而异。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "software-engineer",
+      "context": "介绍软件工程师岗位或职责路径的职位描述，可说明其工作范围与要求；具体分工以该职位为准。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "data-scientist",
+      "context": "介绍数据科学家岗位或职责路径的职位描述，可说明其工作范围与要求；具体分工以该职位为准。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "data-analyst",
+      "context": "介绍数据分析师岗位或职责路径的职位描述，可说明其工作范围与要求；具体分工以该职位为准。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "machine-learning-engineer",
+      "context": "介绍机器学习工程师岗位或职责路径的职位描述，可说明其工作范围与要求；具体分工以该职位为准。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "quantitative-trader",
+      "context": "介绍量化交易员岗位或职责路径的职位描述，可说明其工作范围与要求；具体分工以该职位为准。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "recruiter",
+      "context": "介绍招聘专员岗位或职责路径的职位描述，可说明其工作范围与要求；具体分工以该职位为准。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "hiring-manager",
+      "context": "介绍用人经理岗位或职责路径的职位描述，可说明其工作范围与要求；具体分工以该职位为准。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "individual-contributor",
+      "context": "介绍个人贡献者岗位或职责路径的职位描述，可说明其工作范围与要求；具体分工以该职位为准。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "engineering-manager",
+      "context": "介绍工程经理岗位或职责路径的职位描述，可说明其工作范围与要求；具体分工以该职位为准。"
+    }
+  ],
+  "summary": "说明岗位职责、任职要求及相关工作条件的招聘或组织管理文书。",
+  "description": "职位描述用于说明岗位做什么、需要什么能力，以及适用的职级、地点等条件。阅读时应区分必备要求、优先条件与入职后的职责，避免把技术关键词清单等同于全部工作内容。\n\n企业可用职位族和职级组织职位描述。同一岗位名称在不同团队中的职责范围可能不同，应结合具体文书理解。\n\n参考：[GitLab 职位描述库及编写流程](https://handbook.gitlab.com/handbook/hiring/job-description-library/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://handbook.gitlab.com/handbook/hiring/job-description-library/",
+  "abbreviation": "JD"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "job-offer",
+  "name": "Job Offer",
+  "display_primary": "录用通知",
+  "display_secondary": "Job Offer",
+  "aliases": [
+    "录用通知",
+    "Offer",
+    "录用通知书",
+    "书面 Offer",
+    "书面Offer",
+    "Offer Letter"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-material"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "total-compensation",
+      "context": "书面录用材料可列明薪酬项目、金额或适用安排；应区分确定部分与附条件部分。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "job-level",
+      "context": "采用职级体系的企业可在录用材料中说明职位级别及岗位安排。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "employment-background-check",
+      "context": "以背景核实为条件的录用文件可说明该条件；是否适用及具体程序取决于岗位和法域。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "base-salary",
+      "context": "载明薪资条件的录用文件可说明基本工资、币种与支付周期。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "employment-probation",
+      "context": "约定试用期的录用材料可说明相关条件，实际适用受当地规则和合同约束。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "internship-conversion",
+      "context": "介绍实习留用机会的录用材料可说明后续评估安排，机会描述不等于保证转正。"
+    }
+  ],
+  "summary": "招聘方向候选人提出岗位及录用条件的通知，常以书面形式列明具体安排。",
+  "description": "录用通知通常说明岗位、待遇、预计开始时间及其他适用条件。图谱中的 Offer 节点以录用通知本身为对象，OC 则描述围绕录用的电话沟通。\n\n比较或确认机会时，需要核对书面内容及待确认事项。意向书、审批状态与正式录用通知在不同公司的命名和流程并不统一，应按具体文件理解。\n\n参考：[哈佛：评估与协商录用通知](https://careerservices.fas.harvard.edu/resources/gsas-evaluating-and-negotiating-job-offers/)；[Greenhouse：Offer 审批与发送](https://support.greenhouse.io/hc/en-us/articles/360035625832-Offer-approval-overview)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://careerservices.fas.harvard.edu/resources/gsas-evaluating-and-negotiating-job-offers/"
+}

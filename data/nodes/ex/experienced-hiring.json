@@ -1,0 +1,43 @@
+{
+  "id": "experienced-hiring",
+  "name": "Experienced Hiring",
+  "display_primary": "社会招聘",
+  "display_secondary": "Experienced Hiring",
+  "aliases": [
+    "社会招聘",
+    "社招",
+    "经验人才招聘"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "system-design-interview",
+      "context": "需要架构设计能力的软件岗位可安排系统设计面试，讨论容量、可靠性与设计取舍。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "employee-referral",
+      "context": "通过员工推荐发现可能适合开放岗位的人选，后续仍需正常申请和评估。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hr-interview",
+      "context": "由招聘人员参与的沟通可核对经历、求职意愿及到岗安排，顺序随组织变化。"
+    }
+  ],
+  "summary": "面向社会人才按岗位需求开展的招聘，常结合相关工作经验评估职责匹配。",
+  "description": "社会招聘通常按业务岗位需求寻找人才，关注候选人的相关经验、技能与能够承担的职责。工作年限和学历等要求应从具体职位描述读取，不能把某一企业的门槛当成统一标准。\n\n在有经验的软件开发岗位中，项目讨论、编程与系统设计可用于评估实际能力；员工推荐是可能采用的候选来源。\n\n参考：[亚马逊有经验软件开发岗位的面试示例](https://amazon.jobs/content/en/how-we-hire/sde-ii-interview-prep)；[微软员工推荐说明](https://careers.microsoft.com/v2/global/en/hiringfaqs.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://amazon.jobs/content/en/how-we-hire/sde-ii-interview-prep"
+}

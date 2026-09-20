@@ -1,0 +1,35 @@
+{
+  "id": "performance-review",
+  "name": "Performance Review",
+  "display_primary": "绩效评估",
+  "display_secondary": "Performance Review",
+  "aliases": [
+    "绩效评估",
+    "绩效考核",
+    "绩效评价",
+    "Performance Assessment",
+    "Performance Evaluation"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-progression"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "project-experience",
+      "context": "项目型工作可通过项目经历中的成果、责任和协作证据评价表现，评估并不限于项目数量。"
+    }
+  ],
+  "summary": "结合目标、职责与工作证据评价一段时间内的工作表现并形成反馈。",
+  "description": "绩效评估结合岗位职责、目标和观察到的贡献，回顾一段时间内的工作表现，并为反馈和发展讨论提供依据。证据可能来自工作成果、协作反馈和承担的责任，形式与周期随组织而异。\n\n绩效、成长潜力和晋升准备度属于不同判断，不能机械合为同一个分数。组织可能进行评议或校准，也可能把评估用于薪酬和发展安排；高绩效是否带来晋升或奖金仍取决于相应制度与岗位条件。\n\n参考：[GitLab：人才与绩效评估](https://handbook.gitlab.com/handbook/people-group/talent-assessment/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/handbook/people-group/talent-assessment/"
+}

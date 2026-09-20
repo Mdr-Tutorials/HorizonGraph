@@ -105,3 +105,28 @@
 - 源是工程工件（language / framework / library / tool / architecture / product…）→ `implements`（haskell implements type-system、prolog implements programming-paradigm、erlang implements concurrency-theory）
 
 反方向不落图：理论对工件的约束写在理论节点叙述里，「被实现」由 build 从 implements 的 inverse 渲染。
+
+## 11. 招聘语境的关系与别名
+
+- assesses 表评估活动考察知识或方法；prepares_for 表资源或方法用于准备评估。
+- describes 表文书或记录描述内容；discusses 表沟通活动涉及议题。它们不推导组成、审批结果、流程先后或录用结论。
+- 关系契约的 requires_context 为 true 时，数据边与本体叙事边必须提供非空字符串 context；当前包括 uses、stewarded_by、refers_to、subsidiary_of、can_bias 与上述四种关系。
+- OC、HC、JD、STAR、QR、QD 使用 abbreviation；招聘俗称进入 aliases 与正文。歧义俗称可返回多个词条，不为缺少稳定定义的说法建立标准流程节点。
+- 详见 ADR-0022；可选的招聘做法与岗位技术须限定场景，不作为所有公司的统一要求。
+
+## 12. 企业合称与所指组织
+
+- 企业合称作为 concept，使用 refers_to 指向各组织；它不是 organization，也不代表一个共同法人或组织隶属。
+- 多义缩写使用限定 id 与显示名，context 明确该边采用的释义。BAT 的 ByteDance 用法使用 bat-bytedance-alibaba-tencent，只连接字节跳动、阿里巴巴与腾讯；传统 Baidu 用法在正文区分。
+- 单一组织的同义名称沿用 aliases；产业圈层沿用 ecosystems，不用指代关系表达泛化关联。
+- 公司更名时保持组织 id，更新显示名并将公司旧名保留为 aliases；历史合称可保留原缩写，refers_to 指向同一组织，context 说明旧名与现名。FLAG 的 F 使用旧名 Facebook，指向 meta；不因更名自动制造新的合称。
+
+## 13. 职业、量化与公司主体的边界
+
+- 软件开发岗位的 SWE 与 SDE 合并为同一职业概念的检索入口，不把常见头衔差异强行解释为统一的岗位级别。IC 表示个人贡献者职责路径，不能据此推断初级或没有技术领导责任。
+- 岗位 uses 技术、方法或指标必须给出实际场景；风险因素导致评估失真使用 can_bias，不能用 uses 把应避免的错误写成工作方法。
+- 薪酬组成写明适用条件。员工期权与 RSU 分别建档；归属、行权与出售不混写为同一步骤。绩效评估、晋升和内部转岗分别定义，不强加统一的公司政策。
+- 母子公司分别建组织节点，以 subsidiary_of 记录直接关系；Google 不是 Alphabet 的别名。公司与同名产品也分别建档，以 provides 表达提供关系，旧公司名可与产品名共享检索结果。
+- 详见 ADR-0024。金融语境的 FAANG 中，G 可对应上市主体 Alphabet；沿用 Google 名称的历史展开需在正文及边的 context 中说明。
+- 公司与同名产品分别建模。既有 linkedin 指职业社交平台，补充 linkedin-company 指公司主体；FLAG 的 L 指向公司，由公司通过 provides 连接平台。既有产品 id 不变。
+- 详见 ADR-0023；社区资料只能支持称谓存在，不能据此宣称某种解释已经统一取代其他解释。

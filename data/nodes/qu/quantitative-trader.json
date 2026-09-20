@@ -1,0 +1,46 @@
+{
+  "id": "quantitative-trader",
+  "name": "Quantitative Trader",
+  "display_primary": "量化交易员",
+  "display_secondary": "Quantitative Trader · QT",
+  "abbreviation": "QT",
+  "aliases": [
+    "量化交易员",
+    "Quant Trader",
+    "量化交易岗",
+    "QT"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development",
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backtesting",
+      "context": "参与策略研究的交易员可用历史模拟比较交易规则，结果还需结合执行条件判断。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transaction-cost",
+      "context": "评估交易机会与策略运行表现时，将适用的费用和执行成本纳入分析。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slippage",
+      "context": "分析实际成交与参考价格的差异，评估执行质量及策略可实现性。"
+    }
+  ],
+  "summary": "结合定量分析、市场判断与执行反馈管理交易策略和风险的岗位。",
+  "description": "量化交易员（Quantitative Trader，QT）运用数据和定量方法分析市场机会，参与交易策略的形成、执行与风险管理。工作可包括研究信号、观察策略运行、分析成交结果及改进交易系统，并非所有岗位都以人工下单为主。\n\nQT、量化研究员（QR）和量化开发工程师（QD）的分工依机构而异。QT 往往更贴近交易决策和实际运行，QR 更侧重研究验证，QD 更侧重软件实现；这些职责可能由同一人承担。历史回测和执行成本分析只是具体团队可使用的方法。\n\n参考：[Jane Street：量化交易员职责](https://www.janestreet.com/join-jane-street/position/8415898002/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.janestreet.com/join-jane-street/position/8415898002/"
+}

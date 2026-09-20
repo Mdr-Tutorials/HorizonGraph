@@ -1,0 +1,40 @@
+{
+  "id": "online-assessment",
+  "name": "Online Assessment",
+  "display_primary": "在线笔试",
+  "display_secondary": "Online Assessment",
+  "aliases": [
+    "在线笔试",
+    "在线测评",
+    "招聘在线测评",
+    "OA"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "array",
+      "context": "在包含数组操作的编程题中，观察索引处理、边界条件与实现正确性。"
+    },
+    {
+      "relation_type": "assesses",
+      "target_id": "big-o",
+      "context": "算法类编程题可要求比较输入规模增长时的时间或空间开销。"
+    }
+  ],
+  "summary": "通过在线系统完成招聘题目或任务的评估环节，题型依岗位而定。",
+  "description": "在线笔试或在线测评通过系统提供题目与任务，可能包含编程、专业知识或情境题。评估内容、时长以及允许使用的工具由招聘方说明。\n\n软件开发岗位的在线评估可包含编程任务。它描述的是考核环节；候选人事先使用的练习平台与实际考试系统可以不同。\n\n参考：[亚马逊软件开发在线评估与技术主题](https://amazon.jobs/content/en-gb/how-we-hire/interview-prep/software-development-topics)；[牛客在线笔试产品说明](https://www.nowcoder.com/nowcoder/about)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://amazon.jobs/content/en-gb/how-we-hire/interview-prep/software-development-topics",
+  "abbreviation": "OA"
+}

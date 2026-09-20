@@ -1,11 +1,18 @@
 {
   "id": "meta",
   "name": "Meta",
-  "display_primary": "脸书",
-  "display_secondary": "Meta",
+  "display_primary": "Meta",
+  "display_secondary": "原 Facebook 公司",
   "aliases": [
+    "脸书公司",
+    "脸书",
     "Facebook",
-    "Meta"
+    "Facebook 公司",
+    "Facebook Inc.",
+    "原 Facebook 公司",
+    "Meta",
+    "Meta Platforms",
+    "Meta Platforms, Inc."
   ],
   "type": "organization",
   "ecosystems": [
@@ -20,12 +27,18 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "facebook-platform",
+      "context": "Facebook 社交产品由 Meta 提供；2021 年公司更名公告没有把 Facebook 产品也改名为 Meta。"
     }
   ],
   "summary": "社交起家的科技公司，React、PyTorch 与 Llama 的源头。",
+  "description": "Meta 是原 Facebook 公司采用的现名。2021 年 10 月 28 日，公司公布 Meta 品牌，将旗下应用和技术置于这一公司名称之下；这次公告中的公司更名与 Facebook 社交产品本身的名称是两件事。官方创始人公开信明确说明，应用及其品牌名称不会随之更改。\n\n因此，招聘或企业历史资料中的 Facebook 可能指现名 Meta 的公司，而日常产品语境中的 Facebook 仍指社交应用。FLAG 等沿用公司旧名的称谓可以保留 F 的历史展开，并在介绍所指公司时使用 Meta（原 Facebook 公司）。\n\n参考：[Meta 公司更名公告](https://about.fb.com/news/2021/10/facebook-company-is-now-meta/)；[Meta 2021 年创始人公开信](https://about.fb.com/news/2021/10/founders-letter/amp/)。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
   "importance": 5,
   "official_site": "https://www.meta.com"
 }

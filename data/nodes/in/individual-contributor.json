@@ -1,0 +1,35 @@
+{
+  "id": "individual-contributor",
+  "name": "Individual Contributor",
+  "display_primary": "个人贡献者",
+  "display_secondary": "Individual Contributor · IC",
+  "abbreviation": "IC",
+  "aliases": [
+    "个人贡献者",
+    "独立贡献者",
+    "专业贡献者",
+    "IC"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "career-dual-ladder",
+      "context": "在提供双通道的组织中规划专业发展时，可参照专业与管理路径的职责定义，理解扩大贡献范围的选择。"
+    }
+  ],
+  "summary": "主要通过专业工作和技术影响作出贡献、不以人员管理为核心职责的角色。",
+  "description": "个人贡献者（Individual Contributor，IC）主要通过专业工作及其影响作出贡献，而不是以直接管理人员为核心职责。IC 可以从初级成长到高级专家，也可以承担技术方向、跨团队协调和指导他人等领导工作。\n\nIC 不表示独自工作、没有领导力或级别较低。部分组织提供与管理路径并行的发展通道，但头衔、职级和薪酬对照并不跨公司统一。判断一个岗位是否属于 IC，应看实际责任，而不是仅看名称中是否出现 Lead 或 Manager。\n\n参考：[GitLab：组织结构与双通道](https://handbook.gitlab.com/handbook/company/structure/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://handbook.gitlab.com/handbook/company/structure/"
+}

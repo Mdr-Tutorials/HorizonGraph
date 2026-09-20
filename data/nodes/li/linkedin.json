@@ -1,0 +1,36 @@
+{
+  "id": "linkedin",
+  "name": "LinkedIn",
+  "display_primary": "LinkedIn",
+  "display_secondary": "领英",
+  "aliases": [
+    "领英",
+    "LinkedIn 领英"
+  ],
+  "type": "product",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-platform"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "experienced-hiring",
+      "context": "通过职业资料、职位发布与人选发现支持社会招聘的信息连接环节。"
+    }
+  ],
+  "summary": "连接职业人群、组织与工作机会的职业社交平台，支持职业资料展示和招聘。",
+  "description": "LinkedIn 围绕职业资料和人际联系组织信息，连接专业人士、组织与工作机会。它既承载职业交流，也提供职位与招聘服务。\n\n求职者可以借助职业资料介绍经历，招聘方则可寻找与岗位相关的人选。不同地区与产品入口的服务范围可能不同，本节点不把历史本地产品与全球平台混为一项。\n\n参考：[LinkedIn 官方介绍](https://about.linkedin.com/)；[LinkedIn 招聘职位说明](https://business.linkedin.com/content/dam/business/talent-solutions/global/en_US/site/pdf/datasheets/linkedin-jobs-network-datasheet-en-us.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://about.linkedin.com/",
+  "ecosystems": [
+    "enterprise-apps-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

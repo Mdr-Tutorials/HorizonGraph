@@ -1,0 +1,39 @@
+{
+  "id": "career-portfolio",
+  "name": "Career Portfolio",
+  "display_primary": "作品集",
+  "display_secondary": "Career Portfolio",
+  "aliases": [
+    "作品集",
+    "求职作品集",
+    "技术作品集",
+    "Portfolio"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-material"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "project-experience",
+      "context": "通过案例、演示和设计说明展示项目背景、过程与个人贡献。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "open-source-contribution",
+      "context": "可选取自己参与的公开协作记录，展示贡献内容和沟通过程。"
+    }
+  ],
+  "summary": "围绕求职目标组织作品、案例与说明，展示实际能力和个人贡献的材料集合。",
+  "description": "作品集将若干有代表性的成果组织成便于查看的材料，可包括演示、项目说明、代码入口与个人贡献。技术作品需要让读者理解用途、运行方式和设计选择。\n\n作品集可以展示独立项目，也可以展示自己参与的开源贡献；选择内容时应说明本人完成的部分与对应岗位能力。\n\n参考：[GitHub 求职项目展示指南](https://docs.github.com/en/account-and-profile/tutorials/using-your-github-profile-to-enhance-your-resume)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://docs.github.com/en/account-and-profile/tutorials/using-your-github-profile-to-enhance-your-resume"
+}

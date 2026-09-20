@@ -1,0 +1,28 @@
+{
+  "id": "employment-letter-of-intent",
+  "name": "Employment Letter of Intent",
+  "display_primary": "录用意向书",
+  "display_secondary": "Employment Letter of Intent",
+  "aliases": [
+    "录用意向书",
+    "意向书",
+    "招聘意向书"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-material"
+    }
+  ],
+  "summary": "招聘方用于表达拟录用意向及后续安排的文书，具体内容随组织而异。",
+  "description": "录用意向书是部分招聘项目使用的文书名称，通常表达拟录用意向并说明后续安排。不同组织可能将它与正式 Offer 分开发放，也可能使用其他名称。\n\n例如高校发布的快手 2021 校招说明将录用意向书与正式 Offer 列为不同环节；这只是该次招聘的历史示例。理解具体文件时应查看正文、条件和下一步要求，不能仅凭标题判断其含义。\n\n参考：[快手校招意向书与 Offer 的历史示例（杭州师范大学）](https://yjs.hznu.edu.cn/c/2020-08-19/2442534.shtml)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://yjs.hznu.edu.cn/c/2020-08-19/2442534.shtml"
+}

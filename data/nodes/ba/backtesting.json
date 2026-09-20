@@ -1,0 +1,49 @@
+{
+  "id": "backtesting",
+  "name": "Backtesting",
+  "display_primary": "回测",
+  "display_secondary": "Backtesting",
+  "aliases": [
+    "回测",
+    "历史回测",
+    "策略回测",
+    "Backtest"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transaction-cost",
+      "context": "估计策略净表现时，将适用的佣金、费用及执行成本计入回测。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slippage",
+      "context": "成交模拟包含价格偏离时，用滑点假设估计可实现的成交价格。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "maximum-drawdown",
+      "context": "评估历史路径风险时，计算净值从既有峰值到后续谷值的最大相对跌幅。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sharpe-ratio",
+      "context": "采用夏普比率评估时，以一致周期的收益差额序列衡量相对于波动的平均回报。"
+    }
+  ],
+  "summary": "用历史数据模拟策略决策与执行，评估其在设定假设下的表现。",
+  "description": "回测按照给定规则，在历史数据上模拟当时能够作出的决策、订单和持仓变化，并据此计算收益与风险指标。它可以帮助检查策略实现、比较方案以及检验研究假设，结果依赖数据和模拟方式。\n\n有效的历史模拟需要处理信息的可得时间、交易费用、成交假设和滑点等条件。回测得到的是特定样本与假设下的结果，不能直接视为未来实盘收益。样本外验证、最大回撤和夏普比率可提供不同角度的检查，单一指标不足以说明策略质量。\n\n参考：[QuantConnect：回测入门](https://www.quantconnect.com/docs/v2/cloud-platform/backtesting/getting-started)；[QuantConnect：回测与实盘差异](https://www.quantconnect.com/docs/v2/writing-algorithms/live-trading/reconciliation)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.quantconnect.com/docs/v2/cloud-platform/backtesting/getting-started"
+}

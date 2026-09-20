@@ -1,0 +1,49 @@
+{
+  "id": "software-engineer",
+  "name": "Software Engineer",
+  "display_primary": "软件工程师",
+  "display_secondary": "Software Engineer · SWE",
+  "abbreviation": "SWE",
+  "aliases": [
+    "软件工程师",
+    "软件开发工程师",
+    "软件开发岗位",
+    "软件开发",
+    "Software Developer",
+    "Software Development Engineer",
+    "SDE",
+    "SWE"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "采用 Git 的开发团队用版本管理组织代码修改、评审与协作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "在可自动验证的代码单元上编写测试，帮助发现回归并维护预期行为。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cicd",
+      "context": "采用持续集成与交付的团队用自动构建、检查和发布流程交付软件。"
+    }
+  ],
+  "summary": "设计、实现、测试和维护软件的岗位，常见头衔包括 SWE 与 SDE。",
+  "description": "软件工程师（Software Engineer，SWE）围绕软件需求进行设计、编码、测试、交付与维护。Software Development Engineer（SDE）和 Software Developer 也是常见头衔，本节点将其作为软件开发岗位的检索入口；具体职责仍由职位描述决定。\n\n岗位可覆盖前端、后端、客户端、基础设施等方向。SWE 与 SDE 不构成跨公司的固定等级差异，也不能仅凭头衔判断是否负责架构设计。版本管理、单元测试和持续集成是软件团队常用的协作与质量实践，实际采用方式随项目而异。\n\n参考：[美国劳工统计局：软件开发与测试职责](https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm"
+}

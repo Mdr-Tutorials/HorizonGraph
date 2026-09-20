@@ -1,0 +1,35 @@
+{
+  "id": "facebook-platform",
+  "name": "Facebook",
+  "display_primary": "Facebook",
+  "display_secondary": "Facebook",
+  "aliases": [
+    "Facebook",
+    "Facebook 产品",
+    "Facebook 社交平台",
+    "Facebook App",
+    "脸书应用",
+    "脸书"
+  ],
+  "type": "product",
+  "domains": [
+    "industry-landscape"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "Meta 提供的 Facebook 社交产品，产品名称与公司名称分开理解。",
+  "description": "Facebook 是 Meta 旗下的社交产品，用于个人、社群和组织之间的内容分享与连接。本节点表示这一产品，与原名 Facebook、现名 Meta 的公司节点分别建模。\n\n2021 年公司公布 Meta 名称时，官方公开信明确说明应用及其品牌名称不随之更改。因此产品语境中的 Facebook 仍可以指这一社交平台；FLAG 或企业历史语境中的 Facebook 则可能指现名 Meta 的公司，检索时需要结合实体类型辨认。\n\n参考：[Meta：2021 年创始人公开信](https://about.fb.com/news/2021/10/founders-letter/amp/)；[Meta：公司更名公告](https://about.fb.com/news/2021/10/facebook-company-is-now-meta/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://www.facebook.com/",
+  "ecosystems": [
+    "platform-commerce-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

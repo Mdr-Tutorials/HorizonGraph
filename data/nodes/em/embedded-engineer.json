@@ -13,12 +13,23 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "career-role"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "c",
+      "context": "使用 C 语言接口开发固件、驱动或访问底层硬件的嵌入式项目需要 C。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "interrupt",
+      "context": "处理外设事件与时序响应时，使用处理器中断机制并管理中断上下文。"
     }
   ],
-  "summary": "在资源受限的硬件上写可靠代码，与手册和示波器为伴。",
+  "summary": "面向设备与硬件约束开发、调试和维护嵌入式软件的岗位。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "description": "嵌入式工程师面向设备中的计算系统开发软件，工作可涉及启动流程、外设驱动、通信、实时任务与硬件联调。内存、功耗、时序和处理器能力往往直接影响设计，设备类型不同，职责差别也很大。\n\n嵌入式软件可能运行在裸机、实时操作系统或更完整的操作系统上，不必都采用同一套工具。Arm CMSIS 提供处理器内核、驱动与实时系统等接口，是其中一种生态实例；在使用 C 接口和中断机制的项目中，需要理解寄存器访问与异步事件处理。\n\n参考：[Arm：CMSIS 嵌入式开发接口](https://arm-software.github.io/CMSIS_6/latest/General/index.html)。"
 }

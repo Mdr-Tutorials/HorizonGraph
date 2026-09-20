@@ -1,0 +1,30 @@
+{
+  "id": "employment-background-check",
+  "name": "Employment Background Check",
+  "display_primary": "招聘背景调查",
+  "display_secondary": "Employment Background Check",
+  "aliases": [
+    "招聘背景调查",
+    "背景调查",
+    "背调",
+    "Background Check",
+    "Employment Verification"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    }
+  ],
+  "summary": "在招聘中核实与岗位有关的候选信息，范围和程序受当地规则约束。",
+  "description": "招聘背景调查是在招聘过程中核实候选信息的活动，可能包括任职经历、教育或与岗位有关的其他记录。雇主可以自行核实，也可能使用服务机构；具体项目并不是所有岗位统一适用的清单。\n\n开展时间、授权、可查询的信息和结果处理规则随法域而异。美国 EEOC 与 FTC 的指引分别涉及平等就业和第三方报告等要求，不能直接套用于其他地区。背调与技术能力面试、推荐人沟通并非完全相同，也不能把提交授权理解为保证录用。\n\n参考：[EEOC 与 FTC：招聘背景调查](https://www.eeoc.gov/laws/guidance/background-checks-what-employers-need-know)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.eeoc.gov/laws/guidance/background-checks-what-employers-need-know"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "employee-referral",
+  "name": "Employee Referral",
+  "display_primary": "员工内推",
+  "display_secondary": "Employee Referral",
+  "aliases": [
+    "员工内推",
+    "内推",
+    "内部推荐"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    }
+  ],
+  "summary": "由企业员工通过内部渠道向招聘团队推荐候选人的人才发现方式。",
+  "description": "员工内推把员工认识或了解到的候选人与开放岗位连接起来，通常需要提供岗位信息及候选资料。推荐人应先取得候选人的同意再提交个人信息。\n\n推荐与后续申请、面试是不同动作。例如微软明确要求被推荐者仍完成职位申请；不同公司的推荐入口、奖励与评估安排可能不同。\n\n参考：[微软招聘 FAQ：员工推荐](https://careers.microsoft.com/v2/global/en/hiringfaqs.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://careers.microsoft.com/v2/global/en/hiringfaqs.html"
+}

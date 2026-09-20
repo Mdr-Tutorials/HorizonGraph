@@ -1,0 +1,35 @@
+{
+  "id": "restricted-stock-unit",
+  "name": "Restricted Stock Unit",
+  "display_primary": "限制性股票单位",
+  "display_secondary": "Restricted Stock Unit · RSU",
+  "abbreviation": "RSU",
+  "aliases": [
+    "限制性股票单位",
+    "限制性股票单元",
+    "Restricted Stock Units",
+    "RSU"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "employment-terms"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "equity-vesting",
+      "context": "RSU 计划以归属条件确定何时取得奖励权益；实际交付时间另按计划规定。"
+    }
+  ],
+  "summary": "满足归属等条件后按计划交付股票或现金等价物的权益奖励单位。",
+  "description": "限制性股票单位（Restricted Stock Unit，RSU）是以公司股票价值为基础的奖励单位。授予时通常尚未交付股票；满足归属条件后，再按计划规定的时间和方式交付股票或现金等价物。\n\nRSU 与员工期权不同：期权提供按行权价购买股票的权利，RSU 通常不要求以行权价购买。授予、归属、交付和出售并非同一步，已归属也不必然意味着立即可出售或收到现金。具体数量、时间和离职处理应按计划理解。\n\n参考：[Fidelity：RSU 与归属、交付](https://www.fidelity.com/webxpress/help/topics_nb/learn_rsus.shtml)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 3,
+  "official_site": "https://www.fidelity.com/webxpress/help/topics_nb/learn_rsus.shtml"
+}

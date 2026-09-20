@@ -1,0 +1,32 @@
+{
+  "id": "behavioral-interview",
+  "name": "Behavioral Interview",
+  "display_primary": "行为面试",
+  "display_secondary": "Behavioral Interview",
+  "aliases": [
+    "行为面试",
+    "行为事件面试"
+  ],
+  "type": "concept",
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recruitment-process"
+    },
+    {
+      "relation_type": "discusses",
+      "target_id": "project-experience",
+      "context": "通过项目中的协作、冲突、失误或决策实例了解候选人的具体行为。"
+    }
+  ],
+  "summary": "通过候选人的具体经历，了解其在协作、决策和问题处理中的行为方式。",
+  "description": "行为面试常请候选人回顾真实经历，追问情境、采取的行动以及结果，以了解其处理问题和与他人协作的方式。例子可以来自工作、学习或其他实践。\n\n准备时需要讲清本人做了什么以及获得的反馈。STAR 可以组织表达，但不会替代经历本身的真实性和细节。\n\n参考：[哈佛面试指南：行为与匹配度面试](https://careerservices.fas.harvard.edu/resources/interviewing/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-09-20",
+  "importance": 4,
+  "official_site": "https://careerservices.fas.harvard.edu/resources/interviewing/"
+}
