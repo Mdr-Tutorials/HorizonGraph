@@ -9,17 +9,28 @@
   ],
   "type": "concept",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "operations-research",
+    "mathematical-optimization"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-problem",
+      "context": "在具备适当最优子结构的阶段决策模型中，以价值递推求解目标最优值和策略。"
     }
   ],
   "summary": "把重叠子问题的解存表复用，状态转移方程是核心。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "description": "动态规划把问题拆成具有状态与转移的子问题，记录已求结果，避免重复计算。适当的最优子结构使整体解可由子问题解递推；记忆化和自底向上填表是常见执行方式。\n\n运筹中的阶段决策可以用状态、行动与价值递推表达，但建模是否满足所需条件必须检验。状态空间可能随维度快速增长，动态规划不自动意味着多项式复杂度；压缩状态或近似方法还需要说明损失和适用范围。\n\n参考：[MIT 6.006 动态规划课程](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/pages/lecture-notes/)；[MIT 优化方法](https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/)。"
 }

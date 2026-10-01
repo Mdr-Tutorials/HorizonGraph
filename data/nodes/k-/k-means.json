@@ -1,0 +1,39 @@
+{
+  "id": "k-means",
+  "name": "K-means",
+  "aliases": [
+    "K 均值聚类",
+    "K 均值",
+    "Kmeans",
+    "K-means Clustering"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unsupervised-learning",
+      "context": "仅使用特征向量与距离结构进行分簇，不依赖预先给定的类别标签。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "feature-scaling",
+      "context": "以欧氏距离聚类不同量纲的特征时，按任务决定缩放以避免大尺度特征主导距离。"
+    }
+  ],
+  "summary": "交替分配样本与更新中心的聚类方法。",
+  "description": "K-means 预先指定簇数 k，交替把样本分配给最近中心，再用簇内均值更新中心，优化簇内平方距离总和。k-means++ 可改进初始中心的选择，但迭代仍可能到达局部解。\n\n它适合用欧氏空间中的中心概括数据，常用于分组探索和向量量化。尺度差异、异常值与不接近球形的簇会影响结果，簇编号本身没有类别语义。聚类无需训练标签；已知业务标签只能作为后续解释或外部评价依据。\n\n参考：[scikit-learn K-means 机制与局限](https://scikit-learn.org/stable/modules/clustering.html#k-means)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

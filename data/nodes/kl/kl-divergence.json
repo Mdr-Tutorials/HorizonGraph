@@ -1,0 +1,39 @@
+{
+  "id": "kl-divergence",
+  "name": "Kullback–Leibler Divergence",
+  "aliases": [
+    "KL 散度",
+    "相对熵",
+    "Kullback-Leibler Divergence"
+  ],
+  "type": "concept",
+  "domains": [
+    "mathematics",
+    "statistics",
+    "machine-learning",
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mathematical-foundations"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "probability-distribution",
+      "context": "在相同事件空间上比较目标分布 P 与近似分布 Q。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "expected-value",
+      "context": "以 P 为采样分布，计算对数概率比 log(P/Q) 的期望。"
+    }
+  ],
+  "summary": "比较两个概率分布的非对称散度。",
+  "description": "KL 散度 D_KL(P∥Q) 计算 P 下对数概率比的期望；离散形式为 Σp(x)log[p(x)/q(x)]。在相应支持或绝对连续条件下可定义有限值；Q 对 P 的正概率事件赋零概率时，散度可能无穷。\n\n它非负且通常不对称，不满足作为距离所需的全部性质。模型拟合、变分推断与信息论都使用它衡量分布失配；适当有限条件下，交叉熵可分解为熵加 KL。\n\n计算时应区分离散概率质量与连续密度，检查归一化、零项约定和对数底。加平滑后有限的数值反映的是修改后的分布，不能直接当成原分布的精确散度。\n\n参考：[MIT 熵与散度](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_1/)；[Deep Learning 概率章节](https://www.deeplearningbook.org/contents/prob.html)；[SciPy 相对熵](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.rel_entr.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "KL"
+}

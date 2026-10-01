@@ -19,11 +19,22 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "argon2",
+      "context": "采用密码认证的新系统可使用按资源测量配置的 Argon2id 存储验证结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bcrypt",
+      "context": "需要兼容既有密码存储时可采用 bcrypt，并处理实现的输入字节上限。"
     }
   ],
-  "summary": "验证你是谁：密码、MFA、证书与通行密钥都属于它。",
+  "summary": "验证所声称身份或凭据，建立可用于授权的主体。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\n认证可采用密码、持有的密钥或其他因素，验证成功后建立会话或凭据上下文。密码认证应存储带盐且有成本参数的验证结果，而不是可逆明文或快速通用哈希。\n\n## 边界与应用\n\n认证成功不表示可访问任意对象；会话失效、速率限制和恢复流程也属于设计范围。密码哈希方案与参数应依资源及威胁模型选择，并允许升级。\n\n## 参考\n\n- [OWASP：身份认证](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)\n- [OWASP：密码存储](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)"
 }

@@ -1,0 +1,32 @@
+{
+  "id": "ohms-law",
+  "name": "Ohm's Law",
+  "aliases": [
+    "欧姆定律"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "resistor",
+      "context": "约束理想线性电阻及实际电阻在欧姆性工作区内的电压电流关系。"
+    }
+  ],
+  "summary": "描述欧姆性元件电压与电流线性关系的经验规律。",
+  "description": "对工作条件固定的欧姆性元件，电压和电流成正比，比例系数为电阻 R，即 V=IR。它支持电阻网络的电流、电压和功率计算。\n\n欧姆定律不是所有器件都必须满足的普适自然定律。二极管、晶体管及温度变化明显的元件可能呈非线性；其特定工作点的小信号电阻也不等于全局恒定电阻。\n\n参考：[OpenStax：欧姆定律及其适用条件](https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law"
+}

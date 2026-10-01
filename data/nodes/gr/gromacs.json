@@ -1,0 +1,44 @@
+{
+  "id": "gromacs",
+  "name": "GROMACS",
+  "aliases": [
+    "GROMACS 分子模拟软件"
+  ],
+  "type": "tool",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "molecular-dynamics",
+      "context": "通过配置的积分与耦合方案推进分子体系。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "force-field",
+      "context": "读取一致的拓扑及相互作用参数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "periodic-boundary-condition",
+      "context": "在体相模拟中用周期盒组织边界与长程处理。"
+    }
+  ],
+  "summary": "提供分子动力学、能量最小化和轨迹分析的软件。",
+  "description": "GROMACS 组织分子拓扑、力场参数、坐标和模拟设置，执行动力学及分析，常用于生物分子与其他分子体系。模型和输入是否一致比软件名称更直接地决定物理含义。\n\n周期盒、约束、温度压力耦合及长程相互作用处理应明确记录。能量最小化与平衡取样是不同步骤，轨迹长度和相关性限制统计结论。\n\n## 参考\n\n- [GROMACS：分子动力学算法](https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html)\n- [GROMACS：键合相互作用](https://manual.gromacs.org/current/reference-manual/functions/bonded-interactions.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.gromacs.org/"
+}

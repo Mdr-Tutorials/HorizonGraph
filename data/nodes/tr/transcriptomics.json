@@ -1,0 +1,37 @@
+{
+  "id": "transcriptomics",
+  "name": "Transcriptomics",
+  "aliases": [
+    "转录组学"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rna-seq",
+      "context": "通过测序调查样本 RNA 内容和表达水平时采用 RNA-seq。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gene-ontology",
+      "context": "对表达相关基因集合进行功能注释与解释时使用 GO 及其证据化注释。"
+    }
+  ],
+  "summary": "研究特定条件下 RNA 集合与表达变化的学科。",
+  "description": "## 机制\n\n转录组学研究样本中转录产生的 RNA，包括其种类、数量和变化。计算分析把测量信号转为转录本或基因层面的表达表示，再比较条件、细胞类型或时间。\n\n## 边界与应用\n\n转录组不是固定的基因组副本，采样条件、细胞组成和技术流程都会影响结果。RNA 丰度不等于蛋白丰度或活性；表达差异分析还需考虑重复、批次和统计假设。\n\n## 参考\n\n- [NHGRI：转录组概览](https://www.genome.gov/about-genomics/fact-sheets/Transcriptome-Fact-Sheet)",
+  "importance": 4,
+  "official_site": "https://www.genome.gov/about-genomics/fact-sheets/Transcriptome-Fact-Sheet",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

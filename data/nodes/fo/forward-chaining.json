@@ -1,0 +1,33 @@
+{
+  "id": "forward-chaining",
+  "name": "Forward Chaining",
+  "aliases": [
+    "前向链推理",
+    "前向推理"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-base",
+      "context": "读取已有事实和规则，并保存选定求值语义下的派生结果。"
+    }
+  ],
+  "summary": "从已知事实反复应用规则产生后续结论。",
+  "description": "前向链推理从事实出发寻找可满足的规则条件，再把相应结论加入当前知识。正 Datalog 的典型求值可重复这一过程直至没有新事实。\n\n它适合共享大量派生结果的数据驱动任务，但中间事实与重复匹配可能增加成本。包含动作、否定或无限项生成的系统还需要额外的执行与终止条件。\n\n## 参考\n\n- [Apache Jena：推理与规则引擎](https://jena.apache.org/documentation/inference/)\n- [Poole 与 Mackworth：Datalog](https://artint.info/3e/html/ArtInt3e.Ch15.S4.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

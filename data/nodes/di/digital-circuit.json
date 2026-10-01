@@ -1,0 +1,38 @@
+{
+  "id": "digital-circuit",
+  "name": "Digital Circuit",
+  "aliases": [
+    "数字电路"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logic-gate",
+      "context": "在组合逻辑中以逻辑门实现布尔函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "flip-flop",
+      "context": "在同步时序设计中以触发器保存时钟边沿更新的状态。"
+    }
+  ],
+  "summary": "以离散逻辑值表示与处理信息的电子电路。",
+  "description": "数字电路用电压区间表示逻辑值，要求噪声裕量和传播延迟满足约束。组合电路的输出由当前输入决定；时序电路还保存状态。RTL、门级网表与晶体管电路是不同抽象层，不能把功能仿真通过等同于物理时序满足。\n\n参考：[MIT 6.004：数字抽象](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c2/c2s1/)；[MIT 6.004：时序逻辑](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c5/c5s1/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c2/c2s1/"
+}

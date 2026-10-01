@@ -1,0 +1,44 @@
+{
+  "id": "ffmpeg",
+  "name": "FFmpeg",
+  "aliases": [
+    "FFmpeg",
+    "音视频转码工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "multirate-signal-processing",
+      "context": "用 aresample 等音频滤镜转换采样率并处理相应的插值和抗混叠。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fir-filter",
+      "context": "使用 afir 音频滤镜时，以给定脉冲响应实施有限卷积滤波。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "iir-filter",
+      "context": "使用 aiir 等递归滤镜时按系数和实现形式处理音频。"
+    }
+  ],
+  "summary": "提供音视频解复用、编码、滤镜与输出管线的工具集。",
+  "description": "FFmpeg 组织输入解复用、解码、过滤、编码和输出复用的媒体处理流程。命令行工具与 libavcodec、libavformat 等库承担不同接口角色，流复制可跳过重新编码但受到输出格式限制。\n\n容器、编码和像素或采样格式是不同层次，实际支持范围还取决于构建配置。音频重采样、FIR/IIR 等滤镜改变信号特性，处理时需检查时间戳、声道和延迟。\n\n参考：[FFmpeg 命令行文档](https://ffmpeg.org/ffmpeg.html)；[FFmpeg 滤镜文档](https://ffmpeg.org/ffmpeg-filters.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ffmpeg.org/ffmpeg.html",
+  "abstraction_level": "application_tool"
+}

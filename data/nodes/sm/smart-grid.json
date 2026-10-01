@@ -1,0 +1,32 @@
+{
+  "id": "smart-grid",
+  "name": "Smart Grid",
+  "aliases": [
+    "智能电网"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "iec-61850",
+      "context": "在采用该标准的信息模型和通信映射的电力自动化系统中，实现设备语义与数据交换。"
+    }
+  ],
+  "summary": "以量测、通信与控制增强电网运行和资源协调的体系。",
+  "description": "智能电网把传感、计量、通信和控制应用于电力网络，使运行状态更可见，并支持分布式资源、用户侧管理和自动化。它涉及物理设备、数据及运营流程的协同。\n\n增加通信并不会自动提升可靠性；互操作、数据质量、网络安全及供电约束需要共同处理。智能电网是系统性能力，不能等同于安装智能电表或某一种协议。\n\n参考：[美国能源部：智能电网与储能示范](https://www.energy.gov/documents/sg11-24-09demosenergystorageoepdf)；[IEC：通信与信息互操作层](https://iec61850.dvl.iec.ch/what-is-61850/technical-principles/comm_concepts/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.energy.gov/documents/sg11-24-09demosenergystorageoepdf"
+}

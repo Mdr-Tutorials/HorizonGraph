@@ -1,0 +1,37 @@
+{
+  "id": "industrial-automation",
+  "name": "Industrial Automation",
+  "aliases": [
+    "工业自动化"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "plc",
+      "context": "在采用可编程控制器的机器或生产线中，执行现场逻辑与设备控制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "process-control",
+      "context": "在温度、压力、流量等工业过程的调节中，采用过程变量测量与控制方法。"
+    }
+  ],
+  "summary": "用传感、控制、通信和执行设备组织工业过程与生产。",
+  "description": "工业自动化把物理设备、控制器、现场通信与上层监控联系起来，用于连续过程、离散制造或批次生产。系统通常需要与真实过程的时间尺度、可用性和安全要求协调。\n\nPLC、DCS、SCADA、MES 分别承担不同层次任务，实际部署可以组合这些系统。自动化不是只把企业 IT 软件搬到工厂，控制动作仍受对象动态、现场设备和运行约束影响。\n\n参考：[NIST SP 800-82 Rev.3：OT 系统架构](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf)；[Siemens：分布式过程控制系统](https://www.siemens.com/en-gb/products/process-control/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf"
+}

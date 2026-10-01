@@ -1,0 +1,48 @@
+{
+  "id": "gatk",
+  "name": "Genome Analysis Toolkit",
+  "aliases": [
+    "GATK 基因组分析工具"
+  ],
+  "type": "tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "variant-calling"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sam-bam",
+      "context": "基于比对读段的 GATK 检测流程读取 BAM 等数据并核对读组与参考。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sequence-assembly",
+      "context": "HaplotypeCaller 在活跃区域局部重组装候选单倍型，而不是组装完整基因组。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vcf",
+      "context": "变异发现工具输出 VCF 或 GVCF，中间产物须按工具流程解释。"
+    }
+  ],
+  "summary": "提供测序数据处理、变异发现与基因型分析的工具集。",
+  "description": "## 机制\n\nGATK 提供多个测序处理和分析工具。HaplotypeCaller 在活跃区域做局部单倍型组装，比较读段与候选序列的似然，并输出原始 VCF 或供联合分型使用的 GVCF。\n\n## 边界与应用\n\nGATK 是工具集而非一种万能检测算法。HaplotypeCaller 的生殖系流程不能直接推广到体细胞等场景，原始调用与 GVCF 中间产物还需要相应后处理和质量筛选。\n\n## 参考\n\n- [Broad Institute：GATK 算法文档](https://gatk.broadinstitute.org/hc/en-us/sections/360007226771-Algorithms)\n- [Broad Institute：HaplotypeCaller](https://gatk.broadinstitute.org/hc/en-us/articles/360036889312-HaplotypeCaller)",
+  "importance": 4,
+  "official_site": "https://gatk.broadinstitute.org/hc/en-us/sections/360007226771-Algorithms",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "abbreviation": "GATK"
+}

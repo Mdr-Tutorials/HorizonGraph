@@ -35,3 +35,6 @@
 | [0022](0022-recruitment-context-relations.md) | 招聘语境中的评估、准备、描述与沟通关系 | 已接受 | 2026-09-20 |
 | [0023](0023-organization-appellation-relation.md) | 企业合称的指代关系 | 已接受 | 2026-09-20 |
 | [0024](0024-career-quant-and-company-boundaries.md) | 职业扩展中的评估偏差与母子公司关系 | 已接受 | 2026-09-20 |
+| [0025](0025-versioned-engine-and-offline-release.md) | 版本化数据快照、端侧查询引擎与完整离线发布 | 已接受 | 2026-10-01 |
+| [0026](0026-foundational-content-classification.md) | 基础领域内容的分类与消歧 | 已接受 | 2026-10-01 |
+| [0027](0027-whole-domain-content-expansion.md) | 整领域内容扩展与工程路径 | 已接受 | 2026-10-01 |

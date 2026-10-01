@@ -1,0 +1,28 @@
+{
+  "id": "state-of-health",
+  "name": "State of Health",
+  "aliases": [
+    "健康状态"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "按容量、内阻等指标评估电池相对参考状态的退化。",
+  "description": "SOH 描述电池相对初始或参考状态的性能保持程度。容量保持率是一种常见定义，也可关注内阻和给定负载下的能力，因此不同应用需明确所用指标。\n\n满电不表示健康状态良好：老化电池也可达到当前容量的满充。容量与功率退化可能不同，单一百分比不能无条件替代对温度、循环与负载需求的评估。\n\n参考：[Texas Instruments：荷电状态与健康状态的区别](https://www.ti.com/lit/pdf/SSZT854)；[Texas Instruments：电池电量计与状态估计](https://www.ti.com/product-category/battery-management-ics/battery-fuel-gauges/overview.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.ti.com/lit/pdf/SSZT854",
+  "abbreviation": "SOH"
+}

@@ -7,14 +7,18 @@
   ],
   "type": "language",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "scientific-computing",
+    "computational-engineering",
+    "high-performance-computing"
   ],
   "abstraction_level": "runtime_vm",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "scientific-computing-ecosystem"
   ],
   "relations": [
     {
@@ -25,5 +29,6 @@
   "summary": "为科学计算设计的数组语言，HPC 与数值库的历史内核。",
   "importance": 3,
   "popular": 48,
-  "official_site": "https://fortran-lang.org"
+  "official_site": "https://fortran-lang.org",
+  "description": "Fortran 是长期用于科学和工程计算的编程语言，具有数值类型、数组表达式与过程组织等语言能力。大量线性代数和物理模拟程序以 Fortran 编写，现代语言版本也提供模块、派生类型及与 C 的互操作机制。\n\n程序可调用 BLAS/LAPACK，但这些数值库不是 Fortran 语言语法本身。编译器优化与并行模型会影响执行效率，计算可靠性仍取决于数值方法、精度选择和验证；旧源码是否兼容也需要按实际语言特性与编译器选项判断。\n\n参考：[GNU Fortran 手册](https://gcc.gnu.org/onlinedocs/gfortran/)；[Fortran 数值编程](https://fortran-lang.org/learn/)。"
 }

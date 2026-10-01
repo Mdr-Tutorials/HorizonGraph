@@ -1,0 +1,39 @@
+{
+  "id": "iir-filter",
+  "name": "Infinite Impulse Response Filter",
+  "aliases": [
+    "无限脉冲响应滤波器",
+    "IIR 滤波器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "z-transform",
+      "context": "通过传递函数与极点分析因果递归滤波器的频率响应和稳定性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numerical-stability",
+      "context": "选择二阶节等表示，减少高阶系数和有限精度带来的实现误差。"
+    }
+  ],
+  "summary": "脉冲响应一般无限长的递归数字滤波结构。",
+  "description": "IIR 滤波器使用递归差分关系，把过去输出与输入组合；其脉冲响应一般不会在有限时间后严格为零。较低阶数可能达到较陡频率选择，但相位通常不同于线性相位 FIR。\n\n因果稳定性要检查极点与实现结构，舍入或系数量化可改变行为。高阶系统直接使用多项式系数可能有数值问题，二阶节表示常有更好的实现可靠性。\n\n参考：[SciPy Butterworth IIR](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html)；[SciPy 信号处理](https://docs.scipy.org/doc/scipy/tutorial/signal.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html",
+  "abbreviation": "IIR"
+}

@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.4.0",
   "policy": "登记制：新词随数据 PR 同步登记。CI 双向校验：数据出现未登记 value 即失败；登记项连续多个周期未被引用则告警。节点字段存储 value，en/zh 供展示。",
   "entries": [
     { "value": "systems-programming", "en": "Systems Programming", "zh": "系统编程" },
@@ -28,6 +28,32 @@
     { "value": "industry-landscape", "en": "Industry Landscape", "zh": "产业格局" },
     { "value": "learning-cognition", "en": "Learning & Cognition", "zh": "学习与认知" },
     { "value": "health-ergonomics", "en": "Health & Ergonomics", "zh": "健康与人体工学" },
-    { "value": "personal-finance", "en": "Personal Finance", "zh": "个人财务" }
+    { "value": "personal-finance", "en": "Personal Finance", "zh": "个人财务" },
+    { "value": "mathematics", "en": "Mathematics", "zh": "数学" },
+    { "value": "statistics", "en": "Statistics", "zh": "统计学" },
+    { "value": "data-engineering", "en": "Data Engineering", "zh": "数据工程" },
+    { "value": "robotics", "en": "Robotics", "zh": "机器人" },
+    { "value": "control-theory", "en": "Control Theory", "zh": "控制理论" },
+    { "value": "digital-design", "en": "Digital Design", "zh": "数字电路设计" },
+    { "value": "semiconductor-engineering", "en": "Semiconductor Engineering", "zh": "半导体工程" },
+    { "value": "geospatial-computing", "en": "Geospatial Computing", "zh": "地理空间计算" },
+    { "value": "remote-sensing", "en": "Remote Sensing", "zh": "遥感" },
+    { "value": "medical-informatics", "en": "Medical Informatics", "zh": "医疗信息学" },
+    { "value": "bioinformatics", "en": "Bioinformatics", "zh": "生物信息学" },
+    { "value": "computational-biology", "en": "Computational Biology", "zh": "计算生物学" },
+    { "value": "power-energy-systems", "en": "Power & Energy Systems", "zh": "电力与能源系统" },
+    { "value": "analog-electronics", "en": "Analog Electronics", "zh": "模拟电子" },
+    { "value": "rf-engineering", "en": "RF Engineering", "zh": "射频工程" },
+    { "value": "industrial-automation", "en": "Industrial Automation", "zh": "工业自动化" },
+    { "value": "operations-research", "en": "Operations Research", "zh": "运筹学" },
+    { "value": "mathematical-optimization", "en": "Mathematical Optimization", "zh": "数学优化" },
+    { "value": "scientific-computing", "en": "Scientific Computing", "zh": "科学计算" },
+    { "value": "computational-engineering", "en": "Computational Engineering", "zh": "计算工程" },
+    { "value": "signal-processing", "en": "Signal Processing", "zh": "信号处理" },
+    { "value": "information-theory", "en": "Information Theory", "zh": "信息论" },
+    { "value": "materials-science", "en": "Materials Science", "zh": "材料科学" },
+    { "value": "computational-chemistry", "en": "Computational Chemistry", "zh": "计算化学" },
+    { "value": "knowledge-engineering", "en": "Knowledge Engineering", "zh": "知识工程" },
+    { "value": "semantic-web", "en": "Semantic Web", "zh": "语义网" }
   ]
 }

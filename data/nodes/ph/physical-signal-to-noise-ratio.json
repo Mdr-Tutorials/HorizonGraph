@@ -1,0 +1,35 @@
+{
+  "id": "physical-signal-to-noise-ratio",
+  "name": "Signal-to-Noise Ratio (Physical)",
+  "aliases": [
+    "物理信噪比",
+    "信号噪声功率比",
+    "SNR"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "expected-value",
+      "context": "在随机信号分析中，通过均方值或其估计计算信号与噪声的平均功率。"
+    }
+  ],
+  "summary": "目标信号功率相对于噪声功率的比值。",
+  "description": "物理信噪比定义为信号功率与噪声功率之比，分贝形式为 10 log10(Ps/Pn)。用幅度比的 20 log10 形式需要相同功率与幅度对应条件，测量还需说明带宽和信号噪声的分离方法。\n\n谐波失真、干扰和噪声的归类会影响估计，它与 SINAD 或峰值信噪比不能互换。此节点指工程量，区别于本站另一个用于描述信息环境的信噪比隐喻。\n\n参考：[MathWorks SNR 测量](https://www.mathworks.com/help/signal/ref/snr.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.mathworks.com/help/signal/ref/snr.html",
+  "abbreviation": "SNR"
+}

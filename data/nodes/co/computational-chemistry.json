@@ -1,0 +1,42 @@
+{
+  "id": "computational-chemistry",
+  "name": "Computational Chemistry",
+  "aliases": [
+    "计算化学"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "density-functional-theory",
+      "context": "在电子结构研究中以电子密度为核心变量计算能量与性质。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "molecular-mechanics",
+      "context": "对适合经典模型的分子采用参数化势能函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "molecular-dynamics",
+      "context": "研究原子体系的时间演化和统计性质。"
+    }
+  ],
+  "summary": "用物理模型和数值计算研究化学结构与行为。",
+  "description": "计算化学用量子化学、分子力学及动力学方法研究分子、反应和凝聚态体系。任务包括估计结构、能量、电子性质和随时间的演化，模型选择取决于研究尺度与所需精度。\n\n第一性原理方法、经验力场与机器学习模型的输入和误差来源不同。求得一个数值结果并不自动意味着它适合特定温度、溶剂环境或反应机制。\n\n## 参考\n\n- [VASP：第一性原理计算理论](https://vasp.at/wiki/index.php/Category:Theory)\n- [GROMACS：分子动力学算法](https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

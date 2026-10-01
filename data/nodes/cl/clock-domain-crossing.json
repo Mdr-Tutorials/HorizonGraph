@@ -1,0 +1,36 @@
+{
+  "id": "clock-domain-crossing",
+  "name": "Clock Domain Crossing",
+  "aliases": [
+    "时钟域跨越",
+    "跨时钟域",
+    "时钟域交叉"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "flip-flop",
+      "context": "对适用的单比特异步信号，用目的时钟域的多级触发器同步链降低亚稳态传播风险。"
+    }
+  ],
+  "summary": "信号跨越时钟域时需要约束和同步设计的工程问题。",
+  "description": "CDC 指信号从一个时钟域传到另一个时钟域。对异步时钟，建立、保持无法按固定相位保证，需按数据类型设计同步器、握手或异步 FIFO。单比特同步链不能直接保证多位总线一致；同步器降低亚稳态传播风险，不能保证风险为零。\n\n缩写 CDC 也用于数据库的 Change Data Capture（变更数据捕获），本节点仅指数字电路的跨时钟域问题。\n\n参考：[AMD UG574：异步时钟域跨越](https://www.amd.com/content/dam/xilinx/support/documents/user_guides/ug574-ultrascale-clb.pdf)；[Siemens：Questa Signoff CDC 技术说明](https://static.sw.cdn.siemens.com/siemens-disw-assets/public/7i5foKM8ww6JWvCL0TTjw7/en-US/Siemens%20SW%20Questa%20Signoff%20CDC%20FS%2083306%20C1.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "CDC",
+  "official_site": "https://www.amd.com/content/dam/xilinx/support/documents/user_guides/ug574-ultrascale-clb.pdf"
+}

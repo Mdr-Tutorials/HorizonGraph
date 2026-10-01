@@ -1,0 +1,46 @@
+{
+  "id": "questa",
+  "name": "Questa",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "siemens-eda"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "verilog",
+      "context": "在 HDL 仿真与验证中读取 Verilog 和 SystemVerilog 设计及测试平台。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vhdl",
+      "context": "在混合语言或 VHDL 设计验证中编译与仿真 VHDL。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clock-domain-crossing",
+      "context": "通过 Questa CDC 工具检查跨域结构和数据传输的正确性。"
+    }
+  ],
+  "summary": "Siemens EDA 提供的仿真、形式验证与 CDC 验证工具族。",
+  "description": "Questa 是 Siemens EDA 的硬件验证方案，工具族包含 HDL 仿真、形式验证和 CDC 分析。官方资料说明 SystemVerilog、Verilog 与 VHDL 支持及验证流程集成；各能力由具体产品承担。仿真、CDC 验证不替代布局后时序签核。\n\n参考：[Siemens：Questa 验证方案](https://static.sw.cdn.siemens.com/siemens-disw-assets/public/2VxKS6Q3bOyJlBmp3NzVpm/en-US/The-Questa-Verification-Solution-FS.pdf)；[Siemens：Questa Signoff CDC 技术说明](https://static.sw.cdn.siemens.com/siemens-disw-assets/public/7i5foKM8ww6JWvCL0TTjw7/en-US/Siemens%20SW%20Questa%20Signoff%20CDC%20FS%2083306%20C1.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://static.sw.cdn.siemens.com/siemens-disw-assets/public/2VxKS6Q3bOyJlBmp3NzVpm/en-US/The-Questa-Verification-Solution-FS.pdf"
+}

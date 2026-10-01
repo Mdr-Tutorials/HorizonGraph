@@ -1,0 +1,37 @@
+{
+  "id": "bayes-theorem",
+  "name": "Bayes' Theorem",
+  "aliases": [
+    "贝叶斯定理",
+    "贝叶斯公式",
+    "Bayes' Rule"
+  ],
+  "type": "concept",
+  "domains": [
+    "mathematics",
+    "statistics",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mathematical-foundations"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "conditional-probability",
+      "context": "通过交换条件概率并结合先验与证据概率，计算观测之后的后验。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "probability-distribution",
+      "context": "贝叶斯参数推断用先验分布与观测模型形成并归一化后验分布。"
+    }
+  ],
+  "summary": "用先验与观测似然推导后验概率。",
+  "description": "贝叶斯定理在 P(B)>0 时给出 P(A|B)=P(B|A)P(A)/P(B)。先验 P(A) 与似然 P(B|A) 共同决定观察 B 后的后验，分母作为归一化的证据概率。\n\n例如解释分类器的阳性结果时，除了检测能力，还必须考虑目标类别的基准比例；忽略先验会把 P(B|A) 误当作 P(A|B)。它是条件概率的恒等式，可用于贝叶斯推断和概率分类；后验可信程度仍受模型假设与先验依据影响。\n\n参考：[Statlect 贝叶斯公式](https://www.statlect.com/fundamentals-of-probability/Bayes-rule)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

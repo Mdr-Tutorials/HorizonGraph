@@ -1,0 +1,31 @@
+{
+  "id": "block-code",
+  "name": "Block Code",
+  "aliases": [
+    "分组码",
+    "块码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "error-correcting-code",
+      "context": "作为信道保护方案时，通过具有足够码距的分组码字与译码规则恢复受损块。"
+    }
+  ],
+  "summary": "将固定长度输入块映射为固定长度码字的编码形式。",
+  "description": "信道编码中的分组码把 k 个符号映射为 n 个符号，码率通常记为 k/n。码字可以具有线性或非线性结构，消息分块与码字集合共同定义编码方案。\n\n分组码不必都线性，块长和符号单位也须说明。此处讨论信道保护的分组码，不能将所有分块存储格式或块密码自动视为同一纠错对象。\n\n参考：[MathWorks 分组码](https://www.mathworks.com/help/comm/ug/block-codes.html)；[MIT 线性码与容量](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.mathworks.com/help/comm/ug/block-codes.html"
+}

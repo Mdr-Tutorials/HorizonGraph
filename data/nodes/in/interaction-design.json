@@ -1,0 +1,46 @@
+{
+  "id": "interaction-design",
+  "name": "Interaction Design",
+  "aliases": [
+    "交互设计",
+    "IxD"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "user-research",
+      "context": "根据目标用户的任务、需求和限制形成流程与原型设计依据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "usability-testing",
+      "context": "观察用户操作原型或实际服务，迭代步骤、反馈和错误恢复方式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fitts-law",
+      "context": "分析鼠标或触控指向任务中的目标距离与有效尺寸，不作为所有交互的统一预测。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hick-law",
+      "context": "在选择反应任务中分析选项不确定性与决策时间，复杂导航还需任务测试。"
+    }
+  ],
+  "summary": "设计用户与服务交互的流程、动作、状态反馈和恢复路径。",
+  "description": "## 设计对象\n\n交互设计关注人如何通过界面或其他触点完成目标，包括步骤顺序、输入动作、系统反馈、错误处理和返回路径。原型用于让流程和状态变化可以被体验与测试；视觉样式只是其中一部分。\n\n## 证据与边界\n\n研究帮助确定用户需要完成什么，易用性测试帮助判断设计是否支持这些目标。设计应覆盖不同设备与访问需求。Fitts 定律可辅助分析指向动作，Hick 定律可辅助分析受控选择任务，二者都不能独自决定完整服务设计。\n\n## 参考\n\n- [GOV.UK：交互设计职责](https://ddat-capability-framework.service.gov.uk/role/interaction-designer)\n- [GOV.UK：不同设计工作的边界](https://designnotes.blog.gov.uk/2016/04/22/the-different-types-of-design-in-government/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ddat-capability-framework.service.gov.uk/role/interaction-designer"
+}

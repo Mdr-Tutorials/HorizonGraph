@@ -1,0 +1,25 @@
+{
+  "id": "fitts-law",
+  "name": "Fitts' Law",
+  "aliases": [
+    "菲茨定律",
+    "费茨定律"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    }
+  ],
+  "summary": "用目标距离与宽度预测受控指向动作所需时间。",
+  "description": "## 模型\n\nFitts 定律描述受控指向任务的速度与精度权衡。人机交互中常用 Shannon 形式 MT = a + b log2(1 + D/W)，D 是起点到目标的距离，W 是运动方向上的目标宽度，a、b 需根据设备、参与者和任务拟合。进行精度校正时，可使用由实际落点分布估计的有效宽度 Wₑ；几何目标宽度与有效宽度应分别记录。\n\n## 使用条件\n\n目标更远或更窄通常使指向更难，但认知搜索、拖拽流程和整体任务时间不能全部归入该公式。二维目标、错误率和实际落点分布会影响测量；应明确采用的难度公式和精度处理方法。\n\n## 参考\n\n- [Fitts：1954 年原始论文](https://www2.psychology.uiowa.edu/faculty/mordkoff/infoproc/pdfs/Fitts%201954.pdf)\n- [MacKenzie：Fitts 定律在人机交互中的研究](https://www.yorku.ca/mack/ijhcs2004.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www2.psychology.uiowa.edu/faculty/mordkoff/infoproc/pdfs/Fitts%201954.pdf"
+}

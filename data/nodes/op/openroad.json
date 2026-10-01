@@ -1,0 +1,46 @@
+{
+  "id": "openroad",
+  "name": "OpenROAD",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "place-and-route"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "yosys",
+      "context": "在 OpenROAD Flow Scripts 的参考流程中，以 Yosys 执行前端逻辑综合。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "opensta",
+      "context": "在 OpenROAD 应用的物理实现与时序优化中使用 OpenSTA 时序分析引擎。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "process-design-kit",
+      "context": "在面向具体工艺的流程中读取相应库、技术和设计规则信息。"
+    }
+  ],
+  "summary": "提供数字芯片布局、布线与时序优化的开源工具。",
+  "description": "OpenROAD 提供数字 IC 物理实现功能，包括布局规划、单元放置、时钟树与布线，并集成时序分析。OpenROAD 应用与 OpenROAD Flow Scripts 不同：后者编排 Yosys、OpenROAD 等工具完成 RTL 到 GDSII 的流程，仍需工艺库、约束与签核检查。\n\n参考：[OpenROAD 官方仓库与流程说明](https://github.com/The-OpenROAD-Project/OpenROAD)；[OpenROAD Flow Scripts 教程](https://openroad-flow-scripts.readthedocs.io/en/latest/tutorials/FlowTutorial.html)；[OpenROAD 集成的 OpenSTA 文档](https://openroad.readthedocs.io/en/latest/main/src/sta/README.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/The-OpenROAD-Project/OpenROAD"
+}

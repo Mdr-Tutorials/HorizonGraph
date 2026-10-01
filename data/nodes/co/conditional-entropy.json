@@ -1,0 +1,35 @@
+{
+  "id": "conditional-entropy",
+  "name": "Conditional Entropy",
+  "aliases": [
+    "条件熵"
+  ],
+  "type": "metric",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "joint-entropy",
+      "context": "用联合熵与已知变量熵的差计算离散条件熵。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "conditional-probability",
+      "context": "对每个观测值的条件分布计算不确定性并按观测概率平均。"
+    }
+  ],
+  "summary": "已知另一变量后剩余不确定性的平均度量。",
+  "description": "离散条件熵 H(X|Y) 对各 Y 取值下 X 的条件分布熵求平均。它满足链式关系 H(X|Y)=H(X,Y)-H(Y)，刻画观测 Y 后仍需描述 X 的平均信息。\n\n条件熵不是把某一次观测的熵直接代入整体，也不同于互信息。离散条件熵非负，连续变量的微分条件熵有不同性质；估计时需要合适的联合或条件分布。\n\n参考：[MIT 熵与散度](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_1/)；[MIT 互信息](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_2/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_1/"
+}

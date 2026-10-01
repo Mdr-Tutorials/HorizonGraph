@@ -1,0 +1,45 @@
+{
+  "id": "owl",
+  "name": "Web Ontology Language",
+  "aliases": [
+    "Web 本体语言"
+  ],
+  "type": "language",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "description-logic",
+      "context": "OWL 2 DL 的形式化语义与相应描述逻辑片段相接；其他使用方式需区分。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "open-world-assumption",
+      "context": "在常见本体推理语义中允许未记录事实保持未知。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "在 RDF 映射和基于 RDF 的交换路径中表示本体。"
+    }
+  ],
+  "summary": "表达本体公理并支持规定语义下的逻辑推理。",
+  "description": "OWL 用类、属性、个体和公理表示本体。OWL 2 提供不同语义与 profiles，以平衡表达能力、推理代价和数据规模；具体推理器支持的范围需要核实。\n\nOWL 的常见开放世界语义与数据完整性校验不同。缺少一个属性值不一定构成逻辑矛盾，建模者应区分必然结论、未知信息和应用要求。\n\n## 参考\n\n- [W3C：OWL 2 概览](https://www.w3.org/TR/owl2-overview/)\n- [W3C：OWL 2 profiles](https://www.w3.org/TR/owl2-profiles/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "abbreviation": "OWL",
+  "official_site": "https://www.w3.org/TR/owl2-overview/"
+}

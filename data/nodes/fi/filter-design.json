@@ -1,0 +1,37 @@
+{
+  "id": "filter-design",
+  "name": "Filter Design",
+  "aliases": [
+    "滤波器设计"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "window-function",
+      "context": "采用窗方法构造 FIR 时，对理想无限响应进行截断和加窗。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mathematical-optimization",
+      "context": "最小二乘或约束滤波器设计路线将响应误差和频带要求表达成优化问题。"
+    }
+  ],
+  "summary": "把频带、误差和相位要求转换成可实现滤波器。",
+  "description": "滤波器设计从通带、阻带、过渡带、纹波和延迟要求选择结构与阶数，再计算系数。FIR 窗法或最优化路线、IIR 原型变换等方法具有不同精度和实现取舍。\n\n设计结果要检查实际频率响应、相位和数值稳定性，规格可相互冲突。数字截止频率必须说明采样率或归一化约定，模拟原型的参数不能直接当成数字 Hz 使用。\n\n参考：[SciPy FIR 设计](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.firwin.html)；[SciPy IIR 设计](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.firwin.html"
+}

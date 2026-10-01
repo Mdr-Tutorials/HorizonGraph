@@ -1,0 +1,42 @@
+{
+  "id": "biopython",
+  "name": "Biopython",
+  "aliases": [
+    "Biopython 生物计算库"
+  ],
+  "type": "library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fasta",
+      "context": "用 SeqIO 等组件读写 FASTA 序列时采用其记录格式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fastq",
+      "context": "读写带逐碱基质量的读段时使用 FASTQ 支持并核对格式变体。"
+    }
+  ],
+  "summary": "为 Python 提供生物序列、文件读写与分析组件。",
+  "description": "## 机制\n\nBiopython 用 Seq、SeqRecord 等对象组织生物序列，并提供 SeqIO 等文件接口、比对和数据资源访问能力。组件可以把序列解析、转换及计算组合成 Python 工作流。\n\n## 边界与应用\n\nBiopython 是组件集合，不是自动决定实验设计的端到端流程。文件读写和算法支持随模块、版本及格式不同而变化，使用者仍需核对标识、质量和生物含义。\n\n## 参考\n\n- [Biopython：教程与手册](https://biopython.org/docs/latest/Tutorial/)\n- [Biopython：快速入门](https://biopython.org/docs/latest/Tutorial/chapter_quick_start.html)",
+  "importance": 4,
+  "official_site": "https://biopython.org/docs/latest/Tutorial/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library"
+}

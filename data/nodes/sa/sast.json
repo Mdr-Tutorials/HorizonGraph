@@ -1,0 +1,38 @@
+{
+  "id": "sast",
+  "name": "Static Application Security Testing",
+  "aliases": [
+    "静态应用安全测试"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "语法类静态分析可在 AST 上识别调用与结构模式；不是所有 SAST 都只分析 AST。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ir",
+      "context": "部分静态工具使用中间表示组织控制流与数据流分析，具体形式依实现。"
+    }
+  ],
+  "summary": "在源码或编译表示上分析潜在应用安全问题。",
+  "description": "## 机制\n\nSAST 不依赖完整运行被测应用，可使用语法模式、控制流与数据流分析寻找危险输入到敏感操作的路径。工具支持的语言、框架建模和规则决定覆盖范围。\n\n## 边界与应用\n\n缺少源码、动态行为和环境信息可能导致漏报，近似分析也可能误报。发现结果需要确认可达路径及业务上下文，不能把扫描通过理解为软件安全证明。\n\n## 参考\n\n- [OWASP：静态源码分析](https://community.owasp.org/Source_Code_Analysis_Tools)\n- [CodeQL：查询与静态分析](https://codeql.github.com/docs/writing-codeql-queries/about-codeql-queries/)",
+  "importance": 4,
+  "official_site": "https://community.owasp.org/Source_Code_Analysis_Tools",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abbreviation": "SAST"
+}

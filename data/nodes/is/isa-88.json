@@ -1,0 +1,33 @@
+{
+  "id": "isa-88",
+  "name": "ISA-88",
+  "aliases": [
+    "ISA-88 批次控制标准"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "isa",
+      "context": "ISA 组织 ISA-88 批次控制模型与配方相关标准的制定和维护。"
+    }
+  ],
+  "summary": "以设备、过程和程序模型组织批次生产及配方的标准系列。",
+  "description": "ISA-88 为批次过程提供统一术语及模型，区分设备结构、过程和执行程序，有助于把配方需求与设备能力联系起来。模块化组织便于复用和管理批次控制。\n\n它定义的模型与框架不等于一套现成运行时，也不保证所有生产都属于批次流程。与 ISA-95 结合时，批次执行和企业制造信息之间仍需明确映射。\n\n参考：[ISA：ISA-88 批次控制标准](https://www.isa.org/standards-and-publications/isa-standards/isa-88-standards)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.isa.org/standards-and-publications/isa-standards/isa-88-standards",
+  "abstraction_level": "runtime_vm"
+}

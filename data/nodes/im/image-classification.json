@@ -1,0 +1,49 @@
+{
+  "id": "image-classification",
+  "name": "Image Classification",
+  "aliases": [
+    "图像分类",
+    "图像识别分类"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "computer-vision",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "imagenet",
+      "context": "视觉识别研究使用 ImageNet 的分类子集训练模型，并按固定数据划分比较分类结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cross-entropy",
+      "context": "监督单标签分类常以类别交叉熵训练输出 logits 的分类器；多标签任务需选择匹配的目标与损失。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resnet",
+      "context": "采用 ResNet 的图像分类实现路径使用该网络结构，具体任务也可以采用其他架构。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vision-transformer",
+      "context": "采用 Vision Transformer 的图像分类实现路径使用该网络结构，具体任务也可以采用其他架构。"
+    }
+  ],
+  "summary": "从整幅图像预测类别标签的视觉任务。",
+  "description": "图像分类把整幅图像映射为类别标签或类别得分。单标签分类选择一个类别，多标签分类允许多个类别同时存在；分类结果本身不提供各对象的位置。ILSVRC 2012 的分类任务规定每幅图像一个真值类别，并依据候选类别列表计算错误率。[ILSVRC 2012 任务说明](https://www.image-net.org/challenges/LSVRC/2012/)。\n\n典型监督流程是将图像转换为张量，提取视觉特征，再由分类头输出各类别的 logits。CNN、ResNet 和 ViT 都可作为特征提取架构。单标签训练常使用交叉熵；PyTorch 的 CrossEntropyLoss 接收未归一化 logits，不能把它与多标签分类所需的独立二元目标混用。[TorchVision 分类模型说明](https://docs.pytorch.org/vision/stable/models.html#classification)、[CrossEntropyLoss 文档](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)。\n\n图像分类适用于按内容整理图片、识别产品类别和视觉检索的类别入口。若问题要求找到图中每个对象的位置，应转向目标检测；若要求对象轮廓，应使用图像分割。比较分类模型还需固定标签集合、数据划分与 top-k 口径，不能将一个数据集上的类别准确率直接当成新场景中的可靠性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.image-net.org/challenges/LSVRC/2012/"
+}

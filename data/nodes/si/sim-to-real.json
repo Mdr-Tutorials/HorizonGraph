@@ -9,17 +9,24 @@
   "type": "concept",
   "domains": [
     "machine-learning",
-    "embedded-systems"
+    "embedded-systems",
+    "robotics"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gazebo",
+      "context": "选用 Gazebo 建模和验证机器人软件的迁移实验可利用其物理与传感器仿真，其他实验可采用不同平台。"
     }
   ],
-  "summary": "将高仿真虚拟环境中训练出的控制策略平滑泛化到物理实体机器人的技术。",
+  "summary": "将仿真中训练或验证的方法迁移到真实系统，并评估现实差距。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 迁移问题\n\n虚实迁移关注从仿真训练或验证得到的方法如何在真实系统上工作。物理、传感器、执行器、延迟与环境差异造成现实差距，域随机化等方法试图使学习策略适应部分变化。\n\n## 评估边界\n\n仿真表现好不保证真实部署同样有效。随机化范围、模型误差与真实任务分布影响迁移结果，还需硬件标定、实际测试与失效分析。Gazebo 可作为一种仿真环境，其他任务也可采用不同平台。\n\n## 参考\n\n- [Tobin 等：域随机化与虚实迁移](https://arxiv.org/abs/1703.06907)\n- [Gazebo：仿真环境](https://gazebosim.org/docs/latest/getstarted/)"
 }

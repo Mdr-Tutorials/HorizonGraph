@@ -27,13 +27,39 @@
     {
       "relation_type": "implements",
       "target_id": "ir"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ir",
+      "context": "以 LLVM IR 连接前端、优化 Pass 和目标后端。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-generation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "constant-folding"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dead-code-elimination"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "common-subexpression-elimination"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "register-allocation"
     }
   ],
-  "summary": "可复用的编译器基础设施，Clang 与 rustc 的后端。",
+  "summary": "提供 IR、优化与多目标后端的可复用编译工具体系。",
   "importance": 5,
   "popular": 82,
   "official_site": "https://llvm.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\nLLVM 的 IR 与 Pass 基础设施承载分析和变换，目标后端完成指令选择与寄存器分配等降低。Clang 是使用 LLVM 的独立前端，ORC 提供运行时编译与链接设施。\n\n## 边界与应用\n\nLLVM 不是一个单独的源语言编译器，也不保证所有语言语义自动兼容。具体优化流水线、目标支持和 JIT 能力取决于构建与调用方式。\n\n## 参考\n\n- [LLVM IR 语言参考](https://llvm.org/docs/LangRef.html)\n- [LLVM 代码生成器](https://llvm.org/docs/CodeGenerator.html)\n- [LLVM ORC JIT 架构](https://llvm.org/docs/ORCv2.html)\n- [LLVM 分析与优化 Pass](https://llvm.org/docs/Passes.html)"
 }

@@ -1,0 +1,39 @@
+{
+  "id": "operations-research",
+  "name": "Operations Research",
+  "aliases": [
+    "运筹学",
+    "OR"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mathematical-optimization",
+      "context": "在资源分配、排程和路径决策中，将目标与约束构造成可求解模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "combinatorial-optimization",
+      "context": "选择设施、路线或作业顺序时采用离散组合模型。"
+    }
+  ],
+  "summary": "用数学模型和定量方法支持资源配置与决策。",
+  "description": "运筹学从真实决策中提取变量、约束和目标，结合优化、概率模型与仿真评估方案。生产排程、车辆路径和人员配置是典型问题，建模首先需要明确资源限制和评价标准。\n\n求解器只能优化所提供的模型；遗漏约束、错误成本或不确定的输入都可能使数学最优方案不可执行。实践中要检验假设、做敏感性分析，并区分可行方案与已证明最优的方案。\n\n参考：[MIT 运筹优化讲义](https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/)；[OR-Tools 应用分类](https://developers.google.com/optimization/introduction)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/"
+}

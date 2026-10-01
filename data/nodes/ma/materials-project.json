@@ -1,0 +1,39 @@
+{
+  "id": "materials-project",
+  "name": "Materials Project",
+  "aliases": [
+    "材料项目"
+  ],
+  "type": "product",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "density-functional-theory",
+      "context": "主要材料计算路径通过 DFT 估计结构能量和性质。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "thermodynamic-stability",
+      "context": "以相图及竞争相分析展示材料稳定性信息。"
+    }
+  ],
+  "summary": "提供计算材料结构、性质与分析接口的项目。",
+  "description": "Materials Project 发布带方法信息的材料结构与计算性质，并提供检索、可视化和程序接口。记录涉及电子结构、稳定性、声子等能力，具体数据可用性随条目与发布批次变化。\n\n它不是所有材料的实验真值表。使用时需保留材料标识、结构、计算路线及数据库版本，特别注意不同泛函与校正方案混用的边界。\n\n## 参考\n\n- [Materials Project：项目介绍](https://docs.materialsproject.org/)\n- [Materials Project：计算条件](https://docs.materialsproject.org/methodology/materials-methodology/calculation-details)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://materialsproject.org/"
+}

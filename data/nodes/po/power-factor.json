@@ -1,0 +1,33 @@
+{
+  "id": "power-factor",
+  "name": "Power Factor",
+  "aliases": [
+    "功率因数"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reactive-power",
+      "context": "在正弦稳态功率三角形中，结合 P 与 Q 计算视在功率及功率因数。"
+    }
+  ],
+  "summary": "有功功率与视在功率之比，用于描述负荷的功率利用关系。",
+  "description": "功率因数按有功功率与电压、电流有效值形成的视在功率之比计算。在正弦稳态条件下，它与电压和电流相位差的余弦对应。\n\n非线性负荷产生谐波时，总功率因数不只由基波相位差决定。功率因数不是设备能量转换效率，改善它也不能直接等同于按相同比例降低有功耗能。\n\n参考：[MIT 6.061：交流网络功率](https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/resources/mit6_061s11_ch2/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/resources/mit6_061s11_ch2/",
+  "abbreviation": "PF"
+}

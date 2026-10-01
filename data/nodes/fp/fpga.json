@@ -1,0 +1,44 @@
+{
+  "id": "fpga",
+  "name": "Field-Programmable Gate Array",
+  "aliases": [
+    "现场可编程门阵列"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rtl",
+      "context": "在 HDL 驱动的 FPGA 流程中，以 RTL 说明用户数字电路。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logic-synthesis",
+      "context": "把可综合描述映射为目标 FPGA 的逻辑与存储等资源。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "place-and-route",
+      "context": "在目标 FPGA 资源上确定布局和可编程互连。"
+    }
+  ],
+  "summary": "通过配置可编程逻辑与互连来实现数字硬件的器件类型。",
+  "description": "FPGA 在制造后配置逻辑块和可编程互连，以实现用户电路；通常还包含存储、乘加或其他硬核资源。常见流程从 RTL 经综合、布局布线生成器件配置数据。配置完成后是硬件电路在执行，并非顺序解释 HDL；具体资源和配置机制依器件而异。\n\n参考：[Synopsys：RTL 设计](https://www.synopsys.com/glossary/what-is-register-transfer-level-design.html)；[Yosys+nextpnr 原始论文](https://arxiv.org/abs/1903.10407)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "FPGA",
+  "official_site": "https://www.synopsys.com/glossary/what-is-register-transfer-level-design.html"
+}

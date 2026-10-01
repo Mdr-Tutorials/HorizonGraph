@@ -1,0 +1,43 @@
+{
+  "id": "signal-processing",
+  "name": "Signal Processing",
+  "aliases": [
+    "信号处理",
+    "DSP"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "signal",
+      "context": "将观测建模为随时间或空间变化的函数或样本序列。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fourier-transform",
+      "context": "分析频率成分和线性系统频率响应。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "digital-filter",
+      "context": "在离散样本处理中抑制指定频带或提取需要的变化。"
+    }
+  ],
+  "summary": "分析、变换和提取信号中有效信息的方法体系。",
+  "description": "信号处理把声音、图像、传感器或通信测量表示成函数或序列，通过滤波、变换和估计提取信息。连续与离散时间、确定与随机信号需要相应分析工具，数字处理还涉及采样与有限精度。\n\n算法效果依赖信号假设、噪声模型和观测条件。处理不会自动恢复采样已经丢失的信息，滤波也可能改变目标内容；应同时评估频率响应、延迟和估计误差。\n\n参考：[MIT 信号与系统](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/lecture-notes/)；[MIT 离散时间信号处理](https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/lecture-notes/"
+}

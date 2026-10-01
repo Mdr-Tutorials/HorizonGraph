@@ -1,0 +1,33 @@
+{
+  "id": "coordinate-reference-system",
+  "name": "Coordinate Reference System",
+  "aliases": [
+    "坐标参考系"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "geospatial-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geodetic-datum",
+      "context": "地球参考系通过大地基准或参考框架把坐标与地球联系起来。"
+    }
+  ],
+  "summary": "规定坐标轴、单位和地球参考，使位置具有可解释含义。",
+  "description": "## 机制\n\nCRS 将坐标系统与参考框架或基准联系起来，规定坐标所描述的位置及轴、单位等约定。地理和投影坐标参考系使用不同坐标表达，可通过适当操作进行转换。\n\n## 边界与应用\n\n相同数值在不同 CRS 中不一定是同一地点；仅修改 CRS 标签不等于重投影。轴顺序、历元、适用区域和基准转换资料会影响正确性与精度。\n\n## 参考\n\n- [QGIS：坐标参考系](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html)\n- [PROJ：坐标参考对象](https://proj.org/en/stable/specifications/projjson.html)",
+  "importance": 5,
+  "official_site": "https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ],
+  "abbreviation": "CRS"
+}

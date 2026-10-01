@@ -1,0 +1,44 @@
+{
+  "id": "pca",
+  "name": "Principal Component Analysis",
+  "aliases": [
+    "主成分分析"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics",
+    "mathematics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "singular-value-decomposition",
+      "context": "对中心化样本矩阵做 SVD，以获得主方向与对应的解释方差。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "covariance",
+      "context": "通过中心化数据的协方差结构解释各主成分对应的变化方向。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "statistical-variance",
+      "context": "按投影后的方差排序主成分，并以解释方差衡量保留信息量。"
+    }
+  ],
+  "summary": "寻找最大方差的正交方向进行线性降维。",
+  "description": "PCA 对中心化数据寻找按解释方差排序的正交方向，将样本投影到前几个方向。可对中心化矩阵做 SVD，也可分析协方差矩阵的特征方向；得到的主成分是原始特征的线性组合。\n\n它可用于压缩、去除部分噪声和可视化，但最大方差方向未必最有利于预测标签，线性投影也无法保留所有非线性结构。中心化不等于标准化；不同特征的量纲是否应统一必须明确。用于后续监督模型时，PCA 只能在训练数据上拟合。\n\n参考：[scikit-learn PCA](https://scikit-learn.org/stable/modules/decomposition.html#pca)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "PCA"
+}

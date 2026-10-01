@@ -1,0 +1,31 @@
+{
+  "id": "random-forest",
+  "name": "Random Forest",
+  "aliases": [
+    "随机森林"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "decision-tree",
+      "context": "以多棵随机化决策树为基本学习器，通过聚合输出形成预测。"
+    }
+  ],
+  "summary": "结合多棵随机化决策树形成集成预测。",
+  "description": "随机森林训练多棵树，常用自助采样抽取每棵树的训练数据，并在节点分裂时只考虑随机抽取的一部分特征。分类可聚合各树的类别概率或投票，回归可平均各树预测。\n\n随机化使树之间不完全相同，集成有助于降低单树的估计波动；它不保证任意数据上优于其他方法。更多树增加计算与存储，特征重要性也会受统计方式和相关特征影响。袋外分数可提供内部估计，但不能替代与实际部署分布一致的测试。\n\n参考：[Breiman 随机森林原始论文](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)；[scikit-learn RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

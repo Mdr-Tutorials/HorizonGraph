@@ -1,0 +1,37 @@
+{
+  "id": "power-flow",
+  "name": "Power Flow Analysis",
+  "aliases": [
+    "潮流分析"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "per-unit-system",
+      "context": "在常用潮流数据模型中，把电压及网络阻抗按共同功率和电压基准归一化。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kirchhoffs-laws",
+      "context": "由网络电流与功率平衡关系构建母线约束。"
+    }
+  ],
+  "summary": "在给定稳态网络与注入条件下求解电压和功率分布。",
+  "description": "潮流分析根据网络拓扑、线路和变压器参数，以及发电与负荷条件，求母线电压幅值、相角及支路功率。交流潮流通常是非线性方程问题。\n\n平衡交流、三相不平衡和线性化直流潮流具有不同假设；电力领域的 DC 潮流是交流网络近似，不等于任意物理直流电网仿真。收敛也不自动证明所有运行约束满足。\n\n参考：[MIT 6.061：潮流分析](https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/resources/mit6_061s11_ch5/)；[pandapower：潮流分析](https://pandapower.readthedocs.io/en/stable/powerflow/run.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/resources/mit6_061s11_ch5/"
+}

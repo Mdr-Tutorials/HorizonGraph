@@ -1,0 +1,37 @@
+{
+  "id": "crystallography",
+  "name": "Crystallography",
+  "aliases": [
+    "晶体学"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "crystal-structure",
+      "context": "以原子排列、对称与占位为结构分析对象。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reciprocal-lattice",
+      "context": "在衍射分析中表达周期结构的空间频率与反射位置。"
+    }
+  ],
+  "summary": "研究晶体结构、对称性及其测定方法。",
+  "description": "晶体学研究晶体中的空间排列和对称性，并通过衍射等测量推断结构。点阵描述平移周期，原子基元及占位则决定具体晶体，点阵类型并不等于一种材料结构。\n\n晶胞、实空间与倒易空间共同表达几何和衍射信息。实际数据还受缺陷、无序、仪器条件和模型选择影响，几何分类与实验结构精修承担不同任务。\n\n## 参考\n\n- [IUCr：晶体结构](https://dictionary.iucr.org/Crystal_structure)\n- [IUCr：倒易点阵](https://www.iucr.org/what-we-do/education/pamphlets/reciprocal-lattice)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

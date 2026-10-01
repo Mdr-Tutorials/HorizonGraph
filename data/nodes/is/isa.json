@@ -1,0 +1,28 @@
+{
+  "id": "isa",
+  "name": "International Society of Automation",
+  "aliases": [
+    "国际自动化学会"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "以标准、教育和专业交流推动自动化工程的非营利组织。",
+  "description": "ISA 是自动化领域的非营利专业组织，组织标准制定、知识交流、培训与专业认证。批次控制、企业控制集成及工业网络安全属于其标准工作范围。\n\n专业协会的标准与教育活动不等于制造自动化设备。成员、培训证书、产品符合性和标准治理归属需要区分，不能相互推导。\n\n参考：[ISA：国际自动化学会](https://www.isa.org/about-isa)；[ISA：ISA-88 批次控制标准](https://www.isa.org/standards-and-publications/isa-standards/isa-88-standards)；[ISA：ISA-95 企业与控制集成标准](https://www.isa.org/standards-and-publications/isa-standards/isa-95-standard)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "official_site": "https://www.isa.org/about-isa",
+  "abbreviation": "ISA"
+}

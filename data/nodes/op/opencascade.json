@@ -1,0 +1,39 @@
+{
+  "id": "opencascade",
+  "name": "Open CASCADE Technology",
+  "aliases": [
+    "Open CASCADE",
+    "OpenCASCADE",
+    "OCCT"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "boundary-representation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "constructive-solid-geometry"
+    }
+  ],
+  "summary": "提供边界几何建模、布尔运算与数据交换的开源内核。",
+  "description": "Open CASCADE Technology 是几何建模内核与 C++ 组件集合，提供曲线曲面、拓扑、布尔运算、显示和工程数据交换等功能。它为 CAD 应用提供底层能力，自身并非完整机械设计工作流。\n\n几何容差、拓扑有效性和曲面求交影响操作结果。使用其算法仍需理解输入形状和返回状态，不能把内核调用成功视作模型满足制造或仿真的全部条件。\n\n参考：[Open CASCADE 建模数据](https://dev.opencascade.org/doc/overview/html/occt_user_guides__modeling_data.html)；[Open CASCADE 建模算法](https://dev.opencascade.org/doc/overview/html/occt_user_guides__modeling_algos.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://dev.opencascade.org/doc/overview/html/occt_user_guides__modeling_data.html",
+  "abstraction_level": "framework_library"
+}

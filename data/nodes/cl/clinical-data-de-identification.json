@@ -1,0 +1,38 @@
+{
+  "id": "clinical-data-de-identification",
+  "name": "Clinical Data De-identification",
+  "aliases": [
+    "临床数据去标识化",
+    "医疗数据脱敏"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ehr",
+      "context": "从电子健康记录准备研究或共享数据时识别并处理能够揭示患者身份的内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-data-provenance",
+      "context": "记录脱敏规则、数据版本与处理过程，以便审查输出及信息损失。"
+    }
+  ],
+  "summary": "降低临床数据被关联至具体个人的风险。",
+  "description": "## 机制\n\n临床数据去标识化识别直接标识、准标识和隐含身份线索，再通过删除、泛化或其他处理降低识别风险。自由文本、日期、影像像素及关联数据也可能泄露身份。\n\n## 边界与应用\n\n去标识化会损失信息，并不意味着重识别风险为零。美国 HIPAA 的 Safe Harbor 和专家判定是特定制度的例子，不能视为适用于所有地区的统一规则；须按实际数据和使用环境评估。\n\n## 参考\n\n- [HHS：健康信息去标识化方法](https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html)",
+  "importance": 4,
+  "official_site": "https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ]
+}

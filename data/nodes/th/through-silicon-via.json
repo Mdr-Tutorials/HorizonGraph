@@ -1,0 +1,30 @@
+{
+  "id": "through-silicon-via",
+  "name": "Through-Silicon Via",
+  "aliases": [
+    "硅通孔",
+    "穿硅通孔"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    }
+  ],
+  "summary": "穿过硅层的垂直导电互连，用于堆叠芯片等结构。",
+  "description": "TSV 在硅层中形成垂直导电通路，以连接堆叠芯片或中介层的不同表面。HBM 用 TSV 连接堆叠 DRAM；该结构涉及制造、信号、电源与热设计约束。TSV 是互连技术，不能把所有 3D 封装都等同于 TSV 封装。\n\n参考：[Micron：HBM2E 堆叠与 TSV](https://www.micron.com/about/blog/applications/data-center/hbm2e-fastest-memory-modern-data-center)；[TSMC：CoWoS](https://www.tsmc.com/english/dedicatedFoundry/technology/cowos)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abbreviation": "TSV",
+  "official_site": "https://www.micron.com/about/blog/applications/data-center/hbm2e-fastest-memory-modern-data-center"
+}

@@ -17,11 +17,42 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "threat-modeling",
+      "context": "设计与重要变更评审时维护威胁模型，确定需验证的信任边界。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sast",
+      "context": "代码与构建流程按项目语言、规则和风险配置静态安全分析。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dast",
+      "context": "授权的测试环境中探测运行应用接口，补充静态分析的可观测行为。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "secrets-management",
+      "context": "在开发和部署过程中受控交付、轮换和撤销凭据，避免把秘密固化到工件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cvss",
+      "context": "处置已知漏洞时可参考带版本和向量的 CVSS 严重性，再结合资产暴露与业务影响排序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fuzzing",
+      "context": "对解析器等输入复杂组件开展模糊测试，确认失败条件并修复。"
     }
   ],
-  "summary": "把安全左移进流水线，依赖扫描与 SAST 常态化。",
+  "summary": "将安全设计、验证与响应融入软件交付生命周期。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "## 机制\n\n团队在设计、实现、构建、部署与维护中共同承担安全工作，可结合威胁建模、代码测试、依赖检查和凭据管理。NIST SSDF 将实践组织为准备、保护、产出安全软件和响应漏洞等方面。\n\n## 边界与应用\n\nDevSecOps 不等于加几项流水线扫描；工具告警需验证和处置，设计及生产运行仍有责任。安全左移与持续运行反馈可以并行，指标应结合覆盖与风险而非仅看扫描次数。\n\n## 参考\n\n- [NIST SSDF：安全开发实践](https://csrc.nist.gov/pubs/sp/800/218/final)"
 }

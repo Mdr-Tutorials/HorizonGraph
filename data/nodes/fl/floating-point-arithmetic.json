@@ -1,0 +1,34 @@
+{
+  "id": "floating-point-arithmetic",
+  "name": "Floating-Point Arithmetic",
+  "aliases": [
+    "浮点运算",
+    "浮点算术"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "numerical-stability",
+      "context": "有限精度与舍入规则限定数值算法误差传播的分析条件。"
+    }
+  ],
+  "summary": "以有限尾数和指数近似实数运算的表示与规则。",
+  "description": "浮点数使用符号、尾数和指数表示有限范围的数，许多实数及运算结果需要舍入。IEEE 浮点体系还处理特殊值、异常和不同舍入方式；数学上的结合律在有限精度运算中通常不成立。\n\n相近数相减可能暴露原有表示误差，溢出和下溢也影响结果。并行归约顺序不同可能产生不同末位，重复计算的一致性与实际误差大小应分别评估。\n\n参考：[Goldberg 浮点运算论文](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html)；[FNC 误差与稳定性](https://fncbook.com/chapter1/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html"
+}

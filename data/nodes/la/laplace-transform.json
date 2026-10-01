@@ -1,0 +1,28 @@
+{
+  "id": "laplace-transform",
+  "name": "Laplace Transform",
+  "aliases": [
+    "拉普拉斯变换"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing",
+    "control-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    }
+  ],
+  "summary": "用复频率积分表示连续信号与微分方程的变换。",
+  "description": "Laplace 变换将连续信号与复指数核积分，用于微分方程和连续时间系统分析。单边形式可处理初始条件，双边形式需要收敛域；二者的约定不能混用。\n\n复频域极点分析须结合因果性和收敛条件。它与傅里叶变换相关但并不要求相同收敛范围，传递函数的零状态解释也不同于任意非零初值的完整响应。\n\n参考：[MIT Laplace 变换](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec06/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec06/"
+}

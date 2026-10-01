@@ -1,0 +1,28 @@
+{
+  "id": "r-tree",
+  "name": "R-tree",
+  "aliases": [
+    "R 树"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    }
+  ],
+  "summary": "以分层包围矩形组织多维空间对象的动态索引结构。",
+  "description": "## 机制\n\nR-tree 的内部条目用包围矩形覆盖子节点，叶层引用空间对象；查询按矩形关系下探，插入和分裂保持动态结构。对象可以具有范围，而不是只有零体积坐标点。\n\n## 边界与应用\n\n兄弟矩形可能重叠，使查询访问多个分支。树筛选候选后仍可能需要精确几何检查；R*tree 等变体改变组织策略，不应混为唯一实现。\n\n## 参考\n\n- [Guttman：R-tree 原始论文](https://www.cs.princeton.edu/courses/archive/fall08/cos597B/papers/rtrees.pdf)\n- [PostGIS：空间索引](https://postgis.net/workshops/postgis-intro/indexing.html)",
+  "importance": 4,
+  "official_site": "https://www.cs.princeton.edu/courses/archive/fall08/cos597B/papers/rtrees.pdf",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "databases"
+  ]
+}

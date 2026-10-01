@@ -1,0 +1,42 @@
+{
+  "id": "codesys",
+  "name": "CODESYS Development System",
+  "aliases": [
+    "CODESYS 开发系统"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "codesys-group"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "structured-text",
+      "context": "提供 ST 编辑器与编译支持，用于实现控制程序中的计算和逻辑。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ladder-diagram",
+      "context": "提供 LD 图形编辑与在线监视，用于设计和调试控制网络。"
+    }
+  ],
+  "summary": "支持 IEC 61131-3 控制程序、工程配置和在线调试的开发工具。",
+  "description": "CODESYS Development System 提供 ST、LD、FBD 等编辑器、库和工程功能，可针对不同设备平台开发控制应用。运行应用需要与目标控制运行时和设备配置配合。\n\n开发系统与 PLC 运行时是不同产品角色，不能把安装 IDE 等同于部署控制器。标准语言之外的扩展、可选模块和设备支持具有各自范围。\n\n参考：[CODESYS：Development System](https://www.codesys.com/products/engineering/development-system/)；[CODESYS Group：软件与运行时体系](https://www.codesys.com/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.codesys.com/products/engineering/development-system/",
+  "abstraction_level": "application_tool"
+}

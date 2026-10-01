@@ -1,0 +1,52 @@
+{
+  "id": "scipy",
+  "name": "SciPy",
+  "aliases": [
+    "SciPy",
+    "Python 科学计算库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering",
+    "mathematical-optimization",
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "numpy"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "numerical-integration"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sparse-linear-solver"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "filter-design"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "root-finding"
+    }
+  ],
+  "summary": "提供优化、积分、信号与科学数值算法的 Python 库。",
+  "description": "SciPy 建立在 NumPy 数组之上，提供线性代数、优化、积分、插值、稀疏结构和信号处理等模块。它把多类数值实现组织成 Python 接口，与只提供数组计算的 NumPy 职责不同。\n\n函数的算法条件、误差容差和返回状态仍需阅读文档，统一接口不会消除数值问题。稀疏与稠密方法、全局与局部优化以及不同 ODE 方法须按模型结构选择。\n\n参考：[SciPy 用户指南](https://docs.scipy.org/doc/scipy/tutorial/)；[SciPy 信号处理](https://docs.scipy.org/doc/scipy/tutorial/signal.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.scipy.org/doc/scipy/tutorial/",
+  "abstraction_level": "framework_library"
+}

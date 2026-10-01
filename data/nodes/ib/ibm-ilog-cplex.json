@@ -1,0 +1,47 @@
+{
+  "id": "ibm-ilog-cplex",
+  "name": "IBM ILOG CPLEX Optimization Studio",
+  "aliases": [
+    "IBM ILOG CPLEX",
+    "CPLEX",
+    "CPLEX Optimization Studio"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "linear-programming"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mixed-integer-programming"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "constraint-programming"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "ibm"
+    }
+  ],
+  "summary": "结合数学规划与约束规划的商业优化产品。",
+  "description": "IBM ILOG CPLEX Optimization Studio 包含建模与求解工具，CPLEX 引擎处理线性、混合整数和二次等数学规划，CP Optimizer 面向约束规划与排程。产品套件、建模语言和两个求解引擎需区分。\n\n不同问题须使用合适引擎和接口；离散搜索到达限制时可能只得到可行方案。应用应检查许可配置、返回状态、最优性间隙和数据假设，而不是把产品名当作对所有优化问题的统一保证。\n\n参考：[IBM 官方产品说明](https://www.ibm.com/products/ilog-cplex-optimization-studio)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.ibm.com/products/ilog-cplex-optimization-studio",
+  "abstraction_level": "application_tool"
+}

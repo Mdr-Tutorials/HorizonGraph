@@ -1,0 +1,32 @@
+{
+  "id": "molecular-mechanics",
+  "name": "Molecular Mechanics",
+  "aliases": [
+    "分子力学"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "force-field",
+      "context": "以原子类型、势能项和参数计算分子能量及力。"
+    }
+  ],
+  "summary": "用参数化势能描述分子的经典结构与相互作用。",
+  "description": "分子力学通过键长、键角、扭转和非键相互作用等项定义势能。原子类型及参数编码模型假设，适合的问题取决于参数化覆盖的化学环境。\n\n常规固定拓扑力场并不显式求解电子，也通常不能自行描述成键断键。几何优化与分子动力学可以使用这一势能，但静态最小值和有限温度轨迹是不同结果。\n\n## 参考\n\n- [GROMACS：键合相互作用](https://manual.gromacs.org/current/reference-manual/functions/bonded-interactions.html)\n- [OpenMM：物理模型与数值方法](https://docs.openmm.org/latest/userguide/theory.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

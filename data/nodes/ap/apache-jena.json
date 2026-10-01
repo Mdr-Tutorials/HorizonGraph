@@ -1,0 +1,49 @@
+{
+  "id": "apache-jena",
+  "name": "Apache Jena",
+  "aliases": [
+    "Apache Jena 语义网框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "通过 RDF API 读写和操作图数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sparql",
+      "context": "使用 ARQ 处理 SPARQL 查询。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rule-engine",
+      "context": "在配置推理模型时使用支持的规则引擎。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "java",
+      "context": "在 Java API 路径中组织语义数据应用。"
+    }
+  ],
+  "summary": "提供 RDF、SPARQL、本体与推理相关能力的 Java 框架。",
+  "description": "Apache Jena 包含 RDF 数据 API、ARQ 查询、存储和本体及推理相关能力，组件可以用于构建不同的语义数据应用。推理器支持的逻辑范围与配置需要按文档区分。\n\n一个框架提供 OWL 相关 API 不意味着每个内置引擎都完整实现 OWL 2 DL。持久化、查询、规则推理与本体编辑承担不同角色，应用应选择实际需要的组件。\n\n## 参考\n\n- [Apache Jena：本体 API](https://jena.apache.org/documentation/ontology/)\n- [Apache Jena：ARQ 查询处理](https://jena.apache.org/documentation/query/)\n- [Apache Jena：推理与规则引擎](https://jena.apache.org/documentation/inference/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://jena.apache.org/"
+}

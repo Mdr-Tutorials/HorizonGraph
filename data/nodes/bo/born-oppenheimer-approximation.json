@@ -1,0 +1,32 @@
+{
+  "id": "born-oppenheimer-approximation",
+  "name": "Born–Oppenheimer Approximation",
+  "aliases": [
+    "玻恩—奥本海默近似"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "potential-energy-surface",
+      "context": "把选定电子态的能量作为核坐标的函数来组织核运动。"
+    }
+  ],
+  "summary": "利用电子与原子核运动尺度差异近似分离计算。",
+  "description": "玻恩—奥本海默近似利用电子和原子核质量及运动尺度的差异，在许多计算中先固定核坐标求电子状态，再研究核在相应能量面上的运动。它使结构优化和不少原子模拟计算成为可组织的步骤。\n\n这种分离有物理适用范围；电子态接近、非绝热过程和某些激发态动力学可能需要超出该近似的处理。第一性原理模拟仍包含具体近似，不能把名称理解为毫无模型误差。\n\n## 参考\n\n- [VASP：第一性原理计算理论](https://vasp.at/wiki/index.php/Category:Theory)\n- [VASP：分子结构优化与玻恩—奥本海默近似](https://vasp.at/tutorials/latest/molecules/part2/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

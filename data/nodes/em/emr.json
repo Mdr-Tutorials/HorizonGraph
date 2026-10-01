@@ -1,0 +1,33 @@
+{
+  "id": "emr",
+  "name": "Electronic Medical Record",
+  "aliases": [
+    "电子病历"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-terminology",
+      "context": "机构内记录临床事实并支持结构化检索时采用临床编码与词汇。"
+    }
+  ],
+  "summary": "保存医疗机构内部诊疗过程的数字化病历。",
+  "description": "## 机制\n\n电子病历将原有纸质诊疗记录转为数字数据，保存医务人员在某一机构或业务范围内采集的病史、检查、处置与文书，支撑本地临床工作流程。\n\n## 边界与应用\n\nEMR 不等于任何一份电子文档，也不保证数据可在外部直接复用。与 EHR 的区别主要在跨服务方共享与记录范围，实际系统可以同时承担两种职责。\n\n## 参考\n\n- [ONC：EHR、EMR 与个人健康记录的区别](https://www.healthit.gov/faq/what-difference-between-personal-health-record-electronic-health-record-and-electronic-medical)",
+  "importance": 4,
+  "official_site": "https://www.healthit.gov/faq/what-difference-between-personal-health-record-electronic-health-record-and-electronic-medical",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abbreviation": "EMR"
+}

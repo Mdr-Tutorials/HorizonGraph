@@ -1,0 +1,61 @@
+{
+  "id": "stanford-cs229",
+  "name": "Stanford CS229: Machine Learning",
+  "aliases": [
+    "斯坦福 CS229",
+    "CS229",
+    "斯坦福机器学习课程"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "course"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "supervised-learning",
+      "context": "官方课程说明将生成式与判别式监督学习、参数与非参数方法列为内容。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "unsupervised-learning",
+      "context": "官方课程说明包括聚类与降维；公开讲义给出相应建模与学习方法。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "linear-regression",
+      "context": "公开主讲义讲解最小二乘线性回归的目标函数、拟合与概率解释。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "logistic-regression",
+      "context": "公开主讲义以分类概率模型推导逻辑回归及其参数学习。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "svm",
+      "context": "公开主讲义介绍支持向量机、间隔和核方法。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "maximum-likelihood-estimation",
+      "context": "公开讲义将似然估计用于回归与分类等概率模型的参数学习。"
+    }
+  ],
+  "summary": "讲解机器学习与统计模式识别的斯坦福课程。",
+  "description": "Stanford CS229 从数学建模、目标函数与学习算法介绍机器学习，课程范围包括监督学习、聚类与降维、学习理论，以及强化学习和自适应控制。公开主讲义可作为线性回归、逻辑回归、SVM 等概念的推导入口。\n\n它与吴恩达在 Coursera 的机器学习课程有相关主题，但是不同课程实体，数学要求、授课安排和材料会随学期变化。检索某年作业、讲义或考核规则时应以对应学期的官方页面为准，公开资料也不意味着取得在校学分。\n\n参考：[CS229 官方课程主页](https://cs229.stanford.edu/)；[公开主讲义](https://cs229.stanford.edu/main_notes.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://cs229.stanford.edu/"
+}

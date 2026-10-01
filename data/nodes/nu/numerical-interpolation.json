@@ -1,0 +1,37 @@
+{
+  "id": "numerical-interpolation",
+  "name": "Numerical Interpolation",
+  "aliases": [
+    "数值插值"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "构造多项式或样条系数时，可用线性方程表达节点与连续性条件。"
+    }
+  ],
+  "summary": "构造经过已知样本点的函数近似。",
+  "description": "插值以节点和函数值构造通过这些点的近似，例如分段线性、多项式或样条。它不同于允许误差的回归拟合；节点位置与插值形式决定区间内部的近似行为。\n\n高次全局多项式可能在等距节点间强烈振荡，更多点不保证更好结果。外推到数据区间以外需要额外假设，不能沿用区间内的误差判断。\n\n参考：[FNC 插值与积分](https://fncbook.com/chapter5/)；[SciPy 插值文档](https://docs.scipy.org/doc/scipy/reference/interpolate.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://fncbook.com/chapter5/"
+}

@@ -3,14 +3,23 @@ import { createHash } from "node:crypto";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
+import { encodeAdjacency, type GraphEdge } from "./adjacency.js";
+import { createSearchIndex, SEARCH_ROUTING, searchLabel, type SearchRecord } from "./search-index.js";
+import { completeDataRelease, generatedDataset, publishDataRelease } from "./release.js";
 
 // 派生平面构建：前置 pnpm validate 通过。全部产物确定性排序，可重复构建。
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
 const CONTRACTS = path.join(ROOT, "contracts");
 const DATA = path.join(ROOT, "data");
 const DIST = path.join(ROOT, "dist");
+const renamesPath = path.join(DATA, "renames.json");
+const datasetPath = path.join(ROOT, "web", "src", "generated", "dataset.ts");
 
 const J = (p: string): any => JSON.parse(readFileSync(p, "utf8"));
+const cachedJSON = (p: string): any => {
+  try { return existsSync(p) ? J(p) : null; }
+  catch { return null; } // 缓存损坏只能使重建发生，不能成为事实源错误。
+};
 const sha1 = (s: string | Buffer) => createHash("sha1").update(s).digest("hex");
 
 const typesJ = J(path.join(CONTRACTS, "types.json"));
@@ -31,23 +40,39 @@ function* walk(dir: string, ext = ".json"): Generator<string> {
 const inputs: Record<string, string> = {};
 for (const f of [...walk(CONTRACTS), ...walk(path.join(DATA, "nodes")), ...walk(path.join(ROOT, "tools", "src"), ".ts")])
   inputs[path.relative(ROOT, f).replaceAll("\\", "/")] = sha1(readFileSync(f, "utf8"));
+// 重命名与重定向也是发布输入；文件的新增、修改和删除均使缓存失效。
+if (existsSync(renamesPath)) inputs["data/renames.json"] = sha1(readFileSync(renamesPath, "utf8"));
 
 const statePath = path.join(DIST, ".cache", "state.json");
+const previousState = cachedJSON(statePath);
 if (
-  existsSync(statePath) &&
-  existsSync(path.join(DIST, "graph", "edges.json")) &&
+  previousState &&
+  completeDataRelease(DIST, previousState.dataVersion, datasetPath) &&
   existsSync(path.join(DIST, "fonts", "harmony-sc-400.woff2")) &&
-  JSON.stringify(J(statePath).inputs) === JSON.stringify(inputs)
+  existsSync(path.join(DIST, "fonts", "harmony-sc-700.woff2")) &&
+  JSON.stringify(previousState.inputs) === JSON.stringify(inputs)
 ) {
   console.log("输入无变化，跳过构建");
   process.exit(0);
 }
 
+const logicalResources = new Set<string>();
+const rememberResource = (rel: string) => {
+  if (/^(graph|search|l2|site|contracts-vocab)\//.test(rel) || rel === "eco-vocab.json" || rel === "redirects.json")
+    logicalResources.add(rel);
+};
 const write = (rel: string, data: unknown) => {
   const p = path.join(DIST, rel);
   mkdirSync(path.dirname(p), { recursive: true });
   const s = typeof data === "string" ? data : JSON.stringify(data);
   writeFileSync(p, s.endsWith("\n") ? s : s + "\n");
+  rememberResource(rel);
+};
+const writeBinary = (rel: string, data: Uint8Array) => {
+  const p = path.join(DIST, rel);
+  mkdirSync(path.dirname(p), { recursive: true });
+  writeFileSync(p, data);
+  rememberResource(rel);
 };
 
 // ---------- 加载与索引 ----------
@@ -78,7 +103,7 @@ const ctxIdx = (c?: string) => {
   if (!ctxPool.has(c)) ctxPool.set(c, ctxPool.size);
   return ctxPool.get(c)!;
 };
-const edges: number[][] = [];
+const edges: GraphEdge[] = [];
 for (const n of dataNodes)
   for (const e of n.relations ?? [])
     edges.push([idx.get(n.id)!, relIdx.get(e.relation_type)!, idx.get(e.target_id)!, ctxIdx(e.context)]);
@@ -113,6 +138,27 @@ for (const n of dataNodes) {
   ]);
 }
 for (const s of shards) s.sort((a, b) => (a[1] < b[1] ? -1 : 1));
+
+// ---------- 可路由搜索：完整显示记录 + 1/2/3-gram 候选倒排分片 ----------
+const searchRecords: SearchRecord[] = allIds.map((id, i) => {
+  const o = ontoMap.get(id);
+  const n = o ?? nodeMap.get(id)!;
+  const type = o ? "meta_concept" : n.type;
+  const aliases: string[] = n.aliases ?? [];
+  const label = searchLabel(n.name, n.abbreviation ?? "", aliases, n.display_primary ?? "", n.display_secondary ?? "", type);
+  return {
+    idx: i, id, name: n.name, abbr: n.abbreviation ?? "", aliases, type,
+    importance: n.importance ?? 0, parent: vOf.get(i) ?? -1,
+    primary: label.primary, secondary: label.secondary,
+    realm: o ? "conceptual" : typesJ.types[type].realm, kind: o ? 0 : 1,
+  };
+});
+const routedSearch = createSearchIndex(searchRecords);
+write("search/routing.json", SEARCH_ROUTING);
+for (let s = 0; s < SHARDS; s++) {
+  write(`search/records-${s.toString(16)}.json`, routedSearch.records[s]);
+  write(`search/postings-${s.toString(16)}.json`, routedSearch.postings[s]);
+}
 
 // ---------- 分类树与实例 ----------
 const effMemo = new Map<string, string[]>();
@@ -198,7 +244,8 @@ const chainsOf = (v: string, seen = new Set<string>()): string[][] => {
   }
   return out;
 };
-const nodeEcosystems: string[][] = [];
+// 与 ids 严格对齐；本体节点没有生态链，也必须写 []，不能留下 JSON null 洞。
+const nodeEcosystems: string[][][] = Array.from({ length: allIds.length }, () => []);
 for (const n of dataNodes) {
   const chains: string[][] = [];
   const seenChain = new Set<string>();
@@ -237,13 +284,13 @@ write("site/worldview.json", {
 });
 
 // ---------- redirects 与汇总写出 ----------
-const renamesPath = path.join(DATA, "renames.json");
 write("redirects.json", existsSync(renamesPath) ? J(renamesPath) : { entries: [] });
 
 write("graph/ids.json", allIds);
 write("graph/nodes.json", records);
 write("graph/edges.json", edges);
 write("graph/reverse.json", reverse);
+writeBinary("graph/adjacency.bin", encodeAdjacency(allIds.length, relKeys.length, edges));
 const relDisplay: Record<string, { zh: string; en: string }> = {};
 const relInverse: Record<string, string> = {};
 for (const k of relKeys) {
@@ -303,7 +350,8 @@ collect(relDisplay);
 collect(relInverse);
 const charset = [...new Set(charsetBuf + UI_CHARS)].join("");
 const fontCachePath = path.join(DIST, ".cache", "font.json");
-if (!existsSync(fontCachePath) || J(fontCachePath).sha !== sha1(charset)) {
+if (cachedJSON(fontCachePath)?.sha !== sha1(charset) ||
+  !existsSync(path.join(DIST, "fonts", "harmony-sc-400.woff2")) || !existsSync(path.join(DIST, "fonts", "harmony-sc-700.woff2"))) {
   const req = createRequire(import.meta.url);
   const pkgDir = path.dirname(req.resolve("@lobehub/webfont-harmony-sans-sc/package.json"));
   const { default: subsetFont } = await import("subset-font");
@@ -317,7 +365,11 @@ if (!existsSync(fontCachePath) || J(fontCachePath).sha !== sha1(charset)) {
   write(".cache/font.json", { sha: sha1(charset), chars: charset.length });
 }
 
-write(".cache/state.json", { inputs });
+// ---------- 不可变数据发布：稳定入口钉住清单，资源按完整内容哈希寻址 ----------
+const release = publishDataRelease(DIST, typesJ.schema_version, logicalResources);
+mkdirSync(path.dirname(datasetPath), { recursive: true });
+writeFileSync(datasetPath, generatedDataset(release));
+write(".cache/state.json", { inputs, dataVersion: release.dataVersion });
 
 let files = 0;
 let bytes = 0;

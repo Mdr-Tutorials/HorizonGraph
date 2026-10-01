@@ -1,0 +1,32 @@
+{
+  "id": "gene-ontology",
+  "name": "Gene Ontology",
+  "aliases": [
+    "基因本体",
+    "GO 生物功能资源"
+  ],
+  "type": "product",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    }
+  ],
+  "summary": "以本体和证据化注释组织基因产物功能的资源。",
+  "description": "## 机制\n\nGO 用形式关系连接生物概念，主要组织分子功能、生物过程和细胞组分三方面。注释将基因产物与 GO 概念关联，并记录证据和来源，便于跨物种比较与数据解释。\n\n## 边界与应用\n\n本体概念与具体注释需区分，注释证据强度和版本会影响解释。缺少注释不表示缺少某种功能；富集分析也不能直接证明因果作用，需核对背景集合和统计流程。\n\n## 参考\n\n- [Gene Ontology：本体概览](https://www.geneontology.org/docs/ontology-documentation/)\n- [Gene Ontology：注释与证据](https://www.geneontology.org/docs/go-annotations/)",
+  "importance": 4,
+  "official_site": "https://www.geneontology.org/docs/ontology-documentation/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "abbreviation": "GO",
+  "display_primary": "Gene Ontology",
+  "display_secondary": "基因本体"
+}

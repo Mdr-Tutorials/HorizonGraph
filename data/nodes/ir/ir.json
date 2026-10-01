@@ -15,11 +15,17 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssa",
+      "context": "LLVM IR 的局部值采用 SSA 形式，内存状态仍需额外表示和分析。"
     }
   ],
-  "summary": "编译器前端的统一语言，优化发生在这一层。",
+  "summary": "连接程序分析、优化与目标降低的中间表示。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\nIR 用明确的运算和控制流表达程序，可以是树、图、字节码或多层表示。LLVM IR 提供类型、基本块与 SSA 值，使不同前端和后端共享部分分析与变换。\n\n## 边界与应用\n\n一种 IR 的语义不等于所有源语言语义；前端必须正确编码溢出、异常和内存规则。IR 的未定义行为和目标相关属性也限制允许的优化。\n\n## 参考\n\n- [LLVM IR 语言参考](https://llvm.org/docs/LangRef.html)"
 }

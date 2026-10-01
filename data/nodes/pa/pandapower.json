@@ -1,0 +1,44 @@
+{
+  "id": "pandapower",
+  "name": "pandapower",
+  "aliases": [
+    "pandapower"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "power-flow"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "power-system-state-estimation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "optimal-power-flow"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "以 Python 数据结构支持电网建模、潮流、估计和优化的工具库。",
+  "description": "pandapower 为线路、变压器、母线和其他电网元件提供模型及分析接口，支持潮流、最优潮流、状态估计、短路计算和拓扑分析。网络对象和结果表便于连接 Python 数据处理流程。\n\n平衡交流、线性化直流、三相及不同求解后端的支持条件不同。状态估计的量测可观测性、坏数据处理与求解收敛等仍需检查，调用成功并不证明模型符合实际系统。\n\n参考：[pandapower：电网建模、分析与优化](https://www.pandapower.org/)；[pandapower：潮流分析](https://pandapower.readthedocs.io/en/stable/powerflow/run.html)；[pandapower：电力系统状态估计](https://pandapower.readthedocs.io/en/stable/estimation.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.pandapower.org/",
+  "abstraction_level": "framework_library"
+}

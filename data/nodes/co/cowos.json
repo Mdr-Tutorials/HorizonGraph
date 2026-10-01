@@ -1,0 +1,44 @@
+{
+  "id": "cowos",
+  "name": "Chip-on-Wafer-on-Substrate",
+  "aliases": [
+    "晶片上晶圆上基板封装",
+    "CoWoS 封装"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "advanced-packaging",
+      "context": "以封装级异构集成实现多裸片逻辑与存储系统。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hbm",
+      "context": "在官方给出的 HPC 集成方案中，将逻辑芯片与多个 HBM 堆栈互连。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "tsmc"
+    }
+  ],
+  "summary": "台积电通过中介层集成逻辑芯片与存储的封装技术族。",
+  "description": "CoWoS 是 TSMC 的先进封装技术族，在封装级整合逻辑芯片和存储，官方示例包括通过中介层连接 SoC 与多个 HBM 堆栈。它处理裸片之间的集成，不替代单个裸片内部的 RTL、综合或晶圆制造；不同 CoWoS 变体的中介层结构不同。\n\n参考：[TSMC：CoWoS](https://www.tsmc.com/english/dedicatedFoundry/technology/cowos)；[TSMC：3DFabric](https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/3DFabric.htm)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abbreviation": "CoWoS",
+  "official_site": "https://www.tsmc.com/english/dedicatedFoundry/technology/cowos"
+}

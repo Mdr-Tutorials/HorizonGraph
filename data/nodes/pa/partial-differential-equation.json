@@ -1,0 +1,45 @@
+{
+  "id": "partial-differential-equation",
+  "name": "Partial Differential Equation",
+  "aliases": [
+    "偏微分方程",
+    "PDE"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "finite-difference-method",
+      "context": "在适当网格上用差分近似空间导数并形成离散方程。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "finite-element-method",
+      "context": "把弱形式投影到有限维函数空间以处理复杂几何中的场方程。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "finite-volume-method",
+      "context": "对控制体积分守恒方程并以边界通量构造离散平衡。"
+    }
+  ],
+  "summary": "用多个自变量的偏导数描述场变化的方程。",
+  "description": "偏微分方程描述温度、流速或位移等场对空间和时间的变化。除了方程，还需要定义几何域、边界及可能的初始条件；这些条件与方程共同决定计算问题。\n\n离散化可采用有限差分、有限元或有限体积等方法，各自对几何、守恒和函数空间有不同处理。解的存在、唯一性及误差不由求解器自动保证，需要结合模型和离散分析。\n\n参考：[DOLFINx Poisson 示例](https://docs.fenicsproject.org/dolfinx/main/python/demos/demo_poisson.html)；[PETSc 时间演化模型](https://petsc.org/release/manual/ts/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.fenicsproject.org/dolfinx/main/python/demos/demo_poisson.html",
+  "abbreviation": "PDE"
+}

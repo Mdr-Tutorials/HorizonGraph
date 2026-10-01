@@ -1,0 +1,38 @@
+{
+  "id": "numerical-stability",
+  "name": "Numerical Stability",
+  "aliases": [
+    "数值稳定性"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "condition-number",
+      "context": "把算法后向误差转化为可能的解误差时结合问题敏感程度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "floating-point-arithmetic",
+      "context": "分析有限精度舍入和相消怎样影响中间结果与最终解。"
+    }
+  ],
+  "summary": "描述计算算法如何控制与传播误差的性质。",
+  "description": "数值稳定性评价算法是否在合理范围内传播输入、舍入和中间计算误差。后向误差分析把计算结果看作邻近输入问题的精确解，帮助解释线性代数算法的可靠性。\n\n稳定性不同于物理系统的动态稳定，也不同于数据不会丢失。稳定算法处理病态问题仍可能有很大前向误差，因此必须与条件数、计算精度和残差检查一起解释。\n\n参考：[FNC 误差与稳定性](https://fncbook.com/chapter1/)；[LAPACK 误差分析](https://www.netlib.org/lapack/lug/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://fncbook.com/chapter1/"
+}

@@ -15,12 +15,33 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "gradient-boosting",
+      "context": "以按轮构建的树集成与正则化目标实现梯度提升。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "decision-tree",
+      "context": "树 booster 将回归树作为每一轮新增的基本学习器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regularization",
+      "context": "树复杂度与叶子权重惩罚以及采样等配置控制模型拟合能力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cross-validation",
+      "context": "xgboost.cv 可在指定分折与评价指标下执行交叉验证；划分须匹配数据的组别和时间结构。"
     }
   ],
-  "summary": "梯度提升树之王，表格建模竞赛与工业界长青。",
+  "summary": "提供可扩展梯度提升树的训练与预测库。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
-  "official_site": "https://xgboost.readthedocs.io"
+  "official_site": "https://xgboost.readthedocs.io",
+  "description": "XGBoost 的树提升模型按轮加入新树，把损失与模型复杂度惩罚组成训练目标，并利用一阶、二阶信息评估分裂。稀疏输入与缺失值的处理、数据结构和并行计算是其工程实现的重要部分。\n\n它提供原生训练接口与兼容 scikit-learn 的包装器，常用于表格分类、回归及排序。树深、学习率、轮数、采样和正则项要共同选择；早停所用数据不能被当成独立最终测试集。默认目标、设备和参数随接口与版本而异，不能由库名推断固定配置或效果排名。\n\n参考：[XGBoost 提升树教程](https://xgboost.readthedocs.io/en/stable/tutorials/model.html)；[XGBoost 原始论文](https://arxiv.org/abs/1603.02754)；[Python API 与交叉验证](https://xgboost.readthedocs.io/en/stable/python/python_api.html#xgboost.cv)。"
 }

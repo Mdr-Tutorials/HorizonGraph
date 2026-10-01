@@ -1,0 +1,45 @@
+{
+  "id": "stochastic-gradient-descent",
+  "name": "Stochastic Gradient Descent",
+  "aliases": [
+    "随机梯度下降",
+    "SGD"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gradient-descent",
+      "context": "把完整梯度替换为随机样本或小批量的梯度估计后执行更新。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "feature-scaling",
+      "context": "在线性模型训练中标准化尺度以改善随机梯度更新的数值行为。"
+    }
+  ],
+  "summary": "用随机样本或小批量梯度估计更新参数。",
+  "description": "随机梯度下降以样本或小批量近似完整目标梯度，在大数据训练中降低每步计算成本。估计的噪声使迭代路径波动，学习率策略、批量大小和数据采样方式影响收敛。\n\n它不等于所有带随机性的优化器，也不默认包含动量或 Adam。损失与正则项必须按约定缩放，特征尺度和数据顺序也会显著影响实际训练。\n\n参考：[scikit-learn SGD](https://scikit-learn.org/stable/modules/sgd.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://scikit-learn.org/stable/modules/sgd.html",
+  "abbreviation": "SGD"
+}

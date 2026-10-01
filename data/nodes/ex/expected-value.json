@@ -1,0 +1,32 @@
+{
+  "id": "expected-value",
+  "name": "Expected Value",
+  "aliases": [
+    "数学期望",
+    "期望值",
+    "Expectation"
+  ],
+  "type": "concept",
+  "domains": [
+    "mathematics",
+    "statistics",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mathematical-foundations"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "probability-distribution",
+      "context": "按随机变量的分布对取值加权求和或积分，以计算总体平均。"
+    }
+  ],
+  "summary": "按概率加权的随机变量平均值。",
+  "description": "离散随机变量的期望为 E[X]=Σx·P(X=x)，有密度时以相应积分计算。期望概括分布的平均位置，不必等于某个实际可取值；线性性 E[aX+bY]=aE[X]+bE[Y] 不要求 X 与 Y 独立。\n\n机器学习的总体风险可写成数据分布下的期望损失，有限样本平均是对它的估计。期望是否存在取决于可积性；重尾分布未必有有限均值，样本均值也不能无条件代表总体。\n\n参考：[Statlect 数学期望](https://www.statlect.com/fundamentals-of-probability/expected-value)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

@@ -1,0 +1,34 @@
+{
+  "id": "process-design-kit",
+  "name": "Process Design Kit",
+  "aliases": [
+    "工艺设计套件"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transistor",
+      "context": "用工艺相关器件模型和尺寸规则支持晶体管电路的设计与验证。"
+    }
+  ],
+  "summary": "把工艺模型、设计规则与实现视图交给设计工具的数据集。",
+  "description": "PDK 为指定工艺提供器件模型、层定义、设计规则及设计工具接口，库与参考流程可作为配套内容。它连接电路设计与可制造性验证；仅拥有 PDK 不代表设计已通过签核或可以量产。SkyWater 文档的开放版本还明确标注当前状态与已知问题。\n\n参考：[SkyWater SKY130 PDK 文档](https://skywater-pdk.readthedocs.io/en/main/)；[OpenROAD Flow Scripts 教程](https://openroad-flow-scripts.readthedocs.io/en/latest/tutorials/FlowTutorial.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abbreviation": "PDK",
+  "official_site": "https://skywater-pdk.readthedocs.io/en/main/"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "capacitor",
+  "name": "Capacitor",
+  "aliases": [
+    "电容器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impedance",
+      "context": "对线性电容的正弦稳态响应使用 1/(jωC) 阻抗，而非把该表达式用于所有瞬态。"
+    }
+  ],
+  "summary": "通过电场储能、使端口电流与电压变化率相关的元件。",
+  "description": "理想电容满足 Q=CV，恒定电容量下端口电流为 C·dV/dt，储能为 CV²/2。它可在电路中用于去耦、耦合、积分、滤波或定时。\n\n直流稳态开路是理想模型结论；实际器件存在漏电、等效串联电阻、寄生电感及电压限制。分析交流时，电容阻抗随频率改变。\n\n参考：[OpenStax：电容与电容量](https://openstax.org/books/university-physics-volume-2/pages/8-1-capacitors-and-capacitance)；[MIT 6.002：阻抗模型](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l17/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://openstax.org/books/university-physics-volume-2/pages/8-1-capacitors-and-capacitance"
+}

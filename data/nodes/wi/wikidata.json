@@ -1,0 +1,39 @@
+{
+  "id": "wikidata",
+  "name": "Wikidata",
+  "aliases": [
+    "维基数据"
+  ],
+  "type": "product",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-base",
+      "context": "以条目和结构化陈述维护可复用知识。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "entity-resolution",
+      "context": "通过条目标识和外部标识区分、连接不同来源的实体。"
+    }
+  ],
+  "summary": "维护带标识、陈述和来源的协作知识库。",
+  "description": "Wikidata 用稳定条目标识组织知识，并允许陈述携带限定符、来源和等级等信息。它可连接不同语言和外部标识，是可复用结构化知识的一种公共来源。\n\n陈述并非全部一致或经过同一审核流程，查询简化视图还可能省略限定符与来源。使用时需要辨认完整陈述与便捷表示，并保留具体资料时间和证据。\n\n## 参考\n\n- [Wikidata：项目介绍](https://www.wikidata.org/wiki/Wikidata:Introduction)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.wikidata.org/"
+}

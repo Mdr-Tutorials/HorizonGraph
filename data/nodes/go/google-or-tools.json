@@ -1,0 +1,42 @@
+{
+  "id": "google-or-tools",
+  "name": "OR-Tools",
+  "aliases": [
+    "Google OR-Tools",
+    "谷歌运筹优化工具"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "constraint-programming"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "integer-programming"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "提供路径、排程和整数优化能力的开源工具库。",
+  "description": "OR-Tools 提供车辆路径、约束规划、整数与线性优化等接口和实现。CP-SAT 与 MPSolver 的问题表示和求解路线不同，后者可连接多个线性或混合整数后端。\n\nCP-SAT 中的约束系数须按整数形式表达；启发式路径求解与已证明最优的整数求解也有不同保证。应按任务选择接口，并报告求解状态、时间限制和方案的实际约束。\n\n参考：[OR-Tools 总览](https://developers.google.com/optimization/introduction)；[CP-SAT](https://developers.google.com/optimization/cp/cp_solver)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://developers.google.com/optimization/introduction",
+  "abstraction_level": "framework_library"
+}

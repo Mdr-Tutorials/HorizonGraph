@@ -1,0 +1,42 @@
+{
+  "id": "snakemake",
+  "name": "Snakemake",
+  "aliases": [
+    "Snakemake 工作流系统"
+  ],
+  "type": "tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bwa",
+      "context": "官方基因组分析教程以规则调用 bwa mem 做读段比对；工作流可选择其他工具。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "samtools",
+      "context": "官方示例将 SAMtools 转换、排序及索引步骤接到 BWA 比对输出；这些是示例流程的可选工具。"
+    }
+  ],
+  "summary": "按输入输出规则组织和执行可扩展数据分析的工具。",
+  "description": "## 机制\n\nSnakemake 用基于 Python 的规则描述输入、输出和处理命令，依据目标输出及依赖关系安排任务。软件环境与执行配置可随工作流一同描述，使任务扩展至不同运行环境。\n\n## 边界与应用\n\nSnakemake 与 Nextflow 的流程表达和调度模型不同。缓存或环境定义不能代替固定输入、工具版本和方法验证；一个成功完成的流程仍可能包含不适合实验的分析步骤。\n\n## 参考\n\n- [Snakemake：官方文档](https://snakemake.readthedocs.io/en/stable/)\n- [Snakemake：基因组分析示例工作流](https://snakemake.readthedocs.io/en/stable/tutorial/basics.html)",
+  "importance": 4,
+  "official_site": "https://snakemake.readthedocs.io/en/stable/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

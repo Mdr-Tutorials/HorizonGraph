@@ -1,0 +1,38 @@
+{
+  "id": "phase-locked-loop",
+  "name": "Phase-Locked Loop",
+  "aliases": [
+    "锁相环"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "negative-feedback",
+      "context": "在经典模拟锁相环中，用相位误差闭环控制振荡器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "voltage-controlled-oscillator",
+      "context": "在 VCO 型 PLL 中，以控制电压调整振荡频率。"
+    }
+  ],
+  "summary": "通过相位比较与反馈调节振荡器、使其跟踪参考信号的系统。",
+  "description": "典型 PLL 包含相位或频率检测器、环路滤波器、压控振荡器和可选反馈分频器。相位误差信号改变振荡频率，可用于频率合成、时钟恢复及同步。\n\n锁定范围、环路带宽、相位裕度、抖动与杂散具有设计取舍。整数分频和分数分频形成不同合成方式；并非每种 PLL 都采用模拟 VCO。\n\n参考：[Analog Devices：锁相环基本原理](https://www.analog.com/media/en/training-seminars/tutorials/MT-086.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.analog.com/media/en/training-seminars/tutorials/MT-086.pdf",
+  "abbreviation": "PLL"
+}

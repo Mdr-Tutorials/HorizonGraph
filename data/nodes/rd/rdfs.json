@@ -1,0 +1,40 @@
+{
+  "id": "rdfs",
+  "name": "RDF Schema",
+  "aliases": [
+    "RDF 模式"
+  ],
+  "type": "language",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "在 RDF 图中表达类、属性及其关系。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logical-entailment",
+      "context": "根据 RDFS 语义推导类型及继承关系。"
+    }
+  ],
+  "summary": "为 RDF 类与属性提供基本词汇及语义。",
+  "description": "RDFS 描述类、属性、子类和子属性等关系，并提供 domain、range 等语义。它可以使图中隐含的类别或属性关系成为可推导陈述。\n\ndomain 和 range 在 RDFS 中通常用于推导类型，不是把违规记录直接拒绝的数据库约束。若任务需要检查已给数据是否满足形状，应使用明确的数据校验机制。\n\n## 参考\n\n- [W3C：RDF Schema](https://www.w3.org/TR/rdf-schema/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "RDFS",
+  "official_site": "https://www.w3.org/TR/rdf-schema/"
+}

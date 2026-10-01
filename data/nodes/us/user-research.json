@@ -1,0 +1,29 @@
+{
+  "id": "user-research",
+  "name": "User Research",
+  "aliases": [
+    "用户研究"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "usability-testing",
+      "context": "验证原型或服务流程时，观察目标用户完成具体任务，识别设计中的障碍。"
+    }
+  ],
+  "summary": "通过访谈、观察与任务研究了解用户需求和使用情境。",
+  "description": "## 方法\n\n用户研究围绕真实或潜在用户的目标、行为、限制与使用环境收集证据。访谈、情境观察、现有数据分析和原型测试各回答不同问题，研究方法与参与者应匹配需要验证的假设。\n\n## 边界\n\n用户口述的偏好需要与实际行为、任务结果一起解释；团队自己的设想不能直接充当用户需求。研究应贯穿设计与交付，并纳入残障用户及为用户提供支持的人。开展研究还需获得适当同意并保护参与者资料。\n\n## 参考\n\n- [GOV.UK：学习用户需求](https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs"
+}

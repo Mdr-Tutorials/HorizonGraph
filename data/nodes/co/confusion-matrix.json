@@ -1,0 +1,27 @@
+{
+  "id": "confusion-matrix",
+  "name": "Confusion Matrix",
+  "aliases": [
+    "混淆矩阵"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    }
+  ],
+  "summary": "按真实类别与预测类别统计分类结果。",
+  "description": "混淆矩阵汇总每个真实类别被预测为各类别的数量。scikit-learn 的约定是行表示真实类别、列表示预测类别；二分类可由此得到 TP、FP、FN、TN，进一步计算精确率、召回率和准确率。\n\n它本身是一张计数表，单一标量无法替代它揭示的误分类方向。类别顺序、正类定义、样本权重与归一化方式必须注明；按行归一化与按列归一化回答不同问题。多标签任务常为每个标签单独统计二元混淆矩阵。\n\n参考：[scikit-learn confusion_matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

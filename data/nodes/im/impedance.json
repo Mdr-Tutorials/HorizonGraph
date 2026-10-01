@@ -1,0 +1,32 @@
+{
+  "id": "impedance",
+  "name": "Electrical Impedance",
+  "aliases": [
+    "阻抗"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "impedance-matching",
+      "context": "负载与源、传输线的复阻抗关系决定匹配条件及反射。"
+    }
+  ],
+  "summary": "以复数统一描述正弦稳态电压电流的幅值与相位关系。",
+  "description": "阻抗是电压相量与电流相量之比，实部表示电阻性分量，虚部表示电抗。理想电阻、电感、电容分别具有 R、jωL、1/(jωC) 的阻抗。\n\n阻抗依赖频率及所用模型，不是任何瞬态都能直接使用的固定比值。射频端口还需说明参考平面和参考阻抗，匹配设计才能具有确定含义。\n\n参考：[MIT 6.002：阻抗模型](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l17/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l17/"
+}

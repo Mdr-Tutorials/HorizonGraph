@@ -1,0 +1,48 @@
+{
+  "id": "image-segmentation",
+  "name": "Image Segmentation",
+  "aliases": [
+    "图像分割",
+    "影像分割"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "computer-vision"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "u-net",
+      "context": "生物医学图像的像素级区域预测可采用 U-Net 的编码器、解码器与跨尺度跳跃连接。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "intersection-over-union",
+      "context": "分割评估用预测像素集合与真值集合的交并比；多类别语义分割常报告逐类 IoU 或 mIoU。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dice-score",
+      "context": "器官、病灶等前景区域的分割评估可用 Dice 重合分数，须说明背景与类别聚合口径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coco-dataset",
+      "context": "自然场景的实例分割研究使用 COCO 中的逐实例掩码标注训练与评估模型。"
+    }
+  ],
+  "summary": "按像素划分图像区域，可预测类别或对象实例掩码。",
+  "description": "图像分割把图像划分为区域，输出像素标签或掩码。语义分割为每个像素赋类别，同类的不同对象可以共享标签；实例分割还区分每个对象实例。它比边界框定位更细致，但也需要更精细的标注。[FCN 原始论文](https://arxiv.org/abs/1411.4038)、[Mask R-CNN 原始论文](https://openaccess.thecvf.com/content_iccv_2017/html/He_Mask_R-CNN_ICCV_2017_paper.html)。\n\n深度分割模型通常提取较低分辨率的语义特征，再恢复像素网格并融合浅层空间细节；U-Net 是编码器与解码器之间传递多尺度特征的代表。分割也可用传统算法实现，OpenCV 提供分水岭和 GrabCut，因此这是一类视觉任务，并不限于深度学习。[U-Net 项目说明](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)、[OpenCV 图像处理教程](https://docs.opencv.org/4.x/d2/d96/tutorial_py_table_of_contents_imgproc.html)。\n\n应用包括医学图像区域勾画、场景理解和前景提取。IoU 与 Dice 衡量区域重合，而实例分割还要处理实例匹配。只报告总体像素准确率可能掩盖少量前景被背景吞没的问题；评价结果应说明是否含背景、空掩码的处理方法，以及逐类或逐图聚合方式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://arxiv.org/abs/1411.4038"
+}

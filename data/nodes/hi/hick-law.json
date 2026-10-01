@@ -1,0 +1,26 @@
+{
+  "id": "hick-law",
+  "name": "Hick–Hyman Law",
+  "aliases": [
+    "希克定律",
+    "希克海曼定律",
+    "Hick's Law"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    }
+  ],
+  "summary": "描述受控选择反应中信息不确定性与反应时间的关系。",
+  "description": "## 原理\n\nHick–Hyman 定律研究选择反应任务中，需要区分的刺激或反应所含信息与反应时间的关系。等概率选项的简化模型呈对数趋势；选项概率不相等时，需要考虑分布带来的信息不确定性。\n\n## 边界\n\n实验中的刺激识别与反应选择不同于阅读长菜单、语义搜索或熟练快捷操作。不能据此断言所有界面只要减少选项就会更快；分组、可发现性、经验和实际任务都会影响结果，应再用用户测试验证。\n\n## 参考\n\n- [Hick：On the Rate of Gain of Information（论文摘要）](https://journals.sagepub.com/doi/pdf/10.1080/17470215208416600)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "official_site": "https://journals.sagepub.com/doi/pdf/10.1080/17470215208416600"
+}

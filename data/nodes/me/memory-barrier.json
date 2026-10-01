@@ -1,0 +1,28 @@
+{
+  "id": "memory-barrier",
+  "name": "Memory Barrier",
+  "aliases": [
+    "内存屏障",
+    "内存栅栏"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    }
+  ],
+  "summary": "约束编译器或处理器对指定内存访问的可见顺序。",
+  "description": "## 机制\n\n屏障在特定模型下建立读写顺序约束，常见于发布数据、设备访问与无锁算法。编译器屏障和 CPU 屏障作用层次不同；获取与释放操作也可提供单向排序。\n\n## 边界与应用\n\n屏障不等于互斥，不会让任意复合操作原子化。正确性依赖语言和硬件模型，以及配对同步规则；Linux 内核屏障文档不能替代用户态 C/C++ 语言规范。\n\n## 参考\n\n- [Linux 内存屏障说明](https://docs.kernel.org/core-api/wrappers/memory-barriers.html)",
+  "importance": 4,
+  "official_site": "https://docs.kernel.org/core-api/wrappers/memory-barriers.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ]
+}

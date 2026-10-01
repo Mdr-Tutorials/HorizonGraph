@@ -1,0 +1,33 @@
+{
+  "id": "unit-cell",
+  "name": "Unit Cell",
+  "aliases": [
+    "晶胞",
+    "单胞"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "用基矢矩阵变换分数坐标与笛卡尔坐标并计算胞体积。"
+    }
+  ],
+  "summary": "由晶格基矢定义、可平移重复的空间单元。",
+  "description": "晶胞由三个晶格基矢围成，其平移复制可描述周期点阵。原胞只包含一个点阵点，惯用胞可能包含多个点阵点以方便呈现对称性；点阵点数与原子数不是同一概念。\n\n晶胞尺寸、夹角和胞内分数坐标是材料结构输入的基本量。改变胞的选择可以保留同一无限周期结构，因此输入表示的差异不一定意味着不同材料。\n\n## 参考\n\n- [IUCr：晶胞](https://dictionary.iucr.org/Unit_cell)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4
+}

@@ -1,0 +1,47 @@
+{
+  "id": "ontology-engineering",
+  "name": "Ontology Engineering",
+  "aliases": [
+    "本体工程"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "description-logic",
+      "context": "在需要可计算类别约束和推理的形式化路径中选择描述逻辑。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "owl",
+      "context": "在 OWL 本体路径中表达类、属性、个体及公理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shacl",
+      "context": "在 RDF 数据校验路径中编写需检查的形状约束。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "protege",
+      "context": "在采用该编辑器的 OWL 本体工作流中维护类、属性、个体与公理。"
+    }
+  ],
+  "summary": "设计和维护领域概念、关系及形式约束。",
+  "description": "本体工程明确领域中的类别、属性、关系及它们的语义，服务于沟通、整合与推理。设计需要确定建模范围、能力问题、命名约定和维护流程。\n\n本体不只是术语列表，也不必全部采用最强逻辑。OWL 适用于特定形式化路径，SKOS 更适合概念词表组织；校验约束和逻辑推导也应分别设计。\n\n## 参考\n\n- [Poole 与 Mackworth：知识图谱与本体](https://artint.info/3e/html/ArtInt3e.Ch16.html)\n- [W3C：OWL 2 入门](https://www.w3.org/TR/owl2-primer/)\n- [W3C：SKOS](https://www.w3.org/TR/skos-reference/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4
+}

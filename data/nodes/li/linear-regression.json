@@ -1,0 +1,42 @@
+{
+  "id": "linear-regression",
+  "name": "Linear Regression",
+  "aliases": [
+    "线性回归"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "supervised-learning",
+      "context": "从输入特征与已观测的连续目标标签学习回归系数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mean-squared-error",
+      "context": "普通最小二乘在固定训练样本数下，以最小化残差平方和等价地最小化 MSE。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "singular-value-decomposition",
+      "context": "稠密最小二乘可用 SVD 求解，提高对秩亏和病态设计矩阵的处理能力。"
+    }
+  ],
+  "summary": "用特征的线性组合预测连续目标。",
+  "description": "线性回归用 ŷ=b+wᵀx 表示预测，普通最小二乘选择使残差平方和最小的系数。这里的线性指参数以线性组合出现，输入可包含预先构造的多项式或交互特征。\n\n它适合连续目标的基线建模，也便于分析特征系数；但系数不是自动成立的因果效应。共线性会使参数估计不稳定，异常值对平方损失影响较大。高斯噪声假设可把最小二乘解释为最大似然估计，Ridge、Lasso 则另外引入参数约束。\n\n参考：[scikit-learn LinearRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

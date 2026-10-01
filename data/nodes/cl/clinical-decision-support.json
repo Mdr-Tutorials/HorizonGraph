@@ -1,0 +1,38 @@
+{
+  "id": "clinical-decision-support",
+  "name": "Clinical Decision Support",
+  "aliases": [
+    "临床决策支持"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ehr",
+      "context": "在患者查看、医嘱等电子记录工作流程中取得相关上下文并呈现支持信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fhir",
+      "context": "采用 CDS Hooks 等 FHIR 集成方案时用资源提供临床上下文；并非所有 CDS 都要求 FHIR。"
+    }
+  ],
+  "summary": "在临床工作流程中呈现相关知识与信息的能力。",
+  "description": "## 机制\n\nCDS 把患者数据、知识或规则与业务时点关联起来，向使用者提供提醒、信息或建议。CDS Hooks 是一种在指定工作流事件调用服务，并返回可展示卡片的集成模式。\n\n## 边界与应用\n\n系统提示的有效性需要专业验证、版本管理与工作流评估。数据缺失、过时规则和过多提醒会影响使用；接口标准不证明临床效果，技术输出不能直接替代专业判断。\n\n## 参考\n\n- [HL7：CDS Hooks 实现指南](https://cds-hooks.hl7.org/)",
+  "importance": 4,
+  "official_site": "https://cds-hooks.hl7.org/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abbreviation": "CDS"
+}

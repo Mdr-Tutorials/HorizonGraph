@@ -1,0 +1,37 @@
+{
+  "id": "rf-engineering",
+  "name": "Radio-Frequency Engineering",
+  "aliases": [
+    "射频工程"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transmission-line",
+      "context": "对传播效应不可忽略的射频互连，使用分布参数传输线模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "s-parameters",
+      "context": "以端口入射波和出射波分析、测量射频网络。"
+    }
+  ],
+  "summary": "研究无线频段信号生成、传播、放大与接收的工程领域。",
+  "description": "射频工程将电路设计与电磁传播结合，涵盖收发机、天线、传输线、匹配网络、放大器和频率合成。系统分析需要同时考虑功率、噪声、非线性及频率响应。\n\n当结构尺寸相对波长不能忽略时，集总电路近似可能失效。无线网络协议只描述其中部分通信行为，不能替代天线、射频端口和物理前端的设计。\n\n参考：[Michael Steer：微波与射频设计教材](https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer))。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)"
+}

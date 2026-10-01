@@ -1,0 +1,32 @@
+{
+  "id": "condition-variable",
+  "name": "Condition Variable",
+  "aliases": [
+    "条件变量"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutex",
+      "context": "等待共享谓词时配合互斥锁原子释放、阻塞和重新加锁，避免检查与睡眠间的丢失唤醒。"
+    }
+  ],
+  "summary": "让线程等待共享状态满足谓词并与互斥锁协作。",
+  "description": "## 机制\n\n等待操作原子地释放关联互斥锁并阻塞，返回前重新获取锁；另一线程在修改状态后通知等待者。状态谓词应在锁保护下检查，并用 while 循环重新检查。\n\n## 边界与应用\n\n通知不保存业务状态，可能有虚假唤醒或其他线程先消费条件。条件变量用于等待状态变化，互斥锁用于保护访问，两者不能互相替代。\n\n## 参考\n\n- [OSTEP：条件变量](https://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf)",
+  "importance": 4,
+  "official_site": "https://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ]
+}

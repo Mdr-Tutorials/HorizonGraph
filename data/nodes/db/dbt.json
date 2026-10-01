@@ -13,7 +13,8 @@
   ],
   "domains": [
     "databases",
-    "distributed-systems"
+    "distributed-systems",
+    "data-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -35,13 +36,18 @@
       "relation_type": "implements",
       "target_id": "data-lineage",
       "context": "通过模型引用和编译元数据生成数据依赖与血缘。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-quality",
+      "context": "通过模型与字段的数据测试检查具体质量断言，测试范围由项目定义。"
     }
   ],
-  "summary": "通过声明式模型组织数据转换、测试、文档与血缘的工具体系。",
-  "description": "dbt 将 SQL 模型及其引用组织为依赖图，在目标数据平台执行转换，并生成测试、文档和血缘等上下文。它主要承担 ELT 的转换部分，需要配合数据接入与调度工具。开源执行引擎和托管平台的能力、实现语言与部署方式应分别看待。\n\n参考：[权威资料](https://docs.getdbt.com/docs/introduction)。",
+  "summary": "将转换模型、依赖、测试与文档组织为数据构建过程。",
+  "description": "## 机制\n\ndbt 常在目标数据平台执行 SQL 转换模型，引用建立依赖与血缘。数据测试以查询验证唯一、非空、关系或自定义断言，检测不满足预期的数据。\n\n## 边界与应用\n\n测试验证的是声明的断言，不能证明所有业务事实正确。dbt 主要承担 ELT 的转换环节，数据接入、平台运行和完整调度仍需配合其他组件。\n\n## 参考\n\n- [dbt：数据测试](https://docs.getdbt.com/docs/build/data-tests)",
   "importance": 4,
   "official_site": "https://docs.getdbt.com/docs/introduction",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-01",
   "origin": "ai_draft",
   "status": "active"
 }

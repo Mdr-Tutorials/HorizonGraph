@@ -1,0 +1,33 @@
+{
+  "id": "s-parameters",
+  "name": "Scattering Parameters",
+  "aliases": [
+    "散射参数"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impedance",
+      "context": "定义端口波变量及归一化时使用参考阻抗，并可换算线性网络端口参数。"
+    }
+  ],
+  "summary": "用端口入射与出射波关系描述线性网络的参数。",
+  "description": "散射参数以指定参考阻抗及参考平面定义波变量。二端口的 S11、S22 表示相应端口反射，S21、S12 表示正向和反向传输，通常随频率变化。\n\n测量或模型需说明校准、端接及工作点。小信号 S 参数不足以单独描述压缩、互调或功率放大器的大信号行为；端口匹配也不意味着零损耗。\n\n参考：[Michael Steer：微波网络分析](https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)/07%3A_Microwave_Network_Analysis)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)/07%3A_Microwave_Network_Analysis",
+  "abbreviation": "S-parameters"
+}

@@ -12,17 +12,29 @@
     "ai_data_science"
   ],
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "statistics"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cross-validation",
+      "context": "在监督模型比较与超参数选择中，用合适分折估计不同候选方案的泛化表现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "train-test-split",
+      "context": "在离线预测建模中隔离拟合与最终评估数据，并根据主体或时间确定划分边界。"
     }
   ],
-  "summary": "从数据中自动学规律做预测，不必写死规则。",
+  "summary": "从数据中学习模型并检验其泛化能力的方法领域。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "机器学习依据数据拟合模型，并检查它对未参与拟合的数据或后续任务的表现。监督学习利用目标标签进行分类或回归，无监督学习探索没有预定标签的结构；其他学习设置还涉及奖励、交互或自监督目标。\n\n建模过程包括数据划分、预处理、模型拟合与评价。训练误差小不等于泛化好，选择模型和超参数也会使用信息，因此测试数据必须与拟合和选择过程保持适当隔离。适合的目标、指标与验证策略由任务及数据生成方式决定，单个库或模型名称不能替代这层设计。\n\n参考：[Stanford CS229 课程说明](https://cs229.stanford.edu/)；[scikit-learn 拟合与评估入门](https://scikit-learn.org/stable/getting_started.html)。"
 }

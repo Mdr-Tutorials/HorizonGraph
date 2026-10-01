@@ -1,0 +1,32 @@
+{
+  "id": "singular-value-decomposition",
+  "name": "Singular Value Decomposition",
+  "aliases": [
+    "奇异值分解"
+  ],
+  "type": "concept",
+  "domains": [
+    "mathematics",
+    "machine-learning",
+    "high-performance-computing",
+    "scientific-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mathematical-foundations"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "matrix-multiplication",
+      "context": "通过 U、Σ、Vᵀ 的矩阵乘积重构原矩阵或其截断近似。"
+    }
+  ],
+  "summary": "把矩阵分解为正交方向与非负缩放。",
+  "description": "实矩阵可分解为 A=UΣVᵀ，复矩阵则使用共轭转置；U、V 的列给出正交方向，Σ 的非负对角元素是奇异值。SVD 适用于非方阵，奇异值也不等同于一般矩阵的特征值。\n\n截断最大的若干奇异值可得到低秩近似，也可用 SVD 构造伪逆、求解最小二乘和分析病态方向。二范数下非奇异矩阵的条件数等于最大与最小奇异值之比；小奇异值的截断容差应按尺度与噪声选择，低秩近似会丢失相应方向的信息。\n\n参考：[MIT 奇异值分解](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/positive-definite-matrices-and-applications/singular-value-decomposition/)；[NumPy SVD](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html)；[LAPACK SVD](https://www.netlib.org/lapack/lug/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "SVD"
+}

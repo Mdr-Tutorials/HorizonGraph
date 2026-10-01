@@ -1,0 +1,43 @@
+{
+  "id": "clinical-interoperability",
+  "name": "Clinical Interoperability",
+  "aliases": [
+    "医疗互操作性",
+    "临床互操作"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fhir",
+      "context": "资源化数据交换时采用 FHIR 与适用的实现指南。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-terminology",
+      "context": "跨机构解释检查及临床概念时采用术语编码和受审核的映射。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-data-provenance",
+      "context": "合并来自多系统的数据时保留作者、来源与变换历史。"
+    }
+  ],
+  "summary": "让不同医疗系统交换并正确使用数据的能力。",
+  "description": "## 机制\n\n医疗互操作把传输、结构、语义与工作流程结合起来：系统不仅接收数据，还应辨识患者、字段、单位、时间与编码意义。应用约定可进一步限制可选字段和术语。\n\n## 边界与应用\n\n同为 FHIR 或 DICOM 系统仍可能因版本、实现指南和支持能力不同而无法直接协作。格式转换不自动解决临床语义差异，映射过程需要保留来源与不确定性。\n\n## 参考\n\n- [HL7：FHIR 总览](https://hl7.org/fhir/overview.html)\n- [ONC：健康信息交换](https://healthit.gov/health-it-basics/hie/)",
+  "importance": 5,
+  "official_site": "https://hl7.org/fhir/overview.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ]
+}

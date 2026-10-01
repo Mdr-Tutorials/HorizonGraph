@@ -1,0 +1,38 @@
+{
+  "id": "dynamic-linking",
+  "name": "Dynamic Linking",
+  "aliases": [
+    "动态链接"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "compiler-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "elf",
+      "context": "Linux 动态链接器读取 ELF 动态节等元数据定位共享对象与符号。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "relocation",
+      "context": "装载共享对象时按目标 ABI 完成必要的动态重定位。"
+    }
+  ],
+  "summary": "在装载或运行阶段解析共享库及其符号引用。",
+  "description": "## 机制\n\nLinux 动态链接器装载 ELF 所列共享对象，按搜索路径与可见性解析符号并完成必要重定位；具体实现还可采用延迟绑定等策略。代码可以共享，程序仍需匹配库接口与 ABI。\n\n## 边界与应用\n\n共享库减少部分重复代码，却引入版本、路径与装载安全问题。动态链接与运行中显式加载库并不完全相同；平台格式和符号规则也有差异。\n\n## 参考\n\n- [Linux 动态链接器手册](https://man7.org/linux/man-pages/man8/ld.so.8.html)",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man8/ld.so.8.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers",
+    "systems-programming"
+  ]
+}

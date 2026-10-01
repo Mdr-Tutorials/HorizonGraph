@@ -1,0 +1,41 @@
+{
+  "id": "dcm4che",
+  "name": "dcm4che",
+  "aliases": [
+    "dcm4che DICOM 工具库"
+  ],
+  "type": "library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dicom"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-data-de-identification",
+      "context": "使用去标识化工具处理 DICOM 属性时采用脱敏规则，像素中的身份线索也须单独评估。"
+    }
+  ],
+  "summary": "提供 DICOM 数据处理、通信与命令行工具的 Java 项目。",
+  "description": "## 机制\n\ndcm4che 以 Java 工具库和实用程序处理 DICOM 数据集、编码转换、对象存取及网络服务。模块覆盖核心对象、影像、审计与相关通信，便于构建影像应用。\n\n## 边界与应用\n\n本节点指工具库，不是 dcm4chee Archive 归档产品。具体编解码能力可能涉及本地库；程序可读写对象不代表完整 PACS 流程、临床适用性或所有 DICOM 功能已经实现。\n\n## 参考\n\n- [dcm4che：官方工具库](https://github.com/dcm4che/dcm4che)",
+  "importance": 4,
+  "official_site": "https://github.com/dcm4che/dcm4che",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library"
+}

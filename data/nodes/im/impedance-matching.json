@@ -1,0 +1,32 @@
+{
+  "id": "impedance-matching",
+  "name": "Impedance Matching",
+  "aliases": [
+    "阻抗匹配"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "smith-chart",
+      "context": "在射频匹配网络设计中，可用圆图跟踪串并联电抗或线长引起的阻抗变换。"
+    }
+  ],
+  "summary": "通过端接或网络变换改善端口能量传输与反射的设计方法。",
+  "description": "匹配网络用电抗元件或传输线把负载阻抗变换到所需端口值。传输线无反射匹配和最大可用功率的共轭匹配需根据源、负载与目标分别判断。\n\n匹配通常有带宽、损耗与器件范围取舍。LNA 的最低噪声匹配也可能与最大增益或功率匹配不同，因此不能把所有射频端口都简化为同一个目标。\n\n参考：[Michael Steer：阻抗匹配](https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)/10%3A_Impedance_Matching)；[Analog Devices：LNA 匹配与噪声系数](https://www.analog.com/en/resources/technical-articles/lownoise-amplifier-lna-matching-techniques-for-optimizing-noise-figures.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)/10%3A_Impedance_Matching"
+}

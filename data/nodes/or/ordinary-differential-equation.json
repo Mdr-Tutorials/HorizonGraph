@@ -1,0 +1,40 @@
+{
+  "id": "ordinary-differential-equation",
+  "name": "Ordinary Differential Equation",
+  "aliases": [
+    "常微分方程",
+    "ODE"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runge-kutta-method",
+      "context": "对适当的初值问题用多级时间步进近似状态演化。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "laplace-transform",
+      "context": "求解适用的线性常系数初值问题时，用单边 Laplace 变换把微分关系及初始条件转为代数关系。"
+    }
+  ],
+  "summary": "用单一自变量的导数描述函数变化的方程。",
+  "description": "常微分方程描述未知函数对一个自变量的变化，例如时间上的位置、温度或反应浓度。初值问题指定起始状态，边值问题在不同位置给定限制，求解方式与适定性条件不同。\n\n数值时间步进需要控制局部误差和稳定性，刚性问题可能使显式方法必须使用极小步长。离散轨迹只是模型的近似，事件、守恒量和物理参数仍需单独检查。\n\n参考：[FNC 常微分方程](https://fncbook.com/chapter6/)；[SciPy solve_ivp](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://fncbook.com/chapter6/",
+  "abbreviation": "ODE"
+}

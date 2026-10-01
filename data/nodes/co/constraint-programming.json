@@ -1,0 +1,34 @@
+{
+  "id": "constraint-programming",
+  "name": "Constraint Programming",
+  "aliases": [
+    "约束规划",
+    "CP"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-problem",
+      "context": "在需要最优方案的约束满足模型中加入目标函数和变量界限。"
+    }
+  ],
+  "summary": "通过变量域、约束传播和搜索求可行或最优解。",
+  "description": "约束规划描述变量取值域及它们必须满足的关系，通过传播削减取值范围，再结合搜索求解。排程中的互斥、时间间隔和逻辑限制可以用专门约束表达，也可以加入优化目标。\n\n约束规划并非线性规划的同义词。OR-Tools CP-SAT 是结合 SAT 技术的整数求解器，输入限制需按整数表达；可行解、最优解和 UNKNOWN 状态应分别解释。\n\n参考：[OR-Tools CP-SAT](https://developers.google.com/optimization/cp/cp_solver)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://developers.google.com/optimization/cp/cp_solver"
+}

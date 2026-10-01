@@ -1,0 +1,39 @@
+{
+  "id": "mixed-integer-programming",
+  "name": "Mixed-Integer Programming",
+  "aliases": [
+    "混合整数规划",
+    "MIP"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-programming",
+      "context": "混合整数线性模型的分支搜索通过连续线性松弛取得界限。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "branch-and-bound",
+      "context": "对子问题分支并利用上下界剪枝以搜索整数可行解。"
+    }
+  ],
+  "summary": "同时含连续和整数决策变量的优化模型。",
+  "description": "混合整数规划同时描述连续数量与离散选择，例如工厂是否开设和生产多少。混合整数线性规划要求目标与约束线性；二次或非线性混合整数模型还需对应求解能力。\n\n连续松弛提供搜索界限，整数候选提供可行目标值，两者的间隙刻画尚未证明的最优性范围。达到时间限制时可能只有可行解，不能把 FEASIBLE 状态写成已经证明全局最优。\n\n参考：[OR-Tools MIP 示例](https://developers.google.com/optimization/mip/mip_example)；[Gurobi 建模约束](https://docs.gurobi.com/projects/optimizer/en/current/concepts/modeling/constraints.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://developers.google.com/optimization/mip/mip_example"
+}

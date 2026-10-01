@@ -21,11 +21,37 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lexer",
+      "context": "源语言前端常用词法分析把字符组织为词法单元。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "parser",
+      "context": "前端按语法规则识别词法单元并建立结构。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "semantic-analysis",
+      "context": "编译过程中检查名称、类型及语言约束。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ir",
+      "context": "采用中间表示的编译器在 IR 上组织分析、优化和降低。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-generation",
+      "context": "需要目标机器代码时用后端生成目标指令及工件。"
     }
   ],
-  "summary": "将高级源语言翻译为目标代码、机器码或中间表示的语言处理系统。",
+  "summary": "分析并转换程序表示，按目标语义生成代码的系统。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\n常见编译链从词法和语法分析进入名称、类型等语义检查，生成中间表示后优化，再降低为目标代码。编译器也可生成字节码或另一种源语言；链接负责组装工件。\n\n## 边界与应用\n\n前中后端是功能划分，不保证每次编译都严格分离。优化须保持语言规定的可观察行为，是否提前或运行时编译则是另一维度。\n\n## 参考\n\n- [Clang 内部架构手册](https://clang.llvm.org/docs/InternalsManual.html)\n- [LLVM 代码生成器](https://llvm.org/docs/CodeGenerator.html)"
 }

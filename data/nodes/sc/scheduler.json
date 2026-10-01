@@ -17,12 +17,18 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-switch",
+      "context": "选定另一任务后通过上下文切换完成 CPU 执行权交接。"
     }
   ],
-  "summary": "决定下一毫秒哪条线程占用 CPU 的内核策略。",
+  "summary": "按策略选择可运行任务，并协调 CPU 执行权。",
   "importance": 4,
   "popular": 50,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\n调度策略按优先级、公平性或实时约束选择任务，上下文切换负责现场交接。可运行、运行与阻塞不同，阻塞任务须由事件唤醒后才能参与调度。\n\n## 边界与应用\n\n策略权衡响应、公平、吞吐和截止时间。实时优先级不能绕过锁等待，优先级反转和长临界区需另行处理；进入内核不意味着一定重新调度。\n\n## 参考\n\n- [OSTEP：受限直接执行](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf)\n- [Linux RT-mutex 与优先级继承](https://docs.kernel.org/locking/rt-mutex-design.html)"
 }

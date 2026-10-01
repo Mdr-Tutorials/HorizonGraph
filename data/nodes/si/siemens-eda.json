@@ -12,7 +12,9 @@
     "hardware_iot"
   ],
   "domains": [
-    "industry-landscape"
+    "industry-landscape",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "relations": [
     {
@@ -20,13 +22,14 @@
       "target_id": "organization"
     },
     {
-      "relation_type": "alternative_to",
-      "target_id": "synopsys"
+      "relation_type": "provides",
+      "target_id": "questa"
     }
   ],
-  "summary": "原 Mentor Graphics，被西门子收编的三巨头之一。",
+  "summary": "Siemens 的电子设计自动化业务，提供验证与实现工具。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "Siemens 官方记录 Mentor Graphics 于 2021 年起更名为 Siemens EDA，并归于 Siemens Digital Industries Software。Questa 是其硬件验证方案，包含仿真、形式和 CDC 能力；Calibre 面向 IC 物理验证等任务。这里承接既有业务主体与历史名称，不据品牌名推断独立法人或给出市场排名。\n\n参考：[Siemens：Mentor 更名为 Siemens EDA](https://blogs.sw.siemens.com/calibre/2021/01/14/2021-time-to-simplify-your-life-or-at-least-your-workload/)；[Siemens：Questa 验证方案](https://static.sw.cdn.siemens.com/siemens-disw-assets/public/2VxKS6Q3bOyJlBmp3NzVpm/en-US/The-Questa-Verification-Solution-FS.pdf)。"
 }

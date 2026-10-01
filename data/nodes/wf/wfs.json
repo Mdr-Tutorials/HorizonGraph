@@ -1,0 +1,39 @@
+{
+  "id": "wfs",
+  "name": "Web Feature Service",
+  "aliases": [
+    "Web 要素服务"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vector-geospatial-data",
+      "context": "按要素及其属性提供几何数据访问，而不是仅返回渲染图像。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ogc",
+      "context": "该标准在组织的开放标准制定与维护流程下发布，具体版本和合规要求以对应规范为准。"
+    }
+  ],
+  "summary": "提供地理要素级发现、查询及可选事务操作的标准。",
+  "description": "## 机制\n\nWFS 以要素和属性为访问单位，客户端获取能力与模式后按条件查询。标准还定义锁定和事务等操作，具体服务只需按其合规类别提供相应能力。\n\n## 边界与应用\n\n要素访问不同于 WMS 的地图图像，服务也不必支持任意写入。版本、编码、过滤和分页能力要核对；OGC API – Features 提供另一条较新的 Web 接口路线。\n\n## 参考\n\n- [OGC：Web Feature Service](https://www.ogc.org/standards/wfs/)",
+  "importance": 4,
+  "official_site": "https://www.ogc.org/standards/wfs/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ],
+  "abbreviation": "WFS",
+  "abstraction_level": "framework_library"
+}

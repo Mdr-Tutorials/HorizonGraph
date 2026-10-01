@@ -7,11 +7,17 @@
   "type": "library",
   "ecosystems": [
     "python-ecosystem",
-    "ai_data_science"
+    "ai_data_science",
+    "scientific-computing-ecosystem"
   ],
   "domains": [
     "databases",
-    "high-performance-computing"
+    "high-performance-computing",
+    "mathematics",
+    "statistics",
+    "machine-learning",
+    "scientific-computing",
+    "computational-engineering"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -32,14 +38,40 @@
       "relation_type": "implements",
       "target_id": "matrix-multiplication",
       "context": "提供矩阵乘法运算；具体接口和执行设备由实现决定。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "singular-value-decomposition",
+      "context": "numpy.linalg.svd 提供实矩阵与复矩阵的奇异值分解。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "statistical-variance",
+      "context": "numpy.var 提供按轴计算方差及 ddof 归一化选项。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "covariance",
+      "context": "numpy.cov 提供样本协方差矩阵计算与权重、归一化选项。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "blas",
+      "context": "对受支持的数据类型和运算调用所链接的 BLAS 后端执行矩阵乘法等基础内核；具体后端由构建配置决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lapack",
+      "context": "numpy.linalg 的相应分解与线性求解接口调用 LAPACK 数值例程。"
     }
   ],
-  "summary": "Python 的 N 维数组与向量化计算基座。",
+  "summary": "提供多维数组、广播与数值运算的 Python 库。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "2006-01-01",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-01",
   "importance": 5,
   "popular": 85,
-  "official_site": "https://numpy.org"
+  "official_site": "https://numpy.org",
+  "description": "NumPy 的 ndarray 用形状、数据类型与步幅描述多维数组，索引、广播和通用函数将批量数值运算表达成数组操作。矩阵乘法、线性代数分解和统计汇总使它成为设计矩阵、离散物理场与数值建模的常用基座。\n\n广播依照轴长度规则工作，切片可能共享原始内存；矩阵乘法与逐元素乘法也不同。linalg 中适用的运算调用 BLAS/LAPACK 后端，但具体链接库、数据布局和问题规模影响性能；var/cov 的轴与归一化参数需要明确。\n\nNumPy 提供数组及基础计算，SciPy 在其上增加积分、优化、稀疏矩阵和信号处理等算法。把 PDE 网格值存成数组并不等同于选定了正确离散方法，计算仍需检查浮点误差、条件数和边界条件。\n\n参考：[NumPy 数组入门](https://numpy.org/doc/stable/user/absolute_beginners.html)；[NumPy 线性代数](https://numpy.org/doc/stable/reference/routines.linalg.html)；[NumPy 方差](https://numpy.org/doc/stable/reference/generated/numpy.var.html)；[NumPy 协方差](https://numpy.org/doc/stable/reference/generated/numpy.cov.html)。"
 }

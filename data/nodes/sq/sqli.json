@@ -23,9 +23,10 @@
       "target_id": "theory"
     }
   ],
-  "summary": "将未过滤的恶意 SQL 代码片段拼接到数据库查询中以越权读取或篡改数据的经典漏洞。",
+  "summary": "不可信数据进入 SQL 语法位置并改变查询含义的漏洞。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\n拼接查询若将输入当作 SQL 结构解析，会使攻击者影响条件或操作。参数化查询把值与结构分离；无法参数化的表名、列名等位置应从受控选项选择。\n\n## 边界与应用\n\n过滤或手工转义不是通用替代方案，防护需适配实际驱动和语法上下文。参数化也不能替应用执行对象授权，合法查询仍可能泄露越权数据。\n\n## 参考\n\n- [OWASP：SQL 注入防护](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)"
 }

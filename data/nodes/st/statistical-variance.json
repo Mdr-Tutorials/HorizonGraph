@@ -1,0 +1,33 @@
+{
+  "id": "statistical-variance",
+  "name": "Variance (Statistics)",
+  "aliases": [
+    "统计方差",
+    "方差",
+    "Population Variance",
+    "Sample Variance"
+  ],
+  "type": "concept",
+  "domains": [
+    "mathematics",
+    "statistics",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mathematical-foundations"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "expected-value",
+      "context": "先计算均值，再求对均值的平方偏差的期望。"
+    }
+  ],
+  "summary": "衡量随机变量围绕均值的平方离散程度。",
+  "description": "存在有限二阶矩时，Var(X)=E[(X−E[X])²]，也等于 E[X²]−E[X]²。方差的单位是原变量单位的平方；标准差为它的平方根。这里讨论统计方差，与类型系统中的协变、逆变无关。\n\n样本的平方偏差和可按 n 或 n−1 归一化：前者常用于描述当前数据，后者在独立同分布且用样本均值估计总体均值时给出总体方差的无偏估计。NumPy 的 ddof 控制分母 n−ddof。方差对异常值敏感，也可能不存在有限值。\n\n参考：[Statlect 方差](https://www.statlect.com/fundamentals-of-probability/variance)；[NumPy var 与 ddof](https://numpy.org/doc/stable/reference/generated/numpy.var.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

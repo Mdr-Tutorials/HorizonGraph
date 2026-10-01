@@ -1,0 +1,33 @@
+{
+  "id": "energy-management-system",
+  "name": "Energy Management System",
+  "aliases": [
+    "能量管理系统"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "distributed-energy-resources",
+      "context": "在微电网能量管理中协调分布式发电与储能资源，匹配本地需求和运行目标。"
+    }
+  ],
+  "summary": "依据状态、资源与运行目标协调能源供需和调度的系统类别。",
+  "description": "EMS 使用能源资源和负荷的状态、预测及运行目标形成计划或调度决策。在微电网中，它可协调分布式发电、储能和负荷，并与现场控制器交换指令和状态。\n\nEMS 的任务因电网、工厂或建筑场景而异；计划层调度与快速电压频率控制不能混为一谈。数据、预测和网络约束不足时，优化计划也可能无法实际执行。\n\n参考：[美国能源部：微电网能量管理实例](https://www.energy.gov/cmei/systems/articles/success-story-using-renewable-microgrids-keep-lights)；[美国能源部：微电网系统](https://www.energy.gov/oe/microgrid-systems)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.energy.gov/cmei/systems/articles/success-story-using-renewable-microgrids-keep-lights",
+  "abbreviation": "EMS"
+}

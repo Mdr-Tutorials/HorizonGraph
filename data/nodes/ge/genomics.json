@@ -1,0 +1,42 @@
+{
+  "id": "genomics",
+  "name": "Genomics",
+  "aliases": [
+    "基因组学"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dna-sequencing",
+      "context": "获取基因组的序列信息时通过 DNA 测序产生实验数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sequence-assembly",
+      "context": "从读段构建连续基因组序列的研究中采用序列组装。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "variant-calling",
+      "context": "比较样本与参考表示并识别序列差异时采用变异检测。"
+    }
+  ],
+  "summary": "研究完整基因组及其功能元素和相互作用的学科。",
+  "description": "## 机制\n\n基因组学从全体 DNA 出发，研究基因、功能元素、序列差异及其关系。计算工作将测序数据转为组装、比对和注释等表示，再围绕具体生物问题分析。\n\n## 边界与应用\n\n基因组学不仅是找到单个基因，也不意味着仅凭 DNA 就能解释全部表型。参考序列、样本代表性、测量误差与分析模型都会影响结论；个体变异识别与临床解释是不同步骤。\n\n## 参考\n\n- [NHGRI：基因组学](https://www.genome.gov/genetics-glossary/genomics)",
+  "importance": 5,
+  "official_site": "https://www.genome.gov/genetics-glossary/genomics",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

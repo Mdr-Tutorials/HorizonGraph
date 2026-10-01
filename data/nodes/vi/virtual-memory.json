@@ -17,12 +17,28 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-table",
+      "context": "分页型虚拟内存使用页表保存各地址空间的映射与权限。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tlb",
+      "context": "具有 TLB 的处理器缓存翻译结果以加速分页虚拟内存访问。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-fault",
+      "context": "按需映射和受保护页面通过页故障进入内核处理。"
     }
   ],
-  "summary": "用页表把进程地址空间与物理页框解耦，支撑隔离与换页。",
+  "summary": "以地址翻译和权限隔离组织进程地址空间的机制。",
   "importance": 5,
   "popular": 55,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\n进程看到独立虚拟地址空间；页表映射虚拟页并控制访问权限。文件映射、按需分配和写时复制让逻辑地址空间与物理内存占用分开，TLB 加速常用翻译。\n\n## 边界与应用\n\n虚拟内存不等于交换空间，也不保证任意地址可用。缺页处理和映射更新均有成本；是否存在交换、页大小及层级取决于系统与硬件。\n\n## 参考\n\n- [OSTEP：分页](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf)\n- [Linux 页表文档](https://docs.kernel.org/mm/page_tables.html)"
 }

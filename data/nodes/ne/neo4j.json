@@ -7,19 +7,31 @@
     "database-ecosystem"
   ],
   "domains": [
-    "databases"
+    "databases",
+    "knowledge-engineering"
   ],
   "abstraction_level": "framework_library",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "property-graph",
+      "context": "以带属性的节点与关系组织产品中的图数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cypher",
+      "context": "通过 Cypher 接口查询和操作属性图。"
     }
   ],
-  "summary": "原生图数据库，Cypher 查询关系网络见长。",
+  "summary": "用属性图组织数据并通过 Cypher 等接口查询。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
-  "official_site": "https://neo4j.com"
+  "official_site": "https://neo4j.com",
+  "description": "Neo4j 是基于属性图的数据管理产品，以节点、关系和属性组织网络，并通过 Cypher 等接口查询。它可用于知识图谱、依赖网络和业务关系分析，但存储能力与领域知识语义应分别建模。\n\n图数据库不会自动推导所有 OWL 公理，也不因名称匹配而完成实体合并。实际应用需要指定身份、约束、事务、来源及所采用的产品能力。\n\n## 参考\n\n- [Neo4j：图数据库概念](https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/)\n- [Neo4j：Cypher 介绍](https://neo4j.com/docs/cypher-manual/current/introduction/)"
 }

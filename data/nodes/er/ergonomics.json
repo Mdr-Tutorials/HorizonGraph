@@ -15,12 +15,18 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "usability",
+      "context": "评价人机交互系统时，围绕特定用户、目标和环境分析实际使用结果。"
     }
   ],
-  "summary": "优化工作装备与坐姿视线，最大限度降低高强度久坐脑力工作者肌肉骨骼慢性损伤的学科。",
+  "summary": "研究人与系统交互，并据此改善人的福祉与整体系统性能。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 学科范围\n\n人体工学研究人与系统其他要素之间的交互，并把相关知识用于系统设计，兼顾人的福祉与整体性能。它包括身体、认知与组织方面的问题，范围超过办公装备与坐姿。\n\n## 交互应用\n\n设计数字系统时，需要考虑用户任务、能力、环境以及使用结果。易用性是人机交互中的一个评价视角；工作环境、负荷与输入设备也会影响实际体验，不能仅由某件设备的营销标签判断。\n\n## 参考\n\n- [国际工效学协会：人体工学定义](https://iea.cc/about/what-is-ergonomics/)\n- [ISO：易用性概念](https://www.iso.org/standard/63500.html)"
 }

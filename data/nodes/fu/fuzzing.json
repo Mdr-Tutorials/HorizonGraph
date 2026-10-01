@@ -17,11 +17,17 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cwe",
+      "context": "分析触发缺陷的根因后可用 CWE 分类记录弱点类型；分类不是自动利用判定。"
     }
   ],
-  "summary": "喂随机与变异输入找崩溃，内存漏洞的自动猎手。",
+  "summary": "以大量变异或生成输入探索异常和安全缺陷。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\n模糊测试把输入送入目标并观察崩溃、超时或检测器告警；覆盖引导方法利用执行反馈保留能探索新路径的输入。语料、输入结构和测试入口影响探索能力。\n\n## 边界与应用\n\n崩溃不是漏洞利用性的自动证明，未崩溃也不代表安全。覆盖反馈通常需要插桩，测试还应控制时间、资源和环境，并缩减复现输入确认根因。\n\n## 参考\n\n- [LLVM：覆盖引导模糊测试](https://llvm.org/docs/LibFuzzer.html)"
 }

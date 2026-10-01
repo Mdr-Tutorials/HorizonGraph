@@ -1,0 +1,29 @@
+{
+  "id": "path-traversal",
+  "name": "Path Traversal",
+  "aliases": [
+    "路径遍历",
+    "目录穿越"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "路径输入突破预期目录边界，访问非授权文件。",
+  "description": "## 机制\n\n文件下载、模板载入等功能若接受任意路径，父目录片段、绝对路径或编码变体可能指向允许目录之外。以内部标识映射文件及规范化后验证边界能减少风险。\n\n## 边界与应用\n\n字符串过滤无法完整覆盖操作系统路径规则；符号链接、大小写、重复解码和检查后使用之间的竞态也要考虑。路径存在或可读取不代表用户有权访问。\n\n## 参考\n\n- [OWASP：路径遍历](https://community.owasp.org/attacks/Path_Traversal)",
+  "importance": 4,
+  "official_site": "https://community.owasp.org/attacks/Path_Traversal",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ]
+}

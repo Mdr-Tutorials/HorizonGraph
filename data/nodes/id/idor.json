@@ -1,0 +1,30 @@
+{
+  "id": "idor",
+  "name": "Insecure Direct Object Reference",
+  "aliases": [
+    "不安全直接对象引用",
+    "对象级越权"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "对象标识可被操纵且缺少相应对象级授权检查。",
+  "description": "## 机制\n\n接口接收对象 ID 后若只验证用户已登录，而未确认其对该对象的权限，就可能跨用户或租户读写。每次访问都应依据当前主体、对象与操作重新授权。\n\n## 边界与应用\n\n随机 UUID 或隐藏链接只降低猜测难度，不能替代权限检查；纵向权限提升与横向对象越权还应区分。IDOR 不要求底层存在 SQL 注入。\n\n## 参考\n\n- [OWASP：IDOR 防护](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html)",
+  "importance": 4,
+  "official_site": "https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "abbreviation": "IDOR"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "svm",
+  "name": "Support Vector Machine",
+  "aliases": [
+    "支持向量机",
+    "Support Vector Machines"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regularization",
+      "context": "软间隔目标以间隔惩罚和分类误差权衡控制模型复杂度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "feature-scaling",
+      "context": "采用 RBF 等对尺度敏感的核时，先以训练数据拟合缩放以改善特征间可比性。"
+    }
+  ],
+  "summary": "以间隔约束与核方法学习决策边界。",
+  "description": "支持向量机在分类中寻找较大间隔的决策边界，软间隔形式允许部分训练点违反间隔，并用参数 C 平衡拟合与约束。支持向量是对边界有直接影响的训练点；核函数可在隐式特征空间计算相似性。\n\nSVM 还包含回归和单类检测变体。基于距离或核的训练通常需要考虑特征尺度，C 与核参数必须用合适验证集选择。核 SVM 在大量样本上可能付出较高开销；原始决策得分也不是直接校准的类别概率。\n\n参考：[scikit-learn SVM 指南](https://scikit-learn.org/stable/modules/svm.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "SVM"
+}

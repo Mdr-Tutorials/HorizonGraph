@@ -1,0 +1,30 @@
+{
+  "id": "maximum-likelihood-estimation",
+  "name": "Maximum Likelihood Estimation",
+  "aliases": [
+    "最大似然估计"
+  ],
+  "type": "concept",
+  "domains": [
+    "statistics",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "statistical-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "probability-distribution",
+      "context": "将参数化概率质量或密度函数作为观测数据的似然，比较不同参数。"
+    }
+  ],
+  "summary": "选择使已观测数据似然最大的模型参数。",
+  "description": "最大似然估计固定已观测数据，在候选参数 θ 中最大化似然 L(θ)。对独立样本，联合似然是各样本概率或密度的乘积，通常转为对数似然之和以便优化。\n\n似然是参数的函数，不是参数本身的后验概率。高斯误差下的线性回归与平方损失相联系，伯努利分类与二元交叉熵相联系。估计的存在、唯一性与渐近性质需要相应假设；有限样本、模型设定错误和优化失败都可能影响结果，MLE 也不天然防止过拟合。\n\n参考：[Statlect 最大似然估计](https://www.statlect.com/fundamentals-of-statistics/maximum-likelihood)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "MLE"
+}

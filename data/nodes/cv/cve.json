@@ -1,0 +1,35 @@
+{
+  "id": "cve",
+  "name": "Common Vulnerabilities and Exposures",
+  "aliases": [
+    "通用漏洞与披露",
+    "CVE 标识体系",
+    "通用漏洞披露标识"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cwe",
+      "context": "CVE 记录可以引用 CWE 标识说明弱点类型；不是所有记录都必然给出精确映射。"
+    }
+  ],
+  "summary": "为已公开披露的具体漏洞提供共同标识与结构化记录。",
+  "description": "## 机制\n\nCVE 计划通过编号机构给具体漏洞分配 CVE ID，并发布包含描述、受影响信息和参考来源等内容的记录。标识帮助厂商、扫描器和使用方对同一个漏洞对齐信息。\n\n## 边界与应用\n\nCVE ID 不是严重性分数，也不是弱点类型；未获得 CVE 不代表没有漏洞。记录的保留、发布、拒绝等状态和修订需要区分，编号年份也不必等于发现时间。\n\n## 参考\n\n- [CVE：记录格式](https://cveproject.github.io/cve-schema/)\n- [CVE：计划与记录](https://www.cve.org/Resources/Media/Archives/OldWebsite/about/faqs.html)",
+  "importance": 4,
+  "official_site": "https://cveproject.github.io/cve-schema/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abbreviation": "CVE"
+}

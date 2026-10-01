@@ -11,7 +11,9 @@
   ],
   "domains": [
     "embedded-systems",
-    "systems-programming"
+    "systems-programming",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "abstraction_level": "hardware",
   "relations": [
@@ -20,11 +22,12 @@
       "target_id": "platform"
     }
   ],
-  "summary": "开放指令集，模块化扩展，正在嵌入式与学术核中铺开。",
+  "summary": "由基本指令集与可选扩展组成的开放指令集架构。",
   "importance": 4,
   "popular": 65,
   "official_site": "https://riscv.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "RISC-V 规范定义软件可见的指令集，而不指定唯一处理器或微架构。官方引言明确避免绑定顺序、乱序等微架构及 ASIC、FPGA 等实现技术，基座与扩展可以按要求组合。开放 ISA 不等于所有实现都开源，也不意味着任意扩展组合的软件兼容。\n\n参考：[RISC-V 非特权 ISA：引言](https://docs.riscv.org/reference/isa/v20240411/unpriv/intro.html)。"
 }

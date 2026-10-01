@@ -4,23 +4,38 @@
   "display_primary": "神经算子",
   "display_secondary": "Neural Operator",
   "aliases": [
-    "傅里叶神经算子",
-    "FNO"
+    "神经算子"
   ],
   "type": "concept",
   "domains": [
     "machine-learning",
-    "high-performance-computing"
+    "high-performance-computing",
+    "scientific-computing",
+    "computational-engineering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "partial-differential-equation",
+      "context": "在 PDE 代理建模场景中，以方程参数、初边值数据及数值解样本构造训练任务。"
     }
   ],
-  "summary": "能够直接在无限维函数空间学习映射、将偏微分方程求解加速百千倍的神经网络。",
+  "summary": "从离散训练数据学习函数到函数映射的模型家族。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "description": "神经算子是一类学习函数空间之间映射的模型，例如从 PDE 的系数场、初始条件或边界数据预测解场。实际训练与推理仍使用有限离散数据，模型设计旨在跨离散表示表达算子，而非真的在计算机中存储无限维向量。\n\n傅里叶神经算子 FNO 是其中一种架构，通过频域参数化的层学习全局作用；它不是神经算子的同义词。训练后的推理可在适当任务上降低重复求解成本，但精度、速度和跨网格泛化取决于模型与数据，不能普遍承诺某一加速倍数。\n\n这类模型可作工程仿真的代理，但不会自动满足守恒、稳定性或未见工况下的误差要求。应用于实际物理问题时，应与数值基准比较，并检验边界、外推条件及不确定性。\n\n参考：[神经算子论文](https://arxiv.org/abs/2108.08481)；[傅里叶神经算子论文](https://arxiv.org/abs/2010.08895)。",
+  "official_site": "https://arxiv.org/abs/2108.08481"
 }

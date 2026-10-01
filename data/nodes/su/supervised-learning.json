@@ -18,11 +18,36 @@
     {
       "relation_type": "part_of",
       "target_id": "machine-learning"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "loss-function",
+      "context": "用预测输出与已知目标之间的损失定义训练目标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-regression",
+      "context": "连续目标预测可用线性回归作为一种监督建模方法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logistic-regression",
+      "context": "离散类别预测可用逻辑回归学习输入条件下的类别概率。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "decision-tree",
+      "context": "可通过带标签的特征划分训练分类树或回归树。"
     }
   ],
-  "summary": "用带标签的数据学出输入到输出的映射。",
+  "summary": "利用带目标标签的样本学习预测映射。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "监督学习从输入与目标的配对样本学习映射。分类预测离散类别，回归预测连续值；训练通过损失函数比较模型输出与标签，再调整模型参数。\n\n标签定义、采样方式和部署分布会影响模型学到的规律。训练标签存在不等于没有偏差，训练误差低也不能保证未知样本的表现。线性回归、逻辑回归、树模型和 SVM 可服务不同监督任务，选择时应配合任务指标与独立评价。\n\n参考：[scikit-learn 监督学习方法目录](https://scikit-learn.org/stable/supervised_learning.html)；[Stanford CS229 公开讲义](https://cs229.stanford.edu/main_notes.pdf)。"
 }

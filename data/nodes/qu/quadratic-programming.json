@@ -1,0 +1,39 @@
+{
+  "id": "quadratic-programming",
+  "name": "Quadratic Programming",
+  "aliases": [
+    "二次规划",
+    "QP"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "convex-function",
+      "context": "二次矩阵半正定时利用凸性保证局部最小解的全局最优性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kkt-conditions",
+      "context": "对具有相应正则性条件的连续二次问题检查驻点与约束最优性。"
+    }
+  ],
+  "summary": "在仿射约束下优化二次目标的模型。",
+  "description": "二次规划使用二次目标及线性等式、不等式约束，适用于最小二乘、投资组合和控制。最小化时二次矩阵半正定使目标凸；含二次约束的模型属于更广的二次约束规划。\n\n非凸二次目标可能出现局部最优，不能沿用凸问题的全局保证。矩阵缩放、稀疏结构和约束活跃性影响求解，严格凸目标在非空可行域上至多有一个最优解。\n\n参考：[Stanford 优化课程](https://web.stanford.edu/class/ee364a/index.html)；[Boyd 与 Vandenberghe 教材](https://stanford.edu/~boyd/cvxbook/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://web.stanford.edu/class/ee364a/index.html"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "knowledge-representation",
+  "name": "Knowledge Representation",
+  "aliases": [
+    "知识表示"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "first-order-logic",
+      "context": "在需要变量、关系与量化陈述的逻辑建模路径中表达知识。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-graph",
+      "context": "在关系组织和多来源知识集成的路径中表示实体及其联系。"
+    }
+  ],
+  "summary": "选择符号、结构与语义以表达可计算知识。",
+  "description": "知识表示为实体、事实、类别和规则选择符号与结构，并明确这些表达式的含义。表示的表达能力、推理代价和维护方式需要与具体任务一起考虑。\n\n逻辑表示、图表示和概率模型可服务不同需求。使用图存储不自动产生逻辑语义，采用形式化语言也不自动解决资料来源或建模歧义。\n\n## 参考\n\n- [Poole 与 Mackworth：个体与关系](https://artint.info/3e/html/ArtInt3e.Ch15.html)\n- [Poole 与 Mackworth：知识图谱与本体](https://artint.info/3e/html/ArtInt3e.Ch16.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

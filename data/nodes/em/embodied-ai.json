@@ -12,17 +12,29 @@
   ],
   "domains": [
     "machine-learning",
-    "industry-landscape"
+    "industry-landscape",
+    "robotics"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "path-planning",
+      "context": "在需要抵达目标或操作物体的机器人任务中，规划模块选择符合环境和运动约束的路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sim-to-real",
+      "context": "将仿真训练的策略部署到真实机器人时，研究并评估环境和系统差异造成的迁移问题。"
     }
   ],
-  "summary": "让模型住进身体与世界交互，大模型的下一站。",
+  "summary": "研究具备感知与行动能力的主体如何与环境交互并完成任务。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 研究对象\n\n具身智能研究具有感知与行动能力的主体如何在环境中完成任务，涉及环境观察、决策与执行之间的闭环。主体可以是仿真机器人或真实设备，模型不必局限于大语言模型。\n\n## 工程边界\n\n导航、操作等任务需要明确观察、动作和成功标准。仿真平台可提供训练与评估环境，但真实执行还涉及传感器、规划、控制与现实差距，不能把语言生成能力直接等同于物理任务能力。\n\n## 参考\n\n- [AI Habitat：具身智能仿真与任务](https://aihabitat.org/)"
 }

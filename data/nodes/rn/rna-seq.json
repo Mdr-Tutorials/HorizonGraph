@@ -1,0 +1,38 @@
+{
+  "id": "rna-seq",
+  "name": "RNA sequencing",
+  "aliases": [
+    "RNA 测序"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "next-generation-sequencing",
+      "context": "常见 cDNA 测序实验使用高通量平台生成 RNA 相关读段。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sequence-alignment",
+      "context": "采用参考比对路线的分析中定位 RNA 相关读段，需考虑剪接及多位置匹配。"
+    }
+  ],
+  "summary": "通过测序调查 RNA 内容、表达与转录结构的方法。",
+  "description": "## 机制\n\nRNA-seq 通过 RNA 相关测序读段调查样本的转录内容。常见路线将 RNA 逆转录为 cDNA 后制备和测序，再比对或采用其他定量方案，估计基因、转录本及剪接相关信号。\n\n## 边界与应用\n\nRNA-seq 不是唯一的转录组测量方式，也不是全部采用同一实验技术。样本组成、建库偏差、比对歧义和归一化影响定量，RNA 读数不能直接代替蛋白水平或临床效应。\n\n## 参考\n\n- [EMBL-EBI：RNA 测序](https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/rna-sequencing/)",
+  "importance": 4,
+  "official_site": "https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/rna-sequencing/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abbreviation": "RNA-seq"
+}

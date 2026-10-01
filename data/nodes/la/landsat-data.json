@@ -1,0 +1,39 @@
+{
+  "id": "landsat-data",
+  "name": "Landsat Data",
+  "aliases": [
+    "Landsat 卫星数据"
+  ],
+  "type": "product",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "remote-sensing",
+      "context": "Landsat 任务通过卫星传感器获得遥感观测，再处理为相应数据产品。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "raster-geospatial-data",
+      "context": "影像及质量层以带空间参考的网格组织，分析需核对产品元数据。"
+    }
+  ],
+  "summary": "由 Landsat 任务产生并按产品规范组织的地球观测数据。",
+  "description": "## 机制\n\nLandsat 数据提供长期陆表观测入口，Collection 2 按处理和质量规范组织数据。不同级别产品可包含几何校正观测及表面反射率、温度等派生结果，需读取具体产品说明。\n\n## 边界与应用\n\n本节点指数据产品系列，不指某颗卫星硬件。跨传感器或跨年代分析需核对波段、比例因子、质量掩膜与处理层级，不能只因格式相同就直接比较像元值。\n\n## 参考\n\n- [USGS：Landsat Collection 2](https://www.usgs.gov/landsat-missions/landsat-collection-2)\n- [USGS：Collection 2 表面反射率](https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-reflectance)",
+  "importance": 4,
+  "official_site": "https://www.usgs.gov/landsat-missions/landsat-collection-2",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "remote-sensing"
+  ],
+  "abstraction_level": "framework_library"
+}

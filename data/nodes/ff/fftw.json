@@ -1,0 +1,37 @@
+{
+  "id": "fftw",
+  "name": "FFTW",
+  "aliases": [
+    "FFTW",
+    "最快西方傅里叶变换库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fast-fourier-transform"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "discrete-fourier-transform"
+    }
+  ],
+  "summary": "按数据规模和布局规划高性能离散变换的 C 库。",
+  "description": "FFTW 提供实数、复数及多维离散变换，通过计划器为给定规模和布局选择执行路线。它支持多种长度和数组组织，也提供线程、MPI 及 Fortran 等接口路径。\n\n计划创建和执行是不同成本，部分规划方式会改变输入数据，需按接口约定处理。FFTW 的变换通常不自动按逆变换归一化，性能取决于布局、计划和硬件，不能泛化为总是最快。\n\n参考：[FFTW 官方说明](https://www.fftw.org/fftw3_doc/Introduction.html)；[FFTW 计算约定](https://www.fftw.org/fftw3_doc/What-FFTW-Really-Computes.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.fftw.org/fftw3_doc/Introduction.html",
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "sequence-assembly",
+  "name": "Sequence Assembly",
+  "aliases": [
+    "序列组装",
+    "基因组组装"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fastq",
+      "context": "从含读段序列和质量的实验数据开始组装时使用 FASTQ 输入，具体格式由实现决定。"
+    }
+  ],
+  "summary": "从读段及其关系重建更长序列的计算方法。",
+  "description": "## 机制\n\n序列组装利用读段的重叠或 k-mer 关系构建连续序列，常见方法包含重叠图及 de Bruijn 图。连续片段可进一步以方向、距离等证据组织成 scaffold。\n\n## 边界与应用\n\n组装与把读段定位到既有参考的比对不同。重复序列、测序错误和覆盖不足可能产生断点或错误连接；更长的片段不自动意味着更准确，评价需要结合完整性与结构证据。\n\n## 参考\n\n- [Zerbino 与 Birney：Velvet 与 de Bruijn 图组装](https://genome.cshlp.org/content/18/5/821)\n- [NCBI GRC：组装术语](https://www.ncbi.nlm.nih.gov/grc/help/definitions/)",
+  "importance": 4,
+  "official_site": "https://genome.cshlp.org/content/18/5/821",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

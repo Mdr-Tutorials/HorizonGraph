@@ -1,0 +1,38 @@
+{
+  "id": "datalog",
+  "name": "Datalog",
+  "aliases": [
+    "Datalog 逻辑查询语言"
+  ],
+  "type": "language",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "first-order-logic",
+      "context": "以受限的关系规则片段表达变量与谓词。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "forward-chaining",
+      "context": "在自底向上的求值路径中反复产生新事实直至不动点。"
+    }
+  ],
+  "summary": "用受限关系规则表达事实、查询与递归。",
+  "description": "Datalog 使用关系事实和规则描述可推导的数据，经典形式不含一般函数符号。正规则在有限输入上具有适合数据库计算的性质，递归可表达可达性等关系。\n\n扩展中的否定、聚合和外部函数会改变语义或求值条件。它与一般 Prolog 不同，不能把一种实现的搜索顺序或扩展能力当作所有 Datalog 的定义。\n\n## 参考\n\n- [Poole 与 Mackworth：Datalog](https://artint.info/3e/html/ArtInt3e.Ch15.S4.html)\n- [Poole 与 Mackworth：完整知识假设](https://artint.info/3e/html/ArtInt3e.Ch15.S9.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abstraction_level": "application_tool"
+}

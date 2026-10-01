@@ -19,9 +19,10 @@
       "target_id": "theory"
     }
   ],
-  "summary": "攻击战术与技术的知识库，蓝军红旗的通用语言。",
+  "summary": "以现实观察组织攻击者战术和技术的知识库。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "## 机制\n\nATT&CK 按攻击者目标与行为组织战术、技术和子技术，并关联观察、检测及缓解信息。安全团队可用它描述行为、设计检测覆盖或组织演练。\n\n## 边界与应用\n\n它不是漏洞编号系统，也不是逐项完成即安全的合规清单。不同环境矩阵和观察范围不同；应用弱点分类可参考 CWE，具体漏洞标识则由 CVE 等体系承担。\n\n## 参考\n\n- [MITRE ATT&CK 知识库](https://attack.mitre.org/)"
 }

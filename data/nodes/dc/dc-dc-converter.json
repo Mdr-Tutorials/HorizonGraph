@@ -1,0 +1,37 @@
+{
+  "id": "dc-dc-converter",
+  "name": "DC–DC Converter",
+  "aliases": [
+    "直流变换器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pwm",
+      "context": "在 PWM 型 Buck、Boost 等转换器中，调节开关导通时间实现输出控制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inductor",
+      "context": "在 Buck 或 Boost 等非隔离拓扑中，用电感储能和限制电流变化；其他拓扑可能使用变压器等器件。"
+    }
+  ],
+  "summary": "将直流输入转换为另一组直流电压电流条件的电路类别。",
+  "description": "常见开关型 DC-DC 转换器通过开关动作与储能元件实现降压、升压或其他直流变换；Buck、Boost 及隔离拓扑具有不同结构和约束。线性稳压也可实现直流降压，但其耗散机理不同于这些开关储能结构。\n\n开关型转换器的理想变换比需说明连续或断续导通及稳态等条件。电感纹波、器件损耗、控制环路和输入输出范围会改变实际表现，并非每种转换器都采用相同调制。\n\n参考：[Texas Instruments：开关稳压器基本原理](https://www.ti.com/lit/pdf/SNVA559)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.ti.com/lit/pdf/SNVA559"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "dicom",
+  "name": "Digital Imaging and Communications in Medicine",
+  "aliases": [
+    "医学数字成像与通信"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "规定医疗影像对象、存储与交换服务的标准。",
+  "description": "## 机制\n\nDICOM 定义医疗影像及相关信息的对象结构、网络命令与服务，也包含介质存储的文件格式和目录规则。数据对象将像素内容与患者、检查、设备等属性关联起来。\n\n## 边界与应用\n\nDICOM 既不只是图片扩展名，也不定义完整 PACS 产品。设备的符合性声明需要与对方支持的对象和服务核对；标准兼容不自动确保影像质量、安全或完整工作流。\n\n## 参考\n\n- [DICOM：范围与应用](https://dicom.nema.org/medical/dicom/current/output/chtml/part01/chapter_1.html)",
+  "importance": 5,
+  "official_site": "https://dicom.nema.org/medical/dicom/current/output/chtml/part01/chapter_1.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "abbreviation": "DICOM"
+}

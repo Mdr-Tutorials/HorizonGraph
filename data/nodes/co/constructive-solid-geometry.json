@@ -1,0 +1,35 @@
+{
+  "id": "constructive-solid-geometry",
+  "name": "Constructive Solid Geometry",
+  "aliases": [
+    "构造实体几何",
+    "CSG"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "boundary-representation",
+      "context": "采用边界内核进行布尔运算时，通过曲面求交与拓扑重建计算实体结果。"
+    }
+  ],
+  "summary": "通过基本实体的布尔组合表达复杂形状。",
+  "description": "CSG 以基本实体为叶子，用并、交、差等集合运算构成形状表达式。它记录构造过程，可描述孔洞和组合零件，求值时可转换为边界表示或用于其他几何计算。\n\nCSG 表达树与最终实体边界是不同表示；布尔运算仍需处理重合边界和几何容差。不同软件支持的基本体和结果有效性规则不同，不能把任意布尔表达式视作制造可行零件。\n\n参考：[Gmsh CSG 与 OpenCASCADE 教程](https://gmsh.info/doc/texinfo/)；[Open CASCADE 建模算法](https://dev.opencascade.org/doc/overview/html/occt_user_guides__modeling_algos.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://gmsh.info/doc/texinfo/",
+  "abbreviation": "CSG"
+}

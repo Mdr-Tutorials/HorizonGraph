@@ -1,0 +1,35 @@
+{
+  "id": "dram",
+  "name": "Dynamic Random-Access Memory",
+  "aliases": [
+    "动态随机存取存储器",
+    "动态随机访问内存"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transistor",
+      "context": "典型 1T1C DRAM 单元用访问晶体管连接电容与位线。"
+    }
+  ],
+  "summary": "以电容电荷保存数据并需要周期刷新的易失存储技术。",
+  "description": "典型 DRAM 的 1T1C 单元用一个晶体管控制访问、一个电容保存一位信息。电荷会泄漏，因此需要刷新，读取也涉及感应与恢复。DRAM 是存储技术类别；DDR 和 HBM 等接口与组织方式不能与其混作同一层概念。\n\n参考：[Micron：DRAM 存储单元与刷新](https://www.micron.com/content/dam/micron/educatorhub/memory/how-dram-memory-works/micron-how-dram-memory-works-quiz.pdf)；[Micron：HBM2E 堆叠与 TSV](https://www.micron.com/about/blog/applications/data-center/hbm2e-fastest-memory-modern-data-center)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abbreviation": "DRAM",
+  "official_site": "https://www.micron.com/content/dam/micron/educatorhub/memory/how-dram-memory-works/micron-how-dram-memory-works-quiz.pdf"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "fastq",
+  "name": "FASTQ format",
+  "aliases": [
+    "FASTQ 读段格式"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "同时存放序列和逐碱基质量信息的文本格式。",
+  "description": "## 机制\n\nFASTQ 记录读段标识、碱基序列及质量字符，质量与序列位置逐一对应。常见 Sanger 风格以 Phred 分数编码质量，历史变体的评分和字符偏移存在差别。\n\n## 边界与应用\n\nFASTQ 不是测序算法或传输协议。解析时不能只假设质量字符含义在所有文件中一致；质量估计也不是绝对正确率，样本和实验元数据通常需要另行保存。\n\n## 参考\n\n- [Cock 等：FASTQ 格式及其变体](https://pmc.ncbi.nlm.nih.gov/articles/PMC2847217/)",
+  "importance": 4,
+  "official_site": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2847217/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library"
+}

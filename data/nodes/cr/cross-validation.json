@@ -1,0 +1,33 @@
+{
+  "id": "cross-validation",
+  "name": "Cross-validation",
+  "aliases": [
+    "交叉验证",
+    "K 折交叉验证",
+    "K-fold Cross-validation"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "train-test-split",
+      "context": "在每轮将用于拟合的训练子集与用于评分的留出子集隔离，具体可采用 K 折、分组或时间划分。"
+    }
+  ],
+  "summary": "用多次训练与验证划分估计泛化表现。",
+  "description": "交叉验证重复把部分样本用于拟合、另一部分用于评分。K 折方法使每折轮流作为验证集，再汇总分数；它用于模型比较与超参数选择，不能把被反复用于选模型的验证成绩当作最终独立测试结果。\n\n随机分折依赖数据的独立性条件。同一用户或主体的记录应按组划分，时间序列通常需要保持时间先后。缩放、特征选择和降维也属于拟合过程，必须在每个训练折内执行；嵌套交叉验证可将内层调参与外层评估分开。\n\n参考：[scikit-learn 交叉验证指南](https://scikit-learn.org/stable/modules/cross_validation.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

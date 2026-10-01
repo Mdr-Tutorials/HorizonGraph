@@ -1,0 +1,42 @@
+{
+  "id": "simplex-method",
+  "name": "Simplex Method",
+  "aliases": [
+    "单纯形法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "解基矩阵对应的线性方程，计算搜索方向与变量更新。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "feasible-region",
+      "context": "原始单纯形更新在可行基之间移动，并用比例检验维持约束可行性。"
+    }
+  ],
+  "summary": "沿可行基更新搜索线性规划最优解的方法。",
+  "description": "单纯形法以线性规划的基表示候选解，通过入基和出基变量更新改善目标。修订单纯形法避免维护完整表格；原始与对偶单纯形法在保持可行性的方式上不同。\n\n退化可能造成停滞或循环，需使用适当选基规则；最坏情况并非多项式时间。用于非线性无导数优化的 Nelder–Mead 单纯形方法是另一种算法，不能与线性规划单纯形法合并。\n\n参考：[MIT 运筹优化讲义](https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/)；[SciPy 线性规划算法](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "code-generation",
+  "name": "Code Generation",
+  "aliases": [
+    "代码生成"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "compiler-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ir",
+      "context": "编译器后端从 IR 接收已分析的程序表示并逐步降低。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "register-allocation",
+      "context": "生成面向有限硬件寄存器的代码时分配寄存器，并为溢出值安排内存存取。"
+    }
+  ],
+  "summary": "将程序表示降低为目标指令及可执行工件。",
+  "description": "## 机制\n\n后端把中间表示逐步转换为目标指令，处理指令选择、调度、寄存器分配和编码。生成目标文件后，仍可能需要链接器解析外部符号并完成重定位。\n\n## 边界与应用\n\n代码生成也可输出另一种中间语言；优化与降低可能穿插进行。目标架构和 ABI 决定调用约定及可用指令，不应把代码生成简单等同于打印汇编。\n\n## 参考\n\n- [LLVM 代码生成器](https://llvm.org/docs/CodeGenerator.html)",
+  "importance": 4,
+  "official_site": "https://llvm.org/docs/CodeGenerator.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers"
+  ]
+}

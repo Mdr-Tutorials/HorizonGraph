@@ -1,0 +1,37 @@
+{
+  "id": "analog-circuit",
+  "name": "Analog Circuit",
+  "aliases": [
+    "模拟电路"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kirchhoffs-laws",
+      "context": "在集总电路模型成立时，用节点电流及回路电压约束联立求解。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transistor",
+      "context": "在晶体管放大器中用偏置与小信号变化控制输出；并非所有模拟电路都包含晶体管。"
+    }
+  ],
+  "summary": "用连续变化的电压或电流表示、处理信号的电路。",
+  "description": "模拟电路通过电压、电流及其连续变化承载信号，典型任务包括放大、滤波、振荡与电源调节。集总模型把元件之间的连线视为理想节点，再用器件关系和基尔霍夫定律建立方程。\n\n模拟与数字是信号解释及设计抽象的区别，晶体管本身并不只属于其中一类。当连线尺寸、传播延迟或寄生参数不可忽略时，需要传输线或更完整的电磁模型。\n\n参考：[MIT 6.002：电路分析](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l2/)；[Michael Steer：微波与射频设计教材](https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer))。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l2/"
+}

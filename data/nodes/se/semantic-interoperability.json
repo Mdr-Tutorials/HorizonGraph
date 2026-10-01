@@ -1,0 +1,37 @@
+{
+  "id": "semantic-interoperability",
+  "name": "Semantic Interoperability",
+  "aliases": [
+    "语义互操作"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ontology-engineering",
+      "context": "建立并维护共享术语与关系的明确含义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "entity-resolution",
+      "context": "在跨系统数据整合中对应不同标识所指实体。"
+    }
+  ],
+  "summary": "使跨系统交换的数据具有一致可解释的含义。",
+  "description": "语义互操作关注数据交换后是否能按约定理解实体、属性、值域和关系。仅能读取相同文件格式或调用相同接口，只解决部分结构及传输问题。\n\n共享词汇、身份映射、单位、上下文和来源有助于建立共同解释。词汇映射不能忽略定义差异，自动把两个近似类别判为等价可能引入错误推理。\n\n## 参考\n\n- [Poole 与 Mackworth：知识图谱与本体](https://artint.info/3e/html/ArtInt3e.Ch16.html)\n- [W3C：RDF 入门](https://www.w3.org/TR/rdf11-primer/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

@@ -22,11 +22,17 @@
     {
       "relation_type": "part_of",
       "target_id": "process"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "condition-variable",
+      "context": "共享内存线程可用条件变量等待状态，并在互斥锁保护下重新检查谓词。"
     }
   ],
-  "summary": "操作系统进行 CPU 调度的最小基本执行单元，同一进程内的线程共享虚拟内存。",
+  "summary": "共享进程资源但维护独立执行现场的执行单元。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\n线程共享进程地址空间与部分资源，各自维护栈、寄存器现场和调度状态。线程阻塞等待 I/O 或同步对象时，CPU 可以交给另一可运行线程。\n\n## 边界与应用\n\n共享内存要求处理数据竞争。用户态任务、协程与内核线程不一定一对一；增加线程不保证提高吞吐。\n\n## 参考\n\n- [OSTEP：受限直接执行](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf)\n- [OSTEP：条件变量](https://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf)"
 }

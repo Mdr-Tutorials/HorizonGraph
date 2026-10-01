@@ -1,0 +1,27 @@
+{
+  "id": "genome",
+  "name": "Genome",
+  "aliases": [
+    "基因组"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    }
+  ],
+  "summary": "生物体或细胞完整遗传信息集合的表示对象。",
+  "description": "## 机制\n\n基因组通常指生物体或细胞所含的完整 DNA 集合，涵盖编码与非编码区域。测序和组装提供它的数字表示，分析需关联具体样本、物种及序列版本。\n\n## 边界与应用\n\n基因组不是所有基因名称的列表，基因数或序列长度也不能直接代表复杂程度。组装表示可能存在缺口或替代区域；数字参考与某个个体的全部实际序列应区分。\n\n## 参考\n\n- [NHGRI：基因组](https://www.genome.gov/genetics-glossary/Genome)",
+  "importance": 4,
+  "official_site": "https://www.genome.gov/genetics-glossary/Genome",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

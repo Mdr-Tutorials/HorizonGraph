@@ -1,0 +1,43 @@
+{
+  "id": "finite-volume-method",
+  "name": "Finite Volume Method",
+  "aliases": [
+    "有限体积法",
+    "FVM"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-mesh",
+      "context": "把计算域划分为控制体，并记录邻接面和面法向以计算通量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sparse-linear-solver",
+      "context": "隐式离散时求解控制体平衡形成的稀疏代数系统。"
+    }
+  ],
+  "summary": "对控制体积分守恒方程并离散面通量的方法。",
+  "description": "有限体积法对各控制体中的守恒方程积分，以面通量更新体内平均量。相邻控制体共享面的通量按相反方向计入，可构造局部守恒离散，是计算流体力学的常见方法。\n\n守恒并不自动保证高精度或稳定；通量近似、插值、限制器及边界处理仍需设计。非正交网格和对流占优问题可能带来额外误差与迭代困难。\n\n参考：[OpenFOAM 用户指南](https://doc.cfd.direct/openfoam/user-guide-v13/)；[OpenFOAM 数值离散](https://doc.cfd.direct/openfoam/user-guide-v13/fvschemes)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://doc.cfd.direct/openfoam/user-guide-v13/"
+}

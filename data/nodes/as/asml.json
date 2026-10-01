@@ -11,18 +11,25 @@
     "hardware_iot"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "asml-euv"
     }
   ],
-  "summary": "光刻机公司，EUV 设备的唯一量产供应方。",
+  "summary": "提供 DUV、EUV 光刻及相关量测技术的半导体设备企业。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
   "importance": 5,
-  "official_site": "https://www.asml.com"
+  "official_site": "https://www.asml.com",
+  "description": "ASML 提供用于晶圆图形转移的光刻系统，包括 DUV 和 EUV 产品。光刻通过投影光学把掩膜图案缩小到感光晶圆上，设备与材料、工艺和计算方法共同影响成像。此处连接其 EUV 系统与光刻方法，不把设备厂商等同于代工厂或给所有产品添加唯一供应方结论。\n\n参考：[ASML：光刻原理](https://www.asml.com/en/technology/lithography-principles)；[ASML：EUV 光刻系统](https://www.asml.com/en/products/euv-lithography-systems)。"
 }

@@ -10,10 +10,12 @@
   "type": "protocol",
   "ecosystems": [
     "hardware_iot",
-    "embedded-ecosystem"
+    "embedded-ecosystem",
+    "power-energy-ecosystem"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "power-energy-systems"
   ],
   "abstraction_level": "hardware",
   "relations": [
@@ -24,11 +26,18 @@
     {
       "relation_type": "depends_on",
       "target_id": "usb"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dc-dc-converter",
+      "context": "在采用 DC-DC 电源级的 USB PD 实现中，由协商后的策略控制电压转换；USB-IF 将外围电源管理与 PD 控制器接口区分。"
     }
   ],
-  "summary": "USB 供电协议，最高 240W 的一口充所有。",
+  "summary": "通过协商管理 USB 设备电压、电流和供电角色的协议。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "USB Power Delivery 让电源与用电设备按支持能力协商供电，并允许电力与数据角色分别管理。USB PD 3.1 扩展了功率范围，规定条件下可支持最高 240 W，而非所有接口都具备该能力。\n\n实际功率受协议版本、端口、电源、受电设备和线缆能力约束。USB-IF 将政策控制与外围电源管理区分；协议协商不能替代转换器、保护电路或设备热设计。\n\n参考：[USB-IF：USB Power Delivery 功能和功率范围](https://www.usb.org/usb-charger-pd)。",
+  "official_site": "https://www.usb.org/usb-charger-pd"
 }

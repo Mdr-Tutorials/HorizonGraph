@@ -1,0 +1,19 @@
+{
+  "id": "imagenet",
+  "name": "ImageNet",
+  "aliases": ["ImageNet 图像数据集", "ImageNet 数据集"],
+  "type": "product",
+  "ecosystems": ["ai_data_science"],
+  "domains": ["computer-vision", "machine-learning"],
+  "abstraction_level": "application_tool",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "dataset" }
+  ],
+  "summary": "按语义类别组织的图像数据集与视觉识别基准来源。",
+  "description": "ImageNet 是按 WordNet 的语义类别组织图像的数据集项目。经常被模型文档简称为 ImageNet 的是 ILSVRC 分类与定位子集，而非整个 ImageNet。官方列出的该子集包含 1,000 类、1,281,167 张训练图像、50,000 张验证图像和 100,000 张测试图像。[ImageNet 项目说明](https://www.image-net.org/about.php)、[官方数据下载说明](https://www.image-net.org/download.php)。\n\n分类标注用于预测图像类别，定位任务还提供对象边界框。ILSVRC 以固定任务和数据划分比较识别算法，为 CNN、ResNet 等架构研究提供了共同基准，也常作为视觉预训练的数据来源。[ILSVRC 任务与挑战说明](https://www.image-net.org/challenges/LSVRC/index.php)。\n\nImageNet-1k、ImageNet-21k 等子集具有不同标签范围和训练规模，模型名称中出现 ImageNet 并不足以确定具体预训练条件。本节点统一提供项目入口。比较结果应明确子集、训练与验证划分及 top-k 指标；自然图像基准上的表现不能直接代表医学、工业或其他分布中的效果。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.image-net.org/"
+}

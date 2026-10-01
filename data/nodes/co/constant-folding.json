@@ -1,0 +1,32 @@
+{
+  "id": "constant-folding",
+  "name": "Constant Folding",
+  "aliases": [
+    "常量折叠"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ir",
+      "context": "LLVM 等编译器在 IR 变换过程中折叠能够安全求值的常量表达式。"
+    }
+  ],
+  "summary": "按语言语义在编译时求值确定不变的表达式。",
+  "description": "## 机制\n\n当运算数和运算语义已确定时，编译器可用计算结果替换表达式，例如把整数常量加法改为一个常量。折叠常与常量传播协作，后者让更多表达式具备可折叠条件。\n\n## 边界与应用\n\n溢出、浮点舍入、异常和目标位宽都属于语义约束；不能凭代数直觉随意改写有副作用或可能陷阱的表达式。优化收益也需结合代码体积与目标开销判断。\n\n## 参考\n\n- [LLVM 转换与分析 Pass](https://llvm.org/docs/Passes.html)",
+  "importance": 4,
+  "official_site": "https://llvm.org/docs/Passes.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers"
+  ]
+}

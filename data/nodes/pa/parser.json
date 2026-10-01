@@ -15,11 +15,37 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-free-grammar",
+      "context": "编程语言语法常以上下文无关文法组织递归结构，并补充实现所需规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ll-parsing",
+      "context": "采用预测或递归下降前端时可按 LL 方法组织产生式选择；不是所有解析器的必选方法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lr-parsing",
+      "context": "采用移进归约生成器时可用 LR 分析表识别语法；此边限定该实现路线。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "语法分析常输出抽象语法树，供语义检查和后续转换使用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lexer",
+      "context": "语法分析器通过词法分析接口获取 token 与源码位置，识别输入结构。"
     }
   ],
-  "summary": "按文法把 token 流组织成语法树。",
+  "summary": "根据文法识别输入结构并构造语法表示。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\n语法分析读取 token，按产生式识别表达式、声明与语句，通常构造语法树并保留错误位置。LL 和 LR 是两类方法，工业前端也可能手写并与语义分析交错。\n\n## 边界与应用\n\n合法语法不等于名称和类型合法；错误恢复也不等同于接受非法程序。文法、前瞻和歧义处理策略共同决定可识别范围及诊断质量。\n\n## 参考\n\n- [Clang 内部架构手册](https://clang.llvm.org/docs/InternalsManual.html)\n- [Cornell：LL 与递归下降分析](https://www.cs.cornell.edu/courses/cs4120/2023sp/lectures/05ll/lec05-sp16.pdf)"
 }

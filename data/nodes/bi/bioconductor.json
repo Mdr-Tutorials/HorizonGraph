@@ -1,0 +1,33 @@
+{
+  "id": "bioconductor",
+  "name": "Bioconductor",
+  "aliases": [
+    "Bioconductor 生物数据分析项目"
+  ],
+  "type": "tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "r",
+      "context": "多数分析组件作为 R 包分发，研究工作流在 R 环境中调用这些组件。"
+    }
+  ],
+  "summary": "以 R 软件包、注释与工作流支持生物数据分析的项目。",
+  "description": "## 机制\n\nBioconductor 围绕生物数据分析分发软件、实验数据与注释资源，多数组件是 R 包。共同的数据表示与文档帮助研究者把统计计算、基因组区间和生物元数据联系起来。\n\n## 边界与应用\n\n本节点指软件分发与分析项目，不是一只单独的 R 包。不同组件支持不同任务，包版本、数据资源和实验设计决定结果，平台存在不保证全部分析可自动复现。\n\n## 参考\n\n- [Bioconductor：目标与组件](https://bioconductor.org/about/)",
+  "importance": 4,
+  "official_site": "https://bioconductor.org/about/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

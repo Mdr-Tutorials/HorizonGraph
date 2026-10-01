@@ -1,0 +1,41 @@
+{
+  "id": "gradient-boosting",
+  "name": "Gradient Boosting",
+  "aliases": [
+    "梯度提升"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "loss-function",
+      "context": "每一轮按当前预测损失的负梯度定义新学习器的拟合目标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "decision-tree",
+      "context": "树梯度提升以回归树拟合各轮的梯度目标，并将树输出相加。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regularization",
+      "context": "通过学习率、树复杂度、子采样和早停等选择约束拟合能力。"
+    }
+  ],
+  "summary": "逐步加入弱学习器以降低预测损失。",
+  "description": "梯度提升把模型写成多个弱学习器的加和。每轮依据当前损失的负梯度拟合新学习器，再以学习率控制增量；平方损失下的负梯度就是残差，其他损失的更新不应一概称为残差拟合。\n\n使用决策树作基学习器的形式常称 GBDT，能够处理非线性表格特征。学习率、树复杂度和轮数需要联合选择；迭代过多或树过深仍可能过拟合。与随机森林中相对独立地训练树不同，提升轮次在当前集成结果的基础上继续优化。\n\n参考：[scikit-learn 梯度提升指南](https://scikit-learn.org/stable/modules/ensemble.html#gradient-boosting)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

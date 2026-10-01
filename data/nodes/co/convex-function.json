@@ -1,0 +1,38 @@
+{
+  "id": "convex-function",
+  "name": "Convex Function",
+  "aliases": [
+    "凸函数"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "convex-set",
+      "context": "凸性不等式要求定义域包含任意两点的凸组合。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "convex-optimization",
+      "context": "最小化目标及不等式约束函数的凸性支撑全局最优分析。"
+    }
+  ],
+  "summary": "函数在凸组合处不高于端点值凸组合的函数。",
+  "description": "凸函数在凸定义域上满足 f(tx+(1-t)y)≤tf(x)+(1-t)f(y)。可微时可用一阶支撑不等式检验，二阶可微时 Hessian 半正定提供判据；不可微的绝对值和最大值函数也可以是凸函数。\n\n凸函数的局部最小点是全局最小点，但最小值未必存在，也未必只有一个最优点。识别凸性依赖函数组合规则，自动建模系统无法识别的表达式不一定真的非凸。\n\n参考：[Boyd 与 Vandenberghe 教材](https://stanford.edu/~boyd/cvxbook/)；[CVXPY 曲率与组合规则](https://www.cvxpy.org/tutorial/dcp/index.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://stanford.edu/~boyd/cvxbook/"
+}

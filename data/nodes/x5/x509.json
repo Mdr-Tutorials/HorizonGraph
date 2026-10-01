@@ -14,11 +14,22 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "certificate-chain",
+      "context": "PKIX 通过候选认证路径与本地信任锚验证目标证书。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ocsp",
+      "context": "部署可用 OCSP 获取吊销相关状态，再按时效和响应签名验证策略处理；不是所有部署的必选方案。"
     }
   ],
-  "summary": "数字证书的格式标准，PKI 体系的通用语言。",
+  "summary": "规定公钥证书结构，PKIX 定义互联网验证规则。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\nX.509 证书绑定主体信息和公钥，签发者签名保护其内容；互联网 PKIX 规范定义证书及扩展约束与路径验证。验证从配置的信任锚出发检查签发链、约束与策略。\n\n## 边界与应用\n\n自签名不等于可信，路径有效也不自动完成服务名称或用途检查。吊销相关状态和应用身份验证需按协议要求补充，证书只是公钥基础设施的一部分。\n\n## 参考\n\n- [RFC 5280：X.509 证书与路径验证](https://www.rfc-editor.org/rfc/rfc5280.html)"
 }

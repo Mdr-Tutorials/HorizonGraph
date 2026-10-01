@@ -1,0 +1,31 @@
+{
+  "id": "hamming-code",
+  "name": "Hamming Code",
+  "aliases": [
+    "汉明码",
+    "海明码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-code",
+      "context": "以二元校验矩阵和综合运算构造码字并定位单比特错误。"
+    }
+  ],
+  "summary": "以校验位和综合定位单符号错误的经典线性码。",
+  "description": "二元 Hamming 码的校验矩阵列为不同非零二进制向量，综合可定位单比特错误。标准码最小距离为三，常见 (7,4) 码用三个校验位保护四个信息位。\n\n标准码可以纠正单错，距离三也能在纯检测意义下检测双错，但单错译码器可能把双错误纠。扩展 Hamming 码增加整体校验并用于 SECDED，不能把标准与扩展码的承诺混同。\n\n参考：[MathWorks 分组码](https://www.mathworks.com/help/comm/ug/block-codes.html)；[Hamming 原始论文](https://doi.org/10.1002/j.1538-7305.1950.tb00463.x)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.mathworks.com/help/comm/ug/block-codes.html"
+}

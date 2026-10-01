@@ -1,0 +1,62 @@
+{
+  "id": "threat-modeling",
+  "name": "Threat Modeling",
+  "aliases": [
+    "威胁建模"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cwe",
+      "context": "设计评审可借助 CWE 弱点分类检查遗漏，分类不能替代具体数据流分析。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssrf",
+      "context": "评审代理抓取、URL 预览和回调服务时分析 SSRF 是否跨越网络信任边界。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "idor",
+      "context": "评审对象读取或修改 API 时检查跨用户、角色或租户的对象级访问风险。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-injection",
+      "context": "系统设计需要调用外部命令时识别输入与命令解释边界。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "path-traversal",
+      "context": "上传、下载或模板服务接受路径输入时检查越出允许目录的风险。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "insecure-deserialization",
+      "context": "评审接受外部对象编码的接口时检查类型重建与回调执行风险。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mitre-attack",
+      "context": "评审企业环境的攻击路径时可用 ATT&CK 行为知识补充威胁识别，不将其当作所有应用的唯一模板。"
+    }
+  ],
+  "summary": "建模资产与信任边界，识别威胁并验证应对措施。",
+  "description": "## 机制\n\n先明确系统、资产、参与者和数据流，再沿信任边界识别威胁，确定应对与验证方式。模型应随设计和部署变化维护，可使用不同方法组织风险讨论。\n\n## 边界与应用\n\n威胁建模不是一次漏洞扫描，也不存在适合所有系统的唯一模板。分类框架帮助系统地提问，但业务风险、实际暴露和缓解效果仍需场景证据。\n\n## 参考\n\n- [OWASP：威胁建模](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)",
+  "importance": 4,
+  "official_site": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ]
+}

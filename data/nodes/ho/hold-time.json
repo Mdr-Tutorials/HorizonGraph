@@ -1,0 +1,33 @@
+{
+  "id": "hold-time",
+  "name": "Hold Time",
+  "aliases": [
+    "保持时间"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "flip-flop",
+      "context": "规定输入相对采样边沿的继续稳定要求。"
+    }
+  ],
+  "summary": "采样时钟边沿后输入仍须保持有效稳定的时间要求。",
+  "description": "保持时间描述时序单元在采样边沿之后对输入稳定性的要求。保持分析关注最快数据变化及相应时钟路径；降低时钟频率并不普遍解决保持违例。器件保持要求与路径保持裕量不同，实际数值由库和工作条件给出。\n\n参考：[MIT 6.004：时序逻辑](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c5/c5s1/)；[AMD UG906：保持检查](https://docs.amd.com/r/en-US/ug906-vivado-design-analysis/Hold/Removal-Relationship)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c5/c5s1/"
+}

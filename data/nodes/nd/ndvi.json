@@ -1,0 +1,39 @@
+{
+  "id": "ndvi",
+  "name": "Normalized Difference Vegetation Index",
+  "aliases": [
+    "归一化植被指数"
+  ],
+  "type": "metric",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "landsat-data",
+      "context": "Landsat 反射率产品可提供红与近红外波段，按其尺度和质量说明计算 NDVI。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sentinel-2-data",
+      "context": "Sentinel-2 的红和近红外观测可用于 NDVI，具体波段分辨率和处理层级需核对。"
+    }
+  ],
+  "summary": "用近红外与红波段的归一化差值描述植被光谱特征。",
+  "description": "## 机制\n\nNDVI=(NIR−Red)/(NIR+Red)，使用相应反射率计算，帮助比较植被相关光谱响应。计算前须核对传感器波段、比例因子、质量掩膜以及分母无效情形。\n\n## 边界与应用\n\nNDVI 不是植被健康或产量的直接真值；土壤、大气、云和高覆盖饱和都会影响解释。不同传感器及处理层级的结果不能仅按同一个公式假定完全一致。\n\n## 参考\n\n- [USGS：Landsat NDVI](https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index)",
+  "importance": 4,
+  "official_site": "https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "remote-sensing"
+  ],
+  "abbreviation": "NDVI"
+}

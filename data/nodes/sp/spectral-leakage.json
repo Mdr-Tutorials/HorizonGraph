@@ -1,0 +1,33 @@
+{
+  "id": "spectral-leakage",
+  "name": "Spectral Leakage",
+  "aliases": [
+    "频谱泄漏",
+    "谱泄漏"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "frequency-spectrum",
+      "context": "有限窗使单频成分分散到多个格点，影响峰值幅度与相近频率的解释。"
+    }
+  ],
+  "summary": "有限观测窗口使频率能量扩散到其他频点的现象。",
+  "description": "有限长度观测相当于原信号乘窗，频域则与窗谱卷积。未落在 DFT 格点上的正弦分量因此可能扩散到多个频点，记录边缘的不连续也会影响旁瓣。\n\n泄漏与采样混叠不同，前者受观测时长和窗影响，后者来自频谱复制重叠。加窗调整泄漏分布，但存在主瓣宽度与旁瓣取舍，补零不能创造新的分辨信息。\n\n参考：[SciPy 傅里叶计算](https://docs.scipy.org/doc/scipy/tutorial/fft.html)；[SciPy Hann 窗](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.windows.hann.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://docs.scipy.org/doc/scipy/tutorial/fft.html"
+}

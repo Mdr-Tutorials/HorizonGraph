@@ -1,0 +1,45 @@
+{
+  "id": "quantum-espresso",
+  "name": "Quantum ESPRESSO",
+  "aliases": [
+    "量子 ESPRESSO"
+  ],
+  "type": "tool",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "density-functional-theory",
+      "context": "在 PWscf 等路径中计算近似基态电子结构。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "plane-wave-basis",
+      "context": "在相应包中展开电子态与场。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudopotential",
+      "context": "采用选定核心近似及其配套数据集。"
+    }
+  ],
+  "summary": "以平面波和赝势进行电子结构等计算的软件套件。",
+  "description": "Quantum ESPRESSO 是包含多个包的电子结构与原子模拟软件套件。PWscf 等核心路径使用平面波基与赝势进行 DFT 自洽计算，其他包处理声子、路径及后处理等任务。\n\n它不是一个输入格式完全统一的单程序。应区分所用包、赝势数据集、波函数截断、波矢网格和算法参数；软件成功结束也不代表研究性质已收敛。\n\n## 参考\n\n- [Quantum ESPRESSO：包与方法](https://www.quantum-espresso.org/documentation/)\n- [Quantum ESPRESSO：赝势](https://pseudopotentials.quantum-espresso.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "QE",
+  "official_site": "https://www.quantum-espresso.org/"
+}

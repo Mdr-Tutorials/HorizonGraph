@@ -1,0 +1,38 @@
+{
+  "id": "decision-tree",
+  "name": "Decision Tree",
+  "aliases": [
+    "决策树",
+    "Classification and Regression Tree",
+    "CART"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "supervised-learning",
+      "context": "根据标签选择分类或回归划分，学习从特征到目标的规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regularization",
+      "context": "限制树深、叶子样本数或进行代价复杂度剪枝，以减少过拟合。"
+    }
+  ],
+  "summary": "通过递归特征划分完成分类或回归。",
+  "description": "决策树递归选择特征及阈值，把训练样本划分到更纯的子节点。分类叶子给出类别或类别比例，回归叶子给出连续预测；路径可解释为一组条件规则。\n\n单树能够描述非线性关系，通常不要求按特征尺度标准化。过深的树容易记住训练噪声，且小幅数据变化可能改变树结构；最大深度、叶子最少样本数和剪枝用于控制复杂度。它也是随机森林和树梯度提升常用的基本学习器。\n\n参考：[scikit-learn 决策树指南](https://scikit-learn.org/stable/modules/tree.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

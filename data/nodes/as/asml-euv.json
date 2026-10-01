@@ -9,7 +9,9 @@
     "hardware_iot"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "abstraction_level": "hardware",
   "relations": [
@@ -20,12 +22,17 @@
     {
       "relation_type": "developed_by",
       "target_id": "asml"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "photolithography"
     }
   ],
-  "summary": "ASML 的 EUV 光刻机，先进制程唯一量产来源。",
+  "summary": "ASML 使用极紫外光进行晶圆图形转移的光刻系统族。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
   "importance": 5,
-  "official_site": "https://www.asml.com"
+  "official_site": "https://www.asml.com",
+  "description": "ASML EUV 系统采用 13.5 nm 极紫外光和反射光学，用于芯片制造中的图形转移。NXE 与 EXE 是不同平台，数值孔径与光学设计等能力不同；现有节点以产品族为边界，不混同某一机型或宣称所有先进工艺均仅使用 EUV。\n\n参考：[ASML：EUV 光刻系统](https://www.asml.com/en/products/euv-lithography-systems)；[ASML：光学与数值孔径](https://www.asml.com/en/technology/lithography-principles/lenses-and-mirrors)。"
 }

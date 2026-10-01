@@ -1,0 +1,39 @@
+{
+  "id": "short-time-fourier-transform",
+  "name": "Short-Time Fourier Transform",
+  "aliases": [
+    "短时傅里叶变换",
+    "STFT"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "window-function",
+      "context": "对每个局部片段施加窗，控制截断边缘与频谱泄漏。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fast-fourier-transform",
+      "context": "对各加窗的有限片段高效计算离散频率系数。"
+    }
+  ],
+  "summary": "对滑动窗口内信号计算局部频率表示的变换。",
+  "description": "STFT 对信号的重叠窗口分别作傅里叶变换，形成随时间变化的复频率系数，常用于语音和非平稳信号分析。窗口长度与步长控制时间、频率分辨率和计算成本。\n\n短窗提高时间定位却降低频率分辨，长窗的取舍相反。重建需要匹配窗、步长和覆盖条件，谱图的功率或幅度显示也不同于原始复系数。\n\n参考：[SciPy STFT](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.stft.html)；[MIT 离散时间信号处理](https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.stft.html",
+  "abbreviation": "STFT"
+}

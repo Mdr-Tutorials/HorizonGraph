@@ -1,0 +1,38 @@
+{
+  "id": "numerical-integration",
+  "name": "Numerical Integration",
+  "aliases": [
+    "数值积分",
+    "数值求积"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numerical-interpolation",
+      "context": "对已知样本构造局部函数近似后，可将该近似的积分作为求积公式。"
+    }
+  ],
+  "summary": "通过有限采样与权重近似积分的数值方法。",
+  "description": "数值积分用函数有限次求值构造积分近似，常见方法包括梯形、Simpson、Gaussian 求积和自适应分区。给定离散样本与可随时求值的函数适用的接口和误差估计不同。\n\n奇点、快速振荡和不光滑函数可能使普通误差估计失准。此处主要指求积；ODE 的时间积分也使用 integration 一词，但它求的是随时间演化的未知函数。\n\n参考：[FNC 插值与积分](https://fncbook.com/chapter5/)；[SciPy 积分接口](https://docs.scipy.org/doc/scipy/reference/integrate.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://fncbook.com/chapter5/"
+}

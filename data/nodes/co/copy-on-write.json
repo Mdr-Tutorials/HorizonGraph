@@ -1,0 +1,37 @@
+{
+  "id": "copy-on-write",
+  "name": "Copy-on-Write",
+  "aliases": [
+    "写时复制"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-fault",
+      "context": "Linux fork 后受保护共享页的写入通过页故障进入写时复制处理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-table",
+      "context": "复制完成后修改写入进程的页表，其他进程保留对原页的映射。"
+    }
+  ],
+  "summary": "先共享只读数据，首次修改时才建立私有副本的机制。",
+  "description": "## 机制\n\n以 Linux fork 为例，父子进程最初共享物理页，映射设置为受保护状态；一方写入触发页故障，内核在需要时复制该页并更新其映射。\n\n## 边界与应用\n\n写时复制推迟分配与复制成本，不代表永不复制，也不保证写入时内存足够。文件系统和容器存储也可采用此思想，具体粒度、元数据和一致性规则不同。\n\n## 参考\n\n- [Linux fork 手册](https://man7.org/linux/man-pages/man2/fork.2.html)\n- [Linux 页表文档](https://docs.kernel.org/mm/page_tables.html)",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man2/fork.2.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ]
+}

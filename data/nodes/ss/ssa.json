@@ -17,9 +17,10 @@
       "target_id": "theory"
     }
   ],
-  "summary": "每个变量只赋值一次的 IR 形态，现代优化的基石。",
+  "summary": "让每个值只定义一次，以显式合并表达控制流数据流。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "## 机制\n\nSSA 将变量的不同赋值改为不同值名，分支合流处用 phi 等形式选择前驱值。显式定义与使用关系便于常量传播、值编号和无用计算分析。\n\n## 边界与应用\n\nSSA 主要描述值，不使任意内存存取自动单赋值。实现仍需处理别名、副作用与控制流；降低到机器代码时也需消去或实现合并操作。\n\n## 参考\n\n- [LLVM IR 语言参考](https://llvm.org/docs/LangRef.html)"
 }

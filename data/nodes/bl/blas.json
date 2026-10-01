@@ -6,11 +6,15 @@
   ],
   "type": "library",
   "ecosystems": [
-    "ai_data_science"
+    "ai_data_science",
+    "scientific-computing-ecosystem"
   ],
   "domains": [
     "high-performance-computing",
-    "machine-learning"
+    "machine-learning",
+    "mathematics",
+    "scientific-computing",
+    "computational-engineering"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -22,12 +26,18 @@
       "relation_type": "implements",
       "target_id": "matrix-multiplication",
       "context": "提供矩阵乘法运算；具体接口和执行设备由实现决定。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "linear-algebra",
+      "context": "以标准化子程序接口实现向量、矩阵向量及矩阵矩阵等基础线性代数运算。"
     }
   ],
-  "summary": "线性代数运算的事实标准接口，数值计算的奠基石。",
+  "summary": "为向量与矩阵基本运算定义接口的数值库。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
-  "official_site": "https://www.netlib.org/blas/"
+  "official_site": "https://www.netlib.org/blas/",
+  "description": "BLAS 约定基础线性代数子程序接口：Level 1 处理向量，Level 2 处理矩阵与向量，Level 3 处理矩阵与矩阵。GEMM 实现一般矩阵乘法，是把很多小标量运算组织成可优化计算内核的典型接口。\n\nNetlib 提供参考实现，其他实现可针对缓存、向量指令和多线程优化。BLAS 位于基础运算层，LAPACK 等上层数值库用这些内核组织分解与求解；BLAS 本身不是完整的 PDE 或优化求解器。数据布局、精度和问题大小都会影响性能。\n\n参考：[Netlib BLAS](https://www.netlib.org/blas/)；[LAPACK 用户指南](https://www.netlib.org/lapack/lug/)。"
 }

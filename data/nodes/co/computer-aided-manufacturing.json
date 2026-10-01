@@ -1,0 +1,40 @@
+{
+  "id": "computer-aided-manufacturing",
+  "name": "Computer-Aided Manufacturing",
+  "aliases": [
+    "计算机辅助制造",
+    "CAM"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computer-aided-design",
+      "context": "利用零件几何和设计尺寸建立加工目标及刀具路径的几何依据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-problem",
+      "context": "规划特定刀路或排程时，可用约束与成本表达加工时间和资源取舍。"
+    }
+  ],
+  "summary": "从设计几何规划并生成制造加工过程的软件方法。",
+  "description": "CAM 根据几何、毛坯、刀具和加工策略生成刀具路径，再通过后处理器输出适配机床控制器的程序。机械加工中常把 CAD 模型作为输入，但还需明确工艺、装夹和设备约束。\n\n仿真与碰撞检查不能替代现场工艺验证，刀路可生成不代表可安全加工。不同机床轴数、控制器和后处理器有不同限制，软件计算应与材料和制造误差一起评估。\n\n参考：[Autodesk CAD/CAM 流程](https://www.autodesk.com/ca-en/solutions/cad-cam)；[FreeCAD 官方功能](https://freecad.github.io/Website/features/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.autodesk.com/ca-en/solutions/cad-cam",
+  "abbreviation": "CAM"
+}

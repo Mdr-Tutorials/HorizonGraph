@@ -1,0 +1,33 @@
+{
+  "id": "pwm",
+  "name": "Pulse-Width Modulation",
+  "aliases": [
+    "脉宽调制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "feedback-control",
+      "context": "在闭环 PWM 稳压器中，根据输出误差调整占空比；PWM 本身也可用于开环调制。"
+    }
+  ],
+  "summary": "通过改变脉冲宽度或占空比控制平均输出的调制方法。",
+  "description": "PWM 在一定周期内改变开关导通时间，占空比为导通时间与周期之比。经过合适的储能与滤波网络后，可调节电压、电流或执行器平均作用。\n\n占空比与输出的关系依赖拓扑、导通模式和负载。死区、最小脉宽、开关损耗和频率影响实际行为；PWM 也不同于以改变脉冲频率为主的 PFM。\n\n参考：[Texas Instruments：开关稳压器基本原理](https://www.ti.com/lit/pdf/SNVA559)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.ti.com/lit/pdf/SNVA559",
+  "abbreviation": "PWM"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "pseudopotential",
+  "name": "Pseudopotential",
+  "aliases": [
+    "赝势"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    }
+  ],
+  "summary": "以有效势近似核心区域以降低电子计算成本。",
+  "description": "赝势在选定近似下替代原子核附近的核心电子影响，使价电子计算更易采用平滑基组。模守恒、超软及 PAW 相关数据集具有不同形式和要求，不宜当作可任意互换的文件。\n\n选择应匹配交换关联方法、元素价态与所研究性质，并验证截断能及可迁移性。使用赝势不能省略精度和收敛检查。\n\n## 参考\n\n- [Quantum ESPRESSO：赝势](https://pseudopotentials.quantum-espresso.org/)\n- [VASP：第一性原理计算理论](https://vasp.at/wiki/index.php/Category:Theory)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

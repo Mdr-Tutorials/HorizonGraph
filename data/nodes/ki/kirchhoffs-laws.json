@@ -1,0 +1,32 @@
+{
+  "id": "kirchhoffs-laws",
+  "name": "Kirchhoff's Circuit Laws",
+  "aliases": [
+    "基尔霍夫定律"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "analog-circuit",
+      "context": "在满足集总电路假设的模型内，约束节点和回路方程。"
+    }
+  ],
+  "summary": "以节点电流和回路电压守恒约束集总电路。",
+  "description": "基尔霍夫电流定律要求节点处流入、流出电流的代数和为零；电压定律要求闭合回路中电压升降的代数和为零。结合器件端口关系，可建立节点或回路方程。\n\n集总电路假设把储能和耗散集中在元件内。当节点积累电荷、回路有未建模的时变磁通或传播效应显著时，需要纳入相应元件、感应电势或分布参数。\n\n参考：[MIT 6.002：电路分析](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l2/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l2/"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "rtl",
+  "name": "Register-Transfer Level",
+  "aliases": [
+    "寄存器传输级",
+    "寄存器传输层"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "verilog",
+      "context": "在硬件设计中，用可综合 Verilog 或 SystemVerilog 子集表达寄存器传输行为。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vhdl",
+      "context": "在 VHDL 设计流程中用可综合描述表达寄存器与组合逻辑。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "flip-flop",
+      "context": "在同步设计中描述寄存器状态，并在综合时映射到触发器等时序单元。"
+    }
+  ],
+  "summary": "按寄存器、数据传输和逻辑运算描述同步硬件的抽象层。",
+  "description": "RTL 描述寄存器之间的数据流及其组合运算，通常用 Verilog、SystemVerilog 或 VHDL 表达。可综合描述经综合转换成目标器件网表；测试平台和任意行为描述未必可综合。相同 RTL 可面向 FPGA 或 ASIC，但映射资源、时序约束和物理实现不同。\n\n参考：[Synopsys：RTL 设计](https://www.synopsys.com/glossary/what-is-register-transfer-level-design.html)；[Yosys 官方介绍](https://yosyshq.readthedocs.io/projects/yosys/en/latest/introduction.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "RTL",
+  "official_site": "https://www.synopsys.com/glossary/what-is-register-transfer-level-design.html"
+}

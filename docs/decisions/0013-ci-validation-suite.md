@@ -3,6 +3,8 @@
 - 状态：已接受
 - 日期：2026-08-29
 
+端侧引擎、数据快照、实际 WASM 与浏览器离线回归的当前门禁见 [ADR-0025](0025-versioned-engine-and-offline-release.md)。下列清单保留完整目标；当前 `pnpm validate` 的实现范围以 `tools/src/validate/run.ts` 为准。
+
 ## 背景
 
 ADR-0001 确立强制平面。本项目贡献走单一低门槛通道（任何人可 PR 数据与契约文件），CI 是唯一结构守门员：规则缺口即数据缺口。

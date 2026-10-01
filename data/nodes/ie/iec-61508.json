@@ -1,0 +1,38 @@
+{
+  "id": "iec-61508",
+  "name": "IEC 61508",
+  "aliases": [
+    "IEC 61508 功能安全标准"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "iec",
+      "context": "IEC 发布并制修订面向 E/E/PE 安全相关系统的 IEC 61508 系列。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "safety-integrity-level",
+      "context": "以 SIL 描述所分配安全功能的完整性要求。"
+    }
+  ],
+  "summary": "面向电气、电子及可编程电子安全相关系统的基础标准系列。",
+  "description": "IEC 61508 提供安全生命周期、安全功能与完整性要求的基础框架，覆盖硬件、软件和系统性失效等问题。多个行业功能安全标准在此框架上作领域化规定。\n\n其要求围绕明确的安全相关系统与功能，并非对所有电子产品统一给出一个等级。标准遵循、第三方评估和具体设备认证也需要分别理解。\n\n参考：[IEC：功能安全与 IEC 61508 概览](https://assets.iec.ch/public/acos/IEC%2061508%20%26%20Functional%20Safety-2022.pdf)；[IEC 61508-5：安全完整性等级的确定](https://webstore.iec.ch/en/publication/5519)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://assets.iec.ch/public/acos/IEC%2061508%20%26%20Functional%20Safety-2022.pdf",
+  "abstraction_level": "runtime_vm"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "mes",
+  "name": "Manufacturing Execution System",
+  "aliases": [
+    "制造执行系统"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "isa-95",
+      "context": "在采用 ISA-95 的企业与制造系统集成中，以其活动和信息模型划分接口与交换内容。"
+    }
+  ],
+  "summary": "管理现场生产执行、进度、质量和追溯的系统类别。",
+  "description": "MES 位于企业生产计划与车间执行之间，处理作业进度、物料、质量、设备和生产记录等信息。它利用实际生产数据，使计划和制造活动能够对应。\n\nMES 不负责替代每个设备的快速闭环，也不能与 ERP 或 SCADA 完全等同。不同产品与行业的功能范围不同；采用 ISA-95 模型可帮助约定系统接口与活动边界。\n\n参考：[Siemens：SCADA、MES 与 ERP 职责边界](https://www.siemens.com/en-us/products/xhq/)；[ISA：ISA-95 企业与控制集成标准](https://www.isa.org/standards-and-publications/isa-standards/isa-95-standard)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.siemens.com/en-us/products/xhq/",
+  "abbreviation": "MES"
+}

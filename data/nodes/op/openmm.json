@@ -1,0 +1,44 @@
+{
+  "id": "openmm",
+  "name": "OpenMM",
+  "aliases": [
+    "OpenMM 分子模拟库"
+  ],
+  "type": "library",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "molecular-dynamics",
+      "context": "用力对象、系统和积分器组织动力学模拟。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "force-field",
+      "context": "在应用层路径中建立所选分子相互作用模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "通过提供的 Python API 组织分子模拟工作流。"
+    }
+  ],
+  "summary": "提供可编程力模型与高性能分子模拟接口的工具包。",
+  "description": "OpenMM 提供分子模拟的库接口、物理模型和应用层工具，可通过 Python 等接口建立体系并选择积分方法。自定义力及插件支持特定模型扩展，硬件后端取决于安装与配置。\n\n它不自动决定模型是否适合研究问题。力场、约束、积分器、时间步和运行环境仍需验证，API 可编程性与物理模型准确性是不同维度。\n\n## 参考\n\n- [OpenMM：库与应用层](https://docs.openmm.org/latest/userguide/introduction.html)\n- [OpenMM：物理模型与数值方法](https://docs.openmm.org/latest/userguide/theory.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://openmm.org/"
+}

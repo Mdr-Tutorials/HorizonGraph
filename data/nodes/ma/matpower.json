@@ -1,0 +1,41 @@
+{
+  "id": "matpower",
+  "name": "MATPOWER",
+  "aliases": [
+    "MATPOWER"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "power-flow"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "optimal-power-flow"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "matlab",
+      "context": "可在 MATLAB 环境中运行 MATPOWER；项目也支持 GNU Octave，因此该关系不是唯一硬依赖。"
+    }
+  ],
+  "summary": "用于电力潮流与最优潮流研究的 MATLAB/Octave 工具包。",
+  "description": "MATPOWER 提供电力系统稳态仿真和优化代码，使用母线、发电机及支路数据描述网络，并提供 AC/DC 潮流和最优潮流接口。它也发布求解器与扩展架构的文档。\n\n项目支持 MATLAB 与 GNU Octave 运行环境，版本和可选求解器的要求需结合安装文档核对。模型假设、约束及求解状态决定输出的含义，工具名称不代表全局最优保证。\n\n参考：[MATPOWER：官方项目](https://matpower.org/)；[MATPOWER：用户手册](https://matpower.org/docs/MATPOWER-manual.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://matpower.org/",
+  "abstraction_level": "application_tool"
+}

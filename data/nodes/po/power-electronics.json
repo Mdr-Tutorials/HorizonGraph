@@ -1,0 +1,37 @@
+{
+  "id": "power-electronics",
+  "name": "Power Electronics",
+  "aliases": [
+    "电力电子"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mosfet",
+      "context": "在采用 MOSFET 的开关转换器中，控制器件导通状态以变换功率。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pwm",
+      "context": "在脉宽调制转换器中，通过控制开关脉冲调节平均能量传输。"
+    }
+  ],
+  "summary": "用功率半导体及控制电路变换和调节电能的工程技术。",
+  "description": "电力电子处理电能的电压、电流、频率和方向，涵盖 DC-DC、整流与逆变等转换。开关器件、储能元件、调制和反馈共同形成可控转换系统。\n\n效率和动态响应取决于开关、导通及磁性元件损耗，布局和寄生参数也影响性能。理想开关模型便于分析，但不能替代器件和热设计。\n\n参考：[Texas Instruments：电力电子实验课程](https://www.ti.com/video/series/experimental-power-electronics-curriculum-and-reference.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.ti.com/video/series/experimental-power-electronics-curriculum-and-reference.html"
+}

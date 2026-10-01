@@ -1,0 +1,33 @@
+{
+  "id": "dead-code-elimination",
+  "name": "Dead Code Elimination",
+  "aliases": [
+    "死代码消除"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ir",
+      "context": "通过 IR 的使用关系和副作用信息识别可安全删除的指令。"
+    }
+  ],
+  "summary": "删除不影响程序可观察行为的无用计算或代码。",
+  "description": "## 机制\n\n以数据流为基础，若某条指令的结果不被使用且无可观察副作用，就可删除；删除后又可能暴露更多死指令。不可达代码删除与无用结果删除相关，但分析条件不同。\n\n## 边界与应用\n\n外部 I/O、volatile 存取、异常和其他副作用可能使结果无人使用的指令仍须保留。激进删除必须证明语义等价，而不是仅按源代码中变量是否出现判断。\n\n## 参考\n\n- [LLVM 转换与分析 Pass](https://llvm.org/docs/Passes.html)",
+  "importance": 4,
+  "official_site": "https://llvm.org/docs/Passes.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers"
+  ],
+  "abbreviation": "DCE"
+}

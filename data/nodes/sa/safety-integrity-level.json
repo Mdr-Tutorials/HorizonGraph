@@ -1,0 +1,33 @@
+{
+  "id": "safety-integrity-level",
+  "name": "Safety Integrity Level",
+  "aliases": [
+    "安全完整性等级"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "iec-61508",
+      "context": "以 IEC 61508 的等级定义与运行模式要求表述安全功能的完整性目标。"
+    }
+  ],
+  "summary": "按规定框架表达安全功能完整性要求的离散等级。",
+  "description": "IEC 61508 使用 SIL 1 至 SIL 4 描述分配给安全功能的安全完整性要求，其中 SIL 4 的要求更高。等级涉及适用运行模式下的危险失效目标及系统能力。\n\nSIL 是安全功能的属性，不是给整家公司或任意系统笼统贴的可靠性分数。确定等级需要风险分析和功能边界，单个元件证书也不能替代完整系统论证。\n\n参考：[IEC：功能安全与 IEC 61508 概览](https://assets.iec.ch/public/acos/IEC%2061508%20%26%20Functional%20Safety-2022.pdf)；[IEC 61508-5：安全完整性等级的确定](https://webstore.iec.ch/en/publication/5519)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://assets.iec.ch/public/acos/IEC%2061508%20%26%20Functional%20Safety-2022.pdf",
+  "abbreviation": "SIL"
+}

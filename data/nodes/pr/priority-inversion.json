@@ -1,0 +1,32 @@
+{
+  "id": "priority-inversion",
+  "name": "Priority Inversion",
+  "aliases": [
+    "优先级反转"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "scheduler",
+      "context": "锁等待造成的优先级反转约束实时调度设计，需要继承或上限等协议控制阻塞。"
+    }
+  ],
+  "summary": "高优先级任务等待低优先级持锁者而被间接拖延。",
+  "description": "## 机制\n\n典型场景中，低优先级任务持锁，高优先级任务阻塞于该锁，中优先级任务持续抢占持锁者。优先级继承把等待者的较高优先级暂时传递给锁拥有者，帮助其完成临界区。\n\n## 边界与应用\n\n继承需要处理嵌套锁和依赖链，不能消除死锁或无界临界区。只有采用相应协议时才有阻塞约束，不应把名义优先级当作完成时间保证。\n\n## 参考\n\n- [Linux RT-mutex 与优先级继承](https://docs.kernel.org/locking/rt-mutex-design.html)",
+  "importance": 4,
+  "official_site": "https://docs.kernel.org/locking/rt-mutex-design.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ]
+}

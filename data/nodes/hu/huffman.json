@@ -9,17 +9,34 @@
   ],
   "type": "concept",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "information-theory"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "algorithm"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "heap",
+      "context": "构造码树时可用最小堆维护待合并权重，反复提取最小的两项。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "prefix-code",
+      "context": "用前缀码树表达所生成的码字，保证符号流可以即时判定码字边界。"
     }
   ],
-  "summary": "按频率分配变长前缀码的贪心最优编码。",
+  "summary": "按权重贪心合并，构造平均码长最优的二元前缀码。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "ecosystems": [],
+  "description": "Huffman 编码反复合并权重最小的两个项，构造二叉码树。给定符号权重时，该过程可取得符号逐个编码的二元前缀码中的最小平均码长；解码器沿树分支恢复符号，码字之间不存在前缀包含关系。\n\n最优性有明确范围：它不是所有压缩方案或任意码约束的普遍最优。整数码长与逐符号处理会限制效率，可将符号分块，或采用算术编码表达更细的概率区间；实际文件还需携带或约定码表，开销也计入总大小。\n\n参考：[MIT 无损压缩与前缀码](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/)；[MIT 信源编码](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_9/)。"
 }

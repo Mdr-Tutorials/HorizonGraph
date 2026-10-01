@@ -1,0 +1,32 @@
+{
+  "id": "sequence-alignment",
+  "name": "Sequence Alignment",
+  "aliases": [
+    "序列比对"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dynamic-programming",
+      "context": "Needleman-Wunsch、Smith-Waterman 等精确成对比对方法用动态规划求解给定评分模型下的最优对应。"
+    }
+  ],
+  "summary": "按匹配、替换与缺口规则寻找序列之间的对应。",
+  "description": "## 机制\n\n序列比对为核酸或蛋白序列建立位置对应，用评分模型处理匹配、替换和缺口。全局与局部比对的目标不同，动态规划可在指定模型下求解，而大规模检索也常采用种子扩展等启发式方法。\n\n## 边界与应用\n\n高分相似不直接证明同源或相同功能，结论要结合统计、覆盖和生物上下文。读段定位与多序列比对也是不同任务，重复区域和模型选择会导致歧义。\n\n## 参考\n\n- [NCBI 教材：序列分析的原理与方法](https://www.ncbi.nlm.nih.gov/books/NBK20261/?report=reader)\n- [Nalbantoğlu：序列比对中的动态规划](https://pubmed.ncbi.nlm.nih.gov/24170392/)",
+  "importance": 4,
+  "official_site": "https://www.ncbi.nlm.nih.gov/books/NBK20261/?report=reader",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

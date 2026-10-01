@@ -1,0 +1,36 @@
+{
+  "id": "elf",
+  "name": "Executable and Linkable Format",
+  "aliases": [
+    "可执行与可链接格式"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "relocation",
+      "context": "ELF 目标文件以重定位条目描述尚待解析和修补的符号引用。"
+    }
+  ],
+  "summary": "描述目标文件、可执行文件和共享对象的二进制格式。",
+  "description": "## 机制\n\nELF 头描述文件类型、架构与其他表的位置；节组织链接所需代码和元数据，程序头描述装载视图。符号表和重定位记录支持跨文件名称解析与地址修补。\n\n## 边界与应用\n\nELF 是文件格式，不是 CPU 指令集或完整调用约定。32/64 位、字节序与架构补充规范仍须匹配；并非所有操作系统或编译器目标都采用 ELF。\n\n## 参考\n\n- [ELF 文件头规范](https://gabi.xinuos.com/elf/02-eheader.html)\n- [ELF 符号表规范](https://gabi.xinuos.com/elf/05-symtab.html)\n- [ELF 重定位规范](https://gabi.xinuos.com/elf/06-reloc.html)",
+  "importance": 4,
+  "official_site": "https://gabi.xinuos.com/elf/02-eheader.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "abbreviation": "ELF",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "compilers",
+    "systems-programming"
+  ],
+  "abstraction_level": "runtime_vm"
+}

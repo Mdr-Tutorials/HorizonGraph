@@ -1,0 +1,30 @@
+{
+  "id": "ssrf",
+  "name": "Server-Side Request Forgery",
+  "aliases": [
+    "服务端请求伪造",
+    "服务器端请求伪造"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "不可信输入驱动服务器向非预期目标发起请求。",
+  "description": "## 机制\n\nURL 抓取、代理或回调服务若让外部输入控制目标，可使服务器访问内网、元数据端点或其他受限服务。攻击借用服务器所在网络和身份，而不是直接从浏览器访问目标。\n\n## 边界与应用\n\n防护要按业务限制协议、目标和出站网络，同时处理重定向、DNS 解析及地址规范化。仅检查字符串前缀或只封禁少量 IP 不足以覆盖解析差异和目标变化。\n\n## 参考\n\n- [OWASP：SSRF 防护](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)",
+  "importance": 4,
+  "official_site": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "abbreviation": "SSRF"
+}

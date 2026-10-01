@@ -1,0 +1,32 @@
+{
+  "id": "gene-expression",
+  "name": "Gene Expression",
+  "aliases": [
+    "基因表达"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "rna-seq",
+      "context": "表达随细胞和条件改变，约束 RNA-seq 的采样设计及对 RNA 丰度的解释。"
+    }
+  ],
+  "summary": "把基因编码信息转为 RNA 或蛋白等功能产物的过程。",
+  "description": "## 机制\n\n基因表达涉及基因信息转录为 RNA，以及编码 RNA 后续产生蛋白等过程。表达在时间、细胞类型与环境中受到调节，非编码 RNA 也可作为功能产物。\n\n## 边界与应用\n\n测到 RNA、蛋白丰度或活性分别观察表达过程的不同层面，不应视为相同量。细胞组成与样本状态会影响信号，因此表达研究需要明确测量对象和实验条件。\n\n## 参考\n\n- [NHGRI：基因表达](https://www.genome.gov/genetics-glossary/Gene-Expression)",
+  "importance": 4,
+  "official_site": "https://www.genome.gov/genetics-glossary/Gene-Expression",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

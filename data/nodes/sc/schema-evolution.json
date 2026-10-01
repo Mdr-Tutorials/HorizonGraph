@@ -1,0 +1,29 @@
+{
+  "id": "schema-evolution",
+  "name": "Schema Evolution",
+  "aliases": [
+    "模式演进",
+    "Schema 演进"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    }
+  ],
+  "summary": "在数据结构变化时维护新旧读写端的兼容关系。",
+  "description": "## 机制\n\n添加、删除、重命名或调整字段时，需要定义旧数据与新模式如何解析。Avro 使用读者和写者模式解析；Iceberg 依稳定字段 ID 支持部分模式变更而无需重写全部数据文件。\n\n## 边界与应用\n\n兼容方向不同：新读者读旧数据不等于旧读者读新数据。可接受的结构变化也不代表业务含义不变，字段重用、单位变化与消费者预期需额外约定。\n\n## 参考\n\n- [Avro：模式解析规范](https://avro.apache.org/docs/1.12.0/specification/)\n- [Iceberg：模式与分区演进](https://iceberg.apache.org/docs/latest/evolution/)",
+  "importance": 4,
+  "official_site": "https://avro.apache.org/docs/1.12.0/specification/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "databases"
+  ]
+}

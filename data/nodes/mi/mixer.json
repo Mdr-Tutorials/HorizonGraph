@@ -1,0 +1,32 @@
+{
+  "id": "mixer",
+  "name": "RF Mixer",
+  "aliases": [
+    "射频混频器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "voltage-controlled-oscillator",
+      "context": "在采用 VCO 或 PLL 合成本振的收发机中，为混频器提供可调本振；固定振荡器也可使用。"
+    }
+  ],
+  "summary": "用本振与输入信号的非线性交互完成频率变换。",
+  "description": "射频混频器接收信号与本地振荡器激励，产生和频、差频及其他混频产物；滤波和端口设计选择所需中频或基带。它用于上变频和下变频。\n\n转换增益或损耗、噪声、线性度及端口隔离均会影响系统。混频不是把两个同频信号简单相加，输出杂散也不能仅由理想乘法模型完全描述。\n\n参考：[Analog Devices：接收机、混频器与本地振荡器](https://wiki.analog.com/university/tools/m2k/tutorials/buildingaradiowithm2k)；[Analog Devices：AD831 混频器](https://www.analog.com/en/products/ad831.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://wiki.analog.com/university/tools/m2k/tutorials/buildingaradiowithm2k"
+}

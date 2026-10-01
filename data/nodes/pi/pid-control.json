@@ -1,0 +1,40 @@
+{
+  "id": "pid-control",
+  "name": "PID Control",
+  "aliases": [
+    "PID 控制",
+    "比例积分微分控制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "robotics-ecosystem",
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "control-theory",
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "robotics-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "feedback-control",
+      "context": "根据参考值与测量值的误差及其积分、变化率形成闭环控制输入。"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    }
+  ],
+  "summary": "结合误差、误差积分与变化率生成反馈控制输入。",
+  "description": "PID 以比例、积分和微分项组合控制输入，常用于运动以及温度、压力、流量等过程调节。比例项响应当前误差，积分项累积误差，微分项响应变化；PI、PD 是相应特例。\n\n实现需考虑采样时间、微分滤波、执行器饱和及抗积分饱和。积分不保证所有对象无稳态误差，PID 也不保证任意延迟、非线性或耦合系统稳定；参数整定和工况变化需要验证。\n\n参考：[ROS 2 control：PID 控制器](https://control.ros.org/rolling/doc/ros2_controllers/pid_controller/doc/userdoc.html)；[NI：PID 与过程变量控制](https://www.ni.com/en/shop/labview/pid-theory-explained.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://control.ros.org/rolling/doc/ros2_controllers/pid_controller/doc/userdoc.html"
+}

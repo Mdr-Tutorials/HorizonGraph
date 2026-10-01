@@ -1,0 +1,35 @@
+{
+  "id": "boundary-representation",
+  "name": "Boundary Representation",
+  "aliases": [
+    "边界表示",
+    "B-rep"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "表达点、方向及仿射变换，计算几何对象的位置和坐标系关系。"
+    }
+  ],
+  "summary": "通过面、边、顶点及拓扑连接描述几何实体。",
+  "description": "边界表示把实体的几何曲面、曲线和顶点与拓扑面、边、线框等连接关系组合。几何描述形状，拓扑描述邻接和方向，闭合且一致的边界可用于表示实体内部。\n\n只有曲面集合未必构成有效实体，缝隙、方向错误和容差冲突会影响布尔运算与网格生成。B-rep 不等于三角面片格式，曲面本身可以是解析或样条表示。\n\n参考：[Open CASCADE 建模数据](https://dev.opencascade.org/doc/overview/html/occt_user_guides__modeling_data.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://dev.opencascade.org/doc/overview/html/occt_user_guides__modeling_data.html",
+  "abbreviation": "B-rep"
+}

@@ -9,17 +9,27 @@
   "type": "concept",
   "domains": [
     "industry-landscape",
-    "cloud-infrastructure"
+    "cloud-infrastructure",
+    "industrial-automation"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
     }
   ],
-  "summary": "物理实体的实时数字镜像，仿真与运维的新范式。",
+  "summary": "与物理对象的数据联系相结合、支持分析和预测的数字表示。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "数字孪生把物理对象或过程的数字模型与观测数据联系起来，面向监测、诊断、预测或方案评估。数据联系、模型、分析和更新机制共同决定其实际能力，单个三维模型并不充分。\n\n更新频率和保真度取决于用途，不能要求所有数字孪生都逐时刻同步。数据质量、模型假设与安全信任影响结论，仿真结果也不能自动视为物理系统的真实状态。\n\n参考：[NIST：数字孪生的基本组成](https://www.nist.gov/digital-twins/essential-elements)；[NIST：数字孪生安全与信任边界](https://www.nist.gov/publications/security-and-trust-considerations-digital-twin-technology-digital-twin-technology)。",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "official_site": "https://www.nist.gov/digital-twins/essential-elements"
 }

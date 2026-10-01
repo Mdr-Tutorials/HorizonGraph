@@ -1,0 +1,37 @@
+{
+  "id": "process-control",
+  "name": "Process Control",
+  "aliases": [
+    "过程控制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "feedback-control",
+      "context": "利用过程变量与目标之间的误差调节执行器输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pid-control",
+      "context": "在适合 PID 的调节回路中组合比例、积分与微分作用。"
+    }
+  ],
+  "summary": "用量测和控制输入把工业过程变量维持在目标条件的方法。",
+  "description": "过程控制围绕温度、压力、流量等变量，借助传感器、控制器和执行器响应设定值或扰动。闭环调节、顺序逻辑及工艺约束共同影响生产行为。\n\nPID 是常见控制律，但对象耦合、延迟、饱和或非线性可能需要其他方法。过程控制与监控数据展示属于不同层次，不能用界面正常显示证明控制环路稳定。\n\n参考：[NI：PID 与过程变量控制](https://www.ni.com/en/shop/labview/pid-theory-explained.html)；[Siemens：分布式过程控制系统](https://www.siemens.com/en-gb/products/process-control/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.ni.com/en/shop/labview/pid-theory-explained.html"
+}

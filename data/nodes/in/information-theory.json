@@ -1,0 +1,40 @@
+{
+  "id": "information-theory",
+  "name": "Information Theory",
+  "aliases": [
+    "信息论"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shannon-entropy",
+      "context": "度量离散信源的不确定性，并界定无损压缩的平均信息需求。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutual-information",
+      "context": "度量输入输出共享的信息，用于容量及统计依赖分析。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rate-distortion-theory",
+      "context": "在允许损失的压缩任务中分析码率与失真之间的极限。"
+    }
+  ],
+  "summary": "研究信息度量、压缩和可靠传输极限的数学领域。",
+  "description": "信息论用概率模型定义熵、散度与互信息，研究描述数据需要多少比特以及带噪传输能够达到什么速率。它关注编码和通信的数学极限，与具体消息的语义价值不同。\n\n结论依赖信源、信道、失真标准及块长等假设。渐近极限并不说明有限长度代码的误码率或计算成本，需要实际编码、译码和系统设计把理论转为工程方案。\n\n参考：[MIT 信息论讲义](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/pages/lecture-notes/"
+}

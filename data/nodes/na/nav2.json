@@ -1,0 +1,39 @@
+{
+  "id": "nav2",
+  "name": "Navigation2",
+  "aliases": [
+    "Nav2",
+    "ROS 2 导航框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "embedded-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ros"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "path-planning",
+      "context": "通过规划服务器及其插件根据地图、目标与机器人约束生成导航路径。"
+    }
+  ],
+  "summary": "组合地图、状态估计、规划与控制的 ROS 2 导航框架。",
+  "description": "## 组织方式\n\nNav2 为 ROS 2 移动机器人导航提供模块化服务器和行为树编排，组合全局规划、路径跟踪、代价地图及恢复行为。定位、地图与坐标变换需要由相应组件或输入提供。\n\n## 配置边界\n\n框架通过插件选择算法，导航不等于每个部署都执行 SLAM。规划器与控制器应匹配机器人运动模型、传感器和环境，最终执行仍受真实硬件与动态障碍限制。\n\n## 参考\n\n- [Nav2：导航概念](https://docs.nav2.org/rolling/getting_started/navigation_concepts/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://docs.nav2.org/rolling/getting_started/navigation_concepts/"
+}

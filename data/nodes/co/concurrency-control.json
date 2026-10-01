@@ -15,11 +15,22 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mvcc",
+      "context": "多版本实现用快照读减少普通读写冲突，再结合冲突检测或锁维护相应隔离。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transactions",
+      "context": "在同时执行的事务之间协调读写访问及提交结果。"
     }
   ],
-  "summary": "让并发操作不破坏正确性的锁与无锁技术总称。",
+  "summary": "协调并发事务，维持声明的隔离和冲突处理规则。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\n并发控制可使用锁、多版本或乐观验证，在读写冲突时等待、验证或重试。隔离级别规定允许的观测行为，实现则决定检测和协调的方法。\n\n## 边界与应用\n\nMVCC 与锁并不互斥；多版本系统仍可用行锁协调写入。快照隔离也不自动防止写偏斜，应用需按隔离级别处理序列化失败、死锁和重试。\n\n## 参考\n\n- [PostgreSQL：事务隔离](https://www.postgresql.org/docs/current/transaction-iso.html)\n- [PostgreSQL：显式锁](https://www.postgresql.org/docs/current/explicit-locking.html)"
 }

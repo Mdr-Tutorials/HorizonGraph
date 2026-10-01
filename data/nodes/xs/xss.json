@@ -22,10 +22,11 @@
       "target_id": "theory"
     }
   ],
-  "summary": "把恶意脚本注入页面执行，输入转义与 CSP 是主防线。",
+  "summary": "不可信内容进入可执行浏览器上下文并冒用页面权限。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-01",
   "importance": 4,
-  "official_site": "https://owasp.org/www-community/attacks/xss/"
+  "official_site": "https://owasp.org/www-community/attacks/xss/",
+  "description": "## 机制\n\nXSS 可来自服务端回显、持久化内容或 DOM 写入。根据 HTML、属性、URL 或脚本等目标上下文正确编码，或在需要富文本时使用合适净化规则，减少内容被解释为可执行代码。\n\n## 边界与应用\n\n同一种转义不能覆盖所有上下文，危险 DOM API 和动态脚本也需检查。CSP 可作为纵深防御，不能替代上下文编码与安全处理，内容净化还需随依赖更新维护。\n\n## 参考\n\n- [OWASP：XSS 防护](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)"
 }

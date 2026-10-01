@@ -23,11 +23,58 @@
     {
       "relation_type": "developed_by",
       "target_id": "andrew-ng"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "linear-regression",
+      "context": "早期单课与现行专项都讲解线性回归；现行第一课以 Python 进行回归实践。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "logistic-regression",
+      "context": "现行第一课用逻辑回归解释二元分类概率与参数学习。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "decision-tree",
+      "context": "现行专项的 Advanced Learning Algorithms 课程包括决策树。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "random-forest",
+      "context": "现行专项的 Advanced Learning Algorithms 课程包括随机森林等树集成。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "gradient-boosting",
+      "context": "现行专项的 Advanced Learning Algorithms 课程讲解 boosted trees。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "supervised-learning",
+      "context": "当前专项第一课围绕回归与分类组织监督学习内容。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "unsupervised-learning",
+      "context": "当前专项第三课讲解聚类、异常检测与推荐等无监督应用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numpy",
+      "context": "当前专项的 Python 练习用 NumPy 构建与处理训练数据和数值运算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scikit-learn",
+      "context": "当前专项的 Python 练习用 scikit-learn 训练与比较机器学习估计器。"
     }
   ],
-  "summary": "吴恩达的机器学习公开课，无数人的 AI 入门第一课。",
+  "summary": "吴恩达机器学习入门课程及公开学习材料入口。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "吴恩达的机器学习公开教学从监督学习中的线性回归、逻辑回归推进到模型评估与无监督方法。本条目保留这一课程入口，阅读资料时需要区分早期 Coursera 单课与现行 Machine Learning Specialization 三课专项。\n\n现行专项由 DeepLearning.AI 与 Stanford Online 合作，练习使用 Python、NumPy 与 scikit-learn，并加入决策树、随机森林和提升树等内容；早期作业采用 Octave。两者的课程编排和工具不同，作业代码不能直接混用。该入门入口与 Stanford CS229 的在校课程、公开讲义也应分别查阅。\n\n参考：[官方 Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction)。",
+  "official_site": "https://www.coursera.org/specializations/machine-learning-introduction"
 }

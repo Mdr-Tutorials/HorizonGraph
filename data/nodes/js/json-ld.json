@@ -1,0 +1,39 @@
+{
+  "id": "json-ld",
+  "name": "JSON-LD",
+  "aliases": [
+    "关联数据 JSON 表示"
+  ],
+  "type": "protocol",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "用 JSON 对象与数组作为序列化表面语法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "在相应转换和解释路径中表达 RDF 数据。"
+    }
+  ],
+  "summary": "用 JSON 语法及上下文表达关联数据。",
+  "description": "JSON-LD 使用 JSON 语法表达关联数据，context 将属性和类型映射到 IRI 等语义。展开、压缩等算法帮助在不同表面表示之间处理数据。\n\n普通 JSON 文档不会因为字段相似就自动具有相同的 RDF 含义。上下文、标识和处理选项是解释的一部分，远程上下文的变化还会影响可复现性。\n\n## 参考\n\n- [W3C：JSON-LD 1.1](https://www.w3.org/TR/json-ld11/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.w3.org/TR/json-ld11/"
+}

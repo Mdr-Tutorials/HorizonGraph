@@ -1,0 +1,41 @@
+{
+  "id": "w3c-prov",
+  "name": "W3C PROV",
+  "aliases": [
+    "W3C 来源模型",
+    "PROV 标准家族"
+  ],
+  "type": "protocol",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "在 PROV-O 交换路径中表达实体、活动及其来源关系。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-representation",
+      "context": "为来源实体、活动和主体提供明确的数据模型。"
+    }
+  ],
+  "summary": "用实体、活动与主体描述数据产生及责任来源。",
+  "description": "W3C PROV 家族为来源信息提供共同模型，区分实体、活动和主体，并表达生成、使用、派生与关联等关系。PROV-O 将该模型映射为可交换的本体表示。\n\n来源记录说明数据从何而来及如何产生，不自动验证记录真实或授权合规。应用需决定记录粒度、时间和身份，并避免把派生关系误当作事实支持的全部证据。\n\n## 参考\n\n- [W3C：PROV 概览](https://www.w3.org/TR/prov-overview/)\n- [W3C：PROV-O](https://www.w3.org/TR/prov-o/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "PROV",
+  "official_site": "https://www.w3.org/TR/prov-overview/"
+}

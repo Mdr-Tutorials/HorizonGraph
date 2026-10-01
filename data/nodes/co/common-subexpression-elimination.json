@@ -1,0 +1,33 @@
+{
+  "id": "common-subexpression-elimination",
+  "name": "Common Subexpression Elimination",
+  "aliases": [
+    "公共子表达式消除"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssa",
+      "context": "SSA 的显式定义与使用关系方便识别值等价；处理内存表达式仍需额外分析。"
+    }
+  ],
+  "summary": "复用已计算且语义等价的表达式结果。",
+  "description": "## 机制\n\n若同一表达式在可达路径上已经计算，且其输入与依赖状态未改变，可复用原结果。局部消除处理基本块，全局值编号等方法可以跨块识别等价计算。\n\n## 边界与应用\n\n内存读取是否可复用依赖别名和写入分析；异常、并发、volatile 与浮点规则也限制替换。外形相同的表达式不一定在所有路径上具有相同值。\n\n## 参考\n\n- [LLVM 转换与分析 Pass](https://llvm.org/docs/Passes.html)",
+  "importance": 4,
+  "official_site": "https://llvm.org/docs/Passes.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers"
+  ],
+  "abbreviation": "CSE"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "linear-algebra",
+  "name": "Linear Algebra",
+  "aliases": [
+    "线性代数"
+  ],
+  "type": "concept",
+  "domains": [
+    "mathematics",
+    "machine-learning",
+    "scientific-computing",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mathematical-foundations"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "matrix-multiplication",
+      "context": "复合线性映射以及将设计矩阵应用于参数向量时，用矩阵乘法计算结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "singular-value-decomposition",
+      "context": "分析矩阵的秩、求解最小二乘和构造低秩近似时使用 SVD。"
+    }
+  ],
+  "summary": "研究向量空间、矩阵和线性映射的数学基础。",
+  "description": "线性代数研究向量空间与线性映射，以矩阵表达选定基下的坐标关系。方程组、秩、正交投影、特征值和矩阵分解解释哪些方向可被表示、求解或压缩；换基会改变矩阵元素而不一定改变线性映射。\n\n最小二乘通过投影拟合数据，SVD 支持秩分析与低秩近似。在工程仿真中，离散方程也常成为大型线性系统，稀疏结构决定存储和算法选择。形式上存在逆矩阵不能保证浮点计算可靠，需要分别考察问题条件数与算法稳定性。\n\n参考：[MIT 18.06SC](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/)；[NumPy 线性代数](https://numpy.org/doc/stable/reference/routines.linalg.html)；[FNC 数值计算基础](https://fncbook.com/chapter1/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

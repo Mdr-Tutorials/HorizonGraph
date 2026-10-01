@@ -1,0 +1,49 @@
+{
+  "id": "asic",
+  "name": "Application-Specific Integrated Circuit",
+  "aliases": [
+    "专用集成电路"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rtl",
+      "context": "在数字标准单元 ASIC 设计中，以 RTL 描述功能与状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "place-and-route",
+      "context": "在标准单元数字 ASIC 流程中把网表落实为物理单元和金属互连。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tapeout",
+      "context": "在定制芯片制造前提交通过验证和签核的制造数据。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "fpga",
+      "context": "在需要实现数字硬件功能时，两者是具有不同可配置性和制造成本的器件方案。"
+    }
+  ],
+  "summary": "为特定应用设计并制造的集成电路类型。",
+  "description": "ASIC 为特定应用设计电路，数字标准单元流程通常经历 RTL、验证、综合、物理实现、签核和流片。制造后的电路连接通常固定，软件和片内可编程模块仍可能可变。ASIC 与 FPGA 的选择取决于需求、开发成本和数量，不作普遍性能优劣判断。\n\n参考：[Synopsys：ASIC 设计流程](https://www.synopsys.com/glossary/what-is-asic-design.html)；[Synopsys：RTL 设计](https://www.synopsys.com/glossary/what-is-register-transfer-level-design.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "ASIC",
+  "official_site": "https://www.synopsys.com/glossary/what-is-asic-design.html"
+}

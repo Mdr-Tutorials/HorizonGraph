@@ -1,0 +1,33 @@
+{
+  "id": "dna-sequencing",
+  "name": "DNA Sequencing",
+  "aliases": [
+    "DNA 测序",
+    "脱氧核糖核酸测序"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fastq",
+      "context": "将带逐碱基质量信息的读段交给下游计算流程时常采用 FASTQ 文件。"
+    }
+  ],
+  "summary": "通过实验确定 DNA 分子中碱基顺序的技术。",
+  "description": "## 机制\n\nDNA 测序读取 DNA 的碱基排列，产生供计算处理的序列和相关质量信息。不同实验方法在读长、通量及误差特征上不同，计算流程据此完成校验、比对或组装。\n\n## 边界与应用\n\n读段不是自动正确的完整基因组，测序错误、覆盖不均及样本处理都会影响数据。确定碱基顺序与理解其生物功能是两个阶段，不能把测序结果直接等同于健康结论。\n\n## 参考\n\n- [NHGRI：DNA 测序](https://www.genome.gov/genetics-glossary/DNA-Sequencing)",
+  "importance": 5,
+  "official_site": "https://www.genome.gov/genetics-glossary/DNA-Sequencing",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

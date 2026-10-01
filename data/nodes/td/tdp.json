@@ -8,7 +8,8 @@
   "type": "metric",
   "domains": [
     "embedded-systems",
-    "systems-programming"
+    "systems-programming",
+    "power-energy-systems"
   ],
   "relations": [
     {
@@ -16,9 +17,14 @@
       "target_id": "metric"
     }
   ],
-  "summary": "热设计功耗，散热器选型的第一参数。",
+  "summary": "厂商在规定工况下提供的处理器热设计功率参考。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "TDP 是用于处理器及平台热设计的功率参考，定义和对应工作条件需查具体厂商、产品文档。Intel 的相关设计指南将处理器热设计和长期功耗限制联系起来，同时区分其他功率限制。\n\nTDP 不能直接视为任意时刻的最大功耗、设备墙端功耗或实际能耗。短时提升、配置和工作负载会改变运行功率，不同厂商或产品的同数值 TDP 也未必代表同一测量条件。\n\n参考：[Intel：处理器功耗限制与热设计](https://edc.intel.com/content/www/id/id/design/products-and-solutions/processors-and-chipsets/alder-lake-s/atx12v-and-atx12vo-psu-design-guide-addendum/004/introduction/)。",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "official_site": "https://edc.intel.com/content/www/id/id/design/products-and-solutions/processors-and-chipsets/alder-lake-s/atx12v-and-atx12vo-psu-design-guide-addendum/004/introduction/"
 }

@@ -1,0 +1,34 @@
+{
+  "id": "first-order-logic",
+  "name": "First-Order Logic",
+  "aliases": [
+    "一阶逻辑",
+    "谓词逻辑"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logical-entailment",
+      "context": "根据所有满足前提的解释是否满足结论来定义推理目标。"
+    }
+  ],
+  "summary": "用对象、关系和量词表达形式化命题。",
+  "description": "一阶逻辑通过对象域、谓词、变量和量词描述陈述，并用解释确定真假。量词作用于对象而不是任意谓词或集合，这与更高阶的表示能力不同。\n\n表达能力与算法可判定性需要区分。一般一阶推理不能保证所有输入都在有限时间内得到判定，工程系统常使用受限片段或明确的搜索策略。\n\n## 参考\n\n- [Poole 与 Mackworth：谓词逻辑](https://artint.info/3e/html/ArtInt3e.Ch15.S3.html)\n- [Poole 与 Mackworth：证明与替换](https://artint.info/3e/html/ArtInt3e.Ch15.S5.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abbreviation": "FOL"
+}

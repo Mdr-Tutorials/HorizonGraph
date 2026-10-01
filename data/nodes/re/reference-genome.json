@@ -1,0 +1,37 @@
+{
+  "id": "reference-genome",
+  "name": "Reference Genome",
+  "aliases": [
+    "参考基因组"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "genome",
+      "context": "以一套基因组序列表示作为跨样本定位与比较的坐标基准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fasta",
+      "context": "向比对与分析工具提供参考序列时常采用 FASTA 表示，并另行保存版本与注释。"
+    }
+  ],
+  "summary": "用于序列定位、比较与注释的基因组参考表示。",
+  "description": "## 机制\n\n参考基因组提供可复用的序列及坐标基准，让读段比对、注释和变异表达可以定位到共同参考。参考可包含主组装、替代区域或补丁，需用明确标识和版本说明。\n\n## 边界与应用\n\n参考不等于某个物种的唯一真实序列，也不保证覆盖群体的全部变异。版本变化可能改变序列与坐标，不能将不同版本的位置直接混合；NCBI 的 reference 标签还具有其资源选择规则。\n\n## 参考\n\n- [NCBI GRC：组装术语](https://www.ncbi.nlm.nih.gov/grc/help/definitions/)\n- [NCBI：参考基因组术语更新](https://ncbiinsights.ncbi.nlm.nih.gov/2024/09/25/updated-terminology-reference-genome/)",
+  "importance": 5,
+  "official_site": "https://www.ncbi.nlm.nih.gov/grc/help/definitions/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "postgis",
+  "name": "PostGIS",
+  "aliases": [
+    "PostGIS 空间扩展"
+  ],
+  "type": "library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "postgresql"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "spatial-index"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spatial-analysis",
+      "context": "通过空间函数和 SQL 查询执行相交、距离与叠加等分析。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spatial-join",
+      "context": "在 SQL 连接条件中采用空间谓词匹配不同地理对象。"
+    }
+  ],
+  "summary": "为 PostgreSQL 增加地理对象、空间函数与索引能力。",
+  "description": "## 机制\n\nPostGIS 通过数据库扩展提供 geometry、geography 等类型和空间函数，把空间谓词、距离与关联计算放入 SQL 查询。空间索引可先筛选包围盒候选，再执行精确几何判断。\n\n## 边界与应用\n\nPostGIS 不是独立数据库，也不代表 PostgreSQL 默认安装就具备全部空间能力。geometry 与 geography 的计算模型、单位和功能范围有差别，索引也不保证所有查询更快。\n\n## 参考\n\n- [PostGIS：数据与索引管理](https://postgis.net/docs/using_postgis_dbmanagement.html)\n- [PostGIS：空间查询](https://postgis.net/docs/using_postgis_query.html)",
+  "importance": 5,
+  "official_site": "https://postgis.net/docs/using_postgis_dbmanagement.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "databases"
+  ],
+  "abstraction_level": "framework_library"
+}

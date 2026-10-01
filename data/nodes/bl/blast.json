@@ -1,0 +1,38 @@
+{
+  "id": "blast",
+  "name": "Basic Local Alignment Search Tool",
+  "aliases": [
+    "BLAST 序列检索"
+  ],
+  "type": "tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sequence-alignment"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fasta",
+      "context": "提交序列查询或准备数据库输入的常见流程使用 FASTA 序列记录。"
+    }
+  ],
+  "summary": "在序列数据库中寻找局部相似匹配的工具族。",
+  "description": "## 机制\n\nBLAST 在核酸或蛋白序列数据库中查找局部相似，采用词或种子命中再扩展的策略，并输出评分、覆盖及统计指标。不同程序支持不同查询与目标序列组合。\n\n## 边界与应用\n\nBLAST 不是完整基因组组装器，启发式检索也不承诺枚举所有可能比对。显著匹配需要结合覆盖、数据库规模及生物学证据，不能把首个命中自动当成相同功能。\n\n## 参考\n\n- [NCBI：BLAST 帮助](https://blast.ncbi.nlm.nih.gov/doc/blast-help/)\n- [NCBI 教材：序列分析的原理与方法](https://www.ncbi.nlm.nih.gov/books/NBK20261/?report=reader)",
+  "importance": 4,
+  "official_site": "https://blast.ncbi.nlm.nih.gov/doc/blast-help/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "abbreviation": "BLAST"
+}

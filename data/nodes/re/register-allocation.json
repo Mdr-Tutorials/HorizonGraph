@@ -16,9 +16,10 @@
       "target_id": "theory"
     }
   ],
-  "summary": "把无限变量塞进有限寄存器的经典图着色问题。",
+  "summary": "把活跃值分配到有限物理寄存器并安排溢出。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "## 机制\n\n分配器依据活跃区间与寄存器约束为值选择物理寄存器，容量不足时把部分值溢出到栈或其他内存位置。图着色、线性扫描与贪心方法都是实现路线。\n\n## 边界与应用\n\n图着色并非唯一方法；目标寄存器类别、调用约定和指令约束也会影响分配。减少溢出、编译时间与代码质量常需要权衡。\n\n## 参考\n\n- [LLVM 代码生成器](https://llvm.org/docs/CodeGenerator.html)"
 }

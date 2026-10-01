@@ -1,0 +1,29 @@
+{
+  "id": "vcf",
+  "name": "Variant Call Format",
+  "aliases": [
+    "VCF 变异格式"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "记录参考坐标下变异、等位基因与样本信息的格式。",
+  "description": "## 机制\n\nVCF 以带元数据头部的记录表示变异位置、参考与替代等位基因、质量和筛选等信息，还可包含各样本的基因型及其他字段。字段定义和参考版本决定数据含义。\n\n## 边界与应用\n\nVCF 不负责发现变异，也不保证变异真实或具有临床意义。等价变异可能有不同表示，需要规范化并核对参考；GVCF 扩展还可记录参考置信信息，不能把其中每行都当成已发现变异。\n\n## 参考\n\n- [VCF Specification：VCF 4.5](https://samtools.github.io/hts-specs/VCFv4.5.pdf)",
+  "importance": 4,
+  "official_site": "https://samtools.github.io/hts-specs/VCFv4.5.pdf",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "abbreviation": "VCF"
+}

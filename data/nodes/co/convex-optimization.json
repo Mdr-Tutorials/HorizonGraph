@@ -1,0 +1,43 @@
+{
+  "id": "convex-optimization",
+  "name": "Convex Optimization",
+  "aliases": [
+    "凸优化"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "convex-function",
+      "context": "利用目标和约束函数的凸性建立全局最优性结论。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lagrange-duality",
+      "context": "通过对偶下界和原始对偶间隙评估最优性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "interior-point-method",
+      "context": "求解可用障碍函数或锥形式表示的连续凸问题时采用内点方法。"
+    }
+  ],
+  "summary": "在凸可行域上最小化凸函数的优化体系。",
+  "description": "标准凸优化要求最小化凸目标、使用凸不等式和仿射等式约束。线性规划、凸二次规划及半正定规划都是重要形式；满足适当条件时可通过对偶和最优性条件判断全局最优。\n\n凸结构降低分析与求解难度，但大规模或病态问题仍可能难以高精度求解。非凸模型不能只换用凸求解器就获得全局保证；松弛、近似和重参数化的误差需要另外说明。\n\n参考：[Stanford 优化课程](https://web.stanford.edu/class/ee364a/index.html)；[Boyd 与 Vandenberghe 教材](https://stanford.edu/~boyd/cvxbook/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://web.stanford.edu/class/ee364a/index.html"
+}

@@ -24,12 +24,18 @@
     {
       "relation_type": "alternative_to",
       "target_id": "base"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transactions",
+      "context": "ACID 属性用于说明数据库事务的行为与保障范围。"
     }
   ],
-  "summary": "原子性、一致性、隔离性、持久性，事务正确性的四条约束。",
+  "summary": "概括事务的原子性、一致性、隔离性与持久性。",
   "importance": 5,
   "popular": 66,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\n原子性约束操作组的整体完成，一致性要求事务维持声明的约束，隔离性规定并发可见行为，持久性约束成功提交后数据在相应故障模型下保留。\n\n## 边界与应用\n\nACID 的一致性不是分布式一致性协议的同义词，也不替应用自动实现所有业务规则。实际保证取决于隔离级别、日志同步、存储及部署条件。\n\n## 参考\n\n- [PostgreSQL：事务教程](https://www.postgresql.org/docs/current/tutorial-transactions.html)\n- [PostgreSQL：事务隔离](https://www.postgresql.org/docs/current/transaction-iso.html)\n- [PostgreSQL：预写日志](https://www.postgresql.org/docs/current/wal-intro.html)"
 }

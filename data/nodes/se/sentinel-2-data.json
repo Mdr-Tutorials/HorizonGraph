@@ -1,0 +1,39 @@
+{
+  "id": "sentinel-2-data",
+  "name": "Sentinel-2 Data",
+  "aliases": [
+    "Sentinel-2 卫星数据"
+  ],
+  "type": "product",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "remote-sensing",
+      "context": "通过 Sentinel-2 的多光谱传感器获得遥感观测，并形成不同处理层级产品。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geospatial-resampling",
+      "context": "组合不同分辨率波段时可能需要重采样，方法应依据连续值或质量分类性质选择。"
+    }
+  ],
+  "summary": "由 Sentinel-2 多光谱任务发布的分级地球观测数据。",
+  "description": "## 机制\n\nSentinel-2 数据以多光谱影像和质量元数据支持地表研究；常见 Level-1C 与 Level-2A 产品分别面向顶层大气与经大气处理后的表面反射率表达。产品按空间单元与时间组织。\n\n## 边界与应用\n\n不同波段分辨率不一致，统一网格时需重采样。云、阴影、处理基线和反射率编码影响比较；本节点讨论数据产品，不把所有波段视作直接可互换测量。\n\n## 参考\n\n- [Copernicus：Sentinel-2 数据产品](https://sentiwiki.copernicus.eu/web/s2-products)",
+  "importance": 4,
+  "official_site": "https://sentiwiki.copernicus.eu/web/s2-products",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "remote-sensing"
+  ],
+  "abstraction_level": "framework_library"
+}

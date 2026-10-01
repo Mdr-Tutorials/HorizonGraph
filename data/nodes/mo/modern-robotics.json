@@ -1,0 +1,45 @@
+{
+  "id": "modern-robotics",
+  "name": "Modern Robotics: Mechanics, Planning, and Control",
+  "aliases": [
+    "现代机器人学",
+    "Modern Robotics"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "control-theory"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "textbook"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "inverse-kinematics",
+      "context": "教材相关章节系统讲解机器人运动学、规划或反馈控制，并提供配套学习资料。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "path-planning",
+      "context": "教材相关章节系统讲解机器人运动学、规划或反馈控制，并提供配套学习资料。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "feedback-control",
+      "context": "教材相关章节系统讲解机器人运动学、规划或反馈控制，并提供配套学习资料。"
+    }
+  ],
+  "summary": "系统讲解机器人运动学、动力学、规划与控制的教材。",
+  "description": "## 内容\n\nKevin Lynch 与 Frank Park 的 Modern Robotics 组织了机器人运动学、动力学、轨迹生成、规划与控制的系统知识。作者网站提供教材及配套章节视频、练习与软件资料，适合作为连接机器人概念与实现的学习入口。\n\n## 使用\n\n教材中的模型与推导需要结合具体机器人、传感器与控制配置。理解逆运动学或规划理论不等于掌握任意框架的接口，实际部署还需对应项目文档。\n\n## 参考\n\n- [Lynch 与 Park：Modern Robotics 教材与课程资料](https://modernrobotics.northwestern.edu/)\n\n[Cambridge：原教材运动规划章节与目录](https://www.cambridge.org/core/books/abs/modern-robotics/motion-planning/C0EECD7C0AE3BC6764214FBA87B8E601)、[机器人控制章节](https://www.cambridge.org/core/books/abs/modern-robotics/robot-control/CC6669BBB12A5AAAB2EEA55810D6498D)确认原教材的内容结构；作者资源站提供原教材及配套内容，学习时应核对具体书名、版次与章节。\n\n[作者教材资源入口](https://modernrobotics.org/)提供原教材的预印本、软件和学习资源；视频页标题与书名不一定相同，不能仅根据网页标题判断版次。\n\n[作者教材主页](https://hades.mech.northwestern.edu/index.php/Modern_Robotics)列出 2017 第一版与 2019 修订第一版预印本，具体学习资料应按所用版本核对。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://hades.mech.northwestern.edu/index.php/Modern_Robotics"
+}

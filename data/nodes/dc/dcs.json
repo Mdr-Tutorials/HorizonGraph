@@ -1,0 +1,38 @@
+{
+  "id": "dcs",
+  "name": "Distributed Control System",
+  "aliases": [
+    "分布式控制系统"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "process-control",
+      "context": "在连续或批次工业过程内组织多个变量的调节与控制任务。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pid-control",
+      "context": "在采用 PID 调节的过程环路中，执行比例、积分和微分控制；并非所有 DCS 功能都使用 PID。"
+    }
+  ],
+  "summary": "将过程控制、现场接入与操作监控分布组织的系统类别。",
+  "description": "DCS 把控制任务分布在多个控制单元，并与工程、操作和数据管理环境集成。它常用于化工、能源及其他过程工业，协调多个过程环路和设备。\n\n分布式不是任意微服务集群的同义词，现场控制的连续性与生命周期管理是重要边界。DCS 与 PLC、SCADA 的功能存在重叠，不能仅用厂商标签判断完整系统角色。\n\n参考：[Siemens：分布式过程控制系统](https://www.siemens.com/en-gb/products/process-control/)；[NI：PID 与过程变量控制](https://www.ni.com/en/shop/labview/pid-theory-explained.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.siemens.com/en-gb/products/process-control/",
+  "abbreviation": "DCS"
+}

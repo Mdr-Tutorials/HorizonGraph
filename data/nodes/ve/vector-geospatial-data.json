@@ -1,0 +1,32 @@
+{
+  "id": "vector-geospatial-data",
+  "name": "Vector Geospatial Data",
+  "aliases": [
+    "地理矢量数据"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-reference-system",
+      "context": "几何坐标必须结合相应 CRS 才能正确定位和与其他图层比较。"
+    }
+  ],
+  "summary": "以点、线、面和关联属性表达离散地理对象。",
+  "description": "## 机制\n\n矢量几何用坐标描述位置和形状，属性表描述名称、类别等信息。点、线、面适合道路、地块与设施等对象；几何、属性与 CRS 一起形成可解释数据。\n\n## 边界与应用\n\n同一现实对象可因尺度与用途采用不同几何。自交、无效边界与坐标误差会影响叠加分析，矢量坐标精细不等于实际采集精度高。\n\n## 参考\n\n- [QGIS：矢量数据](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/vector_data.html)",
+  "importance": 5,
+  "official_site": "https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/vector_data.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ]
+}

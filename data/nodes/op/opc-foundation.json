@@ -1,0 +1,27 @@
+{
+  "id": "opc-foundation",
+  "name": "OPC Foundation",
+  "aliases": [
+    "OPC 基金会"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "推动 OPC 标准、互操作和认证体系的非营利组织。",
+  "description": "OPC Foundation 组织标准与工作组，推动工业系统的安全、可靠互操作。OPC UA 和与行业伙伴共同制定的配套信息模型构成其主要技术工作。\n\n基金会是标准与生态治理主体，不能因此视为每个 OPC UA 产品的开发者。成员、认证、标准遵循与产品研发归属是不同关系。\n\n参考：[OPC Foundation：组织与治理](https://opcfoundation.org/about/opc-foundation/)；[OPC Foundation：使命与标准开发](https://opcfoundation.org/about/opc-foundation/mission-statement/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://opcfoundation.org/about/opc-foundation/"
+}

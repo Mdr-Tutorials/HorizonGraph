@@ -1,0 +1,33 @@
+{
+  "id": "data-quality",
+  "name": "Data Quality",
+  "aliases": [
+    "数据质量"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-lineage",
+      "context": "发生异常时沿血缘定位来源和受影响的下游，以支持质量调查；血缘本身不证明正确。"
+    }
+  ],
+  "summary": "依据用途评估准确性、完整性、有效性与时效性。",
+  "description": "## 机制\n\n数据质量需要转为可检查的规则，例如主键唯一、非空、取值范围、关联完整性和更新时间，再通过断言、统计与异常追踪检验。检查可置于接入、转换或交付阶段。\n\n## 边界与应用\n\n通过类型或非空校验不代表事实准确，也不保证适合某个业务用途。质量阈值需记录对象、时间范围与责任人，异常处置还需考虑误报、修复和下游影响。\n\n## 参考\n\n- [Great Expectations：定义数据断言](https://docs.greatexpectations.io/docs/core/define_expectations/)\n- [dbt：数据测试](https://docs.getdbt.com/docs/build/data-tests)",
+  "importance": 4,
+  "official_site": "https://docs.greatexpectations.io/docs/core/define_expectations/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "databases"
+  ]
+}

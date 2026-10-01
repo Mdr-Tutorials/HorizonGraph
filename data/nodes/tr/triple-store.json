@@ -1,0 +1,37 @@
+{
+  "id": "triple-store",
+  "name": "Triple Store",
+  "aliases": [
+    "三元组存储"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "以 RDF 图或数据集作为数据组织模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sparql",
+      "context": "在提供标准查询接口的路径中检索图模式。"
+    }
+  ],
+  "summary": "针对 RDF 三元组与数据集组织查询的存储系统。",
+  "description": "三元组存储围绕 RDF 图、资源标识和文字量组织数据，并通过索引或其他执行结构支持图模式查询。命名图、推理和事务能力因具体实现而异。\n\n它是数据库系统的一类能力，不是所有图数据库的通称。RDF 三元组模型与属性图的边属性、标签等表示需要显式映射，不能假定无损互换。\n\n## 参考\n\n- [W3C：RDF 数据模型](https://www.w3.org/TR/rdf11-concepts/)\n- [Apache Jena：ARQ 查询处理](https://jena.apache.org/documentation/query/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

@@ -1,0 +1,38 @@
+{
+  "id": "boolean-algebra",
+  "name": "Boolean Algebra",
+  "aliases": [
+    "布尔代数"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "logic-gate",
+      "context": "逻辑门的真值表定义其布尔函数。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "logic-synthesis",
+      "context": "综合中的布尔等价变换须保持逻辑函数。"
+    }
+  ],
+  "summary": "以与、或、非等运算描述和化简二值逻辑。",
+  "description": "布尔代数以二值变量和与、或、非运算描述逻辑函数。真值表与布尔表达式可以相互转换；等价变换用于构造或化简门电路。这里收录数字逻辑语境，不把布尔表达式的等价性误当作电路延迟相同。\n\n参考：[MIT 6.004：组合逻辑](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c4/c4s1/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c4/c4s1/"
+}

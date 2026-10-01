@@ -1,0 +1,45 @@
+{
+  "id": "petsc",
+  "name": "PETSc",
+  "aliases": [
+    "PETSc",
+    "可扩展科学计算工具库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sparse-linear-solver"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sparse-matrix",
+      "context": "通过 Mat 接口组织分布式非零结构并执行线性系统运算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runge-kutta-method",
+      "context": "TS 时间步进模块提供显式及隐式 Runge–Kutta 类方法，按问题刚性选择。"
+    }
+  ],
+  "summary": "组织并行矩阵、线性与非线性求解的科学计算库。",
+  "description": "PETSc 提供分布式向量、矩阵、Krylov 方法、预条件和非线性及时间演化求解接口。它让应用在保持问题表示的同时配置算法，适用于大规模 PDE 离散与多次线性系统求解。\n\n不同求解器需要匹配矩阵与预条件结构，迭代结束不等于收敛。并行可扩展性取决于问题、通信和配置；库本身不替用户选定物理模型或保证离散精度。\n\n参考：[PETSc 线性求解手册](https://petsc.org/release/manual/ksp/)；[PETSc 时间求解器](https://petsc.org/release/manual/ts/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://petsc.org/release/manual/ksp/",
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "smith-chart",
+  "name": "Smith Chart",
+  "aliases": [
+    "史密斯圆图"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "s-parameters",
+      "context": "把一端口反射系数 S11 等波参数绘制在圆图上以分析端口匹配。"
+    }
+  ],
+  "summary": "以反射系数平面可视化归一化阻抗、导纳和传输线变换。",
+  "description": "史密斯圆图将归一化复阻抗或导纳映射到反射系数平面，叠加等电阻、等电抗等曲线。它支持读取端口状态并图解匹配网络或沿传输线的变换。\n\n使用时必须选定参考阻抗及阻抗或导纳视图。圆图是对模型关系的图解工具，不能替代频率扫描、元件损耗或稳定性分析。\n\n参考：[Michael Steer：史密斯圆图](https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)/08%3A_Graphical_Network_Analysis/8.03%3A_Smith_Chart)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)/08%3A_Graphical_Network_Analysis/8.03%3A_Smith_Chart"
+}

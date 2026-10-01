@@ -1,0 +1,39 @@
+{
+  "id": "health-information-exchange",
+  "name": "Health Information Exchange",
+  "aliases": [
+    "健康信息交换",
+    "医疗信息交换"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-interoperability",
+      "context": "将外部记录纳入本地工作流程时需要统一语法、语义和使用约定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fhir",
+      "context": "采用 FHIR 的交换接口中以资源组织患者、检查与相关数据；其他交换方案也可使用。"
+    }
+  ],
+  "summary": "在授权参与方之间交换和访问健康信息的流程。",
+  "description": "## 机制\n\nHIE 让医疗服务方、患者和相关参与者以电子方式共享或检索健康信息，可采用定向发送、查询或患者参与等方式。接收方需将内容关联到正确患者并解释其含义。\n\n## 边界与应用\n\n交换成功不仅是网络连通，还涉及数据完整性、同意与权限、来源及组织间约定。HIE 也可指提供这种能力的组织或网络；本节点聚焦交换机制。\n\n## 参考\n\n- [ONC：健康信息交换](https://healthit.gov/health-it-basics/hie/)",
+  "importance": 4,
+  "official_site": "https://healthit.gov/health-it-basics/hie/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abbreviation": "HIE"
+}

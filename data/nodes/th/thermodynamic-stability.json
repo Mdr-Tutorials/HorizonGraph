@@ -1,0 +1,32 @@
+{
+  "id": "thermodynamic-stability",
+  "name": "Thermodynamic Stability",
+  "aliases": [
+    "热力学稳定性"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "formation-energy",
+      "context": "在组成相图路径中把候选相能量归一到一致的元素参考。"
+    }
+  ],
+  "summary": "比较给定条件下体系相对竞争状态的稳定程度。",
+  "description": "热力学稳定性比较指定温度、压力及组成条件下的热力学势。材料相图计算常用候选相及其能量构造稳定相集合，零温电子能量只是实际自由能问题的一种近似。\n\n稳定性还要与动力学区分：亚稳相可以因能垒而长期存在。负形成能不保证相对全部竞争相稳定，数据库条件也不直接代表合成环境。\n\n## 参考\n\n- [Materials Project：组成相图与稳定性](https://docs.materialsproject.org/methodology/materials-methodology/thermodynamic-stability/phase-diagrams-pds)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

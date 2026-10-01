@@ -1,0 +1,32 @@
+{
+  "id": "functional-safety",
+  "name": "Functional Safety",
+  "aliases": [
+    "功能安全"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "safety-integrity-level",
+      "context": "在 IEC 61508 框架下，以 SIL 表述分配给安全功能的完整性要求。"
+    }
+  ],
+  "summary": "依靠安全功能正确响应输入、降低相关风险的安全部分。",
+  "description": "功能安全关注电气、电子或可编程系统的安全功能在需要时是否正确工作。安全生命周期包含风险分析、需求分配、设计验证、运行维护及变更管理。\n\n它不等于网络安全，也不涵盖产品所有安全问题。某元件具有安全能力不能自动证明整条安全功能合格；完整性要求与系统性失效、随机硬件失效等因素共同相关。\n\n参考：[IEC：功能安全与 IEC 61508 概览](https://assets.iec.ch/public/acos/IEC%2061508%20%26%20Functional%20Safety-2022.pdf)；[IEC 61508-5：安全完整性等级的确定](https://webstore.iec.ch/en/publication/5519)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://assets.iec.ch/public/acos/IEC%2061508%20%26%20Functional%20Safety-2022.pdf"
+}

@@ -30,12 +30,23 @@
     {
       "relation_type": "implements",
       "target_id": "jit"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "escape-analysis",
+      "context": "HotSpot 实现可用逃逸分析支持标量替换和锁消除，具体受选项和代码形态约束。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "stop-the-world",
+      "context": "HotSpot 的部分 GC 阶段暂停应用线程，具体暂停范围随收集器不同。"
     }
   ],
-  "summary": "Java 字节码的运行时，靠 JIT 与垃圾回收把托管代码跑上硬件。",
+  "summary": "按 Java 虚拟机规范执行字节码并管理运行时状态。",
   "importance": 5,
   "popular": 85,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\nJVM 规范定义类文件执行模型、运行时数据区、指令与异常规则；实现可采用解释、JIT 或其他编译策略。HotSpot 还提供逃逸分析和多种垃圾收集器。\n\n## 边界与应用\n\nJVM 规范不强制某一种 JIT 或 GC 算法；实现细节不能推广为所有 JVM 的共同保证。堆、方法区和线程栈的逻辑定义也不等于唯一物理布局。\n\n## 参考\n\n- [JVM 规范：运行时结构](https://docs.oracle.com/javase/specs/jvms/se25/html/jvms-2.html)\n- [HotSpot 性能与逃逸分析](https://docs.oracle.com/en/java/javase/25/vm/java-hotspot-virtual-machine-performance-enhancements.html)"
 }

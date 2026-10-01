@@ -1,0 +1,37 @@
+{
+  "id": "phonon",
+  "name": "Phonon",
+  "aliases": [
+    "声子"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reciprocal-lattice",
+      "context": "用倒易空间波矢描述周期晶格的振动模式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "density-functional-theory",
+      "context": "在第一性原理路径中获得力常数或微扰响应。"
+    }
+  ],
+  "summary": "晶格集体振动模式的量子化描述。",
+  "description": "声子表示凝聚态中原子集体振动的量子化激发，色散描述模式频率随波矢的变化。它与热输运、结构动力学稳定性和电子相互作用等问题相接。\n\n谐近似计算中的虚频可能提示结构不稳定，也可能与数值精度、取样或近似相关。有限温度的非谐效应需要进一步处理，不能仅凭一张零温谱解释全部热学行为。\n\n## 参考\n\n- [Materials Project：声子色散](https://docs.materialsproject.org/methodology/materials-methodology/phonon-dispersion)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

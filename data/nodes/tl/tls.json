@@ -24,19 +24,31 @@
       "target_id": "public-key-cryptography"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "x509"
-    },
-    {
       "relation_type": "stewarded_by",
       "target_id": "ietf",
       "context": "相关标准由 IETF 工作组按其标准流程制定和维护。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "aead",
+      "context": "TLS 1.3 记录层以所选 AEAD 算法保护应用数据和关联上下文。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "certificate-chain",
+      "context": "采用证书认证的 TLS 部署需验证证书路径及应用身份，PSK 模式不要求同样路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hmac",
+      "context": "TLS 1.3 密钥日程用基于 HMAC 的 HKDF，Finished 消息也使用 HMAC。"
     }
   ],
-  "summary": "为字节流提供保密、完整与身份，HTTPS 的加密层。",
+  "summary": "通过握手建立密钥，并保护连接中的应用数据。",
   "importance": 5,
   "popular": 90,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\nTLS 1.3 的握手协商密码参数与认证材料，派生流量密钥，记录层采用 AEAD 保护数据。证书模式需要验证认证路径和应用身份；预共享密钥模式提供另一种认证路线。\n\n## 边界与应用\n\nTLS 保护传输，不自动验证应用授权、业务正确性或端点安全。TLS 1.3 的 0-RTT 数据有重放风险；证书也不是所有 TLS 模式不可移除的硬依赖。\n\n## 参考\n\n- [RFC 8446：TLS 1.3](https://www.rfc-editor.org/rfc/rfc8446.html)"
 }

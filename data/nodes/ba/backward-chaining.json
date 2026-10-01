@@ -1,0 +1,38 @@
+{
+  "id": "backward-chaining",
+  "name": "Backward Chaining",
+  "aliases": [
+    "后向链推理",
+    "后向推理"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unification",
+      "context": "在关系规则路径中寻找使目标与规则表达式匹配的替换。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-base",
+      "context": "查找可支持目标的事实及规则。"
+    }
+  ],
+  "summary": "从待证明目标展开可支持它的规则与子目标。",
+  "description": "后向链推理从查询或目标出发，选择能产生该结论的规则，再尝试证明规则前提。关系查询中变量替换让目标与规则头对应起来。\n\n搜索次序、递归与缓存影响求值表现。单一路径失败不必等于目标在所有语义下为假，一般程序的搜索也可能不终止。\n\n## 参考\n\n- [Apache Jena：推理与规则引擎](https://jena.apache.org/documentation/inference/)\n- [Poole 与 Mackworth：证明与替换](https://artint.info/3e/html/ArtInt3e.Ch15.S5.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

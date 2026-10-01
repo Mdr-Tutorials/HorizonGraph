@@ -16,13 +16,15 @@
       "target_id": "theory"
     },
     {
-      "relation_type": "part_of",
-      "target_id": "concurrency-control"
+      "relation_type": "uses",
+      "target_id": "transactions",
+      "context": "按事务隔离级别及其快照规则决定记录版本的可见性。"
     }
   ],
-  "summary": "读写互不阻塞的多版本快照机制，InnoDB 与 PG 的心脏。",
+  "summary": "以版本与快照减少普通读写冲突的并发控制机制。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\n数据库为记录保存多个版本，事务按快照与可见性规则读取适合的版本。PostgreSQL 的普通快照读取通常不与行更新互相等待，不同隔离级别使用不同快照范围。\n\n## 边界与应用\n\nMVCC 不保证所有读写互不阻塞：写写冲突、SELECT FOR UPDATE 等锁定读取及某些 DDL 仍会等待或失败。它也不自动提供可串行化；旧版本保留与回收还需空间和维护成本。\n\n## 参考\n\n- [PostgreSQL：MVCC](https://www.postgresql.org/docs/current/mvcc-intro.html)\n- [PostgreSQL：显式锁](https://www.postgresql.org/docs/current/explicit-locking.html)\n- [PostgreSQL：事务隔离](https://www.postgresql.org/docs/current/transaction-iso.html)"
 }

@@ -13,19 +13,36 @@
     "dl-framework-ecosystem"
   ],
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "statistics",
+    "mathematics",
+    "information-theory"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "statistical-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "probability-distribution",
+      "context": "以目标分布 P 对预测分布 Q 的负对数概率加权求和或积分。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shannon-entropy",
+      "context": "在量有限的离散情形，用 H(P,Q)=H(P)+D_KL(P∥Q) 区分真实分布不确定性与模型失配代价。"
     }
   ],
-  "summary": "衡量目标分布与预测分布差异的量，常用作分类损失。",
-  "description": "交叉熵 H(p,q) = −Σ p(x) log q(x)，度量以预测分布 q 描述目标分布 p 的代价。目标为单个类别时，对应正确类别预测概率的负对数。PyTorch 的 CrossEntropyLoss 接收未归一化的 logits；一般不应先手动做 softmax 再传入。\n\n参考：[权威资料](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)。",
+  "summary": "度量预测分布描述目标分布的对数损失。",
+  "description": "交叉熵 H(P,Q) 是真实分布 P 下按另一分布 Q 赋予的负对数概率的期望。离散情形为 −Σp(x)log q(x)，对数底决定单位；当正概率事件被 Q 赋零概率时，值可为无穷。\n\n相应量有限时 H(P,Q)=H(P)+D_KL(P∥Q)，连接概率拟合与编码代价。在分类训练中，目标分布与预测分布形成损失，但硬标签、软标签、权重和归约方式会改变接口计算结果。它是评价分布或构造损失的量，不是纠错编码算法。\n\n参考：[MIT 熵与散度](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_1/)；[Deep Learning 概率章节](https://www.deeplearningbook.org/contents/prob.html)；[PyTorch CrossEntropyLoss](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)。",
   "importance": 4,
   "official_site": "https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-01",
   "origin": "ai_draft",
   "status": "active"
 }

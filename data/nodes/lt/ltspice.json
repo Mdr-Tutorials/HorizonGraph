@@ -1,0 +1,33 @@
+{
+  "id": "ltspice",
+  "name": "LTspice",
+  "aliases": [
+    "LTspice"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spice",
+      "context": "采用 SPICE 电路描述及分析方式生成波形和工作点结果。"
+    }
+  ],
+  "summary": "集成原理图输入、SPICE 仿真和波形查看的电路工具。",
+  "description": "LTspice 是 Analog Devices 提供的 SPICE 仿真工具，结合原理图捕获、仿真引擎、器件模型和波形查看器，支持对模拟电路及电源设计进行分析。\n\n内置模型和示例有助于构建仿真，但不是对任意器件或第三方 SPICE 方言完全兼容的保证。模型中的寄生参数、控制行为与温度范围需要结合数据手册理解。\n\n参考：[Analog Devices：LTspice](https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
+  "abstraction_level": "application_tool"
+}

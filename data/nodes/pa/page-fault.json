@@ -1,0 +1,33 @@
+{
+  "id": "page-fault",
+  "name": "Page Fault",
+  "aliases": [
+    "缺页异常",
+    "页故障"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-table",
+      "context": "内核处理页故障时检查并可能更新相关页表项。"
+    }
+  ],
+  "summary": "地址翻译或权限检查失败后转交内核处理的异常。",
+  "description": "## 机制\n\n访问缺少有效映射或违反权限时，处理器触发异常；内核区分合法的按需分配、文件页载入、写时复制与非法地址，再修复映射或向进程报告错误。\n\n## 边界与应用\n\n缺页异常不一定读取磁盘。已在内存的文件页、零页分配和写时复制可无需磁盘 I/O；TLB 未命中通常先进行页表遍历，也不等于缺页。\n\n## 参考\n\n- [Linux 页表文档](https://docs.kernel.org/mm/page_tables.html)",
+  "importance": 4,
+  "official_site": "https://docs.kernel.org/mm/page_tables.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ]
+}

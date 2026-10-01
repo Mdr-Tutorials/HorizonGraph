@@ -1,0 +1,32 @@
+{
+  "id": "negative-feedback",
+  "name": "Negative Feedback",
+  "aliases": [
+    "负反馈"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "feedback-control",
+      "context": "在放大器或锁相环中，以输出反馈形成误差驱动的闭环调节。"
+    }
+  ],
+  "summary": "将输出的反馈分量以反向作用送回输入的闭环方法。",
+  "description": "负反馈让输出变化反向作用于输入误差。放大器在合适工作区内可用它减小闭环增益对开环增益的敏感性，并调整输入输出阻抗与响应。\n\n反馈极性必须结合完整环路和频率判断。延迟与相位变化可能使某些频率处的环路趋向正反馈，因此负反馈配置本身并不保证稳定，也不能突破电源轨或器件带宽。\n\n参考：[MIT 6.002：运算放大器电路](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l20/)；[Analog Devices：锁相环基本原理](https://www.analog.com/media/en/training-seminars/tutorials/MT-086.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l20/"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "clinical-data-governance",
+  "name": "Clinical Data Governance",
+  "aliases": [
+    "临床数据治理",
+    "医疗数据治理"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-quality",
+      "context": "对临床数据进行完整性、一致性和可用性检查时采用数据质量管理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-data-provenance",
+      "context": "在数据汇集与再利用中记录来源和处理历史以支持责任追踪。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rbac",
+      "context": "按岗位限制临床数据操作的部署中使用角色访问控制，并结合其他授权条件。"
+    }
+  ],
+  "summary": "明确临床数据使用责任、质量与访问控制的治理。",
+  "description": "## 机制\n\n临床数据治理定义数据的责任方、使用目的、质量管理、授权、保留与审计规则，使医疗数据的交换和再利用有可执行的边界。治理需要组织政策与系统控制共同实现。\n\n## 边界与应用\n\n采用某一标准或加密能力不自动满足治理要求。数据来源、用途、辖区和同意条件会影响允许的处理，日志本身也可能含敏感信息；技术实现须与适用规则核对。\n\n## 参考\n\n- [HL7：FHIR 安全与隐私](https://hl7.org/fhir/security.html)",
+  "importance": 4,
+  "official_site": "https://hl7.org/fhir/security.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ]
+}

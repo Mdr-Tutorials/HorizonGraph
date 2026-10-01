@@ -1,0 +1,39 @@
+{
+  "id": "smart-on-fhir",
+  "name": "SMART on FHIR",
+  "aliases": [
+    "SMART App Launch",
+    "SMART 医疗应用集成"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fhir",
+      "context": "应用读取或写入标准化医疗资源时使用 FHIR 接口和相应能力约定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oauth",
+      "context": "应用授权流程采用 OAuth 2.0 模式获取受范围限制的访问；以 SMART 指南约束具体行为。"
+    }
+  ],
+  "summary": "规范 FHIR 应用发现、授权与启动上下文的方案。",
+  "description": "## 机制\n\nSMART App Launch 在 FHIR 数据系统之上定义应用发现、授权与集成模式，基于 OAuth 2.0 等机制为应用取得范围受限的访问。应用可从 EHR 工作流启动或独立启动。\n\n## 边界与应用\n\nSMART 不替代 FHIR 的资源模型，也不保证客户端获得全部数据。服务端能力、授权范围、用户身份与患者上下文需要分别核对；令牌签发不自动解决全部数据治理问题。\n\n## 参考\n\n- [HL7：SMART App Launch](https://hl7.org/fhir/smart-app-launch/)",
+  "importance": 4,
+  "official_site": "https://hl7.org/fhir/smart-app-launch/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library"
+}

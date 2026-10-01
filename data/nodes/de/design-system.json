@@ -1,0 +1,40 @@
+{
+  "id": "design-system",
+  "name": "Design System",
+  "aliases": [
+    "设计系统"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "interaction-design",
+      "context": "共享交互模式规定表单、导航和账户等常见任务的流程与反馈。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "accessibility",
+      "context": "设计与维护组件时考虑语义、键盘操作、对比度及辅助技术支持。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shadcn-ui",
+      "context": "采用 shadcn/ui 的设计系统实现可复用、调整并维护其组件源码；不是每个设计系统都选用该集合。"
+    }
+  ],
+  "summary": "共享设计原则、样式、组件与模式，支持一致的产品交付。",
+  "description": "## 组成与维护\n\n设计系统把样式约定、可复用组件、交互模式和使用指南一起提供给设计与工程团队。组件解决局部界面需求，模式说明如何组合组件支持用户任务；持续研究、版本维护和贡献规则使这些约定随产品演进。\n\n## 应用边界\n\n统一组件可以减少重复工作，但不能保证每个组合或定制页面都易用、无障碍。团队仍需验证实际内容、键盘操作、状态反馈和用户路径。GOV.UK Design System 是提供样式、组件与模式的一个具体实例。\n\n## 参考\n\n- [GOV.UK Design System：样式、组件与模式](https://design-system.service.gov.uk/)\n\n[shadcn/ui 官方介绍](https://ui.shadcn.com/docs)提供一种以可分发源码组件为起点的设计系统构建路径。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://design-system.service.gov.uk/"
+}

@@ -11,6 +11,8 @@ import "@fontsource/mona-sans/700.css";
 import "../styles/tokens.css";
 import SearchPalette from "../components/SearchPalette.vue";
 import TermApp from "../components/TermApp.vue";
+import OfflineStatus from "../components/OfflineStatus.vue";
+import { DATA_MANIFEST } from "../generated/dataset";
 import { Search, SunMoon, Info } from "@lucide/astro";
 const { title = "HorizonGraph" } = Astro.props;
 const B = import.meta.env.BASE_URL;
@@ -22,6 +24,7 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="hg-dataset" content={B + DATA_MANIFEST} />
     <title>{title}</title>
     <style set:html={fontCss}></style>
     <script is:inline>
@@ -44,6 +47,7 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
       >
       <button
         id="hg-search"
+        disabled
         class="ml-auto inline-flex items-baseline gap-1 text-sm text-ink-2 hover:text-ink cursor-pointer bg-transparent border-0 p-0"
       >
         <Search size={15} class="self-center" />
@@ -112,21 +116,22 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
           class="text-ink-2 hover:text-ink underline underline-offset-2">GitHub</a>
       </p>
       <div id="hg-stats" class="m-0 text-sm text-ink-2" hidden></div>
+      <OfflineStatus client:load />
     </dialog>
-    <script is:inline>
+    <script>
+      import { assetJson } from "../lib/dataset";
       const infoBtn = document.getElementById("hg-info");
-      const infoDialog = document.getElementById("hg-info-dialog");
+      const infoDialog = document.getElementById("hg-info-dialog") as HTMLDialogElement | null;
       let statsLoaded = false;
       infoBtn?.addEventListener("click", async () => {
         infoDialog?.showModal();
         if (statsLoaded) return;
         statsLoaded = true;
         try {
-          const B = document.querySelector("a.font-brand")?.getAttribute("href") || "/";
-          const m = await (await fetch(B + "graph/manifest.json")).json();
+          const m = await assetJson<any>("graph/manifest.json");
           const c = m.counts ?? {};
-          const T = { concept: "概念", metric: "度量", language: "编程语言", protocol: "协议", framework: "框架", library: "库", tool: "工具", architecture: "架构", model_family: "模型族", product: "产品", organization: "组织", person: "人物" };
-          const row = (k, v) =>
+          const T: Record<string, string> = { concept: "概念", metric: "度量", language: "编程语言", protocol: "协议", framework: "框架", library: "库", tool: "工具", architecture: "架构", model_family: "模型族", product: "产品", organization: "组织", person: "人物" };
+          const row = (k: string, v: unknown) =>
             `<span class="whitespace-nowrap">${k} <b class="font-mono font-semibold text-ink">${v}</b></span>`;
           const el = document.getElementById("hg-stats");
           if (!el) return;
@@ -189,15 +194,7 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
       });
       fixTermGrids();
 
-      // 空闲时静默预热图数据，为词条点击提供 0ms 纯内存秒开
-      if ("requestIdleCallback" in window) {
-        requestIdleCallback(() => {
-          const B = document.querySelector("a.font-brand")?.getAttribute("href") || "/";
-          ["graph/ids.json", "graph/nodes.json", "graph/edges.json", "graph/reverse.json", "graph/manifest.json", "graph/node-ecosystems.json", "eco-vocab.json"].forEach((f) => {
-            fetch(B + f);
-          });
-        });
-      }
+      // Offline installation warms versioned resources without decoding the graph on the UI thread.
     </script>
   </body>
 </html>

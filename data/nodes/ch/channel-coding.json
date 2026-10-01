@@ -1,0 +1,36 @@
+{
+  "id": "channel-coding",
+  "name": "Channel Coding",
+  "aliases": [
+    "信道编码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "error-correcting-code",
+      "context": "在前向纠错路径中选择码结构和译码方案，对接收错误进行恢复。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "block-code",
+      "context": "采用分组编码方案时，把固定长度消息块映射为码字进行传输。"
+    }
+  ],
+  "summary": "为带噪传输构造冗余表示以支持可靠恢复。",
+  "description": "信道编码把消息映射为码字，借助冗余结构和译码规则处理噪声或擦除。码率、块长、最小距离以及软硬判决影响性能，编码与调制承担不同但相互配合的角色。\n\n加入冗余不保证任意错误都可纠正，能力受码结构和噪声模型限制。吞吐、延迟和译码计算量须与误码率一起评估，自动重传也不等同于前向纠错编码。\n\n参考：[MIT 信道编码](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_14/)；[MIT 线性码与容量](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_14/"
+}

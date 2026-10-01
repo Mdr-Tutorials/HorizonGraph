@@ -1,0 +1,31 @@
+{
+  "id": "kraft-inequality",
+  "name": "Kraft–McMillan Inequality",
+  "aliases": [
+    "克拉夫特－麦克米兰不等式",
+    "Kraft 不等式"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "prefix-code",
+      "context": "D 元前缀码的码长必须满足不等式，满足的整数码长集合也允许构造前缀码。"
+    }
+  ],
+  "summary": "限定可唯一译码码长并刻画前缀码构造可能性的条件。",
+  "description": "D 元码字长度满足 ΣD^(-li)≤1 是前缀码的必要条件；满足该条件的整数码长集合可以构造前缀码。McMillan 扩展把相同必要不等式用于唯一可译码的码。\n\n不等式约束的是码长，而不直接给出某套具体非前缀码是否唯一可译。构造平均长度最优方案还需考虑概率，不能仅用总和小于一判断压缩效果。\n\n参考：[MIT 无损变长编码](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/"
+}

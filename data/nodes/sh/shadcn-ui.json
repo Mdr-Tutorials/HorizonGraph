@@ -31,7 +31,8 @@
   ],
   "summary": "通过代码直接复制粘贴至项目中的现代化 UI 组件库模式，彻底重构组件复用方式。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 使用方式\n\nshadcn/ui 提供可分发的组件源码及工具，团队可把组件纳入自己的代码库并修改。它为构建团队自己的组件体系提供起点，设计系统仍需要结合项目的样式、模式、内容与维护规则。\n\n## 无障碍边界\n\n组件提供的默认语义与交互仍需在实际组合、内容和定制后测试。更改控件结构、标签或焦点行为可能影响辅助技术体验，使用某个组件集合不能自动证明整个应用符合 WCAG。\n\n## 参考\n\n- [shadcn/ui：官方介绍](https://ui.shadcn.com/docs)"
 }

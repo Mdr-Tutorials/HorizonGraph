@@ -1,0 +1,42 @@
+{
+  "id": "knowledge-graph",
+  "name": "Knowledge Graph",
+  "aliases": [
+    "知识图谱"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "entity-resolution",
+      "context": "整合多来源记录时识别哪些标识指向同一对象。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ontology-engineering",
+      "context": "在需要共享类别和关系含义的路径中定义知识模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "在 RDF 实现路径中以资源标识和三元组表示知识。"
+    }
+  ],
+  "summary": "以有语义的实体与关系组织知识。",
+  "description": "知识图谱用实体标识、关系和相关属性组织知识，支持连接、检索和跨来源整合。图的意义来自标识与关系定义，而不是仅由节点和边的形状决定。\n\n可采用 RDF、属性图或其他结构；不同系统的约束与推理能力不同。融合外部数据时还要处理同名实体、证据、时间和冲突，不能把字符串相同直接当作身份相同。\n\n## 参考\n\n- [Poole 与 Mackworth：知识图谱与本体](https://artint.info/3e/html/ArtInt3e.Ch16.html)\n- [W3C：RDF 入门](https://www.w3.org/TR/rdf11-primer/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

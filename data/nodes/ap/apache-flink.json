@@ -12,7 +12,8 @@
     "big-data-ecosystem"
   ],
   "domains": [
-    "distributed-systems"
+    "distributed-systems",
+    "data-engineering"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -38,11 +39,29 @@
       "relation_type": "stewarded_by",
       "target_id": "apache-software-foundation",
       "context": "项目在 Apache 基金会框架下由对应社区与项目管理委员会治理。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "event-time"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "watermark"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "late-data",
+      "context": "事件时间窗口按允许迟到和旁路输出等策略处理晚到记录。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "checkpointing"
     }
   ],
-  "summary": "提供有状态计算与精确一次语义的低延迟分布式流处理框架，流计算事实标准。",
+  "summary": "提供有状态分布式流处理，支持事件时间与检查点。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\nFlink 的有状态算子处理数据流，事件时间与水位线协调乱序输入，窗口策略决定输出与迟到处理。检查点保存一致状态和输入进度，使失败后能够恢复计算。\n\n## 边界与应用\n\n精确一次的状态保证不等于任意外部系统端到端精确一次，仍需可重放源和具有相应事务或幂等语义的接收端。水位线策略也会影响延迟与完整性。\n\n## 参考\n\n- [Flink：事件时间与水位线](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/time/)\n- [Flink：检查点与端到端一致性](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/fault-tolerance/checkpointing/)"
 }

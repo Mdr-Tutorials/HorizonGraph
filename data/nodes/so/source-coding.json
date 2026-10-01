@@ -1,0 +1,36 @@
+{
+  "id": "source-coding",
+  "name": "Source Coding",
+  "aliases": [
+    "信源编码",
+    "数据压缩编码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "huffman",
+      "context": "无损变长编码中，可按离散符号概率建立最优前缀码。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "arithmetic-coding",
+      "context": "利用符号条件概率连续缩小区间，以块或序列编码逼近概率信息量。"
+    }
+  ],
+  "summary": "利用信源统计结构减少数据描述长度的编码。",
+  "description": "信源编码把消息映射为用于存储或传输的表示，无损形式要求恢复原消息，有损形式允许按失真标准舍弃信息。编码方法需要与概率模型或数据结构相匹配。\n\n压缩去除统计冗余，不提供信道纠错的保护冗余，也不等同于加密。模型参数、码表和格式开销应计入实际成本，短消息不一定比原表示更小。\n\n参考：[MIT 无损变长编码](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/)；[MIT 通用压缩](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_9/)；[MIT 率失真理论](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_23/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/"
+}

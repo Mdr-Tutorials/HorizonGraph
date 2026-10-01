@@ -1,0 +1,33 @@
+{
+  "id": "aliasing",
+  "name": "Aliasing",
+  "aliases": [
+    "混叠",
+    "频谱混叠"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "frequency-spectrum",
+      "context": "高频成分折叠进可观测频段，使样本频谱无法直接解释为原连续信号的真实频率分布。"
+    }
+  ],
+  "summary": "采样使不同频率成分变得不可区分的现象。",
+  "description": "采样后频谱以采样率为周期复制，不满足相应带限条件时复制频谱重叠。不同连续频率可能映射到同一离散频率，产生无法由样本单独区分的成分。\n\n混叠不同于有限记录导致的频谱泄漏，采样之后再滤波通常无法知道折叠前的真实频率。降低采样率也需先滤波，增加 FFT 点数不能修复已经发生的混叠。\n\n参考：[MIT 采样讲义](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec21/)；[SciPy 傅里叶计算](https://docs.scipy.org/doc/scipy/tutorial/fft.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec21/"
+}

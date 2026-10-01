@@ -18,11 +18,26 @@
     {
       "relation_type": "part_of",
       "target_id": "machine-learning"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "k-means",
+      "context": "以 K-means 从未标注的特征向量探索基于中心的分组。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pca",
+      "context": "以 PCA 在不使用目标标签的情况下压缩或观察特征的主要变化方向。"
     }
   ],
-  "summary": "从无标签数据里找结构：聚类、降维与密度估计。",
+  "summary": "在没有预定目标标签时探索数据结构。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "无监督学习从输入数据本身提取结构，常见任务包括聚类、表示学习、降维和密度估计。K-means 按特征距离组织簇，PCA 则寻找主要变化方向；这些输出需要结合任务解释，不会自动产生真实业务类别。\n\n没有训练标签不代表无需目标函数、超参数或评价。距离、特征尺度与簇数会改变结构，投影保留的方差也未必与下游预测有关。用于下游监督任务时，变换仍应在训练数据上拟合，以保持评价边界。\n\n参考：[scikit-learn 无监督学习目录](https://scikit-learn.org/stable/unsupervised_learning.html)；[Stanford CS229 课程说明](https://cs229.stanford.edu/)。"
 }

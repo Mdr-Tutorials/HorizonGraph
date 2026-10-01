@@ -1,0 +1,32 @@
+{
+  "id": "reactive-power",
+  "name": "Reactive Power",
+  "aliases": [
+    "无功功率"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impedance",
+      "context": "在正弦稳态中，通过复阻抗及电压电流相量关系计算无功分量。"
+    }
+  ],
+  "summary": "描述交流电路中相位相关能量交换的功率量。",
+  "description": "在正弦稳态相量模型中，复功率 S=P+jQ 的虚部 Q 为无功功率，单位通常为 var。感性与容性负载可具有相反符号的 Q，符号还取决于约定的功率方向。\n\n无功不等于没有工程影响：它会影响电流、电压和设备容量。谐波明显时，简单的正弦复功率表达不能覆盖所有非有功功率分量。\n\n参考：[MIT 6.061：交流网络功率](https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/resources/mit6_061s11_ch2/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/resources/mit6_061s11_ch2/"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "hashicorp-vault",
+  "name": "HashiCorp Vault",
+  "aliases": [
+    "Vault 秘密管理工具"
+  ],
+  "type": "tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "secrets-management"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authorization",
+      "context": "认证后的请求由 Vault 策略约束可访问路径和允许操作。"
+    }
+  ],
+  "summary": "集中管理秘密、动态凭据及受控密码操作的工具。",
+  "description": "## 机制\n\nVault 通过认证方法、策略和秘密引擎提供受控接口。引擎可存储静态秘密、动态生成数据库凭据，或提供加密等操作；租约和撤销帮助管理凭据寿命。\n\n## 边界与应用\n\nVault 不是安装后即自动安全的数据库，仍需设计存储、封印与解封、审计和权限。不同引擎、部署方式和版本能力不同，动态凭据也要求目标系统支持相应账户生命周期。\n\n## 参考\n\n- [Vault 官方概览](https://developer.hashicorp.com/vault/docs/about-vault/what-is-vault)\n- [Vault 秘密引擎](https://developer.hashicorp.com/vault/docs/secrets)",
+  "importance": 4,
+  "official_site": "https://developer.hashicorp.com/vault/docs/about-vault/what-is-vault",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "security",
+    "devops"
+  ],
+  "abstraction_level": "application_tool"
+}

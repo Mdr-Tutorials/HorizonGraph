@@ -14,7 +14,8 @@
   ],
   "domains": [
     "databases",
-    "distributed-systems"
+    "distributed-systems",
+    "data-engineering"
   ],
   "relations": [
     {
@@ -30,13 +31,18 @@
       "relation_type": "uses",
       "target_id": "data-warehouse",
       "context": "常见实现利用目标仓库的计算能力执行加载后的转换。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-quality",
+      "context": "在目标内执行转换和质量测试，确认输出满足实际消费者要求。"
     }
   ],
-  "summary": "先将抽取的数据加载到目标平台，再利用平台计算能力转换。",
-  "description": "ELT 先把源数据载入目标数据平台，再执行转换，常见于具备弹性计算能力的数据仓库和湖仓系统。它允许保留原始数据并重复加工，但仍需要权限、质量与资源管理。dbt 常承担其中的转换环节。\n\n参考：[权威资料](https://www.databricks.com/discover/etl)；[dbt 与转换](https://docs.getdbt.com/docs/introduction)。",
+  "summary": "先将数据加载到目标，再利用目标计算能力执行转换。",
+  "description": "## 机制\n\nELT 将接入与转换分开，数据进入仓库或湖后由目标引擎执行模型。dbt 等工具组织其中的转换、测试和模型依赖，接入与基础设施另由其他系统负责。\n\n## 边界与应用\n\n先加载不意味着无需清洗或可以忽略访问控制。原始数据保留、转换成本、质量检查和数据契约仍须管理；ETL 与 ELT 可在同一管线并存。\n\n## 参考\n\n- [dbt：转换工具与 ELT](https://docs.getdbt.com/docs/introduction)",
   "importance": 4,
   "official_site": "https://www.databricks.com/discover/etl",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-01",
   "origin": "ai_draft",
   "status": "active"
 }

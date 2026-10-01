@@ -1,0 +1,28 @@
+{
+  "id": "insecure-deserialization",
+  "name": "Insecure Deserialization",
+  "aliases": [
+    "不安全反序列化"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "处理不可信对象编码时触发非预期对象行为或状态。",
+  "description": "## 机制\n\n一些对象反序列化机制会重建类型并执行构造、钩子或其他逻辑；外部可控编码因此可能触发危险对象链或篡改安全相关状态。优先使用限定类型的数据交换并显式验证。\n\n## 边界与应用\n\n换成 JSON 不代表数据语义已经安全；业务字段、权限和资源用量仍需验证。类型允许列表和完整性保护只能解决部分边界，不能代替对可信来源与执行行为的判断。\n\n## 参考\n\n- [OWASP：反序列化](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)",
+  "importance": 4,
+  "official_site": "https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ]
+}

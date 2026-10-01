@@ -1,0 +1,43 @@
+{
+  "id": "interior-point-method",
+  "name": "Interior-Point Method",
+  "aliases": [
+    "内点法",
+    "障碍方法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "newton-method",
+      "context": "对障碍目标或原始对偶最优性方程计算迭代方向。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sparse-linear-solver",
+      "context": "在大规模稀疏约束模型中求解迭代产生的线性系统。"
+    }
+  ],
+  "summary": "借助障碍函数或原始对偶路径求解约束优化。",
+  "description": "内点法在连续约束问题中使用障碍函数或原始对偶方程，逐步逼近最优边界。每一步常通过牛顿类线性系统求方向，并调整步长以维持相应的内部可行性。\n\n它是一类方法而非单一算法，可用于线性、凸二次及锥优化等形式。大规模问题的瓶颈往往是稀疏线性系统求解，求解速度取决于矩阵结构和精度要求。\n\n参考：[Boyd 与 Vandenberghe 教材](https://stanford.edu/~boyd/cvxbook/)；[Stanford 优化课程](https://web.stanford.edu/class/ee364a/index.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://stanford.edu/~boyd/cvxbook/"
+}

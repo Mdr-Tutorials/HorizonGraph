@@ -1,0 +1,34 @@
+{
+  "id": "semidefinite-programming",
+  "name": "Semidefinite Programming",
+  "aliases": [
+    "半正定规划",
+    "SDP"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "convex-optimization",
+      "context": "利用半正定锥的凸性构建可求全局界限的连续模型。"
+    }
+  ],
+  "summary": "在线性条件下优化受半正定矩阵约束的模型。",
+  "description": "半正定规划将对称矩阵约束为半正定，目标和其他约束通常是矩阵元素的仿射表达式。它推广线性规划，可用于控制中的线性矩阵不等式、组合问题松弛及矩阵估计。\n\n矩阵尺寸增长会明显增加内存与计算成本。组合问题的半正定松弛给出界限，不自动给出原离散问题的精确解；提取可行离散方案通常还需要舍入或专门恢复步骤。\n\n参考：[Boyd 与 Vandenberghe 教材](https://stanford.edu/~boyd/cvxbook/)；[CVXPY 半正定约束](https://www.cvxpy.org/tutorial/constraints/index.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "official_site": "https://stanford.edu/~boyd/cvxbook/"
+}

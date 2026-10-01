@@ -28,13 +28,32 @@
     {
       "relation_type": "developed_by",
       "target_id": "apple"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "compiler"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "semantic-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "Clang 使用声明和表达式等 AST 节点承载前端语法与语义信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "llvm",
+      "context": "生成 LLVM IR 后使用 LLVM 优化基础设施和目标后端。"
     }
   ],
-  "summary": "LLVM 的 C/C++ 前端，诊断信息以清晰著称。",
+  "summary": "以模块化前端分析 C 家族语言并生成 LLVM 表示。",
   "importance": 5,
   "popular": 66,
   "official_site": "https://clang.llvm.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\nClang 的 Lexer、Parser、Sema 与 AST 组件协作进行源码分析，CodeGen 通常生成 LLVM IR，再由 LLVM 优化与后端处理。驱动程序还协调汇编和链接。\n\n## 边界与应用\n\nClang 与 LLVM 不同：前者主要负责语言前端，后者提供可复用优化和后端。兼容 GCC 风格命令不代表诊断、扩展与所有选项完全相同。\n\n## 参考\n\n- [Clang 内部架构手册](https://clang.llvm.org/docs/InternalsManual.html)\n- [Clang AST 简介](https://clang.llvm.org/docs/IntroductionToTheClangAST.html)"
 }

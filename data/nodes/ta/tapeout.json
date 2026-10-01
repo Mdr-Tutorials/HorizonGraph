@@ -11,17 +11,30 @@
     "hardware_iot"
   ],
   "domains": [
-    "industry-landscape"
+    "industry-landscape",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "place-and-route",
+      "context": "在标准单元数字 ASIC 流程中，交付数据基于完成布局布线的物理设计。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-timing-analysis",
+      "context": "在数字 ASIC 制造数据交付前，以签核时序分析检查目标工作条件下的路径约束。"
     }
   ],
-  "summary": "设计定稿送厂掩膜制造，一次流片动辄千万。",
+  "summary": "向制造方提交通过检查的芯片最终制造数据的阶段。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "流片通常指设计完成并交付制造数据的阶段，数字 ASIC 流程会先完成验证、物理实现及签核，再提交以 GDSII 等版图数据为核心的数据包。它不是只把 RTL 发给代工厂，也不保证返回芯片即可量产；后续还有晶圆制造、封装和测试，费用不能脱离工艺及项目规模概括。\n\n参考：[Synopsys：ASIC 设计流程](https://www.synopsys.com/glossary/what-is-asic-design.html)；[OpenROAD Flow Scripts 教程](https://openroad-flow-scripts.readthedocs.io/en/latest/tutorials/FlowTutorial.html)。"
 }

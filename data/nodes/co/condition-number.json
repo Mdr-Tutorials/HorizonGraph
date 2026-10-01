@@ -1,0 +1,33 @@
+{
+  "id": "condition-number",
+  "name": "Condition Number",
+  "aliases": [
+    "条件数"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "singular-value-decomposition",
+      "context": "计算矩阵二范数条件数时取最大与最小奇异值之比。"
+    }
+  ],
+  "summary": "衡量问题输出对输入相对扰动敏感程度的量。",
+  "description": "条件数刻画输入小扰动在解中可能被放大的程度。矩阵二范数条件数可由最大与最小奇异值之比计算；奇异矩阵对应不可逆情形，条件数依问题和范数的定义而变。\n\n条件数属于问题性质，不是某个求解算法的稳定性评分。病态问题可能使很小残差仍对应较大解误差，缩放或正则化应依据模型需求实施，不能只看输出小数位很多。\n\n参考：[FNC 误差与稳定性](https://fncbook.com/chapter1/)；[NumPy cond 文档](https://numpy.org/doc/stable/reference/generated/numpy.linalg.cond.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://fncbook.com/chapter1/"
+}

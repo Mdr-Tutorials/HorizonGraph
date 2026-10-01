@@ -1,0 +1,20 @@
+{
+  "id": "object-localization",
+  "name": "Object Localization",
+  "aliases": ["目标定位", "物体定位"],
+  "type": "concept",
+  "ecosystems": ["ai_data_science"],
+  "domains": ["computer-vision"],
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "machine-learning-method" },
+    { "relation_type": "uses", "target_id": "intersection-over-union", "context": "以边界框输出目标位置时，用预测框与真值框的交并比判定空间重合程度。" },
+    { "relation_type": "uses", "target_id": "imagenet", "context": "ImageNet 的 ILSVRC 分类与定位任务同时评估类别预测和对应边界框。" }
+  ],
+  "summary": "预测图像中目标的空间位置，常以边界框表示。",
+  "description": "目标定位回答对象位于图像何处，常以矩形边界框坐标表示位置。与只输出类别的图像分类相比，它增加空间预测；与枚举多个对象实例的目标检测相比，定位任务可以限定待定位类别或关注的目标。具体任务协议仍决定是否同时要求类别判断。[ILSVRC 2012 分类与定位任务](https://www.image-net.org/challenges/LSVRC/2012/)。\n\n一种实现方式是由视觉特征预测框的角点或中心、宽高，再用交并比衡量预测框与真值框的重合。ILSVRC 的定位评估同时检查类别与框的位置，不能仅凭框重合就视为类别预测正确。坐标应明确采用像素还是归一化表示，以及 xyxy、xywh 等格式。[TorchVision box_iou 文档](https://docs.pytorch.org/vision/stable/generated/torchvision.ops.box_iou.html)。\n\n定位可用于裁剪感兴趣区域，并作为检测系统空间预测的组成能力。边界框描述外包矩形，不刻画对象的精确轮廓；需要逐像素区域时应使用分割掩码。对象遮挡、尺寸很小或图像缩放都可能影响定位误差，因此评估应明确框匹配阈值与预处理坐标变换。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.image-net.org/challenges/LSVRC/2012/"
+}

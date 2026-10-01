@@ -1,0 +1,43 @@
+{
+  "id": "lapack",
+  "name": "LAPACK",
+  "aliases": [
+    "LAPACK",
+    "线性代数计算库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "blas"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "singular-value-decomposition"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numerical-stability",
+      "context": "使用经误差分析的分解与求解例程，并提供条件估计和错误状态。"
+    }
+  ],
+  "summary": "提供线性方程、特征值与矩阵分解例程的数值库。",
+  "description": "LAPACK 提供稠密及部分带状矩阵的线性方程、最小二乘、特征值和奇异值分解例程。它在较高层次组织线性代数算法，并利用 BLAS 完成基本矩阵和向量运算。\n\n它不是通用大规模稀疏求解器，矩阵布局、类型和例程参数需遵循接口。调用方应检查 INFO、条件估计和误差信息，不能仅凭例程返回就认定所有位数可靠。\n\n参考：[LAPACK 用户指南](https://www.netlib.org/lapack/lug/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.netlib.org/lapack/lug/",
+  "abstraction_level": "framework_library"
+}

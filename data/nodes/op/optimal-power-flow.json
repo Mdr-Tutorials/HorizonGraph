@@ -1,0 +1,33 @@
+{
+  "id": "optimal-power-flow",
+  "name": "Optimal Power Flow",
+  "aliases": [
+    "最优潮流"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "power-flow",
+      "context": "把网络潮流关系作为优化中的功率平衡约束，而非只做无约束经济调度。"
+    }
+  ],
+  "summary": "在电网功率平衡和运行约束下优化控制变量的数学问题。",
+  "description": "OPF 将发电出力、电压或其他控制量作为变量，以成本、损耗等目标进行优化，并约束功率平衡、设备能力及网络运行范围。目标和限制需要由具体任务明确。\n\nAC OPF 通常具有非线性和非凸性；线性化 DC OPF、凸松弛或其他近似有各自边界。求解器返回的可行或局部最优结果不能无条件解释为全局最优。\n\n参考：[MATPOWER：OPF 求解接口](https://matpower.org/docs/ref/matpower6.0/opf.html)；[MATPOWER：用户手册](https://matpower.org/docs/MATPOWER-manual.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://matpower.org/docs/ref/matpower6.0/opf.html",
+  "abbreviation": "OPF"
+}

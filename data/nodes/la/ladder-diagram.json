@@ -1,0 +1,39 @@
+{
+  "id": "ladder-diagram",
+  "name": "Ladder Diagram",
+  "aliases": [
+    "梯形图"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "boolean-algebra",
+      "context": "以触点的串并联条件实现与、或、非等布尔逻辑组合。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "iec-61131-3",
+      "context": "此处指该标准语言体系中定义的 Ladder Diagram，而非任意电气接线图。"
+    }
+  ],
+  "summary": "以触点、线圈和网络表达 PLC 控制逻辑的图形语言。",
+  "description": "IEC 61131-3 的 LD 以类似继电器电路的触点、线圈及连线组织网络，也可调用程序组织单元。串联与并联触点可以表达逻辑条件，在线监视帮助观察控制状态。\n\n图形相似不表示它等同于实际继电器布线；执行顺序、变量更新和任务调度仍按语言与运行时语义处理。复杂逻辑也不能仅从视觉连接猜测其实时行为。\n\n参考：[CODESYS：FBD 与 LD 语言结构](https://content.helpme-codesys.com/en/CODESYS%20LD%20FBD/_cds_f_programming_language_fbd_ld_il.html)；[IEC 61131-3:2025：可编程控制器语言](https://webstore.iec.ch/en/publication/68533)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://content.helpme-codesys.com/en/CODESYS%20LD%20FBD/_cds_f_programming_language_fbd_ld_il.html",
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "LD"
+}

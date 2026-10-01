@@ -13,7 +13,8 @@
   ],
   "domains": [
     "databases",
-    "distributed-systems"
+    "distributed-systems",
+    "data-engineering"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -45,13 +46,17 @@
       "relation_type": "stewarded_by",
       "target_id": "apache-software-foundation",
       "context": "项目在 Apache 基金会框架下由对应社区与项目管理委员会治理。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-evolution"
     }
   ],
-  "summary": "以快照和元数据管理分析表的开放表格式，支持多引擎访问。",
-  "description": "Iceberg 在 Parquet 等数据文件之上定义表元数据、快照与提交规则，使多个计算引擎可以访问同一张分析表。它支持模式演进和分区演进。表格式、数据文件格式和执行查询的计算引擎属于不同层次。\n\n参考：[权威资料](https://iceberg.apache.org/docs/latest/)。",
+  "summary": "以快照和稳定字段标识管理可演进的分析表格式。",
+  "description": "## 机制\n\nIceberg 在数据文件之上定义元数据、快照与提交规则。字段 ID 将字段身份与名称和顺序分离，支持安全的添加、删除、重命名等受支持模式演进；分区布局也可独立演进。\n\n## 边界与应用\n\n表格式、数据文件格式和执行引擎是不同层次。模式兼容不保证业务语义兼容，数据文件、元数据与快照清理仍需遵循表格式维护规则。\n\n## 参考\n\n- [Iceberg：模式与分区演进](https://iceberg.apache.org/docs/latest/evolution/)",
   "importance": 4,
   "official_site": "https://iceberg.apache.org/docs/latest/",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-01",
   "origin": "ai_draft",
   "status": "active"
 }

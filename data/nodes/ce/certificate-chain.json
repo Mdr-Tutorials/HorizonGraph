@@ -1,0 +1,34 @@
+{
+  "id": "certificate-chain",
+  "name": "Certificate Chain",
+  "aliases": [
+    "证书链",
+    "认证路径",
+    "cert-chain"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x509",
+      "context": "X.509 认证路径使用证书中的签发者、主体、公钥与扩展进行验证。"
+    }
+  ],
+  "summary": "将目标证书沿签发关系连接到本地信任锚。",
+  "description": "## 机制\n\n路径构建选择可能的签发者，路径验证检查签名、有效期、CA 约束及策略等条件。信任锚由验证者配置，不是收到一个自签名证书就自然可信。\n\n## 边界与应用\n\n证书链有效不等于应用身份匹配或吊销状态有效；服务器名称、用途和状态检查需按协议补充。交叉签名可能产生多条路径，信任锚也不必以链内自签名证书表示。\n\n## 参考\n\n- [RFC 5280：证书路径验证](https://www.rfc-editor.org/rfc/rfc5280.html)",
+  "importance": 4,
+  "official_site": "https://www.rfc-editor.org/rfc/rfc5280.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ]
+}

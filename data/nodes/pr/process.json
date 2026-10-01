@@ -17,12 +17,28 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "virtual-memory",
+      "context": "各进程通过自己的虚拟地址空间组织和隔离内存，共享映射是显式例外。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "copy-on-write",
+      "context": "Linux fork 采用写时复制避免立即复制全部用户态页面。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inter-process-communication",
+      "context": "独立进程借助 IPC 交换消息或共享数据，接口由实际场景选择。"
     }
   ],
-  "summary": "资源与地址空间的隔离单位；线程共享其内存但各有栈与现场。",
+  "summary": "维护地址空间和资源的执行容器，容纳一个或多个线程。",
   "importance": 5,
   "popular": 65,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\n进程拥有虚拟地址空间、文件描述符等资源，线程在其中执行。Linux fork 建立新进程并以写时复制共享初始页面，exec 则可用新程序替换地址空间。\n\n## 边界与应用\n\n共享映射会显式跨越隔离边界。多线程进程 fork 后，子进程在 exec 前可调用函数受到约束，不应任意沿用父进程锁状态。\n\n## 参考\n\n- [Linux fork 手册](https://man7.org/linux/man-pages/man2/fork.2.html)"
 }

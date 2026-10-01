@@ -1,0 +1,35 @@
+{
+  "id": "tlb",
+  "name": "Translation Lookaside Buffer",
+  "aliases": [
+    "地址转换后备缓冲",
+    "快表",
+    "翻译旁路缓冲"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-table",
+      "context": "TLB 未命中后从页表取得有效翻译；具体填充机制依处理器架构而定。"
+    }
+  ],
+  "summary": "缓存地址翻译结果，减少重复页表遍历的硬件结构。",
+  "description": "## 机制\n\nTLB 保存最近使用的虚拟页到物理页翻译及权限，命中可绕过完整页表遍历。不同体系以硬件遍历或软件异常填充处理未命中，并可用地址空间标识区分进程。\n\n## 边界与应用\n\nTLB 缓存的是翻译，不是数据；未命中不是必然缺页。修改映射时须按架构规则失效旧翻译，多核系统可能需要跨核失效，切换进程也不总是全量刷新。\n\n## 参考\n\n- [OSTEP：TLB](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf)",
+  "importance": 4,
+  "official_site": "https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abbreviation": "TLB"
+}

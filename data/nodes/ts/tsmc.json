@@ -12,7 +12,9 @@
     "hardware_iot"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "relations": [
     {
@@ -20,10 +22,11 @@
       "target_id": "organization"
     }
   ],
-  "summary": "全球领先的晶圆代工厂，先进制程的制造层。",
+  "summary": "为客户芯片设计提供工艺、晶圆制造与先进封装的代工企业。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
   "importance": 5,
-  "official_site": "https://www.tsmc.com"
+  "official_site": "https://www.tsmc.com",
+  "description": "TSMC 的专用晶圆代工模式以制造客户设计的芯片为核心，并提供工艺、设计生态和后端服务。客户的 RTL 需要经过目标工艺库映射、物理实现和验证后，才能交付制造数据。其 CoWoS 与 3DFabric 补充多裸片集成；组织、制程与封装技术分别建模，不因晶圆代工身份把客户 ISA 或 HDL 归为其研发。\n\n参考：[TSMC：公司介绍](https://www.tsmc.com/english/aboutTSMC/company_profile)；[TSMC：工艺技术](https://www.tsmc.com/english/dedicatedFoundry/technology)；[TSMC：制造与后端服务](https://www.tsmc.com/english/dedicatedFoundry/services)；[TSMC：CoWoS](https://www.tsmc.com/english/dedicatedFoundry/technology/cowos)。"
 }

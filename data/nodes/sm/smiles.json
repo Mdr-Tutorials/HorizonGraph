@@ -1,0 +1,30 @@
+{
+  "id": "smiles",
+  "name": "Simplified Molecular Input Line Entry System",
+  "aliases": [
+    "简化分子线性输入规范"
+  ],
+  "type": "language",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    }
+  ],
+  "summary": "用文本记法表达分子连接与相关结构信息。",
+  "description": "SMILES 用原子、键、分支和环标记表达分子图，并可携带立体化学信息。它是结构记法，不是化学名称；一张分子图可能具有多个有效字符串表示。\n\n规范 SMILES 依赖具体实现和规范化规则，不能假定不同工具输出完全一致。字符串长度或字符顺序也不能直接代表化学相似性。\n\n## 参考\n\n- [Daylight：SMILES 语言](https://www.daylight.com/dayhtml/doc/theory/theory.smiles.html)\n- [RDKit：分子表示与化学信息处理](https://www.rdkit.org/docs/GettingStartedInPython.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "SMILES",
+  "official_site": "https://www.daylight.com/dayhtml/doc/theory/theory.smiles.html"
+}

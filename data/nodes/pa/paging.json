@@ -15,11 +15,17 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-table",
+      "context": "分页地址翻译用页表将虚拟页号映射为物理页框。"
     }
   ],
-  "summary": "操作系统将物理内存划分为固定大小页框以消除外部碎片的经典内存离散管理机制。",
+  "summary": "以固定大小的页和页框实现地址空间映射。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\n虚拟地址拆分为虚拟页号与页内偏移，页表把页号翻译为物理页框号，页框不必连续。这方便稀疏映射和逐页权限管理。\n\n## 边界与应用\n\n固定页大小带来内部碎片与页表占用；大页减少翻译项，但提高连续物理内存和分配粒度要求。分页本身不规定页面置换策略。\n\n## 参考\n\n- [OSTEP：分页](https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf)"
 }

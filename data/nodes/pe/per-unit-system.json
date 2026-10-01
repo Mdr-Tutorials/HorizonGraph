@@ -1,0 +1,33 @@
+{
+  "id": "per-unit-system",
+  "name": "Per-Unit System",
+  "aliases": [
+    "标幺制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "power-transformer",
+      "context": "在多电压等级网络中，以变压器变比建立相协调的两侧电压基准。"
+    }
+  ],
+  "summary": "按选定基准归一化电力系统量值的表示方法。",
+  "description": "标幺值是实际量与相应基准值之比。选定功率和电压基准后，可推导电流、阻抗等一致基准，使不同电压等级的设备参数便于比较及联立计算。\n\n基准的三相或每相定义必须一致，跨设备基准时需要换算。按变压器额定变比选取两侧电压基准可简化等值网络，但不能忽略实际变比偏移与相移。\n\n参考：[MATPOWER：用户手册](https://matpower.org/docs/MATPOWER-manual.pdf)；[MIT 6.061：多相电力网络](https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/resources/mit6_061s11_ch3/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://matpower.org/docs/MATPOWER-manual.pdf",
+  "abbreviation": "p.u."
+}

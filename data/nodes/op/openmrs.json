@@ -1,0 +1,37 @@
+{
+  "id": "openmrs",
+  "name": "OpenMRS",
+  "aliases": [
+    "开源医疗记录系统"
+  ],
+  "type": "product",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "emr"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-terminology",
+      "context": "在配置观察和业务概念字典时管理临床概念，以保持数据录入与检索含义一致。"
+    }
+  ],
+  "summary": "可按医疗场景配置和扩展的开源病历平台。",
+  "description": "## 机制\n\nOpenMRS 提供电子病历平台与模块化扩展，用来组织患者、就诊和观察等信息。社区维护平台、参考应用及模块，使实施者能够根据机构工作流程进行配置。\n\n## 边界与应用\n\nOpenMRS 软件项目与支持它的社区、组织需区分。实施仍需要本地业务设计、术语管理、访问控制及运维；安装基础平台不等于所有医疗流程或外部接口都已具备。\n\n## 参考\n\n- [OpenMRS：平台与社区](https://openmrs.org/about/)",
+  "importance": 4,
+  "official_site": "https://openmrs.org/about/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

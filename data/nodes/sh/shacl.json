@@ -1,0 +1,35 @@
+{
+  "id": "shacl",
+  "name": "Shapes Constraint Language",
+  "aliases": [
+    "形状约束语言"
+  ],
+  "type": "language",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "以 RDF 图表达形状并对输入数据图执行约束检查。"
+    }
+  ],
+  "summary": "用形状描述并校验 RDF 数据的条件。",
+  "description": "SHACL 用 shapes 描述应检查的节点、属性及值约束，并产生符合性与校验结果。核心约束和基于 SPARQL 的扩展提供不同的表达能力。\n\n校验针对给定数据图和规定处理方式，不能把通过检查理解为真实世界事实全部正确。它与 OWL 公理推理有不同目标，应用中需要明确先推理、再校验等具体流程。\n\n## 参考\n\n- [W3C：SHACL](https://www.w3.org/TR/shacl/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "SHACL",
+  "official_site": "https://www.w3.org/TR/shacl/"
+}

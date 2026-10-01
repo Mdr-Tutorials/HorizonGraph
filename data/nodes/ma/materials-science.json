@@ -1,0 +1,37 @@
+{
+  "id": "materials-science",
+  "name": "Materials Science",
+  "aliases": [
+    "材料科学"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "crystal-structure",
+      "context": "描述晶态材料的原子排列，并据此分析不同结构对应的性质。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-chemistry",
+      "context": "通过电子结构和原子尺度计算解释材料能量、结构与相互作用。"
+    }
+  ],
+  "summary": "研究材料结构、加工、性质与性能之间的关系。",
+  "description": "材料科学把原子与微观结构连接到宏观性质和使用性能。不同成分、晶体排列、缺陷与加工路径会改变电学、力学和热学行为，不能仅凭化学式确定一种材料的全部性质。\n\n计算材料研究利用电子结构计算、原子模拟和数据库比较候选材料，再与实验测量及制造条件对照。计算得到的理想结构、基态性质和实际器件表现需要分别解释。\n\n## 参考\n\n- [Materials Project：材料计算方法](https://docs.materialsproject.org/methodology/materials-methodology/overview)\n- [Materials Project：项目介绍](https://docs.materialsproject.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

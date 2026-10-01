@@ -1,0 +1,39 @@
+{
+  "id": "mathematical-optimization",
+  "name": "Mathematical Optimization",
+  "aliases": [
+    "数学优化",
+    "最优化"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-problem",
+      "context": "用目标、变量与约束的标准形式表达待求解的决策。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-solver",
+      "context": "将具体模型交给支持相应问题类别的算法实现，并检查状态与容差。"
+    }
+  ],
+  "summary": "在约束下寻找使目标函数最优的决策变量。",
+  "description": "数学优化以变量、目标函数和可行域描述决策问题。连续或离散、凸或非凸、确定或随机的结构决定适用算法；相同业务问题往往可以有多种不同的数学建模方式。\n\n最优解可能不存在、不可达或不唯一。算法返回的局部最优、可行解和全局最优证书必须区分，数值容差也意味着计算结果不是无限精度的数学证明。\n\n参考：[Stanford 优化课程](https://web.stanford.edu/class/ee364a/index.html)；[Boyd 与 Vandenberghe 教材](https://stanford.edu/~boyd/cvxbook/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://web.stanford.edu/class/ee364a/index.html"
+}

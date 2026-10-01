@@ -11,7 +11,8 @@
   ],
   "domains": [
     "embedded-systems",
-    "machine-learning"
+    "machine-learning",
+    "robotics"
   ],
   "abstraction_level": "hardware",
   "relations": [
@@ -22,11 +23,17 @@
     {
       "relation_type": "developed_by",
       "target_id": "nvidia"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "ros",
+      "context": "通过官方 Isaac ROS 软件包在受支持 Jetson 平台上运行 ROS 2 感知与机器人应用。"
     }
   ],
   "summary": "边缘 AI 模组家族，把推理塞进机器人和摄像头。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "## 平台\n\nJetson 是面向边缘计算与 AI 的硬件模组和开发平台家族，可用于机器人感知与推理。NVIDIA Isaac ROS 提供面向 ROS 2 的加速包和开发路径，具体支持组合与资源需求取决于硬件和软件版本。\n\n## 边界\n\nJetson 提供计算能力，不自动构成完整机器人自主系统。传感器、状态估计、规划、控制与应用逻辑仍需集成；使用 Isaac ROS 是一个可选软件路径。\n\n## 参考\n\n- [NVIDIA Isaac ROS：官方项目文档](https://nvidia-isaac-ros.github.io/)"
 }

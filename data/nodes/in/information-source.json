@@ -1,0 +1,31 @@
+{
+  "id": "information-source",
+  "name": "Information Source",
+  "aliases": [
+    "信息源",
+    "信源"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "probability-distribution",
+      "context": "以符号及序列的概率分布描述产生机制，供编码和熵分析使用。"
+    }
+  ],
+  "summary": "生成待描述符号序列的概率模型。",
+  "description": "信源模型规定符号及序列的概率规律，可独立同分布，也可包含时间依赖。压缩算法利用这些规律编码，单符号分布不足以描述所有序列相关性。\n\n实际数据分布可能未知或随时间变化，熵率和模型失配比单次频率统计更重要。这里的信息源是数学与通信模型，不代表现实消息一定随机产生或具有同样语义价值。\n\n参考：[MIT 无损变长编码](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/)；[MIT 平稳遍历信源](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_8/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/"
+}

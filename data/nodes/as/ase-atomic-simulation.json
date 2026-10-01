@@ -1,0 +1,41 @@
+{
+  "id": "ase-atomic-simulation",
+  "name": "Atomic Simulation Environment",
+  "aliases": [
+    "原子模拟环境",
+    "ASE 原子模拟环境"
+  ],
+  "type": "library",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geometry-optimization",
+      "context": "通过优化器和所接计算器的能量及力调整结构。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "用 Python 的原子对象和计算器接口组织模拟。"
+    }
+  ],
+  "summary": "用统一 Python 对象组织原子模拟及其计算器。",
+  "description": "ASE 提供原子、晶胞、约束和计算器接口，帮助建立结构、运行优化或动力学、读取结果。计算器可连接不同电子结构或力场程序，因此工作流与实际能量模型需要分别辨认。\n\n相同的 ASE 脚本在不同计算器下可能代表不同物理近似。运行前仍需设定方法和收敛条件，结构优化的局部结果也不能直接当作全局稳定结构。\n\n## 参考\n\n- [ASE：原子模拟环境](https://ase-lib.org/)\n- [ASE：结构优化](https://docs.ase-lib.org/ase/optimize.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "ASE",
+  "official_site": "https://ase-lib.org/"
+}

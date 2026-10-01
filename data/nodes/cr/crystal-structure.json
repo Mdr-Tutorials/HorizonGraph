@@ -1,0 +1,37 @@
+{
+  "id": "crystal-structure",
+  "name": "Crystal Structure",
+  "aliases": [
+    "晶体结构"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-cell",
+      "context": "用晶胞基矢和胞内原子位置表示周期性的原子模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bravais-lattice",
+      "context": "区分平移点阵的几何与对称类型。"
+    }
+  ],
+  "summary": "描述晶态物质中原子与重复周期的空间排列。",
+  "description": "晶体结构包含周期性的空间组织和原子位置。相同组成可以形成不同结构，从而产生不同的稳定性或物性；结构文件中的晶格、元素和坐标共同定义一个模型。\n\n晶胞可以采用原胞或便于表达对称性的惯用胞。只比较文件中的坐标列表容易误判等价结构，通常需要考虑坐标基、平移和对称操作。\n\n## 参考\n\n- [IUCr：晶体结构](https://dictionary.iucr.org/Crystal_structure)\n- [IUCr：晶胞](https://dictionary.iucr.org/Unit_cell)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4
+}

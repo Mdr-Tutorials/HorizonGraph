@@ -19,11 +19,22 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "concurrency-control",
+      "context": "数据库通过并发控制实现所声明隔离级别，应用须处理相应等待或重试。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wal",
+      "context": "采用预写日志的数据库在持久化相关修改前写入恢复日志，支持事务故障恢复。"
     }
   ],
-  "summary": "把多步读写包成全成或全败的原子执行单元。",
+  "summary": "把多步数据操作组织为具有提交或回滚边界的单元。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\n事务在提交前执行一组操作，成功后一起生效，失败时可撤销未提交修改；隔离级别控制与并发事务之间的可见性和冲突。数据库日志及恢复机制支持持久化与故障处理。\n\n## 边界与应用\n\n事务边界之外的邮件、文件或远程 API 不自动随数据库回滚。隔离和持久性选项影响保证，应用仍需处理提交结果未知、重试和业务不变量。\n\n## 参考\n\n- [PostgreSQL：事务教程](https://www.postgresql.org/docs/current/tutorial-transactions.html)\n- [PostgreSQL：事务隔离](https://www.postgresql.org/docs/current/transaction-iso.html)"
 }

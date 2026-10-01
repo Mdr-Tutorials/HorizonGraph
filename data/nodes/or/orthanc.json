@@ -1,0 +1,37 @@
+{
+  "id": "orthanc",
+  "name": "Orthanc",
+  "aliases": [
+    "Orthanc DICOM 服务器"
+  ],
+  "type": "tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dicom"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dicomweb",
+      "context": "安装并配置 DICOMweb 插件的部署中使用标准 Web 影像交换服务。"
+    }
+  ],
+  "summary": "提供影像归档与自动化接口的轻量 DICOM 服务器。",
+  "description": "## 机制\n\nOrthanc 接收和管理 DICOM 实例，提供查询、获取与 REST 接口，适合影像数据流的自动化和系统集成。插件可以扩展数据库、查看或 DICOMweb 等能力。\n\n## 边界与应用\n\nOrthanc 的 REST API 与标准 DICOMweb 接口需区分，后者依赖适用插件。公开部署须配置身份与授权、网络访问和存储策略；轻量服务不自动具备完整医院 PACS 的全部职责。\n\n## 参考\n\n- [Orthanc：理解 DICOM](https://orthanc.uclouvain.be/book/dicom-guide.html)\n- [Orthanc：快速入门](https://orthanc.uclouvain.be/book/users/cookbook.html)\n- [Orthanc：服务安全边界](https://orthanc.uclouvain.be/book/faq/security.html)",
+  "importance": 4,
+  "official_site": "https://orthanc.uclouvain.be/book/dicom-guide.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

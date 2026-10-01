@@ -1,0 +1,38 @@
+{
+  "id": "scientific-computing",
+  "name": "Scientific Computing",
+  "aliases": [
+    "科学计算"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numerical-analysis",
+      "context": "选择近似算法并估计截断、舍入和迭代误差，判断计算可信度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "将离散科学模型中的方程组织为矩阵和向量运算。"
+    }
+  ],
+  "summary": "把科学与工程模型转化为可靠数值计算的领域。",
+  "description": "科学计算将物理或数学模型表示为计算问题，再选择离散化、线性代数和迭代算法获得近似解。工作包括数据表示、误差控制、数值求解与结果分析，不只是使用高性能硬件加速代码。\n\n建模误差、离散化误差和浮点误差来自不同环节，需要分别检查。计算结果应结合网格或步长收敛、已知解及实验数据评估；更快的求解不保证模型更符合现实。\n\n参考：[数值计算教材](https://fncbook.com/)；[MIT 数值分析课程](https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://fncbook.com/"
+}

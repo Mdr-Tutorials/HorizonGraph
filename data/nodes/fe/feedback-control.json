@@ -1,0 +1,36 @@
+{
+  "id": "feedback-control",
+  "name": "Feedback Control",
+  "aliases": [
+    "反馈控制",
+    "闭环控制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "robotics-ecosystem",
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "control-theory",
+    "industrial-automation",
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "robotics-method"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    }
+  ],
+  "summary": "用测量结果与目标的偏差调整输入、控制动态系统。",
+  "description": "反馈控制用状态或输出的测量形成误差，再调整作用于对象的输入。机器人运动、工业过程调节和模拟电路反馈共享这一闭环思想，具体控制器与对象模型则不同。\n\n闭环能响应部分扰动和模型偏差，但增益、相位延迟、采样、饱和与噪声决定效果。有反馈不意味着稳定，负反馈电路也必须结合频率响应评估实际环路。\n\n参考：[Modern Robotics：运动反馈控制](https://modernrobotics.northwestern.edu/nu-gm-book-resource/11-3-motion-control-with-velocity-inputs-part-1-of-3/)；[NI：PID 与过程变量控制](https://www.ni.com/en/shop/labview/pid-theory-explained.html)；[MIT 6.002：运算放大器电路](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l20/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/11-3-motion-control-with-velocity-inputs-part-1-of-3/"
+}

@@ -18,11 +18,17 @@
     {
       "relation_type": "alternative_to",
       "target_id": "jit"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-generation",
+      "context": "构建或部署时生成目标代码，再把工件交付给运行环境。"
     }
   ],
-  "summary": "构建期编译成机器码，启动快与体积小的取舍。",
+  "summary": "在程序运行前完成代码编译，降低运行时编译需求。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "## 机制\n\nAOT 把编译工作安排在构建或部署阶段，可生成本机代码或预编译工件。它与 JIT 的主要区别是时机；优化、链接和运行时支持仍取决于实现。\n\n## 边界与应用\n\n提前编译不代表没有运行时、垃圾回收或动态加载，也不自动消除启动成本。目标架构、部署兼容性和闭世界假设会限制可用优化。\n\n## 参考\n\n- [GCC 总体编译选项](https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html)\n- [LLVM 代码生成器](https://llvm.org/docs/CodeGenerator.html)"
 }

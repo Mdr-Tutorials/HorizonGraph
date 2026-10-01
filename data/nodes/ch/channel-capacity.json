@@ -1,0 +1,36 @@
+{
+  "id": "channel-capacity",
+  "name": "Channel Capacity",
+  "aliases": [
+    "信道容量"
+  ],
+  "type": "metric",
+  "ecosystems": [],
+  "domains": [
+    "information-theory",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutual-information",
+      "context": "对允许的输入分布最大化输入输出互信息，计算相应无记忆信道容量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-problem",
+      "context": "将输入分布及功率等约束构造成容量计算的最大化问题。"
+    }
+  ],
+  "summary": "给定信道模型下可可靠传输的渐近最大码率。",
+  "description": "对离散无记忆信道，容量为输入分布上互信息 I(X;Y) 的最大值，通常以每次信道使用的 bit 表达。加入功率或其他输入约束时，可优化的输入分布集合也相应受限。\n\n容量不是每条链路立即可获得的吞吐量，也不等于带宽的同义词。有限码长、译码复杂度和协议开销会降低实际速率，超过容量的结论也须按误差和信道假设解释。\n\n参考：[MIT 线性码与容量](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/)；[MIT 受约束与 Gaussian 信道](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_17/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/"
+}

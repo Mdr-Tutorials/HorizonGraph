@@ -1,6 +1,7 @@
 {
   "id": "hbm3e",
   "name": "HBM3E",
+  "display_primary": "SK hynix HBM3E",
   "aliases": [
     "HBM3E"
   ],
@@ -10,7 +11,10 @@
     "gpu-computing"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "digital-design",
+    "semiconductor-engineering",
+    "high-performance-computing"
   ],
   "abstraction_level": "hardware",
   "relations": [
@@ -23,13 +27,14 @@
       "target_id": "sk-hynix"
     },
     {
-      "relation_type": "bases_for",
-      "target_id": "nvidia-h100"
+      "relation_type": "implements",
+      "target_id": "hbm"
     }
   ],
-  "summary": "SK 海力士的第五代高带宽内存。",
+  "summary": "SK hynix 的 HBM3E 堆叠内存产品。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "SK hynix 的 HBM3E 是 HBM3 增强代际的堆叠内存产品，官方于 2024 年 3 月宣布量产。该产品实现 HBM 高带宽堆叠内存技术。NVIDIA 的 HGX 官方规格列 H100 SXM 使用 HBM3、H200 SXM 使用 HBM3e；具体 GPU 采用的内存代际及供应商应以相应型号资料为准。\n\n参考：[SK hynix：HBM3E 量产公告](https://news.skhynix.com/en/sk-hynix-begins-volume-production-of-industry-first-hbm3e/)；[NVIDIA：HGX H100、H200、B200 组件规格](https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory-h100-h200-b200/latest/components.html)。"
 }

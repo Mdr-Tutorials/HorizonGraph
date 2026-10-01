@@ -14,14 +14,25 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-generation",
+      "context": "运行时需要机器代码时通过后端生成并装载目标指令。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ir",
+      "context": "LLVM ORC 等 JIT 路线接受 IR 并在运行时触发编译；不是所有 JIT 的统一输入。"
     }
   ],
   "tags": [
     "jit"
   ],
-  "summary": "运行时编译热点路径，把解释器跑出编译速度。",
+  "summary": "在程序运行期间编译代码，可利用运行时反馈。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\nJIT 可把字节码或 IR 转换为机器代码，并按调用频率或类型反馈选择优化层级。运行时需装载生成代码、维护符号和处理先前假设失效的情况。\n\n## 边界与应用\n\nJIT 不是一定更快：编译时间、预热、内存和安全策略都有成本。解释、提前编译与即时编译可共存，不同实现也未必都采用投机优化。\n\n## 参考\n\n- [LLVM ORC JIT 架构](https://llvm.org/docs/ORCv2.html)\n- [HotSpot 性能与逃逸分析](https://docs.oracle.com/en/java/javase/25/vm/java-hotspot-virtual-machine-performance-enhancements.html)"
 }

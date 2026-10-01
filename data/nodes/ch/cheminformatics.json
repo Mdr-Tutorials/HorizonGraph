@@ -1,0 +1,37 @@
+{
+  "id": "cheminformatics",
+  "name": "Cheminformatics",
+  "aliases": [
+    "化学信息学"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "smiles",
+      "context": "以线性记法存储或交换分子图及部分立体化学信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdkit",
+      "context": "在具体工作流中解析、检索并计算化学结构特征。"
+    }
+  ],
+  "summary": "组织化学结构数据并进行检索、描述与分析。",
+  "description": "化学信息学用计算表示和操作化学结构、反应及性质数据。分子图、线性记法、描述符和指纹服务于结构检索、相似性比较与建模，具体表示保留的信息各不相同。\n\n名称相似、字符串一致和化学实体相同不能简单等同。盐、立体化学、互变异构和规范化规则会改变数据处理结果，任务必须明确实体身份与标准化范围。\n\n## 参考\n\n- [RDKit：分子表示与化学信息处理](https://www.rdkit.org/docs/GettingStartedInPython.html)\n- [Daylight：SMILES 语言](https://www.daylight.com/dayhtml/doc/theory/theory.smiles.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

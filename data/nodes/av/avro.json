@@ -9,7 +9,8 @@
     "big-data-ecosystem"
   ],
   "domains": [
-    "distributed-systems"
+    "distributed-systems",
+    "data-engineering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -20,11 +21,16 @@
     {
       "relation_type": "competes_with",
       "target_id": "protocol-buffers"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-evolution"
     }
   ],
-  "summary": "带 schema 演进的序列化格式，Kafka 生态标配。",
+  "summary": "以明确模式序列化数据，并规定读写模式解析规则。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "## 机制\n\nAvro 按模式编码记录、联合等数据类型；读取时可用不同的读者模式解析写者数据。增加字段等变更能否兼容，取决于类型匹配、默认值与模式解析规则。\n\n## 边界与应用\n\n默认值主要服务于读者遇到缺失字段时的解析，不表示写者可任意省略字段。文档字段不参与模式解析，结构兼容也不会验证字段单位或业务含义。\n\n## 参考\n\n- [Avro：模式解析规范](https://avro.apache.org/docs/1.12.0/specification/)"
 }

@@ -1,0 +1,38 @@
+{
+  "id": "sampling-theorem",
+  "name": "Sampling Theorem",
+  "aliases": [
+    "采样定理",
+    "奈奎斯特－香农采样定理"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "aliasing",
+      "context": "带限与采样率条件决定频谱复制是否重叠，从而约束可唯一重建的范围。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "multirate-signal-processing",
+      "context": "降低采样率前必须限制新采样率下不可区分的高频成分。"
+    }
+  ],
+  "summary": "给出带限连续信号可由均匀样本重建的条件。",
+  "description": "经典带限采样定理说明，信号最高频率为 B 且满足相应条件时，超过 2B 的均匀采样率允许理想重建。频谱复制不重叠是这一条件的频域解释，实际采样前通常需抗混叠滤波。\n\n定理采用带限和理想重建假设，现实滤波器有过渡带，因此须留出裕量。恰好等于边界频率的情况需额外条件，不能把每周期两个任意样本视为所有波形都可恢复。\n\n参考：[MIT 采样讲义](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec21/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec21/"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "spice",
+  "name": "SPICE",
+  "aliases": [
+    "SPICE 电路仿真"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kirchhoffs-laws",
+      "context": "在节点分析中，将器件端口关系与电路电流约束组合为待求解方程。"
+    }
+  ],
+  "summary": "以器件模型和电路方程进行直流、交流及瞬态仿真的程序体系。",
+  "description": "SPICE 源自 UC Berkeley 的电路仿真程序，把电路网表、器件模型及分析指令转换成数值问题，支持非线性直流、瞬态和小信号交流分析。名称也用于其后衍生的仿真器和网表传统。\n\n仿真回答的是模型电路在给定条件下的响应；模型缺失、参数错误、收敛或时间步设置会影响结论。不同 SPICE 实现的器件、语法扩展和模型兼容性需分别检查。\n\n参考：[UC Berkeley：SPICE 原始技术报告](https://www2.eecs.berkeley.edu/Pubs/TechRpts/1973/22871.html)；[UC Berkeley：SPICE 用户指南](https://bwrcs.eecs.berkeley.edu/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/1973/22871.html",
+  "abstraction_level": "application_tool",
+  "abbreviation": "SPICE"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "plc",
+  "name": "Programmable Logic Controller",
+  "aliases": [
+    "可编程逻辑控制器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "plc-scan-cycle",
+      "context": "在循环扫描型 PLC 任务中，按规定阶段更新 I/O 和执行控制程序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "iec-61131-3",
+      "context": "在采用 IEC 61131-3 编程体系的控制器中，用标准语言和程序组织结构描述应用。"
+    }
+  ],
+  "summary": "读取现场输入并执行控制程序、驱动输出的工业控制器类别。",
+  "description": "PLC 通过输入输出接口连接传感器和执行设备，在指定运行时中执行逻辑、顺序或调节程序。其硬件与工程环境面向工业部署；SoftPLC 也可在通用平台上实现控制运行时。\n\n周期任务、事件中断和直接 I/O 可以并存，具体执行时序由设备与配置决定。普通 PLC 不自动具有安全 PLC 的完整性等级或认证，也不保证任意程序满足实时截止期。\n\n参考：[NIST SP 800-82 Rev.3：OT 系统架构](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf)；[Siemens：S7-1200 程序执行与扫描周期](https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_enus_20/plc-concepts/execution-of-the-user-program/processing-the-scan-cycle-in-run-mode)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf",
+  "abbreviation": "PLC"
+}

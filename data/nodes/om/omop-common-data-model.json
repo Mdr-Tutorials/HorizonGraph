@@ -1,0 +1,40 @@
+{
+  "id": "omop-common-data-model",
+  "name": "OMOP Common Data Model",
+  "aliases": [
+    "OMOP 通用数据模型",
+    "OMOP CDM"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-terminology",
+      "context": "标准词汇映射中用共同临床概念规范来源编码，保留映射与来源信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-quality",
+      "context": "把来源数据装载为 CDM 后检查表、字段和语义一致性，再开展研究。"
+    }
+  ],
+  "summary": "统一观察性医疗数据结构与术语的研究数据模型。",
+  "description": "## 机制\n\nOMOP CDM 把不同来源的观察性医疗数据映射为统一表、字段和约定，并通过标准词汇表达临床概念。研究者可围绕共同结构定义队列与分析，减少为每个数据源重写查询。\n\n## 边界与应用\n\nOMOP 聚焦分析数据模型，不是实时业务交换协议。ETL、术语映射和数据质量影响分析可信度，结构统一不消除测量偏差、缺失数据或因果推断限制。\n\n## 参考\n\n- [OHDSI：OMOP Common Data Model](https://ohdsi.github.io/CommonDataModel/)",
+  "importance": 4,
+  "official_site": "https://ohdsi.github.io/CommonDataModel/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "abbreviation": "OMOP CDM"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "three-phase-power",
+  "name": "Three-Phase Electric Power",
+  "aliases": [
+    "三相电力"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impedance",
+      "context": "在正弦稳态三相网络中，用各相及序网络阻抗计算电压电流关系。"
+    }
+  ],
+  "summary": "以三组交流相量构成的电力供给与网络形式。",
+  "description": "理想平衡三相系统的三组同频正弦量具有相同幅值、相差 120°，可采用星形或三角形连接。线电压、相电压和电流关系随接法及平衡条件不同。\n\n平衡模型便于单相等值分析，但配电负荷可能不平衡，且谐波和零序分量需要额外处理。三相并不意味着任意实际网络都满足平衡正弦假设。\n\n参考：[MIT 6.061：多相电力网络](https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/resources/mit6_061s11_ch3/)；[pandapower：潮流分析](https://pandapower.readthedocs.io/en/stable/powerflow/run.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/resources/mit6_061s11_ch3/"
+}

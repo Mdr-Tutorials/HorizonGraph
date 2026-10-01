@@ -1,0 +1,29 @@
+{
+  "id": "command-injection",
+  "name": "OS Command Injection",
+  "aliases": [
+    "操作系统命令注入",
+    "命令注入"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "不可信输入改变外部命令的结构、选项或执行语义。",
+  "description": "## 机制\n\n应用把外部输入拼接到 shell 命令或命令参数时，解释器和被调用程序可能把数据当作语法或选项。优先使用不经 shell 的受限 API，并控制允许的命令与参数。\n\n## 边界与应用\n\n避免 shell 不自动消除参数注入，转义一个参数也不保证参数业务语义安全。参数边界、选项分隔、白名单和最小权限需按被调用程序设计。\n\n## 参考\n\n- [OWASP：命令注入防护](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)",
+  "importance": 4,
+  "official_site": "https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "systems-programming"
+  ]
+}

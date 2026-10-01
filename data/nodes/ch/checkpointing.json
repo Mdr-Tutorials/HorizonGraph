@@ -10,7 +10,8 @@
   "type": "concept",
   "domains": [
     "distributed-systems",
-    "high-performance-computing"
+    "high-performance-computing",
+    "data-engineering"
   ],
   "relations": [
     {
@@ -18,9 +19,10 @@
       "target_id": "distributed-systems"
     }
   ],
-  "summary": "定期将分布式训练或计算状态全量序列化落盘，以便故障宕机后快速回滚断点续跑。",
+  "summary": "保存可恢复的状态和进度，帮助故障后继续计算。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\n检查点在选定时刻持久化计算状态及恢复所需进度；分布式流处理中需要协调算子与输入，形成一致恢复点。状态可以采用全量或增量方式，不必每次全量序列化全部数据。\n\n## 边界与应用\n\n检查点恢复可能重放记录，外部副作用需事务或幂等机制配合。保存周期在恢复重算量、存储带宽和运行开销之间权衡；检查点也不等同于任意历史版本的备份。\n\n## 参考\n\n- [Flink：检查点与端到端一致性](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/fault-tolerance/checkpointing/)"
 }

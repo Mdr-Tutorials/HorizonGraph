@@ -1,0 +1,37 @@
+{
+  "id": "ldpc-code",
+  "name": "Low-Density Parity-Check Code",
+  "aliases": [
+    "低密度奇偶校验码",
+    "LDPC 码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sparse-matrix",
+      "context": "用稀疏二元奇偶校验矩阵表示码字必须满足的有限域线性约束。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-code",
+      "context": "通过线性校验约束定义有效码字集合并组织编码。"
+    }
+  ],
+  "summary": "以稀疏校验矩阵定义并常用迭代译码的线性码。",
+  "description": "LDPC 码由非零元素较少的校验矩阵定义，图中的变量节点和校验节点对应比特与约束。译码常沿图交换软信息，编码与校验矩阵结构需要针对具体码设计。\n\n稀疏不保证所有码都接近容量，短环、块长和迭代策略影响性能。译码到达迭代上限或满足校验也不能在所有噪声情况下保证恢复原消息，应评估误码与误检。\n\n参考：[MathWorks LDPC 编码](https://www.mathworks.com/help/comm/ref/ldpcencode.html)；[MathWorks 分组码](https://www.mathworks.com/help/comm/ug/block-codes.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.mathworks.com/help/comm/ref/ldpcencode.html",
+  "abbreviation": "LDPC"
+}

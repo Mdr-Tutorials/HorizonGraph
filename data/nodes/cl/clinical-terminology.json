@@ -1,0 +1,38 @@
+{
+  "id": "clinical-terminology",
+  "name": "Clinical Terminology",
+  "aliases": [
+    "临床术语系统",
+    "医疗术语"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "loinc",
+      "context": "解释测量或观察项目的标识时采用 LOINC，并保留实际结果与单位。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "snomed-ct",
+      "context": "表示可编码临床概念与关系时采用 SNOMED CT，按场景限定可用内容。"
+    }
+  ],
+  "summary": "用受控概念、编码与关系表达临床数据的语义。",
+  "description": "## 机制\n\n临床术语将多种文字表达关联到稳定概念，支持编码、检索和跨系统理解。术语服务还可处理版本、值集、同义词与映射，减少仅凭自由文本匹配带来的歧义。\n\n## 边界与应用\n\n术语、分类和测量标识承担不同职责：SNOMED CT、ICD 与 LOINC 不能随意互换。编码仍需要时间、标本、单位及业务上下文，受控词汇也不自动纠正输入错误。\n\n## 参考\n\n- [LOINC：入门与编码含义](https://loinc.org/start)\n- [SNOMED International：SNOMED CT](https://www.snomed.org/what-is-snomed-ct)",
+  "importance": 4,
+  "official_site": "https://loinc.org/start",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ]
+}

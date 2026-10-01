@@ -1,0 +1,35 @@
+{
+  "id": "skos",
+  "name": "Simple Knowledge Organization System",
+  "aliases": [
+    "简单知识组织系统"
+  ],
+  "type": "protocol",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "用 RDF 词汇组织概念、标签和词表关系。"
+    }
+  ],
+  "summary": "表示概念词表、分类方案与术语关系的标准。",
+  "description": "SKOS 以 RDF 词汇表示概念、标签、词表和 broader、narrower 等关系，用于共享叙词表与分类方案。词表概念与 OWL 类的建模目的不同，不应随意互换。\n\n概念的上下位关系不自动等于所有实例集合的逻辑包含。映射中的 exactMatch 和 closeMatch 也有不同含义，数据集成需要保留原词表及映射依据。\n\n## 参考\n\n- [W3C：SKOS](https://www.w3.org/TR/skos-reference/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "SKOS",
+  "official_site": "https://www.w3.org/TR/skos-reference/"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "uniprot",
+  "name": "UniProt",
+  "aliases": [
+    "通用蛋白质资源"
+  ],
+  "type": "product",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gene-ontology",
+      "context": "在功能注释与交叉资源关联中采用 GO 概念和证据化注释。"
+    }
+  ],
+  "summary": "汇集蛋白序列、功能注释与关联知识的数据库资源。",
+  "description": "## 机制\n\nUniProt 以蛋白序列、稳定标识和注释连接相关知识。其 UniProtKB 中 Swiss-Prot 收录人工审校记录，TrEMBL 提供等待完整人工审校的计算注释记录，并与外部资源交叉关联。\n\n## 边界与应用\n\n人工审校不意味着每项注释都来自直接实验，计算注释也不应视为已验证事实。UniProt 蛋白质组与某个实验样本的实际表达集合不同，检索或分析需保留记录、证据与资源版本。\n\n## 参考\n\n- [UniProt：蛋白质知识库](https://www.uniprot.org/UniProt)\n- [UniProt：蛋白质组的来源与审校](https://www.uniprot.org/help/proteome)",
+  "importance": 4,
+  "official_site": "https://www.uniprot.org/UniProt",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library"
+}

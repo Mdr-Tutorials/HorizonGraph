@@ -1,0 +1,38 @@
+{
+  "id": "multirate-signal-processing",
+  "name": "Multirate Signal Processing",
+  "aliases": [
+    "多速率信号处理",
+    "多采样率处理"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fir-filter",
+      "context": "在多相重采样路径中用低通 FIR 限制镜像与降采样混叠。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sampling-theorem",
+      "context": "按目标采样率确定需保留的带宽和抗混叠条件。"
+    }
+  ],
+  "summary": "结合滤波与升降采样改变信号采样率的体系。",
+  "description": "多速率处理通过插值、抽取和滤波改变数字信号的采样率，可用于音频转换和滤波器组。多相分解把计算组织到合适速率，避免不必要地计算随后会丢弃的样本。\n\n升采样插零会产生频谱镜像，降采样可能产生混叠，均需对应滤波。直接删点或插零不等同于完整重采样，边界与滤波器延迟也要处理。\n\n参考：[SciPy 多相重采样](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.resample_poly.html)；[MIT 离散时间信号处理](https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.resample_poly.html"
+}

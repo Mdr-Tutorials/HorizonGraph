@@ -7,12 +7,15 @@
   "type": "language",
   "ecosystems": [
     "languages_runtimes",
-    "ai_data_science"
+    "ai_data_science",
+    "scientific-computing-ecosystem"
   ],
   "domains": [
     "programming-languages",
     "machine-learning",
-    "high-performance-computing"
+    "high-performance-computing",
+    "scientific-computing",
+    "computational-engineering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -32,14 +35,29 @@
     {
       "relation_type": "competes_with",
       "target_id": "matlab"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "linear-algebra"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "blas",
+      "context": "标准库 LinearAlgebra 的相应基础矩阵运算调用 BLAS 接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lapack",
+      "context": "标准库 LinearAlgebra 的相应矩阵分解和线性求解调用 LAPACK 例程。"
     }
   ],
-  "summary": "科学计算语言，想要 Python 的易用与 C 的速度。",
+  "summary": "以多重分派与数值计算能力支持科学编程的语言。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "2012-02-14",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-01",
   "importance": 4,
   "popular": 52,
-  "official_site": "https://julialang.org"
+  "official_site": "https://julialang.org",
+  "description": "Julia 是具有多重分派的通用编程语言，数值与科学计算是其重要应用方向。数组、类型和函数组合可表达计算内核，LinearAlgebra 标准库提供矩阵运算、分解与线性求解，并暴露 BLAS/LAPACK 接口。\n\n首次编译、类型推断与数据布局影响实际性能，高层语法并不自动保证所有程序达到某种速度。求解 ODE/PDE、优化或有限元通常还需选用相应算法和包；语言与计算模型不应混为同一求解方法。\n\n参考：[Julia 多重分派](https://docs.julialang.org/en/v1/manual/methods/)；[Julia LinearAlgebra](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/)。"
 }

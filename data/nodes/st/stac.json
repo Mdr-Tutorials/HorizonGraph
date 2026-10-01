@@ -1,0 +1,35 @@
+{
+  "id": "stac",
+  "name": "SpatioTemporal Asset Catalog",
+  "aliases": [
+    "时空资产目录"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geojson",
+      "context": "STAC Item 采用扩展的 GeoJSON Feature 结构表达空间范围与属性。"
+    }
+  ],
+  "summary": "用一致元数据和链接组织可发现的时空数据资产。",
+  "description": "## 机制\n\nSTAC 以 Item 表示具有空间、时间与资产链接的数据条目，Collection 补充集合范围与共享属性，Catalog 组织遍历关系。API 规范可支持按空间和时间等条件搜索。\n\n## 边界与应用\n\n目录记录通常指向资产，而不把原始影像直接放进元数据。STAC 与 STAC API 需要区分，扩展字段、坐标规则和资产访问权限也应由提供者明确。\n\n## 参考\n\n- [STAC：目录、集合与条目](https://stacspec.org/en/about/stac-spec/)",
+  "importance": 4,
+  "official_site": "https://stacspec.org/en/about/stac-spec/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "remote-sensing"
+  ],
+  "abbreviation": "STAC",
+  "abstraction_level": "framework_library"
+}

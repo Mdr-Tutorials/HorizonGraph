@@ -9,7 +9,8 @@
     "robotics-ecosystem"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "robotics"
   ],
   "abstraction_level": "hardware",
   "relations": [
@@ -22,18 +23,16 @@
       "target_id": "unitree"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "linux"
-    },
-    {
-      "relation_type": "depends_on",
-      "target_id": "pytorch"
+      "relation_type": "uses",
+      "target_id": "pytorch",
+      "context": "在官方 unitree_rl_gym 的 G1 强化学习训练路径中使用 PyTorch，不表示 C++ 控制 SDK 或设备全部运行路径必须安装它。"
     }
   ],
   "summary": "宇树的人形机器人平台。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
-  "official_site": "https://www.unitree.com"
+  "official_site": "https://www.unitree.com",
+  "description": "## 开发与控制\n\nUnitree G1 是宇树的人形机器人平台。官方 SDK 2 和 ROS 2 仓库提供相应开发接口与示例；控制方式、传感器和计算配置应按具体型号与开发版本核对，不能把一个研究代码仓库的环境要求当成设备全部运行路径的要求。\n\n## 训练与运行\n\n官方 unitree_rl_gym 提供包括 G1 在内的强化学习研究路径，其中训练代码使用 PyTorch。官方 C++ SDK 的构建与控制路径并不以 PyTorch 为前提，因此原先设备对 PyTorch 的无条件 depends_on 边改为限定训练场景的 uses。\n\n## 参考\n\n- [Unitree SDK 2](https://github.com/unitreerobotics/unitree_sdk2)\n- [Unitree ROS 2](https://github.com/unitreerobotics/unitree_ros2)\n- [Unitree 强化学习研究代码](https://github.com/unitreerobotics/unitree_rl_gym)\n\nSDK 示例的 Ubuntu 构建环境只说明该开发路径的平台条件，不足以推出实体机器人所有运行路径对 Linux 的直接硬依赖。"
 }

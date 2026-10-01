@@ -1,0 +1,33 @@
+{
+  "id": "ll-parsing",
+  "name": "LL Parsing",
+  "aliases": [
+    "LL 语法分析",
+    "自顶向下预测分析"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-free-grammar",
+      "context": "用满足相应 LL 条件的文法产生式预测下一个展开步骤。"
+    }
+  ],
+  "summary": "从左到右读取输入并构造最左推导的分析方法。",
+  "description": "## 机制\n\nLL(k) 使用最多 k 个向前看的输入符号选择产生式；LL(1) 可用预测表或递归下降实现。FIRST 与 FOLLOW 集帮助识别选择冲突，左因子提取和消除左递归可适配部分文法。\n\n## 边界与应用\n\n并非所有上下文无关文法都能直接 LL 分析；文法变换也需保持表达式结合性和 AST 结构。手写递归下降不必然是严格 LL(1)，应区分回溯、额外前瞻等扩展。\n\n## 参考\n\n- [Cornell：LL 与递归下降分析](https://www.cs.cornell.edu/courses/cs4120/2023sp/lectures/05ll/lec05-sp16.pdf)",
+  "importance": 4,
+  "official_site": "https://www.cs.cornell.edu/courses/cs4120/2023sp/lectures/05ll/lec05-sp16.pdf",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers"
+  ]
+}

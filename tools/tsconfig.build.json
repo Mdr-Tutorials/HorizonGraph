@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/build", "src/offline", "src/wasm"]
+}

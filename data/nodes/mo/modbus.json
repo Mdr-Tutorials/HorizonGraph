@@ -5,10 +5,12 @@
   "type": "protocol",
   "ecosystems": [
     "embedded-ecosystem",
-    "hardware_iot"
+    "hardware_iot",
+    "industrial-automation-ecosystem"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "industrial-automation"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -17,9 +19,11 @@
       "target_id": "protocol"
     }
   ],
-  "summary": "工业自动化最古老的串行主从协议。",
+  "summary": "以功能码和数据模型组织设备请求、响应的工业应用层协议。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "Modbus 在应用层定义功能码、请求响应和离散输入、线圈及寄存器等数据模型。串行传输与 Modbus TCP 使用不同封装，应用功能并不等同于某一种物理层。\n\n基本协议的数据地址与寄存器含义需要设备文档配合；支持协议不代表自动具有完整设备语义。网络安全扩展另有规范，传统部署不能默认具备加密和身份认证。\n\n参考：[Modbus Organization：应用协议规范](https://www.modbus.org/file/secure/modbusprotocolspecification.pdf)；[Modbus Organization：协议与传输规范](https://www.modbus.org/modbus-specifications)。",
+  "official_site": "https://www.modbus.org/file/secure/modbusprotocolspecification.pdf"
 }

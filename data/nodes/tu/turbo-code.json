@@ -1,0 +1,31 @@
+{
+  "id": "turbo-code",
+  "name": "Turbo Code",
+  "aliases": [
+    "Turbo 码",
+    "涡轮码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "convolutional-code",
+      "context": "经典并行级联构造使用分量卷积编码器，对原序列和交织序列生成保护信息。"
+    }
+  ],
+  "summary": "通过级联编码与迭代软信息交换改善纠错性能的码。",
+  "description": "经典并行级联 Turbo 码把输入及其交织版本送入多个卷积编码器，再由译码器迭代交换外信息。交织打散相邻关系，软信息更新帮助利用两个分量码的约束。\n\nTurbo 产品码是另一种常见结构，不能都视为同一个并行卷积配置。迭代次数、交织长度和终止处理影响性能与延迟，接近容量的表现需要指定码率和信道。\n\n参考：[MathWorks 并行级联 Turbo 编码](https://www.mathworks.com/help/comm/ug/parallel-concatenated-convolutional-coding-turbo-codes.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "official_site": "https://www.mathworks.com/help/comm/ug/parallel-concatenated-convolutional-coding-turbo-codes.html"
+}

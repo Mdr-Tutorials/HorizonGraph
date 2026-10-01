@@ -2,16 +2,18 @@
   "id": "can",
   "name": "CAN",
   "aliases": [
-    "Controller Area Network",
-    "控制器局域网"
+    "控制器局域网",
+    "Controller Area Network"
   ],
   "type": "protocol",
   "ecosystems": [
     "embedded-ecosystem",
-    "hardware_iot"
+    "hardware_iot",
+    "industrial-automation-ecosystem"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "industrial-automation"
   ],
   "abstraction_level": "hardware",
   "relations": [
@@ -20,9 +22,11 @@
       "target_id": "protocol"
     }
   ],
-  "summary": "车载总线标准，汽车电子的神经系统。",
+  "summary": "以优先级仲裁和错误检测支持控制设备交换消息的总线协议家族。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "CAN 使用标识符参与总线仲裁，并提供错误检测及故障处理机制。消息标识符承担优先级和接收过滤等作用，不能直接把它等同于一个节点地址。汽车与工业设备均可采用 CAN。\n\n经典 CAN、CAN FD 与 CAN XL 的帧、数据长度和速率能力不同，需要控制器及收发器配合。总线协议本身也不规定所有设备对象语义或保证任意负载下的控制截止时间。\n\n参考：[Bosch：CAN 协议家族](https://www.bosch-semiconductors.com/products/ip-modules/can-ip-modules/xs-can/)；[Bosch：M_CAN 控制器与仲裁](https://www.bosch-semiconductors.com/media/ip_modules/pdf_2/m_can/mcan_users_manual_v331.pdf)。",
+  "official_site": "https://www.bosch-semiconductors.com/products/ip-modules/can-ip-modules/xs-can/"
 }

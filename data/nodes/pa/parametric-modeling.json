@@ -1,0 +1,33 @@
+{
+  "id": "parametric-modeling",
+  "name": "Parametric Modeling",
+  "aliases": [
+    "参数化建模"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "boundary-representation",
+      "context": "在基于实体内核的特征建模中，重新计算参数驱动的曲面、边和实体拓扑。"
+    }
+  ],
+  "summary": "用参数、约束与特征依赖驱动几何变化的建模方法。",
+  "description": "参数化建模把尺寸和草图约束与几何特征关联，修改参数后按依赖关系重新生成模型。机械 CAD 的拉伸、旋转、圆角等特征可以组成可编辑历史，保留部分设计意图。\n\n过约束、依赖循环和拓扑变化可能使重算失败，参数化并不保证任意修改都有效。它与简单缩放不同，也不要求所有 CAD 工具都采用相同历史树或求解策略。\n\n参考：[FreeCAD 官方功能](https://freecad.github.io/Website/features/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://freecad.github.io/Website/features/"
+}

@@ -11,19 +11,29 @@
     "dl-framework-ecosystem"
   ],
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "statistics"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cross-validation",
+      "context": "在适合数据结构的验证折上比较正则强度，选择模型复杂度；最终测试集仍需保持独立。"
     }
   ],
-  "summary": "通过约束模型或训练过程改善泛化、抑制过拟合的方法。",
-  "description": "正则化在拟合数据之外加入限制或偏好。L2 正则通过惩罚较大的参数控制复杂度；早停等方法也属于广义正则化。正则强度需要结合验证数据选择，并非越强越好，也不能代替数据质量检查。\n\n参考：[权威资料](https://developers.google.com/machine-learning/crash-course/overfitting/regularization)。",
+  "summary": "以参数惩罚或训练限制控制模型复杂度。",
+  "description": "正则化在拟合数据之外加入约束或偏好。L2 参数惩罚倾向于缩小系数，L1 可产生稀疏系数；限制树复杂度、dropout 和早停也属于更广义的正则化方法，不限于神经网络。\n\n它通过改变可选模型或优化目标影响偏差与波动，通常以验证数据选择强度。惩罚过强可能欠拟合，特征尺度还会改变参数惩罚的意义。正则化不能修复标签错误、数据泄漏或部署分布变化，验证集也不能被无限次试验后继续充当独立测试集。\n\n参考：[Google 机器学习课程：正则化](https://developers.google.com/machine-learning/crash-course/overfitting/regularization)；[scikit-learn Ridge](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)；[scikit-learn Lasso](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html)。",
   "importance": 4,
   "official_site": "https://developers.google.com/machine-learning/crash-course/overfitting/regularization",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-01",
   "origin": "ai_draft",
   "status": "active"
 }

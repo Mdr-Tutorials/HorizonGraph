@@ -1,0 +1,35 @@
+{
+  "id": "usability-testing",
+  "name": "Usability Testing",
+  "aliases": [
+    "易用性测试",
+    "可用性测试"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "usability",
+      "context": "分析特定用户在指定任务和环境中的完成效果、投入与主观满意度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "accessibility",
+      "context": "测试包含残障参与者和辅助技术场景时，检查任务路径是否存在访问障碍。"
+    }
+  ],
+  "summary": "观察目标用户执行具体任务，发现交互障碍并验证设计。",
+  "description": "## 操作\n\n易用性测试让参与者在原型或实际系统上完成代表性任务，研究人员观察成功、失败、犹豫与恢复过程。主持式测试可请参与者出声表达想法；主持人应避免提示正确答案，以免改变观察到的行为。\n\n## 解释\n\n测试对象是设计与服务流程，不能把遇到的问题归咎于参与者。小规模定性测试有助于定位问题，不能直接推出总体成功率。自动扫描无法替代真实用户任务测试；辅助技术用户应使用与其实际需求相符的设备和配置。\n\n## 参考\n\n- [GOV.UK：主持式易用性测试](https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.gov.uk/service-manual/user-research/using-moderated-usability-testing"
+}

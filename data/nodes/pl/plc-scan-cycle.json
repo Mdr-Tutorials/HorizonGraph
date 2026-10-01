@@ -1,0 +1,32 @@
+{
+  "id": "plc-scan-cycle",
+  "name": "PLC Scan Cycle",
+  "aliases": [
+    "PLC 扫描周期"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "plc",
+      "context": "通过 PLC 的过程映像、任务调度和 I/O 接口实施周期性的控制程序执行。"
+    }
+  ],
+  "summary": "循环 PLC 任务执行 I/O 更新、程序和系统工作的过程。",
+  "description": "扫描周期组织输入输出过程映像、用户程序与通信等工作。以 S7-1200 默认循环为例，周期开始可写出上一映像的输出、读取输入，再执行程序；事件与直接 I/O 可采用其他路径。\n\n不同控制器和任务模式不必采用完全相同顺序。采样到输出的延迟由输入过滤、I/O 更新、任务执行和通信共同决定，不能把一个标称扫描时间视为所有动作的最坏延迟。\n\n参考：[Siemens：S7-1200 程序执行与扫描周期](https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_enus_20/plc-concepts/execution-of-the-user-program/processing-the-scan-cycle-in-run-mode)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://docs.tia.siemens.cloud/r/simatic_s7_1200_manual_collection_enus_20/plc-concepts/execution-of-the-user-program/processing-the-scan-cycle-in-run-mode"
+}

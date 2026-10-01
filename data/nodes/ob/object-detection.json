@@ -4,7 +4,8 @@
   "display_primary": "目标检测",
   "display_secondary": "Object Detection",
   "aliases": [
-    "目标检测"
+    "目标检测",
+    "物体检测"
   ],
   "type": "concept",
   "domains": [
@@ -14,11 +15,28 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "object-localization",
+      "context": "边界框目标检测除判断类别外，还要预测每个对象实例的空间位置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "intersection-over-union",
+      "context": "基准评估以预测框与真值框的 IoU 及类别匹配判定检测结果，阈值由评估协议规定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coco-dataset",
+      "context": "自然场景目标检测研究使用 COCO 框与类别标注训练模型，并按官方协议评估。"
     }
   ],
   "summary": "定位并识别图中多个物体的视觉任务。",
+  "description": "目标检测同时回答图中有哪些对象以及各自位于何处，典型输出是每个实例的类别、置信度与边界框。整图分类不提供这些位置，实例分割则进一步提供逐对象掩码。检测可以由传统方法或深度网络实现，图谱现有深度学习分类挂载代表其常见技术语境。[Mask R-CNN 中的任务区分](https://openaccess.thecvf.com/content_iccv_2017/html/He_Mask_R-CNN_ICCV_2017_paper.html)。\n\n深度检测方法可以先生成候选区域再分类与回归，也可以像原始 YOLO 一样从整图直接预测框与类别。训练与部署都需处理框坐标、尺度变换和输出匹配；是否需要非极大值抑制由具体架构与导出形式决定。[YOLO 原始论文](https://arxiv.org/abs/1506.02640)、[OpenCV YOLO 推理说明](https://docs.opencv.org/4.x/da/d9d/tutorial_dnn_yolo.html)。\n\n检测适用于自然场景对象定位、视频分析和可视化计数等任务。评价时要同时考虑分类与定位，COCO 的 AP 汇总多个 IoU 阈值并区分对象大小；IoU 高的错误类别仍不是正确检测。基准成绩与视频吞吐量都不能单独保证新场景中的表现，应明确数据分布、漏检和重复框的处理。[COCO 官方评估代码](https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py)。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://cocodataset.org/"
 }

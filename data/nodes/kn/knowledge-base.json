@@ -1,0 +1,33 @@
+{
+  "id": "knowledge-base",
+  "name": "Knowledge Base",
+  "aliases": [
+    "知识库"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-representation",
+      "context": "选择事实、关系及规则的符号形式与解释。"
+    }
+  ],
+  "summary": "按明确语义维护事实、规则或结构化陈述。",
+  "description": "知识库是可供检索与推理使用的知识集合，可以保存事实、关系、规则及公理。它的表现形式可能是关系数据、图或逻辑表达式，具体能力取决于模型与实现。\n\n知识库与文档仓库的边界需明确：文档内容可以作为证据，但不会自动变成可推理事实。维护时需要处理身份、来源、版本、冲突和适用条件。\n\n## 参考\n\n- [Poole 与 Mackworth：知识图谱与本体](https://artint.info/3e/html/ArtInt3e.Ch16.html)\n- [Poole 与 Mackworth：个体与关系](https://artint.info/3e/html/ArtInt3e.Ch15.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abbreviation": "KB"
+}

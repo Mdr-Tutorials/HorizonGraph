@@ -2,19 +2,40 @@
   "id": "cpython",
   "name": "CPython",
   "display_primary": "CPython",
-  "aliases": ["Python 参考实现"],
+  "aliases": [
+    "Python 参考实现"
+  ],
   "type": "architecture",
-  "ecosystems": ["python-ecosystem"],
-  "domains": ["programming-languages"],
+  "ecosystems": [
+    "python-ecosystem"
+  ],
+  "domains": [
+    "programming-languages"
+  ],
   "abstraction_level": "runtime_vm",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "virtual-machine" },
-    { "relation_type": "developed_by", "target_id": "python-software-foundation" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtual-machine"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "python-software-foundation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "reference-counting"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "garbage-collection"
+    }
   ],
-  "summary": "Python 语言的主流参考实现，包含解释器与标准库。",
+  "summary": "Python 的参考实现，结合引用计数与循环回收。",
   "importance": 5,
   "official_site": "https://www.python.org/",
-  "last_reviewed": "2026-09-08",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\nCPython 的对象 API 区分拥有引用与借用引用，引用计数帮助回收不再持有的对象；循环收集器补充处理彼此引用但无法从外部到达的对象。\n\n## 边界与应用\n\n实现细节受版本与构建模式影响，不应把引用计数或某一线程限制推广为 Python 语言规范。扩展代码仍需遵守引用所有权及并发访问约定。\n\n## 参考\n\n- [CPython：引用计数 API](https://docs.python.org/3/c-api/refcounting.html)\n- [CPython 循环回收接口](https://docs.python.org/3/library/gc.html)"
 }

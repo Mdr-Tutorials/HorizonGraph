@@ -14,7 +14,8 @@
   ],
   "domains": [
     "databases",
-    "distributed-systems"
+    "distributed-systems",
+    "data-engineering"
   ],
   "relations": [
     {
@@ -25,13 +26,18 @@
       "relation_type": "uses",
       "target_id": "data-warehouse",
       "context": "典型分析管线把完成转换的数据加载到数据仓库；目标也可为其他存储。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-quality",
+      "context": "在进入目标之前按管线定义验证关键字段、格式或业务断言；规则由数据用途决定。"
     }
   ],
   "summary": "先抽取、转换，再加载到目标系统的数据集成流程。",
-  "description": "ETL 从源系统抽取数据，在写入目标仓库或其他目标存储之前完成清洗、转换或聚合。转换顺序是它与 ELT 的关键区别。它描述数据处理流程，具体调度、执行与存储可以由不同工具承担。\n\n参考：[权威资料](https://www.databricks.com/discover/etl)。",
+  "description": "## 机制\n\nETL 在源数据进入目标之前执行清洗、映射与聚合等转换。执行引擎、调度器和目标存储可以分别选择，批量与增量接入也可组合。\n\n## 边界与应用\n\n转换顺序是与 ELT 的主要区别，不保证某一顺序总更快或更安全。质量规则、重复处理、失败重试与消费者约定仍须在管线中设计。\n\n## 参考\n\n- [AWS Glue：ETL 服务](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)",
   "importance": 4,
   "official_site": "https://www.databricks.com/discover/etl",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-01",
   "origin": "ai_draft",
   "status": "active"
 }

@@ -1,0 +1,32 @@
+{
+  "id": "signal",
+  "name": "Signal",
+  "aliases": [
+    "信号"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "probability-distribution",
+      "context": "建模随机信号或观测噪声时，用概率分布描述取值与不确定性。"
+    }
+  ],
+  "summary": "承载信息或描述物理量变化的函数与序列。",
+  "description": "信号以独立变量上的函数表示量的变化，音频常按时间索引，图像按空间坐标索引。连续时间信号与离散时间序列不同，离散索引并不意味着数值幅度已量化。\n\n能量、功率、频带和统计假设决定适用的分析方式。数字序列可能来自采样也可能直接生成，处理时应说明采样率、单位和测量条件，而不是只把它看成无单位数组。\n\n参考：[MIT 信号定义](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec01/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec01/"
+}

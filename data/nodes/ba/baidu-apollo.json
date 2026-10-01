@@ -11,7 +11,8 @@
     "embedded-ecosystem"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "robotics"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -26,12 +27,28 @@
     {
       "relation_type": "depends_on",
       "target_id": "linux"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "path-planning",
+      "context": "开放自动驾驶软件的规划模块生成车辆运动路径与轨迹。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lidar",
+      "context": "采用激光雷达的车辆配置将点云用于感知或定位，并需传感器标定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "imu",
+      "context": "相关定位配置融合惯性观测与其他定位输入，需明确坐标与标定。"
     }
   ],
   "summary": "百度的自动驾驶开放平台。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
-  "official_site": "https://www.apollo.auto"
+  "official_site": "https://www.apollo.auto",
+  "description": "## 系统组成\n\nApollo 自动驾驶软件组织感知、定位、预测、规划与控制等模块。车辆集成需要明确传感器、坐标、标定与车辆接口，激光雷达和 IMU 是文档中若干配置的输入，不能推导每种车型或版本都采用相同硬件。\n\n## 配置边界\n\n感知估计提供状态与环境信息，规划选择运动目标，控制把目标转成车辆执行输入。平台能力受车辆、传感器与运行环境约束，开放软件模块不代表任意部署具备相同自动驾驶能力。\n\n## 参考\n\n- [Apollo：官方软件模块](https://github.com/ApolloAuto/apollo)\n- [Apollo：传感器标定](https://apollo.baidu.com/docs/apollo/latest/md_docs_2_xE5_xBA_x94_xE7_x94_xA8_xE5_xAE_x9E_xE8_xB7_xB5_2_xE8_xBD_xA6_xE8_xBE_x86_xE9_x9B_x86_187f8a13985b94b6102c6e96a924fa1d.html)"
 }

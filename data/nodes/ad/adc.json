@@ -1,0 +1,33 @@
+{
+  "id": "adc",
+  "name": "Analog-to-Digital Converter",
+  "aliases": [
+    "模数转换器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dac",
+      "context": "在逐次逼近型 ADC 中，用 DAC 生成试探电平与输入比较；其他 ADC 架构不必采用此结构。"
+    }
+  ],
+  "summary": "把模拟输入映射为有限分辨率数字代码的转换器。",
+  "description": "ADC 将模拟量转换为数字代码；在采样系统中，采样时刻与量化等级共同决定离散表示。常见架构包括闪速、逐次逼近、流水线和 Σ-Δ，各有速度、功耗与精度取舍。\n\n位数描述代码分辨率，不等于有效精度。参考源、输入驱动、噪声、失真与时钟抖动会影响结果；采样前的信号带宽也需受到约束。\n\n参考：[Analog Devices：ADC 架构与比较器](https://www.analog.com/media/en/training-seminars/tutorials/MT-020.pdf)；[Analog Devices：理想 ADC 的量化噪声](https://www.analog.com/mt-001)；[Analog Devices：二进制 DAC 架构](https://www.analog.com/media/en/training-seminars/tutorials/MT-015.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.analog.com/media/en/training-seminars/tutorials/MT-020.pdf",
+  "abbreviation": "ADC"
+}

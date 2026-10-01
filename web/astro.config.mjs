@@ -8,5 +8,5 @@ export default defineConfig({
   base: (process.env.PUBLIC_BASE_PATH || "/").replace(/\/?$/, "/"),
   publicDir: "../dist",
   integrations: [vue()],
-  vite: { plugins: [tailwindcss()] },
+  vite: { plugins: [tailwindcss()], worker: { format: "es" } },
 });

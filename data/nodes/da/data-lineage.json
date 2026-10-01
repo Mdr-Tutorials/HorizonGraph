@@ -13,19 +13,25 @@
   ],
   "domains": [
     "databases",
-    "distributed-systems"
+    "distributed-systems",
+    "data-engineering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-contract",
+      "context": "分析契约变更影响时可利用提供者声明的字段语义与消费者边界，配合实际血缘确认范围。"
     }
   ],
-  "summary": "记录数据来源、处理步骤和去向，支撑追踪与变更影响分析。",
-  "description": "数据血缘描述数据集经过哪些作业生成、被哪些下游使用，并可细化到字段层面。设计时的声明血缘与实际运行采集的血缘承担不同作用。它能帮助追溯来源和分析影响，但不自动保证数据正确或符合业务要求。\n\n参考：[权威资料](https://openlineage.io/docs/spec/object-model/)。",
+  "summary": "记录数据来源、处理步骤和去向，支持追踪与影响分析。",
+  "description": "## 机制\n\n血缘模型把数据集、作业和运行关联起来，可细化到字段映射；设计声明的依赖与实际运行采集的信息各有作用。OpenLineage 以作业、运行和输入输出数据集等对象描述上下文。\n\n## 边界与应用\n\n血缘不自动保证数据正确，也不覆盖未采集的处理过程。调查质量异常或契约变更时，还需结合业务规则、执行版本与实际运行时间。\n\n## 参考\n\n- [OpenLineage 对象模型](https://openlineage.io/docs/spec/object-model/)",
   "importance": 4,
   "official_site": "https://openlineage.io/docs/spec/object-model/",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-01",
   "origin": "ai_draft",
   "status": "active"
 }

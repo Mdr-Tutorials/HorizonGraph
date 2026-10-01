@@ -18,11 +18,17 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "b-tree",
+      "context": "有选择性或顺序访问需求时可选择 B-tree 索引路径；索引存在不代表一定被使用。"
     }
   ],
-  "summary": "优化器改写并选择执行计划，决定 SQL 的真实速度。",
+  "summary": "在语义等价的候选计划中选择适合数据的执行方式。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "## 机制\n\n优化器结合重写规则、基数统计与成本模型选择扫描、连接顺序和算子。EXPLAIN 展示计划与估计，EXPLAIN ANALYZE 在执行后提供实际行数和耗时用于比较。\n\n## 边界与应用\n\n估计成本不是毫秒，也不保证全局最优。统计过期、数据倾斜和参数差异会影响选择；执行分析会真正运行语句，应理解其副作用。\n\n## 参考\n\n- [PostgreSQL：理解 EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html)"
 }

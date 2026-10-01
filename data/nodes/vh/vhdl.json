@@ -2,6 +2,7 @@
   "id": "vhdl",
   "name": "VHDL",
   "aliases": [
+    "超高速集成电路硬件描述语言",
     "VHDL"
   ],
   "type": "language",
@@ -9,20 +10,28 @@
     "hardware_iot"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "abstraction_level": "theoretical",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "language"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rtl",
+      "context": "在可综合设计中，以 VHDL 描述寄存器传输及其组合逻辑。"
     }
   ],
-  "summary": "IEEE 标准化的硬件描述语言，军工与欧洲常用。",
+  "summary": "IEEE 标准化的硬件描述语言，用于建模、仿真与综合。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "1987-01-01",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
-  "popular": 40
+  "popular": 40,
+  "description": "VHDL 由 IEEE 1076 定义，用于描述硬件结构、行为和并行性。RTL 是常见可综合抽象，但语言完整语义及测试平台不等于综合工具支持范围。与 Verilog 的选择取决于工程、工具和团队，不能仅按地域或行业给语言划定必然归属。\n\n参考：[IEEE 1076-2019：VHDL](https://standards.ieee.org/ieee/1076/5179/)；[Synopsys：RTL 设计](https://www.synopsys.com/glossary/what-is-register-transfer-level-design.html)。"
 }

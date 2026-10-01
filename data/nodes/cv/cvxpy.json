@@ -1,0 +1,43 @@
+{
+  "id": "cvxpy",
+  "name": "CVXPY",
+  "aliases": [
+    "CVXPY",
+    "Python 凸优化建模库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "convex-optimization"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-solver",
+      "context": "将通过规则检查的模型规范化后交给支持相应锥或混合整数结构的后端。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "numpy"
+    }
+  ],
+  "summary": "把优化表达式转换为求解器模型的 Python 库。",
+  "description": "CVXPY 用变量、参数和表达式构造优化问题，通过 DCP 等规则检查结构，再转换成下游求解器可处理的形式。建模接口与算法后端分离，同一模型可在支持相应形式的求解器之间切换。\n\nDCP 是可检验的充分规则，表达式未通过检查不一定数学上非凸。混合整数或特定锥模型需要相应后端，求解状态及精度由模型和后端共同决定。\n\n参考：[CVXPY DCP](https://www.cvxpy.org/tutorial/dcp/index.html)；[CVXPY 求解器](https://www.cvxpy.org/tutorial/solvers/index.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.cvxpy.org/tutorial/dcp/index.html",
+  "abstraction_level": "framework_library"
+}

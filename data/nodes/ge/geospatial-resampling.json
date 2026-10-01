@@ -1,0 +1,33 @@
+{
+  "id": "geospatial-resampling",
+  "name": "Geospatial Resampling",
+  "aliases": [
+    "地理栅格重采样"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "raster-geospatial-data",
+      "context": "依据源栅格值和新网格位置估计目标像元，处理时需保留无数据与空间参考规则。"
+    }
+  ],
+  "summary": "在新网格位置估计栅格值，以配合投影或分辨率变化。",
+  "description": "## 机制\n\n重采样通过源像元与目标网格的空间对应计算输出值，可采用最近邻、双线性、平均或其他方法。重投影和多网格对齐常同时需要这一操作。\n\n## 边界与应用\n\n类别数据不宜任意使用会产生新数值类别的插值；连续变量也需考虑尺度和无数据规则。增加像元数量不创造真实观测细节，重采样还可能改变统计特征。\n\n## 参考\n\n- [GDAL：重投影与重采样](https://gdal.org/en/stable/programs/gdalwarp.html)",
+  "importance": 4,
+  "official_site": "https://gdal.org/en/stable/programs/gdalwarp.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "remote-sensing"
+  ]
+}

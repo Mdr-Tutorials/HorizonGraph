@@ -1,0 +1,40 @@
+{
+  "id": "axe-core",
+  "name": "axe-core",
+  "aliases": [
+    "无障碍自动测试引擎"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "web_frontend",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wcag",
+      "context": "按所选 WCAG 版本与级别标签运行可自动检查的规则，不能证明整体符合性。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "playwright",
+      "context": "Playwright 官方无障碍测试指南通过 axe 的适配包在页面中运行扫描。"
+    }
+  ],
+  "summary": "按规则扫描 Web 界面无障碍问题的开源测试引擎。",
+  "description": "## 检查方式\n\naxe-core 在页面上下文中检查 DOM 和可访问性相关状态，返回规则违反、通过及需要人工复核的结果。规则包括 WCAG 版本和级别对应的检查，也包含最佳实践规则。\n\n## 覆盖边界\n\n自动扫描只能检查可以程序化判断的条件，无法确认替代文本是否准确、完整任务是否易于操作或所有辅助技术体验。页面的新状态需要分别检查，键盘、读屏和用户任务测试仍然必要。通过全部自动规则不等于 WCAG 合规。\n\n## 参考\n\n- [axe-core：官方规则与测试引擎](https://github.com/dequelabs/axe-core)\n- [Playwright：接入 axe 的无障碍测试](https://playwright.dev/docs/accessibility-testing)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "official_site": "https://github.com/dequelabs/axe-core"
+}

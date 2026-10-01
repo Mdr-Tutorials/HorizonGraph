@@ -1,0 +1,46 @@
+{
+  "id": "mit-18-06",
+  "name": "MIT 18.06 Linear Algebra",
+  "aliases": [
+    "MIT 线性代数",
+    "18.06",
+    "Gilbert Strang 线性代数"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "mathematics",
+    "machine-learning"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "course"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "linear-algebra",
+      "context": "18.06SC 的课程主线包含线性方程组、向量空间、正交性、特征值及相关应用。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "singular-value-decomposition",
+      "context": "18.06SC 的奇异值分解单元说明矩阵的分解、子空间与低秩方向。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "matrix-multiplication",
+      "context": "课程从矩阵运算与线性变换解释乘法、消元和分解的关系。"
+    }
+  ],
+  "summary": "以矩阵、向量空间与线性映射为主线的 MIT 课程。",
+  "description": "MIT 18.06 是线性代数课程入口，Gilbert Strang 的公开教学材料从线性方程组与矩阵运算推进到四个基本子空间、正交投影、特征值和 SVD。MIT OpenCourseWare 的 18.06SC 版本提供讲课视频、概要、练习和解答。\n\n它可以为最小二乘、PCA 与数值计算建立数学背景，但不是 NumPy 编程教程或统计推断课程。18.06、18.06SC 及其他年份的教学材料有各自编排，使用作业与视频时应查看具体版本。\n\n参考：[MIT 18.06SC 官方课程](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/)；[SVD 单元](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/positive-definite-matrices-and-applications/singular-value-decomposition/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/"
+}

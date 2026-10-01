@@ -1,0 +1,40 @@
+{
+  "id": "slam",
+  "name": "Simultaneous Localization and Mapping",
+  "aliases": [
+    "同时定位与建图",
+    "同步定位与地图构建"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "computer-vision"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "robotics-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kalman-filter",
+      "context": "经典 EKF-SLAM 以扩展卡尔曼滤波联合更新机器人状态和地图，不表示所有 SLAM 实现采用滤波。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lidar",
+      "context": "激光 SLAM 路径使用距离扫描或点云进行环境匹配与地图更新，视觉 SLAM 可采用其他观测。"
+    }
+  ],
+  "summary": "移动主体在估计自身位置的同时构建环境地图。",
+  "description": "## 问题\n\nSLAM 将定位与地图估计耦合：观测用于更新地图，而地图又帮助解释新观测并估计位姿。数据关联、噪声、运动误差与重复访问区域的识别影响结果。\n\n## 路径与边界\n\nEKF-SLAM 是一种经典概率实现，现代系统也可能采用优化、图方法或粒子方法。观测可来自视觉、激光雷达或多传感器组合；不能把 SLAM 等同于某一种传感器或滤波器。已知地图中的纯定位与完整 SLAM 问题不同。\n\n## 参考\n\n- [Durrant-Whyte 与 Bailey：SLAM 教程](https://www-personal.acfr.usyd.edu.au/tbailey/publications/slamtutorial1.htm)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www-personal.acfr.usyd.edu.au/tbailey/publications/slamtutorial1.htm",
+  "abbreviation": "SLAM"
+}

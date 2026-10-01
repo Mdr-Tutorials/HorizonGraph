@@ -18,15 +18,21 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "memory-barrier",
+      "context": "所采用的内存模型决定屏障能约束的访问顺序及需要的配对同步。"
     }
   ],
-  "summary": "并发下读写如何可见、重排到何处为止的语言规则。",
+  "summary": "定义并发读写允许的可见性、顺序与同步关系。",
   "importance": 5,
   "popular": 40,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
   "status": "active",
   "tags": [
     "memory-model"
-  ]
+  ],
+  "description": "## 机制\n\n语言内存模型规定线程执行可产生的观测结果，硬件模型约束处理器访问次序。原子操作、获取/释放与屏障建立同步关系；编译器变换须遵守相应语言规则。\n\n## 边界与应用\n\n语言、处理器和设备的规则不能混用；volatile 不是通用线程同步手段。屏障也不能自动使普通共享变量的数据竞争合法，必须验证完整同步协议。\n\n## 参考\n\n- [Linux 内存屏障说明](https://docs.kernel.org/core-api/wrappers/memory-barriers.html)"
 }

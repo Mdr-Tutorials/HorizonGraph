@@ -1,0 +1,34 @@
+{
+  "id": "key-management-service",
+  "name": "Key Management Service",
+  "aliases": [
+    "密钥管理服务"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authorization",
+      "context": "通过身份和密钥策略授权加解密、签名、管理等具体操作。"
+    }
+  ],
+  "summary": "通过受控 API 管理密码密钥生命周期与密钥操作。",
+  "description": "## 机制\n\nKMS 可集中处理密钥创建、授权、轮换和加解密或签名操作，使应用围绕密钥标识而不是任意传播密钥材料。信封加密常用主密钥保护数据密钥，再由数据密钥处理较大内容。\n\n## 边界与应用\n\nKMS 是一类服务，此节点不专指 AWS 产品。密钥是否可导出、硬件边界和轮换行为取决于实现；轮换主密钥也不必自动重新加密全部历史数据。\n\n## 参考\n\n- [AWS KMS：密钥服务实例](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html)",
+  "importance": 4,
+  "official_site": "https://docs.aws.amazon.com/kms/latest/developerguide/overview.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "cloud-infrastructure"
+  ],
+  "abbreviation": "KMS"
+}

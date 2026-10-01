@@ -1,0 +1,38 @@
+{
+  "id": "data-contract",
+  "name": "Data Contract",
+  "aliases": [
+    "数据契约"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-quality",
+      "context": "契约将消费者需要的质量属性写成可检查规则，并在数据交付时验证。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "schema-evolution",
+      "context": "契约版本变更需检查已有消费者与历史数据的模式兼容，区分结构变更和语义变化。"
+    }
+  ],
+  "summary": "由提供者和消费者明确数据结构、含义与交付约束。",
+  "description": "## 机制\n\n数据契约记录字段含义、结构、质量要求、责任人与服务约定，并配合验证与变更流程。ODCS 提供一种可机器读取的开放表达格式，使生产与消费双方共享同一约定。\n\n## 边界与应用\n\n契约不是数据库约束的同义词，也不是写一份 YAML 就自动履约。版本兼容、业务语义、质量验证及违规处理仍需流程和执行机制，不同标准之间也不必完全兼容。\n\n## 参考\n\n- [Open Data Contract Standard](https://bitol-io.github.io/open-data-contract-standard/latest/)",
+  "importance": 4,
+  "official_site": "https://bitol-io.github.io/open-data-contract-standard/latest/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "databases"
+  ]
+}

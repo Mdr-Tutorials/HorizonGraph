@@ -1,0 +1,40 @@
+{
+  "id": "rate-distortion-theory",
+  "name": "Rate–Distortion Theory",
+  "aliases": [
+    "率失真理论"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutual-information",
+      "context": "对满足平均失真约束的重建条件分布最小化互信息，构造率失真函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-problem",
+      "context": "将码率最小化与失真约束表达为分布上的优化问题。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "source-coding",
+      "context": "在指定信源和失真准则下约束有损压缩可达到的渐近码率。"
+    }
+  ],
+  "summary": "研究允许指定失真时压缩所需最小码率的理论。",
+  "description": "率失真理论在给定信源分布和失真函数下，寻找满足失真限制的最小信息率。它可通过条件分布上的互信息最小化表达，将有损压缩的保真要求纳入数学模型。\n\n平方误差只是失真标准之一，不必与人类感知一致。渐近率失真函数不是现成编解码器，有限长度、复杂度和实际数据分布会使工程方案偏离理论界限。\n\n参考：[MIT 率失真理论](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_23/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_23/"
+}

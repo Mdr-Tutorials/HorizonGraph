@@ -18,13 +18,19 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "language"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wai-aria",
+      "context": "自定义控件在遵守 HTML 与 ARIA 使用规则的前提下补充原生语义不足的状态和角色。"
     }
   ],
   "summary": "描述网页结构的标记语言，浏览器把它变成 DOM。",
   "importance": 5,
   "popular": 95,
   "official_site": "https://html.spec.whatwg.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 语义与界面\n\nHTML 描述文档结构以及表单、链接等交互元素的语义，浏览器据此建立 DOM 并提供相应行为。正确的标题层级、标签和原生控件语义有助于辅助技术解释页面。\n\n## 无障碍实现\n\n优先使用满足需求的原生交互元素；复杂自定义组件可补充适用的 ARIA 语义，同时实现键盘和焦点行为。ARIA 属性不能自动使一个 div 具备按钮功能。页面是否无障碍还取决于内容、样式、脚本和实际操作流程。\n\n## 参考\n\n- [WHATWG：HTML 焦点与交互](https://html.spec.whatwg.org/multipage/interaction.html#focus)\n- [W3C：HTML 中的 ARIA 使用规则](https://www.w3.org/TR/html-aria/)"
 }

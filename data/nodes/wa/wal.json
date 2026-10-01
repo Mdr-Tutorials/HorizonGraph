@@ -15,11 +15,17 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transactions",
+      "context": "事务系统以日志顺序和提交同步规则支持声明的持久性与崩溃恢复。"
     }
   ],
-  "summary": "先记日志再改数据，崩溃恢复与复制的基石。",
+  "summary": "先持久化修改日志，再允许对应数据页落盘。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\n预写日志要求描述数据修改的日志在相应数据页之前进入持久存储。崩溃后可重放日志恢复未写回的数据；连续写日志和组提交还能减少随机同步开销。\n\n## 边界与应用\n\n写日志不等于任何时刻都已经持久化，提交同步配置和底层存储语义仍决定耐久性。恢复日志、备份与复制用途可重叠，但不能把 WAL 当作独立完整备份。\n\n## 参考\n\n- [PostgreSQL：预写日志](https://www.postgresql.org/docs/current/wal-intro.html)"
 }

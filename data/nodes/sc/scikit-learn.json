@@ -10,7 +10,8 @@
     "open-source-ai-ecosystem"
   ],
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "statistics"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -21,12 +22,103 @@
     {
       "relation_type": "depends_on",
       "target_id": "python"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "linear-regression",
+      "context": "LinearRegression 提供普通最小二乘拟合；Ridge/Lasso 提供带惩罚的回归变体。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "logistic-regression",
+      "context": "LogisticRegression 提供带可选惩罚与不同求解器的分类估计器。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "decision-tree",
+      "context": "DecisionTreeClassifier/Regressor 将递归特征划分实现为可拟合的估计器。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "random-forest",
+      "context": "RandomForestClassifier/Regressor 提供随机化决策树集成。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "svm",
+      "context": "SVC、LinearSVC 和 SVR 等接口提供核或线性支持向量方法。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "k-means",
+      "context": "KMeans 与 MiniBatchKMeans 提供基于中心的聚类实现。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "pca",
+      "context": "PCA 提供中心化数据的主成分投影与解释方差。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "gradient-boosting",
+      "context": "GradientBoosting 与 HistGradientBoosting 估计器提供树梯度提升。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "feature-scaling",
+      "context": "StandardScaler、MinMaxScaler 等变换器以训练数据拟合缩放参数。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "cross-validation",
+      "context": "model_selection 中的 cross_validate 与分折器实现交叉验证流程。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "confusion-matrix",
+      "context": "metrics.confusion_matrix 根据真实类别与预测类别生成分类计数表。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "classification-precision",
+      "context": "metrics.precision_score 用真阳性与假阳性统计分类精确率。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "classification-recall",
+      "context": "metrics.recall_score 用真阳性与假阴性统计分类召回率。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "f1-score",
+      "context": "metrics.f1_score 对分类精确率与召回率计算相应 F1 汇总。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "roc-auc",
+      "context": "metrics.roc_auc_score 对分类连续得分计算指定二元或多分类口径的 AUC。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "classification-accuracy",
+      "context": "metrics.accuracy_score 统计单标签正确率或多标签 subset accuracy。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mean-squared-error",
+      "context": "metrics.mean_squared_error 按样本权重与多输出策略汇总回归平方误差。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "xgboost",
+      "context": "XGBoost 的 Python 接口提供兼容 scikit-learn estimator API 的包装器，可用于相应 Pipeline 与模型选择。"
     }
   ],
-  "summary": "经典机器学习工具箱，表格数据与基线模型首选。",
+  "summary": "提供经典机器学习估计器、预处理与评估工具。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-01",
   "importance": 4,
-  "official_site": "https://scikit-learn.org"
+  "official_site": "https://scikit-learn.org",
+  "description": "scikit-learn 将模型拟合、预测和数据变换组织成统一的 estimator API：fit 学习参数，predict 给出预测，transform 变换特征。它覆盖线性模型、决策树、随机森林、SVM、聚类和 PCA 等方法，并提供指标、交叉验证及超参数搜索。\n\nPipeline 可把缩放、特征选择与预测器连接起来，使验证时的拟合步骤保持在训练折内。库提供的方法不会自动保证合适的数据划分或业务指标；应根据分组、时间与任务选择验证策略。部分算法依赖特征尺度，模型序列化也需要考虑环境与可信输入。\n\n参考：[scikit-learn 官方入门与 Pipeline](https://scikit-learn.org/stable/getting_started.html)；[监督学习目录](https://scikit-learn.org/stable/supervised_learning.html)；[无监督学习目录](https://scikit-learn.org/stable/unsupervised_learning.html)；[数据泄漏说明](https://scikit-learn.org/stable/common_pitfalls.html#data-leakage)。"
 }

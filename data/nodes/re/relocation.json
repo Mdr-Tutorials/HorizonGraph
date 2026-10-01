@@ -1,0 +1,32 @@
+{
+  "id": "relocation",
+  "name": "Relocation",
+  "aliases": [
+    "重定位"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "compiler-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "symbol-table",
+      "context": "处理目标文件重定位时从符号表确定被引用符号的属性及地址。"
+    }
+  ],
+  "summary": "根据符号最终位置修补目标代码或数据中的引用。",
+  "description": "## 机制\n\n编译后的引用可先以占位值和重定位记录表示，链接器或装载器在确定符号地址后按目标架构规则修补。ELF 的记录包含修补位置、类型和符号索引，部分格式还保存加数。\n\n## 边界与应用\n\n重定位类型和公式由处理器 ABI 规定；静态与动态重定位发生阶段不同。位置无关代码可减少某些运行时修补，但不代表整个程序无需符号解析或重定位。\n\n## 参考\n\n- [ELF 重定位规范](https://gabi.xinuos.com/elf/06-reloc.html)",
+  "importance": 4,
+  "official_site": "https://gabi.xinuos.com/elf/06-reloc.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers"
+  ]
+}

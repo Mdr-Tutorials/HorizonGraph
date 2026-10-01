@@ -1,0 +1,19 @@
+{
+  "id": "dice-score",
+  "name": "Dice Score",
+  "aliases": ["Dice 分数", "Dice 系数", "Dice Coefficient", "Sørensen–Dice Coefficient", "DSC"],
+  "type": "metric",
+  "ecosystems": ["ai_data_science"],
+  "domains": ["computer-vision", "machine-learning"],
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "ml-evaluation-metric" },
+    { "relation_type": "alternative_to", "target_id": "intersection-over-union", "context": "二者都是区域重合指标，比较分割结果时须固定掩码与聚合口径；同一非空二值集合下可互相换算。" }
+  ],
+  "summary": "以两倍交集除以区域大小之和评估分割重合的指标。",
+  "description": "二值区域的 Dice 分数为 2|A∩B| / (|A|+|B|)，也可写为 2TP / (2TP+FP+FN)。对于非空分母，0 表示不重合，1 表示完全重合。它常用于评价分割前景区域，尤其是医学图像中的器官与病灶。[TorchMetrics 版本化 Dice 定义](https://lightning.ai/docs/torchmetrics/v1.5.2/classification/dice.html)。\n\n训练时可构造基于软预测概率的可微 Dice 目标，但 soft Dice 的分母、平滑项与类别聚合存在不同实现，不能将训练损失与阈值化后报告的二值 Dice 分数直接当成同一数值。V-Net 原始论文采用 Dice 目标处理前景与背景体素数量不均衡的分割训练。[V-Net 原始论文](https://arxiv.org/abs/1606.04797)。\n\n对同一非空二值集合，Dice = 2IoU / (1+IoU)，这一换算不直接适用于先分别平均后的多类分数。报告时应说明是否含背景、逐图还是全局累计、类别权重和空掩码处理；分数高也不单独保证边界位置或细小结构正确。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://lightning.ai/docs/torchmetrics/v1.5.2/classification/dice.html"
+}

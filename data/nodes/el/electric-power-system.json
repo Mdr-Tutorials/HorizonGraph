@@ -1,0 +1,37 @@
+{
+  "id": "electric-power-system",
+  "name": "Electric Power System",
+  "aliases": [
+    "电力系统"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "power-flow",
+      "context": "在稳态规划与运行分析中，以潮流求解母线电压和支路功率分布。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "power-transformer",
+      "context": "在采用变压器的交流输配电网络中，变换电压等级并连接相应网络。"
+    }
+  ],
+  "summary": "协调发电、输配电、负荷与控制保护的电能系统。",
+  "description": "电力系统将电源、线路、变压器和负荷连接成可输送和使用电能的网络。工程分析需要区分稳态运行、短路故障、暂态响应与调度控制，不同问题采用不同模型。\n\n交流系统中的有功、无功、电压与频率相互关联。分布式能源与电力电子会改变传统发电和负荷的行为；通信和计算支持控制，却不能替代物理网络约束。\n\n参考：[MIT 6.061：电力系统教材与课程](https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/readings/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/readings/"
+}

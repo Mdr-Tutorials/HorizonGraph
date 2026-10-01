@@ -1,0 +1,29 @@
+{
+  "id": "hl7",
+  "name": "Health Level Seven International",
+  "aliases": [
+    "HL7 International",
+    "健康七层国际"
+  ],
+  "type": "organization",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "制定医疗数据交换与互操作标准的非营利组织。",
+  "description": "## 机制\n\nHL7 International 协调社区制定医疗信息标准，FHIR、HL7 V2 与 CDA 分别提供资源、消息及临床文档等交换模型。标准组织与具体协议需分开识别。\n\n## 边界与应用\n\nHL7 有时被口语化用于指 V2 消息，本节点只指组织。标准发布不保证每个产品实现全部功能，实施仍需根据场景约定版本、内容与验证方式。\n\n## 参考\n\n- [HL7 International：组织与使命](https://info.hl7.org/learn-more)",
+  "importance": 4,
+  "official_site": "https://info.hl7.org/learn-more",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abbreviation": "HL7"
+}

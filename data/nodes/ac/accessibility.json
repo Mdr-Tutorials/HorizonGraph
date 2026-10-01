@@ -19,13 +19,29 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wcag",
+      "context": "在设计和审查 Web 内容时，以相应版本的成功标准组织检查与符合性评估。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wai-aria",
+      "context": "实现自定义动态控件时表达原生 HTML 尚未覆盖的角色、状态与属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "usability-testing",
+      "context": "邀请残障用户完成代表性任务，发现标准检查与工具扫描未覆盖的使用障碍。"
     }
   ],
   "summary": "让残障用户也能用：语义化、键盘导航与读屏适配。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-01",
   "importance": 4,
-  "official_site": "https://www.w3.org/WAI/"
+  "official_site": "https://www.w3.org/WAI/",
+  "description": "## 目标\n\n无障碍设计使残障用户能够感知、理解、导航和操作 Web 内容，包括视觉、听觉、运动及认知等访问需求。语义结构、替代内容、键盘路径、清晰反馈与辅助技术互操作需要共同考虑。\n\n## 验证\n\nWCAG 提供可测试的内容要求，WAI-ARIA 补充复杂界面的语义。自动扫描可发现一部分问题，仍需人工检查、辅助技术测试与用户任务研究。无障碍与易用性相互影响，二者的评估目标和适用用户不能互相替代。\n\n## 参考\n\n- [WAI：无障碍导论](https://www.w3.org/WAI/fundamentals/accessibility-intro/)\n- [WAI：评估方法](https://www.w3.org/WAI/test-evaluate/)"
 }

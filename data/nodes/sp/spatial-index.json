@@ -1,0 +1,33 @@
+{
+  "id": "spatial-index",
+  "name": "Spatial Index",
+  "aliases": [
+    "空间索引"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "geospatial-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "r-tree",
+      "context": "部分空间索引通过 R-tree 类分层包围盒组织候选，具体数据库实现可能采用变体。"
+    }
+  ],
+  "summary": "以空间范围等信息筛选候选，降低几何查询成本。",
+  "description": "## 机制\n\n空间索引利用包围盒或空间分区缩小查询范围，再对候选执行精确几何判断。R-tree 类结构是常见路线，数据库实现也可结合自身索引框架组织空间键。\n\n## 边界与应用\n\n包围盒相交只给出候选，不等于真实几何相交。索引效果取决于对象分布和查询选择性，更新与维护也有成本，不能保证任何空间查询都使用索引。\n\n## 参考\n\n- [PostGIS：空间索引](https://postgis.net/workshops/postgis-intro/indexing.html)",
+  "importance": 4,
+  "official_site": "https://postgis.net/workshops/postgis-intro/indexing.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "databases"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "kalman-filter",
+  "name": "Kalman Filter",
+  "aliases": [
+    "卡尔曼滤波",
+    "KF"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "robotics-ecosystem",
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "control-theory",
+    "statistics",
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "robotics-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "covariance",
+      "context": "在预测和观测更新中传播状态误差与观测噪声的协方差，计算观测修正权重。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "matrix-multiplication",
+      "context": "线性状态预测与协方差传播使用状态转移、观测矩阵的乘法。"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    }
+  ],
+  "summary": "递归结合动态模型与观测，估计状态及其不确定性。",
+  "description": "卡尔曼滤波在状态空间模型中交替进行预测和测量更新，传播状态估计及其误差协方差，再由测量残差与卡尔曼增益修正结果。经典形式适用于线性模型；线性高斯条件下，递推结果给出相应状态后验的均值与协方差。\n\n在模型与噪声统计假设合适时，它也有最小均方误差线性估计的解释。EKF 使用局部线性化，UKF 通过选定点传播近似分布，二者不直接继承所有经典线性高斯最优性结论；滤波与利用未来观测的平滑也不同。\n\n机器人定位、导航与信号估计可融合多个传感器，但需要定义坐标系、时间对齐、噪声协方差及相关性。偏差、离群值和错误模型会使估计不一致，协方差变小不能单独证明定位变准。\n\n参考：[Kalman Filter 教程](https://arxiv.org/abs/1710.04055)；[robot_localization 官方文档](https://docs.ros.org/en/noetic/api/robot_localization/html/index.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://arxiv.org/abs/1710.04055"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "data-leakage",
+  "name": "Data Leakage",
+  "aliases": [
+    "数据泄漏",
+    "信息泄漏",
+    "Target Leakage",
+    "目标泄漏"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "cross-validation",
+      "context": "若特征选择或缩放在全体数据上提前拟合，验证折的信息会进入模型，交叉验证分数可能虚高。"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "classification-accuracy",
+      "context": "若目标发生后的信息进入输入特征，留出集准确率可能高于真实预测时可实现的准确率。"
+    }
+  ],
+  "summary": "训练过程使用了评估时不应获得的信息。",
+  "description": "数据泄漏发生在拟合或模型选择使用了预测时不可获得的信息，使评估表现偏离真实部署能力。典型机制包括先在全数据上拟合缩放与特征选择、同一主体跨训练测试集出现，或用目标发生之后才产生的特征预测目标。\n\n应在数据划分后拟合预处理，在交叉验证内用 Pipeline 封装完整学习过程，并按主体与时间定义边界。这里讨论机器学习评估中的泄漏，与敏感数据被外传的安全事件不同；正确随机划分也不能自动消除时间和业务流程中的泄漏。\n\n参考：[scikit-learn 数据泄漏与 Pipeline](https://scikit-learn.org/stable/common_pitfalls.html#data-leakage)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

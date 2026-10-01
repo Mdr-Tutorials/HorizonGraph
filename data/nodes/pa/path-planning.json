@@ -1,0 +1,39 @@
+{
+  "id": "path-planning",
+  "name": "Path Planning",
+  "aliases": [
+    "路径规划",
+    "运动路径规划"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "control-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "robotics-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "a-star",
+      "context": "把环境离散为网格或图并采用启发式图搜索时，可用 A* 寻找路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dijkstra",
+      "context": "图表示的非负代价路径问题可用 Dijkstra 搜索，其他规划表示可采用不同方法。"
+    }
+  ],
+  "summary": "在约束下寻找连接起点与目标的可行运动路径。",
+  "description": "## 规划对象\n\n路径规划在工作空间或构型空间中寻找连接起点与目标的可行路径，通常需要避开障碍并满足配置约束。网格、图搜索、采样与优化可用于不同问题表示。\n\n## 与执行的区别\n\n几何路径描述经过哪些状态，轨迹进一步规定时间参数、速度等执行要求。静态地图中的无碰撞路径并不保证动态环境中的执行安全；实际机器人还需碰撞检查、局部反馈与重规划。\n\n## 参考\n\n- [Modern Robotics：运动规划概览](https://modernrobotics.northwestern.edu/nu-gm-book-resource/10-1-overview-of-motion-planning/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/10-1-overview-of-motion-planning/"
+}

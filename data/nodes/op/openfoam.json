@@ -1,0 +1,43 @@
+{
+  "id": "openfoam",
+  "name": "OpenFOAM",
+  "aliases": [
+    "OpenFOAM",
+    "开放场运算与操纵工具箱"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "finite-volume-method"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "computational-fluid-dynamics"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-mesh",
+      "context": "在计算域的单元与面上存储场，构造通量及边界离散。"
+    }
+  ],
+  "summary": "以有限体积离散为核心的开源流体与场仿真工具箱。",
+  "description": "OpenFOAM 提供 C++ 场运算、网格、离散算子和求解框架，用于流体、传热及其他连续场模型。有限体积、边界条件和数值格式共同决定实际求解路径，用户可配置或扩展模型。\n\n不同发行体系的版本和组件不能随意混用；此处以 OpenFOAM Foundation 用户指南为参考。网格质量、湍流模型及收敛判断仍由使用者评估，残差下降并不等于实验预测准确。\n\n参考：[OpenFOAM 用户指南](https://doc.cfd.direct/openfoam/user-guide-v13/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://doc.cfd.direct/openfoam/user-guide-v13/",
+  "abstraction_level": "framework_library"
+}

@@ -7,7 +7,8 @@
   "type": "metric",
   "domains": [
     "cloud-infrastructure",
-    "industry-landscape"
+    "industry-landscape",
+    "power-energy-systems"
   ],
   "relations": [
     {
@@ -15,9 +16,14 @@
       "target_id": "metric"
     }
   ],
-  "summary": "数据中心总能耗与 IT 能耗之比，越接近 1 越省。",
+  "summary": "数据中心设施总能耗与 IT 设备能耗的比值。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "PUE 将同一测量边界和周期内的数据中心设施总能耗除以 IT 设备能耗，用于观察供配电、冷却等设施开销相对于 IT 负载的大小。规范边界下，理论最低值为 1。\n\n比较 PUE 需要一致的计量方法和环境背景。数值更低不保证 IT 计算本身更高效、绝对能耗更少或碳排更低；负载变化也可能改变比值，因此需结合能耗与运行数据理解。\n\n参考：[美国能源部：PUE 与数据中心能耗计量](https://www.energy.gov/cmei/femp/cooling-water-efficiency-opportunities-federal-data-centers)；[美国能源部：数据中心能效设计指南](https://www.energy.gov/sites/default/files/2024-07/best-practice-guide-data-center-design.pdf)。",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "official_site": "https://www.energy.gov/cmei/femp/cooling-water-efficiency-opportunities-federal-data-centers"
 }

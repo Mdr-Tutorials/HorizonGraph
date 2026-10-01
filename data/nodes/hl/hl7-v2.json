@@ -1,0 +1,40 @@
+{
+  "id": "hl7-v2",
+  "name": "HL7 Version 2",
+  "aliases": [
+    "HL7 V2",
+    "HL7 V2.x 消息"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "hl7",
+      "context": "HL7 International 制定和维护 V2 医疗消息标准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-terminology",
+      "context": "结果消息中用临床术语标识检查或观察内容，接收方仍需约定编码系统。"
+    }
+  ],
+  "summary": "以事件和消息段交换临床业务信息的标准系列。",
+  "description": "## 机制\n\nHL7 V2 用触发事件和消息类型描述入出院、检查结果等业务消息，消息由段、字段及进一步的数据元素组成。实现可按版本与本地约定解释编码和可选内容。\n\n## 边界与应用\n\nHL7 V2 不是 HL7 组织本身，也不是 FHIR 的旧文件扩展名。本地扩展、术语和接口约定会影响互操作，不能只凭相同版本号断言消息能无损交换。\n\n## 参考\n\n- [HL7：FHIR 与 V2 的比较](https://hl7.org/fhir/comparison-v2.html)",
+  "importance": 4,
+  "official_site": "https://hl7.org/fhir/comparison-v2.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "abbreviation": "HL7 V2"
+}

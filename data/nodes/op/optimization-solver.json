@@ -1,0 +1,38 @@
+{
+  "id": "optimization-solver",
+  "name": "Optimization Solver",
+  "aliases": [
+    "优化求解器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-problem",
+      "context": "解析模型的变量、约束和目标，执行对应的数值或离散求解程序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numerical-stability",
+      "context": "处理浮点缩放、容差及病态系统，评估求解结果是否可靠。"
+    }
+  ],
+  "summary": "执行优化算法并报告可行性与最优性状态的软件。",
+  "description": "优化求解器读取目标、变量和约束的数学表示，执行支持的算法，并返回解、界限、状态及诊断。建模系统负责表达和转换模型；求解器负责计算，两者不必是同一个软件。\n\n必须核对问题类别与求解能力，例如 LP、MIP、锥问题或非凸 NLP。时间限制、容差和数值尺度会改变报告，求解成功不能证明输入模型准确描述了真实业务。\n\n参考：[CVXPY 求解器功能](https://www.cvxpy.org/tutorial/solvers/index.html)；[OR-Tools 状态](https://developers.google.com/optimization/cp/cp_solver)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.cvxpy.org/tutorial/solvers/index.html"
+}

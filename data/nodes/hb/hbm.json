@@ -1,26 +1,39 @@
 {
   "id": "hbm",
   "name": "HBM",
-  "display_primary": "高带宽显存",
+  "display_primary": "高带宽内存",
   "display_secondary": "High Bandwidth Memory",
   "aliases": [
-    "HBM显存",
-    "高带宽内存"
+    "高带宽内存",
+    "HBM显存"
   ],
   "type": "concept",
   "domains": [
     "high-performance-computing",
-    "systems-programming"
+    "systems-programming",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "dram",
+      "context": "HBM 存储堆栈由多层 DRAM 芯片构成。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "through-silicon-via",
+      "context": "通过 TSV 在堆叠 DRAM 芯片层间建立垂直电气互连。"
     }
   ],
-  "summary": "通过 3D 硅通孔垂直堆叠 DRAM、提供 TB/s 级吞吐的显存架构。",
+  "summary": "通过堆叠 DRAM 与宽接口提高带宽的存储技术族。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "HBM 通过垂直堆叠 DRAM 并以 TSV 连接芯片层，提供宽、多通道的短距离接口；它是内存技术族，不仅用于显存。带宽、容量和功耗取决于代际与实现，不能给整个 HBM 家族统一写成 TB/s 指标。HBM 堆栈与加速器裸片的封装级互连还需相应集成方案。\n\n参考：[Micron：HBM2E 堆叠与 TSV](https://www.micron.com/about/blog/applications/data-center/hbm2e-fastest-memory-modern-data-center)；[TSMC：CoWoS](https://www.tsmc.com/english/dedicatedFoundry/technology/cowos)。"
 }

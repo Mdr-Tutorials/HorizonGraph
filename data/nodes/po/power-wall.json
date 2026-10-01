@@ -9,17 +9,28 @@
   "type": "concept",
   "domains": [
     "high-performance-computing",
-    "systems-programming"
+    "systems-programming",
+    "power-energy-systems"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "cmos",
+      "context": "在 CMOS 处理器设计中，功率及散热预算限制频率和同时活跃的计算资源。"
     }
   ],
-  "summary": "芯片散热能力与数据中心供电极限对处理器频率与密度的物理约束。",
+  "summary": "功耗与散热预算对处理器提频和同时活跃计算资源的约束。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "功耗墙描述处理器无法仅靠提高频率或同时启用更多晶体管持续获得性能的约束。电压缩放减缓后，器件密度增加并不相应降低每次开关的能耗，供电与散热预算限制活跃资源。\n\n暗硅研究把这一问题作为多核缩放模型的功率限制来分析，其历史预测不应当视为每个现行芯片的测量结果。架构专用化、频率调节和功耗管理可改变取舍，但不会取消功率预算。\n\n参考：[作者研究组：Dark Silicon and the End of Multicore Scaling](https://research.cs.wisc.edu/vertical/wiki/index.php/Pubs2/B2hd-isca11darksilicon)；[Intel：处理器功耗限制与热设计](https://edc.intel.com/content/www/id/id/design/products-and-solutions/processors-and-chipsets/alder-lake-s/atx12v-and-atx12vo-psu-design-guide-addendum/004/introduction/)。",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "official_site": "https://research.cs.wisc.edu/vertical/wiki/index.php/Pubs2/B2hd-isca11darksilicon"
 }

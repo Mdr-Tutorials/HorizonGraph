@@ -1,0 +1,38 @@
+{
+  "id": "logic-gate",
+  "name": "Logic Gate",
+  "aliases": [
+    "逻辑门"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transistor",
+      "context": "在晶体管逻辑实现中，以受控导通器件构成开关网络。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cmos",
+      "context": "在静态 CMOS 门中以互补上拉、下拉网络实现布尔函数。"
+    }
+  ],
+  "summary": "实现与、或、非等布尔函数的基本数字逻辑单元。",
+  "description": "逻辑门把输入逻辑值映射为输出逻辑值，典型门包括与、或、非、与非和异或。门的逻辑功能用真值表说明，电气实现还受延迟、负载和噪声裕量影响；CMOS 是实现门电路的一种技术。\n\n参考：[MIT 6.004：组合逻辑](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c4/c4s1/)；[MIT 6.004：CMOS](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c3/c3s1/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c4/c4s1/"
+}

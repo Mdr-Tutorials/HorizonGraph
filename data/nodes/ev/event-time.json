@@ -1,0 +1,33 @@
+{
+  "id": "event-time",
+  "name": "Event Time",
+  "aliases": [
+    "事件时间"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "watermark",
+      "context": "流处理系统以水位线估计事件时间进度，决定何时触发按事件时间组织的计算。"
+    }
+  ],
+  "summary": "用事件发生时刻定义流式计算的时间语义。",
+  "description": "## 机制\n\n事件时间来自记录中的时间戳，计算按业务发生时间归属窗口或排序，而不是处理机器收到记录的时刻。重新处理历史数据也可保留相同的业务时间划分。\n\n## 边界与应用\n\n事件时间正确性依赖时间戳质量；乱序、时钟误差与无限迟到仍需处理。使用事件时间不自动保证实时输出，需要进度判断和结果修订策略。\n\n## 参考\n\n- [Flink：事件时间与水位线](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/time/)",
+  "importance": 4,
+  "official_site": "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/time/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "distributed-systems"
+  ]
+}

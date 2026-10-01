@@ -1,0 +1,32 @@
+{
+  "id": "snomed-ct",
+  "name": "SNOMED CT",
+  "aliases": [
+    "系统化医学临床术语"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "clinical-terminology"
+    }
+  ],
+  "summary": "以概念、名称与关系表达临床内容的术语系统。",
+  "description": "## 机制\n\nSNOMED CT 用稳定概念标识连接不同语言的描述，并通过关系定义临床概念的含义。系统可据此记录结构化临床事实，支持语义检索和与其他编码体系的映射。\n\n## 边界与应用\n\n术语不是诊断系统，也不是网络传输协议。版本、地区扩展、使用许可和记录上下文影响部署；映射至另一分类体系通常不意味着一对一、双向无损对应。\n\n## 参考\n\n- [SNOMED International：SNOMED CT](https://www.snomed.org/what-is-snomed-ct)",
+  "importance": 4,
+  "official_site": "https://www.snomed.org/what-is-snomed-ct",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library"
+}

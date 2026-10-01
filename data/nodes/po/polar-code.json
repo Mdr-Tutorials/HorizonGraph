@@ -1,0 +1,36 @@
+{
+  "id": "polar-code",
+  "name": "Polar Code",
+  "aliases": [
+    "极化码",
+    "Polar 码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "communication-channel",
+      "context": "根据目标信道模型评估合成子信道可靠性，选定信息位与冻结位。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-code",
+      "context": "利用有限域上的递归线性变换生成极化码字。"
+    }
+  ],
+  "summary": "通过信道极化选择可靠子信道构造的纠错码。",
+  "description": "Polar 码通过递归组合和拆分信道，使合成子信道的可靠程度趋向两端，再在可靠位置发送信息、在其他位置固定冻结位。逐次消除及列表译码具有不同复杂度和有限长度表现。\n\n容量达成结论针对相应渐近信道条件，不意味着短块代码在所有条件下最好。构造需匹配信道、码率与冻结集合，工程中的 CRC、速率匹配和列表大小也影响结果。\n\n参考：[Arıkan 信道极化原论文](https://arxiv.org/abs/0807.3917)；[MathWorks 5G 编码组件](https://www.mathworks.com/help/5g/transport-channel-subcomponents.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://arxiv.org/abs/0807.3917"
+}

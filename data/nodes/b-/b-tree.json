@@ -22,9 +22,10 @@
       "target_id": "lsm-tree"
     }
   ],
-  "summary": "自平衡多路搜索树，数据库索引与文件系统的底座。",
+  "summary": "以多路平衡树组织有序键，支持索引与范围访问。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\n多路节点减少磁盘或缓存页访问层数，分裂与合并维持树结构。数据库常采用相关 B+tree 变体，在叶层维护有序记录或指针以支持等值、范围与顺序扫描。\n\n## 边界与应用\n\nB-tree 家族和特定数据库实现并非完全相同。索引有写入、空间与维护成本，低选择性条件也可能让全表扫描更合算。\n\n## 参考\n\n- [PostgreSQL：B-tree 索引](https://www.postgresql.org/docs/current/btree.html)\n- [PostgreSQL 索引类型](https://www.postgresql.org/docs/current/indexes-types.html)"
 }

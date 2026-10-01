@@ -1,0 +1,42 @@
+{
+  "id": "knowledge-engineering",
+  "name": "Knowledge Engineering",
+  "aliases": [
+    "知识工程"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-representation",
+      "context": "根据任务选择可表达事实、关系和规则的形式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ontology-engineering",
+      "context": "在共享术语与结构化模型路径中设计并维护本体。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-base",
+      "context": "把经过建模的事实与规则组织为可维护的知识集合。"
+    }
+  ],
+  "summary": "获取、表示、验证和维护可计算的领域知识。",
+  "description": "知识工程把任务需求与领域知识转化为可供计算系统使用的模型。工作包括确定实体与概念、描述关系和规则、选择表示、核查来源及维护知识变化。\n\n重点不只是建立数据库或抽取文本，还要保证符号的含义、适用条件与使用任务一致。系统能推导的结论受输入知识和语义约束，不能把推理能力当作事实正确性的保证。\n\n## 参考\n\n- [Poole 与 Mackworth：知识图谱与本体](https://artint.info/3e/html/ArtInt3e.Ch16.html)\n- [Poole 与 Mackworth：个体与关系](https://artint.info/3e/html/ArtInt3e.Ch15.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

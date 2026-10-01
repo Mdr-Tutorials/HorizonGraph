@@ -1,0 +1,34 @@
+{
+  "id": "arithmetic-coding",
+  "name": "Arithmetic Coding",
+  "aliases": [
+    "算术编码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "conditional-probability",
+      "context": "依据上下文模型给出的下一个符号概率分割当前编码区间。"
+    }
+  ],
+  "summary": "依符号概率逐步缩小区间来表示整段消息的压缩方法。",
+  "description": "算术编码从一个初始区间开始，按符号概率划分子区间并随消息逐步选择。它把整段序列联合编码，可避免给每个符号单独分配整数比特码长的部分开销。\n\n有限精度实现需要区间重标定和正确的终止规则，编码与译码必须使用一致概率模型。概率失配会降低压缩效果，算术编码本身不提供纠错或保密性。\n\n参考：[MIT 通用压缩](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_9/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_9/"
+}

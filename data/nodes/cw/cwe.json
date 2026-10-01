@@ -1,0 +1,29 @@
+{
+  "id": "cwe",
+  "name": "Common Weakness Enumeration",
+  "aliases": [
+    "通用弱点枚举",
+    "CWE 弱点分类"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "对软件与硬件弱点类型进行分类的知识体系。",
+  "description": "## 机制\n\nCWE 描述能导致安全问题的设计或实现弱点，以层级和视图组织条目，并记录成因、后果和缓解信息。它支持设计评审、漏洞归因与工具规则统一表达。\n\n## 边界与应用\n\nCWE 条目描述弱点类别，不是某个产品中的具体 CVE，也不提供统一严重性评分。类别层级与视图有差别，映射应尽量依据具体机制而不是仅选宽泛父类。\n\n## 参考\n\n- [MITRE：CWE 定义](https://cwe.mitre.org/about/index.html)",
+  "importance": 4,
+  "official_site": "https://cwe.mitre.org/about/index.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abbreviation": "CWE"
+}

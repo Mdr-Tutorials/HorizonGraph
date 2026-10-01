@@ -1,0 +1,32 @@
+{
+  "id": "antenna",
+  "name": "Antenna",
+  "aliases": [
+    "天线"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impedance-matching",
+      "context": "在天线馈电设计中，把天线输入阻抗与馈线端口匹配以控制反射；匹配不能单独保证辐射效率。"
+    }
+  ],
+  "summary": "在馈电端口与空间电磁波之间转换能量的结构。",
+  "description": "天线在发射时把馈电能量耦合为电磁辐射，在接收时从入射场产生端口信号。辐射方向图、极化、增益、效率及输入阻抗共同描述其行为。\n\n天线增益涉及能量在方向上的分布，不表示天线创造能量。馈线失配、附近物体、安装环境和频率变化都可能改变系统中的实际性能。\n\n参考：[Michael Steer：天线与射频链路](https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)/02%3A_Antennas_and_the_RF_Link)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)/02%3A_Antennas_and_the_RF_Link"
+}

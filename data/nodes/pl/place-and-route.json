@@ -1,0 +1,49 @@
+{
+  "id": "place-and-route",
+  "name": "Place and Route",
+  "aliases": [
+    "布局布线",
+    "布局与布线"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logic-synthesis",
+      "context": "在 RTL 实现流程中，以综合生成的目标资源或门级网表作为输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-timing-analysis",
+      "context": "在时序驱动的物理实现中检查路径裕量并指导优化。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-cell",
+      "context": "在标准单元 ASIC 实现中安排库单元位置并连接引脚。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "process-design-kit",
+      "context": "在 ASIC 物理实现中读取目标工艺的层、规则与库信息。"
+    }
+  ],
+  "summary": "确定逻辑资源位置和互连路径的物理实现过程。",
+  "description": "布局确定单元或 FPGA 逻辑资源的位置，布线为网表连接分配金属线或可编程互连。ASIC 流程还包括布局规划、时钟树及寄生提取等步骤，需迭代处理拥塞、设计规则和时序。FPGA 与 ASIC 的物理资源不同，流程名称相同不代表实现相同。\n\n参考：[OpenROAD 官方仓库与流程说明](https://github.com/The-OpenROAD-Project/OpenROAD)；[nextpnr 官方仓库](https://github.com/YosysHQ/nextpnr)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://github.com/The-OpenROAD-Project/OpenROAD"
+}

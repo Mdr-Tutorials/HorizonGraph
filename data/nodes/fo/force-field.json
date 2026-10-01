@@ -1,0 +1,33 @@
+{
+  "id": "force-field",
+  "name": "Molecular Force Field",
+  "aliases": [
+    "分子力场",
+    "力场"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "potential-energy-surface",
+      "context": "通过规定势能函数与参数近似体系构型对应的能量。"
+    }
+  ],
+  "summary": "定义原子相互作用能和参数的模型。",
+  "description": "分子力场规定如何从构型得到能量与力，可能包含键合、非键、多体及极化等项。不同力场家族的参数、排除规则和单位需要一致，不能随意混搭。\n\n它是物理近似与参数体系，不是一个唯一软件包。模型可针对蛋白质、液体、金属等体系建立，训练或拟合范围之外的使用需要检验可迁移性。\n\n## 参考\n\n- [GROMACS：键合相互作用](https://manual.gromacs.org/current/reference-manual/functions/bonded-interactions.html)\n- [LAMMPS：功能与模型](https://docs.lammps.org/Intro_features.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4
+}

@@ -1,0 +1,43 @@
+{
+  "id": "molecular-dynamics",
+  "name": "Molecular Dynamics",
+  "aliases": [
+    "分子动力学"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "force-field",
+      "context": "在经典分子动力学路径中用选定势能模型计算力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ordinary-differential-equation",
+      "context": "经典分子动力学从相互作用力构造牛顿运动方程，并按选定算法进行时间推进。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "periodic-boundary-condition",
+      "context": "在模拟体相体系时用周期盒近似无限环境。"
+    }
+  ],
+  "summary": "通过时间积分模拟原子或粒子的运动。",
+  "description": "分子动力学在给定初始状态和相互作用模型下推进粒子的位置与速度。经典路径用势能导出的力进行时间积分，可从轨迹分析结构、扩散和统计性质。\n\n时间步、边界、约束、温度压力耦合和取样长度都会影响结果。轨迹只访问可达的时间和构型范围，单次模拟不能证明全部相空间已充分采样。\n\n## 参考\n\n- [GROMACS：分子动力学算法](https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html)\n- [OpenMM：物理模型与数值方法](https://docs.openmm.org/latest/userguide/theory.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "MD"
+}

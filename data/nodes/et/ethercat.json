@@ -1,0 +1,37 @@
+{
+  "id": "ethercat",
+  "name": "EtherCAT",
+  "aliases": [
+    "EtherCAT 工业以太网"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ethernet",
+      "context": "使用以太网帧和全双工链路承载主设备组织的过程数据交换。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "industrial-ethernet"
+    }
+  ],
+  "summary": "在帧经过节点时处理过程数据、支持同步的工业通信协议。",
+  "description": "EtherCAT 主设备发送的帧依次经过节点，子设备在帧通过时读取及写入相关数据，随后将帧返回。分布式时钟支持节点动作同步，过程数据可高效组织。\n\n它使用以太网物理与帧机制，但实时过程交换不等于普通 TCP 请求响应。同步精度、拓扑、周期和设备能力须结合系统配置评估，不应从协议名称推导任意延迟保证。\n\n参考：[EtherCAT Technology Group：运行机制](https://www.ethercat.org/en/technology.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.ethercat.org/en/technology.html",
+  "abstraction_level": "hardware"
+}

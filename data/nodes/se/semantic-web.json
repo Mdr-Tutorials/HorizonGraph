@@ -1,0 +1,37 @@
+{
+  "id": "semantic-web",
+  "name": "Semantic Web",
+  "aliases": [
+    "语义网"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "在标准数据表示路径中组织资源、属性与值。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linked-data",
+      "context": "通过可解析标识和数据链接连接分布式资源。"
+    }
+  ],
+  "summary": "用共享标识与形式化模型连接可解释的数据。",
+  "description": "语义网围绕资源标识、结构化数据和共享词汇，让不同系统能够交换及解释信息。RDF 提供图模型，本体、查询和约束语言分别承担不同能力。\n\n它不是所有网站都会自动采用的统一数据库，也不意味着语义能仅从词语表面推断。跨系统使用需要约定身份、词汇、来源及实际支持的标准。\n\n## 参考\n\n- [W3C：RDF 入门](https://www.w3.org/TR/rdf11-primer/)\n- [Tim Berners-Lee：Linked Data](https://www.w3.org/DesignIssues/LinkedData.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

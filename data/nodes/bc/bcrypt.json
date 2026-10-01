@@ -1,0 +1,27 @@
+{
+  "id": "bcrypt",
+  "name": "bcrypt",
+  "aliases": [
+    "bcrypt 密码哈希"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "使用盐与自适应计算成本存储密码验证结果。",
+  "description": "## 机制\n\nbcrypt 通过带盐的昂贵密钥设置增加离线猜测成本，编码结果包含版本、盐和成本参数，验证时重算比较。其成本参数控制计算工作量。\n\n## 边界与应用\n\nOWASP 将 bcrypt 主要用于需要兼容的旧系统，并提示多数实现有 72 字节输入上限；字节与字符不同。不要静默截断密码或自行随意预哈希，新系统可根据需求评估 Argon2id 等方案。\n\n## 参考\n\n- [OWASP：密码存储与 bcrypt](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)",
+  "importance": 4,
+  "official_site": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ]
+}

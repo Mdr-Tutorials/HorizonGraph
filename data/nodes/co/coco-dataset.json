@@ -1,0 +1,20 @@
+{
+  "id": "coco-dataset",
+  "name": "COCO",
+  "aliases": ["COCO 数据集", "Common Objects in Context", "Microsoft COCO", "MS COCO"],
+  "type": "product",
+  "ecosystems": ["ai_data_science"],
+  "domains": ["computer-vision", "machine-learning"],
+  "abstraction_level": "application_tool",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "dataset" },
+    { "relation_type": "uses", "target_id": "intersection-over-union", "context": "COCO 官方框与实例掩码评估器使用 IoU 匹配预测与标注，并在 0.50 至 0.95 的多档阈值汇总 AP。" }
+  ],
+  "summary": "面向自然场景目标检测、实例分割等任务的标注数据集。",
+  "description": "COCO 的全称是 Common Objects in Context，收集日常场景中处于自然上下文的常见对象。原始工作强调复杂场景、多个对象与逐实例分割标注；后续项目还提供关键点、图像描述和全景分割等任务的数据与评估入口。[COCO 原始论文](https://arxiv.org/abs/1405.0312)、[官方项目主页](https://cocodataset.org/)。\n\n常用检测和实例分割配置包含 80 个有实例标注的对象类别；原始论文讨论的 91 个对象类型与实际任务类别集合不能混为同一数字。COCO 同时提供图片、实例类别、框与掩码等结构化标注，训练时应核对任务、年份和划分。检测数据中的标注语义与图像分类的一幅图一个标签不同。[官方数据概览](https://cocodataset.org/dataset/home.htm)、[官方 API 实现](https://github.com/cocodataset/cocoapi)。\n\nCOCO 可训练与比较 YOLO 等检测器和实例分割模型。官方框与掩码评估在 IoU 0.50 到 0.95、步长 0.05 的多个阈值计算结果，主 AP 与 AP50 不同；还区分目标大小与允许的检测数量。数据集项目 COCO 与游戏引擎 Cocos 是不同实体。[COCO 官方评估代码](https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://cocodataset.org/"
+}

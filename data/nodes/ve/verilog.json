@@ -2,7 +2,11 @@
   "id": "verilog",
   "name": "Verilog",
   "aliases": [
-    "Verilog HDL"
+    "Verilog HDL",
+    "SystemVerilog",
+    "System Verilog",
+    "SV",
+    "数字硬件描述语言"
   ],
   "type": "language",
   "ecosystems": [
@@ -12,7 +16,9 @@
   ],
   "domains": [
     "embedded-systems",
-    "systems-programming"
+    "systems-programming",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "abstraction_level": "theoretical",
   "relations": [
@@ -23,14 +29,19 @@
     {
       "relation_type": "competes_with",
       "target_id": "vhdl"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rtl",
+      "context": "在可综合数字设计中描述寄存器传输与组合逻辑；完整语言还可表达非综合验证内容。"
     }
   ],
-  "summary": "数字硬件描述语言，芯片流片前的建模语言。",
-  "description": "SystemVerilog 是其超集（验证 + 综合扩展），不另开节点，差异写在此处。Verilog 建模的对象流向 TSMC N3 / SMIC 7nm 的制造侧。",
+  "summary": "用于数字硬件建模、仿真和综合的硬件描述语言。",
+  "description": "Verilog 描述并行硬件结构与行为，可用于 RTL 和门级建模。IEEE 1800 的 SystemVerilog 将设计、规范与验证能力统一扩展；本项目沿用同一检索母体，别名和正文承接 SystemVerilog，不另开重复节点。测试平台中的类、随机化等验证功能不能一概综合成硬件，制造目标也不限某家代工厂或工艺节点。\n\n参考：[IEEE 1800-2023：SystemVerilog](https://standards.ieee.org/ieee/1800/7743/)；[Synopsys：RTL 设计](https://www.synopsys.com/glossary/what-is-register-transfer-level-design.html)；[Yosys 官方介绍](https://yosyshq.readthedocs.io/projects/yosys/en/latest/introduction.html)。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "1984-01-01",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-01",
   "importance": 4,
   "popular": 45
 }

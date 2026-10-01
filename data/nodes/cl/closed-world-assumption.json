@@ -1,0 +1,33 @@
+{
+  "id": "closed-world-assumption",
+  "name": "Closed-World Assumption",
+  "aliases": [
+    "封闭世界假设"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-base",
+      "context": "为特定查询或关系指定采用完整性假设的知识范围。"
+    }
+  ],
+  "summary": "在指定完整范围内把未成立事实按缺省判假。",
+  "description": "封闭世界假设在某个被视作完整的知识范围内，以未获支持作为否定或失败的依据。数据库和逻辑程序的具体用法需要同时说明查询及否定语义。\n\n范围是关键：一份资料的完整性不意味着整个现实世界已被记录。将缺失值、未知和明确否定合并，可能使数据集成与推理产生错误。\n\n## 参考\n\n- [Poole 与 Mackworth：完整知识假设](https://artint.info/3e/html/ArtInt3e.Ch15.S9.html)\n- [W3C：OWL 2 入门](https://www.w3.org/TR/owl2-primer/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abbreviation": "CWA"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "spatial-join",
+  "name": "Spatial Join",
+  "aliases": [
+    "空间连接"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spatial-index",
+      "context": "对大量几何对象的连接可用索引先缩小候选，再执行精确空间关系判断。"
+    }
+  ],
+  "summary": "按照几何关系关联不同数据集中的对象与属性。",
+  "description": "## 机制\n\n空间连接以相交、包含、最近邻或距离等条件匹配对象，将匹配关系转为记录关联。可先用空间索引筛选候选，再按所声明几何谓词精确判断。\n\n## 边界与应用\n\n一个对象可匹配零个或多个对象，不能默认一对一。边界是否包含、距离单位、CRS 和连接方向均影响输出，最近邻也不意味着语义上最相关。\n\n## 参考\n\n- [GeoPandas：空间连接](https://geopandas.org/en/stable/docs/user_guide/mergingdata.html)",
+  "importance": 4,
+  "official_site": "https://geopandas.org/en/stable/docs/user_guide/mergingdata.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ]
+}

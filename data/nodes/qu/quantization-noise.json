@@ -1,0 +1,32 @@
+{
+  "id": "quantization-noise",
+  "name": "Quantization Noise",
+  "aliases": [
+    "量化噪声"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "adc",
+      "context": "在规定输入、量化模型及统计假设下，限制理想 ADC 的量化信噪比。"
+    }
+  ],
+  "summary": "由连续数值映射到离散等级造成的量化误差表现。",
+  "description": "量化使一定输入区间共享同一代码，产生输入与代表值的差。理想均匀量化器的误差常被建模为有限区间内的随机量，以估计量化噪声功率。\n\n白噪声、均匀分布和不相关等假设具有适用条件；低幅度或周期相关信号可能表现为确定性误差和杂散。理想满幅正弦 ADC 的信噪比公式也不能直接代表真实转换器性能。\n\n参考：[Analog Devices：理想 ADC 的量化噪声](https://www.analog.com/mt-001)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.analog.com/mt-001"
+}

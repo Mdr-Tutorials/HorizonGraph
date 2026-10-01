@@ -1,0 +1,32 @@
+{
+  "id": "power-transformer",
+  "name": "Power Transformer",
+  "aliases": [
+    "电力变压器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inductor",
+      "context": "以互感耦合、励磁及漏感等电感模型描述绕组和磁路的电气行为。"
+    }
+  ],
+  "summary": "通过磁耦合在交流绕组间变换电压与电流的设备类别。",
+  "description": "变压器通过共同磁通耦合绕组，在理想模型中电压比由匝数比决定，电流比反向变化。电力变压器用于输配电的电压等级变换，也需考虑接线方式和绝缘要求。\n\n实际模型包含励磁支路、漏感、铜损与铁损，效率并非恒为 100%。普通变压器不能用理想匝比直接持续变换直流，还需根据激励、磁芯与绝缘条件选择结构。\n\n参考：[OpenStax：变压器](https://openstax.org/books/university-physics-volume-2/pages/15-6-transformers)；[MIT 6.061：电力系统教材与课程](https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/pages/readings/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://openstax.org/books/university-physics-volume-2/pages/15-6-transformers"
+}

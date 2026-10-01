@@ -11,7 +11,8 @@
     "embedded-ecosystem"
   ],
   "domains": [
-    "embedded-systems"
+    "embedded-systems",
+    "robotics"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -24,20 +25,28 @@
       "target_id": "dji"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "cpp"
+      "relation_type": "uses",
+      "target_id": "imu",
+      "context": "Onboard SDK 的相关遥测主题读取机载 IMU 经飞控处理的测量输出，接口可用性取决于支持机型。"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "linux"
+      "relation_type": "uses",
+      "target_id": "cpp",
+      "context": "Onboard SDK 的 C++ 开发路径采用 C++ API；DJI SDK 家族的其他套件与语言路径需分别核对。"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "linux",
+      "context": "Onboard SDK 官方仓库提供 Linux 开发与运行路径，也有不同硬件平台路径，不表示整个 SDK 家族只支持 Linux。"
     }
   ],
   "summary": "大疆的机载与载荷开发套件。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
   "popular": 30,
   "display_primary": "DJI SDK",
-  "official_site": "https://developer.dji.com"
+  "official_site": "https://developer.dji.com",
+  "description": "## 套件范围\n\nDJI 开发者套件覆盖机载、载荷及移动应用等不同接口。Onboard SDK 在兼容机型与配置上提供遥测、飞行控制和其他机载能力；Payload SDK 面向载荷集成，不能把不同套件的语言、操作系统或支持列表完全等同。\n\n## 遥测与控制\n\nOnboard 遥测主题包含机载惯性测量相关输出，应用据此获取状态信息或组织上层控制。API 提供数据与控制入口，并不意味着用户重写了底层飞控。机型、固件及权限条件应以对应版本资料为准。\n\n## 参考\n\n- [DJI：Onboard SDK 介绍](https://developer.dji.com/onboard-sdk/documentation/introduction/onboard-sdk-introduction.html)\n- [DJI：遥测主题](https://developer.dji.com/onboard-api-reference/group__telem.html)\n\nOnboard SDK 官方仓库包含不同平台的代码路径；本节点作为套件家族不能将 Linux 或 C++ 路径描述成所有成员的无条件硬依赖。参考：[DJI Onboard SDK 官方仓库](https://github.com/dji-sdk/Onboard-SDK)。"
 }

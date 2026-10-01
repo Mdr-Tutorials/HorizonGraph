@@ -1,0 +1,34 @@
+{
+  "id": "n-triples",
+  "name": "N-Triples",
+  "aliases": [
+    "N-Triples RDF 序列化"
+  ],
+  "type": "protocol",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "以规定文本语法序列化 RDF 图中的三元组。"
+    }
+  ],
+  "summary": "以简单逐行语法交换 RDF 三元组。",
+  "description": "N-Triples 用较简单的行式语法表达 RDF 三元组，通常每条语句完整给出资源标识。它便于流式处理和工具交换，但比带前缀简写的语法更冗长。\n\n格式没有因此获得额外的知识语义，空白节点也不能当作跨文档全局标识。文档处理应保留字符编码、转义和资源身份规则。\n\n## 参考\n\n- [W3C：N-Triples](https://www.w3.org/TR/n-triples/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.w3.org/TR/n-triples/"
+}

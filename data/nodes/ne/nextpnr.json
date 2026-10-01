@@ -1,0 +1,41 @@
+{
+  "id": "nextpnr",
+  "name": "nextpnr",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "place-and-route"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fpga",
+      "context": "针对受支持 FPGA 架构的资源与互连生成物理映射。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "yosys",
+      "context": "官方 iCE40 演示流程读取 Yosys 综合产生的 JSON 网表；并非所有调用的硬依赖。"
+    }
+  ],
+  "summary": "把 FPGA 网表映射到目标器件位置与互连的开源工具。",
+  "description": "nextpnr 提供面向不同 FPGA 架构的布局布线。官方 iCE40 示例由 Yosys 产生 JSON 网表，nextpnr 布局布线后再由 icepack 生成二进制配置。它不是独立替代全部 HDL 编译步骤的工具，支持范围依器件后端。\n\n参考：[nextpnr 官方仓库](https://github.com/YosysHQ/nextpnr)；[Yosys+nextpnr 原始论文](https://arxiv.org/abs/1903.10407)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/YosysHQ/nextpnr"
+}

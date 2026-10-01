@@ -1,0 +1,43 @@
+{
+  "id": "variant-calling",
+  "name": "Variant Calling",
+  "aliases": [
+    "变异检测",
+    "变异识别"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reference-genome",
+      "context": "参考驱动的检测流程以固定版本的序列和坐标解释候选差异。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sam-bam",
+      "context": "采用比对读段的检测流程读取比对记录及其质量与样本信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vcf",
+      "context": "输出或交换变异及基因型结果时采用 VCF，并保留参考与字段定义。"
+    }
+  ],
+  "summary": "依据测序证据推断样本相对参考的序列差异。",
+  "description": "## 机制\n\n变异检测结合读段、参考及误差模型识别候选等位基因并估计样本基因型。部分方法使用局部组装或单倍型推断，而不是逐位置简单比较。\n\n## 边界与应用\n\n检测输出还需过滤和质量评估；覆盖、参考偏差和比对误差都会影响结果。生殖系、体细胞和不同变异类型需要适用的方法，检测序列差异不等于解释疾病或功能。\n\n## 参考\n\n- [Broad Institute：HaplotypeCaller](https://gatk.broadinstitute.org/hc/en-us/articles/360036889312-HaplotypeCaller)",
+  "importance": 4,
+  "official_site": "https://gatk.broadinstitute.org/hc/en-us/articles/360036889312-HaplotypeCaller",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

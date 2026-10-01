@@ -1,0 +1,30 @@
+{
+  "id": "convolutional-code",
+  "name": "Convolutional Code",
+  "aliases": [
+    "卷积码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "convolution",
+      "context": "线性卷积编码器在有限域上将输入序列与生成多项式系数组合，形成带记忆输出。"
+    }
+  ],
+  "summary": "使编码输出依赖当前及过去输入状态的纠错码。",
+  "description": "卷积码使用带记忆的编码器，输出由当前输入和有限历史状态决定，可用移位寄存器或 trellis 表示。约束长度、生成多项式和终止方式影响码的结构及译码成本。\n\nViterbi 和 APP 等译码使用不同准则和输入信息，软判决并非简单多数表决。卷积码中的卷积通常在有限域上计算，与实值音频滤波虽共享形式但目的和运算不同。\n\n参考：[MathWorks 卷积码](https://www.mathworks.com/help/comm/ug/convolutional-codes.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.mathworks.com/help/comm/ug/convolutional-codes.html"
+}

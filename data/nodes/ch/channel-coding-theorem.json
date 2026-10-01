@@ -1,0 +1,36 @@
+{
+  "id": "channel-coding-theorem",
+  "name": "Channel Coding Theorem",
+  "aliases": [
+    "信道编码定理",
+    "有噪信道编码定理"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "channel-capacity",
+      "context": "以给定信道模型容量作为可靠渐近编码速率的界限。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "channel-coding",
+      "context": "在规定信道和误差模型下，约束长块编码能够可靠传输的码率。"
+    }
+  ],
+  "summary": "在相应假设下用容量区分可可靠传输的码率。",
+  "description": "经典无记忆信道编码定理说明，在低于容量的码率下，存在随块长增长而误差趋小的码；超过容量时，不能在同一模型与误差要求下维持渐近可靠传输。\n\n定理证明存在性，不提供任意有限块长的具体实现或零错误保证。输入约束、信道记忆、反馈及误差定义不同会改变表述，工程系统必须另外评估实际代码和译码复杂度。\n\n参考：[MIT 信道编码](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_14/)；[MIT 线性码与容量](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_14/"
+}

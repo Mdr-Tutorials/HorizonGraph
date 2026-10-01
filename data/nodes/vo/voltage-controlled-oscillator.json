@@ -1,0 +1,33 @@
+{
+  "id": "voltage-controlled-oscillator",
+  "name": "Voltage-Controlled Oscillator",
+  "aliases": [
+    "压控振荡器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rlc-circuit",
+      "context": "在 LC 型 VCO 中，通过谐振网络及可调电抗设定振荡频率；不适用于所有 VCO 拓扑。"
+    }
+  ],
+  "summary": "振荡频率受控制电压调节的振荡器。",
+  "description": "VCO 将控制电压变化映射为振荡频率变化，调谐灵敏度描述工作点附近的频率斜率。它可作为频率合成器、调频电路或可调本振的一部分。\n\n调谐范围和斜率并不在所有电压下恒定；相位噪声、电源扰动及负载牵引会影响频谱。在 LC 型实现中，改变等效电容可改变谐振频率，但 VCO 也存在其他拓扑。\n\n参考：[Analog Devices：锁相环基本原理](https://www.analog.com/media/en/training-seminars/tutorials/MT-086.pdf)；[MIT 6.002：二阶系统](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l15/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.analog.com/media/en/training-seminars/tutorials/MT-086.pdf",
+  "abbreviation": "VCO"
+}

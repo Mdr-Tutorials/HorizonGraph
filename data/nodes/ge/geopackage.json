@@ -1,0 +1,38 @@
+{
+  "id": "geopackage",
+  "name": "GeoPackage",
+  "aliases": [
+    "地理数据包"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sqlite",
+      "context": "按标准的 SQLite 容器与表结构保存内容，普通任意 SQLite 文件不自动属于 GeoPackage。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ogc",
+      "context": "该标准在组织的开放标准制定与维护流程下发布，具体版本和合规要求以对应规范为准。"
+    }
+  ],
+  "summary": "以 SQLite 容器和标准表结构保存地理数据的开放格式。",
+  "description": "## 机制\n\nGeoPackage 定义内容、空间参考和几何等表与约束，可在一个容器中组织矢量要素和栅格瓦片等数据。其扩展机制允许额外能力，但需声明并遵循相应规则。\n\n## 边界与应用\n\n它是编码与容器规范，不是网络传输协议。使用 SQLite 不自动使文件符合 GeoPackage，表约束、坐标信息和扩展兼容仍需检查，多个写入者也受底层容器条件限制。\n\n## 参考\n\n- [OGC GeoPackage 编码标准](https://www.geopackage.org/spec/)",
+  "importance": 4,
+  "official_site": "https://www.geopackage.org/spec/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ],
+  "abstraction_level": "framework_library"
+}

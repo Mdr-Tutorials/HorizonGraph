@@ -1,0 +1,29 @@
+{
+  "id": "stop-the-world",
+  "name": "Stop-the-World",
+  "aliases": [
+    "全局暂停",
+    "停止世界"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "compiler-mechanism"
+    }
+  ],
+  "summary": "让受管理程序线程暂停，以便运行时完成协调工作。",
+  "description": "## 机制\n\n回收器或运行时请求程序线程到达安全点并暂停，取得稳定的根或对象状态后完成必须协调的步骤，再恢复执行。并发收集器也可能保留短暂的暂停阶段。\n\n## 边界与应用\n\n暂停不等于整台操作系统停止，也不代表整个回收周期都串行执行。暂停长度受算法、存活对象、根扫描和调度等影响，应与总吞吐和内存成本一起评估。\n\n## 参考\n\n- [Go：垃圾回收指南](https://go.dev/doc/gc-guide)\n- [HotSpot GC 实现](https://docs.oracle.com/en/java/javase/25/gctuning/garbage-collector-implementation.html)",
+  "importance": 4,
+  "official_site": "https://go.dev/doc/gc-guide",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ]
+}

@@ -11,17 +11,20 @@
     "hardware_iot"
   ],
   "domains": [
-    "industry-landscape"
+    "industry-landscape",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "digital-design-concept"
     }
   ],
-  "summary": "用光把电路印上硅片，精度由波长决定。",
+  "summary": "将掩膜图案投影到感光晶圆材料上的图形转移工艺。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "光刻利用光学系统把掩膜或光罩上的图案成像到晶圆的感光材料上，后续工艺再形成器件或互连结构。分辨率受波长、数值孔径和工艺因子共同影响，不能只按波长判断精度；DUV 和 EUV 是不同光源与光学方案。\n\n参考：[ASML：光刻原理](https://www.asml.com/en/technology/lithography-principles)；[ASML：光学与数值孔径](https://www.asml.com/en/technology/lithography-principles/lenses-and-mirrors)。"
 }

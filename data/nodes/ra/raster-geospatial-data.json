@@ -1,0 +1,32 @@
+{
+  "id": "raster-geospatial-data",
+  "name": "Raster Geospatial Data",
+  "aliases": [
+    "地理栅格数据"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-reference-system",
+      "context": "栅格的地理定位结合 CRS、网格原点和像元方向等元数据。"
+    }
+  ],
+  "summary": "以带空间参考的网格单元表达影像或地理场。",
+  "description": "## 机制\n\n栅格按行列存储像元值，地理变换和 CRS 把网格联系到位置。多波段影像、地形与分类图可采用栅格，但各自值的含义、单位和无数据标记不同。\n\n## 边界与应用\n\n空间分辨率不等于定位精度；网格间距改变也不增加真实观测信息。重投影或合并网格时需要考虑重采样、像元对齐与无数据区域。\n\n## 参考\n\n- [QGIS：栅格数据](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/raster_data.html)",
+  "importance": 5,
+  "official_site": "https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/raster_data.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ]
+}

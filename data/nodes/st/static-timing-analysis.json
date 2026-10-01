@@ -1,0 +1,39 @@
+{
+  "id": "static-timing-analysis",
+  "name": "Static Timing Analysis",
+  "aliases": [
+    "静态时序分析"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "setup-time",
+      "context": "在最大延迟分析中检查接收时序单元的建立要求。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hold-time",
+      "context": "在最小延迟分析中检查接收时序单元的保持要求。"
+    }
+  ],
+  "summary": "根据网表、延迟模型和约束检查设计时序的方法。",
+  "description": "STA 在网表与时序约束下计算数据路径和时钟路径的到达时间，检查建立、保持等要求并报告裕量。分析会使用单元时序库和互连寄生参数，结果依赖约束与模型；功能仿真、CDC 验证和 STA 各检查不同问题。\n\n参考：[OpenSTA 官方仓库](https://github.com/parallaxsw/OpenSTA)；[AMD UG906：保持检查](https://docs.amd.com/r/en-US/ug906-vivado-design-analysis/Hold/Removal-Relationship)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "STA",
+  "official_site": "https://github.com/parallaxsw/OpenSTA"
+}

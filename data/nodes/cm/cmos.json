@@ -1,0 +1,41 @@
+{
+  "id": "cmos",
+  "name": "Complementary Metal–Oxide–Semiconductor",
+  "aliases": [
+    "互补金属氧化物半导体",
+    "互补 MOS"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering",
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mosfet",
+      "context": "静态 CMOS 门组合 n 沟道与 p 沟道 MOSFET 的互补开关网络。"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    }
+  ],
+  "summary": "以互补 n 型和 p 型 MOS 器件构成电路的技术。",
+  "description": "静态 CMOS 逻辑通常以 p 型器件构成上拉网络、n 型器件构成下拉网络，把有效输入下的输出连接到相应电源轨。CMOS 是器件与电路技术，不等于一个工艺节点或指令集。\n\nCMOS 也可用于模拟与混合信号电路。例如电容式 DAC 可使用 CMOS 开关控制电荷分配；这种具体拓扑不表示所有 CMOS 电路都包含 DAC。漏电、切换和电容负载共同影响实际功耗。\n\n参考：[MIT 6.004：MOSFET 与 CMOS](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c3/c3s1/)；[Analog Devices：二进制 DAC 架构](https://www.analog.com/media/en/training-seminars/tutorials/MT-015.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "CMOS",
+  "official_site": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c3/c3s1/"
+}

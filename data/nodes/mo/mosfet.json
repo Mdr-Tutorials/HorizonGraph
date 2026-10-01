@@ -1,0 +1,37 @@
+{
+  "id": "mosfet",
+  "name": "Metal–Oxide–Semiconductor Field-Effect Transistor",
+  "aliases": [
+    "金属氧化物半导体场效应晶体管",
+    "MOS 晶体管"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering",
+    "analog-electronics",
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    }
+  ],
+  "summary": "以栅极电场控制沟道导通的场效应晶体管。",
+  "description": "MOSFET 通过栅源电压影响源漏间沟道电流，具有栅、源、漏和体端。互补 n 沟道与 p 沟道器件构成 CMOS；在放大电路中，还可围绕偏置点建立小信号模型。\n\n器件既可作为开关，也可工作于模拟电流调节状态。区域、电压和温度影响电流与损耗；栅极充放电、寄生电容及负载会影响开关速度，不能把理想开关直接等同于真实功率器件。\n\n参考：[MIT 6.004：MOSFET 与 CMOS](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c3/c3s1/)；[MIT 6.002：MOSFET 放大器](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l9/)；[Texas Instruments：电力电子实验课程](https://www.ti.com/video/series/experimental-power-electronics-curriculum-and-reference.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abbreviation": "MOSFET",
+  "official_site": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c3/c3s1/"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "imu",
+  "name": "Inertial Measurement Unit",
+  "aliases": [
+    "惯性测量单元",
+    "惯导测量单元"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "embedded-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "组合加速度计与陀螺仪输出，支持运动状态估计。",
+  "description": "## 输出\n\n典型 IMU 在多个轴上提供加速度计与角速度测量，具体器件还可能包含温度补偿或其他传感器。测量坐标系、时间同步、偏置与标定决定数据如何被后续估计器解释。\n\n## 估计边界\n\nIMU 原始输出不等于世界坐标中的准确位置或绝对姿态。积分会累积误差，长期导航往往需要与视觉、轮速、GNSS 或其他观测融合；是否带磁力计、是否输出融合姿态取决于产品。\n\n## 参考\n\n- [Analog Devices：IMU 测量什么](https://ez.analog.com/mems/a/documents/c/adis16497-faq/DO18821/mems-imu-101---what-do-mems-imus-measure)\n- [Analog Devices：机器人定位中的 IMU](https://www.analog.com/en/resources/analog-dialogue/articles/enhancing-robotic-localization.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ez.analog.com/mems/a/documents/c/adis16497-faq/DO18821/mems-imu-101---what-do-mems-imus-measure",
+  "abbreviation": "IMU"
+}

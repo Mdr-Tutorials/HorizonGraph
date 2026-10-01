@@ -1,0 +1,33 @@
+{
+  "id": "logical-entailment",
+  "name": "Logical Entailment",
+  "aliases": [
+    "逻辑蕴涵",
+    "逻辑后承"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-base",
+      "context": "以知识集合中的陈述作为检查必然结论的前提。"
+    }
+  ],
+  "summary": "所有满足前提的解释都满足结论的关系。",
+  "description": "逻辑蕴涵从语义上定义结论是否由知识必然推出：若所有满足知识库的解释也满足结论，前者蕴涵后者。证明程序是求解这一关系的算法路径，与语义定义本身不同。\n\n在开放世界模型中未推出某事实，不意味着推出其否定。推理结果的可靠性仍依赖输入公理、选定逻辑及实现的健全性和覆盖能力。\n\n## 参考\n\n- [W3C：RDF 语义](https://www.w3.org/TR/rdf11-mt/)\n- [Poole 与 Mackworth：谓词逻辑](https://artint.info/3e/html/ArtInt3e.Ch15.S3.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

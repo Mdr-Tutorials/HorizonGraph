@@ -1,0 +1,32 @@
+{
+  "id": "rectifier",
+  "name": "Rectifier",
+  "aliases": [
+    "整流器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "capacitor",
+      "context": "在带电容滤波的整流电源中，通过电容储能降低输出脉动；并非所有整流器都采用该滤波方式。"
+    }
+  ],
+  "summary": "将交流输入转换为单向直流输出的电路类别。",
+  "description": "整流器以二极管或受控半导体把交流变成单向输出，滤波和后级稳压再处理脉动。单相、三相以及无控、可控或有源整流器具有不同输入输出特征。\n\n整流输出不一定是平滑或稳定的直流。输入电流谐波、功率因数、滤波电容冲击和器件损耗会影响系统；能量双向传输也不是所有整流结构都支持的能力。\n\n参考：[Texas Instruments：DC-AC 与 AC-DC 实验电路手册](https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/196/TI-Power-Electronics-Board-_2800_User-Manual_2900_.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/196/TI-Power-Electronics-Board-_2800_User-Manual_2900_.pdf"
+}

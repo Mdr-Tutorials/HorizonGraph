@@ -1,0 +1,43 @@
+{
+  "id": "robot-localization",
+  "name": "robot_localization",
+  "aliases": [
+    "机器人状态估计包"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "embedded-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ros"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "kalman-filter",
+      "context": "提供 EKF 和 UKF 非线性状态估计实现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "imu",
+      "context": "融合已配置 IMU 的角速度、加速度或姿态观测，按坐标与协方差解释数据。"
+    }
+  ],
+  "summary": "用扩展或无迹卡尔曼滤波融合机器人状态观测。",
+  "description": "## 功能\n\nrobot_localization 是 ROS 的非线性状态估计包，提供 EKF 与 UKF 路径来融合机器人传感器观测。输入通常包含里程计与 IMU 等信息，需要正确设置坐标变换、协方差和观测项。\n\n## 边界\n\n滤波输出依赖输入标定、时间一致性与配置，不能自动替代地图构建或全局重定位。它可提供导航需要的状态估计，但单独运行不构成完整 SLAM 系统。\n\n## 参考\n\n- [robot_localization：官方仓库](https://github.com/cra-ros-pkg/robot_localization)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://github.com/cra-ros-pkg/robot_localization"
+}

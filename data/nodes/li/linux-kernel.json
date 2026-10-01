@@ -36,14 +36,32 @@
     {
       "relation_type": "implements",
       "target_id": "scheduler"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "copy-on-write"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "context-switch"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "memory-barrier"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-fault",
+      "context": "异常处理路径检查合法映射，完成必要分配或报告访问错误。"
     }
   ],
-  "summary": "开源操作系统内核，今日主导服务器、云与嵌入式基础设施。",
+  "summary": "提供进程、内存、文件、设备与网络机制的 Linux 内核。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "1991-09-17",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-01",
   "importance": 5,
   "popular": 97,
-  "official_site": "https://kernel.org"
+  "official_site": "https://kernel.org",
+  "description": "## 机制\n\n内核处理系统调用与异常，管理任务执行、页表、内存回收和设备资源。页故障路径判断按需映射、写时复制或非法访问，并修复映射或报告错误。\n\n## 边界与应用\n\n内核不等于完整发行版，不同配置、架构和版本能力有别。内核屏障与用户态语言同步规范也不能直接互换。\n\n## 参考\n\n- [Linux 页表文档](https://docs.kernel.org/mm/page_tables.html)\n- [Linux 内存屏障说明](https://docs.kernel.org/core-api/wrappers/memory-barriers.html)"
 }

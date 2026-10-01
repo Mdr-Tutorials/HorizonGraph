@@ -1,0 +1,28 @@
+{
+  "id": "impulse-response",
+  "name": "Impulse Response",
+  "aliases": [
+    "脉冲响应",
+    "冲激响应"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    }
+  ],
+  "summary": "系统对单位脉冲输入的响应。",
+  "description": "脉冲响应是系统对单位冲激或离散单位脉冲的输出。对于零状态 LTI 系统，它足以通过卷积确定任意适当输入的响应，连续与离散情形使用积分或求和。\n\n一般非线性或时变系统不能只靠一个脉冲响应描述全部行为。测量中的有限带宽、噪声和初始状态也会影响估计，实验脉冲只能近似数学理想冲激。\n\n参考：[MIT 卷积讲义](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec08/)；[MIT 系统定义](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec01/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec08/"
+}

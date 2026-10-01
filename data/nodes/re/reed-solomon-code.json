@@ -1,0 +1,32 @@
+{
+  "id": "reed-solomon-code",
+  "name": "Reed–Solomon Code",
+  "aliases": [
+    "里德－所罗门码",
+    "RS 码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-code",
+      "context": "在较大有限域上构造线性码字，并用代数校验与译码处理符号错误。"
+    }
+  ],
+  "summary": "在有限域符号上构造的代数纠错码。",
+  "description": "Reed–Solomon 码可通过有限域多项式求值构造，其符号而非单独比特是基本纠错单位。经典 [n,k] RS 码最小距离为 n-k+1，对错误和已知擦除有对应的恢复界限。\n\n把一组比特作为一个有限域符号时，突发错误可能集中在少数符号中，但表现依交织和布局而变。缩短、穿孔及字段表示需明确，不能把所有配置都当成相同参数的标准 RS 码。\n\n参考：[MathWorks RS 编码器](https://www.mathworks.com/help/comm/ref/comm.rsencoder-system-object.html)；[Reed 与 Solomon 原始论文](https://doi.org/10.1137/0108018)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.mathworks.com/help/comm/ref/comm.rsencoder-system-object.html",
+  "abbreviation": "RS"
+}

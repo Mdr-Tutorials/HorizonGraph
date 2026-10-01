@@ -1,0 +1,39 @@
+{
+  "id": "next-generation-sequencing",
+  "name": "Next-generation Sequencing",
+  "aliases": [
+    "下一代测序",
+    "高通量测序"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dna-sequencing",
+      "context": "进行大规模 DNA 序列读取时采用具体平台的 DNA 测序方法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fastq",
+      "context": "常见读段交换流程用 FASTQ 同时记录序列及逐碱基质量。"
+    }
+  ],
+  "summary": "以大规模并行读取产生大量核酸序列的技术统称。",
+  "description": "## 机制\n\nNGS 泛指一组高通量测序技术，通过并行获取大量 DNA 或 RNA 相关读段提高测量规模。平台的读长、错误模式和实验流程不同，计算方法要根据实际数据选择。\n\n## 边界与应用\n\nNGS 不是单一设备、固定文件格式或固定读长。第二代与第三代的命名边界在资料中存在差异；高通量也不自动消除偏差，质量控制及实验设计仍是必要环节。\n\n## 参考\n\n- [EMBL-EBI：下一代测序](https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/next-generation-sequencing/)",
+  "importance": 4,
+  "official_site": "https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/next-generation-sequencing/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abbreviation": "NGS"
+}

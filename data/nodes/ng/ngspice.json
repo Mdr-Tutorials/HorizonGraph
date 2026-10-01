@@ -1,0 +1,33 @@
+{
+  "id": "ngspice",
+  "name": "ngspice",
+  "aliases": [
+    "ngspice"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spice",
+      "context": "沿用 SPICE 的网表、器件模型与分析流程进行电路仿真。"
+    }
+  ],
+  "summary": "支持网表、器件模型与多种分析模式的开源 SPICE 仿真器。",
+  "description": "ngspice 延续 SPICE 电路仿真路线，读取网表、预处理参数与子电路，建立电路结构和矩阵，再执行仿真及结果处理。项目提供命令行、交互控制与共享库相关文档。\n\n器件模型、方言兼容模式和仿真选项具有明确支持边界。模拟结果与实际硬件的一致性仍依赖模型及输入条件，开源并不消除收敛和数值精度问题。\n\n参考：[ngspice：用户手册与内部流程](https://ngspice.sourceforge.io/docs.html)；[UC Berkeley：SPICE 用户指南](https://bwrcs.eecs.berkeley.edu/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ngspice.sourceforge.io/docs.html",
+  "abstraction_level": "application_tool"
+}

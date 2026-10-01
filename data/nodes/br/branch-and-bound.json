@@ -1,0 +1,37 @@
+{
+  "id": "branch-and-bound",
+  "name": "Branch and Bound",
+  "aliases": [
+    "分支定界"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-programming",
+      "context": "在整数线性规划中解连续松弛，为分支子问题计算目标界限。"
+    }
+  ],
+  "summary": "利用子问题界限剪枝的离散优化搜索方法。",
+  "description": "分支定界把候选集合拆成子问题，以松弛或其他方法计算可达到目标的界限。当前最佳可行解提供比较基准，无法改善它的分支可以删除，剩余分支继续细分。\n\n有效界限能够缩小搜索，但最坏情况下仍可能探索大量节点。整数线性规划常使用 LP 松弛；更一般的分支定界也可使用其他可证明界限，不限于线性模型。\n\n参考：[MIT 运筹优化讲义](https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/)；[OR-Tools 混合整数模型](https://developers.google.com/optimization/mip/mip_example)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/"
+}

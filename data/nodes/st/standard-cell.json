@@ -1,0 +1,38 @@
+{
+  "id": "standard-cell",
+  "name": "Standard Cell",
+  "aliases": [
+    "标准单元"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logic-gate",
+      "context": "标准单元库以与非、反相等组合门单元提供逻辑功能。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "flip-flop",
+      "context": "时序单元库提供保持寄存器状态的触发器单元。"
+    }
+  ],
+  "summary": "按工艺预设计并表征的逻辑和时序电路单元。",
+  "description": "标准单元库提供逻辑门、触发器等预设计单元的逻辑、时序与物理视图。综合选择和连接单元，物理实现安排位置与布线。库会针对工艺及性能、功耗、面积目标提供不同变体，不能将不同库或工作角的时序数据直接互换。\n\n参考：[SkyWater：标准单元库](https://skywater-pdk.readthedocs.io/en/main/contents/libraries.html)；[OpenROAD Flow Scripts 教程](https://openroad-flow-scripts.readthedocs.io/en/latest/tutorials/FlowTutorial.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://skywater-pdk.readthedocs.io/en/main/contents/libraries.html"
+}

@@ -5,12 +5,15 @@
   "type": "model_family",
   "ecosystems": [
     "open-source-ai-ecosystem",
-    "ai_data_science"
+    "ai_data_science",
+    "bioinformatics-ecosystem"
   ],
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "bioinformatics",
+    "computational-biology"
   ],
-  "abstraction_level": "runtime_vm",
+  "abstraction_level": "framework_library",
   "relations": [
     {
       "relation_type": "is_instance_of",
@@ -19,11 +22,22 @@
     {
       "relation_type": "developed_by",
       "target_id": "google"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "protein-structure-prediction"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sequence-alignment",
+      "context": "AlphaFold 2 的进化信息处理利用多序列比对；这不代表模型族所有版本及输入都采取同一流程。"
     }
   ],
-  "summary": "蛋白质结构预测模型族，AI4Science 的里程碑。",
+  "summary": "用学习模型预测蛋白质及相关生物分子结构的模型族。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\nAlphaFold 是结构预测模型族。AlphaFold 2 结合序列、多序列比对等信息学习蛋白的空间结构；AlphaFold 3 进一步以不同架构预测包含多种生物分子的相互作用结构，两者的范围和软件条件需分别辨识。\n\n## 边界与应用\n\n预测不等同于实验结构、分子运动轨迹或功能验证，局部和相对位置的置信度应分别查看。AlphaFold 模型、开源实现与 AlphaFold Protein Structure Database 是不同实体；适用输入和许可应按具体版本核对。\n\n## 参考\n\n- [Jumper 等：AlphaFold 2 结构预测](https://www.nature.com/articles/s41586-021-03819-2)\n- [EMBL-EBI：AlphaFold 数据库 FAQ](https://alphafold.ebi.ac.uk/faq)\n- [Abramson 等：AlphaFold 3 生物分子相互作用预测](https://www.nature.com/articles/s41586-024-07487-w)\n- [Google DeepMind：AlphaFold 2 官方代码](https://github.com/google-deepmind/alphafold)",
+  "official_site": "https://github.com/google-deepmind/alphafold"
 }

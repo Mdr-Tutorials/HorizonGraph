@@ -24,14 +24,28 @@
     {
       "relation_type": "implements",
       "target_id": "public-key-cryptography"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "hmac"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "certificate-chain",
+      "context": "证书验证接口按配置的信任锚和策略构建或验证 X.509 认证路径。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ocsp"
     }
   ],
-  "summary": "实现 TLS 与公钥算法的开源密码库。",
+  "summary": "提供密码 API、TLS 和证书验证能力的开源库及工具。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "1998-12-23",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-01",
   "importance": 4,
   "popular": 85,
-  "official_site": "https://www.openssl.org"
+  "official_site": "https://www.openssl.org",
+  "description": "## 机制\n\nOpenSSL 将 libcrypto 密码操作、libssl 协议功能与命令行工具组合起来。EVP 接口及提供者机制组织算法，verify 和 ocsp 等命令支持证书路径及状态处理。\n\n## 边界与应用\n\n库支持某算法不代表应用已经正确选择参数、信任锚和身份验证规则。配置、可用提供者及版本影响能力，命令行展示结果也不能替代应用完整的证书策略。\n\n## 参考\n\n- [OpenSSL API 架构](https://docs.openssl.org/3.6/man7/ossl-guide-introduction/)\n- [OpenSSL HMAC 实现](https://docs.openssl.org/3.6/man7/EVP_MAC-HMAC/)\n- [OpenSSL 证书验证](https://docs.openssl.org/3.6/man1/openssl-verify/)\n- [OpenSSL OCSP 工具](https://docs.openssl.org/3.6/man1/openssl-ocsp/)"
 }

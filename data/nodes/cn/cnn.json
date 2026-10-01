@@ -1,6 +1,7 @@
 {
   "id": "cnn",
   "name": "Convolutional Neural Network",
+  "abbreviation": "CNN",
   "display_primary": "CNN",
   "display_secondary": "卷积神经网络",
   "aliases": [
@@ -9,11 +10,13 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "ai_data_science"
+    "ai_data_science",
+    "signal-processing-ecosystem"
   ],
   "domains": [
     "machine-learning",
-    "computer-vision"
+    "computer-vision",
+    "signal-processing"
   ],
   "relations": [
     {
@@ -27,11 +30,23 @@
     {
       "relation_type": "alternative_to",
       "target_id": "transformer"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backpropagation",
+      "context": "训练可微卷积网络时，用反向传播计算卷积核及其他参数的损失梯度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "convolution",
+      "context": "利用局部滑动核与参数共享构造卷积层；常见框架按互相关实现，核是否翻转需按接口定义理解。"
     }
   ],
-  "summary": "利用卷积核与池化提取局部空间特征的神经网络架构，计算机视觉基石。",
+  "summary": "用局部连接与共享卷积核学习空间特征的神经网络架构。",
+  "description": "卷积神经网络以局部连接和参数共享提取空间或序列特征，再组合成更大范围的表示。常见深度学习接口实际计算的是互相关，卷积这一名称沿用架构习惯；池化、步幅和膨胀率会改变分辨率与感受野。\n\nCNN 可用于分类、检测与分割，也可处理适当的一维信号；ResNet 通过残差连接支持深层特征学习，任务头和训练目标决定具体输出。共享权重在理想条件下具有平移等变性，但边界、下采样和输入变换都会影响这一性质。\n\n反向传播用于训练参数，数据增强与验证集用于检查泛化。CNN 并非自动对全部几何变换不变，也不会仅凭使用卷积保证鲁棒性；性能需要在具体数据分布和任务指标上评估。\n\n参考：[PyTorch Conv2d](https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv2d.html)；[ResNet 原论文](https://arxiv.org/abs/1512.03385)；[TorchVision 模型](https://docs.pytorch.org/vision/stable/models.html)。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.pytorch.org/docs/stable/generated/torch.nn.modules.conv.Conv2d.html"
 }

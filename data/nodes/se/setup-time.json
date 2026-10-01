@@ -1,0 +1,33 @@
+{
+  "id": "setup-time",
+  "name": "Setup Time",
+  "aliases": [
+    "建立时间"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "flip-flop",
+      "context": "规定输入相对采样边沿的提前稳定要求。"
+    }
+  ],
+  "summary": "采样时钟边沿前输入必须有效且稳定的时间要求。",
+  "description": "建立时间描述时序单元在采样时钟边沿之前对输入稳定性的要求。同步路径的最大延迟须连同时钟偏斜和不确定性满足该要求，才能得到非负建立裕量。这里描述器件约束，不把它与整个路径的建立裕量混为一谈。\n\n参考：[MIT 6.004：时序逻辑](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c5/c5s1/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c5/c5s1/"
+}

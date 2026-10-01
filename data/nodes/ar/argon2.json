@@ -1,0 +1,28 @@
+{
+  "id": "argon2",
+  "name": "Argon2",
+  "aliases": [
+    "Argon2 密码哈希",
+    "Argon2id"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "以可配置内存和计算成本提高密码猜测的代价。",
+  "description": "## 机制\n\nArgon2 把密码、盐与成本参数映射到哈希结果，提供 d、i、id 等变体；Argon2id 综合两种访存策略。内存、迭代和并行度共同决定实现成本与可接受认证延迟。\n\n## 边界与应用\n\n它不是可逆密码加密，弱密码仍可被猜测。参数应依据实际资源和并发负载测量，避免照搬一个值；记录算法版本、盐和参数，便于验证与后续升级。\n\n## 参考\n\n- [RFC 9106：Argon2](https://www.rfc-editor.org/rfc/rfc9106.html)\n- [OWASP：密码存储与 bcrypt](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)",
+  "importance": 4,
+  "official_site": "https://www.rfc-editor.org/rfc/rfc9106.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ]
+}

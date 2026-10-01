@@ -18,11 +18,17 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cve",
+      "context": "组件与版本识别后可关联 CVE 和厂商公告调查已知漏洞，仍需确认实际受影响范围。"
     }
   ],
-  "summary": "软件成分的完整清单，供应链安全的账本。",
+  "summary": "记录软件组成和依赖，支撑供应链追踪与漏洞比对。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "## 机制\n\nSBOM 以结构化形式列出组件、版本和关系，帮助接收方了解某个工件的组成。SPDX 等格式支持交换和后续分析，可与漏洞公告及其他证据组合。\n\n## 边界与应用\n\n清单不自动完整、准确或实时，需明确生成时间和覆盖边界。组件匹配 CVE 不代表必然可利用，实际版本、配置与可达性还需确认；SBOM 也不是安全认证。\n\n## 参考\n\n- [SPDX：SBOM 与安全应用](https://spdx.dev/learn/areas-of-interest/security/)"
 }

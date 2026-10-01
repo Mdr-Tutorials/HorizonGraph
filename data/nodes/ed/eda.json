@@ -11,17 +11,35 @@
     "hardware_iot"
   ],
   "domains": [
-    "industry-landscape"
+    "industry-landscape",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logic-synthesis",
+      "context": "在数字实现流程中把可综合 RTL 转为目标网表。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "place-and-route",
+      "context": "在数字芯片或 FPGA 流程中落实逻辑资源和互连。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-timing-analysis",
+      "context": "在数字设计中根据库与约束检查建立、保持等时序要求。"
     }
   ],
-  "summary": "芯片设计的软件工具链，三巨头垄断的市场。",
+  "summary": "辅助电路设计、验证与实现的电子设计自动化方法和工具链。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "EDA 将电路建模、验证、综合、物理实现和签核等任务交给软件工具。数字流程可由 RTL 经综合到布局布线，ASIC 制造前还需要工艺相关检查；EDA 也覆盖模拟、混合信号和板级设计。Yosys 与 OpenROAD 展示开放实现路径，不把整个领域描述为某几家公司的市场口号。\n\n参考：[Synopsys：ASIC 设计流程](https://www.synopsys.com/glossary/what-is-asic-design.html)；[OpenROAD 官方仓库与流程说明](https://github.com/The-OpenROAD-Project/OpenROAD)；[SkyWater SKY130 PDK 文档](https://skywater-pdk.readthedocs.io/en/main/)。"
 }

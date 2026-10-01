@@ -1,0 +1,32 @@
+{
+  "id": "inductor",
+  "name": "Inductor",
+  "aliases": [
+    "电感器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impedance",
+      "context": "在线性、正弦稳态模型中，以 jωL 表示电感的端口关系。"
+    }
+  ],
+  "summary": "通过磁场储能、使端口电压与电流变化率相关的元件。",
+  "description": "理想电感满足 V=L·dI/dt，磁场储能为 LI²/2。它可储存开关电源每周期传输的能量，也可与电容组成滤波或谐振网络。\n\n实际器件具有绕组电阻、磁芯损耗和寄生电容；磁饱和会改变电感值。理想直流稳态短路模型不能替代对额定电流与温升的评估。\n\n参考：[OpenStax：自感与电感器](https://openstax.org/books/university-physics-volume-2/pages/14-2-self-inductance-and-inductors)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://openstax.org/books/university-physics-volume-2/pages/14-2-self-inductance-and-inductors"
+}

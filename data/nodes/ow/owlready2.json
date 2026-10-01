@@ -1,0 +1,39 @@
+{
+  "id": "owlready2",
+  "name": "Owlready2",
+  "aliases": [
+    "Owlready2 Python 本体库"
+  ],
+  "type": "library",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "owl",
+      "context": "读取和构造本体类、属性、个体及相关公理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "以 Python 对象和接口组织本体工作流。"
+    }
+  ],
+  "summary": "用 Python 对象操作 OWL 本体并连接推理工具。",
+  "description": "Owlready2 提供在 Python 中加载和操作 OWL 本体的接口，并可与相应推理工具相接。Python 对象访问方式与本体的逻辑语义需要分别理解。\n\n声明封闭世界处理或执行推理等功能具有明确范围和条件。不能把库中一个操作的缺省行为直接当作所有 OWL 数据的语义，外部引擎和运行依赖也应核实。\n\n## 参考\n\n- [Owlready2：文档](https://owlready2.readthedocs.io/en/latest/)\n- [W3C：OWL 2 入门](https://www.w3.org/TR/owl2-primer/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://owlready2.readthedocs.io/"
+}

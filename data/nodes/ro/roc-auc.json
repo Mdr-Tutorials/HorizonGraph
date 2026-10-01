@@ -1,0 +1,35 @@
+{
+  "id": "roc-auc",
+  "name": "ROC AUC",
+  "aliases": [
+    "ROC 曲线下面积",
+    "受试者工作特征曲线下面积",
+    "Area Under the ROC Curve"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ml-evaluation-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "classification-recall",
+      "context": "在扫描二分类阈值时，将真正率即召回率作为 ROC 曲线纵坐标。"
+    }
+  ],
+  "summary": "汇总跨阈值分类得分的排序区分能力。",
+  "description": "ROC 曲线随阈值变化绘出真正率与假正率，ROC AUC 汇总其下方面积。二分类时，它可解释为随机正例得分高于随机负例得分的概率，平分情况通常按半次正确排序计算。\n\n应输入连续决策分数或正类概率，硬类别标签会丢失大部分排序信息。AUC 高不保证选定阈值的精确率，也不说明概率已校准；极不平衡任务还应检查精确率召回率曲线和实际误报数量。多分类需声明 OvR/OvO、类别顺序及平均方式。\n\n参考：[scikit-learn roc_auc_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "AUC"
+}

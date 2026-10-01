@@ -1,0 +1,32 @@
+{
+  "id": "fieldbus",
+  "name": "Fieldbus",
+  "aliases": [
+    "现场总线"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "modbus",
+      "context": "在采用 Modbus 的现场串行通信系统中，以功能码和寄存器数据进行控制器与设备交换。"
+    }
+  ],
+  "summary": "连接工业现场设备与控制系统的数字通信网络类别。",
+  "description": "现场总线为传感器、执行器、驱动与控制器提供数字数据交换，涉及地址、介质访问、设备模型及诊断等约定。不同总线在拓扑、速率与实时机制上存在差异。\n\n总线只是通信链，应用语义、安全及过程控制还需其他层次。串行 Modbus、CAN 及工业以太网不能简单视为同一种帧、物理层或时间保证。\n\n参考：[PI：现场总线与工业以太网技术](https://www.profibus.com/technologies)；[NIST SP 800-82 Rev.3：OT 系统架构](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.profibus.com/technologies"
+}

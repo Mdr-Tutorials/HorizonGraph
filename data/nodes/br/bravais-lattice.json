@@ -1,0 +1,33 @@
+{
+  "id": "bravais-lattice",
+  "name": "Bravais Lattice",
+  "aliases": [
+    "布拉维点阵",
+    "布拉菲格子"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-cell",
+      "context": "通过晶胞形状和中心化方式表达不同点阵类型。"
+    }
+  ],
+  "summary": "按平移与对称特征分类周期点阵。",
+  "description": "布拉维点阵类型描述周期点阵在几何和对称方面的类别。三维通常区分十四种类型，但它们并不穷尽晶体结构，因为实际结构还包含放置在点阵上的原子基元。\n\n体心、面心等惯用胞表达可以让对称性更直观。讨论晶胞、点阵和原子结构时应区分对象，避免把点阵分类直接当作材料组成或电子性质。\n\n## 参考\n\n- [IUCr：布拉维点阵](https://dictionary.iucr.org/Bravais_lattice)\n- [IUCr：晶胞](https://dictionary.iucr.org/Unit_cell)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

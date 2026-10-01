@@ -1,0 +1,48 @@
+{
+  "id": "finite-element-method",
+  "name": "Finite Element Method",
+  "aliases": [
+    "有限元法",
+    "FEM"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-mesh",
+      "context": "用单元及其连接关系构造有限维近似空间并组装全局方程。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numerical-integration",
+      "context": "计算弱形式中的单元积分和载荷积分。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sparse-linear-solver",
+      "context": "求解局部组装产生的大规模稀疏线性系统。"
+    }
+  ],
+  "summary": "以局部基函数和弱形式近似场方程的方法。",
+  "description": "有限元法把几何域划分成单元，在有限维函数空间中近似解，并通过弱形式组装代数系统。它可用于弹性、热传导和流体等方程，不是专属于某一种材料或某个软件。\n\n边界条件、单元类型、积分精度和网格质量都会影响结果。网格加密是误差检查的一部分，线性系统收敛并不证明物理模型或离散方案正确。\n\n参考：[DOLFINx Poisson 示例](https://docs.fenicsproject.org/dolfinx/main/python/demos/demo_poisson.html)；[PETSc 有限元基础设施](https://petsc.org/release/manualpages/FE/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.fenicsproject.org/dolfinx/main/python/demos/demo_poisson.html"
+}

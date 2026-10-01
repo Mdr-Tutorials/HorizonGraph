@@ -1,0 +1,38 @@
+{
+  "id": "description-logic",
+  "name": "Description Logic",
+  "aliases": [
+    "描述逻辑"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "first-order-logic",
+      "context": "在其相关逻辑片段中表达概念与关系的形式语义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logical-entailment",
+      "context": "判断类别包含和实例关系是否由公理必然推出。"
+    }
+  ],
+  "summary": "以概念、角色和个体组织可计算的逻辑表示。",
+  "description": "描述逻辑是一族知识表示形式，使用概念、关系与个体表达结构，并为类别包含、可满足性和实例归属等问题提供形式语义。不同片段的表达力与推理复杂度不同。\n\nOWL 2 DL 与描述逻辑相接，但不是所有 OWL 用法都属于同一可判定片段。模型中的公理表达含义与必然结论，不能自动当作数据库完整性检查。\n\n## 参考\n\n- [描述逻辑研究者：表示与推理](https://iccl.inf.tu-dresden.de/web/LATPub364/en)\n- [W3C：OWL 2 profiles](https://www.w3.org/TR/owl2-profiles/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abbreviation": "DL"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "inter-process-communication",
+  "name": "Inter-Process Communication",
+  "aliases": [
+    "进程间通信"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "socket",
+      "context": "本地或远程进程可以采用套接字交换消息；此边只描述 IPC 的一种实现选择。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "semaphore",
+      "context": "共享内存进程可用进程共享信号量协调访问，不是所有 IPC 的必选项。"
+    }
+  ],
+  "summary": "通过消息或共享内存跨越进程地址空间交换信息。",
+  "description": "## 机制\n\n常见方式包括管道、消息队列、共享内存和套接字。消息方式由内核或运行时传递数据；共享内存让多个进程映射同一存储区，再用同步机制协调访问。\n\n## 边界与应用\n\n共享内存减少复制，却不自动解决竞态；消息接口也有容量、阻塞、权限和生命周期。Linux 的 System V IPC 只是 IPC 家族之一，不包含所有管道或套接字机制。\n\n## 参考\n\n- [Linux System V IPC 手册](https://man7.org/linux/man-pages/man7/sysvipc.7.html)",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man7/sysvipc.7.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "abbreviation": "IPC"
+}

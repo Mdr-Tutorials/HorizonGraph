@@ -10,21 +10,25 @@
   "type": "concept",
   "domains": [
     "high-performance-computing",
-    "industry-landscape"
+    "industry-landscape",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "digital-design-concept"
     },
     {
-      "relation_type": "governs",
-      "target_id": "chiplet"
+      "relation_type": "uses",
+      "target_id": "through-silicon-via",
+      "context": "在采用硅中介层或穿硅垂直互连的部分 2.5D/3D 封装方案中使用 TSV，非所有封装的必选。"
     }
   ],
-  "summary": "超越单芯片物理微缩极限，在微米级中介层上集成异构芯粒的工艺。",
+  "summary": "通过封装互连和堆叠集成多个裸片的技术集合。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "先进封装涵盖中介层集成、3D 堆叠和扇出等技术，在封装层连接逻辑、存储及其他裸片。TSMC 3DFabric 的 CoWoS、SoIC 与 InFO 是具体例子。芯粒是系统分解与集成的设计单元，封装是实现互连的技术，两者不能仅用相邻主题推成普遍组成关系。\n\n参考：[TSMC：3DFabric](https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/3DFabric.htm)；[TSMC：CoWoS](https://www.tsmc.com/english/dedicatedFoundry/technology/cowos)。"
 }

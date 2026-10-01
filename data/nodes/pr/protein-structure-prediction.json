@@ -1,0 +1,33 @@
+{
+  "id": "protein-structure-prediction",
+  "name": "Protein Structure Prediction",
+  "aliases": [
+    "蛋白质结构预测"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sequence-alignment",
+      "context": "采用进化信息或模板的预测路线用序列比对建立同源或多序列约束；不是所有方法都要求此步骤。"
+    }
+  ],
+  "summary": "用计算方法推断蛋白质可能的三维结构。",
+  "description": "## 机制\n\n蛋白质结构预测根据氨基酸序列以及适用的进化、模板或物理信息估计三维构象。方法包括模板建模、物理模型及学习模型，输出可附带不同层次的置信评估。\n\n## 边界与应用\n\n预测结构不等同于实验解析或分子的真实动态过程。局部可靠性、结构域相对位置、无序区域和环境条件需分别考虑，结构预测本身不直接证明功能、相互作用或临床效果。\n\n## 参考\n\n- [Jumper 等：AlphaFold 2 结构预测](https://www.nature.com/articles/s41586-021-03819-2)\n- [EMBL-EBI：AlphaFold 数据库 FAQ](https://alphafold.ebi.ac.uk/faq)",
+  "importance": 4,
+  "official_site": "https://www.nature.com/articles/s41586-021-03819-2",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics",
+    "computational-biology"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

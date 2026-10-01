@@ -1,0 +1,32 @@
+{
+  "id": "geographic-coordinate-system",
+  "name": "Geographic Coordinate System",
+  "aliases": [
+    "地理坐标系"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "geospatial-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geodetic-datum",
+      "context": "经纬度依赖所声明基准确定参考曲面与地球之间的联系。"
+    }
+  ],
+  "summary": "以经纬度等角度坐标及地球基准表达位置。",
+  "description": "## 机制\n\n地理 CRS 常以经度、纬度和可选高度表达位置，并关联参考椭球与大地基准。完整定义还包含轴顺序和单位，因此两列角度数值不足以完整描述一个 CRS。\n\n## 边界与应用\n\n经纬度的度数不是固定长度单位。测距、面积或跨基准叠加需采用适当大地计算或投影；GeoJSON 等格式也可能规定与一般 CRS 定义不同的轴顺序约定。\n\n## 参考\n\n- [QGIS：坐标参考系](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html)\n- [PROJ：坐标参考对象](https://proj.org/en/stable/specifications/projjson.html)",
+  "importance": 4,
+  "official_site": "https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ]
+}

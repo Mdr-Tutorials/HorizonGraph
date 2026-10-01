@@ -1,0 +1,39 @@
+{
+  "id": "f1-score",
+  "name": "F1 Score",
+  "aliases": [
+    "F1 分数",
+    "F1 值",
+    "F-measure"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ml-evaluation-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "classification-precision",
+      "context": "将同一正类与同一统计口径下的精确率作为调和平均的一项。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "classification-recall",
+      "context": "将同一正类与同一统计口径下的召回率作为调和平均的一项。"
+    }
+  ],
+  "summary": "以调和平均结合精确率与召回率。",
+  "description": "F1=2PR/(P+R)，二分类时也可写为 2TP/(2TP+FP+FN)。调和平均使很低的精确率或召回率显著拉低分数；F1 在二者间给予对称权重，但不直接计入真阴性数量。\n\n它适合同时关注误报与漏报的分类比较。多分类的 macro F1 是各类 F1 的平均，不等于宏平均精确率与宏平均召回率的调和平均；不同汇总口径不能混比。F1 依赖阈值，且不代表概率校准或业务成本，零分母也需要明确约定。\n\n参考：[scikit-learn f1_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

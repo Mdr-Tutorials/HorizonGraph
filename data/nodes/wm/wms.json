@@ -1,0 +1,39 @@
+{
+  "id": "wms",
+  "name": "Web Map Service",
+  "aliases": [
+    "Web 地图服务"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "WMS 定义面向地图请求的 HTTP 接口，由服务端返回相应地图图像。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ogc",
+      "context": "该标准在组织的开放标准制定与维护流程下发布，具体版本和合规要求以对应规范为准。"
+    }
+  ],
+  "summary": "通过 HTTP 请求获取带地理参考的地图图像的接口标准。",
+  "description": "## 机制\n\nWMS 让客户端请求图层、区域、CRS 与样式等参数，服务器返回地图图像，并提供能力描述等操作。客户端可把来自不同服务的图像叠加显示。\n\n## 边界与应用\n\n地图图像通常不是原始要素或可直接分析的矢量数据。轴顺序与参数随版本和 CRS 规则变化；查询能力、样式和访问权限也要依据服务实际声明。\n\n## 参考\n\n- [OGC：Web Map Service](https://www.ogc.org/standards/wms/)",
+  "importance": 4,
+  "official_site": "https://www.ogc.org/standards/wms/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ],
+  "abbreviation": "WMS",
+  "abstraction_level": "framework_library"
+}

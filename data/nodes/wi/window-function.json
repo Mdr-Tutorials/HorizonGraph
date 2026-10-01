@@ -1,0 +1,33 @@
+{
+  "id": "window-function",
+  "name": "Window Function",
+  "aliases": [
+    "窗函数",
+    "加窗函数"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "spectral-leakage",
+      "context": "窗口的频域主瓣和旁瓣形状限定有限记录中频谱扩散与相邻成分可分辨程度。"
+    }
+  ],
+  "summary": "对有限片段施加权重以控制边缘与频谱特性。",
+  "description": "窗函数给有限信号片段施加权重，常用于频谱分析、STFT 和 FIR 设计。矩形、Hann、Hamming 等窗的主瓣宽度与旁瓣衰减不同，对时间截断后的频域扩散产生不同影响。\n\n压低旁瓣通常会扩大主瓣，不能无代价地提升全部分辨能力。幅度和功率估计需要相应归一化，分析窗与对称 FIR 设计窗的端点约定也可能不同。\n\n参考：[SciPy Hann 窗](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.windows.hann.html)；[SciPy 傅里叶计算](https://docs.scipy.org/doc/scipy/tutorial/fft.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.windows.hann.html"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "hapi-fhir",
+  "name": "HAPI FHIR",
+  "aliases": [
+    "HAPI FHIR Java API"
+  ],
+  "type": "library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fhir"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    }
+  ],
+  "summary": "用于构建 FHIR 客户端、服务端与数据处理的 Java 库。",
+  "description": "## 机制\n\nHAPI FHIR 提供 Java 的 FHIR 数据模型、解析与序列化能力，以及客户端和服务端接口。项目的服务端组件可用于建设 FHIR 数据服务，文档按不同能力与版本组织。\n\n## 边界与应用\n\n它与 HAPI HL7 V2 项目不同。数据模型支持、校验和服务端能力应按具体发行版核对；使用库不自动保证某一实施指南、安全策略或业务语义已经满足。\n\n## 参考\n\n- [HAPI FHIR：官方项目](https://github.com/hapifhir/hapi-fhir)\n- [HAPI FHIR：文档](https://hapifhir.io/hapi-fhir/docs/)",
+  "importance": 4,
+  "official_site": "https://github.com/hapifhir/hapi-fhir",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ogc",
+  "name": "Open Geospatial Consortium",
+  "aliases": [
+    "开放地理空间联盟"
+  ],
+  "type": "organization",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "组织地理空间开放标准与互操作活动的国际联盟。",
+  "description": "## 机制\n\nOGC 通过成员与工作组协作制定地理空间接口和编码标准，发布规范并组织互操作、测试等活动。WMS、WFS、GeoTIFF 和 GeoPackage 是可据此学习的具体标准入口。\n\n## 边界与应用\n\nOGC 是标准组织，不是一款 GIS 软件，也不代替数据生产者保证观测质量。标准的合规类别、版本与实现范围需要分别判断，组织归属不等于软件间必然兼容。\n\n## 参考\n\n- [OGC：组织与标准职责](https://www.ogc.org/about/overview/)",
+  "importance": 4,
+  "official_site": "https://www.ogc.org/about/overview/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ],
+  "abbreviation": "OGC"
+}

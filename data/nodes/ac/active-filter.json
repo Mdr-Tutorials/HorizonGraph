@@ -1,0 +1,37 @@
+{
+  "id": "active-filter",
+  "name": "Active Filter",
+  "aliases": [
+    "有源滤波器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "operational-amplifier",
+      "context": "在运放有源滤波拓扑中提供增益、缓冲或反馈。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rc-circuit",
+      "context": "在常见 RC 有源滤波拓扑中用电阻电容确定极点和零点。"
+    }
+  ],
+  "summary": "结合放大器与频率选择网络实现指定频率响应的电路。",
+  "description": "有源滤波器用运放等有源器件与电阻、电容网络形成低通、高通、带通等响应。放大器可提供增益或隔离负载，使滤波不完全由无源网络和负载共同决定。\n\n实际响应受运放增益带宽、噪声、输出范围和元件误差影响。用于采样前的抗混叠滤波时，需要按采样频率与带外信号设计衰减，而非认为任意低通都足够。\n\n参考：[MIT 6.002：滤波器](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l18/)；[MIT 6.002：运算放大器抽象](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l19/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l18/"
+}

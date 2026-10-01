@@ -1,0 +1,33 @@
+{
+  "id": "distributed-energy-resources",
+  "name": "Distributed Energy Resources",
+  "aliases": [
+    "分布式能源资源"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inverter",
+      "context": "在光伏或电池等直流资源接入交流电网的实现中，通过逆变器转换与调节功率。"
+    }
+  ],
+  "summary": "接入配电网或用户侧的小规模发电、储能等资源。",
+  "description": "DER 包括分布式光伏、储能及其他靠近用电位置的资源，区别于仅连接高压输电网的大型集中电源。资源的功率方向、可控性与时间特征各不相同。\n\n高比例 DER 接入会改变电压、潮流和保护条件。光伏或电池等直流资源通常借助逆变器接入交流网，但燃机等其他资源并不都采用相同转换结构。\n\n参考：[美国能源部：分布式能源与微电网](https://www.energy.gov/cmei/systems/solar-integration-distributed-energy-resources-and-microgrids-basics)；[EPRI：OpenDSS 与分布式能源仿真](https://opendss.epri.com/OpenDSSRepository.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.energy.gov/cmei/systems/solar-integration-distributed-energy-resources-and-microgrids-basics",
+  "abbreviation": "DER"
+}

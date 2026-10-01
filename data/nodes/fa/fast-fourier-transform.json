@@ -1,0 +1,43 @@
+{
+  "id": "fast-fourier-transform",
+  "name": "Fast Fourier Transform",
+  "aliases": [
+    "快速傅里叶变换",
+    "FFT"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "discrete-fourier-transform",
+      "context": "将待计算的 DFT 分解成较小的 DFT 子问题，并利用周期与对称结构组合结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "divide-and-conquer",
+      "context": "Cooley–Tukey 等 FFT 路线通过拆分序列和合并子变换降低运算量。"
+    }
+  ],
+  "summary": "通过结构分解高效计算离散傅里叶变换的算法族。",
+  "description": "FFT 利用 DFT 的代数结构，把较长变换分解为较小子变换并组合结果。常见算法把直接计算的二次复杂度降到近似 N log N，不限于长度为二的幂的序列。\n\nFFT 不改变 DFT 所包含的信息，也不会自动提高采样质量。长度因子、数据布局、并行和计划选择影响性能，数值误差和归一化仍需按实现约定处理。\n\n参考：[SciPy 傅里叶计算](https://docs.scipy.org/doc/scipy/tutorial/fft.html)；[FFTW 算法说明](https://www.fftw.org/fftw3_doc/Introduction.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.scipy.org/doc/scipy/tutorial/fft.html",
+  "abbreviation": "FFT"
+}

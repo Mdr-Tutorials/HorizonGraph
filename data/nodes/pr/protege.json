@@ -1,0 +1,34 @@
+{
+  "id": "protege",
+  "name": "Protégé",
+  "aliases": [
+    "Protégé 本体编辑器"
+  ],
+  "type": "tool",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "owl",
+      "context": "在 OWL 本体编辑路径中组织类、属性、个体与公理。"
+    }
+  ],
+  "summary": "提供本体建模、编辑和相关工具集成的软件。",
+  "description": "Protégé 是用于本体建模的工具体系，可创建和检查类、属性、个体与公理，并通过相应组件或插件连接推理能力。桌面与协作路径的能力及部署方式不同。\n\n编辑器帮助观察结构，不自动证明领域建模正确。推理结果要按选定引擎的语义与覆盖范围解释，数据校验和知识来源也需独立检查。\n\n## 参考\n\n- [Stanford：Protégé](https://protege.stanford.edu/)\n- [W3C：OWL 2 入门](https://www.w3.org/TR/owl2-primer/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://protege.stanford.edu/"
+}

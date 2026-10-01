@@ -1,0 +1,30 @@
+{
+  "id": "conditional-probability",
+  "name": "Conditional Probability",
+  "aliases": [
+    "条件概率"
+  ],
+  "type": "concept",
+  "domains": [
+    "mathematics",
+    "statistics",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mathematical-foundations"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "probability-distribution",
+      "context": "从联合分布计算给定观测下的条件分布时，按条件重新归一化概率。"
+    }
+  ],
+  "summary": "在已知事件条件下重新计算概率。",
+  "description": "当 P(B)>0 时，P(A|B)=P(A∩B)/P(B)。它将关注范围限制到条件事件 B，再在该范围内计算 A 的比例。P(A|B) 与 P(B|A) 的分母不同，通常不能交换；独立事件才满足 P(A|B)=P(A)。\n\n分类模型常估计给定特征后的类别概率。条件依赖描述统计信息，不自动证明因果作用。对连续变量的具体观测值，不能直接用零概率事件作分母，应使用条件密度或更一般的条件分布定义。\n\n参考：[Statlect 条件概率](https://www.statlect.com/fundamentals-of-probability/conditional-probability)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

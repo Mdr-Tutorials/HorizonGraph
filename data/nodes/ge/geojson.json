@@ -1,0 +1,33 @@
+{
+  "id": "geojson",
+  "name": "GeoJSON",
+  "aliases": [
+    "GeoJSON 地理数据格式"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vector-geospatial-data",
+      "context": "以几何与属性对象编码地理矢量要素，适合文件或 Web 数据交换。"
+    }
+  ],
+  "summary": "以 JSON 交换地理几何、要素和属性的数据格式。",
+  "description": "## 机制\n\nGeoJSON 定义 Geometry、Feature 与 FeatureCollection，支持点、线、面及其组合。RFC 7946 使用 WGS 84 经纬度坐标，位置数组按经度、纬度顺序，并可包含高度。\n\n## 边界与应用\n\n它是数据编码格式，不是传输层协议。RFC 7946 不提供任意 CRS 声明机制；跨日期变更线、几何有效性与坐标精度仍需处理，不能把任意投影坐标直接塞入经纬度字段。\n\n## 参考\n\n- [RFC 7946：GeoJSON 格式](https://www.rfc-editor.org/rfc/rfc7946.html)",
+  "importance": 4,
+  "official_site": "https://www.rfc-editor.org/rfc/rfc7946.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ],
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "convolution",
+  "name": "Convolution",
+  "aliases": [
+    "卷积"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fast-fourier-transform",
+      "context": "对较长有限序列进行卷积时，可在充分补零后用频域乘法计算线性卷积。"
+    }
+  ],
+  "summary": "把移位函数或序列按乘积积分或求和组合的运算。",
+  "description": "卷积通过反转、移位并累加两个函数或序列的乘积构造新结果。它刻画 LTI 系统输出，也用于概率分布和图像处理；离散线性卷积与循环卷积有不同边界语义。\n\n许多深度学习库名为卷积的算子实际计算互相关，不显式翻转核。用 FFT 实现线性卷积时需要充分补零，否则会发生循环回绕；边界填充也会改变输出。\n\n参考：[MIT 卷积讲义](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec08/)；[SciPy 卷积文档](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.convolve.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec08/"
+}

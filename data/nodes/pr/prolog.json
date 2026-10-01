@@ -10,7 +10,8 @@
   ],
   "domains": [
     "programming-languages",
-    "formal-methods"
+    "formal-methods",
+    "knowledge-engineering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -22,13 +23,24 @@
       "relation_type": "implements",
       "target_id": "programming-paradigm",
       "context": "逻辑编程范式的代表实现"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backward-chaining",
+      "context": "在典型逻辑程序求值路径中从查询目标展开规则和子目标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unification",
+      "context": "匹配查询、事实与规则中的结构化项及变量。"
     }
   ],
-  "summary": "逻辑编程语言，早期 AI 的主角。",
+  "summary": "以事实、规则和查询组织目标驱动的逻辑程序。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "1972-01-01",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
-  "popular": 42
+  "popular": 42,
+  "description": "Prolog 以事实、规则和查询组织逻辑程序，关系项与变量使程序可以从目标出发寻找替换和证明。语言与具体实现需区分，不同系统可能具有各自的模块、外部接口和扩展。\n\n典型求值采用目标驱动搜索与回溯，子目标及规则次序会影响终止和结果枚举。它与受限的经典 Datalog 求值不同，一次搜索失败也不能不加条件地视作现实世界中的否定。\n\n## 参考\n\n- [SWI-Prolog：逻辑程序与实现](https://www.swi-prolog.org/pldoc/man?section=overview)\n- [Poole 与 Mackworth：Datalog](https://artint.info/3e/html/ArtInt3e.Ch15.S4.html)\n- [Poole 与 Mackworth：证明与替换](https://artint.info/3e/html/ArtInt3e.Ch15.S5.html)"
 }

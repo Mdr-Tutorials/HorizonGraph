@@ -1,0 +1,28 @@
+{
+  "id": "state-of-charge",
+  "name": "State of Charge",
+  "aliases": [
+    "荷电状态"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "电池剩余可用电量相对规定满充容量的估计比例。",
+  "description": "SOC 表示电池当前剩余电量在指定容量参考下的比例。电量计可结合电流积分、电压、温度及电池模型进行估计，参考容量也可能随学习与老化变化。\n\nSOC 不是直接可见的通用电压刻度；负载、温度、迟滞和化学体系会影响电压与容量关系。报告百分比时应区分设计容量、当前满充容量和允许使用范围。\n\n参考：[Texas Instruments：荷电状态与健康状态的区别](https://www.ti.com/lit/pdf/SSZT854)；[Texas Instruments：电池电量计与状态估计](https://www.ti.com/product-category/battery-management-ics/battery-fuel-gauges/overview.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.ti.com/lit/pdf/SSZT854",
+  "abbreviation": "SOC"
+}

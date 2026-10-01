@@ -1,0 +1,37 @@
+{
+  "id": "medical-imaging-informatics",
+  "name": "Medical Imaging Informatics",
+  "aliases": [
+    "医学影像信息学"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dicom",
+      "context": "在设备和系统之间保留影像对象与采集上下文时采用 DICOM。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pacs",
+      "context": "在影像归档、检索和分发流程中使用 PACS 能力。"
+    }
+  ],
+  "summary": "管理医疗影像、元数据与采集阅片工作流程。",
+  "description": "## 机制\n\n医学影像信息学处理影像的采集、标识、归档、传输、显示和相关临床上下文，连接设备、存储与应用。数据管理需要保留检查、序列和实例之间的关联。\n\n## 边界与应用\n\n它不等同于计算机视觉算法或医学诊断。图像处理还须考虑采集参数、空间信息及可追溯性；像素能够显示不代表全部属性与工作流程已经正确连接。\n\n## 参考\n\n- [DICOM：范围与应用](https://dicom.nema.org/medical/dicom/current/output/chtml/part01/chapter_1.html)\n- [Orthanc：理解 DICOM](https://orthanc.uclouvain.be/book/dicom-guide.html)\n- [Orthanc：快速入门](https://orthanc.uclouvain.be/book/users/cookbook.html)",
+  "importance": 4,
+  "official_site": "https://dicom.nema.org/medical/dicom/current/output/chtml/part01/chapter_1.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ]
+}

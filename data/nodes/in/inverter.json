@@ -1,0 +1,32 @@
+{
+  "id": "inverter",
+  "name": "Power Inverter",
+  "aliases": [
+    "逆变器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pwm",
+      "context": "在 PWM 电压源逆变器中，以调制控制桥臂开关并形成所需交流分量。"
+    }
+  ],
+  "summary": "将直流电能转换为交流电能的功率转换器类别。",
+  "description": "逆变器用受控开关把直流侧电能转换为交流输出，可用于电机驱动、光伏并网和储能系统。调制、滤波及控制决定输出的幅值、频率和波形。\n\n并网跟随型与构网型控制具有不同角色；逆变器并不天然具备独立建立电网电压频率的能力。实际设备还需考虑开关损耗、死区、谐波和保护。\n\n参考：[Texas Instruments：DC-AC 与 AC-DC 实验电路手册](https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/196/TI-Power-Electronics-Board-_2800_User-Manual_2900_.pdf)；[美国能源部：微电网能量管理实例](https://www.energy.gov/cmei/systems/articles/success-story-using-renewable-microgrids-keep-lights)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/196/TI-Power-Electronics-Board-_2800_User-Manual_2900_.pdf"
+}

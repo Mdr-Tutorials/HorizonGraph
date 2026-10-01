@@ -1,0 +1,36 @@
+{
+  "id": "wai-aria",
+  "name": "Accessible Rich Internet Applications",
+  "abbreviation": "WAI-ARIA",
+  "aliases": [
+    "无障碍富互联网应用",
+    "ARIA"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "w3c-standards-ecosystem"
+  ],
+  "domains": [
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "w3c",
+      "context": "由 W3C 相应无障碍工作组按标准流程维护与发布。"
+    }
+  ],
+  "summary": "用角色、状态和属性表达动态 Web 界面的辅助技术语义。",
+  "description": "## 功能\n\nWAI-ARIA 为控件、结构和动态状态定义角色、状态及属性，使用户代理可以把信息提供给辅助技术。它适用于原生 HTML 不能完整表达的复杂交互语义。\n\n## 实现责任\n\n添加 role 不会自动产生键盘行为、焦点管理或样式。优先采用具有正确原生语义与行为的 HTML 元素；自定义控件需要开发者兑现相应交互约定，并在目标浏览器与辅助技术组合中测试。ARIA Authoring Practices Guide 提供实践模式，不能把其中每个示例视为跨平台兼容保证。\n\n## 参考\n\n- [W3C：WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/)\n- [WAI：ARIA 实践使用前须知](https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.w3.org/TR/wai-aria-1.2/"
+}

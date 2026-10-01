@@ -1,0 +1,31 @@
+{
+  "id": "linear-code",
+  "name": "Linear Code",
+  "aliases": [
+    "线性码",
+    "线性分组码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "在有限域上用向量空间、生成矩阵和校验矩阵描述码字；运算域与实数数值库不同。"
+    }
+  ],
+  "summary": "码字集合构成有限域向量空间的分组码。",
+  "description": "线性码的码字对有限域加法和数乘封闭，可用生成矩阵编码、校验矩阵刻画有效码字。二元码在 GF(2) 上运算，Reed–Solomon 等符号码使用更大的有限域。\n\n实数线性代数的数值运算不能直接替代有限域算法。线性结构便利编码和综合分析，但纠错性能还取决于最小距离、码率及译码方式，不能仅凭线性就判断好坏。\n\n参考：[MIT 线性码与容量](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/)；[MathWorks 分组码](https://www.mathworks.com/help/comm/ug/block-codes.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/"
+}

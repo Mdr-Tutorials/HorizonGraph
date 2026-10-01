@@ -1,0 +1,34 @@
+{
+  "id": "late-data",
+  "name": "Late Data",
+  "aliases": [
+    "迟到数据",
+    "迟到事件"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "watermark",
+      "context": "按事件时间处理时，用当前水位线判断记录所属窗口是否已越过触发时间。"
+    }
+  ],
+  "summary": "在时间进度超过相应事件或窗口之后到达的数据。",
+  "description": "## 机制\n\n事件到达顺序可以不同于事件时间；在 Flink 窗口中，水位线越过窗口末尾后到达的记录属于迟到数据。允许迟到可延长状态保留并触发结果更新，也可将超限记录送到旁路输出。\n\n## 边界与应用\n\n处理迟到数据会增加状态和结果修订成本。更新输出可能要求下游支持覆盖、撤回或幂等处理；默认丢弃、允许迟到和旁路收集都需按业务完整性要求选择。\n\n## 参考\n\n- [Flink：窗口与迟到数据](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/operators/windows/)",
+  "importance": 4,
+  "official_site": "https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/operators/windows/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "distributed-systems"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "low-noise-amplifier",
+  "name": "Low-Noise Amplifier",
+  "aliases": [
+    "低噪声放大器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impedance-matching",
+      "context": "根据噪声、增益与线性目标设计 LNA 输入输出网络，最低噪声匹配不必等于功率匹配。"
+    }
+  ],
+  "summary": "在弱信号接收链中兼顾增益、噪声与线性度的放大器。",
+  "description": "LNA 常布置于接收机较前端，使后级的噪声贡献相对降低。选型除噪声系数外，还应考虑增益、带宽、压缩、互调、功耗与阻抗。\n\n低噪声并不表示不增加噪声，也不能只按单一噪声系数比较完整接收机。输入匹配会影响噪声和增益，强干扰下线性范围也可能成为限制。\n\n参考：[Analog Devices：LNA 选择与性能权衡](https://www.analog.com/en/resources/app-notes/an-2622.html)；[Analog Devices：LNA 匹配与噪声系数](https://www.analog.com/en/resources/technical-articles/lownoise-amplifier-lna-matching-techniques-for-optimizing-noise-figures.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.analog.com/en/resources/app-notes/an-2622.html",
+  "abbreviation": "LNA"
+}

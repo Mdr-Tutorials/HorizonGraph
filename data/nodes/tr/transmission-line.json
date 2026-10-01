@@ -1,0 +1,32 @@
+{
+  "id": "transmission-line",
+  "name": "Transmission Line",
+  "aliases": [
+    "传输线"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impedance",
+      "context": "用特性阻抗与负载阻抗描述端口反射及沿线阻抗变换。"
+    }
+  ],
+  "summary": "以分布参数描述沿线传播、反射及阻抗变换的互连模型。",
+  "description": "传输线把电阻、电感、电导与电容按长度分布建模，信号以波传播。特性阻抗、传播常数、线长与终端共同决定端口响应和反射。\n\n判断是否需要传输线模型要比较传播时间与信号变化时间，而不只看载波频率。传输线输入阻抗一般随频率、长度及负载改变，不能等同于导线直流电阻。\n\n参考：[Michael Steer：传输线](https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)/03%3A_Transmission_Lines)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electronics/Fundamentals_of_Microwave_and_RF_Design_(Steer)/03%3A_Transmission_Lines"
+}

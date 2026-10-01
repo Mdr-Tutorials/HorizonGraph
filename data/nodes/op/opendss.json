@@ -1,0 +1,32 @@
+{
+  "id": "opendss",
+  "name": "OpenDSS",
+  "aliases": [
+    "OpenDSS"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "power-flow"
+    }
+  ],
+  "summary": "EPRI 开源的配电系统仿真器，支持分布式资源与时序分析。",
+  "description": "OpenDSS 面向公用电力配电系统建模和仿真，提供脚本及程序接口，便于把仿真引擎纳入其他分析流程。它用于评估网络、负荷及分布式能源接入。\n\n模型及求解模式需要与任务匹配，时间序列运行和单次稳态分析不是同一问题。接口形式随平台和实现而异，不能把 Windows COM 接口当作所有部署的唯一形态。\n\n参考：[EPRI：OpenDSS 介绍](https://opendss.epri.com/opendss_documentation.html)；[EPRI：OpenDSS 与分布式能源仿真](https://opendss.epri.com/OpenDSSRepository.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://opendss.epri.com/opendss_documentation.html",
+  "abstraction_level": "application_tool"
+}

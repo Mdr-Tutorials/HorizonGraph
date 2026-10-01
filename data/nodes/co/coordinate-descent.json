@@ -1,0 +1,37 @@
+{
+  "id": "coordinate-descent",
+  "name": "Coordinate Descent",
+  "aliases": [
+    "坐标下降"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regularization",
+      "context": "求解带可分离 L1 惩罚的 Lasso 目标时逐坐标更新参数。"
+    }
+  ],
+  "summary": "轮流优化单个变量或变量块的迭代方法。",
+  "description": "坐标下降固定其他变量，只优化一个坐标或一块变量，循环或随机选择更新对象。具有可分离正则项的稀疏线性模型常采用这种方法，单坐标子问题可比整体优化便宜。\n\n收敛依赖目标结构、坐标选择和子问题求解条件；相关特征及非凸耦合可能造成缓慢或不理想行为。它与沿全梯度方向更新的梯度下降有不同的计算与并行化取舍。\n\n参考：[scikit-learn Lasso 坐标下降](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html"
+}

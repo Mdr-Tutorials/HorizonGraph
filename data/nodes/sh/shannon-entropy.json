@@ -1,0 +1,36 @@
+{
+  "id": "shannon-entropy",
+  "name": "Shannon Entropy",
+  "aliases": [
+    "香农熵",
+    "信息熵"
+  ],
+  "type": "metric",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "probability-distribution",
+      "context": "按离散变量各取值概率计算负对数的加权平均。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "expected-value",
+      "context": "将样本自信息 -log p(X) 的期望作为熵的定义。"
+    }
+  ],
+  "summary": "离散随机变量自信息的期望值。",
+  "description": "离散 Shannon 熵为 H(X)=-Σp(x)log p(x)，零概率项按连续延拓计为零。对数以二为底时单位是 bit，描述已给概率分布下的平均不确定性，而不是单个样本的意义。\n\n连续变量的微分熵是不同对象，可能为负并依赖坐标尺度，不能直接当作离散平均码长。熵也不等同于交叉熵：后者使用另一分布描述样本，二者由 KL 散度联系。\n\n参考：[MIT 熵与散度](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_1/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_1/"
+}

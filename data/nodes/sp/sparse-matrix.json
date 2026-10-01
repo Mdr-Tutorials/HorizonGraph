@@ -1,0 +1,33 @@
+{
+  "id": "sparse-matrix",
+  "name": "Sparse Matrix",
+  "aliases": [
+    "稀疏矩阵"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "用矩阵向量运算表示图、离散场方程及大规模线性系统，同时保留非零结构。"
+    }
+  ],
+  "summary": "以少量非零元素为主要结构的矩阵及存储表示。",
+  "description": "稀疏矩阵的大部分元素为零，计算通常只存储非零值及索引。CSR、CSC、COO 等格式对逐行运算、列操作和增量构建各有取舍，重复条目和显式存储的零也要按接口语义处理。\n\n稀疏输入不保证分解后的因子同样稀疏，填充可能增加内存需求。按非零结构选算法和排序，比仅看矩阵维度更能判断求解成本。\n\n参考：[SciPy 稀疏数组](https://docs.scipy.org/doc/scipy/reference/sparse.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.scipy.org/doc/scipy/reference/sparse.html"
+}

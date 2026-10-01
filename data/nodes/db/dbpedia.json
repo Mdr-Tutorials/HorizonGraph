@@ -1,0 +1,39 @@
+{
+  "id": "dbpedia",
+  "name": "DBpedia",
+  "aliases": [
+    "DBpedia 知识项目"
+  ],
+  "type": "product",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "在语义数据发布路径中组织资源与关系。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linked-data",
+      "context": "通过资源标识和链接让知识数据可跨来源使用。"
+    }
+  ],
+  "summary": "从百科等来源组织和发布可链接知识数据的项目。",
+  "description": "DBpedia 通过提取和整合百科等来源的数据发布结构化知识，并提供本体、数据访问和相关基础设施。不同语言、提取路径及数据发布具有各自的覆盖范围。\n\n自动提取会继承源资料和映射中的缺失或错误。与其他知识库链接需要核查实体对应和版本，不能把提取结果直接当作已验证事实。\n\n## 参考\n\n- [DBpedia：项目介绍](https://www.dbpedia.org/about/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.dbpedia.org/"
+}

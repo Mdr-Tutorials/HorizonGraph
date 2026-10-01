@@ -6,25 +6,37 @@
   ],
   "type": "tool",
   "ecosystems": [
-    "ai_data_science"
+    "ai_data_science",
+    "scientific-computing-ecosystem"
   ],
   "domains": [
     "machine-learning",
-    "high-performance-computing"
+    "high-performance-computing",
+    "scientific-computing",
+    "computational-engineering",
+    "signal-processing"
   ],
   "abstraction_level": "application_tool",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "linear-algebra"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "runge-kutta-method"
     }
   ],
-  "summary": "矩阵计算商业环境，工科教学与仿真的标准工具。",
-  "description": "MATLAB 是 MathWorks 的商业软件，工科信号处理与控制理论教学的事实标准；Simulink 是其仿真子系统。",
+  "summary": "以数组计算、绘图与数值例程支持工程分析的环境。",
+  "description": "MATLAB 是 MathWorks 的数值计算语言与开发环境，以数组表达式、绘图和数值例程支持算法实验与工程分析。基础接口覆盖矩阵分解、线性方程及常微分方程；信号、控制等专业能力还由相应工具箱扩展。\n\node45 采用显式 Dormand–Prince Runge–Kutta 对，适合许多非刚性初值问题；刚性方程应考虑适合的求解器。矩阵求解通常应使用反斜杠等接口而非显式求逆。Simulink 是相关的模型与仿真产品，不能把所有仿真能力都视为 MATLAB 基础环境的内置功能。\n\n参考：[MATLAB 线性代数](https://www.mathworks.com/help/matlab/linear-algebra.html)；[MATLAB ode45](https://www.mathworks.com/help/matlab/ref/ode45.html)。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "1984-01-01",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-01",
   "importance": 4,
   "popular": 80,
   "official_site": "https://www.mathworks.com"

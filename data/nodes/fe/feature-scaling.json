@@ -1,0 +1,33 @@
+{
+  "id": "feature-scaling",
+  "name": "Feature Scaling",
+  "aliases": [
+    "特征缩放",
+    "特征标准化",
+    "Feature Standardization"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "statistical-variance",
+      "context": "标准化变体用训练样本估计的方差或标准差来统一各特征尺度。"
+    }
+  ],
+  "summary": "调整特征尺度以匹配优化或距离计算。",
+  "description": "特征缩放把输入转换到选定尺度。标准化常用 (x−μ)/σ，最小最大缩放则映射到指定区间；每个特征的标准化与每个样本向量的单位范数归一化是不同操作。\n\n它常影响 SVM、K-means 及带参数惩罚的模型；树的阈值划分通常不需要同样的缩放。均值、方差或上下界只能从训练数据估计，再用于验证与测试数据，交叉验证时也要在每个训练折重新拟合。异常值、零方差特征与部署时超出训练范围都需按变换规则处理。\n\n参考：[scikit-learn 预处理指南](https://scikit-learn.org/stable/modules/preprocessing.html#standardization-or-mean-removal-and-variance-scaling)；[StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4
+}

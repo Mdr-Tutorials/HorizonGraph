@@ -1,0 +1,32 @@
+{
+  "id": "resistor",
+  "name": "Resistor",
+  "aliases": [
+    "电阻器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ohms-law",
+      "context": "在欧姆性工作范围内，以电压与电流的线性关系建立电阻模型。"
+    }
+  ],
+  "summary": "以电阻限制电流、分配电压并耗散电能的无源元件。",
+  "description": "理想线性电阻器以 V=IR 描述端口关系，吸收的功率可写成 I²R 或 V²/R。串并联电阻可用于分压、偏置、限流和反馈网络。\n\n实际器件还具有温度系数、容差、额定功率以及寄生电容、电感；电阻值并不意味着在任意温度、频率和功率下都保持理想模型。\n\n参考：[OpenStax：欧姆定律及其适用条件](https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://openstax.org/books/university-physics-volume-2/pages/9-4-ohms-law"
+}

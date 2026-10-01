@@ -1,0 +1,37 @@
+{
+  "id": "proteomics",
+  "name": "Proteomics",
+  "aliases": [
+    "蛋白质组学"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uniprot",
+      "context": "蛋白鉴定及功能解释中使用 UniProt 的序列、稳定标识和注释资源。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gene-ontology",
+      "context": "对检测出的蛋白或基因产物开展功能分类与富集解释时采用 GO 注释。"
+    }
+  ],
+  "summary": "研究蛋白质集合、丰度、修饰和相互作用的学科。",
+  "description": "## 机制\n\n蛋白质组学在特定生物条件下研究蛋白的存在、丰度、定位、修饰和相互作用。计算分析把实验信号与候选蛋白序列、标识及功能注释联系起来。\n\n## 边界与应用\n\n蛋白质组随细胞类型和时间变化，不能直接由基因组或 RNA 丰度完整推得。检测方法、序列库与鉴定规则影响结果，推断的蛋白身份与功能仍需依据相应证据。\n\n## 参考\n\n- [EMBL-EBI：蛋白质组学](https://www.ebi.ac.uk/training/online/courses/proteomics-an-introduction/what-is-proteomics/)",
+  "importance": 4,
+  "official_site": "https://www.ebi.ac.uk/training/online/courses/proteomics-an-introduction/what-is-proteomics/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "ocsp",
+  "name": "Online Certificate Status Protocol",
+  "aliases": [
+    "在线证书状态协议"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x509",
+      "context": "OCSP 请求和响应围绕 X.509 证书标识与状态工作。"
+    }
+  ],
+  "summary": "以签名响应查询证书的吊销相关状态。",
+  "description": "## 机制\n\nOCSP 请求以签发者和序列号等标识证书，响应给出 good、revoked 或 unknown，并携带时间与签名信息。客户端需要验证响应者权限、签名及新鲜度。\n\n## 边界与应用\n\ngood 不是对证书整体有效性的证明，unknown 也不能视为良好。状态服务不可达、缓存和重放策略会影响实际保障；路径、用途及身份检查仍需单独执行。\n\n## 参考\n\n- [RFC 6960：OCSP](https://www.rfc-editor.org/rfc/rfc6960.html)",
+  "importance": 4,
+  "official_site": "https://www.rfc-editor.org/rfc/rfc6960.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abbreviation": "OCSP",
+  "abstraction_level": "runtime_vm"
+}

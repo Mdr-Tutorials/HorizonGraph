@@ -1,0 +1,32 @@
+{
+  "id": "formation-energy",
+  "name": "Formation Energy",
+  "aliases": [
+    "形成能"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ab-initio-calculation",
+      "context": "在第一性原理相图路径中计算候选与参考结构的总能量。"
+    }
+  ],
+  "summary": "相对选定组成参考态计算形成某相的能量差。",
+  "description": "形成能比较化合物与所选组成参考态的能量，需要明确元素参考、计量系数和归一方式。材料数据库常按每原子报告，以便在同一方法与校正体系中比较。\n\n参考态和计算方法不一致时数值不能直接混用。形成能与相对竞争相的分解能也不同，负形成能不足以判断一个候选是热力学稳定相。\n\n## 参考\n\n- [Materials Project：组成相图与稳定性](https://docs.materialsproject.org/methodology/materials-methodology/thermodynamic-stability/phase-diagrams-pds)\n- [Materials Project：计算条件](https://docs.materialsproject.org/methodology/materials-methodology/calculation-details)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

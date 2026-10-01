@@ -1,0 +1,28 @@
+{
+  "id": "iec",
+  "name": "International Electrotechnical Commission",
+  "aliases": [
+    "国际电工委员会"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "制定电气、电子及相关技术国际标准并开展合格评定的组织。",
+  "description": "IEC 通过技术委员会等组织结构制定电工领域国际标准，并提供相关合格评定体系。其内容覆盖电力、电子、自动化和安全等技术范围。\n\n标准制定、产品研发和具体认证结论是不同事实。IEC 作为标准组织并不因此成为每个遵循 IEC 标准设备的制造商或所有实现软件的开发者。\n\n参考：[IEC：国际标准与合格评定](https://webstore.iec.ch/faq/)；[IEC 61131-3:2025：可编程控制器语言](https://webstore.iec.ch/en/publication/68533)；[IEC：IEC 61850 的范围与模型](https://iec61850.dvl.iec.ch/what-is-61850/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://webstore.iec.ch/faq/",
+  "abbreviation": "IEC"
+}

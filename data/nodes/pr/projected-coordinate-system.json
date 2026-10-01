@@ -1,0 +1,37 @@
+{
+  "id": "projected-coordinate-system",
+  "name": "Projected Coordinate System",
+  "aliases": [
+    "投影坐标系"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "geospatial-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "map-projection",
+      "context": "利用声明的投影方法与参数将基础地理坐标映射到平面。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geographic-coordinate-system",
+      "context": "以指定地理 CRS 作为投影参考和输入位置定义。"
+    }
+  ],
+  "summary": "把地理坐标经指定投影表达为平面坐标的参考系。",
+  "description": "## 机制\n\n投影 CRS 由基础地理 CRS、投影方法和参数，以及平面坐标轴与单位组成。常见应用以米等单位处理区域尺度位置，便于平面绘图与部分空间计算。\n\n## 边界与应用\n\n采用米制坐标不代表所有距离或面积都没有畸变；需要关注投影适用区域和比例因子。改变基准与改变地图投影属于不同操作，不能只替换名称。\n\n## 参考\n\n- [QGIS：坐标参考系](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html)\n- [PROJ：坐标参考对象](https://proj.org/en/stable/specifications/projjson.html)\n- [PROJ：地图投影](https://proj.org/en/stable/operations/projections/index.html)",
+  "importance": 4,
+  "official_site": "https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ]
+}

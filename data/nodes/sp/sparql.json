@@ -1,0 +1,34 @@
+{
+  "id": "sparql",
+  "name": "SPARQL",
+  "aliases": [
+    "SPARQL 图查询语言"
+  ],
+  "type": "language",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "通过图模式匹配 RDF 三元组与数据集。"
+    }
+  ],
+  "summary": "查询 RDF 图与数据集的标准语言家族。",
+  "description": "SPARQL 用图模式及相关表达式匹配 RDF 数据，并可执行筛选、聚合和路径等查询。SPARQL 1.1 家族还包含更新、协议等规范，查询语言与服务端能力应分别辨认。\n\n查询不会自动启用所有 OWL 推理，结果取决于数据集和服务器的 entailment 支持。远程端点的权限、限制和数据版本也会影响可复现性。\n\n## 参考\n\n- [W3C：SPARQL 1.1 查询](https://www.w3.org/TR/sparql11-query/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.w3.org/TR/sparql11-query/"
+}

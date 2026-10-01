@@ -1,0 +1,39 @@
+{
+  "id": "lagrange-duality",
+  "name": "Lagrange Duality",
+  "aliases": [
+    "拉格朗日对偶",
+    "优化对偶"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lagrangian",
+      "context": "对拉格朗日函数关于原始变量取下确界，构造对偶函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kkt-conditions",
+      "context": "在相应正则性条件下结合原始与对偶可行性检验最优性。"
+    }
+  ],
+  "summary": "通过乘子构造原优化问题的界限与对偶问题。",
+  "description": "拉格朗日对偶通过对变量最小化拉格朗日函数形成对偶函数，再对允许的乘子最大化该下界。弱对偶提供下界；强对偶需要额外条件，凸性本身不总是足够。\n\n在满足 Slater 等约束资格条件的凸问题中，对偶变量和 KKT 条件可帮助刻画最优解。非凸问题可能存在对偶间隙，对偶最优值不能直接代替原问题最优值。\n\n参考：[Stanford 对偶讲义](https://stanford.edu/class/ee364a/lectures/duality.pdf)；[Boyd 与 Vandenberghe 教材](https://stanford.edu/~boyd/cvxbook/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://stanford.edu/class/ee364a/lectures/duality.pdf"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "reference-counting",
+  "name": "Reference Counting",
+  "aliases": [
+    "引用计数"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "记录对象持有引用的数量并在可回收时释放对象。",
+  "description": "## 机制\n\n持有和释放引用时调整计数，使无引用对象能够及时回收。CPython 区分拥有引用与借用引用，API 使用者须遵守获取、转移和释放所有权的约定。\n\n## 边界与应用\n\n单纯引用计数不能回收彼此引用的不可达循环，CPython 另有循环回收器。并发计数有同步成本；不朽对象等实现特例也使计数值不能简单等同于真实活引用数。\n\n## 参考\n\n- [CPython：引用计数 API](https://docs.python.org/3/c-api/refcounting.html)\n- [CPython 循环垃圾回收](https://docs.python.org/3/library/gc.html)",
+  "importance": 4,
+  "official_site": "https://docs.python.org/3/c-api/refcounting.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "periodic-boundary-condition",
+  "name": "Periodic Boundary Condition",
+  "aliases": [
+    "周期性边界条件",
+    "周期边界"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-cell",
+      "context": "在周期晶体模拟中以晶胞或超胞指定重复单元。"
+    }
+  ],
+  "summary": "以重复模拟单元的方式定义边界行为。",
+  "description": "周期性边界把计算区域的相对边界连接为平移重复的环境，用有限盒模拟周期结构或体相。粒子离开一侧时按相应映像关系处理，盒形与尺寸是模型的一部分。\n\n周期盒会引入有限尺寸及映像影响，不能把使用周期边界等同于真正无限体系。短程最小映像与长程静电处理也应分别说明。\n\n## 参考\n\n- [GROMACS：周期性边界](https://manual.gromacs.org/current/reference-manual/algorithms/periodic-boundary-conditions.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abbreviation": "PBC"
+}

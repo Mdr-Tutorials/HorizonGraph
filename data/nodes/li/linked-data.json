@@ -1,0 +1,38 @@
+{
+  "id": "linked-data",
+  "name": "Linked Data",
+  "aliases": [
+    "关联数据",
+    "链接数据"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "在典型关联数据路径中共享结构化资源描述。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "通过可访问的 HTTP 标识提供资源描述和发现入口。"
+    }
+  ],
+  "summary": "通过可解析标识和链接共享结构化数据。",
+  "description": "Linked Data 使用资源标识、可访问的数据表示以及到其他资源的链接组织分布式数据。它让数据之间的关联可以跨系统被发现和使用。\n\n链接存在不自动意味着数据开放、可信或语义等价。实际使用还需要处理授权、版本、来源和身份映射；开放数据与关联数据是相交但不同的属性。\n\n## 参考\n\n- [Tim Berners-Lee：Linked Data](https://www.w3.org/DesignIssues/LinkedData.html)\n- [W3C：RDF 入门](https://www.w3.org/TR/rdf11-primer/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

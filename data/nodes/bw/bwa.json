@@ -1,0 +1,43 @@
+{
+  "id": "bwa",
+  "name": "Burrows-Wheeler Aligner",
+  "aliases": [
+    "BWA 比对器"
+  ],
+  "type": "tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sequence-alignment"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reference-genome",
+      "context": "构建参考索引并把查询读段定位到该参考版本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sam-bam",
+      "context": "将比对结果输出为 SAM，后续可按规范转换为 BAM。"
+    }
+  ],
+  "summary": "将读段映射到参考序列的比对软件。",
+  "description": "## 机制\n\nBWA 使用压缩索引相关算法将序列映射到较大的参考，软件含 BWA-backtrack、BWA-SW 和 BWA-MEM 等方法。输出保存位置、比对关系和质量等信息，供后续分析使用。\n\n## 边界与应用\n\nBWA 执行比对而非直接检测 SNP，也不是适合所有测序任务的统一最优方法。误差模式、读长、重复区域和参考版本影响结果；RNA 剪接比对等任务需要另行评估适合的工具。\n\n## 参考\n\n- [BWA：官方说明](https://bio-bwa.sourceforge.net/)",
+  "importance": 4,
+  "official_site": "https://bio-bwa.sourceforge.net/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "abbreviation": "BWA"
+}

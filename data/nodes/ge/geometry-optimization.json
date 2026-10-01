@@ -1,0 +1,38 @@
+{
+  "id": "geometry-optimization",
+  "name": "Geometry Optimization",
+  "aliases": [
+    "几何优化",
+    "结构弛豫"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "potential-energy-surface",
+      "context": "以构型能量和梯度指导原子位置更新。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mathematical-optimization",
+      "context": "把选定自由度、能量目标和约束组成优化问题。"
+    }
+  ],
+  "summary": "迭代改变原子或晶胞位置以满足优化目标。",
+  "description": "几何优化使用能量与力调整结构，通常寻找给定模型和约束下的局部驻点或最小值。材料计算可同时优化原子坐标和晶胞，分子计算则常固定某些自由度。\n\n结果依赖初始结构、约束、算法和收敛标准；局部弛豫不保证找到所有构型中的全局基态。输出还需要检查残余力、应力及可能的鞍点。\n\n## 参考\n\n- [ASE：结构优化](https://docs.ase-lib.org/ase/optimize.html)\n- [Materials Project：计算条件](https://docs.materialsproject.org/methodology/materials-methodology/calculation-details)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

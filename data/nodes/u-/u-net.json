@@ -1,0 +1,40 @@
+{
+  "id": "u-net",
+  "name": "U-Net",
+  "aliases": [
+    "U 形网络",
+    "U型网络",
+    "UNet"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "computer-vision",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cnn",
+      "context": "原始 U-Net 以卷积、下采样和上采样构建收缩路径与扩张路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cross-entropy",
+      "context": "原始 U-Net 用逐像素 softmax 与加权交叉熵训练，并提高接触细胞之间分隔区域的损失权重。"
+    }
+  ],
+  "summary": "通过编码器、解码器与跨尺度跳跃连接实现像素分割的架构。",
+  "description": "U-Net 是为生物医学图像分割提出的卷积网络架构。收缩路径逐步下采样以提取上下文，扩张路径逐步上采样以恢复空间分辨率；对应尺度的编码特征与解码特征拼接，将较细的位置信息传给输出端。网络轮廓呈 U 形。[U-Net 原始论文](https://arxiv.org/abs/1505.04597)。\n\n原始方案依靠较强的数据增强提高有限标注图像的利用率，并使用逐像素训练目标。它输出区域标签，不天然为同类的每个对象分配实例身份；区分接触细胞等实例还需相应训练目标或后处理。原始网络使用无填充卷积并裁剪跳跃连接的特征，后续常见实现的尺寸处理可能不同。\n\nU-Net 适用于显微图像、医学区域和其他密集预测问题，也成为许多编码器与解码器结构的设计起点。这里描述的是架构，不能用“U-Net”名称推断固定输入尺寸、损失函数、预训练权重或具体领域表现。三维、残差、注意力等变体应按各自结构核对。[作者项目页与原始实现](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/"
+}

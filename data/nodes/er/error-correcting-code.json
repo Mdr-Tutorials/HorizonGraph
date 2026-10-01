@@ -1,0 +1,32 @@
+{
+  "id": "error-correcting-code",
+  "name": "Error-Correcting Code",
+  "aliases": [
+    "纠错码",
+    "前向纠错码",
+    "FEC"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-code",
+      "context": "使用线性分组码实现纠错时，通过生成与校验矩阵组织编码及综合译码。"
+    }
+  ],
+  "summary": "通过受控冗余使错误或擦除可检测及纠正的码。",
+  "description": "纠错码给有效消息分配相互区分的码字，译码器利用结构把受损接收结果恢复为候选消息。最小码距决定部分硬判决纠错界限，软信息或擦除位置也可以改变可恢复范围。\n\n检测与纠正的能力不同，超出设计范围时可能误纠。校验和、CRC 和密码学完整性机制也有不同目的，纠错成功不构成身份认证或抗恶意篡改保证。\n\n参考：[MIT 线性码与容量](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/)；[MathWorks 分组码](https://www.mathworks.com/help/comm/ug/block-codes.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/"
+}

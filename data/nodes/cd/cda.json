@@ -1,0 +1,39 @@
+{
+  "id": "cda",
+  "name": "Clinical Document Architecture",
+  "aliases": [
+    "临床文档架构"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "hl7",
+      "context": "HL7 International 制定和维护 CDA 临床文档标准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-terminology",
+      "context": "结构化临床条目用术语编码表达临床事实，具体绑定由模板和实施约定决定。"
+    }
+  ],
+  "summary": "定义可交换临床文档结构与语义的标记标准。",
+  "description": "## 机制\n\nCDA 将临床文档建模为具有上下文的完整对象，包含头部、可供人阅读的正文和可选结构化条目。文档具有持久性、管理责任与整体性，使用 XML 表示。\n\n## 边界与应用\n\nCDA 聚焦文档交换，与事件消息和细粒度资源接口的组织方式不同。C-CDA 等实施模板约束 CDA，但不能把所有 CDA 文档都视为同一模板或天然可计算内容。\n\n## 参考\n\n- [HL7：CDA 标准](https://hl7.org/cda/)\n- [HL7：CDA R2 规范](https://www.hl7.org/cda/stds/online-navigation/infrastructure/cda/cda.htm)",
+  "importance": 4,
+  "official_site": "https://hl7.org/cda/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "abbreviation": "CDA"
+}

@@ -27,13 +27,23 @@
     {
       "relation_type": "implements",
       "target_id": "jit"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "garbage-collection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "stop-the-world",
+      "context": "V8 的回收流程保留需要协调应用线程的暂停阶段。"
     }
   ],
-  "summary": "Google 的 JavaScript 引擎，Chrome 与 Node.js 的执行核心。",
+  "summary": "实现 JavaScript 与 WebAssembly 的运行时引擎。",
   "importance": 5,
   "popular": 82,
   "official_site": "https://v8.dev",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\nV8 通过解释与多层编译执行代码，优化编译器利用程序反馈生成机器代码；Orinoco 垃圾收集器组合并行、增量和并发工作管理对象空间。\n\n## 边界与应用\n\n具体编译层级随版本演进，不能把某一历史架构当作永久固定结构。并发 GC 仍可能需要暂停，投机优化也需处理假设失效。\n\n## 参考\n\n- [V8 优化编译器](https://v8.dev/docs/turbofan)\n- [V8：Orinoco GC](https://v8.dev/blog/trash-talk)"
 }

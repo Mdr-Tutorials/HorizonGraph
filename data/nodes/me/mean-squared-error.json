@@ -1,0 +1,28 @@
+{
+  "id": "mean-squared-error",
+  "name": "Mean Squared Error",
+  "aliases": [
+    "均方误差"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ml-evaluation-metric"
+    }
+  ],
+  "summary": "对预测值与真实值的平方偏差取平均。",
+  "description": "MSE=(1/n)Σ(yᵢ−ŷᵢ)²，是非负的回归误差指标，也常作为训练损失。平方使较大误差具有更大影响，单位是目标单位的平方；RMSE 对它开平方后恢复原单位。\n\n比较时应使用同一目标尺度、数据划分、权重和多输出汇总方式。MSE 不是残差的方差，存在平均偏差时两者不同；平方损失下的总体最优预测与条件均值相关。异常值可能主导结果，不能把某个数值孤立地宣称为好或坏。\n\n参考：[scikit-learn mean_squared_error](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "MSE"
+}

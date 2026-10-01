@@ -1,0 +1,19 @@
+{
+  "id": "intersection-over-union",
+  "name": "Intersection over Union",
+  "abbreviation": "IoU",
+  "aliases": ["交并比", "Jaccard Index", "Jaccard 相似系数"],
+  "type": "metric",
+  "ecosystems": ["ai_data_science"],
+  "domains": ["computer-vision", "machine-learning"],
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "ml-evaluation-metric" }
+  ],
+  "summary": "以交集除以并集衡量预测区域与真值区域的重合程度。",
+  "description": "交并比 IoU = |A∩B| / |A∪B|，衡量两个区域或集合的重合；对非空并集取值在 0 到 1 之间。用于检测框时计算几何面积，用于分割掩码时计算像素或体素集合。它也称 Jaccard 指数。[TorchVision box_iou 定义](https://docs.pytorch.org/vision/stable/generated/torchvision.ops.box_iou.html)。\n\n目标定位与检测评估用 IoU 阈值决定预测区域是否足够接近标注，但检测是否正确还要考虑类别、置信度与一对一匹配。COCO 的框和实例掩码 AP 在多档 IoU 阈值下汇总，因此 IoU 不是 AP，也不能代替检测器整体的精确率与召回表现。[COCO 官方评估器](https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py)。\n\n语义分割中的 mIoU 通常先计算各类别的 IoU 再取均值；不能与先汇总所有像素再计算的单一 IoU 混用。实现还应说明空区域的约定、背景是否计入和框坐标格式。该指标衡量区域重合，不单独刻画边界误差或对象实例数量。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.pytorch.org/vision/stable/generated/torchvision.ops.box_iou.html"
+}

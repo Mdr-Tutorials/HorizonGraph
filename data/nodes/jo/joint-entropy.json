@@ -1,0 +1,30 @@
+{
+  "id": "joint-entropy",
+  "name": "Joint Entropy",
+  "aliases": [
+    "联合熵"
+  ],
+  "type": "metric",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "probability-distribution",
+      "context": "使用随机向量的联合概率分布计算组合取值的平均自信息。"
+    }
+  ],
+  "summary": "多个离散随机变量共同取值的不确定性。",
+  "description": "联合熵把随机向量视为一个离散变量，按联合概率计算自信息期望。两个变量满足 H(X,Y)=H(X)+H(Y|X)，独立时联合熵才等于各自熵之和。\n\n共享信息会使简单相加重复计算不确定性。连续联合微分熵和离散联合熵的边界不同，联合分布的维度增长也会让有限样本估计更困难。\n\n参考：[MIT 熵与散度](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_1/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_1/"
+}

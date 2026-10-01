@@ -1,0 +1,35 @@
+{
+  "id": "kkt-conditions",
+  "name": "Karush–Kuhn–Tucker Conditions",
+  "aliases": [
+    "KKT 条件",
+    "卡罗需－库恩－塔克条件"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lagrangian",
+      "context": "通过关于原始变量的拉格朗日梯度建立驻点条件。"
+    }
+  ],
+  "summary": "组合驻点、可行性与互补松弛的最优性条件。",
+  "description": "KKT 条件包括原始可行性、对偶可行性、拉格朗日驻点和互补松弛。对可微约束问题，它把目标梯度与活跃约束梯度的平衡表达为可计算条件。\n\n约束资格条件决定这些条件是否对局部最优必要；在凸问题中，满足条件的点给出全局最优性。对非凸问题，满足 KKT 通常不能排除鞍点或非全局局部最优。\n\n参考：[Stanford 对偶讲义](https://stanford.edu/class/ee364a/lectures/duality.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://stanford.edu/class/ee364a/lectures/duality.pdf",
+  "abbreviation": "KKT"
+}

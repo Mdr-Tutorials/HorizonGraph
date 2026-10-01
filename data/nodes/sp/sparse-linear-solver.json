@@ -1,0 +1,43 @@
+{
+  "id": "sparse-linear-solver",
+  "name": "Sparse Linear Solver",
+  "aliases": [
+    "稀疏线性求解方法",
+    "稀疏线性系统求解"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sparse-matrix",
+      "context": "显式矩阵求解路径利用非零结构进行分解、矩阵向量乘法和预条件构造。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "condition-number",
+      "context": "评估系统敏感性及迭代误差与残差的关系。"
+    }
+  ],
+  "summary": "利用稀疏结构求解线性方程的算法与接口。",
+  "description": "稀疏线性求解包括直接分解和 Krylov 迭代等路线，预条件可以改善迭代收敛。矩阵的对称性、正定性、谱及非零结构决定适用方法，例如共轭梯度要求相应正定条件。\n\n达到最大迭代数不同于收敛，残差小也须结合条件数解释解误差。直接法要评估填充内存，迭代法要评估预条件成本；某些问题可通过算子接口避免显式存储矩阵。\n\n参考：[PETSc 线性求解手册](https://petsc.org/release/manual/ksp/)；[SciPy 稀疏线性代数](https://docs.scipy.org/doc/scipy/reference/sparse.linalg.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://petsc.org/release/manual/ksp/"
+}

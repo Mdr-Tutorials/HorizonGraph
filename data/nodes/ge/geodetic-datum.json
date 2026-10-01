@@ -1,0 +1,28 @@
+{
+  "id": "geodetic-datum",
+  "name": "Geodetic Datum",
+  "aliases": [
+    "大地基准",
+    "大地测量基准"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "geospatial-concept"
+    }
+  ],
+  "summary": "把地球坐标与参考曲面或参考框架联系起来的定义。",
+  "description": "## 机制\n\n大地基准描述坐标参考的地球模型与定位关系；现代参考框架还可能涉及时间变化。CRS 通过基准或基准集合确定坐标与真实地球之间的关系。\n\n## 边界与应用\n\n椭球相同不保证基准相同。不同基准的转换可能需要区域网格、时间信息和精度说明，缺失转换资料时不能把坐标结果当作精确测量。\n\n## 参考\n\n- [QGIS：坐标参考系](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html)\n- [PROJ：坐标参考对象](https://proj.org/en/stable/specifications/projjson.html)",
+  "importance": 4,
+  "official_site": "https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ]
+}

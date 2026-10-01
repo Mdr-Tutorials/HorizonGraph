@@ -1,0 +1,33 @@
+{
+  "id": "pacs",
+  "name": "Picture Archiving and Communication System",
+  "aliases": [
+    "影像归档与通信系统"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dicom",
+      "context": "与影像设备和阅片系统交换影像对象、查询或获取归档内容时采用 DICOM。"
+    }
+  ],
+  "summary": "保存、检索并分发医疗影像及相关信息的系统。",
+  "description": "## 机制\n\nPACS 围绕患者、检查、序列与影像实例组织医疗影像，提供归档、查询、获取与阅片系统之间的通信。DICOM 让影像设备和存储服务以共同对象模型交换数据。\n\n## 边界与应用\n\nPACS 是系统能力而非单一文件格式。完整部署还涉及存储可靠性、工作列表、权限和显示工作站；轻量 DICOM 服务可充当部分组件，但不必包含完整医院影像工作流。\n\n## 参考\n\n- [Orthanc：理解 DICOM](https://orthanc.uclouvain.be/book/dicom-guide.html)\n- [Orthanc：快速入门](https://orthanc.uclouvain.be/book/users/cookbook.html)",
+  "importance": 4,
+  "official_site": "https://orthanc.uclouvain.be/book/dicom-guide.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abbreviation": "PACS"
+}

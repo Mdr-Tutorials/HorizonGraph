@@ -1,0 +1,39 @@
+{
+  "id": "rdkit",
+  "name": "RDKit",
+  "aliases": [
+    "RDKit 化学信息工具包"
+  ],
+  "type": "library",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "smiles",
+      "context": "在 SMILES 输入路径中解析分子连接及立体标记。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "通过 Python 接口组织常见化学数据工作流。"
+    }
+  ],
+  "summary": "提供分子解析、检索、描述符与结构处理的工具包。",
+  "description": "RDKit 提供分子对象、SMILES 等输入输出、子结构搜索、指纹、描述符及构象相关功能。它在化学信息和数据分析工作流中处理结构，而不等同于第一性原理电子结构求解器。\n\n分子清洗、芳香性、立体化学和规范化选项会影响操作结果。相似性与预测模型需说明具体指纹和度量，不能把一个相似分数当作完整化学或生物学等价。\n\n## 参考\n\n- [RDKit：分子表示与化学信息处理](https://www.rdkit.org/docs/GettingStartedInPython.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.rdkit.org/"
+}

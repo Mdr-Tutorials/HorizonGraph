@@ -1,0 +1,39 @@
+{
+  "id": "linear-time-invariant-system",
+  "name": "Linear Time-Invariant System",
+  "aliases": [
+    "线性时不变系统",
+    "LTI 系统"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impulse-response",
+      "context": "以单位脉冲输入的零状态响应刻画系统的时间特性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "convolution",
+      "context": "对输入与脉冲响应进行卷积，计算零状态输出。"
+    }
+  ],
+  "summary": "满足叠加性且响应不随时间平移改变的系统。",
+  "description": "线性时不变系统同时满足线性叠加和时间平移不变性。对于适当的零状态描述，输入与脉冲响应的卷积给出输出，傅里叶或 Laplace/Z 变换可转化为频域或复频域运算。\n\n非线性、时变和带未说明初始状态的系统不能直接套用同一卷积模型。因果性和稳定性是另外的性质，LTI 本身不保证系统因果或稳定。\n\n参考：[MIT 系统讲义](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec01/)；[MIT 卷积讲义](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec08/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec01/",
+  "abbreviation": "LTI"
+}

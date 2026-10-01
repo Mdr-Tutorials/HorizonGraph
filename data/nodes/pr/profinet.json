@@ -1,0 +1,37 @@
+{
+  "id": "profinet",
+  "name": "PROFINET",
+  "aliases": [
+    "PROFINET 工业以太网"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ethernet",
+      "context": "在以太网基础上组织工业设备通信及实时 I/O 传输。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "industrial-ethernet"
+    }
+  ],
+  "summary": "以以太网承载工业 I/O、实时通信和设备诊断的协议体系。",
+  "description": "PROFINET 面向工业控制器与现场设备交换 I/O、参数和诊断，兼顾不同实时需求，并可与 TCP/IP 数据通信共存。应用与实时类别需要按设备和任务配置。\n\n使用同一种物理介质不意味着所有通信都具有相同截止期。实时能力、同步、冗余与安全相关功能属于具体机制和配置，不能把任意以太网网络视为等价 PROFINET 系统。\n\n参考：[PI：PROFINET 系统说明](https://www.profibus.com/download/profinet-technology-and-application-system-description)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.profibus.com/download/profinet-technology-and-application-system-description",
+  "abstraction_level": "hardware"
+}

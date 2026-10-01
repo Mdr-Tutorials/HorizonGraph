@@ -1,0 +1,43 @@
+{
+  "id": "systems-biology",
+  "name": "Systems Biology",
+  "aliases": [
+    "系统生物学"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gene-expression",
+      "context": "研究调控网络时把基因表达作为可测量状态或模型变量，并限定实验条件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transcriptomics",
+      "context": "以转录组数据估计状态或约束模型参数的研究中使用表达观测。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "proteomics",
+      "context": "研究蛋白网络及动态的模型中采用适用的蛋白丰度、修饰或相互作用数据。"
+    }
+  ],
+  "summary": "结合数据与机制模型研究生物系统的结构和动态。",
+  "description": "## 机制\n\n系统生物学关注细胞和生物体中组成部分之间的关系、动态及整体性质。研究可把实验数据与网络或数学机制模型结合，通过模拟和扰动分析检验假设。\n\n## 边界与应用\n\n汇集大量组学数据不自动形成系统解释。模型的变量、参数和假设决定可推断范围，拟合已有数据也不保证能预测其他条件；模型与实验需要相互核对。\n\n## 参考\n\n- [Kitano：系统生物学概览](https://pubmed.ncbi.nlm.nih.gov/11872829/)\n- [EMBL-EBI：BioModels 与机制模型](https://www.ebi.ac.uk/training/online/courses/biomodels-quick-tour/what-is-biomodels/)",
+  "importance": 4,
+  "official_site": "https://pubmed.ncbi.nlm.nih.gov/11872829/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "computational-biology",
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "remote-sensing",
+  "name": "Remote Sensing",
+  "aliases": [
+    "遥感"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "geospatial-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "raster-geospatial-data",
+      "context": "光学多波段观测常组织为带空间参考的栅格，其他传感器也可能产生不同表示。"
+    }
+  ],
+  "summary": "通过传感器远距离获取对象或环境的观测信息。",
+  "description": "## 机制\n\n遥感利用传感器接收或发射能量获取观测，平台可以位于地面、航空器或卫星。主动与被动观测、波段和空间/时间分辨率影响能看到的性质。\n\n## 边界与应用\n\n遥感值与目标属性之间通常需要校正和模型解释，不能把像元颜色直接当作事实标签。云、观测角度、环境和传感器差异会限制比较，部分任务还需地面验证。\n\n## 参考\n\n- [NASA：遥感原理](https://science.nasa.gov/earth/earth-observatory/remote-sensing/)",
+  "importance": 4,
+  "official_site": "https://science.nasa.gov/earth/earth-observatory/remote-sensing/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "remote-sensing"
+  ]
+}

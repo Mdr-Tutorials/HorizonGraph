@@ -1,0 +1,33 @@
+{
+  "id": "operational-amplifier",
+  "name": "Operational Amplifier",
+  "aliases": [
+    "运算放大器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "negative-feedback",
+      "context": "在线性闭环放大配置中，将输出经网络送回反相方向以设定增益。"
+    }
+  ],
+  "summary": "高开环增益的差分放大器，常配反馈网络执行模拟运算。",
+  "description": "运算放大器放大两个输入端之间的电压差。理想模型假设高开环增益、高输入阻抗和低输出阻抗；借助外部网络可构成放大、积分或缓冲电路。\n\n常见线性电路利用负反馈设定闭环增益。虚短等近似只有在负反馈有效且器件未饱和时才成立；输入共模范围、输出摆幅、带宽与压摆率仍须分别考虑。\n\n参考：[MIT 6.002：运算放大器抽象](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l19/)；[MIT 6.002：运算放大器电路](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l20/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l19/",
+  "abbreviation": "Op-Amp"
+}

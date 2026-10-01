@@ -1,0 +1,47 @@
+{
+  "id": "gurobi",
+  "name": "Gurobi Optimizer",
+  "aliases": [
+    "Gurobi",
+    "Gurobi 优化器"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "linear-programming"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mixed-integer-programming"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "quadratic-programming"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-problem",
+      "context": "通过变量、约束与目标接口建立待求解模型，并检查可行性和求解状态。"
+    }
+  ],
+  "summary": "提供线性、混合整数及多类优化求解的商业软件。",
+  "description": "Gurobi Optimizer 提供数学规划求解引擎和多语言建模接口，支持连续与整数变量以及线性、二次和文档规定的非线性约束形式。建模时应核对具体问题与版本支持的算法能力。\n\n结果使用有限精度计算，约束满足与最优性按容差解释；病态模型需要检查缩放和输入精度。许可方式及支持范围随产品配置变化，不能把接口支持表达式等同于任意问题都能迅速获得精确全局解。\n\n参考：[Gurobi 约束参考](https://docs.gurobi.com/projects/optimizer/en/current/concepts/modeling/constraints.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://docs.gurobi.com/projects/optimizer/en/current/concepts/modeling/constraints.html",
+  "abstraction_level": "application_tool"
+}

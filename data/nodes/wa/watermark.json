@@ -1,0 +1,28 @@
+{
+  "id": "watermark",
+  "name": "Watermark",
+  "aliases": [
+    "水位线"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    }
+  ],
+  "summary": "声明事件时间进度，帮助流计算判定结果触发时机。",
+  "description": "## 机制\n\n水位线随数据流携带时间进度，声明较早时间的事件应已到达。Flink 多输入算子通常按各输入的最小水位线推进，生成策略可以允许一定乱序。\n\n## 边界与应用\n\n水位线是进度声明，不是永不迟到的物理保证；空闲分区可能拖住全局进度，需空闲检测等策略。过于激进与保守分别影响迟到率和结果延迟。\n\n## 参考\n\n- [Flink：水位线生成与空闲输入](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/event-time/generating_watermarks/)\n- [Flink：事件时间与水位线](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/time/)",
+  "importance": 4,
+  "official_site": "https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/event-time/generating_watermarks/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "big-data-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "distributed-systems"
+  ]
+}

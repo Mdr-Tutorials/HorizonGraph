@@ -1,0 +1,45 @@
+{
+  "id": "vasp",
+  "name": "Vienna Ab initio Simulation Package",
+  "aliases": [
+    "维也纳从头算模拟软件包"
+  ],
+  "type": "tool",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "density-functional-theory",
+      "context": "在常用 Kohn–Sham 路径中计算电子基态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "plane-wave-basis",
+      "context": "在其主要周期电子结构路径中表示电子相关量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geometry-optimization",
+      "context": "通过计算力与应力更新原子和晶胞结构。"
+    }
+  ],
+  "summary": "用于电子结构与原子尺度材料建模的软件。",
+  "description": "VASP 提供材料电子结构和原子尺度模拟能力，包含 DFT、相关电子方法、结构更新及动力学等路径。常见计算以平面波和 PAW 描述为基础，实际能力需按所用方法区分。\n\n它是软件实现而不是物理理论的同义词。输入势、泛函、取样、结构和收敛设置会改变结果；不同计算路线与许可条件也需要独立确认。\n\n## 参考\n\n- [VASP：第一性原理计算理论](https://vasp.at/wiki/index.php/Category:Theory)\n- [Materials Project：计算条件](https://docs.materialsproject.org/methodology/materials-methodology/calculation-details)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "VASP",
+  "official_site": "https://www.vasp.at/"
+}

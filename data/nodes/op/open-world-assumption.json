@@ -1,0 +1,33 @@
+{
+  "id": "open-world-assumption",
+  "name": "Open-World Assumption",
+  "aliases": [
+    "开放世界假设"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logical-entailment",
+      "context": "用必然推出而非记录是否出现来判断逻辑结论。"
+    }
+  ],
+  "summary": "未给出的事实允许仍未知，而非直接判假。",
+  "description": "开放世界假设允许知识不完整：某陈述未在当前数据中出现，也未被推导，并不据此断言它为假。OWL 的常见逻辑语义采用这一解释方式。\n\n它与数据库查询返回空结果的操作行为不同，也不禁止给出明确的否定或限制。需要同时辨认公理语义、查询求值和数据校验所采用的规则。\n\n## 参考\n\n- [W3C：OWL 2 入门](https://www.w3.org/TR/owl2-primer/)\n- [W3C：RDF 语义](https://www.w3.org/TR/rdf11-mt/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abbreviation": "OWA"
+}

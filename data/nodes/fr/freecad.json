@@ -1,0 +1,47 @@
+{
+  "id": "freecad",
+  "name": "FreeCAD",
+  "aliases": [
+    "FreeCAD",
+    "自由参数化 CAD"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "opencascade"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "parametric-modeling"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "computer-aided-design"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computer-aided-manufacturing",
+      "context": "使用 CAM 工作台规划加工路径并由对应后处理器输出机床程序。"
+    }
+  ],
+  "summary": "提供参数化实体建模及工程工作台的开源 CAD 软件。",
+  "description": "FreeCAD 以参数化对象和工作台组织机械设计，支持草图、实体特征、数据交换，并提供制造或仿真相关扩展。它基于 Open CASCADE 几何内核，几何和拓扑能力与其工程内核密切相关。\n\n不同工作台负责不同流程，CAD 建模、CAM 刀路和 FEM 设置不能混为一项自动能力。输出进入加工或分析前，仍需检查几何有效性、单位、材料与设备配置。\n\n参考：[FreeCAD 官方功能](https://freecad.github.io/Website/features/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://freecad.github.io/Website/features/",
+  "abstraction_level": "application_tool"
+}

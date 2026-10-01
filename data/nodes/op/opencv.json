@@ -1,7 +1,10 @@
 {
   "id": "opencv",
   "name": "OpenCV",
-  "aliases": [],
+  "aliases": [
+    "开源计算机视觉库",
+    "Open Source Computer Vision Library"
+  ],
   "type": "library",
   "ecosystems": [
     "open-source-ai-ecosystem"
@@ -19,12 +22,28 @@
     {
       "relation_type": "depends_on",
       "target_id": "cpp"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "image-segmentation",
+      "context": "提供分水岭、GrabCut 等传统分割算法，以及导入模型后的分割推理能力。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "object-detection",
+      "context": "提供对象检测相关接口和 DNN 推理模块，具体模型需与后端及预后处理匹配。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "yolo",
+      "context": "官方 DNN 教程说明导出并运行受支持的 YOLO 检测模型，需采用对应版本的输入处理与输出解码。"
     }
   ],
-  "summary": "计算机视觉的瑞士军刀，从滤波到 SLAM 全都有。",
+  "summary": "提供图像处理、视觉算法与模型推理能力的开源库。",
+  "description": "OpenCV 是计算机视觉与图像处理库，核心以 C++ 实现，并提供 Python 等接口。图像处理模块覆盖颜色变换、滤波、阈值、形态学、轮廓和几何变换等操作；这些算子可组成传统视觉流水线，也可服务于深度模型的输入和输出处理。[官方图像处理教程](https://docs.opencv.org/4.x/d2/d96/tutorial_py_table_of_contents_imgproc.html)。\n\n分割方面，OpenCV 提供分水岭和 GrabCut 等方法。DNN 模块可以加载受支持的网络并执行分类、检测或分割推理，官方教程说明了从 PyTorch、TensorFlow 等导出模型后的部署过程；它的这一用途应与通用深度学习框架中的训练流程区分。[DNN 模块教程](https://docs.opencv.org/4.x/d2/d58/tutorial_table_of_content_dnn.html)。\n\nOpenCV 适用于图像预处理、传统视觉原型及部分模型部署。运行 YOLO 等模型时，输入尺寸、颜色通道、缩放与填充值、输出解码都需匹配具体权重；仅成功加载模型并不能保证预测正确。可用算子和加速后端还取决于 OpenCV 版本与编译选项。[官方 YOLO 部署教程](https://docs.opencv.org/4.x/da/d9d/tutorial_dnn_yolo.html)。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-01",
   "importance": 4,
   "official_site": "https://opencv.org"
 }

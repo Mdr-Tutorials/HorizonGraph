@@ -1,0 +1,37 @@
+{
+  "id": "iec-61131-3",
+  "name": "IEC 61131-3",
+  "aliases": [
+    "IEC 61131-3 编程语言标准"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "iec",
+      "context": "IEC 发布并制修订 IEC 61131 系列，可编程控制器语言由第 3 部分规定。"
+    },
+    {
+      "relation_type": "implemented_by",
+      "target_id": "codesys"
+    }
+  ],
+  "summary": "规定可编程控制器语言语法、语义和程序组织的标准。",
+  "description": "IEC 61131-3 为可编程控制器定义程序语言及配置元素。2025 版的语言主体包括 Structured Text、Ladder Diagram 和 Function Block Diagram，并以 SFC 元素组织程序与功能块。\n\n语言标准并不保证不同厂商工程文件、库或硬件能力完全兼容。历史版本与工具仍可能支持 Instruction List 等旧语言，需区分标准版次和具体实现的扩展。\n\n参考：[IEC 61131-3:2025：可编程控制器语言](https://webstore.iec.ch/en/publication/68533)；[CODESYS：Development System](https://www.codesys.com/products/engineering/development-system/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://webstore.iec.ch/en/publication/68533",
+  "abstraction_level": "runtime_vm"
+}

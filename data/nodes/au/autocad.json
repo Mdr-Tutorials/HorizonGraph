@@ -6,10 +6,13 @@
   ],
   "type": "product",
   "ecosystems": [
-    "graphics_gaming"
+    "graphics_gaming",
+    "scientific-computing-ecosystem"
   ],
   "domains": [
-    "graphics"
+    "graphics",
+    "scientific-computing",
+    "computational-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -20,13 +23,18 @@
     {
       "relation_type": "developed_by",
       "target_id": "autodesk"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "computer-aided-design"
     }
   ],
   "summary": "Autodesk 的计算机辅助设计软件。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
-  "official_site": "https://www.autodesk.com",
-  "first_released": "1982-12-01"
+  "official_site": "https://www.autodesk.com/products/autocad/overview.htm",
+  "first_released": "1982-12-01",
+  "description": "AutoCAD 是 Autodesk 的 CAD 产品，提供二维制图、标注以及实体、曲面和网格等三维建模能力。图层、块、尺寸和图纸布局帮助工程人员组织几何与设计文档，API 和脚本可以扩展重复操作。\n\nCAD 模型或图纸主要描述设计几何及相关信息；生成加工刀路、执行物理分析还需要适当的 CAM 或仿真工作流，不能仅凭有三维模型就视为已完成制造或验证。数据交换时也需检查单位、几何有效性和具体文件格式的能力。\n\n参考：[AutoCAD 官方产品页](https://www.autodesk.com/products/autocad/overview.htm)；[Autodesk CAD 说明](https://www.autodesk.com/solutions/cad-software)。"
 }

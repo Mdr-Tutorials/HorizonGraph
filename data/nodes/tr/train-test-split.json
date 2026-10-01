@@ -1,0 +1,29 @@
+{
+  "id": "train-test-split",
+  "name": "Train–test Split",
+  "aliases": [
+    "训练测试划分",
+    "训练集测试集划分",
+    "Holdout Evaluation",
+    "留出法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    }
+  ],
+  "summary": "将模型拟合数据与最终评估数据分开。",
+  "description": "训练测试划分在拟合前留出一部分数据，让模型在未参与训练的数据上接受评估。若还要选超参数或阈值，应另设验证集或在训练部分交叉验证，最终测试集只用于预先确定的评估。\n\n随机打乱适合相应的独立同分布场景；分层划分可维持类别比例，但不解决同一主体泄漏或时间前视。所有预处理统计量也应只从训练部分学习。一次留出的得分可能受样本量与随机种子影响，不能只挑最好的一次划分发布。\n\n参考：[scikit-learn train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)；[scikit-learn 数据划分说明](https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

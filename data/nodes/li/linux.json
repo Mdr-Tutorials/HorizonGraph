@@ -2,20 +2,39 @@
   "id": "linux",
   "name": "Linux",
   "display_primary": "Linux",
-  "aliases": ["GNU/Linux", "Linux 操作系统"],
+  "aliases": [
+    "GNU/Linux",
+    "Linux 操作系统"
+  ],
   "type": "product",
-  "ecosystems": ["linux-gnu-ecosystem"],
-  "domains": ["systems-programming"],
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
   "abstraction_level": "kernel_os",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "product" },
-    { "relation_type": "depends_on", "target_id": "linux-kernel" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux-kernel",
+      "context": "Linux 操作系统由 Linux 内核提供进程、内存与设备等基础服务。"
+    }
   ],
-  "summary": "以 Linux 内核为核心的开源操作系统家族，广泛用于服务器、桌面与嵌入式。",
+  "summary": "围绕 Linux 内核构成的操作系统家族。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "1991-09-17",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-10-01",
   "importance": 5,
-  "official_site": "https://kernel.org"
+  "official_site": "https://kernel.org",
+  "description": "## 机制\n\nLinux 系统将内核的进程、虚拟内存与设备机制同用户空间程序、系统库和管理工具组合起来。应用经系统调用请求服务，发行版决定具体软件组合和发布策略。\n\n## 边界与应用\n\n内核、发行版与 GNU 用户工具是不同实体。fork 的写时复制、IPC 接口与页表可作为系统学习入口；用户态能力仍须区分具体组件。\n\n## 参考\n\n- [Linux fork 手册](https://man7.org/linux/man-pages/man2/fork.2.html)\n- [Linux System V IPC 手册](https://man7.org/linux/man-pages/man7/sysvipc.7.html)"
 }

@@ -8,18 +8,43 @@
   ],
   "type": "concept",
   "domains": [
-    "machine-learning",
-    "industry-landscape"
+    "bioinformatics",
+    "computational-biology"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sequence-alignment",
+      "context": "比较生物序列或定位测序读段时采用序列比对方法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sequence-assembly",
+      "context": "从测序读段构建连续序列的计算分析路线采用序列组装。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "variant-calling",
+      "context": "从测序证据生成候选变异及基因型的分析路线采用变异检测。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gene-ontology",
+      "context": "为基因或蛋白结果集合添加功能语义时使用 GO 本体及证据化注释。"
     }
   ],
-  "summary": "用计算解读生命序列，交叉学科的桥梁。",
+  "summary": "组织、存储并分析生物数据的计算交叉学科。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 2
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\n生物信息学用计算、数据库及统计方法组织和分析生物数据，常见链路从测序读段和质量检查开始，经比对、组装或定量形成可解释的数据，再与功能及资源注释联系起来。\n\n## 边界与应用\n\n它与计算生物学在定义和实践上高度重叠，不只限于机器学习或 DNA 序列。输入质量、参考版本、方法假设与证据来源影响结果，计算得到的候选需要相应的实验或领域验证。\n\n## 参考\n\n- [NCI：生物信息学定义](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/bioinformatics)\n- [NCBI 教材：序列分析的原理与方法](https://www.ncbi.nlm.nih.gov/books/NBK20261/?report=reader)",
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "official_site": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/bioinformatics"
 }

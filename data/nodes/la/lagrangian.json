@@ -1,0 +1,33 @@
+{
+  "id": "lagrangian",
+  "name": "Lagrangian",
+  "aliases": [
+    "拉格朗日函数"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "optimization-problem",
+      "context": "把原问题的目标和等式、不等式约束组合为乘子参数化函数。"
+    }
+  ],
+  "summary": "将目标与约束乘子组合以分析约束优化的函数。",
+  "description": "优化中的拉格朗日函数把目标函数与各约束的乘子项相加。对标准最小化的不等式约束，乘子须非负；等式乘子可以无符号限制，符号约定随约束写法变化。\n\n此处指约束优化中的函数，不是分析力学中的动能减势能函数。对变量取下确界得到对偶函数，可用于构造原问题下界，但不存在普遍的原始对偶等价保证。\n\n参考：[Stanford 对偶讲义](https://stanford.edu/class/ee364a/lectures/duality.pdf)；[Boyd 与 Vandenberghe 教材](https://stanford.edu/~boyd/cvxbook/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://stanford.edu/class/ee364a/lectures/duality.pdf"
+}

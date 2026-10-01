@@ -1,0 +1,44 @@
+{
+  "id": "rdflib",
+  "name": "RDFLib",
+  "aliases": [
+    "RDFLib Python RDF 库"
+  ],
+  "type": "library",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "用图、资源标识与文字量对象操作 RDF 数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sparql",
+      "context": "在支持的查询路径中匹配 RDF 图模式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "通过 Python 接口组织图数据处理。"
+    }
+  ],
+  "summary": "在 Python 中解析、存储和查询 RDF 数据的库。",
+  "description": "RDFLib 提供 RDF 图、资源与文字量对象，支持多种序列化以及 SPARQL 等操作。存储与格式能力可由插件扩展，实际支持依赖版本和安装。\n\n它提供数据操作能力，并不自动赋予应用完整的 OWL 推理或语义一致性检查。知识建模、来源追踪和验证流程仍需要额外设计。\n\n## 参考\n\n- [RDFLib：功能概览](https://rdflib.readthedocs.io/en/stable/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://rdflib.readthedocs.io/"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "iec-61850",
+  "name": "IEC 61850",
+  "aliases": [
+    "IEC 61850 标准系列"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "iec",
+      "context": "IEC 发布并维护面向电力自动化信息模型、工程配置与通信映射的 IEC 61850 国际标准系列。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ethernet",
+      "context": "在采用 GOOSE、采样值等以太网映射的电力自动化网络中承载相关交换；整个标准系列不限于一种通信映射。"
+    }
+  ],
+  "summary": "面向电力自动化的信息模型、工程配置与通信标准系列。",
+  "description": "IEC 61850 不只是单一报文协议：它包含功能与数据的信息模型、工程配置以及通信映射。逻辑节点等模型使设备交换的数据具有一致的电力系统含义。\n\n其应用已从变电站扩展到分布式能源等场景。符合某部分映射不自动保证完整系统互操作；数据模型、服务、配置和所采用标准部分需要明确。\n\n参考：[IEC：IEC 61850 的范围与模型](https://iec61850.dvl.iec.ch/what-is-61850/)；[IEC：通信与信息互操作层](https://iec61850.dvl.iec.ch/what-is-61850/technical-principles/comm_concepts/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://iec61850.dvl.iec.ch/what-is-61850/",
+  "abstraction_level": "runtime_vm"
+}

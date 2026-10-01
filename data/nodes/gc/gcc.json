@@ -24,13 +24,27 @@
     {
       "relation_type": "competes_with",
       "target_id": "llvm"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "compiler"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linking",
+      "context": "驱动默认在成功生成目标文件后调用链接步骤；-c/-S/-E 等选项可跳过。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-generation"
     }
   ],
-  "summary": "GNU 的 C/C++ 等语言编译器套件，系统软件的默认工具链之一。",
+  "summary": "支持多种源语言和目标平台的 GNU 编译器集合。",
   "importance": 5,
   "popular": 81,
   "official_site": "https://gcc.gnu.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\nGCC 驱动按输入类型和选项执行预处理、编译、汇编和链接；-E、-S、-c 可分别停止在不同阶段。内部前端、优化表示与目标后端共同生成代码。\n\n## 边界与应用\n\ngcc 命令不是一个仅编译 C 的不可分黑盒。目标平台和选项决定链接方式；共享库、静态库和运行时组件的要求应按具体工具链区分。\n\n## 参考\n\n- [GCC 总体编译选项](https://gcc.gnu.org/onlinedocs/gcc/Overall-Options.html)\n- [GCC 链接选项](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html)"
 }

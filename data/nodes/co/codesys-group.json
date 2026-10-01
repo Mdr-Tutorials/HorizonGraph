@@ -1,0 +1,31 @@
+{
+  "id": "codesys-group",
+  "name": "CODESYS Group",
+  "aliases": [
+    "CODESYS 集团"
+  ],
+  "type": "organization",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "codesys"
+    }
+  ],
+  "summary": "开发 CODESYS 工业自动化软件与控制运行时的企业群体。",
+  "description": "CODESYS Group 提供以 IEC 61131-3 工程环境和控制运行时为基础的软件体系，使自动化软件可适配多个设备供应商和平台。开发系统、运行时和其他服务承担不同角色。\n\n软件平台供应方不自动是所有采用 CODESYS 的 PLC 硬件制造者。设备集成、许可、可选产品和具体部署能力需分别核对。\n\n参考：[CODESYS Group：软件与运行时体系](https://www.codesys.com/)；[CODESYS：Development System](https://www.codesys.com/products/engineering/development-system/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "official_site": "https://www.codesys.com/"
+}

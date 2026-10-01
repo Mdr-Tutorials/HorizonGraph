@@ -1,0 +1,43 @@
+{
+  "id": "computational-biology",
+  "name": "Computational Biology",
+  "aliases": [
+    "计算生物学"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "bioinformatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sequence-alignment",
+      "context": "通过序列的对应与相似关系研究进化或功能相关问题时采用比对方法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "protein-structure-prediction",
+      "context": "从序列信息研究蛋白构象及结构相关假设时采用结构预测。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "systems-biology",
+      "context": "研究系统级生物动态时构建并分析机制或网络模型。"
+    }
+  ],
+  "summary": "用算法、数学模型和计算实验研究生命科学问题。",
+  "description": "## 机制\n\n计算生物学将生物问题转为可计算的表示与模型，涵盖序列分析、结构预测及生物系统模拟等任务。数据、算法和实验知识共同决定可回答的问题。\n\n## 边界与应用\n\n计算生物学与生物信息学高度重叠，资料中也可能将两者作为近义词。这里侧重模型与问题求解的组织入口，不能把计算输出直接当成生物事实；需要说明假设、证据及验证范围。\n\n## 参考\n\n- [NCI：生物信息学定义](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/bioinformatics)\n- [NCBI 教材：序列分析的原理与方法](https://www.ncbi.nlm.nih.gov/books/NBK20261/?report=reader)\n- [Kitano：系统生物学概览](https://pubmed.ncbi.nlm.nih.gov/11872829/)\n- [EMBL-EBI：BioModels 与机制模型](https://www.ebi.ac.uk/training/online/courses/biomodels-quick-tour/what-is-biomodels/)",
+  "importance": 5,
+  "official_site": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/bioinformatics",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "computational-biology",
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ]
+}

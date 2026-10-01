@@ -1,0 +1,35 @@
+{
+  "id": "lidar",
+  "name": "Light Detection and Ranging",
+  "aliases": [
+    "激光雷达",
+    "光探测与测距"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "embedded-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "robotics-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "imu",
+      "context": "航空激光测绘把测距与惯性姿态、位置及标定数据结合，将扫描点转换到空间坐标系。"
+    }
+  ],
+  "summary": "利用激光与反射信号测量距离，形成扫描或点云。",
+  "description": "## 测量\n\nLiDAR 以激光与反射信号获取距离，扫描结果可以形成空间点集。脉冲测距是常见实现；测绘系统还需要位置、姿态、扫描角度与标定数据，把测量转成统一坐标系下的点云。\n\n## 应用边界\n\n机器人可用距离数据感知几何结构、定位和建图，测距本身不会自动给出完整语义或运动决策。遮挡、反射特性、天气和标定误差会影响观测；具体设备原理与量程需查对应规格。\n\n## 参考\n\n- [NOAA：LiDAR 测量与点云](https://oceanservice.noaa.gov/facts/lidar.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://oceanservice.noaa.gov/facts/lidar.html",
+  "abbreviation": "LiDAR"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "expert-system",
+  "name": "Expert System",
+  "aliases": [
+    "专家系统"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "knowledge-base",
+      "context": "维护问题领域的事实、规则及相关说明。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rule-engine",
+      "context": "在规则系统路径中匹配条件并产生可解释结论。"
+    }
+  ],
+  "summary": "用领域知识与推理机制支持特定问题求解。",
+  "description": "专家系统把特定领域的事实和规则组织为知识库，借助推理机制提供分析或建议。传统系统常将知识与推理实现分开，以便检查结论和维护规则。\n\n系统的能力受知识覆盖和输入质量限制。局部专家经验不能直接推广到所有环境，结论应可追踪到规则、事实和适用条件。\n\n## 参考\n\n- [Poole 与 Mackworth：知识图谱与本体](https://artint.info/3e/html/ArtInt3e.Ch16.html)\n- [Apache Jena：推理与规则引擎](https://jena.apache.org/documentation/inference/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

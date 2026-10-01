@@ -1,0 +1,39 @@
+{
+  "id": "fhir",
+  "name": "Fast Healthcare Interoperability Resources",
+  "aliases": [
+    "FHIR 医疗数据交换标准"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "hl7",
+      "context": "HL7 International 组织制定和维护 FHIR 标准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-terminology",
+      "context": "资源中的编码元素通过术语绑定表达检查、诊断和其他临床含义。"
+    }
+  ],
+  "summary": "以资源和实现约定组织医疗数据交换的标准。",
+  "description": "## 机制\n\nFHIR 以 Patient、Observation 等资源表达数据，资源可以引用其他资源，并支持扩展、结构约束与术语绑定。REST 接口是常用方式，也可通过文档、消息等方式使用资源。\n\n## 边界与应用\n\nFHIR 不是电子病历产品，也不强制所有交换走 REST。版本、实现指南、CapabilityStatement 和安全策略决定实际兼容性；资源结构一致不代表数据质量或临床解释已经一致。\n\n## 参考\n\n- [HL7：FHIR 总览](https://hl7.org/fhir/overview.html)",
+  "importance": 5,
+  "official_site": "https://hl7.org/fhir/overview.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "abbreviation": "FHIR"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "property-graph",
+  "name": "Property Graph",
+  "aliases": [
+    "属性图"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    }
+  ],
+  "summary": "用带属性的节点和关系组织图数据的模型。",
+  "description": "属性图以节点和关系构成网络，并在它们上保存属性，常用标签或类型表达分类。具体系统对属性值、身份、约束与查询语言的支持不同。\n\n它与 RDF 是不同的数据模型。属性图中的关系属性不能简单当作一个 RDF 三元组的普通附加字段，跨模型转换需要选择明确的表示方式。\n\n## 参考\n\n- [Neo4j：图数据库概念](https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/)\n- [W3C：RDF 数据模型](https://www.w3.org/TR/rdf11-concepts/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

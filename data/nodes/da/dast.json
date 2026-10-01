@@ -1,0 +1,39 @@
+{
+  "id": "dast",
+  "name": "Dynamic Application Security Testing",
+  "aliases": [
+    "动态应用安全测试"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sqli",
+      "context": "主动测试可发送 SQL 注入探测输入并验证响应；是否检测成功取决于接口和测试上下文。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "xss",
+      "context": "动态测试可以检查输入回显及浏览器执行语义，但覆盖受上下文与路径限制。"
+    }
+  ],
+  "summary": "通过运行中的应用接口检查可观测安全行为。",
+  "description": "## 机制\n\nDAST 从接口发送测试请求，观察响应和状态变化以发现注入或其他风险；主动扫描可能改变服务状态。配置身份、会话和测试路径影响覆盖，授权范围应包含测试目标。\n\n## 边界与应用\n\n黑盒测试看不到所有内部路径，也难以自动理解全部业务授权规则。未扫描到的接口、状态与角色都可能遗漏；被动观察与主动探测的影响范围不同。\n\n## 参考\n\n- [ZAP：主动扫描](https://www.zaproxy.org/docs/desktop/start/features/ascan/)",
+  "importance": 4,
+  "official_site": "https://www.zaproxy.org/docs/desktop/start/features/ascan/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "abbreviation": "DAST"
+}

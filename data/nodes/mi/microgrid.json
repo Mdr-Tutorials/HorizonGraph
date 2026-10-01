@@ -1,0 +1,37 @@
+{
+  "id": "microgrid",
+  "name": "Microgrid",
+  "aliases": [
+    "微电网"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "distributed-energy-resources",
+      "context": "通过协调本地发电和储能等分布式资源，平衡微电网供给与负荷。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "energy-management-system",
+      "context": "在具有能量管理层的微电网中，协调运行计划和资源调度；低层电压频率控制仍需其他环节。"
+    }
+  ],
+  "summary": "在明确电气边界内协调负荷与本地能源的可控电网。",
+  "description": "微电网包含相互连接的负荷和本地能源，对主网可作为一个可控实体运行，并可按设计切换并网与孤岛状态。控制器协调发电、储能及负荷，支持局部供电任务。\n\n只有电池或备用发电机不自动构成完整微电网。孤岛转换、保护、同步并网和电能质量需要系统设计；自主运行能力也受到能源、设备和负荷约束。\n\n参考：[美国能源部：微电网系统](https://www.energy.gov/oe/microgrid-systems)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.energy.gov/oe/microgrid-systems"
+}

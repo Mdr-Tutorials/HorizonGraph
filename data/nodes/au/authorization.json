@@ -19,11 +19,22 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rbac",
+      "context": "业务权限可按角色组织，再把用户映射到角色；角色边界须由应用定义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "abac",
+      "context": "需要根据资源、主体或环境属性授权时可采用 ABAC 策略。"
     }
   ],
-  "summary": "决定你能做什么：RBAC、ACL 与策略引擎的主战场。",
+  "summary": "判断主体是否可以对某个资源执行指定操作。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "description": "## 机制\n\n授权以主体、资源、动作与环境为输入，依据策略决定访问。RBAC 或 ABAC 提供不同组织方式，应用仍须在服务端对对象和操作执行检查。\n\n## 边界与应用\n\n身份认证只确认身份或凭据，不自动授予对象访问权。权限需考虑租户边界、继承和变化，并尽可能默认拒绝；复杂或随机对象 ID 不能替代检查。\n\n## 参考\n\n- [OWASP：授权](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)"
 }

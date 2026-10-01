@@ -1,0 +1,38 @@
+{
+  "id": "combinatorial-optimization",
+  "name": "Combinatorial Optimization",
+  "aliases": [
+    "组合优化"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "integer-programming",
+      "context": "用零一或整数变量建模离散选择与资源限制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dynamic-programming",
+      "context": "当问题具有可利用的阶段状态和最优子结构时，用状态递推求解离散方案。"
+    }
+  ],
+  "summary": "在离散组合方案中寻找最优结构或选择。",
+  "description": "组合优化研究离散方案中的最佳选择，例如路线、匹配、指派和排程。问题结构差异很大，一些可用多项式算法求解，另一些需要指数搜索、近似算法或启发式。\n\n不能把组合优化一概视为 NP 完全。精确、近似和启发式方法提供不同保证，实际模型还需要明确决策是否可分割以及误差或最优性间隙能否接受。\n\n参考：[MIT 运筹优化讲义](https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/)；[OR-Tools 问题类型](https://developers.google.com/optimization/introduction)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/"
+}

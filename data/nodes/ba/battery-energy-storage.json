@@ -1,0 +1,38 @@
+{
+  "id": "battery-energy-storage",
+  "name": "Battery Energy Storage System",
+  "aliases": [
+    "电池储能系统"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "battery-management-system",
+      "context": "监测电池包电压、电流和温度，并处理保护及状态信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inverter",
+      "context": "在接入交流网络的储能系统中，通过双向或相应逆变功率级交换能量。"
+    }
+  ],
+  "summary": "以电池、功率转换和管理控制储存及释放电能的系统类别。",
+  "description": "BESS 将电池储能与功率转换、监测保护及系统控制组合，用于负荷转移、备用供电或电网服务。容量、功率、持续时间和循环条件是不同维度。\n\n电池额定能量不等于任意负载下可交付的交流能量；转换损耗、温度、荷电范围和老化都会影响结果。电池管理处理单体和电池包状态，系统级调度则属于另一层。\n\n参考：[美国能源部：微电网系统](https://www.energy.gov/oe/microgrid-systems)；[Texas Instruments：电池管理中的测量与保护](https://www.ti.com/document-viewer/lit/html/SSZT998/GUID-F1D908B5-9950-46A5-8DD3-D10F6437FAED)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.energy.gov/oe/microgrid-systems",
+  "abbreviation": "BESS"
+}

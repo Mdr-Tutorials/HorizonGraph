@@ -1,0 +1,28 @@
+{
+  "id": "fasta",
+  "name": "FASTA format",
+  "aliases": [
+    "FASTA 序列格式"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "以标识行和序列文本交换生物序列的格式。",
+  "description": "## 机制\n\nFASTA 以大于号开头的描述行标识序列，后续行存放核酸或蛋白序列字符。一个文件可包含多个记录；不同数据库会对标识与描述部分施加额外规则。\n\n## 边界与应用\n\nFASTA 格式与名为 FASTA 的序列搜索程序需区分。它通常不含逐碱基质量或完整功能注释，序列标识、字母表及版本必须按工具和资源约定解释。\n\n## 参考\n\n- [NCBI：核酸序列 FASTA 格式](https://www.ncbi.nlm.nih.gov/genbank/fastaformat/)",
+  "importance": 4,
+  "official_site": "https://www.ncbi.nlm.nih.gov/genbank/fastaformat/",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library"
+}

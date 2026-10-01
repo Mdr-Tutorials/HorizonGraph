@@ -1,0 +1,45 @@
+{
+  "id": "resnet",
+  "name": "ResNet",
+  "aliases": [
+    "残差网络",
+    "Residual Network",
+    "Deep Residual Network"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "computer-vision",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cnn",
+      "context": "经典 ResNet 的残差分支由卷积层等组成，属于采用残差连接的卷积网络架构。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "imagenet",
+      "context": "原始论文使用 ImageNet 分类基准训练与评估不同深度的残差网络。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "vision-transformer",
+      "context": "在视觉分类或特征主干选型中，可比较卷积残差网络与图像 patch Transformer，须控制训练数据和计算预算。"
+    }
+  ],
+  "summary": "通过残差连接训练深层卷积网络的视觉架构。",
+  "description": "ResNet 用残差学习缓解深层网络的优化困难。一个基本残差块计算 y = F(x) + x，使若干层学习相对输入的变化量；输入与输出维度不一致时可用投影捷径。原始论文关注增加深度后训练误差反而变高的退化问题，不能把全部改进简单归因于减少过拟合。[Deep Residual Learning 原始论文](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html)。\n\n经典 ResNet 是卷积网络，较浅配置使用基本块，较深配置使用瓶颈块控制计算量。残差连接与 U-Net 中传递多尺度细节的长跳跃连接具有不同的主要目的。这里收录的是架构概念；ResNet-18、50、101 等配置及其训练权重不等同于一个具有固定预测能力的模型。[TorchVision ResNet 实现与配置](https://docs.pytorch.org/vision/stable/models/resnet.html)。\n\nResNet 可直接用于图像分类，也可将分类头移除后作为检测或分割系统的特征主干。预训练权重的类别、输入归一化和训练方案会影响迁移效果；层数更深也不保证在任何数据量、推理设备与延迟要求下都更合适。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html"
+}

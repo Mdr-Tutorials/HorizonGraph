@@ -1,0 +1,33 @@
+{
+  "id": "kohn-sham-equations",
+  "name": "Kohn–Sham Equations",
+  "aliases": [
+    "科恩—沈方程",
+    "Kohn-Sham 方程"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "在离散基组下计算轨道本征问题及密度更新。"
+    }
+  ],
+  "summary": "用自洽单粒子问题构造电子密度的方程。",
+  "description": "Kohn–Sham 方程是密度泛函理论的一种实际计算形式，用辅助非相互作用轨道构造密度，并使有效势依赖该密度。求解通常需要反复更新密度与势直至满足收敛标准。\n\n辅助轨道能量的物理解释有适用边界，不能把所有本征值直接当作精确实验激发谱。交换关联近似和自洽收敛都会影响最终状态。\n\n## 参考\n\n- [VASP：第一性原理计算理论](https://vasp.at/wiki/index.php/Category:Theory)\n- [Materials Project：计算条件](https://docs.materialsproject.org/methodology/materials-methodology/calculation-details)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

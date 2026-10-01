@@ -1,0 +1,32 @@
+{
+  "id": "industrial-ethernet",
+  "name": "Industrial Ethernet",
+  "aliases": [
+    "工业以太网"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ethernet",
+      "context": "采用以太网链路或帧机制，并按相应工业协议扩展实时和设备通信行为。"
+    }
+  ],
+  "summary": "在以太网基础上满足工业设备通信需求的技术类别。",
+  "description": "工业以太网把以太网技术用于现场 I/O、驱动、控制与诊断，常加入实时调度、同步、冗余或工业环境适配。EtherCAT 和 PROFINET 采用不同具体机制。\n\n工业以太网不是一个统一报文协议，也不表示必须用 TCP/IP 传输所有过程数据。普通以太网接口的存在不能证明系统具备确定时序或工业协议互操作能力。\n\n参考：[PI：现场总线与工业以太网技术](https://www.profibus.com/technologies)；[EtherCAT Technology Group：运行机制](https://www.ethercat.org/en/technology.html)；[PI：PROFINET 系统说明](https://www.profibus.com/download/profinet-technology-and-application-system-description)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.profibus.com/technologies"
+}

@@ -18,12 +18,28 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "symbol-table",
+      "context": "从目标文件符号表解析外部定义与引用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "relocation",
+      "context": "确定符号与布局后应用重定位记录修补地址。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dynamic-linking",
+      "context": "采用共享库的目标平台可将部分符号解析和重定位留至装载阶段。"
     }
   ],
-  "summary": "把目标文件的符号与重定位拼成可执行映像或动态库。",
+  "summary": "合并目标工件、解析符号并修补地址引用。",
   "importance": 4,
   "popular": 55,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\n链接器从目标文件和库中解析定义与引用，安排代码和数据布局，再按重定位记录修补地址。静态链接主要在生成最终工件时完成，动态链接把部分工作留到装载或运行阶段。\n\n## 边界与应用\n\n链接成功不保证 ABI、动态库版本和运行环境匹配。源语言类型检查与链接期符号解析不同；同一符号名也不必携带足够语义或类型信息。\n\n## 参考\n\n- [ELF 符号表规范](https://gabi.xinuos.com/elf/05-symtab.html)\n- [ELF 重定位规范](https://gabi.xinuos.com/elf/06-reloc.html)\n- [Linux 动态链接器手册](https://man7.org/linux/man-pages/man8/ld.so.8.html)"
 }

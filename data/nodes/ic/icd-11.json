@@ -1,0 +1,33 @@
+{
+  "id": "icd-11",
+  "name": "International Classification of Diseases 11th Revision",
+  "aliases": [
+    "国际疾病分类第十一次修订"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "clinical-terminology"
+    }
+  ],
+  "summary": "用于疾病及相关健康问题统计和编码的分类标准。",
+  "description": "## 机制\n\nICD-11 为疾病与相关健康问题提供分类框架和数字编码能力，面向死亡、疾病及其他卫生数据的记录和统计。分类的层次和编码规则支持不同机构以共同口径汇总。\n\n## 边界与应用\n\nICD 分类的统计目的与细粒度临床术语的表达目的不同。编码需要按适用版本和规则选择，不等于确认个体诊断；各地采用进度和用途也可能不同。\n\n## 参考\n\n- [WHO：国际疾病分类](https://www.who.int/standards/classifications/classification-of-diseases)",
+  "importance": 4,
+  "official_site": "https://www.who.int/standards/classifications/classification-of-diseases",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "abbreviation": "ICD-11"
+}

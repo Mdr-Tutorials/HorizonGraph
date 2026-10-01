@@ -1,0 +1,32 @@
+{
+  "id": "power-system-state-estimation",
+  "name": "Power System State Estimation",
+  "aliases": [
+    "电力系统状态估计"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scada",
+      "context": "在通过 SCADA 向调度中心传送量测的电网中，处理其采集的运行数据；也可采用其他量测来源。"
+    }
+  ],
+  "summary": "结合电网模型与冗余量测估计母线电压状态的方法。",
+  "description": "状态估计用电压、电流、有功和无功等量测及其误差模型，推断电网母线电压幅值和相角。加权最小二乘是常见实现之一；量测冗余用于降低噪声影响和分析坏数据。\n\n结果依赖网络拓扑、参数、量测位置与可观测性。通信到达并不意味着数据正确；坏数据、错误开关状态或不足量测可能影响估计，不能把估计值当作无误差真值。\n\n参考：[pandapower：电力系统状态估计](https://pandapower.readthedocs.io/en/stable/estimation.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://pandapower.readthedocs.io/en/stable/estimation.html"
+}

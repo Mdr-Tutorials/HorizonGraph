@@ -1,0 +1,37 @@
+{
+  "id": "semantic-analysis",
+  "name": "Semantic Analysis",
+  "aliases": [
+    "语义分析"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "compiler-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "symbol-table",
+      "context": "名称解析与作用域查找时使用符号表找到相应声明及属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "在语法树上检查声明、表达式类型和语言约束，并添加语义信息。"
+    }
+  ],
+  "summary": "在语法结构上验证名称、类型与语言约束。",
+  "description": "## 机制\n\n语义分析把名称绑定到声明，检查表达式与控制结构是否满足类型和其他语言规则，并为语法树补充解析后的语义信息。在 Clang 中 Sema 与 Parser 协作生成有语义属性的 AST。\n\n## 边界与应用\n\n语法正确不代表程序类型或含义合法。静态检查能验证的范围取决于语言设计，不自动证明程序无运行时错误，也不一定要求前后端阶段严格独立。\n\n## 参考\n\n- [Clang 内部架构手册](https://clang.llvm.org/docs/InternalsManual.html)",
+  "importance": 4,
+  "official_site": "https://clang.llvm.org/docs/InternalsManual.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers"
+  ]
+}

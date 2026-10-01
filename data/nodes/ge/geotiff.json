@@ -1,0 +1,39 @@
+{
+  "id": "geotiff",
+  "name": "GeoTIFF",
+  "aliases": [
+    "地理 TIFF"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "raster-geospatial-data",
+      "context": "GeoTIFF 以 TIFF 像素网格编码栅格，并补充对应地理定位元数据。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ogc",
+      "context": "该标准在组织的开放标准制定与维护流程下发布，具体版本和合规要求以对应规范为准。"
+    }
+  ],
+  "summary": "在 TIFF 栅格中携带地理定位与坐标参考元数据的格式。",
+  "description": "## 机制\n\nGeoTIFF 以标准标签与 GeoKey 表达网格的空间变换和 CRS 信息，将像元值同地球位置联系起来。不同数据可保存多波段、压缩和无数据等信息，具体能力由编码与软件实现决定。\n\n## 边界与应用\n\nGeoTIFF 是地理栅格文件格式，不是地图服务。文件带地理标签不保证标注或观测正确；单位、波段含义、CRS 和无数据约定仍需检查，云优化布局是另外的组织约束。\n\n## 参考\n\n- [OGC GeoTIFF 1.1](https://docs.ogc.org/is/19-008r4/19-008r4.html)",
+  "importance": 4,
+  "official_site": "https://docs.ogc.org/is/19-008r4/19-008r4.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "remote-sensing"
+  ],
+  "abstraction_level": "framework_library"
+}

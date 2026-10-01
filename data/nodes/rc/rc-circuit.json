@@ -1,0 +1,38 @@
+{
+  "id": "rc-circuit",
+  "name": "RC Circuit",
+  "aliases": [
+    "RC 电路"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resistor",
+      "context": "用电阻与电容量共同确定充放电速率和滤波时间常数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "capacitor",
+      "context": "用电容储能形成随时间变化的状态。"
+    }
+  ],
+  "summary": "由电阻和电容构成、常具有一阶充放电响应的电路。",
+  "description": "简单串联 RC 网络对阶跃激励产生指数充放电响应，时间常数为 RC。根据输出取在电阻还是电容两端，可形成高通或低通结构。\n\n时间常数应由电容所见等效电阻计算；信号源内阻和后级负载可能改变响应。理想公式也不覆盖电容漏电、寄生参数或放大器带宽限制。\n\n参考：[MIT 6.002：电容与一阶系统](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l12/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l12/",
+  "abbreviation": "RC"
+}

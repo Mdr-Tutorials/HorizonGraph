@@ -1,0 +1,31 @@
+{
+  "id": "sam-bam",
+  "name": "SAM/BAM",
+  "aliases": [
+    "Sequence Alignment/Map",
+    "SAM 文本格式",
+    "BAM 二进制格式"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "以文本或二进制编码保存序列比对记录的格式。",
+  "description": "## 机制\n\nSAM 用制表符分隔的文本记录比对位置、标志、CIGAR、序列、质量及可选标签；BAM 按同一数据模型采用二进制编码和分块压缩。头部可保存参考序列、读组和处理程序信息。\n\n## 边界与应用\n\nSAM 和 BAM 是两种表示，不是两个比对算法，也不保证记录已经比对、排序或可随机访问。索引通常还要求适当排序；SAM 的位置表示与 BAM 内部坐标约定有差别，转换应由遵循规范的工具完成。\n\n## 参考\n\n- [SAM/BAM Format Specification Working Group：格式规范](https://samtools.github.io/hts-specs/SAMv1.pdf)",
+  "importance": 5,
+  "official_site": "https://samtools.github.io/hts-specs/SAMv1.pdf",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "abbreviation": "SAM/BAM"
+}

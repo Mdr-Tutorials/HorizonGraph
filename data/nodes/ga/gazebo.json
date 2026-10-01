@@ -1,0 +1,35 @@
+{
+  "id": "gazebo",
+  "name": "Gazebo",
+  "aliases": [
+    "Gazebo 仿真器",
+    "Ignition Gazebo"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "embedded-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "ros",
+      "context": "现代 Gazebo 可通过官方 ROS 2 集成交换仿真与机器人软件消息。"
+    }
+  ],
+  "summary": "模拟机器人、环境与传感器，并提供可扩展仿真接口。",
+  "description": "## 仿真环境\n\nGazebo 提供机器人与环境建模、物理仿真、传感器及交互工具。ROS 集成通过相应桥接或控制接口交换消息，使机器人软件可在仿真中验证。\n\n## 家族与边界\n\n此节点指现代 Gazebo 家族，历史上的 Gazebo Classic 与现代版本的接口和生命周期不同。仿真结果依赖模型、参数、物理引擎与传感器配置，不能据此保证真实硬件表现一致。\n\n## 参考\n\n- [Gazebo：入门与现代发行版](https://gazebosim.org/docs/latest/getstarted/)\n- [Gazebo：ROS 2 集成](https://gazebosim.org/docs/latest/ros2_integration/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://gazebosim.org/docs/latest/getstarted/"
+}

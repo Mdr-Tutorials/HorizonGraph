@@ -1,0 +1,34 @@
+{
+  "id": "transistor",
+  "name": "Transistor",
+  "aliases": [
+    "晶体管"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering",
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    }
+  ],
+  "summary": "可控制电流、用于开关或放大的半导体器件。",
+  "description": "晶体管包含双极型与场效应等器件类别。数字电路可在指定工作范围把器件抽象为开关；模拟放大器则围绕偏置点分析输入变化如何改变输出电流或电压。\n\n模型和参数需与器件、工艺及工作条件一致。小信号近似只适用于相应偏置附近；实际增益、带宽、噪声、负载和功耗不能从晶体管这一名称单独推断。\n\n参考：[MIT 6.004：MOSFET 与 CMOS](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c3/c3s1/)；[MIT 6.002：MOSFET 放大器](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l9/)；[SkyWater：SKY130 器件模型与工艺资料](https://skywater-pdk.readthedocs.io/en/main/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c3/c3s1/"
+}

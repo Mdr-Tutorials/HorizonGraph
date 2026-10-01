@@ -1,0 +1,44 @@
+{
+  "id": "moveit",
+  "name": "MoveIt",
+  "aliases": [
+    "MoveIt 2",
+    "机器人运动规划框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "embedded-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ros"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "path-planning",
+      "context": "通过可配置的规划流水线生成机器人运动路径与轨迹。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "inverse-kinematics",
+      "context": "通过运动学插件求满足末端目标与关节约束的关节配置。"
+    }
+  ],
+  "summary": "框架化组织机器人运动规划、运动学、碰撞检查与执行。",
+  "description": "## 能力\n\nMoveIt 为机器人操作提供运动学求解、运动规划、碰撞检查和轨迹执行等能力。规划流水线组合规划器与适配器，具体算法、运动学插件和机器人模型由配置选择。\n\n## 边界\n\n本节点承载 MoveIt 家族，MoveIt 2 基于 ROS 2；支持某个算法插件不意味着每个部署使用它。生成的规划还需匹配机器人描述、场景、关节约束与实际控制接口。\n\n## 参考\n\n- [MoveIt：规划流水线](https://moveit.picknik.ai/main/doc/examples/motion_planning_pipeline/motion_planning_pipeline_tutorial.html)\n- [MoveIt：运动学](https://moveit.picknik.ai/main/doc/concepts/kinematics.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://moveit.picknik.ai/main/doc/examples/motion_planning_pipeline/motion_planning_pipeline_tutorial.html"
+}

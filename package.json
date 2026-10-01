@@ -6,8 +6,17 @@
     "gen": "pnpm -C tools gen",
     "validate": "pnpm -C tools validate",
     "build:data": "pnpm -C tools build",
+    "build:wasm": "pnpm -C tools build:wasm",
     "build:web": "pnpm -C web build",
-    "build": "pnpm gen && pnpm validate && pnpm build:data && pnpm build:web",
-    "dev": "pnpm build:data && pnpm -C web dev"
+    "build:offline": "pnpm -C tools build:offline",
+    "build": "pnpm gen && pnpm validate && pnpm build:data && pnpm build:wasm && pnpm build:web && pnpm build:offline",
+    "dev": "pnpm gen && pnpm build:data && pnpm build:wasm && pnpm -C web dev",
+    "test:unit": "pnpm -C tools exec tsx --test tests/*.test.ts ../web/tests/*.test.ts",
+    "test:browser": "playwright test",
+    "benchmark": "pnpm -C tools exec tsx src/benchmark.ts",
+    "test": "pnpm test:unit && pnpm test:browser"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
   }
 }

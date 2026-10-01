@@ -1,0 +1,44 @@
+{
+  "id": "gnu-radio",
+  "name": "GNU Radio",
+  "aliases": [
+    "GNU Radio",
+    "GNU 软件无线电"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing",
+    "networking"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "signal-processing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "digital-filter",
+      "context": "在接收和信号变换流图中配置滤波模块以限制频带或提取所需分量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "multirate-signal-processing",
+      "context": "在适用流图模块中通过插值、抽取或重采样匹配处理速率。"
+    }
+  ],
+  "summary": "以信号处理模块和流图构造软件无线电的开源工具。",
+  "description": "GNU Radio 提供实时流式信号处理模块及运行时，流图连接信号源、变换、滤波和接收等阶段。它既可配合射频硬件，也可用文件或生成信号进行仿真实验。\n\n软件不能替代天线、射频前端和采样硬件的物理能力，硬件不是所有使用方式的必需条件。流图速率、缓冲和计算负载影响实时性，调制与同步参数仍需按通信模型设计。\n\n参考：[GNU Radio 官方介绍](https://www.gnuradio.org/about/)；[GNU Radio 官方代码](https://github.com/gnuradio/gnuradio)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.gnuradio.org/about/",
+  "abstraction_level": "framework_library"
+}

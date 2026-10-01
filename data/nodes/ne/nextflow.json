@@ -1,0 +1,33 @@
+{
+  "id": "nextflow",
+  "name": "Nextflow",
+  "aliases": [
+    "Nextflow 工作流系统"
+  ],
+  "type": "tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "blast",
+      "context": "官方示例工作流把 BLAST 搜索与结果提取封装为相连 process，其他流程可选择不同工具。"
+    }
+  ],
+  "summary": "以数据流连接处理步骤并调度计算任务的工作流工具。",
+  "description": "## 机制\n\nNextflow 把工具或脚本封装为 process，以 channel 等数据流结构连接输入输出；数据依赖决定任务何时执行。执行器把同一流程映射到本地、集群或云环境。\n\n## 边界与应用\n\nNextflow 不强制某一种生物分析工具，也不自动保证科学结果可复现。数据、参数、软件环境和流程版本需要固定；容器、调度器等是可配置集成，不能都标成硬依赖。\n\n## 参考\n\n- [Nextflow：数据流与执行模型](https://docs.seqera.io/nextflow/overview)",
+  "importance": 4,
+  "official_site": "https://docs.seqera.io/nextflow/overview",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

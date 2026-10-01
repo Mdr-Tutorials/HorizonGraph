@@ -11,17 +11,25 @@
     "hardware_iot"
   ],
   "domains": [
-    "industry-landscape"
+    "industry-landscape",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "advanced-packaging",
+      "context": "在多裸片系统中，通过相应封装技术连接同质或异质芯粒。"
     }
   ],
-  "summary": "把大芯片拆成小芯粒互连，摩尔定律的续命术。",
+  "summary": "通过封装互连组合成系统的功能裸片设计单元。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "芯粒把系统分成可独立设计或制造的功能裸片，再通过封装互连组合。不同裸片可选择不同工艺，复用变化较少或较难缩放的模块。芯粒并不自动消除成本、测试、互连或散热问题，先进封装负责其一种实际集成路径。\n\n参考：[TSMC：3DFabric](https://3dfabric.tsmc.com/english/dedicatedFoundry/technology/3DFabric.htm)。"
 }

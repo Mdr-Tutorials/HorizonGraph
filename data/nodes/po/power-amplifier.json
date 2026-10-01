@@ -1,0 +1,38 @@
+{
+  "id": "power-amplifier",
+  "name": "RF Power Amplifier",
+  "aliases": [
+    "射频功率放大器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "rf-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transistor",
+      "context": "在晶体管射频功放中，用有源器件把电源能量受控地转换到射频输出。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impedance-matching",
+      "context": "在输出网络中把器件所需负载变换到外部端口条件。"
+    }
+  ],
+  "summary": "把直流供电能量转换为较高射频输出功率的放大器。",
+  "description": "射频 PA 为发射链提供输出功率，偏置与工作类别影响线性度、导通行为和效率。功率回退、负载网络及器件技术共同决定实际运行状态。\n\n高效率与线性度常需权衡；接近饱和会引入压缩和失真。输出功率还受到散热、供电和负载失配约束，不能只用小信号增益评价功放。\n\n参考：[Analog Devices：射频功率放大器偏置](https://www.analog.com/en/resources/technical-articles/basestation-rf-poweramplifier-biasing.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.analog.com/en/resources/technical-articles/basestation-rf-poweramplifier-biasing.html",
+  "abbreviation": "PA"
+}

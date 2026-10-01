@@ -1,0 +1,38 @@
+{
+  "id": "band-structure",
+  "name": "Electronic Band Structure",
+  "aliases": [
+    "电子能带结构",
+    "能带结构"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reciprocal-lattice",
+      "context": "在倒易空间选取波矢和路径来描述周期电子态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "density-functional-theory",
+      "context": "在常见材料计算路径中获取近似的电子结构。"
+    }
+  ],
+  "summary": "描述晶体电子能量随波矢变化的关系。",
+  "description": "电子能带结构把周期晶体的电子态能量表示为波矢的函数。常沿高对称路径绘制，以观察能隙、带的色散及可能的导电行为；绘图路径并不代表整个倒易空间的全部取样。\n\n计算结果受交换关联近似、结构、磁态和相互作用模型影响。标准基态 DFT 的能带并不自动给出精确激发能，预测带隙与实验比较时需要说明近似。\n\n## 参考\n\n- [Materials Project：电子结构](https://docs.materialsproject.org/methodology/materials-methodology/electronic-structure)\n- [VASP：第一性原理计算理论](https://vasp.at/wiki/index.php/Category:Theory)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

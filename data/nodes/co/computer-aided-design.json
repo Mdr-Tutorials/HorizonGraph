@@ -1,0 +1,45 @@
+{
+  "id": "computer-aided-design",
+  "name": "Computer-Aided Design",
+  "aliases": [
+    "计算机辅助设计",
+    "CAD"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "parametric-modeling",
+      "context": "通过尺寸、草图约束和特征依赖组织可修改的机械零件模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "boundary-representation",
+      "context": "采用实体几何内核时以曲面、边和拓扑连接表达几何边界。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "constructive-solid-geometry",
+      "context": "通过基本实体的布尔组合构造复杂零件时采用 CSG 方法。"
+    }
+  ],
+  "summary": "用软件构造、修改和表达工程几何与设计信息。",
+  "description": "CAD 支持工程绘图与几何建模，从二维图纸到三维零件或装配。机械设计中的尺寸、约束和几何特征可以表达设计意图，输出几何也可进入制造和仿真流程。\n\nCAD 模型不直接等同于可制造零件或有效仿真网格。几何容差、实体有效性和交换格式影响下游操作，二维绘图、参数化实体和自由曲面建模也具有不同能力边界。\n\n参考：[Autodesk CAD 说明](https://www.autodesk.com/solutions/cad-software)；[FreeCAD 官方功能](https://freecad.github.io/Website/features/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.autodesk.com/solutions/cad-software",
+  "abbreviation": "CAD"
+}

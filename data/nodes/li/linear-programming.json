@@ -1,0 +1,39 @@
+{
+  "id": "linear-programming",
+  "name": "Linear Programming",
+  "aliases": [
+    "线性规划",
+    "LP"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "simplex-method",
+      "context": "通过更新可行基求解线性规划时使用单纯形法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "interior-point-method",
+      "context": "采用障碍或原始对偶路径求解连续线性规划时使用内点法。"
+    }
+  ],
+  "summary": "在线性目标和线性约束下优化连续变量。",
+  "description": "线性规划使用线性目标、线性等式或不等式，以及连续变量界限。可行域是多面体，适用于生产配额、网络流和资源分配；若要表示不可分割决策，需要整数规划而不是事后直接四舍五入。\n\n问题可能不可行、无界或具有多个最优解。单纯形和内点方法都是求解路线，求解状态、对偶变量与数值容差比单独一个目标值更能说明结果可靠性。\n\n参考：[MIT 运筹优化讲义](https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/)；[SciPy linprog](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/lecture-notes/"
+}

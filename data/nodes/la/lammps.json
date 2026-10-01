@@ -1,0 +1,44 @@
+{
+  "id": "lammps",
+  "name": "LAMMPS",
+  "aliases": [
+    "LAMMPS 分子动力学软件"
+  ],
+  "type": "tool",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "molecular-dynamics",
+      "context": "按粒子模型与时间积分方案生成运动轨迹。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "force-field",
+      "context": "通过所选势函数与参数计算相互作用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "periodic-boundary-condition",
+      "context": "在周期模拟路径中设置盒与映像边界。"
+    }
+  ],
+  "summary": "面向原子和粒子模型的并行模拟软件。",
+  "description": "LAMMPS 支持多类粒子模型、相互作用势、积分器和边界条件，常用于经典分子动力学。可选包扩展 GPU、机器学习势和多种耦合能力，不能把可选能力当作每个构建的固定组成。\n\n建模需要同时选定粒子类型、势、单位和取样方案。它也支持一些非标准 MD 任务，具体结果应按输入模型解释而不是按软件名判断精度。\n\n## 参考\n\n- [LAMMPS：功能与模型](https://docs.lammps.org/Intro_features.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.lammps.org/"
+}

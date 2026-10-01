@@ -1,0 +1,33 @@
+{
+  "id": "dac",
+  "name": "Digital-to-Analog Converter",
+  "aliases": [
+    "数模转换器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resistor",
+      "context": "在 R-2R 或电阻串 DAC 架构中，以匹配电阻比例形成代码对应的输出等级；并非所有 DAC 都采用电阻网络。"
+    }
+  ],
+  "summary": "按数字代码和参考量产生模拟电压或电流的转换器。",
+  "description": "DAC 将数字代码映射到模拟电压或电流。电阻串、R-2R 网络、电流舵与电容阵列等架构以不同方式组合参考量，实现多等级输出。\n\n分辨率不能单独保证单调性、线性度或快速建立。实际输出还受参考源、开关毛刺、负载和输出放大器影响；连续波形生成通常还需后级重建滤波。\n\n参考：[Analog Devices：二进制 DAC 架构](https://www.analog.com/media/en/training-seminars/tutorials/MT-015.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.analog.com/media/en/training-seminars/tutorials/MT-015.pdf",
+  "abbreviation": "DAC"
+}

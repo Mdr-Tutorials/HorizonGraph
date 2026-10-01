@@ -1,0 +1,38 @@
+{
+  "id": "earth-observation",
+  "name": "Earth Observation",
+  "aliases": [
+    "地球观测"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "geospatial-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "remote-sensing",
+      "context": "卫星和航空地球观测使用遥感获得大范围重复测量，地面观测可补充验证。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "stac",
+      "context": "时空观测资产可通过 STAC 元数据和链接组织发现，具体目录取决于发布方。"
+    }
+  ],
+  "summary": "采集并分析地球环境的空间与时间变化信息。",
+  "description": "## 机制\n\n地球观测结合卫星、航空和地面等测量来源，研究陆地、海洋与大气。数据产品可以是原始观测、校正结果或派生指标，不同层级承担不同分析作用。\n\n## 边界与应用\n\n地球观测不只等于卫星照片；时空覆盖、产品层级和测量不确定性需要记录。把多个来源合并时还要考虑分辨率、采集时间和处理方法差异。\n\n## 参考\n\n- [NASA ARSET：遥感与观测平台](https://appliedsciences.nasa.gov/sites/default/files/2022-11/Fundamentals_of_RS_Edited_SC.pdf)",
+  "importance": 4,
+  "official_site": "https://appliedsciences.nasa.gov/sites/default/files/2022-11/Fundamentals_of_RS_Edited_SC.pdf",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing",
+    "remote-sensing"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "scada",
+  "name": "Supervisory Control and Data Acquisition",
+  "aliases": [
+    "监控与数据采集"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "industrial-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "opc-ua",
+      "context": "在采用 OPC UA 接口的 SCADA 部署中，交换现场变量、状态或事件；其他通信协议也可使用。"
+    }
+  ],
+  "summary": "采集现场数据并提供操作、报警和监督控制的系统类别。",
+  "description": "SCADA 从现场控制器或远程终端获取状态和量测，提供可视化、报警、历史记录及监督层操作。快速闭环通常仍由现场控制器执行，上层系统下达设定值或监督指令。\n\n通信延迟、数据质量、访问控制与运行连续性影响监控能力。SCADA 不等于 PLC 程序，也不等于负责订单、追溯和生产执行的 MES。\n\n参考：[NIST SP 800-82 Rev.3：OT 系统架构](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf)；[Siemens：WinCC SCADA 与 OPC UA 接口](https://www.siemens.com/en-us/products/simatic-wincc/unified/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf",
+  "abbreviation": "SCADA"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "iec-62443",
+  "name": "ISA/IEC 62443",
+  "aliases": [
+    "ISA/IEC 62443 工控安全标准"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "isa",
+      "context": "ISA 的 ISA99 委员会开发工业自动化与控制系统网络安全系列及相关技术报告。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "iec",
+      "context": "IEC 以 IEC 62443 系列发布工业通信网络和系统安全国际标准。"
+    }
+  ],
+  "summary": "规定工业自动化与控制系统网络安全要求和过程的标准系列。",
+  "description": "ISA/IEC 62443 面向工业自动化与控制系统，涉及资产所有者、安全程序、服务提供方、系统与组件等角色。它把风险评估、产品开发和持续运行中的安全过程联系起来。\n\n网络安全等级与功能安全 SIL 不可混用。标准系列中的各部分具有不同对象与要求，不能把某组件或某部分符合性直接外推为整厂系统已经安全。\n\n参考：[ISA：ISA/IEC 62443 标准系列](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards",
+  "abstraction_level": "runtime_vm"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "qgis",
+  "name": "QGIS",
+  "aliases": [
+    "QGIS 地理信息软件"
+  ],
+  "type": "tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "gis"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "gdal",
+      "context": "QGIS 的构建要求 GDAL/OGR 库；此处依赖库能力，不要求逐次调用 GDAL 命令行程序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wms",
+      "context": "可把 WMS 服务添加为地图图层，服务返回渲染图像。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wfs",
+      "context": "可通过 WFS 访问要素数据，写入与过滤能力由服务和客户端支持决定。"
+    }
+  ],
+  "summary": "用于地理数据编辑、分析与制图的开源桌面 GIS。",
+  "description": "## 机制\n\nQGIS 以项目和图层组织矢量、栅格及服务数据，提供属性查询、编辑、处理和布局工作流。界面中的坐标参考设置与渲染配置影响显示及处理方式。\n\n## 边界与应用\n\nQGIS 是 GIS 的一个具体实现，不等于整个学科。项目的即时重投影用于显示时不必改写原数据，输出分析仍应核对目标 CRS、算法参数与来源精度。\n\n## 参考\n\n- [QGIS：应用界面与工作流](https://docs.qgis.org/latest/en/docs/user_manual/introduction/qgis_gui.html)\n- [QGIS：数据格式与 GDAL 驱动](https://docs.qgis.org/latest/en/docs/user_manual/managing_data_source/supported_data.html)\n- [QGIS：官方构建依赖](https://github.com/qgis/QGIS/blob/master/INSTALL.md)",
+  "importance": 5,
+  "official_site": "https://docs.qgis.org/latest/en/docs/user_manual/introduction/qgis_gui.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ],
+  "abstraction_level": "application_tool"
+}

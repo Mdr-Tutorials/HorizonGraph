@@ -12,7 +12,8 @@
   ],
   "domains": [
     "embedded-systems",
-    "machine-learning"
+    "machine-learning",
+    "robotics"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -25,10 +26,11 @@
       "target_id": "cpp"
     }
   ],
-  "summary": "机器人软件的事实标准框架，话题与服务消息总线。",
+  "summary": "提供机器人通信接口、开发工具与软件包生态的框架家族。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
-  "official_site": "https://www.ros.org"
+  "official_site": "https://www.ros.org",
+  "description": "## 家族与接口\n\nROS 提供机器人软件的通信、工具和包生态。节点、话题、服务与动作等接口帮助模块交换数据并组织长期任务。ROS 1 与 ROS 2 属于同一家族，但通信、构建和运行模型存在差异，本节点保留家族身份。\n\n## 组件边界\n\n运动规划、导航、状态估计和仿真由对应项目承担，ROS 本身不是这些算法的统一实现，也不等同于 Linux 内核。MoveIt、Nav2、robot_localization 与 Gazebo 形成不同能力路径，具体版本和配置应查项目文档。\n\n## 参考\n\n- [ROS 2：官方代码与文档入口](https://github.com/ros2/ros2)\n- [Nav2：机器人导航架构](https://docs.nav2.org/rolling/getting_started/navigation_concepts/)"
 }

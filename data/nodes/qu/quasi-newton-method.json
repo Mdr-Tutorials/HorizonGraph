@@ -1,0 +1,38 @@
+{
+  "id": "quasi-newton-method",
+  "name": "Quasi-Newton Method",
+  "aliases": [
+    "拟牛顿法",
+    "准牛顿法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "用矩阵更新维护 Hessian 或其逆的近似，并计算由近似曲率调整的搜索方向。"
+    }
+  ],
+  "summary": "利用相邻梯度信息近似二阶曲率的优化方法。",
+  "description": "拟牛顿方法利用相邻迭代点与梯度差更新 Hessian 或其逆的近似，减少直接计算二阶导数的成本。BFGS 是典型更新，L-BFGS 以有限历史记录控制大规模问题的存储成本。\n\n曲率近似和步长选择共同决定行为；不保证所有非凸问题的全局最优。带边界的 L-BFGS-B 有额外约束处理，不能把无约束 BFGS 的行为直接套用到任意约束模型。\n\n参考：[SciPy BFGS 文档](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-bfgs.html)；[Stanford 无约束优化讲义](https://web.stanford.edu/class/ee364a/lectures/unconstrained.pdf)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://docs.scipy.org/doc/scipy/reference/optimize.minimize-bfgs.html"
+}

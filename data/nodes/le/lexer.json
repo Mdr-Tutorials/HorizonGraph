@@ -18,9 +18,10 @@
       "target_id": "theory"
     }
   ],
-  "summary": "把字符流切成 token 的编译第一站。",
+  "summary": "按词法规则把字符流组织为词法单元。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\n词法分析识别标识符、字面量、关键字和运算符等 token，保存源码位置以支持后续诊断。预处理和注释处理的具体位置由语言及前端实现决定。\n\n## 边界与应用\n\n词法分析不能单独判断递归语法结构或完成名称绑定。边界规则、最长匹配与上下文相关词法需依具体语言处理，不能仅用空白切分源码。\n\n## 参考\n\n- [Clang 内部架构手册](https://clang.llvm.org/docs/InternalsManual.html)"
 }

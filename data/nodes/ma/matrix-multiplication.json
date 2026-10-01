@@ -12,19 +12,24 @@
   ],
   "domains": [
     "machine-learning",
-    "high-performance-computing"
+    "high-performance-computing",
+    "mathematics"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mathematical-foundations"
     }
   ],
-  "summary": "按行列内积组合矩阵的运算，连接线性代数与高性能计算。",
-  "description": "形状为 m×k 与 k×n 的矩阵相乘，得到 m×n 的矩阵，每个元素是相应行列的内积。它不同于逐元素相乘。NumPy 的 matmul、BLAS 的 GEMM 和 GPU 内核都提供相关计算，是注意力与低秩适配的重要计算环节。\n\n参考：[权威资料](https://numpy.org/doc/stable/reference/generated/numpy.matmul.html)。",
+  "summary": "以行列内积组合矩阵表示的线性变换。",
+  "description": "形状为 m×k 与 k×n 的矩阵相乘得到 m×n 矩阵，元素 Cᵢⱼ 是对应行列内积。乘法次序通常影响结果，也要求匹配内部维度；逐元素乘法则是另一种操作。\n\n矩阵乘法可表示线性映射的复合，并用于设计矩阵预测、SVD 重构、神经网络与注意力计算。NumPy 的 matmul 对高维输入还具有批量维广播规则；BLAS 的 GEMM 则支持缩放和累加形式。理论运算相同，具体数值误差和性能受精度、存储布局及执行后端影响。\n\n参考：[NumPy matmul 规则](https://numpy.org/doc/stable/reference/generated/numpy.matmul.html)；[Netlib BLAS](https://www.netlib.org/blas/)。",
   "importance": 5,
   "official_site": "https://numpy.org/doc/stable/reference/generated/numpy.matmul.html",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-01",
   "origin": "ai_draft",
   "status": "active"
 }

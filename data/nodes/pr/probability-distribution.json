@@ -1,0 +1,25 @@
+{
+  "id": "probability-distribution",
+  "name": "Probability Distribution",
+  "aliases": [
+    "概率分布"
+  ],
+  "type": "concept",
+  "domains": [
+    "mathematics",
+    "statistics",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mathematical-foundations"
+    }
+  ],
+  "summary": "描述随机变量取值及其概率的规则。",
+  "description": "概率分布规定随机变量落入各类取值集合的概率。离散变量可用概率质量函数描述；绝对连续变量可用密度描述，区间概率由积分得到；累积分布函数 F(x)=P(X≤x) 可统一表达一维分布。\n\n密度值并非单点概率，连续密度可大于 1，只需整体积分为 1。联合分布、边缘分布与条件分布回答不同问题。选择高斯或伯努利等分布是建模假设，需要结合数据与任务检验；分布为似然估计、预测不确定性与采样提供数学对象。\n\n参考：[Statlect 随机变量与分布](https://www.statlect.com/fundamentals-of-probability/random-variables)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

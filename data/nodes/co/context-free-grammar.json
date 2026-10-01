@@ -1,0 +1,28 @@
+{
+  "id": "context-free-grammar",
+  "name": "Context-Free Grammar",
+  "aliases": [
+    "上下文无关文法"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "以单个非终结符产生式描述递归语法结构。",
+  "description": "## 机制\n\n上下文无关文法包含终结符、非终结符、开始符号和产生式，产生式左侧是单个非终结符。递归规则可描述嵌套括号、表达式与语句，由推导生成合法字符串。\n\n## 边界与应用\n\n文法可有歧义，且通常不表达变量声明后才能使用等语义约束。此处 CFG 指文法，已有 cfg 节点指控制流图，两者不应因缩写相同而合并。\n\n## 参考\n\n- [Cornell：文法与语法分析](https://www.cs.cornell.edu/courses/cs4120/2023sp/lectures/04cfgs/lec04-slides.pdf)",
+  "importance": 4,
+  "official_site": "https://www.cs.cornell.edu/courses/cs4120/2023sp/lectures/04cfgs/lec04-slides.pdf",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers"
+  ],
+  "abbreviation": "CFG"
+}

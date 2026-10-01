@@ -14,12 +14,13 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "data-structure"
     }
   ],
-  "summary": "源码结构的树形抽象，编译器与 LSP 的通用中间体。",
+  "summary": "用声明和表达式等节点表示源程序抽象语法结构。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\nAST 保留对后续分析有意义的结构，通常省略部分标点或文法辅助节点。Clang 的节点还可保存源码位置、类型和声明绑定，支持诊断与工具访问。\n\n## 边界与应用\n\nAST 与完整解析树或目标机器 IR 不同，但抽象程度由工具设计决定。源码改写若需保留注释和格式，不能只靠缺少这些信息的 AST。\n\n## 参考\n\n- [Clang AST 简介](https://clang.llvm.org/docs/IntroductionToTheClangAST.html)"
 }

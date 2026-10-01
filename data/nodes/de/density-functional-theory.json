@@ -1,0 +1,33 @@
+{
+  "id": "density-functional-theory",
+  "name": "Density Functional Theory",
+  "aliases": [
+    "密度泛函理论"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kohn-sham-equations",
+      "context": "在常见 Kohn–Sham DFT 实现中求解辅助单粒子自洽方程。"
+    }
+  ],
+  "summary": "以电子密度为核心变量研究多电子基态。",
+  "description": "密度泛函理论把多电子体系的基态研究转化为关于电子密度的描述。常用 Kohn–Sham 形式引入辅助单粒子轨道，并通过自洽计算寻找满足所选能量泛函的状态。\n\n理论基础与实际近似应区分：交换关联泛函、赝势、基组、取样和收敛条件都会影响结果。方法广泛用于材料和分子，但并不保证所有性质都达到同一精度。\n\n## 参考\n\n- [Hohenberg 与 Kohn：Inhomogeneous Electron Gas](https://doi.org/10.1103/PhysRev.136.B864)\n- [VASP：第一性原理计算理论](https://vasp.at/wiki/index.php/Category:Theory)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "DFT"
+}

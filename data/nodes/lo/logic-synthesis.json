@@ -1,0 +1,44 @@
+{
+  "id": "logic-synthesis",
+  "name": "Logic Synthesis",
+  "aliases": [
+    "逻辑综合",
+    "RTL 综合"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rtl",
+      "context": "数字综合流程读取可综合 RTL，生成门级或目标资源网表。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "boolean-algebra",
+      "context": "在逻辑优化中以等价布尔变换简化组合逻辑。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-cell",
+      "context": "在标准单元 ASIC 综合中，把逻辑映射到给定库的单元。"
+    }
+  ],
+  "summary": "把可综合硬件描述变换并映射为目标逻辑网表的过程。",
+  "description": "逻辑综合将可综合 RTL 转换成逻辑网表，经过优化与技术映射，面向 ASIC 标准单元库或 FPGA 资源。它须保持设计语义，同时考虑时序、面积等目标；综合后的功能正确性和物理时序仍需要验证。\n\n参考：[Yosys 官方介绍](https://yosyshq.readthedocs.io/projects/yosys/en/latest/introduction.html)；[Synopsys：ASIC 设计流程](https://www.synopsys.com/glossary/what-is-asic-design.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://yosyshq.readthedocs.io/projects/yosys/en/latest/introduction.html"
+}

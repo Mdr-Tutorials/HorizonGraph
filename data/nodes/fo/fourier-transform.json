@@ -1,0 +1,32 @@
+{
+  "id": "fourier-transform",
+  "name": "Fourier Transform",
+  "aliases": [
+    "傅里叶变换"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numerical-integration",
+      "context": "直接数值近似连续变换时，对截断区间上的复指数加权信号进行求积。"
+    }
+  ],
+  "summary": "把信号表示为频率成分的积分或相应广义变换。",
+  "description": "连续时间傅里叶变换以复指数为基，把时间函数映射为频率表示；逆变换恢复满足相应条件的信号。不同书籍对符号、角频率和归一化的约定不同，公式使用前需保持一致。\n\n普通积分形式有收敛条件，周期信号和冲激等可使用广义函数解释。连续傅里叶变换、离散时间傅里叶变换及 DFT 不是同一个对象，数值计算通常只得到有限采样与截断下的近似。\n\n参考：[MIT 傅里叶变换](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec16/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec16/"
+}

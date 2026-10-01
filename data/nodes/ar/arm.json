@@ -12,7 +12,9 @@
   ],
   "domains": [
     "embedded-systems",
-    "systems-programming"
+    "systems-programming",
+    "digital-design",
+    "semiconductor-engineering"
   ],
   "abstraction_level": "hardware",
   "relations": [
@@ -37,11 +39,12 @@
       "target_id": "loongarch"
     }
   ],
-  "summary": "手机与能效服务器的 RISC 指令集家族。",
+  "summary": "定义处理器软件接口的 Arm 指令集架构家族。",
   "importance": 5,
   "popular": 81,
   "official_site": "https://www.arm.com",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Arm 指令集架构规定软件可见的指令、寄存器及其他执行行为，微架构决定如何实现这些行为。AArch64 是 Arm 架构中的一种执行状态，常见 ARM64 称呼不应让人误以为整个家族仅有 64 位。Arm 教学资料示例以 SoC 和 FPGA 平台连接处理器、外设及硬件加速，但 ISA 不规定唯一 RTL、工艺或封装。\n\n参考：[Arm：ISA 与微架构](https://www.arm.com/zh-tw/glossary/isa)；[Arm：高级 SoC 设计教学包](https://www.arm.com/resources/education/education-kits/advanced-soc)。"
 }

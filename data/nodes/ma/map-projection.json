@@ -1,0 +1,32 @@
+{
+  "id": "map-projection",
+  "name": "Map Projection",
+  "aliases": [
+    "地图投影"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "geospatial-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geographic-coordinate-system",
+      "context": "投影从地理坐标及其参考曲面定义计算平面位置。"
+    }
+  ],
+  "summary": "将曲面上的地理位置映射到平面坐标的数学方法。",
+  "description": "## 机制\n\n地图投影以公式和参数把地球参考曲面上的位置映射到平面。不同方法保留或近似保留角度、面积等性质，投影中心与区域范围影响畸变分布。\n\n## 边界与应用\n\n平面地图不能同时在全球保持面积、角度与距离。投影选择应依据用途与地区；投影操作也不自动完成不同大地基准之间的转换。\n\n## 参考\n\n- [PROJ：地图投影](https://proj.org/en/stable/operations/projections/index.html)\n- [QGIS：坐标参考系](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/coordinate_reference_systems.html)\n- [PROJ：坐标参考对象](https://proj.org/en/stable/specifications/projjson.html)",
+  "importance": 4,
+  "official_site": "https://proj.org/en/stable/operations/projections/index.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ]
+}

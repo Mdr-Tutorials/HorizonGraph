@@ -1,0 +1,33 @@
+{
+  "id": "convex-set",
+  "name": "Convex Set",
+  "aliases": [
+    "凸集"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "convex-optimization",
+      "context": "凸优化的可行域要求为凸集；整数限制一般破坏这一条件。"
+    }
+  ],
+  "summary": "任意两点间的线段仍位于集合内部的集合。",
+  "description": "凸集的定义是任意两点的凸组合仍在集合中。半空间、仿射集合和它们的交集提供常见凸可行域；集合为凸不意味着边界光滑，也不要求集合有界。\n\n凸性让两个可行方案之间的线性插值保持可行，是凸优化分析的基本条件。带整数约束的可行集合通常不凸；用连续松弛替代原集合时，需要另外处理整数可行性。\n\n参考：[Boyd 与 Vandenberghe 教材](https://stanford.edu/~boyd/cvxbook/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://stanford.edu/~boyd/cvxbook/"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "numerical-analysis",
+  "name": "Numerical Analysis",
+  "aliases": [
+    "数值分析"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "condition-number",
+      "context": "估计输入扰动可能放大的程度，区分病态问题与实现误差。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numerical-stability",
+      "context": "分析计算过程是否额外放大舍入或中间误差。"
+    }
+  ],
+  "summary": "研究近似计算算法、收敛性与误差的数学领域。",
+  "description": "数值分析研究有限精度与有限计算量下的近似解，包括线性方程、非线性求根、积分、插值和微分方程。评价算法要结合一致性、收敛、稳定性及问题本身的敏感程度。\n\n减少离散步长不一定无限改善结果，舍入和迭代误差可能开始占主导。条件数描述问题敏感性，稳定性描述算法如何传播误差；稳定算法也不能消除病态输入带来的信息损失。\n\n参考：[数值计算教材](https://fncbook.com/)；[FNC 误差与稳定性](https://fncbook.com/chapter1/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://fncbook.com/"
+}

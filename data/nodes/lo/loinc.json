@@ -1,0 +1,33 @@
+{
+  "id": "loinc",
+  "name": "Logical Observation Identifiers Names and Codes",
+  "aliases": [
+    "LOINC 检验与观察编码"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "clinical-terminology"
+    }
+  ],
+  "summary": "用统一编码标识健康观察、测量和临床文档。",
+  "description": "## 机制\n\nLOINC 给检查、观察、量表及文档提供稳定标识与名称，其编码常表达测量的“问题”，结果值与单位由其他字段携带。术语的多个维度帮助区分看似相同的测量。\n\n## 边界与应用\n\n同一名称不保证标本、方法或尺度相同，本地映射要核对语义。LOINC 不是传输协议，也不能单独表达全部临床事实；定性结果可与其他术语系统配合。\n\n## 参考\n\n- [LOINC：入门与编码含义](https://loinc.org/start)",
+  "importance": 4,
+  "official_site": "https://loinc.org/start",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "abbreviation": "LOINC"
+}

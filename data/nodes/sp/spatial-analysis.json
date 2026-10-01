@@ -1,0 +1,37 @@
+{
+  "id": "spatial-analysis",
+  "name": "Spatial Analysis",
+  "aliases": [
+    "空间分析"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "geospatial-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-reference-system",
+      "context": "计算距离或叠加前核对输入的坐标系和单位，必要时采用正确转换。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spatial-join",
+      "context": "依据相交、包含或距离条件将对象的空间关系转为关联记录。"
+    }
+  ],
+  "summary": "依据位置、几何和邻近关系分析地理数据。",
+  "description": "## 机制\n\n空间分析包括距离、缓冲、叠加、空间连接及空间统计等操作。处理流程先明确输入表示与 CRS，再选择与问题相符的空间关系和计算方法。\n\n## 边界与应用\n\n平面与大地计算、边界包含规则和单位会改变结果。空间相关或地图聚集不直接证明因果，数据分辨率、采样与时间差异也应纳入解释。\n\n## 参考\n\n- [PostGIS：空间查询](https://postgis.net/docs/using_postgis_query.html)",
+  "importance": 4,
+  "official_site": "https://postgis.net/docs/using_postgis_query.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ]
+}

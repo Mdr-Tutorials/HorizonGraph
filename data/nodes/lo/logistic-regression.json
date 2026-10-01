@@ -1,0 +1,48 @@
+{
+  "id": "logistic-regression",
+  "name": "Logistic Regression",
+  "aliases": [
+    "逻辑回归",
+    "Logit Model"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "conditional-probability",
+      "context": "估计给定输入特征后属于各类别的条件概率。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "maximum-likelihood-estimation",
+      "context": "未加惩罚时，通过最大化伯努利或多项分布的条件似然拟合分类参数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cross-entropy",
+      "context": "分类训练以相应的交叉熵作为负对数似然损失。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regularization",
+      "context": "正则化逻辑回归在目标中加入参数惩罚，以控制系数与模型复杂度。"
+    }
+  ],
+  "summary": "用线性得分与概率链接函数进行分类。",
+  "description": "二分类逻辑回归将线性得分 z=wᵀx+b 经 sigmoid 转成 P(y=1|x)。它建模的是对数几率与特征的线性关系，虽名为回归，却常用于分类；多分类可用相应的 softmax 形式。\n\n伯努利似然的负对数等于二元交叉熵，实践中常加入 L1 或 L2 正则化。概率输出需按阈值转为类别，阈值可随误报与漏报成本调整。线性决策边界有表达能力限制，数据完全可分时，无正则的最大似然解还可能没有有限最优系数。\n\n参考：[scikit-learn LogisticRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)；[scikit-learn 逻辑回归机制](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

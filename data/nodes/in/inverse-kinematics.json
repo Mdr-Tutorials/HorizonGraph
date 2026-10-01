@@ -1,0 +1,35 @@
+{
+  "id": "inverse-kinematics",
+  "name": "Inverse Kinematics",
+  "aliases": [
+    "逆运动学",
+    "反向运动学",
+    "IK"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "robotics-ecosystem"
+  ],
+  "domains": [
+    "robotics",
+    "control-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "robotics-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "数值逆运动学通过雅可比与线性方程近似把末端误差转换为关节修正量。"
+    }
+  ],
+  "summary": "由末端目标位姿求满足运动学关系的关节配置。",
+  "description": "## 求解\n\n逆运动学根据机器人结构与末端目标，求使正运动学达到该目标的关节变量。特定结构可解析求解，通用数值方法可根据位姿误差与雅可比迭代修正关节。\n\n## 约束\n\n目标可能不可达、存在多个解或位于奇异配置附近，关节限制和初值会影响数值求解。得到一个运动学解不等于得到无碰撞、满足速度与动力学限制的运动轨迹，规划与控制还需后续验证。\n\n## 参考\n\n- [Modern Robotics：数值逆运动学](https://modernrobotics.northwestern.edu/nu-gm-book-resource/6-2-numerical-inverse-kinematics-part-1-of-2/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/6-2-numerical-inverse-kinematics-part-1-of-2/"
+}

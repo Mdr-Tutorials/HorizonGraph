@@ -1,0 +1,38 @@
+{
+  "id": "battery-management-system",
+  "name": "Battery Management System",
+  "aliases": [
+    "电池管理系统"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "power-energy-ecosystem"
+  ],
+  "domains": [
+    "power-energy-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "power-energy-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "state-of-charge",
+      "context": "估计电池剩余可用电量，以支持充放电管理和系统报告。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "state-of-health",
+      "context": "评估容量或其他性能相对参考状态的退化，辅助维护及运行决策。"
+    }
+  ],
+  "summary": "监测电池状态并执行保护、均衡及状态估计的系统类别。",
+  "description": "BMS 获取单体及电池包电压、电流和温度，用于充放电保护、均衡和状态估计。测量精度与采样条件直接影响对电池实际状态的判断。\n\nSOC、SOH 和可用功率描述不同性质，不能只用某一时刻端电压代替全部状态。BMS 也不等于储能站的完整能量调度系统；具体保护与均衡能力因实现而异。\n\n参考：[Texas Instruments：电池管理中的测量与保护](https://www.ti.com/document-viewer/lit/html/SSZT998/GUID-F1D908B5-9950-46A5-8DD3-D10F6437FAED)；[Texas Instruments：电池电量计与状态估计](https://www.ti.com/product-category/battery-management-ics/battery-fuel-gauges/overview.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://www.ti.com/document-viewer/lit/html/SSZT998/GUID-F1D908B5-9950-46A5-8DD3-D10F6437FAED",
+  "abbreviation": "BMS"
+}

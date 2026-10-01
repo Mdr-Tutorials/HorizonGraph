@@ -1,0 +1,39 @@
+{
+  "id": "rdf",
+  "name": "Resource Description Framework",
+  "aliases": [
+    "资源描述框架"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logical-entailment",
+      "context": "通过规定的 RDF 语义解释图之间的蕴涵关系。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "w3c",
+      "context": "RDF 标准由 W3C 工作组制定并按其标准流程发布。"
+    }
+  ],
+  "summary": "用资源标识与三元组表达图数据的标准模型。",
+  "description": "RDF 定义由主语、谓词、宾语三元组组成的图及相关语义，资源可用 IRI 标识，值可采用文字量，匿名对象可由空白节点表达。RDF 数据集还可组织命名图。\n\nRDF 是抽象数据模型，不是单一文件格式或传输协议。Turtle、JSON-LD 等提供不同序列化，RDFS、OWL 和 SPARQL 则在模型之上承担其他能力。\n\n## 参考\n\n- [W3C：RDF 数据模型](https://www.w3.org/TR/rdf11-concepts/)\n- [W3C：RDF 语义](https://www.w3.org/TR/rdf11-mt/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "abbreviation": "RDF",
+  "official_site": "https://www.w3.org/TR/rdf11-concepts/"
+}

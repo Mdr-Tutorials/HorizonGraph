@@ -1,0 +1,31 @@
+{
+  "id": "prefix-code",
+  "name": "Prefix Code",
+  "aliases": [
+    "前缀码",
+    "即时码"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "trie",
+      "context": "以按码元分叉的树存储码字，叶子界定即时译码边界。"
+    }
+  ],
+  "summary": "任何码字都不是另一码字前缀的变长码。",
+  "description": "前缀码的码字集合不含相互前缀，因此收到一个完整码字即可在当前边界译出，不必依赖未来符号。二元树的叶子对应码字，Huffman 编码是一种按概率构造前缀码的算法。\n\n前缀性质保证串接时的唯一译码，但不是所有唯一可译码都必须具有前缀性质。是否节省平均长度取决于符号概率与码长，前缀码也不自动检测传输错误。\n\n参考：[MIT 无损变长编码](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/"
+}

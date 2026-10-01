@@ -1,0 +1,33 @@
+{
+  "id": "hmac",
+  "name": "Hash-based Message Authentication Code",
+  "aliases": [
+    "基于哈希的消息认证码"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sha-2",
+      "context": "HMAC-SHA-256 等实例以 SHA-2 家族成员为底层哈希；HMAC 构造不只允许 SHA-2。"
+    }
+  ],
+  "summary": "结合共享密钥与哈希函数校验消息完整性和来源。",
+  "description": "## 机制\n\nHMAC 用不同内外填充组合密钥与哈希计算认证标签，接收者以同一秘密密钥重新计算并比较。HMAC-SHA-256 等实例把底层哈希与认证构造分开选择。\n\n## 边界与应用\n\nHMAC 不加密消息，也不提供双方之间的不可否认性；密钥泄露后双方均可生成标签。应使用可靠随机密钥和安全比较，重放防护还需时间戳、序号等协议设计。\n\n## 参考\n\n- [RFC 2104：HMAC](https://www.rfc-editor.org/rfc/rfc2104.html)",
+  "importance": 4,
+  "official_site": "https://www.rfc-editor.org/rfc/rfc2104.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abbreviation": "HMAC"
+}

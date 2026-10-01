@@ -1,0 +1,43 @@
+{
+  "id": "finite-difference-method",
+  "name": "Finite Difference Method",
+  "aliases": [
+    "有限差分法",
+    "FDM"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-mesh",
+      "context": "在网格节点上定义差分模板和边界上的离散条件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sparse-linear-solver",
+      "context": "隐式步进或稳态离散产生稀疏方程时求解代数系统。"
+    }
+  ],
+  "summary": "用相邻网格值的差分近似微分算子。",
+  "description": "有限差分法用网格点上的函数值构造导数近似，把微分方程变成代数方程或离散时间步进。差分模板的宽度、阶数和边界处理决定离散精度与结构。\n\n局部截断误差小还需结合稳定性才能说明收敛。复杂边界和不规则网格需要额外处理，空间离散与时间离散的限制也应一起检查。\n\n参考：[FNC 边值问题](https://fncbook.com/chapter10/)；[FNC 扩散方程](https://fncbook.com/chapter11/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://fncbook.com/chapter10/"
+}

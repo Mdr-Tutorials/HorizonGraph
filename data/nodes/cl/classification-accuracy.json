@@ -1,0 +1,33 @@
+{
+  "id": "classification-accuracy",
+  "name": "Accuracy (Classification)",
+  "aliases": [
+    "分类准确率",
+    "准确率"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ml-evaluation-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "confusion-matrix",
+      "context": "对单标签分类，将对角线上的正确分类计数除以全部样本计数。"
+    }
+  ],
+  "summary": "统计分类预测正确的样本比例。",
+  "description": "单标签分类准确率是预测类别与真实类别相同的样本比例，二分类可写为 (TP+TN)/N。它适合先给出整体正确率，再用各类召回率和混淆矩阵解释错误分布。\n\n类别极不平衡时，总预测多数类也可能获得很高准确率；不同类别成本不相同时，相同准确率未必具有相同业务价值。多标签任务的 subset accuracy 要求一个样本的整组标签全部正确，不能与逐标签正确率混淆。\n\n参考：[scikit-learn accuracy_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

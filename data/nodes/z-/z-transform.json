@@ -1,0 +1,32 @@
+{
+  "id": "z-transform",
+  "name": "Z Transform",
+  "aliases": [
+    "Z 变换"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "impulse-response",
+      "context": "对离散 LTI 系统的脉冲响应作 Z 变换，构造传递函数并保留收敛域信息。"
+    }
+  ],
+  "summary": "以复变量幂级数表示离散序列的变换。",
+  "description": "Z 变换将序列映射为复变量 z 的幂级数，常用于离散时间系统、差分方程和数字滤波器分析。变换表达式和收敛域需要一起说明，单独一个有理式不能总是唯一确定序列。\n\n单位圆位于收敛域中时可与离散时间频率响应相联系。极点位置的稳定性结论还依赖因果性及收敛域，不能只看分母形式就判断任意系统稳定。\n\n参考：[MIT Z 变换](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec05/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec05/"
+}

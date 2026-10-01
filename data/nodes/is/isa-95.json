@@ -1,0 +1,33 @@
+{
+  "id": "isa-95",
+  "name": "ISA-95",
+  "aliases": [
+    "ISA-95 企业控制集成标准"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "industrial-automation-ecosystem"
+  ],
+  "domains": [
+    "industrial-automation"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "isa",
+      "context": "ISA 组织 ISA-95 企业与控制系统集成标准的制定和维护。"
+    }
+  ],
+  "summary": "用活动与信息模型定义企业和制造控制系统的集成边界。",
+  "description": "ISA-95 以生产活动及信息交换模型描述企业系统与制造运行之间的接口，帮助约定生产、物料、设备及能力等数据的含义。IEC 62264 对应相关国际标准系列。\n\n层级模型不等于要求所有系统必须使用同一物理网络拓扑，也不是一个具体 MES 软件。系统可以采用不同技术实现，但仍需明确模型中的角色、信息和接口。\n\n参考：[ISA：ISA-95 企业与控制集成标准](https://www.isa.org/standards-and-publications/isa-standards/isa-95-standard)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.isa.org/standards-and-publications/isa-standards/isa-95-standard",
+  "abstraction_level": "runtime_vm"
+}

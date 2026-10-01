@@ -1,0 +1,44 @@
+{
+  "id": "gmsh",
+  "name": "Gmsh",
+  "aliases": [
+    "Gmsh",
+    "三维有限元网格生成器"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "computational-mesh"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "opencascade",
+      "context": "选用 OpenCASCADE 几何内核时执行 STEP 导入、实体布尔运算与复杂几何建模。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "constructive-solid-geometry",
+      "context": "在 OpenCASCADE 教程流程中，通过实体并交差构造待划分网格的几何域。"
+    }
+  ],
+  "summary": "结合几何、网格生成与后处理的开源工程工具。",
+  "description": "Gmsh 提供几何描述、二维三维网格生成、后处理及脚本和 API。其内置几何与 OpenCASCADE 路径有不同能力，物理分组用于把边界或材料区域传给下游求解流程。\n\n导入几何不等于自动得到高质量分析网格，尺寸场、单元类型和边界标记需显式设计。Gmsh 可以组织计算流程，但完整物理求解通常由外部求解器或集成组件承担。\n\n参考：[Gmsh 官方手册](https://gmsh.info/doc/texinfo/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://gmsh.info/doc/texinfo/",
+  "abstraction_level": "application_tool"
+}

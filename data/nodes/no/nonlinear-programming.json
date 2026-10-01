@@ -1,0 +1,39 @@
+{
+  "id": "nonlinear-programming",
+  "name": "Nonlinear Programming",
+  "aliases": [
+    "非线性规划",
+    "NLP"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kkt-conditions",
+      "context": "在可微且满足约束资格条件的问题中检验局部最优的必要条件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "quasi-newton-method",
+      "context": "在适当连续子问题中利用梯度变化估计二阶曲率。"
+    }
+  ],
+  "summary": "目标或约束含非线性表达式的连续优化。",
+  "description": "非线性规划允许目标或约束为非线性函数，涵盖参数估计、几何设计及物理模型优化。凸非线性问题和一般非凸问题的最优性保证不同，导数可用性也影响算法选择。\n\n局部求解器通常从给定初值寻找驻点或局部解，不能默认得到全局最优。约束缩放、可微性和梯度精度会影响收敛，必要时应检查多个初值及目标的实际物理意义。\n\n参考：[Boyd 与 Vandenberghe 教材](https://stanford.edu/~boyd/cvxbook/)；[SciPy 优化接口](https://docs.scipy.org/doc/scipy/reference/optimize.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://stanford.edu/~boyd/cvxbook/"
+}

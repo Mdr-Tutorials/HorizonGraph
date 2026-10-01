@@ -18,15 +18,31 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "type-system"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mark-sweep",
+      "context": "追踪式收集器可以采用标记清除回收不可达对象；不是所有 GC 都使用这一算法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reference-counting",
+      "context": "CPython 等运行时以引用计数为基础并辅以循环检测。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "stop-the-world",
+      "context": "部分收集阶段需暂停受管理线程取得稳定根或完成协调；并发算法也可能保留短暂停顿。"
     }
   ],
-  "summary": "运行时自动回收不可达内存，换来暂停与吞吐的权衡。",
+  "summary": "自动识别不再需要的对象，并回收其存储空间。",
   "importance": 5,
   "popular": 72,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
   "status": "active",
   "tags": [
     "gc"
-  ]
+  ],
+  "description": "## 机制\n\n追踪回收从根集合寻找可达对象，引用计数则跟踪引用所有权变化。回收器可能采用分代、移动、增量或并发策略，在 CPU、内存、吞吐与暂停之间权衡。\n\n## 边界与应用\n\nGC 不保证外部资源立即释放，文件、锁和连接仍应明确管理。并发收集器也可能有短暂停顿；引用计数单独不能清理不可达循环。\n\n## 参考\n\n- [Go：垃圾回收指南](https://go.dev/doc/gc-guide)\n- [CPython：引用计数 API](https://docs.python.org/3/c-api/refcounting.html)"
 }

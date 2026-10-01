@@ -1,0 +1,33 @@
+{
+  "id": "unification",
+  "name": "Unification",
+  "aliases": [
+    "合一",
+    "统一替换"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "first-order-logic",
+      "context": "在含变量与项的推理路径中构造一致的符号替换。"
+    }
+  ],
+  "summary": "寻找使两个符号项一致的变量替换。",
+  "description": "合一寻找能让两个项成为同一表达式的变量替换，是关系规则和逻辑程序的重要操作。它比普通字符串比较更强，因为变量可以对应结构化项。\n\n采用有限项的一般算法需要处理变量是否出现在自身替换中。某些实现支持有理树或不同检查方式，不能把特定程序的行为当作所有合一语义。\n\n## 参考\n\n- [Poole 与 Mackworth：证明与替换](https://artint.info/3e/html/ArtInt3e.Ch15.S5.html)\n- [SWI-Prolog：逻辑程序与实现](https://www.swi-prolog.org/pldoc/man?section=overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

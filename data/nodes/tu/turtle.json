@@ -1,0 +1,34 @@
+{
+  "id": "turtle",
+  "name": "Turtle",
+  "aliases": [
+    "Turtle RDF 序列化"
+  ],
+  "type": "protocol",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdf",
+      "context": "把 RDF 图的三元组写为可交换的文本表示。"
+    }
+  ],
+  "summary": "用紧凑文本语法序列化 RDF 图。",
+  "description": "Turtle 用前缀、IRI、文字量及简写表达 RDF 三元组，便于人阅读和编写图数据。前缀是语法便利，实际资源身份仍由展开后的 IRI 决定。\n\n它不是图查询语言，也不定义领域公理。文档语句顺序和简写方式可以不同，而表达同一图；三元组列表需要按 RDF 语义解释。\n\n## 参考\n\n- [W3C：Turtle](https://www.w3.org/TR/turtle/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.w3.org/TR/turtle/"
+}

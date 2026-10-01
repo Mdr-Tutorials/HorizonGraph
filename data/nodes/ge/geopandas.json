@@ -1,0 +1,42 @@
+{
+  "id": "geopandas",
+  "name": "GeoPandas",
+  "aliases": [
+    "GeoPandas 地理数据分析库"
+  ],
+  "type": "library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "在 Python 程序中组织几何对象与表格分析工作流。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "spatial-join"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-reference-system",
+      "context": "在坐标转换和空间计算前保留并核对数据的 CRS 定义。"
+    }
+  ],
+  "summary": "在 Python 表格工作流中组织几何列与空间操作。",
+  "description": "## 机制\n\nGeoPandas 的 GeoSeries 和 GeoDataFrame 把几何对象与表格属性联系起来，支持读写、坐标转换及空间连接。空间匹配按指定谓词或距离条件关联记录。\n\n## 边界与应用\n\n空间连接可以是一对多，不等同于键连接；CRS 与单位影响距离含义。几何运算与表格分析不能自动保证地理基准一致，性能也取决于数据规模和索引使用。\n\n## 参考\n\n- [GeoPandas：地理数据与空间连接](https://geopandas.org/en/stable/docs/user_guide/mergingdata.html)",
+  "importance": 4,
+  "official_site": "https://geopandas.org/en/stable/docs/user_guide/mergingdata.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ],
+  "abstraction_level": "framework_library"
+}

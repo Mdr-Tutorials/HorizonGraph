@@ -1,0 +1,36 @@
+{
+  "id": "classification-recall",
+  "name": "Recall (Classification)",
+  "aliases": [
+    "分类召回率",
+    "召回率",
+    "查全率",
+    "Sensitivity",
+    "True Positive Rate"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ml-evaluation-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "confusion-matrix",
+      "context": "从指定正类的真阳性和假阴性计数计算 TP/(TP+FN)。"
+    }
+  ],
+  "summary": "实际正类的样本中有多少被成功检出。",
+  "description": "二分类召回率为 TP/(TP+FN)，又称灵敏度或真正率，关注真实正例是否被找全。把更多样本判为正可能提高召回率，同时增加误报；单看召回率不能确认预测的可靠性。\n\n需要指定正类、阈值及平均方法；某类别没有真实样本时，应声明未定义值的处理策略。在筛查、故障检测等漏报成本高的应用中，召回率有明确意义，但仍须配合精确率、负类误报与实际资源约束评估。\n\n参考：[scikit-learn recall_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

@@ -1,0 +1,30 @@
+{
+  "id": "covariance",
+  "name": "Covariance",
+  "aliases": [
+    "协方差"
+  ],
+  "type": "concept",
+  "domains": [
+    "mathematics",
+    "statistics",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mathematical-foundations"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "expected-value",
+      "context": "计算两个中心化随机变量乘积的期望，得到总体协方差。"
+    }
+  ],
+  "summary": "衡量两个随机变量共同变化的方向。",
+  "description": "Cov(X,Y)=E[(X−E[X])(Y−E[Y])]。正负号表示围绕均值共同偏移的方向，数值随两变量的量纲与尺度变化；Var(X)=Cov(X,X)。多变量的两两协方差排列成协方差矩阵。\n\n零协方差只排除了这种线性共同变化，一般不等于独立，更不代表因果关系。PCA 可从中心化数据的协方差矩阵提取主要方向；估计时须明确样本轴、权重和归一化约定。\n\n参考：[Statlect 协方差](https://www.statlect.com/fundamentals-of-probability/covariance)；[NumPy cov](https://numpy.org/doc/stable/reference/generated/numpy.cov.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

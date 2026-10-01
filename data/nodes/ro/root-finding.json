@@ -1,0 +1,38 @@
+{
+  "id": "root-finding",
+  "name": "Root Finding",
+  "aliases": [
+    "数值求根",
+    "求根方法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "newton-method",
+      "context": "函数或导数可计算时，以局部线性化更新根的位置。"
+    }
+  ],
+  "summary": "求函数等于零位置的近似数值方法。",
+  "description": "求根寻找 f(x)=0 的解，单变量可用区间夹逼、二分、割线或牛顿方法，多变量通常利用 Jacobian。优化的一阶驻点可转化为梯度为零的求根问题，但零梯度不保证最小值。\n\n区间方法需要相应连续性和符号条件，Newton 类方法依赖初值与导数性质。停止时应分别检查残差和变量变化，病态根可能使很小残差仍对应不小的位置误差。\n\n参考：[FNC 非线性求根](https://fncbook.com/chapter4/)；[SciPy root_scalar](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.root_scalar.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://fncbook.com/chapter4/"
+}

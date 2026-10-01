@@ -1,0 +1,37 @@
+{
+  "id": "dicomweb",
+  "name": "DICOMweb",
+  "aliases": [
+    "DICOM Web 服务"
+  ],
+  "type": "protocol",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "dicom"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "Web 服务使用 HTTP 系列协议传输请求和 DICOM 信息对象。"
+    }
+  ],
+  "summary": "通过 HTTP 接口查询、获取和存储 DICOM 对象。",
+  "description": "## 机制\n\nDICOMweb 是 DICOM PS3.18 中 REST Web 服务的统称，包含查询、获取、存储等服务，支持影像、注释和报告等信息对象在 Web 环境交换。\n\n## 边界与应用\n\nDICOMweb 保留 DICOM 信息对象语义，不等于把影像转为普通网页图片。访问控制、授权与审计还涉及 PS3.15 及部署策略，不能仅开放接口就声称服务安全。\n\n## 参考\n\n- [DICOM PS3.18：Web Services 范围](https://dicom.nema.org/medical/dicom/current/output/chtml/part18/chapter_1.html)",
+  "importance": 4,
+  "official_site": "https://dicom.nema.org/medical/dicom/current/output/chtml/part18/chapter_1.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abstraction_level": "framework_library"
+}

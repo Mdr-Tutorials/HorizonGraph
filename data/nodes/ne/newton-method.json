@@ -1,0 +1,38 @@
+{
+  "id": "newton-method",
+  "name": "Newton's Method",
+  "aliases": [
+    "牛顿法",
+    "牛顿迭代"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "求解由 Jacobian 或 Hessian 构成的线性系统来确定迭代步。"
+    }
+  ],
+  "summary": "以局部线性化或二次模型计算迭代更新的方法。",
+  "description": "求根的牛顿法解局部线性化方程，优化中的牛顿法解 Hessian 与梯度构成的线性系统。初值接近解、导数性质合适时可快速收敛，但优化步并不总是下降方向。\n\n全局化常加入线搜索、信赖域或正则化；导数奇异、初值不好及非凸曲率会影响收敛。它不是计算完整逆矩阵的要求，实际应求解相应线性系统。\n\n参考：[Stanford 无约束优化讲义](https://web.stanford.edu/class/ee364a/lectures/unconstrained.pdf)；[FNC 非线性求根](https://fncbook.com/chapter4/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://web.stanford.edu/class/ee364a/lectures/unconstrained.pdf"
+}

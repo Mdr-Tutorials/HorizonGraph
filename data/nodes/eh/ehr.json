@@ -1,0 +1,38 @@
+{
+  "id": "ehr",
+  "name": "Electronic Health Record",
+  "aliases": [
+    "电子健康记录"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "health-information-exchange",
+      "context": "跨医疗服务提供者共享授权的患者记录时通过健康信息交换流程。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clinical-terminology",
+      "context": "把检查、诊断与临床事实编码为可检索的信息时采用受控术语。"
+    }
+  ],
+  "summary": "面向持续医疗服务与授权共享的数字化健康记录。",
+  "description": "## 机制\n\n电子健康记录组织患者的诊疗、药物、检查及相关健康信息，支持持续更新与跨参与方共享。系统需要把记录关联到患者身份、时间和来源，并控制访问。\n\n## 边界与应用\n\nEHR 与机构内部的 EMR 有语义侧重差别，但产品命名常混用。部署一个 EHR 并不自动实现跨机构互操作；还要协调交换格式、术语、身份匹配与授权。\n\n## 参考\n\n- [ONC：EHR、EMR 与个人健康记录的区别](https://www.healthit.gov/faq/what-difference-between-personal-health-record-electronic-health-record-and-electronic-medical)",
+  "importance": 5,
+  "official_site": "https://www.healthit.gov/faq/what-difference-between-personal-health-record-electronic-health-record-and-electronic-medical",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ],
+  "abbreviation": "EHR"
+}

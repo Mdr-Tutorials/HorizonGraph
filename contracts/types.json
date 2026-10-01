@@ -17,7 +17,7 @@
       "architecture": "执行环境/硬件体系/虚拟机架构，如 JVM、WebAssembly、RISC-V",
       "metric": "量化与性能指标，如 FPS、Latency、TPS",
       "model_family": "AI 大模型与算法族，如 GLM、Llama、GPT",
-      "product": "商业软硬件产品与服务，如 NVIDIA H100、AWS EC2",
+      "product": "可交付的软硬件、服务与资料制品，如 NVIDIA H100、AWS EC2、教材、数据集",
       "organization": "公司、基金会与标准组织，如 智谱 AI、CNCF、W3C",
       "person": "产业与技术人物，如 Linus Torvalds"
     },
@@ -74,7 +74,7 @@
     "aliases": {
       "type": "string[]",
       "layer": "L0",
-      "constraint": "中文译名/俗称/别名；跨节点唯一，并与他节点的 name/abbreviation 做冲突检测"
+      "constraint": "中文译名/俗称/别名；允许跨节点同名，也允许与其他节点的 name/abbreviation 同名；身份由唯一 id 区分，同名异物由检索层消歧"
     },
     "type": {
       "type": "EntityType",

@@ -1,0 +1,38 @@
+{
+  "id": "runge-kutta-method",
+  "name": "Runge–Kutta Method",
+  "aliases": [
+    "龙格－库塔方法",
+    "RK 方法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numerical-stability",
+      "context": "按方程刚性与方法稳定域选择时间步长，避免误差在步进中失控。"
+    }
+  ],
+  "summary": "利用一步中的多个斜率评估推进常微分方程。",
+  "description": "Runge–Kutta 方法在单个时间步内多次评估导数，再加权合成状态更新。显式方法依次计算级值，隐式方法需要解耦合方程；嵌入式配对常用于误差估计和自适应步长。\n\n阶数高不意味着任意步长都稳定，刚性问题可能更适合隐式方法。误差容差是局部控制目标，不直接保证全程每个物理量达到同样的绝对精度。\n\n参考：[FNC 常微分方程](https://fncbook.com/chapter6/)；[SciPy ODE 求解方法](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://fncbook.com/chapter6/"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "vision-transformer",
+  "name": "Vision Transformer",
+  "abbreviation": "ViT",
+  "aliases": [
+    "视觉 Transformer",
+    "视觉变换器",
+    "视觉Transformer"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "computer-vision",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transformer",
+      "context": "原始 ViT 将图像 patch 的嵌入序列输入 Transformer 编码器进行视觉表征学习。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "attention-mechanism",
+      "context": "ViT 的多头自注意力在图像 patch token 之间聚合信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "imagenet",
+      "context": "原始论文使用 ImageNet-1k 与 ImageNet-21k 等不同规模数据研究预训练和下游分类效果。"
+    }
+  ],
+  "summary": "将图像块视为序列并用 Transformer 学习视觉表征的架构。",
+  "description": "Vision Transformer 将图像切成固定大小的 patch，展平并线性投影为 token 嵌入，加上位置嵌入后送入 Transformer 编码器。原始 ViT 额外加入可学习的分类 token，用其最终表示连接分类头；编码器交替使用多头自注意力与前馈网络。[ViT 原始论文](https://arxiv.org/abs/2010.11929)。\n\n与 CNN 相比，原始 ViT 对局部邻域与平移结构的归纳偏置较少，更依赖数据和训练方案。固定 patch 大小时，提高图像分辨率会增加 token 数；全局自注意力的 token 两两交互也增加计算与显存需求。论文中的大规模预训练优势不意味着小数据集上从头训练一定优于卷积网络。\n\nViT 可作为图像分类架构或视觉特征编码器。用于检测、分割时通常需加入与任务匹配的输出结构，不能把分类权重直接等同于检测器。ViT-B/16 等名称同时编码模型规模与 patch 尺寸，具体输入处理、预训练数据及权重版本仍应按实现核对。[Google Research 官方实现与预训练模型](https://github.com/google-research/vision_transformer)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://github.com/google-research/vision_transformer"
+}

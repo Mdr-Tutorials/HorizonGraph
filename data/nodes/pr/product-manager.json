@@ -20,13 +20,18 @@
       "relation_type": "uses",
       "target_id": "trade-off",
       "context": "确定产品优先级时，权衡用户价值、业务目标、工程投入与交付风险。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "user-research",
+      "context": "在依据用户问题形成产品方向的工作中，与研究和设计团队合作，把访谈、观察及研究结果纳入决策；职责分工因组织而异。"
     }
   ],
   "summary": "围绕用户和业务问题确定产品方向、优先级与成功标准的岗位。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-20",
+  "last_reviewed": "2026-10-01",
   "importance": 3,
   "abbreviation": "PM",
-  "description": "产品经理（Product Manager，PM）通过用户研究、业务理解与数据反馈识别值得解决的问题，明确产品目标、优先级和成功标准，并与设计、工程等团队协作推进结果。\n\nPM 通常关注做什么以及为什么做，具体实现由跨职能团队共同完成。该头衔不意味着直接管理工程师，也不同于工程经理或招聘中的用人经理。需求之间、投入与收益之间的权衡是常见工作；各公司对商业、交付和研究职责的划分可能不同。\n\n参考：[GitLab：产品经理职责](https://handbook.gitlab.com/job-description-library/product/product-manager/)。"
+  "description": "产品经理（Product Manager，PM）通过用户研究、业务理解与数据反馈识别值得解决的问题，明确产品目标、优先级和成功标准，并与设计、工程等团队协作推进结果。\n\nPM 通常关注做什么以及为什么做，具体实现由跨职能团队共同完成。该头衔不意味着直接管理工程师，也不同于工程经理或招聘中的用人经理。需求之间、投入与收益之间的权衡是常见工作；各公司对商业、交付和研究职责的划分可能不同。\n\n参考：[GitLab：产品经理职责](https://handbook.gitlab.com/job-description-library/product/product-manager/)。\n\nGitLab 的公开岗位资料把 UX Research 作为理解用户问题的证据来源，并区分研究、设计、产品与工程的职责。这里的使用关系表示产品决策采用研究证据，不推导每个 PM 都独立执行全部研究活动。参考：[GitLab 产品经理职责](https://handbook.gitlab.com/job-description-library/product/product-manager/)。"
 }

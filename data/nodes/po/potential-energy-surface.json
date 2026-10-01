@@ -1,0 +1,37 @@
+{
+  "id": "potential-energy-surface",
+  "name": "Potential Energy Surface",
+  "aliases": [
+    "势能面"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ab-initio-calculation",
+      "context": "在电子结构路径中逐构型估计能量和力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "molecular-mechanics",
+      "context": "在经典模型路径中以力场近似构型能量。"
+    }
+  ],
+  "summary": "把体系势能表示为原子构型的函数。",
+  "description": "势能面将原子或核坐标映射到能量，局部极小值、鞍点和梯度帮助描述结构及转变路径。所选电子态和物理模型决定这张面代表什么。\n\n静态势能面与含熵、温度影响的自由能面不同。几何最小值也不自动表示体系在实验条件下最稳定或最常见的状态。\n\n## 参考\n\n- [ASE：结构优化](https://docs.ase-lib.org/ase/optimize.html)\n- [GROMACS：分子动力学算法](https://manual.gromacs.org/current/reference-manual/algorithms/molecular-dynamics.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

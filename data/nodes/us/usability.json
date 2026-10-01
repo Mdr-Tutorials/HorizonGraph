@@ -1,0 +1,25 @@
+{
+  "id": "usability",
+  "name": "Usability",
+  "aliases": [
+    "易用性",
+    "交互可用性"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    }
+  ],
+  "summary": "特定用户在特定情境下有效、高效且满意地完成目标的程度。",
+  "description": "## 含义\n\n易用性描述使用的结果，需要说明用户、目标、系统以及使用环境。任务完成效果、完成任务的资源投入和满意度是常用观察维度，评估口径应围绕实际任务设定。\n\n## 消歧\n\nUsability 与表示系统正常提供服务时间比例的 Availability 不同。它也不等于外观好看或无障碍合规：一个界面可能容易被多数用户理解，却仍阻碍读屏或键盘用户。评估应结合实际参与者和情境。\n\n## 参考\n\n- [ISO 9241-11：易用性定义与概念](https://www.iso.org/standard/63500.html)\n- [W3C：无障碍、易用性与包容性](https://www.w3.org/WAI/fundamentals/accessibility-usability-inclusion/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.iso.org/standard/63500.html"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "context-switch",
+  "name": "Context Switch",
+  "aliases": [
+    "上下文切换"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "thread",
+      "context": "调度交接时保存和恢复线程执行现场；跨进程切换还涉及地址空间。"
+    }
+  ],
+  "summary": "保存当前执行现场并恢复另一任务现场的调度步骤。",
+  "description": "## 机制\n\n内核在任务阻塞、抢占或主动让出 CPU 后，保存寄存器、栈指针等现场，再恢复下一任务；进程间切换还可能改变地址空间。调度策略决定选谁，切换机制负责交接执行权。\n\n## 边界与应用\n\n同进程线程切换通常共享地址空间，但仍有现场保存成本。进入内核处理系统调用不必然切换任务；缓存、TLB 与分支预测状态的间接损耗也影响实际成本。\n\n## 参考\n\n- [OSTEP：受限直接执行](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf)",
+  "importance": 4,
+  "official_site": "https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ]
+}

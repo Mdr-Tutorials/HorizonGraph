@@ -1,0 +1,33 @@
+{
+  "id": "clinical-data-provenance",
+  "name": "Clinical Data Provenance",
+  "aliases": [
+    "临床数据来源追踪",
+    "临床数据溯源"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "medical-informatics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fhir",
+      "context": "采用 FHIR 的交换链路可通过 Provenance 资源描述数据生成和修订的来源。"
+    }
+  ],
+  "summary": "记录临床数据的来源、作者和转换过程。",
+  "description": "## 机制\n\n临床数据溯源关联目标数据与生成活动、参与者、来源和时间，使接收者了解数据从何而来。FHIR Provenance 资源可描述被创建或修改的资源及其活动和相关实体。\n\n## 边界与应用\n\n溯源记录与访问审计的关注点不同，前者解释内容形成，后者记录访问等事件。记录存在不保证源数据真实；跨系统变换要保留版本和目标引用，避免将历史与当前内容错误关联。\n\n## 参考\n\n- [HL7：FHIR Provenance](https://hl7.org/fhir/provenance.html)",
+  "importance": 4,
+  "official_site": "https://hl7.org/fhir/provenance.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "medical-informatics"
+  ],
+  "ecosystems": [
+    "medical-informatics-ecosystem"
+  ]
+}

@@ -15,11 +15,17 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wal",
+      "context": "RocksDB 等 LSM 实现在内存写入路径可用 WAL 提供崩溃恢复；关闭 WAL 会改变耐久性。"
     }
   ],
-  "summary": "先写内存再批量落盘，用读放大换顺序写吞吐。",
+  "summary": "以内存写入和分层有序文件组织持续更新。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-01",
+  "importance": 3,
+  "description": "## 机制\n\nLSM 类结构先在内存接收写入，再刷新为有序文件，通过合并压缩控制文件数量与重叠。RocksDB 以 memtable、SST 和可配置 compaction 等机制实现这一思路。\n\n## 边界与应用\n\n吞吐收益需同写放大、读放大和空间放大权衡。删除标记与旧版本回收受快照和合并条件限制，LSM 本身也不规定唯一的持久化或并发控制方案。\n\n## 参考\n\n- [RocksDB：LSM 存储结构](https://github.com/facebook/rocksdb/wiki/RocksDB-Overview)"
 }

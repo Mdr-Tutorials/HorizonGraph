@@ -1,0 +1,28 @@
+{
+  "id": "cvss",
+  "name": "Common Vulnerability Scoring System",
+  "aliases": [
+    "通用漏洞评分系统"
+  ],
+  "type": "metric",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "以向量与分数描述漏洞严重性，辅助场景化评估。",
+  "description": "## 机制\n\nCVSS v4.0 用基本、威胁、环境和补充指标表达攻击条件与影响，计算严重性分数并保留向量上下文。补充指标提供额外信息，不直接改变最终计算分数。\n\n## 边界与应用\n\n严重性不等于组织的完整风险或实际被利用概率。应写明版本和向量，并结合资产暴露、业务影响与补救条件判断优先级，不能只按一个基本分数决定所有处置。\n\n## 参考\n\n- [FIRST：CVSS v4.0 规范](https://www.first.org/cvss/v4.0/specification-document)",
+  "importance": 4,
+  "official_site": "https://www.first.org/cvss/v4.0/specification-document",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abbreviation": "CVSS"
+}

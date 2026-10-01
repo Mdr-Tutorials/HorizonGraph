@@ -1,0 +1,45 @@
+{
+  "id": "computational-fluid-dynamics",
+  "name": "Computational Fluid Dynamics",
+  "aliases": [
+    "计算流体力学",
+    "CFD"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "scientific-computing-ecosystem"
+  ],
+  "domains": [
+    "scientific-computing",
+    "computational-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "scientific-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "partial-differential-equation",
+      "context": "以流体质量、动量和能量守恒等场方程描述连续流动。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "finite-volume-method",
+      "context": "采用控制体守恒离散的求解路径时计算面通量与单元平衡。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-mesh",
+      "context": "把流动域划分为可求解的空间单元，并进行网格精度检查。"
+    }
+  ],
+  "summary": "通过离散方程模拟流动及相关传热输运的领域。",
+  "description": "计算流体力学将流体守恒方程与材料、湍流或输运模型离散，在计算网格上求速度、压力等场。几何、边界条件、初始状态和数值格式共同构成模拟方案。\n\n网格和时间步收敛、守恒检查及实验比较承担不同验证任务。湍流闭合和其他建模近似可能主导误差，不能把更密网格或更小残差自动解释为更接近真实流动。\n\n参考：[OpenFOAM 用户指南](https://doc.cfd.direct/openfoam/user-guide-v13/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://doc.cfd.direct/openfoam/user-guide-v13/",
+  "abbreviation": "CFD"
+}

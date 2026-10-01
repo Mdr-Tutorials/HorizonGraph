@@ -1,0 +1,34 @@
+{
+  "id": "entity-resolution",
+  "name": "Entity Resolution",
+  "aliases": [
+    "实体解析",
+    "实体消歧",
+    "记录链接"
+  ],
+  "type": "concept",
+  "domains": [
+    "knowledge-engineering",
+    "semantic-web"
+  ],
+  "ecosystems": [
+    "knowledge-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "knowledge-representation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-quality",
+      "context": "在合并数据前检查缺失、冲突与字段规范，减少误匹配。"
+    }
+  ],
+  "summary": "识别不同记录是否指向同一现实对象。",
+  "description": "实体解析将记录中的标识、名称和属性与候选实体比较，决定合并、区分或建立关系。规则、概率和学习模型可以采用不同的匹配证据及阈值。\n\n同名、相似字符串或相同地址都不必等于同一对象。误合并会传播到图关系与下游分析，应保留来源、匹配理由及可复查的身份决策。\n\n## 参考\n\n- [IBM：实体解析](https://www.ibm.com/docs/en/iii/9.0.0?topic=insight-entity-resolution)\n- [Wikidata：项目介绍](https://www.wikidata.org/wiki/Wikidata:Introduction)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

@@ -8,3 +8,7 @@ web/.astro/
 .tmp-roadmap/
 .zcode/
 scratch/
+.scratch/
+crates/**/target/
+test-results/
+playwright-report/

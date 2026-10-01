@@ -1,0 +1,38 @@
+{
+  "id": "digital-filter",
+  "name": "Digital Filter",
+  "aliases": [
+    "数字滤波器",
+    "数字滤波"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-time-invariant-system",
+      "context": "分析固定系数线性数字滤波路径时，以 LTI 模型定义频率响应与稳定性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "filter-design",
+      "context": "按通带、阻带和延迟要求选择阶数、系数及实现结构。"
+    }
+  ],
+  "summary": "以数值运算改变离散信号特性的系统或算法。",
+  "description": "数字滤波器对离散样本进行运算，以改变频带、相位或其他信号特性。线性时不变滤波常以差分方程、脉冲响应或传递函数表示，FIR 与 IIR 是两类常见结构。\n\n数字滤波并不天然等于去噪，也可能用于均衡、带通或重采样。系数量化、边界状态和实时延迟影响实现，非线性滤波还不能直接套用 LTI 频率响应分析。\n\n参考：[SciPy 信号处理](https://docs.scipy.org/doc/scipy/tutorial/signal.html)；[MIT 离散时间信号处理](https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://docs.scipy.org/doc/scipy/tutorial/signal.html"
+}

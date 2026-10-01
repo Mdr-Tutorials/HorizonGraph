@@ -1,0 +1,32 @@
+{
+  "id": "page-table",
+  "name": "Page Table",
+  "aliases": [
+    "页表"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "paging",
+      "context": "分页地址翻译以虚拟页号查找页表项，并保留页内偏移。"
+    }
+  ],
+  "summary": "记录虚拟页到物理页映射及访问权限的数据结构。",
+  "description": "## 机制\n\n页表项保存页框号、有效状态与访问权限；多级页表只为使用中的地址范围分配下级表，降低稀疏地址空间的存储成本。CPU 的地址翻译单元依据页表和权限完成访问。\n\n## 边界与应用\n\n页表的层级、页大小和位定义由架构决定，大页可减少翻译项却增加分配和碎片约束。页表保存翻译元数据，不保存页面的业务内容。\n\n## 参考\n\n- [Linux 页表文档](https://docs.kernel.org/mm/page_tables.html)",
+  "importance": 4,
+  "official_site": "https://docs.kernel.org/mm/page_tables.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ]
+}

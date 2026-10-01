@@ -1,0 +1,32 @@
+{
+  "id": "wavelet-transform",
+  "name": "Wavelet Transform",
+  "aliases": [
+    "小波变换"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "multirate-signal-processing",
+      "context": "离散小波滤波器组通过滤波和抽取形成多尺度分解及重建。"
+    }
+  ],
+  "summary": "用平移和尺度变化的小波分析局部信号结构。",
+  "description": "小波变换以具有局部性质的基函数及尺度分析信号，连续小波与离散小波有不同采样和冗余结构。它可提供多尺度的时间定位，适用于瞬态、压缩和某些去噪任务。\n\n尺度不等同于所有情形下固定频率，结果依赖母小波及边界处理。离散小波的滤波器组需满足相应重建条件，阈值去噪可能同时改变弱小的真实信号。\n\n参考：[MathWorks 连续与离散小波变换](https://www.mathworks.com/help/wavelet/gs/continuous-and-discrete-wavelet-transforms.html)；[MIT 离散时间信号处理](https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.mathworks.com/help/wavelet/gs/continuous-and-discrete-wavelet-transforms.html"
+}

@@ -5,12 +5,15 @@
   "scripts": {
     "gen": "tsx src/gen/generate.ts",
     "validate": "tsx src/validate/run.ts",
-    "build": "tsx src/build/run.ts"
+    "build": "tsx src/build/run.ts",
+    "build:wasm": "tsx src/wasm/build.ts",
+    "build:offline": "tsx src/offline/build.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.0",
+    "workbox-build": "^7.4.1"
   },
   "dependencies": {
     "@lobehub/webfont-harmony-sans-sc": "^1.0.0",

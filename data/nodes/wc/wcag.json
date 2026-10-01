@@ -1,0 +1,36 @@
+{
+  "id": "wcag",
+  "name": "Web Content Accessibility Guidelines",
+  "abbreviation": "WCAG",
+  "aliases": [
+    "Web 内容无障碍指南",
+    "网页内容无障碍指南"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "w3c-standards-ecosystem"
+  ],
+  "domains": [
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "w3c",
+      "context": "由 W3C 相应无障碍工作组按标准流程维护与发布。"
+    }
+  ],
+  "summary": "规定 Web 内容无障碍成功标准与一致性要求的 W3C 指南。",
+  "description": "## 规范范围\n\nWCAG 为 Web 内容提出可测试的成功标准，按可感知、可操作、可理解与稳健四项原则组织。WCAG 2.2 使用 A、AA、AAA 一致性级别；声称满足某一级别需要满足该级别及以下级别的全部适用成功标准，并符合一致性要求。\n\n## 使用边界\n\n指南与具体实现技术分离，辅助文档提供理解和实现方法。自动工具只能覆盖部分检查，合规检查也不能代替残障用户的实际任务体验。此节点承载指南家族，版本差异应在正文中说明，不把草案自动当成正式推荐标准。\n\n## 参考\n\n- [W3C：WCAG 2.2 推荐标准](https://www.w3.org/TR/WCAG22/)\n- [WAI：WCAG 概览](https://www.w3.org/WAI/standards-guidelines/wcag/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://www.w3.org/TR/WCAG22/"
+}

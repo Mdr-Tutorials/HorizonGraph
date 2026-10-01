@@ -2,6 +2,7 @@
   "id": "yolo",
   "name": "YOLO",
   "aliases": [
+    "YOLO 检测模型族",
     "You Only Look Once"
   ],
   "type": "model_family",
@@ -20,11 +21,28 @@
     {
       "relation_type": "implements",
       "target_id": "object-detection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cnn",
+      "context": "原始 YOLO 与许多后续检测版本用卷积网络从整幅图像提取特征并预测框与类别。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coco-dataset",
+      "context": "许多现代 YOLO 检测权重在 COCO 标注集上训练或评估；类别集合与具体权重版本相关。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "intersection-over-union",
+      "context": "采用 COCO 检测评估时，预测框按 IoU 阈值与标注匹配；部分版本还在框损失或后处理中使用 IoU。"
     }
   ],
-  "summary": "单阶段实时目标检测模型族，速度的代名词。",
+  "summary": "以整幅图像直接预测框与类别的实时目标检测模型族。",
+  "description": "YOLO 源于 You Only Look Once，原始方法把目标检测表述为从整幅图像直接预测边界框与类别概率的回归问题。一次网络前向同时完成空间与类别预测，避免先逐个提出候选区域再独立分类的流水线。[YOLO 原始论文](https://arxiv.org/abs/1506.02640)。\n\nYOLO 后续名称覆盖多个团队与版本，卷积主干、跨尺度特征融合、检测头、锚框、损失与后处理均可能变化；不能把原始网格设计视为所有版本的固定结构。部分实现还提供实例分割、分类等任务，但检测权重输出框，分割权重才输出实例掩码。[Ultralytics 官方模型与任务入口](https://docs.ultralytics.com/models/)、[实例分割任务说明](https://docs.ultralytics.com/tasks/segment/)。\n\nYOLO 常用于视频与图像中的实时对象识别。实际速度取决于模型规模、输入分辨率、硬件、推理后端及预后处理，不存在一个适用于全族的 FPS。部署时需匹配颜色通道、缩放、填充与输出解码；评估应注明数据集与 AP 的 IoU 口径，小目标、遮挡与分布变化也需单独检查。[OpenCV 的 YOLO 部署说明](https://docs.opencv.org/4.x/da/d9d/tutorial_dnn_yolo.html)。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://arxiv.org/abs/1506.02640"
 }

@@ -15,11 +15,17 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ir",
+      "context": "编译器在程序表示和引用数据流上分析对象可达范围，具体 IR 随实现变化。"
     }
   ],
-  "summary": "静态判定对象指针是否逃逸出当前函数栈或线程，决定栈上分配与锁消除的优化技术。",
+  "summary": "分析对象是否逃出给定作用域，以支持受限优化。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "description": "## 机制\n\n分析跟踪对象引用是否被返回、保存到外部状态或传给未知调用；在能证明对象或锁不被外部观察时，运行时可进行标量替换或锁消除等优化。\n\n## 边界与应用\n\n逃逸结论依分析精度和目标范围而定，不等于所有不逃逸对象都真正分配在栈上。HotSpot 支持的具体优化应按实现与选项判断，未知调用常使分析保守。\n\n## 参考\n\n- [HotSpot 性能与逃逸分析](https://docs.oracle.com/en/java/javase/25/vm/java-hotspot-virtual-machine-performance-enhancements.html)"
 }

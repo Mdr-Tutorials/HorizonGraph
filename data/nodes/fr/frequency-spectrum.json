@@ -1,0 +1,37 @@
+{
+  "id": "frequency-spectrum",
+  "name": "Frequency Spectrum",
+  "aliases": [
+    "频谱"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "signal-processing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fourier-transform",
+      "context": "对满足条件的连续信号提取频率表示及相位信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "discrete-fourier-transform",
+      "context": "分析有限数字样本时计算离散频率格点上的复系数。"
+    }
+  ],
+  "summary": "描述信号各频率成分的幅度、相位或功率。",
+  "description": "频谱表示信号在频率轴上的组成，可指复系数、幅度谱或功率谱等不同量。连续信号和有限样本需要不同变换或估计方式，采样率决定可观测频段。\n\n有限记录、窗和归一化影响谱估计；功率谱密度的单位与幅度谱不同。解释峰值时应区分混叠、泄漏和实际成分，补零只改变频率格点的显示密度。\n\n参考：[MIT 傅里叶变换](https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec16/)；[SciPy 傅里叶计算](https://docs.scipy.org/doc/scipy/tutorial/fft.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/resources/mit6_003f11_lec16/"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "aead",
+  "name": "Authenticated Encryption with Associated Data",
+  "aliases": [
+    "带关联数据的认证加密"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    }
+  ],
+  "summary": "同时保护明文保密性与完整性，并认证额外上下文。",
+  "description": "## 机制\n\nAEAD 输入密钥、nonce、明文与关联数据，输出带认证的密文。关联数据不加密但受完整性保护，可绑定消息头或协议上下文；解密应在认证失败时拒绝输出有效明文。\n\n## 边界与应用\n\n多数常见方案要求同一密钥下 nonce 不重复，重用可能破坏安全。认证加密不自动解决重放或身份授权，关联数据也不能用于隐藏敏感信息。\n\n## 参考\n\n- [RFC 5116：AEAD 接口](https://www.rfc-editor.org/rfc/rfc5116.html)",
+  "importance": 4,
+  "official_site": "https://www.rfc-editor.org/rfc/rfc5116.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abbreviation": "AEAD"
+}

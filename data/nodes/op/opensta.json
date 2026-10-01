@@ -1,0 +1,36 @@
+{
+  "id": "opensta",
+  "name": "OpenSTA",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-timing-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "verilog",
+      "context": "读取门级 Verilog 网表作为时序图结构输入，不承担完整语言仿真。"
+    }
+  ],
+  "summary": "读取网表、时序库与约束的开源静态时序分析器。",
+  "description": "OpenSTA 是门级静态时序分析引擎，支持 Verilog 网表、Liberty 单元库、SDC 约束以及 SPEF 等寄生信息，并通过 Tcl 读取设计和输出报告。它可作为独立程序或嵌入其他 EDA 工具；所得裕量取决于输入模型和约束。\n\n参考：[OpenSTA 官方仓库](https://github.com/parallaxsw/OpenSTA)；[OpenROAD 官方仓库与流程说明](https://github.com/The-OpenROAD-Project/OpenROAD)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/parallaxsw/OpenSTA"
+}

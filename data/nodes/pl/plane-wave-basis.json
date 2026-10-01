@@ -1,0 +1,37 @@
+{
+  "id": "plane-wave-basis",
+  "name": "Plane-Wave Basis",
+  "aliases": [
+    "平面波基组"
+  ],
+  "type": "concept",
+  "domains": [
+    "materials-science",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "materials-chemistry-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "materials-chemistry-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reciprocal-lattice",
+      "context": "用倒易空间波矢组织周期函数的展开。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudopotential",
+      "context": "在常见平面波电子计算中采用平滑核心近似。"
+    }
+  ],
+  "summary": "用周期平面波展开电子态或空间场。",
+  "description": "平面波基组用一组波矢对应的平面波展开周期体系中的函数。能量截断控制保留的基函数范围，通常结合赝势处理核附近的快速变化。\n\n截断能、晶胞和波矢取样共同影响计算成本与精度。截断能增大只是一个收敛方向，不能代替对不同取样、势和性质的检查。\n\n## 参考\n\n- [Quantum ESPRESSO：包与方法](https://www.quantum-espresso.org/documentation/)\n- [Quantum ESPRESSO：赝势](https://pseudopotentials.quantum-espresso.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 3
+}

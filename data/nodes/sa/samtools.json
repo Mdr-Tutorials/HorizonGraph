@@ -1,0 +1,37 @@
+{
+  "id": "samtools",
+  "name": "SAMtools",
+  "aliases": [
+    "SAMtools 比对数据工具"
+  ],
+  "type": "tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sam-bam"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fasta",
+      "context": "索引或提取参考序列区间时使用 FASTA；部分处理命令还需一致的参考数据。"
+    }
+  ],
+  "summary": "对序列比对文件进行转换、排序、索引和查询的工具集。",
+  "description": "## 机制\n\nSAMtools 处理 SAM、BAM 与 CRAM 等比对记录，提供格式转换、排序、合并、索引和按区域获取等命令。流式输入输出可连接多个处理步骤。\n\n## 边界与应用\n\n索引与区域查询对排序和索引类型有要求；快速完整性检查也不证明整个文件无损坏。当前变异输出常由配套 BCFtools 等工具处理，不能把所有历史 SNP 调用能力都归为当前 SAMtools。\n\n## 参考\n\n- [SAMtools：官方手册](https://www.htslib.org/doc/samtools.html)",
+  "importance": 4,
+  "official_site": "https://www.htslib.org/doc/samtools.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "domains": [
+    "bioinformatics"
+  ],
+  "ecosystems": [
+    "bioinformatics-ecosystem"
+  ],
+  "abstraction_level": "application_tool"
+}

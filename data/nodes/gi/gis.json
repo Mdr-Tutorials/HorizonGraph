@@ -1,0 +1,43 @@
+{
+  "id": "gis",
+  "name": "Geographic Information System",
+  "aliases": [
+    "地理信息系统"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "geospatial-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vector-geospatial-data",
+      "context": "表示道路、边界和离散对象时使用点、线、面及属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "raster-geospatial-data",
+      "context": "表示连续场或遥感影像时使用带空间参考的网格。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spatial-analysis",
+      "context": "根据位置关系开展叠加、距离或邻近分析，以支持地理问题研究。"
+    }
+  ],
+  "summary": "组织地理位置与属性数据，并开展空间查询和分析。",
+  "description": "## 机制\n\nGIS 将带位置的数据、处理软件和工作流程结合起来，以图层组织对象与属性，支持查询、分析和制图。道路、行政区与卫星影像可以采用不同表示，在同一空间参考下结合。\n\n## 边界与应用\n\nGIS 不是一款软件的别名。位置精度、时间、尺度与坐标系会影响分析；地图展示的重叠也不自动证明数据在空间上精确一致。\n\n## 参考\n\n- [QGIS：GIS 导论](https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/introducing_gis.html)",
+  "importance": 5,
+  "official_site": "https://docs.qgis.org/latest/en/docs/gentle_gis_introduction/introducing_gis.html",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "geospatial-ecosystem"
+  ],
+  "domains": [
+    "geospatial-computing"
+  ],
+  "abbreviation": "GIS"
+}

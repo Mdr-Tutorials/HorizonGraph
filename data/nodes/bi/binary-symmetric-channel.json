@@ -1,0 +1,37 @@
+{
+  "id": "binary-symmetric-channel",
+  "name": "Binary Symmetric Channel",
+  "aliases": [
+    "二元对称信道",
+    "BSC"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "conditional-probability",
+      "context": "用 P(Y≠X|X)=p 定义每次输入到输出的相同翻转规律。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shannon-entropy",
+      "context": "通过二元熵 h2(p) 计算经典 BSC 的每次使用容量 1-h2(p)。"
+    }
+  ],
+  "summary": "以相同概率翻转两个二元输入值的无记忆信道。",
+  "description": "二元对称信道把输入 bit 以概率 p 翻转，两个输入值具有相同错误概率；经典模型还假设各次噪声独立。它以简单条件概率展示噪声、纠错与容量之间的关系。\n\n其容量为每次使用 1-h2(p) bit，但实际链路可能存在擦除、非对称、记忆和软输出信息。p 大于二分之一的情况可按已知规则翻转输出重新解释，不能只凭原始误码率套用直觉。\n\n参考：[MIT 线性码与容量](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_16/",
+  "abbreviation": "BSC"
+}

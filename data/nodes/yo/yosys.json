@@ -1,0 +1,36 @@
+{
+  "id": "yosys",
+  "name": "Yosys",
+  "aliases": [],
+  "type": "tool",
+  "ecosystems": [
+    "hardware_iot"
+  ],
+  "domains": [
+    "digital-design",
+    "semiconductor-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "logic-synthesis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "verilog",
+      "context": "原生前端读取可综合 Verilog-2005 子集，具体 SystemVerilog 能力依前端而定。"
+    }
+  ],
+  "summary": "面向 FPGA 与 ASIC 流程的开源 RTL 综合工具。",
+  "description": "Yosys 提供可脚本化的 RTL 综合与技术映射，官方文档说明原生支持可综合 Verilog-2005 子集。SystemVerilog 支持范围取决于前端，不能因能读取部分语法就宣称支持完整验证语言。它在 FPGA 或 ASIC 流程中负责综合，后续布局布线由相应工具完成。\n\n参考：[Yosys 官方介绍](https://yosyshq.readthedocs.io/projects/yosys/en/latest/introduction.html)；[Yosys+nextpnr 原始论文](https://arxiv.org/abs/1903.10407)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://yosyshq.readthedocs.io/projects/yosys/en/latest/introduction.html"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "gstreamer",
+  "name": "GStreamer",
+  "aliases": [
+    "GStreamer",
+    "流媒体管线框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "signal-processing-ecosystem"
+  ],
+  "domains": [
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "multirate-signal-processing",
+      "context": "使用音频重采样元素在不同采样率的媒体阶段之间转换数据。"
+    }
+  ],
+  "summary": "以可连接插件和媒体协商组织音视频处理的框架。",
+  "description": "GStreamer 以元素、管线和插件组织媒体数据流，提供采集、解码、转换和播放等组件。数据格式通过 caps 协商，时钟、时间戳和状态机制支持同步及流式处理。\n\n框架不自带任意格式的全套能力，实际功能取决于插件和环境。管线连接正确还需确认媒体格式、背压、延迟和同步，实时性受设备和处理成本共同影响。\n\n参考：[GStreamer 官方介绍](https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://gstreamer.freedesktop.org/documentation/application-development/introduction/gstreamer.html",
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "rlc-circuit",
+  "name": "RLC Circuit",
+  "aliases": [
+    "RLC 电路"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "analog-rf-ecosystem"
+  ],
+  "domains": [
+    "analog-electronics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "analog-electronics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inductor",
+      "context": "与电容交换储能以形成二阶响应。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "capacitor",
+      "context": "与电感构成谐振所需的独立储能状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resistor",
+      "context": "在 RLC 模型中表示阻尼和损耗。"
+    }
+  ],
+  "summary": "以电阻、电感和电容构成谐振与二阶动态网络。",
+  "description": "RLC 网络中电感与电容交换能量，电阻耗散能量。简单串联模型可呈欠阻尼、临界阻尼或过阻尼响应；理想谐振频率由 L 和 C 决定。\n\n谐振不意味着损耗为零或输出一定无限大。源与负载、寄生元件和品质因数影响带宽及峰值；串联和并联拓扑也具有不同端口特性。\n\n参考：[MIT 6.002：二阶系统](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l15/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 4,
+  "official_site": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/resources/6002_l15/",
+  "abbreviation": "RLC"
+}

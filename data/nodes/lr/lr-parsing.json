@@ -1,0 +1,33 @@
+{
+  "id": "lr-parsing",
+  "name": "LR Parsing",
+  "aliases": [
+    "LR 语法分析",
+    "移进归约分析"
+  ],
+  "type": "concept",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-free-grammar",
+      "context": "将文法产生式编为状态与归约表，按 LR 方法识别输入。"
+    }
+  ],
+  "summary": "从左到右读取输入并逆向构造最右推导。",
+  "description": "## 机制\n\nLR 分析维护状态栈，通过移进输入和按产生式归约构造语法结构；项目集与前瞻信息决定分析表。LR(0)、SLR、LALR 与 LR(1) 的状态和冲突处理能力不同。\n\n## 边界与应用\n\n移进/归约或归约/归约冲突需检查文法、优先级和结合性；消除表冲突不自动证明语言语义正确。GNU Bison 的默认方法与其他 LR 变体应按其选项区分。\n\n## 参考\n\n- [Cornell：自底向上语法分析](https://www.cs.cornell.edu/courses/cs4120/2023sp/notes.html?id=bottomup)\n- [GNU Bison 手册](https://www.gnu.org/software/bison/manual/bison.html)",
+  "importance": 4,
+  "official_site": "https://www.cs.cornell.edu/courses/cs4120/2023sp/notes.html?id=bottomup",
+  "last_reviewed": "2026-10-01",
+  "origin": "ai_draft",
+  "status": "active",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "compilers"
+  ]
+}

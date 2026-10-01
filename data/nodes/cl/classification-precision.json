@@ -1,0 +1,35 @@
+{
+  "id": "classification-precision",
+  "name": "Precision (Classification)",
+  "aliases": [
+    "分类精确率",
+    "精确率",
+    "查准率",
+    "Positive Predictive Value"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "ai_data_science"
+  ],
+  "domains": [
+    "machine-learning",
+    "statistics"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ml-evaluation-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "confusion-matrix",
+      "context": "从指定正类的真阳性和假阳性计数计算 TP/(TP+FP)。"
+    }
+  ],
+  "summary": "预测为正类的样本中有多少真正为正。",
+  "description": "二分类精确率为 TP/(TP+FP)，关注预测为正的结果是否可靠。它与召回率的分母不同，也与全样本准确率不同；将少量高置信样本判为正可能提高精确率，却漏掉更多实际正例。\n\n正类、决策阈值与测试集类别比例会影响结果。多分类或多标签需要说明 micro、macro、weighted 等汇总方式；没有正类预测时分母为零，结果采用何种未定义值处理必须公开。它适合误报成本较高的场景，与召回率一起看才可理解完整取舍。\n\n参考：[scikit-learn precision_score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5
+}

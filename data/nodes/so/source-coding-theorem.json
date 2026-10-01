@@ -1,0 +1,36 @@
+{
+  "id": "source-coding-theorem",
+  "name": "Source Coding Theorem",
+  "aliases": [
+    "信源编码定理",
+    "无损信源编码定理"
+  ],
+  "type": "concept",
+  "ecosystems": [],
+  "domains": [
+    "information-theory"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "information-theory-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shannon-entropy",
+      "context": "在离散无记忆信源情形中，用每符号熵界定平均描述长度和渐近压缩率。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "source-coding",
+      "context": "在相应信源及可译码或误差条件下约束无损编码可达到的平均码率。"
+    }
+  ],
+  "summary": "用熵或熵率界定无损压缩可达到的码率。",
+  "description": "无损信源编码定理在规定信源与误差准则下建立压缩率和熵之间的极限。对单符号可唯一译码的码，平均长度有熵下界；适当长块编码能减小每符号的整数码长开销。\n\n独立同分布或平稳遍历信源的长块结论，需要采用相应熵或熵率假设。几乎无损的固定长度编码与逐消息完全无损的变长编码是不同表述，不能把渐近结论理解为任何短消息都能压到同样长度。\n\n参考：[MIT 无损变长编码](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/)；[MIT 固定长度压缩](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_7/)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-01",
+  "importance": 5,
+  "official_site": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/resources/mit6_441s16_chapter_6/"
+}
