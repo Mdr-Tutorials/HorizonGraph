@@ -1,0 +1,47 @@
+{
+  "id": "codescene",
+  "name": "CodeScene",
+  "aliases": [
+    "CodeScene代码分析平台"
+  ],
+  "type": "product",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "repository-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "change-hotspot",
+      "context": "结合演化活动与代码状况生成热点视图，以定位进一步维护调查区域。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "temporal-coupling",
+      "context": "按产品支持的共同变更事件构造文件或模块联系，保留事件定义与分析窗口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-age",
+      "context": "提供文件修改距基准时间的年龄视图，并与维护范围结合解释。"
+    }
+  ],
+  "summary": "结合代码状况与演化记录提供维护分析的产品。",
+  "description": "CodeScene 是结合源码分析与开发历史的商业分析产品，提供热点、变化耦合、代码年龄和知识分布等视图。产品可以把代码状况与演化活动结合，帮助团队选取需要继续调查的区域。\n\n热点视图可叠加修改频率和代码健康等数据，时间耦合则依据共同提交、任务或时间关联观察模块变化。具体部署与集成决定可取得的数据；商业产品的界面、套餐或阈值不能写成通用方法定义。\n\n历史活动和产品评分都需要解释其输入与规则。高活动区域可能正常承担业务演化，归属推断也不能完整观察团队知识；这些结果用于维护决策支持，不直接证明缺陷因果或评价个人绩效。\n\n## 参考\n\n- [CodeScene：官方产品](https://codescene.com/product)\n- [CodeScene：热点分析](https://docs.enterprise.codescene.io/versions/6.6.0/guides/technical/hotspots.html)\n- [CodeScene：时间耦合](https://docs.enterprise.codescene.io/versions/3.3.8/guides/technical/temporal-coupling.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://codescene.com/product"
+}

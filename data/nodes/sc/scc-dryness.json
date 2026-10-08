@@ -1,0 +1,39 @@
+{
+  "id": "scc-dryness",
+  "name": "scc DRYness",
+  "aliases": [
+    "scc 文本唯一行比例",
+    "scc DRYness 指标",
+    "DRYness"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unique-lines-of-code",
+      "context": "在 scc 表格实现中，以项目级唯一文本行集合的大小作为 DRYness 的分子。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "total-source-lines",
+      "context": "按核查的 scc 表格源码，以计入文件的 sumLines 总物理行数作为 DRYness 分母。"
+    }
+  ],
+  "summary": "scc 用唯一行数除以总物理行数得到的文本比例。",
+  "description": "scc DRYness 是 scc 的可选文本统计。在核查的表格格式实现中，分子是项目级唯一行集合大小，分母是 sumLines，即已计入文件的总物理行数；输出示例用 0.56 这样的比率展示。\n\nREADME 使用 SLOC 等术语描述这个比值，容易被理解为仅除以非注释代码行。解读具体版本应核对格式实现与样例，并保存工具版本、输入文件和 ULOC 相等规则，不能把显示标签中的百分号当作已经乘以一百。\n\n相同括号、空行、注释头和固定模板都会影响这个比例。它不识别跨多行的语义克隆，也不量化所有不要重复自己的设计原则；不能据此直接给不同语言或团队下质量结论。\n\n## 参考\n\n- [scc 表格统计实现](https://github.com/boyter/scc/blob/master/processor/formatters_tabular.go)\n- [scc 官方项目与使用说明](https://github.com/boyter/scc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/boyter/scc/blob/master/processor/formatters_tabular.go"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "spdx-license-list",
+  "name": "SPDX License List",
+  "aliases": [
+    "SPDX 许可列表",
+    "SPDX License Identifiers"
+  ],
+  "type": "product",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    }
+  ],
+  "summary": "为常见许可证与例外提供统一标识、文本和匹配数据。",
+  "description": "SPDX License List 收录常见许可证及许可例外，为每项提供规范短标识、全名、文本和永久链接。它支持不同工具用一致的名称交流许可证据，可用于源码标头、包元数据与物料清单。列表是发布的数据资源，SPDX 的完整数据交换模型和许可表达式语法另有各自规范。\n\n许可证和例外分开维护，例外通常通过 WITH 运算符与许可证组合。机器可读数据仓库提供多种表示，文本匹配模板允许规范规定的可省略或可替换片段。列表版本独立于 SPDX SBOM 规范版本，工具使用的标识集不一定和网站当前列表一致。\n\n标识符让证据可交换，不代表所有软件都只有列表内的许可，也不证明包内的声明正确。废弃标识需要按列表说明处理，自定义许可仍可用明确引用表示。是否允许某项使用行为应依据实际条款和事实审查；列表中的存在与审批标记不能替代对具体工件的判断。\n\n## 参考\n\n- [SPDX：License List 与标识范围](https://spdx.org/licenses/)\n- [SPDX：许可列表机器可读发布数据](https://github.com/spdx/license-list-data)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://spdx.org/licenses/",
+  "abstraction_level": "application_tool"
+}

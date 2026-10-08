@@ -1,0 +1,49 @@
+{
+  "id": "ohcount",
+  "name": "Ohcount",
+  "aliases": [
+    "Ohloh 代码计数器",
+    "Ohcount 源码分析"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-line-counting"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "embedded-language-counting",
+      "context": "解析同一 HTML 等源文件中的多种语言片段，生成逐行语言与代码注释分类。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-language-detection",
+      "context": "通过项目检测器确定源文件的主要语言族。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "在逐行解析结果中统计源码代码行。"
+    }
+  ],
+  "summary": "提供语言检测与逐行多语言计数的 Ohloh 工具。",
+  "description": "Ohcount 起源于 Ohloh，是源码语言检测与行计数项目，用于 Open Hub 的分析工作。项目提供检测器、逐行解析器、命令行入口和 Ruby 绑定，既可扫描单文件也可扫描目录树。\n\n它支持同一文件含多种语言，例如 HTML 中的 CSS 和 JavaScript，并可生成行级注解。语言检测确定主要语言族，解析器再分类源码内容，两者不是相同功能。\n\n官方说明面向 Unix 类构建环境，明确不支持 Windows，并给出特定依赖与较早测试平台。Ruby 和 Python 包装的维护条件不同，Python 包装标为不支持；不应据包装目录存在推断平台能力一致。\n\n## 参考\n\n- [Ohcount 官方项目](https://github.com/blackducksoftware/ohcount)\n- [Ohcount CLI 与逐行分析入口](https://raw.githubusercontent.com/blackducksoftware/ohcount/main/src/ohcount.c)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/blackducksoftware/ohcount"
+}

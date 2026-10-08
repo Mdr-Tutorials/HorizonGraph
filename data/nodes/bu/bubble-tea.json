@@ -1,0 +1,40 @@
+{
+  "id": "bubble-tea",
+  "name": "Bubble Tea",
+  "aliases": [
+    "BubbleTea",
+    "Charm Bubble Tea"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "go-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-user-interface",
+      "context": "以消息更新循环和声明式视图管理终端文本应用的交互。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go",
+      "context": "框架源码及宿主应用采用 Go 开发并编译；不声明最终用户必须安装 Go 工具链。"
+    }
+  ],
+  "summary": "以状态、消息和视图模型构建 Go 终端应用的框架。",
+  "description": "Bubble Tea 是 Go 终端应用框架，采用受 Elm Architecture 启发的状态更新模型。应用的 Model 保存状态，Init 启动初始命令，Update 响应消息并产生新状态和命令，View 描述界面内容。框架负责运行消息循环及终端渲染，使界面与业务状态之间的关系更明确。\n\n消息可以来自键盘、鼠标、计时器或异步任务结果，命令用于执行 I/O 并把结果返回更新流程。当前 v2 API 采用声明式视图描述终端内容和部分能力配置，支持内联、全屏或混合界面；阅读旧示例时应核对主版本的导入路径及 View 等接口差异。\n\nBubble Tea 本身组织应用生命周期，Bubbles 组件和其他 Charm 工具可按需要配合使用。终端能力及输入输出仍由宿主环境决定，框架不是终端模拟器或 Shell。Go 是开发及编译应用所采用的语言，构建出的程序并不因此要求用户另装 Go 工具链才能运行。\n\n参考资料：\n\n- [官方代码库与教程](https://github.com/charmbracelet/bubbletea)\n- [当前 Go 包 API 文档](https://pkg.go.dev/charm.land/bubbletea/v2)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/charmbracelet/bubbletea"
+}

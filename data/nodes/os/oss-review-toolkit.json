@@ -1,0 +1,51 @@
+{
+  "id": "oss-review-toolkit",
+  "name": "OSS Review Toolkit",
+  "aliases": [
+    "开源软件审查工具包",
+    "ORT"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "software-composition-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "license-detection",
+      "context": "Scanner 阶段调用已配置的许可扫描器收集源码证据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "component-dependency-graph",
+      "context": "Analyzer 阶段解析受支持项目的依赖及元数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "Reporter 选择相应 BOM 格式时输出依赖与组成信息。"
+    }
+  ],
+  "summary": "编排依赖分析、源码扫描、公告和自定义政策审查。",
+  "description": "OSS Review Toolkit 是开源依赖审查与政策自动化工具包，通常简称 ORT。它把分析、下载、扫描、公告查询、规则评估与报告分别组织为工具，形成可重复的审查流水线。依赖解析、文件许可证据和政策结果保存在相应阶段，便于分清各自来源。\n\nAnalyzer 读取受支持构建系统和包管理信息，Downloader 获取源码，Scanner 调用配置的外部扫描器。Advisor 获取受支持公告服务的信息，Evaluator 使用组织提供的规则评估结果，Reporter 输出报告、通知材料或 BOM。可选扫描器和外部服务不是每次 ORT 部署均存在的硬依赖。\n\n排除范围、数据修订和人工处理记录会改变结论，需要随运行配置保留。报告生成不表示全部政策都已执行，自定义规则通过也不等于各项证据真实。ORT 帮助编排和记录分析，实际覆盖仍由输入、工具支持与组织规则限定。\n\n## 参考\n\n- [ORT：各阶段职责](https://oss-review-toolkit.org/ort/docs/intro)\n- [ORT：配置、排除与报告教程](https://oss-review-toolkit.org/ort/docs/getting-started/tutorial)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://oss-review-toolkit.org/ort/docs/intro",
+  "abstraction_level": "application_tool",
+  "abbreviation": "ORT"
+}

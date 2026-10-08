@@ -1,0 +1,35 @@
+{
+  "id": "terminal-device-attributes",
+  "name": "Terminal Device Attributes",
+  "aliases": [
+    "终端设备属性报告"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "control-sequence-introducer",
+      "context": "DA 查询及设备属性回复通过对应 CSI 序列编码，具体字段依查询类型和实现。"
+    }
+  ],
+  "summary": "通过查询与回复报告终端兼容身份及部分能力。",
+  "description": "设备属性报告是 DEC 终端传统中的查询回复机制，应用向终端请求属性，再从输入流读取返回序列。主要 DA、次要 DA 和后续身份扩展具有不同含义；它们可以帮助选择兼容处理，但不构成一个覆盖所有现代特性的统一能力表。\n\n原始 VT100 文档定义了相应查询和选项报告，xterm 参考则说明后续 DEC 代际与其他实现的返回形式。现代终端可能报告兼容设备类型而非真实硬件型号。应用需按完整响应格式解析，避免只看某个数字就认定某个品牌、版本或所有图像能力。\n\n回复与用户输入共享通道，应用应管理查询期限、未响应情况和中间层过滤。设备属性也不能代替 terminfo 中的具体操作字符串或扩展专用查询。输出中的终端身份声明没有自动认证，权限与安全策略仍应由宿主明确执行。\n\n## 参考\n\n- [DEC：VT100 原始用户手册的程序员章节](https://oldmanprogrammer.net/webapps/vt100/doc/vt100-ug/chapter3.html)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)\n- [Microsoft：虚拟终端序列与屏幕缓冲](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://oldmanprogrammer.net/webapps/vt100/doc/vt100-ug/chapter3.html",
+  "abbreviation": "DA"
+}

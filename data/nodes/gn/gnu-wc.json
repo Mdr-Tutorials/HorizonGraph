@@ -1,0 +1,41 @@
+{
+  "id": "gnu-wc",
+  "name": "GNU wc",
+  "aliases": [
+    "GNU 字数统计",
+    "wc",
+    "word count"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem",
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "gnu-coreutils"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "未提供文件或指定标准输入时读取文本流，并将计数写到标准输出以参与命令管道。"
+    }
+  ],
+  "summary": "GNU Coreutils 中按字节流统计换行、单词和字节的命令。",
+  "description": "GNU wc 是 GNU Coreutils 的文本统计命令，可分别报告换行、单词、字符、字节和最大显示行宽。它读取文件或标准输入，是通用文本工具，没有源语言的代码与注释分类。\n\n选项 -l 数换行字符，文件末尾没有换行的文本片段不会增加该数值；-c 与 -m 的字节和字符计数也不同。词和显示宽度还受区域设置及 GNU 扩展规则影响，不能把所有列都解释为源码行数。\n\nwc 可参与已明确筛选文本的管道，例如原始 ULOC 提案中的排序去重计数。分析源码时仍需另行规定文件范围、注释和末行规则；GNU 专用选项不保证其他同名实现也支持。\n\n## 参考\n\n- [GNU wc 官方手册](https://www.gnu.org/software/coreutils/manual/html_node/wc-invocation.html)\n- [GNU wc 实现](https://github.com/coreutils/coreutils/blob/master/src/wc.c)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.gnu.org/software/coreutils/manual/html_node/wc-invocation.html"
+}

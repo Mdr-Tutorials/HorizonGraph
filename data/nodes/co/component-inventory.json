@@ -1,0 +1,45 @@
+{
+  "id": "component-inventory",
+  "name": "Software Component Inventory",
+  "aliases": [
+    "软件组件清单",
+    "组件盘点"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-url",
+      "context": "用按生态定义的包身份关联组件条目，保留版本及限定符。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "swid",
+      "context": "资产及组成清单可采用 SWID 标签关联软件身份、版本与载荷信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "将适用于明确工件的组件盘点结果序列化为交换清单。"
+    }
+  ],
+  "summary": "整理软件组件身份、版本、来源和实际观察范围。",
+  "description": "软件组件盘点把某个产品、工件或环境中识别的软件组织为可追踪的清单，包括名称、版本、来源及标识。它是一种信息组织活动；SBOM 则是面向明确所述对象的可交换物料清单记录。源码依赖清单、镜像扫描结果和运行环境资产表提供的观察范围可以不同。\n\n清单应保留组件实例与统一身份的区别：同一包可能出现在多个路径和层，多个版本也可能同时存在。包元数据、文件位置与识别依据帮助解释这些差异。PURL、CPE 或 SWID 能辅助跨工具关联，但不能因名称相同就把不同生态或版本的组件合并。\n\n组件条目数量不是完整性的直接证明。嵌入库、私有组件、动态下载和排除目录可能形成盲区，生成者应说明已知未知范围。后续漏洞和许可分析使用这份清单时，需要保留其工件范围及采集时间，避免用过期库存推断当前部署中的全部组成。\n\n## 参考\n\n- [CycloneDX：软件组件身份与观察位置](https://www.cyclonedx.org/use-cases/software-components/)\n- [Dependency-Track：组件与清单术语](https://docs.dependencytrack.org/terminology/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.cyclonedx.org/use-cases/software-components/"
+}

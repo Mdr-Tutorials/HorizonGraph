@@ -1,0 +1,45 @@
+{
+  "id": "maintainability-index",
+  "name": "Maintainability Index",
+  "abbreviation": "MI",
+  "aliases": [
+    "可维护性指数",
+    "维护性指数"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "halstead-volume",
+      "context": "常见MI公式采用 Halstead 体积的对数作为输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclomatic-complexity",
+      "context": "常见MI公式采用被分析代码的圈复杂度作为输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-lines-of-code",
+      "context": "常见MI公式采用源码规模的对数；物理或逻辑口径按具体工具定义。"
+    }
+  ],
+  "summary": "结合源码规模、复杂度与Halstead体积的复合指标。",
+  "description": "可维护性指数把若干源码指标合成为经验分数。常见基础式为 171−5.2·ln(V)−0.23·G−16.2·ln(L)，V 为 Halstead 体积、G 为圈复杂度、L 为源码行数；这些输入的粒度与口径仍需说明。\n\nVisual Studio 将该式按 100/171 重标并对负值截断为零。Radon 的变体另含与注释比例有关的项；不同工具还可能采用不同聚合与对数规则，因此同名 MI 数值不能不加条件地相互比较。\n\n分数是提示审查位置的代理指标，不是可维护性的直接实验读数。报告应注明具体公式、原始输入、排除范围及版本；工具自带颜色阈值不能直接推广为所有语言与项目的通用质量判定。\n\n## 参考\n\n- [Microsoft：MI范围与公式](https://learn.microsoft.com/en-us/visualstudio/code-quality/code-metrics-maintainability-index-range-and-meaning?view=visualstudio)\n- [Radon：MI变体及限制](https://radon.readthedocs.io/en/latest/intro.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://learn.microsoft.com/en-us/visualstudio/code-quality/code-metrics-maintainability-index-range-and-meaning?view=visualstudio"
+}

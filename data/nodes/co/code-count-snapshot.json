@@ -1,0 +1,33 @@
+{
+  "id": "code-count-snapshot",
+  "name": "Code Count Snapshot",
+  "aliases": [
+    "代码计数快照",
+    "源码统计快照"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-counting-scope",
+      "context": "在统计记录中保存实际路径、排除规则和输入修订，限定快照结果的适用范围。"
+    }
+  ],
+  "summary": "保存特定输入修订和口径下的计数结果及元数据。",
+  "description": "代码计数快照是一次测量结果及其适用条件的记录，通常含工具版本、源码修订、文件清单、参数、语言明细和汇总。JSON、CSV 等序列化保存了计数，但字段本身不保证记录了全部输入条件。\n\nTokei 可以导出统计并把以前的结果通过 --input 加到当前运行中。这个操作是合并计数，不能自动推导历史差异、识别重叠文件或去重；对同一输入重复累加会改变总数。\n\n趋势分析需要相同或可说明变更的测量范围和单位，最好保存文件级明细以定位差异。报表没有匹配源码修订或排除规则时，数值变化可能来自工具配置而非实际代码变化。\n\n## 参考\n\n- [Tokei 官方项目](https://github.com/XAMPPRocky/tokei)\n- [Tokei Languages API](https://docs.rs/tokei/latest/tokei/struct.Languages.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/XAMPPRocky/tokei"
+}

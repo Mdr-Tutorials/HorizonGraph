@@ -1,0 +1,30 @@
+{
+  "id": "file-descriptor",
+  "name": "File Descriptor",
+  "aliases": [
+    "文件描述符",
+    "FD"
+  ],
+  "type": "concept",
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    }
+  ],
+  "summary": "进程用整数引用已打开文件、设备及通信端点的机制。",
+  "description": "文件描述符是 POSIX 进程使用的非负整数，用于引用文件、终端、套接字或管道等已打开对象。这个整数属于进程的描述符表，而打开文件描述对象保存当前位置及文件状态标志。区分这两层有助于解释为何两个不同编号可以访问同一个打开对象，以及关闭一个编号后其他引用仍可继续使用。\n\nopen 创建或取得访问对象并返回描述符；dup 等操作增加对同一打开文件描述的引用，因此可能共享文件偏移和状态。fork 后父子进程的对应描述符也可引用相同对象。Shell 重定向通常通过打开、复制和关闭描述符安排命令的输入输出，命令本身无需知道最终目的地是屏幕、文件还是管道。\n\n描述符编号只在特定进程与时刻具有意义，关闭后该数字可以被重新使用。它不等同文件路径、C 标准库的 FILE 流对象或 Windows HANDLE。资源泄漏、继承及 close-on-exec 标志会影响程序生命周期；拥有一个描述符也不意味着其目标支持所有读取、定位或终端控制操作。\n\n## 参考\n\n- [Linux man-pages: open 与打开文件描述](https://man7.org/linux/man-pages/man2/open.2.html)\n- [Linux man-pages: dup 与共享引用](https://man7.org/linux/man-pages/man2/dup.2.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man2/open.2.html"
+}

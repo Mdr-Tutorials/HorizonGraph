@@ -1,0 +1,40 @@
+{
+  "id": "yq-mikefarah",
+  "name": "yq (Mike Farah)",
+  "aliases": [
+    "Go yq",
+    "Mike Farah yq",
+    "yq"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "yaml",
+      "context": "通过路径表达式选择、修改及输出 YAML 文档；注释和格式保留按工具实际支持限定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "在所选输入或输出模式下读取或输出 JSON，用于与其他结构化工具交换数据。"
+    }
+  ],
+  "summary": "以 jq 风格表达式查询和编辑 YAML 等数据的工具。",
+  "description": "Mike Farah 的 yq 是以 Go 实现的便携命令行数据处理器，主要用于 YAML 查询与编辑，也提供 JSON 等格式的处理和转换能力。限定名称用于区别其他同名项目，特别是围绕外部 jq 处理器组织的 Python yq。\n\nyq 使用类似 jq 的表达式选择路径、筛选数据和更新值，eval 对每个文档依次求值，eval-all 则可让多个输入文档参与统一表达式。读取标准输入、输出格式及原地写入是独立选项，脚本应明确输入文档范围和更新目标。\n\n表达式相似不表示完全兼容 jq 的全部语法，也不意味着该 Go 工具需要调用外部 jq 二进制。注释、空白和其他格式细节的保留存在适用范围，数据重写需按官方行为检查；支持 YAML 处理不能等同理解任意配置文件的业务语义。\n\n## 参考\n\n- [Mike Farah yq 项目](https://github.com/mikefarah/yq)\n- [eval 命令与输入范围](https://mikefarah.gitbook.io/yq/commands/evaluate)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/mikefarah/yq"
+}

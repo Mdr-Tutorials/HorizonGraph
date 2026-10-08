@@ -29,10 +29,15 @@
       "relation_type": "uses",
       "target_id": "artifact-attestation",
       "context": "需要认证构建来源时，将来源记录作为关于工件的声明，由受信任构建平台签署并供消费方验证。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "需要说明构建输出的组成时，可关联针对输出工件生成的 SBOM，但过程记录不替代组成清单。"
     }
   ],
   "summary": "记录工件由谁、以哪些输入和构建过程产生。",
-  "description": "构建来源证明记录一个软件工件如何产生，包括构建平台、构建定义、外部参数、已解析输入和本次执行信息。它关注生产过程及输入与输出的关联，SBOM 则主要关注软件组成。两者可以共享依赖信息，却不能彼此替代；最终镜像中的构建历史文本也不自动成为经过认证的构建来源证明。\n\nSLSA 的构建来源格式采用 in-toto Statement，以 subject 中的摘要绑定输出工件，并在 predicate 中区分 buildDefinition 与 runDetails。builder.id 表达受信任构建平台的边界，不能仅凭一个签署者名称推导构建环境。消费方需要匹配被接受的签署者与 builder 组合，并核查源码仓库、buildType 和外部参数是否符合预期。\n\n来源记录的可靠性取决于谁生成、谁签署，以及构建平台对记录准确性和完整性的保证。SLSA Build L1 允许不完整或未签名的来源记录；较高等级要求更强的生成与隔离控制。签名能够验证声明者和记录完整性，不能独立证明记录中的每个事实真实；即使可信来源符合策略，也仍需处理源码缺陷、依赖漏洞和构建平台本身被攻陷的风险。\n\n## 参考\n\n- [SLSA 1.2：构建来源格式](https://slsa.dev/spec/v1.2/build-provenance)\n- [SLSA 1.2：消费方验证工件](https://slsa.dev/spec/v1.2/verifying-artifacts)\n- [SLSA 1.2：Build Track 等级](https://slsa.dev/spec/v1.2/build-track-basics)",
+  "description": "构建来源证明记录一个软件工件如何产生，包括构建平台、构建定义、外部参数、已解析输入和本次执行信息。它关注生产过程及输入与输出的关联，SBOM 则主要关注软件组成。两者可以共享依赖信息，却不能彼此替代；最终镜像中的构建历史文本也不自动成为经过认证的构建来源证明。\n\nSLSA 的构建来源格式采用 in-toto Statement，以 subject 中的摘要绑定输出工件，并在 predicate 中区分 buildDefinition 与 runDetails。builder.id 表达受信任构建平台的边界，不能仅凭一个签署者名称推导构建环境。消费方需要匹配被接受的签署者与 builder 组合，并核查源码仓库、buildType 和外部参数是否符合预期。\n\n来源记录的可靠性取决于谁生成、谁签署，以及构建平台对记录准确性和完整性的保证。SLSA Build L1 允许不完整或未签名的来源记录；较高等级要求更强的生成与隔离控制。签名能够验证声明者和记录完整性，不能独立证明记录中的每个事实真实；即使可信来源符合策略，也仍需处理源码缺陷、依赖漏洞和构建平台本身被攻陷的风险。\n\n构建来源记录与清单生命周期可以联系，但源码依赖、构建时输入和最终交付组成不是同一集合。生产过程中的临时工具未必进入产品，运行时动态组件也未必出现在构建记录中。来源验证应按工件和构建参数判断，组件清单则另外保留生成阶段、分析方法与覆盖，使消费方能够解释两类证据的差异。\n\n## 参考\n\n- [SLSA 1.2：构建来源格式](https://slsa.dev/spec/v1.2/build-provenance)\n- [SLSA 1.2：消费方验证工件](https://slsa.dev/spec/v1.2/verifying-artifacts)\n- [SLSA 1.2：Build Track 等级](https://slsa.dev/spec/v1.2/build-track-basics)\n- [CycloneDX：生命周期与制造阶段](https://cyclonedx.org/guides/sbom/lifecycle_phases/)\n- [CycloneDX：组件来源说明](https://www.cyclonedx.org/use-cases/provenance/)",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",

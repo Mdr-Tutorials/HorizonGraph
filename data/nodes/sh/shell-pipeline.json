@@ -1,0 +1,43 @@
+{
+  "id": "shell-pipeline",
+  "name": "Shell Pipeline",
+  "aliases": [
+    "Shell 管道",
+    "命令管道"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "anonymous-pipe",
+      "context": "POSIX 字节流 Shell 通过操作系统的匿名管道连接相邻命令的标准输出和标准输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "exit-status",
+      "context": "Bash 根据末段退出状态或已启用的 pipefail 规则计算流水线返回状态。"
+    }
+  ],
+  "summary": "把命令输出连接到后续命令输入的组合机制。",
+  "description": "Shell 管道把一串命令的输出连接到后续命令的输入，使各程序可以按数据流组合。POSIX 风格的连接传输字节，应用再解释字节中的行、字段或格式；管道符本身不会自动解析 JSON，也不保证输入数据就是文本。这里不把 PowerShell 对象管道的传值规则混入字节流定义。\n\n在 Bash 中，普通 | 连接前一个命令的 stdout 与下一个命令的 stdin，stderr 是否合并由额外规则决定。Shell 创建所需连接并组织命令执行，程序可以并发工作；Bash 的各阶段执行环境还受 lastpipe 等选项与作业控制条件影响，不能假定循环中的变量修改总能回到父 Shell。\n\n流水线的返回状态需要独立判断。Bash 默认取最后一个命令的状态，启用 pipefail 后采用自己的聚合规则；一段流水线没有报错文字不代表每个阶段成功。下游提前退出也可能中断上游写入，调用者应根据实际任务解释这种结束条件。\n\n## 参考\n\n- [GNU：Pipelines](https://www.gnu.org/software/bash/manual/html_node/Pipelines)\n- [GNU：Command Execution Environment](https://www.gnu.org/software/bash/manual/html_node/Command-Execution-Environment.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Pipelines"
+}

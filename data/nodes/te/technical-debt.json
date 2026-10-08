@@ -1,0 +1,28 @@
+{
+  "id": "technical-debt",
+  "name": "Technical Debt",
+  "aliases": [
+    "技术债",
+    "技术债务"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    }
+  ],
+  "summary": "短期有利的设计或实现使未来变更承担额外成本。",
+  "description": "技术债描述某些设计或实现选择在短期促进交付，却建立了使未来变更更昂贵或困难的技术背景。SEI 强调它的影响取决于后续演化方向，主要关联可维护性与可演化性，而不是一切软件问题的统称。\n\n债务可以存在于局部代码、模块接口、系统架构或所采用的技术中；结构清晰的源码也可能受不合适的整体设计限制。债务有时出于明确取舍，有时由认识不足或外部条件变化形成，不能一概归因于开发者故意偷工减料。\n\n债务隐喻帮助讨论补救代价与保留问题产生的额外成本，但并没有统一的金融利率或完整自动检测方法。静态工具标记的异味和修复时间只是特定证据，应结合实际变更后果、替代方案及业务计划判断。\n\n## 参考\n\n- [SEI：技术债的设计与演化范围](https://www.sei.cmu.edu/blog/managing-the-consequences-of-technical-debt-5-stories-from-the-field/)\n- [Martin Fowler：Technical Debt](https://martinfowler.com/bliki/TechnicalDebt.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.sei.cmu.edu/blog/managing-the-consequences-of-technical-debt-5-stories-from-the-field/"
+}

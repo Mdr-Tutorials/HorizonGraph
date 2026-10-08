@@ -1,0 +1,34 @@
+{
+  "id": "osc-8",
+  "name": "OSC 8 Hyperlinks",
+  "aliases": [
+    "OSC 8 终端超链接"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "operating-system-command",
+      "context": "使用编号 8 的 OSC 字符串开始、切换或结束字符单元的超链接属性。"
+    }
+  ],
+  "summary": "把字符单元标记为可由用户打开的 URI 超链接。",
+  "description": "OSC 8 给终端字符单元赋予显式超链接属性。应用发送带参数与 URI 的开始序列，随后绘制的文字指向该目标；发送空 URI 的序列关闭当前链接属性。显示文字可以与目标地址不同，这与终端自动识别屏幕上看似 URL 的字符串是两种机制。\n\n规范使用 OSC 8 ; params ; URI ST，关闭时保留分隔符但省略参数和 URI。可选 id 将同一目标的多个单元关联起来，适用于换行或多窗格后的鼠标呈现。属性可以直接从一个链接切到另一个，终端不是 HTML DOM，不要求以嵌套标签方式构造一棵树。\n\n终端决定允许的 URI scheme、显示目标以及打开时的明确用户交互；收到序列不会自动导航。远程 file URI 还需处理主机名与本地路径差异。OSC 8 提供便捷访问，不认证链接或可见文字的来源，复用器和分页器也需显式支持其保留行为。\n\n## 参考\n\n- [VTE / iTerm2：终端超链接原始规范](https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda)\n- [Ghostty：外部终端协议](https://ghostty.org/docs/vt/external)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda"
+}

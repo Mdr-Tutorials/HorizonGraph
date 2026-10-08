@@ -1,0 +1,49 @@
+{
+  "id": "code-line-counting",
+  "name": "Code Line Counting",
+  "aliases": [
+    "代码行计数",
+    "源码计数",
+    "Source Code Counting"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-lines-of-code",
+      "context": "采用明确的物理行或逻辑语句单位，输出源码规模计数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-counting-scope",
+      "context": "开始扫描前确定输入文件集合、排除项和测量对象。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "comment-aware-counting",
+      "context": "对物理源码统计按语言规则区分代码、注释和字符串。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-file-count",
+      "context": "报告实际进入计数流程的源文件数，与行数一起揭示输入规模。"
+    }
+  ],
+  "summary": "按可操作语言规则分类源文件并汇总代码行统计。",
+  "description": "代码行计数先确定输入文件和语言，再按明确规则区分代码、注释与空白，最后输出文件或语言汇总。流程中的文件发现、语言识别和文本分类是不同步骤，任一步的规则都会影响结果。\n\n语言感知的计数通常识别字符串与注释状态；逻辑语句计数可能还需更完整的解析。完整编译不是物理行计数的普遍前提，简单 wc 换行统计也不能替代这些分类步骤。\n\n可复核结果应带工具版本、命令参数、输入修订、排除规则和错误明细。多工具比较宜先用短小的混合行、块注释和嵌入语言样例验证口径，再比较同一文件集合的汇总。\n\n## 参考\n\n- [cloc 官方项目与计数说明](https://github.com/AlDanial/cloc)\n- [SEI：源码规模计数框架](https://sei.cmu.edu/library/software-size-measurement-a-framework-for-counting-source-statements/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://github.com/AlDanial/cloc"
+}

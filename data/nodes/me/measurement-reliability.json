@@ -1,0 +1,29 @@
+{
+  "id": "measurement-reliability",
+  "name": "Measurement Reliability",
+  "aliases": [
+    "测量信度",
+    "度量可靠性"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    }
+  ],
+  "summary": "评估测量在应保持一致的条件下有多稳定。",
+  "description": "测量信度指测量程序在本应得到一致结果的条件下，结果的稳定程度。软件研究可检查重复运行、不同评审者或问卷题项的一致性；这些信度形式针对不同误差来源，不能互相替代。\n\n对代码计数器，应固定源码快照、遍历规则、语言配置和工具版本，再检查重复结果。对人工缺陷分类，应明确标签规则并报告评审者一致性；题项的内部一致性也不能被解释为所有题目都测对了目标属性。\n\n可靠但带有系统偏差的测量仍可能失真。降低随机噪声有助于比较，但重复执行不能消除错误的排除规则或错误代理；信度阈值应由测量用途、预期效果和误差影响说明，避免套用一个万能分数。\n\n## 参考\n\n- [软件工程度量理论与测量性质](https://arxiv.org/html/2406.14494v1)\n- [ACM SIGSOFT 实证软件工程标准](https://github.com/acmsigsoft/EmpiricalStandards)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://arxiv.org/html/2406.14494v1"
+}

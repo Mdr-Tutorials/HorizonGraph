@@ -1,0 +1,36 @@
+{
+  "id": "cyclomatic-complexity",
+  "name": "Cyclomatic Complexity",
+  "abbreviation": "CC",
+  "aliases": [
+    "圈复杂度",
+    "环形复杂度",
+    "McCabe Complexity"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cfg",
+      "context": "按控制流图的边、节点与连接结构计算线性独立路径数。"
+    }
+  ],
+  "summary": "以控制流图独立路径数刻画程序结构复杂度。",
+  "description": "圈复杂度由 McCabe 提出，描述控制流图中线性独立路径的数量。在通常的单入口、单出口连通函数图上，v(G)=E−N+2，其中 E 为边数、N 为节点数；这里的路径数不是全部可能执行序列的数量。\n\n对适用的结构化控制语句，工具常按决策点数加一计算。短路布尔表达式、异常处理、switch 分支与语言特性的计数规则存在变体，因此报告需要注明解析器和计数选项；单纯关键字计数只是近似口径。\n\n该指标可帮助规划基路径测试和定位集中分支逻辑。达到某个分数不证明所有路径均可执行，也不保证测试判定充分或程序正确；使用基路径思想仍需处理不可行路径和具体输入约束。\n\n## 参考\n\n- [NIST：圈复杂度与结构化测试](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication500-235.pdf)\n- [Checkstyle：圈复杂度规则](https://checkstyle.org/checks/metrics/cyclomaticcomplexity.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication500-235.pdf"
+}

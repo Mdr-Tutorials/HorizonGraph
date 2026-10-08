@@ -1,0 +1,39 @@
+{
+  "id": "process-group",
+  "name": "Process Group",
+  "aliases": [
+    "进程组",
+    "进程组标识",
+    "PGID"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unix-session"
+    }
+  ],
+  "summary": "以组标识组织进程，支持终端前后台切换和信号发送。",
+  "description": "进程组是 Unix 会话中的进程集合，组 ID 用于把一项交互作业的多个进程一起管理。组领导者的进程 ID 与组 ID 相同，领导者退出后组仍可能存续。它与父子进程树不相同，Shell 管道中的多个进程通常可以属于一个组。\n\nsetpgid 在规定条件下设定成员的进程组，组不能任意跨越会话边界。fork 子进程继承父进程组，exec 不因执行新程序而改变组归属。终端记录前台进程组 ID，通过 tcgetpgrp 和 tcsetpgrp 查询或改变访问角色。\n\n信号接口可以向整个进程组发出通知，终端中断字符也按前台组分派。在后台读取、孤儿组和停止状态等场景下，还有专门规则。进程组不是资源限制控制组，不提供 cgroup 的 CPU 或内存配额，也不是线程组或网络会话的另一名称。\n\n## 参考\n\n- [Linux man-pages：进程组](https://man7.org/linux/man-pages/man2/setpgid.2.html)\n- [Linux man-pages：终端前台进程组](https://man7.org/linux/man-pages/man3/tcgetpgrp.3.html)\n- [Linux man-pages：进程组、会话与控制终端](https://man7.org/linux/man-pages/man7/credentials.7.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man2/setpgid.2.html"
+}

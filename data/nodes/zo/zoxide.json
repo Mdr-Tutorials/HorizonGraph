@@ -1,0 +1,42 @@
+{
+  "id": "zoxide",
+  "name": "zoxide",
+  "aliases": [
+    "zoxide 目录跳转工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "command-line-interface"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-startup-files",
+      "context": "初始化脚本需从相应 Bash、zsh、Fish、Nushell 或 PowerShell 配置入口加载，以安装目录记录与跳转函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fzf",
+      "context": "启用 zi 等交互候选选择或相关补全路径时使用 fzf；普通查询和跳转不要求该组件。"
+    }
+  ],
+  "summary": "依据使用记录选择目录并接入Shell切换路径的工具。",
+  "description": "zoxide 通过记录访问的目录与使用情况，帮助用户用较短查询跳转到常用路径。它维护候选数据并提供查询命令，实际改变当前 Shell 的目录则由安装的宿主适配函数完成；一个普通子进程不能自行修改父 Shell 的工作目录。\n\n工具结合访问频率与最近使用情况排序候选，初始化脚本把记录钩子和跳转函数接入相应 Shell。不同 Shell 的初始化位置与语法分别定义，未安装适配时不能假定输入 z 就一定调用 zoxide；数据目录和排除条件也可按需要配置。\n\n交互选择 zi 等路径可采用 fzf，这是可选能力而非所有基本跳转的硬依赖。查询词不代表唯一路径标识，执行前可检查实际匹配目录；Shell 类型与工具版本决定补全等具体支持条件，目录历史也不等同于保存完整的命令历史。\n\n## 参考\n\n- [zoxide：README](https://github.com/ajeetdsouza/zoxide)\n- [zoxide：Algorithm](https://github.com/ajeetdsouza/zoxide/wiki/Algorithm)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/ajeetdsouza/zoxide"
+}

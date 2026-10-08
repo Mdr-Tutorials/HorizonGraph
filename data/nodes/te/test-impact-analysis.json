@@ -1,0 +1,34 @@
+{
+  "id": "test-impact-analysis",
+  "name": "Test Impact Analysis",
+  "aliases": [
+    "测试影响分析",
+    "TIA"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-coverage",
+      "context": "采用动态覆盖映射的实现以记录测试触达的代码，辅助分析后续变更影响；文件依赖等模型另有口径。"
+    }
+  ],
+  "summary": "建立变更与测试依赖映射，判断需要验证的范围。",
+  "description": "测试影响分析关联代码或资源变化与测试依赖，判断哪些验证可能受到影响。它为回归测试选择提供依据，影响模型可以来自动态依赖、覆盖数据或静态关系。\n\nMicrosoft 的 Azure Pipelines TIA 是有具体支持范围的实现，通过已有映射选择受影响、新增和此前失败测试，并对无法理解的变化保守执行全量测试。不能把该产品的旧版宿主限制推广为所有影响分析方法的共同限制。\n\n映射需随测试与代码变化更新，并考虑配置、数据、外部依赖与运行环境。未知依赖不应被当作无影响；缺少有效映射时应扩展验证范围，而非静默跳过测试。\n\n## 参考\n\n- [Microsoft：测试影响分析与回退](https://learn.microsoft.com/en-us/azure/devops/pipelines/test/test-impact-analysis?view=azure-devops)\n- [Ekstazi：动态文件依赖原始论文](https://users.ece.utexas.edu/~gligoric/papers/GligoricETAL15Ekstazi.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://learn.microsoft.com/en-us/azure/devops/pipelines/test/test-impact-analysis?view=azure-devops",
+  "abbreviation": "TIA"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "cloc",
+  "name": "Count Lines of Code",
+  "aliases": [
+    "代码计数器 cloc",
+    "cloc",
+    "CLOC"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem",
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-line-counting"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "perl",
+      "context": "源码实现为 Perl；直接运行 Perl 脚本与使用打包可执行文件具有不同的宿主要求。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "使用 Code 列报告移除空白和注释后保留的物理源码行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "duplicate-file-filtering",
+      "context": "默认在 Digest::MD5 可用且未禁用唯一性检查时，只保留完整相同文件的一个代表；模块缺失或 --skip-uniqueness 会跳过检查。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-count-diff",
+      "context": "启用 --diff 比较两份源码中的代码、注释与空白行变化。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-language-detection",
+      "context": "按扩展、脚本首行与冲突语言的内容规则确定语言分类。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-counting-scope",
+      "context": "按文件清单、目录、VCS 或排除参数选择计数输入。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "scc"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "tokei"
+    }
+  ],
+  "summary": "Perl 实现的代码行统计与两份源码差分工具。",
+  "description": "cloc 是 Perl 实现的多语言计数工具，分别报告空白、注释和物理代码行。它可处理文件、目录、列表及适用的压缩归档，并输出语言汇总、文件明细和多种报表格式。\n\n流程先发现输入、识别语言，再应用语言注释过滤规则；默认在 Digest::MD5 可用且未禁用唯一性检查时按内容去重，模块缺失则跳过检查，因此环境会影响实际进入报告的文件。扩展名冲突、注释边界及用户语言定义仍需核验，不能把扫描结果当作完整语义解析。\n\n差分选项 --diff 比较两份源码中的代码、注释与空白变化，区别于仅对总行数做减法。当前项目在 GitHub 开发，SourceForge 页面保留历史说明；源码版、打包二进制及归档解压路径的依赖条件应分别核对。\n\n## 参考\n\n- [cloc 官方项目与计数说明](https://github.com/AlDanial/cloc)\n- [cloc 计数实现](https://github.com/AlDanial/cloc/blob/master/cloc)\n- [cloc 历史官方说明](https://cloc.sourceforge.net/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/AlDanial/cloc"
+}

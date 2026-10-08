@@ -1,0 +1,34 @@
+{
+  "id": "kitty-keyboard-protocol",
+  "name": "Kitty Keyboard Protocol",
+  "aliases": [
+    "Kitty 键盘协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "control-sequence-introducer",
+      "context": "查询、增强标志与可消歧键盘事件通过协议定义的 CSI 形式编码。"
+    }
+  ],
+  "summary": "以可协商编码区分终端按键、修饰键及按下释放等事件。",
+  "description": "Kitty 键盘协议扩展终端的键盘事件表示，处理传统字节编码的歧义、修饰键不足和事件类型缺失。它提供应用可选择的渐进增强，使按键能够区分按下、重复与释放等信息。该协议已有多个终端和库实现，身份不等同于 Kitty 终端产品本身。\n\n应用通过查询及推入、弹出增强标志管理协议状态，并解析相应 CSI 编码。增强选项区分消除歧义、报告事件类型、额外按键信息及相关文字等行为；不能把收到某个 CSI u 序列直接视作所有增强都已开启。终端可以保留与传统应用相容的初始状态。\n\n实现应在退出或嵌套应用切换时恢复正确状态，并处理查询回复与普通文字输入的共享通道。它改进事件表达，不绕过操作系统快捷键、输入法或 TTY 设置。转接复用器是否理解或转发这些消息需单独核对，协议支持也不意味着终端支持同品牌的图像或远控协议。\n\n## 参考\n\n- [Kitty：键盘协议原始规范](https://sw.kovidgoyal.net/kitty/keyboard-protocol/)\n- [Kitty：终端协议扩展的设计边界](https://sw.kovidgoyal.net/kitty/protocol-extensions/)\n- [Ghostty 1.3：OSC 133 解析与协议更新](https://ghostty.org/docs/install/release-notes/1-3-0)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://sw.kovidgoyal.net/kitty/keyboard-protocol/"
+}

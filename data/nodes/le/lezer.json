@@ -1,0 +1,42 @@
+{
+  "id": "lezer",
+  "name": "Lezer",
+  "aliases": [
+    "Lezer 解析系统"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "incremental-parsing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "error-recovery-parsing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "syntax-highlighting",
+      "context": "语言包根据树与 highlighter 标签给编辑器源码设置语法样式。"
+    }
+  ],
+  "summary": "面向编辑器的增量、容错语法解析系统。",
+  "description": "Lezer 是面向实时编辑器的解析系统，由文法生成器、LR 运行时、通用树接口和高亮包等构成。它生成紧凑的 JavaScript 解析表，采用 LR 解析，并在文法明确允许的位置以 GLR 方式处理歧义。\n\n系统支持旧树复用、错误恢复和小内存树结构，适合频繁变化且尚未完成的源码。生成器运行于构建阶段，运行时消费生成的表；具体语言文法和语言扩展仍有独立身份。\n\nLezer 的语法树区别于常见语义 AST，不默认产生 ESTree，也不执行名称绑定或类型检查。CodeMirror 的语言包使用其接口；旧 GitHub 仓库迁站属于托管变化，不能认定整个解析系统停止维护。\n\n## 参考\n\n- [Lezer：系统指南](https://lezer.codemirror.net/docs/guide/)\n- [Lezer：参考 API](https://lezer.codemirror.net/docs/ref/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://lezer.codemirror.net/docs/guide/"
+}

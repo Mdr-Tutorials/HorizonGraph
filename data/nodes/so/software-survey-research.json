@@ -1,0 +1,39 @@
+{
+  "id": "software-survey-research",
+  "name": "Software Engineering Questionnaire Survey",
+  "aliases": [
+    "软件工程问卷调查",
+    "开发者问卷研究"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "construct-validity",
+      "context": "检查问卷题项是否测量声明的体验、能力或态度，而非相邻属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "measurement-reliability",
+      "context": "按题项与量表的实际构造评估一致性，避免把稳定回答当作效度证明。"
+    }
+  ],
+  "summary": "用设计好的问卷与抽样收集软件工程观测资料。",
+  "description": "软件工程问卷调查向一组受访者提出预设问题，再系统分析回答。当前 SIGSOFT Questionnaire Surveys 标准主要针对封闭式问题的调查；访谈、主要开放式问卷和实验中的背景资料表，需要按各自方法另行判断。\n\n调查应定义目标总体、抽样与招募方式、问卷构念、试点和缺失数据处理。感知资料可以是研究目标，例如开发者认为等待构建怎样影响工作；感知速度不能直接替代工具实际吞吐量，问卷措辞也可能改变回答。\n\n报告需说明受访者与目标总体的差异，并提供可审查问卷。公开订阅式招募的分母可能不明，不能虚构响应率；匿名、合适的聚合与用途说明有助于可信反馈，但不会自动消除非响应或自选择偏差。\n\n## 参考\n\n- [SIGSOFT：问卷调查标准](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/QuestionnaireSurveys.md)\n- [Baltes 与 Ralph：软件工程研究抽样方法](https://arxiv.org/pdf/2002.07764)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/QuestionnaireSurveys.md"
+}

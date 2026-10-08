@@ -8,21 +8,39 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "devops_tooling"
+    "devops_tooling",
+    "software-testing-ecosystem"
   ],
   "domains": [
-    "devops"
+    "devops",
+    "software-testing"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "programming-paradigm"
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "以小范围测试提供频繁反馈，分布比例应按项目风险与成本调整。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "integration-testing",
+      "context": "以跨模块或服务边界测试补充协作证据，并按实际架构界定层次。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "e2e-testing",
+      "context": "用必要的关键完整流程验证系统组合，数量不设统一配额。"
     }
   ],
-  "summary": "底层大量快测、顶层少量慢测，控制反馈速度与成本。",
+  "summary": "以不同测试粒度协调反馈速度、成本和验证范围。",
   "importance": 3,
   "popular": 40,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "测试金字塔是测试组合的分布建议，用不同粒度的自动测试平衡反馈速度与维护成本。Mike Cohn 的原始叙述包含单元、服务与 UI 层，后续实践常调整层次名称以匹配项目架构。\n\n常见原则是保留较多小范围快测，并用适量跨边界测试和端到端流程补充系统证据。UI 也可以单元测试，集成测试也可能很窄，因此不能只凭是否包含界面或某工具名称决定所在层。\n\n该模型不规定所有团队的统一比例，也不是程序正确性的证明。应根据风险、架构、可靠性与执行成本调整组合，避免为了形状或数量复制已有断言而不增加验证价值。\n\n## 参考\n\n- [Mike Cohn：原始金字塔服务层](https://www.mountaingoatsoftware.com/agile/the-forgotten-layer-of-the-test-automation-pyramid)\n- [Ham Vocke：测试金字塔实践](https://martinfowler.com/articles/practical-test-pyramid.html)"
 }

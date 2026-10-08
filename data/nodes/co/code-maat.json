@@ -1,0 +1,58 @@
+{
+  "id": "code-maat",
+  "name": "Code Maat",
+  "aliases": [
+    "CodeMaat",
+    "代码历史挖掘工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "repository-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "temporal-coupling",
+      "context": "运行 coupling 分析时统计指定事件范围中的共同修改并应用阈值。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-age",
+      "context": "运行 age 分析时以最后修改日期和指定基准时间计算文件月龄。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "developer-ownership-share",
+      "context": "运行 main-dev-by-revs 分析时计算模块主要贡献者在全部修订中的份额，限定为历史贡献代理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-churn",
+      "context": "运行绝对或按实体变化分析时汇总导出日志中的新增、删除行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "change-frequency",
+      "context": "运行 revisions 分析时按文件汇总被修改的修订次数。"
+    }
+  ],
+  "summary": "从版本控制日志分析共同变更与贡献历史。",
+  "description": "Code Maat 是以版本控制日志为输入的命令行分析工具。它解析 Git 等系统的导出日志并生成 CSV 结果，支持修订、作者、时间耦合、代码年龄及变化统计；它本身不提供这些结果的可视化界面。\n\n分析配置包括最少修订、共同修改阈值和最大变更集，并可用分组文件聚合路径或按日合并逻辑变更。Git 日志格式与路径过滤必须符合所选解析模式，输出中的行数、作者和日期有各自口径。\n\n作者分布与变化模式用于调查维护结构，不能作为人员绩效评价。README 的示例和阈值只说明用法，数据本身仍受身份别名、批量变化及不完整日志影响；必须保存输入与分析参数。\n\n## 参考\n\n- [Code Maat：项目与分析命令](https://github.com/adamtornhill/code-maat)\n- [作者：版本控制历史分析](https://www.adamtornhill.com/code/codemaat.htm)\n- [Code Maat：修订贡献与份额实现](https://github.com/adamtornhill/code-maat/blob/master/src/code_maat/analysis/effort.clj)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/adamtornhill/code-maat"
+}

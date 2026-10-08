@@ -1,0 +1,43 @@
+{
+  "id": "software-engineering",
+  "name": "Software Engineering",
+  "aliases": [
+    "软件工程"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality",
+    "software-testing",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "summary": "系统地开发、验证、维护与演化软件的工程学科。",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "software-measurement",
+      "context": "工程管理与改进通过明确的软件产品和过程度量支持计划、跟踪及决策，指标随信息需要选择。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "开发和维护中通过评审代码变更及验证证据发现问题并形成反馈。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "构建与验证阶段可用隔离单元的测试检查规定行为，配合其他测试层次。"
+    }
+  ],
+  "description": "软件工程把需求、设计、构建、验证、运行和维护组织为可管理的工程活动，同时考虑成本、质量与交付约束。编程是其中的重要工作，学科范围还包括过程、配置管理、专业实践和软件演化。\n\n不同项目可以采用不同生命周期和协作方法；SWEBOK 汇集普遍接受的知识领域，为课程、实践和专业发展提供导航。它对领域的描述不会规定每个团队必须采用同一流程，也不能用一个工具列表代替需求、风险和工程判断。\n\n代码计数、结构分析、测试和历史分析为工程活动提供不同证据。解释这些结果时需要注明目标、对象和条件，把可观察计数与质量、交付和使用效果联系起来；单项统计不会自动给出软件或开发者的综合评价。\n\n## 参考\n\n- [IEEE Computer Society：SWEBOK 范围与用途](https://www.computer.org/education/bodies-of-knowledge/software-engineering)\n- [SWEBOK v4.0a：知识领域与软件工程度量](https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08"
+}

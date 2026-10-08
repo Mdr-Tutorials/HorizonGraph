@@ -1,0 +1,34 @@
+{
+  "id": "shell",
+  "name": "Shell",
+  "aliases": [
+    "命令解释器",
+    "命令行 Shell"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "environment-variable",
+      "context": "启动外部命令时，Shell 从自身环境构造子进程的环境；局部语言变量与可继承环境变量仍须区分。"
+    }
+  ],
+  "summary": "解析命令语言并组织程序执行与输入输出的机制。",
+  "description": "Shell 是供用户组合和执行命令的解释器机制。它把命令文字按自己的语言规则解析成内建操作、函数或外部程序调用，也能提供变量、条件和循环来表达自动化。Bash、zsh、Fish、Nushell 与 PowerShell 都有 Shell 工具身份，其语法和数据模型并不完全相同。\n\nShell 在启动外部命令时管理参数、环境和输入输出连接。Unix 风格的 Shell 经常组合字节流工具，PowerShell 和 Nushell 还能在内部命令之间传递对象或结构化值；Shell 的职责不包括替代操作系统内核，也不包括直接充当绘制文字的终端模拟器。\n\n交互执行与脚本执行使用不同的初始化和错误处理条件。可移植脚本须声明所需语言或规范，不能把 sh、Bash 与所有 Shell 当作可互换名称；选择某个终端应用也不会自动改变现有脚本的解释器或证明特定 Shell 已安装。\n\n## 参考\n\n- [GNU：What is a shell?](https://www.gnu.org/software/bash/manual/html_node/What-is-a-shell_003f.html)\n- [Microsoft：What is PowerShell?](https://learn.microsoft.com/en-us/powershell/scripting/overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/What-is-a-shell_003f.html"
+}

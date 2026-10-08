@@ -1,0 +1,39 @@
+{
+  "id": "wget",
+  "name": "GNU Wget",
+  "aliases": [
+    "Wget",
+    "wget"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "从 HTTP 或 HTTPS 资源读取数据，并可按递归条件跟随文档链接进行获取。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-option",
+      "context": "用递归深度、域名限制、输出目标与续传选项控制下载范围及行为。"
+    }
+  ],
+  "summary": "支持非交互下载和递归镜像的 GNU 网络获取工具。",
+  "description": "GNU Wget 是非交互式网络下载工具，可获取 HTTP、HTTPS 与 FTP 等资源，并支持恢复下载与后台运行。此节点指经典 GNU Wget 软件，不能由命令名推导为 Wget2 或 BusyBox 的精简 wget 实现。\n\n递归模式能沿 HTML 和 CSS 引用获取相关资源，镜像及链接转换可用于形成一定范围的本地网站副本。递归深度、域名、目录和文件类型条件决定遍历范围，普通单 URL 下载与递归行为需要分别说明。\n\n下载得到的是服务器提供的资源，不能保证复现由浏览器脚本、认证状态或动态 API 生成的完整页面。断点续传也依赖服务器支持和资源变化情况，传输完成不等同业务校验；实际 TLS 与协议能力应按构建和选项确认。\n\n## 参考\n\n- [GNU Wget 官方项目](https://www.gnu.org/software/wget/)\n- [GNU Wget 手册](https://www.gnu.org/software/wget/manual/wget.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/wget/"
+}

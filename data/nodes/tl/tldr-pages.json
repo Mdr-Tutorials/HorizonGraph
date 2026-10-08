@@ -1,0 +1,35 @@
+{
+  "id": "tldr-pages",
+  "name": "tldr pages",
+  "aliases": [
+    "tldr-pages",
+    "TLDR Pages",
+    "tldr 命令速查页"
+  ],
+  "type": "product",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "documentation"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "command-line-option",
+      "context": "页面通过常用命令示例说明选项、取值和操作数用法；不覆盖每个工具完整的所有参数。"
+    }
+  ],
+  "summary": "以常用示例提供命令速查的社区文档集合。",
+  "description": "tldr pages 是社区维护的命令速查文档集合，用简短说明和常用示例帮助读者完成典型操作。此节点表示页面内容制品，不把所有访问它的 Node.js、Python、Rust 或 Web 客户端合并为一个工具实体。\n\n页面按平台和语言组织，以 Markdown 编写，并使用占位符区分需替换的参数。客户端规范定义页面查找、平台回退、显示和缓存等访问行为，平台专用示例应与 common 页面区分，实际安装版本和命令实现仍需核对。\n\n速查页适合寻找常见调用方式，不能替代完整参数语义及边界条件的官方手册。页面集合与客户端的缓存更新有不同生命周期，例子中的路径和选项也需结合实际系统；当前归档获取位置以项目发布和客户端规范为准。\n\n## 参考\n\n- [tldr pages 官方仓库与内容说明](https://github.com/tldr-pages/tldr/blob/main/README.md)\n- [tldr 客户端规范](https://github.com/tldr-pages/tldr/blob/main/CLIENT-SPECIFICATION.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/tldr-pages/tldr/blob/main/README.md"
+}

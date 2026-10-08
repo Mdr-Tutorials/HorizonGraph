@@ -1,0 +1,45 @@
+{
+  "id": "kitty",
+  "name": "kitty",
+  "aliases": [
+    "kitty 终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "kitty-keyboard-protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "kitty-graphics-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssh",
+      "context": "SSH kitten 在远程登录时准备终端能力与环境，实际认证和连接仍由 SSH 客户端与服务端负责。"
+    }
+  ],
+  "summary": "提供 GPU 渲染、分屏和丰富终端扩展的模拟器。",
+  "description": "kitty 是面向 Linux 与 macOS 的终端模拟器，提供 GPU 绘制、标签页、窗口布局和键盘驱动的交互。终端负责解析和显示程序输出，内部窗口可以按布局组合；这类本地窗口组织与远程进程脱离客户端后持续运行属于不同能力。\n\n项目同时维护图形、键盘和其他终端扩展，使支持相应协议的程序能够显示图片或精确表达按键事件。kittens 提供图片查看、差异比较和 SSH 辅助等扩展工具。协议本身已被其他终端采纳，不能把协议身份与 kitty 应用、某个 kitten 或所有 ANSI 终端混为一体。\n\n图像、按键增强和 Shell 集成需要应用及中间层配合，经过 tmux 等复用器时尤其要核查转发支持。kitty 的 SSH 辅助可以准备远端环境，但不会取代 SSH 认证机制；不同平台与版本的实现范围以对应官方文档为准，不能由 GPU 加速或丰富扩展推断完整跨平台支持。\n\n## 参考\n\n- [kitty：官方文档](https://sw.kovidgoyal.net/kitty/)\n- [kitty：术语与窗口模型](https://sw.kovidgoyal.net/kitty/glossary/)\n- [kitty：兼容性 FAQ](https://sw.kovidgoyal.net/kitty/faq/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://sw.kovidgoyal.net/kitty/"
+}

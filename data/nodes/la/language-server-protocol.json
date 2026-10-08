@@ -8,10 +8,12 @@
   "type": "protocol",
   "domains": [
     "developer-environments",
-    "programming-languages"
+    "programming-languages",
+    "language-tooling"
   ],
   "ecosystems": [
-    "editor-ide-ecosystem"
+    "editor-ide-ecosystem",
+    "language-tooling-ecosystem"
   ],
   "relations": [
     {
@@ -25,7 +27,7 @@
     }
   ],
   "summary": "标准化编辑器客户端与语言服务器的文档和能力交互。",
-  "description": "Language Server Protocol 规定编辑器客户端与语言服务器交换文档状态和语言能力的消息。它让服务器实现与编辑器集成解耦，覆盖诊断、补全、导航、符号、代码操作及重命名等请求；协议自身不执行语言分析。\n\nLSP 基于 JSON-RPC，使用请求、响应和通知组织交互，并在初始化期间协商支持的能力。文档版本、资源位置与编辑结果让客户端同步和应用变更；服务端不能因为协议包含某个方法就被认定已经支持该功能。官方入口当前指向 3.18，接入时仍需核对双方实现和能力。\n\n服务器如何启动、其语言分析器以及文件访问环境由具体宿主决定。编辑器可通过直接 API 接入语言能力，AI 补全也未必沿 LSP 路径运行。调试器集成采用的 DAP 是另一套协议，不能把语言服务消息与调试生命周期混为一体。\n\n## 参考\n\n- [Microsoft：Language Server Protocol 官方入口](https://microsoft.github.io/language-server-protocol/)\n- [Microsoft：LSP 3.18 规范](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.18/specification/)\n- [VS Code：直接语言 API 与 LSP 的能力对应](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)",
+  "description": "Language Server Protocol 规定编辑器客户端与语言服务器交换文档和语言能力的消息，覆盖诊断、补全、导航、引用、重构和语义 token 等场景。它解耦编辑器与分析实现，协议自身不执行语言检查。\n\nLSP 用 JSON-RPC 组织请求、响应与通知，通过初始化协商能力，并用文档标识、位置和工作区编辑表达交互。接入时要核对规范版本、位置编码与双方实现；方法出现在规范中不证明某服务器已经支持它。\n\nTern JSON 查询与经典 tsserver 会话接口不等于 LSP，社区适配器可以转换相应请求。TypeScript 7 原生服务器已经采用 LSP，但这不使旧协议自动变更；编辑器的直接语言 API、调试协议 DAP 也分别保留身份。\n\n## 参考\n\n- [Microsoft：LSP 官方入口](https://microsoft.github.io/language-server-protocol/)\n- [Microsoft：已发布 LSP 3.17](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/)\n- [VS Code：直接 API 与协议能力](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [Microsoft：TypeScript 原生 LSP](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",

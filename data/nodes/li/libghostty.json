@@ -1,0 +1,38 @@
+{
+  "id": "libghostty",
+  "name": "libghostty",
+  "aliases": [
+    "Ghostty 嵌入式终端库",
+    "Libghostty"
+  ],
+  "type": "library",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "zig",
+      "context": "共享终端核心和独立 Zig 模块以 Zig 实现；C 接入方通过公开接口使用构建后的库。"
+    }
+  ],
+  "summary": "向应用提供 Ghostty 共享终端能力的可嵌入库族。",
+  "description": "libghostty 是 Ghostty 项目的可嵌入终端核心与库族入口，使应用能够复用终端解析和状态处理等能力，而由宿主选择自己的界面与部署方式。Ghostty 桌面客户端使用共享核心，第三方应用也可以通过 Zig 模块或 C 接口接入；它与需要安装运行的 Ghostty 桌面终端分别建模。\n\n项目正在将较大的核心范围拆分为独立库，首先提供 libghostty-vt。VT 模块聚焦终端序列、状态和输入编码，不负责选择 GUI 框架或统一代管远程认证。涉及字体、渲染、窗口和进程 I/O 的完整应用仍要明确各组件的接口范围，不能把库族名称解释为每个分发模块都提供全部功能。\n\n2026-10-08 核验的官方 README 表明现有模块已用于实际项目，但尚未给 libghostty 打版本标签，公开 API 签名仍在演进。1.3.0 发布说明明确桌面应用与库将采用独立版本和发布周期。接入方应固定源码或构建版本、检查相应头文件与示例，不能由桌面版本号推断已经存在同号稳定库发行。\n\n## 参考\n\n- [Ghostty：libghostty 当前状态](https://github.com/ghostty-org/ghostty)\n- [Mitchell Hashimoto：libghostty 的模块边界](https://mitchellh.com/writing/libghostty-is-coming)\n- [Ghostty：独立库的发布周期](https://ghostty.org/docs/install/release-notes/1-3-0)",
+  "status": "emerging",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/ghostty-org/ghostty"
+}

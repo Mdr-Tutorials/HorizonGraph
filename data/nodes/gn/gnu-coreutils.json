@@ -1,0 +1,39 @@
+{
+  "id": "gnu-coreutils",
+  "name": "GNU Coreutils",
+  "aliases": [
+    "GNU 核心工具集",
+    "coreutils"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "cat、sort、cut 等文本处理命令通过标准输入和输出连接文件或管道。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-option",
+      "context": "GNU 命令以短选项、长选项和 -- 分隔符解释操作参数；具体支持范围以每条命令为准。"
+    }
+  ],
+  "summary": "GNU 的文件、文本与基础系统操作命令集合。",
+  "description": "GNU Coreutils 提供文件、文本与基础系统操作的常用命令，覆盖目录列举、复制移动、权限调整、文本排序、字段选取与校验等任务。它把早期的 fileutils、textutils 和 sh-utils 整合为一个发行项目；命令集合是具体软件，而不是 Shell 解释器或终端仿真器。\n\ncat、sort、cut、uniq 等命令可以通过标准输入和标准输出组合，ls、cp 等则主要围绕路径与文件操作。命令选项、退出状态和区域设置共同影响脚本行为；处理可能带空格或换行的文件名时，应选择相应工具支持的明确记录分隔方式。\n\nGNU 实现提供自己的长选项和扩展，不能假定 BSD 工具或 BusyBox 的同名命令支持全部相同参数。Grep、Sed、Gawk 和 Findutils 属于各自独立项目，不是 Coreutils 的组成部分；部署时也应区分外部可执行文件与 Shell 内置的同名命令。\n\n## 参考\n\n- [GNU Coreutils 手册](https://www.gnu.org/software/coreutils/manual/coreutils.html)\n- [通用选项与参数约定](https://www.gnu.org/software/coreutils/manual/html_node/Common-options.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+}

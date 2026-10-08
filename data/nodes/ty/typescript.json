@@ -8,12 +8,14 @@
   "type": "language",
   "ecosystems": [
     "node-js-ecosystem",
-    "web_frontend"
+    "web_frontend",
+    "language-tooling-ecosystem"
   ],
   "domains": [
     "programming-languages",
     "web-development",
-    "api-engineering"
+    "api-engineering",
+    "language-tooling"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -36,14 +38,18 @@
     {
       "relation_type": "implements",
       "target_id": "type-inference"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "control-flow-analysis"
     }
   ],
   "summary": "给 JavaScript 加上静态类型的超集，编译回 JS 运行。",
   "importance": 5,
   "popular": 85,
   "official_site": "https://www.typescriptlang.org",
-  "last_reviewed": "2026-10-07",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active",
-  "description": "TypeScript 在 JavaScript 语法与运行行为基础上增加静态类型系统，提供类型注解、推断、泛型和结构兼容检查。编译器可以检查程序并将支持的语法转换为 JavaScript；编辑器利用同一类型信息提供补全和诊断。目标运行环境仍执行 JavaScript，平台可执行的语言特性与标准库能力需要与构建目标和运行时匹配。\n\n网络接口可以通过共享路由类型、验证模式或 OpenAPI 生成的声明，连接服务端与客户端的静态检查。类型注解在输出中被擦除，类型断言也不会主动检查外部对象是否符合接口；运行时解析需要验证库或显式代码。严格检查选项可以加强空值和隐式 any 等约束，但静态类型仍不负责执行授权、验证部署版本或证明业务副作用正确。\n\n## 参考\n\n- [TypeScript：静态检查与类型擦除](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)\n- [TypeScript：类型推断](https://www.typescriptlang.org/docs/handbook/type-inference.html)\n- [TypeScript：结构类型兼容](https://www.typescriptlang.org/docs/handbook/type-compatibility.html)"
+  "description": "TypeScript 在 JavaScript 基础上增加类型注解、推断、泛型和结构兼容等静态类型能力。类型检查器分析程序，编译工具可以输出 JavaScript；最终运行环境执行 JavaScript，目标语法与标准库能力仍需匹配宿主。\n\n类型化 API 可通过共享路由、模式或生成声明连接调用双方，但输出中擦除类型，类型断言也不会验证外部对象。严格选项加强检查范围，运行时数据校验、授权和部署版本一致性仍需执行相应代码及流程。\n\n工具链需要区分经典 TypeScript 6 的进程内 Language Service、tsserver 自有协议和 TypeScript 7 的原生编译器与 LSP 服务器。7.0 已正式发布，但其程序化 API 不兼容经典接口；使用旧编译 API 的嵌入工具可并行保留兼容包，不能只凭语言名字假定所有集成已经迁移。\n\n## 参考\n\n- [TypeScript：基础检查与类型擦除](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)\n- [TypeScript：类型兼容](https://www.typescriptlang.org/docs/handbook/type-compatibility.html)\n- [TypeScript：经典语言服务](https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API)\n- [Microsoft：TypeScript 7 正式发布](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)"
 }

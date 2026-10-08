@@ -1,0 +1,33 @@
+{
+  "id": "semantic-tokens",
+  "name": "Semantic Tokens",
+  "aliases": [
+    "语义 token",
+    "语义高亮标记"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "semantic-analysis",
+      "context": "通过名称、类型和声明属性识别源码片段所对应的语言实体类别。"
+    }
+  ],
+  "summary": "以分析后的实体类别和修饰信息标注源码范围。",
+  "description": "语义 token 用语言分析结果为源码范围附上实体类别及修饰信息，例如变量、类型、参数、只读或声明。编辑器可据此增强高亮，让同形文本按照实际符号角色显示不同样式。\n\n提供者计算 token 并与宿主协商类型和修饰符；LSP 具有语义 token 能力与传输约定，编辑器也可以通过直接 API 获取。全量、范围或增量返回等路径需要匹配双方支持与当前文档版本。\n\n这里的语义指语言实体分类，区别于向量嵌入或模型对自然语言含义的理解。token 信息不保证源码无错误，主题也可选择不显式区分某些类别；具备语义高亮不证明所有语言能力都走 LSP。\n\n## 参考\n\n- [VS Code：语义高亮接口](https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide)\n- [LSP：语义 token 约定](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,42 @@
+{
+  "id": "harfbuzz",
+  "name": "HarfBuzz",
+  "aliases": [
+    "HarfBuzz 文本塑形库"
+  ],
+  "type": "library",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-shaping"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "font-ligature",
+      "context": "在字体包含相应布局表并启用相关特性时执行连字替换。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "opentype",
+      "context": "原生 OpenType 塑形路径读取字形映射、替换和定位等字体表。"
+    }
+  ],
+  "summary": "把 Unicode 文本转换为定位字形的跨平台塑形库。",
+  "description": "HarfBuzz 是跨平台文本塑形库，接收字体与 Unicode 文本，并结合书写系统、语言、方向和字体特性产生字形编号、推进量及偏移。它支持多种字体布局机制，使复杂文字和上下文替换能够正确输出。\n\n应用通常先划分合适的文本运行段，再配置 buffer 和 font 执行塑形，通过 cluster 值维护输入与字形的对应关系。HarfBuzz 的 FreeType 集成可以从 FT_Face 构造字体对象，但库也有原生 OpenType 路径，并非所有构建都硬依赖 FreeType。\n\n塑形 API 的结果不等于完整段落布局，字体回退、换行和段落双向处理需要调用方组织。当前项目还提供字体子集及字形渲染相关 API，因此不能把历史上的职责介绍解释为永远没有栅格化能力；应按实际构建模块和 API 判断。\n\n## 参考\n\n- [HarfBuzz：当前手册与功能入口](https://harfbuzz.github.io/index.html)\n- [HarfBuzz：核心塑形功能](https://harfbuzz.github.io/what-is-harfbuzz.html)\n- [HarfBuzz：FreeType 集成](https://harfbuzz.github.io/integration-freetype.html)\n- [HarfBuzz：cluster 映射](https://harfbuzz.github.io/working-with-harfbuzz-clusters.html)",
+  "official_site": "https://harfbuzz.github.io/index.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library"
+}

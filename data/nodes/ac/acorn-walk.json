@@ -1,0 +1,43 @@
+{
+  "id": "acorn-walk",
+  "name": "acorn-walk",
+  "aliases": [
+    "Acorn AST 遍历库"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "acorn"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "estree",
+      "context": "按 ESTree 节点种类和子字段访问已有语法树。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "在访问者回调中读取节点结构和位置，为上层分析收集信息。"
+    }
+  ],
+  "summary": "以访问者回调遍历已有 ESTree 语法树。",
+  "description": "acorn-walk 是 Acorn 项目独立分发的 AST 遍历包。它接收已有的 ESTree 树，按节点类型调用访问者，不负责把源代码解析成树，也不直接生成 JavaScript 输出。\n\nsimple、ancestor、recursive 等接口提供不同遍历控制，调用者可传递状态、读取祖先或自定义基础 walker；位置查找接口能定位覆盖某一范围的节点。新增方言节点需要对应遍历规则，不能假定所有解析器私有节点都可直接处理。\n\n当前包声明包含 Acorn 运行依赖，但接收的结构接口不限定必须由 Acorn 主解析器生成。遍历能用于分析和信息提取，名称绑定、类型推断和改写保真仍需上层实现。\n\n## 参考\n\n- [acorn-walk：API](https://github.com/acornjs/acorn/blob/master/acorn-walk/README.md)\n- [acorn-walk：依赖声明](https://github.com/acornjs/acorn/blob/master/acorn-walk/package.json)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/acornjs/acorn/blob/master/acorn-walk/README.md"
+}

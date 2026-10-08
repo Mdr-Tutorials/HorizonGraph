@@ -1,0 +1,31 @@
+{
+  "id": "fan-out",
+  "name": "Software Fan-Out",
+  "abbreviation": "Fan-Out",
+  "aliases": [
+    "软件扇出",
+    "调用扇出",
+    "Fan Out"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计软件单元向外调用、依赖或传递信息的范围。",
+  "description": "软件扇出描述函数、类或模块向外联系的数量。结构口径可统计不同被调用函数或被引用类型，并按选定规则处理标准库、同文件类型和重复调用。\n\nCheckstyle 的 ClassFanOutComplexity 统计类依赖的其他类型，可配置排除集合。SciTools 的信息流扇出另计被调用函数、修改的参数和全局变量及返回值等输出，因此必须区分结构扇出与信息流扇出。\n\n扇出记录依赖广度，不是调用总次数或分支路径数。高值可提示需要审查依赖集中程度，但协调多个接口的合理职责也可能形成较大范围；具体建议应结合边界和依赖稳定性。\n\n## 参考\n\n- [Checkstyle：类扇出范围与排除规则](https://checkstyle.org/checks/metrics/classfanoutcomplexity.html)\n- [SciTools：信息流FANOUT](https://docs.scitools.com/metrics/CountOutput.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://checkstyle.org/checks/metrics/classfanoutcomplexity.html"
+}

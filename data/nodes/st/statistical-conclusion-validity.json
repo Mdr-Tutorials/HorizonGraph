@@ -1,0 +1,34 @@
+{
+  "id": "statistical-conclusion-validity",
+  "name": "Statistical Conclusion Validity",
+  "aliases": [
+    "统计结论效度",
+    "软件研究统计推论效度"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "benchmark-experimental-design",
+      "context": "性能比较需要根据变异层次安排重复和分析，并公开效果大小及不确定性。"
+    }
+  ],
+  "summary": "检验数据和分析是否支持所报告的统计结论。",
+  "description": "统计结论效度考察数据和分析是否支持对关系或差异的判断。样本量、观测独立性、误差结构、分析假设和多重比较，都可能影响结论；计算出 p 值不代表这些问题已被解决。\n\n在软件性能实验中，同一进程内迭代、独立进程执行和重新构建可能产生不同层次的变异。应按误差来源安排重复预算，报告效应量和区间，并保留原始记录；只增加内循环次数无法消除进程间变异。\n\n统计显著性与实际改进幅度不同，未达到显著也不证明两工具等效。分析应结合研究问题、样本与效果大小，说明不确定性和假设；统计关系本身不提供因果解释或总体代表性。\n\n## 参考\n\n- [SIGSOFT：软件工程实验标准与适用范围](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Experiments.md)\n- [Kalibera 与 Jones：性能实验重复层次与不确定性](https://kar.kent.ac.uk/33611/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Experiments.md"
+}

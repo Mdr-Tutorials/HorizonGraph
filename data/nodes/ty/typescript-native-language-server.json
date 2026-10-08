@@ -1,0 +1,53 @@
+{
+  "id": "typescript-native-language-server",
+  "name": "TypeScript Native Language Server",
+  "aliases": [
+    "TypeScript 7 Language Server",
+    "TypeScript 原生语言服务器"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "language-server"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "language-server-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "使用原生 TypeScript 分析核心计算项目类型信息，为编辑请求提供基础。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-completion",
+      "context": "根据项目类型与光标上下文返回符号及其他编辑候选。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "semantic-tokens",
+      "context": "通过原生语义高亮能力提供按语言实体角色分类的源码标记。"
+    }
+  ],
+  "summary": "原生 TypeScript 工具链中的官方 LSP 语言服务器。",
+  "description": "TypeScript 原生语言服务器是 TypeScript 7 工具链面向编辑器的官方语言智能实现，采用 LSP，并利用原生类型分析和多线程支持查询。它与经典 tsserver 的自有会话协议以及社区适配服务器分别建档。\n\n服务支持诊断、补全、引用、导航及语义高亮等编辑能力，编辑器仍需安装或启用对应集成并同步工作区。7.0 正式发布说明已经采用 LSP，不能把当前能力持续写成尚未开始的原生移植计划。\n\n经典语言服务插件与嵌入旧 TypeScript API 的 Vue、Astro 等工具，在 7.0 发布时仍有适配限制。支持 LSP 不等于兼容所有经典插件或项目分析路径；具体工作流需按语言工具和版本核验，而不把新实现倒推为 tsserver 协议已经成为 LSP。\n\n## 参考\n\n- [Microsoft：原生 LSP 与编辑器能力](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)\n- [Microsoft：官方原生实现](https://github.com/microsoft/TypeScript)\n- [TypeScript 原生实现：差异记录](https://github.com/microsoft/typescript-go/blob/main/CHANGES.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/"
+}

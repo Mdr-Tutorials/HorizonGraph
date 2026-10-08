@@ -1,0 +1,38 @@
+{
+  "id": "terminal-raw-mode",
+  "name": "Raw Terminal Mode",
+  "aliases": [
+    "终端原始模式",
+    "raw mode"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "line-discipline"
+    }
+  ],
+  "summary": "减少终端层的字符转换和控制处理，由应用接管字节输入。",
+  "description": "原始模式是一组使终端输入尽量少经解释的设置，通常关闭规范行缓冲、回显、信号字符与若干输入输出转换。Linux cfmakeraw 和 curses raw 接口提供常用配置，但 raw 不是一个在所有系统上完全相同的独立 POSIX 布尔属性。\n\n应用进入原始模式后，原本可能触发中断、暂停或流控的字节可以作为输入到达应用，由它自行决定操作。读取是否阻塞、何时返回以及每次交付多少字节还与 VMIN、VTIME 和文件描述符选项有关，不能把 raw 自动解释成非阻塞读取。\n\n终端仿真器仍会解析应用写出的控制序列，因此 raw 模式不等同于关闭颜色或转义处理。程序需要保存原设置，并在结束及恢复前台时正确还原；否则后续 Shell 可能出现不回显或异常换行。它也不提供密码保护、传输加密或命令来源认证。\n\n## 参考\n\n- [Linux man-pages：termios 接口与输入模式](https://man7.org/linux/man-pages/man3/termios.3.html)\n- [ncurses：cbreak、raw 与输入选项](https://invisible-island.net/ncurses/man/curs_inopts.3x.html)\n- [GNU C Library：非规范输入的 MIN/TIME](https://sourceware.org/glibc/manual/latest/html_node/Noncanonical-Input.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man3/termios.3.html"
+}

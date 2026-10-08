@@ -1,0 +1,44 @@
+{
+  "id": "textual",
+  "name": "Textual",
+  "aliases": [
+    "Python Textual 界面框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-user-interface",
+      "context": "通过 App、控件树、布局和事件系统实现文本应用交互框架。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python",
+      "context": "框架包在 Python 运行环境中执行。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "rich-python",
+      "context": "官方 Python 包配置将 Rich 列为直接运行依赖。"
+    }
+  ],
+  "summary": "提供控件、布局和事件机制的 Python 文本应用框架。",
+  "description": "Textual 是 Python 应用框架，主要用于构建具备控件、布局和交互的终端文本界面，也提供在浏览器中运行应用的相关路径。程序通过 App 子类组织应用，组合控件和屏幕，利用事件、消息以及响应式状态描述行为，而不是只把一连串 print 输出拼接成界面。\n\n框架提供 Textual CSS 样式、布局、焦点与输入处理等机制，底层直接依赖 Rich 的渲染能力。Textual 的 CSS 与控件树服务于自己的界面模型，不能因为出现 CSS 或 DOM 等术语，就视为完整浏览器 HTML/CSS/DOM 实现。Python 运行环境与框架包是部署时需要处理的实际依赖。\n\n耗时任务可以通过 worker 等机制与主界面协作，避免阻塞交互循环，框架还提供测试与开发辅助工具。语法高亮相关 Tree-sitter 依赖在官方包配置中属于 syntax 可选额外能力。终端、浏览器托管路径和可选组件应分别核对，不能把某一种部署条件推广到全部 Textual 应用。\n\n参考资料：\n\n- [官方应用与控件指南](https://textual.textualize.io/guide/app/)\n- [官方代码库](https://github.com/Textualize/textual)\n- [官方包依赖声明](https://raw.githubusercontent.com/Textualize/textual/main/pyproject.toml)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://textual.textualize.io/guide/app/"
+}

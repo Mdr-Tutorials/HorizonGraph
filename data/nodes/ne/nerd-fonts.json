@@ -1,0 +1,39 @@
+{
+  "id": "nerd-fonts",
+  "name": "Nerd Fonts",
+  "aliases": [
+    "Nerd Fonts 图标字体集合",
+    "Nerd Font"
+  ],
+  "type": "product",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "glyph",
+      "context": "聚合图标字形，并把它们添加到修补字体或独立符号字体中。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "monospace-font",
+      "context": "Mono 输出按单宽字形调整图标以适配等宽界面；普通及 Propo 输出有不同宽度处理。"
+    }
+  ],
+  "summary": "聚合开发图标、修补字体并发布预修补字体的项目。",
+  "description": "Nerd Fonts 聚合开发者常用的符号与图标字形，并提供修补工具和预修补字体集合。项目可把多个图标来源加入选定字体，也提供专用符号字体，使终端提示符和状态栏能使用对应图形。\n\n图标以字体中的字形和码点映射呈现，部分映射使用 Unicode 私用区，含义需要与具体项目版本约定匹配。项目提供 Mono、常规及比例等宽度处理选项，不能把全部 Nerd Fonts 输出都认定为相同的单列布局。\n\nNerd Fonts 是可交付字体资源及工具集合，不是终端图形传输协议，也不会给终端增加网络或 Shell 解析能力。应用还需输出匹配的符号并选择覆盖相应字形的字体；原始字体与加入的图标来源分别具有许可边界。\n\n## 参考\n\n- [Nerd Fonts：项目与修补工具](https://www.nerdfonts.com/)\n- [Nerd Fonts：官方仓库与字体说明](https://github.com/ryanoasis/nerd-fonts)\n- [Nerd Fonts：字形映射速查](https://www.nerdfonts.com/cheat-sheet)",
+  "official_site": "https://www.nerdfonts.com/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool"
+}

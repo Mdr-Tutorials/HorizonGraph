@@ -1,0 +1,34 @@
+{
+  "id": "internal-validity",
+  "name": "Internal Validity in Software Engineering Studies",
+  "aliases": [
+    "软件研究内部效度",
+    "内部效度"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "software-quasi-experiment",
+      "context": "准实验的效果解释必须核查非随机分派及其他可替代因果解释。"
+    }
+  ],
+  "summary": "检验研究观察到的效果是否可归因于处理。",
+  "description": "内部效度关心在既定研究范围内，观察到的效果能否归因于研究所考察的处理。组间经验差异、学习与疲劳、同期环境变化或选择性退出，都可能给结果提供其他解释。\n\n软件实验需要说明分派、顺序、任务和控制方法；准实验则特别需要公开非随机分派和时间趋势。工具升级与团队变化同时发生时，升级后的交付改善不能仅因时间先后就全部归因于工具。\n\n随机化、设计比较条件和记录潜在混杂可以加强因果解释，但任何具体研究仍有协议偏离和测量问题。内部效度与外部效度不同：在实验内解释成立，不自动证明结论可推广到其他团队。\n\n## 参考\n\n- [SIGSOFT：软件工程实验标准与适用范围](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Experiments.md)\n- [实证软件工程标准研究报告](https://arxiv.org/abs/2010.03525)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Experiments.md"
+}

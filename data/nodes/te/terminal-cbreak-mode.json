@@ -1,0 +1,38 @@
+{
+  "id": "terminal-cbreak-mode",
+  "name": "Cbreak Terminal Mode",
+  "aliases": [
+    "终端 cbreak 模式",
+    "cbreak mode"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "line-discipline"
+    }
+  ],
+  "summary": "关闭整行输入等待，同时保留信号字符与流控处理。",
+  "description": "cbreak 是 curses 及历史终端接口中常见的输入模式称呼。它使已键入内容无需等待整行结束即可供应用读取，并关闭终端行删除或清除处理；与 raw 的常见区别是保留中断、退出、暂停与流控字符的处理。它不是一个新的终端字节编码协议。\n\n在 POSIX 系统上，这类行为通过非规范输入及相关 termios 标志实现，库还会配置适当的读取条件。curses 对窗口层输入函数设置的等待超时，与内核非规范输入的 MIN/TIME 是不同层次。回显也需单独决定，cbreak 并不等于应用一定看不到键入的文字。\n\n按键驱动菜单和全屏程序可采用 cbreak，让程序逐步处理事件，同时保留用户熟悉的中断行为。库文档提醒 raw、noraw、cbreak 与 nocbreak 混合切换会使状态难以预测。退出或作业恢复时需要还原保存的终端设置，而不能只假设上一个应用使用默认模式。\n\n## 参考\n\n- [ncurses：cbreak、raw 与输入选项](https://invisible-island.net/ncurses/man/curs_inopts.3x.html)\n- [GNU C Library：非规范输入的 MIN/TIME](https://sourceware.org/glibc/manual/latest/html_node/Noncanonical-Input.html)\n- [Linux man-pages：termios 接口与输入模式](https://man7.org/linux/man-pages/man3/termios.3.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://invisible-island.net/ncurses/man/curs_inopts.3x.html"
+}

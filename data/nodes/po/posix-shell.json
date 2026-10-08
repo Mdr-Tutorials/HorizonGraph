@@ -1,0 +1,33 @@
+{
+  "id": "posix-shell",
+  "name": "POSIX Shell Command Language",
+  "aliases": [
+    "POSIX Shell 规范",
+    "POSIX Shell 命令语言"
+  ],
+  "type": "protocol",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "posix"
+    }
+  ],
+  "summary": "规定可移植Shell语法、展开和命令执行语义的规范。",
+  "description": "POSIX Shell Command Language 是 POSIX Shell and Utilities 部分的命令语言规范，定义 sh 等入口使用的语法与执行规则。它是可实现的语言接口约定，而不是一个叫 POSIX Shell 的统一发行工具，也不表示操作系统所有接口都由 Shell 实现。\n\n规范覆盖词法与语法、参数展开、重定向、命令查找和执行环境等内容，并区分规定行为、实现定义以及未指定情况。编写可移植脚本时须依据采用的规范版次和目标实现，不应把某个 Shell 的数组、插件或交互补全功能自动视为所有 sh 都具备。\n\nBash 提供 POSIX 模式并说明与标准相关的调整；这有助于约束脚本所依赖的行为，但不代替目标环境验证。Fish 和 Nushell 有各自命令语言，不宣称按同一语法执行现有 POSIX Shell 脚本；终端模拟器也不会承担 Shell 语言一致性的实现职责。\n\n## 参考\n\n- [The Open Group：Shell Command Language](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html)\n- [GNU：Bash POSIX Mode](https://www.gnu.org/software/bash/manual/html_node/Bash-POSIX-Mode.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"
+}

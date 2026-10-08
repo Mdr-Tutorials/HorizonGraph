@@ -1,0 +1,38 @@
+{
+  "id": "terminal-recording",
+  "name": "Terminal Session Recording",
+  "aliases": [
+    "终端会话录制",
+    "终端录屏"
+  ],
+  "type": "concept",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudoterminal",
+      "context": "PTY 方式的录制器借助伪终端承载程序并采集终端交互；不表示所有屏幕录制方式都依赖 PTY。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asciicast",
+      "context": "asciinema 等实现用该格式保存终端事件与时间，其他系统可采用不同格式。"
+    }
+  ],
+  "summary": "保存终端交互及时间信息，支持重放与分享。",
+  "description": "终端会话录制保存程序与终端之间的交互数据及必要时间信息，以便后续检查、演示或重放。数据录制与拍摄桌面像素是两类实现：前者可以保留文本和终端事件，后者记录实际画面，但通常不保留原始控制序列的结构。\n\n录制器常通过 PTY 承载程序，记录输出、尺寸和所选事件，再由格式及播放器解释。asciicast 提供一种事件流格式，其他记录系统也可能使用日志与计时文件；某一种格式的字段和默认行为不能代表所有终端录制实现。\n\n输出、输入和环境变量的采集范围需要明确选择，关闭键盘记录并不能保证输出没有凭据。重放是呈现已有数据，不是再次运行脚本；普通录制也不会自动形成不可篡改、完整或能证明业务结果的审计链。发布时应分别检查信息范围、播放兼容性与访问权限。\n\n## 参考\n\n- [asciinema：工作机制](https://docs.asciinema.org/how-it-works/)\n- [asciinema：录制 CLI](https://docs.asciinema.org/manual/cli/)\n- [asciinema：事件格式](https://docs.asciinema.org/manual/asciicast/v3/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://docs.asciinema.org/how-it-works/"
+}

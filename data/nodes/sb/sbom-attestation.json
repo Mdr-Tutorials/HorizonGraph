@@ -1,0 +1,45 @@
+{
+  "id": "sbom-attestation",
+  "name": "SBOM Attestation",
+  "aliases": [
+    "SBOM 声明证明",
+    "软件物料清单证明"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "artifact-attestation",
+      "context": "将组成清单作为具体类型的工件声明进行认证与验收。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "以组件清单作为声明载荷或被明确绑定的材料。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "in-toto-statement",
+      "context": "采用 in-toto 表示时以 subject 摘要与 predicateType 绑定工件及清单语义。"
+    }
+  ],
+  "summary": "将清单与工件及声明者绑定，支持可信验收。",
+  "description": "SBOM 声明证明把组成清单作为关于特定工件的认证声明交付。相比仅发布一个清单文件，它还需要让消费方验证所述工件、声明者及载荷是否对应。清单主要描述组成，构建来源证明描述生产过程，两种声明不能相互替代。\n\n一种路径使用 in-toto Statement，将工件摘要放在 subject 中，用明确的 predicateType 标记 SBOM 载荷语义，再对声明签署。Cosign 支持为镜像或普通文件签署清单及声明，具体封装与交付方式需要和消费系统约定。仅签署一个独立清单文件，不一定已经建立它与目标产品的可验证关系。\n\n验证应同时核对工件绑定、签署者是否被信任、清单版本以及所需覆盖。有效签名证明认证与完整性，不能独立证明生产者识别了全部组件或内容真实。对旧清单重新签名也不会更新软件组成，声明的生成时间与工件摘要应随验收证据保留。\n\n## 参考\n\n- [Sigstore：清单签署与声明交付](https://docs.sigstore.dev/cosign/signing/other_types/)\n- [in-toto：Statement 工件及 predicate 绑定](https://github.com/in-toto/attestation/blob/main/spec/v1/statement.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sigstore.dev/cosign/signing/other_types/"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "equivalent-mutant",
+  "name": "Equivalent Mutant",
+  "aliases": [
+    "等价变异体",
+    "等价突变体"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "mutation-score",
+      "context": "未识别的等价变异仍进入可评分分母时，会压低把非等价有效变异检出率作为目标的估计值。"
+    }
+  ],
+  "summary": "在指定观察范围内与原程序行为等价的变异体。",
+  "description": "等价变异体在指定输入与可观察行为范围内与原程序表现相同，因此该范围内的正确测试无法将其检出。语法发生变化并不保证行为有变化，例如某些边界修改受不可变前提约束。\n\n应区分真正行为等价、当前测试不足以及团队没有验证某类副作用。存活状态本身不能证明等价；确认需结合语义推理、可达条件与声明的观察范围，通用工具通常无法完整自动识别。\n\n若理论得分定义只计算非等价有效变异，等价项应经过确认后排除；若工具尚未识别，则可能仍在报告分母中压低得分。保存判定依据，不能为追求百分百而将所有存活项都标作等价。\n\n## 参考\n\n- [Stryker：等价变异](https://stryker-mutator.io/docs/mutation-testing-elements/equivalent-mutants/)\n- [PIT：变异执行与状态](https://pitest.org/quickstart/basic_concepts/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://stryker-mutator.io/docs/mutation-testing-elements/equivalent-mutants/"
+}

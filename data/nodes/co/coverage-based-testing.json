@@ -1,0 +1,68 @@
+{
+  "id": "coverage-based-testing",
+  "name": "Coverage-Based Testing",
+  "aliases": [
+    "基于覆盖准则的测试",
+    "覆盖驱动测试设计"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-coverage",
+      "context": "选用这一覆盖准则定义测试要求并定位尚未触达的代码结构；各准则需独立报告。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "line-coverage",
+      "context": "选用这一覆盖准则定义测试要求并定位尚未触达的代码结构；各准则需独立报告。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "statement-coverage",
+      "context": "选用这一覆盖准则定义测试要求并定位尚未触达的代码结构；各准则需独立报告。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "branch-coverage",
+      "context": "选用这一覆盖准则定义测试要求并定位尚未触达的代码结构；各准则需独立报告。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "condition-coverage",
+      "context": "选用这一覆盖准则定义测试要求并定位尚未触达的代码结构；各准则需独立报告。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "decision-coverage",
+      "context": "选用这一覆盖准则定义测试要求并定位尚未触达的代码结构；各准则需独立报告。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "path-coverage",
+      "context": "选用这一覆盖准则定义测试要求并定位尚未触达的代码结构；各准则需独立报告。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "modified-condition-decision-coverage",
+      "context": "选用这一覆盖准则定义测试要求并定位尚未触达的代码结构；各准则需独立报告。"
+    }
+  ],
+  "summary": "按结构覆盖缺口设计和补充测试输入。",
+  "description": "基于覆盖准则的测试先选定结构模型及需要触达的元素，再构造测试输入以满足这些要求。覆盖指标是设计反馈与完成条件之一，测试本身仍需要能判定行为的预期结果。\n\n具体准则可以选择语句、行、分支、条件、决策、路径或 MC/DC。不同准则覆盖的要求集合不同，团队应结合风险和模型可行性选择，不能只将所有准则混合成一个无解释的综合百分比。\n\n补测时先检查未覆盖代码是否可达、是否符合需求及是否因范围配置缺失。单纯为增加计数而运行代码、放宽断言或排除难测逻辑，会降低覆盖结果作为验证证据的价值。\n\n## 参考\n\n- [NASA：MC/DC 实践教程](https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf)\n- [Ammann 与 Offutt：测试准则教学材料](https://www.albany.edu/faculty/offutt/softwaretest/powerpoint/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf"
+}

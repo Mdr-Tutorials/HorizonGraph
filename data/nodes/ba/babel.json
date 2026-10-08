@@ -5,11 +5,13 @@
   "type": "tool",
   "ecosystems": [
     "node-js-ecosystem",
-    "web_frontend"
+    "web_frontend",
+    "language-tooling-ecosystem"
   ],
   "domains": [
     "web-development",
-    "devops"
+    "devops",
+    "language-tooling"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -18,14 +20,30 @@
       "target_id": "tool"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "nodejs"
+      "relation_type": "implements",
+      "target_id": "compiler"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "解析源码后在 Babel 自身节点结构上遍历并执行插件转换。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-map",
+      "context": "按配置生成代码转换前后的源码位置映射。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nodejs",
+      "context": "常规 CLI 和 Node.js 构建集成使用此运行时；standalone 分发另有非 Node.js 路径。"
     }
   ],
-  "summary": "JavaScript 编译器，把新语法降级到旧环境运行。",
+  "summary": "通过 AST、插件和 preset 转换 JavaScript 的工具链。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://babeljs.io"
+  "official_site": "https://babeljs.io",
+  "description": "Babel 是通过解析、AST 转换与代码生成组织 JavaScript 编译的工具链，插件和 preset 控制语法降级、JSX 等转换。它可服务构建系统和 codemod；语言标准库兼容通常还需单独配置 polyfill，不是语法转换自动提供。\n\nBabel parser 支持配置的 JavaScript、Flow、TypeScript 和提案语法，默认 AST 与 ESTree 有明确差异，需要相应插件或适配。遍历与转换包处理这些树，source map 按配置记录原始位置；历史解析器来源不证明当前主工具依赖 Acorn。\n\nTypeScript 与 Flow 转换主要移除类型标注，不执行完整类型检查。常规 CLI 和构建工具运行在 Node.js，官方 standalone 分发也能在浏览器或其他 JavaScript 宿主使用，因此不能把 Node.js 写成家族全部分发形态的硬依赖。\n\n## 参考\n\n- [Babel：工具链用途](https://babeljs.io/docs/)\n- [Babel：parser 及 AST 差异](https://babeljs.io/docs/babel-parser)\n- [Babel：类型转换边界](https://babeljs.io/docs/babel-plugin-transform-typescript)\n- [Babel：standalone 分发](https://babeljs.io/docs/babel-standalone/)"
 }

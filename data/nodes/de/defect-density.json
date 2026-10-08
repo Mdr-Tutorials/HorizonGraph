@@ -1,0 +1,34 @@
+{
+  "id": "defect-density",
+  "name": "Defect Density",
+  "aliases": [
+    "缺陷密度",
+    "故障缺陷密度"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-quality",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-lines-of-code",
+      "context": "在以 SLOC 或 KLOC 为规模单位的定义中，用声明口径的源码行数作为分母；也可采用其他规模单位。"
+    }
+  ],
+  "summary": "以发现的缺陷数量除以明确的工件规模。",
+  "description": "缺陷密度是发现的缺陷数量与工件规模之比，规模可以采用代码行数、功能点或其他声明单位。缺陷登记应先区分确认缺陷、重复报告和一般静态告警，使分子具有可追踪的含义。\n\n比较需要统一工件范围、版本、发现时间窗、严重度和规模计数口径。测试投入及运行暴露条件也影响已发现缺陷数；较低的数值可能反映发现活动不足，而不只是较少的实际缺陷。\n\n该指标用于描述指定范围的缺陷分布，不直接衡量开发者个人能力，也不能证明尚未观察到的缺陷不存在。零规模或单位改变时应避免无定义或误导的比率，并报告分子和分母以便复核。\n\n## 参考\n\n- [ISTQB：缺陷密度定义](https://glossary.istqb.org/en_US/term/defect-density/2)\n- [ISTQB：缺陷指标教材](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://glossary.istqb.org/en_US/term/defect-density/2"
+}

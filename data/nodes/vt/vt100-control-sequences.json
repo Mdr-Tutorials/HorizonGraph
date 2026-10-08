@@ -1,0 +1,36 @@
+{
+  "id": "vt100-control-sequences",
+  "name": "DEC VT100 Control Sequences",
+  "aliases": [
+    "VT100 控制序列",
+    "VT100",
+    "DEC VT100 协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "control-sequence-introducer",
+      "context": "ANSI 模式中的定位、属性与设备查询通过 CSI 控制序列编码。"
+    }
+  ],
+  "summary": "描述 DEC VT100 的字符显示、键盘与终端模式交互。",
+  "description": "VT100 控制序列指 DEC 原始 VT100 终端文档规定的显示、键盘与模式交互。本节点记录协议行为，历史硬件产品则是另一种实体。VT100 支持 ANSI 模式和兼容 VT52 的模式，现代终端常借用其光标、属性与按键编码作为兼容基础。\n\n程序员文档描述光标定位、擦除、滚动区域、设备属性查询与私有模式等功能，终端也向主机发送键盘产生的序列。普通和应用光标键模式会改变按键编码。DEC 私有控制以明确的语法区分，不能把所有后续 xterm 特性都追溯为原始 VT100 的功能。\n\n现代文档有时把 VT100 广义地用作后续 DEC 兼容终端家族的简称，录入时仍应分清原始设备与后续扩展。Sixel 位图、真彩色、OSC 8 超链接和现代键盘事件不是仅凭 VT100 兼容即可推导的能力。TERM=vt100 也只是选择兼容能力条目。\n\n## 参考\n\n- [DEC：VT100 原始用户手册的程序员章节](https://oldmanprogrammer.net/webapps/vt100/doc/vt100-ug/chapter3.html)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)\n- [Microsoft：虚拟终端序列与屏幕缓冲](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://oldmanprogrammer.net/webapps/vt100/doc/vt100-ug/chapter3.html"
+}

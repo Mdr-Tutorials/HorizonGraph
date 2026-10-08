@@ -1,0 +1,35 @@
+{
+  "id": "npath-complexity",
+  "name": "NPath Complexity",
+  "abbreviation": "NPath",
+  "aliases": [
+    "NPath复杂度",
+    "无环执行路径数"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cfg",
+      "context": "按无环控制路径组合解释指标；具体分析器可从语法构造直接求得相应计数。"
+    }
+  ],
+  "summary": "统计函数无环控制路径组合的结构度量。",
+  "description": "NPath 复杂度统计方法或函数中无环执行路径的组合。它对顺序控制构造组合采用乘法，因此多个连续二选一分支可能形成快速增长的路径组合，即使圈复杂度仅线性增长。\n\n分析器依据条件表达式、分支和循环构造定义局部计数规则，再组合方法体的结果。这里不展开循环任意迭代次数形成的无限执行轨迹；具体语言的异常与短路语法仍需参照工具规则。\n\n结构上计入的组合可能因数据约束而不可行，因此 NPath 不等于能够实际执行的不同输入行为数。阈值用于提示评审或拆分复杂控制逻辑，不是跨项目统一质量标准，也不能代替运行测试。\n\n## 参考\n\n- [Checkstyle：NPath定义与计算规则](https://checkstyle.org/checks/metrics/npathcomplexity.html)\n- [PMD：NPath检测规则](https://pmd.github.io/pmd/pmd_rules_java_design.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://checkstyle.org/checks/metrics/npathcomplexity.html"
+}

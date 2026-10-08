@@ -1,0 +1,33 @@
+{
+  "id": "test-prioritization",
+  "name": "Test Case Prioritization",
+  "aliases": [
+    "测试用例优先级排序",
+    "测试排序"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "line-coverage",
+      "context": "采用覆盖信息的排序策略可优先安排触达受影响源码的测试；并非所有策略均采用行覆盖。"
+    }
+  ],
+  "summary": "调整测试执行顺序以更早获得有价值的反馈。",
+  "description": "测试用例优先级排序为待运行测试安排顺序，使缺陷或高风险变化更早得到反馈。排序本身不删除测试，区别于选择子集和永久缩减测试集。\n\n可依据受影响代码的覆盖、历史失败、执行成本或业务风险排序。Microsoft Research 的 Echelon 研究使用程序变化及测试覆盖信息优先触达受影响部分，具体结果取决于研究环境与故障集合。\n\n排序效果应按明确目标衡量，例如在时间预算内多快获得失败反馈；长测试与短测试的成本不同。早期反馈变快不等于缺陷总数减少，也不能将历史启发式当作必然发现下一次缺陷的保证。\n\n## 参考\n\n- [Microsoft Research：测试优先级原始研究](https://www.microsoft.com/en-us/research/publication/effectively-prioritizing-tests-in-development-environment/)\n- [Microsoft Research：选择、排序与缩减测试](https://www.microsoft.com/en-us/research/wp-content/uploads/2015/05/The-Art-of-Testing-Less-without-Sacrificing-Quality.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.microsoft.com/en-us/research/publication/effectively-prioritizing-tests-in-development-environment/"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "generated-source-code",
+  "name": "Generated Source Code",
+  "aliases": [
+    "生成源码",
+    "机器生成源文件",
+    "自动生成代码"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "source-lines-of-code",
+      "context": "当 SLOC 被解释为人工维护源码规模而未区分大批生成输出时，生成文件会增大计数并使该解释偏离实际维护对象。"
+    }
+  ],
+  "summary": "由规范、模板或程序产生并需单独说明计数范围的源码。",
+  "description": "生成源码是从模式、模板、接口定义等输入经程序产生的源文件。它可能参与构建和交付，但维护对象常是生成器与输入；仅统计输出行数不能完整表达人工编写与维护的规模。\n\n识别需要具体约定。Go 的生成标记和 go/ast.IsGenerated 提供语言生态中的规则，scc 可按文件头标记识别生成文件；标记缺失或任意出现的文字都可能使启发式识别与实际来源不一致。\n\n规模报告应把生成物与人工维护源码分层，注明是否计入。这里的源文件形态不等同于编译器生成机器指令，也不能由有无生成标记推断代码质量或生成过程的可信程度。\n\n## 参考\n\n- [Go：生成代码工作流](https://go.dev/blog/generate)\n- [Go：IsGenerated 的标记规则](https://pkg.go.dev/go/ast#IsGenerated)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://go.dev/blog/generate"
+}

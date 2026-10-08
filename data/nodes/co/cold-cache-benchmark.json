@@ -1,0 +1,29 @@
+{
+  "id": "cold-cache-benchmark",
+  "name": "Cold-Cache Benchmark",
+  "aliases": [
+    "冷缓存基准",
+    "冷缓存性能测试"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    }
+  ],
+  "summary": "在指定缓存未命中的条件下测量任务表现。",
+  "description": "冷缓存基准研究指定缓存尚未填充或被按协议重置时的任务成本。文件系统页缓存、应用缓存、处理器缓存和运行时状态是不同对象；称为冷缓存时必须说明实际控制了哪一层。\n\nhyperfine 的准备命令可在计量前执行环境准备，官方示例包含 Linux 文件缓存处理。该动作依赖平台与权限，且不保证所有硬件缓存或存储设备状态都已重置；重新启动进程也不等于清除了操作系统缓存。\n\n冷与暖结果对应不同使用情境，二者不能混成无条件速度结论。准备动作是否计入任务耗时、数据量是否超过内存及重复之间的状态，都应报告；对计数器尤其需要区别首次读仓库与重复扫描。\n\n## 参考\n\n- [hyperfine v1.19.0：预热、准备与导出](https://github.com/sharkdp/hyperfine/blob/v1.19.0/README.md)\n- [SIGSOFT：软件基准实验标准](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Benchmarking.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/sharkdp/hyperfine/blob/v1.19.0/README.md"
+}

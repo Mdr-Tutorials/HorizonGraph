@@ -1,0 +1,45 @@
+{
+  "id": "coverage-py",
+  "name": "Coverage.py",
+  "aliases": [
+    "Python 覆盖率工具",
+    "coverage.py",
+    "coverage"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "line-coverage",
+      "context": "报告纳入分析的可执行 Python 源码行被执行的情况。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "branch-coverage",
+      "context": "启用分支模式时采集行间转换弧并报告缺失结果。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "采集 Python 执行行与分支并生成覆盖报告。",
+  "description": "Coverage.py 是 Python 代码覆盖测量工具，采集执行事件，再分析可执行结构并生成文本、HTML、XML 或 JSON 等报告。运行采集、静态分析和报告是不同阶段，不依赖于必须使用某个测试框架。\n\n行覆盖记录源码行触达，分支模式记录行间转换并与静态可能弧比较。测量核心可采用解释器跟踪或监控事件；不同 Python 版本和核心的能力需按实际安装文档核对。\n\n源文件范围、排除、子进程、源码上下文与合并配置会影响结果。覆盖数据应与源码版本对应，不能将测试没有加载的文件遗漏视为充分覆盖，也不能把触达当作断言质量。\n\n## 参考\n\n- [Coverage.py 官方文档](https://coverage.readthedocs.io/en/latest/)\n- [Coverage.py：采集、分析与报告](https://coverage.readthedocs.io/en/latest/howitworks.html)\n- [Coverage.py：分支覆盖](https://coverage.readthedocs.io/en/latest/branch.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://coverage.readthedocs.io/en/latest/"
+}

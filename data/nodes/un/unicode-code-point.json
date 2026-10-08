@@ -1,0 +1,32 @@
+{
+  "id": "unicode-code-point",
+  "name": "Unicode Code Point",
+  "aliases": [
+    "Unicode 码点",
+    "码点"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unicode"
+    }
+  ],
+  "summary": "Unicode 代码空间中用于标识字符与特殊用途的位置。",
+  "description": "Unicode 码点是 Unicode 代码空间中从 U+0000 到 U+10FFFF 的整数位置。代码空间包含已分配字符、未分配位置、代理码点、私用位置和非字符，因而不是每个码点都对应一个已定义的可见字符。\n\nUnicode 标量值排除 U+D800 至 U+DFFF 的代理码点。UTF-8 与 UTF-16 等编码形式把标量值转换成代码单元；码点值、代码单元和序列化字节应分别计数，尤其不能将 UTF-16 的代理项单独视为标量值。\n\n码点也不是字形或用户感知字符。多个码点可以构成一个字素簇，字体塑形可以把多个字符映射成一个字形；搜索偏移、删除操作与终端列位置采用哪一层单位，需要由接口与交互规则明确。\n\n## 参考\n\n- [Unicode：码点与字符](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-2/)\n- [Unicode：标量值形式定义](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/)\n- [Unicode：文本分段](https://www.unicode.org/reports/tr29/)",
+  "official_site": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-2/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

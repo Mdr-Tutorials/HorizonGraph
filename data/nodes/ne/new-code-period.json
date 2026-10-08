@@ -1,0 +1,28 @@
+{
+  "id": "new-code-period",
+  "name": "New Code Period",
+  "aliases": [
+    "新代码期间",
+    "新代码定义"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    }
+  ],
+  "summary": "为增量质量分析界定最近添加或修改的代码范围。",
+  "description": "新代码期间用于区分整体代码与当前需要重点检查的变更范围。Sonar 的新代码定义可以基于前一项目版本、一定天数、指定分析或参考分支，具体选项与部署产品能力应按文档核对。\n\n基于日期的方式形成起止期间，参考分支方式比较分析分支与基准分支的当前差异，因此名称中的“期间”不意味着所有定义都只按提交日期筛选。范围判定还依赖分析和 SCM 数据。\n\n它帮助设定增量质量政策，并没有清除历史问题。时间窗滑动可能使未解决问题转入整体代码范围；参考分支或版本定义变化也会改变新代码指标，因此应记录基准和配置并保持可追踪。\n\n## 参考\n\n- [Sonar：新代码定义](https://docs.sonarsource.com/sonarqube-server/user-guide/about-new-code)\n- [Sonar：质量门](https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-gates/introduction-to-quality-gates)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-server/user-guide/about-new-code"
+}

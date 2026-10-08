@@ -1,0 +1,35 @@
+{
+  "id": "codemirror",
+  "name": "CodeMirror",
+  "aliases": [
+    "CodeMirror 编辑器"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "浏览器端编辑组件通过 JavaScript 应用集成，具体语言包与构建方式按代际配置。"
+    }
+  ],
+  "summary": "用于网页嵌入代码编辑能力的组件库家族。",
+  "description": "CodeMirror 是供 Web 应用嵌入的代码编辑组件库，负责文档编辑、选择、输入和可扩展的展示。它可用于在线编辑器、教程、查询工作台与 IDE 界面，但组件库本身不等于完整 IDE、语言服务器或编译器。\n\n该家族具有需要区分的两个主要架构代际：CodeMirror 5 采用 mode、addon 与可变编辑器选项；CodeMirror 6 拆分状态、视图和语言包，以事务和扩展组合功能。两者有独立文档与集成路径，因此保留版本节点。\n\n解析、高亮、补全和外部语言服务的集成依具体代际及扩展决定。旧 GitHub 仓库迁到作者的代码托管站，不等于项目停止；读取历史文档时必须保留代际边界，尤其不能把第五代的 Tern addon 归给第六代。\n\n## 参考\n\n- [CodeMirror：文档入口](https://codemirror.net/docs/)\n- [CodeMirror：代际迁移说明](https://codemirror.net/docs/migration/)\n- [CodeMirror：当前开发仓库迁移声明](https://github.com/codemirror/dev)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://codemirror.net/docs/"
+}

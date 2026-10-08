@@ -1,0 +1,27 @@
+{
+  "id": "condition-coverage",
+  "name": "Condition Coverage",
+  "aliases": [
+    "条件覆盖率"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "检查每个布尔条件的真与假结果是否被执行。",
+  "description": "条件覆盖关注决策中各个基本布尔条件是否分别取到真和假。应按实际可求值的条件结果定义计数，而不是仅记录整个复合表达式的最终结果。\n\n条件覆盖与决策覆盖是不同准则。在两条件均求值的 A or B 模型下，输入真假和假真可让两条件都出现真与假，但整体决策始终为真；采用短路求值时，某些输入条件值并不会成为实际求值事件，必须另行核查。\n\n条件结果都出现不等于证明各条件对决策具有独立影响。报告需说明短路规则、不可行结果和采集粒度；需要独立影响证据时应另行检查 MC/DC，而不是将普通条件覆盖更名。\n\n## 参考\n\n- [NASA：MC/DC 实践教程](https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf)\n- [Ammann 与 Offutt：测试准则教学材料](https://www.albany.edu/faculty/offutt/softwaretest/powerpoint/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf"
+}

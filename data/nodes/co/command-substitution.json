@@ -1,0 +1,37 @@
+{
+  "id": "command-substitution",
+  "name": "Command Substitution",
+  "aliases": [
+    "命令替换"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell-expansion"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "Bash 的普通 $(...) 捕获内部命令的 stdout，stderr 默认继续使用既有诊断通路。"
+    }
+  ],
+  "summary": "把命令的输出作为外层命令展开结果的机制。",
+  "description": "命令替换把一次命令执行产生的输出用于外围命令的参数或变量值。在 Bash 的常见形式 $(...) 中，执行发生在子 Shell 环境，捕获的是标准输出，并删除结尾换行；这与读取命令退出状态、把两个程序连接成管道是不同操作。\n\n替换结果是否继续接受单词分割和文件名展开取决于外层引用。双引号包围的普通替换可以保留结果的参数边界，但不恢复已经删除的尾部换行。Bash 5.3 还提供在当前环境执行的替换形式，不能把传统 $(...) 的子环境隔离结论推广到所有形式。\n\n输出中的空格和换行可能属于数据，而非可靠的文件名分隔符。需要保留字节或批量处理任意路径时，应选择合适的流、数组或零字节分隔接口；命令替换的结果也不是 Shell 语法自动再次执行，显式 eval 或新的 Shell 调用才引入另一层解释。\n\n## 参考\n\n- [GNU：Command Substitution](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html)\n- [GNU：Word Splitting](https://www.gnu.org/software/bash/manual/html_node/Word-Splitting.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html"
+}

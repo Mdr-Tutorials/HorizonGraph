@@ -1,0 +1,28 @@
+{
+  "id": "mutation-operator",
+  "name": "Mutation Operator",
+  "aliases": [
+    "变异算子",
+    "突变算子"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    }
+  ],
+  "summary": "定义生成变异程序的受控代码改写规则。",
+  "description": "变异算子定义一种受控改写，例如将小于替换为小于等于、反转条件或改变返回值。它是用于生成候选缺陷的规则，不是任意文本修改，也不要求产生的每个程序都可运行。\n\n不同工具可在源码 AST 或字节码层操作，算子的名称与可适用代码结构因语言而异。PIT 的条件边界和返回值算子与 Stryker 的算子表各有实现规则，不能直接将同名算子视作跨语言相同缺陷集合。\n\n算子选择决定结果解释范围；增加弱算子可能产生容易检出的改动，也可能增加等价或不可行变异。比较得分时应固定算子集、版本、过滤条件与测试范围，而不只比较总百分比。\n\n## 参考\n\n- [PIT：字节码变异算子](https://pitest.org/quickstart/mutators/)\n- [Stryker：支持的变异算子](https://stryker-mutator.io/docs/mutation-testing-elements/supported-mutators/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://pitest.org/quickstart/mutators/"
+}

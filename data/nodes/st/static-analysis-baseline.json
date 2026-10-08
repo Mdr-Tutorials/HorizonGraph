@@ -1,0 +1,28 @@
+{
+  "id": "static-analysis-baseline",
+  "name": "Static Analysis Baseline",
+  "aliases": [
+    "静态分析基线",
+    "质量分析基线"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    }
+  ],
+  "summary": "保存已接受的发现以识别后续新增问题的机制。",
+  "description": "静态分析基线保存某次分析中的已知发现，使后续执行能够识别新增或已消除的问题。它可以采用工具专用的标识、内容指纹或其他稳定匹配规则，不能简单理解为固定了一个总数。\n\njscpd 的基线记录克隆内容指纹及数量，并以新增克隆条件控制失败；既有克隆仍会被报告并进入总体统计。ESLint 的批量抑制机制则按文件和规则跟踪已有违反数量，匹配细节需要按各工具分别说明。\n\n创建或更新基线表示接受一批已有发现，并不表示这些问题已经修复。分析规则、范围或指纹机制改变时，应复核基线差异；自动吸收所有新发现会失去增量质量控制的实际作用。\n\n## 参考\n\n- [jscpd：基线与新增克隆门禁](https://jscpd.dev/guides/baseline)\n- [ESLint：批量抑制机制](https://eslint.org/docs/latest/use/suppressions)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://jscpd.dev/guides/baseline"
+}

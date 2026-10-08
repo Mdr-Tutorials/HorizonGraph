@@ -1,0 +1,33 @@
+{
+  "id": "libcurl",
+  "name": "libcurl",
+  "aliases": [
+    "curl 网络传输库"
+  ],
+  "type": "library",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "在启用对应支持的构建中，以 HTTP 客户端方式完成 URL 请求；具体版本能力按构建和服务端协商限定。"
+    }
+  ],
+  "summary": "为程序提供 URL 数据传输和多协议客户端接口的库。",
+  "description": "libcurl 是客户端 URL 传输库，提供 C 接口供应用发送和接收数据。curl 命令行工具建立在此库上，但应用也可以直接链接 libcurl 或使用语言绑定，无需把命令行文本交给外部 curl 进程执行。\n\neasy 接口以单个传输句柄组织同步操作，multi 接口帮助应用调度多个传输并与事件循环配合，share 等接口负责特定状态的共享。回调、选项与返回信息共同控制数据流，连接重用还依赖句柄和连接池的存续安排。\n\n协议、TLS 后端和可选能力取决于实际构建，不能把项目完整功能表当作每个二进制的统一保证。线程使用还需遵循官方针对句柄及全局初始化的要求；跨平台 API 一致性也不会消除证书配置、代理及网络环境差异。\n\n## 参考\n\n- [libcurl 官方概览](https://curl.se/libcurl/)\n- [libcurl API 与句柄模型](https://curl.se/libcurl/c/libcurl.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://curl.se/libcurl/"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "tight-class-cohesion",
+  "name": "Tight Class Cohesion",
+  "abbreviation": "TCC",
+  "aliases": [
+    "紧密类内聚度",
+    "紧类内聚度"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "以可见方法之间共享实例状态的直接联系比例衡量内聚。",
+  "description": "TCC 使用可见方法之间的直接连接比例刻画类内聚。若两个方法或其类内调用树访问同一个实例变量，则按所采用的定义建立直接连接；它计算的是方法关系，而非共享变量出现次数。\n\n以 n 个纳入的方法计算无序方法对时，最大可能对数 NP=n(n−1)/2，TCC=NDC/NP。实现也可同时计入两个方向而使用 n(n−1) 作分母；字段访问、可见性及构造方法范围仍需固定。\n\nTCC 在分母有效时通常处于零到一之间。没有足够方法形成方法对时需区分缺失值与实际零分；共享状态多不自动等于职责单一，该结构指标仍需要与设计语义一起评审。\n\n## 参考\n\n- [Bieman与Kang：类内聚与复用](https://www.cs.colostate.edu/~bieman/Pubs/bieman-kang-ssr95.pdf)\n- [CK：直接连接与分母实现](https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/metric/TightClassCohesion.java)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.cs.colostate.edu/~bieman/Pubs/bieman-kang-ssr95.pdf"
+}

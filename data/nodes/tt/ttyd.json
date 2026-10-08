@@ -1,0 +1,38 @@
+{
+  "id": "ttyd",
+  "name": "ttyd",
+  "aliases": [
+    "Web 终端共享工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "xtermjs",
+      "context": "分发的浏览器终端前端使用 xterm.js 提供终端仿真。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "websocket",
+      "context": "使用双向 Web 连接在浏览器输入和服务端终端会话间传输数据。"
+    }
+  ],
+  "summary": "把指定命令的终端会话发布为浏览器可访问界面。",
+  "description": "ttyd 是将终端通过 Web 共享的命令行工具，运行指定程序并向浏览器提供终端界面。服务端处理命令与会话连接，网页端负责显示和交互；它提供的访问入口与内嵌终端仿真组件分别具有独立身份。\n\n项目使用 xterm.js 作为网页终端，并通过持久双向连接传输交互数据。官方选项包含认证、TLS、监听地址和是否允许写入，当前帮助明确默认为只读，-W 用来允许客户端输入。运行的命令、权限和生命周期仍由部署者的服务端配置决定。\n\n向浏览器提供命令执行入口需要配置实际认证、来源校验和宿主权限，单纯使用 HTTPS 不会自动提供用户授权或会话隔离。某种图片或文件传输功能可能依赖相应插件和终端程序，不能由首页功能列表推断每个默认部署均已启用。\n\n## 参考\n\n- [ttyd：官方项目与选项](https://github.com/tsl0922/ttyd)\n- [ttyd：官方使用示例](https://github.com/tsl0922/ttyd/wiki/Example-Usage)\n- [xterm.js：ttyd 集成记录](https://xtermjs.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/tsl0922/ttyd"
+}

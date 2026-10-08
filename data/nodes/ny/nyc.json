@@ -1,0 +1,43 @@
+{
+  "id": "nyc",
+  "name": "nyc",
+  "aliases": [
+    "Istanbul 命令行工具",
+    "nyc 覆盖率工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "istanbuljs"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coverage-instrumentation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-coverage",
+      "context": "将语句、函数、分支和行计数汇总为指定范围覆盖报告。"
+    }
+  ],
+  "summary": "以 IstanbulJS 插桩包装命令并汇总覆盖报告。",
+  "description": "nyc 是 IstanbulJS 的命令行界面，可包装测试命令，采集执行生成的覆盖数据并输出报告。它与底层库分开发布，也不等于旧版 istanbul CLI。\n\n默认范围通常关注测试实际访问的源文件，启用 all 并配置扩展、include 和 exclude 才能把未访问的目标文件一同计入报告。预插桩和转译工作流需要正确配置源码映射与插桩责任，避免重复改写。\n\nnyc 支持覆盖阈值、合并运行及不同报告器；这些规则改变构建判定和统计范围，不替代测试行为判定。跨批次合并必须确保源码与映射一致，并记录排除与阈值配置。\n\n## 参考\n\n- [nyc 官方仓库与配置](https://github.com/istanbuljs/nyc)\n- [Istanbul：源码插桩](https://istanbul.js.org/docs/advanced/instrument/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/istanbuljs/nyc"
+}

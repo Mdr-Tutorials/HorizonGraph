@@ -1,0 +1,36 @@
+{
+  "id": "libedit",
+  "name": "libedit",
+  "aliases": [
+    "Editline 行编辑库",
+    "editline",
+    "EditLine"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-interface",
+      "context": "作为宿主交互式命令行的输入编辑、历史查询与提示符处理组件。"
+    }
+  ],
+  "summary": "源自 NetBSD 的交互式行编辑、历史与词元划分库。",
+  "description": "libedit，也称 editline，是源自 NetBSD 的原生库，向交互程序提供行编辑、历史记录和词元划分函数。调用方通过 EditLine 对象配置输入输出流、提示符和编辑行为；库处理用户编辑输入的过程，应用继续负责解释输入和执行命令。\n\n其接口包含窄字符与宽字符版本，并尊重应用设置的 LC_CTYPE。编辑模式和按键绑定可采用 Emacs 或 vi 风格，用户还可以通过 editrc 配置文件为所有程序或特定程序指定设置。字符处理、配置作用范围与返回缓冲区生命周期都需要按 API 文档管理。\n\nlibedit 与 GNU Readline 常被用于相似的 REPL 和 Shell 场景，但原生 EditLine API、兼容接口和具体行为不能自动视作完全相同。它也不是完整 Shell 语言实现或全屏 TUI 框架；历史、分词和编辑能力不会替应用完成语法求值、进程管理及终端窗口布局。\n\n参考资料：\n\n- [NetBSD editline API 手册](https://man.netbsd.org/editline.3)\n- [NetBSD editrc 配置手册](https://man.netbsd.org/editrc.5)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://man.netbsd.org/editline.3"
+}

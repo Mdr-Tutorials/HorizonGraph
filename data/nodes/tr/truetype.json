@@ -1,0 +1,33 @@
+{
+  "id": "truetype",
+  "name": "TrueType",
+  "aliases": [
+    "TrueType 字体格式"
+  ],
+  "type": "protocol",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "glyph",
+      "context": "用字形数据与水平度量等表分别表达具体字形轮廓和布局信息。"
+    }
+  ],
+  "summary": "用字体表、二次曲线轮廓和指令表达字体的技术。",
+  "description": "TrueType 是字体技术与格式规范，使用 sfnt 目录组织字体表，以点、轮廓和二次曲线描述可缩放字形。字形数据、字符映射、水平度量及名称等表承担不同职责。\n\nTrueType 指令可调整轮廓与像素网格的关系，以改善特定字号和分辨率下的显示。最终图像还由字体引擎的加载、缩放及栅格化策略决定，文件中的指令并不能单独保证所有设备上的呈现完全一致。\n\nsfnt 封装与 TrueType 轮廓技术需要区分：其他字体可以采用相同封装而不包含 TrueType 轮廓。OpenType 扩展了这一格式体系，现代字体还可能结合额外布局表，不能把全部 sfnt 字体无条件叫作 TrueType 轮廓字体。\n\n## 参考\n\n- [Apple：TrueType 参考手册](https://developer.apple.com/fonts/TrueType-Reference-Manual/)\n- [Apple：字体表与 sfnt 边界](https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6.html)\n- [Apple：轮廓数字化](https://developer.apple.com/fonts/TrueType-Reference-Manual/RM01/Chap1.html)\n- [Microsoft：TrueType 基础](https://learn.microsoft.com/en-us/typography/opentype/spec/ttch01)",
+  "official_site": "https://developer.apple.com/fonts/TrueType-Reference-Manual/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm"
+}

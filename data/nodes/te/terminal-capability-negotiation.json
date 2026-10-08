@@ -1,0 +1,43 @@
+{
+  "id": "terminal-capability-negotiation",
+  "name": "Terminal Capability Negotiation",
+  "aliases": [
+    "终端能力协商"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminfo",
+      "context": "以 TERM 对应静态能力条目选择基础控制序列。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminal-device-attributes",
+      "context": "在需要兼容设备身份及相关选项时发送 DA 查询并解析预期回复。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kitty-keyboard-protocol",
+      "context": "高级键盘路径按该协议的查询与渐进增强标志确认支持并设置状态。"
+    }
+  ],
+  "summary": "结合静态描述和主动查询选择当前可用的终端功能。",
+  "description": "终端能力协商是应用识别当前终端接口并选择功能的工程过程。静态描述来自 TERM 及数据库条目，主动查询则向终端请求某类状态或扩展支持。两者回答的问题不同：声明可以帮助生成序列，查询可以反映当前路径，但都不意味着所有功能都能一次性发现。\n\n设备属性 DA、模式状态 DECRQM、xterm 的 XTGETTCAP 与协议专用查询各有格式和范围。应用应在适当输入模式下发送少量已定义请求，解析预期回复并保留超时及回退。复用器、SSH 以及内嵌终端可能转接或截获消息，使下游观察到的是虚拟接口而非最外层产品。\n\n查询失败可能意味着不支持、被过滤或运行环境没有可交互终端，不能自动视作肯定响应。能力开启与恢复还需管理嵌套状态。选择高级键盘、图片或同步输出时，应依其具体协议核对，而不是凭终端名称、一个颜色变量或 VT100 兼容标签推断全部能力。\n\n## 参考\n\n- [ncurses：terminfo 能力描述格式](https://invisible-island.net/ncurses/man/terminfo.5.html)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)\n- [Contour：同步输出原始规范](https://github.com/contour-terminal/vt-extensions/blob/master/synchronized-output.md)\n- [Kitty：键盘协议原始规范](https://sw.kovidgoyal.net/kitty/keyboard-protocol/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://invisible-island.net/ncurses/man/terminfo.5.html"
+}

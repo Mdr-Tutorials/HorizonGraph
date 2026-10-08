@@ -1,0 +1,34 @@
+{
+  "id": "sixel",
+  "name": "Sixel",
+  "aliases": [
+    "Sixel 终端位图协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "device-control-string",
+      "context": "Sixel 的 DEC 图形载荷由 DCS 引入，以 q 选择 Sixel 子格式并以 ST 结束。"
+    }
+  ],
+  "summary": "以垂直六像素编码和颜色寄存器在终端传送位图。",
+  "description": "Sixel 是 DEC 图形终端传统中的位图编码与终端控制协议。一个数据字符表达垂直排列的六个像素，图像按条带组织并可选择颜色寄存器。它曾服务打印与图形终端，现代部分终端继续实现；字符集中的线框符号则不属于 Sixel 栅格图像。\n\n典型图像载荷位于 DCS 中，以规定参数与最终 q 进入图形语义，载荷包含像素组、重复、颜色定义和移动控制，并以 ST 结束。DEC VT330 / VT340 等图形文档详细规定相应行为，不能把它说成原始 VT100 的必备图像能力。颜色数量与画布限制也依实现而异。\n\nSixel 与 Kitty 图像协议是独立路线：后者采用 APC 及另一套数据、身份和放置语义。兼容 xterm 或 VT100 不自动意味着支持 Sixel，Ghostty 维护者明确选择不实现它。应用应探测或配置实际可用路径，并在大载荷、远程转发和资源限制下提供可理解的降级。\n\n## 参考\n\n- [DEC：VT330 / VT340 原始程序员袖珍指南](https://vt100.net/dec/ek-vt3xx-hr-002.pdf)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)\n- [Ghostty 维护者：Sixel 支持决议](https://github.com/ghostty-org/ghostty/discussions/2496)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://vt100.net/dec/ek-vt3xx-hr-002.pdf"
+}

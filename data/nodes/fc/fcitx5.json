@@ -1,0 +1,50 @@
+{
+  "id": "fcitx5",
+  "name": "Fcitx 5",
+  "aliases": [
+    "Fcitx5",
+    "小企鹅输入法框架 5"
+  ],
+  "type": "framework",
+  "domains": [
+    "desktop-application-development",
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "input-method-framework",
+      "context": "实现可扩展引擎、输入上下文和面板协调。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wayland",
+      "context": "在原生 Wayland 集成路径中使用宿主支持的文本输入或输入法协议；并非所有部署都走该前端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x11",
+      "context": "X11 前端及 XWayland 客户端通过相应 X 输入路径接入。"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "linux",
+      "context": "主要用于 Linux 桌面应用的多语言输入集成。"
+    }
+  ],
+  "summary": "具有扩展引擎和多种桌面前端的输入法框架。",
+  "description": "Fcitx 5 是支持扩展的输入法框架，提供输入上下文、引擎、配置和用户界面组件。它可接入不同语言输入方法以及键盘模式，框架职责在于协调输入与应用交互，而非把某一种中文输入算法固定为内核。\n\n输入引擎可更新候选列表与预编辑，并依据输入上下文的能力决定显示方式。GTK、Qt 模块及 X11、Wayland 前端提供不同应用接入路径；候选面板的位置与焦点状态还涉及工具包和宿主合成器支持。\n\n原生 Wayland 应用、XWayland 应用和传统 X11 应用需要分别检查集成方式。官方文档建议按桌面与应用选择模块或文本输入协议，不能把全局设置 GTK_IM_MODULE 等变量写成通用保证；某些组合需要由合成器启动相应输入法服务。\n\n## 参考\n\n- [Fcitx 5 官方介绍](https://fcitx-im.org/wiki/Fcitx_5/en)\n- [Fcitx 5 Wayland 集成](https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland)\n- [Fcitx 5 引擎开发](https://fcitx-im.org/wiki/Develop_an_simple_input_method/en)",
+  "official_site": "https://fcitx-im.org/wiki/Fcitx_5/en",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

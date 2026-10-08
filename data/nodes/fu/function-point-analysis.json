@@ -1,0 +1,32 @@
+{
+  "id": "function-point-analysis",
+  "name": "Function Point Analysis",
+  "abbreviation": "FPA",
+  "display_primary": "功能点分析",
+  "display_secondary": "Function Point Analysis",
+  "aliases": [
+    "功能点分析",
+    "功能点计数",
+    "IFPUG FPA"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    }
+  ],
+  "summary": "从用户功能需求计数软件功能规模的方法。",
+  "description": "功能点分析按用户可识别的功能需求度量软件规模。IFPUG 方法区分外部输入、外部输出、外部查询、内部逻辑文件和外部接口文件；识别对象依赖应用边界与功能意图，界面控件数、数据库表数和代码行数都不能直接代替功能计数。\n\n详细计数识别基本功能构件，并依据规定的数据元素、记录或引用文件等条件判定复杂度，再按计数规则汇总。外部输出是否包含派生数据会影响分类；同样的技术实现变化未必改变用户获得的功能规模。\n\n需求尚不完整时可以采用高层或指示性估算，但需披露未知功能与复杂度假设，并随需求细化更新。功能点分析提供规模依据；把规模转换成开发工作量仍需组织自己的历史数据和项目条件。\n\n## 参考\n\n- [IFPUG：功能点分析与度量范围](https://ifpug.org/ifpug-standards/fpa)\n- [IFPUG：外部输出中的派生数据计数解释](https://ifpug.org/wp-content/uploads/2022/06/iTip07DerivedData.pdf)\n- [IFPUG：早期功能点估算与一致成本估算](https://ifpug.org/wp-content/uploads/2026/06/uTip-003-Early-FPA.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://ifpug.org/ifpug-standards/fpa"
+}

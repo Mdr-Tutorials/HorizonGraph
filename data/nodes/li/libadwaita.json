@@ -1,0 +1,39 @@
+{
+  "id": "libadwaita",
+  "name": "libadwaita",
+  "aliases": [
+    "Adwaita 控件库",
+    "Adw"
+  ],
+  "type": "library",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "gtk4",
+      "context": "libadwaita 当前 Adw 1 API 的控件基于 GTK 4。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "gobject",
+      "context": "公开对象类型采用 GObject 类型系统。"
+    }
+  ],
+  "summary": "在 GTK 4 上提供 GNOME 风格与自适应控件的库。",
+  "description": "libadwaita 是面向现代 GNOME 应用的界面组件库，建立在 GTK 4 上，提供符合相应设计语言的控件、外观管理和布局能力。它既包含样式，也包含应用可调用的对象与控件，并非只是一份 GTK 主题文件。\n\n应用使用它组织标题栏、标签页、偏好设置、提示及自适应布局，依据可用空间改变内容安排。构建通过 libadwaita-1 等接口引入；其公开类使用 GTK 与 GObject 类型体系，控件 API 的可用性还需结合具体库版本。\n\nlibadwaita 与 GTK 4 是不同发行物，GTK 应用并不必然依赖它。它扩充 GNOME 界面的组件和行为，但本节点以 depends_on 表达实际库依赖，不把它称为 GTK 全部接口的兼容超集，也不推断应用的自定义终端正文必经这些控件绘制。\n\n## 参考\n\n- [libadwaita 官方 API](https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/)\n- [编译 libadwaita 应用](https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/build-howto.html)",
+  "official_site": "https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

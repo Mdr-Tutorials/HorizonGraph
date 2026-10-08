@@ -1,0 +1,38 @@
+{
+  "id": "code-clone-detection",
+  "name": "Code Clone Detection",
+  "aliases": [
+    "代码克隆检测",
+    "代码重复检测"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "token-based-clone-detection",
+      "context": "选用词法表示方法时，通过归一化 token 的序列或集合搜索克隆候选。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "syntax-based-clone-detection",
+      "context": "选用结构分析方法时，以语法树表示比较程序片段。"
+    }
+  ],
+  "summary": "按声明的相似准则定位重复或近似代码片段。",
+  "description": "代码克隆检测把源程序转换成可比较的表示，再搜索达到大小和相似条件的片段。工具可以输出克隆对、克隆类以及位置和统计数据，输入范围与归一化规则共同决定结果含义。\n\n检测技术包括文本、token、语法树、程序依赖表示以及其他语义近似方法。token 匹配擅长规模较大的语法相似搜索，语法树方法能利用结构信息；它们都需要针对目标语言和克隆类别验证检测能力。\n\n评价应同时考虑漏报、误报、匹配边界、时间和资源开销，并注明基准与判定规则。能够发现 Type-1 或部分 Type-3 并不证明能够判定任意程序语义等价；总体重复百分比也会随排除文件和阈值变化。\n\n## 参考\n\n- [Roy、Cordy：代码克隆检测综述](https://research.cs.queensu.ca/TechReports/Reports/2007-541.pdf)\n- [BigCloneEval：作者评估框架](https://github.com/jeffsvajlenko/BigCloneEval)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://research.cs.queensu.ca/TechReports/Reports/2007-541.pdf"
+}

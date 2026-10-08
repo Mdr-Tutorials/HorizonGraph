@@ -1,0 +1,28 @@
+{
+  "id": "software-maintainability",
+  "name": "Software Maintainability",
+  "aliases": [
+    "软件可维护性",
+    "可维护性"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    }
+  ],
+  "summary": "软件被理解、修改和验证时的有效性与效率。",
+  "description": "软件可维护性关注维护者分析和修改软件的有效性与效率。它涉及理解结构、定位变更影响、实施修改和验证结果；功能能够运行并不自动说明未来修改的成本较低。\n\n产品质量模型把可维护性作为独立质量维度，度量活动则需要按具体任务和系统条件选择证据。复杂度、重复、耦合、文档及变更测试可以揭示不同的障碍，但任何单个源码指标都只是对某些方面的近似。\n\n评估应结合真实变更场景，例如新增协议字段需要同时修改多少模块，以及维护者能否验证兼容性。工具给出的 Maintainability Index 或技术债评级依赖各自的公式和规则，不能视作 ISO 模型全部要求的等价实现。\n\n## 参考\n\n- [ISTQB：可维护性定义](https://glossary.istqb.org/en_US/term/maintainability/2)\n- [ISTQB：测试与静态分析教材](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)\n- [ISO：25010:2023 产品质量模型](https://www.iso.org/standard/78176.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://glossary.istqb.org/en_US/term/maintainability/2"
+}

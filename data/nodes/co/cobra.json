@@ -1,0 +1,40 @@
+{
+  "id": "cobra",
+  "name": "Cobra",
+  "aliases": [
+    "Go Cobra 命令行库",
+    "spf13/cobra"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "go-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "command-line-interface",
+      "context": "以 Command 命令树、标志解析和帮助生成 API 组织应用的命令行入口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go",
+      "context": "库和采用它的应用以 Go 编写并编译，不将源码语言等同于终端用户必须安装的工具链。"
+    }
+  ],
+  "summary": "为 Go 应用组织子命令、标志、帮助和 Shell 补全的库。",
+  "description": "Cobra 是 Go 命令行应用库，以 Command 结构组织命令树，再用参数和标志描述每个命令的输入。它支持嵌套子命令、命令别名和帮助生成，适合将具有多项操作的开发或运维程序建成一致的 CLI，而不是自行为每条命令解析原始字符串。\n\n库区分本地标志与向子命令传播的持久标志，并通过 pflag 支持标志处理。它还提供 Bash、Zsh、Fish 和 PowerShell 等 Shell 的补全生成能力。补全脚本是在 Shell 中辅助选择命令和参数的集成，不意味着 Cobra 自己解释这些 Shell 的语言或提供终端渲染引擎。\n\nCobra 库、可生成应用骨架的 cobra-cli 工具以及可选配置库 Viper 各有交付身份。应用可以手工使用 Cobra API，不能把脚手架工具或可选配置集成记为所有应用的必要依赖。Go 是开发和编译语言，分发后的程序是否需要额外运行环境应由其实际构建方式判断。\n\n参考资料：\n\n- [Cobra 官方项目文档](https://cobra.dev/)\n- [官方代码库与概念说明](https://github.com/spf13/cobra)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://cobra.dev/"
+}

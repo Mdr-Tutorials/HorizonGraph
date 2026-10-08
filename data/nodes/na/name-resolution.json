@@ -1,0 +1,39 @@
+{
+  "id": "name-resolution",
+  "name": "Name Resolution",
+  "aliases": [
+    "名称解析",
+    "符号绑定",
+    "Name Binding"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "symbol-table",
+      "context": "编译器查找路径利用名称与声明身份、类型及作用域属性的关联。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lexical-scope",
+      "context": "对采用词法作用域的语言按源码嵌套和声明可见性确定名称候选。"
+    }
+  ],
+  "summary": "按语言作用域规则将名称引用关联到声明。",
+  "description": "名称解析把源码中的名称引用关联到相应声明或语言实体。局部作用域、遮蔽、模块导入、命名空间及重载等规则共同决定绑定，不能只依据相同文本认定两处名称表示同一对象。\n\n编译器通常使用作用域及符号信息进行查找，并结合语言规则处理可见性和歧义。TypeScript 的 binder 记录声明身份与符号，后续检查器进一步解析类型及使用位置；不同语言阶段划分不必相同。\n\n名称绑定支持导航、引用和重命名，但不等于动态运行时属性查找或自然语言语义搜索。项目配置、生成声明和导入解析会影响可见实体；绑定成功也不能证明类型正确或不存在业务错误。\n\n## 参考\n\n- [Clang：名称查找和语义阶段](https://clang.llvm.org/docs/InternalsManual.html)\n- [TypeScript：绑定器与符号](https://github.com/microsoft/TypeScript/wiki/Architectural-Overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

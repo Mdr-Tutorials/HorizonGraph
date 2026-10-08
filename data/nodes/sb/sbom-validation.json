@@ -1,0 +1,40 @@
+{
+  "id": "sbom-validation",
+  "name": "SBOM Validation",
+  "aliases": [
+    "SBOM 校验",
+    "软件物料清单校验"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "以指定版本的清单为输入，检查结构、标识及引用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom-completeness",
+      "context": "验收中单独审查覆盖说明，不以结构校验通过替代内容完整性判断。"
+    }
+  ],
+  "summary": "检查清单格式、引用和工件绑定，区分校验层次。",
+  "description": "SBOM 校验检查一份文档是否满足指定格式、版本及消费场景的要求。结构层可验证字段类型、必填项和标识形式，语义层可检查组件引用、依赖关系及对象范围。通过结构检查只说明文档符合相应规则，不说明它完整描述了实际软件。\n\n校验工具的职责不同：SPDX 工具解析并校验规范文档，CycloneDX CLI 可以验证其支持版本的 BOM，Microsoft SBOM Tool 还能在相应验证路径核对交付文件。验收应记录工具、规范版本和检查项目，避免只展示一个通过标记而隐藏未实施的内容或覆盖核验。\n\n一致的组件引用、可解释的生成信息和对应工件是后续分析的前提。许可表达式、漏洞状态与完整性仍可能需要另外检查；哈希核对也只能绑定已列文件。格式转换或清单合并后应再次校验，并保留转换损失，不能由校验工具存在推断任何输入都能自动纠正。\n\n## 参考\n\n- [SPDX Tools Python：解析与校验范围](https://github.com/spdx/tools-python)\n- [Microsoft SBOM Tool：生成及交付验证](https://github.com/microsoft/sbom-tool/blob/main/docs/sbom-tool-cli-reference.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/spdx/tools-python"
+}

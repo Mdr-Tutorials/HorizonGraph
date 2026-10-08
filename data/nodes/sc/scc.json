@@ -1,0 +1,90 @@
+{
+  "id": "scc",
+  "name": "Sloc, Cloc and Code",
+  "aliases": [
+    "代码计数器 scc",
+    "scc",
+    "Succinct Code Counter"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem",
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-line-counting"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go",
+      "context": "工具以 Go 实现，源码构建使用 Go 工具链；发行二进制计数不要求用户安装 Go 编译器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "按扫描结果输出 Code 列，作为非注释物理代码行统计。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unique-lines-of-code",
+      "context": "启用 --uloc 时按文件、语言和项目的唯一行集合输出 ULOC。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scc-dryness",
+      "context": "启用 --dryness 时用项目唯一行数与总物理行数计算文本比例。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "duplicate-file-filtering",
+      "context": "显式启用重复检查时，筛掉内容相同的完整文件副本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-language-detection",
+      "context": "在扫描输入时根据语言配置、扩展及内容特征选择计数规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cocomo",
+      "context": "按选定 COCOMO 参数从源码规模估算开发投入，结果是模型输出。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "locomo-cost-estimation",
+      "context": "在实际版本支持并启用 LOCOMO 时，按代码行与配置参数输出大模型生成情景估算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-counting-scope",
+      "context": "按目录、忽略、语言和文件选项确定本次统计集合。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "comment-aware-counting",
+      "context": "扫描时利用语言状态区分代码、注释、字符串与空白。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "tokei"
+    }
+  ],
+  "summary": "Go 实现的多语言代码计数器，附启发式度量和估算。",
+  "description": "scc 是 Go 实现的源码计数工具，名称可展开为 Sloc, Cloc and Code 或 Succinct Code Counter。它遍历选定文件，按语言报告代码、注释、空白、总行和文件数，并可输出文件明细及机器可读报表。\n\n扫描器利用注释和字符串状态分类源码，还提供复本检查、生成与压缩文件识别，以及可选 ULOC、DRYness 和估算。复杂度列按文件累加语言配置中的分支与循环模式，属于词法启发式，不是依据完整控制流图计算的精确圈复杂度。\n\nCOCOMO 与 LOCOMO 输出基于模型参数，不能当作真实开发工资或 API 账单。官方 README 明确帮助示例反映 master，安装发布版可能缺少新选项；比较性能与统计结果时应固定版本、输入、规则和环境。\n\n## 参考\n\n- [scc 官方项目与使用说明](https://github.com/boyter/scc)\n- [scc 官方发布记录](https://github.com/boyter/scc/releases)\n- [scc 计数与识别源码](https://github.com/boyter/scc/blob/master/processor/workers.go)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/boyter/scc"
+}

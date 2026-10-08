@@ -1,0 +1,50 @@
+{
+  "id": "hyperfine",
+  "name": "hyperfine",
+  "aliases": [
+    "命令行性能基准工具",
+    "Hyperfine"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "software-measurement-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "benchmark"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "benchmark-warmup",
+      "context": "通过显式预热配置，在正式计量前执行所选命令，研究指定暖状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cold-cache-benchmark",
+      "context": "可通过显式准备步骤控制特定缓存层，再计量声明的冷状态；效果依赖平台和准备命令。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rust",
+      "context": "项目的主要实现语言为 Rust；不把开发语言写成运行时硬依赖。"
+    }
+  ],
+  "summary": "重复执行命令并统计耗时、预热与参数化比较。",
+  "description": "hyperfine 是命令行基准工具，可重复执行命令，支持预热、准备步骤、参数化比较及结构化结果导出。2026 年 10 月发布的 v2.0.0 增加多种性能量选择，默认显示墙钟时间和可用的峰值内存数据；硬件计数器及内存支持依平台和执行方式限定。\n\nv2.0.0 默认直接执行被测命令和预热命令，不自动解释通配符、变量或管道；可用 -S 或 --shell=default 启用平台 shell。--setup、--prepare、--conclude 和 --cleanup 步骤仍通过 shell 执行，因此准备命令与被测命令的语义需要分别记录。\n\nv1.19.0 默认通过平台 shell 执行，与 v2.0.0 不同。v2.0.0 的 JSON 导出改为 schema version 2，读取旧导出格式的分析脚本需要迁移；基准报告应注明实际版本、执行模式、输入快照与计量边界。\n\nhyperfine 可以运行代码计数器作性能比较，但不会确认各命令统计了相同文件或完成同等功能。重复次数、暖状态或准备步骤都应符合研究目的；结果只支持所测配置下的比较，不能单独证明某工具普遍最快。\n\n## 参考\n\n- [hyperfine v2.0.0：正式版行为与平台范围](https://github.com/sharkdp/hyperfine/blob/v2.0.0/README.md)\n- [hyperfine v2.0.0：发布说明与破坏性变更](https://github.com/sharkdp/hyperfine/releases/tag/v2.0.0)\n- [hyperfine v1.19.0：历史默认 shell 与导出](https://github.com/sharkdp/hyperfine/blob/v1.19.0/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/sharkdp/hyperfine"
+}

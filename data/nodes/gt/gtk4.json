@@ -1,0 +1,65 @@
+{
+  "id": "gtk4",
+  "name": "GTK 4",
+  "aliases": [
+    "GTK4",
+    "Gtk 4"
+  ],
+  "type": "framework",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gtk",
+      "context": "独立主版本 API/ABI、官方文档与 libadwaita 等关系集合构成独立生态位。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "gobject",
+      "context": "GTK 4 控件对象继承 GObject 体系。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "gio",
+      "context": "GTK 4 链接 GIO，应用、文件与异步能力使用其接口。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pango",
+      "context": "GTK 4 标准文本控件的文本处理采用 Pango。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cairo",
+      "context": "GTK 4 构建依赖 Cairo 及 cairo-gobject；并不表示所有绘制必经 Cairo 软件路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wayland",
+      "context": "编入并选择 Wayland GDK 后端时，以 Wayland 客户端接入会话。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x11",
+      "context": "编入并选择 X11 GDK 后端时，通过 X11 连接显示服务器。"
+    }
+  ],
+  "summary": "拥有独立 API、ABI 与渲染模型的 GTK 主版本。",
+  "description": "GTK 4 是 GTK 的第四代主版本，具有独立的 API、ABI 和文档；官方迁移指南明确它与 GTK 3 不兼容。应用需要针对 GTK 4 编译和适配控件、事件处理及绘制接口，而非仅把链接库名称替换。\n\n其控件绘制采用 snapshot 与渲染节点组织内容，GSK 负责把这些节点交给具体渲染器。GLib、GObject、GIO、Pango 和 Cairo 等库构成基础依赖；GDK 根据构建配置提供 Wayland、X11、Windows 或 macOS 等平台后端。\n\nGTK 4 的独立文档、ABI 和 libadwaita 等专用生态符合版本实体单列条件，用 version_of 指向 GTK 家族。后端支持须按构建和运行环境确认；自定义绘制控件可以使用独立 GPU 管线，不能把 GTK 4 的窗口角色泛化成应用所有内容的渲染后端。\n\n## 参考\n\n- [GTK 3 到 GTK 4 迁移](https://docs.gtk.org/gtk4/migrating-3to4.html)\n- [GTK 4 绘制模型](https://docs.gtk.org/gtk4/drawing-model.html)\n- [GTK 4 构建依赖](https://docs.gtk.org/gtk4/building.html)\n- [GTK 4.0 首次稳定发布](https://blog.gtk.org/2020/12/16/gtk-4-0/)",
+  "official_site": "https://docs.gtk.org/gtk4/migrating-3to4.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "first_released": "2020-12-16"
+}

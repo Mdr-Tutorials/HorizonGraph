@@ -1,0 +1,36 @@
+{
+  "id": "named-pipe",
+  "name": "POSIX Named Pipe (FIFO)",
+  "aliases": [
+    "POSIX 有名管道",
+    "FIFO 特殊文件",
+    "有名管道"
+  ],
+  "type": "concept",
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "file-descriptor",
+      "context": "POSIX FIFO 在调用 open 后通过描述符进行读写；路径只用于定位与打开通信端点。"
+    }
+  ],
+  "summary": "以文件系统名称定位端点的 POSIX 管道机制。",
+  "description": "POSIX 有名管道称为 FIFO 特殊文件，它在文件系统中提供一个可打开的名称，使并非通过端点继承联系的进程也能找到通信通道。路径用于定位及访问权限检查；通信数据在内核管道中传递，不会像普通文件那样作为该路径的内容写入磁盘。\n\n进程分别打开读取或写入端后，FIFO 的字节流通信遵循管道规则。常见阻塞打开会等待另一端出现，非阻塞读取与写入的打开条件则不同。读写操作需要考虑缓冲容量、结束条件和引用关闭，不能用普通文件的随机定位或永久内容模型理解 FIFO。\n\n本节点限定 POSIX FIFO；Windows Named Pipes 还具有消息模式、多实例与不同服务端连接接口，应单独核对。即使在 POSIX 系统之间，某些操作也存在允许的差异，例如 Linux 允许同一进程以读写方式打开 FIFO，而 POSIX 没有为这一用法规定统一行为。路径存在本身不证明有另一端在线。\n\n## 参考\n\n- [Linux man-pages: FIFO 特殊文件](https://man7.org/linux/man-pages/man7/fifo.7.html)\n- [Linux man-pages: pipe 与FIFO通道语义](https://man7.org/linux/man-pages/man7/pipe.7.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man7/fifo.7.html"
+}

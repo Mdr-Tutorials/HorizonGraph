@@ -1,0 +1,40 @@
+{
+  "id": "rich-python",
+  "name": "Rich",
+  "aliases": [
+    "Python Rich 终端格式化库",
+    "Rich Python"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python",
+      "context": "作为 Python 包执行终端内容渲染和输出格式化。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-interface",
+      "context": "为命令行应用的人类可读报告、进度和诊断输出提供格式化展示。"
+    }
+  ],
+  "summary": "提供彩色文本、表格、进度与动态显示的 Python 库。",
+  "description": "Rich 是 Python 终端输出与格式化库，可显示带颜色和样式的文本、表格、Markdown、语法高亮代码及数据结构。应用把内容交给 Console 和相关可渲染对象，由库根据可用宽度及输出环境组织显示，适合命令行报告、调试信息和面向人的状态展示。\n\nRich 还提供进度、状态和 Live 动态显示能力，能够在终端中持续更新同一块输出区域。Live 接收可渲染对象并控制刷新，应用负责更新数据和生命周期；这类动态输出不等于完整控件焦点、输入分派及应用事件框架，Textual 在其上构建更完整的交互体系。\n\n库在 Python 运行环境中使用，终端的颜色、样式和刷新效果受实际环境影响，重定向或非交互输出需要单独考虑。格式化展示也不应替代机器可读输出契约，例如给脚本消费的 JSON 应保持有效结构。这里的 Rich 指 Python 项目，区别于通用富文本这一界面概念。\n\n参考资料：\n\n- [Rich 官方入门文档](https://rich.readthedocs.io/en/stable/introduction.html)\n- [Rich 动态显示文档](https://rich.readthedocs.io/en/stable/live.html)\n- [官方代码库](https://github.com/Textualize/rich)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://rich.readthedocs.io/en/stable/introduction.html"
+}

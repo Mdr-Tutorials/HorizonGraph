@@ -1,0 +1,40 @@
+{
+  "id": "gnu-sed",
+  "name": "GNU Sed",
+  "aliases": [
+    "GNU sed",
+    "sed",
+    "流编辑器"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "text-filtering",
+      "context": "在非交互式脚本中对标准输入或文件逐步转换，并向标准输出交付处理结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regex",
+      "context": "通过地址匹配和替换命令识别文本模式；表达式方言以所选模式及实现为准。"
+    }
+  ],
+  "summary": "按编辑脚本对输入文本执行流式转换的工具。",
+  "description": "GNU Sed 是非交互式流编辑器，根据脚本对文件或管道输入执行选取、替换、删除和其他文本转换。程序通常按输入记录依次工作，在模式空间中执行命令，再按规则输出；它是独立 GNU 项目，不能并入 Coreutils。\n\n地址和正则表达式决定哪些输入接受哪些动作，保持空间可在处理过程中保存文本。简单替换适合日志和文本清洗，多行处理也可通过相关命令显式构造；支持这些机制不表示 Sed 会理解 JSON、XML 等格式的完整语法。\n\nGNU 扩展与其他 Sed 实现存在差别，特别是脚本转义、正则模式和原地编辑选项。原地编辑应理解输出替换文件及备份行为，文本经管道输出与直接修改文件也是不同操作；换行、编码与区域设置需按实际输入确认。\n\n## 参考\n\n- [GNU Sed 项目](https://www.gnu.org/software/sed/)\n- [GNU Sed 手册](https://www.gnu.org/software/sed/manual/sed.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/sed/"
+}

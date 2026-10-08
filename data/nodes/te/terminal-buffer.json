@@ -1,0 +1,32 @@
+{
+  "id": "terminal-buffer",
+  "name": "Terminal Screen Buffer",
+  "aliases": [
+    "终端屏幕缓冲"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "terminal-emulation"
+    }
+  ],
+  "summary": "保存终端字符单元与相关显示状态，供增量更新和渲染。",
+  "description": "终端屏幕缓冲是仿真器维护的字符单元与显示状态模型。单元通常包含文字和颜色、样式等属性，缓冲与光标、滚动区域及当前模式协作，承载应用对屏幕的修改。这里的 buffer 指终端显示内容，不是操作系统等待 read 或 write 的字节队列。\n\n仿真器解析字节流后执行定位、插入、擦除和滚动等操作，渲染端再从模型取得可见内容。xterm.js 的接口区分缓冲行、光标位置和视口偏移，并提供主缓冲及备用缓冲。物理内存布局与更新算法由实现选择，不能从控制序列推出固定的数据结构。\n\n缓冲的可见区域与回滚历史可以有不同长度，备用屏幕也可能按窗口尺寸独立管理。改变终端尺寸时，重排策略会影响既有内容。屏幕快照只是某一时刻的解释结果，原始输出可能包含已经被擦除或重写的数据，因此完整录屏与缓冲导出并不等同。\n\n## 参考\n\n- [xterm.js：屏幕缓冲 API](https://xtermjs.org/docs/api/terminal/interfaces/ibuffer/)\n- [xterm.js：主屏与备用屏幕](https://xtermjs.org/docs/api/terminal/interfaces/ibuffernamespace/)\n- [Microsoft：虚拟终端序列与屏幕缓冲](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://xtermjs.org/docs/api/terminal/interfaces/ibuffer/"
+}

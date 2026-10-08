@@ -1,0 +1,39 @@
+{
+  "id": "iso-iec-25010-2023",
+  "name": "ISO/IEC 25010:2023",
+  "aliases": [
+    "软件产品质量模型标准",
+    "ISO 25010"
+  ],
+  "type": "product",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "documentation"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "software-quality",
+      "context": "定义产品质量特征，支持质量要求、度量和评价。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "software-maintainability",
+      "context": "将可维护性列为产品质量模型中的质量特征。"
+    }
+  ],
+  "summary": "给出 ICT 与软件产品九项质量特征的正式标准。",
+  "description": "ISO/IEC 25010:2023 是 SQuaRE 系列中的产品质量模型标准，适用于 ICT 与软件产品。它给出九项质量特征及相应子特征，用于表达、度量和评价产品的质量属性。\n\n该标准是 2023 年发布的第二版，所描述的是产品质量模型。2011 版与新版的模型范围和结构需要按版本区分，不能把旧版常见的八项特征清单直接冠以 2023 版名称。\n\n质量模型为选择要求和度量提供参考，具体产品仍需定义情境、评价证据与接受条件。这里将标准作为可交付文档建档；它不规定网络消息或程序接口，也不是某个静态检查器的规则集。\n\n## 参考\n\n- [ISO：25010:2023 产品质量模型](https://www.iso.org/standard/78176.html)\n- [IEC：25010:2023 产品质量模型](https://webstore.iec.ch/en/publication/90024)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.iso.org/standard/78176.html"
+}

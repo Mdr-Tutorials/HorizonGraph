@@ -1,0 +1,34 @@
+{
+  "id": "unicode",
+  "name": "Unicode",
+  "aliases": [
+    "统一码",
+    "万国码"
+  ],
+  "type": "protocol",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unicode-code-point",
+      "context": "用码点空间标识编码字符，具体编码形式再把标量值转换为代码单元。"
+    }
+  ],
+  "summary": "定义字符编码、属性与文本处理规则的标准。",
+  "description": "Unicode 为世界各书写系统和文本符号提供统一的字符编码模型，并定义字符属性、符合性要求及文本处理规则。它编码抽象字符，以码点标识字符身份；具体字体中用于显示的字形及其外观属于另一层。\n\nUTF-8、UTF-16 和 UTF-32 是 Unicode 的编码形式，用不同尺寸的代码单元表示同一套 Unicode 标量值。字符数据库及标准附录还支持规范化、字素分段和双向文本处理，不能把 Unicode 简化为一种八位字节编码。\n\n实现应说明使用的标准版本、数据表和支持范围。接收合法 Unicode 文本，不代表字体覆盖全部字符，也不代表终端正确处理所有字素簇、列宽和双向排版；跨组件采用不同版本的数据表时仍可能出现显示与定位差异。\n\n## 参考\n\n- [Unicode：17.0.0 标准参考](https://www.unicode.org/versions/Unicode17.0.0/)\n- [Unicode：字符、码点与编码形式](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-2/)\n- [Unicode：符合性与形式定义](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/)",
+  "official_site": "https://www.unicode.org/versions/Unicode17.0.0/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "abstraction_level": "runtime_vm"
+}

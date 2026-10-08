@@ -8,11 +8,13 @@
   "type": "tool",
   "domains": [
     "developer-environments",
-    "systems-programming"
+    "systems-programming",
+    "command-line-tools"
   ],
   "ecosystems": [
     "windows-ecosystem",
-    "wsl-ecosystem"
+    "wsl-ecosystem",
+    "shell-cli-ecosystem"
   ],
   "relations": [
     {
@@ -32,10 +34,23 @@
       "relation_type": "uses",
       "target_id": "wsl-interop",
       "context": "在 Windows 上需要调用 Linux 工具的可选工作流中，通过 wsl.exe 启动命令并连接其文本输入输出。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "structured-shell-pipeline"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-startup-files",
+      "context": "依据当前用户与宿主的 profile 文件建立初始化配置，可用 -NoProfile 等方式选择加载条件。"
     }
   ],
-  "summary": "使用对象管道的跨平台 Shell、脚本与任务自动化工具。",
-  "description": "PowerShell 是由命令行 Shell、脚本语言和自动化能力构成的工具体系，本节点覆盖可执行 Shell 与自动化工具身份。现代 PowerShell 可运行于 Windows、Linux 和 macOS，命令、函数、脚本及模块共同组成任务执行环境。它以系统管理、构建部署和重复任务为常见用途，不能因为最初服务 Windows 管理就将所有现行版本限定为 Windows 专用工具。\n\nPowerShell 的 cmdlet 管道可以传递 .NET 对象，使后续命令直接使用属性和方法进行筛选或组合，而不必先从终端显示文本恢复结构。对象管道与外部本机程序的标准输入输出边界需要区分：调用 `wsl.exe` 或其他外部程序并不让对方的文本输出自动成为其原始对象。格式化、字符串转义和调用参数也分别受 PowerShell 与被调用程序的规则影响。\n\nWindows PowerShell 5.1 使用 .NET Framework，现代 PowerShell 使用跨平台 .NET，二者的可执行入口和模块兼容性存在差异。Windows Terminal 可以承载 PowerShell 会话；在 Windows 上，PowerShell 可调用 `wsl.exe` 执行 Linux 工具，并通过 WSL 的互操作能力组合工作流。这样的集成是可选场景，PowerShell 无须安装 WSL 才能执行一般脚本，也不能把 Windows 专属管理模块推定为跨平台通用。\n\n## 参考\n\n- [Microsoft：What is PowerShell?](https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.5)\n- [Microsoft：Windows PowerShell 与 PowerShell 的差异](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/differences-from-windows-powershell?view=powershell-7.5)\n- [Microsoft：Windows/Linux 命令互操作](https://learn.microsoft.com/en-us/windows/wsl/interop)\n- [Microsoft：Windows Terminal FAQ](https://learn.microsoft.com/en-us/windows/terminal/faq)",
+  "summary": "以对象管道组合命令的跨平台Shell与自动化工具。",
+  "description": "PowerShell 是由命令行 Shell、脚本语言和任务自动化能力构成的工具体系。现代 PowerShell 可在 Windows、Linux 和 macOS 上运行，通过命令、函数、脚本和模块组织任务；它不是绘制终端窗口的模拟器，Windows 专属模块也不因 Shell 跨平台就自动获得跨平台能力。\n\ncmdlet 管道可逐项传递 .NET 对象，使后续命令使用属性和参数绑定进行筛选或转换。向终端显示表格是格式化步骤，不等于原对象的序列化；本机程序仍使用自己的标准流。PowerShell 7.4 起特定本机到本机管道与 stdout 文件重定向保留字节，合并 stderr 等路径另有边界。\n\nWindows PowerShell 5.1 与现代 PowerShell 的运行时、入口和模块兼容性有区别。Profile 文件按用户及宿主组织，交互补全和提示也由实际配置决定；引号、参数传递、对象管道与 POSIX Shell 字节流不能仅因为共用 | 字符就视作完全相同语义。\n\nWindows Terminal 可以承载 PowerShell 会话。在 Windows 的可选跨系统工作流中，PowerShell 可经 wsl.exe 启动 Linux 工具；此时调用参数、路径、编码与返回状态需要按双方接口处理，WSL 并非执行一般 PowerShell 脚本的必要组件。\n\n## 参考\n\n- [Microsoft：What is PowerShell?](https://learn.microsoft.com/en-us/powershell/scripting/overview)\n- [Microsoft：about_Pipelines](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines)\n- [Microsoft：about_Profiles](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles)\n- [Microsoft：Differences from Windows PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/differences-from-windows-powershell)\n- [Microsoft：WSL Interop](https://learn.microsoft.com/en-us/windows/wsl/interop)",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",

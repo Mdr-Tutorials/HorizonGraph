@@ -1,0 +1,29 @@
+{
+  "id": "benchmark-warmup",
+  "name": "Benchmark Warmup",
+  "aliases": [
+    "基准预热",
+    "性能测试预热"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    }
+  ],
+  "summary": "在正式计量前运行任务形成声明的稳态条件。",
+  "description": "基准预热在正式计量之前运行任务，以形成声明的缓存、运行时或代码执行状态。它通常用于研究稳态性能；预热样本与正式样本应分开，不能混入后又称为冷启动结果。\n\nGoogle Benchmark 可配置预热时长，hyperfine 可指定预热次数。固定次数未必让所有系统达到稳态，特别是 JIT、分层缓存或持续初始化的系统；需要根据任务行为说明预热策略和停止依据。\n\n预热会改变研究问题。如果用户实际关心首次扫描或进程启动，排除这些成本可能不符合目标；应把冷与暖场景分别记录，公开预热动作，而不是通过删掉较慢样本挑选好看的平均值。\n\n## 参考\n\n- [Google Benchmark：计时、重复与优化边界](https://github.com/google/benchmark/blob/main/docs/user_guide.md)\n- [hyperfine v1.19.0：预热、准备与导出](https://github.com/sharkdp/hyperfine/blob/v1.19.0/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/google/benchmark/blob/main/docs/user_guide.md"
+}

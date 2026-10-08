@@ -1,0 +1,37 @@
+{
+  "id": "iterm2",
+  "name": "iTerm2",
+  "aliases": [
+    "iTerm2 终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "tmux",
+      "context": "使用 tmux 控制模式把服务端窗口和窗格映射为 macOS 原生界面；不是每个终端会话的依赖。"
+    }
+  ],
+  "summary": "面向 macOS 的终端，提供分屏、Shell 和 tmux 集成。",
+  "description": "iTerm2 是 macOS 终端应用，提供窗口、标签、分屏、搜索和多套 profile，承载本地或远程命令行会话。终端界面、Shell 进程与远程服务器分别负责显示、命令执行和远程运行，配置 profile 并不会改变服务器的进程或权限模型。\n\nShell 集成提供提示符定位与命令相关交互，tmux 集成通过其控制接口把服务端窗口和窗格映射到原生界面。此时进程持久性来自 tmux 服务端，iTerm2 提供本地展示与控制；普通分屏并不需要每次都创建 tmux 服务，也不会自动拥有同样的脱离能力。\n\n官方文档还定义行内图像及专有控制序列，并提供自动化接口。采用某个扩展时，应核查应用和中间复用器版本，不能从外观相似推断所有终端都能理解同一序列。某些功能面向特定 iTerm2 版本或 macOS 能力，应按相应文档范围判断。\n\n## 参考\n\n- [iTerm2：官方文档](https://iterm2.com/documentation.html)\n- [iTerm2：tmux 集成](https://iterm2.com/documentation-tmux-integration.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://iterm2.com/documentation.html"
+}

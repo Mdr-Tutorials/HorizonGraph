@@ -1,0 +1,28 @@
+{
+  "id": "decision-coverage",
+  "name": "Decision Coverage",
+  "aliases": [
+    "决策覆盖率",
+    "判定覆盖率"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "检查每个决策的所有可能结果是否被测试触达。",
+  "description": "决策覆盖关注整个决策表达式的结果，例如布尔决策是否分别得到真和假。它与关注每个基本条件取值的条件覆盖不同，决策的分析范围也应明确是否包括不直接改变控制流的布尔表达式。\n\n简单 if 的真假结果经常对应控制流的两条分支，因此一些工具将决策覆盖与分支覆盖近似使用。但复合条件、异常处理、表达式赋值及编译器转换会改变这种对应，不能在所有工具与语言之间声明二者完全等价。\n\n即使复合决策已有真假结果，也可能有某个条件从未影响结果。测试需要区分整个决策结果、基本条件结果以及独立影响证据，并保存适用准则与源代码映射。\n\n## 参考\n\n- [NASA：MC/DC 实践教程](https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf)\n- [Clang：源码覆盖](https://clang.llvm.org/docs/SourceBasedCodeCoverage.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf"
+}

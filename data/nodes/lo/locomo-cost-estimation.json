@@ -1,0 +1,34 @@
+{
+  "id": "locomo-cost-estimation",
+  "name": "scc LOCOMO Cost Estimation",
+  "aliases": [
+    "scc LOCOMO 成本估算",
+    "LLM Oriented Cost Model",
+    "LOCOMO"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "按 scc 的 sumCode 非注释代码行和每行 token 假设计算生成规模。"
+    }
+  ],
+  "summary": "scc 按源码量与假设参数估算大模型生成成本的方法。",
+  "description": "scc 的 LOCOMO 是面向大模型辅助生成代码的启发式成本模型。核查的实现从非注释代码行和词法复杂度密度出发，用配置中的每行 token、重试次数和价格参数估算输入输出 token 与费用。\n\n模型还报告按生成吞吐推算的时间和按每行审查时间推算的人类复核小时。这些是情景假设的计算结果，并非读取实际 API 使用记录或开发工时；预设价格、吞吐与审查时间应按具体场景调整。\n\n官方说明列出上下文复用、算法差异、测试生成和无法可靠自动生成代码等限制。LOCOMO 与传统 COCOMO 估算不同对象，不代表统一行业标准；功能及参数需按实际 scc 发布版本核对。\n\n## 参考\n\n- [scc 官方项目与使用说明](https://github.com/boyter/scc)\n- [scc：LOCOMO 计算源码](https://github.com/boyter/scc/blob/master/processor/locomo.go)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/boyter/scc"
+}

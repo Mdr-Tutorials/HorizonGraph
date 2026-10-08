@@ -1,0 +1,84 @@
+{
+  "id": "ghostty",
+  "name": "Ghostty",
+  "aliases": [
+    "Ghostty 终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "kitty-keyboard-protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "kitty-graphics-protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "osc-133"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "libghostty",
+      "context": "桌面客户端使用同项目共享终端核心；完整库族与独立 VT 模块的公开 API 状态分别核验。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "metal",
+      "context": "macOS 桌面客户端的 GPU 渲染后端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "opengl",
+      "context": "Linux 桌面客户端的 GPU 渲染后端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminfo",
+      "context": "通过 xterm-ghostty 能力条目让本地与远端终端程序选择控制序列。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gtk4",
+      "context": "Linux 的 GTK 客户端通过 GTK4 C API 构建本地窗口和界面，macOS 客户端使用另一套本地界面实现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "libadwaita",
+      "context": "采用 libadwaita 的 Linux GTK 界面路径使用其桌面组件；官方 1.3 发布说明列出该版本的 GTK 与 libadwaita 要求，其他构建按实际配置核查。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "appkit",
+      "context": "macOS 客户端调用 AppKit 构建本地窗口与系统交互，Linux 客户端另用 GTK 路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "swiftui",
+      "context": "macOS 客户端以 SwiftUI 组织部分本地界面，与 AppKit 和共享终端核心共同组成应用。"
+    }
+  ],
+  "summary": "以原生桌面界面和 GPU 渲染承载终端会话。",
+  "description": "Ghostty 是终端模拟器，解析程序输出的控制序列、维护字符网格与回滚内容，并把键盘和鼠标输入送入会话。桌面应用提供窗口、标签页和分屏；命令语法、脚本执行和远程认证分别由 Shell、操作系统或 SSH 实现负责。其共享核心以 Zig 编写，macOS 客户端采用原生 Apple 界面，Linux 客户端采用 GTK。\n\n图形终端、libghostty 库族与 libghostty-vt 模块具有不同交付身份。macOS 使用 Metal、Linux 使用 OpenGL 的渲染路径不改变终端控制序列的含义。Ghostty 支持 Kitty 键盘和图形协议以及 OSC 133 等扩展，实际体验仍取决于终端内程序、远端能力描述和中间复用器是否支持相应协议。\n\n截至 2026-10-08 核验，官方桌面发行覆盖 macOS 与 Linux；核心库能够运行于 Windows 并不等于官方 Windows 桌面客户端已经发布。官方 SSH 功能文档明确 ghostty +ssh 属于 tip、拟进入 1.4.0，1.3.x 没有该 CLI 动作；1.3.x 已有的 SSH Shell 集成功能另行说明。应按已安装版本区分稳定功能、开发分支与路线图。\n\nLinux 客户端的 GTK4 与 libadwaita、macOS 客户端的 AppKit 与 SwiftUI 是具体平台的界面路径。官方 1.3.0 发布说明列出 GTK 与 libadwaita 版本要求；这些组件不能从一个平台推导为另一个平台的运行依赖，也不属于 libghostty-vt 必须选择的窗口或渲染器。\n\n## 参考\n\n- [Ghostty：项目与架构](https://github.com/ghostty-org/ghostty)\n- [Ghostty：关于项目](https://ghostty.org/docs/about)\n- [Ghostty：1.3.0 发布说明](https://ghostty.org/docs/install/release-notes/1-3-0)\n- [Ghostty：SSH 功能与版本边界](https://ghostty.org/docs/features/ssh)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/ghostty-org/ghostty"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "git-first-parent",
+  "name": "Git First-Parent History",
+  "aliases": [
+    "Git 第一父历史",
+    "Git 主线遍历"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git",
+      "context": "Git 历史遍历子系统按父顺序选择路径的内置模式"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-object-model",
+      "context": "依据 commit 对象内有序的 parent 字段，仅继续遍历第一个父提交"
+    }
+  ],
+  "summary": "遇到合并时仅沿第一父链接遍历的 Git 历史视图。",
+  "description": "Git 第一父历史在遇到多父提交时只沿第一个父提交继续遍历，常由 `git log --first-parent` 或 rev-list 的相应选项取得。它展示所选引用的整合脉络，保留合并节点而不展开通过其他父链接进入的分支提交。\n\n第一父由 commit 对象中父链接的次序确定，通常对应执行合并时原分支的 HEAD；它不是全仓库永恒的默认分支身份。历史重写、不同分支的合并方向及起点选择会改变这一视图，不能将其称作完整开发过程。\n\n仓库分析可用它观察主线接纳变更的阶段，但会遗漏分支中的独立提交事件。`--first-parent` 还改变 log 对合并提交的默认差异方式；统计报告应同时注明遍历口径与差异口径，避免与全父历史数据直接混合比较。\n\n## 参考\n\n- [Git log：first-parent](https://git-scm.com/docs/git-log)\n- [Git rev-list：遍历与提交范围](https://git-scm.com/docs/git-rev-list)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://git-scm.com/docs/git-log"
+}

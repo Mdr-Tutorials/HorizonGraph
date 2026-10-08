@@ -1,0 +1,34 @@
+{
+  "id": "terminal-mouse-reporting",
+  "name": "Terminal Mouse Reporting",
+  "aliases": [
+    "终端鼠标事件报告"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "control-sequence-introducer",
+      "context": "xterm 模式设置及 SGR 鼠标报告采用协议各自定义的 CSI 控制与输入形式。"
+    }
+  ],
+  "summary": "把启用的鼠标动作编码为应用可读取的终端输入。",
+  "description": "终端鼠标事件报告允许应用在需要时接收鼠标动作，而不只让终端自己处理选择或滚动。应用请求启用相应私有模式，终端随后把按钮、位置与适用的移动信息编码进输入流。未启用时不应假设每次鼠标移动都会发送到运行程序。\n\nxterm 传统区分按下报告、按钮事件移动、任意事件移动及不同坐标编码。SGR 鼠标模式 1006 使用文本参数避免旧格式的坐标范围限制，并区分按钮按下与释放。报告范围与编码格式属于不同选择；启用移动报告不自动说明应用理解 SGR 编码。\n\n坐标通常对应当前字符网格，扩展也可定义像素位置；窗口缩放及远程复用器会影响映射。应用应关闭不再使用的模式，并为用户保留适用的文本选择方式。鼠标报告只提供输入事件，不能证明用户授权某项文件操作或让字符界面自动获得图形控件语义。\n\n## 参考\n\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)\n- [xterm.js：支持的控制序列](https://xtermjs.org/docs/api/vtfeatures/)\n- [Kitty：终端协议扩展的设计边界](https://sw.kovidgoyal.net/kitty/protocol-extensions/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://invisible-island.net/xterm/ctlseqs/ctlseqs.html"
+}

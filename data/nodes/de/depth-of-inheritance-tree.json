@@ -1,0 +1,30 @@
+{
+  "id": "depth-of-inheritance-tree",
+  "name": "Depth of Inheritance Tree",
+  "abbreviation": "DIT",
+  "aliases": [
+    "继承树深度",
+    "继承深度"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "记录类沿继承路径到根的最大深度。",
+  "description": "DIT 表示类在继承结构中到根的最大路径长度。多重继承时采用最长祖先链，不能把各父类深度相加；根按零计的定义与把隐含 Object 基类计入的工具输出也需区分。\n\nSciTools 的根类深度为零；Visual Studio 对普通 .NET 类可能因 System.Object 得到一。分析范围中缺少外部父类定义时，工具可见的祖先链与完整程序继承结构不一定一致。\n\n继承深度能提示需要追踪的祖先行为，但深度本身不等于坏设计。分析要结合覆盖、覆盖方法行为和实际复用方式；语言或框架中的既有层次不能直接套用统一最大深度门槛。\n\n## 参考\n\n- [SciTools：DIT与多重继承](https://docs.scitools.com/metrics/MaxInheritanceTree.html)\n- [Microsoft：继承深度的假设与限制](https://learn.microsoft.com/en-us/visualstudio/code-quality/code-metrics-depth-of-inheritance?view=visualstudio)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.scitools.com/metrics/MaxInheritanceTree.html"
+}

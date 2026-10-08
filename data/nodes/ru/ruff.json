@@ -1,0 +1,37 @@
+{
+  "id": "ruff",
+  "name": "Ruff",
+  "aliases": [
+    "Ruff Python 检查器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis-rule",
+      "context": "根据配置启用 Python 规则并输出相应诊断或修复建议。"
+    }
+  ],
+  "summary": "以 Rust 实现 Python 规则检查与格式化的工具。",
+  "description": "Ruff 是以 Rust 实现的 Python 检查和格式化工具，ruff check 与 ruff format 分别承担规则诊断与格式改写。它可复现多种现有 Python 检查规则，但不是把所有第三方插件原样加载运行。\n\n配置通过规则选择、忽略项、目标语言版本和路径范围控制结果；部分规则提供自动修复，规则成熟度和 preview 状态需按所用版本确认。格式化器针对一致布局，与类型检查及业务行为验证具有不同职责。\n\n替换 Flake8 或其他工具时，应核对实际规则和插件是否覆盖，而不是只比较启动速度。修复存在安全与不安全分类，团队应审查修改语义；格式化成功或零告警不自动说明程序正确。\n\n## 参考\n\n- [Ruff：官方项目](https://github.com/astral-sh/ruff)\n- [Ruff：检查器](https://docs.astral.sh/ruff/linter/)\n- [Ruff：格式化器](https://docs.astral.sh/ruff/formatter/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/astral-sh/ruff"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "swc",
+  "name": "SWC",
+  "aliases": [
+    "Speedy Web Compiler",
+    "SWC 编译器"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "compiler"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rust",
+      "context": "编译核心以 Rust 实现；从源码构建时使用 Rust 工具链，预编译分发另有路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-map",
+      "context": "源码转换按配置输出原始位置与生成代码位置的映射。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "按配置解析并移除 TypeScript 类型语法，不承担全程序类型检查。"
+    }
+  ],
+  "summary": "用 Rust 实现 JavaScript 与 TypeScript 转换的工具链。",
+  "description": "SWC 是 Rust 实现的 JavaScript 与 TypeScript 编译平台，提供解析、转换、打印和压缩能力。CLI、核心 API 与平台二进制包各有交付形态，应用可以通过 Node.js 包或相应 WASM 接口使用核心。\n\n解析器可按配置读取 ECMAScript、TypeScript 或 Flow 语法，转换阶段移除类型专用结构并输出代码，sourceMaps 选项提供位置映射。内部 Script 与 Module 结构属于 SWC 自身 AST，不能直接当作默认 ESTree 交给其他遍历库。\n\n单文件转译不执行 TypeScript 全程序类型检查，仍需类型检查器验证语义。Rust 是源码实现与源码构建的工具链要求，不代表使用预编译包必须安装 Rust；打包器集成及历史 bundling 能力也应按实际工具说明。\n\n## 参考\n\n- [SWC：核心 API](https://swc.rs/docs/usage/core)\n- [SWC：从 tsc 迁移的检查边界](https://swc.rs/docs/migrating-from-tsc)\n- [SWC：安装与预编译包](https://swc.rs/docs/getting-started)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://swc.rs/docs/usage/core"
+}

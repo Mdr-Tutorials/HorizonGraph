@@ -1,0 +1,32 @@
+{
+  "id": "cpe",
+  "name": "Common Platform Enumeration",
+  "aliases": [
+    "通用平台枚举",
+    "CPE"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "以标准名称和匹配规则描述软硬件平台及版本。",
+  "description": "CPE 是用于命名和匹配软件、硬件及操作系统平台的标准化体系。2.3 将命名、名称匹配、字典和适用性语言分开定义，安全内容自动化系统可以据此表达漏洞影响的产品范围。它关注平台描述，不能直接替代按包生态定义的软件包 URL。\n\n命名模型通过厂商、产品、版本及目标环境等属性描述平台，并规定绑定到具体字符串形式的方式。名称匹配考虑属性值及集合包含关系，适用性表达可以组合平台条件。公告和扫描器选择的 CPE 需要依据产品实际身份与版本，不能只从一个相似显示名自动推导。\n\n通用产品名到具体发行版包的映射可能含歧义，厂商修复回移也不能由上游版本比较直接处理。匹配命中是影响调查的线索，仍需结合公告和安装证据。拥有 CPE 名称不构成安全评价，也不能证明两个包含同名组件的工件具有相同漏洞状态。\n\n## 参考\n\n- [NIST：CPE 2.3 规范族](https://csrc.nist.gov/projects/security-content-automation-protocol/specifications/cpe)\n- [NIST：CPE Naming Specification 2.3](https://csrc.nist.gov/pubs/ir/7695/final)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://csrc.nist.gov/projects/security-content-automation-protocol/specifications/cpe",
+  "abstraction_level": "application_tool",
+  "abbreviation": "CPE"
+}

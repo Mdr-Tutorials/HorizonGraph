@@ -1,0 +1,35 @@
+{
+  "id": "ctags-format",
+  "name": "Ctags Tag File Format",
+  "aliases": [
+    "ctags tags 格式",
+    "vi tags 格式"
+  ],
+  "type": "protocol",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-tag-index",
+      "context": "序列化源码标签名称、文件与定位信息，供索引消费者查询。"
+    }
+  ],
+  "summary": "以名称、文件及定位字段交换源码标签索引。",
+  "description": "Ctags Tag File Format 是 vi 类 tags 文件及其扩展的记录约定，一条常规记录包含 tag 名称、目标文件和定位命令。扩展格式还可加入对象种类、作用域、行号等字段及说明生成器能力的伪标签。\n\n消费者根据排序信息和记录字段查询符号，再将定位信息应用到目标源码。Universal Ctags 与 Exuberant 兼容输出有明确差异，消费者必须处理对应字段、转义和版本信息，不能把同名 tags 文件视为任意实现间完全等价。\n\n该格式保存索引记录，不保证源码当前仍对应生成时的位置，也不规定全程序类型检查。定位命令由生成器产出并由客户端解释，应用需要按可信来源和消费者行为管理它；Emacs TAGS 是另一种格式。\n\n## 参考\n\n- [Universal Ctags：tags 格式](https://docs.ctags.io/en/latest/man/tags.5.html)\n- [Universal Ctags：输出格式选择](https://docs.ctags.io/en/stable/output-format.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://docs.ctags.io/en/latest/man/tags.5.html"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "token-based-clone-detection",
+  "name": "Token-based Clone Detection",
+  "aliases": [
+    "基于词法单元的克隆检测",
+    "Token 克隆检测"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    }
+  ],
+  "summary": "以词法单元的序列或集合相似性搜索代码克隆。",
+  "description": "基于词法单元的克隆检测先按编程语言规则把源码转为 token，再进行窗口、序列或集合比较。这里的 token 表示语言词法单元，与自然语言模型的分词单元具有不同定义和处理目标。\n\n工具可按配置忽略注释或归一化名称、字面量，从而改变可识别的克隆类别。jscpd 使用滚动哈希寻找重复序列，SourcererCC 的研究方法采用 token 集合及索引过滤，不能把所有 token 方法都描述为同一算法。\n\n这种表示便于跨较大源码集合搜索语法相似片段，但通常无法直接证明行为等价。最小长度、重复窗口合并、名称归一化和语言词法规则都影响结果，比较工具时应保持这些条件可追踪。\n\n## 参考\n\n- [jscpd：检测机制](https://jscpd.dev/concepts/how-detection-works)\n- [Roy、Cordy：代码克隆检测综述](https://research.cs.queensu.ca/TechReports/Reports/2007-541.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://jscpd.dev/concepts/how-detection-works"
+}

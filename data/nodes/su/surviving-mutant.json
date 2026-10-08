@@ -1,0 +1,28 @@
+{
+  "id": "surviving-mutant",
+  "name": "Surviving Mutant",
+  "aliases": [
+    "存活变异体",
+    "存活突变体"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    }
+  ],
+  "summary": "测试未检出其改动的变异执行结果状态。",
+  "description": "存活变异体是在相应测试运行后没有导致预期测试失败的变异体。具体工具可能将已覆盖但未检出与完全未覆盖分成不同状态，报告中应保留这一区别。\n\n可能原因包括缺少触发输入、断言薄弱、测试替身遮蔽实际行为或变异与原程序等价。存活结果只描述当前测试及判定范围，不能直接证明变异安全，也不能直接宣称某个真实缺陷已经存在。\n\n分析存活项时复现原始与变异执行，检查覆盖与观察点，再决定补充测试、改进判定或记录等价说明。执行错误和超时需要单独诊断，不应任意归并为存活状态。\n\n## 参考\n\n- [Stryker：变异状态与得分公式](https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/)\n- [PIT：变异执行与状态](https://pitest.org/quickstart/basic_concepts/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/"
+}

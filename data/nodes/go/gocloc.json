@@ -1,0 +1,57 @@
+{
+  "id": "gocloc",
+  "name": "gocloc",
+  "aliases": [
+    "Go 代码计数器 gocloc",
+    "gocloc 计数器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-line-counting"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go",
+      "context": "项目以 Go 实现，源码构建要求按对应修订的 go.mod 确认。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "输出所选源文件中的 Code 物理行统计。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "duplicate-file-filtering",
+      "context": "启用 --skip-duplicated 时按工具规则跳过重复文件。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "scc"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "tokei"
+    }
+  ],
+  "summary": "受 Tokei 启发的 Go 多语言源码计数工具。",
+  "description": "gocloc 是 Go 实现的源码统计工具，官方说明受 Tokei 启发。它按语言或文件统计代码、注释和空白，并提供命令行以及供其他 Go 程序使用的项目 API。\n\nCLI 可按语言、扩展及路径规则筛选输入，并有可选完整文件重复过滤。JSON、cloc-xml、sloccount 等格式便于接入现有报表，具体支持应根据对应版本的参数核对。\n\n源码构建的 Go 要求应以实际 go.mod 为准，README 可能保留较早版本要求。官方发布已增加 Markdown 输出；历史基准不能替代当前同范围测量，也不能因为格式兼容就推断与 cloc 完全同口径。\n\n## 参考\n\n- [gocloc 官方项目](https://github.com/hhatto/gocloc)\n- [gocloc CLI 实现](https://github.com/hhatto/gocloc/blob/master/cmd/gocloc/main.go)\n- [gocloc v0.7.0 发布记录](https://github.com/hhatto/gocloc/releases/tag/v0.7.0)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/hhatto/gocloc"
+}

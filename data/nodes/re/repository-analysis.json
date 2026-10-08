@@ -1,0 +1,43 @@
+{
+  "id": "repository-analysis",
+  "name": "Repository Analysis",
+  "aliases": [
+    "仓库分析",
+    "代码仓库分析"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-language-detection",
+      "context": "分析源码快照的语言构成时先识别文件语言，并记录歧义和排除规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-churn",
+      "context": "研究指定提交窗口内的文件变化规模时统计新增与删除行，并声明计算口径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-object-model",
+      "context": "分析 Git 仓库的可达提交、树与文件对象时采用其内容寻址快照结构。"
+    }
+  ],
+  "summary": "分析仓库快照、提交历史及其结构变化。",
+  "description": "仓库分析从指定工作区或提交快照提取文件、语言和对象结构，也可遍历提交历史研究变化。当前代码体积与历史累计变化是不同观测量；删除的文件可能仍在历史中，未提交内容则不会自动出现在提交记录里。\n\n一次分析应固定仓库身份、引用范围、时间窗口、路径过滤和合并处理方式。Linguist 的语言识别、git-sizer 的对象规模、PyDriller 的提交遍历分别回答不同问题，不能用单个总行数代替这些结果。\n\n仓库数据可以帮助选择需要进一步阅读或验证的区域，但代码行、提交数及作者字段不能直接给出质量、工作投入或因果解释。复现报告需要保存工具版本与输入范围，并说明生成代码、外部代码及不完整历史的处理。\n\n## 参考\n\n- [MSR：软件仓库数据来源](https://conf.researchr.org/track/msr-2026/msr-2026-technical-papers)\n- [PyDriller：提交与修改数据](https://pydriller.readthedocs.io/en/latest/commit.html)\n- [git-sizer：仓库对象规模](https://github.com/github/git-sizer)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://conf.researchr.org/track/msr-2026/msr-2026-technical-papers"
+}

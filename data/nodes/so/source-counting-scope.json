@@ -1,0 +1,38 @@
+{
+  "id": "source-counting-scope",
+  "name": "Source Counting Scope",
+  "aliases": [
+    "源码计数范围",
+    "代码计数输入边界"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "generated-code-exclusion",
+      "context": "测量目标限定人工维护源码时，可采用明确的生成代码排除规则，并记录识别依据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vendored-code-exclusion",
+      "context": "测量自研源码规模时，可按规则排除供应商副本；分析完整交付体时则应另行保留统计。"
+    }
+  ],
+  "summary": "规定一次源码计数纳入哪些文件与内容类别。",
+  "description": "源码计数范围规定一次测量纳入的路径、语言和内容角色。产品源码、测试、示例、生成物、第三方组件与非交付脚本可分层报告；测量目标决定选择，不能默认所有目录都表示自研程序。\n\n目录遍历、版本库已跟踪清单、归档展开和忽略文件会产生不同输入集合。Tokei 的忽略规则与 cloc 的 VCS 和列表选项各有具体语义，参数、工作目录及生效配置应随统计记录。\n\n排除生成或供应商代码可用于观察人工维护部分，但会改变所测对象。报告应保留排除规则与分类依据，并区分识别出的范围、扫描失败和真正为空的结果，避免把缺失输入误当作零规模。\n\n## 参考\n\n- [SEI：物理行与逻辑语句的定义清单](https://www.sei.cmu.edu/documents/1058/1992_005_001_16082.pdf)\n- [Tokei 配置 API](https://docs.rs/tokei/latest/tokei/struct.Config.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.sei.cmu.edu/documents/1058/1992_005_001_16082.pdf"
+}

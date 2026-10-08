@@ -1,0 +1,43 @@
+{
+  "id": "quality-gate",
+  "name": "Quality Gate",
+  "aliases": [
+    "质量门",
+    "质量门禁"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-duplication-density",
+      "context": "设置重复比例门槛时，将声明范围内的检测结果与阈值比较。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-rule-violation-count",
+      "context": "以指定规则和问题范围的发现数量作为可配置接受条件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "new-code-period",
+      "context": "在采用增量质量政策时限定门禁检查的新代码范围。"
+    }
+  ],
+  "summary": "以指标和阈值决定变更或制品是否满足接受条件。",
+  "description": "质量门把一组可检查条件组合成通过或失败的决策，供合并、发布或其他工程阶段使用。条件可能涉及已识别问题、测试覆盖或重复比例，每个条件都需要明确指标、阈值和适用范围。\n\n在 Sonar 中，质量配置决定分析采用哪些规则，而质量门检查分析所得指标；两者是不同职责。团队还可以按新代码范围设置条件，让现有问题与当前变更的接受政策分开管理。\n\n通过状态只表示规定条件满足；要真正阻止合并或发布，还需 CI 或平台执行相应策略。遗漏输入、宽松阈值或未覆盖性质不会因门禁通过而消失，条件调整应可审查并能说明产品依据。\n\n## 参考\n\n- [Sonar：质量门](https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-gates/introduction-to-quality-gates)\n- [Sonar：质量配置](https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-profiles/understanding-quality-profiles)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-gates/introduction-to-quality-gates"
+}

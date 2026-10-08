@@ -1,0 +1,34 @@
+{
+  "id": "vendored-code-exclusion",
+  "name": "Vendored Code Exclusion",
+  "aliases": [
+    "外部代码排除",
+    "供应商代码过滤",
+    "第三方源码过滤"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gitattributes",
+      "context": "在 Linguist 的仓库分析中用 linguist-vendored 属性标记或取消外部代码归类。"
+    }
+  ],
+  "summary": "在源码统计中显式区分随仓库携带的外部代码。",
+  "description": "仓库可能直接携带第三方库源码、浏览器脚本或其他外部内容。外部代码排除按分析目标将这部分从团队维护代码的统计中移出，或另列一组；它不删除文件，也不改变软件实际运行时的组成。\n\nLinguist 使用已知路径模式判定 vendored 文件，并允许 linguist-vendored 属性覆盖。需要保留修改后的外部组件时，应明确统计其全部内容、补丁还是团队自有部分，避免把不同口径的项目相互比较。\n\n路径规则不能证明来源、许可证或安全性，也不保证发现所有复制进来的外部代码。源码计数中的排除与 SBOM 组件识别各有目的；排除一份依赖源码并不表示产品已不依赖该组件。\n\n## 参考\n\n- [Linguist：vendor 属性](https://github.com/github-linguist/linguist/blob/main/docs/overrides.md)\n- [Linguist：vendored 路径规则](https://github.com/github-linguist/linguist/blob/main/lib/linguist/vendor.yml)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/github-linguist/linguist/blob/main/docs/overrides.md"
+}

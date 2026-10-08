@@ -1,0 +1,23 @@
+{
+  "id": "node-pty",
+  "name": "node-pty",
+  "aliases": ["Node.js 伪终端绑定", "PTY 进程桥接库"],
+  "type": "library",
+  "domains": ["terminal-engineering", "developer-environments"],
+  "ecosystems": ["terminal-ecosystem", "node-js-ecosystem"],
+  "abstraction_level": "framework_library",
+  "relations": [
+    { "relation_type": "is_instance_of", "target_id": "library" },
+    { "relation_type": "uses", "target_id": "pseudoterminal", "context": "在 Linux 与 macOS 等 Unix 路径通过原生绑定创建伪终端子进程，并读写终端数据。" },
+    { "relation_type": "uses", "target_id": "conpty", "context": "在符合版本条件的 Windows 路径使用 ConPTY；现行主干已移除 WinPTY，旧发行包须另查支持范围。" },
+    { "relation_type": "uses", "target_id": "nodejs", "context": "向 Node.js 或 Electron 内嵌的兼容 Node 运行环境提供原生终端进程绑定。" },
+    { "relation_type": "integrates_with", "target_id": "vscode", "context": "VS Code 集成终端的进程层通过 node-pty 创建和管理命令行终端会话，显示层另由终端组件处理。" }
+  ],
+  "summary": "向 Node 宿主提供跨平台终端子进程和输入输出接口。",
+  "description": "node-pty 是微软维护的 Node 伪终端绑定库，可创建终端子进程并通过对象接口读取输出、写入输入和调整尺寸。它为 VS Code 等应用提供进程连接层，屏幕状态、字符绘制和用户界面由 xterm.js 或宿主选择的其他组件负责；该库本身不是完整终端模拟器。\n\nLinux 与 macOS 等 Unix 路径采用原生 PTY，Windows 路径利用符合系统条件的 ConPTY。公开 API 使用 TypeScript 声明描述，宿主应按所用库版本与 Node 或 Electron ABI 构建和加载原生组件，不能把平台抽象接口相似理解为底层操作系统语义完全一致。\n\n截至 2026-10-08，现行主干 README 已明确移除 WinPTY 支持并要求相应 Windows 版本，旧发行包可能仍记录旧后端，应分别核查。主干还说明库不支持跨多个 worker 线程的任意共享使用。终端子进程按宿主权限运行，创建一个 PTY 不会自动提供远程认证、会话隔离或可恢复的进程持久化。\n\n## 参考\n\n- [Microsoft：node-pty 项目与当前主干边界](https://github.com/microsoft/node-pty)\n- [Microsoft：VS Code 终端进程接入源码](https://github.com/microsoft/vscode/blob/main/src/vs/platform/terminal/node/terminalProcess.ts)\n- [VS Code：终端高级功能](https://code.visualstudio.com/docs/terminal/advanced)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/microsoft/node-pty"
+}

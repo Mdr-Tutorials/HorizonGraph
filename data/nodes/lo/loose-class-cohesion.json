@@ -1,0 +1,35 @@
+{
+  "id": "loose-class-cohesion",
+  "name": "Loose Class Cohesion",
+  "abbreviation": "LCC",
+  "aliases": [
+    "松类内聚度",
+    "宽松类内聚度"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tight-class-cohesion",
+      "context": "同一方法集合下，LCC沿TCC的直接连接关系加入间接连接，可表示为TCC加间接方法对比例。"
+    }
+  ],
+  "summary": "将直接或间接连通的方法对纳入类内聚比例。",
+  "description": "LCC 在 TCC 使用的直接方法连接基础上纳入经其他方法形成的间接连接。两个方法没有直接共享状态，但可沿方法连接链到达对方时，也会计入宽松内聚的连通方法对。\n\n对同一方法集合和连接定义，LCC=(NDC+NIC)/NP，因此 LCC≥TCC。这里的间接连接是在内聚关系图上的可达性，不是把任意运行时调用链或整个系统的调用关系都算入同一类。\n\n高 LCC 与低 TCC 的组合可以提示类中存在通过中间方法连接的结构。它不证明每个方法都直接服务同一职责；没有足够方法、无法解析字段或动态调用时，应按实现说明缺失与近似规则。\n\n## 参考\n\n- [Bieman与Kang：直接与间接类连接](https://www.cs.colostate.edu/~bieman/Pubs/bieman-kang-ssr95.pdf)\n- [CK：LCC连通计算](https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/metric/TightClassCohesion.java)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.cs.colostate.edu/~bieman/Pubs/bieman-kang-ssr95.pdf"
+}

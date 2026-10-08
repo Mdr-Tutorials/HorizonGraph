@@ -1,0 +1,38 @@
+{
+  "id": "sonarscanner-cli",
+  "name": "SonarScanner CLI",
+  "aliases": [
+    "Sonar 命令行扫描器",
+    "SonarScanner"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "quality-profile",
+      "context": "执行连接平台为项目及语言配置的分析规则。"
+    }
+  ],
+  "summary": "执行项目分析并提交 Sonar 平台结果的 CLI。",
+  "description": "SonarScanner CLI 是执行 Sonar 项目分析的通用命令行工具，通过配置项目身份、源文件范围和服务端连接提交结果。它是扫描器工件，不是保存项目数据和管理质量规则的 SonarQube 服务端。\n\n项目也可以采用 Maven、Gradle、.NET 等专用扫描器，通用 CLI 不替代所有构建环境需要的集成。JRE 供应、分析器获取和运行条件随扫描器及服务端版本变化，应按具体发行文档准备。\n\n扫描器读取源码及支持的外部报告，分析失败、服务端处理和质量门判定是不同阶段。它不会因为能导入覆盖报告就执行测试，也不应把可选平台连接记作所有部署共同的硬依赖。\n\n## 参考\n\n- [Sonar：Scanner CLI](https://docs.sonarsource.com/sonarqube-server/analyzing-source-code/scanners/sonarscanner)\n- [Sonar：Scanner CLI 源码](https://github.com/SonarSource/sonar-scanner-cli)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-server/analyzing-source-code/scanners/sonarscanner"
+}

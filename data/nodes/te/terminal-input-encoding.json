@@ -1,0 +1,38 @@
+{
+  "id": "terminal-input-encoding",
+  "name": "Terminal Input Encoding",
+  "aliases": [
+    "终端输入编码"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "utf-8",
+      "context": "现代终端可将文字输入编码为 UTF-8 字节，功能键和协议消息仍需各自控制编码。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminfo",
+      "context": "传统输入解析按终端能力描述识别功能键字符串，并与当前模式协调。"
+    }
+  ],
+  "summary": "把文字、按键和扩展事件转换成应用接收的字节流。",
+  "description": "终端输入编码把用户的文字与功能键操作转为应用可读的字节。文字可以采用 UTF-8 等字符编码，而方向键、修饰组合、鼠标及协议回复则有控制序列形式。键盘物理位置、文字输入结果与终端字节表示属于不同层次，输入法生成的文字也不等于每次物理按键。\n\n传统编码会将多个操作映射到相同或带共同前缀的字节，例如 ESC 既是单独按键，又可能引入 Alt 组合或功能键序列。应用可能依超时、当前模式和 terminfo 识别它们；高级键盘协议提供协商后的可消歧形式，但需要终端和应用两端支持。\n\nTTY 行规程还可能处理回显、信号字符、流控或回车换行转换，因此用户动作到应用字节并非总是直接映射。输入模式、字符编码、协议状态和中间复用器都需一致。发送 UTF-8 不会自动解决字符显示宽度，也不能从一个读取缓冲的长度推断用户输入了多少字符或按键。\n\n## 参考\n\n- [Microsoft：虚拟终端输入编码](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences#input-sequences)\n- [Kitty：键盘协议原始规范](https://sw.kovidgoyal.net/kitty/keyboard-protocol/)\n- [Linux man-pages：termios 接口与输入模式](https://man7.org/linux/man-pages/man3/termios.3.html)\n- [ncurses：cbreak、raw 与输入选项](https://invisible-island.net/ncurses/man/curs_inopts.3x.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences#input-sequences"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "polyglot-code-counter",
+  "name": "Polyglot (Code Counter)",
+  "aliases": [
+    "ATS 代码计数器 Polyglot",
+    "vmchale polyglot",
+    "poly"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-line-counting"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "按项目规则对所识别语言输出物理源码行分类。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-language-detection",
+      "context": "对部分共享扩展名使用项目的文件名与内容启发式消歧。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "scc"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "tokei"
+    }
+  ],
+  "summary": "以 ATS 编写并用 poly 命令汇总源码内容的工具。",
+  "description": "vmchale 的 Polyglot 以 ATS 编写，CLI 名为 poly，扫描目录并给出语言、文件和源文本行分类汇总。这里的项目身份区别于多语言编程这一泛称，也区别于其他同名软件。\n\n项目采用文件名与内容启发式处理部分共享扩展名的语言歧义，官方示例比较 Coq 与 Verilog 等情况。计数结果由语言定义及启发式共同决定，不是完整编译或语义分析。\n\nREADME 明确列出偏向 Linux、无正则排除、不读取 .gitignore、块注释和多行字符串处理受限等边界。其历史性能表只能说明当时负载与版本，不能作为普遍速度或准确性保证。\n\n## 参考\n\n- [Polyglot 官方项目](https://github.com/vmchale/polyglot)\n- [Polyglot 语言支持说明](https://github.com/vmchale/polyglot/blob/master/LANGUAGES.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/vmchale/polyglot"
+}

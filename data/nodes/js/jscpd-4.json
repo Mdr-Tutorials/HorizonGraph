@@ -1,0 +1,41 @@
+{
+  "id": "jscpd-4",
+  "name": "jscpd v4",
+  "aliases": [
+    "jscpd TypeScript 引擎",
+    "jscpd 4"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "jscpd"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "token-based-clone-detection"
+    }
+  ],
+  "summary": "保留 Node.js 编程 API 的 jscpd 第四代工具。",
+  "description": "jscpd v4 是采用 TypeScript 引擎的第四代分发，官方在 master-v4 分支继续维护。它通过 npm 的第四代版本范围获取，不能将普通最新版本安装命令理解为固定选择这一代。\n\n该代运行于 Node.js，提供 jscpd()、detectClones() 等编程接口及相应存储扩展。官方对照明确它与 Rust 第五代在运行时、程序 API、MCP 包与基线功能上存在差异。\n\n当项目需要嵌入既有 Node.js 分析代码或采用第四代专用存储接口时，它具有独立用途。配置迁移应核对代际说明，不能因为部分配置兼容便推断 API 与所有报告能力完全等同。\n\n## 参考\n\n- [jscpd：v4 独立分支](https://jscpd.dev/getting-started/v4)\n- [jscpd：v4 到 v5 迁移](https://github.com/kucherenko/jscpd/blob/master/README-v4.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://jscpd.dev/getting-started/v4"
+}

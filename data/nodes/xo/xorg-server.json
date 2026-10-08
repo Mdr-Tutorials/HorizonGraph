@@ -1,0 +1,40 @@
+{
+  "id": "xorg-server",
+  "name": "Xorg Server",
+  "aliases": [
+    "X.Org Server",
+    "Xorg",
+    "Xorg 显示服务器"
+  ],
+  "type": "tool",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "x11",
+      "context": "Xorg 处理 X11 客户端请求并提供其服务器端接口。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "display-server",
+      "context": "提供应用与显示、输入资源之间的服务实现。"
+    }
+  ],
+  "summary": "实现 X11 显示服务并接入设备与驱动的服务器。",
+  "description": "Xorg Server 是 X11 显示服务器实现，接收 X 客户端请求并管理显示与输入相关资源。它适用于多种 Unix 类系统与硬件平台，连接设备和驱动层，同时为图形应用提供 X 协议接口。\n\n服务器有协议处理、资源管理与设备相关实现等层次，配置和启动参数控制实际会话。窗口布局、焦点和桌面外观通常仍由窗口管理器及其他会话组件制定，不能仅凭启动 Xorg 推断已经得到完整桌面环境。\n\n本节点指名为 Xorg 的服务器实现，文中 X.Org Server 源码项目还会产生其他服务器目标，如 XWayland。Xorg 和 XWayland 的运行环境及输出路径不同；两者实现 X11 不意味着彼此是可以原样互换的显示后端。\n\n## 参考\n\n- [Xorg 官方手册](https://www.x.org/releases/current/doc/man/man1/Xorg.1.xhtml)\n- [X 服务器移植层说明](https://www.x.org/releases/current/doc/xorg-server/Xserver-spec.pdf)",
+  "official_site": "https://www.x.org/releases/current/doc/man/man1/Xorg.1.xhtml",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

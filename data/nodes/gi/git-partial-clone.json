@@ -1,0 +1,34 @@
+{
+  "id": "git-partial-clone",
+  "name": "Git Partial Clone",
+  "aliases": [
+    "Git 部分克隆",
+    "Git 按需对象获取"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git",
+      "context": "Git 克隆、获取与对象读取共享的过滤及按需补取机制"
+    }
+  ],
+  "summary": "过滤初始对象传输并按需补取缺失对象的 Git 机制。",
+  "description": "Git Partial Clone 使用对象过滤器减少 clone 或 fetch 初始传输的 blob、tree 等对象。比如 `--filter=blob:none` 延迟取得文件内容，之后访问时可向 promisor remote 补取；它主要处理对象可用性，而不是定义源码的逻辑计数单位。\n\n对象过滤在给定提交范围内工作，与 shallow clone 对提交图范围的限制相互独立，也与工作区 sparse checkout 的路径展示边界不同。初次下载很少的字节，不说明仓库历史或源码规模很小；当前工作区也不能代表所有历史对象已经在本地。\n\n统计历史文件内容或计算差异时，缺失对象可能触发网络获取，改变耗时和离线可执行范围。基准应记录过滤器、promisor 配置、预取状态及网络条件，并区分取数成本与分析成本；离线运行需要事先具备所访问对象。\n\n## 参考\n\n- [Git partial-clone 设计文档](https://git-scm.com/docs/partial-clone)\n- [Git clone：对象过滤](https://git-scm.com/docs/git-clone)\n- [Git rev-list：对象过滤规格](https://git-scm.com/docs/git-rev-list)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://git-scm.com/docs/partial-clone"
+}

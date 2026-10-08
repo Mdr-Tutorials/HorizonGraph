@@ -1,0 +1,34 @@
+{
+  "id": "terminal-multiplexing",
+  "name": "Terminal Multiplexing",
+  "aliases": [
+    "终端复用",
+    "终端多路复用",
+    "会话复用"
+  ],
+  "type": "concept",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudoterminal",
+      "context": "典型复用器用独立 PTY 承载各窗格程序，并在会话之间切换显示和输入。"
+    }
+  ],
+  "summary": "让多个终端会话共享显示连接并分别管理生命周期。",
+  "description": "终端复用使多个终端会话共享一个或若干显示连接，提供窗口、窗格切换及会话控制。复用器通常为内部程序维持各自的终端状态，再把当前可见内容传给外部终端模拟器；桌面终端内多个标签页与独立持久复用服务有相交功能，但生命周期不必相同。\n\ntmux、GNU Screen 和 Zellij 是具体实现，WezTerm 也提供可配置的复用服务。典型实现采用 PTY 承载程序，并在客户端与服务端之间组织输入和显示。detach 与 attach 依靠保存会话的进程继续存活，网络传输可以另由 SSH 等机制提供。\n\n断开客户端后持续运行不等于跨服务端重启保存进程，也不等于把所有应用状态自动迁移到另一机器。控制序列经过复用器时还需要能力声明、解析或转发配合，外层终端支持图片或增强键盘不能证明内层程序可直接使用。选择实现时应分别判断窗口组织、持久性和协议兼容。\n\n## 参考\n\n- [OpenBSD：tmux 的会话模型](https://man.openbsd.org/tmux.1)\n- [WezTerm：复用 domain](https://wezterm.org/multiplexing.html)\n- [Zellij：工作区文档](https://zellij.dev/documentation/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://man.openbsd.org/tmux.1"
+}

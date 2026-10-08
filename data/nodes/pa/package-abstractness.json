@@ -1,0 +1,30 @@
+{
+  "id": "package-abstractness",
+  "name": "Package Abstractness",
+  "abbreviation": "A",
+  "aliases": [
+    "包抽象度",
+    "抽象类型比例"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "以抽象类与接口占类型总数比例刻画包结构。",
+  "description": "包抽象度 A 以包内抽象类和接口数量占纳入类型总数的比例描述结构。对有效分母，A=0 表示没有计入的抽象类型，A=1 表示所有计入类型都是抽象类或接口。\n\nJDepend 在 Java 包中统计抽象类与接口；NDepend 在程序集层次采用内部抽象类型与内部类型的比例。枚举、结构、生成类型和空单元如何计入，需要使用具体实现的对象集合规则。\n\n这个比例不是对 API 设计质量、概念抽象水平或接口可用性的直接评价。更多接口可能提供扩展边界，也可能增加无效间接层；其用途是在依赖结构评审中与稳定性等信息共同解释。\n\n## 参考\n\n- [Martin：抽象度与依赖设计](https://linux.ime.usp.br/~joaomm/mac499/arquivos/referencias/oodmetrics.pdf)\n- [JDepend：抽象类型及空包处理](https://github.com/clarkware/jdepend/blob/master/src/jdepend/framework/JavaPackage.java)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://linux.ime.usp.br/~joaomm/mac499/arquivos/referencias/oodmetrics.pdf"
+}

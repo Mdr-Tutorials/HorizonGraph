@@ -1,0 +1,39 @@
+{
+  "id": "xtermjs",
+  "name": "xterm.js",
+  "aliases": [
+    "Xterm.js",
+    "xtermjs",
+    "浏览器终端组件"
+  ],
+  "type": "library",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "将终端组件挂载到宿主网页的 DOM 元素并接收用户交互。"
+    }
+  ],
+  "summary": "在网页中解析和显示终端流的 JavaScript 组件。",
+  "description": "xterm.js 是可嵌入浏览器页面的终端组件，提供屏幕状态、控制序列解释和用户输入事件。宿主把组件挂载到 DOM，再将终端流写入接口；VS Code 和多种浏览器终端使用该库，但库自身不会安装 Shell 或自动创建远程执行环境。\n\n真实会话通常由宿主提供 PTY、远端连接和数据传输，再把输入输出与 xterm.js 接口相连。WebSocket 是常见接入方式，属于宿主选择，并非终端组件必须使用的协议。渲染、适配尺寸、链接或其他附加功能也要根据具体版本与 addon 判断。\n\n终端输入和输出暴露给页面脚本，认证、会话隔离、宿主权限和第三方脚本治理必须由应用层负责。嵌入组件不自动提供安全远程 Shell，也不证明输出中的所有控制序列都应被信任。xterm.js 与 X Window 的 xterm 是不同工件，兼容行为须按实际实现测试。\n\n## 参考\n\n- [xterm.js：官方主页](https://xtermjs.org/)\n- [xterm.js：集成安全指南](https://xtermjs.org/docs/guides/security/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://xtermjs.org/"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "fontconfig",
+  "name": "Fontconfig",
+  "aliases": [
+    "Fontconfig 字体配置库"
+  ],
+  "type": "library",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "font-fallback",
+      "context": "以字符覆盖和候选排序支持应用的回退字体选择，最终运行段和 cluster 处理仍属于上层应用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "xml",
+      "context": "通过 XML 配置树声明字体路径、别名、匹配与替换规则。"
+    }
+  ],
+  "summary": "为应用提供字体发现、配置和匹配的系统字体库。",
+  "description": "Fontconfig 为应用提供系统字体配置、定制和字体访问能力。配置模块读取 XML 规则，匹配模块接受描述字体家族、样式和其他属性的 pattern，并返回接近需求的字体。\n\nFcFontMatch 查询最佳匹配，FcFontSort 按匹配程度产生候选字体集合，并可根据已覆盖的 Unicode 字符范围裁剪冗余候选。这些能力可服务于应用的字体回退流程，最终的分段和字体选择仍由应用组织。\n\n字体匹配不是字形栅格化，也不是完整的文本塑形。Fontconfig 处理字体发现和选择所需的数据；选中的字体随后由其他字体加载或布局组件使用，不能仅因 Linux 桌面常见集成就宣称所有终端硬依赖该库。\n\n## 参考\n\n- [Fontconfig：开发者参考与匹配 API](https://fontconfig.pages.freedesktop.org/fontconfig/fontconfig-devel/)\n- [Fontconfig：配置与用户参考](https://fontconfig.pages.freedesktop.org/fontconfig/fontconfig-user.html)",
+  "official_site": "https://fontconfig.pages.freedesktop.org/fontconfig/fontconfig-devel/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library"
+}

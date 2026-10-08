@@ -1,0 +1,33 @@
+{
+  "id": "utf-16",
+  "name": "UTF-16",
+  "aliases": [
+    "十六位 Unicode 转换格式",
+    "UTF16"
+  ],
+  "type": "protocol",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unicode"
+    }
+  ],
+  "summary": "以一个或一对十六位代码单元编码 Unicode 标量值。",
+  "description": "UTF-16 以十六位代码单元表示 Unicode 标量值。基本多文种平面中的非代理码点使用一个代码单元，补充平面字符使用高代理项与低代理项组成的代理对，因此不能假设一个十六位值就是一个完整字符。\n\n编码形式描述代码单元，编码方案还需要规定序列化时的字节顺序。UTF-16BE、UTF-16LE 和带字节顺序处理约定的 UTF-16 应在数据边界明确区分；RFC 2781 描述其互联网交换表示。\n\n按代码单元截断可能拆开代理对，按码点截断仍可能拆开组合标记或 emoji 的字素簇。UTF-16 字符串的索引长度也不能直接作为终端光标移动的列数，应分别处理编码合法性、文本边界与显示布局。\n\n## 参考\n\n- [RFC 2781：UTF-16](https://www.rfc-editor.org/rfc/rfc2781)\n- [Unicode：UTF-16 编码形式与方案](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-2/)\n- [Unicode：代理对与合法编码序列](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/)",
+  "official_site": "https://www.rfc-editor.org/rfc/rfc2781",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm"
+}

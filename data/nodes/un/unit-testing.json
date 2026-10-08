@@ -8,24 +8,23 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "static-analysis-testing-ecosystem"
+    "static-analysis-testing-ecosystem",
+    "software-testing-ecosystem"
   ],
   "domains": [
-    "devops"
+    "devops",
+    "software-testing"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
-    },
-    {
-      "relation_type": "part_of",
-      "target_id": "testing-pyramid"
+      "target_id": "software-testing-concept"
     }
   ],
-  "summary": "隔离验证最小代码单元，快、量多、常跑在本地。",
+  "summary": "验证小范围代码单元在受控输入下的行为。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "单元测试针对一个较小行为单元，在可控输入和环境下检查可观察结果。单元可以是函数、类或紧密协作的少量对象，项目应明确自己的边界，而不是规定所有测试必须只调用一个函数。\n\n隔离外部依赖是常见策略，但 solitary 与 sociable 两类实践对真实协作者的使用不同。应控制不稳定状态和高成本外部交互，避免把是否使用 mock 当成判定单元测试的唯一标准。\n\n单元测试适合提供频繁反馈；覆盖率显示触达范围，断言与变异分析补充观察能力证据。测试金字塔采用单元测试作为一种分布层次建议，单元测试本身不属于该模型的独有组成。\n\n## 参考\n\n- [Martin Fowler：单元测试边界](https://martinfowler.com/bliki/UnitTest.html)\n- [Ham Vocke：测试金字塔实践](https://martinfowler.com/articles/practical-test-pyramid.html)"
 }

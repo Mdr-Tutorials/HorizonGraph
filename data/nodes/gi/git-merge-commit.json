@@ -1,0 +1,34 @@
+{
+  "id": "git-merge-commit",
+  "name": "Git Merge Commit",
+  "aliases": [
+    "Git 合并提交",
+    "多父提交"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git-object-model",
+      "context": "commit 对象的多父提交形态，共用树快照与提交元数据结构"
+    }
+  ],
+  "summary": "记录两个或更多父提交并指向合并结果快照的提交。",
+  "description": "Git 合并提交具有两个或更多父提交，并像普通提交一样指向一个结果树。典型两分支合并记录双方历史汇合，多个父提交可形成 octopus merge；fast-forward 只是移动引用，不因此制造新的合并提交。\n\n提交本身记录合并后的快照及父顺序，不能由父数量判断是否曾发生冲突、由谁解决或测试是否通过。第一父通常是执行合并时原分支的 HEAD；对结果与不同父提交进行比较，能够得到不同的增删行统计。\n\n历史分析应声明保留、排除或如何统计合并。将分支原始提交和合并相对主线的全部差异重复累计，可能重复计入代码变更；combined diff 是特定合并审查视图，不应默认为所有逐父差异的总和。\n\n## 参考\n\n- [Git commit-tree：父提交与提交对象](https://git-scm.com/docs/git-commit-tree)\n- [Pro Git：基本分支与合并](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)\n- [Git diff：合并差异](https://git-scm.com/docs/git-diff)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://git-scm.com/docs/git-commit-tree"
+}

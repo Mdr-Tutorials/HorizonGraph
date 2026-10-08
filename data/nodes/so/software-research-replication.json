@@ -1,0 +1,34 @@
+{
+  "id": "software-research-replication",
+  "name": "Software Research Replication",
+  "aliases": [
+    "软件研究复现",
+    "软件工程重复研究"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reproducible-evaluation-environment",
+      "context": "对可执行软件或性能实验进行计算复现时，采用固定输入、依赖、初态及运行配置的环境，以核查原结果。"
+    }
+  ],
+  "summary": "明确针对既有软件研究设计并报告重复研究。",
+  "description": "软件研究复现是预先计划、明确针对既有研究的重复研究。需要交代原研究、复现动机、团队重叠和所有方法差异；相似主题的新工作或偶然得到相同结果，并不自动成为复现。\n\n术语需说明采用的体系。SIGSOFT Replication 标准把原数据的原分析重做称为 reproduce，把收集新数据再分析称为 replicate；当前 ACM v1.1 结果徽章则侧重独立团队使用作者工件获得结果，或独立于作者工件获得结果的区别。\n\n复现可以保持方法、改变环境或扩展对象，其范围应明确。与原结论一致和不一致都应报告，并检查差异是否来自协议、样本或原始错误；复制功效不足的设计并不会让结论更牢固，也不应要求不同硬件上的绝对耗时逐位相同。\n\n## 参考\n\n- [SIGSOFT：研究复现标准与术语](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Replication.md)\n- [ACM SIGIR：v1.1 工件与结果徽章](https://sigir.org/general-information/acm-sigir-artifact-badging/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Replication.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "software-research-reproducibility",
+  "name": "Software Research Reproducibility",
+  "aliases": [
+    "软件研究可复现性",
+    "软件研究可重复验证性"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    }
+  ],
+  "summary": "让独立研究者依据材料核查软件研究主要结果。",
+  "description": "软件研究可复现性关注独立研究者是否能依据清楚的方法与材料核查主要结果。材料可包括源码、数据、配置、分析脚本和图表生成过程；它是一种研究证据性质，不等同于发行工件逐位一致的可重现构建。\n\n当前 ACM v1.1 的 Results Reproduced 徽章允许独立团队使用部分作者提供的工件得到主要结果，Results Replicated 强调独立于作者工件。其他方法学使用不同术语，因此中文名称与英文 reproduce、replicate 的对应必须注明体系。\n\n开放仓库、环境能启动或获得 Artifacts Available 徽章，都不证明主要结果已经被独立获得。性能数据需要合理容差与统计解释；环境、输入、版本、随机性和原始数据的保存支持核查，但不能自动保证结论有效。\n\n## 参考\n\n- [ACM SIGIR：v1.1 工件与结果徽章](https://sigir.org/general-information/acm-sigir-artifact-badging/)\n- [ACM GECCO 2026：基准与复现范围](https://sigevo.hosting.acm.org/gecco-2026/Track)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://sigir.org/general-information/acm-sigir-artifact-badging/"
+}

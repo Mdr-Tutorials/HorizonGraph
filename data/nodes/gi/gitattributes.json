@@ -1,0 +1,34 @@
+{
+  "id": "gitattributes",
+  "name": "Git Attributes",
+  "aliases": [
+    "Git 路径属性",
+    ".gitattributes"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git",
+      "context": "Git 对路径属性进行匹配，并由差异、合并和检出等子系统消费"
+    }
+  ],
+  "summary": "为路径指定文本、换行、差异与合并等处理属性。",
+  "description": "Git Attributes 为匹配路径声明属性，常用共享入口是 `.gitattributes`。属性可为已设置、未设置、具有字符串值或未指定；它描述路径处理方式，与 `.gitignore` 是否建议跟踪文件是两套机制。\n\n`text`、`eol`、diff 驱动、merge 驱动及过滤器会影响内容规范化或展示。`textconv` 可以把二进制对象转换成便于阅读的文本差异，但该视图通常不可逆，不等于原始文件内容；执行比较时应记录相关驱动和配置。\n\n仓库分析可利用属性标记或第三方约定，但 Git 不会自动解释任意自定义属性为源码语言、生成代码或供应商文件。其他工具对属性名称及优先级有各自定义；复现计数时应同时固定提交版本、属性来源和实际消费者的处理规则。\n\n## 参考\n\n- [Git attributes 手册](https://git-scm.com/docs/gitattributes)\n- [Pro Git：Git 属性](https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://git-scm.com/docs/gitattributes"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "radon",
+  "name": "Radon",
+  "aliases": [
+    "Radon Python 代码指标工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclomatic-complexity",
+      "context": "在 Python AST 上统计各函数控制结构的复杂度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "halstead-metrics",
+      "context": "按 Python 操作符与操作数计数生成 Halstead 系列指标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "maintainability-index",
+      "context": "用声明的规模、复杂度与 Halstead 公式计算指数。"
+    }
+  ],
+  "summary": "从 Python 源码计算复杂度和可维护性指标的工具。",
+  "description": "Radon 是 Python 源码度量工具，提供原始规模统计、圈复杂度、Halstead 度量与 Maintainability Index。CLI 可以输出分级或机器可读结果，程序接口也可供其他工作流使用。\n\n圈复杂度分析基于 Python AST，Halstead 度量使用工具定义的运算符和操作数计数，可维护性指数再按其公式组合指标。原始物理行、源码行、注释及空白统计具有各自含义，不能只把所有字段称为 LOC。\n\nRadon 的字母等级和指数是特定公式及阈值下的摘要，适合在一致配置下寻找审查对象。它不测量实际团队维护成本，也不证明代码没有缺陷；不同工具的公式、注释处理和统计粒度应单独核对。\n\n## 参考\n\n- [Radon：项目与指标范围](https://github.com/rubik/radon)\n- [Radon：指标公式](https://radon.readthedocs.io/en/latest/intro.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/rubik/radon"
+}

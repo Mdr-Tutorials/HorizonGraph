@@ -1,0 +1,42 @@
+{
+  "id": "alacritty",
+  "name": "Alacritty",
+  "aliases": [
+    "Alacritty 终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "opengl",
+      "context": "以 OpenGL 绘制终端字符和显示内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminal-scrollback",
+      "context": "在回滚内容中进行搜索、浏览与选取。"
+    }
+  ],
+  "summary": "以 OpenGL 渲染和简洁配置提供跨平台终端。",
+  "description": "Alacritty 是以 Rust 实现、采用 OpenGL 的终端模拟器，官方列出 BSD、Linux、macOS 和 Windows 支持。它把终端显示与交互作为核心，提供合理默认值并允许配置字体、颜色和键盘行为；终端内运行的 Shell 与命令行程序仍保持独立身份。\n\n内置能力包括 Vi 模式浏览和选取文本、回滚搜索、正则提示以及多窗口。正则提示可以把匹配到的文本变成可操作对象，但不会改变被匹配内容本身。需要持久会话、复杂分屏或其他工作流时，项目倾向于与外部程序配合，不能把多窗口等同于服务端终端复用。\n\n官方目前仍将软件准备程度描述为 beta，广泛日常使用与稳定性承诺并非同一指标。比较性能应限定输出负载、字体、驱动和交互模式；OpenGL 渲染不保证任何机器上都快于其他终端。部署时还要区分编译所用 Rust 工具链与用户运行预编译应用时的实际要求。\n\n## 参考\n\n- [Alacritty：主页与平台](https://alacritty.org/)\n- [Alacritty：功能说明](https://github.com/alacritty/alacritty/blob/master/docs/features.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://alacritty.org/"
+}

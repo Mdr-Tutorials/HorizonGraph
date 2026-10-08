@@ -1,0 +1,28 @@
+{
+  "id": "technical-debt-principal",
+  "name": "Technical Debt Principal",
+  "aliases": [
+    "技术债本金"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-quality",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "技术债条目在所选模型下的形成或偿还成本量。",
+  "description": "技术债本金用于给某项债务的成本基础命名，具体口径应明示。工程管理常用消除或补救该条目的估计工作量表达需要偿还的成本，而研究术语也可能区分 initial principal 与 current principal。\n\nSEI 收录的术语表将初始本金关联到为了短期收益而延后的工作，并讨论随后累积成本对当前本金的影响。给出本金数值时，应标明估计对象、时间点、方案与单位，不能把不同模型中的“本金”直接相加。\n\n例如更换过时接口的迁移与回归验证可以纳入特定补救方案的工作量，保留接口导致每次开发额外适配的成本则另作利息分析。源码异味的默认修复分钟数能够提供局部估计，却不代表整个架构债务的完整本金。\n\n## 参考\n\n- [SEI：技术债术语原文](https://www.sei.cmu.edu/documents/1391/2016_101_001_463905.pdf)\n- [SEI：Reducing Friction in Software Development](https://www.sei.cmu.edu/library/reducing-friction-in-software-development/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.sei.cmu.edu/documents/1391/2016_101_001_463905.pdf"
+}

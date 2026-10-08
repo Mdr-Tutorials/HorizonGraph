@@ -1,0 +1,40 @@
+{
+  "id": "distance-from-main-sequence",
+  "name": "Distance from Main Sequence",
+  "abbreviation": "Dn",
+  "aliases": [
+    "主序列距离",
+    "包抽象度稳定性距离"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-abstractness",
+      "context": "距离公式采用单元的抽象度 A 作为坐标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-instability",
+      "context": "距离公式采用单元的依赖不稳定性 I 作为坐标。"
+    }
+  ],
+  "summary": "衡量抽象度与依赖不稳定性偏离指定平衡线的程度。",
+  "description": "主序列距离基于抽象度 A 与不稳定性 I，在两者坐标中考察点距 A+I=1 这条设计参考线的距离。常见归一化形式 Dn=|A+I−1|；几何垂距则另除以 sqrt(2)，报告必须说明采用哪种定义。\n\nJDepend 的实现对上述绝对差再乘包的 volatility 参数，默认参数为一。因而工具输出可能带有额外配置语义，不能只看到 D 这个名称就认为是统一的几何长度。\n\n该线表达一种抽象与依赖结构的设计启发式，不是所有软件必须满足的正确性条件。基础数据结构、特定平台适配层及生成组件可有合理偏离；接近参考线也不证明职责、测试或运行行为良好。\n\n## 参考\n\n- [Martin：主序列设计模型](https://linux.ime.usp.br/~joaomm/mac499/arquivos/referencias/oodmetrics.pdf)\n- [JDepend：归一化绝对差及volatility](https://github.com/clarkware/jdepend/blob/master/src/jdepend/framework/JavaPackage.java)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://linux.ime.usp.br/~joaomm/mac499/arquivos/referencias/oodmetrics.pdf"
+}

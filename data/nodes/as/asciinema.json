@@ -1,0 +1,43 @@
+{
+  "id": "asciinema",
+  "name": "asciinema CLI",
+  "aliases": [
+    "asciinema",
+    "asciinema 录制器"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-recording"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asciicast",
+      "context": "将终端输出、时间和其他事件保存为所用版本的 asciicast 文件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudoterminal",
+      "context": "在录制过程中用 PTY 承载和观察被录制程序的终端交互。"
+    }
+  ],
+  "summary": "记录、重放和直播终端输出的命令行工具。",
+  "description": "asciinema CLI 是终端会话录制、重放和直播工具，通常把程序输出及时间信息保存为 asciicast 文件。它记录终端数据而不是逐帧拍摄整个桌面，因此录制可以在终端或网页播放器中重放，也可保留可选取的文本。\n\n录制器在终端内运行，并用 PTY 连接被录制程序，记录输出和相关事件。asciicast 与播放器、托管网站分别具有独立身份；保存本地 .cast 文件不要求先上传网站，分享或直播才涉及相应服务端与网络条件。\n\n录制范围和格式版本要按所用 CLI 核查，键盘输入录制是需要明确选择的能力，输出也可能包含凭据或其他私密信息。重放显示已录制的行为，不会重新执行当时的命令，也不证明业务结果正确。视频或 GIF 转换是额外的呈现路径，原始事件文件与像素影片可保留的信息不同。\n\n## 参考\n\n- [asciinema：CLI 手册](https://docs.asciinema.org/manual/cli/)\n- [asciinema：工作机制](https://docs.asciinema.org/how-it-works/)\n- [asciinema：快速开始](https://docs.asciinema.org/manual/cli/quick-start/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://docs.asciinema.org/manual/cli/"
+}

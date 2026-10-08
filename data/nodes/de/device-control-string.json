@@ -1,0 +1,34 @@
+{
+  "id": "device-control-string",
+  "name": "Device Control String",
+  "aliases": [
+    "设备控制字符串"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ecma-48"
+    }
+  ],
+  "summary": "以明确的引入与终止封装设备控制请求及数据载荷。",
+  "description": "DCS 是 ECMA-48 的设备控制字符串功能，常用七位形式由 ESC 与字母 P 引入，并由 ST 结束。它允许终端方言定义带参数的控制请求或数据载荷。DCS 属于控制字符串框架，不能只凭前缀判断某一图片格式或任意一项终端功能。\n\nDEC 与 xterm 传统中的状态字符串请求、能力查询和 Sixel 图片等采用各自 DCS 子格式，参数及中间、最终标记区分实际操作。解析器需要先识别子格式再消费载荷，并遵守取消和终止规则。查询回复也可能通过同一框架返回到应用的输入流。\n\nDCS、OSC 与 APC 是不同的字符串功能，不能因为都携带一段数据就互相替代。Kitty 图像协议选择 APC 的 ESC _ G 封装，Sixel 采用 DCS。支持一个 DCS 命令不保证实现整个方言，也不代表允许客户端访问本地资源或任意发送无限载荷。\n\n## 参考\n\n- [ECMA-48：控制功能原始标准](https://ecma-international.org/wp-content/uploads/ECMA-48_5th_edition_june_1991.pdf)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)\n- [Kitty：图像协议原始规范](https://sw.kovidgoyal.net/kitty/graphics-protocol/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://ecma-international.org/wp-content/uploads/ECMA-48_5th_edition_june_1991.pdf",
+  "abbreviation": "DCS"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "vte",
+  "name": "VTE",
+  "aliases": [
+    "VTE 终端组件",
+    "Virtual TErminal"
+  ],
+  "type": "library",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudoterminal",
+      "context": "通过 Pty 接口连接宿主的终端 widget 与子进程会话。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gtk",
+      "context": "向 GTK 宿主提供 Terminal widget；GTK3 与 GTK4 变体按各自接口与库版本接入，不能视为同一 ABI。"
+    }
+  ],
+  "summary": "供 GTK 应用嵌入终端显示和会话交互的组件库。",
+  "description": "VTE 是 GNOME 的 Virtual TErminal 组件库，供 GTK 应用嵌入终端。其 Terminal widget 提供输出解析、字符呈现和交互能力，Pty 类型表达会话使用的伪终端；GNOME Terminal 等应用在组件之上组织窗口、profile 与桌面行为。\n\n公开接口覆盖子进程启动、输入输出、选择、回滚与终端属性等场景，宿主仍要处理自身的生命周期、设置和权限。VT 流与普通文本的解释方式不同，显示一段输出可能涉及控制序列和屏幕状态更新；不能把终端 widget 当作只会展示字符串的通用文本框。\n\n官方分别提供 GTK 3 与 GTK 4 API 文档，应按目标工具包和实际库版本选用接口。组件身份、ABI 名称和整个桌面应用不是同一个对象；某一方法被废弃也不代表整个 VTE 项目已停止维护。第三方绑定的支持范围也要与库本身区分。\n\n## 参考\n\n- [GNOME：VTE GTK 4 API](https://gnome.pages.gitlab.gnome.org/vte/gtk4/index.html)\n- [GNOME：Terminal widget](https://gnome.pages.gitlab.gnome.org/vte/gtk4/class.Terminal.html)\n- [GNOME：GTK 3 API](https://gnome.pages.gitlab.gnome.org/vte/gtk3/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://gnome.pages.gitlab.gnome.org/vte/gtk4/index.html",
+  "abbreviation": "VTE"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "estraverse",
+  "name": "Estraverse",
+  "aliases": [
+    "ECMAScript AST 遍历器"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "estree",
+      "context": "按 ECMAScript AST 的节点接口遍历子结构；方言扩展需提供 visitor keys。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "访问和替换已有语法节点，为上层检查与转换收集或修改结构。"
+    }
+  ],
+  "summary": "通过访问者遍历和替换 ECMAScript 语法树。",
+  "description": "Estraverse 是针对 ECMAScript AST 的遍历与替换库。traverse 使用 enter 与 leave 回调访问节点，replace 允许访问者返回替代节点；跳过子树、提前停止和移除节点属于遍历控制，而非执行源码。\n\n访问规则根据节点类型和子字段组织，可以用 visitor keys 扩充已知节点，并通过 fallback 处理未知结构。上层工具必须为方言或解析器私有节点确定规则，不能默认所有 Babel、SWC 或自定义树都直接兼容。\n\n该库接受已有 AST，不负责解析源码或推断变量类型。它与原 estraverse 分支包的身份也需要区分；历史提交频率不直接构成项目被官方废弃的证据。\n\n## 参考\n\n- [Estraverse：官方接口](https://github.com/estools/estraverse)\n- [Estraverse：包声明](https://github.com/estools/estraverse/blob/master/package.json)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/estools/estraverse"
+}

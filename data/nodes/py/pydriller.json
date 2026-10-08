@@ -1,0 +1,47 @@
+{
+  "id": "pydriller",
+  "name": "PyDriller",
+  "aliases": [
+    "PyDriller仓库挖掘库"
+  ],
+  "type": "library",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "repository-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-churn",
+      "context": "通过 CodeChurn 按指定新增、删除口径统计提交窗口内的文件变化。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "changeset-size",
+      "context": "通过 ChangeSet 统计提交共同修改的文件数及窗口内平均值、最大值。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "change-frequency",
+      "context": "通过 CommitsCount 在已选历史范围内累计文件被修改的提交次数。"
+    }
+  ],
+  "summary": "以 Python API 遍历 Git 提交并分析文件变更。",
+  "description": "PyDriller 为 Python 提供 Git 仓库挖掘 API，可遍历本地或指定远程仓库的提交并读取修改文件。提交对象包含作者、提交者、时间、父节点和变化规模；框架也提供过程度量与源码分析信息。\n\nRepository 的筛选参数限定提交、日期、分支或文件范围，过程度量可累计文件修改次数、变化行及变更集大小。分析脚本应固定工具版本和遍历范围，不能把所见提交自然当作完整开发过程。\n\n作者与提交者必须区分，合并和重命名处理也会影响输出。它能整理观测数据，但不自动确认缺陷因果或人员绩效；需要核对源码计量的语言支持、缺失值及所用统计函数定义。\n\n## 参考\n\n- [PyDriller：官方项目](https://github.com/ishepard/pydriller)\n- [PyDriller：提交字段](https://pydriller.readthedocs.io/en/latest/commit.html)\n- [PyDriller：过程度量](https://pydriller.readthedocs.io/en/latest/processmetrics.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/ishepard/pydriller"
+}

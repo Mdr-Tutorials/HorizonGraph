@@ -1,0 +1,37 @@
+{
+  "id": "zellij",
+  "name": "Zellij",
+  "aliases": [
+    "Zellij 终端工作区"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-multiplexing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudoterminal",
+      "context": "为工作区窗格中的命令行进程组织终端会话，实际后端按平台实现。"
+    }
+  ],
+  "summary": "以窗格、标签、布局和插件组织持久终端工作区。",
+  "description": "Zellij 是终端工作区与复用器，提供标签、窗格、布局和会话管理。它运行在终端内，用终端界面组织多个程序；终端模拟器负责桌面显示，Zellij 负责自己的工作区，窗格内的 Shell 则执行用户命令。\n\n用户可以定义布局并通过 CLI 管理工作区，插件为状态显示和交互增加能力。会话脱离、恢复以及其他扩展应按使用的版本和配置核查，不能把保存布局文件等同于所有子进程均可跨宿主重启恢复。插件运行边界与底层进程访问权限也需要分别理解。\n\n截至 2026-10-08 官方主页已列 Linux、macOS 与 Windows 下载入口，不应沿历史说明将平台范围固定为仅 Unix。项目另外提供处于 beta 的托管会话共享服务，开源本地程序与托管服务分别有部署及权限边界；普通本地复用不要求购买或连接该服务。\n\n## 参考\n\n- [Zellij：官方主页](https://zellij.dev/)\n- [Zellij：用户手册](https://zellij.dev/documentation/)\n- [Zellij：项目仓库](https://github.com/zellij-org/zellij)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://zellij.dev/"
+}

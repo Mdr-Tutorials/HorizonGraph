@@ -1,0 +1,81 @@
+{
+  "id": "tern-js",
+  "name": "Tern",
+  "aliases": [
+    "TernJS",
+    "Tern JavaScript 分析器",
+    "Tern JavaScript分析器"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "acorn"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "acorn-walk"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "acorn-loose"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "tern-query-protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "language-server"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "constraint-based-type-inference",
+      "context": "用抽象值和约束传播源码中观测到的类型，为 JavaScript 编辑查询提供推断结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "incremental-analysis",
+      "context": "服务维护变化中的文件集合并更新相关分析；不据此断言采用 Tree-sitter 式增量语法树。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-completion",
+      "context": "依据当前文件、位置、作用域和推断类型返回编辑候选。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go-to-definition",
+      "context": "definition 查询定位声明来源，并受当前项目文件和插件支持范围限制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "find-references",
+      "context": "refs 查询查找服务能够识别的符号引用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rename-refactoring",
+      "context": "rename 查询返回对可识别变量引用的修改集合，不承诺任意动态属性重构。"
+    }
+  ],
+  "summary": "通过类型传播为 JavaScript 编辑器提供代码智能。",
+  "description": "Tern 是 JavaScript 代码分析器，包含推断引擎、维护项目文件的服务层和编辑器接入。它从源码中的声明、赋值与调用收集类型信息，支持补全、类型查询、定义定位、引用查询及有限重命名；本节点与同名容器 SBOM 工具 Tern 分开。\n\n推断引擎在 AST 上建立作用域和抽象值，通过约束传播类型；定义文件及插件补充浏览器、Node.js、模块和文档注释信息。源码中未出现的调用或动态属性可能缺乏类型证据，部分结果采用启发式猜测，不能将编辑辅助推断当作完整静态类型验证。\n\n服务可在 Node.js 中以独立进程提供自有 JSON 查询，也可嵌入应用。CodeMirror 5 提供可选 Tern addon，不能由此推导 CodeMirror 6 内置 Tern。自有协议不等于 LSP，现存项目和历史使用场景也不构成官方废弃声明。\n\n## 参考\n\n- [Tern：组件、查询与插件](https://ternjs.github.io/doc/manual.html)\n- [Tern：推断算法与服务设计](https://marijnhaverbeke.nl/blog/tern.html)\n- [Tern：实际包依赖](https://github.com/ternjs/tern/blob/master/package.json)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://ternjs.github.io/doc/manual.html"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "espree",
+  "name": "Espree",
+  "aliases": [
+    "ESLint JavaScript 解析器"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "acorn"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "estree"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "parser"
+    }
+  ],
+  "summary": "基于 Acorn 为 ESLint 提供兼容语法树的解析库。",
+  "description": "Espree 是 ESLint 生态使用的 JavaScript 解析库，提供 AST、tokens、注释及遍历键等信息。它最初来自 Esprima 分支，从 2.0 起采用建立在 Acorn 之上的兼容层；当前实现不能写成仍依赖 Esprima。\n\n当前依赖包括 Acorn、acorn-jsx 和 eslint-visitor-keys，解析选项决定 ECMAScript 语法代际、上下文及 JSX 支持。它保留 ESLint 所需的树和 token 行为，但不包含 ESLint 的全部检查规则与配置系统。\n\nEspree 是解析器，而非 lint 规则引擎或类型检查器。旧独立仓库归档是迁入 eslint/js 单仓库的托管调整，不构成项目废弃；读取依赖和源代码时应使用当前包路径。\n\n## 参考\n\n- [Espree：当前官方说明](https://github.com/eslint/js/blob/main/packages/espree/README.md)\n- [Espree：当前依赖](https://github.com/eslint/js/blob/main/packages/espree/package.json)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/eslint/js/blob/main/packages/espree/README.md"
+}

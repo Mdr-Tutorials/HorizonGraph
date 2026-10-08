@@ -1,0 +1,33 @@
+{
+  "id": "coverage-instrumentation",
+  "name": "Coverage Instrumentation",
+  "aliases": [
+    "覆盖率插桩",
+    "覆盖插桩"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "control-flow-analysis",
+      "context": "选择控制流探针位置，并从探针结果恢复执行过的分支。"
+    }
+  ],
+  "summary": "通过探针或计数器采集代码执行与覆盖事件。",
+  "description": "覆盖率插桩在源码、编译中间表示、字节码或装载阶段加入执行记录逻辑，使测试运行能够输出计数或事件。探针的位置与映射决定报告能回答行、区域、分支或条件的哪些问题。\n\nGCC 的覆盖编译选项使程序产生执行数据；JaCoCo 可通过 Java agent 在类加载时加入探针；Istanbul 可预先改写 JavaScript。运行时内建事件采集也是覆盖实现路径，但无需假设所有工具都重写用户源码。\n\n探针会带来运行开销和构建差异，优化、宏展开、生成代码及源码映射也会影响解释。应确保执行数据与对应二进制和源码版本一致，并单独验证原始构建的行为与性能。\n\n## 参考\n\n- [GCC：插桩编译选项](https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html)\n- [JaCoCo：探针与控制流分析](https://www.jacoco.org/jacoco/trunk/doc/flow.html)\n- [Istanbul：源码插桩](https://istanbul.js.org/docs/advanced/instrument/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://gcc.gnu.org/onlinedocs/gcc/Instrumentation-Options.html"
+}

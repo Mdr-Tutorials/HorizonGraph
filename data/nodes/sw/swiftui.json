@@ -1,0 +1,38 @@
+{
+  "id": "swiftui",
+  "name": "SwiftUI",
+  "aliases": [
+    "SwiftUI 框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "swift",
+      "context": "SwiftUI 应用的声明式公开编程接口采用 Swift 语言类型与 View 协议。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple",
+      "context": "由 Apple 提供并随相应系统 SDK 交付。"
+    }
+  ],
+  "summary": "用声明式视图、状态与场景构建 Apple 平台界面的框架。",
+  "description": "SwiftUI 是 Apple 的声明式界面框架，应用描述场景、视图层级、布局及所显示的数据，框架据状态变化更新界面。它用于多个 Apple 平台，具体控件行为和系统整合会依据目标平台与系统版本变化。\n\n开发者通过 View 组合、修饰器与状态管理建立界面，应用生命周期通过场景表达。需要传统框架能力时可使用正式桥接：macOS 的 NSViewRepresentable 负责创建、更新和清理包装的 AppKit 视图。\n\n声明式描述不免除线程、数据流和组件生命周期管理，也不保证任意功能都具有相同的跨平台支持。SwiftUI 与 AppKit 可协作，但不能把两者视为同一框架；某应用采用 SwiftUI 组织标签页，也不能直接推断其终端正文渲染实现。\n\n## 参考\n\n- [Apple SwiftUI 应用设计](https://developer.apple.com/documentation/technologyoverviews/swiftui)\n- [AppKit 视图与 SwiftUI 互操作](https://developer.apple.com/documentation/swiftui/nsviewrepresentable)",
+  "official_site": "https://developer.apple.com/documentation/technologyoverviews/swiftui",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

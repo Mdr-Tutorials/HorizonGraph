@@ -1,0 +1,65 @@
+{
+  "id": "tokei",
+  "name": "Tokei",
+  "aliases": [
+    "代码计数器 Tokei",
+    "tokei"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem",
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-line-counting"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rust",
+      "context": "程序与库以 Rust 实现，源码构建使用 Rust 工具链；预编译 CLI 运行不要求编译器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "报告符合对应语言规则的 Code 物理行统计。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "embedded-language-counting",
+      "context": "对支持的嵌入语法保留子语言代码块统计，并在汇总时递归合并。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-count-snapshot",
+      "context": "输出存储格式并通过 --input 将已有统计加入当前结果；调用者负责输入集合不重叠。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-language-detection",
+      "context": "用语言定义选择文件及其片段的计数规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-counting-scope",
+      "context": "按输入路径、忽略文件、隐藏文件和排除选项限定统计集合。"
+    }
+  ],
+  "summary": "Rust 实现的多语言源码统计工具与可嵌入库。",
+  "description": "Tokei 用 Rust 实现源码统计，按语言汇总文件、总行、代码、注释和空白，也可用 --files 查看文件明细。项目同时暴露库 API，使其他 Rust 程序可使用语言识别和计数能力。\n\n计数规则处理字符串、跨行与嵌套注释等边界，适用语言还能保存内嵌片段的子块统计。目录输入通常遵循忽略文件，隐藏文件与额外排除规则由选项控制；支持范围应按实际语言定义和版本核对。\n\n核查的 v15 构建将 JSON 序列化依赖默认包含，JSON 输出可用；YAML、CBOR 等额外格式取决于编译 features。旧 README 的无序列化提示不能泛化到当前 JSON。--input 将存储统计加到当前运行，属于合并而非历史差分或自动去重；比较源码快照应另行保存范围和修订。\n\n## 参考\n\n- [Tokei 官方项目](https://github.com/XAMPPRocky/tokei)\n- [Tokei 官方库文档](https://docs.rs/tokei/latest/tokei/)\n- [Tokei 序列化 feature 定义](https://github.com/XAMPPRocky/tokei/blob/master/Cargo.toml)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/XAMPPRocky/tokei"
+}

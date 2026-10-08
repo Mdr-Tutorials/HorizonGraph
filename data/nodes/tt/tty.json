@@ -1,0 +1,39 @@
+{
+  "id": "tty",
+  "name": "TTY",
+  "aliases": [
+    "终端设备接口"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "line-discipline",
+      "context": "Linux TTY 层通过附接的行规程组织字符接收、规范输入与终端设置。"
+    }
+  ],
+  "summary": "为字符终端提供设备访问、输入处理和作业控制语义。",
+  "description": "TTY 是 Unix 系统对字符终端设备及其接口语义的传统称呼，来源于电传打字机。它可以连接串行设备、内核控制台或伪终端，而不等于某个图形终端应用。程序常通过文件描述符访问终端，其行为会受到输入输出设置、行规程与会话关联影响。\n\nLinux 的 TTY 层在驱动与上层应用之间组织字符传输和行规程。规范输入可以提供行编辑与整行提交；信号字符和流量控制也在适用配置下由该层处理。应用可以查询并调整 termios 参数，不能把一次普通文件读取的语义无条件套用到终端设备。\n\n设备路径的含义需要区分：Linux /dev/tty 表示调用进程的控制终端，而不是系统中固定编号的终端窗口；没有控制终端时不能凭该路径获得一个。进程标准输入输出是否重定向，与它是否仍有关联的控制终端，也是两个独立问题。\n\n## 参考\n\n- [Linux 内核：TTY 驱动](https://docs.kernel.org/driver-api/tty/tty_driver.html)\n- [Linux man-pages：控制终端设备](https://man7.org/linux/man-pages/man4/tty.4.html)\n- [Linux man-pages：termios 接口与输入模式](https://man7.org/linux/man-pages/man3/termios.3.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://docs.kernel.org/driver-api/tty/tty_driver.html",
+  "abbreviation": "TTY"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "technical-debt-ratio",
+  "name": "Technical Debt Ratio",
+  "aliases": [
+    "技术债比率",
+    "技术债务比率"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-quality",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "remediation-effort",
+      "context": "汇总模型识别的维护性问题修复工作量，作为比率分子。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "Sonar 模型将其计入的非注释物理代码行乘以配置的每行开发成本，作为估计开发成本分母。"
+    }
+  ],
+  "summary": "用估计修复成本与估计开发成本之比表达工具债务。",
+  "description": "技术债比率在 Sonar 的度量模型中等于估计修复成本除以估计开发成本。分子汇总维护性问题的修复工作量，分母通常由工具计入的代码行数乘以每行开发成本构成。\n\n每行成本是可配置参数，而非从开发者真实工时自动推导。百分比和评级因此依赖源码计数、规则与修复成本模型；项目或工具间比较时，需要一起记录这些参数及整体代码或新代码范围。\n\n这个比率帮助观察特定静态分析模型中的相对修复负担，不是所有技术债的普遍估价。架构迁移、未知缺陷和运行影响未必进入分子，默认成本也不能用于推断实际人效或财务账单。\n\n## 参考\n\n- [Sonar：度量定义](https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition)\n- [Sonar：可配置的成本与评级参数](https://docs.sonarsource.com/sonarqube-server/instance-administration/analysis-functions/metrics-parameters)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition"
+}

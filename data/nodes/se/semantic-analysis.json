@@ -19,21 +19,33 @@
       "relation_type": "uses",
       "target_id": "ast",
       "context": "在语法树上检查声明、表达式类型和语言约束，并添加语义信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "name-resolution",
+      "context": "依作用域、声明和语言查找规则把名称引用绑定到相应实体。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "类型检查路径结合表达式与上下文推导所需类型，具体模型依语言实现决定。"
     }
   ],
   "summary": "在语法结构上验证名称、类型与语言约束。",
-  "description": "语义分析把名称绑定到声明，检查表达式类型、作用域及其他语言规则，并为程序结构补充解析后的语义信息。在 Clang 中 Parser 与 Sema 协作构造有语义属性的 AST，而不是要求所有编译器都具有严格独立的先后阶段。\n\n语言服务可利用这些信息提供诊断、补全、符号导航与语义重命名；跨文件工具还需结合索引和正确的项目配置。当前文档、宏与依赖变化会影响分析结果，支持编辑过程的工具需要维护相应版本和状态，不能把一个旧索引结果当作完整当前程序。\n\n这里的语义分析是语言规则和实体绑定层面的分析，与按自然语言含义召回代码的语义搜索不同。语法合法并不保证类型合法，静态检查的保证范围也依语言设计而定；分析成功不自动证明无运行时错误或符合业务需求。\n\n## 参考\n\n- [Clang：Parser、Sema 与 AST 的协作](https://clang.llvm.org/docs/InternalsManual.html)\n- [Clang：抽象语法树、类型与源码位置](https://clang.llvm.org/docs/IntroductionToTheClangAST.html)\n- [clangd：导航、补全与语义重构](https://clangd.llvm.org/features)\n- [VS Code：仓库上下文、索引与搜索工具](https://code.visualstudio.com/docs/agents/reference/workspace-context)",
+  "description": "语义分析依据语言规则把名称关联到声明，检查表达式类型、作用域和其他约束，并为程序结构补充相应信息。Clang 的 Parser 与 Sema 可以协作构造语义 AST，不要求所有语言实现严格划分为一次性先后阶段。\n\n名称解析、符号表和类型推断共同支持诊断、补全、导航与重构，跨文件查询还要结合正确项目和索引。编辑中的源码、宏、依赖及配置变化可能使旧信息失效，语言服务需按实际更新策略保持分析上下文。\n\n这里的语义指语言实体和约束，与自然语言向量召回或模型代码生成不同。语法合法不证明类型合法，静态检查成功也不证明无运行时缺陷；不同分析器的保证范围需结合语言规则和动态行为假设判断。\n\n## 参考\n\n- [Clang：Parser 与 Sema](https://clang.llvm.org/docs/InternalsManual.html)\n- [TypeScript：绑定和检查架构](https://github.com/microsoft/TypeScript/wiki/Architectural-Overview)\n- [clangd：符号索引层次](https://clangd.llvm.org/design/indexing)",
   "importance": 4,
   "official_site": "https://clang.llvm.org/docs/InternalsManual.html",
   "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "language-tooling-ecosystem"
   ],
   "domains": [
     "compilers",
     "developer-environments",
-    "ai-assisted-software-engineering"
+    "ai-assisted-software-engineering",
+    "language-tooling"
   ]
 }

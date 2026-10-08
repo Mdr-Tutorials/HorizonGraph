@@ -1,0 +1,37 @@
+{
+  "id": "ekstazi",
+  "name": "Ekstazi",
+  "aliases": [
+    "Java 回归测试选择工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "test-selection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-impact-analysis",
+      "context": "以动态文件依赖及变化检查确定 Java 回归测试的重新运行范围。"
+    }
+  ],
+  "summary": "依据动态文件依赖选择受变更影响的 Java 测试。",
+  "description": "Ekstazi 是 Java 回归测试选择工具，记录测试与动态文件依赖，以识别代码变化后可以跳过或需要重跑的测试。它用于降低重复验证成本，区别于仅对所有测试重新排序。\n\n原始研究采用文件级依赖及变化检查，在具体模型下进行选择。项目提供 Maven 等运行入口，现代 JDK 的附加权限参数和实际支持的测试框架组合需按官方列出的配置核验。\n\n文件依赖无法无条件表达任意环境变化，未知资源、配置和框架动态行为需要考虑保守验证。工具选择后跑的子集结果也不能直接代表当前完整测试集的覆盖，应保存依赖与版本证据。\n\n## 参考\n\n- [Ekstazi 官方仓库](https://github.com/gliga/ekstazi)\n- [Ekstazi：动态文件依赖原始论文](https://users.ece.utexas.edu/~gligoric/papers/GligoricETAL15Ekstazi.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/gliga/ekstazi"
+}

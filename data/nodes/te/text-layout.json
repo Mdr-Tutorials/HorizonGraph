@@ -1,0 +1,36 @@
+{
+  "id": "text-layout",
+  "name": "Text Layout",
+  "aliases": [
+    "文本布局",
+    "文字排版布局"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering",
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem",
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "theoretical",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "text-shaping",
+      "context": "复杂文字布局流水线借助塑形取得字形及推进量，再结合宽度与段落规则安排各行；塑形本身不提供完整段落布局。"
+    }
+  ],
+  "summary": "把文本与字形按行、段落和可用空间安排位置的过程。",
+  "description": "文本布局把字符内容、样式、字体信息与可用空间组织为可呈现的行和段落。它处理换行、基线、对齐、行距及逻辑位置到视觉位置的映射，结果可供后续绘制、光标定位或命中测试使用。\n\n塑形解决书写系统相关的字符到字形与相对定位，布局还要按行宽和段落规则选择断点并安排各行。PangoLayout 提供段落级接口，Core Text 的 typesetter 与 framesetter 组织行和文本框，DirectWrite 的文本布局对象关联文本块与分段格式。\n\n完整流水线的阶段可能由同一个库组合实现，但字形生成、段落布局和栅格化仍是不同职责。终端可以采用固定单元格约束组织内容，其光标、宽度与重排规则不自动等于通用段落布局；使用某字体 API 也不足以证明应用采用该库的全部布局层。\n\n## 参考\n\n- [Pango 段落布局 API](https://docs.gtk.org/Pango/class.Layout.html)\n- [Apple Core Text typesetter](https://developer.apple.com/documentation/coretext/cttypesetter)\n- [Microsoft 文本格式与布局](https://learn.microsoft.com/en-us/windows/win32/directwrite/text-formatting-and-layout)",
+  "official_site": "https://docs.gtk.org/Pango/class.Layout.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -1,0 +1,42 @@
+{
+  "id": "test-adequacy",
+  "name": "Test Adequacy",
+  "aliases": [
+    "测试充分性"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-coverage",
+      "context": "以明确结构准则和代码范围判断测试集触达情况。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutation-score",
+      "context": "在已声明算子和有效变异集合下检查测试能否检出代表性改动。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-oracle",
+      "context": "充分性判断需结合判定规则，确认触达代码时是否验证了预期行为。"
+    }
+  ],
+  "summary": "根据明确准则判断测试集是否满足验证要求。",
+  "description": "测试充分性讨论给定测试集是否满足事先明确的要求集合，例如需求场景、输入分区、结构覆盖或变异检出。充分性始终相对于准则与分析范围，不是可脱离语境的绝对质量标签。\n\n结构覆盖可以揭示未触达的实现部分，变异分析则检查断言是否能发现指定改动。二者提供不同证据；即使均达到阈值，遗漏的需求、错误判定或不适当的模拟环境仍可能留下缺陷。\n\n定义完成条件时应记录风险、准则、可行性、输入空间、判定方式与未满足项的理由。对某个有限准则充分，不等于已经测试所有输入或证明程序正确。\n\n## 参考\n\n- [NASA：MC/DC 实践教程](https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf)\n- [Ammann 与 Offutt：软件测试教材官网](https://www.albany.edu/faculty/offutt/softwaretest/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf"
+}

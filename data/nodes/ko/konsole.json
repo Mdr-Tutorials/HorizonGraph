@@ -1,0 +1,42 @@
+{
+  "id": "konsole",
+  "name": "Konsole",
+  "aliases": [
+    "KDE 终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "qt",
+      "context": "Konsole 用 Qt 构建桌面终端界面和交互。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminal-scrollback",
+      "context": "保存并搜索当前终端会话中滚离可视区域的输出。"
+    }
+  ],
+  "summary": "KDE 的多标签终端，提供 profile、搜索与桌面集成。",
+  "description": "Konsole 是 KDE 的终端模拟器，承载命令行 Shell 和其他终端程序，提供标签、窗口与分屏等桌面交互。它的图形界面与其运行的命令行程序分别建模；启动 SSH 或 GNU Screen 的 profile 是指定命令入口，不会把这些工具变成所有会话的依赖。\n\nprofile 保存启动命令、字体、颜色和键盘等设置。回滚搜索、输出保存、活动监视和书签帮助管理工作，语义 Shell 集成则让终端理解部分命令边界。回滚或保存输出记录的是终端展示信息，不等同于完整的进程检查点或可验证审计。\n\nKonsole 使用 Qt 与 KDE 的桌面基础设施，独立应用与可被其他程序使用的终端组件具有不同接入方式。官方应用页也列出其他平台的开发安装器，应按稳定发行和 nightly 范围检查平台支持；不能把某一桌面的默认终端位置理解为整个 Linux 的统一规定。\n\n## 参考\n\n- [KDE：Konsole 应用](https://apps.kde.org/konsole/)\n- [KDE：Konsole 手册](https://docs.kde.org/stable_kf6/en/konsole/konsole/index.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://apps.kde.org/konsole/"
+}

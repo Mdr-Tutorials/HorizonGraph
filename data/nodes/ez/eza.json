@@ -1,0 +1,37 @@
+{
+  "id": "eza",
+  "name": "eza",
+  "aliases": [
+    "eza 文件列表工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "command-line-interface"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "启用 Git 相关选项且目录处于仓库中时，读取并展示文件的版本控制状态。"
+    }
+  ],
+  "summary": "以颜色、树形布局和元数据显示目录内容的工具。",
+  "description": "eza 是列出文件与目录的命令行工具，定位于现代的 ls 替代选择。它可以展示权限、大小、时间以及目录结构，提供彩色输出、图标和树形布局等选项；这些呈现能力属于应用输出，不改变文件系统的真实对象或权限。\n\n显示列、排序、递归深度和忽略规则都由调用参数决定，可选 Git 状态还能附加版本控制信息。图标依赖使用者字体和终端呈现条件，因此不能把支持图标写成所有终端必然显示一致，也不能只凭彩色文件名判断文件是否安全。\n\neza 由维护社区继续发展，与其历史来源 exa 的项目身份需要区分。它提供自己的接口和功能，并非保证所有 ls 选项与输出完全兼容；面向脚本的目录处理应选择稳定且明确的输出约定，而不依赖给人阅读的列布局。\n\n## 参考\n\n- [eza：项目主页](https://eza.rocks/)\n- [eza：README](https://github.com/eza-community/eza)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://eza.rocks/"
+}

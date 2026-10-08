@@ -1,0 +1,40 @@
+{
+  "id": "fd-find",
+  "name": "fd",
+  "aliases": [
+    "fd-find",
+    "fdfind",
+    "fd 文件查找器"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regex",
+      "context": "默认以正则表达式匹配文件系统条目名称；glob 与固定字符串模式另有选项。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-option",
+      "context": "通过类型、深度、隐藏文件、忽略规则和执行选项限定搜索与后续操作。"
+    }
+  ],
+  "summary": "提供便捷默认行为的递归文件名搜索工具。",
+  "description": "fd 是用于寻找文件系统条目的命令行工具，提供简洁的模式输入和递归目录遍历。它重点覆盖常见文件名搜索场景，而不追求完整实现 find 的全部表达式与操作；发行版也可能以 fdfind 名称安装命令。\n\n默认模式按正则表达式解释，也可显式选择 glob 或固定字符串。智能大小写、隐藏文件过滤和忽略规则构成其默认搜索体验，路径、扩展名、类型和深度选项用于缩小范围；这些默认值会影响为什么某个实际存在的文件没有返回。\n\nfd 提供逐结果执行和批量执行程序的方式，执行并行度应按相关选项控制。路径查找与内容查找是不同功能，不能把 fd 等同 ripgrep；默认忽略文件也不构成访问权限边界，必要时应按需求显式调整隐藏与忽略设置。\n\n## 参考\n\n- [fd 官方项目与用法](https://github.com/sharkdp/fd)\n- [fd 命令手册](https://github.com/sharkdp/fd/blob/master/doc/fd.1)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/sharkdp/fd"
+}

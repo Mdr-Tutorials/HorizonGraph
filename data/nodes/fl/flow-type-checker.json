@@ -1,0 +1,48 @@
+{
+  "id": "flow-type-checker",
+  "name": "Flow",
+  "aliases": [
+    "Flow 类型检查器",
+    "Flowtype"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "type-inference"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "对纳入项目与配置范围的 JavaScript 源码执行静态类型检查。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "control-flow-analysis",
+      "context": "利用分支测试和更新行为细化变量类型，并在相关写入或调用后使细化失效。"
+    }
+  ],
+  "summary": "静态分析 JavaScript 的类型与控制流细化的检查器。",
+  "description": "Flow 是 JavaScript 静态类型检查器，通过类型注解、推断和库定义检查程序中值的使用。它可以维护项目状态并向开发工具报告诊断；这里与心流概念及其他同名语言分别消歧。\n\nFlow 根据条件测试细化联合类型，追踪赋值、属性和调用可能使细化失效的情形。与 TypeScript 共享部分表面语法和类型术语，但类型兼容、模块边界及细化失效规则需要按各自语义比较，不能当作可互换检查器。\n\n类型语法需要由相应转换工具移除后交给 JavaScript 运行环境；移除注解本身不会执行 Flow 检查。静态结果受项目配置、声明和所支持的程序模式限制，也不能代替外部数据校验、授权或运行测试。\n\n## 参考\n\n- [Flow：官方文档](https://flow.org/en/docs/)\n- [Flow：控制流细化](https://flow.org/en/docs/lang/refinements/)\n- [Flow：与 TypeScript 的边界](https://flow.org/en/docs/flow-vs-typescript/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://flow.org/en/docs/"
+}

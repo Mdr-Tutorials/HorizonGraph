@@ -1,0 +1,38 @@
+{
+  "id": "rename-refactoring",
+  "name": "Rename Refactoring",
+  "aliases": [
+    "符号重命名",
+    "语义重命名重构"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "find-references",
+      "context": "收集能够识别为同一符号的声明、定义和引用，为协调修改计算位置集合。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "name-resolution",
+      "context": "根据作用域和符号身份判断修改对象，并避免把无关同名实体并入重命名。"
+    }
+  ],
+  "summary": "保持符号身份关联地修改声明及可识别引用。",
+  "description": "符号重命名重构为选定语言实体选择新名称，并协调修改其声明、定义及可识别引用。它以符号身份为目标，区别于把所有同名文本、注释或字符串无条件替换。\n\n语言服务先判断选中对象能否重命名，再收集编辑位置并按语言规则处理遮蔽、名称冲突和相关引用。编辑器可预览或应用工作区编辑；具体支持的符号种类和文件范围由提供者实现。\n\n动态属性、宏、模板、跨语言接口或外部调用者可能不在可识别范围内。索引新鲜度影响跨文件结果，因此重命名返回编辑集合并不证明行为完全保持；仍需根据项目检查和测试确认修改。\n\n## 参考\n\n- [VS Code：重命名提供者](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [clangd：重命名能力与限制](https://clangd.llvm.org/features)\n- [LSP：重命名与工作区编辑](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

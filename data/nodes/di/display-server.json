@@ -1,0 +1,28 @@
+{
+  "id": "display-server",
+  "name": "Display Server",
+  "aliases": [
+    "显示服务器"
+  ],
+  "type": "concept",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "theoretical",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "desktop-interface-concept"
+    }
+  ],
+  "summary": "为图形客户端协调显示呈现和输入分发的系统服务职责。",
+  "description": "显示服务器是图形系统向客户端提供的服务角色，协调表面或窗口资源、呈现请求和输入分发。它通常位于应用与显示、输入环境之间；概念不限定一种协议、一台物理机器或单个进程。\n\nXorg 是 X11 的服务器实现，XWayland 在兼容路径中同时是 X11 服务器和 Wayland 客户端。Wayland 合成器则提供面向 Wayland 客户端的服务接口，并常整合窗口管理和最终输出合成。\n\n显示服务器不等于桌面环境，也不必负责应用内部所有绘制。直接渲染、客户端缓冲提交与嵌套会话都可能改变实际数据路径；比较实现时应分别说明使用的协议、设备接入和呈现职责，而不能只据名称判断功能。\n\n## 参考\n\n- [Wayland 系统介绍](https://wayland.freedesktop.org/docs/book/Introduction.html)\n- [X 服务器移植层说明](https://www.x.org/releases/current/doc/xorg-server/Xserver-spec.pdf)",
+  "official_site": "https://wayland.freedesktop.org/docs/book/Introduction.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

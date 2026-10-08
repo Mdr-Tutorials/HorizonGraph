@@ -1,0 +1,42 @@
+{
+  "id": "fzf",
+  "name": "fzf",
+  "aliases": [
+    "fzf 模糊查找器"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-user-interface"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-history",
+      "context": "加载官方 Shell 集成的历史搜索绑定时，把宿主提供的历史候选交给交互查找器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ripgrep",
+      "context": "在官方展示的可选交互搜索工作流中，用 ripgrep 重新生成匹配候选，再通过 fzf 选择。"
+    }
+  ],
+  "summary": "从候选输入中交互筛选并输出所选项目的工具。",
+  "description": "fzf 是通用命令行模糊查找器，读取候选数据并通过交互界面筛选结果。候选可以是路径、历史命令、进程或其他记录；它负责选择而不是证明项目合法，也不把模糊匹配自动等同于语义搜索。没有管道输入时，现行版本还可按自己的遍历配置生成候选。\n\n界面支持多选、预览和事件绑定，选中的项目可回到 stdout 再交给下一步。Shell 集成脚本可为历史搜索、目录切换和补全提供入口，但加载方式与具体 Bash、zsh、Fish 或 Nushell 适配有关；fzf 的基础筛选功能不硬依赖某一种 Shell。\n\n预览和执行动作可以启动外部命令，应根据真实候选正确处理引用和分隔。文件名含空格或换行时可采用零字节接口，避免把显示行直接拼成命令。tmux 或 Zellij 弹出窗口等能力具有特定版本和会话条件，不代表普通筛选必须安装这些复用器。\n\n## 参考\n\n- [fzf：README](https://github.com/junegunn/fzf)\n- [fzf：Configuring shell key bindings](https://github.com/junegunn/fzf/wiki/Configuring-shell-key-bindings)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/junegunn/fzf"
+}

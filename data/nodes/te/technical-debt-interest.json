@@ -1,0 +1,28 @@
+{
+  "id": "technical-debt-interest",
+  "name": "Technical Debt Interest",
+  "aliases": [
+    "技术债利息"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-quality",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "保留技术债使后续开发或运行承担的额外成本量。",
+  "description": "技术债利息用于描述由于继续依赖不理想的设计或实现而产生的额外成本。它可以表现为每次变更需要额外协调、重复修改或反复适配，也可能以持续运行和维护支出体现。\n\n技术债术语文献区分随依赖和演化累积的成本与周期性反复付出的成本。测量时需要说明无该债务的比较情境、观察时间窗和成本归属；不能把项目全部工作量都归入利息。\n\n某些债务在未来不再修改的模块中影响有限，另一些债务会被新的功能反复触发，因此利息并无通用固定利率。估计应随演化计划更新，并与直接补救成本分开记录，支持是否以及何时偿还的判断。\n\n## 参考\n\n- [SEI：技术债术语原文](https://www.sei.cmu.edu/documents/1391/2016_101_001_463905.pdf)\n- [SEI：Reducing Friction in Software Development](https://www.sei.cmu.edu/library/reducing-friction-in-software-development/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.sei.cmu.edu/documents/1391/2016_101_001_463905.pdf"
+}

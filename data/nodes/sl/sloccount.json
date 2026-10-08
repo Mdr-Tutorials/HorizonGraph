@@ -1,0 +1,49 @@
+{
+  "id": "sloccount",
+  "name": "SLOCCount",
+  "aliases": [
+    "源代码行计数 SLOCCount",
+    "sloccount"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-line-counting"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "按 SLOCCount 的非空白、非纯注释物理行定义报告源码规模。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cocomo",
+      "context": "根据统计规模与可配置参数报告开发投入估算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-language-detection",
+      "context": "使用套件的文件与语言识别启发式选择对应计数程序。"
+    }
+  ],
+  "summary": "自动识别多语言源码并进行物理行与投入估算的工具。",
+  "description": "SLOCCount 是 David A. Wheeler 的源码规模分析工具套件，自动发现和识别多种语言的源文件，报告物理 SLOC。它可对目录内项目分组，并输出用于其他报表系统处理的详细统计。\n\n工具把含有注释之外非空白内容的物理行计入源码规模，采用语言专用的计数程序与文件识别启发式。自动规则仍需检查，特别是扩展冲突、重复内容和不纳入统计的文件。\n\n套件还基于 COCOMO 与配置假设估算开发投入和费用；这些不是实际账目或人员绩效。它是较早形成的计数工具，安装和兼容要求应按官方手册及发行包确认，不能把旧版示例当作当前平台保证。\n\n## 参考\n\n- [SLOCCount 官方主页](https://dwheeler.com/sloccount/)\n- [SLOCCount 用户指南](https://dwheeler.com/sloccount/sloccount.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://dwheeler.com/sloccount/"
+}

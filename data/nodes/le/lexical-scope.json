@@ -1,0 +1,34 @@
+{
+  "id": "lexical-scope",
+  "name": "Lexical Scope",
+  "aliases": [
+    "词法作用域",
+    "静态作用域",
+    "Lexical Scoping"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "symbol-table",
+      "context": "编译器为静态作用域建立声明及可见性信息，帮助进行名称绑定；运行时环境记录另有生命周期。"
+    }
+  ],
+  "summary": "按源码声明及嵌套结构确定名称可见范围。",
+  "description": "词法作用域根据源码中声明所处的结构及嵌套关系确定名称可见性，函数访问的外层绑定由定义位置决定。它与按调用链决定绑定的动态作用域不同，也与编译器分词阶段的词法分析分别区分。\n\nJavaScript 具有函数、块、模块等作用域规则，不同声明形式的可见性和初始化时机也有差异。闭包可保留创建时的词法环境关联，使函数在离开定义位置后仍访问所引用绑定。\n\n静态作用域不意味着所有变量值能在编译时求出；捕获的是环境关联，具体值可以变化。名称遮蔽、声明提升和暂时性死区还需按语言规则判断，语言服务也必须据此区分同名实体。\n\n## 参考\n\n- [Mozilla：闭包与词法作用域](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)\n- [ECMAScript：环境记录规范](https://tc39.es/ecma262/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

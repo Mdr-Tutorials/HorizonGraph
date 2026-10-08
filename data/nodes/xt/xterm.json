@@ -1,0 +1,43 @@
+{
+  "id": "xterm",
+  "name": "xterm",
+  "aliases": [
+    "XTerm",
+    "X Window 终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminfo",
+      "context": "使用终端能力数据库条目向终端程序声明当前仿真能力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x11",
+      "context": "作为 X Window 客户端，通过 X11 与显示服务器进行窗口、输入事件和图形交互。"
+    }
+  ],
+  "summary": "为 X Window 提供 VT 仿真及长期维护的终端行为参考。",
+  "description": "xterm 是 X Window System 的终端模拟器，最初支持 DEC VT102 与 Tektronix 4014 的交互，后来扩展到其他 VT 系列行为。每个窗口可以运行独立进程，并通过 X 协议显示在本地；X 的窗口传输与终端内部的远程 Shell 登录并不是同一机制。\n\nxterm 的手册和控制序列文档长期为终端兼容性提供事实参考，包含光标、颜色、替代屏幕和其他扩展。TERM 与 terminfo 条目告诉终端程序该采用哪些能力，而不是选择一个任意字符串后即可使模拟器具备该能力；不同仿真等级也不完全等价。\n\nxterm 与 xterm.js 是不同项目，前者是桌面程序，后者是可嵌入网页的库。声称兼容 xterm 通常指若干控制序列行为，并不证明完整实现其所有扩展、编译选项或图形仿真。评估时应使用具体序列和版本测试，不能从 TERM=xterm 推断程序身份。\n\n## 参考\n\n- [Thomas Dickey：xterm 项目](https://invisible-island.net/xterm/)\n- [xterm：官方手册](https://invisible-island.net/xterm/manpage/xterm.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://invisible-island.net/xterm/"
+}

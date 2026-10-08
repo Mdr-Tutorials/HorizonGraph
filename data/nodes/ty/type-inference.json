@@ -9,7 +9,8 @@
   "type": "concept",
   "domains": [
     "programming-languages",
-    "api-engineering"
+    "api-engineering",
+    "language-tooling"
   ],
   "relations": [
     {
@@ -17,10 +18,13 @@
       "target_id": "type-system"
     }
   ],
-  "summary": "编译器自动推导表达式类型，省标注而不失检查。",
+  "summary": "按语言规则或分析模型从程序上下文获得类型信息。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-10-07",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "description": "类型推断由类型系统从表达式、函数调用及上下文确定类型信息，减少重复标注，同时继续检查代码中的操作是否符合约束。TypeScript 会从变量初值、函数返回值和上下文推导类型；泛型、条件类型与索引访问等机制也可把已有结构中的类型继续传递给调用方。推断能力与精度取决于语言及声明方式，不意味着编译器能够理解任意运行时业务行为。\n\n类型化 API 将这种机制应用到路由和模式：Hono Client 接收路由类型后推导调用输入及 JSON 响应，tRPC 则从过程定义推导客户端。链式注册和保留具体泛型能影响信息是否被保留；宽泛注解或 any 可能丢失检查能力。静态推断不会解析网络收到的值，输入转换和运行时校验仍需实际执行相应模式。\n\n## 参考\n\n- [TypeScript：类型推断](https://www.typescriptlang.org/docs/handbook/type-inference.html)\n- [TypeScript：由类型创建类型](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html)\n- [Hono：RPC 与客户端类型推导](https://hono.dev/docs/guides/rpc)"
+  "description": "类型推断根据表达式、调用及上下文获得类型信息，减少手动注解。静态语言检查器在其类型规则下推导和检查，编辑辅助分析器也可以近似推断动态语言类型；两类结果的精度和保证不能仅凭“推断”名称互相替代。\n\n约束式方法从源码生成等式、子类型或集合传播约束，采用对应求解器；Tern 根据观测到的赋值和调用传播类型，并对缺失证据采用限定猜测。TypeScript 会从初值、返回值和上下文获得类型，泛型及索引访问也可传递既有结构信息。\n\n类型化 API 通过保留路由和模式类型连接服务端与调用方，例如 Hono RPC。宽泛注解或 any 会丢失信息，静态类型擦除与类型断言不解析网络载荷；推断不执行运行校验、授权，也不证明任意业务副作用正确。\n\n## 参考\n\n- [TypeScript：类型推断](https://www.typescriptlang.org/docs/handbook/type-inference.html)\n- [Aarhus：约束式类型分析](https://cs.au.dk/~amoeller/spa/2-type-analysis.pdf)\n- [Tern 作者：推断与猜测边界](https://marijnhaverbeke.nl/blog/tern.html)\n- [Hono：RPC 类型共享](https://hono.dev/docs/guides/rpc)",
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ]
 }

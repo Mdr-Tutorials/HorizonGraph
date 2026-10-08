@@ -1,0 +1,36 @@
+{
+  "id": "tags-format",
+  "name": "Emacs TAGS Format",
+  "aliases": [
+    "TAGS",
+    "Emacs TAGS 文件格式",
+    "etags 格式"
+  ],
+  "type": "protocol",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-tag-index",
+      "context": "以 Emacs 可读取的标签表形式保存源码对象与位置索引。"
+    }
+  ],
+  "summary": "保存 Emacs 源码标签表与位置记录的格式。",
+  "description": "Emacs TAGS Format 是 etags 标签表使用的文件格式，通常以 TAGS 命名。它按文件组织源码标签和位置记录，Emacs 的 etags 后端将这些记录用于定义导航及相关符号查询。\n\nGNU etags 可生成该格式，其他工具如 Universal Ctags 的 etags 输出也可产生兼容表。格式身份与生成器身份应分开：出现 TAGS 文件不证明使用 GNU etags，也不表示它就是 vi 风格的行式 tags 文件。\n\n标签表反映生成时的源码范围，缺失或陈旧记录会造成无法定位或定位错误。它不是实时文档同步协议或完整语义分析结果，索引更新和编辑器选择哪个标签表仍由上层工作流决定。\n\n## 参考\n\n- [GNU Emacs：TAGS 标签表](https://www.gnu.org/software/emacs/manual/html_node/emacs/Tags-Tables.html)\n- [GNU Emacs：创建与更新](https://www.gnu.org/software/emacs/manual/html_node/emacs/Create-Tags-Table.html)\n- [Universal Ctags：etags 输出](https://docs.ctags.io/en/stable/output-format.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.gnu.org/software/emacs/manual/html_node/emacs/Tags-Tables.html"
+}

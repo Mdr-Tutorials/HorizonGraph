@@ -1,0 +1,38 @@
+{
+  "id": "cocomo-ii",
+  "name": "Constructive Cost Model II",
+  "abbreviation": "COCOMO II",
+  "display_primary": "COCOMO II",
+  "display_secondary": "Constructive Cost Model II",
+  "aliases": [
+    "COCOMO II",
+    "COCOMO 2",
+    "COCOMO II.2000",
+    "第二代构造性成本模型"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-lines-of-code",
+      "context": "在 Early Design 或 Post-architecture 采用 KSLOC 规模输入的估算场景中，按模型规则区分新增、修改和复用规模；不代表所有子模型只接受代码行数。"
+    }
+  ],
+  "summary": "考虑复用、项目尺度和成本驱动的工作量估算模型。",
+  "description": "COCOMO II 是为后续软件开发实践修订的估算模型，覆盖 Applications Composition、Early Design 和 Post-architecture 三个子模型。不同子模型服务于不同设计信息完备度，不能把一个子模型的输入和输出规则套用到整个体系。\n\n采用源代码规模的子模型结合规模效应与工作量乘子估算人员投入。成本驱动包括产品、平台、人员和项目条件，复用和修改代码也需按模型规则处理；参数评级与本地历史数据校准会改变估算结果。\n\n模型支持情景与敏感性分析，帮助比较范围、复用和开发条件变化。工作量、日历进度和货币成本仍是不同输出，模型不保证适配所有组织；应记录子模型、版本、数据定义与假设，避免将默认参数当成实际生产率。\n\n## 参考\n\n- [Boehm CSSE：COCOMO II 的三个子模型](https://boehmcsse.org/tools/cocomo-ii/)\n- [Barry Boehm：Safe and Simple Software Cost Analysis（作者论文）](https://people.eecs.ku.edu/~hossein/811/Papers/boehm-cost-analysis.pdf)\n- [NASA/JPL：Handbook for Software Cost Estimation（2003）](https://swehb.nasa.gov/download/attachments/16450436/Handbook_for_Software_Cost_Estimation.pdf?api=v2)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://boehmcsse.org/tools/cocomo-ii/"
+}

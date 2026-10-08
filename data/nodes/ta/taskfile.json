@@ -1,0 +1,40 @@
+{
+  "id": "taskfile",
+  "name": "Task",
+  "aliases": [
+    "Taskfile",
+    "Go Task",
+    "Task 命令运行器"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "yaml",
+      "context": "读取 YAML Taskfile 中的任务、变量、输入输出与检查声明，实际任务仍执行所配置的命令。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "exit-status",
+      "context": "执行 status 检查命令并以其成功退出判断条件是否满足；这与失败前置条件检查分开。"
+    }
+  ],
+  "summary": "以 YAML Taskfile 描述项目命令与检查条件的运行器。",
+  "description": "Task 以 YAML Taskfile 定义项目自动化任务，组织命令、变量、依赖任务和文件变化检查。它用于把测试、构建和其他操作变成可重复调用的任务，工具实体与配置文件名称应区分，也不应混同操作系统的普通任务概念。\n\nsources 与 generates 可以参与是否需要重跑的判断，status 则通过命令检查结果是否已存在。默认内容校验方法记录输入指纹并检查声明输出存在；依赖任务和调用任务拥有各自执行规则，需要根据项目预期完整声明。\n\n输出文件存在不证明内容未被篡改，编辑输出也不会在默认检查中自动视作输入变化。远端制品及其他状态宜配置对应 status 检查，失败前置条件与成功状态检查有不同目的；不同平台的外部命令和 Shell 仍需明确处理。\n\n## 参考\n\n- [Task 官方文档](https://taskfile.dev/docs/)\n- [任务更新判断与边界](https://taskfile.dev/docs/guide/up-to-date)\n- [Taskfile 配置参考](https://taskfile.dev/docs/reference/schema)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://taskfile.dev/docs/"
+}

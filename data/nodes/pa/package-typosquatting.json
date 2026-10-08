@@ -1,0 +1,36 @@
+{
+  "id": "package-typosquatting",
+  "name": "Package Typosquatting",
+  "aliases": [
+    "软件包拼写抢注",
+    "软件包名称仿冒",
+    "Typosquatting"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "evidence-based-component-identification",
+      "context": "近似名称与复制的上游链接可能使依靠显示名或未经认证包元数据的身份判断误关联合法组件。"
+    }
+  ],
+  "summary": "以近似包名诱导安装非预期组件的供应链攻击机制。",
+  "description": "软件包拼写抢注通过注册与常用包近似的名称，让输错、误读或复制错误安装命令的人取得另一组件。名称可能采用漏字、换字或相似组合，攻击者还可能复制合法项目的说明与仓库字段。这里限定软件包注册表语境，与相似域名攻击分别理解。\n\n近似名称本身不是恶意证据，需要结合发布者、文件内容和行为分析。Microsoft 对 npm 攻击的调查展示了名称仿冒与复制上游元数据并存的方式。清单中的主页或仓库链接如果由包作者自行填写，不能直接作为真正上游归属的认证。\n\n依赖混淆侧重软件源和解析歧义，拼写抢注侧重用户选择近似名称，二者可能一起出现。核对包身份、内容和来源能够支持调查，单纯拼写校验或漏洞数据库匹配不能发现全部恶意包。SBOM 为追踪已引入组件提供依据，但不会自动证明其发布者可信。\n\n## 参考\n\n- [OWASP：组件仓库信任与名称仿冒](https://community.owasp.org/Component_Analysis)\n- [Microsoft：npm 名称仿冒与元数据复制调查](https://www.microsoft.com/en-us/security/blog/2026/05/28/typosquatted-npm-packages-used-steal-cloud-ci-cd-secrets/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://community.owasp.org/Component_Analysis"
+}

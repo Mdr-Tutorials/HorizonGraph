@@ -1,0 +1,35 @@
+{
+  "id": "anonymous-pipe",
+  "name": "Anonymous Pipe",
+  "aliases": [
+    "匿名管道",
+    "无名管道"
+  ],
+  "type": "concept",
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "file-descriptor",
+      "context": "POSIX pipe 返回分别指向读端与写端的两个描述符，调用者通过其安排继承、重定向和关闭。"
+    }
+  ],
+  "summary": "通过读写端点在进程间传递字节流的通信机制。",
+  "description": "匿名管道提供读端与写端组成的进程间通信通道。POSIX 的 pipe 调用返回两个文件描述符，写入一端的字节由另一端读取；它没有供其他进程按路径重新打开的文件系统名称。创建者可以在派生子进程前后安排端点继承，使相关进程交换数据。\n\nShell 的常见字节流管线利用这种机制，把一个程序的标准输出连接到另一个程序的标准输入。管道按字节流处理内容，不保留应用写入操作对应的完整消息边界；有限缓冲区、阻塞与非阻塞模式影响生产者和消费者的推进。原子写入上限与总缓冲容量是两个不同属性。\n\n读端观察到文件结束，需要所有指向写端的引用都关闭；多余继承引用可能让读者一直等待。没有读者时写入会按平台规则触发 SIGPIPE 或错误。POSIX 不要求匿名管道提供双向通信，Windows 的匿名管道有自己的 HANDLE 和继承接口，也不应从名称相同推导所有行为完全一致。\n\n## 参考\n\n- [Linux man-pages: 管道与FIFO语义](https://man7.org/linux/man-pages/man7/pipe.7.html)\n- [Linux man-pages: pipe 系统调用](https://man7.org/linux/man-pages/man2/pipe.2.html)\n- [Microsoft: Anonymous Pipes](https://learn.microsoft.com/en-us/windows/win32/ipc/anonymous-pipes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man7/pipe.7.html"
+}

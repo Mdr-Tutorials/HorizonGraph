@@ -1,0 +1,41 @@
+{
+  "id": "osv-schema",
+  "name": "Open Source Vulnerability Format",
+  "aliases": [
+    "OSV 格式",
+    "OSV Schema"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "OSV 规定以 JSON 交换公告，字段语义由 OSV Schema 定义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-url",
+      "context": "受影响包提供 PURL 时用其关联软件包身份，同时保留生态名称与版本范围。"
+    }
+  ],
+  "summary": "按开源包生态与版本或提交范围交换漏洞公告。",
+  "description": "OSV 格式是面向开源软件包漏洞公告的标准化 JSON 交换模型。它记录漏洞身份、更新时间、描述、受影响软件包与版本范围，便于多个数据库交换和消费信息。该规范与 OSV.dev 聚合数据库独立，采用格式不代表数据必须由同一服务产生。\n\n受影响包由生态、名称和可选 PURL 指明，范围类型区分生态版本、语义化版本及 Git 提交。introduced、fixed、last_affected 等事件描述区间边界，具体比较按其类型与生态规则实施。aliases 与 related 承担不同关联语义，消费者不应把所有相关编号自动当成同一漏洞。\n\n结构校验能发现字段问题，却不能证明影响范围和修复信息准确。上游记录可能更新或撤回，数据库特有字段也未必被所有消费端解释。匹配结果需要同时保留数据源、版本和时间，不能将 OSV 格式中的 affected 范围直接扩大为任意部署可利用性结论。\n\n## 参考\n\n- [OpenSSF：OSV Schema 正式格式](https://ossf.github.io/osv-schema/)\n- [OSV：记录质量与范围要求](https://google.github.io/osv.dev/data_quality.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://ossf.github.io/osv-schema/",
+  "abstraction_level": "application_tool"
+}

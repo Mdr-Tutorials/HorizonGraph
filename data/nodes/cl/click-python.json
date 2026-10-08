@@ -1,0 +1,40 @@
+{
+  "id": "click-python",
+  "name": "Click",
+  "aliases": [
+    "Python Click 命令行库",
+    "Command Line Interface Creation Kit"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "command-line-interface",
+      "context": "将参数解析、命令分派、帮助生成及子命令组合落实为可调用的 Python API。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python",
+      "context": "命令定义及处理逻辑以 Python 包在 Python 环境中执行。"
+    }
+  ],
+  "summary": "以装饰器和可组合命令结构构建 Python CLI 的库。",
+  "description": "Click 是 Python 命令行接口工具库，全称为 Command Line Interface Creation Kit。它采用装饰器声明命令、选项和参数，把普通 Python 函数连接到命令解析与调用流程。应用可以通过命令组组合子命令，并由库生成帮助信息及处理常见输入类型。\n\n库提供命令上下文、参数转换、提示输入等能力，支持嵌套命令和运行时延迟加载子命令。其重点是命令行 API 的声明、解析和组合，不是 Shell 语法解释、终端模拟或完整全屏界面。业务函数仍负责资源访问、错误语义和执行结果。\n\nClick 运行在 Python 环境中，测试和打包时需核对具体版本及入口方式。Typer 在其命令模型上增加类型注解驱动的声明层，但当前 Typer 已把 Click 源码内置，不能继续把二者的关系笼统写成外部 Click 包安装依赖。此节点以 click-python 区分同名普通词与其他项目。\n\n参考资料：\n\n- [Click 官方文档](https://click.palletsprojects.com/en/stable/)\n- [Click 官方代码库](https://github.com/pallets/click)\n- [Typer 官方 Click 关系说明](https://typer.tiangolo.com/alternatives/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://click.palletsprojects.com/en/stable/"
+}

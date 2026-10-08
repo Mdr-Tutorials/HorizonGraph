@@ -1,0 +1,39 @@
+{
+  "id": "szz-algorithm",
+  "name": "SZZ Algorithm",
+  "aliases": [
+    "SZZ算法",
+    "缺陷引入变更追踪"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-diff",
+      "context": "分析 Git 缺陷修复提交时提取变化的旧行，作为候选历史追踪输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-blame",
+      "context": "在使用 Git blame 的 SZZ 路径中追溯修复涉及旧行的此前改写提交，结果仍需核验。"
+    }
+  ],
+  "summary": "由修复提交启发式追溯可能引入缺陷的历史变更。",
+  "description": "SZZ 方法从已识别的缺陷修复提交出发，检查被修复的行并追溯此前修改，生成可能引入该缺陷的提交候选。SZZ 来自 Śliwerski、Zimmermann 和 Zeller 的研究，其输出属于启发式标签。\n\n典型流程先链接缺陷记录与修复提交，再以 diff 和 blame 等历史信息追踪旧行。不同实现会处理重命名、代码移动、空白变化和时间约束；不完整修复标签与机械性变化可能传播到最终候选。\n\n候选不能直接证明因果，也不能据此认定某位作者造成缺陷。评估需要可靠的开发者确认或其他判定依据，保存方法与过滤配置；研究表明不同实现与 diff 选择会影响标签，必须核对准确性。\n\n## 参考\n\n- [原始论文：When do Changes Induce Fixes](https://www.st.cs.uni-saarland.de/publications/details/sliwerski-msr-2005/)\n- [开发者确认的 SZZ 评估](https://arxiv.org/abs/2102.03300)\n- [SZZ 实现评估框架](https://ieeexplore.ieee.org/abstract/document/7588121)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.st.cs.uni-saarland.de/publications/details/sliwerski-msr-2005/",
+  "abbreviation": "SZZ"
+}

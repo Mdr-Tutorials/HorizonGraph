@@ -1,0 +1,38 @@
+{
+  "id": "static-analysis",
+  "name": "Static Program Analysis",
+  "aliases": [
+    "静态程序分析",
+    "静态分析"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "基于语法的分析读取声明、表达式和语句结构；其他分析也可在中间表示上运行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-flow-analysis",
+      "context": "追踪变量定义、值或资源状态的静态分析可沿控制路径传播抽象信息。"
+    }
+  ],
+  "summary": "在不执行目标程序的情况下推断其结构或性质。",
+  "description": "静态程序分析在不运行目标程序的情况下读取程序表示并推断结构或性质。它覆盖类型分析、数据流、控制流、模式检查和部分缺陷检测，安全静态检测只是其中一个应用范围。\n\n方法可以采用语法树匹配、抽象解释、约束求解或符号执行等不同模型。某些工具只检查有限语法模式，另一些工具追踪路径和状态；统一称为静态分析不意味着拥有相同的精度、成本或形式保证。\n\n分析受语言语义、外部调用、模型与预算限制，可能产生误报或漏报。检查通过不能证明任意业务正确性或排除所有运行时问题；结论应说明被分析的输入范围与性质，并与测试及实际运行观测配合使用。\n\n## 参考\n\n- [Clang：静态分析器职责](https://clang.llvm.org/docs/ClangStaticAnalyzer.html)\n- [Aarhus：静态程序分析模型](https://www.cs.au.dk/~amoeller/spa/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

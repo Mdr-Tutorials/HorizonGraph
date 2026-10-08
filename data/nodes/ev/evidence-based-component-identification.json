@@ -1,0 +1,40 @@
+{
+  "id": "evidence-based-component-identification",
+  "name": "Evidence-based Component Identification",
+  "aliases": [
+    "基于证据的组件识别",
+    "组件身份证据"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "component-inventory",
+      "context": "为清单中的组件身份与出现位置保存可解释的识别依据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-url",
+      "context": "确认包生态及版本后用 PURL 表达身份，标识字符串本身不是识别证据。"
+    }
+  ],
+  "summary": "以文件、包元数据和分析方法支持组件身份判断。",
+  "description": "基于证据的组件识别将名称或版本判断联系到具体观察，例如包元数据、文件哈希、源码特征或二进制嵌入信息。它回答某个组件身份为什么被认定，避免仅输出一个无法解释的包名。软件包身份、出现位置与识别方法应分别保存。\n\nCycloneDX 支持身份分析方法、置信度、发生位置等证据，生成器可按其支持技术提供这些内容。不同证据强度不能由一个统一分数直接替代，包声明和内容哈希也证明不同事实。多个来源冲突时需要保留差异，不能只取看起来最规范的字符串。\n\n识别证据让漏洞和许可分析更可复核，但不自动认证组件发布者或证明没有遗漏。被恶意软件复制的元数据可能导致误判，内容变更也可能使历史判断失效。消费系统应保留证据、工具和工件对应，而不是把规范化标识自身当作真实性保证。\n\n## 参考\n\n- [CycloneDX：组件身份方法与出现位置](https://www.cyclonedx.org/use-cases/software-components/)\n- [cdxgen：证据增强与分析技术](https://github.com/cdxgen/cdxgen/blob/master/docs/ADVANCED.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.cyclonedx.org/use-cases/software-components/"
+}

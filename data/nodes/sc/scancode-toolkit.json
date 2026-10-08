@@ -1,0 +1,44 @@
+{
+  "id": "scancode-toolkit",
+  "name": "ScanCode Toolkit",
+  "aliases": [
+    "ScanCode 工具包",
+    "ScanCode"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "license-detection"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "software-composition-analysis"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "tern-container",
+      "context": "Tern 的可选文件分析扩展调用另行安装的 ScanCode；该能力不属于 Tern 原生扫描器。"
+    }
+  ],
+  "summary": "提取文件与包的许可、版权和组成证据的分析工具。",
+  "description": "ScanCode Toolkit 是开源代码与包信息分析工具，可识别许可文本、版权声明、包清单及依赖信息。它面向文件和代码库收集证据，并可从受支持归档和二进制中提取文本。这里的 ScanCode 是软件扫描工具，与计算机键盘扫描码的同名术语不同。\n\n许可检测由文本规则与索引驱动，报告可以保留命中文件、行号及规则来源。包分析与普通文件许可扫描具有各自选项，包清单解析得到的许可信息不应与扫描整个文件集的证据混同。输出可供其他工具消费，采用什么格式及保留哪些字段取决于版本与配置。\n\nTern 可以将另行安装的 ScanCode 作为可选扩展，补充原生包元数据检查之外的文件许可信息。扫描结果仍需核对范围、规则和冲突，检测到文本不会自动得出整个工件的许可结论。它提供可追溯证据，不保证所有私有格式、裁剪二进制或未扫描文件都已覆盖。\n\n## 参考\n\n- [ScanCode：许可检测过程与输出证据](https://scancode-toolkit.readthedocs.io/en/latest/explanation/scancode-license-detection.html)\n- [ScanCode：文件扫描和包扫描选项](https://scancode-toolkit.readthedocs.io/en/stable/tutorials/configuring-scan-detection.html)\n- [Tern：外部 ScanCode 扩展](https://github.com/tern-tools/tern)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://scancode-toolkit.readthedocs.io/en/latest/explanation/scancode-license-detection.html",
+  "abstraction_level": "application_tool"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "core-text",
+  "name": "Core Text",
+  "aliases": [
+    "CoreText",
+    "Core Text 文本框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "desktop-application-development",
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem",
+    "text-rendering-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-shaping",
+      "context": "Core Text 布局引擎提供字符到定位字形转换及连字、字距等处理。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "font-fallback",
+      "context": "字体技术提供自动字体替代与级联选择能力。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple",
+      "context": "Apple 平台系统框架。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-layout",
+      "context": "CTTypesetter 生成定位字形行，CTFramesetter 将行组织到文本框中。"
+    }
+  ],
+  "summary": "提供 Apple 平台低层文本布局与字体处理的框架。",
+  "description": "Core Text 提供 Apple 平台的低层文本布局和字体接口，处理字符到字形映射、定位、连字、字距与字体度量。它与 Core Foundation 和 Core Graphics 等系统能力协作，可供定制文本引擎使用。\n\n应用可以借助 CTFont、CTLine、CTRun、CTFramesetter 等对象获取字体、行、字形运行段和文本框信息。字体系统还提供描述符、集合与自动替代能力，最终字形数据可用于相应绘制接口。\n\nCore Text 不负责完整 GUI 控件或终端控制序列解释。通用文本界面可由更高层的 AppKit、UIKit 与 TextKit 提供；自定义渲染应用则可能只取其字体或塑形结果，因此必须区分文本布局数据与最终 GPU 或图形绘制路径。\n\n## 参考\n\n- [Apple Core Text 当前 API](https://developer.apple.com/documentation/coretext/)\n- [Apple Core Text 编程概览](https://developer.apple.com/library/archive/documentation/StringsTextFonts/Conceptual/CoreText_Programming/Overview/Overview.html)\n- [Apple Core Text typesetter](https://developer.apple.com/documentation/coretext/cttypesetter)",
+  "official_site": "https://developer.apple.com/documentation/coretext/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

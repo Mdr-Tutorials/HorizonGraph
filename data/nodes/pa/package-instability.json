@@ -1,0 +1,40 @@
+{
+  "id": "package-instability",
+  "name": "Package Instability",
+  "abbreviation": "I",
+  "aliases": [
+    "包不稳定性指标",
+    "依赖不稳定度"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "afferent-coupling",
+      "context": "公式分母采用同一粒度的传入耦合 Ca。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "efferent-coupling",
+      "context": "公式以 Ce 作分子，并与 Ca 相加形成分母。"
+    }
+  ],
+  "summary": "以传出依赖占全部入出依赖比例衡量结构稳定性。",
+  "description": "包不稳定性 I=Ce/(Ca+Ce)，采用传入和传出耦合度。Ca 较大、Ce 较小时值接近零，表示该单元较多被其他单元依赖而较少依赖外部；它是依赖结构意义上的稳定性。\n\n在分母非零时 I 位于零到一之间。JDepend 对没有入出耦合的包返回零，这是实现约定；数学公式本身在零分母时未定义，其他工具可以选择缺失值或不同处理。\n\nI 不是观察到的修改频率、故障率或版本发布频率，也不提供未来变更概率。解释必须与 Ca、Ce 使用相同计数粒度；小规模包和大型程序集即使比例相同，绝对影响范围也可能不同。\n\n## 参考\n\n- [Martin：依赖结构与稳定性](https://linux.ime.usp.br/~joaomm/mac499/arquivos/referencias/oodmetrics.pdf)\n- [JDepend：公式和零分母约定](https://github.com/clarkware/jdepend/blob/master/src/jdepend/framework/JavaPackage.java)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://linux.ime.usp.br/~joaomm/mac499/arquivos/referencias/oodmetrics.pdf"
+}

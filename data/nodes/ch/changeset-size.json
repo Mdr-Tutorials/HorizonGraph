@@ -1,0 +1,28 @@
+{
+  "id": "changeset-size",
+  "name": "Change Set Size",
+  "aliases": [
+    "变更集大小",
+    "提交涉及文件数"
+  ],
+  "type": "metric",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计一次变更涉及的文件或模块数量。",
+  "description": "变更集大小统计一项提交或逻辑变更触及多少个文件或模块。它通常不是新增与删除行之和；一次批量改名可能涉及很多路径，而对一个文件的大改动仍可能只有一个文件单位。\n\nPyDriller 的 ChangeSet 返回观察窗口中共同提交文件数的平均值和最大值。研究也可能把一天或同一任务的多个提交合为逻辑变更，报告需明确聚合规则，不能与按单个提交统计的结果混用。\n\n过大的变更集可影响时间耦合分析，工具常设置阈值过滤批量更新。拆分提交、squash 和合并策略也会改变数值，因此它只反映指定历史表示中的修改范围，不等于任务难度或人员效率。\n\n## 参考\n\n- [PyDriller：Change Set 定义](https://pydriller.readthedocs.io/en/latest/processmetrics.html#change-set)\n- [PyDriller：ChangeSet 实现](https://github.com/ishepard/pydriller/blob/master/pydriller/metrics/process/change_set.py)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://pydriller.readthedocs.io/en/latest/processmetrics.html#change-set"
+}

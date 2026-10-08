@@ -1,0 +1,31 @@
+{
+  "id": "abc-metric",
+  "name": "ABC Software Metric",
+  "abbreviation": "ABC",
+  "aliases": [
+    "ABC软件度量",
+    "赋值分支条件度量",
+    "ABC Size"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "用赋值、调用分支和条件计数描述源码语句规模。",
+  "description": "ABC 度量记录三元组 ⟨A,B,C⟩：赋值、分支和条件的计数。常见标量大小为 sqrt(A²+B²+C²)，同时保留向量可看出分数主要来自数据赋值、调用还是判断。\n\n其中 branch 表示离开当前作用域的显式调用等分支，不应一律解释为 if 判断。RuboCop 的 Ruby 实现采用方法调用作为该类计数，并提供重复属性调用的计数选项；语言规则决定各构造如何分类。\n\nABC 对源码活动量的刻画与圈复杂度的独立路径数不同，也不直接奖励或惩罚每一层嵌套。比较结果需固定配置和粒度；将一次长调用链重写成多次赋值可能改变向量，却不自动证明功能或可读性改善。\n\n## 参考\n\n- [RuboCop：ABC检查与选项](https://docs.rubocop.org/rubocop/latest/cops_metrics.html#metricsabcsize)\n- [RuboCop：ABC计算实现](https://github.com/rubocop/rubocop/blob/master/lib/rubocop/cop/metrics/utils/abc_size_calculator.rb)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.rubocop.org/rubocop/latest/cops_metrics.html#metricsabcsize"
+}

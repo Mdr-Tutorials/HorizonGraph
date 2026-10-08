@@ -1,0 +1,50 @@
+{
+  "id": "stryker-js",
+  "name": "StrykerJS",
+  "aliases": [
+    "JavaScript 变异测试框架",
+    "Stryker JavaScript",
+    "Stryker"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mutation-testing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutation-operator",
+      "context": "采用受支持的 JavaScript 或 TypeScript 代码改写算子生成候选变异体。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutation-score",
+      "context": "依据结果状态计算有效变异检出比例，并区分 covered-code 得分。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutation-testing-report",
+      "context": "输出包含变异位置、状态与聚合指标的审查报告。"
+    }
+  ],
+  "summary": "对 JavaScript 和 TypeScript 应用执行变异测试。",
+  "description": "StrykerJS 是 Stryker 家族中面向 JavaScript 与 TypeScript 项目的变异测试框架。它与 Stryker.NET、Stryker4s 分别交付，家族共同理念不能被写成单个包同时支持所有语言。\n\n框架生成变异体，调用选定测试运行器并记录检出、存活、未覆盖、超时及错误状态。测试运行器、类型检查器和报告器是可配置集成，具体项目应按实际插件与源码范围设置。\n\n其报告将 killed 加 timeout 计为 detected，并从评分分母排除编译和运行错误等状态。结果需要结合等价变异、过滤与不稳定测试分析；高得分不是对所有真实故障的检出保证。\n\n## 参考\n\n- [StrykerJS 官方介绍](https://stryker-mutator.io/docs/stryker-js/introduction/)\n- [StrykerJS 官方仓库](https://github.com/stryker-mutator/stryker-js)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://stryker-mutator.io/docs/stryker-js/introduction/"
+}

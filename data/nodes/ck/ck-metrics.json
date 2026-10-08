@@ -1,0 +1,70 @@
+{
+  "id": "ck-metrics",
+  "name": "Chidamber–Kemerer Metrics Suite",
+  "abbreviation": "CK",
+  "aliases": [
+    "CK度量套件",
+    "Chidamber和Kemerer指标"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "weighted-methods-per-class",
+      "context": "以WMC记录类中方法的权重总和。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "depth-of-inheritance-tree",
+      "context": "以DIT记录继承图到根的最大深度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "number-of-children",
+      "context": "以NOC记录类的直接子类数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coupling-between-objects",
+      "context": "以CBO记录按定义发生耦合的其他类数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "response-for-a-class",
+      "context": "以RFC记录类可能响应消息所涉及的方法集合大小。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lack-of-cohesion-of-methods",
+      "context": "以LCOM记录方法对共享实例状态不足的结构。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "software-coupling",
+      "context": "套件采用类间成员使用关系界定耦合，使CBO的计数对象有明确结构含义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "software-cohesion",
+      "context": "套件用方法共享实例变量的关系操作化类内聚性，形成LCOM定义。"
+    }
+  ],
+  "summary": "由六项类结构指标组成的面向对象度量套件。",
+  "description": "Chidamber 与 Kemerer 的 CK 套件针对面向对象类设计提出六项指标：WMC、DIT、NOC、CBO、RFC 和 LCOM。它分别记录方法权重、继承深度、直接子类、类间耦合、响应集合及方法间缺乏内聚的结构特征。\n\n套件是一组度量定义，不是名为 CK 的某个软件工具。不同实现可能选择不同复杂度权重、继承计数边界或静态调用近似；复现实验需保留各项指标的实际定义，而不能只记 CK 这个缩写。\n\n这些指标可提供类设计评审线索，但某一项高或低不直接证明缺陷、复用或维护成本。研究结论需要限定样本、语言和统计条件；把六项加成一个无说明总分也会丢失不同维度的含义。\n\n## 参考\n\n- [Chidamber与Kemerer：原始论文](https://sites.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf)\n- [SEI：面向对象度量的定义整理](https://insights.sei.cmu.edu/documents/1125/1995_005_001_16376.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://sites.pitt.edu/~ckemerer/CK%20research%20papers/MetricForOOD_ChidamberKemerer94.pdf"
+}

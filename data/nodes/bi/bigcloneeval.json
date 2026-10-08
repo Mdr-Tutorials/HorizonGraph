@@ -1,0 +1,38 @@
+{
+  "id": "bigcloneeval",
+  "name": "BigCloneEval",
+  "aliases": [
+    "代码克隆检测评估框架"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bigclonebench",
+      "context": "读取基准克隆标注与源码范围，将检测输出同其比较。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "classification-recall",
+      "context": "根据匹配到的基准正例与适用正例数量报告检测召回。"
+    }
+  ],
+  "summary": "用 BigCloneBench 和可配置匹配规则评价检测召回。",
+  "description": "BigCloneEval 是用于 BigCloneBench 实验的克隆检测工具评估框架，注册检测器并导入其报告的代码片段对。它将候选结果与基准标注按配置的匹配规则比较。\n\n评估可限制片段行数、token 数和语法相似区间，并分别报告克隆类别或功能组的召回。框架支持匹配器扩展；报告的匹配成功含义取决于覆盖比例和其他判定参数。\n\n不同参数会改变可评价集合和结果，实验应保存数据版本、输入规模、工具配置与匹配规则。它不会因评估召回便完整估计误报，也不把检测器的基准结果转换为项目代码的总体质量等级。\n\n## 参考\n\n- [BigCloneEval：作者评估框架](https://github.com/jeffsvajlenko/BigCloneEval)\n- [BigCloneEval：评估配置手册](https://github.com/jeffsvajlenko/BigCloneEval/blob/master/ReadMe.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/jeffsvajlenko/BigCloneEval"
+}

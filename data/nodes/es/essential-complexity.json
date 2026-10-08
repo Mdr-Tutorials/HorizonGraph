@@ -1,0 +1,41 @@
+{
+  "id": "essential-complexity",
+  "name": "Essential Complexity",
+  "abbreviation": "ev(G)",
+  "aliases": [
+    "必要复杂度",
+    "本质复杂度",
+    "Essential Cyclomatic Complexity"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cfg",
+      "context": "先在函数控制流图上规约指定结构化控制构造。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclomatic-complexity",
+      "context": "对规约后的残余控制流图计算圈复杂度，得到 ev(G)。"
+    }
+  ],
+  "summary": "度量规约结构化控制构造后残留的非结构化程度。",
+  "description": "McCabe 必要复杂度 ev(G) 先将控制流图中的可规约结构化构造压缩，再对残余图计算圈复杂度。它刻画控制结构中不能按指定单入口、单出口构造规约的部分，与原图所有分支的复杂度不同。\n\n在该规约模型下，完全结构化的图可以规约到 ev(G)=1；一般满足 1≤ev(G)≤v(G)。一个拥有很多规则分支的函数可以具有高圈复杂度和低必要复杂度，而跨结构跳转可能保留不可规约部分。\n\n术语中的 essential 指这种控制流图规约性质，不是业务领域不可消除的概念难度。实现必须说明如何处理退出、异常和跳转语义；该值不能直接断言代码难懂程度或重构所需工时。\n\n## 参考\n\n- [NIST SP 500-235：必要复杂度](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication500-235.pdf)\n- [McCabe：结构化测试报告](https://www.mccabe.com/pdf/mccabe-nist235r.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication500-235.pdf"
+}

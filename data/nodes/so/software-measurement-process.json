@@ -1,0 +1,44 @@
+{
+  "id": "software-measurement-process",
+  "name": "Software Measurement Process",
+  "aliases": [
+    "软件度量过程",
+    "软件测量过程",
+    "软件度量计划"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement",
+    "empirical-software-engineering"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "summary": "围绕信息需要组织定义、采集、分析与改进度量。",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "goal-question-metric",
+      "context": "目标驱动的度量方案可从目标提出需要回答的问题，再选择与问题匹配的指标；这是可采用的方法而非所有过程的唯一实现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "measurement-validity",
+      "context": "解释分析结果前核对所选指标与信息需要的对应关系及结论适用范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "measurement-reliability",
+      "context": "通过定义采集方法、执行条件和检查规则减少重复测量之间的不一致。"
+    }
+  ],
+  "description": "软件度量过程把信息需要转化为可执行的测量工作。它从需要支持的决策和目标出发，选择对象与度量，制定采集、分析和解释规则，再向使用者提供结果；只持续收集数字并不等于完成这条过程。\n\n计划需要说明数据定义、来源、采集时间、责任和检查方式，使不同执行者能够在相同条件下获得可比较的记录。规模、投入和进度等数据应使用一致的项目边界；工具升级、排除规则或范围变化也需要作为解释背景保留。\n\n过程还需评价结果是否有用，并随目标及工程环境改进。异常值可能提示真实问题，也可能来自采集错误或口径变化；分析者应先核对数据与背景，再决定行动，而不是把指标阈值当作没有条件的最终结论。\n\n## 参考\n\n- [SEI：建立可重复的软件测量过程](https://www.sei.cmu.edu/library/establishing-a-software-measurement-process/)\n- [SEI：定义与理解软件测量数据](https://www.sei.cmu.edu/documents/186/2001_019_001_29625.pdf)\n- [SWEBOK：度量计划、执行与评价](https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08"
+}

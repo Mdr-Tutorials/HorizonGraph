@@ -20,11 +20,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
-    },
-    {
-      "relation_type": "part_of",
-      "target_id": "testing-pyramid"
+      "target_id": "software-testing-concept"
     },
     {
       "relation_type": "uses",

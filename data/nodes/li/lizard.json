@@ -1,0 +1,42 @@
+{
+  "id": "lizard",
+  "name": "Lizard",
+  "aliases": [
+    "Lizard 复杂度分析器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclomatic-complexity",
+      "context": "按支持语言的轻量结构规则计算函数 CCN，并可设置告警阈值。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-clone-detection",
+      "context": "启用复制检测扩展时搜索重复代码片段。"
+    }
+  ],
+  "summary": "轻量统计多语言函数规模和圈复杂度的分析器。",
+  "description": "Lizard 是多语言源码复杂度分析器，在不需要完整头文件或依赖导入的情况下读取函数结构。它统计非注释行数、函数 token 数、参数数和圈复杂度，并提供阈值告警及报告。\n\n工具以自己的轻量语言处理规则估计代码结构，官方明确其结果更接近代码表现出的复杂性，而非完整编译语义。修改后的圈复杂度和复制检测等扩展需按选项解释，不与所有其他工具的 CCN 结果直接等同。\n\n它适合为代码审查定位较长或分支较多的函数，CI 可用告警状态检查约定阈值。检测受语言语法覆盖及配置影响，高复杂度不直接证明缺陷，低数值也不能证明行为正确或无维护负担。\n\n## 参考\n\n- [Lizard：官方项目](https://github.com/terryyin/lizard)\n- [Lizard：分析器实现](https://github.com/terryyin/lizard/blob/master/lizard.py)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/terryyin/lizard"
+}

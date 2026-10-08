@@ -1,0 +1,28 @@
+{
+  "id": "github-codeowners",
+  "name": "GitHub CODEOWNERS",
+  "aliases": [
+    "CODEOWNERS",
+    "GitHub代码责任文件"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    }
+  ],
+  "summary": "以路径模式声明 GitHub 仓库的审查责任者。",
+  "description": "GitHub CODEOWNERS 是仓库中的路径责任声明机制，可列出负责某些路径的用户或团队。在拉取请求中，它可请求相应责任者审查；声明不表示这些人员编写了文件的全部内容。\n\n文件可放在 .github、仓库根或 docs 中，GitHub 按查找顺序采用一个文件；规则涉及路径模式、用户或团队及优先匹配。责任者必须具备相应仓库权限，团队还有可见性要求，不能把任意账号名视作有效配置。\n\n是否必须得到责任者批准取决于分支保护或规则配置，而非文件出现就自动成立。CODEOWNERS 的模式语法也有与 .gitignore 不同之处；历史归属研究应将此类责任声明与提交贡献分布分别记录。\n\n## 参考\n\n- [GitHub：代码责任规则](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)\n- [GitHub：受保护分支与责任者审查](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners"
+}

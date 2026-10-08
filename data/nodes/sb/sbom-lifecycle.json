@@ -1,0 +1,45 @@
+{
+  "id": "sbom-lifecycle",
+  "name": "SBOM Lifecycle",
+  "aliases": [
+    "SBOM 生命周期",
+    "软件物料清单生命周期"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "为各个观察阶段维护对应的软件组成记录。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom-generation",
+      "context": "产品、工件或阶段变化时采用相应生成路径获取清单。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "build-provenance",
+      "context": "构建阶段可将组成信息与生产过程记录关联，二者仍表达不同事实。"
+    }
+  ],
+  "summary": "按设计、源码、构建和运行等阶段维护组成信息。",
+  "description": "SBOM 生命周期描述组成信息在软件设计、源码、构建、交付与运行等阶段如何产生和使用。不同类型清单反映不同观察：计划依赖可能未构建，构建输入可能未交付，运行中还可能出现动态载入内容。生命周期让这些差异有明确语境。\n\n生产者应为清单标注阶段、所述对象和时间，并随着软件发布保留相应版本。构建生成器、工件分析器和运行观测器可以互补，但不能因为记录来自更晚阶段就默认包含全部历史材料。供应链消费方还需要处理清单存储、更新、共享和再分析。\n\n发布后公告变化可以让同一工件的风险结论更新，而其组成清单未必改变；重新部署或工件变化则需重新核对组成。清单生命周期、漏洞报告生命周期和签名有效性分别管理，避免用更新后的告警覆盖原始生成事实，或用旧清单推断当前系统。\n\n## 参考\n\n- [CycloneDX：BOM 生命周期阶段](https://cyclonedx.org/guides/sbom/lifecycle_phases/)\n- [CISA：清单类型与实施资料](https://www.cisa.gov/topics/cyber-threats-and-advisories/sbom/sbomresourceslibrary)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://cyclonedx.org/guides/sbom/lifecycle_phases/"
+}

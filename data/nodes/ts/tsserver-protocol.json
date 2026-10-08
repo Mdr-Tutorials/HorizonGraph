@@ -1,0 +1,35 @@
+{
+  "id": "tsserver-protocol",
+  "name": "tsserver Protocol",
+  "aliases": [
+    "TypeScript Server Protocol",
+    "tsserver 会话协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "用 JSON 消息表达自有命令、响应及事件；不据此认定为 JSON-RPC。"
+    }
+  ],
+  "summary": "规定经典 tsserver 的请求、响应与事件结构。",
+  "description": "tsserver Protocol 是经典 TypeScript 独立语言服务的会话接口约定，定义文件打开、修改、项目配置和代码查询等命令，以及相应响应和事件。消息带有请求序号和命令等字段，方便编辑器关联查询和返回值。\n\n服务通过标准输入输出传递 JSON 消息，协议源码给出各命令参数及结果结构。位置、文件更新和能力需要按所选 TypeScript 版本实现；接入者不能仅根据某个接口名字假定服务器支持所有新能力。\n\n这套接口与 JSON-RPC 的 LSP 有不同消息及生命周期约定。适配器可以在双方之间转换语言查询，但转换层不代表两套协议相同，也不承诺支持所有私有命令。原生 TypeScript 的新服务器协议另行核对。\n\n## 参考\n\n- [TypeScript：tsserver 会话接口](https://github.com/microsoft/TypeScript/wiki/Standalone-Server-(tsserver))\n- [TypeScript 6.0.2：经典协议类型源码](https://github.com/microsoft/TypeScript/blob/v6.0.2/src/server/protocol.ts)\n- [Microsoft：TypeScript 7 正式发布与原生 LSP](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/microsoft/TypeScript/wiki/Standalone-Server-(tsserver)"
+}

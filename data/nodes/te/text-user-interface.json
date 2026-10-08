@@ -1,0 +1,35 @@
+{
+  "id": "text-user-interface",
+  "name": "Text User Interface",
+  "aliases": [
+    "文本用户界面",
+    "字符用户界面"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "event-loop",
+      "context": "持续交互的终端界面通过事件循环协调输入、状态变化和绘制；Textual 等框架提供这一运行机制。"
+    }
+  ],
+  "summary": "以文本单元、布局和输入事件构成持续交互界面。",
+  "description": "文本用户界面利用字符、颜色和终端上的空间布局表达可操作的界面。列表选择、表单、面板与状态显示可以在同一会话中持续更新，因此 TUI 不只是一段打印到控制台的文字，也不等同于逐行输入命令的 CLI。终端模拟器负责承载输入输出，应用负责交互逻辑。\n\n常见终端式 TUI 需要接收键盘或鼠标事件、维护界面状态并重绘受影响区域。ncurses 用窗口和终端能力抽象帮助程序控制屏幕，Textual 则提供组件、布局和事件处理等更高层机制；它们处于应用构建层，而不是一种新的 Shell 或终端协议。\n\n文本界面仍须处理窗口尺寸变化、字符显示宽度、颜色能力和退出后的终端恢复。它可以与脚本接口并存，但不能假定全屏界面适合被另一程序解析；支持无障碍、远程会话或输出重定向的程度取决于具体应用和宿主。\n\n## 参考\n\n- [ncurses：库接口](https://invisible-island.net/ncurses/man/ncurses.3x.html)\n- [Textual：官方文档](https://textual.textualize.io/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://invisible-island.net/ncurses/man/ncurses.3x.html",
+  "abbreviation": "TUI"
+}

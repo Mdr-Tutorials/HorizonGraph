@@ -1,0 +1,28 @@
+{
+  "id": "code-clone",
+  "name": "Code Clone",
+  "aliases": [
+    "代码克隆",
+    "重复代码"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    }
+  ],
+  "summary": "在所选语法或语义准则下相似的代码片段。",
+  "description": "代码克隆指依据某种相似准则识别出的代码片段对或集合，既可能源于复制，也可能由独立实现或生成过程造成。报告必须说明比较粒度、预处理和相似阈值，不能仅凭存在克隆断定不当复制。\n\n常用研究分类中，Type-1 仅允许空白、布局和注释差异；Type-2 允许名称、字面量等变化；Type-3 还包含插入、删除或修改语句的近似副本；Type-4 指语法可能明显不同但行为相似的实现。Type-3 与 Type-4 的边界及操作化阈值需要按研究或工具说明。\n\n克隆可能提高同步修改负担，也可能是明确的隔离、生成或兼容性选择。相同行数去重无法覆盖所有近似或语义克隆，检测结果也不能自动给出重构方案；应结合片段职责、变化频率和行为验证决定如何管理。\n\n## 参考\n\n- [Roy、Cordy：代码克隆检测综述](https://research.cs.queensu.ca/TechReports/Reports/2007-541.pdf)\n- [jscpd：克隆类型与支持范围](https://jscpd.dev/concepts/clone-types)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://research.cs.queensu.ca/TechReports/Reports/2007-541.pdf"
+}

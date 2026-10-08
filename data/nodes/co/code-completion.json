@@ -9,10 +9,12 @@
   "type": "concept",
   "domains": [
     "developer-environments",
-    "programming-languages"
+    "programming-languages",
+    "language-tooling"
   ],
   "ecosystems": [
-    "editor-ide-ecosystem"
+    "editor-ide-ecosystem",
+    "language-tooling-ecosystem"
   ],
   "relations": [
     {
@@ -28,10 +30,15 @@
       "relation_type": "uses",
       "target_id": "ai-code-generation",
       "context": "模型驱动的补全以当前编辑上下文生成候选源码；此边只适用于 AI 补全。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "name-resolution",
+      "context": "语言感知路径按光标处作用域和声明可见性筛选符号，文本或模型生成路径不要求同一方式。"
     }
   ],
   "summary": "根据编辑位置与上下文提供可接受的代码候选。",
-  "description": "代码补全根据当前编辑位置和已有上下文提供标识符、参数、片段或多行文本候选。候选可以出现在列表或行内灰色文本中；既有语言规则和模板驱动实现，也有模型驱动实现，行内展示本身不证明使用 AI。\n\n语言服务可以解析名称、类型和作用域来限定候选，编辑器也能直接注册提供者或通过 LSP 请求结果。模型补全进一步利用附近代码与可用上下文预测片段。建议随后由用户接受或由配置的工作流处理，与自行运行多步代码任务的代理循环不同。\n\n候选的新鲜度受文档版本、项目配置和上下文限制影响。下一处编辑建议还会预测位置与替换内容，不能全部归为光标处插入补全。接受候选只是编辑操作，程序能否满足需求仍需检查和验证。\n\n## 参考\n\n- [VS Code：IntelliSense 与语言服务](https://code.visualstudio.com/docs/editing/intellisense)\n- [VS Code：直接语言 API 与 LSP 的能力对应](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [GitHub：IDE 中的补全、编辑建议与代理能力](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides)",
+  "description": "代码补全根据编辑位置与上下文提供标识符、参数、片段或多行文本候选。候选可出现在列表或行内；语言规则、模板和生成模型都有相应实现，展示位置不证明采用某种算法。\n\n语言感知补全使用名称、作用域和类型信息，Tern 或 TypeScript 语言服务可提供相应候选。编辑器既能直接注册提供者，也可通过 LSP 或自有协议查询；模型补全还会利用附近源码及其他上下文预测片段。\n\n候选受当前文档版本、项目配置、声明和分析精度影响。接受补全只是应用编辑，候选能否编译、运行或满足需求还需相应检查；下一处编辑建议预测位置与改写，也不能全部归为光标处插入。\n\n## 参考\n\n- [VS Code：IntelliSense](https://code.visualstudio.com/docs/editing/intellisense)\n- [VS Code：补全提供者](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [TypeScript：语言服务查询](https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API)",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",

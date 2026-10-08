@@ -1,0 +1,43 @@
+{
+  "id": "direnv",
+  "name": "direnv",
+  "aliases": [
+    "direnv 环境加载工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "environment-variable",
+      "context": "根据工作目录计算导出的环境变量差异，在宿主 Shell 中加载或撤销项目配置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bash",
+      "context": "在 .envrc 工作流中用 Bash 子进程执行配置，捕获导出变量，而非在宿主中直接执行全部定义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-prompt",
+      "context": "常见 Shell 适配在下一次显示提示符前检查目录配置并导出环境变化；具体宿主钩子依其接口。"
+    }
+  ],
+  "summary": "按当前目录加载和撤销项目环境变量的工具。",
+  "description": "direnv 根据工作目录变化加载或撤销项目环境变量，通过 Shell 钩子让每个项目获得自己的配置。它与完整的容器隔离或虚拟机不同，作用于当前 Shell 的环境差异，不会仅凭进入目录就建立操作系统层面的安全边界。\n\n在通常的 .envrc 路径中，direnv 先在 Bash 子进程里执行配置，再把导出的环境差异交给宿主 Shell。这样可服务不同 Shell，但 .envrc 的执行语言并不随宿主变成 Fish 或 PowerShell；别名和函数也不随环境变量差异自动导出到宿主。\n\n配置文件首次或变更后需要按工具规则获准加载，具体授权与信任判断仍由用户和环境管理。进入或离开目录时的变量变化可用于工具路径与项目配置，但配置脚本可以执行代码，不能把环境自动加载机制当作对任意项目内容的沙箱。\n\n## 参考\n\n- [direnv：项目文档](https://direnv.net/)\n- [direnv：Shell Hook Setup](https://direnv.net/docs/hook.html)\n- [direnv：direnv(1)](https://direnv.net/man/direnv.1.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://direnv.net/"
+}

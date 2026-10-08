@@ -1,0 +1,39 @@
+{
+  "id": "change-hotspot",
+  "name": "Change Hotspot",
+  "aliases": [
+    "变更热点",
+    "代码演化热点",
+    "维护热点"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "change-frequency",
+      "context": "在基于演化记录的热点筛选中，把文件修改次数或频率作为活动输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-churn",
+      "context": "采用行变化规模作为热点活动视图时使用限定窗口内的新增、删除统计，不把它当质量结论。"
+    }
+  ],
+  "summary": "结合修改活动与代码状况定位维护调查区域。",
+  "description": "变更热点分析寻找经常发生修改、并在规模或代码状况上值得关注的区域。它利用演化历史为维护工作排序，与 CPU 热路径或执行采样中的热点不同；仅有一次巨大文件也不必然成为维护热点。\n\n一种常见视图把文件的修改频率与规模结合，CodeScene 还允许叠加代码健康、缺陷或成本数据。不同视图有各自指标和时间窗口，因此需要解释所用坐标与筛选，不把某个产品的排序公式当统一标准。\n\n热点提示下一步调查位置，仍需阅读代码并理解正常业务变化。批量格式化、生成文件和外部内容可能带来噪声；热点排名不直接证明缺陷存在，也不能自动决定应由谁负责改进。\n\n## 参考\n\n- [CodeScene：热点视图](https://docs.enterprise.codescene.io/versions/6.6.0/guides/technical/hotspots.html)\n- [CodeScene：热点管理工作流](https://codescene.io/docs/guides/technical/augmented-analysis.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.enterprise.codescene.io/versions/6.6.0/guides/technical/hotspots.html"
+}

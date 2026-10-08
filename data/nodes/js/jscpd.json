@@ -1,0 +1,32 @@
+{
+  "id": "jscpd",
+  "name": "jscpd",
+  "aliases": [
+    "复制粘贴检测器 jscpd"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "token-based-clone-detection"
+    }
+  ],
+  "summary": "检测多格式源码重复并提供报告与门禁的工具家族。",
+  "description": "jscpd 是代码复制粘贴检测工具，按支持的格式提取 token 并搜索重复片段。它提供不同输出报告与 CI 接入，项目名称中的 JavaScript 历史来源不意味着输入只限 JavaScript。\n\n当前第五代采用 Rust 引擎和原生二进制分发，第四代 TypeScript 引擎仍有独立维护分支。两代核心 token 重复检测有共同基础，但编程 API、运行要求、基线和扩展能力需要分别核对。\n\n检测参数会影响重复统计和克隆类别；当前文档中的可选语义或其他新能力还需核实是否进入所用 release。性能数据和健康分数依赖输入、环境与模型，不能推广为通用最快工具或完整质量保证。\n\n## 参考\n\n- [jscpd：5.3.2 稳定版说明](https://github.com/kucherenko/jscpd/blob/v5.3.2/README.md)\n- [jscpd：v4 独立分支](https://jscpd.dev/getting-started/v4)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/kucherenko/jscpd/blob/v5.3.2/README.md"
+}

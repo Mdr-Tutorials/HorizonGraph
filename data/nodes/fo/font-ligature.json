@@ -1,0 +1,29 @@
+{
+  "id": "font-ligature",
+  "name": "Font Ligature",
+  "aliases": [
+    "字体连字",
+    "连字",
+    "编程连字"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    }
+  ],
+  "summary": "在字体布局中把字符序列呈现为联合字形。",
+  "description": "字体连字让多个输入字符在显示时采用联合字形。例如拉丁字母 fi 和编程运算符序列可由字体特性产生连字，源文本通常仍保持原来的字符序列，而不是自动改写成单一码点。\n\nOpenType GSUB 支持连字替换，并通过特性与查找规则确定适用条件。标准连字、必要连字和上下文替换有不同用途；编程字体采用的特性标签可能是 calt 等，不能认定所有连字都只受 liga 开关控制。\n\n连字与字素簇不是同义词，fi 的联合字形可以对应两个默认字素簇。应用需要保留输入到字形的映射来处理选择和光标；关闭装饰性编程连字也不应被表述为所有复杂文字都可关闭必要的布局处理。\n\n## 参考\n\n- [Microsoft：GSUB 连字替换](https://learn.microsoft.com/en-us/typography/opentype/spec/gsub)\n- [HarfBuzz：连字与必要塑形](https://harfbuzz.github.io/why-do-i-need-a-shaping-engine.html)\n- [Unicode UAX #29：字素簇与连字的区别](https://www.unicode.org/reports/tr29/)\n- [Ghostty：font-feature 控制](https://ghostty.org/docs/config/reference#font-feature)",
+  "official_site": "https://learn.microsoft.com/en-us/typography/opentype/spec/gsub",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

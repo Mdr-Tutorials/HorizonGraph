@@ -1,0 +1,34 @@
+{
+  "id": "operating-system-command",
+  "name": "Operating System Command",
+  "aliases": [
+    "操作系统命令控制字符串"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ecma-48"
+    }
+  ],
+  "summary": "引入带终止符的终端控制字符串，供标题等命令扩展使用。",
+  "description": "OSC 是 ECMA-48 定义的一种控制字符串引入功能，七位形式为 ESC 后接右方括号。终端生态在该框架下分配具体命令编号，如窗口标题、颜色、超链接或剪贴板交互。名字中的操作系统命令不表示终端应把内容交给系统 Shell 执行。\n\nOSC 字符串以 ST 终止，七位 ST 为 ESC 后接反斜线；xterm 传统还接受 BEL 作为 OSC 结束符。编号、分号、参数和载荷的语义由具体命令定义，不能用 CSI 的最终字节规则来结束字符串，也不能将所有编号解释为同一套标准功能。\n\nECMA-48 提供字符串框架，具体 OSC 8、52 或 133 的职责需要各自规范支持。终端可因权限策略忽略或限制命令，例如剪贴板读取。未知命令的解析与恢复应保持后续文字一致，并限制字符串资源使用；正确封装并不证明请求来源可信。\n\n## 参考\n\n- [ECMA-48：控制功能原始标准](https://ecma-international.org/wp-content/uploads/ECMA-48_5th_edition_june_1991.pdf)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)\n- [Microsoft：虚拟终端序列与屏幕缓冲](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://ecma-international.org/wp-content/uploads/ECMA-48_5th_edition_june_1991.pdf",
+  "abbreviation": "OSC"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "jacoco",
+  "name": "JaCoCo",
+  "aliases": [
+    "Java 代码覆盖库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coverage-instrumentation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "line-coverage",
+      "context": "依据字节码调试信息将执行过的指令映射到源码行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "branch-coverage",
+      "context": "统计 Java if 与 switch 分支，按官方口径排除异常处理分支。"
+    }
+  ],
+  "summary": "通过字节码探针采集 Java 覆盖并生成报告。",
+  "description": "JaCoCo 提供 Java 字节码覆盖采集与分析库，可通过 Java agent 动态插桩，也可采用离线插桩，再由构建工具或命令行生成报告。它不必在每次测量时读取源码才能统计字节码指令。\n\n其计数包括指令、分支、行、方法、类和复杂度；行映射需调试信息。分支统计面向 if 与 switch，明确不计异常处理；编译器生成的合成代码及版本过滤规则会影响源码层解释。\n\nagent 输出的执行数据必须与相同类文件匹配，动态类变换和不同构建会造成映射问题。报告阈值是工程政策，达到阈值不会证明断言充分或整个 Java 应用不存在缺陷。\n\n## 参考\n\n- [JaCoCo 官方文档](https://www.jacoco.org/jacoco/trunk/doc/index.html)\n- [JaCoCo：Java agent](https://www.jacoco.org/jacoco/trunk/doc/agent.html)\n- [JaCoCo：覆盖计数口径](https://www.jacoco.org/jacoco/trunk/doc/counters.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.jacoco.org/jacoco/trunk/doc/index.html"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "loc-code-counter",
+  "name": "loc (Code Counter)",
+  "aliases": [
+    "Rust 代码计数器 loc",
+    "cgag loc",
+    "loc"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-line-counting"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rust",
+      "context": "计数器以 Rust 实现；源码构建与发布二进制运行的编译器条件分开。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "按工具的行分类规则输出 Code 列。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "scc"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "tokei"
+    }
+  ],
+  "summary": "以 Rust 实现多语言计数的早期源码统计工具。",
+  "description": "cgag/loc 是 Rust 实现的命令行源码计数器，汇总语言的文件、总行、空白、注释与代码，也可输出每文件明细。这里的 loc 指具体工具，区别于代码行数 LOC 指标。\n\n它提供包含与排除规则，默认尊重部分忽略文件并跳过隐藏路径。官方列出多行字符串内注释符和特定 Fortran 注释规则等已知误计边界，使用时应以实际语法样例检验结果。\n\nREADME 中的速度比较属于早期基准，作者在后续说明中建议查看 Tokei 与 scc，并指出自己的维护投入不足。该项目可用于理解计数器实现和历史取舍，不应复用旧倍数声称当前普遍最快。\n\n## 参考\n\n- [loc 官方项目与维护说明](https://github.com/cgag/loc)\n- [loc 计数实现](https://github.com/cgag/loc/blob/master/src/lib.rs)",
+  "status": "historical",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/cgag/loc"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "sbom-generation",
+  "name": "SBOM Generation",
+  "aliases": [
+    "SBOM 生成",
+    "软件物料清单生成"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "component-inventory",
+      "context": "生成步骤汇集已识别组件与版本等信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "component-dependency-graph",
+      "context": "生成器在可获得证据的范围内补充组件依赖，而不从组件共存猜测关系。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "以明确格式写出所述工件的结构化组成记录。"
+    }
+  ],
+  "summary": "在明确阶段采集组件和依赖并生成可交换清单。",
+  "description": "SBOM 生成将组件识别结果组织为描述明确软件对象的物料清单。源码、构建过程、最终工件和运行观测各提供不同范围的证据，生成者需要先决定要描述哪个产品与阶段。选择输出格式只是最后的表示步骤，不能代替对组成信息的采集。\n\n流程通常包括确定工件身份、解析包元数据、补充依赖关系和写入生成工具及时间。清单可能借助 Syft、Tern 或构建插件产生；不同分析器支持的包类型、二进制及路径决定发现范围。针对同一工件需要保存配置和文件选择，才能解释多个生成器为什么产生不同结果。\n\n成功输出文件并不证明组件没有遗漏。生成后应分别检查文档结构、关系引用、对象绑定与覆盖说明，必要时比较构建输入和交付内容。对新发布的工件重新生成清单，不应将旧清单改个版本号就视作更新，也不应把声明依赖全部当作已交付组件。\n\n## 参考\n\n- [Syft：组件分析器及配置](https://oss.anchore.com/docs/guides/sbom/catalogers/)\n- [CISA：SBOM 类型与实施材料](https://www.cisa.gov/topics/cyber-threats-and-advisories/sbom/sbomresourceslibrary)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://oss.anchore.com/docs/guides/sbom/catalogers/"
+}

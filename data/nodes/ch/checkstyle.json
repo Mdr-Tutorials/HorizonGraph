@@ -1,0 +1,42 @@
+{
+  "id": "checkstyle",
+  "name": "Checkstyle",
+  "aliases": [
+    "Java 编码约定检查器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis-rule",
+      "context": "以配置选择检查模块、参数和过滤策略。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "TreeWalker 类型检查在 Java 语法树的 token 节点上执行。"
+    }
+  ],
+  "summary": "按可配置检查约束 Java 源码编码约定。",
+  "description": "Checkstyle 是检查 Java 源码是否符合编码约定的工具，配置可以选择模块、属性及过滤机制。检查覆盖命名、布局、文档和部分结构限制，范围由启用的检查决定。\n\n其 TreeWalker 使用语法树访问机制执行相应检查，同时还有对文件集合工作的检查类型。团队可以编写扩展检查，或通过构建工具与 CI 保存统一配置；并非每个检查都需要同一种 AST 路径。\n\n编码约定满足情况与功能正确性、类型分析及缺陷验证不同。配置的严重度、抑制和语言版本支持应记录，工具告警减少也可能来自停用检查，而非实际质量改善。\n\n## 参考\n\n- [Checkstyle：官方介绍](https://checkstyle.org/)\n- [Checkstyle：编写检查](https://checkstyle.org/writing-checks.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://checkstyle.org/"
+}

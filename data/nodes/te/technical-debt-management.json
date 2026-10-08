@@ -1,0 +1,47 @@
+{
+  "id": "technical-debt-management",
+  "name": "Technical Debt Management",
+  "aliases": [
+    "技术债管理"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "technical-debt-register",
+      "context": "记录可追踪的工件、后果、负责人、补救方案和处理状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "technical-debt-principal",
+      "context": "在明确成本模型后估计处理条目的工作量并支持排序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "technical-debt-interest",
+      "context": "比较保留债务将增加的后续成本与补救方案。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-refactoring",
+      "context": "在适合的代码结构问题上通过保持行为的重构执行补救。"
+    }
+  ],
+  "summary": "识别、记录、排序并跟踪技术债的处理活动。",
+  "description": "技术债管理把债务从笼统抱怨转为可追踪的工程条目，识别具体工件、短期取舍和未来后果。条目可以涉及代码或架构，管理范围不应被某一检查器能发现的问题范围限定。\n\n团队通过登记表记录证据、负责人、补救方案和状态，并依据预计本金、未来利息及演化需要排序。SEI 的企业案例支持集中或分布的登记方式，关键在于条目能与实际决策、工件和工作计划连接。\n\n处理方式包括重构、迁移、逐步替换或有条件保留，同时验证行为及风险是否符合要求。偿还进展不能只看删除了多少告警；需要检查原有后果是否减轻以及是否产生新的兼容或维护负担。\n\n## 参考\n\n- [SEI：企业技术债登记与补救案例](https://www.sei.cmu.edu/blog/experiences-documenting-and-remediating-enterprise-technical-debt/)\n- [SEI：技术债的设计与演化范围](https://www.sei.cmu.edu/blog/managing-the-consequences-of-technical-debt-5-stories-from-the-field/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.sei.cmu.edu/blog/experiences-documenting-and-remediating-enterprise-technical-debt/"
+}

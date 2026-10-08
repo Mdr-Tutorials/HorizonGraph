@@ -1,0 +1,57 @@
+{
+  "id": "tern-container",
+  "name": "Tern",
+  "aliases": [
+    "容器 Tern",
+    "Tern SBOM",
+    "Tern Container Inspection"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain",
+    "containerization"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "software-composition-analysis"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image",
+      "context": "以容器镜像为输入，按层检查可识别的包及安装元数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx",
+      "context": "选择支持的 SPDX 格式时输出组成与许可信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclonedx",
+      "context": "选择支持的 CycloneDX 输出时交换镜像组件清单。"
+    }
+  ],
+  "summary": "逐层检查容器镜像中的包与许可元数据并生成 SBOM。",
+  "description": "Tern 是面向容器镜像和 Dockerfile 的开源软件组成分析工具，也提供 Python 库。它检查镜像内安装的软件包，保留各镜像层带入组件的线索，输出可阅读报告或机器可消费的 SBOM。此处的 Tern 与 JavaScript 代码分析工具同名，但项目、输入及功能不同，以稳定 ID tern-container 区分。\n\n原生分析器识别基础发行版与包管理方式，在对应层的文件系统环境中运行命令库，收集包名、版本、许可和来源等可获得信息。提供 Dockerfile 时可以联系构建指令与层。SPDX、CycloneDX、JSON 等输出由格式器映射；应核对安装版本的实际格式支持，不能由规范能力推断该工具已经覆盖全部模型。\n\nTern 原生不包含文件级许可扫描器，可选择安装并启用 ScanCode 等扩展补充证据。未知包、缺少许可和执行异常会影响清单覆盖，层中的历史内容也不等于最终运行状态。它的主要职责是组成与许可元数据检查，漏洞检测是另一项分析；报告成功生成不会替代人工审查或证明工件无漏洞。\n\n## 参考\n\n- [Tern：官方项目与格式、扩展说明](https://github.com/tern-tools/tern)\n- [Tern：原生分析器与逐层报告架构](https://github.com/tern-tools/tern/blob/main/docs/architecture.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/tern-tools/tern",
+  "abstraction_level": "application_tool"
+}

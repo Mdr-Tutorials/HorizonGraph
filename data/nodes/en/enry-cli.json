@@ -1,0 +1,37 @@
+{
+  "id": "enry-cli",
+  "name": "enry CLI",
+  "aliases": [
+    "enry",
+    "Enry命令行"
+  ],
+  "type": "tool",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "enry"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "source-language-detection"
+    }
+  ],
+  "summary": "通过 go-enry 库报告目录中文件的语言构成。",
+  "description": "enry CLI 是 go-enry/enry 仓库中的命令行应用，调用 go-enry 库取得语言分类并输出目录构成。它可以分析普通目录，不要求该目录本身是 Git 仓库；CLI 与库采用不同的稳定身份。\n\n它提供 breakdown 和 JSON 等输出，默认报告 Markdown 与编程语言组，-all 扩大语言类型，-prog 只保留编程语言。其文档还列出外部、配置、文档和点开头路径的报告排除规则。\n\n输出外观接近 Linguist 不意味着所有过滤及覆盖行为相同。go-enry 的差异文档说明 CLI 没有与 Linguist 等同的 .gitignore 和子模块排除；需要在工具版本、输入路径和显式过滤一致的条件下比较。\n\n## 参考\n\n- [enry CLI：独立应用与默认范围](https://github.com/go-enry/enry)\n- [go-enry：差异说明](https://github.com/go-enry/go-enry/blob/master/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/go-enry/enry"
+}

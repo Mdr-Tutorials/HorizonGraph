@@ -8,24 +8,28 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "static-analysis-testing-ecosystem"
+    "static-analysis-testing-ecosystem",
+    "software-testing-ecosystem"
   ],
   "domains": [
-    "devops"
+    "devops",
+    "software-testing"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "software-testing-concept"
     },
     {
-      "relation_type": "part_of",
-      "target_id": "testing-pyramid"
+      "relation_type": "uses",
+      "target_id": "contract-testing",
+      "context": "采用窄范围外部服务替身时，可用契约测试核验交互模型与真实提供方的一致性。"
     }
   ],
-  "summary": "验证模块与外部依赖协作是否正确，数量居中。",
+  "summary": "验证模块、服务或外部依赖之间的协作契约。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "集成测试检查分别开发的模块连接后能否正确协作，例如数据库访问、服务接口或模块边界的数据与错误处理。范围可以很窄，也可以覆盖较大系统，必须说明具体集成边界。\n\n窄范围测试可用可信测试替身模拟外部服务，再用契约测试核验替身所依据的交互；宽范围测试使用实际协作者，通常需要更多环境与运行成本。是否带 UI 以及测试速度都不能单独定义集成身份。\n\n测试金字塔可以采用集成测试协调验证成本，但没有统一的数量配额。覆盖报告需匹配实际执行的进程与组件；局部源码覆盖不证明整个服务间流程和部署环境已经验证。\n\n## 参考\n\n- [Martin Fowler：集成测试边界](https://martinfowler.com/bliki/IntegrationTest.html)\n- [Ham Vocke：测试金字塔实践](https://martinfowler.com/articles/practical-test-pyramid.html)"
 }

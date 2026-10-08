@@ -1,0 +1,38 @@
+{
+  "id": "shell-expansion",
+  "name": "Shell Expansion",
+  "aliases": [
+    "Shell 展开",
+    "命令行展开"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-quoting",
+      "context": "Bash 等 Shell 用引号状态限制参数结果的单词分割、路径名展开及其他特殊解释。"
+    }
+  ],
+  "summary": "在执行前按解释器规则把词法输入转成参数。",
+  "description": "Shell 展开是在命令解析之后、实际调用之前计算参数值的过程。参数展开、命令替换、算术展开和路径名匹配都可能参与其中；输入中的字符并不是原样传给程序，最终参数数量也可能与屏幕上的词数不同。这里以 Bash 和 POSIX 风格的命令语言作为主要语境。\n\nBash 规定若干展开阶段的顺序，并在特定情形下执行单词分割和文件名展开。不同展开改变结果的方式不同：参数值可能只替换一个词，也可能随后被分割；数组和位置参数还有自己的例外。引号决定哪些后续阶段适用，因此应同时看展开形式和所在的引用上下文。\n\n展开规则属于解释器，不能照搬到 Fish、Nushell 或 PowerShell。程序自己的正则表达式和路径处理又发生在收到参数之后；一个字符串是否被 Shell 展开，与程序是否把它解释为模式是两个独立问题。处理任意路径时应保留参数边界，避免依赖展示文本的空格分隔。\n\n## 参考\n\n- [GNU：Shell Expansions](https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html)\n- [GNU：Shell Parameter Expansion](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html"
+}

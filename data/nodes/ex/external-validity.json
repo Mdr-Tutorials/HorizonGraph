@@ -1,0 +1,34 @@
+{
+  "id": "external-validity",
+  "name": "External Validity in Software Engineering Studies",
+  "aliases": [
+    "软件研究外部效度",
+    "外部效度"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "benchmark-workload-representativeness",
+      "context": "工作负载代表性的论证必须以目标任务与应用情境为界，不能无条件外推。"
+    }
+  ],
+  "summary": "限定软件研究结论能推广到哪些对象与情境。",
+  "description": "外部效度关注研究结论能否适用于研究之外的对象、任务、环境或时间。软件研究需交代项目类型、语言、规模、生命周期和参与者条件，说明这些特征与目标应用情境的联系。\n\n在少数公开仓库上测得的计数器耗时，并不能自动代表所有私有代码、生成文件或网络文件系统。语言覆盖广也不代表任务覆盖广；总体、抽样框、纳排规则和跨情境核验共同决定推广证据。\n\n推广不一定意味着计算总体比例。案例研究可依靠充分情境说明和理论比较讨论可迁移性；基准则要解释工作负载相关性与局限。有效报告明确覆盖范围，而不是用大样本或真实项目标签替代证据。\n\n## 参考\n\n- [SIGSOFT：抽样目的、总体与偏差](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md)\n- [SIGSOFT：案例研究标准](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/CaseStudy.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md"
+}

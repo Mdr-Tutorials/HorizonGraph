@@ -1,0 +1,30 @@
+{
+  "id": "coupling-between-objects",
+  "name": "Coupling Between Objects",
+  "abbreviation": "CBO",
+  "aliases": [
+    "对象间耦合度",
+    "类间耦合数"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按成员或类型使用关系去重统计耦合到的类。",
+  "description": "CBO 对某类发生耦合的其他类去重计数。耦合可以通过类型、字段、方法调用或其他成员使用表现；对同一个类重复调用多次通常只贡献一个被耦合类。\n\n具体实现对基类、接口、嵌套类和标准库类型的规则不同。SciTools 的 CountClassCoupled 排除基类和嵌套类，而 Microsoft 的类耦合描述包含基类和接口等使用场景；同名结果需核对实际集合。\n\nCBO 反映静态类结构的依赖广度，不能直接给出运行时消息量或必要修改数量。低耦合也不是零协作；评审应区分稳定接口、业务协作和不必要依赖，并保留计算粒度。\n\n## 参考\n\n- [SciTools：类耦合判定与排除项](https://docs.scitools.com/metrics/CountClassCoupled.html)\n- [Microsoft：类耦合计算范围](https://learn.microsoft.com/en-us/visualstudio/code-quality/code-metrics-class-coupling?view=visualstudio)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.scitools.com/metrics/CountClassCoupled.html"
+}

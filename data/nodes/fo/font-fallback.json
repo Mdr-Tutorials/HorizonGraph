@@ -1,0 +1,34 @@
+{
+  "id": "font-fallback",
+  "name": "Font Fallback",
+  "aliases": [
+    "字体回退",
+    "后备字体",
+    "字体回落"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "grapheme-cluster",
+      "context": "CSS Fonts 的 cluster matching 以基本字符与组合序列整体检查字体覆盖，以改善标记定位。"
+    }
+  ],
+  "summary": "主字体缺少所需字符时按规则选择其他字体。",
+  "description": "字体回退在首选字体不能提供所需字符或序列时，按应用、平台和字体匹配规则选择其他字体。选择可以结合字体家族、样式、字符覆盖及语言需求；它不同于为同一字体人工生成粗体或斜体外观。\n\n复杂文本需要关注整个字素簇，而非只对每个码点独立换字体。基本字符与组合标记若落在不兼容的字体中，附着和度量可能出现问题；CSS Fonts 对 cluster matching 规定了专门步骤。\n\n字体覆盖成功仍不保证字体度量、基线和视觉尺寸完全一致。终端可能为后备字体调整字号或限定单元格布局；emoji、私用图标及具体语言文字也可能采用不同策略，应按实际平台与应用验证。\n\n## 参考\n\n- [W3C：CSS Fonts 字体匹配与 cluster matching](https://www.w3.org/TR/css-fonts-4/)\n- [Fontconfig：字体匹配和覆盖排序](https://fontconfig.pages.freedesktop.org/fontconfig/fontconfig-devel/)\n- [Ghostty：后备字体尺寸调整](https://ghostty.org/docs/install/release-notes/1-2-0)",
+  "official_site": "https://www.w3.org/TR/css-fonts-4/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

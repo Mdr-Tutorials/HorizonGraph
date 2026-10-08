@@ -1,0 +1,39 @@
+{
+  "id": "gawk",
+  "name": "GNU Awk",
+  "aliases": [
+    "gawk",
+    "GNU awk"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "text-filtering",
+      "context": "解释 Awk 程序按记录处理日志或表格文本，向后续命令输出计算结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "未指定输入文件时可以从标准输入读取，print 等输出可连接标准输出管道。"
+    }
+  ],
+  "summary": "实现 Awk 语言并提供 GNU 扩展的记录处理工具。",
+  "description": "GNU Awk，命令名 gawk，是 Awk 语言的 GNU 实现。它解释执行模式与动作程序，对文本记录、字段和关联数组进行计算，常用于日志整理、统计汇总和报表生成；软件实现与 Awk 语言本身拥有不同的实体身份。\n\n程序可以从命令行或脚本文件读取，输入既可以是文件，也可以是标准输入。正则匹配、print 和 printf 等功能构成处理链，命令行变量及字段分隔设置用于适配输入；记录进入方式与输出缓冲会影响管道中的可观察行为。\n\nGawk 在可移植 Awk 基础上提供自己的扩展，包括调试、命名空间和扩展接口等能力。不同扩展和构建特性有各自条件，使用 GNU 功能的程序不保证可直接交给其他 awk 实现；它也不是 GNU Coreutils 附带的一条命令。\n\n## 参考\n\n- [GNU Awk 用户指南](https://www.gnu.org/software/gawk/manual/gawk.html)\n- [GNU Awk 入门与执行方式](https://www.gnu.org/software/gawk/manual/html_node/Getting-Started.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/gawk/manual/gawk.html"
+}

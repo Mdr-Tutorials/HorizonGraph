@@ -1,0 +1,39 @@
+{
+  "id": "pmd-cpd",
+  "name": "PMD CPD",
+  "aliases": [
+    "PMD 复制粘贴检测器",
+    "Copy/Paste Detector",
+    "CPD"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "pmd",
+      "context": "作为 PMD 同一分发体系中的复制粘贴检测命令与模块。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "token-based-clone-detection"
+    }
+  ],
+  "summary": "PMD 分发中寻找重复源码片段的多语言检测器。",
+  "description": "CPD 是 PMD 分发中的 Copy/Paste Detector，使用独立命令检测重复源片段。它与 PMD 规则分析共享项目分发，但支持语言和检测任务具有自己的范围，不能将两者的语言列表混用。\n\nCPD 按语言提取可比较 token，并以最小 token 数等配置限定报告的克隆片段。某些语言支持忽略名称或字面量等归一化选项，使用时应注明语言和实际选项，而不是笼统承诺所有克隆类别。\n\n输出可以接入构建任务和文本、XML 等报告流程。重复报告提示需要复核的片段，模板或生成代码可按项目范围排除；CPD 不直接证明语义等价，也不自动决定是否应重构。\n\n## 参考\n\n- [PMD：7.28.0 CPD 文档](https://github.com/pmd/pmd/blob/pmd_releases/7.28.0/docs/pages/pmd/userdocs/cpd/cpd.md)\n- [PMD：7.28.0 说明](https://github.com/pmd/pmd/blob/pmd_releases/7.28.0/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/pmd/pmd/blob/pmd_releases/7.28.0/docs/pages/pmd/userdocs/cpd/cpd.md"
+}

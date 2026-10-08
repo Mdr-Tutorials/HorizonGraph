@@ -1,0 +1,32 @@
+{
+  "id": "function-points",
+  "name": "Function Points",
+  "abbreviation": "FP",
+  "display_primary": "功能点",
+  "display_secondary": "Function Points",
+  "aliases": [
+    "功能点",
+    "IFPUG 功能点",
+    "软件功能规模点"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按功能点计数规则得到的用户功能规模指标。",
+  "description": "功能点是在规定功能规模测量方法下得到的规模数值。本词条采用 IFPUG 语境：输入、输出、查询及逻辑数据功能按相应规则贡献计数，而功能点分析是生成和核对这些计数的方法。\n\n报告数值需注明应用边界、需求版本、测量目的、计数方法和是否采用近似复杂度。同一软件的功能计数可以随着需求细化而增长，即使用户没有增加需求；应区分后来识别出的既有功能与实际新增范围。\n\n功能点可作为每功能点工作量、缺陷数或费用等派生指标的规模分母。它不直接给出开发时长；IFPUG FP 与 COSMIC CFP 采用不同规则，不能把相同点数当成相同规模，也不能使用无条件的固定代码行换算率。\n\n## 参考\n\n- [IFPUG：功能点分析与度量范围](https://ifpug.org/ifpug-standards/fpa)\n- [IFPUG：早期功能点估算与一致成本估算](https://ifpug.org/wp-content/uploads/2026/06/uTip-003-Early-FPA.pdf)\n- [COSMIC：方法与功能用户模型](https://cosmic-sizing.org/cosmic-sizing/intro/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://ifpug.org/ifpug-standards/fpa"
+}

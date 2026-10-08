@@ -1,0 +1,33 @@
+{
+  "id": "control-flow-analysis",
+  "name": "Control-Flow Analysis",
+  "aliases": [
+    "控制流分析",
+    "Control Flow Analysis"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cfg",
+      "context": "基于图的控制流分析用基本块和可能跳转边描述程序路径；高阶调用目标分析另有表示。"
+    }
+  ],
+  "summary": "推断程序可能的控制转移及位置可达关系。",
+  "description": "控制流分析刻画程序执行可能从哪些位置转移到哪些位置，并分析可达性、分支、循环或调用关系。不同语境中它既可分析控制流图，也可推断高阶函数可能流向的调用目标，需按具体模型区分。\n\n编译器和检查器根据语法、条件和语言规则建立或细化路径信息。TypeScript 的 narrowing 按可达性、赋值和条件测试调整某位置的类型；此类流敏感类型结果使用的是语言设计与实现提供的控制流近似。\n\n静态控制路径不等于一次实际执行轨迹，也不自动排除所有不可行路径。间接调用、动态构造及分析预算会影响精度，控制流结构本身还需要与数据流、类型或其他抽象状态结合才能推断值的性质。\n\n## 参考\n\n- [TypeScript：控制流与类型缩窄](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)\n- [Aarhus：控制流分析模型](https://www.cs.au.dk/~amoeller/spa/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

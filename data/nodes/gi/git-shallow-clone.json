@@ -1,0 +1,34 @@
+{
+  "id": "git-shallow-clone",
+  "name": "Git Shallow Clone",
+  "aliases": [
+    "Git 浅克隆",
+    "浅历史仓库"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git",
+      "context": "Git clone/fetch 对本地提交图施加浅边界的内置机制"
+    }
+  ],
+  "summary": "通过提交边界限制所获取历史深度的 Git 克隆机制。",
+  "description": "Git 浅克隆限制取得的提交历史，常由 `git clone --depth`、时间或排除引用等条件建立。浅边界列表让遍历把某些仍具有父字段的提交当作根，从而停止继续追溯；边界不是项目真正的创建时间。\n\n浅仓库可通过 fetch 加深或在条件允许时补成完整历史。某次获取的深度不能直接等同于所有分支各自相同的提交数量；克隆引用范围、服务器可达历史和后续 fetch 行为，也会影响本地可以观察的集合。\n\n历史计数、文件年龄、blame 或演化热点可能因不可见的早期提交而失真。采集时应检测并记录浅边界与获取范围；它与 partial clone 的对象过滤分工不同，两者可以组合，不能仅凭磁盘上存在当前源码就断定历史样本完整。\n\n## 参考\n\n- [Git clone：浅历史选项](https://git-scm.com/docs/git-clone)\n- [Git shallow 设计说明](https://git-scm.com/docs/shallow)\n- [Git fetch：加深与 unshallow](https://git-scm.com/docs/git-fetch)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://git-scm.com/docs/git-clone"
+}

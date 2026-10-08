@@ -1,0 +1,40 @@
+{
+  "id": "sbom-diff",
+  "name": "SBOM Diff",
+  "aliases": [
+    "SBOM 差异比较",
+    "软件物料清单比较"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "以所述工件和生成阶段明确的清单作为比较输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-url",
+      "context": "比较组件时可用已归一的完整包身份辅助匹配，而不是只比较显示名。"
+    }
+  ],
+  "summary": "比较清单中组件、版本和关系变化并解释差异来源。",
+  "description": "SBOM 差异比较对两份或多份清单中的组件、版本和关系变化进行检查，帮助跟踪发布内容或分析器输出的变化。比较前要确认对象和阶段是否可比：源码清单与最终镜像清单存在差异，不一定说明某个生成器出错。\n\n身份归一、文档引用和版本字段影响比较结果。组件新增、移除与版本变化可以作为审查入口，关系或许可变化则需要工具实际支持对应检查。CycloneDX CLI 提供比较能力，输出的具体字段范围应按命令和版本说明核对。\n\n差异可能来自产品内容，也可能来自采集配置、规则库、格式转换或标识修正。相同组件列表不能证明文件内容相同，变化条目也不直接代表漏洞或风险增减。保留原清单、工件摘要、生成配置和比较规则，才能把发现联系到真实发布变化。\n\n## 参考\n\n- [CycloneDX CLI：diff 文档处理命令](https://github.com/CycloneDX/cyclonedx-cli)\n- [Syft：输出格式差异及转换范围](https://oss.anchore.com/docs/guides/sbom/formats/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/CycloneDX/cyclonedx-cli"
+}

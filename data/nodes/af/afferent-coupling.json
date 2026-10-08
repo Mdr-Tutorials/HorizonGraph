@@ -1,0 +1,31 @@
+{
+  "id": "afferent-coupling",
+  "name": "Afferent Coupling",
+  "abbreviation": "Ca",
+  "aliases": [
+    "传入耦合",
+    "传入依赖数",
+    "入向耦合"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计选定单元之外指向该单元的依赖来源。",
+  "description": "传入耦合 Ca 统计其他软件单元对目标单元的依赖来源。在包依赖图中，它通常按不同外部包去重；在类型或程序集分析中，工具也可能按类型计数。\n\nJDepend 以依赖本包的其他包数量计算 Ca；NDepend 的程序集级定义则计入程序集外依赖其内部类型的类型数量。两种口径的对象与边界不同，即使名称相同也不能直接比较绝对值。\n\n较多传入依赖意味着更多已纳入范围的使用者可能受到接口变化影响。它不等同请求频次或实际变更概率；是否包含第三方组件、测试代码和未解析引用会影响结果，需保留统计范围。\n\n## 参考\n\n- [JDepend：传入包集合实现](https://github.com/clarkware/jdepend/blob/master/src/jdepend/framework/JavaPackage.java)\n- [NDepend：类型、命名空间与程序集口径](https://www.ndepend.com/docs/code-metrics)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/clarkware/jdepend/blob/master/src/jdepend/framework/JavaPackage.java"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "gnome-terminal",
+  "name": "GNOME Terminal",
+  "aliases": [
+    "GNOME 终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "vte",
+      "context": "GNOME Terminal 以 VTE widget 提供终端显示、解析和会话交互能力。"
+    }
+  ],
+  "summary": "以 VTE 组件提供 GNOME 桌面中的终端会话界面。",
+  "description": "GNOME Terminal 是 GNOME 桌面中的终端应用，用于运行 Shell 和其他命令行程序。它提供窗口、标签和可配置的显示行为，并使用 VTE 组件完成终端仿真；应用的界面设置、底层终端组件与被执行的程序分别承担职责。\n\nprofile 可以组合字体、颜色、回滚和启动命令，也可以把某套配置用于 SSH 或 GNU Screen 会话。这样的入口表示应用运行相应程序，不证明终端本身实现远程认证或持久复用。多个 profile 的名字与终端能力描述 TERM 也不是同一字段。\n\n回滚搜索、文本选取和退出行为帮助用户管理本地会话，但保存输出不能恢复已结束的进程。GNOME Terminal 与 VTE、GNOME Console 或其他使用相同组件的终端产品分别建模；某款桌面发行版选择默认应用，并不会改变这些项目的独立身份。\n\n## 参考\n\n- [GNOME：Terminal 简介](https://help.gnome.org/gnome-terminal/introduction.html)\n- [GNOME：profile 管理](https://help.gnome.org/gnome-terminal/pref-profiles.html)\n- [GNOME：VTE Terminal 接口](https://gnome.pages.gitlab.gnome.org/vte/gtk3/class.Terminal.html)\n- [GNOME：Terminal 构建依赖源码](https://github.com/GNOME/gnome-terminal/blob/master/meson.build)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://help.gnome.org/gnome-terminal/introduction.html"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "coverage-exclusion",
+  "name": "Coverage Exclusion",
+  "aliases": [
+    "覆盖排除",
+    "覆盖率排除规则"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "code-coverage",
+      "context": "无依据删除未覆盖结构或未加载文件会缩小分母，使报告高估原定代码范围的执行触达程度。"
+    }
+  ],
+  "summary": "明确哪些文件或代码结构不进入覆盖率统计。",
+  "description": "覆盖排除规定哪些文件、行或分支不进入覆盖报告或分母。常见原因包括生成代码、平台特有路径及可证实不可达逻辑，但排除必须说明依据并随源码变化复核。\n\ncoverage.py 的排除标记主要影响分析和报告，排除分支一侧还可能使该条件不再作为分支统计。nyc 也区分文件选择、忽略提示与是否纳入从未加载的文件，配置变化会改变总覆盖率。\n\n排除后的高覆盖值只对剩余范围成立。将难测代码无依据移出分母可能掩盖验证缺口；应保存排除项、理由和版本，并在同口径范围下比较不同运行结果。\n\n## 参考\n\n- [Coverage.py：排除规则](https://coverage.readthedocs.io/en/latest/excluding.html)\n- [nyc 官方仓库与配置](https://github.com/istanbuljs/nyc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://coverage.readthedocs.io/en/latest/excluding.html"
+}

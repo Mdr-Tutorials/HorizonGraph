@@ -1,15 +1,19 @@
 {
   "id": "eslint",
   "name": "ESLint",
-  "aliases": [],
+  "aliases": [
+    "JavaScript 可插拔规则检查器"
+  ],
   "type": "tool",
   "ecosystems": [
     "devops_tooling",
-    "node-js-ecosystem"
+    "node-js-ecosystem",
+    "software-quality-ecosystem"
   ],
   "domains": [
     "devops",
-    "web-development"
+    "web-development",
+    "software-quality"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -20,12 +24,32 @@
     {
       "relation_type": "depends_on",
       "target_id": "nodejs"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis-rule",
+      "context": "按项目配置运行核心及插件规则，输出诊断、修复或修改建议。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "espree",
+      "context": "在默认 JavaScript 解析路径中用 Espree 生成可供规则访问的语法树；可配置其他解析器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis-baseline",
+      "context": "采用批量抑制机制时记录已有的文件与规则违反数，以识别后续新增报告。"
     }
   ],
-  "summary": "可插拔的 JavaScript 静态检查器，团队规范的事实标准。",
+  "summary": "以解析器、插件和可配置规则检查源码的工具。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "official_site": "https://eslint.org"
+  "official_site": "https://eslint.org",
+  "description": "ESLint 是以可配置规则检查源码的工具，默认支持 JavaScript，并可通过插件、语言及处理器扩展分析范围。规则诊断、代码修复与报告格式属于不同职责，报告 formatter 不应误解为自动统一代码布局的格式化器。\n\n默认解析路径采用 Espree，把 JavaScript 转成符合约定的 AST 供规则访问；TypeScript 等语法可以配置专用解析器。插件可以提供规则、配置、处理器和语言支持，具体分析能力取决于实际安装与启用的组合。\n\n规则、忽略范围、参数及抑制影响报告的可比性，批量抑制可以登记已有的规则违反以控制新增问题。自动修复仅覆盖声明可修复的发现，零告警也不证明业务正确性、完整类型安全或全部安全性质。\n\n## 参考\n\n- [ESLint：核心概念](https://eslint.org/docs/latest/use/core-concepts/)\n- [ESLint：解析器接口](https://eslint.org/docs/latest/extend/custom-parsers)\n- [ESLint：批量抑制](https://eslint.org/docs/latest/use/suppressions)"
 }

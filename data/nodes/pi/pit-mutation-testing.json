@@ -1,0 +1,50 @@
+{
+  "id": "pit-mutation-testing",
+  "name": "PIT",
+  "aliases": [
+    "Java 变异测试工具",
+    "PIT Mutation Testing",
+    "PITest"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mutation-testing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutation-operator",
+      "context": "在 JVM 字节码上应用配置中的边界、逻辑、返回值等算子。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-selection",
+      "context": "根据先前采集的每测试覆盖信息选择触达变异位置的测试。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutation-testing-report",
+      "context": "保存变异位置、运行状态与相关测试结果。"
+    }
+  ],
+  "summary": "对 JVM 字节码生成变异并检查 Java 测试效果。",
+  "description": "PIT 是面向 Java 测试的变异分析工具，在编译后的 JVM 字节码上施加算子，再运行测试判断改动是否被发现。源码位置等调试信息帮助将字节码变异映射回可读报告。\n\n工具先采集测试覆盖和耗时，选择与变异代码相关的测试以控制执行成本。报告区分 killed、survived、no coverage、non viable、timeout 和执行错误；算子与过滤会改变候选集合。\n\n存活结果需要审查是否真正暴露测试缺口或属于等价行为，内存和运行错误也不能当成正常检出。官方不同语言和测试平台的集成有各自支持条件，不能由字节码层实现推导任意 JVM 项目均兼容。\n\n## 参考\n\n- [PIT 官方主页](https://pitest.org/)\n- [PIT：变异执行与状态](https://pitest.org/quickstart/basic_concepts/)\n- [PIT：字节码变异算子](https://pitest.org/quickstart/mutators/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://pitest.org/",
+  "abbreviation": "PIT"
+}

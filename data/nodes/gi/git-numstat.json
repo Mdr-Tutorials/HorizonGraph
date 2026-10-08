@@ -1,0 +1,34 @@
+{
+  "id": "git-numstat",
+  "name": "Git Numstat",
+  "aliases": [
+    "Git 增删行统计",
+    "Git --numstat"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git",
+      "context": "Git 差异子系统共享的逐文件统计输出选项"
+    }
+  ],
+  "summary": "以机器可读格式报告文件差异增删行数的 Git 选项。",
+  "description": "Git 的 `--numstat` 是差异输出选项，不是独立的 `git numstat` 子命令。它在 `git diff`、相应日志差异输出等接口中给出新增行数、删除行数与路径，适合采集逐文件变更量；数值依赖所选内容端点及差异规则。\n\n普通记录使用制表符分隔数值和路径。配合 `-z` 时路径采用 NUL 终止，重命名或复制记录有专门的旧路径与新路径布局；解析器不能只按空格切分，也不能把带换行的文件名误当成新的记录。\n\n二进制差异的两个计数字段输出 `-`，不能当成零行变化。新增加删除可作为明确口径下的 churn 输入，而不是当前源码总行数；净变化、累计变更和保留代码量分别回答不同问题，合并去重、生成文件及代码移动还需要另外处理。\n\n## 参考\n\n- [Git diff：numstat 输出](https://git-scm.com/docs/git-diff)\n- [Git log：差异统计选项](https://git-scm.com/docs/git-log)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://git-scm.com/docs/git-diff"
+}

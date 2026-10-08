@@ -1,0 +1,47 @@
+{
+  "id": "guac",
+  "name": "Graph for Understanding Artifact Composition",
+  "aliases": [
+    "软件工件组成关系图",
+    "GUAC"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "摄入支持格式的清单以连接工件与组成。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "artifact-attestation",
+      "context": "摄入支持的工件声明时关联对应对象与载荷，认证和信任仍由消费策略处理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "component-dependency-graph",
+      "context": "在支持的查询中追踪组件依赖路径与受影响产品。"
+    }
+  ],
+  "summary": "聚合软件安全元数据并连接工件、组件与供应链关系。",
+  "description": "GUAC 是将软件供应链元数据聚合到关系图中的开源系统，名称展开为 Graph for Understanding Artifact Composition。它对组件与工件身份进行归一，再连接组成、来源和安全声明等信息。它处于聚合与查询层，不是用一个命令就替代所有清单生成器和漏洞扫描器。\n\n系统摄入支持的 SBOM、证明材料及其他信息，通过查询追踪依赖路径和相关证据。来源与关系应随数据进入图谱，不同发布者对相同组件的声明可能具有不同信任边界。实际部署需要核对采集器、解析器和查询服务的支持范围。\n\n图查询能够帮助定位哪些产品包含受影响组件，并支持政策或审查工作流，但结论质量取决于输入身份、覆盖和证据。连接到一份签署声明不自动表示接受其全部事实；聚合更多节点也不证明库存完整。消费者需要保留来源，并根据自己的信任策略作出判断。\n\n## 参考\n\n- [GUAC：官方聚合与合成定位](https://github.com/guacsec/guac)\n- [GUAC：关系及查询文档](https://docs.guac.sh/guac/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/guacsec/guac",
+  "abstraction_level": "application_tool",
+  "abbreviation": "GUAC"
+}

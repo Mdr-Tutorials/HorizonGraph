@@ -1,0 +1,28 @@
+{
+  "id": "glyph",
+  "name": "Glyph",
+  "aliases": [
+    "字形",
+    "字体字形"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    }
+  ],
+  "summary": "字体中用于呈现字符内容的具体图形表示。",
+  "description": "字形是字符在具体字体中显示或打印时采用的图形表示，可以存储为轮廓、位图或其他受字体格式支持的表示。字形编号属于字体，不能直接把 glyph ID 当成跨字体通用的 Unicode 码点。\n\n字符与字形没有固定的一一对应。一个字符可因位置、语言或样式选择不同字形，多个字符可以形成连字，一个组合序列也可能使用多个彼此定位的字形；这些变化通常不会改变源文本的字符身份。\n\n字形的轮廓包围范围、bearing 和 advance 分别服务于绘制与布局。它们不等于终端列数或字素边界；缺字符时显示的方框字形也不是新增的文本字符，应从字体覆盖、映射和回退层排查。\n\n## 参考\n\n- [Unicode：字符与字形](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-2/)\n- [FreeType：字形加载与 charmap](https://freetype.org/freetype2/docs/tutorial/step1.html)\n- [Microsoft：cmap 字符到字形索引](https://learn.microsoft.com/en-us/typography/opentype/spec/cmap)",
+  "official_site": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-2/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -1,0 +1,43 @@
+{
+  "id": "swebok",
+  "name": "Guide to the Software Engineering Body of Knowledge",
+  "abbreviation": "SWEBOK",
+  "aliases": [
+    "软件工程知识体系指南",
+    "SWEBOK Guide",
+    "SWEBOK v4.0a"
+  ],
+  "type": "product",
+  "abstraction_level": "application_tool",
+  "domains": [
+    "software-quality",
+    "software-testing",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "devops_tooling"
+  ],
+  "summary": "IEEE Computer Society 汇集的软件工程知识领域指南。",
+  "importance": 4,
+  "official_site": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "documentation"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "software-engineering",
+      "context": "指南梳理软件工程公认知识领域并为教育、实践和专业发展提供主题导航。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "software-measurement-process",
+      "context": "工程管理知识领域介绍项目、过程与工作产品的度量计划、执行和评价。"
+    }
+  ],
+  "description": "SWEBOK Guide 是 IEEE Computer Society 发布的软件工程知识体系指南。它组织普遍接受的知识领域，并为进一步学习提供主题和参考资料；指南不是软件工具、运行时或某套可直接执行的项目流程。\n\n当前官方入口提供 v4.0a，覆盖十八个知识领域，包括需求、架构、设计、构建、测试、维护、配置管理、管理、过程、质量及基础知识。版本入口与正文应对应复核时的正式资料，不能把后续版本的公开评审写成当前已完成发行。\n\n指南可以帮助定位软件度量与其他工程活动的联系，并支持课程、职业发展和实践学习。它描述知识范围，不替代具体项目的标准选择、实施方法或质量判断；引用某个章节也不意味着项目已经满足其中列出的全部实践。\n\n## 参考\n\n- [IEEE Computer Society：指南目的和知识领域](https://www.computer.org/education/bodies-of-knowledge/software-engineering)\n- [官方当前版本入口](https://www.computer.org/education/bodies-of-knowledge/software-engineering/v4)\n- [SWEBOK v4.0a 正文](https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08"
+}

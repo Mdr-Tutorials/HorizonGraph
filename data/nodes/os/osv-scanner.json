@@ -1,0 +1,44 @@
+{
+  "id": "osv-scanner",
+  "name": "OSV-Scanner",
+  "aliases": [
+    "OSV 扫描器"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vulnerability-scanning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "osv",
+      "context": "在相应扫描路径查询 OSV 数据，以受支持包版本或提交关联已知漏洞。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "扫描已有清单输入时从其中提取受支持组件，覆盖受输入内容限制。"
+    }
+  ],
+  "summary": "从受支持的软件输入识别依赖并查询已知漏洞。",
+  "description": "OSV-Scanner 是开源命令行漏洞扫描工具，用于发现项目依赖中的已知问题。它能处理支持的锁文件、SBOM 及其他输入，当前工具还提供受支持的容器镜像扫描路径。它读取或识别组件，再查询漏洞数据，不等同于 OSV 数据库或其交换格式。\n\n源码与镜像输入采用不同的发现方式，支持的生态和分析能力取决于所用版本。受支持语言可提供调用分析或修复辅助，但这些能力不能推广为任意二进制均可精确证明不可利用。v1 与 v2 的命令和输入选择存在差异，应按对应文档核对实际使用路径。\n\n扫描覆盖受依赖识别、漏洞数据及配置限制，忽略项与过滤依据应随报告保存。匹配公告是调查起点，不意味着所有问题均能在环境中利用；没有匹配也不排除未知问题。修复建议需要结合包兼容性与测试，成功运行工具不会自动完成软件验收。\n\n## 参考\n\n- [OSV-Scanner：官方文档](https://google.github.io/osv-scanner/)\n- [OSV-Scanner：实现与支持能力](https://github.com/google/osv-scanner)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://google.github.io/osv-scanner/",
+  "abstraction_level": "application_tool"
+}

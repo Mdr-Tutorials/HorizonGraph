@@ -1,0 +1,43 @@
+{
+  "id": "ripgrep",
+  "name": "ripgrep",
+  "aliases": [
+    "ripgrep 搜索工具",
+    "rg"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "command-line-interface"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regex",
+      "context": "默认以正则表达式匹配文件内容，固定字符串模式和可选 PCRE2 模式另有明确选项。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "exit-status",
+      "context": "rg 用文档约定的状态区分存在匹配、没有匹配及执行错误，供脚本判断搜索结果。"
+    }
+  ],
+  "summary": "按正则或字面模式递归搜索文件内容的命令行工具。",
+  "description": "ripgrep 是面向文件内容的搜索工具，命令入口为 rg。它可以递归查找目录、按正则或固定字符串匹配，也能列出搜索文件；搜索机制与文件名模糊选择器的用途不同，本节点也不代表把文本搜索自动升级为结构化语义分析。\n\n默认行为会考虑忽略文件、隐藏文件和二进制等条件，结果集合因此取决于搜索配置。文件类型过滤、编码、上下文行和输出格式都有明确选项；需要全量检索时应核对忽略规则，而不能把默认没有命中解释为内容必然不存在。\n\n默认正则引擎与可选 PCRE2 模式的语法和性能边界不同。面向机器的处理可采用 JSON 或合适的分隔方式，终端彩色展示则服务于人类阅读；批量脚本还应区分未命中与执行错误的退出状态。\n\n## 参考\n\n- [ripgrep：README](https://github.com/BurntSushi/ripgrep)\n- [ripgrep：User Guide](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/BurntSushi/ripgrep"
+}

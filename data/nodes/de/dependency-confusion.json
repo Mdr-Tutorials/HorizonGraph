@@ -1,0 +1,35 @@
+{
+  "id": "dependency-confusion",
+  "name": "Dependency Confusion",
+  "aliases": [
+    "依赖混淆",
+    "软件包依赖混淆"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "evidence-based-component-identification",
+      "context": "若识别仅依据包名且忽略解析来源，同名公开包可能被误认成预期内部组件；源和内容证据可限制此偏差。"
+    }
+  ],
+  "summary": "利用包源或命名空间解析歧义引入非预期依赖。",
+  "description": "依赖混淆是一种软件供应链攻击机制：构建或安装过程在多个软件源之间解析同名包时，取到了攻击者发布的非预期组件。风险与包源优先级、命名空间及版本选择规则有关，不能仅由一个包名判断哪个源是正确来源。\n\n内部包与公共源中的同名包可能触发此类歧义，锁文件、明确源映射和命名空间策略能帮助约束解析。Microsoft 的 Package Source Mapping 将包模式限定到相应源，具体规则仍需覆盖直接与传递依赖。保护措施必须与实际包管理器行为一致，不能推广为所有工具共享同一解析规则。\n\nSBOM 可以记录最终进入工件的组件与来源，但若只保留名称或接受伪造元数据，也可能无法解释错误依赖。发现同名包不证明已经发生攻击，正确拼写也不排除此机制。需要结合解析日志、来源、版本和内容证据确认输入路径与影响。\n\n## 参考\n\n- [OWASP：软件供应链威胁机制](https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html)\n- [Microsoft：NuGet 包源映射](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://cheatsheetseries.owasp.org/cheatsheets/Software_Supply_Chain_Security_Cheat_Sheet.html"
+}

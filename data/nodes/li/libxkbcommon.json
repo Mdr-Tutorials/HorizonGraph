@@ -1,0 +1,33 @@
+{
+  "id": "libxkbcommon",
+  "name": "libxkbcommon",
+  "aliases": [
+    "xkbcommon"
+  ],
+  "type": "library",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wayland",
+      "context": "启用 Wayland 相关工具或集成时，处理合成器与客户端之间传递的键盘映射和状态；核心库不硬依赖 Wayland。"
+    }
+  ],
+  "summary": "编译 XKB 键盘映射并维护按键、布局和修饰键状态的库。",
+  "description": "libxkbcommon 是键盘映射与状态处理库，编译 XKB 描述并根据按键、布局及修饰键状态取得符号、字符或动作。它被 Wayland 合成器、工具包和应用广泛采用，也提供 Compose、死键以及相关开发工具。\n\n服务器和客户端有不同的状态更新方式：服务端根据设备事件维护状态，客户端根据收到的序列化状态同步。快捷键判断还需考虑已消费的修饰键，避免同一符号在不同布局下的产生方式破坏操作绑定。\n\nlibxkbcommon 不自行提供完整键盘布局数据库，常见数据来自 xkeyboard-config；它也不是拼音或其他复杂输入法引擎。X11、Wayland 和注册表工具是可选构建能力，核心键盘映射使用不能据此被写成对所有显示协议的硬依赖。\n\n## 参考\n\n- [libxkbcommon 官方概览](https://xkbcommon.org/doc/current/)\n- [libxkbcommon 键盘状态 API](https://xkbcommon.org/doc/current/group__state.html)",
+  "official_site": "https://xkbcommon.org/doc/current/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

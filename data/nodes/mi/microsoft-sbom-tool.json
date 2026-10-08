@@ -1,0 +1,48 @@
+{
+  "id": "microsoft-sbom-tool",
+  "name": "Microsoft SBOM Tool",
+  "aliases": [
+    "微软 SBOM 工具",
+    "sbom-tool"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom-generation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom-validation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx",
+      "context": "采用工具实际支持的 SPDX 版本描述组件和交付文件。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom-aggregation"
+    }
+  ],
+  "summary": "发现构建依赖与交付文件并生成或校验 SPDX 清单。",
+  "description": "Microsoft SBOM Tool 是微软发布的开源清单生成和验证工具，用于支持软件交付物的组成记录。生成路径可以从构建组件目录发现受支持依赖，再为交付目录中的文件采集信息。它与解析已存在 SPDX 文档的通用库职责不同，也不是全能力漏洞扫描器。\n\n命令区分生成、验证及聚合等操作，项目名称、版本、供应方和命名空间用于描述输出对象。支持的 SPDX 版本和目录布局应按工具版本核对。验证可结合交付文件检查清单对应信息，但仅验证一份文档与验证工件内容不是同一层次。\n\n依赖识别覆盖由支持的生态、项目文件和输入目录决定，无法识别的组件仍需补充证据。生成后应保留配置并检查关系与覆盖，文件哈希也不会告诉工具所有嵌入库的身份。工具输出可参与发布证明，不能单独证明来源真实、许可判断正确或软件无漏洞。\n\n## 参考\n\n- [Microsoft：SBOM Tool 官方项目](https://github.com/microsoft/sbom-tool)\n- [Microsoft：生成、验证及聚合命令](https://github.com/microsoft/sbom-tool/blob/main/docs/sbom-tool-cli-reference.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/microsoft/sbom-tool",
+  "abstraction_level": "application_tool"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "xwayland",
+  "name": "XWayland",
+  "aliases": [
+    "Xwayland",
+    "XWayland 兼容服务器"
+  ],
+  "type": "tool",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "x11",
+      "context": "为旧 X 客户端提供 X11 服务器接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wayland",
+      "context": "作为 Wayland 客户端向宿主合成器提交表面并接收输入。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "display-server",
+      "context": "从连接它的 X11 应用视角提供显示服务器职责。"
+    }
+  ],
+  "summary": "作为 Wayland 客户端运行的 X11 兼容服务器。",
+  "description": "XWayland 是接入 Wayland 合成器的 X11 服务器，使现有 X 应用仍能通过 X11 接口运行。对 X 应用它是显示服务器，对 Wayland 合成器它又是客户端；这两个视角共同构成兼容桥接。\n\n在常见无根窗口模式中，合成器承担 X 窗口管理角色，通过 XWM 协调 X 窗口状态与原生 Wayland 窗口。XWayland 以 Wayland 处理输出和输入，不使用 Xorg 的传统显示与输入驱动模块，因此它的配置路径也不同。\n\n兼容不意味着把 X 应用改成了原生 Wayland 应用，也不保证全部 X11 桌面组件与行为可用。同一实例内的 X 客户端之间通常仍遵循 X11 交互模型；是否隔离、按需启动及支持哪些扩展，要结合合成器部署判断。\n\n## 参考\n\n- [Wayland 官方 X11 应用支持](https://wayland.freedesktop.org/docs/book/Xwayland.html)\n- [Wayland 会话与嵌套合成器](https://wayland.freedesktop.org/docs/book/Compositors.html)",
+  "official_site": "https://wayland.freedesktop.org/docs/book/Xwayland.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

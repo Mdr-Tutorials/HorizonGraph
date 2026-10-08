@@ -4,25 +4,28 @@
   "display_primary": "Git 对象模型",
   "display_secondary": "Git Object Model",
   "aliases": [
-    "blob tree commit"
+    "blob tree commit",
+    "Git 内容寻址对象"
   ],
   "type": "concept",
   "ecosystems": [
     "git-ecosystem"
   ],
   "domains": [
-    "devops"
+    "devops",
+    "repository-analysis"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "repository-analysis-concept"
     }
   ],
   "summary": "blob、tree、commit、tag 构成内容寻址的快照图。",
+  "description": "Git 对象模型以 blob 保存文件内容，以 tree 保存名称、模式和子对象引用，以 commit 指向根树及父提交，另有带注释 tag 对象。blob 本身不包含文件路径；相同内容可以由多处 tree 引用，因此对象数量与源码文件数不是同一种计数。\n\ncommit 的父链接形成历史图，作者、提交者、时间和消息记录在提交对象中。两个或更多父链接表示合并提交；重命名通常由比较快照的相似度推断，而不是 commit 内专门记录的持久操作。差异与行归属都是在选定对象和规则下进一步计算的视图。\n\n对象由类型、长度及内容计算对象 ID，仓库的对象格式决定所用哈希体系；不能把所有仓库都假定为固定 40 位 SHA-1 文本。仓库分析应明确去重单位、引用可达性及对象是否完整，pack 压缩和增量存储的磁盘字节数也不能替代逻辑源码规模。\n\n## 参考\n\n- [Pro Git：Git 对象](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)\n- [Git commit-tree：提交结构](https://git-scm.com/docs/git-commit-tree)\n- [Git 哈希函数迁移说明](https://git-scm.com/docs/hash-function-transition)",
   "importance": 4,
   "popular": 45,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
   "status": "active"
 }

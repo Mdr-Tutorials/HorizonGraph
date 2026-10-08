@@ -11,7 +11,8 @@
   ],
   "domains": [
     "systems-programming",
-    "devops"
+    "devops",
+    "repository-analysis"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -29,10 +30,11 @@
     }
   ],
   "summary": "分布式版本控制系统，以快照与有向无环图管理源码历史。",
+  "description": "Git 是分布式版本控制工具，以内容寻址对象保存文件快照，通过提交的父链接记录演化历史。分支与标签是指向对象的引用；工作区、索引与已提交树分别代表当前文件、待提交内容与历史快照，统计时必须先选定实际对象。\n\nGit 内置 log、diff、blame 等查询命令，可为仓库挖掘提供提交元数据、端点差异及存续行的修改线索。忽略规则、路径属性、mailmap、重命名检测以及合并遍历方式，分别影响文件集合、内容处理、身份显示和历史解释，不宜省略这些采集条件。\n\n拥有本地仓库并不总意味着拥有全部历史和内容：浅克隆截断提交遍历，部分克隆可能按需从远端取得对象。源码行数与提交变更量也不是开发者绩效或软件质量本身；可重复分析需要固定提交或引用、Git 版本、命令、过滤规则与取数状态。\n\n## 参考\n\n- [Git 官方手册](https://git-scm.com/docs/git)\n- [Pro Git：Git 是什么](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)\n- [Git log 手册](https://git-scm.com/docs/git-log)",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "2005-04-07",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
   "popular": 94,
   "official_site": "https://git-scm.com"

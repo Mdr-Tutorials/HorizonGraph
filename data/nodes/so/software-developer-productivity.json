@@ -1,0 +1,29 @@
+{
+  "id": "software-developer-productivity",
+  "name": "Software Developer Productivity",
+  "aliases": [
+    "软件开发者生产力",
+    "开发者生产效率"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    }
+  ],
+  "summary": "结合结果、协作与体验理解开发工作的有效性。",
+  "description": "软件开发者生产力涉及有价值结果如何产生，以及人员、团队与工作系统怎样支持这些结果。代码编写、设计、评审、排障和帮助同事都是工作的一部分；活动数量只覆盖其中某些可见痕迹。\n\n评估时应区分个人、团队和组织层次，并明确任务、时间窗与用途。更少的代码可能来自成功简化，更多提交可能来自拆分策略；删除冗余代码和改善协作也可能有价值，不能把 LOC、PR 数或工时直接换算成个人绩效。\n\nSPACE 提供多维视角，DevEx 着重工作摩擦与体验，DORA 关注应用或服务的交付表现。它们回答的问题不同；自动采集的数据需要与开发者反馈和实际成果一起解释，观察相关关系也不能直接证明某项工具造成生产力提高。\n\n## 参考\n\n- [SPACE 作者：生产力与开发者体验](https://azure.microsoft.com/en-us/blog/navigating-the-space-between-productivity-and-developer-happiness/)\n- [DevEx 原研究与作者说明](https://getdx.com/research/devex-what-actually-drives-productivity/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://azure.microsoft.com/en-us/blog/navigating-the-space-between-productivity-and-developer-happiness/"
+}

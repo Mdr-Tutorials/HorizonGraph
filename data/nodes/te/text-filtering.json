@@ -1,0 +1,33 @@
+{
+  "id": "text-filtering",
+  "name": "Text Filtering",
+  "aliases": [
+    "文本过滤",
+    "Unix 文本过滤器"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "Unix 风格过滤器常以标准输入读取文本、以标准输出交付处理结果；具体工具也可显式读取文件。"
+    }
+  ],
+  "summary": "读取文本并按规则选择或转换记录的处理方法。",
+  "description": "文本过滤把输入文本按模式、字段或规则选择、转换后交给输出，适合把单一职责的命令组合成处理链。过滤可仅保留某些记录，也可替换内容或计算新字段；方法本身不要求某一个具体 GNU 软件。\n\nUnix 风格过滤器经常从标准输入读取并向标准输出写结果，由管道衔接多个进程，诊断可使用独立错误通道。按记录即时处理能够减少等待和存储，但排序、全局去重或汇总等任务可能必须保留状态或等到输入结束。\n\n字节分隔、字符编码、区域设置和数据格式决定文本能否被正确解释。以换行分割不能安全代表所有可能文件名，正则过滤也不能自然解析任意结构化语法；处理 JSON 或 CSV 时，应根据格式规则选择相应处理器。\n\n## 参考\n\n- [GNU Sed：流编辑与过滤](https://www.gnu.org/software/sed/manual/html_node/Introduction.html)\n- [GNU Coreutils：输入输出重定向](https://www.gnu.org/software/coreutils/manual/html_node/I_002fO-redirection.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/sed/manual/html_node/Introduction.html"
+}

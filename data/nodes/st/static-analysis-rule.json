@@ -1,0 +1,43 @@
+{
+  "id": "static-analysis-rule",
+  "name": "Static Analysis Rule",
+  "aliases": [
+    "静态分析规则",
+    "静态检查规则"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "基于语法节点的规则在解析表示上访问表达式、语句和声明。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-smell",
+      "context": "维护性规则可以采用特定结构异味作为需要报告的诊断判据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-clone",
+      "context": "重复代码规则按声明的克隆相似准则界定需要报告的结构模式。"
+    }
+  ],
+  "summary": "在程序表示上识别特定模式或性质的检查定义。",
+  "description": "静态分析规则给出要检查的模式或性质以及报告条件，常运行在语法树、符号或其他程序表示上。规则可以针对语言错误、资源使用、代码结构或项目约定，其目标和依据需要明确。\n\n例如 ESLint 规则通过节点访问和上下文产生诊断，有些规则提供修复或修改建议；PMD 也支持用程序代码或查询编写规则。选择复杂度阈值或异味模式只是可能的规则类型，并非全部静态分析都采用相同模型。\n\n规则的正确性和适用范围受语言语义、解析器、外部调用模型及配置影响。报告属于可复核的发现，自动修复还需验证行为；规则缺失或未启用不能视为相应性质已经得到证明。\n\n## 参考\n\n- [ESLint：自定义规则](https://eslint.org/docs/latest/extend/custom-rules)\n- [PMD：7.28.0 说明](https://github.com/pmd/pmd/blob/pmd_releases/7.28.0/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://eslint.org/docs/latest/extend/custom-rules"
+}

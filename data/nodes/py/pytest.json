@@ -7,10 +7,12 @@
   "type": "tool",
   "ecosystems": [
     "python-ecosystem",
-    "static-analysis-testing-ecosystem"
+    "static-analysis-testing-ecosystem",
+    "software-testing-ecosystem"
   ],
   "domains": [
-    "devops"
+    "devops",
+    "software-testing"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -25,12 +27,18 @@
     {
       "relation_type": "depends_on",
       "target_id": "python"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-oracle",
+      "context": "运行测试断言并产生失败诊断，以判定 Python 被测行为是否符合预期。"
     }
   ],
-  "summary": "Python 测试事实标准，fixture 与参数化好用。",
+  "summary": "以 fixture、参数化和断言诊断组织 Python 测试。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "official_site": "https://docs.pytest.org"
+  "official_site": "https://docs.pytest.org",
+  "description": "pytest 是 Python 测试工具，通过发现测试函数或方法执行断言，并提供清晰的失败诊断。它既可承载小范围单元测试，也可组织集成或其他测试，具体层次由测试对象与环境决定。\n\nfixture 定义可复用的设置和清理生命周期，参数化让同一行为在不同输入下验证。清理、共享状态与并行执行策略会影响可重复性，测试线程及外部服务需自行管理。\n\n覆盖测量可选用 pytest-cov 集成 Coverage.py，变异分析可由 mutmut 等工具调用测试。插件带来的能力不属于 pytest 本体的无条件依赖，覆盖阈值与行为断言通过也应分别解释。\n\n## 参考\n\n- [pytest：fixture 生命周期](https://docs.pytest.org/en/stable/how-to/fixtures.html)\n- [pytest：参数化](https://docs.pytest.org/en/stable/how-to/parametrize.html)\n- [pytest：不稳定测试原因与处置](https://docs.pytest.org/en/stable/explanation/flaky.html)"
 }

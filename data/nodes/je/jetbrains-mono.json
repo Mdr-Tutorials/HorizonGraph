@@ -1,0 +1,41 @@
+{
+  "id": "jetbrains-mono",
+  "name": "JetBrains Mono",
+  "aliases": [
+    "JetBrains Mono 编程字体"
+  ],
+  "type": "product",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "jetbrains"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "monospace-font"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "font-ligature",
+      "context": "常规版本包含编程连字以呈现运算符序列；NL 版本排除这些连字。"
+    }
+  ],
+  "summary": "JetBrains 提供的开放等宽编程字体家族。",
+  "description": "JetBrains Mono 是 JetBrains 为代码阅读设计的开放字体家族。它采用等宽布局，并通过字母结构、字符区分和小写字母高度等设计服务于编辑器中的代码呈现。\n\n字体家族提供不同字重、斜体及编程连字，联合显示运算符序列而保持源代码文本。官方还提供不带连字的 NL 版本；应用的 OpenType 支持与特性设置会影响实际是否出现连字。\n\n字体按 SIL Open Font License 1.1 发布，分发和修改仍应遵守许可。它不是完整 Unicode 覆盖或终端列宽一致性的保证；缺少所需字形时仍需后备字体。Ghostty 官方配置说明将其列为内置默认字体。\n\n## 参考\n\n- [JetBrains：Mono 字体与设计说明](https://www.jetbrains.com/lp/mono/)\n- [JetBrains：官方源码与 NL 版本](https://github.com/JetBrains/JetBrainsMono)\n- [Ghostty：默认字体与配置](https://ghostty.org/docs/config)",
+  "official_site": "https://www.jetbrains.com/lp/mono/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool"
+}

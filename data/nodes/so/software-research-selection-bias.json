@@ -1,0 +1,39 @@
+{
+  "id": "software-research-selection-bias",
+  "name": "Selection Bias in Software Engineering Research",
+  "aliases": [
+    "软件研究选择偏差",
+    "仓库与开发者样本选择偏差"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "software-survey-research",
+      "context": "开发者主动进入调查的概率若与体验或采用效果有关，自选择样本可能扭曲对目标总体的感知推论。"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "software-quasi-experiment",
+      "context": "非随机处理分派若与团队经验或原有表现有关，组间差异可能混入工具或方法的处理效果。"
+    }
+  ],
+  "summary": "选择机制使研究样本或比较组偏离目标对象。",
+  "description": "软件研究选择偏差发生在对象进入样本或处理组的机制与研究结果有关时。公开 GitHub 仓库、愿意填写问卷的开发者和自愿采用新工具的团队，各自只是特定来源中的对象，不能自动代表全部软件与从业者。\n\n总体、抽样框与最终样本应分开说明，公开仓库过滤、语言选择、活跃度门槛和排除步骤。从一个有偏抽样框随机选取大量对象，仍可能遗漏私有、嵌入式或长期维护项目；扩大样本不能补回来源中根本不存在的对象。\n\n准实验的处理分派与总体推广中的抽样偏差影响不同推论。前者需要处理组间差异，后者需要解释覆盖范围并在其他来源核验；非概率抽样也可用于特定目的，但不能把目的性案例解释成总体比例。\n\n## 参考\n\n- [SIGSOFT：抽样目的、总体与偏差](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md)\n- [Baltes 与 Ralph：软件工程研究抽样方法](https://arxiv.org/pdf/2002.07764)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md"
+}

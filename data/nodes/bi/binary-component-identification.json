@@ -1,0 +1,40 @@
+{
+  "id": "binary-component-identification",
+  "name": "Binary Component Identification",
+  "aliases": [
+    "二进制组件识别",
+    "二进制组成分析"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "evidence-based-component-identification",
+      "context": "对从元数据或特征推导的身份记录方法、位置和相应证据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom-generation",
+      "context": "将识别到的交付组件作为生成最终工件清单的输入，未知范围保持可见。"
+    }
+  ],
+  "summary": "从交付文件与嵌入元数据识别软件组件并保留证据。",
+  "description": "二进制组件识别从已经构建的可执行文件、库、归档或镜像中寻找软件组成，而不是只读取源码依赖声明。元数据、符号、版本字符串和其他特征可以提供候选身份。它能够观察交付物中的实际内容，但识别能力取决于格式、构建方式及分析器。\n\n某些语言二进制保留依赖与构建元数据，可帮助确定包版本；裁剪符号、静态链接或自定义打包则可能降低可见性。生成器应记录使用的技术与文件位置，区别明确嵌入元数据和启发式相似匹配。多个组件共处一个文件不自动给出完整运行依赖或函数调用关系。\n\n未知或未命中的组件不等于不存在，编译优化和供应方修改也可能影响身份。二进制发现结果可补充源码或构建清单，不能单独认证来源、许可或漏洞可利用性。与构建记录及工件摘要核对，有助于确认识别对象和解释覆盖盲区。\n\n## 参考\n\n- [Syft：包分析器与二进制识别范围](https://oss.anchore.com/docs/guides/sbom/catalogers/)\n- [cdxgen：支持的分析技术与证据](https://github.com/cdxgen/cdxgen/blob/master/docs/ADVANCED.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://oss.anchore.com/docs/guides/sbom/catalogers/"
+}

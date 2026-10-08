@@ -1,0 +1,45 @@
+{
+  "id": "sbom-aggregation",
+  "name": "SBOM Aggregation",
+  "aliases": [
+    "SBOM 聚合",
+    "软件物料清单合并"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "以范围明确的上游或子系统清单作为组合输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "component-dependency-graph",
+      "context": "合并时连接顶层对象与子组件，保留直接及传递依赖语义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom-validation",
+      "context": "重新检查合并文档中的标识、引用和相应约束。"
+    }
+  ],
+  "summary": "在保留身份、关系和来源的条件下组合多份清单。",
+  "description": "SBOM 聚合将多个组件或子系统的清单组合为更大范围的软件组成记录。它适用于由多份构建输出或上游软件拼装的产品，需要先明确聚合后的顶层对象。简单拼接组件数组可能保留了条目，却未建立正确依赖和组成关系。\n\n聚合需要处理文档内引用、重复身份、多个版本及来源，不能把同名组件直接去重为一个实例。CycloneDX CLI 的层次化合并与 Microsoft SBOM Tool 的聚合提供具体处理路径，输入条件和关系保留应核对工具支持。生成器信息与原始清单需要能够追溯。\n\n各输入清单的覆盖差异会传入结果，未知范围不能因合并操作消失。输入之间存在冲突时应保留差异或明确裁决，不能声称只因条目增加就更完整。聚合后要重新校验引用与对象绑定，必要时签署新的声明，原来对输入文件的签名不直接认证新结果。\n\n## 参考\n\n- [CycloneDX CLI：合并及层次化清单](https://github.com/CycloneDX/cyclonedx-cli)\n- [Microsoft SBOM Tool：多清单聚合](https://github.com/microsoft/sbom-tool/blob/main/docs/sbom-tool-cli-reference.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/CycloneDX/cyclonedx-cli"
+}

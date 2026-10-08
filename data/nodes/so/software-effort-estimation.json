@@ -1,0 +1,67 @@
+{
+  "id": "software-effort-estimation",
+  "name": "Software Effort Estimation",
+  "display_primary": "软件工作量估算",
+  "display_secondary": "Software Effort Estimation",
+  "aliases": [
+    "软件工作量估算",
+    "软件开发工作量估算",
+    "软件工时估算",
+    "软件投入估算"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "software-size-estimation",
+      "context": "采用规模驱动的工作量模型时，软件规模估算及其不确定性构成输入；自下而上估算不必一律先预测代码行数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "function-points",
+      "context": "使用本地历史人时/IFPUG FP 关系估算时，以预计功能点规模作为输入，同时对齐活动范围、需求阶段和计数规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cosmic-functional-size",
+      "context": "使用 COSMIC 功能规模驱动的估算时，以 CFP 和同尺度的历史单位规模投入构成输入，避免与 IFPUG FP 混算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cocomo",
+      "context": "在经典参数模型估算、历史基线解释或使用 COCOMO 81 的工具输出核对中，使用其规模和成本驱动假设。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cocomo-ii",
+      "context": "采用 COCOMO II 参数估算时，按设计信息完备度选择子模型，并记录规模、成本驱动与本地校准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wideband-delphi",
+      "context": "缺少可比历史样本或需专家判断时，用独立估计和多轮讨论形成工作量估算并保留分歧依据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "planning-poker",
+      "context": "在敏捷待办条目相对工作量估算中，使用独立选牌、同时揭示及假设讨论形成团队估计。"
+    }
+  ],
+  "summary": "结合范围、规模、历史数据和风险预测人员投入。",
+  "description": "软件工作量估算预测完成规定软件活动所需的人员投入。必须先明确是否包含需求、设计、集成、测试、管理和维护等活动；投入人时或人月与项目历时不同，日历计划还受到依赖、人员安排及可并行程度约束。\n\n方法包括按工作分解自下而上估算、相似项目类比、参数模型和专家判断。功能规模乘以本地历史单位规模投入可形成估算，前提是活动范围、规模规则与历史样本可比；COSMIC CFP 和 IFPUG FP 应使用各自校准的数据。\n\nCOCOMO 等模型提供规模和成本驱动的参数框架，Planning Poker 可帮助团队讨论待办条目的相对投入。估算需随范围变化修订并与实际值对照，保留假设与风险；团队共识或计算出的数字都不能消除需求的不确定性。\n\n## 参考\n\n- [NASA/JPL：Handbook for Software Cost Estimation（2003）](https://swehb.nasa.gov/download/attachments/16450436/Handbook_for_Software_Cost_Estimation.pdf?api=v2)\n- [IFPUG：早期功能点估算与一致成本估算](https://ifpug.org/wp-content/uploads/2026/06/uTip-003-Early-FPA.pdf)\n- [COSMIC：方法与功能用户模型](https://cosmic-sizing.org/cosmic-sizing/intro/)\n- [Mike Cohn：Planning Poker 的独立选牌与讨论流程](https://www.mountaingoatsoftware.com/agile/story-points/planning-poker)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://swehb.nasa.gov/download/attachments/16450436/Handbook_for_Software_Cost_Estimation.pdf?api=v2"
+}

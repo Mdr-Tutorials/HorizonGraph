@@ -29,10 +29,20 @@
       "relation_type": "uses",
       "target_id": "json",
       "context": "采用 JSON 序列化交换 CycloneDX BOM 时，依据所选规范版本验证结构和字段语义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-url",
+      "context": "软件组件采用 PURL 时表达包生态、名称及版本身份。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx-license-expression",
+      "context": "许可字段可采用 SPDX 表达式，表达式含义仍须有许可证据支持。"
     }
   ],
   "summary": "以组件、服务和关系表达供应链清单及安全上下文。",
-  "description": "CycloneDX 是面向供应链透明度的物料清单数据规范，其模型包含组件、服务、依赖及组合信息，支持直接和传递关系。软件 SBOM 是其中一种用途；规范也能表示硬件、密码资产及其他清单。它是数据模型与交换格式，不是自动识别所有软件的扫描程序，也不只适用于容器镜像。\n\n官方概览列出的 1.7 提供 JSON、XML 与 Protocol Buffers 表示，并在 Ecma 标准化体系中对应 ECMA-424。依赖图描述组件关系，compositions 可说明完整、不完整或未知的清单覆盖；漏洞信息与影响声明则为后续风险调查提供上下文。这些字段要由生产者提供相应证据，不能因结构支持某项信息就认为每份文档都含有它。\n\n在镜像发布与消费流程中，CycloneDX 清单可交给扫描器做组件匹配，也可作为工件声明的 predicate 传递。接收方需要核对文档版本、所述对象、生成阶段和覆盖范围，并区分发现组件、报告漏洞与确认实际影响。签署清单能够绑定声明者与载荷，仍不会自动证明清单完整，格式转换也可能损失两种模型间无法对应的信息。\n\n## 参考\n\n- [CycloneDX：规范概览、版本与对象模型](https://cyclonedx.org/specification/overview/)\n- [CycloneDX：官方 SBOM 指南](https://cyclonedx.org/guides/sbom/relationships/)\n- [Syft：SBOM 格式及版本支持](https://oss.anchore.com/docs/guides/sbom/formats/)",
+  "description": "CycloneDX 是面向供应链透明度的物料清单数据规范，其模型包含组件、服务、依赖及组合信息，支持直接和传递关系。软件 SBOM 是其中一种用途；规范也能表示硬件、密码资产及其他清单。它是数据模型与交换格式，不是自动识别所有软件的扫描程序，也不只适用于容器镜像。\n\n官方概览列出的 1.7 提供 JSON、XML 与 Protocol Buffers 表示，并在 Ecma 标准化体系中对应 ECMA-424。依赖图描述组件关系，compositions 可说明完整、不完整或未知的清单覆盖；漏洞信息与影响声明则为后续风险调查提供上下文。这些字段要由生产者提供相应证据，不能因结构支持某项信息就认为每份文档都含有它。\n\n在镜像发布与消费流程中，CycloneDX 清单可交给扫描器做组件匹配，也可作为工件声明的 predicate 传递。接收方需要核对文档版本、所述对象、生成阶段和覆盖范围，并区分发现组件、报告漏洞与确认实际影响。签署清单能够绑定声明者与载荷，仍不会自动证明清单完整，格式转换也可能损失两种模型间无法对应的信息。\n\nPURL、CPE 与 SWID 可为软件组件提供可关联身份，证据字段则说明身份由何种方法认定。许可模型区分声明、观察证据及结论，VEX 能交换特定漏洞对产品的影响分析。文档的 components、dependencies 和 compositions 各承担库存、关系与覆盖说明，消费者不能由其中一项存在推断另外两项完整。\n\n## 参考\n\n- [CycloneDX：规范概览、版本与对象模型](https://cyclonedx.org/specification/overview/)\n- [CycloneDX：官方 SBOM 指南](https://cyclonedx.org/guides/sbom/relationships/)\n- [Syft：SBOM 格式及版本支持](https://oss.anchore.com/docs/guides/sbom/formats/)\n- [CycloneDX：组件身份和证据](https://www.cyclonedx.org/use-cases/software-components/)\n- [CycloneDX：许可信息层次](https://www.cyclonedx.org/use-cases/open-source-licensing/)\n- [CycloneDX：VEX 交换能力](https://cyclonedx.org/capabilities/vex/)",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",

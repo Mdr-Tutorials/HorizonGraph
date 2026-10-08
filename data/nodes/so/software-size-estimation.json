@@ -1,0 +1,51 @@
+{
+  "id": "software-size-estimation",
+  "name": "Software Size Estimation",
+  "display_primary": "软件规模估算",
+  "display_secondary": "Software Size Estimation",
+  "aliases": [
+    "软件规模估算",
+    "软件规模预测",
+    "软件规模预估"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-lines-of-code",
+      "context": "类比源码规模时使用相似组件的历史 SLOC 计数，并区分新增、复用和修改复用；不同语言及计数口径需单独校准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "function-point-analysis",
+      "context": "需求层规模估算可采用功能点分析；细节不充分时披露高层或指示性计数假设并逐步复核。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cosmic-sizing",
+      "context": "采用 COSMIC 功能规模方法时，从需求识别边界、功能过程与数据移动，得到该测量尺度的规模依据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wideband-delphi",
+      "context": "需求或设计信息尚不充分时，可让专家独立估计软件规模，再经多轮讨论修订假设。"
+    }
+  ],
+  "summary": "在实现完成前估算待开发软件的功能或源码规模。",
+  "description": "软件规模估算在软件实现完成前，根据需求、设计或相似项目预测交付规模。它与对现有仓库执行行数统计有所区别：前者包含尚未实现的内容和不确定性，后者产生选定文件范围在某一快照下的观测值。\n\n常见尺度包括规定口径的源代码行和按用户需求计数的功能规模。分解组件时需区分新增、原样复用和修改复用，并保留类比依据；功能点分析和 COSMIC 测量可在需求层面提供相应的规模方法。\n\n早期缺少细节时可由专家采用 Wideband Delphi 汇集独立估计，也可使用明确假设的高层功能点估算。应记录范围与不确定性，在需求和实现细化后更新；不同计数尺度需要经验校准，不能不加条件地相互换算。\n\n## 参考\n\n- [NASA：软件估算的规模、工作量与参数依据](https://swehb.nasa.gov/spaces/7150/pages/16449831/SWE-015%2B-%2BCost%2BEstimation)\n- [IFPUG：早期功能点估算与一致成本估算](https://ifpug.org/wp-content/uploads/2026/06/uTip-003-Early-FPA.pdf)\n- [SEI：软件工程课程中的 Wideband Delphi 流程](https://insights.sei.cmu.edu/documents/1018/1991_005_001_15914.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://swehb.nasa.gov/spaces/7150/pages/16449831/SWE-015%2B-%2BCost%2BEstimation"
+}

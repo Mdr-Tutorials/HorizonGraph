@@ -1,0 +1,42 @@
+{
+  "id": "pytest-cov",
+  "name": "pytest-cov",
+  "aliases": [
+    "pytest 覆盖率插件"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pytest"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "coverage-py"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-coverage",
+      "context": "在 pytest 生命周期中启用源码覆盖测量、报告和阈值检查。"
+    }
+  ],
+  "summary": "将 Coverage.py 的测量与 pytest 运行集成。",
+  "description": "pytest-cov 是 pytest 的覆盖插件，负责在 pytest 运行中启用 Coverage.py 测量并按配置生成报告。它是可选插件，pytest 本体不会因为存在此插件而无条件依赖覆盖工具。\n\ncov、cov-branch、报告器和阈值参数控制范围与输出，部分设置会覆盖 Coverage.py 配置中的对应值。动态上下文、并行运行和子进程支持应按具体插件版本及 Coverage.py 配置核验。\n\n测试通过和覆盖阈值通过是两个独立判定。应检查目标源码目录、配置文件位置与合并方式，防止漏测文件或不同版本执行数据被合并为看似完整的报告。\n\n## 参考\n\n- [pytest-cov 官方文档](https://pytest-cov.readthedocs.io/en/latest/)\n- [pytest-cov：配置口径](https://pytest-cov.readthedocs.io/en/latest/config.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://pytest-cov.readthedocs.io/en/latest/"
+}

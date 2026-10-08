@@ -1,0 +1,43 @@
+{
+  "id": "codemirror-6",
+  "name": "CodeMirror 6",
+  "aliases": [
+    "CodeMirror 第六代"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "codemirror"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lezer",
+      "context": "语言包采用 Lezer 的通用树、LR 解析和高亮接口；具体文法仍由选定语言支持包提供。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "incremental-parsing",
+      "context": "语言支持通过可复用解析结构响应文档变化，不等于增量类型检查。"
+    }
+  ],
+  "summary": "以状态、事务和扩展组合能力的 Web 编辑器库。",
+  "description": "CodeMirror 6 是采用模块化架构的 CodeMirror 编辑器代际。EditorState 表达文档和扩展状态，EditorView 处理 DOM 视图与用户交互，事务描述编辑、选择和状态更新；状态与视图的分离支持组合不同编辑能力。\n\n配置通过扩展、facet、状态字段及 compartment 等机制组成。语言包可利用 Lezer 增量解析及语法标签实现结构感知功能，补全和高阶语言智能也可以由自定义提供者接入。核心组件不自动执行完整项目的类型检查。\n\n这是与第五代可变 options 和 addon 机制不同的 API。旧 mode 的流式解析适配只覆盖相应语言支持，不能推出第五代 Tern addon 原样工作。当前项目迁移代码托管位置也不构成产品废弃。\n\n## 参考\n\n- [CodeMirror 6：参考 API](https://codemirror.net/docs/ref/)\n- [CodeMirror：代际迁移](https://codemirror.net/docs/migration/)\n- [CodeMirror language：实际依赖](https://github.com/codemirror/language/blob/main/package.json)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://codemirror.net/docs/ref/"
+}

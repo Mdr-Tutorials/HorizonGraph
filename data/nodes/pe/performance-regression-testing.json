@@ -1,0 +1,39 @@
+{
+  "id": "performance-regression-testing",
+  "name": "Performance Regression Testing",
+  "aliases": [
+    "性能回归测试",
+    "性能退化检测"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "benchmark",
+      "context": "在固定任务和可比环境中取得新版本性能，和历史基准记录比较。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "benchmark-experimental-design",
+      "context": "定义基线窗口、重复策略及回归判定，降低环境噪声造成的误报。"
+    }
+  ],
+  "summary": "把新变更的性能与既有可比基线持续比较。",
+  "description": "性能回归测试把新版本或变更的性能，与在可比条件下得到的历史基线比较，以发现不期望的退化。它需要明确指标、工作负载和容许变化，不能用一次功能测试通过来证明性能没有下降。\n\n持续基准系统可保存时间序列和环境元数据，并用阈值或统计模型触发告警。Bencher 提供这类工作流与阈值机制；基线窗口、最小样本及噪声条件会影响告警，应公开配置而非把任何微小变化都判为回归。\n\n告警需要复核是否由硬件、依赖、输入或测试协议变化引起。通过阈值只表示所测场景未检测到规定程度的退化，不保证所有用户工作负载都更快；历史基线过时也可能掩盖持续恶化。\n\n## 参考\n\n- [Bencher：持续性能基准](https://github.com/bencherdev/bencher)\n- [Bencher：性能回归阈值与统计告警](https://bencher.dev/docs/explanation/thresholds/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/bencherdev/bencher"
+}

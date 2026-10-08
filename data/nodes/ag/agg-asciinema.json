@@ -1,0 +1,34 @@
+{
+  "id": "agg-asciinema",
+  "name": "agg",
+  "aliases": [
+    "asciinema gif generator",
+    "asciinema GIF 生成器"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asciicast",
+      "context": "解析终端录制并按时间重放为 GIF 图像帧。"
+    }
+  ],
+  "summary": "把 asciicast 终端录制转换为动画 GIF 的工具。",
+  "description": "agg 是 asciinema 的 GIF 生成工具，读取终端录制并将事件重放为动画图像，便于在不支持网页播放器的平台展示命令行演示。它属于录制后处理工具，与采集终端会话的 asciinema CLI 和在网页中重放事件的播放器分别建模。\n\n生成过程可以设置字体、颜色、尺寸和时间相关参数，将原始终端状态映射为图像帧。输入采用 asciicast，输出动画反映该次渲染选择；改变主题或字体不等于修改原始命令结果。支持的格式版本也应按安装的 agg 版本核查。\n\nGIF 提供通用观看方式，但通常失去原事件文件中的文本选择、结构和精确事件信息。应保留原始录制用于后续重放或分析，并检查输出是否包含私密内容。agg 的转换不重新执行原命令，动画看起来顺畅也不能作为终端延迟或应用正确性的测量依据。\n\n## 参考\n\n- [asciinema：agg 手册](https://docs.asciinema.org/manual/agg/)\n- [asciinema：agg 官方仓库](https://github.com/asciinema/agg)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 2,
+  "official_site": "https://docs.asciinema.org/manual/agg/"
+}

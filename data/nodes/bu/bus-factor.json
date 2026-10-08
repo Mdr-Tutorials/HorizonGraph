@@ -1,0 +1,35 @@
+{
+  "id": "bus-factor",
+  "name": "Bus Factor",
+  "aliases": [
+    "巴士因子",
+    "卡车因子",
+    "Truck Factor",
+    "知识集中风险指标"
+  ],
+  "type": "metric",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "developer-ownership-share",
+      "context": "采用基于代码作者或贡献集中度的自动估计算法时，把历史份额作为知识覆盖的代理输入，并声明阈值。"
+    }
+  ],
+  "summary": "估计使项目失去有效维护能力的最少关键成员人数。",
+  "description": "巴士因子描述关键成员知识过度集中所带来的持续维护风险，通常表述为同时离开后足以使项目严重受损或失去有效维护能力的最少关键成员人数。它不是仓库贡献者总人数，也不是某个成员离开的概率。\n\n自动估计方法常从文件作者、贡献历史和所有权分布推断关键知识集中，再模拟移除成员。不同研究采用不同作者判定、覆盖阈值和离开顺序，因此必须随结果说明算法、数据范围与参数。\n\n提交历史不能完整观察文档、评审、运维和口头知识。问卷或团队核验可补充证据；一个较低估计值可以提示知识传递需求，但不直接证明项目必然失败，也不能把旧研究项目数值写成当前状态。\n\n## 参考\n\n- [原始研究：自动估计卡车因子](https://arxiv.org/abs/1604.06766)\n- [研究作者：实现与参数](https://github.com/aserg-ufmg/Truck-Factor/blob/master/README.md)\n- [估计算法的比较研究](https://homepages.dcc.ufmg.br/~mtov/pub/2019-sqj.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://arxiv.org/abs/1604.06766"
+}

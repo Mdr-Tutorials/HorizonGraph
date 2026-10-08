@@ -1,0 +1,43 @@
+{
+  "id": "icu",
+  "name": "International Components for Unicode",
+  "aliases": [
+    "Unicode 国际化组件",
+    "ICU"
+  ],
+  "type": "library",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "unicode-normalization"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "grapheme-cluster",
+      "context": "BreakIterator 的字符边界接口实现字素分段，具体规则随数据版本及定制而定。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "unicode-bidi"
+    }
+  ],
+  "summary": "提供 Unicode 与 locale 相关文本和国际化功能的库。",
+  "description": "ICU 是国际化与 Unicode 处理库集合，提供 ICU4C 与 ICU4J 等交付形态。能力覆盖字符属性、编码转换、排序、日期数字格式及 locale 数据等，不能把 ICU 简化为字体渲染器。\n\n其 Normalizer2、BreakIterator 和 BiDi 接口分别处理规范化、文本边界与双向算法。应用应选择与目的相符的接口，并记录采用的 ICU、Unicode 和 locale 数据版本；不同功能的支持范围不能仅从包名推断。\n\nICU 的文本处理结果可以供编辑器和布局系统使用，但不直接保证字体字形存在或终端正确分配单元格。字素边界、双向运行段和最终字形塑形仍需在系统中正确衔接，具体宿主是否采用 ICU 也需要独立来源证明。\n\n## 参考\n\n- [ICU：用户指南](https://unicode-org.github.io/icu/userguide/)\n- [ICU：规范化接口](https://unicode-org.github.io/icu/userguide/transforms/normalization/)\n- [ICU：文本边界分析](https://unicode-org.github.io/icu/userguide/boundaryanalysis/)\n- [ICU：BiDi 算法接口](https://unicode-org.github.io/icu/userguide/transforms/bidi.html)",
+  "official_site": "https://unicode-org.github.io/icu/userguide/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "ICU",
+  "abstraction_level": "framework_library"
+}

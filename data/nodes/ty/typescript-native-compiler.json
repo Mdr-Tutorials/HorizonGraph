@@ -1,0 +1,49 @@
+{
+  "id": "typescript-native-compiler",
+  "name": "TypeScript Native Compiler",
+  "aliases": [
+    "TypeScript 7 编译器",
+    "tsgo",
+    "TypeScript 原生编译器"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "compiler"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "type-inference"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "按配置检查 TypeScript 项目并输出目标代码，与类型语法擦除转换器的职责不同。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go",
+      "context": "原生核心以 Go 编写，从源码构建需对应工具链，分发二进制可直接使用。"
+    }
+  ],
+  "summary": "以 Go 实现类型检查与输出的 TypeScript 原生编译器。",
+  "description": "TypeScript 原生编译器是微软以 Go 移植的类型检查和编译实现，TypeScript 7.0 于 2026 年 7 月 8 日正式发布。它与语言本身分别建档，发布包可提供原生 tsc 可执行文件，历史预览也使用过 tsgo 名称。\n\n原生实现复用语言检查逻辑并利用共享内存并行处理，具体性能取决于项目与环境。它处理配置、模块解析、类型检查及源码输出，不同于只擦除类型的转换器；Go 是源码实现和构建工具链，预编译使用不要求安装 Go。\n\n7.0 的程序化 API 与经典 TypeScript 6 不等价，官方说明该版本未提供稳定程序化 API。依赖旧编译 API 的工具可使用 TypeScript 6 兼容包并行保留；命令行升级不能证明所有嵌入式语言工具和插件都已经兼容。\n\n## 参考\n\n- [Microsoft：TypeScript 7.0 正式发布](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)\n- [Microsoft：原生实现仓库](https://github.com/microsoft/TypeScript)\n- [TypeScript 原生实现：兼容差异](https://github.com/microsoft/typescript-go/blob/main/CHANGES.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/"
+}

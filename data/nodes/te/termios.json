@@ -1,0 +1,39 @@
+{
+  "id": "termios",
+  "name": "termios",
+  "aliases": [
+    "终端输入输出接口"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "posix"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tty",
+      "context": "通过终端文件描述符读取和设置 TTY 的输入输出属性。"
+    }
+  ],
+  "summary": "以属性结构和函数接口配置终端输入输出行为。",
+  "description": "termios 是 POSIX 终端输入输出设置接口及其属性结构。输入、输出、控制、本地处理标志与特殊字符表共同描述终端行为，tcgetattr 和 tcsetattr 用于读取或修改设置。它控制终端设备路径上的处理，不是 ECMA-48 光标控制序列或图形渲染 API。\n\nICANON 选择规范输入，ECHO 与 ISIG 分别影响回显和信号字符处理；非规范输入的 VMIN、VTIME 调整读操作的等待条件。软件流控、回车换行转换和字符位宽也有各自设置。Linux 提供额外标志与 cfmakeraw 辅助函数，不能把所有扩展当作 POSIX 必选接口。\n\n交互应用应保存进入前的属性，在正常退出及可处理的异常路径中恢复。修改可立即执行、等待输出发送后执行或同时丢弃未读输入，具体方式由调用参数选择。只关回显并不代表已进入 raw 模式，设置串口波特率也不等同于改变屏幕刷新频率。\n\n## 参考\n\n- [Linux man-pages：termios 接口与输入模式](https://man7.org/linux/man-pages/man3/termios.3.html)\n- [Linux man-pages：终端输入输出设置](https://man7.org/linux/man-pages/man7/termios.7.html)\n- [GNU C Library：非规范输入的 MIN/TIME](https://sourceware.org/glibc/manual/latest/html_node/Noncanonical-Input.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://man7.org/linux/man-pages/man3/termios.3.html"
+}

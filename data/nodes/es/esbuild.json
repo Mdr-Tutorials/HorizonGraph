@@ -5,11 +5,13 @@
   "type": "tool",
   "ecosystems": [
     "web_frontend",
-    "node-js-ecosystem"
+    "node-js-ecosystem",
+    "language-tooling-ecosystem"
   ],
   "domains": [
     "web-development",
-    "devops"
+    "devops",
+    "language-tooling"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -18,18 +20,29 @@
       "target_id": "tool"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "go"
-    },
-    {
       "relation_type": "competes_with",
       "target_id": "webpack"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "compiler"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-map",
+      "context": "构建或转换按配置生成位置映射，映射使用行为由消费者决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go",
+      "context": "实现源码和 Go API 路径使用 Go，从源码构建需工具链，预编译分发不要求安装 Go。"
     }
   ],
-  "summary": "Go 编写的极速 JS 打包器，数量级快于同类工具。",
+  "summary": "提供打包、压缩与源码转换的 Go 实现构建工具。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://esbuild.github.io"
+  "official_site": "https://esbuild.github.io",
+  "description": "esbuild 是 Go 实现的代码构建与转换工具，提供命令行、JavaScript 与 Go API。build 可以处理模块图及打包，transform 处理输入代码片段；压缩、tree shaking 和目标语法转换由相应配置决定。\n\n它支持 JavaScript、TypeScript、JSX 等输入，并可以生成 source map。解析器和 AST 属于内部实现，公开构建接口不是通用 ESTree 树操作 API，不能默认把其内部结构交给 acorn-walk 或 Estraverse。\n\nTypeScript 支持主要移除类型语法，不执行全程序类型检查，也不直接生成类型声明。Go 是源码实现与从源码构建的要求，下载预编译可执行文件或平台包不要求安装 Go；性能优势也要按项目与测量条件描述。\n\n## 参考\n\n- [esbuild：构建与转换 API](https://esbuild.github.io/api/)\n- [esbuild：类型及转换限制](https://esbuild.github.io/content-types/)\n- [esbuild：实现与性能说明](https://esbuild.github.io/faq/)"
 }

@@ -1,0 +1,42 @@
+{
+  "id": "pmd",
+  "name": "PMD",
+  "aliases": [
+    "PMD 源代码分析器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "语言分析器生成语法树，规则在其节点和相关语义信息上运行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis-rule",
+      "context": "按规则集执行内置或自定义检查并生成违反报告。"
+    }
+  ],
+  "summary": "以语言分析器和可扩展规则检查源码问题的工具。",
+  "description": "PMD 是可扩展的多语言静态源码分析器，识别未使用变量、异常处理、对象创建和代码约定等规则定义的问题。分析语言支持与实际可用规则需要分别核对，不能由能解析一种语言推断拥有完整检查集。\n\n它把受支持的程序转换为 AST，再运行内置或自定义规则；规则可用 Java 或 XPath 等方式定义。PMD 分发中还包括 CPD，但规则诊断与克隆搜索是不同分析能力和命令。\n\n本条核对使用已发布的 7.28.0 资料；官网 latest 指向未来 SNAPSHOT 时，应按已安装版本查功能与语义。规则发现可能误报或漏报，启用与参数变化也会改变报告，CI 接受条件需要结合项目要求制定。\n\n## 参考\n\n- [PMD：7.28.0 说明](https://github.com/pmd/pmd/blob/pmd_releases/7.28.0/README.md)\n- [PMD：7.28.0 已发布版本](https://github.com/pmd/pmd/releases/tag/pmd_releases/7.28.0)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/pmd/pmd/blob/pmd_releases/7.28.0/README.md"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "goal-question-metric",
+  "name": "Goal Question Metric",
+  "abbreviation": "GQM",
+  "aliases": [
+    "目标问题度量法",
+    "目标—问题—度量",
+    "GQM 方法"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "software-measurement",
+      "context": "围绕指定目标组织软件产品或过程的度量定义、采集和解释。"
+    }
+  ],
+  "summary": "从明确目标推导问题、指标与结果解释规则。",
+  "description": "Goal Question Metric 从目标出发建立软件度量方案。先描述研究对象、关注属性、观察视角、目的和具体环境，再提出必须回答的问题，最后选择能给这些问题提供证据的指标。\n\n例如要了解一次分析器优化是否改善仓库统计体验，可先限定用户、语料和正确性要求，再问计数是否一致、耗时与资源有何变化，随后确定结果校验和性能指标。先有目标，能够避免因为容易采集行数就把行数当成全部效果。\n\n解释结果需要返回原问题及目标，而不是把收集到的数字简单相加。不同利益相关者可能有不同目标，因此 GQM 不提供通用质量总分，也不保证选定代理天然有效；仍需检验测量定义和数据质量。\n\n## 参考\n\n- [Basili：GQM 软件建模与度量](https://www.cs.umd.edu/~basili/publications/technical/T78.pdf)\n- [Basili：GQM 目标定义要素](https://www.cs.umd.edu/users/basili/qip/tsld025.htm)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.cs.umd.edu/~basili/publications/technical/T78.pdf"
+}

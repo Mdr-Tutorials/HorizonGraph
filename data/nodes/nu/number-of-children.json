@@ -1,0 +1,30 @@
+{
+  "id": "number-of-children",
+  "name": "Number of Children",
+  "abbreviation": "NOC",
+  "aliases": [
+    "直接子类数",
+    "子类数量"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计继承层次中直接继承某类的子类数量。",
+  "description": "NOC 记录某类在继承层次中直接下一层的子类数量。子类的子类不计入该类的 NOC，因而它与所有后代数或继承树深度分别表达不同结构。\n\n例如 Base 有两个直接派生类，其中一个再派生三个类，Base 的 NOC 仍为二。工具需要确定分析边界以及是否能解析外部包中的继承声明；仅有当前源码不保证覆盖所有使用者。\n\n较多直接子类可能体现抽象的复用，也意味着基类变更有更多直接受影响者。NOC 不记录各子类调用频率、行为正确性或语义差异，应与继承契约和测试情况一起解释。\n\n## 参考\n\n- [SciTools：直接子类定义](https://docs.scitools.com/metrics/CountClassDerived.html)\n- [CK：NOC统计实现](https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/metric/NOC.java)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.scitools.com/metrics/CountClassDerived.html"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "mutation-score",
+  "name": "Mutation Score",
+  "aliases": [
+    "变异得分",
+    "突变得分",
+    "变异检出率"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按明确定义的有效变异集合统计被检出的比例。",
+  "description": "变异得分以被检测到的变异数量除以纳入评分的有效变异数量。理论定义常希望排除已确认等价项，工具则按自己的结果状态建立有效分母，必须报告实际公式。\n\nStryker 的 detected 为 killed 加 timeout，valid 为 detected 加 survived 加 no coverage；compile error、runtime error、ignored 和 pending 不进入这一得分分母。它还单列基于已覆盖代码的得分，后者不能冒充全部有效变异得分。\n\n超时、等价项未识别、算子变化或不稳定测试都可影响结果。有效分母为空时应报告无可评分变异而非擅自赋百分百；比较运行必须固定源码、测试集、算子、排除与判定政策。\n\n## 参考\n\n- [Stryker：变异状态与得分公式](https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/)\n- [Stryker：等价变异](https://stryker-mutator.io/docs/mutation-testing-elements/equivalent-mutants/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "devex-framework",
+  "name": "DevEx Framework",
+  "abbreviation": "DevEx",
+  "aliases": [
+    "DevEx 开发者体验框架",
+    "开发者体验框架"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "software-survey-research",
+      "context": "收集开发者对反馈、认知负担与专注条件的感知，并与工作流观测共同解释。"
+    }
+  ],
+  "summary": "从反馈循环、认知负荷和心流定位开发摩擦。",
+  "description": "2023 年 DevEx 框架聚焦开发者日常工作中的体验与摩擦，提出反馈循环、认知负荷、心流状态三个关键维度。反馈循环包括工具和他人的响应，认知负荷涉及理解与执行任务所需的心智努力，心流涉及持续专注的条件。\n\n框架结合开发者感知、工作流系统数据和较高层结果指标。例如构建耗时能描述一次等待，开发者反馈能说明等待是否真正打断工作；单独降低平均耗时不能代替完整体验判断。\n\nDevEx 不是把全部体验压成任务完成数的公式。相关研究中的问卷结果、样本人群和模型假设应与结论一起阅读；某些体验条件与结果相关，不能据此保证在每个组织投入同样工具都产生相同因果效果。\n\n## 参考\n\n- [DevEx 原研究与作者说明](https://getdx.com/research/devex-what-actually-drives-productivity/)\n- [DevEx 正式论文](https://doi.org/10.1145/3610285)\n- [DevEx in Action 原研究](https://www.michaelagreiler.com/wp-content/uploads/2024/06/DevEx-in-Action.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://getdx.com/research/devex-what-actually-drives-productivity/"
+}

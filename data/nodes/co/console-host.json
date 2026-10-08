@@ -1,0 +1,41 @@
+{
+  "id": "console-host",
+  "name": "Windows Console Host",
+  "aliases": [
+    "Windows 控制台宿主",
+    "conhost.exe",
+    "conhost",
+    "OpenConsole.exe"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "windows-ecosystem",
+    "terminal-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    }
+  ],
+  "summary": "处理 Windows Console API 并承载传统控制台交互。",
+  "description": "Windows Console Host 是 Windows 控制台基础设施中的宿主程序，常见可执行文件名为 conhost.exe。它处理控制台应用的 API 请求、输入和屏幕缓冲等工作，并提供传统控制台窗口的交互界面。cmd.exe、PowerShell 等命令解释器仍是另外的客户端程序，分别负责自己的语法和执行规则。\n\n采用伪控制台的路径可把用户界面交给外部终端，同时保留 Console API 服务与旧应用兼容转换。现代终端因此可以通过字符通道呈现控制台程序；窗口宿主和 API 服务所处层次应分别辨认。微软公开源码仓库同时包含 Windows Terminal、控制台宿主及共享组件，不能由共用仓库推导它们是同一个交付程序。\n\n该仓库本地构建的 OpenConsole.exe 对应控制台宿主实现；Windows 自带的 conhost.exe 则通过系统发布。实际功能和默认宿主选择取决于 Windows 与终端版本。记录控制台能力时应以目标版本核验，不能把开源主分支刚合入的改进当作所有已安装系统已具备的行为。\n\n## 参考\n\n- [Microsoft: Windows Console 与Terminal的定义](https://learn.microsoft.com/en-us/windows/console/definitions)\n- [Microsoft Terminal: 控制台宿主及OpenConsole说明](https://github.com/microsoft/terminal)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://learn.microsoft.com/en-us/windows/console/definitions",
+  "abstraction_level": "application_tool"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ghtorrent",
+  "name": "GHTorrent",
+  "aliases": [
+    "GHTorrent数据集",
+    "GitHub研究数据档案"
+  ],
+  "type": "product",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    }
+  ],
+  "summary": "将 GitHub 事件关联实体整理为研究数据的项目。",
+  "description": "GHTorrent 是围绕 GitHub 公开开发数据建立的研究数据集与采集工具项目。其设计从事件中取得关联实体，再保存原始记录与关系视图；这些资料支持仓库、人员和协作结构的历史研究。\n\n历史数据快照与教程展示如何查询关系数据库并抽样仓库。使用时必须注明具体发布快照与字段规则，不能因为项目设计会访问 API 就推断已有下载包含全部数据或持续更新到当前日期。\n\n项目资料明确说明数据不提供完整质量保证。采集缺口、实体删除、重复仓库和历史平台行为会影响结果；GHTorrent、GH Archive 与直接 API 查询的语义不同，互相补充时需要核对时间和身份。\n\n## 参考\n\n- [GHTorrent：官方 FAQ 与数据边界](https://github.com/ghtorrent/ghtorrent.org/blob/master/faq.md)\n- [GHTorrent：作者研究教程](https://github.com/ghtorrent/tutorial/blob/master/index.md)\n- [GHTorrent：历史项目设计](https://github.com/ghtorrent/ghtorrent.org/blob/master/index.md)",
+  "status": "historical",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/ghtorrent/ghtorrent.org/blob/master/faq.md"
+}

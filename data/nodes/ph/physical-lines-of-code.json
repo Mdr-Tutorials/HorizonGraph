@@ -1,0 +1,30 @@
+{
+  "id": "physical-lines-of-code",
+  "name": "Physical Lines of Code",
+  "aliases": [
+    "物理代码行数",
+    "物理源码行数",
+    "PLOC",
+    "NCLOC"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按文本行边界计数含有非注释代码的源码行。",
+  "description": "物理代码行数在选定源文件中按文本行边界计数。常用非注释口径要求该行含有注释之外的非空白字符；纯注释和空白行另计，代码后有行尾注释时仍可归入代码行。\n\n一条语句写成多行会增加物理计数，而多条语句写在一行可能只计一次。声明、括号、预处理内容和文件末尾没有换行的处理须由定义说明，不能把物理代码行数与换行字节数混用。\n\ncloc、Tokei 和 SLOCCount 都提供物理计数，但语言规则与输入筛选可能不同。该指标适合在固定工具和范围下追踪源码体量；重排版造成的变化应与功能增删分开解释。\n\n## 参考\n\n- [SEI：物理行与逻辑语句的定义清单](https://www.sei.cmu.edu/documents/1058/1992_005_001_16082.pdf)\n- [SonarQube 10.6：规模与注释指标定义](https://docs.sonarsource.com/sonarqube-server/10.6/user-guide/code-metrics/metrics-definition)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.sei.cmu.edu/documents/1058/1992_005_001_16082.pdf"
+}

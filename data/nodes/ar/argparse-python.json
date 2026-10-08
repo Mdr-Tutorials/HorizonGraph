@@ -1,0 +1,38 @@
+{
+  "id": "argparse-python",
+  "name": "argparse",
+  "aliases": [
+    "Python argparse",
+    "argparse 参数解析"
+  ],
+  "type": "library",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-option",
+      "context": "依据 ArgumentParser 中的声明识别短长选项、取值、位置参数与子命令，不重新执行 Shell 引用展开。"
+    }
+  ],
+  "summary": "Python 标准库中的选项、参数与子命令解析模块。",
+  "description": "argparse 是 Python 标准库模块，用于声明和解析命令行选项、位置参数及子命令。程序通过 ArgumentParser 配置接口，解析结果形成命名空间，并能按声明生成帮助与用法文本；模块不是单独的 Shell 或终端应用。\n\n参数动作、类型转换、默认值、互斥组与子解析器用于表达接口规则。它接收已经形成的参数列表，默认可读取 sys.argv，Shell 之前的引用和展开不由 argparse 重新实现；显示帮助与执行具体业务逻辑也各有职责。\n\n基本命令行应用通常可以使用此标准模块，但高度定制的选项穿插或特殊前缀语义可能需要其他解析器。成功解析只证明参数符合声明的接口规则，文件存在性、权限与业务有效性仍由应用检查；同名第三方解析库需按语言区分。\n\n## 参考\n\n- [Python argparse API](https://docs.python.org/3/library/argparse.html)\n- [Python argparse 官方教程](https://docs.python.org/3/howto/argparse.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://docs.python.org/3/library/argparse.html"
+}

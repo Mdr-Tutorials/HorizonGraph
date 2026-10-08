@@ -1,0 +1,35 @@
+{
+  "id": "window-manager",
+  "name": "Window Manager",
+  "aliases": [
+    "窗口管理器",
+    "窗管",
+    "WM"
+  ],
+  "type": "concept",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "theoretical",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "desktop-interface-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x11",
+      "context": "在 X11 实现路径中，窗口管理器以客户端身份使用窗口重定向及属性通信；并非所有窗口管理器都使用 X11。"
+    }
+  ],
+  "summary": "决定窗口布局、焦点和交互策略的桌面系统职责。",
+  "description": "窗口管理器是负责窗口排列、大小、层叠、焦点与工作空间等策略的角色。它关注用户如何使用窗口；图形应用自己的控件布局以及显示服务器的协议资源管理是不同层次。\n\nX11 中窗口管理器通常是一个具有特殊职责的客户端，借助协议请求和 ICCCM、EWMH 等约定与应用协调。Wayland 会话常把相应策略与显示服务、合成功能放在合成器实现内，因而不能直接套用 X11 的替换方式。\n\n平铺、浮动或混合是具体管理策略，不改变该概念的职责边界。XWayland 无根窗口模式需要宿主合成器的 XWM 协调 X 窗口，独立 X11 窗口管理器通常不能同时管理原生 Wayland 窗口。\n\n## 参考\n\n- [ICCCM 客户端与窗口管理器通信](https://www.x.org/releases/current/doc/xorg-docs/icccm/icccm.html)\n- [Extended Window Manager Hints](https://specifications.freedesktop.org/wm/latest/)\n- [XWayland XWM](https://wayland.freedesktop.org/docs/book/Xwayland.html)",
+  "official_site": "https://www.x.org/releases/current/doc/xorg-docs/icccm/icccm.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

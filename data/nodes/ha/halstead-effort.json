@@ -1,0 +1,40 @@
+{
+  "id": "halstead-effort",
+  "name": "Halstead Effort",
+  "abbreviation": "E",
+  "aliases": [
+    "Halstead工作量",
+    "Halstead努力量"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "halstead-volume",
+      "context": "公式 E=D·V 采用体积作为乘法输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "halstead-difficulty",
+      "context": "公式 E=D·V 采用难度作为乘法输入。"
+    }
+  ],
+  "summary": "以Halstead体积乘难度得到的模型工作量。",
+  "description": "Halstead 工作量 E=D·V，由 Halstead 难度和体积相乘得到。它是静态词法计数模型的计算结果，不能把 E 直接标成已经投入的小时数、人月或开发费用。\n\n历史解释还包含 T=E/18 秒的时间推算；常数来自模型假设和经验校准，不能保证适用于现代语言、自动生成代码或特定团队。工具输出应保留 E 与任何派生时间之间的区别。\n\n该量适合在固定实现与口径下观察变化或复核公式输入。若用于项目估算，需要独立的本地数据验证与不确定性说明；需求协作、测试、部署及维护的实际投入无法只由源码词法计数完整恢复。\n\n## 参考\n\n- [SciTools：Halstead工作量](https://docs.scitools.com/metrics/HalsteadEffort.html)\n- [Verifysoft：工作量与时间推算](https://www.verifysoft.com/en_halstead_metrics.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.scitools.com/metrics/HalsteadEffort.html"
+}

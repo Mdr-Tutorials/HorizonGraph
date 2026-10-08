@@ -1,0 +1,32 @@
+{
+  "id": "wideband-delphi",
+  "name": "Wideband Delphi",
+  "display_primary": "宽带德尔菲法",
+  "display_secondary": "Wideband Delphi",
+  "aliases": [
+    "宽带德尔菲法",
+    "宽带 Delphi",
+    "Wide-Band Delphi",
+    "宽带专家估算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    }
+  ],
+  "summary": "通过独立估计和多轮讨论汇集专家判断的估算法。",
+  "description": "Wideband Delphi 是软件规模或工作量估算中的结构化专家判断方法。参与者先理解并讨论需求，再独立给出估计；主持过程使估计差异和背后的假设得到说明，避免由一个人的先发数字直接主导结果。\n\n团队多轮比较估计、讨论范围与风险、修订各自判断，直到差异得到可接受的解释或形成可用结论。不同实践对匿名程度和汇总方式的安排可能不同，记录原始估计与关键分歧比只保留最后均值更有解释力。\n\n它可以在缺少历史样本时支持估算，也可与基于历史数据的模型配合：先估计组件规模，再把规模输入本地校准的工作量模型。意见收敛不证明估计准确，后续仍需对照实际规模和投入修订经验。\n\n## 参考\n\n- [SEI：软件工程课程中的 Wideband Delphi 流程](https://insights.sei.cmu.edu/documents/1018/1991_005_001_15914.pdf)\n- [SEI：团队软件过程中的专家估算实践](https://www.sei.cmu.edu/documents/1447/2010_021_001_298903.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://insights.sei.cmu.edu/documents/1018/1991_005_001_15914.pdf"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "estree",
+  "name": "ESTree",
+  "aliases": [
+    "ESTree AST 规范",
+    "JavaScript AST 规范"
+  ],
+  "type": "protocol",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "用节点类型和字段描述 JavaScript 程序的抽象语法结构。"
+    }
+  ],
+  "summary": "约定 JavaScript 抽象语法树的节点结构接口。",
+  "description": "ESTree 是社区维护的 JavaScript AST 结构规范，源自 Mozilla Parser API 的树格式。它约定 Program、声明、语句、表达式和 Identifier 等节点的类型、属性及子结构，让解析器和下游工具能够共享接口。\n\n规范通过不同 ECMAScript 代际的扩展文件演进，并遵循向后兼容、避免冗余及可扩展等原则。Acorn、Esprima 和 Espree 可产生相应格式的树，具体语言版本或私有扩展仍需双方确认。\n\nESTree 是数据接口，不是 JavaScript 语言标准、编译器或运行时。Babel 默认树有明确差异，SWC 也有自身 AST；不能只因这些工具处理 JavaScript 就认定格式一致。格式兼容也不保证源码改写保留所有注释和排版。\n\n## 参考\n\n- [ESTree：规范与原则](https://github.com/estree/estree/blob/master/README.md)\n- [ESTree：基础节点规范](https://github.com/estree/estree/blob/master/es5.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/estree/estree/blob/master/README.md"
+}

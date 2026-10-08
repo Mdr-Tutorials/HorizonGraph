@@ -1,0 +1,44 @@
+{
+  "id": "total-source-lines",
+  "name": "Total Source Lines",
+  "aliases": [
+    "源码总行数",
+    "源文件总物理行数",
+    "Total LOC"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "在代码、注释与空白互斥的统计中，以物理代码行作为总行数的一个加数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "comment-lines-of-code",
+      "context": "在同一互斥分类口径下，加上纯注释行得到源码总物理行数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "blank-lines-of-code",
+      "context": "在同一互斥分类口径下，将空白行计入源码总物理行数。"
+    }
+  ],
+  "summary": "统计选定源文本的全部行并明确分组汇总规则。",
+  "description": "源码总行数表示选定源文本的全部物理行，通常包括代码、注释与空白。它与排除注释和空白的物理代码行数分别报告；只有分类互斥且覆盖全部行时，才可直接相加得到总数。\n\nTokei 的 CodeStats.lines 返回本块 code、comments 与 blanks 的和，内嵌语言保存在子块中，summarise 再递归合并。调用者应区分本块与汇总视图，避免同时相加父级总计和已经包含的子级结果。\n\n文件最后是否有换行也会影响某些原始文本计数。GNU wc -l 统计换行字符，末尾没有换行的文本片段不会多计一个换行；源码计数器可能仍把它作为最后一行，核验时应声明口径。\n\n## 参考\n\n- [Tokei CodeStats API](https://docs.rs/tokei/latest/tokei/struct.CodeStats.html)\n- [GNU wc 的换行计数实现](https://github.com/coreutils/coreutils/blob/master/src/wc.c)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.rs/tokei/latest/tokei/struct.CodeStats.html"
+}

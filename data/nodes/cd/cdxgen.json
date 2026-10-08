@@ -1,0 +1,50 @@
+{
+  "id": "cdxgen",
+  "name": "CycloneDX Generator",
+  "aliases": [
+    "CycloneDX 生成器",
+    "cdxgen"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclonedx",
+      "context": "原生输出采用支持版本的 CycloneDX BOM。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "evidence-based-component-identification",
+      "context": "启用相应分析技术时记录组件身份的证据、观察位置及方法。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "dependency-track",
+      "context": "官方提供将生成的 BOM 提交到 Dependency-Track 的可选消费路径。"
+    }
+  ],
+  "summary": "用受支持的项目与工件证据生成 CycloneDX 清单。",
+  "description": "cdxgen 是用于生成 CycloneDX BOM 的开源工具，也提供程序调用等使用方式。它覆盖多种语言、包管理器和容器输入，通过相应分析技术采集组件与关系。它的工具能力与 CycloneDX 规范自身能表达的全部内容不同，选择输入和运行 profile 会影响输出范围。\n\n工具可以结合包清单、解析结果、源码和受支持的二进制证据补充组件信息，部分路径支持更丰富的身份及调用证据。可选深度分析、构建执行与外部工具会产生不同结果，应核对版本、启用技术及宿主权限。声明支持某种清单版本不代表生成器默认提供该版本的全部字段。\n\n清单可以送入 Dependency-Track 或其他消费者，签署、校验和转换也需要分别检查实际支持。当前文档将 v13 的包名列为 @cdxgen/cdxgen，旧 @cyclonedx/cdxgen 包线具有不同维护范围。该名称变化不改变工具身份；输出仍需核验工件对应、证据与覆盖，不能把生成成功当作完整或安全保证。\n\n## 参考\n\n- [cdxgen：官方项目、分发与功能](https://github.com/cdxgen/cdxgen)\n- [cdxgen：高级分析技术与证据](https://github.com/cdxgen/cdxgen/blob/master/docs/ADVANCED.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/cdxgen/cdxgen",
+  "abstraction_level": "application_tool"
+}

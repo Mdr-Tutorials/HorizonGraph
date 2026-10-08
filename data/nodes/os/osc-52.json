@@ -1,0 +1,34 @@
+{
+  "id": "osc-52",
+  "name": "OSC 52 Clipboard",
+  "aliases": [
+    "OSC 52 剪贴板交互"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "operating-system-command",
+      "context": "用编号 52 的 OSC 字符串携带选择器、Base64 写入载荷或问号查询请求。"
+    }
+  ],
+  "summary": "通过终端序列请求写入或查询剪贴板，受宿主策略限制。",
+  "description": "OSC 52 允许终端中的程序请求剪贴板或选择区交互。字符串包含选择器和数据字段，Base64 载荷用于写入，问号用于发起读取查询。它可以使远程会话中的复制功能到达本地终端，但请求能否完成由宿主策略、平台和中间工具共同决定。\n\n选择器传统区分常规剪贴板、主选择区与其他缓冲区，不同终端可能仅实现部分选择或别名。读取回复通过终端输入流回到请求方，应用需识别它并管理等待时间。Base64 只是编码，并不提供加密、来源认证或对剪贴板内容的隐私保证。\n\n读写权限应分别理解：终端可以允许写入而要求用户批准读取，也可禁用相应操作。Ghostty 文档单独说明选择器支持与一次指定剪贴板的限制，配置控制读取和写入策略。SSH 或复用器是否转发序列属于另外的兼容路径，不能从支持 OSC 52 推断远端可以任意读取本地剪贴板。\n\n## 参考\n\n- [Ghostty：OSC 52 剪贴板交互](https://ghostty.org/docs/vt/osc/52)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)\n- [Ghostty：剪贴板读写与粘贴策略](https://ghostty.org/docs/config/reference)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://ghostty.org/docs/vt/osc/52"
+}

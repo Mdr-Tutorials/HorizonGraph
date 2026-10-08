@@ -1,0 +1,38 @@
+{
+  "id": "jq",
+  "name": "jq",
+  "aliases": [
+    "jq JSON 处理器"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "解析 JSON 值并将查询或转换结果重新序列化为 JSON；原始输入输出模式需显式选择。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "从标准输入或指定文件读取值序列，并向标准输出输出结果以衔接外部进程。"
+    }
+  ],
+  "summary": "用过滤表达式查询和转换 JSON 值的命令行处理器。",
+  "description": "jq 是命令行 JSON 处理器，用自己的过滤表达式选取字段、展开数组、构造对象并转换结构化数据。工具将输入解释为 JSON 值序列，过滤器可以产生零个、一个或多个结果，适合处理 API 响应和自动化脚本中的结构化数据。\n\n过滤器之间的管道传递的是 jq 内部值，与 Shell 连接两个进程的字节管道不同。默认输出是 JSON 文本，原始字符串输出、紧凑输出和显式参数传入分别服务不同任务；Shell 的引用规则需要保护表达式，数据参数也应与程序源码分开传入。\n\n大型 JSON 文本可以选择专门的 --stream 路径，但此时过滤器接收路径和叶值事件，不能假定与普通整值输入完全相同。-e 等选项可改变退出状态判定，解析成功也不自动证明应用字段符合业务约束；jq 不是 YAML 工具或 Shell 本身。\n\n## 参考\n\n- [jq 官方项目](https://jqlang.org/)\n- [jq 1.8 手册](https://jqlang.org/manual/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://jqlang.org/"
+}

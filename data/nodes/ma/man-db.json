@@ -1,0 +1,34 @@
+{
+  "id": "man-db",
+  "name": "man-db",
+  "aliases": [
+    "man-db 手册系统",
+    "man-db man"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "手册显示链生成文本供标准输出或分页程序读取，输出方式受 man 选项和配置影响。"
+    }
+  ],
+  "summary": "管理、检索和显示 Unix 手册页的工具套件。",
+  "description": "man-db 实现通过 man 命令访问的 Unix 手册系统，提供手册定位、显示和索引相关工具。它管理已经安装的文档，而不是自动生成每条命令的完整官方说明；操作系统与软件包仍决定实际有哪些手册页可供读取。\n\nman 按名称、章节和路径找到页面，apropos 与 whatis 等查询可借助索引定位主题，mandb 用于建立或更新数据库。格式化、预处理和分页显示属于输出链中的不同环节，配置决定所用程序及手册搜索范围。\n\n同一个名称可能在命令、库函数和文件格式等章节出现，应根据章节和来源消歧。索引与实际文档的更新不同步会影响检索结果，环境、语言和路径配置也会改变命中；man-db 是具体实现，不代表所有 Unix 系统都采用相同程序。\n\n## 参考\n\n- [man-db 当前官方站点](https://man-db.gitlab.io/man-db/)\n- [man-db 官方源码与配置说明](https://gitlab.com/man-db/man-db/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://man-db.gitlab.io/man-db/"
+}

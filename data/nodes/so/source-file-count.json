@@ -1,0 +1,28 @@
+{
+  "id": "source-file-count",
+  "name": "Source File Count",
+  "aliases": [
+    "源文件数量",
+    "源码文件数"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计进入指定源码测量范围的文件数量。",
+  "description": "源文件数量统计在指定语言识别、路径选择和去重规则下进入测量的文件。它常与代码行数并列报告，反映输入规模；不是仓库内所有路径、目录或 Git 对象的总数。\n\n同一文件可包含多个语言片段，片段数不能自动等同于独立文件数。复本、符号链接、隐藏文件和未识别扩展的处理也会改变结果，应通过文件级明细和忽略清单确认范围。\n\n文件数量可帮助估计扫描开销或观察模块拆分，但同样行数可分布在少量大文件或大量小文件中。应结合每文件规模与实际架构阅读，不能用文件数直接推断模块化程度。\n\n## 参考\n\n- [Tokei 官方项目](https://github.com/XAMPPRocky/tokei)\n- [cloc 官方项目与计数说明](https://github.com/AlDanial/cloc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/XAMPPRocky/tokei"
+}

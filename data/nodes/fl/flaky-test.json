@@ -1,0 +1,39 @@
+{
+  "id": "flaky-test",
+  "name": "Flaky Test",
+  "aliases": [
+    "不稳定测试",
+    "偶发失败测试",
+    "间歇失败测试"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "mutation-score",
+      "context": "与变异无关的偶发失败若被记为 killed，会夸大测试对变异改动的实际检出能力。"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "regression-testing",
+      "context": "待测代码不变仍可能失败，使回归运行难以区分真实功能退化与环境或测试不确定性。"
+    }
+  ],
+  "summary": "在相同待测代码下因未受控因素出现不同结果。",
+  "description": "不稳定测试在待测代码未变化的重复执行中出现时而通过、时而失败的结果。失败可来自未隔离状态、执行顺序、并发时序、随机性、外部服务或过严的时间和浮点判定。\n\n重试能够缓解一次流水线阻塞，却不能解释根因；并行运行中出现的问题尤其需要检查共享状态、线程清理和测试顺序依赖。隔离、记录种子与时间、控制外部依赖和修正判定有助于复现。\n\n不稳定测试会污染回归信号，也可能令变异测试把偶发失败误记为检出。应保留失败证据与暂时隔离规则，并追踪修复；不能把重试后的成功自动解释为最初失败没有意义。\n\n## 参考\n\n- [pytest：不稳定测试原因与处置](https://docs.pytest.org/en/stable/explanation/flaky.html)\n- [原始研究：Python 不稳定测试实证](https://arxiv.org/abs/2101.09077)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.pytest.org/en/stable/explanation/flaky.html"
+}

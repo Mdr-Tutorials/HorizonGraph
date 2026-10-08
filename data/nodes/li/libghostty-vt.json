@@ -1,0 +1,38 @@
+{
+  "id": "libghostty-vt",
+  "name": "libghostty-vt",
+  "aliases": [
+    "Ghostty VT 库",
+    "ghostty-vt"
+  ],
+  "type": "library",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "libghostty",
+      "context": "项目以该模块作为可嵌入库族拆分的起点，独立聚焦 VT 解析与状态。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    }
+  ],
+  "summary": "解析终端控制序列并维护可供宿主读取的终端状态。",
+  "description": "libghostty-vt 是 libghostty 库族首先抽出的 VT 模块，提供控制序列解析、终端状态和输入编码等能力。它接受终端流、更新屏幕状态，并让调用者获得构建显示层所需的数据；终端模拟逻辑与呈现该状态的窗口或网页具有独立职责。\n\n公开的 C 头文件包含终端、键盘、鼠标与渲染状态接口，Zig 调用方可直接使用模块。Ghostling 示例在这些接口外自行管理 PTY，并选择 Raylib 显示；这说明 VT 库不要求所有消费者采用同一种 GUI 或图形后端。其无渲染器意见的状态接口也适合无界面处理和测试场景。\n\n截至 2026-10-08，官方 README 明示 Zig 和 C 可用，并列出 macOS、Linux、Windows 和 WebAssembly 兼容性，同时明确 API 签名仍在变化、库尚未打版本标签。能构建到 Windows 或 WebAssembly 不证明所有桌面能力都已移植。模块成熟的解析行为与承诺长期兼容的发行 API 应分别评估。\n\n## 参考\n\n- [Ghostty：VT 模块状态](https://github.com/ghostty-org/ghostty)\n- [Ghostty：公开 VT C 头文件](https://github.com/ghostty-org/ghostty/blob/main/include/ghostty/vt.h)\n- [Ghostling：实际 C 接入示例](https://github.com/ghostty-org/ghostling/blob/main/main.c)",
+  "status": "emerging",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/ghostty-org/ghostty"
+}

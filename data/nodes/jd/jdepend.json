@@ -1,0 +1,64 @@
+{
+  "id": "jdepend",
+  "name": "JDepend",
+  "aliases": [
+    "Java包依赖分析器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "afferent-coupling",
+      "context": "以依赖当前Java包的其他包数计算Ca。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "efferent-coupling",
+      "context": "以当前Java包依赖的不同外部包数计算Ce。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-abstractness",
+      "context": "计算包内抽象类和接口占类总数的比例。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-instability",
+      "context": "用Ce/(Ca+Ce)计算包依赖结构不稳定性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "distance-from-main-sequence",
+      "context": "用抽象度、不稳定性及volatility参数计算主序列距离。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis",
+      "context": "在不执行目标程序的情况下解析Java类文件的类型依赖。"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "jvm",
+      "context": "Java包分析器本身通过Java运行环境执行。"
+    }
+  ],
+  "summary": "分析Java类文件的包依赖、循环与设计结构指标。",
+  "description": "JDepend 扫描 Java 类文件并建立包级依赖关系，输出包间传入与传出耦合、抽象度、不稳定性及主序列距离。它可通过文本、XML、界面或 Java API 接入设计检查，而不是源码行数计数器。\n\n包依赖集合可用于观察循环、检查预期依赖约束和比较架构结构。类数量、Ca/Ce 与比例指标采用该工具的包边界；分析目录和排除包配置决定哪些类文件进入结果。\n\n解析到的字节码依赖不覆盖任意反射、外部服务调用或运行时动态装配。其经典设计指标提供评审线索，不能证明架构符合全部业务条件；处理现代 class 文件之前还需核对所用工具构建的兼容范围。\n\n## 参考\n\n- [JDepend：官方项目](https://github.com/clarkware/jdepend)\n- [JDepend：使用文档与指标定义](https://github.com/clarkware/jdepend/blob/master/docs/JDepend.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/clarkware/jdepend"
+}

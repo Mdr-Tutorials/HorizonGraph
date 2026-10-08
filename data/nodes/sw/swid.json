@@ -1,0 +1,32 @@
+{
+  "id": "swid",
+  "name": "Software Identification Tags",
+  "aliases": [
+    "软件识别标签",
+    "SWID 标签"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "以标准标签记录软件身份、载荷和生命周期信息。",
+  "description": "SWID 标签是 ISO/IEC 19770-2 定义的软件识别元数据，帮助资产管理与安全系统识别软件产品及其状态。标签可以包含产品名称、版本、创建方、标识和文件载荷信息，供不同工具共享。它是一种结构化识别记录，不是把任意包名换成一个字符串的通用命名约定。\n\n标签类型与生命周期有关：主标签描述已安装产品，补丁标签连接补丁与其适用产品，补充标签可以扩展现有身份信息。NIST 的互操作指南与验证工具补充了标签生产和消费要求。文件载荷和观测证据能够用于核对安装内容，但生产者是否准确提供这些字段仍是独立问题。\n\nSWID 可参与 SBOM 与软件资产系统关联，PURL 和 CPE 则具有不同标识模型。标签格式合规不自动认证发布者、证明整个系统安装状态或取代组件漏洞分析。消费者应核对产品、标签作者、时间和文件证据，避免把标签存在解释为软件获得授权或通过安全验证。\n\n## 参考\n\n- [NIST：可互操作 SWID 标签指南](https://www.nist.gov/publications/guidelines-creation-interoperable-software-identification-swid-tags)\n- [NIST：SWID 标签生命周期](https://csrc.nist.gov/Projects/software-identification-swid/lifecycle)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.nist.gov/publications/guidelines-creation-interoperable-software-identification-swid-tags",
+  "abstraction_level": "application_tool",
+  "abbreviation": "SWID"
+}

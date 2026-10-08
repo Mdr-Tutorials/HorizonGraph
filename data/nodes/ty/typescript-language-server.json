@@ -1,0 +1,42 @@
+{
+  "id": "typescript-language-server",
+  "name": "TypeScript Language Server",
+  "aliases": [
+    "typescript-language-server",
+    "社区 TypeScript LSP 服务器"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "language-server-protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "language-server"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "tsserver"
+    }
+  ],
+  "summary": "为经典 tsserver 提供 LSP 接口的社区服务器。",
+  "description": "TypeScript Language Server 是社区维护的 JavaScript 与 TypeScript LSP 服务器，为经典 tsserver 及相关语言功能提供适配接口。它是独立项目，与微软内置的 TypeScript 语言服务及 VS Code 扩展分别建档。\n\n客户端以 LSP 同步文档和请求能力，服务器对接所选择的 TypeScript 包、tsserver 版本及项目配置。其配置支持插件、服务器路径、偏好设置和语法服务器等选项，实际可用能力仍由所装版本和初始化协商决定。\n\n官方 README 明确该项目不直接隶属微软，也不是 VS Code 内置实现。TypeScript 7 原生服务器已经采用 LSP，但既有社区适配器仍面向经典 tsserver；不能把新实现发布推导为所有编辑器已经迁移，也不能将适配器与 tsserver 视为同一工件。\n\n## 参考\n\n- [TypeScript Language Server：官方身份](https://github.com/typescript-language-server/typescript-language-server)\n- [TypeScript Language Server：配置](https://github.com/typescript-language-server/typescript-language-server/blob/master/docs/configuration.md)\n- [Microsoft：TypeScript 7 正式发布与原生 LSP](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/typescript-language-server/typescript-language-server"
+}

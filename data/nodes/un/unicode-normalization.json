@@ -1,0 +1,41 @@
+{
+  "id": "unicode-normalization",
+  "name": "Unicode Normalization",
+  "aliases": [
+    "Unicode 规范化",
+    "Unicode 正规化",
+    "NFC",
+    "NFD",
+    "NFKC",
+    "NFKD"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unicode"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "combining-character",
+      "context": "规范排序依据字符的 canonical combining class 处理组合标记序列，并参与分解与组合。"
+    }
+  ],
+  "summary": "将等价字符序列转换为规定的分解或组合形式。",
+  "description": "Unicode 规范化把按标准判定等价的字符序列转换为确定形式。NFD 进行规范分解与规范排序，NFC 在相应分解后执行规范组合，使部分预组合字符和基本字符加组合标记的表示能够得到一致结果。\n\nNFKD 与 NFKC 还采用兼容分解，会折叠某些排版或兼容性区别。例如兼容连字、圈号或全角表示可能改变，因此不能在需要保留原文形式的场景默认使用兼容规范化。规范化也不等于大小写折叠。\n\n规范化支持字符串比较、存储及搜索的一致性，但不能识别全部视觉相似字符，也不能直接决定终端列宽。采用的形式应成为数据接口的一部分，保留原文与检索用表示时要明确各自用途。\n\n## 参考\n\n- [Unicode UAX #15：规范化形式](https://www.unicode.org/reports/tr15/)\n- [ICU：Normalization API 与使用说明](https://unicode-org.github.io/icu/userguide/transforms/normalization/)\n- [Unicode：规范化形式定义](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/)",
+  "official_site": "https://www.unicode.org/reports/tr15/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

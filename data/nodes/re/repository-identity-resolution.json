@@ -1,0 +1,33 @@
+{
+  "id": "repository-identity-resolution",
+  "name": "Repository Identity Resolution",
+  "aliases": [
+    "仓库贡献者身份归一化",
+    "作者别名合并"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-mailmap",
+      "context": "对支持 mailmap 的 Git 历史输出采用项目显式提供的姓名邮箱映射，保留原始对象身份字段。"
+    }
+  ],
+  "summary": "将开发记录中的姓名邮箱映射到可审查身份。",
+  "description": "仓库身份归一化处理同一人使用多个姓名、邮箱或账号，以及不同人名称相同的问题。它关系到贡献者人数、归属份额和交流网络的统计；字符串相同或相似不能单独证明人员身份相同。\n\nGit 的 mailmap 可以在支持它的输出中把姓名邮箱映射到规范名称，而原始提交对象不被改写。研究也可结合经授权核实的账号关联和明确别名表，需要记录规则来源与未解决的歧义。\n\n机器人账号、共同作者和 author/committer 的区别也应处理。盲目合并会漏计人员，未合并别名会夸大人数；归一化后的身份仍不能证明全部劳动归属，也不要求公开额外私人信息。\n\n## 参考\n\n- [Git：mailmap 映射语义](https://git-scm.com/docs/gitmailmap)\n- [Git：作者与提交者输出](https://git-scm.com/docs/pretty-formats)\n- [研究作者：显式别名输入](https://github.com/aserg-ufmg/Truck-Factor/blob/master/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://git-scm.com/docs/gitmailmap"
+}

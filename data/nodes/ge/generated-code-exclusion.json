@@ -1,0 +1,33 @@
+{
+  "id": "generated-code-exclusion",
+  "name": "Generated Code Exclusion",
+  "aliases": [
+    "生成代码排除",
+    "自动生成文件过滤"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gitattributes",
+      "context": "采用 GitHub Linguist 分析路径时通过 linguist-generated 属性明确覆盖生成文件归类。"
+    }
+  ],
+  "summary": "按测量目标筛除自动生成的代码工件。",
+  "description": "生成代码排除是测量输入范围的一种选择：若研究人工维护的源码，可以把编译器输出、自动生成绑定或压缩产物单独统计。若研究分发体积、部署内容或生成器输出质量，同一文件可能应保留，因此没有普适排除范围。\n\nLinguist 依据路径与内容规则判断常见生成文件，并允许通过 linguist-generated 属性覆盖。排除规则应记录具体模式、扫描范围和人工更改，不能仅凭文件很多或重复就断定它们由生成器产生。\n\n不同工具的默认过滤并不相同，.gitignore 也不能代替生成文件识别。比较两次行数或语言份额前需统一规则；过滤生成内容会改变分母，但不会据此证明余下代码全部原创或手写。\n\n## 参考\n\n- [Linguist：生成属性覆盖](https://github.com/github-linguist/linguist/blob/main/docs/overrides.md)\n- [Linguist：生成内容检测实现](https://github.com/github-linguist/linguist/blob/main/lib/linguist/generated.rb)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/github-linguist/linguist/blob/main/docs/overrides.md"
+}

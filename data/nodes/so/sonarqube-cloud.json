@@ -1,0 +1,48 @@
+{
+  "id": "sonarqube-cloud",
+  "name": "SonarQube Cloud",
+  "aliases": [
+    "SonarCloud",
+    "云端 SonarQube"
+  ],
+  "type": "product",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "quality-profile",
+      "context": "在支持的语言分析中采用项目质量规则配置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "quality-gate",
+      "context": "根据项目门禁条件呈现分析接受状态。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "sonarscanner-cli",
+      "context": "在适用的 CI 分析路径中，CLI 扫描器向托管项目提交结果。"
+    }
+  ],
+  "summary": "以托管服务提供项目代码分析和质量治理。",
+  "description": "SonarQube Cloud 是 Sonar 的托管代码分析服务，旧名称 SonarCloud 保留为检索入口。它与需要自行管理服务端的 SonarQube Server 区分，项目接入受支持的代码托管和 CI 工作流。\n\n服务运行静态规则和重复分析，组织项目问题、质量配置及质量门；分析可以走受支持的自动分析或 CI 扫描路径。组织权限、语言、分支与拉取请求能力应依据具体套餐和文档确认，不能推断与所有 Server edition 完全相同。\n\n平台产生的状态和报告用于审查，是否阻止合并依赖代码托管及 CI 的配置。外部覆盖数据、被排除文件和不支持的语言需明确，扫描通过也不代表运行时行为、业务要求和全部安全性质都已验证。\n\n## 参考\n\n- [Sonar：Cloud 产品文档](https://docs.sonarsource.com/sonarqube-cloud)\n- [Sonar：Cloud CI 分析](https://docs.sonarsource.com/sonarqube-cloud/analyzing-source-code/ci-based-analysis/overview-of-integrated-cis)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-cloud"
+}

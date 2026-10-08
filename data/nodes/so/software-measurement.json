@@ -1,0 +1,37 @@
+{
+  "id": "software-measurement",
+  "name": "Software Measurement",
+  "aliases": [
+    "软件度量",
+    "软件测量"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "summary": "以定义的对象、属性和方法获取可解释的软件数据。",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "software-measurement-process",
+      "context": "在组织或项目中通过目标、数据定义、采集、分析和反馈建立可重复的测量活动。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "measurement-scale",
+      "context": "确定计数、等级或其他测量结果允许的比较和运算，避免对指标做没有依据的算术解释。"
+    }
+  ],
+  "description": "软件度量为软件产品、过程或项目中的属性建立明确的测量定义，并按方法采集数据。源码行数和分支数是可计算量；可维护性或生产力则需要先说明构念及证据，不能只给一个熟悉的数字便视为完成测量。\n\n度量定义应包括对象边界、计数规则、单位、工具配置和数据来源。同一仓库在纳入生成文件、供应商代码或不同语言分类后可能得到不同结果；只有对齐口径，重复统计和跨项目比较才有可解释的基础。\n\n测量结果服务于具体信息需要。选择、分析和验证度量时，应检查数据是否可靠、指标是否支持目标判断，以及环境变化是否影响比较；计数可以作为信号，不能不经验证地代替抽象质量或因果结论。\n\n## 参考\n\n- [NISTIR 8101：软件计量基础与可量化属性](https://www.nist.gov/publications/rational-foundation-software-metrology)\n- [NISTIR 8289：软件产品测量量与单位](https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8289.pdf)\n- [SEI：目标驱动的测量过程](https://www.sei.cmu.edu/library/establishing-a-software-measurement-process/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08"
+}

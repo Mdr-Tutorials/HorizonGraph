@@ -8,21 +8,18 @@
   "type": "tool",
   "domains": [
     "developer-environments",
-    "systems-programming"
+    "systems-programming",
+    "command-line-tools"
   ],
   "ecosystems": [
     "linux-gnu-ecosystem",
-    "wsl-ecosystem"
+    "wsl-ecosystem",
+    "shell-cli-ecosystem"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "tool"
-    },
-    {
-      "relation_type": "implements",
-      "target_id": "posix",
-      "context": "实现 POSIX Shell and Tools 部分所定义的 Shell 语义，并提供 POSIX 模式及标准外扩展；不代表单个 Shell 实现完整操作系统规范。"
     },
     {
       "relation_type": "integrates_with",
@@ -33,10 +30,29 @@
       "relation_type": "uses",
       "target_id": "wsl-interop",
       "context": "在 WSL 发行版内调用 .exe 工具或与 Windows 命令组合管道时，采用 WSL 提供的跨系统进程互操作。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "posix-shell",
+      "context": "实现 POSIX Shell 命令语言相关行为并提供 POSIX 模式；标准外扩展仍需按 Bash 文档和采用版本判断。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gnu-readline",
+      "context": "在带 Readline 的交互构建和编辑路径中使用其行编辑、历史检索和补全接口；--noediting 可关闭此输入编辑路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-startup-files",
+      "context": "依据交互、登录及调用名字等条件读取相应初始化文件。"
     }
   ],
-  "summary": "GNU 的命令解释器与 Shell 脚本执行工具。",
-  "description": "Bash 是 GNU 的命令语言解释器与 Shell，可用于交互式终端和非交互脚本执行。它解析命令、执行展开和重定向，并启动内建命令或外部程序；函数、条件和循环可以把现有工具组合成自动化流程。本节点覆盖 Bash 解释器工具身份，脚本语言是它提供的接口；Bash 本身不提供 Linux 内核、发行版软件包或图形终端。\n\nShell 的引号、变量展开、路径名展开和命令替换决定实际传给程序的参数。Bash 继承 Bourne Shell 的基本机制，并提供数组、交互编辑和作业控制等扩展；POSIX 模式用于调整与标准 Shell 行为相关的兼容性。可移植脚本应按需要采用 POSIX Shell 子集，依赖 Bash 扩展的脚本则需要明确解释器，而不能把所有 `sh` 都视为 Bash。\n\n在 WSL 中，Bash 通常来自用户安装的发行版，用于操作其 Linux 用户空间；WSL 也能够直接启动其他 Shell 或可执行程序。Windows Terminal 可通过 WSL profile 承载 Bash，Bash 还可经 WSL 互操作调用 Windows 可执行文件。跨边界调用时仍应分别处理 Shell 引号、路径表示和外部程序输出，Bash 的可用性不等于任意 Linux 内核功能均已实现。\n\n## 参考\n\n- [GNU：What is Bash?](https://www.gnu.org/software/bash/manual/html_node/What-is-Bash_003f.html)\n- [GNU：What is a shell?](https://www.gnu.org/software/bash/manual/html_node/What-is-a-shell_003f.html)\n- [GNU：Bash Reference Manual](https://www.gnu.org/s/bash/manual/bash.html)\n- [Microsoft：Working across Windows and Linux](https://learn.microsoft.com/en-us/windows/wsl/interop)\n- [Microsoft：Terminal 支持的 Shell](https://learn.microsoft.com/en-us/windows/terminal/faq)",
+  "summary": "GNU的命令解释器，组合外部程序并执行Shell脚本。",
+  "description": "Bash 是 GNU 的命令语言解释器和 Shell，可用于交互会话或非交互脚本。它提供解析、展开、重定向、内建命令和流程控制，并启动外部程序完成任务。本节点覆盖工具身份；Bash 本身不提供操作系统内核、发行版软件包或图形终端模拟器。\n\nBash 的参数展开、引号、路径名匹配和命令替换决定真实传递的参数。Bash 继承 Bourne 风格语义并提供数组、可编程补全、历史和 Readline 编辑等扩展；POSIX 模式用于调整标准相关行为。依赖 Bash 特性的脚本应明确解释器，不能因为可执行入口叫 sh 就假定它一定是 Bash。\n\nUnix 风格流水线连接命令的字节流，其返回状态与执行环境受 Bash 选项影响。交互模式与登录模式决定不同启动路径，提示符或补全插件应按会话条件初始化；非交互任务不能假定已经执行用户的交互配置。\n\n在 WSL 中，Bash 通常来自用户安装的发行版，Windows Terminal 可承载其会话。调用 Windows 可执行文件时使用 WSL 互操作，并仍须分别处理路径、参数和流的跨系统边界；这一可选工作流不是 Bash 一般运行的硬依赖。\n\n## 参考\n\n- [GNU：What is Bash?](https://www.gnu.org/software/bash/manual/html_node/What-is-Bash_003f.html)\n- [GNU：Bash POSIX Mode](https://www.gnu.org/software/bash/manual/html_node/Bash-POSIX-Mode.html)\n- [GNU：Interactive Shell Behavior](https://www.gnu.org/software/bash/manual/html_node/Interactive-Shell-Behavior.html)\n- [Microsoft：WSL Interop](https://learn.microsoft.com/en-us/windows/wsl/interop)",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",

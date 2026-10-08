@@ -1,0 +1,34 @@
+{
+  "id": "gitignore",
+  "name": "Git Ignore Rules",
+  "aliases": [
+    "Git 忽略规则",
+    ".gitignore"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git",
+      "context": "Git 管理未跟踪路径的内置模式匹配与排除机制"
+    }
+  ],
+  "summary": "按路径模式筛除应保持未跟踪文件的 Git 机制。",
+  "description": "Git 忽略规则指定哪些未跟踪路径通常不应被加入版本控制。共享规则可写在仓库中的 `.gitignore`，本地规则还有仓库 exclude 文件和用户全局配置；已被 Git 跟踪的文件不会因新增忽略规则而自动消失。\n\n规则按来源与目录层次处理，同级后匹配规则生效，`!` 可撤销先前排除。若父目录已被整体排除，不能直接靠子文件的否定模式重新包含它；路径模式与作用目录有关，不能把所有 glob 实现视为相同。\n\n代码计数工具经常借用 Git 忽略规则，但是否默认启用、是否读取全局规则、是否计入已跟踪的匹配文件，必须按具体工具核查。工作区遍历与某个提交的树遍历具有不同样本边界；忽略清单也不是安全边界，不能删除已经提交的敏感内容。\n\n## 参考\n\n- [Git ignore 手册](https://git-scm.com/docs/gitignore)\n- [Pro Git：忽略文件](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://git-scm.com/docs/gitignore"
+}

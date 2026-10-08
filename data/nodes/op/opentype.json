@@ -1,0 +1,43 @@
+{
+  "id": "opentype",
+  "name": "OpenType",
+  "aliases": [
+    "OpenType 字体格式",
+    "开放字体格式"
+  ],
+  "type": "protocol",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "truetype"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unicode",
+      "context": "通过 Unicode 字符映射和变体序列把文本字符关联到字体字形，规范还兼容某些历史编码。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "font-ligature",
+      "context": "GSUB 布局表规定连字替换机制；具体字体是否包含并启用相关查找需要另行检查。"
+    }
+  ],
+  "summary": "规定字体表、字形表示及高级排版数据的字体格式。",
+  "description": "OpenType 是基于 sfnt 表结构的字体格式，扩展原始 TrueType 格式，并保留对符合原始规范字体的兼容。它支持 TrueType 轮廓以及 CFF、CFF2 等表示，字体能力不能简单由 ttf 或 otf 文件后缀判定。\n\ncmap 表记录字符代码到字形索引的映射，GSUB 和 GPOS 等布局表提供字形替换与定位数据。字体可以携带连字、文字必需布局特性、变体及彩色字形能力，具体支持仍取决于字体数据和应用实现。\n\nOpenType 提供字体数据和低层布局操作的规范，不定义全部段落排版或终端单元格行为。符合格式不保证完整字符覆盖，也不保证应用启用所有特性；此节点表达字体文件及布局规范，不是字体家族或网络协议。\n\n## 参考\n\n- [Microsoft：OpenType 规范](https://learn.microsoft.com/en-us/typography/opentype/spec/)\n- [Microsoft：OpenType 总览](https://learn.microsoft.com/en-us/typography/opentype/spec/overview)\n- [Microsoft：cmap 映射](https://learn.microsoft.com/en-us/typography/opentype/spec/cmap)\n- [Microsoft：字体文件结构](https://learn.microsoft.com/en-us/typography/opentype/spec/otff)",
+  "official_site": "https://learn.microsoft.com/en-us/typography/opentype/spec/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm"
+}

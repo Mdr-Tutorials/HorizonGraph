@@ -1,0 +1,45 @@
+{
+  "id": "pango",
+  "name": "Pango",
+  "aliases": [
+    "Pango 文本布局库"
+  ],
+  "type": "library",
+  "domains": [
+    "desktop-application-development",
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem",
+    "text-rendering-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-shaping",
+      "context": "文本处理管线包含从字符到字形的塑形阶段。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cairo",
+      "context": "选择 PangoCairo 后端时将定位字形和布局绘制到 Cairo 表面。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-layout",
+      "context": "PangoLayout 提供段落换行、对齐、对端对齐和省略等布局功能。"
+    }
+  ],
+  "summary": "提供 Unicode 文本分段、布局和后端渲染组织的库。",
+  "description": "Pango 是用于国际化文本处理与布局的库，把 Unicode 文本组织为具有字体、方向与书写系统信息的运行段，再处理字形生成、换行和布局。它用于 GTK 标准文本控件，也可以独立集成到图形应用。\n\n渲染管线包括 itemization、shaping、line breaking、justification 和 rendering 等阶段。应用通过 PangoLayout 等接口取得布局及字形位置，PangoCairo 提供把结果绘到 Cairo 表面的桥接，变换和目标变化时需同步相关上下文。\n\nPango 的范围比单独字形塑形更广，但它不是输入法框架，也不决定图形应用自身的终端单元格语义。GTK 界面使用 Pango 不足以证明应用自定义 GPU 终端正文使用它；具体字体回退、塑形和绘制路径须按调用关系核实。\n\n## 参考\n\n- [Pango 文本渲染管线](https://docs.gtk.org/Pango/pango_rendering.html)\n- [Pango 与 Cairo 渲染桥接](https://docs.gtk.org/PangoCairo/pango_cairo.html)\n- [Pango 段落布局 API](https://docs.gtk.org/Pango/class.Layout.html)",
+  "official_site": "https://docs.gtk.org/Pango/pango_rendering.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

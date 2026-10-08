@@ -1,0 +1,38 @@
+{
+  "id": "rsync",
+  "name": "rsync",
+  "aliases": [
+    "rsync 文件同步"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssh",
+      "context": "在选择 SSH 作为远程 Shell 传输通道时，用其连接远端 rsync 进程；本地和守护进程方式没有此硬依赖。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-option",
+      "context": "通过归档、过滤、删除和校验等选项明确同步范围与文件选择策略。"
+    }
+  ],
+  "summary": "提供本地或远端增量文件传输与同步的工具。",
+  "description": "rsync 用于本地复制及远端文件传输，按照指定的源和目标路径同步内容与选定元数据。它可以采用差量传输减少网络中的重复数据发送，是文件同步工具，不是版本控制系统；删除、冲突和历史保留策略仍由调用方式决定。\n\n远端传输可通过远程 Shell 通道或 rsync 守护进程方式进行，选择 SSH 是其中一种常见安全通道。源目录尾部斜杠、过滤规则和元数据选项会改变目标结构与结果；源目标角色及远端实际权限需要分别确认。\n\n是否选择文件、是否传输整个文件及怎样验证结果是不同阶段，大小和时间比较也不同于逐文件内容校验。本地传输等路径可能采用整文件方式，不能宣称所有 rsync 调用都必然使用差量算法；同步成功也不会自动生成可恢复的历史备份。\n\n## 参考\n\n- [rsync 官方项目](https://rsync.samba.org/)\n- [rsync 官方命令手册](https://download.samba.org/pub/rsync/rsync.1)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://rsync.samba.org/"
+}

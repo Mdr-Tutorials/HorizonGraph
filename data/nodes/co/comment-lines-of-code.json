@@ -1,0 +1,29 @@
+{
+  "id": "comment-lines-of-code",
+  "name": "Comment Lines of Code",
+  "aliases": [
+    "注释行数",
+    "源码注释行",
+    "Comment LOC"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按语言与行分类口径统计源文件中的注释行。",
+  "description": "注释行数统计源码中被语言规则识别为注释的行。行注释、块注释、文档注释和被注释掉的代码如何计入，都应随结果说明；字符串中的注释符号不能直接算作注释。\n\n纯注释行与代码注释混合行有不同计法。某些计数器采用互斥的代码、注释、空白类别，另一些会单列混合行；SonarQube 还对空注释、装饰行及某些语言文件头设有特定规则。\n\n该数值能描绘源码说明文本的规模，并作为注释密度的输入。注释可能过时、重复或包含禁用代码，数量不证明准确性或可维护性；分析时宜查看实际内容和工具分类样例。\n\n## 参考\n\n- [SonarQube 10.6：规模与注释指标定义](https://docs.sonarsource.com/sonarqube-server/10.6/user-guide/code-metrics/metrics-definition)\n- [sloc：混合行与注释分类](https://github.com/flosse/sloc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-server/10.6/user-guide/code-metrics/metrics-definition"
+}

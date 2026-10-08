@@ -1,0 +1,44 @@
+{
+  "id": "lcov",
+  "name": "LCOV",
+  "aliases": [
+    "LCOV 覆盖报告工具",
+    "Linux 测试覆盖工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-coverage",
+      "context": "采集或转换各后端执行覆盖数据并汇总报告。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gcov",
+      "context": "使用 gcov 后端读取 GCC 构建生成的覆盖数据；其他输入后端有各自配置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "llvm-cov",
+      "context": "LLVM 转换路径消费 llvm-cov 导出的覆盖信息，不表示全部 LCOV 使用都依赖 LLVM。"
+    }
+  ],
+  "summary": "采集、转换和汇总覆盖数据并生成 HTML 报告。",
+  "description": "LCOV 是覆盖数据采集与报告工具集，包含 lcov、geninfo、genhtml 及若干格式转换器。它可处理 gcov 等采集结果，而不是自身重新执行全部测试或独立证明代码正确。\n\n当前项目提供 LLVM、Python、Perl、XML 和 JaCoCo 等数据转换路径，并支持按配置汇总与生成差异报告。能否保留分支或 MC/DC 细节取决于输入数据、转换路径、版本与显式选项。\n\n主工具以 Perl 实现，附加脚本和报告方式可能引入其他环境要求。路径、源版本、过滤与未写出运行数据都影响最终报告；LCOV 的名称也常指 tracefile 格式，应区分格式与具体工具身份。\n\n## 参考\n\n- [LCOV 官方仓库](https://github.com/linux-test-project/lcov)\n- [LCOV：功能与数据转换](https://github.com/linux-test-project/lcov/blob/master/README.rst)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/linux-test-project/lcov"
+}

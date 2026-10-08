@@ -1,0 +1,39 @@
+{
+  "id": "gtk",
+  "name": "GTK",
+  "aliases": [
+    "GTK+",
+    "GTK 工具包"
+  ],
+  "type": "framework",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gobject",
+      "context": "GTK 2 及后续主版本的控件与信号体系采用 GObject；此边不追溯表示 GTK 1 的对象实现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "glib",
+      "context": "当前 GTK 应用采用 GLib 主循环与基础数据类型组织事件处理。"
+    }
+  ],
+  "summary": "用于构建跨平台事件驱动图形界面的控件工具包。",
+  "description": "GTK 是以控件组织图形界面的跨平台工具包家族，应用通过窗口、按钮、文本控件、布局与信号回调处理交互。它把界面结构、事件分发和平台窗口接口连接起来，官方提供 C 接口并支持多种语言绑定。\n\nGTK 的公共界面建立在 GLib 与 GObject 等基础设施之上；GDK 隔离窗口系统差异，文本能力由 Pango 等库提供。应用可以用 GtkBuilder 描述控件结构，也能在运行时创建控件；GUI 更新与耗时任务需要正确安排主循环和异步处理。\n\nGTK 家族节点用于连接共同概念，具体主版本有各自的 API 与 ABI。GTK 4 在渲染模型和控件体系上有独立迁移路径，因此另列版本节点；某应用使用 GTK 构建菜单或窗口，并不意味着它的自定义终端网格也使用 GTK 文本控件绘制。\n\n## 参考\n\n- [GTK 官方入门](https://www.gtk.org/docs/getting-started/index)\n- [GTK 官方文档目录](https://docs.gtk.org/)",
+  "official_site": "https://www.gtk.org/docs/getting-started/index",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -11,7 +11,8 @@
   "domains": [
     "compilers",
     "developer-environments",
-    "ai-assisted-software-engineering"
+    "ai-assisted-software-engineering",
+    "language-tooling"
   ],
   "relations": [
     {
@@ -24,5 +25,8 @@
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",
   "importance": 4,
-  "description": "AST 用声明、表达式和语句等节点表达源程序的抽象语法结构，通常省略部分标点或文法辅助节点。抽象程度由工具设计决定；Clang 的 AST 还保留与源码接近的结构、源码位置、类型和声明信息，便于诊断及源码工具访问。\n\n语言服务可以在 AST 上读取符号、引用和类型，支持代码导航、诊断以及部分重构。Clang 的 Parser 与 Sema 协作构造带有语义属性的 AST；并非所有语言都严格先完成一个独立语法树阶段再统一分析，树中有哪些绑定信息需按实际实现说明。\n\nAST 与完整解析树、Tree-sitter 的具体语法树以及目标机器中间表示不同。语法结构本身不证明程序正确，缺失注释或格式信息的 AST 也不能直接保证源码改写保留原文；代码工具需要结合相应位置、词法或编辑机制。\n\n## 参考\n\n- [Clang：抽象语法树、类型与源码位置](https://clang.llvm.org/docs/IntroductionToTheClangAST.html)\n- [Clang：Parser、Sema 与 AST 的协作](https://clang.llvm.org/docs/InternalsManual.html)\n- [clangd：跨文件符号、引用与索引层次](https://clangd.llvm.org/design/indexing)\n- [Tree-sitter：增量解析库与生成器](https://tree-sitter.github.io/tree-sitter/)"
+  "description": "AST 用声明、语句和表达式等节点表达源程序的抽象语法结构，通常省略部分标点或文法辅助节点。抽象程度由工具决定；Clang 的树保留源码位置、类型和声明属性，JavaScript 工具又有各自结构接口。\n\nESTree 约定共享的 JavaScript 节点结构，Acorn 和 Esprima 等解析库提供相应树；Babel 默认 AST 有差异，SWC 也有自己的表示。遍历器和转换器必须匹配节点模型，处理同种语言不代表树接口可直接互换。\n\n语法树可供名称分析、类型查询和源码改写使用，但仅有语法结构不证明程序正确。Lezer 与 Tree-sitter 的具体语法树、完整解析树及机器中间表示各有边界，保留注释、格式与原文改写也需额外信息及机制。\n\n## 参考\n\n- [Clang：AST 与源码位置](https://clang.llvm.org/docs/IntroductionToTheClangAST.html)\n- [ESTree：结构规范](https://github.com/estree/estree/blob/master/README.md)\n- [Babel：AST 差异](https://babeljs.io/docs/babel-parser)",
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ]
 }

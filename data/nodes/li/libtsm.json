@@ -1,0 +1,33 @@
+{
+  "id": "libtsm",
+  "name": "libtsm",
+  "aliases": [
+    "Terminal State Machine",
+    "终端状态机库"
+  ],
+  "type": "library",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    }
+  ],
+  "summary": "解析 VT 控制流并维护终端状态的独立 C 库。",
+  "description": "libtsm 是终端状态机库，面向 DEC VT100 至 VT520 一类终端兼容行为，处理控制序列与终端状态。它为构建终端的应用提供基础逻辑，适合把终端解释与不同窗口、输出和显示实现组合。\n\n库不提供完整图形渲染或窗口管理，宿主需要处理绘制、输入输出和进程连接。解析后的状态是界面构建的依据，但完整终端会话还涉及 PTY、字体及事件处理；采用一个状态机库不意味着应用已自动覆盖所有终端扩展或系统集成。\n\n现行上游是 kmscon/libtsm。Aetf 的个人 fork README 明确说明上游开发已从该 fork 恢复，并将新 issue 与 PR 指向当前官方仓库；2026-09-25 官方发布了 v4.8.0。历史 freedesktop 或个人托管入口与当前上游应分别说明，不能沿陈旧描述把项目记为无人维护。\n\n## 参考\n\n- [kmscon：libtsm 当前官方上游](https://github.com/kmscon/libtsm)\n- [Aetf：上游恢复与迁移说明](https://github.com/Aetf/libtsm)\n- [kmscon：libtsm v4.8.0 发布](https://github.com/kmscon/libtsm/releases/tag/v4.8.0)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/kmscon/libtsm"
+}

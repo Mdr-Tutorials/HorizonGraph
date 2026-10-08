@@ -1,0 +1,43 @@
+{
+  "id": "acorn-loose",
+  "name": "acorn-loose",
+  "aliases": [
+    "Acorn loose parser",
+    "Acorn 容错解析器"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "acorn"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "error-recovery-parsing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "estree",
+      "context": "用带恢复及占位结构的 ESTree 形式向上层提供语法树。"
+    }
+  ],
+  "summary": "在不完整或错误 JavaScript 中恢复可用语法树。",
+  "description": "acorn-loose 是 Acorn 项目的独立容错 JavaScript 解析包，面向编辑中的不完整或错误源码。它尝试恢复结构并返回近似的 ESTree 树，让上层工具在用户尚未完成输入时仍有节点可用。\n\n容错过程可以插入占位节点或调整对错误片段的解释，因此与严格解析器成功接受合法源码不同。上层分析器需要识别恢复后的结构，并避免把占位名称、错误位置或猜测分组当成真实程序语义。\n\n该包依赖 Acorn 的词法基础，Tern 的包声明也把它列为实际依赖。容错解析是编辑体验的基础能力，不是 ECMAScript 合法性验证，也不能证明名称解析、类型推断或重构结果正确。\n\n## 参考\n\n- [acorn-loose：官方说明](https://github.com/acornjs/acorn/blob/master/acorn-loose/README.md)\n- [acorn-loose：依赖声明](https://github.com/acornjs/acorn/blob/master/acorn-loose/package.json)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/acornjs/acorn/blob/master/acorn-loose/README.md"
+}

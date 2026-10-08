@@ -12,16 +12,18 @@
     }
   ],
   "summary": "关联名称、声明与属性，支持名称解析和链接。",
-  "description": "## 机制\n\n编译器符号表记录标识符对应的声明、类型、作用域等信息；目标文件符号表则记录名称、绑定与节或地址信息，供链接器解析引用。二者共享名称关联思想，但字段与生命周期不同。\n\n## 边界与应用\n\n作用域嵌套、遮蔽、重载和跨模块引用都需明确规则。符号表不是抽象语法树，也不直接代替类型检查；链接期的未定义符号与源语言名称解析错误是不同阶段的问题。\n\n## 参考\n\n- [Clang 内部架构手册](https://clang.llvm.org/docs/InternalsManual.html)\n- [ELF 符号表规范](https://gabi.xinuos.com/elf/05-symtab.html)",
+  "description": "符号表把名称关联到声明、类型、作用域及其他属性，是编译器名称绑定的重要数据结构。目标文件符号表则记录名称、绑定和节或地址，服务链接阶段；两种表共享名称关联思想，字段与生命周期不同。\n\n编译器按嵌套作用域、遮蔽、重载和模块规则组织符号查找。TypeScript binder 为声明建立符号信息，检查器与语言服务据此进一步关联引用及类型；具体实现也可能按语言设计划分不同阶段。\n\n符号表与 AST、源码标签文件和语言服务器项目索引分别区分。拥有名称记录不代表完成全程序类型检查，源码未定义名称与链接期未定义符号也属于不同问题；跨文件导航仍需项目和索引上下文。\n\n## 参考\n\n- [Clang：符号和名称查找](https://clang.llvm.org/docs/InternalsManual.html)\n- [TypeScript：binder 与 Symbol](https://github.com/microsoft/TypeScript/wiki/Architectural-Overview)\n- [ELF：链接符号表](https://gabi.xinuos.com/elf/05-symtab.html)",
   "importance": 4,
   "official_site": "https://clang.llvm.org/docs/InternalsManual.html",
-  "last_reviewed": "2026-10-01",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "language-tooling-ecosystem"
   ],
   "domains": [
-    "compilers"
+    "compilers",
+    "language-tooling"
   ]
 }

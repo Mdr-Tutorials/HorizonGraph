@@ -1,0 +1,42 @@
+{
+  "id": "regression-testing",
+  "name": "Regression Testing",
+  "aliases": [
+    "回归测试"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-selection",
+      "context": "测试集较大时可按已声明的依赖模型选择受影响子集，并对未知影响回退到更完整运行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-prioritization",
+      "context": "按风险或变化安排执行顺序，以缩短重要回归失败的反馈时间。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-oracle",
+      "context": "根据应保持的既有行为判定变更后执行结果是否退化。"
+    }
+  ],
+  "summary": "在变更后检查此前应保持的行为是否退化。",
+  "description": "回归测试在软件变更后重新验证应继续成立的既有行为，以发现修复、重构、依赖升级或配置变化引入的退化。它描述验证目的，可以使用单元、集成及端到端等不同层次测试。\n\n测试集可全量执行，也可在明确依赖模型下选择受影响子集并安排优先顺序。保存原始预期和环境条件有助于判断失败来自真实回归、测试基线变化或环境故障。\n\n回归测试关注已有行为，并不自动覆盖新需求或以前遗漏的场景。需要同时补充新增功能测试，复核不稳定项和判定质量；通过一次回归运行不能证明所有未来输入都正确。\n\n## 参考\n\n- [Microsoft：测试影响分析与回退](https://learn.microsoft.com/en-us/azure/devops/pipelines/test/test-impact-analysis?view=azure-devops)\n- [Microsoft Research：测试优先级原始研究](https://www.microsoft.com/en-us/research/publication/effectively-prioritizing-tests-in-development-environment/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://learn.microsoft.com/en-us/azure/devops/pipelines/test/test-impact-analysis?view=azure-devops"
+}

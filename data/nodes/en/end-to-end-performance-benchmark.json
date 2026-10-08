@@ -1,0 +1,34 @@
+{
+  "id": "end-to-end-performance-benchmark",
+  "name": "End-to-End Performance Benchmark",
+  "aliases": [
+    "端到端性能基准",
+    "整体路径性能基准"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "benchmark-experimental-design",
+      "context": "声明完整任务的起止、数据与负载条件，确保比较对象完成同等任务。"
+    }
+  ],
+  "summary": "按声明的完整任务路径测量系统性能。",
+  "description": "端到端性能基准按声明的任务起止边界测量整体路径，例如从启动代码计数命令到统计结果输出完成。它包含哪些初始化、遍历、读取和输出步骤，必须由协议说明；端到端不代表包含系统中所有可能成本。\n\n多组件系统可采用相关工作负载与负载生成方式，并同时检查结果有效性。SPECvirt 的多组件负载说明了一种完整路径组织方式，但其虚拟化工作负载与计分不能直接推广为全部 CLI 或 Web 服务的统一规范。\n\n整体测量能捕捉组件交互和等待，却不单独说明瓶颈所在。需要与局部分析配合，并公开冷启动、稳态、并发和数据条件；功能结果不同或计时边界不同的工具，耗时数字不能直接视为公平效率比较。\n\n## 参考\n\n- [SIGSOFT：软件基准实验标准](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Benchmarking.md)\n- [SPECvirt：多组件虚拟化工作负载](https://www.spec.org/virt_sc2013/docs/SPECvirt_UserGuide.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Benchmarking.md"
+}

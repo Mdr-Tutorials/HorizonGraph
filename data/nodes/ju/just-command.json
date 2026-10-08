@@ -1,0 +1,39 @@
+{
+  "id": "just-command",
+  "name": "just",
+  "aliases": [
+    "Just 命令运行器",
+    "justfile"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "posix-shell",
+      "context": "常见 Unix 配方默认由 sh 解释；可配置其他 Shell，未安装 sh 时须选择可用解释器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-option",
+      "context": "通过命令选项、配方名与配方参数选择需要执行的项目操作。"
+    }
+  ],
+  "summary": "保存并运行项目命令配方的命令行运行器。",
+  "description": "just 把项目常用命令保存为 justfile 中的配方，使用配方名运行测试、开发、生成或部署步骤。语法借鉴 Make，但官方定位是命令运行器，重点在记忆和复用项目操作，不以目标文件时间戳实现 Make 的增量构建模型。\n\n变量、配方参数和依赖配方能够组织执行过程，命令的实际解释还取决于所选 Shell。工具支持多个操作系统，项目可以配置 Shell 或使用对应脚本配方；跨平台分发 just 二进制不保证某个项目的外部命令本身跨平台。\n\n配方运行会执行作者写入的程序，失败行为与执行顺序应按手册检查。存在依赖配方不自动等同完整构建依赖追踪，也不要求把所有操作声明成伪文件目标；Just 的参数语法与 Shell 解析仍是两个阶段。\n\n## 参考\n\n- [Just 正式版程序员手册](https://just.systems/man/en/)\n- [Shell 与平台前置条件](https://just.systems/man/en/prerequisites.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://just.systems/man/en/"
+}

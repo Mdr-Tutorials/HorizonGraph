@@ -1,0 +1,43 @@
+{
+  "id": "foot",
+  "name": "foot",
+  "aliases": [
+    "foot 终端",
+    "Wayland 原生终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminal-scrollback",
+      "context": "保存滚离可视区域的输出，并提供回滚搜索交互。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wayland",
+      "context": "原生 Wayland 客户端通过该显示协议与合成器处理窗口、输入和呈现；终端控制序列是另一层交互。"
+    }
+  ],
+  "summary": "以轻量原生 Wayland 界面提供终端仿真与会话显示。",
+  "description": "foot 是由 dnkl 维护、使用 C 实现的原生 Wayland 终端模拟器，提供字符网格、终端输出解释与本地输入交互。应用在 Wayland 环境中显示程序会话，命令行 Shell 与显示协议分别负责命令解释和桌面窗口通信。\n\n项目提供服务端模式、回滚搜索、输入法交互和 Sixel 等能力。服务端模式可减少创建多个窗口时的重复资源，但不应直接推断为任意远程连接可脱离或跨重启恢复；具体会话生命周期仍由相关进程和宿主环境决定。\n\n2026-10-08 核查的官方仓库仍在维护，发布入口提供 1.28.0。能力范围与接口以官方 README 和所用版本为准；Codeberg 的抓取限制或历史镜像归档状态不能证明上游停更。终端支持某种图片协议还需要实际应用发送对应数据，不能由桌面显示协议推断终端扩展兼容。\n\n## 参考\n\n- [foot：官方 README](https://codeberg.org/dnkl/foot/raw/branch/master/README.md)\n- [foot：官方发布](https://codeberg.org/dnkl/foot/releases)\n- [foot：官方仓库 API](https://codeberg.org/api/v1/repos/dnkl/foot)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://codeberg.org/dnkl/foot/raw/branch/master/README.md"
+}

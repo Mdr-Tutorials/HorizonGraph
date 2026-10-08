@@ -1,0 +1,33 @@
+{
+  "id": "libvterm",
+  "name": "libvterm",
+  "aliases": [
+    "LeoNerd libvterm",
+    "C 终端仿真库"
+  ],
+  "type": "library",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    }
+  ],
+  "summary": "以抽象 C 接口维护 VT 风格终端状态的嵌入库。",
+  "description": "libvterm 是 Paul Evans（LeoNerd）维护的 C99 终端模拟库，实现 VT220、xterm 和 ECMA-48 风格的终端行为。它为宿主处理控制序列与屏幕状态，供编辑器或自定义界面嵌入；这里的项目与其他名为 libvterm、源自 libROTE 的库分别具有身份。\n\n库不绑定某种图形工具包或显示系统，宿主通过抽象回调处理输出和绘制。这样的分工允许终端逻辑被复用，但并不会同时提供完整桌面窗口、Shell 登录或网络认证；进程 I/O 与界面生命周期仍需由集成应用建立。\n\n官方网页提供 0.3.3 源码，Launchpad 项目仍登记为 Active Development；这些信息不等于承诺近期发布频率。Neovim 的独立下游 fork 已因并入主仓库而归档，不能据此认定上游 libvterm 停止维护。接入时应固定所用实现及头文件版本，避免把同名项目的 API 混用。\n\n## 参考\n\n- [LeoNerd：libvterm 上游](https://www.leonerd.org.uk/code/libvterm/)\n- [Launchpad：官方项目元数据](https://api.launchpad.net/1.0/libvterm/trunk)\n- [Neovim：下游迁入主仓库说明](https://github.com/neovim/libvterm)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.leonerd.org.uk/code/libvterm/"
+}

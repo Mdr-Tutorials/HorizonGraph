@@ -1,0 +1,44 @@
+{
+  "id": "pseudoterminal",
+  "name": "Pseudoterminal",
+  "aliases": [
+    "伪终端"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tty",
+      "context": "伪终端从端向应用暴露终端设备的输入输出模式及控制语义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "line-discipline",
+      "context": "Linux PTY 从端经附接行规程处理输入、回显和信号字符。"
+    }
+  ],
+  "summary": "以主从设备对向程序提供终端行为，并连接软件输入输出。",
+  "description": "伪终端是一个双向通信的主从设备对。从端向应用提供类似真实终端的接口，主端由图形终端、远程登录服务或会话工具控制。主端写入的数据作为终端输入抵达从端，从端写入的输出则可由主端读取；这种结构允许软件承担物理终端的角色。\n\n与普通管道相比，伪终端还承载 TTY 输入模式、终端尺寸与作业控制相关行为。例如在信号字符处理启用时，主端写入中断字符会经终端处理向前台进程组发出 SIGINT，而不是保证将同一字节原样交给每个应用。原始模式会改变这一处理路径。\n\nLinux 文档区分较早的 BSD 伪终端接口与 UNIX 98 主从分配接口。PTY 的字节交换、会话设置和显示仿真是不同责任；分配 PTY 不自动建立完整的控制会话，也不保证鼠标、图片或剪贴板扩展被宿主实现。Windows 伪控制台 API 则有单独的接口契约。\n\n## 参考\n\n- [Linux man-pages：伪终端](https://man7.org/linux/man-pages/man7/pty.7.html)\n- [Linux man-pages：termios 接口与输入模式](https://man7.org/linux/man-pages/man3/termios.3.html)\n- [Linux man-pages：进程组、会话与控制终端](https://man7.org/linux/man-pages/man7/credentials.7.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://man7.org/linux/man-pages/man7/pty.7.html",
+  "abbreviation": "PTY"
+}

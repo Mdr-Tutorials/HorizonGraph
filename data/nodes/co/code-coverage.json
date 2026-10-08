@@ -1,0 +1,28 @@
+{
+  "id": "code-coverage",
+  "name": "Code Coverage",
+  "aliases": [
+    "代码覆盖率",
+    "结构覆盖率"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "量化测试执行过的代码结构及其未覆盖部分。",
+  "description": "代码覆盖率以某类代码结构为测量对象，统计测试执行中触达的元素占纳入分析元素的比例。行、语句、分支、条件与路径的分母不同，报告必须标明具体准则及工具口径。\n\n采集通常把运行事件、计数器或探针结果映射回特定版本源码，再结合静态分析确定未触达的结构。应固定源码提交、构建选项、测试集与包含和排除范围；只分析加载过的文件可能遗漏完全未测试的模块。\n\n覆盖说明执行触达，不能单独说明断言验证了正确行为，也无法证明需求完整或不存在缺陷。解读时同时审查未覆盖原因、测试判定和需求场景，不把高覆盖百分比直接当成软件质量分数。\n\n## 参考\n\n- [Coverage.py：采集、分析与报告](https://coverage.readthedocs.io/en/latest/howitworks.html)\n- [NASA：MC/DC 实践教程](https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://coverage.readthedocs.io/en/latest/howitworks.html"
+}

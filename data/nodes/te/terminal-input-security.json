@@ -1,0 +1,33 @@
+{
+  "id": "terminal-input-security",
+  "name": "Terminal Input and Output Security",
+  "aliases": [
+    "终端输入输出安全"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bracketed-paste",
+      "context": "在支持的输入应用中识别粘贴边界并将文本作为整体插入，减少将粘贴内容误作即时按键操作的机会。"
+    }
+  ],
+  "summary": "在粘贴、控制序列和宿主交互之间维护明确的信任边界。",
+  "description": "终端输入输出安全关注字节流如何跨越文字显示、程序输入和宿主权限边界。文件内容、日志或远程程序输出可能包含控制序列，终端会将其中一部分解释为屏幕或宿主交互请求。应区分显示文字、用户动作、终端回复和应用命令，避免把可见输出自动当作可信指令。\n\n实现可限制剪贴板读取、窗口操作、链接 URI scheme 和资源访问，并对不可信日志选择转义或受控渲染。括号粘贴帮助输入应用识别一整段粘贴，从而避免即时按键绑定解释；它不验证命令含义或文本来源。OSC 52 的编码、OSC 133 的退出标记也不能提供认证。\n\n网页嵌入终端还包含应用前端、服务端连接和终端解析器的不同责任。终端功能策略不能替代服务端身份验证和授权；盲目剥离颜色序列也未必能处理所有控制字符串。开发者应按真实功能制定限制，并处理载荷长度、查询反馈、模式恢复和录屏存储中的敏感内容。\n\n## 参考\n\n- [xterm.js：终端与输入输出信任边界](https://xtermjs.org/docs/guides/security/)\n- [Ghostty：剪贴板读写与粘贴策略](https://ghostty.org/docs/config/reference)\n- [VTE / iTerm2：终端超链接原始规范](https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda)\n- [xterm：括号粘贴的起源与实现](https://invisible-island.net/xterm/xterm-paste64.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://xtermjs.org/docs/guides/security/"
+}

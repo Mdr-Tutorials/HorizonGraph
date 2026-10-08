@@ -1,0 +1,54 @@
+{
+  "id": "github-linguist",
+  "name": "GitHub Linguist",
+  "aliases": [
+    "Linguist",
+    "GitHub语言识别库"
+  ],
+  "type": "library",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem",
+    "git-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "source-language-detection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "repository-language-share",
+      "context": "汇总纳入文件的语言字节数并计算百分比，作为仓库语言统计。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gitattributes",
+      "context": "读取 linguist-language、linguist-generated 与 linguist-vendored 等显式覆盖属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "generated-code-exclusion",
+      "context": "计算仓库语言统计时按生成文件检测及覆盖属性筛选输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vendored-code-exclusion",
+      "context": "计算语言统计时按外部代码路径规则及覆盖属性筛选输入。"
+    }
+  ],
+  "summary": "识别文件语言并支持仓库语言统计的 Ruby 库。",
+  "description": "GitHub Linguist 是识别文件语言与仓库语言构成的 Ruby 库，同时提供命令行入口。GitHub 用它支撑语言统计和语法高亮的语言选择；它的主要任务不是对程序做完整语法或语义分析。\n\n它组合名称、扩展名、shebang、启发式与分类器，并识别二进制、外部、生成和文档内容。仓库语言份额按纳入的代码字节数计算，.gitattributes 可覆盖语言、生成和外部归类，规则需要与提交快照一致。\n\n分类规则的版本变化与人工覆盖会改变输出，GitHub 默认分支分析还会异步更新。语言百分比不能当作代码行百分比，标签也不证明构建成功；混合语言或共享后缀文件应检查实际检测结果。\n\n## 参考\n\n- [Linguist：官方项目](https://github.com/github-linguist/linguist)\n- [Linguist：识别与字节统计](https://github.com/github-linguist/linguist/blob/main/docs/how-linguist-works.md)\n- [Linguist：覆盖机制](https://github.com/github-linguist/linguist/blob/main/docs/overrides.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/github-linguist/linguist"
+}

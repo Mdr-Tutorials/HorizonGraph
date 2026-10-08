@@ -1,0 +1,37 @@
+{
+  "id": "planning-poker",
+  "name": "Planning Poker",
+  "display_primary": "计划扑克",
+  "display_secondary": "Planning Poker",
+  "aliases": [
+    "计划扑克",
+    "估算扑克",
+    "规划扑克",
+    "Planning Poker 估算"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "story-points",
+      "context": "采用故事点牌面时，以团队已理解条目的故事点基准作为相对比较尺度；Planning Poker 也允许使用其他估算单位。"
+    }
+  ],
+  "summary": "通过独立选牌、同时揭示和讨论估算敏捷待办工作量。",
+  "description": "Planning Poker 是对产品待办条目进行协作估算的方法。实际承担工作的人先理解需求与完成条件，再私下选择牌面，同时揭示估计；较高和较低估计揭露团队对实现路径、测试范围或风险的不同认识。\n\n它常使用故事点，也可以使用理想日等单位。采用故事点时，通过已理解条目的基准尺度进行相对比较；常见牌面采用较疏的数字序列，数字间隔帮助团队接受较大工作的较高不确定性。\n\n多轮讨论用于澄清假设并得到足以支持计划的估计，直接平均高低牌面容易掩盖尚未解决的范围分歧。若条目持续无法估计，应进一步细化或拆分；牌面共识本身不构成固定工期承诺。\n\n## 参考\n\n- [Mike Cohn：Planning Poker 的独立选牌与讨论流程](https://www.mountaingoatsoftware.com/agile/story-points/planning-poker)\n- [Mike Cohn：Planning Poker 的故事点基准](https://www.mountaingoatsoftware.com/agile/the-best-way-to-establish-a-baseline-when-playing-planning-poker)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.mountaingoatsoftware.com/agile/story-points/planning-poker"
+}

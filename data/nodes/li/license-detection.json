@@ -1,0 +1,40 @@
+{
+  "id": "license-detection",
+  "name": "License Detection",
+  "aliases": [
+    "许可识别",
+    "许可证检测"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx-license-list",
+      "context": "将识别的标准许可映射到统一标识，并保留不在列表内的证据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx-license-expression",
+      "context": "将明确识别到的许可声明组织为可交换表达式，组合关系仍需证据支持。"
+    }
+  ],
+  "summary": "从文本与包元数据提取许可证据并记录位置和匹配方法。",
+  "description": "许可识别从源码、文件标头、包清单及二进制可提取文本中发现许可信息。识别器可以采用规则、模板匹配和显式标识解析，并记录文件与行号等证据位置。任务首先回答看到了什么许可文本或声明，不直接回答整个交付物的适用许可或使用是否合法。\n\n文件级文本与包级声明可能不同，一个包也可能包含多个来源与许可。匹配规则需要区分实质条款和可替换版权字段，报告应保留命中片段、识别规则和未识别部分。扫描选项、排除路径和规则库版本会影响结果，精确短标识与相似文本候选不能混作同等确定性。\n\n识别结果为审查人员提供证据，声明许可与结论许可应分别保存。重复文件可复用技术扫描结果，但工件范围及事实变化仍可能改变后续结论。没有命中不说明没有许可，工具报告中的置信度也不是法律判断；应按实际材料核对冲突或缺失信息。\n\n## 参考\n\n- [ScanCode：许可文本检测与证据输出](https://scancode-toolkit.readthedocs.io/en/latest/explanation/scancode-license-detection.html)\n- [SPDX：许可证文本匹配指南](https://spdx.github.io/spdx-spec/v2.2.2/license-matching-guidelines-and-templates/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://scancode-toolkit.readthedocs.io/en/latest/explanation/scancode-license-detection.html"
+}

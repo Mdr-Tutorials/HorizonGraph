@@ -1,0 +1,33 @@
+{
+  "id": "shell-prompt",
+  "name": "Shell Prompt",
+  "aliases": [
+    "Shell 提示符",
+    "命令提示符"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    }
+  ],
+  "summary": "在读取命令时展示会话位置与状态的输入提示。",
+  "description": "Shell 提示符是在等待输入时显示的提示，可包含当前目录、用户、版本控制状态或上一命令结果。它属于 Shell 的交互界面，不是终端窗口标题，也不是程序执行权限的可靠证明；相同图形符号可被任意提示符配置输出。\n\nBash 的 PS1 等变量与提示前执行逻辑、zsh 的 prompt expansion、Fish 的提示函数分别定义生成规则。提示符框架可为多个 Shell 提供初始化适配，但仍由宿主在合适时机调用；颜色序列和不可见字符的宽度处理会影响行编辑定位。\n\n动态提示可能运行 Git 状态查询、工具探测或用户自定义命令，这些操作会影响每次返回输入状态的速度。设计时应限制不必要工作并清楚展示真正需要的上下文；终端支持彩色显示不代表 Shell 已启用某一提示符框架。\n\n## 参考\n\n- [GNU：Controlling the Prompt](https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt)\n- [zsh：Prompt Expansion](https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt"
+}

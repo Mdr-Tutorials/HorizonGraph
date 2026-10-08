@@ -1,0 +1,43 @@
+{
+  "id": "nushell",
+  "name": "Nushell",
+  "aliases": [
+    "Nu Shell",
+    "Nu",
+    "结构化数据 Shell"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "structured-shell-pipeline"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "通过 from json / to json 等命令显式解码或序列化结构化数据；内部值传递不强制使用 JSON。"
+    }
+  ],
+  "summary": "以记录、表和类型化值组合命令的跨平台Shell。",
+  "description": "Nushell 是把结构化数据处理与命令行操作结合的跨平台 Shell。内部命令可输出记录、表、列表和其他带类型的值，让后续步骤按属性操作数据；其终端表格是显示结果的一种方式，不应当作所有命令之间都传递的底层数据格式。\n\nNu 有独立的语言和配置体系，不按 POSIX Shell 语法直接执行既有 sh 或 Bash 文本。它通过内部管道连接结构化值，调用外部程序时则处理标准输入输出的字节或文本边界；open、from json、to json 等转换步骤把原始输入与可操作结构联系起来。\n\n配置路径和插件加载按 Nushell 文档组织，来自其他 Shell 的补全或提示脚本不能原样使用。跨平台可用不保证所有外部工具或路径规则一致；选择 Nu 进行数据整理时，还需分别核对被调用程序的错误状态、编码以及输出格式。\n\n## 参考\n\n- [Nushell：Introduction](https://www.nushell.sh/book/)\n- [Nushell：Pipelines](https://www.nushell.sh/book/pipelines.html)\n- [Nushell：Configuration](https://www.nushell.sh/book/configuration.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.nushell.sh/book/"
+}

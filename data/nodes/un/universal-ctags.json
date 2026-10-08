@@ -1,0 +1,48 @@
+{
+  "id": "universal-ctags",
+  "name": "Universal Ctags",
+  "aliases": [
+    "Ctags",
+    "ctags",
+    "Universal Ctags 代码索引器"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-tag-index"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ctags-format"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "tags-format"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go-to-definition",
+      "context": "编辑器通过生成的 tag 名称、文件和定位信息跳到记录的定义。"
+    }
+  ],
+  "summary": "扫描多语言源码并生成可供编辑器查询的 tags 索引。",
+  "description": "Universal Ctags 是多语言源码索引工具，扫描声明等语言对象并输出 tag 记录，供编辑器进行定义导航和符号查询。它从 Exuberant Ctags 演进，提供持续扩展的解析器与客户端接口。\n\n输出可选择 Universal tags、Exuberant 兼容格式、Emacs etags、交叉引用表及按构建条件提供的 JSON。标签字段和解析器选项决定保存的种类、作用域与位置；部分解析器及配置还可输出引用标签。\n\ntags 是持久化索引，源码变更后需要重新生成或按工具链更新。其解析与索引不等同于编译器全程序名称绑定或类型检查，不能从支持某语言推出所有动态引用或重命名都能精确处理。\n\n## 参考\n\n- [Universal Ctags：官方入口](https://ctags.io/)\n- [Universal Ctags：命令与输出](https://docs.ctags.io/en/latest/man/ctags.1.html)\n- [Universal Ctags：格式规范](https://docs.ctags.io/en/latest/man/tags.5.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://ctags.io/"
+}

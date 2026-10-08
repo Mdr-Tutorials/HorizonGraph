@@ -6,11 +6,13 @@
   ],
   "type": "tool",
   "domains": [
-    "developer-environments"
+    "developer-environments",
+    "terminal-engineering"
   ],
   "ecosystems": [
     "windows-ecosystem",
-    "wsl-ecosystem"
+    "wsl-ecosystem",
+    "terminal-ecosystem"
   ],
   "relations": [
     {
@@ -25,10 +27,19 @@
       "relation_type": "integrates_with",
       "target_id": "wsl",
       "context": "检测已安装的 WSL 发行版并创建终端 profile，以承载相应 Linux 命令行会话；不负责提供发行版内核。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "conpty",
+      "context": "在支持 ConPTY 的现行 Windows 系统中，用伪控制台接口连接图形宿主与控制台程序；接口与终端窗口分别具有身份。"
     }
   ],
   "summary": "承载 PowerShell、WSL 等命令行程序的多标签终端应用。",
-  "description": "Windows Terminal 是命令行应用的图形宿主，提供标签页、窗格、字符显示、配色与输入交互。PowerShell、cmd.exe 和 WSL 中的 Bash 等程序在它承载的会话里执行命令；具体语法、变量展开和脚本控制流属于 Shell。终端负责呈现与会话组织，不能从某个标签页显示 Linux 提示符推导终端自身是 Linux 发行版。\n\n配置中的 profile 将要启动的命令行程序与标题、外观和起始目录等设置结合起来，多个 profile 可以在同一窗口并排使用。Terminal 可为已安装的 WSL 发行版生成入口，但发行版安装、Linux 内核运行与 Windows/Linux 命令互操作仍由 WSL 和相应系统组件承担。它还可承载其他命令行程序，WSL 并不是启动终端应用的必需依赖。\n\nTerminal 的 GPU 文本渲染、Unicode 支持与快捷键改善交互体验，不会改变被承载程序的权限、文件系统语义或命令解释规则。排查跨系统开发问题时，应分别检查终端 profile、Shell 引号与编码、WSL 发行版和宿主设置；换一个终端外观不能修复缺少的系统调用或软件包。项目的 `wt` 入口负责窗口和 profile 调度，Linux 工具执行入口仍是相应 Shell 或 `wsl.exe`。\n\n## 参考\n\n- [Microsoft：Windows Terminal overview](https://learn.microsoft.com/en-us/windows/terminal/)\n- [Microsoft：Windows Terminal FAQ（Shell 与终端）](https://learn.microsoft.com/en-us/windows/terminal/faq)\n- [Microsoft：Terminal command line arguments](https://learn.microsoft.com/en-us/windows/terminal/command-line-arguments)",
+  "description": "Windows Terminal 是命令行应用的图形宿主，提供标签页、窗格、字符显示、配色与输入交互。PowerShell、cmd.exe 和 WSL 中的 Bash 等程序在它承载的会话里执行命令；具体语法、变量展开和脚本控制流属于 Shell。终端负责呈现与会话组织，不能从某个标签页显示 Linux 提示符推导终端自身是 Linux 发行版。\n\n配置中的 profile 将要启动的命令行程序与标题、外观和起始目录等设置结合起来，多个 profile 可以在同一窗口并排使用。Terminal 可为已安装的 WSL 发行版生成入口，但发行版安装、Linux 内核运行与 Windows/Linux 命令互操作仍由 WSL 和相应系统组件承担。它还可承载其他命令行程序，WSL 并不是启动终端应用的必需依赖。\n\nTerminal 的 GPU 文本渲染、Unicode 支持与快捷键改善交互体验，不会改变被承载程序的权限、文件系统语义或命令解释规则。排查跨系统开发问题时，应分别检查终端 profile、Shell 引号与编码、WSL 发行版和宿主设置；换一个终端外观不能修复缺少的系统调用或软件包。项目的 `wt` 入口负责窗口和 profile 调度，Linux 工具执行入口仍是相应 Shell 或 `wsl.exe`。\n\nWindows Terminal 在支持的 Windows 系统路径中利用 ConPTY 连接控制台子进程，伪控制台通过数据通道向终端宿主提供交互。ConPTY 是操作系统接口，Terminal 是承载会话的图形应用，Shell 则解释命令；窗口分屏与进程脱离后的持久性分别判断。现代 VT 控制序列的支持也应与具体 Windows 版本和程序行为一起核验。\n\n## 参考\n\n- [Microsoft：Windows Terminal overview](https://learn.microsoft.com/en-us/windows/terminal/)\n- [Microsoft：Windows Terminal FAQ（Shell 与终端）](https://learn.microsoft.com/en-us/windows/terminal/faq)\n- [Microsoft：Terminal command line arguments](https://learn.microsoft.com/en-us/windows/terminal/command-line-arguments)\n- [Microsoft：伪控制台接口](https://learn.microsoft.com/en-us/windows/console/pseudoconsoles)",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",

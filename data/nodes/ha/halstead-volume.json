@@ -1,0 +1,35 @@
+{
+  "id": "halstead-volume",
+  "name": "Halstead Volume",
+  "abbreviation": "V",
+  "aliases": [
+    "Halstead体积",
+    "Halstead容量"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "halstead-metrics",
+      "context": "Halstead词法度量体系中由基础计数定义的体积指标。"
+    }
+  ],
+  "summary": "以词汇量和词法总长度计算的源码体积。",
+  "description": "Halstead 体积 V=N·log2(n)，其中 N=N1+N2 是操作符和操作数的出现总次数，n=n1+n2 是不同操作符与操作数的种类总数。这里的体积是模型量，不是源文件字节数或运行时内存大小。\n\n改变换行通常不会改变同一词法口径的计数，而改变表达式或操作数词汇可能改变结果。语言对操作符和操作数的划分决定具体数值，报告需要保留原始计数和分析粒度以便复核。\n\n体积可作为可维护性指数和 Halstead 工作量公式的输入。它不能直接表示程序功能多少；不同语言、生成代码和工具归类规则会影响可比性，项目级求和还应说明是否分别计算函数的词汇集合。\n\n## 参考\n\n- [SciTools：Halstead体积](https://docs.scitools.com/metrics/HalsteadVol.html)\n- [Radon：Halstead公式](https://radon.readthedocs.io/en/latest/intro.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.scitools.com/metrics/HalsteadVol.html"
+}

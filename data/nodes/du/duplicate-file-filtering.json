@@ -1,0 +1,29 @@
+{
+  "id": "duplicate-file-filtering",
+  "name": "Duplicate File Filtering",
+  "aliases": [
+    "重复文件过滤",
+    "复本文件去重",
+    "Identical File Deduplication"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    }
+  ],
+  "summary": "按内容相等规则避免完整文件副本重复进入统计。",
+  "description": "重复文件过滤针对内容完全相同的文件副本，在进入汇总前只保留规定的一份。目标是避免复制目录、镜像文件或多份相同依赖重复增加计数；它不同于寻找文件内部的相似代码块。\n\ncloc 默认在 Digest::MD5 可用且未禁用唯一性检查时，先按文件大小分组，再比较内容摘要，并按路径字典序保留一个代表；模块缺失会跳过该检查，--skip-uniqueness 也可改变行为。scc 提供可选重复检查，各工具默认是否去重不能互相推断。\n\n统计应说明按字节还是经过规范化的内容判等，以及哪些路径被移除。相同内容的两个部署文件仍可能是两个实际交付对象，去重适合的分析目标不代表所有盘点都应删除复本。\n\n## 参考\n\n- [cloc 官方项目与计数说明](https://github.com/AlDanial/cloc)\n- [cloc 可选摘要模块与去重实现](https://github.com/AlDanial/cloc/blob/master/cloc)\n- [scc 计数与识别源码](https://github.com/boyter/scc/blob/master/processor/workers.go)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/AlDanial/cloc"
+}

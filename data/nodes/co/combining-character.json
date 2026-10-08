@@ -1,0 +1,33 @@
+{
+  "id": "combining-character",
+  "name": "Unicode Combining Character",
+  "aliases": [
+    "Unicode 组合字符",
+    "组合标记",
+    "Combining Mark"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unicode"
+    }
+  ],
+  "summary": "与基本字符组合表达附加符号的 Unicode 字符。",
+  "description": "Unicode 组合字符是 General_Category 为 Mark 的字符，包含非间距、间距与包围标记等类别。它们通常与前面的基本字符组合，用于重音符号、元音标记或其他书写系统的附加信息。\n\n组合标记有独立码点，canonical combining class 参与规范排序。组合类为零仍可能是组合字符，因此不能用非零 combining class 作为唯一识别规则；规范化处理与最终字形附着位置分别由字符规则和字体布局决定。\n\n非间距标记通常不独立推进文本位置，但不能把全部组合字符简单认定为零列或不可见。孤立标记、字体缺字和具体终端策略会影响呈现，编辑器还需要按字素边界避免无意拆开用户感知字符。\n\n## 参考\n\n- [Unicode：组合字符形式定义](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/)\n- [Unicode：组合类与字符属性](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-4/)\n- [Unicode UAX #29：组合标记与分段](https://www.unicode.org/reports/tr29/)",
+  "official_site": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

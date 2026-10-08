@@ -1,0 +1,33 @@
+{
+  "id": "bigclonebench",
+  "name": "BigCloneBench",
+  "aliases": [
+    "大型 Java 代码克隆基准"
+  ],
+  "type": "product",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "code-clone",
+      "context": "以源码片段、功能分组与克隆标注提供研究评价数据。"
+    }
+  ],
+  "summary": "为克隆检测评估提供带标注 Java 片段的研究基准。",
+  "description": "BigCloneBench 是由研究作者提供的 Java 代码克隆基准，关联源码片段、功能分组和克隆标注，供检测工具的评估实验使用。它是数据制品，不是执行克隆搜索的工具。\n\n实验常通过 BigCloneEval 导入检测器输出并按克隆类型、语法相似区间和片段大小评价召回。作者说明对 Type-3 与 Type-4 采用基准自身的分区定义，实验配置应与数据版本一起报告。\n\n基准具有抽样与标注范围，不包含现实中所有克隆和非克隆。召回评估结果不自动给出准确率或生产代码的质量结论，不能将特定基准上的语义标签解释为任意 Java 程序的形式等价证明。\n\n## 参考\n\n- [BigCloneBench：作者数据仓库](https://github.com/clonebench/BigCloneBench)\n- [BigCloneEval：评估配置手册](https://github.com/jeffsvajlenko/BigCloneEval/blob/master/ReadMe.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/clonebench/BigCloneBench"
+}

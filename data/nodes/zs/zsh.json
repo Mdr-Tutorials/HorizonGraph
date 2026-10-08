@@ -2,26 +2,49 @@
   "id": "zsh",
   "name": "zsh",
   "aliases": [
+    "zsh 命令解释器",
     "Z Shell"
   ],
   "type": "tool",
   "ecosystems": [
     "devops_tooling",
-    "linux-gnu-ecosystem"
+    "linux-gnu-ecosystem",
+    "shell-cli-ecosystem"
   ],
   "domains": [
-    "devops"
+    "devops",
+    "command-line-tools"
   ],
   "abstraction_level": "application_tool",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "shell-completion"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-startup-files",
+      "context": "根据交互与登录模式等条件执行 zshenv、zprofile、zshrc 和 zlogin 等配置路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-prompt",
+      "context": "交互会话通过 prompt expansion 生成用户、路径与可选状态显示。"
     }
   ],
-  "summary": "功能最全的交互 Shell，macOS 的默认选择。",
+  "summary": "提供可编程补全、行编辑和扩展语法的Shell。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.zsh.org/",
+  "description": "zsh 是用于交互操作与脚本执行的命令语言解释器，提供 Shell 函数、参数与路径展开等功能。它有自己的行编辑器 ZLE、模块和可编程补全体系，可单独使用；Oh My Zsh 等配置框架属于可选生态工件，不是 zsh 本身的必要组成。\n\nzsh 具有 Bourne 风格语法和其他 Shell 的兼容或模拟选项，但默认展开与 Bash 并不完全相同。例如普通变量展开的单词分割行为不同，数组和选项还有各自规则。不能把默认 zsh 当成所有 POSIX Shell 脚本的无条件兼容执行入口。\n\n启动时的 zshenv、zprofile、zshrc 和 zlogin 由登录、交互以及配置选项共同选择。补全系统与 prompt expansion 可按上下文控制候选和提示信息，复杂插件也会影响加载顺序及响应速度；终端承载的 Shell 由启动程序决定，而不是主题决定。\n\n## 参考\n\n- [zsh：Introduction](https://zsh.sourceforge.io/Doc/Release/Introduction.html)\n- [zsh：Files](https://zsh.sourceforge.io/Doc/Release/Files.html)\n- [zsh：Completion System](https://zsh.sourceforge.io/Doc/Release/Completion-System.html)\n- [zsh：Prompt Expansion](https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html)"
 }

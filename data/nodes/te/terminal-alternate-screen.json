@@ -1,0 +1,37 @@
+{
+  "id": "terminal-alternate-screen",
+  "name": "Alternate Screen Buffer",
+  "aliases": [
+    "终端备用屏幕"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "terminal-buffer"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminfo",
+      "context": "可移植全屏应用从终端能力条目取得 smcup/rmcup，以进入和退出适用屏幕模式。"
+    }
+  ],
+  "summary": "为全屏应用切换独立屏幕状态，并在退出后恢复主屏。",
+  "description": "备用屏幕是终端仿真器提供的另一个显示缓冲，常供编辑器、分页器等全屏应用使用。应用可覆盖窗口而不直接破坏主屏中的命令提示符和先前输出；退出备用屏幕后，用户重新看到主缓冲。它不是新进程、Shell 子会话或操作系统虚拟终端。\n\nxterm 传统存在私有模式 47、1047 和 1049 等相关控制，但这些模式的清空、光标保存及恢复细节不完全相同。应用一般通过 terminfo 提供的 smcup 与 rmcup 字符串进入和离开适用的全屏模式，而不应假设所有终端都接受同一组扩展。\n\n许多实现的备用缓冲按窗口尺寸管理，不附带主屏回滚历史。能否滚动、如何保留退出后的内容以及窗口缩放后的行为，仍取决于具体终端策略。应用异常结束后也应恢复相关模式；是否使用备用屏幕与内核 raw 或 cbreak 输入设置分别配置。\n\n## 参考\n\n- [xterm.js：主屏与备用屏幕](https://xtermjs.org/docs/api/terminal/interfaces/ibuffernamespace/)\n- [Microsoft：虚拟终端序列与屏幕缓冲](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)\n- [ncurses：terminfo 能力描述格式](https://invisible-island.net/ncurses/man/terminfo.5.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://xtermjs.org/docs/api/terminal/interfaces/ibuffernamespace/"
+}

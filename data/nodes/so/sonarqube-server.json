@@ -1,0 +1,57 @@
+{
+  "id": "sonarqube-server",
+  "name": "SonarQube Server",
+  "aliases": [
+    "自托管 SonarQube",
+    "SonarQube"
+  ],
+  "type": "product",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-clone-detection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "quality-profile",
+      "context": "为受支持语言选择启用规则和分析参数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "quality-gate",
+      "context": "按项目质量条件计算分析的通过或失败状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "new-code-period",
+      "context": "区分整体源码与按配置界定的新代码指标。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "sonarscanner-cli",
+      "context": "扫描器执行项目分析并向服务器提交结果。"
+    }
+  ],
+  "summary": "自托管的代码质量分析、度量和治理平台。",
+  "description": "SonarQube Server 是由组织自行部署的代码分析与治理产品，连接扫描器、项目和 CI 工作流，保存问题与度量并展示质量状态。它与托管的 SonarQube Cloud、免费的 Community Build 是不同交付身份。\n\n平台按受支持的语言和分析器执行规则，使用质量配置选择检查，并以质量门评价结果；度量包括复杂度、重复、问题和导入的测试覆盖数据。语言、分支、拉取请求及企业治理能力需要按具体版本和 edition 核对。\n\n扫描结果为质量审查提供证据，覆盖报告通常来自外部测试工具，平台本身不因此执行所有测试。质量门状态是否阻断合并或发布由集成策略决定，商业产品的功能说明也不应直接套用到社区产品。\n\n## 参考\n\n- [Sonar：Server 产品文档](https://docs.sonarsource.com/sonarqube-server)\n- [Sonar：Scanner CLI](https://docs.sonarsource.com/sonarqube-server/analyzing-source-code/scanners/sonarscanner)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://docs.sonarsource.com/sonarqube-server"
+}

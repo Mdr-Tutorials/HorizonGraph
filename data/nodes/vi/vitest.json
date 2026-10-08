@@ -1,15 +1,19 @@
 {
   "id": "vitest",
   "name": "Vitest",
-  "aliases": [],
+  "aliases": [
+    "Vitest 测试框架"
+  ],
   "type": "framework",
   "ecosystems": [
     "static-analysis-testing-ecosystem",
-    "node-js-ecosystem"
+    "node-js-ecosystem",
+    "software-testing-ecosystem"
   ],
   "domains": [
     "devops",
-    "web-development"
+    "web-development",
+    "software-testing"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -24,12 +28,23 @@
     {
       "relation_type": "depends_on",
       "target_id": "vite"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-coverage",
+      "context": "显式启用并安装所选 V8 或 Istanbul 提供器后采集和报告覆盖。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "istanbuljs",
+      "context": "选用 Istanbul 覆盖提供器时进行源码插桩与报告；不是所有 Vitest 运行的硬依赖。"
     }
   ],
-  "summary": "基于 Vite 的测试框架，Jest 兼容 API 更快更省心。",
+  "summary": "结合 Vite 工具链运行 JavaScript 与 TypeScript 测试。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://vitest.dev"
+  "official_site": "https://vitest.dev",
+  "description": "Vitest 是与 Vite 工具链协作的测试框架，为 JavaScript 和 TypeScript 项目提供测试发现、断言、mock 与运行配置。部分 API 与 Jest 风格接近，但兼容性应按实际接口和插件核验。\n\n覆盖是显式启用并安装提供器的可选能力，可选择 V8 或 Istanbul。当前文档说明 V8 提供器采用 AST 源码重映射；这一行为属于相应 Vitest 版本的实现，不能推广为所有 V8 覆盖工具共同保证。\n\n测试环境、转换、源码范围和覆盖排除影响实际结果。覆盖报告与断言结果分开审查，运行速度也依赖项目规模和环境，不能不附条件宣称比所有其他框架更快。\n\n## 参考\n\n- [Vitest 官方入门](https://vitest.dev/guide/)\n- [Vitest：覆盖提供器](https://vitest.dev/guide/coverage.html)"
 }

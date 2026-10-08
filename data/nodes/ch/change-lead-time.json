@@ -1,0 +1,30 @@
+{
+  "id": "change-lead-time",
+  "name": "Change Lead Time",
+  "aliases": [
+    "变更前置时间",
+    "变更交付前置时间",
+    "Lead Time for Changes"
+  ],
+  "type": "metric",
+  "domains": [
+    "devops",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "衡量变更从版本控制提交到生产部署的时间。",
+  "description": "DORA 的变更前置时间，从代码提交到版本控制开始，到相应变更部署进入生产为止。它覆盖提交后的评审、构建、测试、排队和部署等待，但不自动包括需求提出或编码开始之前的全部产品开发周期。\n\n计算需要把提交与生产部署映射，并约定 squash、合并提交、分支和部分发布的处理。应保留起止时间、时钟规则及观察窗口，并说明报告的是中位数、分位数或其他聚合；不同起点不能直接混成一个序列。\n\n该指标反映交付路径的等待和批次大小等因素，不直接衡量个体写代码速度。对于未部署变更还要处理观察期截断；只有已成功发布的样本可能漏掉长期等待事项，应公开这种选择对解释的影响。\n\n## 参考\n\n- [DORA：当前软件交付性能指标](https://dora.dev/guides/dora-metrics/)\n- [DORA：软件交付价值流映射](https://dora.dev/guides/value-stream-management/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://dora.dev/guides/dora-metrics/"
+}

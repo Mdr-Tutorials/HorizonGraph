@@ -1,0 +1,34 @@
+{
+  "id": "asciicast",
+  "name": "asciicast",
+  "aliases": [
+    "asciinema 终端录制格式",
+    "cast 文件格式"
+  ],
+  "type": "protocol",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "用首行 JSON 对象与后续 JSON 数组构成换行分隔的头部和事件流。"
+    }
+  ],
+  "summary": "以 JSON 事件流保存终端输出、时序与尺寸的录制格式。",
+  "description": "asciicast 是 asciinema 定义的终端会话录制格式，使用带元数据的头部与后续事件流表达终端输出及时间。它保存可解释的终端数据，不是屏幕像素视频，播放器要根据相应版本解释内容和终端状态。\n\nv2 与 v3 均采用换行分隔的 JSON，但头部模式和计时语义不同：v2 事件时间相对会话开始，v3 记录距离上个事件的间隔。v3 还规定终端信息、输出、可选输入、标记、尺寸变化与退出事件；不能仅修改版本数字就把旧文件变成兼容的新文件。\n\n兼容工具应忽略或传递其不认识的字段和事件，并按格式版本处理能力边界。官方格式要求不要默认捕获键盘输入，输出本身仍可能透露私密数据。事件流可支持重放、检索和转换，但没有内建保证命令成功、完整审计或所有终端扩展都可忠实重现。\n\n## 参考\n\n- [asciinema：asciicast v3](https://docs.asciinema.org/manual/asciicast/v3/)\n- [asciinema：asciicast v2](https://docs.asciinema.org/manual/asciicast/v2/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.asciinema.org/manual/asciicast/v3/"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "terminal-canonical-mode",
+  "name": "Canonical Terminal Input",
+  "aliases": [
+    "终端规范输入模式",
+    "canonical mode",
+    "cooked mode"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "line-discipline"
+    }
+  ],
+  "summary": "由终端层完成行编辑，并在行界限处向应用交付输入。",
+  "description": "规范输入模式由 termios 的 ICANON 标志控制，TTY 层以输入行为单位组织读取。在输入行尚未完成时，用户可以使用已配置的删除、清除等字符编辑当前行，随后在换行、EOL 或 EOF 等条件下交给应用。这里的规范输入与字符编码规范无关。\n\nread 在这种模式下通常至多交付一行，也仍受调用者缓冲大小和队列状态影响。EOF 字符是终端层的控制动作，不是一定会以一个字节出现在应用输入中；空行位置输入 EOF 与行内已经积累文字时的效果需要分别理解。回显和信号处理由独立标志控制。\n\n这种模式适合简单逐行交互程序，但高级 Shell 和编辑器可以选择非规范输入并自行提供行编辑。规范模式有平台定义的输入容量限制，不能用它无条件接收任意长行。它不保证文本可信，也不会检查输入是否是一条安全命令。\n\n## 参考\n\n- [GNU C Library：规范与非规范输入](https://sourceware.org/glibc/manual/latest/html_node/Canonical-or-Not.html)\n- [Linux man-pages：termios 接口与输入模式](https://man7.org/linux/man-pages/man3/termios.3.html)\n- [Linux 内核：N_TTY 输入处理](https://docs.kernel.org/driver-api/tty/n_tty.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://sourceware.org/glibc/manual/latest/html_node/Canonical-or-Not.html"
+}

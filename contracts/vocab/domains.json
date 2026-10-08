@@ -1,5 +1,5 @@
 {
-  "version": "0.9.0",
+  "version": "0.11.0",
   "policy": "登记制：新词随数据 PR 同步登记。CI 双向校验：数据出现未登记 value 即失败；登记项连续多个周期未被引用则告警。节点字段存储 value，en/zh 供展示。",
   "entries": [
     { "value": "systems-programming", "en": "Systems Programming", "zh": "系统编程" },
@@ -75,6 +75,16 @@
     {"value":"financial-market-regulation","en":"Financial Market Regulation","zh":"金融市场监管"},
     {"value":"agent-development","en":"Agent Development","zh":"智能体开发"},
     {"value":"ai-assisted-software-engineering","en":"AI-assisted Software Engineering","zh":"AI 辅助软件工程"},
-    {"value":"browser-automation","en":"Browser Automation","zh":"浏览器自动化"}
+    {"value":"browser-automation","en":"Browser Automation","zh":"浏览器自动化"},
+    {"value":"terminal-engineering","en":"Terminal Engineering","zh":"终端工程"},
+    {"value":"command-line-tools","en":"Command-line Tools and TUIs","zh":"命令行工具与文本界面"},
+    {"value":"language-tooling","en":"Language Tooling","zh":"语言工具链"},
+    {"value":"text-rendering","en":"Unicode and Text Rendering","zh":"Unicode 与文本渲染"},
+    {"value":"desktop-application-development","en":"Desktop Application Development","zh":"桌面应用开发"},
+    {"value":"software-measurement","en":"Software Measurement","zh":"软件度量"},
+    {"value":"repository-analysis","en":"Repository Analysis","zh":"仓库分析"},
+    {"value":"software-quality","en":"Software Quality","zh":"软件质量"},
+    {"value":"software-testing","en":"Software Testing","zh":"软件测试"},
+    {"value":"empirical-software-engineering","en":"Empirical Software Engineering","zh":"实证软件工程"}
   ]
 }

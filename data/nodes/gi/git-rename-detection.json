@@ -1,0 +1,34 @@
+{
+  "id": "git-rename-detection",
+  "name": "Git Rename Detection",
+  "aliases": [
+    "Git 重命名检测",
+    "Git 复制检测"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git",
+      "context": "Git diffcore 内对快照间删除与新增文件对进行相似度分析的机制"
+    }
+  ],
+  "summary": "由内容相似度推断文件重命名与复制的 Git 机制。",
+  "description": "Git 提交保存目录树快照，而不单独存储一条永久的文件重命名操作。重命名检测在差异阶段将足够相似的删除与新增路径配对；因此同一组快照可能随检测选项和阈值产生不同的文件身份解释。\n\n`-M` 控制重命名检测，`-C` 加入复制检测，复制候选范围可再由选项扩展。默认相似度阈值和额外候选比较影响结果与开销；完全重写、重复内容或批量移动时，不应把检测结果视为唯一真实的演化路径。\n\n历史挖掘可借此保持跨路径的文件时间线，并避免把纯移动全算成删旧加新。复现实验应固定阈值、候选限制与 Git 版本，保存原始旧新路径；`git log --follow`、blame 和普通 diff 的应用入口及追踪范围并不完全相同。\n\n## 参考\n\n- [Git diffcore：重命名与复制](https://git-scm.com/docs/gitdiffcore)\n- [Git diff：-M/-C](https://git-scm.com/docs/git-diff)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://git-scm.com/docs/gitdiffcore"
+}

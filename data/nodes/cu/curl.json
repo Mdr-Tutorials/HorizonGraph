@@ -1,0 +1,43 @@
+{
+  "id": "curl",
+  "name": "curl",
+  "aliases": [
+    "cURL",
+    "curl 命令行"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "libcurl"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "在 HTTP URL 传输中构造请求并读取响应；非 HTTP URL 使用各自受支持协议。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "默认可把接收的数据写向标准输出，并通过选项读取标准输入作为请求数据。"
+    }
+  ],
+  "summary": "使用 URL 从命令行发送和接收多协议数据的工具。",
+  "description": "curl 是使用 URL 从命令行发送和接收数据的工具，常用于 API 请求、网络诊断及文件传输。它是 libcurl 的命令行前端，工具与传输库分别交付不同接口；名称类似的语言扩展或其他软件也不能直接视作同一工件。\n\n选项用于控制方法、请求头、认证、代理、超时和输出目标，结果可以保存文件或进入标准输出。HTTP 响应码、传输是否完成和程序退出状态属于不同层次，脚本应选择符合需求的失败判定，避免仅凭有返回正文就认定业务操作成功。\n\n支持协议及 TLS 能力以实际构建为准，不能把常见 OpenSSL 后端写成全部安装的硬依赖。curl 不会自动成为递归网站镜像器，是否跟随重定向也须按选项控制；URL 请求和浏览器执行页面脚本的行为范围不同。\n\n## 参考\n\n- [curl 官方常见问题与库区分](https://curl.se/docs/faq.html)\n- [curl 命令手册](https://curl.se/docs/manpage.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://curl.se/docs/faq.html"
+}

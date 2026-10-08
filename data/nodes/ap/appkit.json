@@ -1,0 +1,43 @@
+{
+  "id": "appkit",
+  "name": "AppKit",
+  "aliases": [
+    "AppKit 框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "macos",
+      "context": "AppKit 为 macOS 原生图形应用提供系统框架接口。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "swiftui",
+      "context": "Apple 提供将 AppKit 视图/控制器嵌入 SwiftUI 及反向嵌入的正式接口。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple",
+      "context": "由 Apple 提供的系统 GUI 框架。"
+    }
+  ],
+  "summary": "构建 macOS 窗口、控件与事件驱动应用的原生框架。",
+  "description": "AppKit 是 Apple 为 macOS 提供的原生图形应用框架，包含窗口、视图、控件、菜单与应用对象。它处理应用与用户及系统的交互，并提供文本、打印、文档、动画、无障碍和本地化相关能力。\n\nNSApplication 组织应用生命周期和事件循环，窗口、视图及 responder 体系处理界面与输入。开发者组合标准对象，并通过代理、回调及自定义视图实现行为；框架控件可以与应用自行绘制的内容同时存在。\n\nAppKit 可与 SwiftUI 混合使用，AppKit 视图能包装进 SwiftUI 层级，SwiftUI 内容也能嵌入传统应用。它是 macOS GUI 框架，不能据此推断自定义终端内容使用 NSTextView；窗口外壳、输入处理和 GPU 渲染可具有不同调用路径。\n\n## 参考\n\n- [Apple AppKit API](https://developer.apple.com/documentation/AppKit)\n- [UIKit 与 AppKit 应用设计](https://developer.apple.com/documentation/technologyoverviews/uikit-appkit)\n- [SwiftUI 的 AppKit 视图包装](https://developer.apple.com/documentation/swiftui/nsviewrepresentable)",
+  "official_site": "https://developer.apple.com/documentation/AppKit",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

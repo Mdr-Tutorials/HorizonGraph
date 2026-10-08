@@ -1,0 +1,57 @@
+{
+  "id": "dora-metrics",
+  "name": "DORA Software Delivery Performance Metrics",
+  "abbreviation": "DORA",
+  "aliases": [
+    "DORA 软件交付指标",
+    "DORA 指标",
+    "DORA 五项指标",
+    "Four Keys"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "deployment-frequency",
+      "context": "按限定应用或服务的生产部署事件跟踪交付吞吐。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "change-lead-time",
+      "context": "跟踪变更从提交到进入生产的时间。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "failed-deployment-recovery-time",
+      "context": "跟踪由失败部署引起的恢复耗时，纳入当前吞吐侧指标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "change-fail-rate",
+      "context": "计算生产部署中需要立即干预的比例，观察交付不稳定性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "deployment-rework-rate",
+      "context": "计算因生产事故产生的非计划部署比例，观察交付不稳定性。"
+    }
+  ],
+  "summary": "用五项指标跟踪应用或服务的交付吞吐与不稳定性。",
+  "description": "截至 2026 年 10 月，DORA 官方软件交付性能模型包含五项指标。吞吐侧包括变更前置时间、部署频率和失败部署恢复时间；不稳定性侧包括变更失败率和部署返工率。旧资料中的 Four Keys 是历史常用称呼，不能据此省略当前第五项。\n\n该模型以应用或服务的交付过程为主要测量范围。应约定生产部署事件、变更与部署映射、失败及返工判定和观察窗口，连续跟踪同一范围，再结合团队讨论定位瓶颈，而不是混合不同业务服务给开发者排名。\n\nDORA 在 2023 年把恢复指标收窄到失败部署，2024 年引入部署返工率，2026 年 Quick Check 已呈现五项。交付与运行可靠性有关但范围不同；研究关联和行业基准为改进提供线索，不是某一指标变化必然造成商业成果的保证。\n\n## 参考\n\n- [DORA：指标定义演变史，2026](https://dora.dev/insights/dora-metrics-history/)\n- [DORA Quick Check 2026 更新](https://dora.dev/insights/quickcheck-updates/)\n- [DORA：当前软件交付性能指标](https://dora.dev/guides/dora-metrics/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://dora.dev/insights/dora-metrics-history/"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "line-discipline",
+  "name": "TTY Line Discipline",
+  "aliases": [
+    "终端行规程"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "tty"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "termios",
+      "context": "N_TTY 根据 termios 参数选择规范输入、回显、信号字符和软件流控处理。"
+    }
+  ],
+  "summary": "在终端驱动与应用之间处理输入、回显和字符控制。",
+  "description": "行规程是 TTY 接收路径中的处理层，位于底层驱动与读取终端的应用之间。Linux 允许为 TTY 注册并附接行规程；常见 N_TTY 提供通常的字符终端行为。行规程是内核机制，不是 Shell 的命令语法分析器，也不是终端窗口内的文字渲染器。\n\n在 N_TTY 的适用模式下，输入处理包括整行缓冲、删除或清除输入、回显、信号字符以及软件流控。termios 标志决定哪些处理生效；切换非规范或原始模式后，应用承担更多输入处理责任。其他行规程可能服务不同协议，因此不能把 N_TTY 的全部行为推广到所有注册项。\n\n行规程维护接收缓冲、读取与唤醒，并需与驱动生命周期和并发访问协调。内核开发者关心引用、切换和停止路径；终端应用开发者通常通过用户态接口调整参数。驱动缓冲、行规程输入队列和仿真器的屏幕回滚历史分别存放不同内容。\n\n## 参考\n\n- [Linux 内核：TTY 行规程](https://docs.kernel.org/driver-api/tty/tty_ldisc.html)\n- [Linux 内核：N_TTY 输入处理](https://docs.kernel.org/driver-api/tty/n_tty.html)\n- [Linux man-pages：termios 接口与输入模式](https://man7.org/linux/man-pages/man3/termios.3.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://docs.kernel.org/driver-api/tty/tty_ldisc.html"
+}

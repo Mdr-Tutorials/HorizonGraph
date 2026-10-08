@@ -1,0 +1,42 @@
+{
+  "id": "esprima",
+  "name": "Esprima",
+  "aliases": [
+    "Esprima JavaScript 解析器"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "estree"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "parser"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "按所用版本及选项分析 ECMAScript 源码。"
+    }
+  ],
+  "summary": "提供 ECMAScript 分词与 ESTree 语法分析的库。",
+  "description": "Esprima 是 ECMAScript 词法和语法分析库，可以把源码分成 token 或解析成 ESTree 风格 AST。parseScript 与 parseModule 分别使用脚本和模块上下文，位置范围、行列、token 和注释信息可以按选项附加。\n\nJSX 等扩展必须显式启用，tolerant 模式只容忍部分错误；它不是面对任意非法或未完成代码都可恢复的承诺。语法版本覆盖要按实际发布物和文档核对，而不是由名称推导始终支持最新语言特性。\n\n解析结构可交给遍历器、检查器和转换器，Esprima 自身不执行程序、不提供完整项目类型检查。示例同时导入 Estraverse 不代表解析器依赖它；既有项目年代也不能单独作为正式废弃依据。\n\n## 参考\n\n- [Esprima：官方项目](https://github.com/jquery/esprima)\n- [Esprima：语法分析选项](https://docs.esprima.org/en/latest/syntactic-analysis.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/jquery/esprima"
+}

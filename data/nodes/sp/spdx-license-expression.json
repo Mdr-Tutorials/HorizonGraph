@@ -1,0 +1,36 @@
+{
+  "id": "spdx-license-expression",
+  "name": "SPDX License Expression",
+  "aliases": [
+    "SPDX 许可表达式",
+    "SPDX License Expressions"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx-license-list",
+      "context": "标准标识与例外引用从 SPDX License List 获取，列表外文本用明确自定义引用表示。"
+    }
+  ],
+  "summary": "以许可标识与组合运算符表达单项或多项许可条件。",
+  "description": "SPDX 许可表达式以许可证标识或自定义许可引用为基础，用组合语法表示软件的许可信息。单项标识适合简单声明，AND 可表达共同适用，OR 表达可选许可，WITH 关联特定许可例外。表达式用于编码声明或审查结论，不是执行许可判断的程序。\n\n括号、运算符与引用的语法由对应规范版本定义，生产者和解析器应明确兼容的规则。LicenseRef 用于列表外的许可，相关文本或文档引用应能被消费方找到。它可出现在 SPDX、CycloneDX 和包元数据中，但载体格式是否校验表达式、如何表示未知值，需要另外核对。\n\n解析成功只能确认表达式满足选定规则；许可证识别证据是否准确、组合是否表达真实适用条件仍要审查。不能把一组发现的文本无差别连接为 AND，也不能将缺少许可信息解释为任意许可。表达式保留机器可读的结构，让后续政策判断具备明确输入。\n\n## 参考\n\n- [SPDX 3.0.1：规范许可表达式语法](https://spdx.github.io/spdx-spec/v3.0.1/annexes/spdx-license-expressions/)\n- [SPDX：标准许可与例外标识](https://spdx.org/licenses/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://spdx.github.io/spdx-spec/v3.0.1/annexes/spdx-license-expressions/",
+  "abstraction_level": "application_tool"
+}

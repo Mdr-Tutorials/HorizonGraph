@@ -1,0 +1,32 @@
+{
+  "id": "cosmic-sizing",
+  "name": "COSMIC Functional Size Measurement",
+  "abbreviation": "COSMIC",
+  "display_primary": "COSMIC 功能规模测量",
+  "display_secondary": "COSMIC Functional Size Measurement",
+  "aliases": [
+    "COSMIC 功能规模测量",
+    "COSMIC 测量法",
+    "COSMIC 功能规模方法"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    }
+  ],
+  "summary": "以功能过程中的数据移动测量软件功能规模。",
+  "description": "COSMIC 功能规模测量根据功能用户需求识别软件边界、功能用户和功能过程，再计数数据组的移动。其通用软件模型涵盖业务、实时和基础设施软件；功能用户也可以是其他软件或硬件，并不限于人机界面的最终用户。\n\n测量分为确定策略、映射和测量阶段。数据移动分为 Entry、Exit、Read 和 Write，分别处理边界交互与持久存储交互；一个功能过程由触发 Entry 启动，数据组描述同一关注对象。\n\n每个合规数据移动计一个 CFP，数据处理不单独计量。汇总组件和软件层次时须遵守边界与聚合规则；对于算法密集而数据移动较少的需求，应说明该功能规模尺度的能力边界，必要的本地扩展也需单独披露。\n\n## 参考\n\n- [COSMIC：方法与功能用户模型](https://cosmic-sizing.org/cosmic-sizing/intro/)\n- [COSMIC：测量策略、映射与计数过程](https://cosmic-sizing.org/cosmic-sizing/intro/measurement-process/)\n- [COSMIC：Measurement Manual v5](https://cosmic-sizing.org/measurement-manual/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://cosmic-sizing.org/cosmic-sizing/intro/"
+}

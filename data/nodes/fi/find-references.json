@@ -1,0 +1,38 @@
+{
+  "id": "find-references",
+  "name": "Find References",
+  "aliases": [
+    "查找引用",
+    "符号引用查询"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "name-resolution",
+      "context": "语义引用路径按语言绑定区分同名实体，并收集指向选定符号的使用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "symbol-table",
+      "context": "利用声明身份与属性关联使用位置；跨文件服务通常另有项目索引。"
+    }
+  ],
+  "summary": "查找指向同一语言符号的源码使用位置。",
+  "description": "查找引用以选定语言符号为对象，返回在当前分析范围中指向该对象的使用位置。它与全文搜索同名字符串不同，作用域遮蔽、重载、别名和模块引用都可能使表面同名对应不同对象。\n\n语言服务可结合当前 AST 和跨文件索引完成查询，某些工具还能选择是否包含声明。文档更新、项目配置及索引覆盖范围决定可见结果；返回位置不自动代表扫描了全部仓库、生成物和动态调用。\n\n宏、模板、反射和运行时构造的属性名可能超出具体实现的可识别范围。引用查询能为导航和重命名准备候选，但修改前仍需核对语义和覆盖条件，不能由查询接口存在推出所有引用都已识别。\n\n## 参考\n\n- [VS Code：引用提供者](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [clangd：符号索引](https://clangd.llvm.org/design/indexing)\n- [LSP：引用请求](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

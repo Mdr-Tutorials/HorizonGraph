@@ -1,0 +1,49 @@
+{
+  "id": "typer",
+  "name": "Typer",
+  "aliases": [
+    "Python Typer 命令行库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "command-line-interface",
+      "context": "按函数签名、类型注解及显式配置生成参数解析与命令调用接口。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python",
+      "context": "Typer 包与用户命令函数在 Python 运行环境中执行。"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "click-python",
+      "context": "当前官方文档明确内置 Click 8.3.1 源代码，不要求安装独立 Click 包。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "rich-python",
+      "context": "当前官方 pyproject 配置将 Rich 列为直接依赖，用于终端展示等能力。"
+    }
+  ],
+  "summary": "利用 Python 类型注解和函数签名生成命令行接口的库。",
+  "description": "Typer 是利用 Python 函数签名和类型注解构建命令行接口的库。开发者通过参数类型、默认值及显式选项配置描述 CLI，库生成命令参数转换、帮助与调用流程。它适合把单个函数或多个子命令组织为命令行应用，减少声明位置之间的重复。\n\nTyper 沿用 Click 的命令能力并增加类型注解驱动的层。当前官方说明其已内置 Click 8.3.1 源代码，而不是通过第三方 Click 包安装来获得该实现，因此这里使用 embeds 表达源代码封装；旧版本的外部依赖方式应结合版本理解。官方包配置同时将 Rich 列为直接依赖。\n\nTyper 可生成帮助并支持 Shell 补全，但运行时仍需 Python 环境，类型注解不会自动证明业务逻辑正确。它借鉴 FastAPI 的设计，Pydantic 也提供过设计启发，二者并非据此成为 Typer 必需的运行依赖。CLI 声明、终端样式与全屏 TUI 生命周期是不同层次的能力。\n\n参考资料：\n\n- [Typer 官方首页](https://typer.tiangolo.com/)\n- [官方设计与内置 Click 说明](https://typer.tiangolo.com/alternatives/)\n- [官方包依赖声明](https://raw.githubusercontent.com/fastapi/typer/master/pyproject.toml)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://typer.tiangolo.com/"
+}

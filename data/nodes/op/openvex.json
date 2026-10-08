@@ -1,0 +1,45 @@
+{
+  "id": "openvex",
+  "name": "OpenVEX",
+  "aliases": [
+    "OpenVEX 格式",
+    "开放 VEX"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vex"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "OpenVEX 以 JSON-LD 文档组织可嵌入的声明和上下文。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-url",
+      "context": "产品采用 PURL 标识时按完整包身份匹配声明，不能仅按名称扩大影响范围。"
+    }
+  ],
+  "summary": "以轻量结构表达产品、漏洞、状态和时间的 VEX 规范。",
+  "description": "OpenVEX 是轻量且可嵌入的 VEX 实现，围绕一个或多个产品、漏洞及其影响状态组织声明。文档包含作者、标识和时间，具体声明可以拥有独立的更新时间。它是交换规范，与利用 SBOM 识别组件的扫描器具有不同职责。\n\n规范定义 affected、not_affected、fixed 和 under_investigation 状态，以及对应的理由和行动要求。不受影响必须提供状态理由或影响说明，受影响必须提供行动说明。部分字段可从文档或包裹结构继承，声明字段省略不意味着完整产品、漏洞或时间信息可以缺失。\n\n产品标识、状态时间与版本支持消费者判断适用范围及声明演进。under_investigation 表示尚未确定产品是否受影响，不能当成 not_affected；后续知识变化应更新声明。作者字段本身不认证作者，签署身份和消费者信任政策仍需另外处理。一份有效 OpenVEX 文件也不能证明未声明的漏洞不存在。\n\n## 参考\n\n- [OpenVEX：v0.2.0 规范与状态要求](https://github.com/openvex/spec/blob/main/OPENVEX-SPEC.md)\n- [OpenVEX：规范及上下文发布](https://github.com/openvex/spec)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/openvex/spec/blob/main/OPENVEX-SPEC.md",
+  "abstraction_level": "application_tool"
+}

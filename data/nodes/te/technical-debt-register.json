@@ -1,0 +1,43 @@
+{
+  "id": "technical-debt-register",
+  "name": "Technical Debt Register",
+  "aliases": [
+    "技术债登记表",
+    "技术债台账"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "technical-debt",
+      "context": "以具体工件、短期取舍与演化后果记录债务条目。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "technical-debt-principal",
+      "context": "在采用成本估计的登记实践中记录补救或偿还成本口径。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "technical-debt-interest",
+      "context": "在登记条目的演化后果中记录保留债务导致的额外成本估计。"
+    }
+  ],
+  "summary": "记录具体债务工件、后果、方案和责任人的资料。",
+  "description": "技术债登记表是用于管理债务条目的记录机制，可以采用独立清单或现有任务跟踪系统。条目应指出实际的设计或实现工件，而不只是“代码质量差”这样的宽泛描述。\n\nSEI 的企业案例把债务描述、后果、补救方案与负责人作为登记内容，登记可以集中或分布。可进一步记录发现依据、估计工作量、优先级与状态，让项目规划能够引用同一项债务。\n\n登记表承载声明和估计，不自动证明债务成立或保证处理价值。随着架构、需求和运行条件变化，应复核影响与方案；同一告警的重复导入和已经解决的条目应保留可追踪的处置结果。\n\n## 参考\n\n- [SEI：企业技术债登记与补救案例](https://www.sei.cmu.edu/blog/experiences-documenting-and-remediating-enterprise-technical-debt/)\n- [SEI：识别和登记技术债条目](https://www.sei.cmu.edu/library/managing-technical-debt-identify-technical-debt-items/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.sei.cmu.edu/blog/experiences-documenting-and-remediating-enterprise-technical-debt/"
+}

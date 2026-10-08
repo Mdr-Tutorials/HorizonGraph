@@ -1,0 +1,33 @@
+{
+  "id": "wayland",
+  "name": "Wayland",
+  "aliases": [
+    "Wayland 协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "window-system",
+      "context": "协议规定客户端表面、缓冲提交和输入分发等窗口系统交互。"
+    }
+  ],
+  "summary": "规定显示客户端与合成器交互的窗口系统协议。",
+  "description": "Wayland 是显示客户端与服务器之间的通信协议，规定对象、请求和事件，用于提交表面内容并接收输入等交互。其 XML 定义可生成接口代码，libwayland 提供消息编码与传输辅助；协议本身与具体桌面合成器是不同实体。\n\n客户端通常自行渲染内容并提交缓冲区，合成器决定如何呈现这些表面和分配输入。窗口角色、桌面会话及额外能力通过相应扩展约定；不同客户端和合成器支持的扩展组合可能不同。\n\nWayland 会话中显示服务、合成和窗口管理常整合在合成器内，但这不使三项职责变成同一个概念。X11 应用需要 XWayland 等兼容路径；Wayland 既不自动把所有 X11 行为转换为原生行为，也不承诺应用可任意访问其他窗口或全局坐标。\n\n## 参考\n\n- [Wayland 官方说明](https://wayland.freedesktop.org/)\n- [Wayland 架构](https://wayland.freedesktop.org/architecture.html)\n- [X11 应用兼容](https://wayland.freedesktop.org/docs/book/Xwayland.html)",
+  "official_site": "https://wayland.freedesktop.org/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

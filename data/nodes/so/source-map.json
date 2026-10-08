@@ -1,0 +1,36 @@
+{
+  "id": "source-map",
+  "name": "Source Map",
+  "aliases": [
+    "源码映射",
+    "Source Maps",
+    "ECMA-426"
+  ],
+  "type": "protocol",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "版本 3 源码映射以 JSON 字段组织源文件、名称和编码的位置映射。"
+    }
+  ],
+  "summary": "将生成代码位置映射到原始源码位置的格式。",
+  "description": "Source Map 是用于描述生成代码与原始源码位置关系的格式，服务转译、压缩及打包后的调试和错误定位。ECMA-426 正式规定该格式；协议身份与具体映射生成器、加载器及浏览器调试界面分别区分。\n\n常见版本 3 的 JSON 文档包含 sources、names 和 mappings 等字段，可选保存 sourcesContent，并通过文件引用或内联方式关联输出。多级转换需要保持或组合相应映射，映射质量取决于每个转换阶段提供的信息。\n\n位置映射不重建完整语义，也不会自动改变程序执行行为。能否映射堆栈与原始源码显示由消费者和配置决定；sourcesContent 可能携带源文本，因此发布映射应按实际调试需求管理访问与内容。\n\n## 参考\n\n- [Ecma：正式 ECMA-426](https://ecma-international.org/publications-and-standards/standards/ecma-426/)\n- [ECMA-426：发布版格式](https://tc39.es/ecma426/2024/)\n- [esbuild：映射生成与使用](https://esbuild.github.io/api/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://ecma-international.org/publications-and-standards/standards/ecma-426/"
+}

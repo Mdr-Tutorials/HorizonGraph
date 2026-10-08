@@ -1,0 +1,43 @@
+{
+  "id": "gnu-screen",
+  "name": "GNU Screen",
+  "aliases": [
+    "Screen",
+    "GNU 终端复用器"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-multiplexing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudoterminal",
+      "context": "用多个伪终端承载内部程序，并在外部终端连接间切换显示。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminfo",
+      "context": "对外部能力与内部 Screen 终端能力分别处理，影响全屏程序控制序列。"
+    }
+  ],
+  "summary": "在一个终端内管理多个可脱离会话的 GNU 复用器。",
+  "description": "GNU Screen 是终端复用器，在一个实际终端连接内管理多个虚拟终端窗口。每个窗口可以运行 Shell 或独立程序，用户切换前台显示而保持其他程序继续运行；Screen 的窗口不是桌面系统中新建的图形窗口。\n\n会话可以 detach 后再次 attach，在 SSH 连接意外断开或用户主动离开显示端时继续由 Screen 进程管理。PTY 与终端控制序列连接内部程序和外部终端，其终端能力声明会影响全屏程序的输出；外部终端支持某种扩展并不证明 Screen 会完整转发。\n\n脱离能力受到服务端进程、用户会话策略和宿主存续约束，服务器重启或会话被终止仍会结束运行中的程序。Screen 的日志和回滚功能帮助查看输出，但不等于自动保存可恢复的应用状态。它与 tmux、Zellij 分别是同领域的具体实现。\n\n## 参考\n\n- [GNU：Screen 项目](https://www.gnu.org/software/screen/)\n- [GNU：Screen 官方手册](https://www.gnu.org/software/screen/manual/screen.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/screen/"
+}

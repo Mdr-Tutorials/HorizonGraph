@@ -1,0 +1,35 @@
+{
+  "id": "space-framework",
+  "name": "SPACE Framework",
+  "abbreviation": "SPACE",
+  "aliases": [
+    "SPACE 生产力框架",
+    "开发者生产力 SPACE 框架"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "software-survey-research",
+      "context": "在满意度、福祉和感知工作效率等维度中，通过有设计的开发者反馈补充系统观测。"
+    }
+  ],
+  "summary": "以五个维度理解开发者生产力及其测量。",
+  "description": "SPACE 是开发者生产力的多维框架：Satisfaction and well-being、Performance、Activity、Communication and collaboration、Efficiency and flow。它强调生产力无法由一个数字或单一活动维度完整表示。\n\n应用时应选取适合问题与层次的证据，例如开发者感受、产品或服务结果、工作活动、协作质量及工作流效率。五个维度不是五个必填计数器；其中既有感知资料，也有系统观测，指标含义应在具体场景解释。\n\nSPACE 不规定一个跨团队通用加权总分，也不支持用提交数排名开发者。框架提醒测量可能遗漏隐性工作；采集和呈现资料应说明用途、聚合层次及参与者反馈，避免把团队层面的活动变化归结为个人能力。\n\n## 参考\n\n- [SPACE 作者：生产力与开发者体验](https://azure.microsoft.com/en-us/blog/navigating-the-space-between-productivity-and-developer-happiness/)\n- [Margaret-Anne Storey：SPACE 与生产力的原作者演讲](https://neverworkintheory.org/static/2022-04/storey-margaret-anne.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://azure.microsoft.com/en-us/blog/navigating-the-space-between-productivity-and-developer-happiness/"
+}

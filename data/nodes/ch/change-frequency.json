@@ -1,0 +1,29 @@
+{
+  "id": "change-frequency",
+  "name": "Change Frequency",
+  "aliases": [
+    "修改频率",
+    "代码变更频率",
+    "文件修订次数"
+  ],
+  "type": "metric",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "度量文件在指定历史范围内被修改的频次。",
+  "description": "修改频率按选定历史范围统计文件或模块被不同变更触及的次数。它可报告窗口内修订次数，也可除以窗口时长形成频率；必须说明单位，不把一次修改涉及多少行混入同一个指标。\n\nPyDriller 的 CommitsCount 按文件累计修改提交，Code Maat 的 revisions 提供修订视图。重命名是否连接旧路径、一次合并如何计数，以及是否只遍历第一父链，会使同一仓库得到不同次数。\n\n频繁修改可能来自功能扩展、缺陷修复、自动更新或大规模格式化。该信号适合与代码规模和维护目标结合定位调查区域；它既不等于运行时访问热点，也不是开发者工作量或缺陷数量。\n\n## 参考\n\n- [PyDriller：文件提交次数](https://pydriller.readthedocs.io/en/latest/processmetrics.html#commits-count)\n- [Code Maat：修订分析](https://github.com/adamtornhill/code-maat)\n- [Git：历史路径与父链范围](https://git-scm.com/docs/git-log)\n- [PyDriller：公开 CommitsCount 类实现](https://github.com/ishepard/pydriller/blob/master/pydriller/metrics/process/commits_count.py)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://pydriller.readthedocs.io/en/latest/processmetrics.html#commits-count"
+}

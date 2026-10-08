@@ -1,0 +1,40 @@
+{
+  "id": "clap",
+  "name": "clap",
+  "aliases": [
+    "Rust clap 参数解析库",
+    "Command Line Argument Parser"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "rust-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "command-line-interface",
+      "context": "通过命令与参数声明实现应用输入解析、命令分派所需的结构和帮助信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rust",
+      "context": "库源码和宿主调用以 Rust 开发、编译；不表示编译产物运行时需要安装 Rust 工具链。"
+    }
+  ],
+  "summary": "提供声明式命令参数、类型转换和帮助生成的 Rust 库。",
+  "description": "clap 是 Rust 命令行参数解析库，提供基于构建器的 API，也可使用 derive 方式从结构体和字段属性声明命令输入。它将选项、位置参数、子命令和约束组织成命令模型，再对实际输入执行解析、类型转换及错误报告，并生成帮助和版本输出。\n\nderive 功能需要启用对应特性，并使用 Parser 等派生宏；构建器 API 则通过显式命令和参数对象完成声明。两种方式都服务于 CLI 输入契约，不能替业务代码完成任意领域验证、进程执行或 Shell 语法展开。测试需要覆盖输入组合、错误信息和实际平台参数传递方式。\n\nShell 补全与 man 手册生成分别有 clap_complete、clap_mangen 等相关项目，不能把这些扩展全部当作核心库的强制能力。clap 属于 Rust 开发生态，构建后的原生程序不因此要求用户安装 Rust 编译器。它负责命令解析，与管理全屏输入事件和文本控件的 TUI 库处在不同层次。\n\n参考资料：\n\n- [官方 Rust API 与入门文档](https://docs.rs/clap/latest/clap/)\n- [clap 官方代码库](https://github.com/clap-rs/clap)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.rs/clap/latest/clap/"
+}

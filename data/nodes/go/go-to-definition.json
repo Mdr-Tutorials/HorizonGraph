@@ -1,0 +1,39 @@
+{
+  "id": "go-to-definition",
+  "name": "Go to Definition",
+  "aliases": [
+    "跳转到定义",
+    "定义导航",
+    "定义跳转"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "name-resolution",
+      "context": "语义导航将当前标识符绑定到声明，再获取相应定义或声明位置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-tag-index",
+      "context": "标签导航路径根据生成的符号记录检索名称、文件和定位信息。"
+    }
+  ],
+  "summary": "从代码位置定位所引用符号的定义或声明。",
+  "description": "定义导航从编辑位置识别符号，并返回其定义或声明所在的文件和范围。具体语言区分声明与定义，编辑器也可能分别提供对应命令；目标可能在当前文件、项目依赖或生成的接口声明中。\n\n语义语言服务结合名称绑定和项目索引确定目标，标签工具则根据已记录的名称与位置提供导航。协议只是运输查询和位置，真正的定位能力由分析器、索引、项目配置和当前文档状态决定。\n\n同名文本、动态属性、宏或重载可能需要不同定位策略，结果也可能有多个候选。导航不是程序执行证明，旧索引或错误构建配置会影响结果；定义、类型定义和实现查找的接口不能全部当作同一种能力。\n\n## 参考\n\n- [VS Code：语言导航提供者](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [clangd：定义与声明能力](https://clangd.llvm.org/features)\n- [LSP：定义请求](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

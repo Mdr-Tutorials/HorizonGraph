@@ -1,0 +1,43 @@
+{
+  "id": "codemirror-5",
+  "name": "CodeMirror 5",
+  "aliases": [
+    "CodeMirror 第五代",
+    "CodeMirror legacy"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "codemirror"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "tern-js"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "syntax-highlighting",
+      "context": "通过语言 mode 的分词规则赋予源码片段样式。"
+    }
+  ],
+  "summary": "采用 mode 与 addon 架构的第五代 Web 编辑器。",
+  "description": "CodeMirror 5 是 CodeMirror 家族的旧代 Web 编辑器库，使用可变编辑器对象、mode 和 addon 组织功能。官方称其为 legacy，仍有独立源码、手册与已有应用；这里记录代际身份，不仅凭 legacy 一词指定统一废弃日期。\n\n基础库处理文档编辑和显示，语言 mode 提供相应语法分词，高阶能力由 addon 或外部服务补足。Tern addon 调用 JavaScript 分析服务，提供补全、类型提示、定义跳转和部分重命名，是可选集成而非所有编辑器的依赖。\n\n第五代的 API、配置对象和 addon 不能直接视为第六代扩展。迁移时要重新对应状态、视图及扩展机制；第六代 legacy-modes 的流式解析适配也不代表完整兼容所有旧 addon。\n\n## 参考\n\n- [CodeMirror 5：官方手册](https://codemirror.net/5/doc/manual.html)\n- [CodeMirror 5：Tern addon 源码](https://github.com/codemirror/codemirror5/blob/master/addon/tern/tern.js)\n- [CodeMirror：迁移指南](https://codemirror.net/docs/migration/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://codemirror.net/5/doc/manual.html"
+}

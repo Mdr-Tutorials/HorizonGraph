@@ -1,0 +1,33 @@
+{
+  "id": "unix-session",
+  "name": "Unix Session",
+  "aliases": [
+    "Unix 进程会话"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    }
+  ],
+  "summary": "把进程组组织成与控制终端相关的操作系统会话。",
+  "description": "Unix 进程会话由一个或多个进程组构成，使用会话 ID 表示成员归属。它是操作系统的进程组织机制，和 HTTP 会话、终端复用器保存的工作会话或智能体聊天记录分别定义。登录 Shell 通常处于一个会话中，但会话也可以没有任何控制终端。\n\nsetsid 在满足条件时创建新会话，使调用进程成为会话领导者，同时成为新进程组的领导者；新会话起初无控制终端。fork 的子进程继承会话归属，exec 替换程序映像不会自行改变会话 ID。会话层与进程组层保持明确的两级成员结构。\n\n会话与控制终端共同为作业控制提供边界，同一会话中的进程组可轮流取得终端前台角色。创建会话不负责用户认证，也不会自动保存屏幕输出或让程序永远后台运行。会话领导者、终端挂断和孤儿进程组各有信号规则，守护进程设计需分别处理。\n\n## 参考\n\n- [Linux man-pages：setsid](https://man7.org/linux/man-pages/man2/setsid.2.html)\n- [Linux man-pages：进程组、会话与控制终端](https://man7.org/linux/man-pages/man7/credentials.7.html)\n- [GNU C Library：作业控制概念](https://sourceware.org/glibc/manual/latest/html_node/Concepts-of-Job-Control.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man2/setsid.2.html"
+}

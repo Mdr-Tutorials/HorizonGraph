@@ -1,0 +1,59 @@
+{
+  "id": "sloc-code-counter",
+  "name": "sloc (Code Counter)",
+  "aliases": [
+    "Node.js 代码计数器 sloc",
+    "flosse sloc",
+    "sloc"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-line-counting"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "对外提供 JavaScript 调用接口，浏览器入口可对传入源码文本计数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nodejs",
+      "context": "作为 npm CLI 或 Node.js 模块使用时，在 Node.js 宿主读取文件并处理统计。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "comment-lines-of-code",
+      "context": "报告注释行及单行、块注释与混合行等细分计数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "Source 列按项目规则报告源代码物理行，区别于所有文本的 Physical 列。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "tokei"
+    }
+  ],
+  "summary": "提供代码、注释和混合行分类的 JavaScript 计数工具。",
+  "description": "flosse/sloc 是可作为命令行应用和 Node.js 模块使用的源码统计项目，也提供浏览器入口。它输出总物理行、源码、注释、混合行、空白及若干注释细分类别。\n\n代码与注释混合行被单独记录，说明其各列不应无条件当作互斥集合相加。CLI 的包含、排除、扩展别名与输出字段选项会影响范围；计数接口接收源码文本和语言类型。\n\n官方仓库将项目标为未维护，收录用于说明这种计数模型与已有集成。CSV、JSON 和表格输出可以供其他流程使用，但旧适配器列表不保证当前宿主兼容，应检查依赖版本与实际样例。\n\n## 参考\n\n- [sloc 官方项目与分类说明](https://github.com/flosse/sloc)\n- [sloc 计数实现](https://github.com/flosse/sloc/blob/master/src/sloc.coffee)",
+  "status": "historical",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/flosse/sloc"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "remediation-effort",
+  "name": "Remediation Effort",
+  "aliases": [
+    "补救工作量",
+    "修复工作量估计"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-quality",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "解决已识别问题所需工作的估计量。",
+  "description": "补救工作量表示为解决指定问题或一组问题估计需要的工作。它需要说明范围与单位，例如某项静态规则问题的修复分钟数，或包含迁移和回归验证的工程方案估计。\n\nSonar 的相关指标以规则为问题分配修复工作量，再汇总安全、可靠性或可维护性类别；其以天显示时使用固定工时换算。数值源于工具模型，并非自动追踪到真实开发过程的用时。\n\n工作量估计用于计划和优先级讨论，应结合问题依赖、方案复用、环境限制及验证成本。多个问题可以由同一变更解决，逐项简单相加也可能高估成本；反之，局部默认值可能遗漏跨模块迁移。\n\n## 参考\n\n- [Sonar：度量定义](https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition)\n- [SEI：企业技术债登记与补救案例](https://www.sei.cmu.edu/blog/experiences-documenting-and-remediating-enterprise-technical-debt/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition"
+}

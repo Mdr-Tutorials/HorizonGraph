@@ -1,0 +1,48 @@
+{
+  "id": "mutation-testing",
+  "name": "Mutation Testing",
+  "aliases": [
+    "变异测试",
+    "突变测试"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutation-operator",
+      "context": "用明确的语法或字节码改写规则生成候选变异体。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutant-killing",
+      "context": "比较原始与变异执行的判定结果，以确认测试是否检出改动。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutation-score",
+      "context": "报告在指定有效变异集合下被检测到的比例。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "常以已有单元测试作为变异运行的判定集合；具体工具也可能支持其他测试层次。"
+    }
+  ],
+  "summary": "注入受控代码改动，检查测试是否能够检出。",
+  "description": "变异测试对生产代码施加受控小改动，生成变异体并运行现有测试，以检查测试能否区分原程序与变异程序。典型改动包括条件边界替换、布尔逻辑反转和返回值改变。\n\n运行前需要原始测试基线通过，随后区分检出、存活、未覆盖、超时和执行错误等结果。PIT 可先采集测试覆盖与耗时，为每个变异体选择相关测试；这种优化需要保留其适用范围。\n\n存活并不一定意味着缺少测试，也可能是等价变异或不在验证范围的行为。算子集合、过滤、环境和超时判定会影响得分；变异测试检验一类缺陷模型，不能穷尽真实缺陷或替代需求验证。\n\n## 参考\n\n- [PIT：变异执行与状态](https://pitest.org/quickstart/basic_concepts/)\n- [Stryker：支持的变异算子](https://stryker-mutator.io/docs/mutation-testing-elements/supported-mutators/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://pitest.org/quickstart/basic_concepts/"
+}

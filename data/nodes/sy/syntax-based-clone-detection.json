@@ -1,0 +1,33 @@
+{
+  "id": "syntax-based-clone-detection",
+  "name": "Syntax-based Clone Detection",
+  "aliases": [
+    "基于语法树的克隆检测",
+    "AST 克隆检测"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "将可解析程序转换为语法树，利用节点结构构造克隆比较表示。"
+    }
+  ],
+  "summary": "使用语法树结构匹配相似程序片段的检测方法。",
+  "description": "基于语法树的克隆检测先解析程序，再利用 AST 的节点和结构表示比较代码。它能够把一些纯布局差异排除在比较之外，并在表达式、语句或函数粒度上提取结构特征。\n\n具体方法可以匹配子树、向量化树结构或对节点进行归一化，使用何种表示与相似条件决定可发现的克隆范围。源码解析与语法树可用性构成输入限制，语言版本、错误恢复和预处理策略都需要说明。\n\nAST 相似仍是结构证据，并不自动等同于相同运行行为。不同控制结构可能具有同样结果，相似树也可能因为状态或外部调用而表现不同；检测器需要通过有明确真值和匹配规则的实验评价。\n\n## 参考\n\n- [Roy、Cordy：代码克隆检测综述](https://research.cs.queensu.ca/TechReports/Reports/2007-541.pdf)\n- [作者：克隆管理研究综述](https://www.cs.usask.ca/documents/technical-reports/2012/TR-2012-03.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://research.cs.queensu.ca/TechReports/Reports/2007-541.pdf"
+}

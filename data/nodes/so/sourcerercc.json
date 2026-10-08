@@ -1,0 +1,32 @@
+{
+  "id": "sourcerercc",
+  "name": "SourcererCC",
+  "aliases": [
+    "大规模 Token 代码克隆检测器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "token-based-clone-detection"
+    }
+  ],
+  "summary": "以 token 集合索引和过滤进行大规模近似克隆搜索。",
+  "description": "SourcererCC 是面向大规模源码集合的克隆检测研究工具，将代码块表示为 token 集合并构造索引。方法使用过滤策略减少候选比较，针对语法相似和近似复制任务设计。\n\n论文与官方仓库分别描述检测方法和研究实现；粒度、token 提取、相似阈值及索引参数是实验配置的一部分。它的 token 集合表示与滚动窗口序列匹配不同，不能把名称中的 CC 简化为某个通用计数器。\n\n使用研究制品时需要按文档准备运行环境并记录数据与配置，不能从论文性能结论推导所有仓库上的排名。token 重叠只提供相似性证据，跨语言行为、业务正确性和完整语义克隆范围需要另行验证。\n\n## 参考\n\n- [SourcererCC：官方项目](https://github.com/Mondego/SourcererCC)\n- [作者：工具与索引过滤论文](https://arxiv.org/abs/1603.01661)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/Mondego/SourcererCC"
+}

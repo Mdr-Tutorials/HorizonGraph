@@ -1,0 +1,39 @@
+{
+  "id": "unix-signal",
+  "name": "Unix Signal",
+  "aliases": [
+    "Unix 进程信号",
+    "POSIX signal",
+    "操作系统信号"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "inter-process-communication"
+    }
+  ],
+  "summary": "以异步通知和规定动作协调进程事件、停止与终止。",
+  "description": "Unix 信号是操作系统向进程或线程通知事件的机制。本节点与信号处理领域表示物理量的 Signal 区分。每种信号有相应默认动作，进程可以在允许范围内设置处理器、忽略或暂时阻塞；SIGKILL 和 SIGSTOP 等则不能通过普通处理器截获。\n\n信号来源包括显式发送、硬件异常及终端或其他内核事件。终端中断和暂停字符在适用输入模式下触发相关信号，发给终端的前台进程组；SIGWINCH 通知尺寸变化。标准信号与实时信号在排队等行为上存在差异，因此不能把每次产生都当作一个独立可靠消息。\n\n异步处理器可安全调用的函数受限制，多线程程序还需管理每线程信号掩码和接收目标。应用可以使用同步等待或适用文件描述符接口整合通知。收到信号不保证立刻终止，退出效果取决于处置及程序状态；终端模式恢复与作业状态也需要另外协调。\n\n## 参考\n\n- [Linux man-pages：Unix 信号](https://man7.org/linux/man-pages/man7/signal.7.html)\n- [Linux man-pages：sigaction](https://man7.org/linux/man-pages/man2/sigaction.2.html)\n- [Linux man-pages：进程组](https://man7.org/linux/man-pages/man2/setpgid.2.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man7/signal.7.html"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "branch-coverage",
+  "name": "Branch Coverage",
+  "aliases": [
+    "分支覆盖率"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计测试触达的控制流分支结果比例。",
+  "description": "分支覆盖率衡量控制流中纳入统计的分支结果被执行的比例，通常能发现语句覆盖忽略的未走分支。真正的分母取决于语言、编译结果以及工具对条件、switch、循环和异常的建模。\n\ncoverage.py 根据运行中的源码行转换弧与静态可能弧比较缺失分支；JaCoCo 统计 Java 字节码中的 if 与 switch 分支，并明确不将异常处理作为其分支计数对象。因此两个报告的同名百分比未必可直接比较。\n\n分支覆盖不保证每个复合布尔条件独立影响决策，也不保证每条路径或断言充分。解释报告应同时记录未执行代码、部分分支、排除规则及优化影响，避免只保留一个总百分比。\n\n## 参考\n\n- [Coverage.py：分支覆盖](https://coverage.readthedocs.io/en/latest/branch.html)\n- [JaCoCo：覆盖计数口径](https://www.jacoco.org/jacoco/trunk/doc/counters.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://coverage.readthedocs.io/en/latest/branch.html"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "window-system",
+  "name": "Window System",
+  "aliases": [
+    "窗口系统"
+  ],
+  "type": "concept",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "theoretical",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "desktop-interface-concept"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "display-server",
+      "context": "这里按显示服务职责分解，不要求独立进程。"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "window-manager",
+      "context": "窗口系统可含窗口布局与焦点管理职责，部署中可与显示服务整合。"
+    }
+  ],
+  "summary": "组织应用表面、显示服务与输入交互的系统机制。",
+  "description": "窗口系统组织图形应用、可显示表面、输出设备和输入事件之间的交互，使多个应用能够共享显示环境。它涉及协议、客户端库、服务实现及管理策略，不能仅用某个 GUI 控件库概括。\n\n显示服务负责接受应用请求并协调呈现和输入，窗口管理职责决定布局、焦点等策略。X11 与 Wayland 展现不同的角色分布：前者常使用独立窗口管理器客户端，后者通常由合成器整合显示、窗口管理和最终合成。\n\n这些角色是功能划分，不要求每个角色单独对应进程，也不保证一定存在独立合成器。终端模拟器可以作为窗口系统的图形客户端；其伪终端、控制序列与网格内容管理属于其他层次，图形窗口协议不会替代这些终端职责。\n\n## 参考\n\n- [Wayland 架构说明](https://wayland.freedesktop.org/architecture.html)\n- [GTK 窗口与绘制模型](https://docs.gtk.org/gtk4/drawing-model.html)",
+  "official_site": "https://wayland.freedesktop.org/architecture.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

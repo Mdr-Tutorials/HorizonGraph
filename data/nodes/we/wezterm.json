@@ -1,0 +1,47 @@
+{
+  "id": "wezterm",
+  "name": "WezTerm",
+  "aliases": [
+    "Wez's Terminal Emulator",
+    "WezTerm 终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-multiplexing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lua",
+      "context": "通过 Lua 配置文件设置终端选项、按键与事件回调。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssh",
+      "context": "SSH domain 用 SSH 通道连接安装兼容 WezTerm 的远端复用服务；普通 SSH 连接另有入口。"
+    }
+  ],
+  "summary": "以 Rust 构建、可用 Lua 配置的跨平台终端与复用器。",
+  "description": "WezTerm 是以 Rust 实现的 GPU 终端模拟器与复用器，提供跨平台桌面终端、标签页和窗格。配置文件使用 Lua，可以设置字体、快捷键与事件处理；使用 Lua 配置并不意味着命令行程序由 Lua 解释，终端、配置语言和 Shell 是三个独立层面。\n\n复用功能采用 domain 表达一组窗口和标签。默认本地 domain 的存在范围与独立复用服务不同；通过 Unix、SSH 或 TLS domain 可以连接另外的复用服务。SSH 复用 domain 要求远端安装兼容 WezTerm，而普通临时 SSH 会话与该部署方式分开。\n\n持久性取决于会话实际由哪个进程保存、是否启用了相应复用配置以及宿主生命周期。关闭普通本地窗口不能自动等同于服务端脱离，WSL、Unix socket 或远端路径还各有平台条件。比较终端能力时，应把图形前端、远端传输和复用后端分别核验。\n\n## 参考\n\n- [WezTerm：项目](https://github.com/wezterm/wezterm)\n- [WezTerm：复用与 domain](https://wezterm.org/multiplexing.html)\n- [WezTerm：Lua 配置](https://wezterm.org/config/files.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/wezterm/wezterm"
+}

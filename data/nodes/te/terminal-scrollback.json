@@ -1,0 +1,32 @@
+{
+  "id": "terminal-scrollback",
+  "name": "Terminal Scrollback",
+  "aliases": [
+    "终端回滚历史"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "terminal-buffer"
+    }
+  ],
+  "summary": "保留离开可见屏幕的内容，支持向上浏览终端输出。",
+  "description": "回滚历史保存终端内容滚出可见区域后仍可浏览的部分。用户通过滚动视口查阅较早输出，仿真器通常对历史容量设限。它与 Shell 命令历史不同：前者保留解释后的显示内容，后者记录命令；也不保证包含应用曾写出的每一个字节。\n\nxterm.js 的模型以基准行和视口行等信息区分活动屏幕位置与用户正在浏览的位置。终端可以限制回滚行数、截断旧内容或重新排列换行，具体策略取决于实现与配置。擦屏序列与清除回滚的扩展有各自语义，不能把二者当作永远一致的操作。\n\n全屏应用经常切换备用屏幕，该屏幕通常不使用主屏的回滚区域；离开后再恢复原先可见内容。需要审计完整会话时，应使用明确的录制与存储机制，而非假设回滚历史永久保留、带时间戳或经过脱敏。长输出及内嵌图像还会改变存储成本。\n\n## 参考\n\n- [xterm.js：屏幕缓冲 API](https://xtermjs.org/docs/api/terminal/interfaces/ibuffer/)\n- [Microsoft：虚拟终端序列与屏幕缓冲](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://xtermjs.org/docs/api/terminal/interfaces/ibuffer/"
+}

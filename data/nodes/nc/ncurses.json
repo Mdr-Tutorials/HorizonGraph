@@ -1,0 +1,41 @@
+{
+  "id": "ncurses",
+  "name": "ncurses",
+  "aliases": [
+    "ncurses 终端界面库",
+    "New Curses",
+    "NCURSES"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-user-interface",
+      "context": "以字符单元窗口、输入事件和屏幕更新 API 支持应用实现文本用户界面。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "notcurses",
+      "context": "构建文本终端界面的不同原生库路线；Notcurses 不兼容 X/Open Curses API。"
+    }
+  ],
+  "summary": "以窗口和终端能力抽象构建字符单元界面的原生库。",
+  "description": "ncurses 是构建字符终端界面的原生库，实现 X/Open Curses 所描述的接口并提供扩展。它把屏幕抽象为 SCREEN，把矩形字符区域抽象为 WINDOW，使程序通过坐标、字符和属性描述界面，而不是直接硬编码每一种终端的控制序列。\n\n库负责维护屏幕状态并更新输出，提供按键输入、颜色和窗口相关接口；终端能力信息则由 terminfo 体系支持。应用通常需要初始化 locale 与屏幕，选择输入模式，并在退出时恢复终端状态。窗口是库中的逻辑区域，不是操作系统图形窗口。\n\nncurses 适用于全屏文本菜单、编辑器和监控界面，也有宽字符等不同构建配置。使用 ncurses 扩展时应区分标准 Curses API 与实现专属行为。Notcurses 属于另一套面向现代终端的 API，不能直接替换既有 ncurses 程序；二者都不负责模拟终端设备本身。\n\n参考资料：\n\n- [ncurses 官方项目主页](https://invisible-island.net/ncurses/)\n- [ncurses 库调用手册](https://invisible-island.net/ncurses/man/ncurses.3x.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://invisible-island.net/ncurses/"
+}

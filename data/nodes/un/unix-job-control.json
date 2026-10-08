@@ -1,0 +1,48 @@
+{
+  "id": "unix-job-control",
+  "name": "Unix Job Control",
+  "aliases": [
+    "Unix 作业控制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "process-group",
+      "context": "将一次交互命令的相关进程作为作业组切换前后台并统一发送信号。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "controlling-terminal",
+      "context": "通过控制终端的前台进程组关联仲裁交互输入访问。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unix-signal",
+      "context": "通过停止、继续与终端访问相关信号协调作业状态。"
+    }
+  ],
+  "summary": "协同进程组、终端前台归属和信号来管理交互作业。",
+  "description": "Unix 作业控制让用户在同一交互会话里停止、继续并切换多个作业。Shell 把运行一次命令所产生的相关进程组织为作业，再借助操作系统的进程组和终端规则实现前后台管理。它不等同于集群任务调度、CI 作业编排或服务器后台进程管理。\n\n前台作业获得终端输入访问，Shell 将控制终端的前台进程组切到该作业，并等待其状态变化。停止后可以把作业留在后台，继续时再选择是否恢复前台。SIGTSTP、SIGCONT、SIGTTIN 等信号与等待接口共同支撑流程，具体 Shell 命令只是用户层入口。\n\nShell 与作业还需要保存、恢复终端模式，避免全屏应用退出或停止后留下不合适的回显与输入设置。没有交互控制终端的进程路径不必具备同样的用户体验。按 Ctrl-C 通常影响前台组，但效果受 ISIG、信号处理器和应用自身状态影响。\n\n## 参考\n\n- [GNU C Library：作业控制](https://sourceware.org/glibc/manual/latest/html_node/Job-Control.html)\n- [GNU C Library：作业控制概念](https://sourceware.org/glibc/manual/latest/html_node/Concepts-of-Job-Control.html)\n- [Linux man-pages：终端前台进程组](https://man7.org/linux/man-pages/man3/tcgetpgrp.3.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://sourceware.org/glibc/manual/latest/html_node/Job-Control.html"
+}

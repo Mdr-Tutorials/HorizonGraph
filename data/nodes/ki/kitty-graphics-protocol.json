@@ -1,0 +1,34 @@
+{
+  "id": "kitty-graphics-protocol",
+  "name": "Kitty Graphics Protocol",
+  "aliases": [
+    "Kitty 终端图像协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "png",
+      "context": "协议的 f=100 路径传输 PNG 图像；其他路径可传 RGB 或 RGBA 像素。"
+    }
+  ],
+  "summary": "在终端字节流中传输和放置栅格图像，并管理图像身份。",
+  "description": "Kitty 图像协议让终端应用传送栅格数据并指定显示位置、层次和后续操作，图像可以与文字滚动及合成。协议把传输图像和创建放置区分开，应用可复用已存图像，管理图像或放置 ID。它不要求用户使用 Kitty 产品，也不是普通字符框线或 Sixel 编码。\n\n消息采用 APC 形式 ESC _ G 控制数据 ; 载荷 ESC 反斜线，控制数据为键值参数，载荷可用 Base64 及分块传输。规范定义 RGB、RGBA 和 PNG 路径，不能把任意 JPEG 或 WebP 直接当作原生像素格式。文件及共享内存路径对本地环境和资源访问有专门条件。\n\n查询、回复、删除和放置生命周期需要共同实现，支持一部分传输不能推断全部动画或占位行为。SSH 与复用器影响载荷和反馈通道，本地文件路径不会自动在远程主机与终端宿主间共享。Ghostty 使用这一路线而未支持 Sixel，应按具体版本核对功能子集。\n\n## 参考\n\n- [Kitty：图像协议原始规范](https://sw.kovidgoyal.net/kitty/graphics-protocol/)\n- [Kitty：终端协议扩展的设计边界](https://sw.kovidgoyal.net/kitty/protocol-extensions/)\n- [Ghostty 维护者：Sixel 支持决议](https://github.com/ghostty-org/ghostty/discussions/2496)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://sw.kovidgoyal.net/kitty/graphics-protocol/"
+}

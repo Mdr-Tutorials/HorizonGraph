@@ -1,0 +1,33 @@
+{
+  "id": "grapheme-cluster",
+  "name": "Unicode Grapheme Cluster",
+  "aliases": [
+    "Unicode 字素簇",
+    "字素簇",
+    "扩展字素簇"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unicode"
+    }
+  ],
+  "summary": "按 Unicode 分段规则近似用户感知字符的文本单元。",
+  "description": "Unicode 字素簇由 UAX #29 的字素边界规则划分，用作用户感知字符的可计算近似。一个簇可含单一码点，也可以由基本字符、组合标记、区域指示符或其他参与组合的码点共同形成。\n\n扩展字素簇用于默认的光标移动、选择与删除等文本操作，但规范允许有明确声明的定制。Unicode 分段基于字符属性与规则，字体塑形中的 cluster 则还可能反映字形替换与重排，两种边界不能无条件互换。\n\n一个字素簇不等于一个字形，也不保证占一列。连字可以横跨多个默认字素簇，emoji 与 CJK 内容可能占多个终端单元；簇数量还不能限制输入字节大小，实际系统应同时设置存储及处理预算。\n\n## 参考\n\n- [Unicode UAX #29：文本分段](https://www.unicode.org/reports/tr29/)\n- [HarfBuzz：塑形 cluster 的含义](https://harfbuzz.github.io/working-with-harfbuzz-clusters.html)\n- [Unicode：字符与字形区别](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-2/)",
+  "official_site": "https://www.unicode.org/reports/tr29/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

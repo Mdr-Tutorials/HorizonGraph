@@ -1,0 +1,33 @@
+{
+  "id": "embedded-language-counting",
+  "name": "Embedded Language Counting",
+  "aliases": [
+    "嵌入语言计数",
+    "混合语言源码统计"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "comment-aware-counting",
+      "context": "对识别出的每种嵌入语言采用相应字符串和注释规则，分别分类其源文本行。"
+    }
+  ],
+  "summary": "识别同一文件内的语言片段并按分组规则计数。",
+  "description": "嵌入语言计数处理一个文件内部含多个语言片段的情形，例如 HTML 中的 CSS 与 JavaScript，或 Markdown 的围栏代码。只按文件扩展归类无法表达这些片段的语言分布。\n\nTokei 使用语言子块保存嵌入内容，并区分当前块与递归汇总；Ohcount 也提供同文件多语言的逐行分析。统计时应明确容器文本和子语言如何归属，不能重复累计已包含子块的父级总数。\n\n支持范围取决于解析规则、版本和实际嵌入语法，不能从多语言工具名称推断识别所有模板。源文件数、语言片段数和行数是不同单位，合并语言报表时应保存文件对应关系。\n\n## 参考\n\n- [Tokei CodeStats API](https://docs.rs/tokei/latest/tokei/struct.CodeStats.html)\n- [Ohcount：同文件多语言解析](https://github.com/blackducksoftware/ohcount)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.rs/tokei/latest/tokei/struct.CodeStats.html"
+}

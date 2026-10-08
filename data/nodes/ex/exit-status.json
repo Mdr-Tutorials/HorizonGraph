@@ -1,0 +1,30 @@
+{
+  "id": "exit-status",
+  "name": "Exit Status",
+  "aliases": [
+    "退出状态",
+    "退出码",
+    "返回状态"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    }
+  ],
+  "summary": "命令向调用方报告执行结果的状态值。",
+  "description": "退出状态是命令结束时交给调用方的结果信号，与打印到屏幕上的消息或函数返回的业务数据不同。在 POSIX 风格工具中，零通常代表成功，非零表达失败或其他约定条件；具体值须查该命令的接口，不能统一理解成相同的错误类别。\n\nBash 通过特殊参数 $? 暴露最近命令的状态，并据此驱动条件与 &&、|| 等组合。找不到命令、不能执行、信号终止等情形有 Bash 的约定；流水线整体状态还取决于其聚合规则，因此末段成功不自动证明前序阶段成功。\n\nPowerShell 中本机程序的 LASTEXITCODE 与表示最近操作成功与否的 $? 需要分别理解。自动化脚本应在合适位置保留和传播状态，因为之后的命令可能覆盖它；业务任务的成功条件还可能需要检查产物或响应内容，不能只看是否有一个零值。\n\n## 参考\n\n- [GNU：Exit Status](https://www.gnu.org/software/bash/manual/html_node/Exit-Status.html)\n- [Microsoft：about_Automatic_Variables](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Exit-Status.html"
+}

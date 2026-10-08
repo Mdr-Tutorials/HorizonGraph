@@ -1,0 +1,35 @@
+{
+  "id": "test-selection",
+  "name": "Regression Test Selection",
+  "aliases": [
+    "回归测试选择",
+    "测试选择",
+    "RTS"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-impact-analysis",
+      "context": "借助代码与测试依赖的影响分析确定此次变更应重跑的测试集合。"
+    }
+  ],
+  "summary": "依据程序变更选择需重新运行的回归测试子集。",
+  "description": "回归测试选择根据两版本间的变化及测试依赖，挑选需要重新运行的测试子集，以减少每次变更的反馈成本。它改变本次运行集合，区别于仅调整同一测试集执行顺序的优先级排序。\n\n方法可使用动态文件依赖、代码覆盖、静态依赖或其他变更影响模型。安全选择的保证只在模型和假设下成立；外部资源、反射、配置及未记录依赖可能需要保守回退到全量测试。\n\n应处理新增、历史失败及依赖未知的测试，并定期执行完整测试集以复核选择机制。只运行选中测试后的覆盖报告不能直接代表整个历史测试集的覆盖，合并旧证据需要验证其仍适用于当前版本。\n\n## 参考\n\n- [Ekstazi：动态文件依赖原始论文](https://users.ece.utexas.edu/~gligoric/papers/GligoricETAL15Ekstazi.pdf)\n- [Microsoft：测试影响分析与回退](https://learn.microsoft.com/en-us/azure/devops/pipelines/test/test-impact-analysis?view=azure-devops)\n- [Microsoft Research：选择、排序与缩减测试](https://www.microsoft.com/en-us/research/wp-content/uploads/2015/05/The-Art-of-Testing-Less-without-Sacrificing-Quality.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://users.ece.utexas.edu/~gligoric/papers/GligoricETAL15Ekstazi.pdf",
+  "abbreviation": "RTS"
+}

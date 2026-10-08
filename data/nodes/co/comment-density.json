@@ -1,0 +1,39 @@
+{
+  "id": "comment-density",
+  "name": "Comment Density",
+  "aliases": [
+    "注释密度",
+    "注释行占比",
+    "Comment Lines Density"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "comment-lines-of-code",
+      "context": "将按照指定分析器规则计算的注释行作为密度公式分子。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "采用 SonarQube 型公式时，使用非注释物理代码行与注释行之和作为分母。"
+    }
+  ],
+  "summary": "用指定分母表达注释行在源码统计中的比例。",
+  "description": "注释密度以注释行计数与规定分母的比值表示说明文本占比。SonarQube 的 comment_lines_density 为 commentLines / (ncloc + commentLines) × 100；空白行不在这个分母中。\n\n其他报表可能使用全部物理行作分母，或对混合行和文件头采用不同规则。比较前必须确认公式与语言分析器，不能只因列标题同为百分比就把结果直接合并。\n\n高占比可能来自充分说明，也可能来自大量许可证头或被禁用的代码；低占比也可能来自表达清楚的小型模块。该项用于定位需要阅读的区域，不能替代文档准确性、设计清晰性或审查判断。\n\n## 参考\n\n- [SonarQube 10.6：规模与注释指标定义](https://docs.sonarsource.com/sonarqube-server/10.6/user-guide/code-metrics/metrics-definition)\n- [cloc 官方项目与计数说明](https://github.com/AlDanial/cloc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-server/10.6/user-guide/code-metrics/metrics-definition"
+}

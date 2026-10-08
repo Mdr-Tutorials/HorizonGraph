@@ -1,0 +1,33 @@
+{
+  "id": "cosmic-functional-size",
+  "name": "COSMIC Functional Size",
+  "abbreviation": "CFP",
+  "display_primary": "COSMIC 功能规模",
+  "display_secondary": "COSMIC Functional Size",
+  "aliases": [
+    "COSMIC 功能规模",
+    "COSMIC Function Point",
+    "COSMIC 功能点",
+    "COSMIC CFP"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "以 CFP 表示并按数据移动求和的功能规模。",
+  "description": "COSMIC 功能规模以 COSMIC Function Point（CFP）表示，一个 CFP 对应一个满足方法规则的数据移动。软件功能规模等于各功能过程的数据移动数之和；运行时重复执行同一过程不会按执行次数增加规模。\n\n计数对象是功能用户需求中的 Entry、Exit、Read 和 Write，不是网络报文数、SQL 语句数或实际 I/O 次数。测量结果应携带范围、边界、层次、粒度和需求版本，使别的测量者能够核对同一语境。\n\n功能变更规模另计所需增加、修改或删除的数据移动，不能简单用变更前后总规模的净差代替。CFP 可为历史工作量估算提供规模输入，但它本身不表示人员投入、日历时长或算法内部计算难度。\n\n## 参考\n\n- [COSMIC：测量策略、映射与计数过程](https://cosmic-sizing.org/cosmic-sizing/intro/measurement-process/)\n- [COSMIC：度量术语与 CFP 单位](https://cosmic-sizing.org/cosmic-sizing/cosmic-glossary/)\n- [COSMIC：Measurement Manual v5](https://cosmic-sizing.org/measurement-manual/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://cosmic-sizing.org/cosmic-sizing/intro/measurement-process/"
+}

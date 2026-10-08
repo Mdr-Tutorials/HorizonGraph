@@ -1,0 +1,34 @@
+{
+  "id": "halstead-difficulty",
+  "name": "Halstead Difficulty",
+  "abbreviation": "D",
+  "aliases": [
+    "Halstead难度"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "halstead-metrics",
+      "context": "操作符与操作数计数推导的Halstead体系难度指标。"
+    }
+  ],
+  "summary": "按操作符种类和操作数复用比例推导的难度量。",
+  "description": "Halstead 难度 D=(n1/2)·(N2/n2)，使用不同操作符数 n1、操作数出现总次数 N2 和不同操作数数 n2。它是该词法模型中的推导量，与圈复杂度或认知复杂度的控制结构规则不同。\n\n在其他计数固定时，操作符种类增多或操作数复用次数提高会使模型难度增加。实际计算要明确标识符、字面量和类型的归类，并说明 n2 为零时的返回或缺失值约定。\n\n名称中的 difficulty 表达模型解释，不是对每位读者理解源码的实测。代码命名、领域背景和工具口径都影响解释；该量与体积相乘生成 Halstead 工作量时仍继承这些计数及模型假设。\n\n## 参考\n\n- [SciTools：难度公式](https://docs.scitools.com/metrics/HalsteadDifficulty.html)\n- [Verifysoft：Halstead难度与计数](https://www.verifysoft.com/en_halstead_metrics.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.scitools.com/metrics/HalsteadDifficulty.html"
+}

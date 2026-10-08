@@ -1,0 +1,39 @@
+{
+  "id": "notcurses",
+  "name": "Notcurses",
+  "aliases": [
+    "Notcurses 终端图形库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-user-interface",
+      "context": "通过字符单元和平面合成接口构建文本终端中的交互界面。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ncurses",
+      "context": "使用 ncurses 项目提供的 terminfo 组件取得终端能力；不调用其完整 Curses 窗口 API，也非兼容替代。"
+    }
+  ],
+  "summary": "提供平面合成、Unicode 与终端图形能力的原生 TUI 库。",
+  "description": "Notcurses 是面向现代终端模拟器的原生 TUI 与字符图形库。它以字符单元、平面和绘制上下文组织界面，支持平面堆叠和合成，将应用描述的内容转换为终端可显示的输出。它延续终端界面库的用途，但没有实现 ncurses 的源代码兼容 Curses API。\n\n库构建在 terminfo 能力抽象之上，采用来自 ncurses 项目的 terminfo 组件，并支持 Unicode、颜色以及符合终端能力的图形输出。其渲染模式通常使用备用屏幕，也提供与普通输出交错使用的 direct 模式。实际图像协议、输入和颜色效果仍取决于终端及环境能力。\n\nNotcurses 的核心库与包含多媒体能力的构建具有不同依赖边界，官方允许不需要多媒体的程序链接 notcurses-core。FFmpeg、OpenImageIO 等属于可选能力配置，不能把它们写成全部部署的必需项。应用还需处理 locale、初始化、显式渲染和清理生命周期。\n\n参考资料：\n\n- [官方代码库与依赖说明](https://github.com/dankamongmen/notcurses)\n- [Notcurses 官方 API 手册](https://notcurses.com/notcurses.3.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/dankamongmen/notcurses"
+}

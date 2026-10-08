@@ -40,6 +40,21 @@
       "relation_type": "uses",
       "target_id": "artifact-attestation",
       "context": "需要认证清单对应的工件和声明者时，可将 SBOM 作为工件声明材料签署交付；不因此保证清单完整。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "component-inventory",
+      "context": "整理清单所描述的软件组件身份、版本和出现范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "component-dependency-graph",
+      "context": "记录组成中的依赖关系，不能从共存组件自动推导完整依赖图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom-completeness",
+      "context": "以覆盖说明记录组件和关系的已知未知范围。"
     }
   ],
   "summary": "记录工件的组件与依赖，供供应链追踪和漏洞比对。",
@@ -47,5 +62,5 @@
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",
   "importance": 3,
-  "description": "SBOM 是关于某个软件产品或工件的结构化组件与依赖清单，帮助接收方了解其组成、版本、标识和关系。它可以从源码声明、构建过程或最终二进制中产生，不同生成阶段观察到的信息和覆盖范围会不同。容器镜像可以作为所述工件，但 SBOM 不是专属于容器的能力；构建来源证明描述生产过程，SBOM 主要描述组成，二者不能相互替代。\n\nSPDX 与 CycloneDX 提供可交换的表示，Syft 和 Trivy 等工具能在支持范围内发现组件或生成清单。清单应明确所述对象、生成工具、时间、关系和已知未知范围；包管理器元数据、文件排除和分析器配置都会影响组件识别。将清单绑定到工件摘要并以声明或签名交付，可以让消费者验证对应对象及声明者，但不会自动补全遗漏组件。\n\n漏洞扫描器能够复用 SBOM 与更新后的公告数据库匹配，不必每次重新发现同一工件中的组件。CVE 关联仍需确认实际版本、厂商回移修复、配置和可达性；没有匹配记录也不表示软件没有漏洞。清单格式合规、内容完整性、发布者授权、来源事实可信性与软件安全性属于不同判断，持有一份 SBOM 并不是安全认证。\n\n## 参考\n\n- [SPDX：SBOM 与安全应用](https://spdx.dev/learn/areas-of-interest/security/)\n- [CycloneDX：官方 SBOM 指南与覆盖范围](https://cyclonedx.org/guides/sbom/relationships/)\n- [Syft：SBOM 生成与组件识别](https://oss.anchore.com/docs/guides/sbom/)"
+  "description": "SBOM 是关于某个软件产品或工件的结构化组件与依赖清单，帮助接收方了解其组成、版本、标识和关系。它可以从源码声明、构建过程或最终二进制中产生，不同生成阶段观察到的信息和覆盖范围会不同。容器镜像可以作为所述工件，但 SBOM 不是专属于容器的能力；构建来源证明描述生产过程，SBOM 主要描述组成，二者不能相互替代。\n\nSPDX 与 CycloneDX 提供可交换的表示，Syft 和 Trivy 等工具能在支持范围内发现组件或生成清单。清单应明确所述对象、生成工具、时间、关系和已知未知范围；包管理器元数据、文件排除和分析器配置都会影响组件识别。将清单绑定到工件摘要并以声明或签名交付，可以让消费者验证对应对象及声明者，但不会自动补全遗漏组件。\n\n漏洞扫描器能够复用 SBOM 与更新后的公告数据库匹配，不必每次重新发现同一工件中的组件。CVE 关联仍需确认实际版本、厂商回移修复、配置和可达性；没有匹配记录也不表示软件没有漏洞。清单格式合规、内容完整性、发布者授权、来源事实可信性与软件安全性属于不同判断，持有一份 SBOM 并不是安全认证。\n\n组件身份、依赖图与覆盖说明是清单消费的重要基础。PURL、CPE 和 SWID 具有不同的识别模型，不能互换为一个无上下文编号；许可声明、发现的文本及审查结论也应区分。清单生成、结构校验、聚合与差异比较属于不同活动，绑定工件的 SBOM 声明证明只认证声明载荷和相应身份，不自动确认内容完整。\n\n## 参考\n\n- [SPDX：SBOM 与安全应用](https://spdx.dev/learn/areas-of-interest/security/)\n- [CycloneDX：官方 SBOM 指南与覆盖范围](https://cyclonedx.org/guides/sbom/relationships/)\n- [Syft：SBOM 生成与组件识别](https://oss.anchore.com/docs/guides/sbom/)\n- [CycloneDX：组件身份与证据](https://www.cyclonedx.org/use-cases/software-components/)\n- [CycloneDX：清单完整性说明](https://www.cyclonedx.org/use-cases/compositions-components/)"
 }

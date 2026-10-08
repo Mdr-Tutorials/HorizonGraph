@@ -1,0 +1,30 @@
+{
+  "id": "change-fail-rate",
+  "name": "Change Fail Rate",
+  "aliases": [
+    "变更失败率",
+    "部署变更失败率",
+    "Change Failure Rate"
+  ],
+  "type": "metric",
+  "domains": [
+    "devops",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计生产部署后需立即干预的部署比例。",
+  "description": "DORA 的变更失败率是生产部署中，部署后需要立即干预的比例，例如回滚或紧急修复。分子是符合失败判定的部署，分母是同一应用或服务、同一观察窗口中的全部纳入生产部署。\n\n采集前应约定部署与事故的归因、什么属于立即干预，以及一次失败的多次告警如何去重。测试阶段失败、计划维护和无关基础设施事故，不应在未说明规则的情况下混入同一交付失败率。\n\n它衡量交付不稳定性，不能替代故障数量、严重程度或用户影响。低部署量会使比例波动，遗漏事故也会让结果偏低；应同时披露样本数和观察窗口，并与恢复时间和返工率一起阅读。\n\n## 参考\n\n- [DORA：当前软件交付性能指标](https://dora.dev/guides/dora-metrics/)\n- [DORA 2024 研究报告：吞吐与不稳定性](https://dora.dev/research/2024/dora-report/2024-dora-accelerate-state-of-devops-report.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://dora.dev/guides/dora-metrics/"
+}

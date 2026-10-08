@@ -1,0 +1,35 @@
+{
+  "id": "conpty",
+  "name": "Windows Pseudoconsole API",
+  "aliases": [
+    "ConPTY",
+    "Windows 伪控制台接口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminal-resize",
+      "context": "宿主通过 ResizePseudoConsole 改变伪控制台行列尺寸，应用响应与显示重排另由实际程序处理。"
+    }
+  ],
+  "summary": "以 Windows 伪控制台 API 将终端宿主连接到控制台程序。",
+  "description": "Windows Pseudoconsole API，通常称 ConPTY，是 Windows 提供给终端宿主的伪控制台接口。宿主可以创建一个无独立显示窗口的控制台会话，将其与子进程关联，再通过输入输出通道连接自己的终端界面；该接口不是 Windows Terminal 的图形窗口或 POSIX PTY 本身。\n\nCreatePseudoConsole、ResizePseudoConsole 和 ClosePseudoConsole 管理会话创建、尺寸与释放。宿主建立管道、为子进程设置伪控制台属性并处理数据流，终端界面再解释输出；传统控制台程序因此可以接入自定义终端宿主，进程权限仍由 Windows 的进程与访问控制决定。\n\n接口可用性受 Windows 版本和宿主实现约束，ConPTY 文档列出 Windows 10 1809 等起始条件。尺寸调整是 API 层的请求，不会自动保证所有应用正确重排；管道处理、生命周期和资源释放也仍是宿主职责。跨平台库对外统一 PTY 抽象时应说明底层后端差异，避免把不同操作系统 API 视为完全相同。\n\n## 参考\n\n- [Microsoft：Pseudoconsoles](https://learn.microsoft.com/en-us/windows/console/pseudoconsoles)\n- [Microsoft：创建伪控制台会话](https://learn.microsoft.com/en-us/windows/console/creating-a-pseudoconsole-session)\n- [Microsoft：ResizePseudoConsole](https://learn.microsoft.com/en-us/windows/console/resizepseudoconsole)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://learn.microsoft.com/en-us/windows/console/pseudoconsoles",
+  "abbreviation": "ConPTY"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "code-tag-index",
+  "name": "Code Tag Index",
+  "aliases": [
+    "源码标签索引",
+    "代码 tags 索引"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "parser",
+      "context": "采用语言解析器的索引工具识别声明等对象；正则提取路径不要求完整文法解析。"
+    }
+  ],
+  "summary": "将源码对象及位置记录为可查询的标签索引。",
+  "description": "源码标签索引把声明、定义或其他语言对象的名称和位置记录为可查询数据，供编辑器定位函数、类型或变量。Ctags 与 etags 是常见生成工具，不同输出格式和解析器能保存不同范围的对象属性。\n\n生成器扫描输入文件后建立记录，消费者根据名称、作用域和定位字段提供导航。部分实现可提取引用标签，但支持范围与准确性取决于语言解析器、选项和索引更新；声明索引不自动成为完整引用关系。\n\n标签索引与编译器符号表、实时语言服务有交集但职责不同。静态文件可能陈旧，源码改动需要更新；查到同名记录不证明已经解析到唯一语义对象，也不保证类型检查或安全重命名。\n\n## 参考\n\n- [Universal Ctags：索引及字段](https://docs.ctags.io/en/latest/man/ctags.1.html)\n- [GNU Emacs：源码标签表](https://www.gnu.org/software/emacs/manual/html_node/emacs/Tags-Tables.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

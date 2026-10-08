@@ -1,0 +1,33 @@
+{
+  "id": "utf-8",
+  "name": "UTF-8",
+  "aliases": [
+    "八位 Unicode 转换格式",
+    "UTF8"
+  ],
+  "type": "protocol",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unicode"
+    }
+  ],
+  "summary": "以一至四个字节编码 Unicode 标量值。",
+  "description": "UTF-8 使用一至四个八位代码单元表示 Unicode 标量值。ASCII 范围的码点保持单字节表示，后续字节的位模式区分序列起始与延续位置，便于在字节流中识别编码结构。\n\nRFC 3629 将有效范围限定到 U+10FFFF，并禁止代理码点、超长表示以及不符合编码结构的序列。解码器需要区分完整合法序列与截断、错误输入，流式读取时一个字符的字节序列可以跨越数据块边界。\n\nUTF-8 的字节数不是码点数、字素簇数或终端列数。一个可见字符可以由多个码点组成，显示宽度还受终端规则影响；使用 UTF-8 传输只解决编码表示，不能代替规范化、分段或字体塑形。\n\n## 参考\n\n- [RFC 3629：UTF-8](https://www.rfc-editor.org/rfc/rfc3629)\n- [Unicode：编码形式](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-2/)\n- [Unicode：合法编码序列](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/)",
+  "official_site": "https://www.rfc-editor.org/rfc/rfc3629",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "abstraction_level": "runtime_vm"
+}

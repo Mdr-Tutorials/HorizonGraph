@@ -1,0 +1,44 @@
+{
+  "id": "code-ownership",
+  "name": "Code Ownership",
+  "aliases": [
+    "代码责任归属",
+    "源码所有者",
+    "代码所有权"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "developer-ownership-share",
+      "context": "采用版本历史推断归属时，按明确的提交或行贡献口径计算贡献者份额。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "github-codeowners",
+      "context": "在 GitHub 上声明路径审查责任时使用 CODEOWNERS 配置，不把声明等同历史贡献推断。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "repository-identity-resolution",
+      "context": "统计同一贡献者的历史份额前处理其姓名和邮箱别名，保留可审查的合并依据。"
+    }
+  ],
+  "summary": "描述代码维护责任及历史贡献的归属口径。",
+  "description": "代码归属可以指团队声明的维护或审查责任，也可指从修改历史推断的贡献分布。二者需要分别标注：负责审核的人未必是最近改写者，Git 作者记录也不会自动赋予法律权利或管理责任。\n\nGitHub CODEOWNERS 以路径声明个人或团队责任；实证研究则常按修改次数或存留行计算每个贡献者的份额。使用历史推断时应先归一化姓名邮箱，并说明是提交、添加行还是当前 blame 行口径。\n\n所有权分布可用于了解知识集中与审查需求，但观察到的历史贡献不等于完整知识。配对开发、评审、设计和线下协作可能未在提交字段中体现，因此不能据此单独认定人员能力或排除他人参与。\n\n## 参考\n\n- [GitHub：显式代码责任声明](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)\n- [微软研究：所有权与质量的观察研究](https://www.microsoft.com/en-us/research/publication/dont-touch-my-code-examining-the-effects-of-ownership-on-software-quality/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners"
+}

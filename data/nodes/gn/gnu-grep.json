@@ -1,0 +1,39 @@
+{
+  "id": "gnu-grep",
+  "name": "GNU Grep",
+  "aliases": [
+    "GNU grep",
+    "grep"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regex",
+      "context": "在 BRE、ERE 或支持的 PCRE 模式下用正则模式筛选文本；固定字符串模式不采用正则解释。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "text-filtering",
+      "context": "读取文件或标准输入并选择匹配记录，形成可组合的文本过滤步骤。"
+    }
+  ],
+  "summary": "通过文本模式选择匹配记录的 GNU 搜索工具。",
+  "description": "GNU Grep 按给定模式从文件或标准输入选择匹配记录，常用于日志筛选、脚本条件判断和文本定位。结果可包括匹配行、行号、文件名或计数；它搜索内容，不承担通用目录查询工具的全部职责，也不是 GNU Coreutils 的成员。\n\nGNU Grep 提供基本和扩展正则表达式模式，也可用固定字符串匹配。启用 Perl 兼容表达式的 -P 路径取决于相应 PCRE 支持，不能将所有安装都视作同一引擎；字符编码与区域设置也会影响匹配和字符分类。\n\n退出状态通常区分命中、没有命中与运行错误，因此零匹配不等同读取失败。二进制输入策略、递归范围、文件名分隔和颜色输出应按具体选项控制；将结果交给下一段管道时，不能假定每个文件名天然是一行安全文本。\n\n## 参考\n\n- [GNU Grep 手册](https://www.gnu.org/software/grep/manual/grep.html)\n- [正则表达式与可选 PCRE 模式](https://www.gnu.org/software/grep/manual/html_node/Regular-Expressions.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/grep/manual/grep.html"
+}

@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.9.0",
   "policy": "树形注册表：10 个根（宏观层）为闭集，变更走 major 版本；根以下深度开放、随数据 PR 登记。parents 可多亲（DAG）；CI 校验无环且所有链路终于根。节点字段 ecosystems 只声明所属圈层，任意层级可命名，祖先与宏观归属由 build 派生。blurb / maintainers 可选，供生态页叙事。生态与本体的分界：生态回答“谁在这个圈里”，本体回答“这是什么”；成员含组织、人物等产业主体时建生态，清一色同类型实体优先考虑本体分类。",
   "entries": [
     { "value": "languages_runtimes", "en": "Languages & Runtimes", "zh": "编程语言与运行时", "parents": [] },
@@ -97,6 +97,16 @@
     {"value":"low-latency-systems-ecosystem","en":"Low-Latency Systems Ecosystem","zh":"低延迟系统生态","parents":["operating_systems","networking_security","hardware_iot"]},
     {"value":"ai-software-engineering-ecosystem","en":"AI-assisted Software Engineering Ecosystem","zh":"AI 辅助软件工程生态","parents":["ai_data_science","devops_tooling"]},
     {"value":"browser-automation-ecosystem","en":"Browser Automation Ecosystem","zh":"浏览器自动化生态","parents":["web_frontend","devops_tooling"]},
-    {"value":"google-ai-ecosystem","en":"Google AI Ecosystem","zh":"Google AI 生态","parents":["ai_data_science"]}
+    {"value":"google-ai-ecosystem","en":"Google AI Ecosystem","zh":"Google AI 生态","parents":["ai_data_science"]},
+    {"value":"terminal-ecosystem","en":"Terminal Engineering Ecosystem","zh":"终端工程生态","parents":["operating_systems","devops_tooling"]},
+    {"value":"shell-cli-ecosystem","en":"Shell and CLI Ecosystem","zh":"Shell 与命令行生态","parents":["operating_systems","devops_tooling"]},
+    {"value":"language-tooling-ecosystem","en":"Language Tooling Ecosystem","zh":"语言工具链生态","parents":["languages_runtimes","editor-ide-ecosystem"]},
+    {"value":"text-rendering-ecosystem","en":"Unicode and Text Rendering Ecosystem","zh":"Unicode 与文本渲染生态","parents":["graphics_gaming","web_frontend"]},
+    {"value":"desktop-gui-ecosystem","en":"Desktop GUI and Windowing Ecosystem","zh":"桌面 GUI 与窗口系统生态","parents":["operating_systems","graphics_gaming","devops_tooling"]},
+    {"value":"software-measurement-ecosystem","en":"Software Measurement Ecosystem","zh":"软件度量生态","parents":["devops_tooling"]},
+    {"value":"repository-analysis-ecosystem","en":"Repository Analysis Ecosystem","zh":"仓库分析生态","parents":["devops_tooling","git-ecosystem"]},
+    {"value":"software-quality-ecosystem","en":"Software Quality Ecosystem","zh":"软件质量生态","parents":["static-analysis-testing-ecosystem"]},
+    {"value":"software-testing-ecosystem","en":"Software Testing Ecosystem","zh":"软件测试生态","parents":["static-analysis-testing-ecosystem"]},
+    {"value":"empirical-software-engineering-ecosystem","en":"Empirical Software Engineering Ecosystem","zh":"实证软件工程生态","parents":["devops_tooling"]}
   ]
 }

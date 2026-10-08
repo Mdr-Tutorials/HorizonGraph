@@ -1,0 +1,38 @@
+{
+  "id": "exuberant-ctags",
+  "name": "Exuberant Ctags",
+  "aliases": [
+    "Exuberant Ctags 代码索引器",
+    "Exuberant ctags"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-tag-index"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ctags-format"
+    }
+  ],
+  "summary": "多语言 Ctags 的历史实现与扩展格式来源。",
+  "description": "Exuberant Ctags 是多语言 Ctags 实现，读取源码中的语言对象并生成供 vi 类编辑器等消费者使用的索引。其官方资料保留 5.8 发布物和解析器扩展说明，本节点记录这一明确工件，而非把所有 ctags 命令都归给它。\n\n扩展 tag 格式在名称、文件和定位信息之外保存种类及作用域等字段，兼容客户端能据此提供更丰富导航。Universal Ctags 继承该实现并继续扩展解析器与字段，二者的选项和输出差异需要按具体实现核对。\n\n这里将其作为历史实现记录，不依据年代虚构统一 deprecated 日期。旧 tag 文件仍可能被兼容消费者读取；生成索引不执行完整语义检查，项目中的新语法和语言支持应核对该发布物的实际覆盖。\n\n## 参考\n\n- [Exuberant Ctags：官方项目](https://ctags.sourceforge.net/)\n- [Exuberant Ctags：解析器扩展](https://ctags.sourceforge.net/parser.html)\n- [Universal Ctags：格式演进](https://docs.ctags.io/en/latest/output-tags.html)",
+  "status": "historical",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://ctags.sourceforge.net/"
+}

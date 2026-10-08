@@ -1,0 +1,34 @@
+{
+  "id": "shell-completion",
+  "name": "Shell Completion",
+  "aliases": [
+    "Shell 补全",
+    "命令行补全",
+    "Tab 补全"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    }
+  ],
+  "summary": "依据输入上下文生成可插入的命令或参数候选。",
+  "description": "Shell 补全根据当前命令、光标位置和已输入参数生成候选，帮助用户输入命令名、路径、选项或特定业务值。候选生成和候选选择可以分别实现；按 Tab 触发只是常见交互方式，补全本身不代表候选一定有效或命令会执行成功。\n\nBash 的可编程补全使用命令相关的 completion specification 和函数结果；zsh 的补全系统允许按上下文配置行为；Fish 的 complete 命令为选项和值登记规则。因此补全脚本通常针对宿主 Shell 编写，不能仅凭文件扩展名就跨 Shell 加载。\n\n动态补全可能访问文件、运行程序或查询远程资源，应权衡延迟、权限和重复请求。补全还必须正确处理候选的引用与参数边界；它帮助构造输入，但不是代码智能分析、执行前校验或自动授权系统。\n\n## 参考\n\n- [GNU：Programmable Completion](https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion.html)\n- [Fish：Writing your own completions](https://fishshell.com/docs/current/completions.html)\n- [zsh：Completion System](https://zsh.sourceforge.io/Doc/Release/Completion-System.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion.html"
+}

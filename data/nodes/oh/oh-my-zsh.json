@@ -1,0 +1,43 @@
+{
+  "id": "oh-my-zsh",
+  "name": "Oh My Zsh",
+  "aliases": [
+    "Oh My Zsh 配置框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "zsh"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-startup-files",
+      "context": "通常从 .zshrc 加载框架，依据变量与插件数组组织交互会话的初始化。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-prompt",
+      "context": "启用主题时通过 zsh 提示符机制显示目录、版本控制等会话状态。"
+    }
+  ],
+  "summary": "管理zsh配置、插件与主题的社区框架。",
+  "description": "Oh My Zsh 是为 zsh 管理配置的开源框架，提供插件、辅助函数和主题的组织方式。它需要已有的 zsh 解释器，不是另一个 Shell，也不替代终端模拟器；不安装它仍可直接使用 zsh 自身的补全、提示符和脚本功能。\n\n框架通常从 zshrc 中加载，plugins 数组选择启用插件，主题和自定义目录又有独立设置。加载顺序决定相同名称定义的覆盖与行为，因此插件集不是所有用户必然具备的内核功能，也不能把某个插件调用的外部工具写成整个框架的硬依赖。\n\n主题和插件执行的是会话配置代码，可能查询项目状态、增加补全函数或改变按键绑定。实际性能、可靠性与兼容性取决于启用项和其外部条件；管理配置时应理解初始化位置和权限，而不把安装框架本身当作获得所有命令能力的保证。\n\n## 参考\n\n- [Oh My Zsh：项目主页](https://ohmyz.sh/)\n- [Oh My Zsh：Settings](https://github.com/ohmyzsh/ohmyzsh/wiki/Settings)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://ohmyz.sh/",
+  "abbreviation": "OMZ"
+}

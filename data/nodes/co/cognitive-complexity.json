@@ -1,0 +1,29 @@
+{
+  "id": "cognitive-complexity",
+  "name": "Cognitive Complexity",
+  "aliases": [
+    "认知复杂度",
+    "Sonar认知复杂度"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按控制流中断与嵌套规则估计相对理解负担。",
+  "description": "认知复杂度是 SonarSource 提出的源码结构指标，目标是反映理解控制流的相对困难。它对破坏线性阅读的控制构造计分，并对部分嵌套额外加分，而不是计算控制流图的独立路径数量。\n\n2023 年 1.7 版白皮书区分结构、嵌套和其他增量：switch 与其 case 总体按一个结构增量处理，递归环中的方法也可产生增量；普通方法入口本身不计分。语言补偿规则与分析器实现需要单独核对。\n\n它适合提示需要审查的控制结构，但分数并未直接测量具体开发者的阅读时间或全部业务知识负担。减少嵌套可能改善该指标，机械拆成许多难以命名的函数则不自动证明整体可维护性提高。\n\n## 参考\n\n- [SonarSource：1.7版认知复杂度白皮书](https://www.sonarsource.com/docs/CognitiveComplexity.pdf)\n- [实证研究：认知复杂度与可理解性](https://arxiv.org/abs/2007.12520)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.sonarsource.com/docs/CognitiveComplexity.pdf"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "glib",
+  "name": "GLib",
+  "aliases": [
+    "GLib 基础库"
+  ],
+  "type": "library",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "c",
+      "context": "GLib 核心公开接口与实现建立在 C 语言工具链上。"
+    }
+  ],
+  "summary": "为 C 应用提供主循环、数据类型与可移植基础能力。",
+  "description": "GLib 提供 C 程序常用的数据结构、字符串与 Unicode 工具、线程相关接口和主事件循环等基础能力。它是 GTK 等上层库的基础，同时也可以用于没有图形界面的服务或命令行程序。\n\n事件源附着于 GMainContext，主循环根据源的就绪状态与优先级派发回调。多个上下文可用于不同线程，但一个上下文同一时刻只能由一个线程运行；主线程上的同步等待可能阻塞输入处理和界面刷新。\n\nGLib 项目发行中还包含 GObject、GIO 等独立链接组件，图谱分别记录各自 API 职责与依赖。这里的 GLib 基础库不是控件工具包，也不直接定义窗口管理策略；应用仍要管理对象生命周期、线程访问和异步回调所属上下文。\n\n## 参考\n\n- [GLib 官方 API](https://docs.gtk.org/glib/)\n- [GLib 主事件循环](https://docs.gtk.org/glib/main-loop.html)",
+  "official_site": "https://docs.gtk.org/glib/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

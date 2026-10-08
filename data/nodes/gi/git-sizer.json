@@ -1,0 +1,41 @@
+{
+  "id": "git-sizer",
+  "name": "git-sizer",
+  "aliases": [
+    "Git仓库规模检查器"
+  ],
+  "type": "tool",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "git"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "repository-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-object-model",
+      "context": "遍历可达 commit、tree、blob 与 tag 对象并衡量仓库历史和目录结构规模。"
+    }
+  ],
+  "summary": "统计 Git 可达对象结构并提示规模风险。",
+  "description": "git-sizer 检查 Git 仓库的可达对象和历史结构，报告提交、树、blob、标签及引用等规模。它衡量的是 Git 仓库操作可能遇到的问题，源码的当前总行数不能替代这些对象统计。\n\n报告包括大 blob、路径深度、宽树和历史等结构信息，并可定位对应对象；输出等级用于提示需要调查的形态。统计范围取决于引用选择与可取得历史，只有工作区文件不足以复现完整结果。\n\n工具文档给出分拆项目或大文件处理等建议，但风险等级不等于性能测量或绝对禁止阈值。历史中的大文件即使在最新提交被删除仍可能保持可达，需要分别分析当前快照与历史对象。\n\n## 参考\n\n- [git-sizer：官方工具](https://github.com/github/git-sizer)\n- [git-sizer：说明与输出](https://github.com/github/git-sizer/blob/master/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/github/git-sizer"
+}

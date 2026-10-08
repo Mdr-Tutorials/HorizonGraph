@@ -1,0 +1,30 @@
+{
+  "id": "lack-of-cohesion-of-methods",
+  "name": "Lack of Cohesion of Methods",
+  "abbreviation": "LCOM",
+  "aliases": [
+    "方法缺乏内聚度",
+    "方法内聚缺失"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按方法与实例状态的关联估计类内聚缺失。",
+  "description": "LCOM 是一组以方法和实例状态关联刻画内聚缺失的度量。常见原始 CK 形式把不共享实例变量的方法对记为 P、共享的方法对记为 Q，取 max(|P|−|Q|,0)。\n\n后续 LCOM、LCOM*、Henderson-Sellers 形式及工具中的百分比定义并不相同。CK 提供原始方法对实现与归一化变体；SciTools 的 PercentLackOfCohesion 使用数据成员和方法交互的比例，不能与原始计数直接互换。\n\n不读取实例字段的方法可能提供有意义的类职责，因此 LCOM 不能单独判断一个类必须拆分。分析应说明访问器、静态状态、继承方法和间接字段访问如何处理，再结合职责与调用结构解释结果。\n\n## 参考\n\n- [CK：原始方法对公式](https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/metric/LCOM.java)\n- [SciTools：百分比LCOM定义](https://docs.scitools.com/metrics/PercentLackOfCohesion.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/metric/LCOM.java"
+}

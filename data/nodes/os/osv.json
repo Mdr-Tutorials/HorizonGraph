@@ -1,0 +1,43 @@
+{
+  "id": "osv",
+  "name": "Open Source Vulnerabilities",
+  "aliases": [
+    "开放源码漏洞数据库",
+    "OSV 数据库",
+    "OSV.dev"
+  ],
+  "type": "product",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "osv-schema",
+      "context": "聚合数据和 API 记录采用 OSV 交换格式描述包与漏洞范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vulnerability-matching",
+      "context": "查询服务根据包版本或提交身份找到对应的已知漏洞记录。"
+    }
+  ],
+  "summary": "聚合开放源码漏洞公告并支持包版本与提交查询。",
+  "description": "OSV.dev 是采用开放格式聚合开源软件漏洞信息的数据库与查询服务。它汇集多个生态的数据，允许按软件包名称和版本或 Git 提交查询已知公告。数据库服务、OSV 交换格式及 OSV-Scanner 客户端分别具有独立身份，不能把三者当成同一个扫描步骤。\n\n服务内记录使用 OSV Schema 描述来源标识、别名、受影响包及范围，相关数据源可以保留各自的数据库特有信息。查询结果需要解释公告别名与更新时间，避免将同一漏洞的多个编号重复计数。包生态和版本必须与真实组件一致，不能仅按通用名称查询。\n\n聚合范围由上游数据源及更新决定，空查询不证明软件无漏洞。公告范围并不自动确定具体部署中的可达性或可利用性，修改过的组件也可能需要额外证据。离线快照与在线服务的更新节奏不同，消费者应保留查询时间和数据来源。\n\n## 参考\n\n- [OSV：官方数据库与查询服务](https://osv.dev/)\n- [OSV：公告数据质量要求](https://google.github.io/osv.dev/data_quality.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://osv.dev/",
+  "abstraction_level": "application_tool",
+  "abbreviation": "OSV"
+}

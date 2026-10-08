@@ -1,0 +1,48 @@
+{
+  "id": "sonarqube-community-build",
+  "name": "SonarQube Community Build",
+  "aliases": [
+    "SonarQube 社区构建",
+    "SonarQube Community Edition"
+  ],
+  "type": "product",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "quality-profile",
+      "context": "使用按语言组织的规则配置执行项目分析。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "quality-gate",
+      "context": "检查 Community Build 支持的质量条件并记录状态。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "sonarscanner-cli",
+      "context": "在 Community Build 的适用扫描路径中提交项目分析结果。"
+    }
+  ],
+  "summary": "免费的自托管 Sonar 代码分析交付产品。",
+  "description": "SonarQube Community Build 是免费的自托管代码分析产品，拥有独立文档和发布路径。旧社区版名称保留为别名以支持检索，不能因此把它作为商业 Server 的全部 edition 功能集合。\n\n它为受支持语言执行静态分析，使用语言质量配置、项目度量和质量门，并可接入 CI 与 IDE 的 Connected Mode。项目分析、支持语言和管理功能应以 Community Build 文档为准。\n\n运行服务、扫描项目和执行测试属于不同职责。扫描器负责分析并提交结果，外部工具负责实际测试及覆盖采集；免费身份也不推导与商业版相同的分支、安全或组织治理能力。\n\n## 参考\n\n- [Sonar：Community Build 文档](https://docs.sonarsource.com/sonarqube-community-build)\n- [Sonar：Community Build 项目分析](https://docs.sonarsource.com/sonarqube-community-build/analyzing-source-code/overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-community-build"
+}

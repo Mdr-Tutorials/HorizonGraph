@@ -1,0 +1,33 @@
+{
+  "id": "shell-history",
+  "name": "Shell History",
+  "aliases": [
+    "Shell 历史记录",
+    "命令历史"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    }
+  ],
+  "summary": "保存并检索以往输入命令的交互机制。",
+  "description": "Shell 历史记录保存输入过的命令，支持搜索、编辑和重新调用。它记录的文本与命令实际执行的结果不是同一种资料；是否保存失败命令、重复命令或多行输入，由解释器选项及配置决定，不能把历史文件当作完整的审计日志。\n\nBash 使用内存历史列表和由 HISTFILE 指定的文件，历史规模与追加行为还有独立配置。记录时机与展开阶段有关系，因此历史内容不一定等于传给程序的最终参数；多个并发 Shell 会话对共享文件的写入也需要按具体实现处理。\n\n历史检索与自动建议可以提高重复操作效率，但重新执行前仍须核对当前目录、对象和权限。敏感信息可能随输入文字进入历史；删除一个历史条目并不能证明其他会话、日志或同步服务没有副本。终端录屏记录展示过程，命令历史主要记录输入，二者边界不同。\n\n## 参考\n\n- [GNU：Bash History Facilities](https://www.gnu.org/software/bash/manual/html_node/Bash-History-Facilities.html)\n- [Fish：Interactive use](https://fishshell.com/docs/current/interactive.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Bash-History-Facilities.html"
+}

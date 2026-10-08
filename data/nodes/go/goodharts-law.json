@@ -1,0 +1,34 @@
+{
+  "id": "goodharts-law",
+  "name": "Goodhart's Law",
+  "aliases": [
+    "古德哈特定律",
+    "Goodhart 定律"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "software-measurement",
+      "context": "以提交数等活动代理评价开发者生产力时，控制或奖励压力可能改变提交拆分行为，使测量结果与目标属性脱离；需核查具体激励与行为。"
+    }
+  ],
+  "summary": "控制压力可能改变代理指标与目标之间的关系。",
+  "description": "古德哈特定律源于货币管理讨论：原先观察到的统计关系，在被施加控制压力后可能失去稳定性。这是关于制度和行为变化的经验警示，不是断言任何测量一旦用于目标就必然失效的数学定理。\n\n后续研究把代理优化的失效区分为不同机制，包括噪声下的极端选择、超出原适用范围以及主动改变系统。应用到软件度量时，需要指出实际机制；例如只奖励提交次数，可能促使人为拆分提交，使提交数偏离有价值的完成工作。\n\n该例是软件管理场景的类比解释，不能从原货币论文直接推导普遍的人员绩效结论。保留质量与结果证据、检查行为变化和重新验证代理，可以帮助发现风险；增加指标数量本身也不保证消除误用。\n\n## 参考\n\n- [RBA 研究：统计规律与控制压力的原始语境](https://www.rba.gov.au/publications/rdp/1983/pdf/rdp8301.pdf)\n- [Goodhart 效应的不同失效机制](https://arxiv.org/abs/1803.04585)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.rba.gov.au/publications/rdp/1983/pdf/rdp8301.pdf"
+}

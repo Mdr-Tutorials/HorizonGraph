@@ -1,0 +1,28 @@
+{
+  "id": "environment-variable",
+  "name": "Environment Variable",
+  "aliases": [
+    "环境变量"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    }
+  ],
+  "summary": "进程携带并向子进程传递的命名配置数据。",
+  "description": "环境变量是进程运行环境中的命名值，可影响命令搜索、区域设置和应用配置。POSIX 将环境表示为 name=value 形式的字符串集合；它是进程获得的一份配置数据，不是所有进程共享、任一修改都会同步的全局字典。\n\nShell 语言中的变量与环境变量有交集但不等同。Bash 的 export 控制值进入外部命令的环境，命令前的赋值还可只作用于该次调用；新启动程序继承构造出的环境，而子进程自行修改环境通常不会直接改写父进程的配置。\n\n名称大小写、编码和持久化方式受平台与接口影响，PATH 与区域变量也有特定解释规则。把值写进启动文件只是在未来初始化时再执行设置，并不让已运行进程自动获得更新；环境中的敏感值也可能被子进程或诊断工具读取，不能当作独立的秘密存储系统。\n\n## 参考\n\n- [The Open Group：Environment Variables](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap08.html)\n- [GNU：Environment](https://www.gnu.org/software/bash/manual/html_node/Environment.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap08.html"
+}

@@ -4,22 +4,39 @@
   "aliases": [],
   "type": "tool",
   "ecosystems": [
-    "devops_tooling"
+    "devops_tooling",
+    "shell-cli-ecosystem"
   ],
   "domains": [
-    "devops"
+    "devops",
+    "command-line-tools"
   ],
   "abstraction_level": "application_tool",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "shell-prompt"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "toml",
+      "context": "按项目文档用 starship.toml 配置模块、格式与显示条件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-startup-files",
+      "context": "从支持宿主的配置入口加载对应初始化代码，使宿主在提示阶段调用 Starship。"
     }
   ],
-  "summary": "Rust 写的极速可定制提示符，全 Shell 通用。",
+  "summary": "为多个Shell生成可配置会话提示符的工具。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 2,
-  "official_site": "https://starship.rs"
+  "official_site": "https://starship.rs",
+  "description": "Starship 是生成 Shell 提示符的工具，为文档列出的多个 Shell 提供初始化适配。它显示目录、版本控制、语言工具链和上次执行状态等信息，既不是新的 Shell 解释器，也不是终端模拟器；支持范围须按实际宿主适配文档判断，不能概括为任意 Shell 都能直接使用。\n\n用户通常在对应 Shell 的启动入口加载 Starship 初始化代码，并用 TOML 配置模块、格式和显示条件。模块可以探测项目文件或查询工具状态，是否启用以及输出方式都取决于配置；用 Rust 实现不表示运行发布二进制时还必须安装 Rust 工具链。\n\n部分主题符号需要适合的字体，颜色与显示宽度则受终端能力影响。状态探测和自定义模块会增加提示符生成工作，应根据实际项目控制开销；安装 Starship 不改变脚本语言规则，也不会让现有终端自动具有所有字体和显示功能。\n\n## 参考\n\n- [Starship：Guide](https://starship.rs/guide/)\n- [Starship：Configuration](https://starship.rs/config/)"
 }

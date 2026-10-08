@@ -1,0 +1,34 @@
+{
+  "id": "shell-startup-files",
+  "name": "Shell Startup Files",
+  "aliases": [
+    "Shell 启动文件",
+    "Shell 初始化文件",
+    "Shell 配置文件"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    }
+  ],
+  "summary": "按Shell模式加载并执行初始化配置的文件机制。",
+  "description": "Shell 启动文件是在特定启动条件下读取的配置脚本或资料，用于建立环境、交互功能和工具适配。是否登录、是否交互、解释器的名字与显式选项都可能影响加载路径；dotfiles 是常见文件形态，不是所有 Shell 共用的初始化标准。\n\nBash 的 profile、bashrc 与非交互 BASH_ENV 路径有不同条件；zsh 依据 zshenv、zprofile、zshrc、zlogin 等顺序组合。PowerShell 的 profile 又按用户与宿主区分。要定位配置问题，应先确认实际可执行程序与启动模式，再核对对应文件，而非同时向所有文件追加同样命令。\n\n这些文件可能执行代码，而不仅是保存键值。交互主题、补全和目录钩子应放在实际需要的路径，避免污染脚本输出或重复修改 PATH。配置变更通常只影响之后加载它的会话，已运行的父进程和子进程不会自动同步得到所有更新。\n\n## 参考\n\n- [GNU：Bash Startup Files](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files)\n- [zsh：Files](https://zsh.sourceforge.io/Doc/Release/Files.html)\n- [Microsoft：about_Profiles](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files"
+}

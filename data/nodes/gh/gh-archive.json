@@ -1,0 +1,29 @@
+{
+  "id": "gh-archive",
+  "name": "GH Archive",
+  "aliases": [
+    "GitHub Archive",
+    "GitHub公开事件归档"
+  ],
+  "type": "product",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    }
+  ],
+  "summary": "按时间保存 GitHub 公开活动事件的数据档案。",
+  "description": "GH Archive 保存 GitHub 公开时间线中的活动事件，并提供按小时组织的 JSON 归档及查询入口。它保留的是事件流，不能等同于全部仓库源码、完整 Git 提交对象或任意时刻的 API 实体快照。\n\n仓库挖掘可用事件类型、仓库标识和时间字段研究公开活动。平台事件结构与采集接口会随时间变化，分析需要固定归档时间范围并核对字段；不能假设所有历史年份具有相同类型及覆盖条件。\n\n私有活动、未发出事件的变化和采集缺口不会由该档案自动补全。事件中的账号与提交作者身份也可能不同；复现研究应保存查询、数据日期和去重规则，不由事件次数推导人员投入或全平台规模。\n\n## 参考\n\n- [GH Archive：数据与访问](https://www.gharchive.org/)\n- [GH Archive：官方采集项目](https://github.com/igrigorik/gharchive.org)\n- [GitHub：事件 API 与覆盖范围](https://docs.github.com/en/rest/activity/events)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.gharchive.org/"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "benchmark-experimental-design",
+  "name": "Software Benchmark Experimental Design",
+  "aliases": [
+    "软件基准实验设计",
+    "性能基准实验设计"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "measurement-scale",
+      "context": "在定义计时、吞吐和聚合结果时说明单位、比例及可比较关系。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "measurement-validity",
+      "context": "验证计时范围与工作负载是否支持所声称的质量或性能解释。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "measurement-reliability",
+      "context": "通过适当重复和状态控制评估结果稳定性。"
+    }
+  ],
+  "summary": "规定工作负载、可比条件、重复与结果解释。",
+  "description": "软件基准实验设计把待比较系统、质量目标、输入工作负载、测量方法和执行协议写成可复核方案。当前 SIGSOFT 已有专门 Benchmarking 标准；2021 年论文提出该标准缺口是历史描述，不能继续当作当前状态。\n\n计数器比较需先核查相同源码快照下实际纳入的文件与计数口径，再固定版本、编译选项、线程、硬件、文件系统和缓存场景。重复次数与持续时间应足以观察不稳定性，同时保存原始结果和配置，而非只发布最快的一次。\n\n公平比较要求基线配置合理、工作负载与目标任务有关，且他人能独立核查。基准排名只描述所测条件；测试样本选择、系统噪声及不确定性需与性能差异一起解释，不能由某台机器上的胜出推导普遍最快。\n\n## 参考\n\n- [SIGSOFT：软件基准实验标准](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Benchmarking.md)\n- [Hasselbring：软件工程基准实验的证据性质](https://arxiv.org/pdf/2105.00272)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Benchmarking.md"
+}

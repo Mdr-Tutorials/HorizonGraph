@@ -1,0 +1,49 @@
+{
+  "id": "wetty",
+  "name": "WeTTY",
+  "aliases": [
+    "Web + TTY",
+    "Wetty"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs",
+      "context": "服务端作为 Node.js 应用运行。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "xtermjs",
+      "context": "浏览器界面采用 xterm.js 的终端仿真组件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "websocket",
+      "context": "以双向连接传送浏览器与服务端会话的终端输入输出。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssh",
+      "context": "配置 SSH 会话时，由服务端调用连接实现并处理远端登录参数。"
+    }
+  ],
+  "summary": "以 Node.js 和 xterm.js 提供浏览器中的终端访问。",
+  "description": "WeTTY 是提供浏览器终端访问的 Node.js 应用，名字来自 Web 与 TTY。它以 xterm.js 显示终端内容，服务端把网页交互接到相应登录程序或命令行会话；网页终端仿真与实际会话建立分别完成。\n\n项目支持 SSH 主机、用户、端口、配置与已知主机文件等选项，并以 WebSocket 传输交互数据。具体启动 login、SSH 或指定命令的行为受身份与配置影响，不能把所有访问都描述为同一种远端连接，也不能认为 xterm.js 本身执行 SSH 认证。\n\nHTTP 前端、HTTPS 保护、SSH 服务端信任与用户授权是分层问题。部署文档建议使用反向代理提供 HTTPS 等能力，宿主还应限制服务权限并核查访问控制。安装时所需 Node.js 运行环境和可选容器部署路径分别理解，容器本身不证明每个会话已获得安全隔离。\n\n## 参考\n\n- [WeTTY：官方项目](https://github.com/butlerx/wetty)\n- [WeTTY：项目维护的说明文件](https://github.com/butlerx/wetty/tree/main/docs)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/butlerx/wetty"
+}

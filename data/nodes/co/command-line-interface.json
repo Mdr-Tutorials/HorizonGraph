@@ -1,0 +1,39 @@
+{
+  "id": "command-line-interface",
+  "name": "Command-line Interface",
+  "aliases": [
+    "命令行界面"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "exit-status",
+      "context": "面向脚本的命令行程序用退出状态向调用方报告调用结果；各程序的非零值含义依其接口约定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "常见命令行工具通过 stdin 接收数据、stdout 输出结果、stderr 输出诊断，具体工具可另外提供文件或其他接口。"
+    }
+  ],
+  "summary": "通过命令、参数和输入输出约定操作程序的界面。",
+  "description": "命令行界面以命令名、选项和位置参数表达用户操作。它既可以由人逐次调用，也能作为脚本和流水线的程序接口；命令解析、帮助信息、错误诊断与返回状态共同决定其可用性。Shell 提供命令组合语言，而单个程序也可以直接提供 CLI，两者不是同一身份。\n\n选项可能携带值，位置参数可能代表文件或其他操作对象，具体顺序和缩写由程序的接口契约决定。POSIX 给标准工具建立参数约定，Click 等库帮助实现参数转换与验证；长选项、子命令和交互提示则应按各工具文档理解，不能从一个工具的写法推断全部 CLI。\n\n自动化通常需要把业务数据、诊断信息和退出状态分别处理，避免从面向人的彩色输出反推成功。命令行本身不要求有图形终端，也不必要求持续的交互会话；重定向或 CI 环境中的调用仍然使用相同的参数入口，但程序可能改变分页、颜色或提示行为。\n\n## 参考\n\n- [The Open Group：Utility Conventions](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap12.html)\n- [Click：Parameters](https://click.palletsprojects.com/en/stable/parameters/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap12.html",
+  "abbreviation": "CLI"
+}

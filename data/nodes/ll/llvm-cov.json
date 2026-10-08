@@ -1,0 +1,49 @@
+{
+  "id": "llvm-cov",
+  "name": "llvm-cov",
+  "aliases": [
+    "LLVM 覆盖率分析工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "llvm-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coverage-instrumentation",
+      "context": "分析与二进制覆盖映射匹配的运行 profile。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "line-coverage",
+      "context": "show 和 report 根据覆盖映射展示源码行执行触达。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "branch-coverage",
+      "context": "按编译器生成的分支区域与计数展示未触达结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "modified-condition-decision-coverage",
+      "context": "源码以相应 MC/DC 插桩编译后，使用 show-mcdc 展示独立影响证据。"
+    }
+  ],
+  "summary": "展示、汇总和导出 LLVM 插桩程序覆盖数据。",
+  "description": "llvm-cov 是 LLVM 覆盖分析命令，支持源码覆盖的 show、report 和 export，也提供 gcov 风格数据的兼容入口。不同模式使用不同的数据产物，不能混为一套通用原始文件。\n\n源码覆盖路径通常由 Clang 生成覆盖映射与运行 profile，再由 llvm-profdata 合并 profile，交给 llvm-cov 与相应二进制分析。工具可展示行、区域、分支及在额外插桩下的 MC/DC，并导出 JSON 或 LCOV。\n\n模板、宏展开、路径重映射与多个对象文件需按实际构建处理。原始 profile、合并数据和二进制版本不匹配会损害报告可信度；导出到其他格式也可能损失较细粒度信息。\n\n## 参考\n\n- [LLVM：llvm-cov 命令](https://llvm.org/docs/CommandGuide/llvm-cov.html)\n- [Clang：源码覆盖](https://clang.llvm.org/docs/SourceBasedCodeCoverage.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://llvm.org/docs/CommandGuide/llvm-cov.html"
+}

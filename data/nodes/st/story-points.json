@@ -1,0 +1,32 @@
+{
+  "id": "story-points",
+  "name": "Story Points",
+  "display_primary": "故事点",
+  "display_secondary": "Story Points",
+  "aliases": [
+    "故事点",
+    "用户故事点",
+    "相对工作量点",
+    "敏捷故事点"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按团队基准比较待办条目总工作量的相对尺度。",
+  "description": "故事点表达产品待办条目相对于团队已理解基准的工作量。估计会综合工作量、风险、不确定性和复杂度，并考虑把条目完成所需的活动；它不是只给代码实现难度打分，也不是功能点标准的计数单位。\n\n团队比较已估算条目建立尺度，例如判断待估项介于两个已理解的条目之间。Planning Poker 可以采用这种尺度，但故事点并不要求某一种会议流程或固定牌面序列；有意义的点数依赖共享的完成条件和基准。\n\n故事点没有普遍固定的人时换算率。历史完成点数可以支持同一团队的计划推断，人员、尺度或完成条件变化时需要重新审视；直接比较不同团队的点数或把速度设为绩效目标会扭曲其解释。\n\n## 参考\n\n- [Mike Cohn：故事点的工作量与使用边界](https://www.mountaingoatsoftware.com/agile/story-points)\n- [Mike Cohn：故事点的定义](https://www.mountaingoatsoftware.com/agile/what-are-story-points)\n- [Mike Cohn：Planning Poker 的故事点基准](https://www.mountaingoatsoftware.com/agile/the-best-way-to-establish-a-baseline-when-playing-planning-poker)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.mountaingoatsoftware.com/agile/story-points"
+}

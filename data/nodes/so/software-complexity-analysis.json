@@ -1,0 +1,49 @@
+{
+  "id": "software-complexity-analysis",
+  "name": "Software Complexity Analysis",
+  "aliases": [
+    "软件复杂度分析",
+    "代码复杂度分析"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclomatic-complexity",
+      "context": "分析函数控制结构时使用线性独立路径数描述一类复杂性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "npath-complexity",
+      "context": "分析顺序与嵌套分支组合时采用无环路径计数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cognitive-complexity",
+      "context": "分析理解控制流的结构负担时采用规则化的认知复杂度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "abc-metric",
+      "context": "采用ABC的工具将赋值、调用分支和条件数量作为源码活动量的补充指标。"
+    }
+  ],
+  "summary": "用明确结构指标分析程序控制与理解负担的方法。",
+  "description": "软件复杂度分析针对代码控制结构、元素依赖及理解负担选择度量并解释结果。它没有一个能覆盖所有维度的通用分数；函数的分支结构、类间关系和维护者理解程序的困难分别需要具体定义。\n\n圈复杂度关注独立控制流路径，NPath 关注无环路径组合，认知复杂度按理解控制结构的规则计分。同样数量的判断语句采用顺序排列或多层嵌套，会在不同指标上呈现不同结果。\n\n这里的复杂性不等同算法随输入规模增长的时间或空间复杂度。比较源码时应注明分析粒度、语言、工具规则与版本；整个项目分数的总和还受代码规模影响，不能直接作为缺陷数或人员能力的读数。\n\n## 参考\n\n- [NIST：结构化测试与控制流复杂度](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication500-235.pdf)\n- [SonarSource：认知复杂度定义](https://www.sonarsource.com/docs/CognitiveComplexity.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication500-235.pdf"
+}

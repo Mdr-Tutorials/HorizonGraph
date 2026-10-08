@@ -1,0 +1,34 @@
+{
+  "id": "termcap",
+  "name": "termcap",
+  "aliases": [
+    "旧式终端能力描述"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminfo",
+      "context": "现代 ncurses 的 termcap 兼容接口以已编译 terminfo 条目模拟旧访问行为；传统实现可直接读取 termcap。"
+    }
+  ],
+  "summary": "以文本条目和短能力名称描述终端，并保留兼容接口。",
+  "description": "termcap 是 Unix 传统中的终端能力文本描述与访问接口体系。数据库条目记录终端名字及布尔、数值和字符串能力，应用查询后产生对应控制输出。这里关注其格式与兼容契约，GNU termcap 库或 ncurses 的兼容层属于具体实现，不与格式身份混写。\n\n传统接口通过 tgetent、tgetflag、tgetnum、tgetstr 等读取能力，tgoto 与 tputs 协助生成或输出操作字符串。历史实现对短能力名、条目容量、调用方缓冲区等存在约束。现代 ncurses 可以用 terminfo 数据模拟这些接口，因此调用 termcap API 不证明系统正在读取纯文本 termcap 文件。\n\ntermcap 对理解旧软件和兼容移植仍有价值，ncurses 文档建议新程序采用现行接口而非依赖旧兼容行为。termcap 与 terminfo 可描述相近操作，但参数化格式和扩展能力不完全相同。转换结果要检查长度和语义，不能把二者文件或字符串直接当作完全可互换。\n\n## 参考\n\n- [GNU：Termcap 原始说明](https://www.gnu.org/software/termutils/manual/termcap-1.3/html_node/termcap_1.html)\n- [ncurses：termcap 兼容层及边界](https://invisible-island.net/ncurses/man/curs_termcap.3x.html)\n- [ncurses：terminfo 能力描述格式](https://invisible-island.net/ncurses/man/terminfo.5.html)",
+  "status": "historical",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.gnu.org/software/termutils/manual/termcap-1.3/html_node/termcap_1.html"
+}

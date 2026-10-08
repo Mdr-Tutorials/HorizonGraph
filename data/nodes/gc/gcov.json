@@ -1,0 +1,49 @@
+{
+  "id": "gcov",
+  "name": "gcov",
+  "aliases": [
+    "GCC 覆盖率分析工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coverage-instrumentation",
+      "context": "读取由 GCC 覆盖编译选项生成的结构与执行计数数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "line-coverage",
+      "context": "将运行计数展示到对应源码行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "path-coverage",
+      "context": "具备对应编译器版本与 fpath-coverage 插桩时报告素路径覆盖。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "modified-condition-decision-coverage",
+      "context": "具备对应条件插桩时报告基本条件对决策结果的独立影响。"
+    }
+  ],
+  "summary": "分析 GCC 插桩程序产生的代码执行数据。",
+  "description": "gcov 是 GCC 配套覆盖分析工具，读取编译与运行阶段产生的数据，显示源码行执行计数及按选项启用的分支信息。程序必须先用匹配的覆盖编译和链接选项构建并实际执行。\n\n当前 GCC 文档还提供条件独立影响与素路径分析选项，分别需要相应编译插桩。素路径是最大简单路径，不是任意循环次数的全部路径；旧版 gcov 不应被默认赋予当前开发文档的全部能力。\n\n优化、内联及共享源码行会影响映射和计数，异常退出也可能使运行数据未完整写出。分析应配对源码、对象文件与执行数据并记录编译选项，不能把未生成数据当成已经测试通过。\n\n## 参考\n\n- [GCC：gcov 概述](https://gcc.gnu.org/onlinedocs/gcc/Gcov.html)\n- [GCC：gcov 命令与覆盖准则](https://gcc.gnu.org/onlinedocs/gcc/Invoking-Gcov.html)\n- [GCC：优化与覆盖映射](https://gcc.gnu.org/onlinedocs/gcc/Gcov-and-Optimization.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://gcc.gnu.org/onlinedocs/gcc/Gcov.html"
+}

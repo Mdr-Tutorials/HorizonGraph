@@ -1,0 +1,29 @@
+{
+  "id": "software-coupling",
+  "name": "Software Coupling",
+  "aliases": [
+    "软件耦合",
+    "模块耦合"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    }
+  ],
+  "summary": "描述软件元素之间依赖与相互作用的结构属性。",
+  "description": "软件耦合描述模块、类或其他软件元素之间的依赖和相互作用。成员调用、类型引用、共享状态和接口契约会产生不同形式的联系；耦合不是一个无需定义粒度的统一计数。\n\nCBO 关注类级被耦合对象，Ca 与 Ce 分别统计选定边界上的传入和传出依赖。静态引用集合、运行时交互频次以及版本历史中共同修改关系表达不同事实，不能因都叫耦合就合并为同一指标。\n\n设计评审通常关注依赖是否符合边界和稳定接口。完全消除协作不是目标；公开接口与内部细节的依赖风险也不同，需要结合实际职责、变更及运行约束判断哪些联系应被削减。\n\n## 参考\n\n- [Microsoft：类耦合的使用关系](https://learn.microsoft.com/en-us/visualstudio/code-quality/code-metrics-class-coupling?view=visualstudio)\n- [Martin：依赖方向与设计度量](https://linux.ime.usp.br/~joaomm/mac499/arquivos/referencias/oodmetrics.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://learn.microsoft.com/en-us/visualstudio/code-quality/code-metrics-class-coupling?view=visualstudio"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "construct-validity",
+  "name": "Construct Validity",
+  "aliases": [
+    "构念效度",
+    "结构效度"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "software-measurement",
+      "context": "设计生产力等软件度量时必须定义构念并验证指标含义，不能直接把活动数量认作生产力。"
+    }
+  ],
+  "summary": "检验观测指标是否表达所声明的理论构念。",
+  "description": "构念效度考察观测方式与理论构念的对应关系，例如所谓开发者生产力到底包含哪些能力与结果。构念需要先有清楚定义，随后说明各指标为何与它有关，以及怎样与相邻但不同的属性区分。\n\n软件规模、复杂度和可维护性可能相关，却不是同一个构念。用代码行数替代复杂度，或用提交数替代生产力，都可能混入语言、工作分工和提交策略；应检查内容覆盖、相关指标的收敛和不同构念的区别。\n\n构念效度需要理论与数据共同支持。多个指标不自动形成有效量表，因子分析或相关性也不是充分证明；不同群体、项目和任务可能有不同测量含义，研究需披露假设并限定结论。\n\n## 参考\n\n- [软件工程度量理论与测量性质](https://arxiv.org/html/2406.14494v1)\n- [ACM SIGSOFT 实证软件工程标准](https://github.com/acmsigsoft/EmpiricalStandards)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://arxiv.org/html/2406.14494v1"
+}

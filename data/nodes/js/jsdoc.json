@@ -1,0 +1,39 @@
+{
+  "id": "jsdoc",
+  "name": "JSDoc",
+  "aliases": [
+    "JSDoc 文档生成器"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "读取 JavaScript 源码及文档注释，形成相应 API 文档。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "name-resolution",
+      "context": "文档 namepath 解析用于定位所描述的模块及符号，区别于运行语言的全部名称绑定。"
+    }
+  ],
+  "summary": "从 JavaScript 文档注释生成 API 资料的工具。",
+  "description": "JSDoc 是 JavaScript API 文档生成工具，读取与源码相邻的文档注释，生成模块、类、函数、参数及返回值等说明。注释通常以特定文档注释起始序列和标签表达，普通注释并不自动成为 API 文档条目。\n\n类型表达式、namepath 和标签帮助描述源码接口，模板与插件可以调整输出。TypeScript 也读取部分 JSDoc 类型标签为 JavaScript 提供编辑和检查信息，Tern 的文档插件亦能利用相应注释；这些是各宿主对注释的使用方式。\n\nJSDoc 工具本身不等于 TypeScript 或 Flow 类型检查器，也不会为外部数据自动插入运行校验。不同消费者支持的标签集合和类型语义存在差异，文档注释正确并不证明源码实现或输出资料始终与实际行为同步。\n\n## 参考\n\n- [JSDoc：入门与生成职责](https://jsdoc.app/about-getting-started)\n- [JSDoc：类型表达式](https://jsdoc.app/tags-type)\n- [TypeScript：支持的 JSDoc 类型](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://jsdoc.app/about-getting-started"
+}

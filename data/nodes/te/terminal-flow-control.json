@@ -1,0 +1,39 @@
+{
+  "id": "terminal-flow-control",
+  "name": "Terminal Flow Control",
+  "aliases": [
+    "终端流量控制",
+    "XON/XOFF"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "termios",
+      "context": "在 TTY 路径通过 IXON、IXOFF 及 START/STOP 字符配置软件流控；硬件握手需另核对平台选项。"
+    }
+  ],
+  "summary": "协调终端字符传输速度，并区分软件控制和设备握手。",
+  "description": "终端流量控制用于协调发送端与接收端的字符传输，避免较慢接收路径持续积压。它可以是软件 START/STOP 字符处理，也可以是串行设备的硬件握手。这里讨论 TTY 输入输出与设备传输行为，和同步输出保持上一完整画面的渲染协议分别定义。\n\n在常见软件流控设置中，IXON 使终端驱动处理输入的停止与恢复字符，传统配置常对应 Ctrl-S 和 Ctrl-Q。IXOFF 与其他标志则控制不同方向或条件，不能把二者当作同一个开关。队列清除、输出排空以及暂停恢复有各自接口和数据保留语义。\n\n原始模式或应用接管按键后，这些字符是否继续作为流控动作取决于具体设置。PTY、串口和远程传输的缓存路径也不完全相同，流控不会自动解决所有下游背压。调试看似冻结的终端时应检查传输设置及队列，而不是把每次无刷新都归因于应用死锁。\n\n## 参考\n\n- [GNU C Library：TTY 输入输出队列与流控](https://sourceware.org/glibc/manual/latest/html_node/I_002fO-Queues.html)\n- [Linux man-pages：termios 接口与输入模式](https://man7.org/linux/man-pages/man3/termios.3.html)\n- [Linux 内核：N_TTY 输入处理](https://docs.kernel.org/driver-api/tty/n_tty.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://sourceware.org/glibc/manual/latest/html_node/I_002fO-Queues.html"
+}

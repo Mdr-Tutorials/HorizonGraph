@@ -1,0 +1,29 @@
+{
+  "id": "software-case-study",
+  "name": "Software Engineering Case Study",
+  "aliases": [
+    "软件工程案例研究",
+    "软件项目案例研究"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    }
+  ],
+  "summary": "在真实情境中深入研究有边界的软件工程案例。",
+  "description": "软件工程案例研究在真实情境中深入研究特定现象，尤其适合现象与环境边界难以清楚分离的问题。案例可以是项目、团队或组织，但必须说明研究边界、分析单位、选择理由和观察期间。\n\n证据可来自访谈、文档、现场观察和工件记录，需给出从资料到结论的分析路径。多个资料来源的互证和充分情境描述有助于评估可信度；少量情境丰富的仓库可适用案例研究，大量仓库的浅层自动统计通常属于仓库挖掘。\n\n案例研究可以支持机制解释、理论发展和情境迁移，但不自动提供总体比例或随机化因果证据。一个工具演示不因写作中称为案例就成为系统研究；单案例的价值应按研究问题和证据深度判断。\n\n## 参考\n\n- [SIGSOFT：案例研究标准](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/CaseStudy.md)\n- [实证软件工程标准研究报告](https://arxiv.org/abs/2010.03525)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/CaseStudy.md"
+}

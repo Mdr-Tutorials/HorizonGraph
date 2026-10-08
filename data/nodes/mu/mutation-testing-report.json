@@ -1,0 +1,43 @@
+{
+  "id": "mutation-testing-report",
+  "name": "Mutation Testing Report",
+  "aliases": [
+    "变异测试报告",
+    "突变测试报告"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "surviving-mutant",
+      "context": "保存存活或未覆盖的变异位置与执行状态，便于逐项审查。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "equivalent-mutant",
+      "context": "在人工或工具另行确认时记录等价说明及其依据，不能从存活状态直接推断。"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "mutation-score",
+      "context": "记录检测数量、有效分母及工具采用的聚合公式。"
+    }
+  ],
+  "summary": "记录变异位置、执行状态、判定与得分口径。",
+  "description": "变异测试报告把变异位置、算子、测试执行状态和聚合指标组织成可审查记录。报告应标识源码与测试版本，让读者能从总分定位具体存活或未覆盖改动。\n\n检出、存活、未覆盖、超时、编译错误与运行错误承担不同含义。保存这些原始分类有助于区分测试缺口、不可执行变异与环境故障，而不只显示一个绿色或红色得分。\n\n等价判定需要额外说明及依据，不能从存活状态自动生成。汇总时同时注明有效分母、算子与过滤规则；报告描述本次运行证据，不代表已经证明软件整体正确。\n\n## 参考\n\n- [Stryker：变异状态与得分公式](https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/)\n- [PIT：变异执行与状态](https://pitest.org/quickstart/basic_concepts/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/"
+}

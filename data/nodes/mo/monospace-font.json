@@ -1,0 +1,29 @@
+{
+  "id": "monospace-font",
+  "name": "Monospace Font",
+  "aliases": [
+    "等宽字体",
+    "固定宽度字体",
+    "定宽字体"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    }
+  ],
+  "summary": "以固定推进宽度组织字形的字体设计类别。",
+  "description": "等宽字体以固定的布局推进宽度组织字形，常用于代码和表格对齐。相同推进宽度并不意味着所有字形的轮廓都一样宽：细窄字母、空格和宽形字母可以具有不同的可见范围。\n\n字体文件用水平度量等数据表达推进量，编程字体也可以在保持逻辑位置的前提下提供连字。CSS 的 monospace 是通用字体家族，由用户代理匹配实际字体，名称本身不保证该字体覆盖所有字符。\n\n终端的单元格布局还涉及 CJK 宽字符、组合序列和字体回退。选用等宽主字体并不能自动保证全部后备字体或 emoji 的度量一致，终端列宽与字体的像素推进量应分别描述。\n\n## 参考\n\n- [W3C：monospace 通用字体家族](https://www.w3.org/TR/css-fonts-4/#monospace)\n- [Microsoft：水平推进量 hmtx](https://learn.microsoft.com/en-us/typography/opentype/spec/hmtx)\n- [JetBrains Mono：等宽设计与编程连字](https://www.jetbrains.com/lp/mono/)",
+  "official_site": "https://www.w3.org/TR/css-fonts-4/#monospace",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

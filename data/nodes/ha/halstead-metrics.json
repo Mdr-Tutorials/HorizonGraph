@@ -1,0 +1,44 @@
+{
+  "id": "halstead-metrics",
+  "name": "Halstead Metrics",
+  "aliases": [
+    "Halstead度量",
+    "霍尔斯特德度量"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "halstead-volume",
+      "context": "从操作符与操作数的总次数和词汇量推导体积。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "halstead-difficulty",
+      "context": "从不同操作符及操作数复用比例推导难度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "halstead-effort",
+      "context": "将模型体积与难度相乘推导工作量指标。"
+    }
+  ],
+  "summary": "由操作符和操作数计数推导规模与难度指标的方法。",
+  "description": "Halstead 度量把源码划分为操作符和操作数，统计不同种类数 n1、n2 与出现总次数 N1、N2。它用这些词法计数推导程序长度、词汇量、体积、难度和工作量等量，关注的输入与控制流图指标不同。\n\n程序长度 N=N1+N2，词汇量 n=n1+n2；体积 V=N·log2(n)，难度 D=(n1/2)·(N2/n2)，工作量 E=D·V。关键字、类型、调用、常量和标点如何归类需按语言与工具定义，不能只凭字符数推导。\n\n这些量适合记录同一计数口径下的源码特征。历史公式中的开发时间和预计错误数属于经验模型推算，不能由词法统计直接证明真实工时、缺陷数量或个人生产率；空输入和零分母也需要实现明确处理。\n\n## 参考\n\n- [Verifysoft：CMT的Halstead定义](https://www.verifysoft.com/en_halstead_metrics.html)\n- [Radon：基础计数与公式](https://radon.readthedocs.io/en/latest/intro.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.verifysoft.com/en_halstead_metrics.html"
+}

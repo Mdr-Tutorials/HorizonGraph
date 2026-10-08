@@ -1,0 +1,34 @@
+{
+  "id": "git-mailmap",
+  "name": "Git Mailmap",
+  "aliases": [
+    "Git 身份映射",
+    ".mailmap"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git",
+      "context": "Git 历史显示与汇总命令共享的身份映射机制"
+    }
+  ],
+  "summary": "归一化历史输出中的作者及提交者姓名和邮箱。",
+  "description": "Git Mailmap 将提交中使用的姓名或邮箱映射到用于显示的规范身份。仓库根目录 `.mailmap` 是常见入口，也可由配置指定文件或 blob；规则可只替换姓名、只替换邮箱，或匹配二者后同时替换。\n\n支持该机制的日志、blame 和 shortlog 等命令可据此展示或分组历史身份。映射不重写已有提交对象、提交哈希或原始元数据，也不修改代码；是否启用及哪份映射生效，应随着提取命令和分析快照记录。\n\n同一人的多个邮箱可能造成贡献者数量膨胀，不同人误合并则造成相反偏差。Mailmap 是维护者提供的身份整理依据，不是身份证明或绩效评价；分析应保留原始与映射值，特别区分 author、committer、机器人和共同创作记录。\n\n## 参考\n\n- [Git mailmap 手册](https://git-scm.com/docs/gitmailmap)\n- [Git shortlog 手册](https://git-scm.com/docs/git-shortlog)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://git-scm.com/docs/gitmailmap"
+}

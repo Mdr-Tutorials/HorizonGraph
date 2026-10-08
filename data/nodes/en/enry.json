@@ -1,0 +1,44 @@
+{
+  "id": "enry",
+  "name": "go-enry",
+  "aliases": [
+    "enry library",
+    "enry语言识别库",
+    "Go Enry"
+  ],
+  "type": "library",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "source-language-detection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vendored-code-exclusion",
+      "context": "库的 IsVendor 等过滤助手依据已知路径模式支持调用方排除外部内容；是否纳入由调用方选择。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "generated-code-exclusion",
+      "context": "库的 IsGenerated 过滤助手向调用方提供生成内容检测，用于明确的测量范围筛选。"
+    }
+  ],
+  "summary": "提供多策略文件语言识别及过滤 API 的 Go 库。",
+  "description": "go-enry 是 Go 文件语言识别库，当前项目位于 go-enry/go-enry；enry 命令行应用在独立仓库中。库 API 可按扩展名、文件名、内容或完整策略链工作，也可返回多个候选并提供文件类别过滤助手。\n\n它使用来自 Linguist 的语言资料并维护两者差异。共享扩展名需要内容启发式或分类器，safe 返回值用于表达唯一候选；库也提供二进制、外部和生成内容检测，具体绑定的平台范围需分别核验。\n\n现行文档明确列出正则引擎和 token 化等差异，.gitattributes 的语言及类型覆盖尚未支持。来自旧 src-d 仓库的说明不能直接代表现行库或 CLI；项目基准也不能证明任意输入下速度与准确性相同。\n\n## 参考\n\n- [go-enry：现行库](https://github.com/go-enry/go-enry)\n- [go-enry：策略、绑定及差异](https://github.com/go-enry/go-enry/blob/master/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/go-enry/go-enry"
+}

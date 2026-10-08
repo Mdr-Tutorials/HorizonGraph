@@ -1,0 +1,47 @@
+{
+  "id": "flake8",
+  "name": "Flake8",
+  "aliases": [
+    "Flake8 Python 检查工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis-rule",
+      "context": "组合核心检查和安装的插件，并按配置选择诊断。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclomatic-complexity",
+      "context": "启用 mccabe 复杂度检查时，以配置阈值报告函数问题。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "ruff",
+      "context": "在支持的 Python 检查规则交集上作为可选工具；插件能力需单独核对。"
+    }
+  ],
+  "summary": "组合 Python 代码检查和插件规则的命令行工具。",
+  "description": "Flake8 是组织 Python 源码检查的命令行工具，默认组合 Pyflakes、pycodestyle 和 mccabe 等检查来源，并提供可扩展插件机制。诊断代码及对应来源有自己的约定。\n\n用户按配置选择或忽略规则、设置复杂度阈值和文件范围，再将报告接入编辑器或 CI。插件集合是部署配置的一部分，两个都叫 Flake8 的运行环境不一定执行相同检查。\n\n它的职责是规则和约定检查，不因此成为统一的类型检查器或自动格式化器。与 Ruff 等替代方案比较时，应核对插件、规则和语言支持，固定这些条件后才能合理比较报告和执行成本。\n\n## 参考\n\n- [Flake8：官方介绍](https://flake8.pycqa.org/en/latest/)\n- [Flake8：检查来源与版本范围](https://flake8.pycqa.org/en/7.4.0/faq.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://flake8.pycqa.org/en/latest/"
+}

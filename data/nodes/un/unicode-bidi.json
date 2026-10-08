@@ -1,0 +1,34 @@
+{
+  "id": "unicode-bidi",
+  "name": "Unicode Bidirectional Algorithm",
+  "aliases": [
+    "Unicode 双向算法",
+    "双向文本算法",
+    "BiDi",
+    "UBA"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unicode"
+    }
+  ],
+  "summary": "依据方向属性把逻辑文本排序为双向显示序列。",
+  "description": "Unicode 双向算法由 UAX #9 规定，用字符的方向属性、段落方向及显式格式控制处理从左到右与从右到左文本的混排。存储的逻辑顺序保留文本内容，显示顺序则根据嵌入层级和相关规则确定。\n\n算法处理数字、标点、括号及方向隔离等交互，并允许更高层协议提供限定范围内的信息。文本塑形选择和定位具体字形，双向算法决定方向运行段及显示顺序，两者需要协作，却不是同一个操作。\n\n某个终端或库能够显示阿拉伯字符的连接形态，不足以证明它实现完整的 Unicode 双向算法。测试应分别覆盖混合文字、数字、控制字符、选择和光标行为；显示顺序也不能替代源文本顺序用于代码审查。\n\n## 参考\n\n- [Unicode UAX #9：双向算法](https://www.unicode.org/reports/tr9/)\n- [ICU：BiDi API](https://unicode-org.github.io/icu/userguide/transforms/bidi.html)\n- [Unicode：逻辑存储与显示顺序](https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-2/)",
+  "official_site": "https://www.unicode.org/reports/tr9/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

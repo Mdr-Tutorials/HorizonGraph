@@ -1,0 +1,29 @@
+{
+  "id": "blank-lines-of-code",
+  "name": "Blank Lines of Code",
+  "aliases": [
+    "空白行数",
+    "源码空行",
+    "Blank LOC"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按工具规则统计源文件中不含实质内容的空白行。",
+  "description": "空白行数统计选定源文件中的空行或仅含所定义空白字符的行。它描述排版与文本体量，通常与代码、注释计数一起输出；不是可执行语句数量。\n\n处在块注释或多行字符串内部的空白行可能按所在词法状态处理。scc 将块注释内的空行归为注释，而 cloc 先移除空白行再过滤注释，因此同一文本的空白列可能不同。\n\n解释差异时应给出空白字符范围、行结束规则及文本样例。格式化工具改变空行会影响该项而不一定改变行为，因此不能把减少空行等同于减少维护工作或改进程序质量。\n\n## 参考\n\n- [scc 计数与识别源码](https://github.com/boyter/scc/blob/master/processor/workers.go)\n- [cloc 计数实现](https://github.com/AlDanial/cloc/blob/master/cloc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/boyter/scc/blob/master/processor/workers.go"
+}

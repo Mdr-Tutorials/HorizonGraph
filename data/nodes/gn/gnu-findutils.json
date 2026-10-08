@@ -1,0 +1,41 @@
+{
+  "id": "gnu-findutils",
+  "name": "GNU Findutils",
+  "aliases": [
+    "GNU 查找工具集",
+    "findutils",
+    "GNU find",
+    "GNU xargs"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "find 输出文件名列表，xargs 从标准输入读取列表并构建程序参数；支持的 NUL 模式须在两端配套使用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-option",
+      "context": "find 与 xargs 按各自选项和表达式规则限定查询及批量执行，不能套用完全相同的参数语法。"
+    }
+  ],
+  "summary": "提供目录查询、文件名索引与参数批处理的工具集。",
+  "description": "GNU Findutils 提供 find、locate、updatedb 与 xargs，分别用于目录树查询、文件名索引查询、索引更新和从输入构建命令参数。目录实时遍历与数据库查询拥有不同的新鲜度和成本，不能把 locate 的结果当作每次都重新检查了文件系统。\n\nfind 按路径、类型、时间、大小等条件组合表达式，并可执行输出或动作。xargs 从标准输入读取参数材料，按命令行限制批量调用程序；涉及文件名时，find 的 NUL 分隔输出与 xargs 对应读取模式可以避免把空格或换行误作记录边界。\n\nGNU 扩展、符号链接处理、遍历范围和动作执行时机应按手册限定。搜索和随后执行之间可能出现文件变化，NUL 分隔解决的是参数边界，不保证消除文件系统竞态。此项目独立于 GNU Coreutils，也不同于只覆盖部分搜索用途的 fd。\n\n## 参考\n\n- [GNU Findutils 项目与组成](https://www.gnu.org/software/findutils/)\n- [GNU Findutils 手册](https://www.gnu.org/software/findutils/manual/html_mono/find.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/findutils/"
+}

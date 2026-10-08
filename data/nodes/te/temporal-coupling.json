@@ -1,0 +1,40 @@
+{
+  "id": "temporal-coupling",
+  "name": "Temporal Coupling",
+  "aliases": [
+    "时间耦合",
+    "逻辑耦合",
+    "变更耦合",
+    "Change Coupling"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "changeset-size",
+      "context": "过滤一次同时修改大量模块的机械性变更时，采用变更集文件数量阈值降低共同修改噪声。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-log",
+      "context": "分析 Git 提交共变时从历史记录取得每次提交触及的路径集合。"
+    }
+  ],
+  "summary": "从历史中的共同修改识别模块间演化联系。",
+  "description": "时间耦合分析识别经常一起修改的文件或模块。共同变更可能来自同一提交、同一任务或指定时间段；它反映历史行为上的联系，不要求源码中存在直接调用，也不自动说明两者存在因果依赖。\n\nCode Maat 可按提交共同修改统计耦合，并使用最少修订、最少共同修订和最大变更集阈值过滤噪声。CodeScene 还提供按开发者与时间段或任务标识关联的视图；不同事件定义会产生不同结果。\n\n测试与实现一起变化可能是正常维护关系，大规模机械更新也可能制造无意义关联。结果应附共同修改次数、观察窗口和过滤方式，再结合代码判断设计原因；比例不能保证未来每次修改都需要联动。\n\n## 参考\n\n- [CodeScene：时间耦合事件定义](https://docs.enterprise.codescene.io/versions/3.3.8/guides/technical/temporal-coupling.html)\n- [Code Maat：耦合分析与阈值](https://github.com/adamtornhill/code-maat#mining-logical-coupling)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.enterprise.codescene.io/versions/3.3.8/guides/technical/temporal-coupling.html"
+}

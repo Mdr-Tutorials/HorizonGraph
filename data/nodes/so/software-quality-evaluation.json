@@ -1,0 +1,53 @@
+{
+  "id": "software-quality-evaluation",
+  "name": "Software Quality Evaluation",
+  "aliases": [
+    "软件质量评价",
+    "软件质量评估"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis",
+      "context": "以不运行程序的检查取得源码结构和规则诊断证据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "通过人员技术审查核实设计、实现与工具发现的适用性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "defect-density",
+      "context": "当缺陷登记、时间窗与规模单位一致时，用于比较缺陷分布。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-rule-violation-count",
+      "context": "记录指定规则集及版本下发现的问题数量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-duplication-density",
+      "context": "在固定克隆定义和输入范围下观察重复覆盖比例。"
+    }
+  ],
+  "summary": "按目标、范围和证据判断软件满足质量要求的程度。",
+  "description": "软件质量评价把质量需求转换为可观察的证据，并在给定范围内作出判断。评价应明确对象、版本、利益相关者、运行条件和接受标准，使结论能够追溯到实际的评价目的。\n\n静态分析、测试、技术审查和质量指标可以组合使用。缺陷密度适用于有明确缺陷登记和规模口径的比较，规则违反数反映某套规则的发现，重复率反映某种克隆检测配置下的覆盖范围。\n\n执行评价还需要检查输入完整性和检测能力，记录排除的语言、文件、环境以及未验证的属性。ISO/IEC 25023 不统一指定所有产品的合格阈值；具体标准应由产品类别、风险和用户需要决定。\n\n## 参考\n\n- [ISO：25023:2016 质量度量](https://www.iso.org/standard/35747.html)\n- [IEEE：SWEBOK 第四版](https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.iso.org/standard/35747.html"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "display-compositor",
+  "name": "Display Compositor",
+  "aliases": [
+    "显示合成器",
+    "桌面合成器",
+    "Compositor"
+  ],
+  "type": "concept",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "theoretical",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "desktop-interface-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "alpha-compositing",
+      "context": "在需要透明表面或效果的合成路径中使用透明度合成；直接扫描输出等路径未必执行该步骤。"
+    }
+  ],
+  "summary": "把应用表面组织并呈现到显示输出的系统合成职责。",
+  "description": "显示合成器负责把多个应用表面、层与效果组织成最终显示输出，并协调刷新或呈现。它是系统层的合成职责，与单个应用内部的图像合成算法以及编译器中的其他同名术语需要区分。\n\nX11 体系可由独立合成管理器处理离屏窗口内容，Wayland 体系通常把显示服务、窗口管理和合成整合为一个实现。系统、会话和嵌套合成器还可处于不同层次，一个合成器也可以是另一个窗口系统的客户端。\n\n实际输出可能采用 GPU 绘制、硬件叠加层或直接扫描输出，不能推断每帧都经过同一个软件混合步骤。角色整合是常见架构而非协议名称的等号：Wayland 定义通信，具体实现决定支持的功能和呈现策略。\n\n## 参考\n\n- [Wayland 合成器类型](https://wayland.freedesktop.org/docs/book/Compositors.html)\n- [Wayland 架构与输出路径](https://wayland.freedesktop.org/architecture.html)",
+  "official_site": "https://wayland.freedesktop.org/docs/book/Compositors.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

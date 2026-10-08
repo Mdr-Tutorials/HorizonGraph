@@ -1,0 +1,38 @@
+{
+  "id": "busybox",
+  "name": "BusyBox",
+  "aliases": [
+    "BusyBox 工具箱"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-option",
+      "context": "调用者以 applet 名称及其已编译支持的选项选择操作，各 applet 的参数能力不同。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "已启用的 cat、grep、sed 等 applet 通过标准输入输出参与 Unix 命令组合。"
+    }
+  ],
+  "summary": "将可选 Unix 小工具组合到多调用二进制中的项目。",
+  "description": "BusyBox 将许多常用 Unix 工具的精简实现合并到一个可执行文件中，通过 applet 名称选择实际功能。它面向有限资源环境，可作为嵌入式系统和小型镜像中的基础用户空间工具；一个 BusyBox 文件并不是完整操作系统。\n\n调用可以写为 busybox 后接命令名，也可通过指向同一二进制的链接使用常见命令名称。共享代码能够减少体积，编译配置决定哪些 applet 及哪些功能被纳入；官方完整命令清单不能证明某个已安装二进制启用了全部命令。\n\nBusyBox 的同名工具通常只覆盖完整 GNU 工具的一部分选项，不能由 grep、sed 或 wget 名称推导相同版本和全部行为。它提供自己的精简实现，不能记录成内嵌整套 GNU 项目源码；Shell applet 与其他文件、网络 applet 也各有职责。\n\n## 参考\n\n- [BusyBox 设计与范围](https://www.busybox.net/about.html)\n- [多调用二进制及命令帮助](https://www.busybox.net/downloads/BusyBox.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.busybox.net/about.html"
+}

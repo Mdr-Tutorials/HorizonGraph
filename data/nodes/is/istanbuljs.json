@@ -1,0 +1,45 @@
+{
+  "id": "istanbuljs",
+  "name": "IstanbulJS",
+  "aliases": [
+    "Istanbul 覆盖工具库",
+    "Istanbul",
+    "istanbul.js"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coverage-instrumentation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "statement-coverage",
+      "context": "插桩库记录可执行语句计数，报告库按该口径汇总。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "branch-coverage",
+      "context": "插桩并报告 JavaScript 条件结果及相关分支计数。"
+    }
+  ],
+  "summary": "提供 JavaScript 插桩、覆盖数据和报告库。",
+  "description": "IstanbulJS 是 JavaScript 覆盖工具库集合，包含插桩、覆盖数据处理及报告能力。这里指现行组件库体系；旧版 istanbul 命令界面与 nyc CLI 的身份不同，不能用同一个名称掩盖代际差异。\n\n源码插桩加入语句、函数与分支计数，执行后产生可汇总的覆盖数据。库可以由测试运行器、构建插件或 nyc 调用，支持结合源码映射解释转译后的代码。\n\n报告结果受包含范围、忽略提示及源码映射影响。采用这些库不表示每个测试框架都必须安装 nyc；评估覆盖时还应核查未加载代码和测试断言。\n\n## 参考\n\n- [IstanbulJS 官方仓库](https://github.com/istanbuljs/istanbuljs)\n- [Istanbul 官方主页](https://istanbul.js.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/istanbuljs/istanbuljs"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "bat-command",
+  "name": "bat",
+  "aliases": [
+    "bat 文件查看器",
+    "bat 命令"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "command-line-interface"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "启用 Git 修改展示且文件处于适用仓库中时，查看相对索引的变化；一般文件查看不依赖此场景。"
+    }
+  ],
+  "summary": "结合语法高亮、行号和Git信息查看文本的工具。",
+  "description": "bat 是带语法高亮和 Git 信息的文本查看工具，可以读取文件或标准输入。它保留 cat 风格的基础用途并提供行号、样式和分页选项；此处 bat 是软件命令，区别于企业合称 BAT、Windows 批处理文件扩展名或其他同名实体。\n\n语法检测、主题和展示样式由参数或配置决定，终端颜色能力又影响最终呈现。可选 Git 信息显示相对索引的修改，分页器帮助阅读较长内容；这些功能服务于查看，不等于解析文件的完整语言语义，也不意味着所有调用都必须在 Git 仓库中进行。\n\n当输出进入管道或文件时，默认可退回普通内容输出，显式样式选项会改变这个行为。把 bat 用于自动化须核对分页、颜色和换行处理，不能把装饰后的显示文字当作原始文件字节的无条件替代。\n\n## 参考\n\n- [bat：README](https://github.com/sharkdp/bat)\n- [bat：官方手册源文件](https://github.com/sharkdp/bat/blob/master/assets/manual/bat.1.in)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/sharkdp/bat"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "miller",
+  "name": "Miller",
+  "aliases": [
+    "mlr",
+    "Miller 数据处理器"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "使用 JSON 输入输出适配器读取或序列化记录，嵌套结构转换按具体规则处理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "处理文件或标准输入并将记录输出到后续管道；是否即时输出取决于所选操作。"
+    }
+  ],
+  "summary": "按具名记录转换 CSV、JSON 等数据的命令行工具。",
+  "description": "Miller，命令名 mlr，以字段名和值组成的记录为中心处理表格与结构化数据。它提供选列、筛选、排序、统计及格式转换等命令，还支持表达式语言，适合将传统文本工具的组合习惯扩展到 CSV 和 JSON 等有字段结构的输入。\n\n多数按记录独立工作的操作可以读取一条后尽快输出，不必先保存全部输入。用户能够通过命令串联组织处理流程，按字段名编程也能减少对列序号的依赖；格式选择与字段类型解释应明确，避免把解析后的值当作未经处理的原始字节。\n\n流式处理并不覆盖所有操作。排序等任务需要保留大量记录，分组统计则可能保留随分组数增长的状态，一些操作要到输入结束才能输出。CSV 与嵌套 JSON 的结构转换也有实际规则，不能保证所有数据形状无损互换。\n\n## 参考\n\n- [Miller 官方文档](https://miller.readthedocs.io/en/latest/)\n- [流式处理与内存边界](https://miller.readthedocs.io/en/latest/streaming-and-memory/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://miller.readthedocs.io/en/latest/"
+}

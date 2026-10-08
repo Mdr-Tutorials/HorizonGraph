@@ -1,0 +1,54 @@
+{
+  "id": "git-log",
+  "name": "git log",
+  "aliases": [
+    "Git 提交日志",
+    "Git 历史查询"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-object-model",
+      "context": "沿 commit 的 parent 链取得指定引用的可达提交集合"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-first-parent",
+      "context": "启用 --first-parent 时仅沿合并提交的第一个父提交遍历"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-numstat",
+      "context": "请求 --numstat 时输出选定差异的文件增删行统计"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-mailmap",
+      "context": "启用 --use-mailmap 时归一化输出中的作者与提交者姓名和邮箱"
+    }
+  ],
+  "summary": "遍历提交图并输出历史、元数据与选定差异的 Git 命令。",
+  "description": "`git log` 是 Git 内置的历史查询命令，沿提交的父链接遍历指定可达集合。`A..B` 选择可从 B 到达、不能从 A 到达的提交，`A...B` 选择两侧可达集合的对称差；这与 `git diff A...B` 的端点比较语义不同。\n\n仓库分析可用格式占位符取得完整提交 ID、父提交、author/committer 及时间，再按路径、范围或日期筛选。`--first-parent`、合并处理和路径历史简化都会改变样本集合；提取时应同时记录 Git 版本、命令、引用与配置，而不能把展示顺序当作完整因果时间线。\n\n`--numstat` 可输出所选提交的逐文件增删行统计，`--use-mailmap` 可归一化显示身份。它们分别解决变更输出和姓名映射问题，不能证明代码质量或人员绩效；自动化解析应使用明确的记录边界，并限定合并提交的差异口径。\n\n## 参考\n\n- [Git log 手册](https://git-scm.com/docs/git-log)\n- [Pro Git：查看提交历史](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)\n- [Git revisions 手册](https://git-scm.com/docs/gitrevisions)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://git-scm.com/docs/git-log"
+}

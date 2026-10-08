@@ -1,0 +1,41 @@
+{
+  "id": "freetype",
+  "name": "FreeType",
+  "aliases": [
+    "FreeType 字体库"
+  ],
+  "type": "library",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "font-rasterization"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "truetype",
+      "context": "在加载 TrueType 字体时解析字体表和字形数据；支持范围还包括其他字体格式。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "harfbuzz"
+    }
+  ],
+  "summary": "加载字体、访问字形度量并生成字形图像的库。",
+  "description": "FreeType 是字体处理库，提供字体 face、size 和 glyph 等对象，支持从文件或内存加载多种字体格式。应用可以读取字符映射、字形索引和度量，再取得轮廓或位图表示。\n\n加载与渲染分开控制。FT_Load_Glyph 等接口取得字形，FT_Render_Glyph 等路径按渲染模式生成输出；字号、加载标志、hinting 和字体自身的数据都会影响图像，字形 advance 也不等于其轮廓包围宽度。\n\nFreeType 的字符映射和基本度量不构成完整的复杂文本布局。常见实现把它与塑形库配合使用，由塑形结果决定字形顺序和位置，再由字体处理或渲染路径绘制；这种集成不代表两库是同一工件。\n\n## 参考\n\n- [FreeType：字形加载与渲染教程](https://freetype.org/freetype2/docs/tutorial/step1.html)\n- [FreeType：轮廓表示](https://freetype.org/freetype2/docs/glyphs/glyphs-2.html)\n- [FreeType：位图约定](https://freetype.org/freetype2/docs/glyphs/glyphs-7.html)\n- [HarfBuzz：FreeType 集成接口](https://harfbuzz.github.io/integration-freetype.html)",
+  "official_site": "https://freetype.org/freetype2/docs/tutorial/step1.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "acorn",
+  "name": "Acorn",
+  "aliases": [
+    "Acorn JavaScript 解析器"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "estree"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "parser"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "解析目标为配置支持的 ECMAScript 源码，插件另行扩展语法。"
+    }
+  ],
+  "summary": "解析 JavaScript 并产生 ESTree 语法树的库。",
+  "description": "Acorn 是 JavaScript 编写的 ECMAScript 解析库，按输入源码与选项产生 ESTree AST。它提供解析器和词法接口，ecmaVersion、sourceType 等选项决定所用语法代际与脚本、模块等上下文。\n\n插件可以通过扩展 Parser 类增加方言或特定语法支持。核心解析器遇到非法语法会报错；独立的 acorn-loose 处理容错恢复，acorn-walk 处理已有树的遍历，不能把这些包的接口混成主解析器的一项无条件能力。\n\nAST 和源码位置适合检查器、转换器及语言工具读取，但解析成功不执行名称解析或类型检查。新语法支持必须核对所装版本与插件，不能把支持 ECMAScript 直接写成对任意提案、TypeScript 或 JSX 的默认完整支持。\n\n## 参考\n\n- [Acorn：官方仓库](https://github.com/acornjs/acorn)\n- [Acorn：解析 API](https://github.com/acornjs/acorn/blob/master/acorn/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/acornjs/acorn"
+}

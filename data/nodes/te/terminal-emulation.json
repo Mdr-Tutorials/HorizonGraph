@@ -1,0 +1,38 @@
+{
+  "id": "terminal-emulation",
+  "name": "Terminal Emulation",
+  "aliases": [
+    "终端仿真"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudoterminal",
+      "context": "在 Unix 交互终端路径中，通过 PTY 主端接收应用输出并向从端发送输入；嵌入与播放路径不要求 PTY。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ecma-48",
+      "context": "将规范化控制功能作为终端字节流解析的基础；具体实现只选择适用的功能集合。"
+    }
+  ],
+  "summary": "把终端字节流解释为屏幕状态，并将交互编码回应用。",
+  "description": "终端仿真让软件承担传统字符终端的显示和输入职责。它逐步解释应用输出中的文字、控制字节和转义序列，维护字符单元、光标、颜色、滚动区域与工作模式，再把结果交给图形或其他显示后端。Shell 负责解释命令；终端仿真本身不规定用户运行哪种 Shell。\n\n在典型 Unix 图形终端路径中，应用连接伪终端从端，仿真器读写主端，TTY 行规程处理输入模式和信号。PTY 传递字节与终端语义，不直接绘制字形。嵌入网页或播放录屏时，也可以向同一仿真核心提供字节，而不启动一个本地 Shell 或真实 PTY。\n\n兼容性需要逐项核对控制序列、键盘编码和可选协议。声明 VT100 或 xterm 兼容不能证明支持后来的剪贴板、图片、鼠标或同步输出扩展。TERM 数据库、主动查询和实际实现共同影响应用选择；字体与 Unicode 显示则属于相邻的文本布局工作。\n\n## 参考\n\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)\n- [Linux man-pages：伪终端](https://man7.org/linux/man-pages/man7/pty.7.html)\n- [Microsoft：虚拟终端序列与屏幕缓冲](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://invisible-island.net/xterm/ctlseqs/ctlseqs.html"
+}

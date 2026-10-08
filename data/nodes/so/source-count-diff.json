@@ -1,0 +1,38 @@
+{
+  "id": "source-count-diff",
+  "name": "Source Count Diff",
+  "aliases": [
+    "源码计数差分",
+    "代码行统计差分"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-count-snapshot",
+      "context": "核对两份统计记录中的源码修订、范围和计数条件，再读取对应源码快照执行行级差分；仅有计数报表不能恢复增删行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "在物理源码差分中区分代码行的增加、移除与保留，而非仅比较净总数。"
+    }
+  ],
+  "summary": "在明确匹配规则下比较两个源码快照的行变化。",
+  "description": "源码计数差分读取两份源码，在规定文件匹配和行比较规则下报告变化。cloc 的 --diff 分类比较代码与注释行中的新增、删除、修改和未变部分；仅把两个 LOC 总数相减只能得到净变化。\n\ncloc 在比较非相同文件时先移除空白行，空白变化按两份文件的空白数量差报告 added 或 removed，不逐行匹配空白位置和修改；只有完全相同文件才可在 same 列保留空白数量。其空白差分不能按代码行差分解读。\n\n文件匹配、重命名处理、语言识别和输入筛选须一致或说明变化，格式化仍可产生大量文本差异。计数快照能帮助核对修订与范围，但行级差分需要读取对应源码；统计报表本身不能恢复增删行，也不能表明长期贡献或业务价值。\n\n## 参考\n\n- [cloc 官方差分与实现说明](https://github.com/AlDanial/cloc)\n- [cloc 差分实现](https://github.com/AlDanial/cloc/blob/master/cloc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/AlDanial/cloc"
+}

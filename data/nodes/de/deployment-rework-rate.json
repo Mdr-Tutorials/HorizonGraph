@@ -1,0 +1,29 @@
+{
+  "id": "deployment-rework-rate",
+  "name": "Deployment Rework Rate",
+  "aliases": [
+    "部署返工率",
+    "生产部署返工率"
+  ],
+  "type": "metric",
+  "domains": [
+    "devops",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计因生产事故而产生的非计划部署比例。",
+  "description": "部署返工率是生产部署中，因生产事故而产生的非计划部署所占比例。DORA 在 2024 年引入该指标，当前把它用于交付不稳定性；2026 年的 Quick Check 已包含该项。\n\n分子统计符合返工判定的部署，分母统计同一应用或服务和观察窗口中的全部纳入生产部署。应约定事故、紧急修复及部署事件关联，区分预先计划的功能发布与因生产问题触发的非计划工作。\n\n返工率与变更失败率互补：前者看部署中有多少用于事故后返工，后者看多少部署需要立即干预。一次失败可能导致多个返工部署，两个比例不能相加或视为同一指标，也不等同于开发团队所有形式的返工工时占比。\n\n## 参考\n\n- [DORA 2024 研究报告：吞吐与不稳定性](https://dora.dev/research/2024/dora-report/2024-dora-accelerate-state-of-devops-report.pdf)\n- [DORA Quick Check 2026 更新](https://dora.dev/insights/quickcheck-updates/)\n- [DORA：当前软件交付性能指标](https://dora.dev/guides/dora-metrics/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://dora.dev/research/2024/dora-report/2024-dora-accelerate-state-of-devops-report.pdf"
+}

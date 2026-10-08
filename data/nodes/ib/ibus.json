@@ -1,0 +1,45 @@
+{
+  "id": "ibus",
+  "name": "IBus",
+  "aliases": [
+    "Intelligent Input Bus",
+    "IBus 输入法框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "desktop-application-development",
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "input-method-framework",
+      "context": "提供输入法守护进程、引擎接入、客户端与面板的协调实现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gtk",
+      "context": "ibus-setup 配置界面采用 GTK；不表示所有 IBus 组件均依赖 GTK。"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "linux",
+      "context": "在 Linux 桌面会话中连接应用与输入法引擎，项目也支持部分其他 Unix 环境。"
+    }
+  ],
+  "summary": "通过总线与工具包接口连接 Linux/Unix 输入法引擎。",
+  "description": "IBus 是 Linux/Unix 输入法框架，通过守护进程、客户端接口、引擎和面板协调文本输入。它提供输入法切换和配置界面，帮助不同语言输入引擎接入应用，而不是单一语言的输入算法。\n\n应用的输入上下文把按键与文本需求交给框架，输入引擎更新预编辑、候选及提交文本。项目提供 GTK 相关集成，并持续发展 Wayland 输入法协议路径；具体桌面会话如何启动和接入服务需要按官方会话说明确认。\n\nIBus 的工作依赖应用、工具包和桌面环境共同支持，同一框架不保证在每种合成器或每个应用中具有相同候选定位行为。系统键盘布局与输入引擎是不同配置层，排查问题时还需区分 X11/XWayland 与原生 Wayland 路径。\n\n## 参考\n\n- [IBus 官方项目](https://github.com/ibus/ibus)\n- [IBus 官方说明](https://github.com/ibus/ibus/wiki/ReadMe)\n- [IBus 当前发布记录](https://github.com/ibus/ibus/releases)",
+  "official_site": "https://github.com/ibus/ibus",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

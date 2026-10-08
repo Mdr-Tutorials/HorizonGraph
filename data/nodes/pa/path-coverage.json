@@ -1,0 +1,27 @@
+{
+  "id": "path-coverage",
+  "name": "Path Coverage",
+  "aliases": [
+    "路径覆盖率"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "衡量测试执行过的规定控制流路径集合比例。",
+  "description": "路径覆盖以控制流图中的执行路径为对象，检查测试是否按规定顺序走过路径。分母必须先声明是全部路径、长度受限路径、简单路径、素路径还是其他有限集合，不能只报告未经限定的百分比。\n\n循环可产生无限路径，分支组合也会迅速扩大路径空间；部分路径因数据约束无法执行。GCC 的素路径覆盖以最大简单路径为对象，是一个具体有限准则，并不等同于覆盖所有实际循环次数。\n\n测试设计应区分静态候选路径和可行执行路径，解释不可行项和插桩上限。达到某个有限路径准则仍不能自动证明所有输入行为正确，也不能用分支覆盖百分比直接推导路径覆盖。\n\n## 参考\n\n- [GCC：gcov 命令与覆盖准则](https://gcc.gnu.org/onlinedocs/gcc/Invoking-Gcov.html)\n- [Cambridge：图覆盖准则](https://www.cambridge.org/highereducation/books/introduction-to-software-testing/95E57CCADEA697EC8594F03729F47311/graph-coverage/4038A6D33E776AE61F6882A89BB30778)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://gcc.gnu.org/onlinedocs/gcc/Invoking-Gcov.html"
+}

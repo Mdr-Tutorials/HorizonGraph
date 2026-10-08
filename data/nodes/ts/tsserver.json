@@ -1,0 +1,46 @@
+{
+  "id": "tsserver",
+  "name": "tsserver",
+  "aliases": [
+    "TypeScript Server",
+    "TypeScript 独立语言服务进程"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "typescript"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "typescript-language-service"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "tsserver-protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "language-server"
+    }
+  ],
+  "summary": "以自有会话协议向编辑器暴露 TypeScript 语言服务。",
+  "description": "tsserver 是经典 TypeScript 包中的独立语言服务进程，为 JavaScript 与 TypeScript 项目暴露编辑查询。它管理打开文件、项目配置和语言服务状态，通过标准输入输出交换自有请求、响应与事件。\n\n服务复用 TypeScript Language Service 处理补全、诊断、导航、引用和重构；显式配置项目、推断项目及文件更新会影响查询语义。编辑器集成还要管理启动、文档同步和所选 TypeScript 版本。\n\ntsserver 的会话协议不等于 LSP。社区 TypeScript Language Server 可以为它提供 LSP 适配，VS Code 内置 TypeScript 接入也不能因此被写成使用该社区服务器。TypeScript 7 原生服务器已经采用 LSP，但新实现不使经典 tsserver 消息自动变更。\n\n## 参考\n\n- [TypeScript：独立 tsserver](https://github.com/microsoft/TypeScript/wiki/Standalone-Server-(tsserver))\n- [TypeScript：语言服务 API](https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API)\n- [TypeScript 6.0.2：经典协议源码](https://github.com/microsoft/TypeScript/blob/v6.0.2/src/server/protocol.ts)\n- [Microsoft：TypeScript 7 正式发布与原生 LSP](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/microsoft/TypeScript/wiki/Standalone-Server-(tsserver)"
+}

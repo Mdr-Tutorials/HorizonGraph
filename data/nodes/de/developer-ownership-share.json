@@ -1,0 +1,29 @@
+{
+  "id": "developer-ownership-share",
+  "name": "Developer Ownership Share",
+  "aliases": [
+    "开发者贡献份额",
+    "历史归属份额",
+    "主要贡献者占比"
+  ],
+  "type": "metric",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按已声明的历史口径计算贡献者在模块中的份额。",
+  "description": "开发者归属份额把某贡献者在文件或模块中的可观察贡献除以该范围总贡献。贡献单位可以是修改提交次数、添加行或当前存留行，各自回答不同问题；应在名称和报告中说明单位。\n\n微软的代码所有权研究考察主要所有者占比等变量，Code Maat 则提供按作者修订次数或新增、删除行分解的视图。计算时需要固定时间窗口并处理身份别名，零分母与机器人作者也应明确记录。\n\n较高份额可提示知识集中，但不证明贡献者拥有全部设计知识。删除代码、共同开发与审查可能没有按同样方式计入；不同口径的份额不宜直接比较，也不能用于推断知识产权比例或个人绩效。\n\n## 参考\n\n- [微软研究：所有权度量](https://www.microsoft.com/en-us/research/publication/dont-touch-my-code-examining-the-effects-of-ownership-on-software-quality/)\n- [Code Maat：按作者的修订及变化视图](https://github.com/adamtornhill/code-maat#ownership-patterns)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.microsoft.com/en-us/research/publication/dont-touch-my-code-examining-the-effects-of-ownership-on-software-quality/"
+}

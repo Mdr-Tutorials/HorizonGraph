@@ -1,0 +1,38 @@
+{
+  "id": "cyclonedx-vex",
+  "name": "CycloneDX VEX",
+  "aliases": [
+    "CycloneDX 漏洞影响声明"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cyclonedx"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vex"
+    }
+  ],
+  "summary": "在 CycloneDX 模型中交换漏洞影响分析和应对状态。",
+  "description": "CycloneDX VEX 指 CycloneDX 规范体系表达漏洞实际影响分析的能力。它可以随 BOM 交换，也可以用于单独的 VEX 文档，连接漏洞、受述组件与分析状态。它是 CycloneDX 的规范切片，不是独立的漏洞扫描程序。\n\n分析对象可记录状态、理由、响应和进一步说明，帮助区分易受攻击的组件存在与具体产品实际受影响。bom-ref 等引用必须能正确对应组件；状态值需要按 CycloneDX 的定义解释，不能把 OpenVEX 或 CSAF 的枚举直接复制而忽略映射。生成者应保留判断依据和文档更新信息。\n\n支持 VEX 的消费工具可能对导入、导出和过滤实现不同范围，需核对具体版本。影响状态来自判断方，消费者仍要审查其身份、对象和时间。状态为不受影响不能作为该产品无漏洞的整体结论，缺失分析字段也不应解释为已经确认安全。\n\n## 参考\n\n- [CycloneDX：VEX 规范能力](https://cyclonedx.org/capabilities/vex/)\n- [Dependency-Track：CycloneDX 与 VEX 消费能力](https://docs.dependencytrack.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://cyclonedx.org/capabilities/vex/",
+  "abstraction_level": "application_tool"
+}

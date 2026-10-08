@@ -1,0 +1,33 @@
+{
+  "id": "shell-quoting",
+  "name": "Shell Quoting",
+  "aliases": [
+    "Shell 引用与转义",
+    "Shell 引号"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    }
+  ],
+  "summary": "用解释器的引用规则控制字符意义和参数边界。",
+  "description": "Shell 引用与转义用于控制元字符是否承担语法作用，并保留需要作为数据传递的参数边界。Bash 的反斜杠、单引号和双引号具有不同语义；引用不是把任何字符串放进引号就都安全，也不是跨解释器统一的数据编码格式。\n\n在 Bash 中，单引号通常保留其中字符的字面意义，双引号仍允许部分展开，同时抑制结果的普通单词分割与路径名展开。引用嵌套应按实际解析层次理解：外层 Shell、被启动的另一个 Shell、远程命令或程序参数各有自己的规则。\n\n变量或文件名最好以明确的参数元素传入，避免把数据拼成随后再次解释的命令文字。JSON 转义、URL 编码或正则转义不能替代 Shell 引用；Fish 和 PowerShell 的引用语义也不能从 Bash 单引号规则直接推导。\n\n## 参考\n\n- [GNU：Quoting](https://www.gnu.org/software/bash/manual/html_node/Quoting.html)\n- [GNU：Double Quotes](https://www.gnu.org/software/bash/manual/html_node/Double-Quotes.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Quoting.html"
+}

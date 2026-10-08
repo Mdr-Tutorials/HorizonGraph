@@ -1,0 +1,34 @@
+{
+  "id": "software-quasi-experiment",
+  "name": "Software Engineering Quasi-Experiment",
+  "aliases": [
+    "软件工程准实验",
+    "软件准实验"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "internal-validity",
+      "context": "重点核查非随机分派、组间差异和时间变化对处理效应解释的影响。"
+    }
+  ],
+  "summary": "在缺少随机分派时研究软件工程干预的效果。",
+  "description": "软件工程准实验研究主动引入的干预，但没有把实验单位随机分派到处理条件。例如团队按既有组织安排采用新工具，可比较实施前后或与其他团队的变化；仅观察未施加干预的历史相关性不自动构成准实验。\n\n不随机分派应有明确原因，并说明原有组间差异怎样处理。匹配、前后测和比较组可以帮助设计，但其解释依赖可比性、时间趋势及未测混杂等假设，不能把调整后的差异直接宣布为无条件因果证明。\n\n需要保留干预时间、参与者选择、协议变化及结果测量方式。退出或组织变动可能同时影响处理与结果；报告应公开剩余威胁和敏感性，而不是靠大样本宣称已经解决选择偏差。\n\n## 参考\n\n- [SIGSOFT：软件工程实验标准与适用范围](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Experiments.md)\n- [Baltes 与 Ralph：软件工程研究抽样方法](https://arxiv.org/pdf/2002.07764)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Experiments.md"
+}

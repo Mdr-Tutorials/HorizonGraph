@@ -1,0 +1,43 @@
+{
+  "id": "shell-redirection",
+  "name": "Shell Redirection",
+  "aliases": [
+    "Shell 重定向",
+    "输入输出重定向"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "file-descriptor",
+      "context": "Unix 风格 Shell 按描述符号打开、复制、替换或关闭命令执行时的输入输出连接。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "重定向可改变 stdin、stdout、stderr 的连接目标；其他编号描述符仍可独立使用。"
+    }
+  ],
+  "summary": "在命令执行前调整输入输出目标和连接的机制。",
+  "description": "Shell 重定向规定命令从哪里读取数据以及把输出发送到哪里。文件读写、追加、描述符复制或关闭都属于这一机制；它发生在解释器组织调用的阶段，不是把程序输出显示到另一块屏幕，也不等同于修改程序的业务参数。\n\nBash 等 Unix 风格 Shell 用描述符表达输入输出连接，常见 0、1、2 分别对应标准输入、输出和错误。多个重定向按出现顺序生效，因此先复制一个描述符再把原描述符改指向文件，与先改指向再复制会产生不同结果。覆盖和追加的区别也直接影响文件内容。\n\n重定向仍可能失败，例如目标权限不足或路径不可用；此时程序可能尚未执行。PowerShell 的对象流和现代本机字节流规则另有规定，不能把 Bash 描述符语法原样套用。脚本应明确业务输出和诊断去向，避免将错误消息混入供下一阶段解析的数据。\n\n## 参考\n\n- [GNU：Redirections](https://www.gnu.org/software/bash/manual/html_node/Redirections.html)\n- [Microsoft：about_Redirection](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_redirection)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Redirections.html"
+}

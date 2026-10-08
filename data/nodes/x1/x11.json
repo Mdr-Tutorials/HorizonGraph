@@ -1,0 +1,35 @@
+{
+  "id": "x11",
+  "name": "X11",
+  "aliases": [
+    "X Window System Protocol Version 11",
+    "X11 协议",
+    "X 协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "window-system",
+      "context": "核心协议规定窗口、图形资源与输入事件的客户端/服务器交互机制。"
+    }
+  ],
+  "summary": "以客户端与服务器模型定义图形窗口和输入交互的协议。",
+  "description": "X11 是 X Window System 的第十一版核心协议，采用客户端与服务器模型。客户端请求创建窗口、操作图形资源并接收事件，服务器提供显示与输入服务；客户端可在本机或远程运行，实际传输方式和访问控制取决于部署。\n\n核心协议定义机制而不强制完整桌面策略。窗口管理器通常作为特殊客户端处理窗口布局与焦点，ICCCM 等约定协调应用间通信；现代栈还依靠扩展和客户端渲染库提供图形与文本能力。\n\nX11 协议不等于 Xorg Server，也不等于所有 X.Org 项目的集合。它仍用于原生 X 会话以及 XWayland 兼容路径；后者保持 X11 客户端接口，但不保证独立 X11 窗口管理器或所有跨客户端行为都能在 Wayland 桌面中原样使用。\n\n## 参考\n\n- [X11 核心协议规范](https://www.x.org/archive/current/doc/xproto/x11protocol.pdf)\n- [ICCCM 应用协调规范](https://www.x.org/releases/current/doc/xorg-docs/icccm/icccm.html)",
+  "official_site": "https://www.x.org/archive/current/doc/xproto/x11protocol.pdf",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

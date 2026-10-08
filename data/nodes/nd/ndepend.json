@@ -1,0 +1,69 @@
+{
+  "id": "ndepend",
+  "name": "NDepend",
+  "aliases": [
+    ".NET依赖和质量分析工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis",
+      "context": "解析.NET代码模型并执行静态规则与结构查询。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclomatic-complexity",
+      "context": "分别报告源码控制流与IL相关的复杂度口径，不能混同比较。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "maintainability-index",
+      "context": "按其文档公式组合源码指标生成可维护性指数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "afferent-coupling",
+      "context": "报告类型、命名空间和程序集级传入依赖，使用对应粒度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "efferent-coupling",
+      "context": "报告类型、命名空间和程序集级传出依赖，使用对应粒度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-abstractness",
+      "context": "在程序集层次计算内部抽象类型占类型总数的比例。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-instability",
+      "context": "在程序集层次用Ca和Ce计算依赖结构不稳定性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "distance-from-main-sequence",
+      "context": "以程序集抽象度与不稳定性计算归一化主序列距离。"
+    }
+  ],
+  "summary": "为.NET代码提供依赖分析、度量、规则与质量门禁。",
+  "description": "NDepend 是面向 .NET 代码的分析工具，提供类型和程序集依赖图、矩阵、源码与中间语言指标以及代码规则查询。规则与查询可以采用 CQLinq，即面向其代码模型的 C# LINQ 查询。\n\n工具可生成交互报告、记录基线变化并在持续集成中执行可配置质量门禁。覆盖率数据从外部测试报告导入；程序集 Ca/Ce、抽象度和不稳定性的对象集合与 Java 包工具的口径不同。\n\n静态规则、维护债务估算和修复成本仍具有模型与配置边界。报告不能直接证明运行正确性或实测工程费用；采用结果应保留分析配置、基线、原始指标及覆盖数据的来源，而不能只依据汇总评分。\n\n## 参考\n\n- [NDepend：官方功能说明](https://www.ndepend.com/features/)\n- [NDepend：指标定义](https://www.ndepend.com/docs/code-metrics)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.ndepend.com/features/"
+}

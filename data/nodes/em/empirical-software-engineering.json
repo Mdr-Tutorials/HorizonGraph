@@ -1,0 +1,54 @@
+{
+  "id": "empirical-software-engineering",
+  "name": "Empirical Software Engineering",
+  "aliases": [
+    "实证软件工程",
+    "经验软件工程"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "controlled-software-experiment",
+      "context": "对可操纵的开发方法或工具设计处理与比较条件，研究限定任务中的效果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "software-case-study",
+      "context": "研究真实项目或团队情境中的过程、机制与经验。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "software-survey-research",
+      "context": "通过明确抽样和问卷设计收集开发者或组织的观测资料。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "construct-validity",
+      "context": "设计测量时检验代理指标是否表达研究所声称的构念。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "measurement-reliability",
+      "context": "评估数据收集工具在应得到一致结果的条件下是否稳定。"
+    }
+  ],
+  "summary": "用观察与实验数据研究软件、开发过程和人员协作。",
+  "description": "实证软件工程用可审查的数据研究软件产品、开发活动和社会技术系统。数据可以来自实验、访谈、问卷、项目历史或现场观察，也可以是有明确假设的仿真数据；实证研究不限于统计分析，更不等于只收集代码仓库数字。\n\n研究问题决定方法。比较两个分析器的固定语料性能，可设计基准实验；理解团队怎样采用分析器，需要案例或参与者研究。ACM SIGSOFT 为不同方法给出不同证据与报告要求，不能用同一清单替代方法选择。\n\n报告应交代研究对象、样本来源、测量定义、分析过程和结论适用范围。仓库行数可以提供规模证据，无法单独证明可维护性或人员生产力；观察到工具采用与结果相关时，还要检查混杂与选择机制。\n\n## 参考\n\n- [ACM SIGSOFT 实证软件工程标准](https://github.com/acmsigsoft/EmpiricalStandards)\n- [实证软件工程标准研究报告](https://arxiv.org/abs/2010.03525)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards"
+}

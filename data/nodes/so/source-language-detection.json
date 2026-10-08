@@ -1,0 +1,29 @@
+{
+  "id": "source-language-detection",
+  "name": "Source Language Detection",
+  "aliases": [
+    "源码语言识别",
+    "编程语言识别",
+    "文件语言检测"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    }
+  ],
+  "summary": "根据文件名、扩展名和内容识别源码语言。",
+  "description": "源码语言识别把文件或文本片段归到一个编程语言或相关文件类别。扩展名可能共享，文件也可能没有扩展名，因此仅按后缀计数会错分；解释器首行、编辑器模式声明和内容特征可以提供额外证据。\n\nLinguist 逐步采用路径或名称、shebang、扩展名、启发式及分类器；enry 提供按名称、内容或组合输入工作的 API，并可返回多个候选。识别策略与规则版本会改变计数工具最终采用的语言标签。\n\n文件语言标签不等于语法已经成功解析，也不证明编译或执行有效。混合语言、模板和生成文件需要明确处理方式；需要可靠比较时保存识别版本、人工覆盖规则及无法确定的候选。\n\n## 参考\n\n- [Linguist：识别策略](https://github.com/github-linguist/linguist/blob/main/docs/how-linguist-works.md)\n- [go-enry：API 与歧义返回](https://github.com/go-enry/go-enry/blob/master/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/github-linguist/linguist/blob/main/docs/how-linguist-works.md"
+}

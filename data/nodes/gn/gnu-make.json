@@ -1,0 +1,35 @@
+{
+  "id": "gnu-make",
+  "name": "GNU Make",
+  "aliases": [
+    "GNU make",
+    "make",
+    "Makefile 构建工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "posix-shell",
+      "context": "在常见 Unix 默认配置中使用 /bin/sh 执行配方；SHELL 设置和其他平台可以改变解释器。"
+    }
+  ],
+  "summary": "按目标、前置条件和配方组织增量构建的 GNU 工具。",
+  "description": "GNU Make 按 Makefile 中的目标、前置条件与配方组织构建。目标通常代表输出文件，也可以显式声明为动作；工具根据规则决定需要更新什么以及先执行什么，编译器或其他实际转换程序则由配方调用。\n\n文件目标通常以存在性和修改时间判断更新需求，普通前置条件与仅用于排序的前置条件拥有不同作用。变量、模式规则和并行执行能够复用构建描述，但正确结果仍依赖完整声明输入及必要的执行顺序。\n\nMakefile 的 GNU 扩展与 POSIX 可移植规则应区分，配方默认 Shell 和具体平台也会影响解释方式。Make 不自动发现所有编译依赖，动作目标要按用途标注；Just 等命令运行器的相似配方写法也不意味着具有相同的文件目标更新模型。\n\n## 参考\n\n- [GNU Make 手册](https://www.gnu.org/software/make/manual/make.html)\n- [目标、前置条件与配方](https://www.gnu.org/software/make/manual/html_node/Rule-Introduction.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/make/manual/make.html"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "code-duplication-density",
+  "name": "Code Duplication Density",
+  "aliases": [
+    "代码重复密度",
+    "重复代码比例"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-quality",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-clone-detection",
+      "context": "以声明的检测器和克隆定义产生重复片段及被覆盖行数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "total-source-lines",
+      "context": "在 Sonar duplicated_lines_density 口径下，以分析范围的全部物理行数作为分母，而非只含代码字符的 ncloc。"
+    }
+  ],
+  "summary": "按检测器口径计算被重复片段覆盖的代码比例。",
+  "description": "代码重复密度表达检测为重复的代码相对分析范围的比例。Sonar 的 duplicated_lines_density 以重复涉及的行数除以物理行数再乘百分之百；其他工具可能采用不同分母与重复片段合并方式。\n\n克隆检测的最小 token 数、行数、语言规则及名称归一化影响分子，忽略生成代码或第三方代码则改变输入范围。相比逐行去重得到的 unique LOC，这种指标针对检测出的片段，并不具有相同定义。\n\n使用时应保留具体检测器、版本、参数以及总体或新代码范围，避免跨工具直接比较。重复可能来自合理隔离或生成过程，百分比不自动说明维护风险，更不能替代逐片段判断是否适合抽象和重构。\n\n## 参考\n\n- [Sonar：度量定义](https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition)\n- [PMD：7.28.0 CPD 文档](https://github.com/pmd/pmd/blob/pmd_releases/7.28.0/docs/pages/pmd/userdocs/cpd/cpd.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition"
+}

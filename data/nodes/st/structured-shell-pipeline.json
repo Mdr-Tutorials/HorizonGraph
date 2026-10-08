@@ -1,0 +1,38 @@
+{
+  "id": "structured-shell-pipeline",
+  "name": "Structured Shell Pipeline",
+  "aliases": [
+    "结构化 Shell 管道",
+    "对象管道"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "当结构化值需要落盘或交换时，PowerShell 与 Nushell 可显式序列化为 JSON；内部管道本身不强制采用 JSON。"
+    }
+  ],
+  "summary": "让Shell内部命令传递对象或结构化值的组合机制。",
+  "description": "结构化 Shell 管道把带属性或类型的值传给后续命令，而不是要求各阶段从显示文字恢复数据。PowerShell 常传递 .NET 对象，Nushell 传递记录、表、列表等值；它们共享结构化组合思路，但对象身份、类型和参数绑定规则仍各自定义。\n\n结构化流允许按属性筛选和选择字段，也需要理解逐项传递、集合包装及下游接受哪些输入。格式化为终端表格属于显示步骤，通常不等于持久化原始结构；转换成 JSON 等格式后还能跨进程传输，但那时需要相应编码与解码。\n\n本机程序的标准流边界另行处理。PowerShell 7.4 起特定本机到本机管道及 stdout 文件重定向保留字节；Nushell 对外部输出提供字节流及文本转换路径。内部结构化能力不保证任意外部命令自动输出同样的对象，也不能从一个 Shell 的规则推断另一个。\n\n## 参考\n\n- [Microsoft：about_Pipelines](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines)\n- [Nushell：Pipelines](https://www.nushell.sh/book/pipelines.html)\n- [Nushell：Types of Data](https://www.nushell.sh/book/types_of_data.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pipelines"
+}

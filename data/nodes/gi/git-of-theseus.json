@@ -1,0 +1,48 @@
+{
+  "id": "git-of-theseus",
+  "name": "Git of Theseus",
+  "aliases": [
+    "Git忒修斯之船",
+    "代码年代与存留分析"
+  ],
+  "type": "tool",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "repository-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-blame",
+      "context": "扫描历史快照时追踪行对应的历史改写，用于引入年代分组。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-object-model",
+      "context": "遍历提交树中的路径与 blob 标识，比较相邻取样快照的 binsha，筛选新增或已修改文件再执行 blame。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-age",
+      "context": "按行进入历史的时间构造年代分组，明确区别于文件最后修改年龄。"
+    }
+  ],
+  "summary": "按历史年代追踪 Git 仓库代码行的存留变化。",
+  "description": "Git of Theseus 是 Erik Bernhardsson 编写的代码演化分析工具。它将历史快照中的行按进入仓库的时间分组，观察旧代码随项目变化仍存留多少，并可生成分组堆叠图和存留曲线。\n\n分析需要先执行仓库扫描，再生成图形；当前实现遍历提交树并比较路径对应的 blob 标识，筛选变化文件后通过 blame 追踪行归属。年代分组与文件最后修改年龄有不同含义，报告要说明取样时间、分支与行追踪配置。\n\n代码行存留不能代表功能、设计或知识完整存留。机械改写和历史表示会影响追踪，作者文章中的半衰期是特定样本的拟合结果，不能作为任意项目的固定寿命或预测承诺。\n\n## 参考\n\n- [Git of Theseus：官方项目](https://github.com/erikbern/git-of-theseus)\n- [作者：代码存留与模型限制](https://erikbern.com/2016/12/05/the-half-life-of-code.html)\n- [Git of Theseus：树对象比较与 blame 实现](https://github.com/erikbern/git-of-theseus/blob/master/git_of_theseus/analyze.py)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/erikbern/git-of-theseus"
+}

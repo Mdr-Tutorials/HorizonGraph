@@ -1,0 +1,33 @@
+{
+  "id": "comment-aware-counting",
+  "name": "Comment-aware Source Counting",
+  "aliases": [
+    "注释感知计数",
+    "语言感知行分类"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lexer",
+      "context": "采用词法扫描的实现按字符串、注释和代码状态解释符号，而非仅按行文本模式删去字符。"
+    }
+  ],
+  "summary": "结合语言词法状态区分代码、注释与字符串中的符号。",
+  "description": "注释感知计数根据语言的注释与字符串规则分类源码行。它必须区分真正的注释起始符与字符串字面量中的同样字符，并处理转义、跨行文本及语言允许的嵌套注释。\n\n实现可以使用状态机、词法扫描或专门解析规则，不必先建立完整 AST。scc 的扫描状态和 Tokei 的语言规则体现了这条路径；纯粹删除匹配注释符的正则可能误删字符串内容。\n\n边界用例包括代码后行尾注释、空块注释、原始字符串及同一文件中的嵌入语言。计数器的测试样例和语言定义是校验依据，支持某种语言不代表其全部语法和版本边界都已覆盖。\n\n## 参考\n\n- [scc 计数与识别源码](https://github.com/boyter/scc/blob/master/processor/workers.go)\n- [Tokei：语言定义](https://github.com/XAMPPRocky/tokei/blob/master/languages.json)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/boyter/scc/blob/master/processor/workers.go"
+}

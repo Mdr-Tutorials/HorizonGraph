@@ -1,0 +1,33 @@
+{
+  "id": "mutant-killing",
+  "name": "Mutant Killing",
+  "aliases": [
+    "变异体检出",
+    "杀死变异体"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-oracle",
+      "context": "由测试判定将可观察结果与原始预期比较，确定变异是否被检出。"
+    }
+  ],
+  "summary": "用测试失败区分变异程序与原始基线。",
+  "description": "变异体检出通常指原始基线测试通过，而启用某个变异后至少一个测试失败。它提供测试能观察到该改动的证据，区别于仅执行过变异位置。\n\n测试需要触达变异位置、使状态产生相关差异并让差异传播到可观察断言。只增加执行触达但不检查输出，可能使覆盖率提高而变异继续存活。\n\n应确认失败由变异引起而非不稳定测试或环境错误。Stryker 将超时也计入 detected，但保留 timeout 状态；这种统计政策与“至少一个断言失败”的 killed 状态应明确区分。\n\n## 参考\n\n- [Stryker：变异状态与得分公式](https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/)\n- [PIT 官方主页](https://pitest.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "measurement-scale",
+  "name": "Measurement Scale",
+  "aliases": [
+    "度量标度",
+    "测量标度",
+    "测量尺度"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "software-measurement",
+      "context": "数值的标度与单位限制软件度量结果可作的排序、差值和比例解释。"
+    }
+  ],
+  "summary": "说明数值表示保留哪些关系及允许哪些比较。",
+  "description": "度量标度描述赋给对象的数值或标签能表达哪些关系。常见区分包括无次序的名义分类、有次序的顺序标度、有可比较差值的区间标度和有有意义零点的比率标度；单位与标度是相关但不同的说明。\n\n语言类别适合做名义分类，严重程度等级通常表达次序；限定口径的文件数和时长可以支持比率比较。若把标签编码为数字，数字大小本身不会赋予可加性，也不能据此宣称等级之间差距相等。\n\nNIST 的软件产品量与单位报告特别说明其传统标度定义有适用范围，并讨论软件属性与计量对象的歧义。分析时应公开编码、单位和聚合规则；某种统计方法能运行，不代表它的解释符合原标度。\n\n## 参考\n\n- [NIST IR 8289：软件产品的量与单位](https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8289.pdf)\n- [软件工程度量理论与测量性质](https://arxiv.org/html/2406.14494v1)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://nvlpubs.nist.gov/nistpubs/ir/2020/NIST.IR.8289.pdf"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "code-smell",
+  "name": "Code Smell",
+  "aliases": [
+    "代码异味",
+    "代码坏味道"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    }
+  ],
+  "summary": "提示代码结构值得进一步检查的可观察迹象。",
+  "description": "代码异味是代码中提示更深层设计问题的可观察迹象。Fowler 将它视为调查线索：长方法、重复结构或过度依赖可能值得检查，但迹象本身不直接证明程序行为有错。\n\n异味的适用性取决于语言、职责和修改场景。静态规则可以为某些模式提供可重复提示，而重构判断还需要理解代码承担的功能、稳定边界和移除该模式的代价。\n\n代码异味不与漏洞、确定缺陷或技术债完全等同。自动告警应经过复核；检查器规则集或产品的问题分类改变时，也应保留版本信息，避免把名称相同的指标解释为相同的发现集合。\n\n## 参考\n\n- [Martin Fowler：Code Smell](https://martinfowler.com/bliki/CodeSmell.html)\n- [SEI：技术债的设计与演化范围](https://www.sei.cmu.edu/blog/managing-the-consequences-of-technical-debt-5-stories-from-the-field/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://martinfowler.com/bliki/CodeSmell.html"
+}

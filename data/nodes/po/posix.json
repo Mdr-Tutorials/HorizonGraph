@@ -8,24 +8,32 @@
   ],
   "type": "protocol",
   "ecosystems": [
-    "linux-gnu-ecosystem"
+    "linux-gnu-ecosystem",
+    "shell-cli-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "terminal-engineering",
+    "command-line-tools"
   ],
   "abstraction_level": "kernel_os",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "protocol"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "posix-shell"
     }
   ],
-  "summary": "操作系统 API 与 Shell 的可移植标准，Unix 兼容的公约。",
+  "summary": "规定系统接口、Shell 与常用工具行为的可移植标准。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "1988-01-01",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
   "popular": 62,
-  "official_site": "https://pubs.opengroup.org/onlinepubs/9699919799/"
+  "official_site": "https://pubs.opengroup.org/onlinepubs/9799919799/",
+  "description": "POSIX 是 IEEE 与 The Open Group 共同维护的可移植操作系统接口标准体系，规定系统接口、头文件、Shell 命令语言和常用工具的行为。本节点以 POSIX.1-2024、The Open Group Base Specifications Issue 8 的公开规范为现行参考，同时保留该标准早期发布的历史信息。标准描述应用可以依赖的接口与语义，不是一个操作系统内核或具体 Shell 程序。\n\n文件描述符、进程、管道、终端控制等接口使应用能够在符合相应要求的系统间迁移；Shell and Utilities 卷规定命令解释与工具调用的共同约定。实现可有扩展，规范也保留未指定或实现定义的行为。某个程序运行成功、支持部分 API 或使用类似 Unix 的目录结构，都不足以单独证明完整符合标准。\n\n终端仿真器、Shell 与操作系统接口各有职责。POSIX 的终端接口不等同全部 ECMA 控制序列、xterm 私有扩展或现代图像协议，Bash 等 Shell 也可以同时提供标准模式和自身扩展。实际移植时需要说明采用的标准版本、可选能力、实现差异与依赖扩展，不能把标准名称当作所有系统行为完全相同的保证。\n\n## 参考\n\n- [The Open Group Base Specifications Issue 8](https://pubs.opengroup.org/onlinepubs/9799919799/)\n- [POSIX.1-2024: Shell Command Language](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html)\n- [POSIX.1-2024: 接口总则与描述符](https://pubs.opengroup.org/onlinepubs/9799919799/functions/V2_chap02.html)"
 }

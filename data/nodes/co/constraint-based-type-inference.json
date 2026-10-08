@@ -1,0 +1,38 @@
+{
+  "id": "constraint-based-type-inference",
+  "name": "Constraint-Based Type Inference",
+  "aliases": [
+    "约束式类型推断",
+    "基于约束的类型推断"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unification",
+      "context": "等式约束的类型推断路径用统一化求变量替换；集合传播和子类型路径可采用其他求解器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "以生成和求解类型约束的方式推导表达式及变量的类型信息。"
+    }
+  ],
+  "summary": "从程序生成类型约束，再求解或传播获得类型信息。",
+  "description": "约束式类型推断先由变量、表达式和调用关系生成类型约束，再求解或传播以得到类型信息。约束可能表达类型相等、子类型或类型集合包含关系；所选关系决定求解算法和语言可表达能力。\n\n统一化适合某些等式类型约束，集合或子类型分析则可用其他传播与不动点方法。Tern 将抽象值接收到的类型传播给约束，并对缺乏证据的结果使用限定启发式，不能把所有约束式推断都写成 Hindley–Milner 统一化。\n\n所得类型取决于约束模型、注解、分析范围与动态语言假设。静态类型系统的检查保证和编辑器的近似类型提示各有边界；约束得到解不代表理解任意运行时业务行为，更不代替外部数据验证。\n\n## 参考\n\n- [Aarhus：约束式程序分析](https://www.cs.au.dk/~amoeller/spa/)\n- [Tern 作者：类型传播算法](https://marijnhaverbeke.nl/blog/tern.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,43 @@
+{
+  "id": "terminal-resize",
+  "name": "Terminal Resize Handling",
+  "aliases": [
+    "终端尺寸变更处理"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unix-signal",
+      "context": "Linux 终端尺寸变化通过 SIGWINCH 通知前台进程组，应用再查询当前尺寸。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "process-group",
+      "context": "Linux TTY 尺寸更新以终端前台进程组作为 SIGWINCH 通知目标。"
+    }
+  ],
+  "summary": "传播字符网格尺寸并让应用重新查询和重绘布局。",
+  "description": "终端尺寸变更处理把窗口的显示变化传播为应用可使用的行列信息。终端首先决定字符网格尺寸，再同步相应设备或会话状态；全屏程序通常根据新尺寸重新布局。像素大小与字符行列分别有含义，不能只把 GUI 窗口宽度当作应用可用列数。\n\nLinux TIOCGWINSZ 和 TIOCSWINSZ 读取或设置窗口大小结构。尺寸发生变化时，内核向终端前台进程组发出 SIGWINCH，应用随后应查询最新状态并安排重绘。信号是变化通知，不是携带完整新布局的事件对象；多次变化也不能按信号数逐项推断。\n\n仿真器需要处理现有字符行、光标、主屏与备用屏幕在缩放后的内容。远程连接和终端复用器还需在不同网格尺寸之间传播信息，具体重排策略可能不同。没有交互终端的输出路径不能无条件依赖此信号，应为不可查询尺寸的情况提供明确行为。\n\n## 参考\n\n- [Linux man-pages：终端窗口大小与 SIGWINCH](https://man7.org/linux/man-pages/man2/TIOCGWINSZ.2const.html)\n- [Linux man-pages：Unix 信号](https://man7.org/linux/man-pages/man7/signal.7.html)\n- [xterm.js：屏幕缓冲 API](https://xtermjs.org/docs/api/terminal/interfaces/ibuffer/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man2/TIOCGWINSZ.2const.html"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "spotbugs",
+  "name": "SpotBugs",
+  "aliases": [
+    "Java 字节码缺陷检查器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis-rule",
+      "context": "在 Java 字节码上执行可配置缺陷模式检测器。"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "jvm"
+    }
+  ],
+  "summary": "从 Java 字节码模式和分析信息发现潜在缺陷。",
+  "description": "SpotBugs 分析 Java 字节码寻找潜在缺陷模式，是 FindBugs 的后继项目。与直接检查源文件约定的工具不同，它的主要输入是编译后的 class 文件及相关分析类路径。\n\n工具采用静态分析并报告带模式、置信度或优先级等信息的发现，可通过 CLI 或构建插件执行。过滤与插件影响检查范围，缺少所需类也可能限制分析，应将输入完整性与结果一起记录。\n\n报告指出潜在问题，不是对所有执行路径和业务要求的证明。生成字节码、依赖版本和分析配置需要复现，问题应结合源码及运行语义复核；筛掉告警也不等于修复程序。\n\n## 参考\n\n- [SpotBugs：官方介绍](https://spotbugs.readthedocs.io/en/latest/introduction.html)\n- [SpotBugs：执行与输入](https://spotbugs.readthedocs.io/en/latest/running.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://spotbugs.readthedocs.io/en/latest/introduction.html"
+}

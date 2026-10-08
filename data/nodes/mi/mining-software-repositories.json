@@ -1,0 +1,50 @@
+{
+  "id": "mining-software-repositories",
+  "name": "Mining Software Repositories",
+  "aliases": [
+    "软件仓库挖掘",
+    "软件库挖掘",
+    "MSR"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "repository-analysis",
+      "context": "以源码快照及版本历史为数据源时进行范围明确的仓库分析。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pydriller",
+      "context": "采用 Python 挖掘 Git 提交和文件变更的研究中使用其遍历 API。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gh-archive",
+      "context": "研究公开 GitHub 事件流时可采用其按时间归档的事件数据，不把事件流当完整源码历史。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ghtorrent",
+      "context": "采用其已发布历史快照研究 GitHub 仓库和协作结构时，固定快照日期并核对实体采集范围。"
+    }
+  ],
+  "summary": "从软件开发记录中提取可验证的工程证据。",
+  "description": "软件仓库挖掘研究软件开发留下的数据，包括版本控制、缺陷跟踪、代码审查、构建记录和开发交流。它关注产品与过程的演化，代码行计数只是其中一种输入；研究对象不局限于 Git 的当前源码树。\n\n研究者需要把问题转化为可观测变量，再取得、清洗和链接记录。PyDriller 可取得提交与修改文件，GH Archive 提供公开活动事件；事件、API 实体状态和源码历史有不同覆盖范围，需要分别理解。\n\n仓库样本和工具生成的标签都可能不完整。分叉重复、身份别名、历史重写及平台使用方式会影响结论；观察相关性不能据此宣称因果关系，分析方案、数据快照与清洗规则应随结果一起公开。\n\n## 参考\n\n- [MSR 会议：研究范围](https://conf.researchr.org/track/msr-2026/msr-2026-technical-papers)\n- [GHTorrent 作者：GitHub 数据研究](https://github.com/ghtorrent/tutorial/blob/master/index.md)\n- [Git 历史研究的陷阱](https://www.microsoft.com/en-us/research/publication/the-promises-and-perils-of-mining-git/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://conf.researchr.org/track/msr-2026/msr-2026-technical-papers",
+  "abbreviation": "MSR"
+}

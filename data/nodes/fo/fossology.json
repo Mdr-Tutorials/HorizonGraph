@@ -1,0 +1,44 @@
+{
+  "id": "fossology",
+  "name": "FOSSology",
+  "aliases": [
+    "FOSSology 许可审查系统"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "license-detection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx",
+      "context": "通过支持的 SPDX 导入导出交换许可审查信息，需确认版本和字段保留。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "concluded-license",
+      "context": "审查工作流在扫描证据基础上记录许可结论，而不将全部候选自动等同于结论。"
+    }
+  ],
+  "summary": "以扫描、人工审查及报告工作流整理开源许可证据。",
+  "description": "FOSSology 是开源许可审查系统与工具包，提供命令行扫描以及数据库和 Web 界面的工作流。它能够发现许可、版权和其他受支持文本信息，并支持人工整理判断。系统的任务是帮助组织收集与审查材料，工具输出不代替对具体事实的判断。\n\n多种扫描器使用不同方法发现许可候选，审查者可以结合文件上下文记录结论。相同文件内容可复用已完成的扫描与审查信息，以降低版本变更时的重复工作。SPDX 导入导出用于交换外部证据与结果，需核对实际支持版本及字段。\n\n自动扫描命中与人工清理决定应分别保存，才能追溯结论来自何处。文本改变、交付范围和组件关系可能影响审查结果，不应仅按相同项目名称复用全部决定。FOSSology 提供操作记录和报告能力，不能由扫描完成推导软件无风险或任意使用已经获得授权。\n\n## 参考\n\n- [FOSSology：官方系统与工具职责](https://github.com/fossology/fossology)\n- [FOSSology：扫描、审查及 SPDX 工作流](https://github.com/fossology/fossology/wiki)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/fossology/fossology",
+  "abstraction_level": "application_tool"
+}

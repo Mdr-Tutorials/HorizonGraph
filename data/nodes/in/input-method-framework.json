@@ -1,0 +1,30 @@
+{
+  "id": "input-method-framework",
+  "name": "Input Method Framework",
+  "aliases": [
+    "输入法框架",
+    "IM Framework"
+  ],
+  "type": "concept",
+  "domains": [
+    "desktop-application-development",
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "theoretical",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "desktop-interface-concept"
+    }
+  ],
+  "summary": "连接输入引擎、应用文本上下文与候选界面的系统机制。",
+  "description": "输入法框架连接应用的文本输入上下文与输入法引擎，使按键序列、预编辑文本、候选选择和最终提交形成协调流程。它组织切换和通信，具体语言的拼音、编码或预测规则通常由可装载引擎实现。\n\n输入上下文传递焦点、光标位置、周边文本以及能力信息，框架据此通知应用显示预编辑并提交结果。候选界面可能由独立进程、合成器协作或客户端模块显示；GTK 输入上下文等接口为工具包提供接入点。\n\n键盘映射、文本塑形和输入法各有职责，能够显示 Unicode 字形不保证能正确输入复杂文字。X11、Wayland 与工具包模块有不同接入路径；环境变量、协议扩展和宿主支持必须匹配，不能用一套配置推断所有桌面应用行为。\n\n## 参考\n\n- [GTK 输入上下文](https://docs.gtk.org/gtk4/class.IMContext.html)\n- [Fcitx 输入法引擎与预编辑流程](https://fcitx-im.org/wiki/Develop_an_simple_input_method/en)",
+  "official_site": "https://docs.gtk.org/gtk4/class.IMContext.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

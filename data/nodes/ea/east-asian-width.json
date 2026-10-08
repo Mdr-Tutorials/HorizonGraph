@@ -1,0 +1,33 @@
+{
+  "id": "east-asian-width",
+  "name": "East Asian Width",
+  "aliases": [
+    "东亚宽度",
+    "东亚字符宽度",
+    "East_Asian_Width"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unicode"
+    }
+  ],
+  "summary": "用于东亚编码互操作的 Unicode 字符宽度属性。",
+  "description": "East Asian Width 是 Unicode 字符数据库中的属性，以 Fullwidth、Halfwidth、Wide、Narrow、Ambiguous 与 Neutral 六类表达与东亚历史编码和排版习惯有关的宽度信息。它首先是字符属性，不是字体栅格化所得的像素测量。\n\nAmbiguous 字符的宽窄需要结合语言、字体、编码来源或应用约定决定。组合标记、变体序列和规范等价形式也可能使简单的逐码点查表不能表达实际显示宽度，字符属性与 advance width 不应混写。\n\nUAX #11 明确指出，现代终端需要针对实际情况定制，不能把 East Asian Width 当成覆盖所有情况的现成列宽算法。应用与终端采用不同 Unicode 数据版本或模糊宽度策略时，表格对齐和光标位置可能不一致。\n\n## 参考\n\n- [Unicode UAX #11：东亚宽度与终端限制](https://www.unicode.org/reports/tr11/)\n- [Unicode：字符属性数据库](https://www.unicode.org/reports/tr44/)\n- [Unicode UAX #29：字素边界](https://www.unicode.org/reports/tr29/)",
+  "official_site": "https://www.unicode.org/reports/tr11/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

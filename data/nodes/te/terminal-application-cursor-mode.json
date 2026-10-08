@@ -1,0 +1,35 @@
+{
+  "id": "terminal-application-cursor-mode",
+  "name": "Application Cursor Keys Mode",
+  "aliases": [
+    "终端应用光标键模式",
+    "DECCKM",
+    "Application Cursor Mode"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vt100-control-sequences",
+      "context": "通过 DEC 的 DECCKM 模式在普通与应用光标键编码之间切换。"
+    }
+  ],
+  "summary": "切换光标键的输入编码，让全屏应用区分特定按键语义。",
+  "description": "应用光标键模式是 DEC VT 传统中的键盘编码状态，改变光标方向键向程序发送的序列。普通模式下常使用 CSI A/B/C/D，应用模式下对应 SS3 形式 ESC O 后接相应字母。它是终端输入编码的选择，不是屏幕光标是否显示或可否移动的开关。\n\nDECCKM 私有模式控制这一状态，应用通过规定序列设置或复位，并按实际输入格式解析。它与数字小键盘的应用模式相关但分别定义，不能把方向键和数字小键盘的所有行为合成一个状态。现代终端还可能支持修饰键或增强键盘协议，需按配置共同解释。\n\n全屏库通常通过终端能力条目处理相关初始化和按键序列，以避免硬编码单一方言。程序退出或嵌套应用结束应正确恢复模式，否则 Shell 可能收到未预期序列。改变 DECCKM 不会自动关闭规范输入、打开鼠标报告或授予应用对桌面快捷键的控制。\n\n## 参考\n\n- [DEC：VT100 原始用户手册的程序员章节](https://oldmanprogrammer.net/webapps/vt100/doc/vt100-ug/chapter3.html)\n- [Microsoft：虚拟终端序列与屏幕缓冲](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)\n- [ncurses：cbreak、raw 与输入选项](https://invisible-island.net/ncurses/man/curs_inopts.3x.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://oldmanprogrammer.net/webapps/vt100/doc/vt100-ug/chapter3.html"
+}

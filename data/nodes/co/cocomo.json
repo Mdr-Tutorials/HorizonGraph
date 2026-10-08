@@ -1,0 +1,38 @@
+{
+  "id": "cocomo",
+  "name": "Constructive Cost Model",
+  "abbreviation": "COCOMO",
+  "display_primary": "构造性成本模型",
+  "display_secondary": "Constructive Cost Model",
+  "aliases": [
+    "构造性成本模型",
+    "COCOMO 81",
+    "COCOMO I",
+    "构造成本模型"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-lines-of-code",
+      "context": "COCOMO 81 以模型定义口径的源代码规模、通常按千行换算，作为工作量估算的重要输入；仓库原始行数须先对齐计数范围。"
+    }
+  ],
+  "summary": "用软件规模与项目参数估算工作量和工期的经典模型。",
+  "description": "COCOMO 是 Barry Boehm 在 1981 年发表的软件开发工作量、成本与进度估算模型，原始方法现通常称 COCOMO 81。Basic、Intermediate 和 Detailed 三种形式逐步引入更细的项目信息，其经验基础对应当时的软件开发实践。\n\n经典模型以规定口径的千源代码行规模为重要输入，配合开发模式以及产品、人员和项目环境等成本驱动参数。工作量一般以人月表达；估算成本还需给出人员费用假设，不能从仓库行数直接读出真实项目账单。\n\nCOCOMO 81 适合解释经典估算和核对采用该模型的工具输出。大量复用、现成组件和后续开发实践改变了适用条件；实际使用应披露计数范围、模型形式、参数和校准依据，不能把输出当作个人绩效或确定工期。\n\n## 参考\n\n- [Boehm CSSE：COCOMO 81 的形式与历史语境](https://boehmcsse.org/tools/cocomo81/)\n- [Barry Boehm：Safe and Simple Software Cost Analysis（作者论文）](https://people.eecs.ku.edu/~hossein/811/Papers/boehm-cost-analysis.pdf)\n- [NASA/JPL：Handbook for Software Cost Estimation（2003）](https://swehb.nasa.gov/download/attachments/16450436/Handbook_for_Software_Cost_Estimation.pdf?api=v2)",
+  "status": "historical",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://boehmcsse.org/tools/cocomo81/"
+}

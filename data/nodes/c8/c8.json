@@ -1,0 +1,43 @@
+{
+  "id": "c8",
+  "name": "c8",
+  "aliases": [
+    "V8 原生覆盖率工具",
+    "c8 覆盖率工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-coverage",
+      "context": "把 Node.js 内建 V8 覆盖事件映射成源码覆盖报告并执行阈值检查。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "nyc"
+    }
+  ],
+  "summary": "将 Node.js 原生 V8 覆盖数据转为报告。",
+  "description": "c8 利用 Node.js 内建的 V8 覆盖能力采集运行信息，并生成兼容 Istanbul 报告器的输出。其主要路径从运行时覆盖数据出发，区别于必须预先改写用户 JavaScript 的源码插桩流程。\n\nV8 默认只提供已加载文件的覆盖，c8 的 all 与 src、include、exclude 配置可将目标范围内未加载文件按零覆盖纳入。源码映射用于把生成代码对应回 TypeScript 或其他原始源码。\n\n阈值、映射前后排除和忽略注释都会影响最终报告；应保持配置与版本可追踪。V8 区域数据转成行、语句或分支结果需要具体映射规则，不能泛称所有 V8 工具输出都天然相同。\n\n## 参考\n\n- [c8 一手资料](https://github.com/bcoe/c8)\n- [Node.js：原生覆盖数据](https://nodejs.org/api/cli.html#node_v8_coveragedir)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/bcoe/c8"
+}

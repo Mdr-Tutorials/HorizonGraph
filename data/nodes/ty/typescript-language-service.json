@@ -1,0 +1,63 @@
+{
+  "id": "typescript-language-service",
+  "name": "TypeScript Language Service",
+  "aliases": [
+    "TypeScript 语言服务",
+    "TS Language Service"
+  ],
+  "type": "library",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "typescript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "incremental-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "复用类型检查器在当前项目上下文推导的表达式与符号类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-completion",
+      "context": "根据文件与位置查询可用符号候选，宿主负责更新源码版本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go-to-definition",
+      "context": "通过服务 API 获取当前符号声明或定义的位置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "find-references",
+      "context": "通过服务 API 查询已纳入项目分析的符号引用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rename-refactoring",
+      "context": "计算针对符号的重命名位置与编辑信息。"
+    }
+  ],
+  "summary": "复用 TypeScript 分析状态提供编辑查询的 API。",
+  "description": "TypeScript Language Service 是 TypeScript 工具链的进程内语言智能 API，围绕长期存在的项目状态提供补全、诊断、定义、引用、重命名及输出查询。它不同于 tsc 的一次性命令行编译，也不同于包装该 API 的 tsserver 进程。\n\n宿主通过 LanguageServiceHost 供给文件内容、版本、编译选项和环境访问，ScriptSnapshot 表达源码快照及变化。服务按请求所需层次延迟解析、绑定和检查，语法诊断并不要求每次都完成整个项目语义检查。\n\n项目版本和宿主文件信息决定查询是否对应当前源码。API 也能服务 JavaScript，但能力取决于声明和检查配置；这套进程内接口不是 LSP，经典 TypeScript 包 API 与其他实现代际的对外协议需分别核对。\n\n## 参考\n\n- [TypeScript：语言服务 API](https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API)\n- [TypeScript：工具链架构](https://github.com/microsoft/TypeScript/wiki/Architectural-Overview)\n- [Microsoft：TypeScript 7 正式发布与原生 LSP](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API"
+}

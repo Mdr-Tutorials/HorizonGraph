@@ -1,0 +1,27 @@
+{
+  "id": "software-quality",
+  "name": "Software Quality",
+  "aliases": [
+    "软件质量"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    }
+  ],
+  "summary": "依据使用目标和利益相关者需求评价软件的多维属性。",
+  "description": "软件质量描述软件在规定情境下满足需求的程度，既包括可观察的运行行为，也包括支持修改、分析与演化的内部属性。功能是否正确、运行是否可靠和修改是否容易需要各自的证据，不能用源代码规模代表全部质量。\n\nISO/IEC 25010:2023 为 ICT 与软件产品给出由九项特征组成的产品质量模型，供需求规格、度量与评价共同使用。SWEBOK 则将质量管理、保证、静态与动态分析以及技术审查放入软件工程活动体系。\n\n实际评价先确定产品目标、用户和运行条件，再选择可检验的质量要求与指标。规则检查、缺陷统计和测试结果回答不同问题；把它们汇总为一个分数时，应保留模型、权重与未覆盖的性质，避免把工具通过状态解释为全面保证。\n\n## 参考\n\n- [ISO：25010:2023 产品质量模型](https://www.iso.org/standard/78176.html)\n- [IEEE：SWEBOK 第四版](https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.iso.org/standard/78176.html"
+}

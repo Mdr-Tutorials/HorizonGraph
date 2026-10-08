@@ -1,0 +1,50 @@
+{
+  "id": "dependency-track",
+  "name": "Dependency-Track",
+  "aliases": [
+    "依赖追踪平台",
+    "OWASP Dependency-Track"
+  ],
+  "type": "product",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "software-composition-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclonedx",
+      "context": "导入及导出支持版本的 CycloneDX BOM，项目组成由生产方清单提供。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclonedx-vex",
+      "context": "在支持的 VEX 导入导出路径交换特定项目的漏洞影响判断。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "package-url",
+      "context": "使用组件 PURL 等身份信息关联跨项目的软件包与公告。"
+    }
+  ],
+  "summary": "持续消费 CycloneDX 清单并分析组件与项目风险。",
+  "description": "Dependency-Track 是以 SBOM 为输入的开源组件分析平台，跟踪多个项目版本中的组件使用。它集中消费组成信息，再通过漏洞情报、许可和政策功能支持持续风险管理。它主要处于清单消费与分析环节，不是面向任意源码或镜像的统一组件发现程序。\n\n平台支持 CycloneDX BOM 与 VEX，API 便于流水线提交项目清单。导入组件与更新后可启动分析，已保存组件还可以随情报更新重新检查。项目、版本和组件身份需要保持准确，特别是 PURL、依赖和许可信息，否则集中保存更多清单也未必提高匹配质量。\n\n审计活动记录对候选问题的判断和适用项目，允许保留证据与处理历史。平台提供政策功能不代表默认替每个组织完成事实或许可审查。清单覆盖、公告来源、VEX 信任和版本支持仍是使用边界；没有告警不能作为所有交付物安全的证明。\n\n## 参考\n\n- [Dependency-Track：官方功能与角色](https://docs.dependencytrack.org/)\n- [Dependency-Track：CI 提交与持续分析](https://docs.dependencytrack.org/usage/cicd/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://docs.dependencytrack.org/",
+  "abstraction_level": "application_tool"
+}

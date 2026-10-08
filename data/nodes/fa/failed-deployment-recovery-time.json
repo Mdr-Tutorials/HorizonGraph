@@ -1,0 +1,29 @@
+{
+  "id": "failed-deployment-recovery-time",
+  "name": "Failed Deployment Recovery Time",
+  "aliases": [
+    "失败部署恢复时间",
+    "部署失败恢复耗时"
+  ],
+  "type": "metric",
+  "domains": [
+    "devops",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "衡量失败生产部署后恢复服务所需的时间。",
+  "description": "失败部署恢复时间衡量一次生产部署失败并需要立即干预后，恢复所需的时间。DORA 在 2023 年用这一名称与定义替代较宽的恢复指标，关注变更引起的服务损害，避免与外部因素造成的事故混在一起。\n\n事件采集需约定失败起点、恢复完成判定、服务范围和时钟，并说明回滚、修复发布或临时缓解怎样结束恢复区间。记录多个事件时应披露聚合方式；没有符合条件的失败事件，应标为无样本而不是推定零恢复时间。\n\n当前 DORA 把它放在交付吞吐侧，因为恢复过程也需要交付变化。该指标不是所有故障的通用 MTTR，也不能独立表明用户影响或长期问题是否解决；比较必须使用一致事件定义和观察窗口。\n\n## 参考\n\n- [DORA：指标定义演变史，2026](https://dora.dev/insights/dora-metrics-history/)\n- [DORA：当前软件交付性能指标](https://dora.dev/guides/dora-metrics/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://dora.dev/insights/dora-metrics-history/"
+}

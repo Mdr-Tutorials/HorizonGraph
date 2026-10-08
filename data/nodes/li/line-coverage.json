@@ -1,0 +1,27 @@
+{
+  "id": "line-coverage",
+  "name": "Line Coverage",
+  "aliases": [
+    "行覆盖率"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计纳入分析的可执行源码行被触达的比例。",
+  "description": "行覆盖率通常为至少执行过一次的可执行源码行数除以纳入分析的可执行行数。注释、空行和纯声明是否具有可执行含义由语言及工具决定，不能把 scc 或 tokei 的物理代码行总数直接当成覆盖分母。\n\n一行可以包含多个语句或分支；一条语句也可能跨行。JaCoCo 将有至少一条已执行字节码指令的源码行视为执行过，因此行已覆盖仍可能存在未执行指令与分支；Python 的行事件又有自己的映射规则。\n\n跨工具比较需要一致的源文件范围、编译调试信息和排除规则。行覆盖适合定位未触达代码，但不能替代语句、分支或断言的分析；重排代码格式也可能改变按行统计的比例。\n\n## 参考\n\n- [JaCoCo：覆盖计数口径](https://www.jacoco.org/jacoco/trunk/doc/counters.html)\n- [Coverage.py：采集、分析与报告](https://coverage.readthedocs.io/en/latest/howitworks.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.jacoco.org/jacoco/trunk/doc/counters.html"
+}

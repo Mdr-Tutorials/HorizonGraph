@@ -1,0 +1,35 @@
+{
+  "id": "ansi-escape-sequence",
+  "name": "ANSI Escape Sequences",
+  "aliases": [
+    "ANSI 转义序列",
+    "ANSI escape codes",
+    "ANSI 转义码"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ecma-48",
+      "context": "描述标准化终端控制序列时采用 ECMA-48 的控制功能与编码语法；私有扩展需另行核对。"
+    }
+  ],
+  "summary": "字符流中控制光标、显示属性及相关终端状态的序列。",
+  "description": "ANSI 转义序列是终端工程中对相关字符控制序列的常见总称，通常让应用在普通文字流中控制光标、擦除或显示属性。其规范基础包括 ECMA-48 及历史 ANSI X3.64 传统；实际生态还混入 DEC、xterm 和各终端的扩展，因此该俗称不是一个全功能统一产品协议。\n\nESC 是常见的七位引入字节，但后续语法需要按序列类别解析。CSI 可携带参数和最终动作字节，OSC 与 DCS 则引入带终止符的控制字符串。一次写调用不保证对应一条完整序列，解析器必须处理字节跨块到达，而不是只查找简单的颜色文本模式。\n\n生成输出时应核对目标终端能力和运行模式，必要时通过能力数据库选择序列。文本含有这些字节时会成为可改变显示状态的输入，处理日志或不可信文件需选择转义或受控解析。禁用颜色不代表消除所有终端控制，也不代表屏幕上的链接和文字已验证来源。\n\n## 参考\n\n- [Ecma International：ECMA-48 第五版](https://ecma-international.org/publications-and-standards/standards/ecma-48/)\n- [Microsoft：虚拟终端序列与屏幕缓冲](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://ecma-international.org/publications-and-standards/standards/ecma-48/"
+}

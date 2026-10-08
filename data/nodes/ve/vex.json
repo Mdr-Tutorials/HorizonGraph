@@ -1,0 +1,41 @@
+{
+  "id": "vex",
+  "name": "Vulnerability Exploitability eXchange",
+  "aliases": [
+    "漏洞可利用性交换",
+    "漏洞影响状态交换"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "需要关联产品与内含组件时，可采用 SBOM 确定声明适用对象，具体格式不必强制内嵌清单。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cve",
+      "context": "公告采用 CVE 标识时，用它关联相应漏洞；VEX 不限于只有 CVE 的记录。"
+    }
+  ],
+  "summary": "交换特定漏洞对明确产品的影响状态、理由和行动。",
+  "description": "VEX 是交换漏洞对特定产品实际影响状态的信息方式。它把产品、漏洞和状态联系起来，便于清单消费方区分组件出现与产品受影响之间的差异。常见状态包括受影响、不受影响、已修复和调查中，状态需要限定产品版本及时间。\n\n声明应标明作者、所述产品、漏洞标识及更新信息；不受影响需要适当理由或影响说明，受影响应提供相应行动信息。OpenVEX、CSAF 的 VEX profile 与 CycloneDX 提供不同格式，状态名和字段不能未经映射直接互换。SBOM 可辅助产品组件关联，但不是每种 VEX 都必须内嵌一份清单。\n\nVEX 是有来源的判断记录，消费者仍要决定作者是否获准判断该产品，并检查匹配范围和新旧声明。对一个漏洞声明不受影响，不代表产品没有其他漏洞；已修复也应对应确切版本。它为扫描结果提供上下文，不能作为无条件屏蔽全部风险的白名单。\n\n## 参考\n\n- [CISA：VEX 最低要求](https://www.cisa.gov/sites/default/files/2023-04/minimum-requirements-for-vex-508c.pdf)\n- [CycloneDX：VEX 目的与影响状态](https://cyclonedx.org/capabilities/vex/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.cisa.gov/sites/default/files/2023-04/minimum-requirements-for-vex-508c.pdf",
+  "abbreviation": "VEX"
+}

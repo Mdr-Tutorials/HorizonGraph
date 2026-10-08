@@ -1,0 +1,40 @@
+{
+  "id": "concluded-license",
+  "name": "Concluded License",
+  "aliases": [
+    "结论许可",
+    "审查结论许可证"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "license-detection",
+      "context": "审查过程可采用文本识别结果作为证据，但检测命中本身不等同结论。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx-license-expression",
+      "context": "用适用载体支持的表达式保存结论结构，未知及自定义文本按规范说明。"
+    }
+  ],
+  "summary": "基于许可证据和对象范围记录分析者形成的许可结论。",
+  "description": "结论许可是清单作者或审查者分析材料后记录的适用许可判断。它与作者原始声明及扫描器命中的许可文本分别保存，能够说明某个文件或包的结论从哪些事实产生。结论的对象范围应明确，不能把部分文件的判断直接复制为整个产品的统一许可。\n\nSPDX 3.0.1 用 hasConcludedLicense 表达这类信息，结论与声明不同时应记录解释；CycloneDX 也区分 declared、observed 与 concluded。分析输入可能包含文件文本、包说明和相关外部材料，扫描命中只是其中的证据。自动扫描或政策规则可以辅助整理，但不应覆盖缺失或冲突事实。\n\n未知、没有作出判断和确认不存在许可信息具有不同语义，使用的特殊值或模型应按规范版本解释。任何缺失字段都不应被推断成宽松许可或已获得授权。保留审查依据、时间与评论，让下游能够评估结论适用性，而不是把机器字段当成无条件最终认定。\n\n## 参考\n\n- [SPDX：Licensing profile 与结论的证据范围](https://spdx.github.io/spdx-spec/v3.0.1/model/Licensing/Licensing/)\n- [CycloneDX：许可证据与结论](https://www.cyclonedx.org/use-cases/open-source-licensing/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://spdx.github.io/spdx-spec/v3.0.1/model/Licensing/Licensing/"
+}

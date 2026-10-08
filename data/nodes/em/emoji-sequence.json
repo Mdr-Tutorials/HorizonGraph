@@ -1,0 +1,38 @@
+{
+  "id": "emoji-sequence",
+  "name": "Unicode Emoji Sequence",
+  "aliases": [
+    "Unicode 表情序列",
+    "Emoji 序列",
+    "表情符号序列"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unicode"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "grapheme-cluster",
+      "context": "UTS #51 的 emoji 序列以单一字素簇参与编辑与边界处理；这一事实不规定终端占用列数。"
+    }
+  ],
+  "summary": "用码点与修饰序列表达 Unicode emoji 呈现。",
+  "description": "Unicode Emoji Sequence 是 UTS #51 定义的 emoji 表示单位，包含基本或呈现序列、修饰序列、旗帜、键帽、tag 与零宽连接符序列。一个 emoji 可以由多个码点共同表达，不能只按单一码点识别所有表情。\n\n变体选择符可以请求文字或 emoji 呈现，肤色修饰符及 ZWJ 连接则参与更复杂的组合。推荐交换集合与对应数据文件有明确版本；符合语法不代表任意组合都属于推荐集合或已被目标字体支持。\n\n标准定义的 emoji 序列在字素分段上形成单一字素簇，但显示字形与终端列数仍由实现决定。缺少联合字形时可能显示为多个独立表情，因此序列合法、簇边界正确和字体呈现完整是三个需要分别检查的条件。\n\n## 参考\n\n- [Unicode UTS #51：Emoji 序列定义](https://www.unicode.org/reports/tr51/)\n- [Unicode UAX #29：Emoji 字素边界](https://www.unicode.org/reports/tr29/)\n- [Unicode：Emoji 数据目录](https://www.unicode.org/Public/emoji/latest/)",
+  "official_site": "https://www.unicode.org/reports/tr51/",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

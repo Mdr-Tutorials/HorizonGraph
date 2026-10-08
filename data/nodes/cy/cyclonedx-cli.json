@@ -1,0 +1,47 @@
+{
+  "id": "cyclonedx-cli",
+  "name": "CycloneDX CLI",
+  "aliases": [
+    "CycloneDX 命令行工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom-validation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom-diff"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom-aggregation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclonedx",
+      "context": "读取和写入工具支持的 CycloneDX 版本及序列化。"
+    }
+  ],
+  "summary": "校验、合并、比较和转换支持的 CycloneDX 文档。",
+  "description": "CycloneDX CLI 是处理 BOM 文档的开源命令行工具，提供格式转换、合并、比较、校验和其他受支持操作。它主要消费已有清单，而不是从任意软件目标中自动发现全部组件。输入必须符合对应命令和工具版本接受的规范范围。\n\n比较操作可以报告组件变化，合并操作把多个清单组合，校验检查相应结构要求。格式转换需处理模型差异，层次化合并还要正确连接顶层组件及依赖。签署或验证相关能力应按具体支持核对，不能从命令名称推断它认证了所有来源或字段事实。\n\n对同一软件的两份清单，差异也可能来自分析器、配置或标识变化。合并后的组件数量更大不证明覆盖完整，转换成功也不能保证全部关系无损。处理结果应保留原文档来源、转换版本和丢失信息，并继续执行对象绑定与内容审查。\n\n## 参考\n\n- [CycloneDX CLI：官方命令与范围](https://github.com/CycloneDX/cyclonedx-cli)\n- [CycloneDX：规范模型与表示](https://cyclonedx.org/specification/overview/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/CycloneDX/cyclonedx-cli",
+  "abstraction_level": "application_tool"
+}

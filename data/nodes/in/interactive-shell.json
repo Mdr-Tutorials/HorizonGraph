@@ -1,0 +1,37 @@
+{
+  "id": "interactive-shell",
+  "name": "Interactive Shell",
+  "aliases": [
+    "交互式 Shell"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-prompt",
+      "context": "交互式 Shell 在读取用户命令时按其配置显示提示符；非交互执行通常不采用这一输入提示路径。"
+    }
+  ],
+  "summary": "以持续用户输入驱动并启用交互行为的Shell模式。",
+  "description": "交互式 Shell 通常持续等待用户输入，提供提示符、行编辑和历史操作。是否交互由解释器的启动参数与输入条件决定，不只是看程序是不是在终端窗口里；在同一窗口中执行脚本时，脚本解释器仍可能以非交互模式运行。\n\nBash 可通过 -i 显式进入交互模式，默认判定还检查启动方式及标准输入、错误是否连接到终端。交互行为会改变启动文件、提示符和部分信号处理方式；配置应检查解释器提供的交互标记，而非仅凭存在某个图形窗口推断。\n\n交互与登录是两个独立维度：一次 Shell 会话可以既交互又登录，也可以交互但非登录。将进度输出、提示符插件和输入询问无条件放入所有启动路径，可能干扰自动化和远程调用；配置时应只在实际交互条件满足时启用这些功能。\n\n## 参考\n\n- [GNU：What is an Interactive Shell?](https://www.gnu.org/software/bash/manual/html_node/What-is-an-Interactive-Shell_003f.html)\n- [GNU：Interactive Shell Behavior](https://www.gnu.org/software/bash/manual/html_node/Interactive-Shell-Behavior.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/What-is-an-Interactive-Shell_003f.html"
+}

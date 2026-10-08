@@ -1,0 +1,33 @@
+{
+  "id": "repository-sampling-bias",
+  "name": "Repository Sampling Bias",
+  "aliases": [
+    "仓库采样偏差",
+    "GitHub研究样本偏差"
+  ],
+  "type": "concept",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "repository-analysis",
+      "context": "仅取高活跃或高星仓库后把样本的变化频率、规模或贡献分布外推到全部项目，会因选择与目标变量相关而偏移结论。"
+    }
+  ],
+  "summary": "仓库选择与可见性使工程研究样本偏离目标总体。",
+  "description": "仓库采样偏差发生于被观察的仓库无法代表研究目标总体时。只选高星项目、活跃项目或公开 GitHub 仓库，会把某些开发方式、规模与生命周期过度呈现；仓库也可能是镜像、教程或存储用途。\n\nGitHub 研究需要区分仓库和独立软件项目，检查分叉、重复历史及平台事件的覆盖范围。筛选条件、采样时间和可取得的历史应记录下来；官方 API 查询结果不因此变成全部软件项目的随机样本。\n\n研究可通过分层、去重、敏感性分析与外部样本验证限定结论。早期论文发现的具体比例只能用于该论文样本，不能当今天全平台的事实；缺少目标总体证据时应报告样本内现象。\n\n## 参考\n\n- [原始研究：挖掘 GitHub 的陷阱](https://gousios.org/bibliography/KGBSGD14.html)\n- [原始研究：MSR 项目采样](https://arxiv.org/abs/2103.04682)\n- [作者扩展研究](https://gousios.org/pub/promises-perils-github-extended.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://gousios.org/bibliography/KGBSGD14.html"
+}

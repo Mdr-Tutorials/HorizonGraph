@@ -1,0 +1,31 @@
+{
+  "id": "fan-in",
+  "name": "Software Fan-In",
+  "abbreviation": "Fan-In",
+  "aliases": [
+    "软件扇入",
+    "调用扇入",
+    "Fan In"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计进入软件单元的调用、依赖或信息来源。",
+  "description": "软件扇入描述进入一个函数、类或模块的联系数量。结构口径通常计入不同调用者或依赖该单元的元素；需要先说明对象粒度与是否按独特来源去重。\n\nCK Java 的类级 FAN-IN 统计引用该类的其他类。SciTools 的信息流扇入则将调用者与读取的参数、全局变量等输入合计；这些计数表达不同口径，不能作为相同数值相互比较。\n\n扇入高可说明一个单元有较多使用者，提示接口变化可能影响更广范围，但它不等同运行时访问量。未解析依赖或未纳入的外部项目会影响计数，报告应注明边界和调用解析能力。\n\n## 参考\n\n- [CK：类级输入依赖与实现](https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/metric/Coupling.java)\n- [SciTools：信息流FANIN](https://docs.scitools.com/metrics/CountInput.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/metric/Coupling.java"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "software-cohesion",
+  "name": "Software Cohesion",
+  "aliases": [
+    "软件内聚",
+    "模块内聚性"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    }
+  ],
+  "summary": "描述同一软件单元内部元素服务共同职责的关联程度。",
+  "description": "软件内聚描述一个模块或类内部元素的相关程度及共同职责。它与外部依赖多少是不同维度：类的方法可以紧密围绕一个任务协作，同时仍需要多个外部接口。\n\n类内聚的结构代理包括共享实例变量的方法对、直接与间接方法连接，以及方法和字段交互比例。LCOM、TCC 与 LCC 分别采用不同规则，因此它们不构成同一分数的简单正负转换。\n\n共享字段只提供结构线索，不能完整证明语义职责一致；无共享字段也不必然表示类设计无效。内聚评审需要结合数据含义、函数角色和边界，指标变动应回到实际代码和职责来解释。\n\n## 参考\n\n- [Bieman与Kang：类组件关联与度量](https://www.cs.colostate.edu/~bieman/Pubs/bieman-kang-ssr95.pdf)\n- [SciTools：方法与状态关联口径](https://docs.scitools.com/metrics/PercentLackOfCohesion.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.cs.colostate.edu/~bieman/Pubs/bieman-kang-ssr95.pdf"
+}

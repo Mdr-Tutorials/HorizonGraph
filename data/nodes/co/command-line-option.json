@@ -1,0 +1,30 @@
+{
+  "id": "command-line-option",
+  "name": "Command-line Option",
+  "aliases": [
+    "命令行选项",
+    "CLI 选项",
+    "短选项",
+    "长选项"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    }
+  ],
+  "summary": "通过命令参数选择程序行为的接口约定。",
+  "description": "命令行选项是在调用程序时选择行为、模式或配置的参数约定，常见形式有单字符短选项和带名称的长选项。选项、选项取值和位置操作数各有角色，程序最终按自己的接口规则解释它们，而不是由终端仿真器统一决定。\n\nPOSIX 提供工具语法指导，并允许具体工具说明例外；GNU 工具常提供额外长选项。-- 在许多遵循相应约定的接口中结束选项列表，单独的 - 也可能代表标准输入或输出，但这些行为必须按具体工具确认，不能推广为所有 CLI 的硬规则。\n\nShell 先形成调用参数，程序内解析器再解释选项，保护引号与解析选项是不同步骤。选项解析成功不说明资源有效或操作获准；自动化接口还需处理重复选项、默认值、错误诊断和版本变化，避免把展示字符串误作稳定协议。\n\n## 参考\n\n- [POSIX 工具约定](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap12.html)\n- [GNU Coreutils 通用选项](https://www.gnu.org/software/coreutils/manual/html_node/Common-options.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap12.html"
+}

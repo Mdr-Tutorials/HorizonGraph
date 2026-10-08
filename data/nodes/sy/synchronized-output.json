@@ -1,0 +1,36 @@
+{
+  "id": "synchronized-output",
+  "name": "Synchronized Output",
+  "aliases": [
+    "终端同步输出",
+    "Synchronized Updates",
+    "Batched Rendering"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "control-sequence-introducer",
+      "context": "以私有模式 2026 的 CSI 设置、复位和状态查询表达同步输出边界。"
+    }
+  ],
+  "summary": "在一次屏幕更新完成前保持先前画面，减少重绘撕裂。",
+  "description": "同步输出扩展让应用通知终端一次屏幕更新的开始与结束，减少看到半帧内容的机会。终端在同步期间继续解析字节并更新内部状态，但渲染保留上一完整状态；结束后可呈现最新屏幕。它不同于停止传输的 XON/XOFF，也不等于应用线程间的锁同步。\n\n当前通用形式以 CSI ? 2026 h 开始、CSI ? 2026 l 结束，2026 是私有模式编号，不能理解成年份或 ECMA-48 的正式功能。应用可通过 DECRQM 查询模式状态：未识别或无响应不能视作支持，已设置与已复位则表达已实现的状态。\n\n规范没有统一的强制超时值，应用应及时结束更新并处理异常路径，不可假设所有终端固定等待某个毫秒数。Ghostty 官方建议高频重绘程序实现此机制，同时只更新确实变化的字符单元。协议改善可见重绘的一致性，不能自动降低网络时延或让所有绘制算法更快。\n\n## 参考\n\n- [Contour：同步输出原始规范](https://github.com/contour-terminal/vt-extensions/blob/master/synchronized-output.md)\n- [Ghostty：同步输出与重绘撕裂](https://ghostty.org/docs/help/synchronized-output)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/contour-terminal/vt-extensions/blob/master/synchronized-output.md"
+}

@@ -1,5 +1,5 @@
 {
-  "version": "0.15.0",
+  "version": "0.17.0",
   "note": "分类骨架：全部非叶子节点在此，数据平面不出现。层级用 parents 数组（多亲 DAG，一个分类可属多个上级）；锚点间元叙事为普通关系边。生效 entity_type 沿 parent 祖先解析。",
   "nodes": [
     { "id": "meta-concept", "name": "Theory, Concept & Metric", "aliases": ["理论概念", "理论与度量"], "summary": "理论、范式与度量概念的顶层骨架。", "relations": [{ "relation_type": "governs", "target_id": "meta-architecture" }], "entity_type": ["concept", "metric"], "importance": 5 },
@@ -96,6 +96,18 @@
     {"id":"market-metric","name":"Market & Execution Metrics","aliases":["市场与执行指标"],"summary":"衡量价格、盘口、成交执行、持仓与交易风险的指标。","parents":["metric"],"relations":[],"importance":4},
     {"id":"agent-systems-concept","name":"Agent Systems Concepts","aliases":["智能体系统概念"],"summary":"智能体运行、上下文、状态、工具协作与执行恢复的概念。","parents":["theory"],"relations":[],"importance":4},
     {"id":"ai-software-engineering-concept","name":"AI-assisted Software Engineering Concepts","aliases":["AI 辅助软件工程概念"],"summary":"AI 辅助代码生成、编辑、审查与软件工程工作流的概念。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"browser-automation-concept","name":"Browser Automation Concepts","aliases":["浏览器自动化概念"],"summary":"浏览器观察、定位、动作、等待、会话与验证的机制。","parents":["theory"],"relations":[],"importance":4}
+    {"id":"browser-automation-concept","name":"Browser Automation Concepts","aliases":["浏览器自动化概念"],"summary":"浏览器观察、定位、动作、等待、会话与验证的机制。","parents":["theory"],"relations":[],"importance":4},
+    {"id":"terminal-concept","name":"Terminal Engineering Concepts","aliases":["终端工程概念"],"summary":"终端仿真、TTY 与 PTY、输入输出状态及能力协商。","parents":["theory"],"relations":[],"importance":4},
+    {"id":"command-line-concept","name":"Command-line and TUI Concepts","aliases":["命令行与文本界面概念"],"summary":"Shell 解释、命令组合、对象管道与文本交互界面。","parents":["theory"],"relations":[],"importance":4},
+    {"id":"language-tooling-concept","name":"Language Tooling Concepts","aliases":["语言工具链概念"],"summary":"程序分析、增量处理、符号导航及编辑器语言智能。","parents":["theory"],"relations":[],"importance":4},
+    {"id":"text-layout-concept","name":"Unicode and Text Layout Concepts","aliases":["Unicode 与文本布局概念"],"summary":"字符编码、字素边界、字形塑形、字体回退与栅格化。","parents":["theory"],"relations":[],"importance":4},
+    {"id":"terminal-specification","name":"Terminal Specifications","aliases":["终端协议与规范"],"summary":"终端控制序列、键盘编码、图像及应用交互规范。","parents":["protocol"],"relations":[],"importance":4},
+    {"id":"desktop-interface-concept","name":"Desktop Interface and Windowing Concepts","aliases":["桌面界面与窗口系统概念"],"summary":"窗口服务、管理、合成与平台原生桌面界面的机制。","parents":["theory"],"relations":[],"importance":4},
+    {"id":"software-measurement-concept","name":"Software Measurement Concepts","aliases":["软件度量概念"],"summary":"软件规模、测量口径、估算模型与度量解释方法。","parents":["theory"],"relations":[],"importance":4},
+    {"id":"software-engineering-metric","name":"Software Engineering Metrics","aliases":["软件工程指标"],"summary":"软件结构、质量、测试、交付与团队过程的量化指标。","parents":["metric"],"relations":[],"importance":4},
+    {"id":"repository-analysis-concept","name":"Repository Analysis Concepts","aliases":["仓库分析概念"],"summary":"源码识别、版本历史、变更、贡献与演化分析方法。","parents":["theory"],"relations":[],"importance":4},
+    {"id":"software-quality-concept","name":"Software Quality Concepts","aliases":["软件质量概念"],"summary":"可维护性、缺陷、重复、技术债与质量控制方法。","parents":["theory"],"relations":[],"importance":4},
+    {"id":"software-testing-concept","name":"Software Testing Concepts","aliases":["软件测试概念"],"summary":"测试覆盖、判定、输入生成与有效性验证方法。","parents":["theory"],"relations":[],"importance":4},
+    {"id":"empirical-software-engineering-concept","name":"Empirical Software Engineering Concepts","aliases":["实证软件工程概念"],"summary":"软件工程的观察研究、实验、验证与度量解释。","parents":["theory"],"relations":[],"importance":4}
   ]
 }

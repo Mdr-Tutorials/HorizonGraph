@@ -1,0 +1,29 @@
+{
+  "id": "unique-lines-of-code",
+  "name": "Unique Lines of Code",
+  "aliases": [
+    "唯一代码行数",
+    "唯一源码行数",
+    "ULOC"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按选定文本相等规则统计不同源文本行的数量。",
+  "description": "唯一代码行数把源文本行视为集合元素，统计不重复的行文本数量。原始 ULOC 提案通过 sort -u 与 wc 组合示意；可在文件、语言或整个项目级别计算，结果随集合范围变化。\n\n该方法没有建立语法或语义等价关系。按原样文本比较时，缩进变化可产生不同元素，共同括号和许可证行可折叠为一个；注释也可能参与，因此名称中的 code 不保证只含可执行代码。\n\nscc 的可选 ULOC 功能提供这类集合统计，增加了去重的时间和空间成本。它能显示文本行的复用程度，但不能证明程序复杂度、知识重复或重构机会，不能代替连续代码块的克隆检测。\n\n## 参考\n\n- [ULOC 原始提案](https://cmcenroe.me/2018/12/14/uloc.html)\n- [scc 作者：ULOC 设计](https://boyter.org/posts/sloc-cloc-code-new-metic-uloc/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://cmcenroe.me/2018/12/14/uloc.html"
+}

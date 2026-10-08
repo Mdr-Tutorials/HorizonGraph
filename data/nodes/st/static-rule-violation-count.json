@@ -1,0 +1,29 @@
+{
+  "id": "static-rule-violation-count",
+  "name": "Static Rule Violation Count",
+  "aliases": [
+    "静态规则违反数",
+    "静态分析告警数"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-quality",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "在固定规则、配置和范围下报告的违反数量。",
+  "description": "静态规则违反数统计一次分析在规定范围内产生的规则诊断数量。应说明启用的规则、工具版本、严重度、排除范围和是否包含抑制项，同一源码使用不同配置会产生不同计数。\n\n一次规则发现不必然对应一个独立缺陷，多个规则可能报告同一结构，也可能产生需要复核的误报。总体数量、新增数量和按规则或文件分类的数量回答不同问题，不能混用为通用质量等级。\n\n项目可在可比较配置下观察趋势，或使用数量门槛控制新增发现。减少报告的原因需要核实：源码修复、文件删除、停用规则或改动基线都会改变计数，只有报告数下降不足以证明功能更正确。\n\n## 参考\n\n- [ESLint：核心概念](https://eslint.org/docs/latest/use/core-concepts/)\n- [PMD：7.28.0 已发布版本](https://github.com/pmd/pmd/releases/tag/pmd_releases/7.28.0)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://eslint.org/docs/latest/use/core-concepts/"
+}

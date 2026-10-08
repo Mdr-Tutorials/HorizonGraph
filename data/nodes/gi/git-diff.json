@@ -1,0 +1,48 @@
+{
+  "id": "git-diff",
+  "name": "git diff",
+  "aliases": [
+    "Git 差异比较",
+    "Git 文件变更"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "git-numstat"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gitattributes",
+      "context": "按匹配路径的 diff 属性与驱动设置进行文本或二进制差异处理"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-rename-detection",
+      "context": "启用 -M 或相应配置时将足够相似的删除与新增文件识别为重命名"
+    }
+  ],
+  "summary": "比较快照、索引或工作区内容并生成差异的 Git 命令。",
+  "description": "`git diff` 比较两个内容状态，可以是两个提交的树、索引与工作区、索引与提交，或磁盘上的两个文件。Git 存储快照后计算差异；差异并非提交中固定保存的一份逐行修改记录，命令所选端点决定了报告回答的问题。\n\n`A..B` 在 diff 中仍比较 A 与 B 两个端点，`A...B` 通常比较两者的合并基点与 B。合并提交需要明确相对哪个父提交，或采用 combined diff；不同差异算法、空白处理、文本转换及重命名设置，也可能改变行级统计和展示。\n\n机器处理可选 `--numstat -z` 等格式，正确区分二进制文件和特殊路径。仓库度量应保存比较对象、算法和过滤条件；一段代码移动、格式化或生成文件更新可能形成大量行差异，增删行量本身不代表新增功能、质量提升或个人产出。\n\n## 参考\n\n- [Git diff 手册](https://git-scm.com/docs/git-diff)\n- [Pro Git：记录更新](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)\n- [Git diffcore 机制](https://git-scm.com/docs/gitdiffcore)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://git-scm.com/docs/git-diff"
+}

@@ -1,25 +1,45 @@
 {
   "id": "tmux",
   "name": "tmux",
-  "aliases": [],
+  "aliases": [
+    "tmux 终端复用器"
+  ],
   "type": "tool",
   "ecosystems": [
     "devops_tooling",
-    "linux-gnu-ecosystem"
+    "linux-gnu-ecosystem",
+    "terminal-ecosystem"
   ],
   "domains": [
-    "devops"
+    "devops",
+    "terminal-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-multiplexing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudoterminal",
+      "context": "为各窗格维护伪终端，并由服务端协调会话生命周期。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminfo",
+      "context": "区分外部终端与内部 tmux 终端的能力，影响控制序列选择和支持范围。"
     }
   ],
-  "summary": "终端复用器，断线不死的远程开发标配。",
+  "summary": "以服务端管理终端会话、窗口和窗格的复用器。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "description": "tmux 是终端复用器，将会话组织为窗口与窗格，每个窗格由独立 PTY 承载一个命令行程序。客户端负责显示和输入，服务端保存会话并管理程序，多个客户端可以连接同一会话；桌面终端模拟器仍负责把字符和控制序列呈现为本地窗口。\n\ndetach 后会话可以由仍在运行的服务端继续管理，之后从另一个终端 attach。SSH 意外断线通常不会结束该服务端会话，但服务器重启、服务端退出或系统会话策略仍会影响生命周期。配置文件和保存布局不是对所有子进程内存状态的自动持久化。\n\n内部终端能力、外层终端能力与扩展转发需要配合，不能随意设置 TERM 来获得未实现的行为。控制模式向外部客户端提供机器可读接口，iTerm2 可据此组织原生界面；OSC 剪贴板、图片和增强按键则要按终端、tmux 版本和配置核查。\n\n## 参考\n\n- [tmux：项目 Wiki](https://github.com/tmux/tmux/wiki)\n- [OpenBSD：tmux 官方手册](https://man.openbsd.org/tmux.1)\n- [tmux：控制模式](https://github.com/tmux/tmux/wiki/Control-Mode)",
+  "official_site": "https://github.com/tmux/tmux/wiki"
 }

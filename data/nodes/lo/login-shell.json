@@ -1,0 +1,37 @@
+{
+  "id": "login-shell",
+  "name": "Login Shell",
+  "aliases": [
+    "登录 Shell"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-startup-files",
+      "context": "登录模式选择 Shell 文档定义的 profile 或 zprofile/zlogin 等初始化路径；是否交互另行决定。"
+    }
+  ],
+  "summary": "按登录入口语义启动并采用相应初始化规则的Shell。",
+  "description": "登录 Shell 是以登录会话入口语义启动的一种模式。它决定解释器如何加载登录初始化和结束配置，而不是一种单独的 Shell 产品；是否登录与是否交互分别判断，因此使用登录选项执行脚本也可能产生非交互的登录 Shell。\n\nBash 通过 argv[0] 的前导连字符或 --login 等方式识别登录模式，读取对应的 profile 文件。zsh 则有 zprofile、zlogin 等登录路径，并与 zshenv、交互 zshrc 组合。不同 Shell 的文件名与顺序由各自文档定义，不能以一套 dotfiles 路径涵盖所有实现。\n\n终端应用、远程会话和容器入口能选择不同启动参数，因此重新开一个标签页不必然意味着登录。要使工具可用，应同时考虑进程继承的环境和实际读取的初始化文件；重复叠加 PATH 或在登录文件中输出无关文字，会影响启动时间及自动化协议。\n\n## 参考\n\n- [GNU：Invoking Bash](https://www.gnu.org/software/bash/manual/html_node/Invoking-Bash.html)\n- [zsh：Files](https://zsh.sourceforge.io/Doc/Release/Files.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Invoking-Bash.html"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "code-age",
+  "name": "Code Age",
+  "aliases": [
+    "代码年龄",
+    "文件最后修改距今时间"
+  ],
+  "type": "metric",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按确定基准日期度量代码距上次修改的时长。",
+  "description": "代码年龄有不同粒度：可以是文件距离最后修改的时间，也可以追踪某批代码行从进入仓库到当前仍存留的时间。两者需要分别说明，不能把文件上次改动当作其全部行的创建日期。\n\nCode Maat 的 age 分析以文件最后变化日期与指定基准日期计算月龄；Git of Theseus 则用 blame 等信息把存留代码按引入年代分组。基准日期、重命名和空白改动规则会影响解释。\n\n较老代码可能稳定，也可能长期无人维护。年龄本身不能判断是否过时或安全，代码行被改写也不意味着原设计知识全部消失；应与修改活动、依赖状态和维护目标一起阅读。\n\n## 参考\n\n- [CodeScene：代码年龄的粒度](https://docs.enterprise.codescene.io/versions/6.6.6/guides/technical/code-age.html)\n- [Code Maat：日期计算实现](https://github.com/adamtornhill/code-maat/blob/master/src/code_maat/analysis/code_age.clj)\n- [Git of Theseus：年代分组](https://github.com/erikbern/git-of-theseus)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.enterprise.codescene.io/versions/6.6.6/guides/technical/code-age.html"
+}

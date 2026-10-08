@@ -1,0 +1,46 @@
+{
+  "id": "csaf",
+  "name": "Common Security Advisory Framework",
+  "aliases": [
+    "通用安全公告框架",
+    "CSAF"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "CSAF 2.0 的结构化安全公告采用 JSON 文档及对应 Schema。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vex"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpe",
+      "context": "产品身份可采用 CPE 辅助映射时，按规范与实际产品信息核对匹配。"
+    }
+  ],
+  "summary": "以结构化公告交换产品、漏洞、影响和修复信息。",
+  "description": "CSAF 是 OASIS 的结构化安全公告交换规范。它规定文档元数据、产品树与漏洞信息，帮助公告发布者和消费者用机器可读方式交流影响范围及修复措施。规范名称中的 Framework 指信息交换框架，不表示一个可直接部署的扫描产品。\n\nCSAF 2.0 的 JSON 模型配合规范测试要求检查产品引用、状态一致性和其他语义。其 profile 面向不同公告场景，VEX 是其中一种 profile，并增加相应状态、影响说明和行动要求。产品可采用名称、PURL、CPE 及其他辅助标识关联，不应将公告产品树直接视为完整 SBOM。\n\n文档格式合规与发布者身份可信是两个问题，消费端需要验证公告来源、产品匹配和更新状态。已知漏洞的影响结论有时间和版本边界，不能由某项产品不受影响推广到全部部署。处理 profile 与版本兼容时，应保留无法对应的状态和说明，避免转换后丢失决策依据。\n\n## 参考\n\n- [OASIS：CSAF 2.0 正式标准](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html)\n- [OASIS：CSAF JSON Schema](https://docs.oasis-open.org/csaf/csaf/v2.0/csaf_json_schema.json)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html",
+  "abstraction_level": "application_tool",
+  "abbreviation": "CSAF"
+}

@@ -7,24 +7,32 @@
   "type": "protocol",
   "ecosystems": [
     "devops_tooling",
-    "cybersecurity-ecosystem"
+    "cybersecurity-ecosystem",
+    "terminal-ecosystem"
   ],
   "domains": [
     "security",
     "devops",
-    "networking"
+    "networking",
+    "terminal-engineering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudoterminal",
+      "context": "连接协议允许交互式会话申请远端 PTY 和尺寸更新；命令执行、转发或子系统通道不必申请 PTY。"
     }
   ],
-  "summary": "加密的远程登录与运维通道，22 端口的事实标准。",
+  "summary": "以认证、加密通道和连接复用支持远程访问的协议族。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
-  "official_site": "https://www.openssh.com"
+  "official_site": "https://www.rfc-editor.org/rfc/rfc4251",
+  "description": "SSH（Secure Shell）是远程访问协议族，架构区分传输层、用户认证和连接协议。传输层提供服务器认证、机密性与完整性，认证阶段识别用户，连接协议将多个逻辑通道复用在保护后的连接中。默认 TCP 端口常为 22，但端口配置不是协议身份的定义。\n\n交互式终端会话可以请求远端 PTY，并携带终端类型、尺寸和模式；窗口改变还可触发尺寸更新请求。执行命令、转发通道和文件传输子系统不必都申请 PTY，SSH 加密字节通道也不会替客户端完成完整终端仿真或自动安装远端 terminfo。\n\nOpenSSH 是 SSH 的具体实现，图形终端、Mosh 和复用器是可能与其组合的不同工件。持久会话、漫游、密钥管理和主机身份信任分别需要相应机制，不能由一次加密连接推断进程会在所有断线条件下继续存在。配置与安全算法应参考当前实现和 RFC 更新，而不是仅靠协议族名称判断。\n\n## 参考\n\n- [RFC Editor：RFC 4251 协议架构](https://www.rfc-editor.org/rfc/rfc4251)\n- [RFC Editor：RFC 4254 连接协议与 PTY 请求](https://www.rfc-editor.org/rfc/rfc4254)\n- [OpenSSH：实现项目](https://www.openssh.com/)"
 }

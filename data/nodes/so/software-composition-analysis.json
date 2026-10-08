@@ -1,0 +1,51 @@
+{
+  "id": "software-composition-analysis",
+  "name": "Software Composition Analysis",
+  "aliases": [
+    "软件组成分析",
+    "软件成分分析"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "component-inventory",
+      "context": "通过组件清单整理目标软件的组成与版本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vulnerability-matching",
+      "context": "进行已知漏洞分析时，将已识别组件及版本与相应公告数据匹配。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "license-detection",
+      "context": "进行许可审查准备时收集可追溯的许可文本与包元数据证据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "用清单交换已识别的软件组成，或消费上游提供的组成信息。"
+    }
+  ],
+  "summary": "识别软件组成并分析依赖、许可及已知组件风险。",
+  "description": "软件组成分析关注应用中引入了哪些软件组件、它们来自哪里，以及组件版本、依赖与许可信息。源码声明、锁文件、构建输出和二进制分别提供不同证据。SBOM 是可以产生或消费的结构化结果，SCA 则是一组分析活动；生成清单与持续评估组件风险可以由不同工具承担。\n\n识别过程需要统一包生态与版本，保留直接和传递依赖，并区分声明、构建时使用和实际交付的组件。许可文字检测、已知漏洞匹配、恶意包调查和维护状态检查各有数据与方法。选择一个称为 SCA 的工具，仍需核对它实际支持哪些输入和检查能力。\n\n分析报告的价值取决于覆盖、证据及更新节奏。已知漏洞数据库不能发现所有恶意行为，某段许可文本也不能自动确定整个交付物的适用条款。对组件的风险判断应可追溯到工件、版本和分析配置，避免将一份通过格式校验的 SBOM 当作分析完成或整体安全的保证。\n\n## 参考\n\n- [OWASP：SCA 活动与流水线](https://owasp.github.io/DevSecOpsGuideline/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-1-Software-Composition-Analysis/)\n- [OWASP：依赖组成与供应链风险](https://devguide.owasp.org/en/05-implementation/02-dependencies/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://owasp.github.io/DevSecOpsGuideline/2-Process/2-3-Build/2-3-2-Software-Composition-Analysis/2-3-2-1-Software-Composition-Analysis/",
+  "abbreviation": "SCA"
+}

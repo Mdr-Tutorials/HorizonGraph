@@ -1,0 +1,42 @@
+{
+  "id": "fish",
+  "name": "fish",
+  "aliases": [
+    "Fish Shell",
+    "友好的交互式 Shell"
+  ],
+  "type": "tool",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "shell"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "shell-completion"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-startup-files",
+      "context": "读取 fish 配置目录中的 conf.d 脚本和 config.fish，并可根据交互、登录条件选择执行内容。"
+    }
+  ],
+  "summary": "提供开箱可用的提示、补全和脚本语言的Shell。",
+  "description": "fish 是面向可用性和交互体验的命令行 Shell，提供语法高亮、自动建议和补全等功能。它既能启动外部程序，也能运行自己的脚本语言；终端模拟器承载会话，而 fish 管理输入解析和命令执行，不因名称包含 shell 就属于终端应用。\n\nfish 有与 Bash 不同的变量、控制结构和展开规则，官方明确其语言有意不兼容 POSIX Shell。变量是列表，普通变量展开不采用 Bash 的单词分割语义；补全和提示函数也采用 fish 接口。需要运行已有 Bash 脚本时，应调用对应解释器，而不是让 fish 直接解析脚本文本。\n\n配置通常位于用户配置目录，交互和登录条件可通过 status 判断。把 fish 设为登录 Shell 时还要核对系统是否假定 Bourne 兼容的初始化；默认交互功能无需额外配置框架，但用户的插件、路径和环境仍会影响实际会话。\n\n## 参考\n\n- [Fish：Introduction](https://fishshell.com/docs/current/index.html)\n- [Fish：fish for Bash users](https://fishshell.com/docs/current/fish_for_bash_users.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://fishshell.com/docs/current/index.html"
+}

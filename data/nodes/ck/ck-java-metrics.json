@@ -1,0 +1,65 @@
+{
+  "id": "ck-java-metrics",
+  "name": "CK",
+  "aliases": [
+    "CK Java度量工具",
+    "Java代码度量器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ck-metrics",
+      "context": "收集类结构时计算WMC、DIT、NOC、CBO、RFC和LCOM的工具定义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fan-in",
+      "context": "输出Java类级输入依赖数量，统计引用当前类的其他类。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fan-out",
+      "context": "输出Java类级向外引用的其他类数量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tight-class-cohesion",
+      "context": "根据可见方法的直接字段连接计算TCC。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "loose-class-cohesion",
+      "context": "将类内方法连接的间接可达对加入LCC计算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "通过Eclipse JDT构造和访问Java语法树来收集静态度量。"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "jvm",
+      "context": "Java实现的独立JAR工具在受支持的Java运行环境执行。"
+    }
+  ],
+  "summary": "用Eclipse JDT静态分析Java源码并导出类和方法指标。",
+  "description": "CK 是 Maurício Aniche 开发的 Java 源码度量工具，使用 Eclipse JDT 构造和解析语法结构，收集类、方法以及可选变量或字段级指标。它与 Chidamber–Kemerer 的度量套件概念分开，工具也提供套件之外的计数。\n\n工具可输出 CSV，并按项目路径、依赖 JAR、批处理大小和排除目录配置分析。类级结果包含 CK 指标、扇入扇出以及 TCC/LCC 等信息；加入依赖有助于类型和调用解析，但不能保证完整动态行为。\n\n运行前需要核对使用版本的 Java 运行要求和语法支持。结果应注明工具实现口径，尤其是 RFC 重载解析、LCOM 变体、嵌套类和源码行计数；不需要目标项目先编译不代表能够精确解析所有缺失依赖。\n\n## 参考\n\n- [CK：官方项目与指标说明](https://github.com/mauricioaniche/ck)\n- [CK：JDT解析与批量分析实现](https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/CK.java)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/mauricioaniche/ck"
+}

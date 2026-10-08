@@ -1,0 +1,42 @@
+{
+  "id": "controlling-terminal",
+  "name": "Controlling Terminal",
+  "aliases": [
+    "控制终端"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-concept"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "unix-session"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tty",
+      "context": "控制终端角色由会话关联的 TTY 设备承担，/dev/tty 解析到该设备。"
+    }
+  ],
+  "summary": "把终端与 Unix 会话及其前台进程组关联起来。",
+  "description": "控制终端是 Unix 会话关联的终端，参与前后台作业访问与终端产生的信号分派。它是一种会话关系，不等于进程当前标准输入所指的文件。子进程一般继承关联；进程即使重定向标准输出，也可能仍属于有控制终端的会话。\n\n一个终端在相应语义中具有前台进程组，终端输入产生的 SIGINT、SIGTSTP 等信号会发送给该组。后台组尝试读取控制终端通常受到 SIGTTIN 限制；后台输出还受 TOSTOP、信号处置及其他条件影响，不能简单说所有后台输出都被禁止。\n\nsetsid 建立的新会话最初没有控制终端，获取或脱离终端需要遵守平台规则。Linux /dev/tty 是当前进程控制终端的别名，相关 ioctl 可使进程脱离它。终端挂断与会话领导者退出会触发特定信号行为，具体生命周期不能从 GUI 窗口是否可见推断。\n\n## 参考\n\n- [Linux man-pages：控制终端设备](https://man7.org/linux/man-pages/man4/tty.4.html)\n- [Linux man-pages：进程组、会话与控制终端](https://man7.org/linux/man-pages/man7/credentials.7.html)\n- [Linux man-pages：setsid](https://man7.org/linux/man-pages/man2/setsid.2.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://man7.org/linux/man-pages/man4/tty.4.html"
+}

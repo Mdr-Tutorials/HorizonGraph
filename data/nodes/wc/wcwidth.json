@@ -1,0 +1,33 @@
+{
+  "id": "wcwidth",
+  "name": "wcwidth",
+  "aliases": [
+    "宽字符列宽接口",
+    "POSIX wcwidth"
+  ],
+  "type": "protocol",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "posix"
+    }
+  ],
+  "summary": "按当前 locale 查询单个宽字符占用列数的 POSIX 接口。",
+  "description": "wcwidth 是 POSIX 的宽字符接口，接收一个在当前 locale 中有效且可由 wchar_t 表示的字符代码，返回其需要占用的列位置数量。它查询的是字符显示列数，不是字符串字节长度或字形像素宽度。\n\n标准规定空宽字符返回零，不可打印的宽字符返回负一，其余返回占用列数。接口的输入与当前 locale 相关；wcswidth 是相应的宽字符串接口，而不同平台及实现的数据表可能影响实际行为。\n\n逐字符结果相加不能自动解决完整 emoji 或其他多码点字素簇的列宽。调用者仍需处理分段及终端采用的宽度策略；Python wcwidth 等第三方库实现了相关计算能力，但不能把同名软件包当成 POSIX 标准接口本身。\n\n## 参考\n\n- [POSIX Issue 8：wcwidth](https://pubs.opengroup.org/onlinepubs/9799919799/functions/wcwidth.html)\n- [POSIX Issue 8：wcswidth](https://pubs.opengroup.org/onlinepubs/9799919799/functions/wcswidth.html)\n- [wcwidth 项目：终端宽度计算与序列处理](https://github.com/jquast/wcwidth)",
+  "official_site": "https://pubs.opengroup.org/onlinepubs/9799919799/functions/wcwidth.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "kernel_os"
+}

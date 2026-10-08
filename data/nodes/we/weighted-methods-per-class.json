@@ -1,0 +1,35 @@
+{
+  "id": "weighted-methods-per-class",
+  "name": "Weighted Methods per Class",
+  "abbreviation": "WMC",
+  "aliases": [
+    "类加权方法数",
+    "加权方法总数"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclomatic-complexity",
+      "context": "在采用McCabe方法复杂度加权的WMC变体中，对类内各方法圈复杂度求和。"
+    }
+  ],
+  "summary": "对类中各方法选定复杂度权重求和的指标。",
+  "description": "WMC 对一个类的各方法权重求和：WMC=Σci。权重 ci 可以采用方法复杂度，也可以统一设为一；后一种口径实质上是纳入范围的方法数，而非复杂分支总数。\n\n使用圈复杂度作为权重时，类中多个简单方法也会累积基数。工具对构造函数、访问器、静态方法、继承方法与生成代码的纳入规则不同；SciTools 的本地方法计数与复杂度加权结果应分开理解。\n\n解释 WMC 需要同时观察方法数与权重分布。一个拥有许多简单访问器的类与少数复杂方法的类可能得到类似总量，因此不能从类级总和直接推断某个方法应如何重构。\n\n## 参考\n\n- [SciTools：本地方法计数与WMC口径](https://docs.scitools.com/metrics/CountDeclMethod.html)\n- [CK：方法复杂度权重实现](https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/metric/WMC.java)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.scitools.com/metrics/CountDeclMethod.html"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "code-churn",
+  "name": "Code Churn",
+  "aliases": [
+    "代码变更量",
+    "代码变动量",
+    "代码流动量"
+  ],
+  "type": "metric",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计指定历史窗口内的新增与删除代码行。",
+  "description": "代码变更量记录一组提交对文件造成的新增和删除行。常见活动量口径为新增加删除，净变化口径为新增减删除；二者不能混用。一次重构可能产生大量变化而最终文件长度几乎不变。\n\nPyDriller 的 CodeChurn 可按参数选择两种计算，并可返回独立的新增、删除值。报告还应固定提交窗口、合并父节点、重命名和路径筛选；格式化、换行变化或生成文件更新可能显著改变数值。\n\n变更量可为热点筛选或缺陷研究提供输入，但不能直接衡量个人产出或代码质量。跨文件比较需考虑规模和维护目标，跨工具比较先核对 diff 与计数规则，不能把净增长当作全部修改成本。\n\n## 参考\n\n- [PyDriller：变更量口径](https://pydriller.readthedocs.io/en/latest/processmetrics.html)\n- [PyDriller：CodeChurn 实现](https://github.com/ishepard/pydriller/blob/master/pydriller/metrics/process/code_churn.py)\n- [Git：diff 统计选项](https://git-scm.com/docs/git-diff)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://pydriller.readthedocs.io/en/latest/processmetrics.html"
+}

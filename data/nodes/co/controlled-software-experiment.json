@@ -1,0 +1,44 @@
+{
+  "id": "controlled-software-experiment",
+  "name": "Controlled Software Engineering Experiment",
+  "aliases": [
+    "软件工程受控实验",
+    "受控软件实验"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "measurement-reliability",
+      "context": "检查任务计时、标注和问卷等测量在实验条件下是否稳定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "internal-validity",
+      "context": "评估观察差异能否归因于处理，而非顺序、学习或组间差异。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "statistical-conclusion-validity",
+      "context": "检查样本、独立性、分析假设及结果不确定性是否支持效应判断。"
+    }
+  ],
+  "summary": "通过操纵处理与比较条件检验软件工程效果。",
+  "description": "软件工程受控实验主动施加处理并观察结果，例如让参与者采用不同评审方法完成限定任务。需要定义自变量、因变量、实验单位、处理条件和控制措施；严格随机实验用随机分派控制组间差异，随机抽样与随机分派是不同操作。\n\n当前 SIGSOFT Experiments 标准以含人类参与者的干预研究为适用场景，要求报告协议、测量、分派、样本量依据和不确定性。仅对 scc 与 tokei 自动重复计时，通常应采用其 Benchmarking 标准，而不是把工具进程当作人类实验参与者。\n\n实验结果需要限定任务、人群和环境，并检查学习、顺序、退出及组间差异。统计显著并不自动说明实践效果重要，学生实验也不自动代表工业团队；共享材料和预先明确分析可帮助其他研究者评估结论。\n\n## 参考\n\n- [SIGSOFT：软件工程实验标准与适用范围](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Experiments.md)\n- [实证软件工程标准研究报告](https://arxiv.org/abs/2010.03525)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Experiments.md"
+}

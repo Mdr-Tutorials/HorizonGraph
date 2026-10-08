@@ -1,0 +1,30 @@
+{
+  "id": "source-lines-of-code",
+  "name": "Source Lines of Code",
+  "aliases": [
+    "源代码行数",
+    "源码行数",
+    "SLOC",
+    "LOC"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "在明确源码范围与计数规则下报告程序规模。",
+  "description": "源代码行数是以程序源文本为对象的规模指标族。SLOC 或 LOC 本身没有消除口径歧义：物理代码行、逻辑语句和含注释的文件总行数回答不同问题，报告应写明采用的单位。\n\n可操作定义还要说明语言、声明和预处理指令、复用与生成代码、测试、外部依赖以及重复文件如何处理。SEI 的定义框架把这些选择列为测量条件，工具名称不能代替完整的输入边界。\n\n行数可支持代码库盘点、同口径趋势和经校准的规模估算。它会受语言表达能力、格式和生成策略影响，不能直接当作个人产出、业务价值或实际开发工时；比较前应保留快照与规则。\n\n## 参考\n\n- [SEI：源码规模计数框架](https://sei.cmu.edu/library/software-size-measurement-a-framework-for-counting-source-statements/)\n- [SLOCCount 用户指南](https://dwheeler.com/sloccount/sloccount.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://sei.cmu.edu/library/software-size-measurement-a-framework-for-counting-source-statements/"
+}

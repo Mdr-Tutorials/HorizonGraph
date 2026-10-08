@@ -1,0 +1,39 @@
+{
+  "id": "getopt-posix",
+  "name": "POSIX getopt()",
+  "aliases": [
+    "getopt C 接口",
+    "POSIX getopt",
+    "getopt"
+  ],
+  "type": "protocol",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "posix"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-option",
+      "context": "按选项字符串逐次识别 C 程序 argv 中的短选项及其所需参数，具体应用解释操作数。"
+    }
+  ],
+  "summary": "规定 C 程序逐项读取短命令行选项的接口。",
+  "description": "POSIX getopt() 规定 C 程序从 argc 与 argv 中解析命令行选项的接口，通过选项字符串声明可识别的短选项及所需参数。它是标准化函数行为，不能与 util-linux 的 getopt 命令、Shell 的 getopts 或 Python getopt 模块合并成同一实体。\n\n调用者反复调用函数获取选项，并使用 optarg、optind 等状态读取选项参数及当前位置。缺失参数与未知选项有规定的返回和诊断控制方式，应用仍需决定错误处理和剩余操作数的解释；函数不负责 Shell 的词法分析。\n\nGNU getopt_long 提供长选项等扩展，不能把这些能力写入 POSIX 基础接口的共同保证。选项和操作数混排等行为也可能受实现模式影响，移植时要按规范要求限定；标准规定接口并不要求应用依赖一个特定 GNU 实现。\n\n## 参考\n\n- [POSIX.1-2024 getopt 接口](https://pubs.opengroup.org/onlinepubs/9799919799/functions/getopt.html)\n- [Gnulib 对 POSIX 与 GNU getopt 的区分](https://www.gnu.org/software/gnulib/manual/html_node/getopt.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://pubs.opengroup.org/onlinepubs/9799919799/functions/getopt.html"
+}

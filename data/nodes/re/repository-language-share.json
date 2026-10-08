@@ -1,0 +1,29 @@
+{
+  "id": "repository-language-share",
+  "name": "Repository Language Share",
+  "aliases": [
+    "仓库语言占比",
+    "GitHub语言份额",
+    "语言字节份额"
+  ],
+  "type": "metric",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按已纳入文件的字节数计算仓库语言份额。",
+  "description": "仓库语言份额表示各语言在某个快照和筛选范围内所占的体量比例。GitHub 的语言统计以语言对应的代码字节数计算百分比；这与物理行数、语句数或开发者使用该语言的时间都不是同一量。\n\n如果某语言被纳入的字节数为 B，其份额为 B 除以全部纳入语言字节数之和。Linguist 会过滤二进制、生成、外部及文档等内容，并接受覆盖规则；这些选择改变分子或分母，必须随结果记录。\n\n压缩、编码和文件分类会影响字节占比。一个小型库中包含巨大的生成文件可能造成明显偏移，GitHub 的异步刷新也会使页面暂时落后于推送；份额不能直接推出代码质量或人员能力。\n\n## 参考\n\n- [Linguist：字节统计及刷新](https://github.com/github-linguist/linguist/blob/main/docs/how-linguist-works.md)\n- [GitHub REST：语言对应字节数](https://docs.github.com/en/rest/repos/repos#list-repository-languages)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://github.com/github-linguist/linguist/blob/main/docs/how-linguist-works.md"
+}

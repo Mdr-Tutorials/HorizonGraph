@@ -1,0 +1,56 @@
+{
+  "id": "directwrite",
+  "name": "DirectWrite",
+  "aliases": [
+    "DWrite",
+    "DirectWrite 文本系统"
+  ],
+  "type": "library",
+  "domains": [
+    "desktop-application-development",
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem",
+    "text-rendering-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "windows",
+      "context": "本节点指 Windows 系统 DirectWrite；不把独立 DWriteCore 发行的可用环境并入。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-shaping",
+      "context": "脚本分析层提供 Unicode 字符到字形及定位处理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "opentype",
+      "context": "字体系统支持 OpenType 字体与高级排版特性。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft",
+      "context": "由 Microsoft 提供 Windows 文本 API 与系统实现。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "text-layout",
+      "context": "IDWriteTextLayout 组织文本块与分段格式，支持布局和命中测试。"
+    }
+  ],
+  "summary": "提供 Windows 文本布局、字体分析与字形输出接口。",
+  "description": "DirectWrite 是 Windows 的文本处理 API 与系统组件，提供独立于具体渲染系统的布局、字体处理和字形输出能力。它支持 Unicode、OpenType 排版特性及多格式文本，可用于文档和用户界面。\n\n应用可以使用较高层文本布局对象测量、绘制与命中测试，也可以直接使用字体和脚本分析能力组织自己的布局。图形输出既可与 Direct2D、GDI 配合，也可以由自定义渲染技术消费字形与位置数据。\n\nDirectWrite 不等于 Direct2D，也不是完整输入法或编辑器组件。硬件加速是某些集成路径的能力，不代表所有 DirectWrite 使用都依赖同一 GPU 管线；不同 API 层与系统版本的可用性应按官方接口要求确认。\n\n## 参考\n\n- [Microsoft DirectWrite 介绍](https://learn.microsoft.com/en-us/windows/win32/directwrite/introducing-directwrite)\n- [Microsoft DirectWrite 功能入口](https://learn.microsoft.com/en-us/windows/win32/directwrite/direct-write-portal)\n- [Microsoft 文本格式与布局](https://learn.microsoft.com/en-us/windows/win32/directwrite/text-formatting-and-layout)",
+  "official_site": "https://learn.microsoft.com/en-us/windows/win32/directwrite/introducing-directwrite",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

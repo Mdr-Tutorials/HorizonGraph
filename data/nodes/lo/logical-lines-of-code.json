@@ -1,0 +1,34 @@
+{
+  "id": "logical-lines-of-code",
+  "name": "Logical Lines of Code",
+  "aliases": [
+    "逻辑代码行数",
+    "逻辑源码行数",
+    "LLOC",
+    "Logical Source Statements"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "physical-lines-of-code"
+    }
+  ],
+  "summary": "按明确语言规则统计逻辑源语句而非文本换行。",
+  "description": "逻辑代码行数尝试按源语句等语言结构计量规模，使单纯换行和排版对结果的影响较小。必须先规定何种声明或语句计一次；逻辑行不是显示器上的一行，也不是通用的分号数。\n\n语句终止方式随语言变化。loccount 在适用语言中以终止标点近似计数，无法适用的语言可报告零，这个零表示该项不提供而不是没有代码；精确语句统计可能需要语言解析器。\n\n逻辑计数适合需要控制格式差异的同语言测量。表达式、宏展开和复合语句如何处理仍有定义差异，跨语言或跨工具比较时应同时保存语言规则和物理计数，不能假定两者存在固定换算率。\n\n## 参考\n\n- [SEI：物理行与逻辑语句的定义清单](https://www.sei.cmu.edu/documents/1058/1992_005_001_16082.pdf)\n- [loccount：SLOC 与 LLOC 规则](https://www.catb.org/~esr/loccount/loccount.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.sei.cmu.edu/documents/1058/1992_005_001_16082.pdf"
+}

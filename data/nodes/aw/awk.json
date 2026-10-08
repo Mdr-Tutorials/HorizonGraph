@@ -1,0 +1,38 @@
+{
+  "id": "awk",
+  "name": "Awk",
+  "aliases": [
+    "AWK",
+    "Awk 语言"
+  ],
+  "type": "language",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "implemented_by",
+      "target_id": "gawk"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regex",
+      "context": "模式选择与记录、字段相关操作采用正则表达式；具体支持范围由规范和实现限定。"
+    }
+  ],
+  "summary": "以模式与动作处理记录和字段的文本编程语言。",
+  "description": "Awk 是围绕模式与动作组织程序的语言，输入通常被分成记录和字段，满足模式的记录触发相应代码。语言包含变量、表达式、关联数组、函数和格式化输出，适合表格文本提取、日志分析与小型数据汇总。\n\n记录和字段分隔规则决定数据如何进入程序，正则表达式可用于选择记录及拆分字段。BEGIN 与 END 阶段分别承载输入前初始化和处理结束后的汇总；常规动作则随输入记录执行，这与一次把整个文件加载为普通字符串的处理方式不同。\n\nAwk 语言与具体 awk 可执行程序应分开理解。Gawk 是 GNU 实现，其他实现和 POSIX 规范形成可移植基础与扩展边界；数组、数值、字符处理及新增语言能力要按实现确认，不能把 Gawk 特有功能当作所有 Awk 程序的共同保证。\n\n## 参考\n\n- [GNU 手册中的 Awk 语言与实现区分](https://www.gnu.org/software/gawk/manual/gawk.html)\n- [POSIX.1-2024 Awk 规范](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/gawk/manual/gawk.html"
+}

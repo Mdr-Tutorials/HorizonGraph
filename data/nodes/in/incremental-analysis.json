@@ -1,0 +1,38 @@
+{
+  "id": "incremental-analysis",
+  "name": "Incremental Program Analysis",
+  "aliases": [
+    "增量程序分析",
+    "增量语义分析"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "incremental-parsing",
+      "context": "对文本变化采用可复用语法树的实现先更新受影响结构，语义状态仍需另行维护。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "semantic-analysis",
+      "context": "语义增量路径按变化重新计算绑定、类型和语言约束，并复用仍有效的信息。"
+    }
+  ],
+  "summary": "在程序变化后复用状态并更新受影响的分析结果。",
+  "description": "增量程序分析在源码、依赖或配置发生变化后复用已有状态，仅更新受影响的解析、绑定、类型或索引结果。它可以服务编辑器和持续构建；具体增量单位可能是文本区域、文件、模块或语义依赖。\n\n实现必须识别哪些旧结果仍有效以及变化怎样传播。TypeScript 语言服务通过宿主版本与快照维护长期项目状态，并按查询所需层次处理；索引系统也可以组合当前文档与后台文件信息。\n\n增量语法解析只更新语法结构，是增量分析的一条基础路径，不能替代名称和类型失效处理。可复用结果的范围受依赖和实现策略限制，不保证每次编辑固定耗时，也不能把缓存命中视为分析结果必然新鲜。\n\n## 参考\n\n- [TypeScript：语言服务与快照](https://github.com/microsoft/TypeScript/wiki/Using-the-Language-Service-API)\n- [clangd：动态及后台索引](https://clangd.llvm.org/design/indexing)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

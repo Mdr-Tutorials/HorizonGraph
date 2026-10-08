@@ -1,0 +1,43 @@
+{
+  "id": "gnu-etags",
+  "name": "GNU etags",
+  "aliases": [
+    "etags",
+    "Emacs etags"
+  ],
+  "type": "tool",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-tag-index"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "tags-format"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go-to-definition",
+      "context": "Emacs 通过 TAGS 中的标记位置为 xref 等导航路径查找定义。"
+    }
+  ],
+  "summary": "生成 Emacs TAGS 文件的源码索引工具。",
+  "description": "GNU etags 是 Emacs 分发中的源码标记工具，扫描多种语言对象并生成通常名为 TAGS 的标签表。它与 vi 风格的 ctags 输出及其他生成 TAGS 的工具分别建档，命令名本身不代表所有 tag 文件具有相同格式。\n\n工具按文件名、内容或显式选项选择语言，也可使用正则表达式补充提取规则。Emacs 的 etags 后端读取标签表，为 xref 等导航接口提供定义查询；表中缺失或过期的记录会影响定位。\n\n源码变化后通常需要重新生成或追加更新标签表，更新是否完整由调用工具链负责。GNU etags 不是 LSP 服务，也不建立完整类型检查项目；正则提取更不能证明名称绑定和所有引用都已解析。\n\n## 参考\n\n- [GNU Emacs：建立标签表](https://www.gnu.org/software/emacs/manual/html_node/emacs/Create-Tags-Table.html)\n- [GNU Emacs：标签表职责](https://www.gnu.org/software/emacs/manual/html_node/emacs/Tags-Tables.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.gnu.org/software/emacs/manual/html_node/emacs/Create-Tags-Table.html"
+}

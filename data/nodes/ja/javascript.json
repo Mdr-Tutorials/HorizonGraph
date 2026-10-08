@@ -8,15 +8,17 @@
   ],
   "type": "language",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "language-tooling"
   ],
   "abstraction_level": "runtime_vm",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "ecosystems": [
     "node-js-ecosystem",
-    "web_frontend"
+    "web_frontend",
+    "language-tooling-ecosystem"
   ],
   "relations": [
     {
@@ -26,10 +28,15 @@
     {
       "relation_type": "developed_by",
       "target_id": "brendan-eich"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "lexical-scope"
     }
   ],
   "summary": "浏览器内生语言，经 Node 成为全栈与工具链语言。",
   "importance": 5,
   "popular": 98,
-  "official_site": "https://tc39.es"
+  "official_site": "https://tc39.es",
+  "description": "JavaScript 是以 ECMAScript 规范为语言基础的编程语言，提供对象、函数、模块及动态值等机制。浏览器和 Node.js 等宿主提供各自平台 API，因此语言规范与 DOM、文件系统及网络接口不能混为同一标准。\n\n语言工具可以用 Acorn 或 Esprima 等解析库获得语法树，再进行检查、转换或编辑查询。Tern 从源码证据近似推断类型，TypeScript 与 Flow 则按自身静态模型为相应项目检查类型；这些工具的保证不成为 JavaScript 运行时默认约束。\n\n名称可见性采用词法作用域等明确规则，但动态属性、反射和运行时构造仍限制纯静态工具的识别范围。语法转换需匹配目标运行环境，移除注释或静态类型不会自动验证外部输入，也不能证明程序满足业务需求。\n\n## 参考\n\n- [Ecma：ECMAScript 规范](https://tc39.es/ecma262/)\n- [Mozilla：词法作用域与闭包](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)\n- [TypeScript：JavaScript 检查](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html)"
 }

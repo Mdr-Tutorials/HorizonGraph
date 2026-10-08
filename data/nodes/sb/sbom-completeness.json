@@ -1,0 +1,40 @@
+{
+  "id": "sbom-completeness",
+  "name": "SBOM Completeness",
+  "aliases": [
+    "SBOM 完整性",
+    "清单覆盖完整性"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "对所述工件清单的组件与关系范围作明确覆盖判断。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclonedx",
+      "context": "采用 compositions 描述清单聚合范围的完整、不完整或未知状态。"
+    }
+  ],
+  "summary": "描述组件与关系的覆盖边界及已知未知范围。",
+  "description": "SBOM 完整性讨论清单对所述产品或工件的组件、依赖和其他信息覆盖到了什么范围。它需要先确定范围和生成阶段，不能只比较条目数量。一个仅收录直接依赖的清单可以明确表达有限覆盖，却不能据此断言全部传递依赖都不存在。\n\nCycloneDX compositions 可为组件、服务和依赖关系声明完整、不完整或未知等聚合状态，并指明相关对象。组件库存与依赖边的完整性可以分别描述，软件自身的组成也与密码资产等其他清单范围不同。生成器的能力、排除目录、私有包和动态加载信息都会影响可作出的覆盖声明。\n\n完整状态是生产者对定义范围的声明，需要相应采集证据支持；结构校验和签名不会让遗漏条目自动出现。消费者应核对范围、配置和已知未知信息，必要时采用独立采集比较。未知比没有解释的空白更可用，但它仍表示需要补充调查的边界。\n\n## 参考\n\n- [CycloneDX：组件组合与完整性声明](https://www.cyclonedx.org/use-cases/compositions-components/)\n- [Dependency-Track：高质量 BOM 实践](https://docs.dependencytrack.org/best-practices/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.cyclonedx.org/use-cases/compositions-components/"
+}

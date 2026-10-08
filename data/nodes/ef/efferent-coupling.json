@@ -1,0 +1,31 @@
+{
+  "id": "efferent-coupling",
+  "name": "Efferent Coupling",
+  "abbreviation": "Ce",
+  "aliases": [
+    "传出耦合",
+    "传出依赖数",
+    "出向耦合"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计选定单元向其边界之外依赖的不同目标。",
+  "description": "传出耦合 Ce 统计一个软件单元所依赖的外部目标。在包依赖图中，来自包内不同类但指向同一外部包的多个引用可去重为一个包依赖。\n\nJDepend 的 Ce 是本包依赖的其他包数；NDepend 的程序集级 Ce 按被内部类型使用的外部类型计数，命名空间和类型级又有各自规则。必须固定计数对象与外部库纳入范围。\n\nCe 记录向外依赖的广度，不能从它独立推断依赖稳定性、加载成本或维护费用。经过稳定接口的正常协作和直接依赖内部实现细节可具有相同数量，应回到具体依赖集合评审。\n\n## 参考\n\n- [JDepend：传出包去重与计数](https://github.com/clarkware/jdepend/blob/master/src/jdepend/framework/JavaPackage.java)\n- [NDepend：Ce定义及外部类型](https://www.ndepend.com/docs/code-metrics)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/clarkware/jdepend/blob/master/src/jdepend/framework/JavaPackage.java"
+}

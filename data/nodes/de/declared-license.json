@@ -1,0 +1,35 @@
+{
+  "id": "declared-license",
+  "name": "Declared License",
+  "aliases": [
+    "声明许可",
+    "声明许可证"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx-license-expression",
+      "context": "在载体允许时以规范表达式记录明确的许可声明，同时保存对象范围。"
+    }
+  ],
+  "summary": "记录软件材料中实际给出的许可声明及其范围。",
+  "description": "声明许可记录软件作者或材料中明确给出的许可信息，用于区分原始声明与分析者后续形成的结论。常见证据包括包内 LICENSE、README、元数据或文件标头。声明需要说明所述对象，顶层项目许可不能自动覆盖所有内含第三方文件。\n\nSPDX 3.0.1 的 hasDeclaredLicense 针对工件内实际发现的信息；外部网页提供的材料可成为结论判断的输入，但不应直接混入该关系。历史 SPDX 字段与 CycloneDX 的 declared 表达存在版本语境，应按所采用模型解释。表达式用于保存许可结构，原始文本与证据位置仍有审查价值。\n\n声明信息可能缺失、冲突或与实际文件不同，记录声明不代表已经完成核对。没有许可声明不是自动的公共领域状态，无法判断时应保留未知而不是猜测。将声明与识别证据、结论及评论分开，能够解释后续结论为何与上游元数据不同。\n\n## 参考\n\n- [SPDX 3.0.1：Declared 与 Concluded 关系](https://spdx.github.io/spdx-spec/v3.0.1/model/Licensing/Licensing/)\n- [CycloneDX：声明、观察和结论许可](https://www.cyclonedx.org/use-cases/open-source-licensing/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://spdx.github.io/spdx-spec/v3.0.1/model/Licensing/Licensing/"
+}

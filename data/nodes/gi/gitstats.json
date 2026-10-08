@@ -1,0 +1,46 @@
+{
+  "id": "gitstats",
+  "name": "GitStats",
+  "aliases": [
+    "hoxu GitStats",
+    "Git历史统计生成器"
+  ],
+  "type": "tool",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "git"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "repository-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-churn",
+      "context": "从 Git 历史的新增和删除行生成活动统计，报告保留其历史窗口与口径。"
+    }
+  ],
+  "summary": "将 Git 历史整理成文件、作者与活动统计报告。",
+  "description": "GitStats 指 hoxu/gitstats 项目，是将 Git 历史生成静态统计报告的工具。它报告作者、文件、提交时间及行变化等信息，名称相近的 Ruby git_stats 和其他仪表盘不因此属于同一工件。\n\n该项目使用 Git、Python 与 Gnuplot，导出包含图表的 HTML 报告。统计面向可取得的仓库历史与所选范围，报告时间分布需要注意时区、历史迁移和作者别名；工具环境应与其源码要求核对。\n\n提交数或新增删除行只反映版本控制记录中的活动。压缩提交、合并、自动更新和格式化都会改变这些图表，因此不能直接据此排列人员绩效，也不把旧项目报告当当前仓库的事实。\n\n## 参考\n\n- [GitStats：项目主页](https://gitstats.sourceforge.net/)\n- [GitStats：官方源码](https://github.com/hoxu/gitstats)",
+  "status": "historical",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://gitstats.sourceforge.net/"
+}

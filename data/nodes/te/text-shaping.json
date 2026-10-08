@@ -1,0 +1,39 @@
+{
+  "id": "text-shaping",
+  "name": "Text Shaping",
+  "aliases": [
+    "文本塑形",
+    "文字整形",
+    "字形塑形"
+  ],
+  "type": "concept",
+  "domains": [
+    "text-rendering"
+  ],
+  "ecosystems": [
+    "text-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "text-layout-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "glyph",
+      "context": "将输入字符映射为具体字体中的 glyph ID，并返回字形推进量与偏移供绘制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "font-ligature",
+      "context": "字体和特性允许时，通过连字替换把多个输入字符显示为联合字形；不能推断所有文本都形成连字。"
+    }
+  ],
+  "summary": "依据字体与书写系统把字符序列映射为定位后的字形。",
+  "description": "文本塑形把字符代码序列转换为可显示的字形序列，并计算字形推进量和偏移。结果依赖字体、书写系统、语言及方向；简单逐码点寻找轮廓无法覆盖上下文形式、组合标记与复杂文字重排。\n\nOpenType 字体用 GSUB 描述字形替换，用 GPOS 描述定位等布局信息。塑形引擎结合这些数据和文字规则生成输出，并通过 cluster 信息保留输入与输出之间的对应关系，帮助上层处理选择和光标。\n\n塑形并不自动提供完整的段落布局、字体回退、换行或双向排序。字形选择与把字形画成像素也有不同职责；在终端中，塑形产生的外观还需遵守单元格布局和光标位置的约束。\n\n## 参考\n\n- [HarfBuzz：文本塑形定义](https://harfbuzz.github.io/what-is-harfbuzz.html)\n- [HarfBuzz：为什么需要塑形引擎](https://harfbuzz.github.io/why-do-i-need-a-shaping-engine.html)\n- [Microsoft：OpenType 布局规范](https://learn.microsoft.com/en-us/typography/opentype/spec/chapter2)",
+  "official_site": "https://harfbuzz.github.io/what-is-harfbuzz.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

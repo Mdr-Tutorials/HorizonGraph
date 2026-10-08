@@ -9,10 +9,12 @@
   "type": "library",
   "domains": [
     "developer-environments",
-    "programming-languages"
+    "programming-languages",
+    "language-tooling"
   ],
   "ecosystems": [
-    "editor-ide-ecosystem"
+    "editor-ide-ecosystem",
+    "language-tooling-ecosystem"
   ],
   "relations": [
     {
@@ -27,10 +29,19 @@
       "relation_type": "uses",
       "target_id": "parser",
       "context": "生成并运行相应语言的解析器，以文法识别源码的具体语法结构。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "error-recovery-parsing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "syntax-highlighting",
+      "context": "编辑器集成可以依据具体语法树和查询规则提取源码显示类别。"
     }
   ],
   "summary": "提供语法生成器与可嵌入增量解析运行库。",
-  "description": "Tree-sitter 同时提供解析器生成工具和增量解析库，按语言文法为源码建立具体语法树，并在文本编辑后更新结构。这里以可嵌入运行库为主要身份记录，同时说明生成器职责；语言文法包与上层编辑器集成属于各自工件。\n\n解析器设计面向编辑中的源码，能够在存在语法错误或不完整输入时保留可用结构。调用者可以遍历节点或执行结构查询，并在应用文档编辑后复用旧树进行重新解析；运行库有 C 接口及多种语言绑定。\n\n具体语法树不是已完成名称绑定和类型检查的语义 AST。Tree-sitter 可为高亮、结构选择和索引提取提供基础，调用者仍需维护文档版本及相应语义分析。支持某种语言也依赖该语言文法和绑定版本，不能据此断言所有 IDE 或编码代理都采用它。\n\n## 参考\n\n- [Tree-sitter：增量解析库与生成器](https://tree-sitter.github.io/tree-sitter/)\n- [Tree-sitter：官方源码与项目身份](https://github.com/tree-sitter/tree-sitter)\n- [Tree-sitter：编辑旧树与增量重新解析](https://tree-sitter.github.io/tree-sitter/using-parsers/3-advanced-parsing.html)",
+  "description": "Tree-sitter 提供语言解析器生成器和可嵌入的增量解析库，按文法建立源码的具体语法树。这里保留运行库为主要实体身份，文法包及上层编辑器集成各有自身工件。\n\n解析器面向持续变化和暂时不完整的文档，错误恢复保留可用结构。调用者调整旧树中的编辑位置，交给重新解析过程复用未受影响节点，并可遍历或查询所得结构；运行库提供 C 接口及不同语言绑定。\n\n具体语法树不等于完成绑定和类型检查的语义 AST。高亮、结构选择和索引提取可利用这层基础，跨文件引用与语义重构仍需要分析和项目上下文；增量复用也不能保证任意编辑只处理固定大小区域。\n\n## 参考\n\n- [Tree-sitter：系统身份](https://tree-sitter.github.io/tree-sitter/)\n- [Tree-sitter：编辑与复用](https://tree-sitter.github.io/tree-sitter/using-parsers/3-advanced-parsing.html)\n- [Tree-sitter：官方源码](https://github.com/tree-sitter/tree-sitter)",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",

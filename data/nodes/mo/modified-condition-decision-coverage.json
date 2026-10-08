@@ -1,0 +1,31 @@
+{
+  "id": "modified-condition-decision-coverage",
+  "name": "Modified Condition/Decision Coverage",
+  "aliases": [
+    "修改条件决策覆盖",
+    "修正条件判定覆盖",
+    "MC/DC",
+    "MCDC"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "检查各基本条件对整体决策结果的独立影响。",
+  "description": "MC/DC 要求覆盖相应条件和决策结果，并为每个基本条件提供能够显示其独立影响决策结果的测试证据。它比只观察条件真假或整个决策真假更严格，但不会穷举任意程序的全部行为。\n\n独立影响的判定存在 unique-cause 与 masking 等变体；短路求值、重复条件和耦合条件会影响可行测试对。应明确采用的变体和工具规则，不把某个示例中的 n+1 测试规模宣称为所有表达式都能达到的保证。\n\nClang 可通过额外 MC/DC 插桩和 llvm-cov 展示相应结果；GCC 的条件覆盖实现也提供具体独立影响分析。启用普通分支覆盖不会自动产生 MC/DC 证据，编译器版本、表达式支持与排除范围都应记录。\n\n## 参考\n\n- [NASA：MC/DC 实践教程](https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf)\n- [Clang：源码覆盖](https://clang.llvm.org/docs/SourceBasedCodeCoverage.html)\n- [GCC：gcov 命令与覆盖准则](https://gcc.gnu.org/onlinedocs/gcc/Invoking-Gcov.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf",
+  "abbreviation": "MC/DC"
+}

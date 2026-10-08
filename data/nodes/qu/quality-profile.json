@@ -1,0 +1,33 @@
+{
+  "id": "quality-profile",
+  "name": "Quality Profile",
+  "aliases": [
+    "质量配置",
+    "质量规则配置"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis-rule",
+      "context": "选取语言规则、设置参数并用于具体项目的分析配置。"
+    }
+  ],
+  "summary": "按语言组织分析时启用的规则及其参数。",
+  "description": "质量配置在 Sonar 中组织某种语言分析时启用的规则集合及相关参数。它回答哪些规则会执行，与质量门依据分析结果决定通过或失败的职责不同。\n\n项目可采用内置配置或按许可与管理能力创建自定义配置，选择规则、调整参数并记录变更。配置是语言相关的：一个项目包含多种语言时，不能假定单一规则列表覆盖所有源文件。\n\n规则增删、严重度或参数改变会影响告警和度量可比性，配置升级应与分析器版本一起保留。停用规则或压低阈值能够改变结果，但不会直接修复源码中的性质。\n\n## 参考\n\n- [Sonar：质量配置](https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-profiles/understanding-quality-profiles)\n- [Sonar：质量门](https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-gates/introduction-to-quality-gates)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-profiles/understanding-quality-profiles"
+}

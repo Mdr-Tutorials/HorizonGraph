@@ -1,0 +1,38 @@
+{
+  "id": "ghostling",
+  "name": "Ghostling",
+  "aliases": [
+    "Ghostty 最小终端示例"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "libghostty-vt",
+      "context": "示例通过 ghostty/vt.h 调用终端、输入编码和状态接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pseudoterminal",
+      "context": "示例在 Unix 宿主创建 PTY，连接终端显示层与子进程输入输出。"
+    }
+  ],
+  "summary": "以 C、Raylib 和 libghostty-vt 展示完整终端的最小示例。",
+  "description": "Ghostling 是 Ghostty 官方组织维护的最小可用终端示例，用一份 C 程序展示如何把 libghostty 的 VT 接口接到真实终端会话。示例覆盖创建子进程、读取输出、维护状态和显示字符等基本链路，便于理解终端核心、进程连接与绘制层之间的职责。\n\n其实现通过 PTY 与子进程通信，借助 libghostty 的键盘、鼠标和终端状态接口处理输入输出，再使用 Raylib 完成窗口与二维绘制。库本身不要求 Raylib；示例选择 CMake、C 和 Raylib 是为了给出便于理解的完整应用，并不是所有 libghostty 消费者的硬性技术栈。\n\nGhostling 的定位是接入示范，功能范围、界面完成度与 Ghostty 桌面客户端不同。修改示例或迁移到其他平台时，应检查宿主的进程、PTY、字体和渲染实现，并固定相匹配的库接口版本；能够显示一段输出并不代表已经覆盖所有终端协议、系统集成或生产维护需求。\n\n## 参考\n\n- [Ghostty 官方组织：Ghostling](https://github.com/ghostty-org/ghostling)\n- [Ghostling：完整 C 示例](https://github.com/ghostty-org/ghostling/blob/main/main.c)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/ghostty-org/ghostling"
+}

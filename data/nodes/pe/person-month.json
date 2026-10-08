@@ -1,0 +1,34 @@
+{
+  "id": "person-month",
+  "name": "Person-Month",
+  "abbreviation": "PM",
+  "display_primary": "人月",
+  "display_secondary": "Person-Month",
+  "aliases": [
+    "人月",
+    "人月工作量",
+    "人员月",
+    "Person Month",
+    "工作月"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按人员投入比例和期间累计的工作量单位。",
+  "description": "人月把人员投入按一个全职工作月的口径累计，用于记录或估算项目工作量。例如一个人在两个月内各投入一半全职工作量，合计为一个人月；具体报告需明确全职月的制度与统计期间。\n\n投入变化时应分期间累计，并注明工时或投入比例如何换算。NIH 的人月说明展示了按任职月数与比例计算的口径，软件估算模型则使用其自身的工作月定义；这些定义提供示例，不能自动视为所有组织的统一月工时。\n\nCOCOMO 等软件模型常以人月表达估计投入，再结合费用与进度假设产生其他结果。相同人月数并不意味着相同日历工期，依赖任务与协作安排会限制并行；人月数也不直接度量交付功能、质量或个人效率。\n\n## 参考\n\n- [NIH：人月与投入比例的计算示例](https://www.grants.nih.gov/news-events/nih-extramural-nexus-news/2026/06/what-is-a-person-month-how-do-i-calculate-it)\n- [NASA/JPL：Handbook for Software Cost Estimation（2003）](https://swehb.nasa.gov/download/attachments/16450436/Handbook_for_Software_Cost_Estimation.pdf?api=v2)\n- [Barry Boehm：Safe and Simple Software Cost Analysis（作者论文）](https://people.eecs.ku.edu/~hossein/811/Papers/boehm-cost-analysis.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://www.grants.nih.gov/news-events/nih-extramural-nexus-news/2026/06/what-is-a-person-month-how-do-i-calculate-it"
+}

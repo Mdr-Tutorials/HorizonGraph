@@ -1,0 +1,37 @@
+{
+  "id": "pylint",
+  "name": "Pylint",
+  "aliases": [
+    "Pylint Python 静态检查器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "static-analysis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis-rule",
+      "context": "运行选定的 Python 检查器和配置规则产生消息。"
+    }
+  ],
+  "summary": "以语法与推断信息检查 Python 代码问题的工具。",
+  "description": "Pylint 是 Python 静态检查工具，针对错误、编码约定、重构提示及其他规则产生分类诊断。它使用程序表示和推断信息处理名称与对象，对支持语法和外部库模型的能力需按版本核对。\n\n团队可通过配置启用检查、设置参数并编写插件，也可按文件或消息规则管理抑制。它给出的分数属于可配置报告模型，与独立的类型检查结果、测试覆盖和确认缺陷数量不同。\n\nPython 动态行为、框架扩展和环境差异可能使模型不足，告警需要根据实际调用语义复核。固定版本和配置后才适合观察趋势；分数上升可能来自抑制或公式变化，不能直接解释为全部质量改善。\n\n## 参考\n\n- [Pylint：官方项目](https://github.com/pylint-dev/pylint)\n- [Pylint：运行与配置](https://pylint.pycqa.org/en/stable/user_guide/usage/run.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/pylint-dev/pylint"
+}

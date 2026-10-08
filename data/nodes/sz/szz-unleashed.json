@@ -1,0 +1,47 @@
+{
+  "id": "szz-unleashed",
+  "name": "SZZ Unleashed",
+  "aliases": [
+    "SZZUnleashed",
+    "开源SZZ实现"
+  ],
+  "type": "tool",
+  "domains": [
+    "repository-analysis"
+  ],
+  "ecosystems": [
+    "repository-analysis-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "szz-algorithm"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "jvm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-maat",
+      "context": "在项目提供的可选 JIT 缺陷预测示例中，以 Code Maat 提取共同变化耦合特征。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-log",
+      "context": "预处理脚本将 Git 提交日志转换为修复记录链接输入。"
+    }
+  ],
+  "summary": "从修复记录生成潜在缺陷引入提交的研究工具。",
+  "description": "SZZ Unleashed 是开放的 SZZ 实现，结合修复记录与 Git 历史生成可能的缺陷引入提交。项目把预处理和修复链接脚本与 Java 追踪程序分开，使用 JGit 读取仓库，并提供研究示例流程。\n\n典型流程取得缺陷记录、整理 Git 日志、识别修复提交，再运行追踪生成提交、注释图和修复候选配对。某些示例另用 Code Maat 提取耦合特征；该可选研究步骤不构成所有 SZZ 执行的依赖。\n\n输出候选可能重复，一个修复也可能链接多个引入候选。工具能支持缺陷预测数据生成，但结果仍是启发式而非已经验证的因果标签；应保存输入修复列表、过滤参数并用外部判定核验。\n\n## 参考\n\n- [SZZ Unleashed：官方实现](https://github.com/wogscpar/SZZUnleashed)\n- [实现作者论文](https://arxiv.org/abs/1903.01742)\n- [SZZ Unleashed：具体工作流](https://github.com/wogscpar/SZZUnleashed/blob/master/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/wogscpar/SZZUnleashed"
+}

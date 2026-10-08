@@ -1,0 +1,39 @@
+{
+  "id": "select-graphic-rendition",
+  "name": "Select Graphic Rendition",
+  "aliases": [
+    "选择字符显示属性"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ecma-48"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "control-sequence-introducer",
+      "context": "以 CSI 参数列表和最终字节 m 编码显示属性控制。"
+    }
+  ],
+  "summary": "以 CSI m 设置后续字符的颜色、样式与显示属性。",
+  "description": "SGR 是用于选择字符显示属性的控制功能，常用 CSI 参数列表后接 m 表示。应用可以设置前景、背景、强度、下划线或反显等属性，随后写入的字符使用相应状态。它控制字符的呈现，和终端位图图片传输、Shell 语法高亮规则不是同一功能。\n\n参数可以组合，省略或零参数用于回到规定的默认属性；其他参数单独开启或关闭某项设置。现代生态扩展了索引颜色、RGB 与下划线样式等编码，具体支持及冒号、分号形式需核对终端文档。颜色编号也依赖当前调色板，不能从编号保证屏幕上的固定 RGB 值。\n\nSGR 是终端状态操作，不是给一段字符串附带自动结束的 HTML 样式。程序应明确复位，否则后续输出可能继承属性；复位文字属性也不会同时清除光标模式、超链接或剪贴板状态。可移植程序可通过能力描述与兼容查询选择可用效果。\n\n## 参考\n\n- [ECMA-48：控制功能原始标准](https://ecma-international.org/wp-content/uploads/ECMA-48_5th_edition_june_1991.pdf)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)\n- [Microsoft：虚拟终端序列与屏幕缓冲](https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequences)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://ecma-international.org/wp-content/uploads/ECMA-48_5th_edition_june_1991.pdf",
+  "abbreviation": "SGR"
+}

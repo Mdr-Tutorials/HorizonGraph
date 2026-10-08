@@ -1,0 +1,39 @@
+{
+  "id": "st-terminal",
+  "name": "st",
+  "aliases": [
+    "suckless st",
+    "simple terminal",
+    "st 终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terminfo",
+      "context": "通过终端能力条目向应用说明 st 支持的控制序列与显示能力。"
+    }
+  ],
+  "summary": "通过源码配置保持简洁的 X11 终端模拟器。",
+  "description": "st 是 suckless 项目的 simple terminal，一个用于 X Window System 的终端模拟器。它实现多数 VT10X 控制序列，并支持 UTF-8、宽字符、256 色与真彩色，供命令行程序在图形桌面内交互；st 的名称不表示通用标准或 Shell 语言。\n\n配置采用 config.h，默认值位于 config.def.h，许多个性化功能以修改源码或应用补丁的方式提供。编译得到的不同变体可能拥有不同能力，不能把社区补丁列表当成上游原版的统一内置功能。终端程序是否正确显示还取决于能力条目和实际实现。\n\n原版回滚通常通过 tmux、Screen、scroll 等程序或 scrollback 补丁解决，替代方式各有生命周期与配置边界。官网明确项目仍在开发；简洁设计并不代表全部现代终端扩展均已实现，也不能由代码规模推断在所有负载下性能或安全性必然更好。\n\n## 参考\n\n- [suckless：st 官方主页](https://st.suckless.org/)\n- [suckless：st 官方源码](https://git.suckless.org/st/)\n- [suckless：st FAQ](https://git.suckless.org/st/file/FAQ.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://st.suckless.org/"
+}

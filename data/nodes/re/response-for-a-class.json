@@ -1,0 +1,30 @@
+{
+  "id": "response-for-a-class",
+  "name": "Response for a Class",
+  "abbreviation": "RFC",
+  "aliases": [
+    "类响应集大小",
+    "类响应数"
+  ],
+  "type": "metric",
+  "domains": [
+    "software-measurement",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计类响应一条消息可能涉及的方法集合大小。",
+  "description": "RFC 的原始思想是计算类的响应集合：类中方法以及响应消息时这些方法能够调用的方法所构成的集合。重复出现的同一方法按集合去重，它不是某条请求实际执行的方法调用次数。\n\n静态计算需要说明纳入直接调用还是传递可达调用、继承方法以及动态分派近似。CK Java 工具以解析到的独特调用实现其口径，并明确重载解析限制；SciTools 的 All Methods 则采用包含继承方法的计数口径。\n\n因此同样标成 RFC 的数值可能描述不同集合。它可提示理解一次类交互时需要考虑的行为范围，但不证明所有候选调用都发生，也不能从静态集合大小直接估计请求耗时。\n\n## 参考\n\n- [CK：RFC实现与调用解析](https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/metric/RFC.java)\n- [SciTools：All Methods对应口径](https://docs.scitools.com/metrics/CountDeclMethodAll.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/mauricioaniche/ck/blob/master/src/main/java/com/github/mauricioaniche/ck/metric/RFC.java"
+}

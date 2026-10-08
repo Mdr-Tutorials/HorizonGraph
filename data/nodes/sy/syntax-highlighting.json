@@ -1,0 +1,33 @@
+{
+  "id": "syntax-highlighting",
+  "name": "Syntax Highlighting",
+  "aliases": [
+    "语法高亮",
+    "源码着色"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lexer",
+      "context": "分词型高亮按词法规则识别关键字、注释和字符串等片段；基于树的高亮另有解析路径。"
+    }
+  ],
+  "summary": "根据词法或语法类别为源码片段设置显示样式。",
+  "description": "语法高亮把源码片段按关键字、字符串、注释或语法位置等类别赋予样式，帮助阅读结构。实现可依据文法、分词器或解析树，分类结果与主题的颜色和字体配置属于不同职责。\n\nVS Code 的 TextMate 语法采用规则和 scope 组织高亮，CodeMirror 的语言支持也可用分词或解析结构生成标签。编辑中的不完整源码需要相应恢复策略，支持高亮并不要求建立完整项目类型状态。\n\n语法类别无法总是区分同形名称对应的实体，例如局部变量与类型的使用。语义 token 可根据分析后的符号身份进一步增强显示；高亮结果本身不等于诊断、名称绑定或程序正确性检查。\n\n## 参考\n\n- [VS Code：语法高亮机制](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide)\n- [Lezer：树与高亮标签](https://lezer.codemirror.net/docs/guide/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,38 @@
+{
+  "id": "standard-streams",
+  "name": "Standard Streams",
+  "aliases": [
+    "标准输入输出流",
+    "标准流",
+    "stdin",
+    "stdout",
+    "stderr"
+  ],
+  "type": "concept",
+  "domains": [
+    "terminal-engineering",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "file-descriptor",
+      "context": "在 POSIX 进程启动约定中，标准输入、输出与错误分别使用文件描述符 0、1、2；C 流重新绑定及其他平台需另行说明。"
+    }
+  ],
+  "summary": "进程默认的输入、正常输出与诊断输出通道约定。",
+  "description": "标准流为命令行程序提供默认的输入和输出约定，通常称为标准输入 stdin、标准输出 stdout 和标准错误 stderr。正常结果与诊断信息具有不同用途，分开后便于把结果传给另一个程序，同时把提示或错误留在独立通道。进程启动环境和调用者决定它们实际连接到哪里。\n\nPOSIX 在启动时定义编号 0、1、2 为标准输入、标准输出和标准错误的文件描述符；C 库的同名流对象在其上提供缓冲接口。Shell 可以把这些通道连接到文件或管道，终端也只是可选目标。改变一个 C 流的绑定时，流对象与最初描述符编号不能永远视作相同对象。\n\n标准错误是一条输出通道，而不是进程退出状态；输出到 stderr 的程序仍可能成功，失败也不保证输出诊断。多条通道的缓冲与读取安排会影响观察到的顺序，stdout 的内容也不必是文本。Windows 使用标准 HANDLE 和自己的控制台接口，应按平台区分其底层表示与 POSIX 描述符。\n\n## 参考\n\n- [POSIX.1-2024: 标准流与描述符的定义](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap03.html)\n- [POSIX.1-2024: 文件描述符与标准I/O流的交互](https://pubs.opengroup.org/onlinepubs/9799919799/functions/V2_chap02.html)\n- [Microsoft: Console 与标准通道](https://learn.microsoft.com/en-us/windows/console/definitions)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap03.html"
+}

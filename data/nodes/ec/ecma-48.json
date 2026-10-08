@@ -1,0 +1,34 @@
+{
+  "id": "ecma-48",
+  "name": "ECMA-48",
+  "aliases": [
+    "字符控制功能标准"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ecma-international",
+      "context": "Ecma International 制修订并发布 ECMA-48 字符控制功能标准。"
+    }
+  ],
+  "summary": "规定字符流中的控制功能、编码形式与显示操作语义。",
+  "description": "ECMA-48 定义嵌入字符编码数据中的控制功能与编码表示，覆盖字符显示设备所需的定位、格式、设备控制等操作。1991 年第五版与 ISO/IEC 6429 相关联，是理解现代终端字节流的重要规范基础。它不规定图形终端窗口布局或应用的命令语法。\n\n标准包含 C0、C1 控制功能以及序列和控制字符串的组织规则，提供适用的七位和八位表示。CSI、OSC、DCS 等具有不同语法职责；参数、结束字节和字符串终止不能混用。具体解析器还需根据字符编码和终端模式处理字节，尤其要避免八位控制与 UTF-8 路径的错误解释。\n\n标准明确允许设备只实现适合自身用途的部分功能。DEC、xterm 及后续终端的私有模式或 OSC 命令可能沿用其封装，却并非全部由 ECMA-48 定义。支持颜色或一项光标操作不足以宣称完整实现，产品兼容性应按控制功能与扩展逐项核对。\n\n## 参考\n\n- [Ecma International：ECMA-48 第五版](https://ecma-international.org/publications-and-standards/standards/ecma-48/)\n- [ECMA-48：控制功能原始标准](https://ecma-international.org/wp-content/uploads/ECMA-48_5th_edition_june_1991.pdf)\n- [xterm：控制序列参考](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "official_site": "https://ecma-international.org/publications-and-standards/standards/ecma-48/"
+}

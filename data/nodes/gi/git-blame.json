@@ -1,0 +1,44 @@
+{
+  "id": "git-blame",
+  "name": "git blame",
+  "aliases": [
+    "Git 行归属追踪",
+    "Git 逐行追溯"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-rename-detection",
+      "context": "追溯行来源时自动跟随整文件重命名，行移动与复制另由 -M/-C 控制"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-mailmap",
+      "context": "按仓库 mailmap 规则归一化报告中的作者身份"
+    }
+  ],
+  "summary": "追溯选定文件各行最近修改提交的 Git 命令。",
+  "description": "`git blame` 为某个版本中文件的每一行标注最近修改该行的提交信息。它可以限定行区间或起始版本，适合把当前代码定位到相关变更与讨论；结果描述的是给定历史和选项下的行归属，不是每行最初的创作者证明。\n\n整文件重命名会自动跟随，`-M` 和 `-C` 可进一步追踪行移动及跨文件复制。忽略空白或特定修订能减少格式化提交的干扰，但也会改变归属结果；浅历史、可见范围及移动检测条件应随分析报告记录。\n\n默认报告只覆盖选定版本仍存在的行，不反映已删除或替换的工作。工具可用 porcelain 输出获得结构化提交与身份信息，并结合差异和历史查询理解原因；将保留行数直接当作个人贡献或绩效，会遗漏评审、设计及删除代码等活动。\n\n## 参考\n\n- [Git blame 手册](https://git-scm.com/docs/git-blame)\n- [Pro Git：使用 Git 调试](https://git-scm.com/book/en/v2/Git-Tools-Debugging-with-Git)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://git-scm.com/docs/git-blame"
+}

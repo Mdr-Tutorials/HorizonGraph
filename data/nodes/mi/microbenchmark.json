@@ -1,0 +1,34 @@
+{
+  "id": "microbenchmark",
+  "name": "Microbenchmark",
+  "aliases": [
+    "微基准测试",
+    "微型性能基准"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "benchmark-experimental-design",
+      "context": "限定小操作、输入和计时边界，并防止优化消除与测量开销掩盖实际成本。"
+    }
+  ],
+  "summary": "测量明确且较小的操作或代码片段的性能。",
+  "description": "微基准测试隔离一个较小操作、函数或算法核心，测量其执行成本。它可以帮助比较解析内循环或数据结构操作，但测量范围与整个命令的目录遍历、输入读取和报告输出不同。\n\n设计时要处理编译器消除、常量折叠、计时分辨率、缓存和预热。Google Benchmark 提供防止结果被优化掉及重复计时的设施，使用这些设施仍要检查优化后的代码是否确实执行了目标操作。\n\n微基准有助于定位局部变化，却不直接证明端到端用户收益。调用比例、输入分布与其他组件可能改变总体效果；应明确操作、输入、计时方式和环境，再用系统层基准核查实际路径。\n\n## 参考\n\n- [Google Benchmark：计时、重复与优化边界](https://github.com/google/benchmark/blob/main/docs/user_guide.md)\n- [SIGSOFT：软件基准实验标准](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Benchmarking.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/google/benchmark/blob/main/docs/user_guide.md"
+}

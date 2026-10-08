@@ -1,0 +1,35 @@
+{
+  "id": "bracketed-paste",
+  "name": "Bracketed Paste Mode",
+  "aliases": [
+    "括号粘贴模式",
+    "Bracketed Paste"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "domains": [
+    "terminal-engineering",
+    "human-computer-interaction"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "terminal-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "control-sequence-introducer",
+      "context": "私有模式 2004 与输入边界 200~/201~ 均通过 CSI 形式编码。"
+    }
+  ],
+  "summary": "用开始与结束序列区分粘贴文本和普通按键输入。",
+  "description": "括号粘贴模式让应用识别一段输入来自粘贴操作，而不是用户逐个键入。支持的终端在应用启用私有模式 2004 后，用 CSI 200 ~ 和 CSI 201 ~ 包围粘贴数据。应用可据此把多行文本作为一次插入，避免按键绑定逻辑误解其中内容。\n\n模式由应用通过 CSI ? 2004 h 开启，并在结束时复位。Readline、编辑器或 TUI 库需要解析这两个边界才会获得效果；不支持的输入层可能显示标记或继续按普通输入处理。终端和中间复用器是否实现该扩展也要核对。\n\n该机制不检查粘贴文本中的命令含义，也不证明文字来自可信来源。Shell 可以选择先插入而不立即执行，用户仍需查看内容并决定执行。终端的粘贴警告政策与协议能力分别配置；启用括号粘贴不能被写作防止所有终端输入攻击的保证。\n\n## 参考\n\n- [xterm：括号粘贴的起源与实现](https://invisible-island.net/xterm/xterm-paste64.html)\n- [GNU Bash：Readline 与括号粘贴](https://www.gnu.org/software/bash/manual/html_node/Readline-Init-File-Syntax.html)\n- [Ghostty：剪贴板读写与粘贴策略](https://ghostty.org/docs/config/reference)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://invisible-island.net/xterm/xterm-paste64.html"
+}

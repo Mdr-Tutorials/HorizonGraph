@@ -1,0 +1,39 @@
+{
+  "id": "gio",
+  "name": "GIO",
+  "aliases": [
+    "GObject Interfaces and Objects",
+    "GIO 系统接口"
+  ],
+  "type": "library",
+  "domains": [
+    "desktop-application-development"
+  ],
+  "ecosystems": [
+    "desktop-gui-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "gobject",
+      "context": "GIO 文件、流与网络抽象采用 GObject 对象和接口。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "glib",
+      "context": "GIO 使用 GLib 主上下文、基本类型与错误处理设施。"
+    }
+  ],
+  "summary": "提供文件、网络、D-Bus 与异步操作的 GLib 系统接口库。",
+  "description": "GIO 是 GLib 项目提供的系统与 I/O 接口库，覆盖文件抽象、流、网络、D-Bus、应用启动和设置等能力。它以 GObject 对象和接口表达操作，使 GTK 应用及非图形程序能够共享较高层的可移植 API。\n\n文件与网络操作常有同步和异步形式，异步回调与启动操作时的线程默认主上下文相关。可取消操作和错误报告帮助应用在等待 I/O 时继续处理事件；在 GUI 主循环中调用耗时同步接口可能造成卡顿。\n\nGIO 的 GFile 表达文件引用，不保证每种 URI 都已有后端可访问。远程文件系统的部分实现由独立 GVFS 模块与进程提供，不能把 GVFS 全部能力都写成 GIO 内置；D-Bus 支持也不会使任意平台上自动存在同一组桌面服务。\n\n## 参考\n\n- [GIO 概览](https://docs.gtk.org/gio/overview.html)\n- [GIO API 目录](https://docs.gtk.org/gio/)",
+  "official_site": "https://docs.gtk.org/gio/overview.html",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

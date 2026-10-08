@@ -1,0 +1,59 @@
+{
+  "id": "loccount",
+  "name": "loccount",
+  "aliases": [
+    "ESR 代码计数器",
+    "loccount 源码计数器"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-measurement",
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-line-counting"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "go",
+      "context": "核心计数器以 Go 实现，构建工具与计数输入语言分别处理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "physical-lines-of-code",
+      "context": "按注释外非空白行规则报告 SLOC。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "logical-lines-of-code",
+      "context": "在支持的语言中按终止标点规则报告 LLOC，并注明不适用语言。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-counting-scope",
+      "context": "根据仓库跟踪文件清单或显式递归模式确定输入范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cocomo",
+      "context": "按选择的模型与源码计数报告投入估算。"
+    }
+  ],
+  "summary": "Go 实现的物理与适用语言逻辑源码行计数器。",
+  "description": "loccount 是 Eric S. Raymond 的 Go 源码计数工具，报告物理 SLOC 和适用语言的 LLOC。它还可说明检测出的语言，并提供可用于机器处理的输出和基于模型的投入估算。\n\n物理行要求在注释外有非空白字符，逻辑行采用语句终止标点等规则；某些语言不适用 LLOC 时会报告零。这个结果不表示程序没有语句，更不能把启发式 LLOC 当作所有语言的精确解析。\n\n官方手册区分版本库跟踪文件清单与递归扫描输入，并提供切换及排除参数。COCOMO 模型、输入遍历和输出字段应按实际版本核对；其规模估算不能证明真实项目成本。\n\n## 参考\n\n- [loccount 官方资源页](https://www.catb.org/~esr/loccount/)\n- [loccount 官方手册](https://www.catb.org/~esr/loccount/loccount.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.catb.org/~esr/loccount/"
+}

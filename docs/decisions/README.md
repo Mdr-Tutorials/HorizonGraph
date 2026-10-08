@@ -43,3 +43,5 @@
 | [0030](0030-wsl-and-container-engineering.md) | WSL、跨宿主开发与容器工程 | 已接受 | 2026-10-08 |
 | [0031](0031-hft-and-electronic-trading.md) | HFT、电子交易与低延迟系统 | 已接受 | 2026-10-08 |
 | [0032](0032-antigravity-and-agent-development.md) | Google Antigravity 与智能体开发 | 已接受 | 2026-10-08 |
+| [0033](0033-terminal-language-tooling-and-software-composition.md) | 终端、语言工具链与软件组成 | 已接受 | 2026-10-08 |
+| [0034](0034-software-measurement-and-repository-analysis.md) | 软件度量、仓库分析与质量验证 | 已接受 | 2026-10-08 |

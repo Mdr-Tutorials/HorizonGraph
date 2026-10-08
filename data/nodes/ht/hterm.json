@@ -1,0 +1,37 @@
+{
+  "id": "hterm",
+  "name": "hterm",
+  "aliases": [
+    "HTML 终端组件"
+  ],
+  "type": "library",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "通过 decorate 等接口把终端挂载到宿主 DOM 节点，网络连接由宿主提供。"
+    }
+  ],
+  "summary": "在浏览器中呈现终端输出并提供输入回调的 JavaScript 库。",
+  "description": "hterm 是 libapps 项目中的 JavaScript 终端模拟库，负责显示终端输出与接收键盘输入。官方明确它不是 SSH 客户端，也不是独立 Shell 环境；Secure Shell 等宿主把它与连接实现组合，才能提供实际远程会话。\n\n嵌入应用创建 Terminal、选择设置存储并挂载 DOM，然后通过 IO 回调接收按键和尺寸变更。宿主可以把这些事件转发给网络或本地会话，同时将程序输出送回库解释。持久保存用户偏好与让会话进程在断线后继续运行是不同能力。\n\n集成时要区分 JavaScript 字符串、UTF-8 数据与控制序列，选择合适的输入 API，避免在不完整字符之间混用编码路径。公开 README 也给出 ECMAScript 运行要求；浏览器可加载一个组件不代表底层连接、远端认证或系统进程能力已经随之提供。\n\n## 参考\n\n- [libapps：hterm README](https://chromium.googlesource.com/apps/libapps/+/HEAD/hterm/README.md)\n- [libapps：嵌入 hterm](https://chromium.googlesource.com/apps/libapps/+/HEAD/hterm/docs/embed.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://chromium.googlesource.com/apps/libapps/+/HEAD/hterm/README.md"
+}

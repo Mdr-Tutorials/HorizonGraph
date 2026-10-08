@@ -1,0 +1,35 @@
+{
+  "id": "tern-query-protocol",
+  "name": "Tern JSON Query Protocol",
+  "aliases": [
+    "Tern 查询协议",
+    "Tern JSON 协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "language-tooling",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "以 JSON 对象组织查询、文件变更及查询返回值。"
+    }
+  ],
+  "summary": "规定 Tern 文件更新与语言查询的 JSON 消息。",
+  "description": "Tern JSON Query Protocol 是 Tern 服务接受文件内容和代码查询的接口约定。请求可以携带 files 与 query，文件项表达完整内容、片段或删除；查询指定文件和位置，返回补全、类型、定义、引用或编辑信息。\n\n服务器在处理请求时更新所管理的文件，结合定义文件、插件与推断状态答复。位置可以按字符偏移或行列对象表达，响应也能选择行列形式；接入者必须按该接口约定同步内容和位置，不能直接套用另一协议的位置编码。\n\n该接口由 Tern 的服务与编程 API 定义，不是 JSON-RPC 或 LSP 的别名。共享补全和定义功能不代表消息兼容；要接入只理解 LSP 的宿主，仍需适配层。协议也不规定分析一定完整、最新语法一定受支持或编辑一定安全。\n\n## 参考\n\n- [Tern：JSON protocol](https://ternjs.github.io/doc/manual.html)\n- [Tern：服务模块与查询实现](https://github.com/ternjs/tern/blob/master/lib/tern.js)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://ternjs.github.io/doc/manual.html"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "error-recovery-parsing",
+  "name": "Error-Recovery Parsing",
+  "aliases": [
+    "错误恢复解析",
+    "容错语法解析",
+    "Parse Error Recovery"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "parser",
+      "context": "在文法识别遇错时采用恢复策略继续构造后续可用结构。"
+    }
+  ],
+  "summary": "在遇到非法或不完整输入后恢复并继续构造语法结构。",
+  "description": "错误恢复解析在语法错误或不完整输入出现后尝试继续识别结构。实现可以跳过片段、插入缺失成分或保留错误节点，目的是让诊断或编辑工具在用户尚未完成源码时继续工作。\n\nLezer、Tree-sitter 与 acorn-loose 为编辑场景提供不同恢复设计，严格解析器也可能支持有限恢复选项。恢复策略影响后续树形和位置，上层应识别错误或占位结构，不能把修补后的树等同于原程序唯一合法解析。\n\n容错与增量解析是可组合的不同能力：一项处理错误输入，另一项复用未改变结构。能得到树不证明原代码合法，也不自动完成名称与类型分析；错误诊断和改写必须考虑恢复造成的不确定性。\n\n## 参考\n\n- [Lezer：错误恢复设计](https://lezer.codemirror.net/docs/guide/)\n- [Acorn：独立 loose parser](https://github.com/acornjs/acorn/blob/master/acorn-loose/README.md)\n- [Tree-sitter：解析系统](https://tree-sitter.github.io/tree-sitter/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

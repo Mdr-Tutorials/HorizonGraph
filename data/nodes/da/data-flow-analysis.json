@@ -1,0 +1,38 @@
+{
+  "id": "data-flow-analysis",
+  "name": "Data-Flow Analysis",
+  "aliases": [
+    "数据流分析",
+    "Dataflow Analysis"
+  ],
+  "type": "concept",
+  "domains": [
+    "language-tooling",
+    "compilers"
+  ],
+  "ecosystems": [
+    "language-tooling-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language-tooling-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cfg",
+      "context": "经典静态数据流框架沿控制流图传播抽象状态，在基本块和路径汇合处更新信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "abstract-interpretation",
+      "context": "静态分析可以将程序状态映射到抽象域，并以转移和合并计算相关性质。"
+    }
+  ],
+  "summary": "沿程序控制路径传播值、定义及使用等抽象信息。",
+  "description": "数据流分析沿程序位置和控制路径传播关于值、定义、使用或其他性质的抽象信息。到达定义、活跃变量及常量传播等问题可表达为各位置的状态与转移关系，常用于编译优化和静态检查。\n\n基于控制流图的实现给语句定义转移函数，在路径汇合处合并状态，并迭代至不动点或相应收敛策略。抽象域和合并规则决定保留哪些区别，不能只因使用图传播就认定分析保留全部执行信息。\n\n这里记录静态程序分析方法，与运行时传播标签的动态数据流检测及业务数据管线分别区分。路径、过程与上下文敏感程度影响精度，分析结论的保证范围必须结合具体模型和所用语言假设判断。\n\n## 参考\n\n- [Clang：数据流分析机制](https://clang.llvm.org/docs/DataFlowAnalysisIntro.html)\n- [Aarhus：单调框架及求解](https://www.cs.au.dk/~amoeller/spa/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

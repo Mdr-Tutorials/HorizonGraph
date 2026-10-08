@@ -1,0 +1,27 @@
+{
+  "id": "statement-coverage",
+  "name": "Statement Coverage",
+  "aliases": [
+    "语句覆盖率"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "统计测试至少执行一次的可执行语句比例。",
+  "description": "语句覆盖率关注程序中可执行语句是否至少运行一次，分母是当前分析范围内的可执行语句集合。它与物理行计数不同，单行多语句或跨行语句需要按解析和映射口径处理。\n\n执行所有语句并不必然执行每个分支结果。例如只有真分支包含赋值的 if，在条件始终为真时即可覆盖其中语句，却没有验证假分支后的行为。Istanbul 类工具提供独立语句计数，与行和分支统计并列报告。\n\n完整语句覆盖是特定结构准则的达成结果，不代表程序对所有输入正确。应进一步核查边界输入、条件组合及可观察输出，并保存无法执行语句的解释及排除依据。\n\n## 参考\n\n- [NASA：MC/DC 实践教程](https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf)\n- [nyc 官方仓库与配置](https://github.com/istanbuljs/nyc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://ntrs.nasa.gov/api/citations/20010057789/downloads/20010057789.pdf"
+}

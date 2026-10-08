@@ -1,0 +1,29 @@
+{
+  "id": "measurement-validity",
+  "name": "Measurement Validity",
+  "aliases": [
+    "测量效度",
+    "度量有效性"
+  ],
+  "type": "concept",
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    }
+  ],
+  "summary": "检验测量结果是否支持对目标属性的解释。",
+  "description": "测量效度关注测量所得是否足以支持对目标属性的解释。先说明想观察的属性、对象和用途，再收集内容、构念或外部效标方面的证据；一个计数程序每次返回相同数字，并不能说明这个数字适合评价软件质量。\n\n在源码分析中，定义为非空非注释物理行的数字，可以支持相应范围的行数报告。若把该数称为复杂度、业务价值或个人生产力，就引入另一种解释，需要额外理论与验证证据，不能依靠工具知名度补足。\n\n效度证据与应用条件一起使用。编程语言、项目阶段、生成代码政策或人群变化，都可能改变代理指标的含义；测量可靠性主要关心一致性，效度主要关心解释是否成立，两者应分别说明。\n\n## 参考\n\n- [软件工程度量理论与测量性质](https://arxiv.org/html/2406.14494v1)\n- [NIST：构念与指标假设的验证](https://airc.nist.gov/airmf-resources/playbook/measure/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://arxiv.org/html/2406.14494v1"
+}

@@ -8,10 +8,12 @@
   "type": "concept",
   "domains": [
     "developer-environments",
-    "programming-languages"
+    "programming-languages",
+    "language-tooling"
   ],
   "ecosystems": [
-    "editor-ide-ecosystem"
+    "editor-ide-ecosystem",
+    "language-tooling-ecosystem"
   ],
   "relations": [
     {
@@ -30,7 +32,7 @@
     }
   ],
   "summary": "为编辑器提供诊断、补全与导航等语言智能的服务。",
-  "description": "语言服务器封装某种语言的分析与编辑能力，向编辑器客户端提供诊断、补全、悬浮信息、导航或重构等服务。采用 LSP 的实现通过统一协议复用到不同编辑器，服务器和编辑器可以使用不同实现语言。\n\n客户端通常同步文档变化并提交能力请求，服务器维护解析与项目状态后返回位置、诊断或编辑结果。实际能力由初始化协商和实现支持决定；本地进程、远程服务等启动方式由宿主配置，协议本身不规定某个产品必须如何安装和托管服务。\n\n语言服务器可以使用编译器、解释器或专门分析器，未必都采用 Tree-sitter。VS Code 还允许扩展直接注册语言能力提供者，因此编辑器具备补全或诊断不意味着全部功能都通过 LSP。语言智能与生成模型的代码建议也可并存，但用途和正确性依据不同。\n\n## 参考\n\n- [Microsoft：Language Server Protocol 官方入口](https://microsoft.github.io/language-server-protocol/)\n- [VS Code：语言服务器扩展架构](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide)\n- [VS Code：直接语言 API 与 LSP 的能力对应](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)",
+  "description": "语言服务器封装语言分析和编辑能力，向客户端提供诊断、补全、导航、引用或重构。采用 LSP 的实现能够接入相应编辑器，但语言服务器作为职责概念不强制每个历史实现都使用这套协议。\n\nTern 和经典 tsserver 分别使用自有 JSON 查询或会话接口，TypeScript 原生语言服务器则已经采用 LSP。接入者必须维护文档和项目状态，核对初始化能力与所选版本，不能把相同功能名视为消息兼容。\n\n分析器可以复用编译器或专门推断引擎，不一定采用 Tree-sitter；编辑器也能直接注册语言提供者。语言服务与模型生成建议可以并存，但分析所依据的语言规则、生成的候选和真实执行验证各有职责。\n\n## 参考\n\n- [VS Code：语言服务器架构](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide)\n- [Tern：自有服务接口](https://ternjs.github.io/doc/manual.html)\n- [TypeScript：经典服务器](https://github.com/microsoft/TypeScript/wiki/Standalone-Server-(tsserver))\n- [Microsoft：正式原生语言服务器](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/)",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-10-08",

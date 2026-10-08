@@ -1,0 +1,29 @@
+{
+  "id": "deployment-frequency",
+  "name": "Deployment Frequency",
+  "aliases": [
+    "部署频率",
+    "生产部署频率"
+  ],
+  "type": "metric",
+  "domains": [
+    "devops",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "empirical-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-engineering-metric"
+    }
+  ],
+  "summary": "按观察窗口统计生产部署次数或部署间隔。",
+  "description": "部署频率表示指定应用或服务在一定时间内向生产环境部署的频次，也可以用两次部署之间的时间表示。计数对象是约定的生产部署事件，不能把源码提交、测试执行和制品构建都算成部署。\n\n采集应注明时间窗口、应用边界和一次部署的判定。灰度步骤、地区批次、回滚与重试可能产生多个系统事件，需先约定怎样归并；按次/周与按部署间隔报告的结果，也必须说明单位和聚合方式。\n\nDORA 用它观察交付吞吐，并建议与失败及恢复指标一起解释。提高次数不自动增加用户价值，拆分无意义发布也可能抬高计数；不同服务的业务节奏不同，频率不应直接作为个人产出排名。\n\n## 参考\n\n- [DORA：当前软件交付性能指标](https://dora.dev/guides/dora-metrics/)\n- [DORA：指标定义演变史，2026](https://dora.dev/insights/dora-metrics-history/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://dora.dev/guides/dora-metrics/"
+}

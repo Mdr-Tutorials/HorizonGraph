@@ -1,0 +1,33 @@
+{
+  "id": "nicad",
+  "name": "NiCad",
+  "aliases": [
+    "NiCad 克隆检测器",
+    "Open-NiCad"
+  ],
+  "type": "tool",
+  "domains": [
+    "software-quality"
+  ],
+  "ecosystems": [
+    "software-quality-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-clone-detection"
+    }
+  ],
+  "summary": "通过解析和源码归一化检测近似代码克隆的研究工具。",
+  "description": "NiCad 是用于检测精确与近似源码克隆的工具，以语言解析、提取和源码归一化形成可比较片段。官方分发支持文件、函数与块粒度，并按插件提供受支持的语言。\n\nNiCad 7.0 使用 OpenTxl 11 或更高版本的工具链，预编译 TXL 程序负责解析、提取和变换。名称归一化、过滤和允许差异阈值由配置控制，不能将其简单归入所有 AST 子树匹配方法。\n\n输出包含克隆对、克隆类和可浏览报告，适合克隆管理或研究实验。近似片段发现不是语义等价证明，跨版本实验应保存语言插件、归一化配置与阈值，实际重构还需验证行为。\n\n## 参考\n\n- [NiCad：官方项目与 7.0 说明](https://github.com/CordyJ/Open-NiCad)\n- [NiCad：官方使用说明](https://github.com/CordyJ/Open-NiCad/blob/main/README.txt)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://github.com/CordyJ/Open-NiCad"
+}

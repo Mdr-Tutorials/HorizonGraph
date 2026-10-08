@@ -1,0 +1,43 @@
+{
+  "id": "mosh",
+  "name": "Mosh",
+  "aliases": [
+    "Mobile Shell",
+    "移动远程终端"
+  ],
+  "type": "tool",
+  "domains": [
+    "terminal-engineering"
+  ],
+  "ecosystems": [
+    "terminal-ecosystem"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssh",
+      "context": "通常以 SSH 登录和启动远端 mosh-server，再切换到自身状态同步通道。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "udp",
+      "context": "交互阶段通过加密 UDP 报文传输状态同步，需允许对应端口访问。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-emulation"
+    }
+  ],
+  "summary": "结合 SSH 启动与 UDP 状态同步改善漫游终端交互。",
+  "description": "Mosh 是面向高延迟和地址漫游场景的远程交互终端工具。常见入口先通过 SSH 登录并启动远端 mosh-server，再建立加密的 UDP 状态同步通道；SSH 引导连接与之后的数据传输阶段具有不同职责。\n\n客户端和服务端维护终端屏幕状态，State Synchronization Protocol 把最新状态传给客户端，而不是无条件逐字节重传全部历史输出。本地回显预测用于降低按键等待感，预测结果还要与服务器实际行为协调，不能把视觉反馈速度等同于远端命令已完成。\n\n部署需要远端 Mosh 程序以及可达的 UDP 通道，防火墙条件不能由 SSH 端口可连接推断。Mosh 也不提供通用 SSH 端口转发或文件传输替代品。要在远端连接之外保留复杂工作区，可另外组合 Screen 或 tmux；Mosh 的漫游连接与复用器的进程生命周期管理分开。\n\n## 参考\n\n- [Mosh：机制与用法](https://mosh.org/)\n- [Mosh：官方项目仓库](https://github.com/mobile-shell/mosh)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://mosh.org/"
+}

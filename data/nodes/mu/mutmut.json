@@ -1,0 +1,42 @@
+{
+  "id": "mutmut",
+  "name": "mutmut",
+  "aliases": [
+    "Python 变异测试工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mutation-testing"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pytest"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mutation-testing-report",
+      "context": "保存候选变异状态并支持逐项检查测试结果。"
+    }
+  ],
+  "summary": "生成 Python 变异并运行相关 pytest 测试。",
+  "description": "mutmut 是 Python 变异测试工具，通过受控改写生成变异代码并调用测试，保存进度与结果以支持逐项分析。当前实现与旧版本的执行方式和能力可能不同，配置需按安装版本核对。\n\n工具使用 pytest，并可依据覆盖范围或调用深度约束相关测试和候选位置。可从存活改动回溯测试是否缺少边界、是否没有观察结果或是否出现等价变异。\n\n当前文档中的 fork 与 forkserver 隔离方式均依赖 POSIX 的 os.fork，Windows 原生支持不能从 Python 跨平台性质推导。进程继承的线程、连接和运行时状态还可能影响隔离与结果，需诊断挂起及环境错误。\n\n## 参考\n\n- [mutmut 官方文档](https://mutmut.readthedocs.io/en/latest/)\n- [mutmut 官方仓库](https://github.com/boxed/mutmut)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://mutmut.readthedocs.io/en/latest/"
+}

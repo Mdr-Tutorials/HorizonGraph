@@ -1,0 +1,34 @@
+{
+  "id": "git-author-committer",
+  "name": "Git Author and Committer",
+  "aliases": [
+    "Git 作者与提交者",
+    "Git 双身份时间"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "git-ecosystem"
+  ],
+  "domains": [
+    "repository-analysis",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "repository-analysis-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git-object-model",
+      "context": "commit 对象同时记录作者和提交者的身份、时间字段"
+    }
+  ],
+  "summary": "分别记录变更作者与应用提交者的身份及时间。",
+  "description": "Git commit 对象分别存储 author 和 committer 的姓名、邮箱与时间。前者记录作品作者，后者记录将作品应用为该提交的人；维护者应用他人的补丁时，两者可以不同，也各自有独立的时间戳。\n\n这些字段属于提交记录，可以由配置、环境变量或提交操作指定。变基、补丁应用等操作可能保留作者信息而更新提交者信息；姓名邮箱本身不证明账户控制或自然人身份，提交时间也不是可信的工作时长记录。\n\n按人员或时间分析仓库时必须声明选用哪组字段及是否应用 mailmap。author date 与 committer date 会使时间窗口落入不同样本；共同创作、机器人和身份别名还需另外处理，不能从单个字段推断完整贡献、劳动关系或绩效。\n\n## 参考\n\n- [Git commit-tree：提交身份和时间](https://git-scm.com/docs/git-commit-tree)\n- [Pro Git：author 与 committer 区别](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://git-scm.com/docs/git-commit-tree"
+}

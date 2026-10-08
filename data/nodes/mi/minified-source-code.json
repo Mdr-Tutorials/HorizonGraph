@@ -1,0 +1,34 @@
+{
+  "id": "minified-source-code",
+  "name": "Minified Source Code",
+  "aliases": [
+    "压缩源码",
+    "最小化代码",
+    "Minified Code"
+  ],
+  "type": "concept",
+  "domains": [
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "physical-lines-of-code",
+      "context": "当跨快照比较把原始源码换成最小化输出时，删除换行可大幅减少物理代码行，而程序功能并未按该比例减少。"
+    }
+  ],
+  "summary": "移除或改写源码表示以缩小交付文本的代码形态。",
+  "description": "压缩源码通过减少空白、缩短标识符及适用的程序变换缩小交付文本。JavaScript 的 compress、mangle 与格式选项分别控制这些方面；它与网络传输中的 gzip 压缩属于不同处理层。\n\n一份大量语句的程序可被输出到很少的物理行，使 LOC 显著下降。scc 可用平均行字节长度等启发式识别此类文件，但长行也可能来自数据或其他风格，不能视为确定的来源证明。\n\n做维护规模分析时宜明确区分原始源码与打包压缩产物，避免对同一逻辑重复计数。Source Map 可帮助关联位置，但不会自动恢复测量范围或证明产物与某份源码完全一致。\n\n## 参考\n\n- [Terser：压缩与名字改写选项](https://terser.org/docs/options/)\n- [scc 计数与识别源码](https://github.com/boyter/scc/blob/master/processor/workers.go)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://terser.org/docs/options/"
+}

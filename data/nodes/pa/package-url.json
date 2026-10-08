@@ -1,0 +1,33 @@
+{
+  "id": "package-url",
+  "name": "Package-URL",
+  "aliases": [
+    "软件包 URL",
+    "Package URL",
+    "PURL"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "按生态、名称和版本统一表示软件包身份的标识规范。",
+  "description": "Package-URL 以 pkg 为方案名，用一组标准化字段表示软件包身份，通常简称 PURL。规范包含类型、命名空间、名称、版本、限定符和子路径，不同包类型具有不同归一与解释规则。它把跨生态的软件包描述转为可交换标识，适合 SBOM、漏洞公告和组件消费系统关联信息。\n\n核心语法与各类型定义需要共同应用，例如命名空间的意义、大小写与允许限定符由对应生态决定。ECMA-427 是 PURL 的正式标准化成果，相关类型定义和实现仍需核对各自版本。相同字符串格式并不消除错误包生态、缺失版本或非等价限定符造成的身份差异。\n\nPURL 是包标识而非保证可访问的下载地址，也不是文件内容摘要或签名。一个合法 PURL 不证明包确实安装、发布者可信或内容未被替换。消费者应把它与工件哈希、来源和识别证据结合，不能将网站 URL、CPE 和 PURL 不加映射地当成同一实体键。\n\n## 参考\n\n- [Ecma：ECMA-427 PURL 标准](https://ecma-international.org/publications-and-standards/standards/ecma-427/)\n- [Package-URL：类型定义与规范实现入口](https://github.com/package-url/purl-spec)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://ecma-international.org/publications-and-standards/standards/ecma-427/",
+  "abstraction_level": "application_tool",
+  "abbreviation": "PURL"
+}

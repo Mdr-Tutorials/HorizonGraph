@@ -1,0 +1,41 @@
+{
+  "id": "gnu-readline",
+  "name": "GNU Readline",
+  "aliases": [
+    "GNU 命令行编辑库",
+    "Readline",
+    "libreadline"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-line-interface",
+      "context": "在交互式命令行读取输入时提供可编辑输入行和命令历史，命令执行由宿主应用承担。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "libedit",
+      "context": "两者都提供交互式行编辑与历史 API；接口、许可和兼容细节不同，非无条件替换。"
+    }
+  ],
+  "summary": "为交互式命令行提供行编辑、历史记录与补全接口的库。",
+  "description": "GNU Readline 是可嵌入应用的命令行编辑库。它让交互程序在读取一行输入时提供光标移动、文本修改与 Emacs 或 vi 风格按键，而不是要求应用逐个处理所有终端输入。这里的 Readline 指 GNU 项目，不能与各语言中恰好名为 readline 的输入函数混为同一实体。\n\n库同时提供命令历史相关能力，使用户能够召回、重新编辑和展开既有输入。其构建还产出可以独立使用的 History 库，因此历史管理与行编辑具有不同的使用边界。应用负责解释最终输入的业务含义；Readline 自身不是 Shell，也不执行用户键入的命令。\n\nReadline 是原生库，可按平台构建静态或共享库并链接进 REPL、Shell 等程序。它与 libedit 都覆盖交互式行编辑，但许可与具体 API 不同，迁移应核对兼容接口及行为。其编辑能力也不等于 ncurses 一类全屏文本界面布局和重绘能力。\n\n参考资料：\n\n- [项目主页与能力说明](https://tiswww.case.edu/php/chet/readline/rltop.html)\n- [官方 README 与构建说明](https://tiswww.case.edu/php/chet/readline/README)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://tiswww.case.edu/php/chet/readline/rltop.html"
+}
