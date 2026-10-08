@@ -1,0 +1,33 @@
+{
+  "id": "source-level-debugging",
+  "name": "Source-level Debugging",
+  "aliases": [
+    "源码级调试",
+    "源代码调试"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "debug-adapter",
+      "context": "在采用适配器的编辑器集成中，经适配器把源码断点、单步和变量查询发送给具体调试后端。"
+    }
+  ],
+  "summary": "以源码位置、变量和调用栈检查程序的运行状态。",
+  "description": "源码级调试把运行中的程序状态关联到开发者可读的源码位置，支持设置断点、单步执行、查看变量和调用栈。它需要语言运行时、编译产物或调试信息提供相应映射，与只观察机器指令地址的调试视角不同。\n\n开发环境可直接接入特定调试器，也可通过 DAP 调试适配器统一界面。启动新目标与附加现有目标有不同前提；断点可能因代码尚未加载、源码映射缺失或后端约束而暂未生效。线程、表达式求值与变量修改也依调试器能力支持。\n\n优化、异步执行、远程路径和生成代码可能使源码位置与实际状态难以一一对应。观察一次执行不证明全部路径正确，调试会话也不能替代测试与静态分析。IDE 中显示调试按钮不意味着项目后端、权限和必要调试信息已经配置完成。\n\n## 参考\n\n- [VS Code：调试器、适配器与扩展的边界](https://code.visualstudio.com/api/extension-guides/debugger-extension)\n- [Microsoft：Debug Adapter Protocol 消息与启动流程](https://microsoft.github.io/debug-adapter-protocol/overview.html)\n- [JetBrains：IDE 的代码智能、构建与调试集成](https://www.jetbrains.com/help/idea/discover-intellij-idea.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

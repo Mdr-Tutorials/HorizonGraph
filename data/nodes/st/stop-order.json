@@ -1,0 +1,40 @@
+{
+  "id": "stop-order",
+  "name": "Stop Order",
+  "aliases": [
+    "止损单",
+    "止损订单",
+    "停止触发订单"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-order",
+      "context": "普通 stop-market 实现触发后采用市价执行指令，触发价不保证最终成交价。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order",
+      "context": "stop-limit 变体触发后采用独立限价约束，价格越界时可能无法成交。"
+    }
+  ],
+  "summary": "达到触发条件后才激活执行指令的订单",
+  "description": "Stop Order 在预先约定的触发条件满足后才激活后续执行。在常见股票 stop-market 语义中，触发后转为市价单；stop-limit 则激活限价单。触发价描述何时激活，与后续允许的成交价格是两个不同参数。\n\n触发依据可以是成交价、报价或场所规定的其它条件，也可能由券商而非交易所监测。短时价格波动、跳空、数据差异和会话规则会改变触发结果；不能把图表曾经过触发价等同于全部实现都已触发。\n\nStop-market 可能在远离触发价的位置成交，stop-limit 则可能因价格越界而长期不成交。CME 等场所还提供带保护范围的止损变体，因此“止损”不构成最大损失保证，支持的触发与执行组合应按产品和接口分别解释。\n\n## 参考\n\n- [SEC：订单类型与交易指令](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14)\n- [CME Globex：订单与有效期、展示数量](https://www.cmegroup.com/cn-s/globex/globex-order-type.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -11,7 +11,8 @@
     "tcp-ip-ecosystem"
   ],
   "domains": [
-    "networking"
+    "networking",
+    "low-latency-systems"
   ],
   "abstraction_level": "hardware",
   "relations": [
@@ -25,9 +26,10 @@
       "context": "以太网相关 IEEE 802.3 标准由 IEEE 802.3 工作组推进。"
     }
   ],
-  "summary": "有线局域网的链路层标准，从同轴电缆走到万兆。",
+  "summary": "定义有线网络 MAC、物理层与帧收发的标准家族。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "Ethernet 是 IEEE 802.3 维护的有线网络标准家族，涵盖 MAC、物理层和多种介质、速率。IP 数据报可按指定帧封装传递，但 Ethernet 帧、IP 包和应用消息是不同层次，不能仅把它描述成一种固定速率或固定线缆的技术。\n\n链路层帧包含地址、类型或长度等字段以及检错信息，检测到错误不等于提供端到端可靠重传。历史共享介质的竞争访问与现代全双工交换链路应区分，不能把 CSMA/CD 当作所有当前 Ethernet 链路的运行方式。\n\n带宽只限定一部分序列化成本，交换与主机队列、通知和协议处理仍会影响延迟。网卡的 DMA、RSS、卸载和硬件打点是具体实现能力，不能由 Ethernet 名称直接推出；低延迟测量还须明确帧在哪里被发送或接收。\n\n## 参考\n\n- [IEEE 802.3 Ethernet 工作组与标准范围](https://www.ieee802.org/3/)\n- [RFC 894：IP 数据报的 Ethernet 封装](https://www.rfc-editor.org/rfc/rfc894.html)\n- [Intel I350 Ethernet Controller 数据手册](https://cdrdv2-public.intel.com/333171/ethernet-controller-i350-datasheet.pdf)"
 }

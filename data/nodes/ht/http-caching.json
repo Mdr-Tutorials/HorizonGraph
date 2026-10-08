@@ -1,0 +1,44 @@
+{
+  "id": "http-caching",
+  "name": "HTTP Caching",
+  "aliases": [
+    "HTTP 缓存",
+    "HTTP 响应缓存"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "caching",
+      "context": "在 HTTP 响应复用场景采用通用缓存思想，并增加标准规定的新鲜度及共享缓存限制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "conditional-request",
+      "context": "缓存条目需要验证时向源站发送条件请求，并据验证结果更新或复用条目。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cache-api",
+      "context": "Hono 等提供显式响应缓存的中间件可采用 Cache API，但需结合运行时实现处理更新与过期。"
+    }
+  ],
+  "summary": "按新鲜度、缓存键与验证规则复用已存储的响应。",
+  "description": "HTTP 缓存保存可复用响应，依据 URI、方法和 Vary 等信息匹配请求，并用 Cache-Control、Expires、Date 与 Age 等判断新鲜度。浏览器私有缓存与共享代理缓存的可存储和可复用条件不同；过期响应可以向源服务器重新验证，收到 304 后更新已有缓存条目。\n\n无参数的 no-cache 要求复用前成功验证，并不等于禁止存储；no-store 限制存储。认证请求、私有数据和随用户变化的表示还要遵守相应共享缓存规则。显式 Cache API 是应用存取 Request/Response 的接口，不能假设它在所有运行时自动执行 RFC 缓存策略；Hono Cache 中间件也说明了 Cloudflare Workers 与 Deno 对字段处理的差异。\n\n## 参考\n\n- [IETF：HTTP 缓存（RFC 9111）](https://www.rfc-editor.org/rfc/rfc9111.html)\n- [Hono：Cache 中间件与运行时限制](https://hono.dev/docs/middleware/builtin/cache)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

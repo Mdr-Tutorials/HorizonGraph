@@ -1,0 +1,31 @@
+{
+  "id": "volume-weighted-average-price",
+  "name": "Volume-Weighted Average Price",
+  "aliases": [
+    "成交量加权平均价格",
+    "成交量加权均价",
+    "VWAP"
+  ],
+  "type": "metric",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    }
+  ],
+  "summary": "用成交数量作为权重计算指定样本的平均交易价格",
+  "description": "成交量加权平均价格（VWAP）在选定的成交样本中以数量为权重：VWAP = Σ(pi·qi) / Σqi，其中 pi 和 qi 是每笔合格成交的价格与数量。它不是最优报价、中间价或把每笔价格直接等权平均，分母为零时也不能凭空生成成交均价。\n\n计算必须声明市场、区间、币种和合格成交范围，例如单一场所或合并数据、常规或延长时段、是否计入竞价及更正。以 K 线典型价格乘区间量得到的是某种近似，不能在数据不足时宣称精确恢复了逐笔 VWAP。\n\nVWAP 可用于市场统计和执行评价，买卖方向不同使相对基准偏差的解释不同。它是事后价格统计，既不承诺订单能按该价格成交，也不直接包含手续费和未成交机会成本；VWAP 执行算法则是尝试跟踪该指标的一组决策方法。\n\n## 参考\n\n- [IBKR：Volume Weighted Average Price 的计算](https://www.interactivebrokers.com/campus/glossary-terms/volume-weighted-average-price-vwap/)\n- [Nasdaq：VWAP 术语定义](https://www.nasdaq.com/glossary/v/vwap)\n- [IBKR：SmartRouting 的场所选择和费用因素](https://www.interactivebrokers.com/en/trading/smart-routing.php)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "VWAP"
+}

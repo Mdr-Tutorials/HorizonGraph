@@ -10,10 +10,12 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "static-analysis-testing-ecosystem"
+    "static-analysis-testing-ecosystem",
+    "browser-automation-ecosystem"
   ],
   "domains": [
-    "devops"
+    "devops",
+    "browser-automation"
   ],
   "relations": [
     {
@@ -23,11 +25,27 @@
     {
       "relation_type": "part_of",
       "target_id": "testing-pyramid"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-automation",
+      "context": "验证 Web 用户流程时，以浏览器控制执行导航、输入和界面交互。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-context-isolation",
+      "context": "采用独立浏览器状态的测试配置时，减少账号与存储残留对各条流程的干扰。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-oracle",
+      "context": "将实际业务结果与流程定义的预期状态和断言比较，决定测试是否通过。"
     }
   ],
-  "summary": "像用户一样操作真实界面，覆盖完整业务路径。",
+  "summary": "按明确系统边界验证完整业务流程及其最终结果。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "description": "端到端测试从明确的系统入口到目标结果，检查一条完整业务流程经过多个组件后的行为。Web 应用常从真实浏览器交互开始并验证后端结果，其他系统也可能从 API 或消息入口开始；是否属于端到端取决于流程边界与验证范围，不以必须点击图形界面为唯一标准。\n\n浏览器路径需要准备应用服务、测试账号和数据，并安排导航、定位、输入与结果断言。自动等待帮助处理异步页面，浏览器上下文隔离减少测试间状态污染；模拟某些外部服务则改变实际覆盖范围，报告应说明哪些集成真实参与、哪些被替代。\n\n端到端测试通过只能证明该配置和判定条件覆盖的路径，不能证明所有输入与业务分支正确。截图和 trace 用于分析失败或审阅结果，测试 oracle 决定实际观察是否符合预期。流程还需控制超时、环境变化与数据恢复，避免测试因为执行顺序或残留状态而偶然通过。\n\n## 参考\n\n- [Cypress：Testing types](https://docs.cypress.io/app/core-concepts/testing-types)\n- [Playwright：Isolation](https://playwright.dev/docs/browser-contexts)\n- [Playwright：Trace viewer](https://playwright.dev/docs/trace-viewer)"
 }

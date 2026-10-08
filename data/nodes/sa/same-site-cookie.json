@@ -1,0 +1,34 @@
+{
+  "id": "same-site-cookie",
+  "name": "SameSite Cookie Attribute",
+  "aliases": [
+    "Cookie SameSite 属性",
+    "SameSite"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "security"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "http-cookie"
+    }
+  ],
+  "summary": "依据同站与跨站上下文约束 Cookie 随请求发送。",
+  "description": "SameSite 是 Cookie 属性，可采用 Strict、Lax 或 None。Strict 主要允许同站请求携带 Cookie，Lax 对部分跨站顶层安全导航保留例外，None 允许跨站使用但要求 Secure。站点判定与 origin 的协议、主机、端口三元组不同，现代规则考虑 scheme 和可注册域等信息，不能把同站简单解释为同源。\n\n该属性会影响登录跳转、嵌入内容和跨站服务组合。浏览器对未显式设置属性的兼容处理与隐私限制可能进一步改变行为。SameSite 能降低某些 CSRF 风险，但同站攻击和应用错误仍可能绕过预期保护；有状态写操作还需按威胁模型采用来源检查或 CSRF 令牌等防护。所引 Cookie 扩展文本仍属于工作草案。\n\n## 参考\n\n- [HTTP 工作组：Cookie 扩展工作草案](https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html)\n- [OWASP：SameSite 与 CSRF 防护边界](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

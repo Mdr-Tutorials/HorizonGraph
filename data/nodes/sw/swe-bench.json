@@ -1,0 +1,40 @@
+{
+  "id": "swe-bench",
+  "name": "SWE-bench",
+  "aliases": [
+    "软件工程仓库修复基准"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "execution-based-evaluation",
+      "context": "官方补丁评估路径把提交结果应用到任务基础仓库，并运行任务指定的功能与回归测试。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reproducible-evaluation-environment",
+      "context": "当前官方评估执行器以任务容器和固定仓库状态准备环境，运行时仍需记录依赖、资源与缓存配置。"
+    }
+  ],
+  "summary": "将真实仓库问题、基础提交和测试打包的软件工程基准。",
+  "description": "SWE-bench 是从真实软件仓库的问题和合并请求构造的软件工程任务集，配套可执行评估。原论文的集合包含来自 12 个 Python 仓库的 2,294 项任务；输入包括问题描述与仓库基础状态，输出通常是修复补丁，而不是简单的函数答案。\n\n评估器将候选补丁应用到对应提交并运行指定测试，检查需要修复的失败用例及应继续通过的用例。当前官方执行器提供容器化环境、逐实例测试输出和报告。空补丁、环境错误、未提交实例及被判定解决的实例应按报告的不同字段解释。\n\nFull、Lite、Verified 等任务配置与后续扩展有不同的范围，报告必须标明具体子集和运行参数。原始任务数不能当作全部后续产品的规模。满足既定测试条件也不保证补丁完整符合需求，额外回归测试与人工审查可以发现评估测试未覆盖的问题。\n\n## 参考\n\n- [SWE-bench 原论文：真实仓库问题与执行测试](https://arxiv.org/html/2310.06770v3)\n- [SWE-bench 官方项目与任务集](https://github.com/SWE-bench/SWE-bench)\n- [SWE-bench：评估环境、报告与结果缓存](https://www.swebench.com/SWE-bench/guides/evaluation/)\n- [原研究：SWE-bench 测试通过与补丁正确性的差别](https://software-lab.org/publications/icse2026_SWE-bench-correctness.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool"
+}

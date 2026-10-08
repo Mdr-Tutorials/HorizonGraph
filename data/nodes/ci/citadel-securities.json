@@ -1,0 +1,34 @@
+{
+  "id": "citadel-securities",
+  "name": "Citadel Securities",
+  "aliases": [
+    "城堡证券",
+    "Citadel Securities LLC"
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "citadel-securities-equities-services"
+    }
+  ],
+  "summary": "提供跨市场流动性与交易执行服务的做市机构。",
+  "description": "Citadel Securities 是提供流动性和执行服务的全球做市机构。官方明确说明 Citadel 与 Citadel Securities 是两家独立、不同业务方向的金融公司；共享创办背景或名称不构成此处可以自动推导的母子关系。\n\n其股票业务包括为客户寻找流动性、执行大小订单、提供 ETF 大宗流动性以及承担 NYSE 指定做市商职责；固定收益与外汇也有各自业务范围。电子系统、定价模型与风险承接共同支撑服务，但做市机构不等同于交易所、投资管理基金或某一条高频策略。\n\n本节点连接公开的股票流动性与执行服务集合。公司网站中 Client Solutions 等职能描述不被虚构为软件产品；服务身份、法律实体、产品名称与公开披露的业务边界分别说明，技术采用也不从招聘标签推导为整个公司的统一运行依赖。\n\n## 参考\n\n- [Citadel Securities 身份与独立性](https://www.citadelsecurities.com/who-we-are/)\n- [Citadel Securities 股票执行与做市服务](https://www.citadelsecurities.com/what-we-do/equities/)\n- [Citadel Securities 公开业务](https://www.citadelsecurities.com/what-we-do/)\n- [Citadel Securities 专业客户服务条款](https://www.citadelsecurities.com/wp-content/uploads/sites/2/2022/10/CitSec_ProfessionalClient_ECP_TermsofBusiness_September_2022.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.citadelsecurities.com/"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "lock-free-programming",
+  "name": "Lock-Free Programming",
+  "aliases": [
+    "无锁编程",
+    "Lock-Freedom",
+    "无锁进度保证"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cas",
+      "context": "许多无锁算法以条件原子更新解决共享状态竞争；需另行证明整体进度，CAS不是唯一实现方式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "memory-model",
+      "context": "用所选语言的原子与同步规则证明发布、读取和对象生命周期的可见性。"
+    }
+  ],
+  "summary": "并发执行中保证整体持续取得进展，但不保证每个操作有界完成。",
+  "description": "无锁编程在并发算法中提供系统整体的进度保证：在持续执行的并发操作中，总有操作能够完成，不需要等待某个持锁者释放互斥资源。它允许个别线程反复重试或饥饿，所以无锁不等于无等待，也不等于某个请求具有固定完成时间。没有显式mutex只能描述代码外观，不能证明这种保证。\n\n常见实现用CAS或其他原子操作发布并条件更新共享状态，再按语言内存模型安排可见性。算法还必须处理对象生命周期、ABA和内存回收；动态分配、日志、回调或非原生原子实现都可能在外围引入阻塞。CAS可用于自旋锁，因此出现CAS指令本身无法判定算法无锁。\n\n无锁方法可避免依赖持锁线程被调度的某些等待，但竞争重试和缓存行迁移仍有成本。要分别验证安全性、线性化与进度，并在实际线程数和负载下比较尾延迟、吞吐及资源消耗。算法步骤的进展性质不消除操作系统抢占、缺页或设备等待造成的墙钟延迟。\n\n## 参考\n\n- [Boost.Lockfree：进度保证及阻塞来源](https://www.boost.org/latest/doc/html/lockfree.html)\n- [原始研究：无锁与无等待算法的进度区别](https://arxiv.org/abs/1311.3200)\n- [Boost.Lockfree：内存管理与 ABA 防护](https://www.boost.org/latest/doc/html/lockfree/rationale.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

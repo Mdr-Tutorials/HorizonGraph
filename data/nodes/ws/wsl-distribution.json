@@ -1,0 +1,37 @@
+{
+  "id": "wsl-distribution",
+  "name": "WSL Distribution",
+  "aliases": [
+    "WSL 发行版",
+    "WSL Linux 发行版"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "wsl"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl-configuration",
+      "context": "注册发行版在启动时读取自身 wsl.conf；发布者可另提供首次使用及桌面入口配置，不把用户侧全局 VM 设置合并进发行版。"
+    }
+  ],
+  "summary": "在 WSL 中注册并运行的 Linux 用户空间实例。",
+  "description": "WSL 发行版是由 WSL 注册和启动的 Linux 用户空间，通常含根文件系统、包管理器、系统工具与用户配置。Ubuntu 等发行版可以提供面向 WSL 的发布包，用户也可从受支持的根文件系统归档导入实例。发行版名称标识一个登记的环境，不等于 WSL 软件包版本或其中某个 Shell；同一种 Linux 发行版还可以形成多个分别管理的实例。\n\nWSL 为每个已注册发行版记录执行架构、默认用户和根文件系统等信息。普通 WSL 2 的多个发行版共享宿主用户的受管理虚拟机和 Linux 内核，但分别拥有隔离的用户空间与部分命名空间；WSL 1 则在 NT 兼容层中执行这些用户程序。发行版所带的用户工具可能相同，承载它们的内核接口实现和资源边界却不同，因此不能由 Ubuntu 的包名推导它一定运行在 WSL 2。\n\n导入与导出是复制发行版用户空间的方式，不能自动保证所有外部文件、宿主设置和开发凭据都完整迁移。实例内的 `/etc/wsl.conf` 控制发行版设置，发布者可通过 `/etc/wsl-distribution.conf` 描述首次使用与桌面入口；Windows 用户目录中的 `.wslconfig` 则属于共享 WSL 2 环境。普通发行版注册也不是 OCI 镜像/容器的同义接口，容器运行平台有另外的生命周期与打包语义。\n\n## 参考\n\n- [Microsoft：Import any Linux distribution to use with WSL](https://learn.microsoft.com/en-us/windows/wsl/use-custom-distro)\n- [Microsoft：Basic commands for WSL](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)\n- [Microsoft：WSL 2 隔离与共享资源](https://learn.microsoft.com/en-us/windows/wsl/about)\n- [Canonical：Customise an Ubuntu distro for WSL](https://documentation.ubuntu.com/wsl/latest/howto/custom-ubuntu-distro/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

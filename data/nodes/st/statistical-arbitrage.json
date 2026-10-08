@@ -1,0 +1,40 @@
+{
+  "id": "statistical-arbitrage",
+  "name": "Statistical Arbitrage",
+  "aliases": [
+    "统计套利",
+    "Stat Arb",
+    "StatArb"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hedging",
+      "context": "在多空相对价值实现中，按所选模型配置对冲腿或因子敞口控制；对冲比例和剩余风险需要独立验证。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transaction-cost",
+      "context": "评估信号能否实施时，纳入多腿手续费、价差、借券及成交成本，而非只观察模型价差收敛。"
+    }
+  ],
+  "summary": "利用统计关系偏离构建具有风险的相对价值交易",
+  "description": "统计套利依据资产间或资产与因子的统计关系寻找相对价值偏离，通常通过多空组合、残差或价差信号进行交易。配对交易是其中一类方法，但多资产、因子或行业模型也属于相关策略范围；“套利”一词不代表确定性的无风险收益。\n\nGatev 等研究以历史价格关系选择股票对，Avellaneda–Lee 则研究 PCA 与行业 ETF 模型的残差及均值回归信号。不同构造采用不同假设与风险暴露，相关性、协整关系和均值回归也不能互相替代或从一个检验结论自动推出另一个。\n\n模型关系可能失效，交易还受到借券、融资、成交成本和多腿执行风险影响。历史回测表现只适用于相应样本、成本模型及交易规则，需要检验样本外稳定性、拥挤和极端情形；统计中性不保证每条风险因素都被消除，更不要求策略必然以高频方式运行。\n\n## 参考\n\n- [Gatev–Goetzmann–Rouwenhorst：Pairs Trading 原始研究](https://www.nber.org/papers/w7032)\n- [Avellaneda–Lee：Statistical Arbitrage in the U.S. Equities Market](https://math.nyu.edu/~avellane/AvellanedaLeeStatArb20090616.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

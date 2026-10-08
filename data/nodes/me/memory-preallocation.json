@@ -1,0 +1,35 @@
+{
+  "id": "memory-preallocation",
+  "name": "Memory Preallocation",
+  "aliases": [
+    "内存预分配",
+    "预分配内存",
+    "预分配缓冲区"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numa",
+      "context": "准备并预触敏感工作集时，根据后续访问线程选择内存放置策略。"
+    }
+  ],
+  "summary": "在关键路径前准备存储及容量，仍需处理驻留、触页和耗尽行为。",
+  "description": "内存预分配在关键处理之前准备所需对象存储、缓冲区或队列容量，使稳定工作集内的操作尽量避免临时分配和扩容。它把部分成本移到初始化阶段，并让容量上限更明确。预留虚拟地址、分配对象存储和让页面实际驻留是不同动作，不能只因malloc或reserve成功就认为未来不会缺页。\n\n敏感程序常结合预触页、合理NUMA放置和需要时的内存锁定，检查数据、栈以及相关元数据是否已准备。首次写入、写时复制和后续增加映射仍可能产生缺页；按需锁页标志也不会自动提前触发所有页面。预分配还应覆盖日志、回调和对象构造等隐藏分配路径。\n\n提前保留大量容量会增加内存占用，需要为超出上限定义拒绝、退化或受控扩容行为。初始化线程触页可能把存储放到不合适的NUMA节点，影响后续工作线程。成功控制分配次数不等于消除缓存未命中、调度或I/O等待，最终收益要用真实负载和尾延迟验证。\n\n## 参考\n\n- [Linux man-pages：驻留内存与预触页边界](https://man7.org/linux/man-pages/man2/mlock.2.html)\n- [Linux：NUMA 内存策略与分配范围](https://docs.kernel.org/admin-guide/mm/numa_memory_policy.html)\n- [Boost.Lockfree：进度保证及阻塞来源](https://www.boost.org/latest/doc/html/lockfree.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

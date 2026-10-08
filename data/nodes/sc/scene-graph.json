@@ -1,0 +1,33 @@
+{
+  "id": "scene-graph",
+  "name": "Scene Graph",
+  "aliases": [
+    "场景图",
+    "场景树"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-transform",
+      "context": "沿父子层级组合局部变换，计算显示对象的世界位置和方向。"
+    }
+  ],
+  "summary": "用对象层级组织显示对象、空间变换与遍历。",
+  "description": "场景图把可显示对象及其父子关系组织为可遍历结构。在 PixiJS 的容器树和 Three.js 的 Object3D 层级中，每个对象保存局部位置、旋转与缩放，父级变换沿层级累积成世界变换；移动一个父对象可以同步移动整组子对象，而不必分别修改所有顶点。\n\n场景图通常承担显示层级、可见性和对象查找等职责，但渲染器仍需从中生成适合 GPU 的绘制命令。树的顺序、透明混合顺序和材质排序会影响结果，不能任意按纹理排序；几何和材质也可由多个对象共享，因此对象层级与资源所有权不必相同。\n\n它用于编辑器、二维界面、游戏和交互可视化中的空间组织。场景图自身不规定游戏场景切换、脚本生命周期、物理模拟或资产加载协议；这些系统可以关联同一批对象。二维显示树的全局坐标还需和浏览器 CSS 坐标、绘图缓冲区像素区别。\n\n## 参考\n\n- [PixiJS 场景图](https://pixijs.com/8.x/guides/concepts/scene-graph)\n- [Three.js Object3D](https://threejs.org/docs/pages/Object3D.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

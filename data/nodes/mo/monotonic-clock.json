@@ -1,0 +1,33 @@
+{
+  "id": "monotonic-clock",
+  "name": "Monotonic Clock",
+  "aliases": [
+    "单调时钟"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tsc",
+      "context": "在 x86 系统选择并核验 TSC 为可靠 clock source 的实现中，将其计数转换为单调时间；其他系统可选不同硬件计数器。"
+    }
+  ],
+  "summary": "以不倒退的时间轴测量本机经过时间的时钟类别。",
+  "description": "单调时钟提供不倒退的时间轴，常用于超时和持续时间计算。它的起点无需对应 UTC，同一时钟连续两次读取也可能得到相同值；单调非递减不等于严格递增，格式包含纳秒也不代表每纳秒都能得到新读数。\n\n具体操作系统时钟具有不同语义：Linux CLOCK_MONOTONIC 不计系统挂起时间，但可受到时间同步的渐进速率调整；CLOCK_MONOTONIC_RAW 不受该调频，CLOCK_BOOTTIME 则包含挂起时间。不能把这些名字作为完全可互换的计时接口。\n\n实现可根据硬件选择可靠 clock source 并把计数转换为时间；x86 平台上经过核验的 TSC 是一种可能来源。跨主机比较仍需同步和误差分析，跨时钟域相减也不自动有效；应用应先选定与业务超时和休眠行为相符的接口。\n\n## 参考\n\n- [Linux clock_gettime(2) 时钟语义](https://man7.org/linux/man-pages/man2/clock_gettime.2.html)\n- [Linux timekeeping 与各类时钟语义](https://docs.kernel.org/core-api/timekeeping.html)\n- [Linux clock source、clock event 与 sched_clock](https://docs.kernel.org/timers/timekeeping.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

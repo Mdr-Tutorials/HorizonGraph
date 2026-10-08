@@ -1,0 +1,54 @@
+{
+  "id": "twojs",
+  "name": "Two.js",
+  "aliases": [
+    "Two.js 二维绘图库",
+    "TwoJS"
+  ],
+  "type": "library",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "scene-graph"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "svg",
+      "context": "选择 SVG 渲染器时，以 SVG 元素表达二维矢量场景。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-2d",
+      "context": "选择 Canvas 渲染器时，把场景中的路径和形状绘制到二维画布。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "选择 WebGL 渲染器时，用 WebGL 把场景图输出到画布。"
+    }
+  ],
+  "summary": "以统一场景对象接口输出 SVG、Canvas 或 WebGL 图形。",
+  "description": "Two.js 是面向浏览器的二维矢量绘图库，围绕形状、路径与分组组织图形对象。场景图维护对象层级与变换，应用可创建和修改对象，再由选定的渲染器输出画面，适合平面动态图形和交互作品。\n\n其 SVG、Canvas 和 WebGL 渲染器提供不同输出路径，统一对象接口并不意味着各后端的实现成本完全相同。导入 SVG、连续更新形状与处理缩放时，需要结合所选后端检查输出效果和资源开销。\n\n## 参考\n\n- [Two.js：定位和场景图](https://two.js.org/)\n- [Two.js：对象与渲染器 API](https://two.js.org/docs/)\n- [Two.js：WebGLRenderer](https://two.js.org/docs/renderers/webgl/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://two.js.org/"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "optimal-execution",
+  "name": "Optimal Execution",
+  "aliases": [
+    "最优执行",
+    "最优交易执行"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-impact",
+      "context": "构建执行优化目标时，对下单速度、数量或轨迹造成的价格冲击进行适用的成本建模。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "implementation-shortfall",
+      "context": "以决策或到达价格为基准的执行问题中，将实施差额及其风险用于评价候选轨迹。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transaction-cost",
+      "context": "比较执行动作时，计入费用、价差及其它适用成本，并与风险和完成约束共同权衡。"
+    }
+  ],
+  "summary": "在模型与约束下权衡交易成本和执行风险的优化问题",
+  "description": "最优执行研究如何把给定交易目标分解为时间与场所上的执行决策，以权衡成本、风险和业务约束。目标可能是清理持仓、取得一定数量或接近指定基准；“最优”必须相对于明确目标函数、可用动作和模型假设解释。\n\nAlmgren–Chriss 的原始框架将市场冲击成本与价格波动造成的执行风险结合，在其假设下构造有效前沿及执行轨迹。实际问题还可能包含限价成交概率、随机交易量、费用、截止时间和多资产暴露，不能把一个闭式轨迹当作所有市场的通用答案。\n\n快速执行减少等待期间的价格风险，却可能提高冲击；延长执行可以分散需求，也增加暴露和未完成风险。模型参数、估计误差和市场变化需要用实际回报与基准评价，优化结果不等于每次成交最便宜，也不等于监管义务或盈利的无条件保证。\n\n## 参考\n\n- [Almgren–Chriss：Optimal Execution of Portfolio Transactions](https://www.risk.net/journal-risk/2161150/optimal-execution-portfolio-transactions)\n- [CFA Institute：Trade Strategy and Execution，2026](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/trade-strategy-execution)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

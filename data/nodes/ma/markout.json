@@ -1,0 +1,35 @@
+{
+  "id": "markout",
+  "name": "Markout",
+  "aliases": [
+    "成交后价格变动",
+    "Markout Curve",
+    "Markouts"
+  ],
+  "type": "metric",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data",
+      "context": "指标从所选市场价格源提取事件时点及各期限的参考价格，并对齐时间与标识。"
+    }
+  ],
+  "summary": "按事件、方向、价格基准与期限定义的后续价格变化指标。",
+  "description": "Markout 衡量成交或信号等事件前后给定期限的价格变化，常用于检查成交质量、短期预测和逆向选择。它有成交价到后续中间价、中间价到中间价、成交价到后续成交价等口径；计算前要声明事件起点、买卖方向、期限、价格源和单位，名称本身不确定唯一公式。\n\n例如约定买入方向为 +1、卖出为 −1，以成交价为基准，方向 ×（事件后 h 时间的中间价 − 成交价）表示交易方视角的价格变化，此约定下正值有利。其他研究可能反向记号、用基点或跳价归一化，也可能采用数量加权；这些量未经换算不能直接比较。\n\n通常按多个期限绘制平均曲线，并按订单、场所或市场状态分组。仅观察成交会遗漏未成交订单的机会成本，手续费与对冲成本也不会自动进入上述价格差。Markout 既不是已实现总损益，也不能单凭相关价格变化证明自身订单的因果冲击；分析应保留样本量与不确定性。\n\n## 参考\n\n- [Databento：Markout 定义、时间窗口与价格口径](https://databento.com/microstructure/markout)\n- [Nasdaq Economic Research：Markouts 与成交样本选择](https://www.nasdaq.com/articles/what-markouts-are-and-why-they-dont-always-matter-2020-07-23)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

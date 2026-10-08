@@ -1,0 +1,48 @@
+{
+  "id": "iptables",
+  "name": "iptables",
+  "aliases": [
+    "iptables 命令",
+    "IPv4 数据包规则工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "systems-programming",
+    "networking",
+    "security",
+    "containerization"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "netfilter",
+      "context": "配置由 Linux Netfilter 基础设施支持的数据包匹配、过滤与转换规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nat",
+      "context": "为采用地址转换的 Linux 网络配置 NAT 与 masquerade 规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nftables",
+      "context": "使用 nftables 兼容后端的 iptables 工具时，以相应基础设施执行 iptables 风格规则。"
+    }
+  ],
+  "summary": "用于配置 Linux 数据包过滤与 NAT 规则的用户态工具。",
+  "description": "iptables 是配置 Linux 数据包规则的用户态命令行工具，可添加、删除、修改和查询规则及计数器，并组织地址转换。配套 ip6tables 面向 IPv6。工具命令负责设置规则，应用流量经过内核路径时才执行相应处理，因此无需把持续过滤理解为 iptables 命令进程一直运行。\n\n经典后端使用 ip_tables 相关规则体系，兼容工具也可以把 iptables 风格语法接到 nftables 基础设施。命令名相同不意味着当前系统采用相同内核后端；规则表、链与匹配扩展需要按实际实现理解，不能把 nftables 简单写成 iptables 的同名版本。\n\nDocker 的 iptables 路线会建立与桥接、端口映射和连接跟踪相关的规则链，用户策略与平台生成规则具有相应顺序和作用范围。平台可以提供其他后端，所以该工具不是所有容器网络的普遍硬依赖；Windows 或用户态网络转发也应与 Linux 规则配置区分。\n\n## 参考\n\n- [Netfilter：iptables](https://netfilter.org/projects/iptables/index.html)\n- [Netfilter：nftables](https://netfilter.org/projects/nftables/index.html)\n- [Docker：iptables 后端](https://docs.docker.com/engine/network/firewall-iptables/)\n- [Docker：nftables 后端](https://docs.docker.com/engine/network/firewall-nftables/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://netfilter.org/projects/iptables/index.html"
+}

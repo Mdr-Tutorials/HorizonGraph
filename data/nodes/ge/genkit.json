@@ -1,0 +1,38 @@
+{
+  "id": "genkit",
+  "name": "Genkit",
+  "aliases": [
+    "Firebase Genkit"
+  ],
+  "type": "framework",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini",
+      "context": "选择官方 Google GenAI 模型插件时，Genkit 应用调用 Gemini 服务完成模型推理；框架还支持其他模型提供者。"
+    }
+  ],
+  "summary": "Google 的开源模型集成、工作流与智能体应用框架。",
+  "description": "Genkit 是 Google 构建的开源 AI 应用框架和开发工具集，提供模型调用、结构化数据、工具、检索、流式输出以及应用工作流等编程能力。它由多个语言实现组成，当前主页区分 TypeScript 和 Go 的 GA 状态以及 Python 和 Dart 的预览状态。使用某个语言包的版本与支持范围，不应推成整个框架所有实现均处于同一阶段。\n\n框架通过插件接入 Gemini 等模型提供者，开发者可以把业务函数、数据检索和生成操作组织成可观测的应用流程。Genkit 的模型访问抽象与 Google GenAI SDK 的单一厂商客户端职责不同，也不等于 ADK 的同名发行包。服务器侧框架与配套客户端辅助代码各有用途，不能把工作流函数直接视为已经运行在用户浏览器中的模型服务。\n\n本地 Developer UI 和跟踪能力帮助检查执行步骤，Genkit MCP 服务器与技能可让编码助手运行流程并读取跟踪结果。应用可以部署到 Firebase、Cloud Run 或其他满足运行条件的环境，因此 Firebase 后端不是所有 Genkit 应用的硬依赖。框架本身、部署服务和用于编写框架代码的代理宿主应该分别辨识。\n\n## 参考\n\n- [Genkit：当前语言状态、能力与开发工具](https://genkit.dev/)\n- [Google：Genkit 官方源码和服务端范围](https://github.com/genkit-ai/genkit)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://genkit.dev/"
+}

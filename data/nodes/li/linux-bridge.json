@@ -1,0 +1,39 @@
+{
+  "id": "linux-bridge",
+  "name": "Linux Bridge",
+  "aliases": [
+    "Linux 网桥",
+    "Linux Ethernet Bridge"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming",
+    "networking",
+    "containerization"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "veth",
+      "context": "在容器桥接布局中，把宿主端 veth 接入网桥以连接容器网络域。"
+    }
+  ],
+  "summary": "在 Linux 中按以太网二层规则转发多个接口之间的帧。",
+  "description": "Linux bridge 是 Linux 内核中的以太网桥接机制，连接多个接口并依据 MAC 地址与转发表在二层转发帧。其作用类似软件交换机，可结合 VLAN、生成树与组播相关配置；桥接本身与三层 IP 路由不同，也不自动完成网络地址转换。\n\n容器的桥接布局常把多个宿主端 veth 接入一座网桥，容器分别持有对应另一端。CNI bridge 插件可以按配置创建网桥，并在需要网关时为网桥组织地址。网桥也可仅承担二层连接，因此不能因出现网桥就推断它必然是默认网关或所有流量都经过 NAT。\n\n接口、桥接、路由与防火墙分别决定连接和访问行为。Linux bridge 的控制接口及可选功能由内核能力与配置决定，命名空间中的网桥也具有自己的作用范围。将多个接口连在一起不等同于服务已经向宿主外发布，跨虚拟机的 Windows 通路还由虚拟化网络后端处理。\n\n## 参考\n\n- [Linux Kernel：Ethernet Bridging](https://docs.kernel.org/networking/bridge.html)\n- [CNI：Bridge Plugin](https://www.cni.dev/plugins/current/main/bridge/)\n- [Docker：Networking Overview](https://docs.docker.com/engine/network/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,37 @@
+{
+  "id": "json-type-definition",
+  "name": "JSON Type Definition",
+  "aliases": [
+    "JSON 类型定义",
+    "JTD",
+    "RFC 8927"
+  ],
+  "type": "protocol",
+  "domains": [
+    "api-engineering",
+    "data-engineering"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "JTD 模式本身是 JSON 文档，用来描述可交换的 JSON 实例。"
+    }
+  ],
+  "summary": "以有限的 JSON 模式形式支持可移植校验与代码生成的规范。",
+  "description": "## 机制与应用\n\nJSON Type Definition 用 JSON 文档描述类型、数组元素、对象属性、枚举和带判别字段的联合等结构。其表达能力有意限制在常见编程语言类型系统容易对应的范围，便于生成类型与代码，并约定可移植的校验错误位置。Ajv 等实现可据此生成校验器、专用解析器和序列化器。\n\nJTD 与 JSON Schema 是不同的模式语言，不能直接把两者的关键字互换；它省略部分复杂约束来控制表达能力，业务验证仍可能需要补充。RFC 8927 属独立提交的 Experimental 文档，未获得 IETF 共识，也不在 Internet Standards Track；收录其规范身份不表示它具有 IETF 互联网标准地位。\n\n## 参考\n\n- [RFC 8927：结构、语义与实验性地位](https://datatracker.ietf.org/doc/html/rfc8927)\n- [Ajv：JTD 模式与实现](https://ajv.js.org/json-type-definition.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "JTD",
+  "official_site": "https://datatracker.ietf.org/doc/html/rfc8927"
+}

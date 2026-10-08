@@ -8,7 +8,8 @@
   "type": "product",
   "ecosystems": [
     "unity-ecosystem",
-    "graphics_gaming"
+    "graphics_gaming",
+    "game-runtime-ecosystem"
   ],
   "domains": [
     "game-development"
@@ -20,22 +21,55 @@
       "target_id": "product"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "csharp"
-    },
-    {
       "relation_type": "developed_by",
       "target_id": "unity-technologies"
     },
     {
       "relation_type": "competes_with",
       "target_id": "unreal-engine"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-engine"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-scene"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-loop"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fixed-timestep"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "prefab",
+      "context": "在将 GameObject、组件、属性及子对象保存为模板并实例化复用的工作流中采用 Prefab；不要求每个对象都来自 Prefab。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "animation-state-machine",
+      "context": "在采用 Mecanim Animator Controller 的动画工作流中用状态及转换控制动作播放和混合；不是全部动画更新的必选路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "csharp",
+      "context": "在编写自定义 MonoBehaviour 等托管游戏脚本时使用 C#；成品的执行路径取决于 Mono 或 IL2CPP 等脚本后端，不表示全部部署需要独立 C# 环境。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ecs",
+      "context": "在采用可选 Entities 包的项目中，以实体标识关联组件数据并由系统查询和处理；不把常见的 GameObject/MonoBehaviour 路径等同于 ECS。"
     }
   ],
-  "summary": "组件化的跨平台游戏引擎，C# 脚本与巨大资源商店。",
+  "summary": "以场景、GameObject 与组件组织交互应用的跨平台引擎。",
   "importance": 4,
   "official_site": "https://unity.com",
-  "last_reviewed": "2026-08-29",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Unity 将场景中的角色、相机、灯光等对象表示为 GameObject，通过附加组件赋予渲染、物理、声音和脚本行为。Transform 保存对象的空间关系；Prefab 将 GameObject、组件、属性及子对象保存为可复用资产，再在场景或运行时建立实例。Mecanim 的 Animator Controller 用状态与转换组织动画，并根据条件切换或混合动作。\n\n运行时的 Player loop 调度各系统，MonoBehaviour 生命周期回调提供脚本的初始化、逐帧更新和销毁入口。Update 跟随帧更新，FixedUpdate 按固定时间间隔服务于物理等工作，单个渲染帧可能对应零次或多次固定更新；时序相关逻辑需要明确选用回调和执行顺序。\n\n自定义脚本通常使用 C#，但源码语言不等于部署时必须安装的运行环境。IL2CPP 将托管程序集转换为 C++ 后再提前编译为目标平台原生代码；Mono 与 IL2CPP 的适用平台和限制不同。不能据 C# 脚本入口把所有 Unity 成品概括为对独立 C# 环境的直接硬依赖，组件化对象模型也不自动等同于 ECS。\n\nUnity 的 Entities 包另外提供数据导向 ECS 路径，以实体标识关联组件数据并由系统查询、处理；它是可选的项目组织方式，应与常见的 GameObject/MonoBehaviour 工作流区分。\n\n## 参考\n\n- [Unity：Introduction to GameObjects](https://docs.unity3d.com/6000.0/Documentation/Manual/GameObjects.html)\n- [Unity：Prefabs](https://docs.unity3d.com/6000.0/Documentation/Manual/Prefabs.html)\n- [Unity：Event function execution order](https://docs.unity3d.com/6000.0/Documentation/Manual/execution-order.html)\n- [Unity：MonoBehaviour.FixedUpdate](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/MonoBehaviour.FixedUpdate.html)\n- [Unity：Introduction to IL2CPP](https://docs.unity3d.com/6000.0/Documentation/Manual/il2cpp-introduction.html)\n- [Unity：Animation state machine](https://docs.unity3d.com/6000.0/Documentation/Manual/AnimationStateMachines.html)\n- [Unity：Entity component system introduction](https://docs.unity3d.com/Packages/com.unity.entities@1.4/manual/concepts-ecs.html)"
 }

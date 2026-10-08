@@ -1,0 +1,45 @@
+{
+  "id": "windows-containers",
+  "name": "Windows Containers",
+  "aliases": [
+    "Windows 容器"
+  ],
+  "type": "architecture",
+  "domains": [
+    "containerization",
+    "virtualization"
+  ],
+  "ecosystems": [
+    "windows-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "host-compute-service",
+      "context": "Windows 容器低层运行路径通过 HCS 创建、启动和管理计算系统及其中的进程。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "host-network-service",
+      "context": "在需要 Windows 容器网络与端点连接的部署中，由 HNS 配置相应网络资源、地址及策略。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "utility-vm",
+      "context": "经典 Hyper-V 隔离模式借助优化 Utility VM 承载容器内核，进程隔离模式则共享宿主内核。"
+    }
+  ],
+  "summary": "以进程或 Hyper-V 隔离运行 Windows 容器镜像的执行环境。",
+  "description": "Windows 容器将 Windows 应用及其用户空间依赖打包成镜像，通过容器运行平台管理实例。微软提供的基础镜像具有不同的 Windows API 覆盖与系统组件，应用要选择符合依赖的镜像；一个容器不是可随意替代完整交互桌面的 Windows 安装。本节点覆盖 Windows 用户空间容器路径，不能把 WSLc 运行的 Linux 镜像或所有 Windows 上的容器工具都合并为同一种客体。\n\nWindows 容器支持进程隔离与 Hyper-V 隔离。进程隔离容器与宿主共享内核，以资源控制和系统命名空间隔离应用视图；经典 Hyper-V 隔离把每个容器承载在优化虚拟机中，使其获得独立内核和硬件隔离边界。两种方式使用同类容器镜像，额外虚拟机是承载与隔离方式。宿主和镜像版本兼容性仍受官方支持矩阵约束，Hyper-V 隔离也不是允许任意 Windows 版本组合的通行证。\n\nWindows 容器的低层管理链由 HCS 管理计算系统与进程，HNS 管理网络和端点，hcsshim、runhcs 与 containerd 等工具在不同路径中调用这些能力。部署所选运行时和隔离模式决定实际使用组件，不能把所有可选工具写成共同硬依赖。映射宿主目录、端口或设备会改变边界；选择隔离方式时，需要同时考虑应用兼容性、资源成本和信任条件。\n\n## 参考\n\n- [Microsoft：Windows containers overview](https://learn.microsoft.com/en-us/virtualization/windowscontainers/about/)\n- [Microsoft：Isolation modes](https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container)\n- [Microsoft：Windows container version compatibility](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility)\n- [Microsoft：Container platform tools on Windows](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/containerd)\n- [Microsoft：Windows container networking architecture](https://learn.microsoft.com/en-us/virtualization/windowscontainers/container-networking/architecture)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "kernel_os",
+  "official_site": "https://learn.microsoft.com/en-us/virtualization/windowscontainers/"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "server-driven-ui",
+  "name": "服务端驱动 UI",
+  "aliases": [
+    "Server-Driven UI",
+    "Server Driven UI",
+    "服务端驱动界面",
+    "SDUI"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "采用 Web 超媒体路线时，以完整页面或 HTML 片段作为界面表示。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "在 Web 实现中通过请求和响应传递用户操作与界面更新。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssr",
+      "context": "采用服务端 HTML 路线时，由服务端渲染器生成页面或局部片段。"
+    }
+  ],
+  "summary": "由服务端组织界面表示并驱动客户端更新的架构。",
+  "description": "服务端驱动 UI 是把界面表示、可执行操作与更新结果的组织责任放在服务端的架构思路。在 Web 的超媒体路线中，服务端根据请求和应用状态返回完整 HTML 页面或局部 HTML，浏览器负责展示、提交用户操作并更新对应区域。客户端仍可维护临时交互状态；服务端主导页面内容并不要求所有界面行为都往返服务器。\n\n以 HTML 片段为响应的实现可以用 SSR 生成页面和片段，再由 htmx 一类客户端机制发送请求、选择更新目标与替换内容。这与服务端只返回业务 JSON、由客户端独立决定组件结构的组织方式有所区别。这里的核心是界面表示由谁决定；普通 SSR 首次输出 HTML、后续全部交互转交客户端的应用，不宜仅凭首次服务端渲染就归入完整的服务端驱动交互路线。\n\n采用这一路线仍需设计 URL、表单语义、请求与响应的粒度以及历史导航。完整页面与局部片段应有可辨别的响应路径，重新打开一个可导航 URL 时应得到可使用的页面。Alpine.js 等局部客户端状态工具可负责菜单、展开状态等即时行为，而服务端处理与持久业务状态有关的界面更新。\n\n## 参考\n\n- [htmx：Hypermedia-Driven Applications](https://htmx.org/essays/hypermedia-driven-applications/)\n- [htmx：Documentation](https://htmx.org/docs/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

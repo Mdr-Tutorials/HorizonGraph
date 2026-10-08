@@ -9,7 +9,8 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "graphics_gaming"
+    "graphics_gaming",
+    "game-runtime-ecosystem"
   ],
   "domains": [
     "game-development"
@@ -17,12 +18,13 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "game-runtime-concept"
     }
   ],
-  "summary": "数据导向的游戏架构，组合优于继承的极致形态。",
+  "summary": "以实体关联组件数据、由系统批量处理匹配对象的架构模式。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "description": "实体组件系统将对象身份、状态数据与处理逻辑拆开：实体关联一组组件，组件表达位置、速度等状态，系统按组件条件选择实体并更新数据。对象行为由组件组合及系统处理共同形成，系统可以只关注所需数据，而不依赖某个庞大对象继承层级。\n\nUnity Entities 是数据导向的 ECS 实现实例。其实体以标识符关联组件，系统可读取 Speed 和 Direction，再更新 Position；是否具备 Renderer 组件可作为查询的包含或排除条件。该实现还能借助 Job System 调度并行工作，但数据布局、任务划分和同步方式属于具体实现选择。\n\nECS 提供组织状态与逻辑的架构，不是完整游戏引擎，也不是所有组件化设计的同义词。采用 ECS 不自动带来并行性或性能改善，系统间读写依赖、结构变化与调度开销仍需设计和测量；Unity 的 GameObject/MonoBehaviour 路径也不因采用组件组合就等同于 Entities 的数据模型。\n\n## 参考\n\n- [Unity：Entities package](https://docs.unity3d.com/Packages/com.unity.entities@1.4/manual/index.html)\n- [Unity：Entity component system introduction](https://docs.unity3d.com/Packages/com.unity.entities@1.4/manual/concepts-ecs.html)\n- [Unity：Job system in Entities introduction](https://docs.unity3d.com/Packages/com.unity.entities@1.4/manual/systems-scheduling-jobs.html)"
 }

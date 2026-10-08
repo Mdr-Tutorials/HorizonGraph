@@ -1,0 +1,44 @@
+{
+  "id": "android-studio",
+  "name": "Android Studio",
+  "aliases": [
+    "Android 开发工作室"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "devops"
+  ],
+  "ecosystems": [
+    "android-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gradle",
+      "context": "IDE 的 Android 项目构建、构建变体与同步流程使用 Gradle 构建系统；项目也可在其他环境调用 Gradle。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "gemini-in-android-studio",
+      "context": "Gemini 服务在 Android Studio 内读取项目上下文并结合 IDE 工具工作；IDE 的普通编辑与构建能力不要求启用此服务。"
+    }
+  ],
+  "summary": "Android 官方 IDE，整合构建、模拟器、分析与 AI 辅助。",
+  "description": "Android Studio 是 Android 官方集成开发环境，以 IntelliJ 平台为基础并提供专门的 Android 项目工具。它整合代码编辑、布局与 Compose 工作流、Gradle 构建、设备和模拟器以及性能分析能力。IDE 与 Android 操作系统、SDK、Android CLI 的职责不同，桌面开发工具不因目标是 Android 就运行在 Android 系统上。\n\n开发者可以在 IDE 中配置项目、选择构建变体、运行和调试应用，并检查设备与性能数据。Gradle 构建与编辑器交互是不同执行环节；IDE 支持相应流程，不代表任何源代码都依赖 IDE 才能构建。可用工具与预览能力依发行渠道和版本而变化，应结合实际项目的构建插件、SDK 和设备条件检查。\n\nGemini in Android Studio 提供专门面向 Android 的编码辅助和 Agent Mode，能够结合 IDE 的日志、UI 和项目上下文工作；这项服务具有独立账号、订阅和兼容范围。外部代理还可通过 Android CLI 连接 IDE 的分析与预览能力。不能把 Gemini CLI 消费登录的退出时间线套用到 Android Studio 或这里的 Gemini 服务。\n\n## 参考\n\n- [Android：Android Studio 官方 IDE 概览](https://developer.android.com/studio/intro)\n- [Android：Gemini in Android Studio 与发行兼容范围](https://developer.android.com/studio/gemini/overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://developer.android.com/studio/intro"
+}

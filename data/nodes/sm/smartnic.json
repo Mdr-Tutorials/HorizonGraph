@@ -1,0 +1,39 @@
+{
+  "id": "smartnic",
+  "name": "SmartNIC",
+  "aliases": [
+    "Smart Network Interface Card",
+    "智能网卡"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fpga",
+      "context": "FPGA 型 SmartNIC 通过可编程逻辑实现自定义包处理或卸载流水线，ASIC/处理核型产品不以此为必需。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dma",
+      "context": "具备主机内存通信能力的 SmartNIC 在受设备与驱动约束的 DMA 映射中交换数据。"
+    }
+  ],
+  "summary": "在网络接口上运行可编程卸载逻辑的硬件类别。",
+  "description": "SmartNIC 是可编程网络接口硬件类别，可把网络转发、过滤、加密或存储相关处理从主机卸载到网卡侧。实现可能采用专用 ASIC、FPGA、通用处理核或组合结构，名称本身并不规定单一芯片架构或编程接口。\n\n部分 FPGA 型 SmartNIC 支持以可编程流水线处理网络流量，其他产品则通过固件或处理核运行服务。DPU 与 SmartNIC 的能力范围有交集，但不是可无条件替换的同义词；一个具体产品的功能也不能代表所有智能网卡。\n\n卸载会改变数据、控制与隔离边界，部署时应核验驱动、固件、资源分配和访问权限。主机通信、设备内部排队与卸载规则仍会影响延迟，可编程或可卸载并不自动保证高频交易性能，也不意味着必须采用 FPGA。\n\n## 参考\n\n- [NVIDIA SmartNIC 实现形态与卸载用途](https://blogs.nvidia.com/blog/what-is-a-smartnic/)\n- [AMD Alveo SN1000 SmartNIC 产品技术简介](https://www.amd.com/content/dam/amd/en/documents/products/accelerators/alveo/sn1000/alveo-sn1000-product-brief.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

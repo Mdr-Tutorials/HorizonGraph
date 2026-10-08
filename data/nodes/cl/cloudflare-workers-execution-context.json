@@ -1,0 +1,35 @@
+{
+  "id": "cloudflare-workers-execution-context",
+  "name": "Cloudflare Workers ExecutionContext",
+  "aliases": [
+    "Workers ctx",
+    "Worker 执行上下文接口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cloudflare",
+      "context": "ExecutionContext 是 Cloudflare Workers 平台维护的运行时 API 接口。"
+    }
+  ],
+  "summary": "控制 Workers 调用存续与响应后任务的上下文接口。",
+  "description": "Cloudflare Workers ExecutionContext 是 Worker 处理程序接收的 ctx 接口，在类形式的 WorkerEntrypoint 中也可通过实例上下文取得。它向当前调用提供生命周期相关能力，区别于资源绑定 env；Durable Objects 的状态上下文虽然拥有部分同名方法，也不能据此视为同一完整接口。\n\nwaitUntil 接收 Promise，用于登记可以在响应返回后继续运行的工作，例如发送日志或完成缓存写入。未等待且未登记的任务可能随调用结束而被取消，登记工作仍受平台规定的响应后或断开后执行预算约束。响应正文仍在向客户端传输时，其流本身可以维持活动；需要可靠重试和持久处理的任务则适合平台相应的队列等能力。\n\npassThroughOnException 可在适用的代理路径中让异常请求回到源站，但它受流式请求体是否已经消费等条件限制，也不是 CPU 或内存超限等所有失败的统一恢复机制。使用 ctx 时应区分有限的调用延续、异常处理和外部持久任务，不把一个 API 的存在理解成后台任务无限执行的保证。\n\n## 参考\n\n- [Cloudflare：Context API](https://developers.cloudflare.com/workers/runtime-apis/context/)\n- [Cloudflare：Fetch handler 的 ctx 参数](https://developers.cloudflare.com/workers/runtime-apis/handlers/fetch/)\n- [Cloudflare：Workers 平台限制](https://developers.cloudflare.com/workers/platform/limits/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://developers.cloudflare.com/workers/runtime-apis/context/"
+}

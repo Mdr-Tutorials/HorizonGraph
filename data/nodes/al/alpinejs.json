@@ -1,0 +1,51 @@
+{
+  "id": "alpinejs",
+  "name": "Alpine.js",
+  "aliases": [
+    "Alpine",
+    "AlpineJS",
+    "Alpine JS"
+  ],
+  "type": "library",
+  "domains": [
+    "web-services",
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "以 HTML 上的 x-data、x-on 与绑定指令声明局部状态和行为。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "reactive-programming"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "状态变化触发指令效果，更新浏览器 DOM 的内容、属性和显示状态。"
+    }
+  ],
+  "summary": "在 HTML 上声明局部状态与响应式交互的 JavaScript 库。",
+  "description": "Alpine.js 是在现有 HTML 中声明局部交互的 JavaScript 库。x-data 建立组件范围内的状态，x-on 监听事件，x-text、x-show、x-model 等指令把状态与文本、显示条件和输入控件关联起来。它适合为菜单、切换控件、表单反馈等区域增加行为，使用这些能力不需要把页面改写成 JSX 组件。\n\nAlpine 的响应式机制追踪状态变化并触发相关效果，让页面指令更新 DOM。其运行时在浏览器执行，服务端可以预先输出 HTML，再由 Alpine 初始化局部状态；这一过程不应直接等同于 React 或 Preact 对组件树执行的水合，也不意味着 Alpine 本身负责生成服务端 HTML。\n\n在服务端驱动界面中，局部浏览器状态与服务端 HTML 更新可以协作，例如客户端管理展开状态，服务器处理提交后返回的业务内容。是否保持无脚本时的基础功能仍取决于页面原生链接与表单设计；添加 Alpine 指令并不会自动建立渐进增强路径。采用特殊执行环境时应核对相应构建和表达式支持，而不是假定所有构建具有相同运行条件。\n\n## 参考\n\n- [Alpine.js：Start Here](https://alpinejs.dev/start-here)\n- [Alpine.js：Reactivity](https://alpinejs.dev/advanced/reactivity)\n- [Alpine.js：CSP](https://alpinejs.dev/advanced/csp)\n- [htmx：Hypermedia-Driven Applications](https://htmx.org/essays/hypermedia-driven-applications/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://alpinejs.dev"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "container-networking",
+  "name": "Container Networking",
+  "aliases": [
+    "容器网络",
+    "容器网络连接"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "networking"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "network-namespace",
+      "context": "选用 Linux 网络隔离路线时，为容器组织独立接口、路由与网络栈视图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "veth",
+      "context": "选用 Linux 桥接路线时，以虚拟以太网对连接容器和宿主网络域。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux-bridge",
+      "context": "桥接驱动或 CNI bridge 路线中，在宿主连接多个容器接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dns",
+      "context": "为容器提供服务名称和外部域名解析，具体服务器与搜索域由平台配置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cni",
+      "context": "采用 CNI 插件体系的运行时，通过其接口配置和清理容器网络。"
+    }
+  ],
+  "summary": "组织容器接口、地址、路由、解析与外部连接的机制。",
+  "description": "容器网络组织容器与其他容器、宿主和外部服务之间的通信，包括接口、地址、路由、DNS 与访问规则。Linux 容器常拥有自己的网络命名空间，但是否隔离网络、使用何种驱动及连接多个网络，取决于运行时配置；不能把全部容器网络定义为一座固定网桥或一组 NAT 规则。\n\n桥接路线可以用 veth 把容器接口连接到宿主 Linux bridge，再由路由与可选地址转换实现外部访问。host、none、macvlan、overlay 等路线采用不同组织方式，Windows 原生容器也有不同驱动。容器看到的接口和地址不足以推断宿主上全部转发路径，名称解析与 IP 可达性还需分别配置。\n\nCNI 规定运行时与网络插件之间的配置及执行接口，而端口发布决定哪些服务通过指定地址可访问。跨虚拟机宿主时又增加一层网络边界，例如 WSLc 的用户态 Consommé；应分别描述容器内部网络、虚拟机到 Windows 的通路和外部访问条件，避免把某一层连通当作整个服务已经可达。\n\n## 参考\n\n- [Docker：Networking Overview](https://docs.docker.com/engine/network/)\n- [CNI：Bridge Plugin](https://www.cni.dev/plugins/current/main/bridge/)\n- [CNI：接口与执行协议](https://www.cni.dev/docs/spec/)\n- [WSL：NAT、Mirrored 与 Consomme](https://wsl.dev/technical-documentation/localhost/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

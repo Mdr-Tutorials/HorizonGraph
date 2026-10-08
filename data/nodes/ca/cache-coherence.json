@@ -8,21 +8,30 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "hardware_iot"
+    "hardware_iot",
+    "low-latency-systems-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "low-latency-systems",
+    "high-performance-computing"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "false-sharing",
+      "context": "以缓存行为单位维护一致性的规则约束独立字段的并发访问；至少一方写入时，同一行上的其他访问也可能承担失效与所有权转移成本。"
     }
   ],
-  "summary": "多核各自缓存同一缓存行时，如何看到彼此的写入。",
+  "summary": "维护共享缓存行的数据一致性，与跨地址访问顺序的内存模型不同。",
   "importance": 4,
   "popular": 35,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "缓存一致性处理多个处理器缓存同一内存位置时的数据更新关系，使共享缓存行的读写遵守相应一致性协议。协议可以通过失效、更新或所有权转移等机制组织缓存副本；具体状态和互连行为依处理器架构而定。它不是要求所有缓存持续保持相同内容，也不意味着每次读取都直接访问主内存。\n\n缓存一致性与内存一致性模型需要分开：前者关注共享位置或缓存行，后者还规定不同地址的访问顺序和可观察结果。有一致性硬件仍可能需要原子操作与获取、释放或屏障建立同步，不能使带数据竞争的用户态程序自动正确。设备DMA和MMIO的可见性还受独立的接口与架构约束。\n\n多核频繁争夺写入所有权会产生互连及缓存行迁移成本，独立字段同处一行也可能形成伪共享。减少共享写入、合理布局和局部化数据能够针对这些成本优化，但额外填充也会消耗内存及TLB资源。硬件事件和结构布局是分析线索，是否改善端到端表现仍需按目标负载验证。\n\n## 参考\n\n- [Linux：内存屏障与 CPU、设备交互](https://docs.kernel.org/core-api/wrappers/memory-barriers.html)\n- [Linux：伪共享成因、检测与布局权衡](https://docs.kernel.org/kernel-hacking/false-sharing.html)"
 }

@@ -1,0 +1,36 @@
+{
+  "id": "browser-profile-isolation",
+  "name": "Browser Profile Isolation",
+  "aliases": [
+    "浏览器用户资料隔离",
+    "浏览器配置文件隔离"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development",
+    "web-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem",
+    "browser-engine-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-cookie",
+      "context": "通过独立浏览器资料各自保存 Cookie jar 和网站登录状态，避免共用普通用户资料的 Cookie。"
+    }
+  ],
+  "summary": "以独立浏览器资料分开保存登录状态、Cookie 和浏览数据。",
+  "description": "浏览器用户资料隔离用独立 profile 分开保存 Cookie、历史、设置及其他浏览状态，避免自动化浏览直接继承日常使用资料中的登录状态。这里的隔离对象是资料与状态存储，不能直接等同于操作系统进程沙箱、每个任务独立的虚拟机或一次性无痕环境。\n\nAntigravity 的浏览器文档描述独立 Chrome profile：智能体使用的资料不共享普通浏览器的 Cookie 与登录状态，用户在该资料中进行的登录仍可被保留。Chrome 的多资料功能也允许每个资料保持自己的浏览信息。由此不能推断智能体资料从不含凭据，或每次运行都会销毁历史状态。\n\n受控浏览还需检查资料中已登录账号的权限、允许访问的网站及实际点击或输入操作。独立 profile 可以减少从个人资料继承权限的机会，但如果在其中登录了高权限账号，网页内容仍可能影响智能体利用这些权限。资料生命周期、下载目录和跨任务共享范围需要按具体部署定义。\n\n## 参考\n\n- [Google Antigravity：独立 Chrome profile](https://www.antigravity.google/docs/ide/separate-chrome-profile/)\n- [Google Chrome：多个用户资料](https://support.google.com/chrome/answer/2364824)\n- [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

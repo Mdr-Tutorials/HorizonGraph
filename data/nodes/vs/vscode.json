@@ -11,7 +11,9 @@
   ],
   "domains": [
     "programming-languages",
-    "web-development"
+    "web-development",
+    "developer-environments",
+    "ai-assisted-software-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -24,24 +26,56 @@
       "target_id": "microsoft"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "typescript"
-    },
-    {
       "relation_type": "bases_for",
       "target_id": "cursor"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "electron"
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "Code - OSS 的编辑器核心源码以 TypeScript 实现；此边描述源码开发，不要求用户项目使用 TypeScript。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "electron",
+      "context": "VS Code 桌面发行以 Electron 承载工作台和本地进程；Web 发行采用浏览器接口。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-editor"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "extension-host",
+      "context": "通过本地、Web 或远程扩展宿主运行符合相应环境能力的扩展代码。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "language-server-protocol",
+      "context": "语言客户端扩展采用 LSP 与服务器交互；编辑器也支持直接注册语言能力提供者。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "debug-adapter-protocol",
+      "context": "通用调试界面按 DAP 与具体调试适配器交换请求、响应和运行状态事件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-worktree",
+      "context": "采用工作树隔离的代理会话使用独立检出目录和索引；任务集成仍由审查及版本控制流程完成。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "通过文件差异、反馈与验证结果审查工作区或代理产生的修改。"
     }
   ],
-  "summary": "微软的开源代码编辑器，Electron 上的主力 IDE。",
+  "summary": "微软基于 Code - OSS 发行的可扩展代码编辑器。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
   "display_primary": "VS Code",
   "official_site": "https://code.visualstudio.com",
-  "first_released": "2015-04-29"
+  "first_released": "2015-04-29",
+  "description": "Visual Studio Code 是微软基于 Code - OSS 构建的编辑器产品，提供代码编辑、语言服务、调试、终端、版本控制与扩展机制。Code - OSS 仓库源码采用 MIT 许可；微软发行的 VS Code 含产品定制和资产并采用产品许可，因此两者不能不加区分地称为同一开源发行物。\n\n编辑器 core 主要用 TypeScript 实现，工作台整合 Monaco Editor Core、服务与扩展 API。桌面发行使用 Electron，Web 发行使用浏览器接口；扩展在独立 extension host 中运行。源码实现语言、桌面运行框架和用户开发项目的语言属于不同层次。\n\nRemote Development 把本地编辑器界面与远端工作区执行分开。Dev Containers、WSL 和 Codespaces 各自有独立连接组件：终端、调试器与多数工作区扩展在目标环境运行，UI 扩展可以留在客户端。远端平台、扩展原生依赖与连接权限决定实际能力，而不是只由本机安装编辑器决定。\n\n语言能力可以由扩展直接注册提供者，也可通过语言客户端连接 LSP 服务器；补全、导航和重构的实际覆盖依语言服务与项目配置决定。调试界面通过 DAP 与具体适配器协作，适配器再连接实际调试器或运行时，因此编辑器、语言服务器、调试适配器和被调试程序承担不同职责。\n\n当前 AI 工作流支持建议、对话和编码代理，并可在共享编辑器工作区中查看修改与验证结果。独立 Agent Host 与保留的扩展宿主会话有不同生命周期和修改审查方式，不能把所有代理都写成扩展代码。工作树任务保持代码修改分开，完成后仍需审查和按分支或工作区集成。\n\n## 参考\n\n- [VS Code：Code - OSS 与产品发行许可](https://code.visualstudio.com/docs/supporting/faq#licensing)\n- [VS Code：源码层次、TypeScript 与桌面/Web 环境](https://github.com/microsoft/vscode/wiki/Source-Code-Organization)\n- [VS Code：远程扩展与工作区执行架构](https://code.visualstudio.com/api/advanced-topics/remote-extensions)\n- [VS Code：直接语言 API 与 LSP 的能力对应](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [VS Code：调试器、适配器与扩展的边界](https://code.visualstudio.com/api/extension-guides/debugger-extension)\n- [VS Code：AI 辅助开发与代理工作方式](https://code.visualstudio.com/docs/agents/overview)\n- [Microsoft：Agent Host 与扩展宿主的运行边界](https://github.com/microsoft/vscode-docs/blob/main/docs/agents/concepts/agent-host.md)\n- [VS Code：审查代理修改、检查点与 worktree 集成](https://code.visualstudio.com/docs/agents/run/review-code-edits)"
 }

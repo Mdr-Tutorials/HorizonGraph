@@ -1,0 +1,40 @@
+{
+  "id": "normal-mapping",
+  "name": "Normal Mapping",
+  "aliases": [
+    "法线映射",
+    "法线贴图",
+    "Normal Map"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering",
+    "game-development"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "从非颜色纹理读取编码的表面法线方向，用于逐片元光照计算"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shader",
+      "context": "片元着色时使用法线贴图扰动表面法线，不改变网格本身的几何轮廓"
+    }
+  ],
+  "summary": "从纹理读取表面法线细节，在着色时改变光照响应",
+  "description": "法线映射把表面法线方向编码在纹理中，着色器对每个片元读取并使用这些方向计算光照，使较简单的网格呈现凹凸细节。常见形式使用切线空间法线贴图，也有对象空间形式；贴图的坐标系和分量约定必须与渲染器匹配。Three.js 的 MeshStandardMaterial 支持两种形式，并提供法线强度参数。\n\n法线贴图改变的是着色所用的法线，不会直接增加网格顶点或改变外轮廓；需要实际几何位移时，应使用其他方法。它属于非颜色数据，不能按普通颜色纹理进行 sRGB 解码。资产导入还需要核对切线基底、手性和绿色通道约定，避免凸凹反转或接缝；这些问题不能仅靠提高纹理分辨率解决。\n\n## 参考\n\n- [Three.js：MeshStandardMaterial.normalMap 与 normalMapType](https://threejs.org/docs/pages/MeshStandardMaterial.html)\n- [Three.js：非颜色纹理的色彩空间处理](https://threejs.org/manual/pages/color-management.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

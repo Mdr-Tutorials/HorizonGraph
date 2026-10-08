@@ -1,29 +1,38 @@
 {
   "id": "oci",
-  "name": "Open Container Initiative",
+  "name": "OCI Specifications",
   "display_primary": "OCI",
   "aliases": [
-    "OCI 运行时规范"
+    "OCI",
+    "OCI 规范族"
   ],
   "type": "protocol",
   "ecosystems": [
-    "cloud_native"
+    "cloud_native",
+    "container-ecosystem"
   ],
   "domains": [
-    "cloud-infrastructure"
+    "cloud-infrastructure",
+    "containerization"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "container-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "open-container-initiative",
+      "context": "规范族由 Open Container Initiative 制修订与公开治理；组织身份与可实现的协议规范分开建模。"
     }
   ],
-  "summary": "容器镜像与运行时的行业规范，Docker 与 Kubernetes 的公约。",
+  "summary": "分别规定容器运行、镜像格式与仓库分发的开放规范族。",
   "importance": 4,
   "popular": 55,
   "official_site": "https://opencontainers.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "OCI Specifications 是 Open Container Initiative 发布的容器规范族入口；本词条保留协议身份，组织的治理身份单独记录。Runtime、Image 和 Distribution 三类规范分别覆盖运行配置与生命周期、镜像产物结构、仓库内容分发，不能用单一“OCI 兼容”标签替代对具体规范和支持范围的说明。\n\nImage Spec 用 manifest、可选 index、配置及文件系统层描述镜像；Runtime Spec 规定解包后 bundle 的配置、执行环境和生命周期；Distribution Spec 规定 registry 与客户端传输内容的 API，并不局限于可运行容器镜像。镜像下载、文件系统解包、运行配置生成和容器启动是相互衔接但职责不同的步骤，规范自身并不是一个可执行容器运行时。\n\n互操作仍取决于支持的规范版本、平台、媒体类型和可选能力。官方 image 到 runtime 配置转换允许调用方输入及实现定义的默认值，因此同一镜像内容不保证相同运行配置。OCI 的仓库分发 API 也不是 Docker Engine 的容器控制 API；符合镜像规范不能自动证明 Docker CLI、Engine API 或 Windows/Linux 执行环境可以完整互换。\n\n## 参考\n\n- [OCI：组织与三类规范](https://opencontainers.org/about/overview/)\n- [OCI：Image Specification](https://github.com/opencontainers/image-spec/blob/main/spec.md)\n- [OCI：Runtime Specification](https://github.com/opencontainers/runtime-spec/blob/main/spec.md)\n- [OCI：Distribution Specification](https://github.com/opencontainers/distribution-spec/blob/main/spec.md)\n- [OCI：镜像到运行配置的转换边界](https://github.com/opencontainers/image-spec/blob/main/conversion.md)\n- [Docker：Engine API 的独立接入面](https://docs.docker.com/reference/api/engine/)"
 }

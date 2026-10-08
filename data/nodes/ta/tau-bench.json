@@ -1,0 +1,44 @@
+{
+  "id": "tau-bench",
+  "name": "τ-bench",
+  "aliases": [
+    "Tau-bench",
+    "工具智能体用户交互基准"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "execution-based-evaluation",
+      "context": "原始 τ-bench 用实际工具执行后的数据库状态及任务标注输出作规则判定，而不是只评价回复表面。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pass-power-k",
+      "context": "原论文对同一任务进行重复试验，估计全部 k 次成功的比例以观察对话与工具行为的一致性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "task-success-rate",
+      "context": "按原始规则奖励汇总单次任务成功情况，同时注明状态判定对政策过程的覆盖限制。"
+    }
+  ],
+  "summary": "以用户模拟、业务工具和状态判定评估对话智能体。",
+  "description": "τ-bench 原始基准模拟用户与语言智能体围绕业务 API 和政策规则的动态对话，主要包含零售及航空场景。任务制品包括初始数据库、工具接口、领域政策及隐藏的用户目标；用户模拟器与被测智能体的角色和模型设置需要分别记录。\n\n评估根据任务标注对比执行后的数据库状态，并在部分任务检查用户所需输出。论文用 pass^k 衡量重复试验的一致成功，而非仅凭一条对话完成宣告。状态符合预期仍可能遗漏明确用户确认等政策步骤，作者指出这一判定边界，因此轨迹检查可作为补充。\n\n截至 2026-10-08，原仓库明确提示旧航空与零售任务不再更新，并指向继任的 τ³-bench；τ² 仓库也已转入 τ³。这里的 τ-bench 指原始数据与协议，继任版本新增领域或语音模态不作为原始条目的别名与规模。复现应固定具体提交、任务和模拟器，不直接比较混合版本成绩。\n\n## 参考\n\n- [τ-bench 原论文：工具、用户模拟与 pass^k](https://arxiv.org/html/2406.12045v1)\n- [τ-bench 官方原始仓库与继任版本提示](https://github.com/sierra-research/tau-bench)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool"
+}

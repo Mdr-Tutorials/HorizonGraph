@@ -1,0 +1,34 @@
+{
+  "id": "kernel-bypass",
+  "name": "Kernel Bypass",
+  "aliases": [
+    "内核旁路",
+    "内核网络旁路"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "zero-copy",
+      "context": "在支持共享数据缓冲区且驱动提供相应能力的旁路路径中，减少应用与数据路径之间的包内容复制。"
+    }
+  ],
+  "summary": "让选定数据路径绕过常规内核网络栈的实现方法。",
+  "description": "内核旁路把选定网络数据路径放在常规内核协议栈之外，例如直接处理设备队列，或通过共享内存把帧交给用户程序。旁路的对象可以是包收发、协议处理或二者，DPDK、AF_XDP、netmap 和 OpenOnload 的接口与覆盖范围并不相同。\n\n设备发现、内存注册、权限检查和资源回收仍可能由内核或驱动完成。共享缓冲区能减少复制，轮询能改变通知成本，但零拷贝和持续忙轮询都不是内核旁路的必要定义；部分驱动还保留内核控制路径。\n\n选择后端时应核验网卡、驱动、队列和协议支持，再比较实际负载下的尾延迟、丢包与 CPU 占用。绕过常规网络栈也会改变可观测性、过滤与隔离位置，不能据此声称所有流量都无需内核，或所有低延迟应用都必须采用旁路。\n\n## 参考\n\n- [DPDK Linux 驱动、VFIO 与 bifurcated driver](https://doc.dpdk.org/guides/linux_gsg/linux_drivers.html)\n- [Linux AF_XDP socket、UMEM 与环所有权](https://docs.kernel.org/networking/af_xdp.html)\n- [AMD OpenOnload 官方源码与后端支持说明](https://github.com/Xilinx-CNS/onload)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

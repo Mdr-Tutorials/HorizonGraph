@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.9.0",
   "policy": "登记制：新词随数据 PR 同步登记。CI 双向校验：数据出现未登记 value 即失败；登记项连续多个周期未被引用则告警。节点字段存储 value，en/zh 供展示。",
   "entries": [
     { "value": "systems-programming", "en": "Systems Programming", "zh": "系统编程" },
@@ -54,6 +54,27 @@
     { "value": "materials-science", "en": "Materials Science", "zh": "材料科学" },
     { "value": "computational-chemistry", "en": "Computational Chemistry", "zh": "计算化学" },
     { "value": "knowledge-engineering", "en": "Knowledge Engineering", "zh": "知识工程" },
-    { "value": "semantic-web", "en": "Semantic Web", "zh": "语义网" }
+    { "value": "semantic-web", "en": "Semantic Web", "zh": "语义网" },
+    { "value": "interactive-graphics", "en": "Interactive Graphics", "zh": "交互图形" },
+    { "value": "real-time-rendering", "en": "Real-Time Rendering", "zh": "实时渲染" },
+    { "value": "creative-coding", "en": "Creative Coding", "zh": "创意编程" },
+    { "value": "computer-animation", "en": "Computer Animation", "zh": "计算机动画" },
+    { "value": "digital-content-creation", "en": "Digital Content Creation", "zh": "数字内容创作" },
+    { "value": "data-visualization", "en": "Data Visualization", "zh": "数据可视化" },
+    { "value": "web-services", "en": "Web Services", "zh": "Web 服务" },
+    { "value": "edge-computing", "en": "Edge Computing", "zh": "边缘计算" },
+    { "value": "api-engineering", "en": "API Engineering", "zh": "API 工程" },
+    {"value":"containerization","en":"Containerization","zh":"容器化"},
+    {"value":"virtualization","en":"Virtualization","zh":"系统虚拟化"},
+    {"value":"developer-environments","en":"Developer Environments","zh":"开发环境"},
+    {"value":"software-supply-chain","en":"Software Supply Chain","zh":"软件供应链"},
+    {"value":"market-microstructure","en":"Market Microstructure","zh":"市场微观结构"},
+    {"value":"electronic-trading","en":"Electronic Trading","zh":"电子交易"},
+    {"value":"low-latency-systems","en":"Low-Latency Systems","zh":"低延迟系统"},
+    {"value":"financial-risk-management","en":"Financial Risk Management","zh":"金融风险管理"},
+    {"value":"financial-market-regulation","en":"Financial Market Regulation","zh":"金融市场监管"},
+    {"value":"agent-development","en":"Agent Development","zh":"智能体开发"},
+    {"value":"ai-assisted-software-engineering","en":"AI-assisted Software Engineering","zh":"AI 辅助软件工程"},
+    {"value":"browser-automation","en":"Browser Automation","zh":"浏览器自动化"}
   ]
 }

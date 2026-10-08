@@ -1,0 +1,38 @@
+{
+  "id": "uniform-interface",
+  "name": "REST Uniform Interface",
+  "aliases": [
+    "REST 统一接口",
+    "统一接口约束"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "rest"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "content-negotiation",
+      "context": "在采用 HTTP 的 REST 服务中，通过协商选择可理解的资源表示，而不暴露其内部存储形式。"
+    }
+  ],
+  "summary": "以资源、表示、自描述消息和超媒体解耦 REST 组件。",
+  "description": "统一接口是 REST 的核心约束。Fielding 将它拆为四项：识别资源，通过表示操作资源，自描述消息，以及以超媒体驱动应用状态。客户端和服务器通过通用接口理解交互，隐藏内部存储和实现细节，使组件可以相对独立演化。\n\n统一接口不意味着所有业务使用同一数据结构，也不等同于生成 TypeScript 客户端或把函数名改成 URL。以 HTTP 实现 REST 时，方法、状态、媒体类型和链接参与表达语义；服务仍需满足无状态通信、缓存、分层等其他 REST 约束。它有通用性与效率之间的取舍，不应把所有 HTTP API 都自动归为完整 REST。\n\n## 参考\n\n- [Fielding：REST 架构风格原始论文](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

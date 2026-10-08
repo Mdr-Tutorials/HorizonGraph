@@ -1,0 +1,39 @@
+{
+  "id": "level-of-detail",
+  "name": "Level of Detail",
+  "aliases": [
+    "细节层次",
+    "LOD",
+    "多级细节"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mesh-optimization",
+      "context": "通过受控简化准备多种复杂度的网格表示。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-geometry",
+      "context": "为同一对象提供不同细节的渲染几何。"
+    }
+  ],
+  "summary": "按观察条件选择不同复杂度表示的图形技术。",
+  "description": "细节层次为同一对象准备不同复杂度的表示，在远处或屏幕占比小的时候选择较简化的几何或其他表示，近处采用更详细的版本。具体选择条件可以是距离、屏幕误差或引擎策略，Three.js 的 LOD 对象提供按距离切换的基本机制。\n\nLOD 需要兼顾性能与可见差异。生成各层时要检查轮廓、材质和动画，切换阈值附近还可能出现闪烁或突然变化，迟滞或过渡策略可以改善部分问题。离线简化生成资产与运行时选择层级属于两个相互配合的步骤。\n\n## 参考\n\n- [Three.js LOD 对象](https://threejs.org/docs/pages/LOD.html)\n- [meshoptimizer 简化及误差控制 API](https://github.com/zeux/meshoptimizer/blob/master/src/meshoptimizer.h)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

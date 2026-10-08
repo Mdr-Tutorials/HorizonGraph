@@ -1,0 +1,42 @@
+{
+  "id": "rekor",
+  "name": "Rekor",
+  "aliases": [
+    "Rekor",
+    "Sigstore Rekor",
+    "软件供应链透明日志"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "merkle-tree",
+      "context": "以 Merkle 树及相应证明检查追加式透明度日志的包含和一致性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "artifact-attestation",
+      "context": "将关于工件的已认证声明材料登记为可查询、可审计的签署记录；入日志不保证声明事实为真。"
+    }
+  ],
+  "summary": "记录工件签名与声明，提供可验证的日志包含证据。",
+  "description": "Rekor 是 Sigstore 的开源签名透明度日志软件，提供服务端 API 与操作日志条目的客户端工具。维护者与构建系统可以登记签名元数据，其他参与者据此查询相关记录并取得可验证的证据。它记录工件签名和供应链声明材料，不是保存全部镜像内容的容器仓库，也不同于 Fulcio 用来公开证书签发的 CT 日志。\n\n透明度机制使用追加式日志和密码学证明，使参与者能够检查条目是否包含于可信日志状态，以及日志状态之间是否一致。Rekor 可用于 Sigstore 流程，也可按相应信任与存储配置独立部署。验证需要信任日志的根材料并检查证据，日志的长期可审计性还依赖外部监控，而不是仅相信一次 API 查询返回的文本。\n\n条目入日志可以帮助审计某个身份曾为某个工件签署何种材料，并为适用流程提供时间相关证据；它不表示日志运营方认可软件安全或确认所有 predicate 内容真实。短期证书的签署时间判断要按使用的日志、bundle 和时间戳机制验证，Rekor 版本之间的时间证据不能随意互换。有效包含证明也不替代发布者授权、构建来源政策或漏洞检查。\n\n## 参考\n\n- [Rekor：软件与日志职责](https://docs.sigstore.dev/logging/overview/)\n- [Sigstore：日志的密码学与监控模型](https://docs.sigstore.dev/about/security/)\n- [Cosign：时间证据与 Rekor 版本边界](https://docs.sigstore.dev/cosign/verifying/timestamps/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/sigstore/rekor"
+}

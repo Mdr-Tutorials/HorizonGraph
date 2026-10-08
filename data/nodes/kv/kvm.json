@@ -12,7 +12,8 @@
   ],
   "domains": [
     "systems-programming",
-    "cloud-infrastructure"
+    "cloud-infrastructure",
+    "virtualization"
   ],
   "abstraction_level": "kernel_os",
   "relations": [
@@ -23,12 +24,27 @@
     {
       "relation_type": "part_of",
       "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "hypervisor"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hardware-assisted-virtualization",
+      "context": "在 x86 客体执行路径中利用 Intel VMX 或 AMD SVM 等处理器支持；其他架构的执行机制与可用能力另按 KVM API 查询。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-table",
+      "context": "在 x86 内存虚拟化中建立影子页表或 EPT/NPT 映射，控制客体地址到宿主页的翻译与访问。"
     }
   ],
-  "summary": "Linux 把内核变成 hypervisor 的模块，云虚拟机的底座之一。",
+  "summary": "Linux 内核的虚拟化子系统，提供客体执行和控制接口。",
   "importance": 4,
   "popular": 55,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 内核虚拟化能力\n\nKVM（Kernel-based Virtual Machine）是 Linux 内核的虚拟化子系统，向用户态虚拟机管理程序提供创建和运行客体的能力。它参与实现 hypervisor 的处理器执行与内存隔离职责，利用宿主 Linux 的内核基础设施。KVM 是内核组件，不是带完整机器配置界面、磁盘镜像格式和所有设备模型的单一虚拟机应用。\n\n## 用户态接口与分工\n\n其 API 以文件描述符和 ioctl 为中心：打开 /dev/kvm 获得子系统句柄，以 KVM_CREATE_VM 创建 VM，再创建 vCPU 或设备；KVM_RUN 驱动虚拟处理器执行。执行返回的 kvm_run 结构告知用户态退出原因，部分 I/O 或 MMIO 可由用户态设备模型完成。QEMU 是使用这些接口的常见程序，其他用户态实现也可以通过同一接口建立客体，因此 KVM 的定义不依赖 QEMU 这一特定前端。\n\n## 执行与内存\n\n在 x86 路径中，KVM 使用 Intel VMX 或 AMD SVM 等硬件虚拟化支持。内存管理还要把客体地址映射到宿主拥有的页；x86 MMU 文档区分影子映射与 EPT/NPT 两阶段分页，并要求客体不能访问未分配给它的宿主内存。客体开启分页时需理解 guest virtual、guest physical 和 host physical 三种地址，不能把客体物理地址直接当成宿主物理地址。\n\n## 能力边界\n\nKVM API 的能力随架构、内核配置和平台而异；用户态应查询 KVM_CAP 等扩展，再选择适用的 VM、vCPU 和设备配置。x86 的硬件条件不能不加限定地推广到 API 列出的所有架构。嵌套客体还需要外层暴露适当扩展，并受内外层实现限制；运行一个 VM 与让该 VM 再充当虚拟化宿主是不同需求。\n\n## 参考\n\n- [Linux Kernel：KVM 的 VM、vCPU 与设备 API](https://docs.kernel.org/virt/kvm/api.html)\n- [Linux Kernel：KVM x86 MMU 与 EPT/NPT 地址翻译](https://docs.kernel.org/virt/kvm/x86/mmu.html)\n- [Linux Kernel：KVM 嵌套客体的架构与条件](https://docs.kernel.org/virt/kvm/x86/running-nested-guests.html)\n- [QEMU：系统模拟与可选虚拟化加速器](https://www.qemu.org/docs/master/system/introduction.html)\n- [Intel：架构软件开发者手册中的 VMX 与虚拟化支持](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)\n- [Microsoft：AMD SVM VMRUN 与 VMCB](https://learn.microsoft.com/en-us/cpp/intrinsics/svm-vmrun?view=msvc-170)"
 }

@@ -4,11 +4,13 @@
   "aliases": [],
   "type": "model_family",
   "ecosystems": [
-    "llm-agent-ecosystem"
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
   ],
   "domains": [
     "machine-learning",
-    "natural-language-processing"
+    "natural-language-processing",
+    "ai-assisted-software-engineering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -42,16 +44,17 @@
     },
     {
       "relation_type": "implements",
-      "target_id": "mcp"
+      "target_id": "function-calling"
     }
   ],
-  "summary": "Anthropic 的对话大模型族，以安全对齐为主线。",
+  "summary": "Anthropic 的语言模型家族，支持生成、视觉与工具使用。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
-  "official_site": "https://www.anthropic.com/claude",
+  "official_site": "https://platform.claude.com/docs/en/models/overview",
   "first_released": "2023-03-14",
   "popular": 98,
-  "display_primary": "Claude"
+  "display_primary": "Claude",
+  "description": "Claude 是 Anthropic 开发的大语言模型家族，用于语言理解、生成、代码、视觉输入和工具使用等任务。家族内不同模型线及版本面向不同的能力、延迟和成本需求，当前型号、输入模态和生命周期应以官方 Models API 与型号文档为准。本节点保持模型家族身份，区别于同名对话应用和 Claude Code 编程代理产品，不将这些产品界面当成模型的组成部分。\n\n在工具使用过程中，应用提供工具定义与上下文，模型可生成结构化工具调用，随后由客户应用或平台所提供的工具服务执行。执行结果进入后续模型输入，形成更大的代理循环；模型生成调用并不等于它独立运行 shell、访问数据库或具备用户授权。客户端工具和平台服务端工具承担不同的执行责任，具体可用功能还取决于模型与所采用平台。\n\nMCP 连接的是宿主应用、客户端与工具服务器。官方架构明确宿主管理客户端，客户端与服务器通信，因此不能把 Claude 模型家族写为 MCP 协议实现者；Claude Code 等宿主可以使用 MCP，而模型处理被宿主提供的工具和结果。部署模型时应分别考察模型能力、上下文、执行环境及权限，模型支持工具使用不会自动提供完整代理运行时或安全保证。\n\n## 参考\n\n- [Anthropic：当前 Claude 模型家族与型号能力](https://platform.claude.com/docs/en/models/overview)\n- [Anthropic：客户端工具与平台工具执行边界](https://platform.claude.com/docs/en/agents-and-tools/tool-use/how-tool-use-works)\n- [MCP：宿主、客户端和服务器的架构](https://modelcontextprotocol.io/docs/learn/architecture)"
 }

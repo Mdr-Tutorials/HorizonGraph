@@ -1,0 +1,36 @@
+{
+  "id": "compose-spec",
+  "name": "Compose Specification",
+  "aliases": [
+    "Compose 规范",
+    "Compose 文件规范"
+  ],
+  "type": "protocol",
+  "domains": [
+    "developer-environments",
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem",
+    "dev-container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "yaml",
+      "context": "以 YAML 文件表达服务、网络、卷及配置资源的 Compose 应用模型。"
+    }
+  ],
+  "summary": "定义多容器应用服务、网络和持久资源的配置规范。",
+  "description": "Compose Specification 定义以 YAML 描述多容器应用的配置格式和预期语义。服务声明镜像与运行配置，网络连接服务，卷提供持久存储，configs 和 secrets 表达不同配置资源。项目名用于区分一份定义的不同实例及其资源。它是声明规范，实际操作由 Compose 实现完成。\n\n规范区分通用应用模型与平台相关属性，构建和部署等部分具有独立可选支持。实现并不被要求支持每个属性，遇到不支持的字段应按模式警告或拒绝；文件能被解析不证明对应能力已执行。顶层 version 为历史兼容信息，不再选择一个固定能力集合。\n\ndepends_on 描述服务依赖与启动条件，但简单的启动顺序不保证数据库等服务已经可用。支持 service_healthy 的实现可以结合 healthcheck 等待健康状态，服务仍需要处理运行期故障。规范没有把所有平台、秘密存储和网络驱动差异消除为统一实现。\n\n## 参考\n\n- [Compose Specification：应用模型、可选能力与版本字段](https://compose-spec.github.io/compose-spec/spec.html)\n- [Docker：启动顺序与健康条件](https://docs.docker.com/compose/how-tos/startup-order/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://compose-spec.io/"
+}

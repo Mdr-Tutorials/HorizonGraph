@@ -1,0 +1,44 @@
+{
+  "id": "texture-painting",
+  "name": "Texture Painting",
+  "aliases": [
+    "纹理绘制",
+    "贴图绘制",
+    "3D Painting"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uv-mapping",
+      "context": "把模型上的绘制结果映射到图像布局。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "保存将由渲染材质采样的绘制结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-material",
+      "context": "按颜色、粗糙度等材质通道组织输出。"
+    }
+  ],
+  "summary": "在图像或模型表面绘制材质通道的内容制作方法。",
+  "description": "纹理绘制通过笔刷、填充、图层或投影编辑表面使用的图像与材质通道。可以直接在二维纹理上作画，也可以在三维模型上观察笔触如何映射到表面；颜色、粗糙度与法线等通道具有不同含义。\n\nUV 布局和材质通道约定决定绘制结果如何进入运行时。需要区分制作项目与导出贴图，确认颜色空间、通道打包、透明度及目标材质输入；显示在制作工具中的预览光照不应无意混入所有材质纹理。\n\n## 参考\n\n- [Substance 3D Painter 使用指南](https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/home)\n- [Substance 3D Designer 概览](https://experienceleague.adobe.com/en/docs/substance-3d-designer/using/getting-started/overview/overview)\n- [Blender 使用 UV 贴图](https://docs.blender.org/manual/id/4.5/modeling/meshes/uv/applying_image.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

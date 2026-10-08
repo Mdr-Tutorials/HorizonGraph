@@ -1,0 +1,44 @@
+{
+  "id": "gemini-interactions-api",
+  "name": "Gemini Interactions API",
+  "aliases": [
+    "Interactions API",
+    "Gemini 交互 API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "gemini-api",
+      "context": "本节点表示 Gemini Developer API 服务的一组统一模型与代理交互接口；不是整个服务的同义名。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "google-antigravity-agent",
+      "context": "Interactions API 的代理调用模式提供托管 Antigravity Agent 的官方调用入口；接口也服务其他模型及代理，本地 Antigravity SDK 不以此接口为硬依赖。"
+    }
+  ],
+  "summary": "统一 Gemini 模型与代理调用、状态和事件的接口规范。",
+  "description": "Gemini Interactions API 是 Google 为模型及代理调用定义的应用接口，围绕 Interaction 资源表示一轮对话或任务及其执行步骤。接口文档定义请求、响应、创建与检索等操作，以及模型调用和代理调用各自的字段。本节点承载接口约定，Gemini Developer API 节点则承载提供接口的云服务。\n\n调用方可以使用 previous_interaction_id 衔接服务器保存的对话状态，或通过 store=false 选择无状态行为。工具调用、工具结果、模型输出和流式事件有明确结构；可用的后台执行和恢复方式应按调用模式及模型或代理核对。接口不是完整代理框架，也不会自动把客户端声明的任意工具变成服务端已执行的动作。\n\n官方概览说明该接口自 2026 年 6 月达到 GA，并推荐用于新项目，generateContent 仍完全受支持。参考页同时保留稳定 v1 与 v1beta 版本，因此示例使用 v1beta 不代表整个接口仍只有预览状态。Antigravity 和 Deep Research 等是可调用的具体托管代理，不能以某个代理的名称覆盖这个通用接口的连续身份。\n\n## 参考\n\n- [Google AI：Interactions 语义、状态与 GA 范围](https://ai.google.dev/gemini-api/docs/interactions-overview)\n- [Google AI：Interactions API 请求响应与版本参考](https://ai.google.dev/api/interactions-api)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://ai.google.dev/api/interactions-api"
+}

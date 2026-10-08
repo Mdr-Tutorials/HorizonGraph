@@ -1,0 +1,48 @@
+{
+  "id": "supertest",
+  "name": "Supertest",
+  "aliases": [
+    "Supertest HTTP 测试库",
+    "SuperTest"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "integration-testing",
+      "context": "通过真实 HTTP 请求与响应断言验证被测 Node.js 应用的路由、序列化和所纳入的组件交互；具体测试边界由应用配置决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "执行 HTTP 请求并断言状态码、头字段、消息体或自定义响应条件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nodejs",
+      "context": "在 Node.js 测试环境中接收 http.Server 或应用处理函数，并为未监听的服务管理临时端口。"
+    }
+  ],
+  "summary": "为 Node.js HTTP 服务提供链式请求与响应断言。",
+  "description": "Supertest 在 SuperAgent 的请求能力上提供面向 HTTP 测试的断言接口，可对状态码、响应头、消息体和自定义条件进行链式检查。request 可以接受 Node.js HTTP Server、应用请求处理函数或目标地址；本地服务尚未监听时，它可为测试绑定临时端口，减少测试代码管理固定端口的负担。实际使用时仍需要准备被测应用及其数据状态。\n\n测试可以通过回调、Promise 或 async/await 取得结果，agent 能在连续请求间保留 Cookie 等客户端状态，支持登录后请求等场景。Supertest 与具体测试运行器无绑定关系，既可放入 Jest、Mocha 等运行器，也可直接使用；它不因常见教程采用 Express 或 Jest 就要求所有项目必须依赖这些框架。HTTP/2 等额外模式也应按支持选项明确启用。\n\nSupertest 提供请求执行与断言机制，断言什么由作者决定。检查返回 200 或某几个字段，不能自动证明接口完整符合 OpenAPI，也不会生成消费者契约、推导全部业务规则或系统性探索所有边界输入。需要 Schema 校验、性质生成或提供者状态时，可以在测试中另行组合这些能力；测试的层级由实际包含的组件和依赖决定。\n\n## 参考\n\n- [Supertest：官方说明、示例与 API](https://github.com/forwardemail/supertest)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/forwardemail/supertest"
+}

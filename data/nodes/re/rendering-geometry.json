@@ -1,0 +1,38 @@
+{
+  "id": "rendering-geometry",
+  "name": "Rendering Geometry",
+  "aliases": [
+    "渲染几何",
+    "绘制几何"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vertex-buffer",
+      "context": "把用于 GPU 顶点输入的几何属性上传为顶点缓冲，并匹配步长和属性格式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "index-buffer",
+      "context": "选用索引几何时用索引缓冲组织图元并复用整套顶点属性。"
+    }
+  ],
+  "summary": "组织绘制图元的顶点属性、索引与范围。",
+  "description": "渲染几何描述用于绘制的点、线或表面：包括位置、法线、纹理坐标、颜色等顶点属性，以及可选索引和绘制范围。Three.js 的 BufferGeometry 将这些属性组织成数组数据供 GPU 读取；几何描述和负责外观的材质、负责空间位置的场景对象分别管理。\n\n索引可以让多个图元重用同一套顶点属性。共享空间位置并不总能共享顶点记录，例如硬边法线或纹理接缝需要不同属性组合。多个材质分组也可能导致多个绘制调用，因此一份几何资源并不保证只绘制一次。\n\n渲染几何强调可视图元、属性插值和 GPU 数据布局，仿真网格还需满足单元拓扑、方程离散与物理边界等要求。动态变形、骨骼和形状目标改变位置时，包围体与拾取逻辑也需匹配，不能沿用过时的静态边界。\n\n## 参考\n\n- [Three.js BufferGeometry](https://threejs.org/docs/pages/BufferGeometry.html)\n- [Three.js Picking](https://threejs.org/manual/pages/picking.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

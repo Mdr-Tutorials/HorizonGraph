@@ -1,0 +1,46 @@
+{
+  "id": "typebox",
+  "name": "TypeBox",
+  "aliases": [
+    "TypeBox 模式库",
+    "@sinclair/typebox",
+    "Sinclair TypeBox"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "json-schema",
+      "context": "当前主包验证器按支持的 JSON Schema 草案检查模式定义的数据实例。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "从 builder 或 Script 定义解析静态类型，使模式与 TypeScript 类型对应。"
+    }
+  ],
+  "summary": "构建 JSON Schema 对象并解析静态类型、编译校验器的库。",
+  "description": "## 机制与应用\n\nTypeBox 通过 builder 或 Type.Script 定义构建内存中的 JSON Schema 对象，并从定义解析 TypeScript 静态类型。模式可交给外部校验器，当前主包也提供 Schema 编译接口及 Check、Parse 等操作。Type.Script 解析传入的定义文本，不能解释为读取运行时已擦除的任意应用 interface。\n\n当前主包名为 typebox，旧 @sinclair/typebox 是仍维护的另一条 LTS 包线；导入路径、模块支持和 API 应按所用包线核对，迁移文档的历史示例不代表所有当前接口。当前主包的验证编译器使用 JIT，在受限环境可回退动态验证。虽然支持多个 JSON Schema 草案，仍需确认选定方言的语义以及目标工具的扩展兼容。\n\n## 参考\n\n- [TypeBox：当前主包、模式与验证器](https://github.com/sinclairzx81/typebox)\n- [Sinclair TypeBox：旧包与 LTS 路线](https://github.com/sinclairzx81/sinclair-typebox)\n- [TypeBox：1.0 包线迁移说明](https://github.com/sinclairzx81/typebox/blob/main/changelog/1.0.0-migration.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/sinclairzx81/typebox"
+}

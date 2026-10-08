@@ -1,0 +1,44 @@
+{
+  "id": "dockerfile",
+  "name": "Dockerfile",
+  "aliases": [
+    "Dockerfile 构建语言",
+    "容器镜像构建文件"
+  ],
+  "type": "language",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "multi-stage-build"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image",
+      "context": "FROM 使用指定基础镜像初始化构建阶段；FROM scratch 明确选择空基础。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-layer",
+      "context": "RUN、COPY、ADD 等文件系统变更由构建器形成镜像层；仅更新启动或环境配置的指令不等同于文件系统层。"
+    }
+  ],
+  "summary": "声明基础镜像、构建步骤和镜像启动配置的领域语言。",
+  "description": "Dockerfile 是描述镜像构建的领域语言，文件中的 FROM、RUN、COPY、ENV 等指令由相应构建器解释。FROM 选择基础镜像或 scratch 空基础并开始一个阶段，RUN 在构建过程中执行命令，COPY 把输入材料放入阶段文件系统；CMD 和 ENTRYPOINT 等则写入最终镜像的默认启动配置。构建时执行与启动时执行具有不同语义，配置指令也不会一律产生文件系统层。\n\n构建器同时接收 Dockerfile 和 build context；本地目录、远程 Git 或归档等上下文决定能够引用的输入。COPY 的源不能被理解为构建器可以任意读取宿主文件，忽略规则和显式命名上下文会进一步控制输入集合。重复 FROM 与 COPY --from 表达多阶段构建，可以只把编译产物带入最终阶段，也能用命名阶段选择构建目标。\n\n具体语法能力取决于构建器与 frontend。BuildKit 的 syntax 指令可选择 Dockerfile frontend，RUN 挂载缓存、secret 或 SSH 等扩展需相应实现支持。Buildah 的 Containerfile 使用相同基本语法，但实现扩展及版本能力仍须核对。Dockerfile 声明与构建输出格式是独立事项，同一构建过程可根据 exporter 生成镜像、目录文件或其他产物。\n\n## 参考\n\n- [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)\n- [Build Context](https://docs.docker.com/build/concepts/context/)\n- [Multi-stage Builds](https://docs.docker.com/build/building/multi-stage/)\n- [Buildah：Containerfile/Dockerfile 语法](https://raw.githubusercontent.com/podman-container-tools/buildah/main/docs/buildah-build.1.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://docs.docker.com/reference/dockerfile/"
+}

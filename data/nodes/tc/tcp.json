@@ -27,10 +27,11 @@
       "target_id": "udp"
     }
   ],
-  "summary": "面向连接的可靠字节流，拥塞控制长在内核里。",
+  "summary": "通过连接、确认和重传提供可靠有序字节流的传输协议。",
   "importance": 5,
   "popular": 92,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "TCP 定义面向连接、可靠且按序交付的字节流，通过序号、确认和重传等机制处理网络中的丢失与重排。流量控制保护接收端缓冲，拥塞控制应对网络负载；可靠交付不等于每个操作有墙钟期限，也不保证连接故障后仍然交付。\n\nTCP 字节流不保留应用发送调用的消息边界。应用必须定义帧长、分隔或业务编码，并处理部分读写、缓冲和关闭状态。建立连接、重传、队头等待和应用队列共同影响观测延迟，不能把可靠性或某个拥塞算法直接转换成固定的延迟结论。\n\n协议规范与具体网络栈应分开理解。Linux 内核 TCP 是一种实现，用户态栈也可以实现相同协议语义；拥塞控制并非在定义上只能位于内核。金融订单会话选择 TCP 时，还需要单独满足会话重连、序号和业务确认约定，不能从传输可靠性推导订单已被交易所接受。\n\n## 参考\n\n- [RFC 9293：TCP](https://www.rfc-editor.org/rfc/rfc9293.html)\n- [Linux tcp(7)](https://man7.org/linux/man-pages/man7/tcp.7.html)"
 }

@@ -1,0 +1,42 @@
+{
+  "id": "virtiofs",
+  "name": "virtiofs",
+  "aliases": [
+    "virtio-fs",
+    "虚拟机共享文件系统接口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "virtualization",
+    "systems-programming",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "virtualization-ecosystem",
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fuse",
+      "context": "文件操作请求基于 FUSE 消息与语义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "virtio",
+      "context": "通过 VIRTIO 文件系统设备队列承载宿主与客户机之间的请求。"
+    }
+  ],
+  "summary": "通过 VIRTIO 传递文件操作以共享宿主目录的接口。",
+  "description": "virtiofs 是宿主与虚拟机共享目录的文件级接口路线。客户机通过文件系统驱动访问宿主导出的目录，VIRTIO 文件系统设备负责承载基于 FUSE 的请求；宿主服务负责完成相应文件操作。此节点按接口规范建模，Linux 驱动和 virtiofsd 等具体实现不因此变成同一个协议实体。\n\n这种文件级共享与把整块虚拟磁盘交给客户机不同，也不需要先暴露一个传统网络文件服务器。缓存、权限、扩展特性与一致性仍取决于双方实现和配置；直接访问或其他优化不是所有环境都支持的固定能力，目标性能也不能当作每种工作负载的保证。\n\nWSLc 的 Windows 目录路线先在虚拟机内挂载 virtiofs，再把该路径绑定到容器。3.0.1 源码中的会话文件共享默认值是 VirtioFs。Windows 端修改是否形成客户机应用可见的 inotify 事件，需要对应实现和场景依据，不能由文件访问加速推出完整通知保证。\n\n## 参考\n\n- [Linux Kernel：virtiofs](https://docs.kernel.org/filesystems/virtiofs.html)\n- [virtio-fs 项目：Design](https://virtio-fs.gitlab.io/design.html)\n- [OASIS：VIRTIO 设备接口规范](https://docs.oasis-open.org/virtio/virtio/v1.3/virtio-v1.3.html)\n- [Microsoft：WSLc Architecture Deep Dive](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)\n- [WSL 3.0.1：WSLCUserSettings 默认设置](https://github.com/microsoft/WSL/blob/3.0.1/src/windows/common/wslc/settings/WSLCUserSettings.h#L100)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "official_site": "https://virtio-fs.gitlab.io/"
+}

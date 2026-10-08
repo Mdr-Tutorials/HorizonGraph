@@ -1,0 +1,50 @@
+{
+  "id": "colima",
+  "name": "Colima",
+  "aliases": [
+    "Colima 容器环境工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "virtualization",
+    "containerization"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "lima"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker-engine",
+      "context": "选择默认 Docker 后端时，在受管理 VM 中运行 Docker 引擎，供宿主客户端连接。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "containerd",
+      "context": "选择 containerd 后端时，在受管理 VM 内提供 containerd 容器环境。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nerdctl",
+      "context": "选择 containerd 后端时，以 colima nerdctl 或配置后的 nerdctl 连接管理容器。"
+    }
+  ],
+  "summary": "基于 Lima 配置本地容器运行环境的命令行工具。",
+  "description": "Colima 是在 macOS 和 Linux 上准备容器运行环境的工具，以 Lima 管理底层 VM，并提供资源、挂载、端口与 profile 配置。它是运行环境的管理层，所选 Docker、containerd 或 Incus 后端负责实际资源执行；Colima 本身不重新定义 OCI 运行时。\n\n默认后端为 Docker，宿主 Docker 客户端通过配置好的连接访问 VM 内引擎；选择 containerd 后端时可通过 colima nerdctl 管理容器。可选 Kubernetes 与多 profile 允许为不同项目准备不同资源布局。已有容器及镜像归属于具体实例和后端，不会因切换客户端而自动迁移。\n\nLinux 与 Intel、Apple Silicon macOS 在宿主能力、VM 驱动和架构上有所区别。配置模板和挂载选项决定客体能访问哪些宿主目录，VM 删除与重建会影响持久数据。Colima 不要求 Docker Desktop；同时使用多个引擎时应核对客户端 context 与 socket，避免管理错目标。\n\n## 参考\n\n- [Colima：支持平台与后端](https://github.com/abiosoft/colima)\n- [Colima：运行后端](https://colima.run/docs/runtimes/)\n- [Colima：Lima 依赖、profile 和连接配置](https://colima.run/docs/faq/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://colima.run/"
+}

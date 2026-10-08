@@ -1,0 +1,54 @@
+{
+  "id": "eu-algorithmic-trading-controls",
+  "name": "EU Algorithmic Trading Controls",
+  "aliases": [
+    "欧盟算法交易控制要求",
+    "MiFID II算法交易风控",
+    "RTS 6控制要求"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "pre-trade-risk-control",
+      "context": "对MiFID II Article 17与RTS6适用的投资公司算法交易，约束订单进入市场前的价格、金额、数量和消息控制及治理。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "trading-kill-switch",
+      "context": "对RTS6适用投资公司，要求能立即取消连接场所中的任意或全部未成交订单并识别责任主体；不强制一个单体按钮实现。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "market-surveillance",
+      "context": "对RTS6适用投资公司，约束对其系统内交易活动的自动化监控、交叉检查、告警处置和记录对账。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "audit-trail",
+      "context": "对适用算法/HFT活动，约束订单与交易记录、责任主体关联和可重建性；字段及范围按Article 17与RTS6相应条款确定。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "order-rate-limits",
+      "context": "RTS6 Article 15对适用投资公司规定最大消息限制及重复自动执行限制；不预设全EU产品统一每秒速率。"
+    }
+  ],
+  "summary": "按MiFID II与RTS6约束适用机构的算法交易控制。",
+  "description": "欧盟算法交易控制要求以MiFID II Article 17和Commission Delegated Regulation (EU) 2017/589（RTS6）为核心，对适用投资公司的算法交易治理、系统韧性、测试和风险控制作出规定。本节点汇集这一范围内的控制要求，不将法规充作wire协议，也不把算法交易和HFT术语视为完全相同的业务类别。\n\nRTS6规定交易前价格、数量、金额与消息控制，立即撤回未成交订单的kill功能，以及异常市场行为监控、实时控制和记录对账；上线、重大修改、容量和业务连续性也需要相应治理。外包算法或使用第三方执行工具不能自动转移该投资公司的适用责任。具体义务仍需按机构活动、资格与规则条款判断，不表示全部自营交易或所有技术供应商具有相同许可义务。\n\nESMA 2026年2月监管简报进一步解释控制校准、监控职责和第三方工具等问题，但明确自身非约束性，不能当作另一部法律或统一认证清单。EU规则变更也不能直接宣告英国本国保留法规已同步废止。业务时钟当前另由MiFIR Article 22c及2025/1155规定，不能沿用旧RTS25参数作为本节点的现行要求。\n\n## 参考\n\n- [ESMA法规入口：MiFID II Article 17 Algorithmic trading](https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-17-algorithmic-trading)\n- [EUR-Lex：Regulation (EU) 2017/589，算法交易组织与风险控制](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0589)\n- [ESMA：2026年算法交易监管简报（非约束性）](https://www.esma.europa.eu/sites/default/files/2026-02/ESMA74-1505669079-10311_Supervisory_Briefing_on_Algorithmic_Trading_in_the_EU.pdf)\n- [EUR-Lex：Regulation (EU) 2025/1155，Articles 11–16及Annex IV](https://eur-lex.europa.eu/eli/reg_del/2025/1155/oj/eng/pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

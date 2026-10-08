@@ -1,0 +1,46 @@
+{
+  "id": "blender",
+  "name": "Blender",
+  "aliases": [
+    "Blender 3D"
+  ],
+  "type": "tool",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "polygon-modeling"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "rigging"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "texture-baking"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gltf",
+      "context": "通过 glTF 导入导出器交换供三维运行时使用的网格、材质及动画。"
+    }
+  ],
+  "summary": "开源数字内容工具，集成建模、绑定、动画与渲染。",
+  "description": "Blender 是开源三维内容制作工具，提供建模、雕刻、纹理、绑定、动画、渲染和合成等功能。它可以保存完整制作场景，也能用于生成游戏、Web 三维展示和其他应用需要的模型、贴图与动画资产。\n\n制作文件与运行时交换文件具有不同用途。向 glTF 等格式导出时，应按导出器支持的材质、对象和动画表示组织内容，并在目标加载器中查看结果；工具专用节点网络、控制器或生成过程不一定完整传递。\n\n## 参考\n\n- [Blender 官方手册导览](https://docs.blender.org/manual/en/latest/)\n- [Khronos glTF 2.0 规范](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html)\n- [Blender glTF 导入导出机制](https://docs.blender.org/manual/en/2.80/addons/io_scene_gltf2.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.blender.org/"
+}

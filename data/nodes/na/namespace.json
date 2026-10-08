@@ -6,29 +6,32 @@
   "aliases": [
     "Linux 命名空间"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
-    "linux-gnu-ecosystem"
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
   ],
   "domains": [
     "systems-programming",
-    "cloud-infrastructure"
+    "cloud-infrastructure",
+    "containerization",
+    "security"
   ],
-  "abstraction_level": "kernel_os",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "platform"
+      "target_id": "os-mechanism"
     },
     {
       "relation_type": "part_of",
       "target_id": "linux-kernel"
     }
   ],
-  "summary": "把 PID、挂载、网络等隔离成容器的内核原语。",
+  "summary": "为进程隔离 Linux 资源视图的内核机制家族。",
   "importance": 4,
   "popular": 58,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Linux namespaces 是内核为进程维护资源视图的机制家族，使一组进程把某类共享资源看作自身的独立实例。PID、mount、network、user、IPC、UTS、cgroup 和 time 等命名空间分别覆盖不同对象；创建一种并不自动创建其余种类。这里的节点表示 Linux 机制，不与编程语言中的名称作用域或云平台中的同名组织对象合并。\n\nclone、unshare 和 setns 等接口用于创建、拆分或进入相应视图，但各类型的成员与权限规则不同。PID namespace 的加入影响后续子进程，user namespace 还关联身份映射和特权作用范围；/proc 下的命名空间引用可用于检查实际归属。命名空间的存续与成员、打开引用等因素有关，不能只凭某个管理进程退出便推断所有视图已销毁。\n\n容器运行时组合这些视图，并同时配置文件共享、capabilities、系统调用策略及资源预算。Namespace 不复制 Linux 内核，也不直接限制 CPU、内存或 I/O；cgroup namespace 主要改变控制组视图，不能替代 cgroup 控制器。共享宿主命名空间、可访问设备或管理套接字会改变隔离边界，不能将任何一类命名空间单独当作完整安全沙箱。\n\n## 参考\n\n- [Linux：namespace 类型、接口与生命周期](https://man7.org/linux/man-pages/man7/namespaces.7.html)\n- [Linux：user namespace 所属关系与权限](https://man7.org/linux/man-pages/man7/user_namespaces.7.html)"
 }

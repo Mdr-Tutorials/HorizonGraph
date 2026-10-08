@@ -1,0 +1,51 @@
+{
+  "id": "msw",
+  "name": "Mock Service Worker",
+  "aliases": [
+    "MSW 网络模拟库",
+    "MSW",
+    "Mock Service Worker"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem",
+    "node-js-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "通过 HTTP 请求处理器拦截应用调用并提供受控响应，用于开发与测试的网络模拟。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "graphql",
+      "context": "使用 GraphQL 操作处理器模拟查询和变更响应，供真实客户端代码在受控场景下执行。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "orval",
+      "context": "配置 Orval 的 MSW mock 输出后，可从 OpenAPI 生成处理器并交给 MSW 的浏览器或 Node.js 接口运行。"
+    }
+  ],
+  "summary": "在浏览器与 Node.js 中拦截请求并模拟 API 行为。",
+  "description": "Mock Service Worker（MSW）为应用提供独立的网络模拟层，通过请求处理器定义匹配条件与响应，让开发、组件测试和集成测试复用 API 场景。调用方可以继续使用实际的 fetch 或其他请求客户端；处理器能够模拟成功、错误、延迟等行为。MSW 支持 HTTP、GraphQL 以及相关实时交互的模拟能力，具体协议的处理接口各不相同。\n\n在浏览器中，MSW 利用 Service Worker 处理网络请求；在 Node.js 中则使用适合进程内请求拦截的机制，setupServer 不表示启动一个浏览器 Service Worker。setupWorker 与 setupServer 可以复用处理器，但启用方式与平台能力应分别配置。测试通常需要为单个场景覆写处理器，再恢复默认行为，防止上一条测试的模拟状态影响下一条。\n\nOrval 可以按 OpenAPI 描述生成 MSW 请求处理器，再交给浏览器或 Node.js 的 MSW 实例使用。这种生成有助于同步接口形状，但 MSW 本身没有自动执行真实提供者并验证消费者契约的流程。模拟响应可能同实际服务发生漂移；需要结合 Schema 校验、提供者测试或独立的契约验证建立证据，也不能把网络模拟等同于生产环境离线缓存。\n\n## 参考\n\n- [MSW：官方定位与平台机制](https://mswjs.io/docs/)\n- [MSW：浏览器集成](https://mswjs.io/guides/integrations/browser)\n- [MSW：Node.js 集成](https://mswjs.io/guides/integrations/node)\n- [Orval：生成 MSW 处理器](https://orval.dev/docs/guides/msw/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "abbreviation": "MSW",
+  "official_site": "https://mswjs.io/"
+}

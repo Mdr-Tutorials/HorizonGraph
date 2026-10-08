@@ -1,0 +1,105 @@
+{
+  "id": "microsoft-agent-framework",
+  "name": "Microsoft Agent Framework",
+  "aliases": [
+    "微软 Agent Framework",
+    "Microsoft AF"
+  ],
+  "type": "framework",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem",
+    "dotnet-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ai-agent",
+      "context": "通过代理接口组织模型、工具、上下文与会话执行。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-harness",
+      "context": "Python 与 .NET 的 Harness Agent 提供围绕模型循环的工具、上下文及会话支撑；各语言功能以对应 SDK 为准。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-session",
+      "context": "AgentSession 为连续代理调用提供可复用的会话容器。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-session-state",
+      "context": "AgentSession 的 StateBag 或 state 字段承载会话内的可变运行信息。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-session-persistence",
+      "context": "提供会话序列化与恢复接口；应用配置存储后可在进程重启后加载。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-checkpointing",
+      "context": "工作流保存执行器状态、共享状态、待处理消息和请求等检查点内容，用于恢复执行。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-event-stream",
+      "context": "代理与工作流提供流式运行接口，向调用者递交逐步执行结果和事件。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-handoff",
+      "context": "handoff 编排在选定参与代理之间转移处理控制权，并按自身规则同步相关会话消息。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sequential-agent-orchestration",
+      "context": "官方顺序编排接口将代理阶段按既定顺序连接执行。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "parallel-agent-orchestration",
+      "context": "官方 concurrent 编排并发运行代理分支并汇集结果。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agentic-workflow",
+      "context": "图工作流组合代理决策与确定性执行步骤，并提供恢复及外部响应机制。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "multi-agent-systems",
+      "context": "团队、handoff 和图工作流组件可组织多个代理协作完成任务。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "structured-output",
+      "context": "在支持的模型接口中声明响应模式，并将完成的模型结果解析为类型化结构。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-lifecycle-hooks",
+      "context": "通过请求、响应和工具等执行中间件开放处理及异常扩展点，接口粒度依 SDK 而定。"
+    }
+  ],
+  "summary": "提供代理运行、图工作流编排与执行恢复的微软开源框架。",
+  "description": "Microsoft Agent Framework 提供智能体与多智能体工作流的构建、运行和部署能力。它把模型与工具适配、会话、执行中间件和工作流接口组合起来，允许应用同时使用确定性步骤与模型决策；框架本身不同于所连接的模型服务和托管平台。\n\n官方项目提供 Python 和 .NET 实现，Go SDK 位于单独仓库，各语言的功能应按实际文档确认。工作流支持顺序、并发、handoff 和团队协作；会话可序列化，工作流检查点还保存待处理消息等执行信息，存储配置决定能否跨进程恢复。\n\n框架可连接不同供应商并采用可选托管、遥测或人机交互组件，不意味着所有部署硬依赖同一个云服务。AutoGen 与它是不同项目，现有系统迁移需要评估模型、工具、状态与团队接口；检查点和控制中间件也不自动消除外部工具副作用。\n\n## 参考\n\n- [Microsoft Agent Framework official repository](https://github.com/microsoft/agent-framework)\n- [Microsoft Agent Framework sessions](https://learn.microsoft.com/en-us/agent-framework/concepts/agents/conversations/session)\n- [Microsoft Agent Framework checkpoints](https://learn.microsoft.com/en-us/agent-framework/workflows/checkpoints)\n- [Microsoft Agent Framework handoff orchestration](https://learn.microsoft.com/en-us/agent-framework/workflows/orchestrations/handoff)\n- [Microsoft Agent Framework structured output sample](https://github.com/microsoft/agent-framework/blob/main/dotnet/samples/02-agents/Agents/Agent_Step02_StructuredOutput/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/microsoft/agent-framework"
+}

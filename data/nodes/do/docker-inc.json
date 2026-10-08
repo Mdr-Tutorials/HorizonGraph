@@ -8,22 +8,35 @@
   ],
   "type": "organization",
   "ecosystems": [
-    "virtualization-ecosystem"
+    "virtualization-ecosystem",
+    "container-ecosystem"
   ],
   "domains": [
     "cloud-infrastructure",
-    "devops"
+    "devops",
+    "containerization"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "docker-desktop",
+      "context": "公司提供组合容器工具与桌面集成的 Docker Desktop 产品。"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "docker-hub",
+      "context": "公司提供 Docker Hub 镜像仓库与内容分发服务。"
     }
   ],
-  "summary": "容器开发者工具 Docker 的商业公司。",
+  "summary": "提供 Docker 开发者产品与服务并参与开源容器项目的公司。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "official_site": "https://www.docker.com"
+  "official_site": "https://www.docker.com",
+  "description": "Docker, Inc. 是提供 Docker 开发者产品与服务的公司，与 Docker 命令行工具、Engine、Desktop 和容器概念分别建模。其产品包括用于本地开发与桌面集成的 Docker Desktop，以及用于发现、存储和分发镜像的 Docker Hub；不同产品的职责和接入 API 不同，公司的品牌名称不能代替具体组件的技术身份。\n\n公司同时参与开源容器工具发展。Docker 官方列出 Docker CLI、Compose、Buildx、Moby 和 BuildKit 等开源工具或维护项目，商业产品与社区组件之间存在组合和上游关系；不能把 Desktop 安装体验、仓库托管服务和每个开源仓库都当成同一个软件包。采用者需要按具体组件了解接口、更新与产品条件，而不能由共同品牌推导完全相同的许可或部署方式。\n\nDocker 的核心运行时工作拆出为 containerd 后进入 CNCF，Distribution 项目也在 2021 年由公司贡献给 CNCF，体现研发来源与后续托管的分工。公司参与 OCI 标准化及开放社区，并不拥有所有采用 OCI 的运行时或规范；商业提供、最初研发、持续贡献和正式治理应按各自证据分别表达。Docker Engine 控制 API 与 Hub 使用的仓库分发 API 同样需要分开核对兼容性。\n\n## 参考\n\n- [Docker：公司与产品](https://www.docker.com/company/)\n- [Docker：开源工具与维护项目](https://www.docker.com/community/open-source/)\n- [Docker：containerd 独立项目起源](https://www.docker.com/blog/introducing-containerd/)\n- [CNCF：接纳 containerd](https://www.cncf.io/announcements/2017/03/29/containerd-joins-cloud-native-computing-foundation/)\n- [Docker：2021 年贡献 Distribution 项目](https://www.docker.com/blog/donating-docker-distribution-to-the-cncf/)\n- [OCI：开放组织与规范](https://opencontainers.org/about/overview/)\n- [Docker：Engine API](https://docs.docker.com/reference/api/engine/)\n- [Docker：Hub Registry API](https://docs.docker.com/reference/api/registry/latest/)"
 }

@@ -1,0 +1,34 @@
+{
+  "id": "quote-driven-market",
+  "name": "Quote-Driven Market",
+  "aliases": [
+    "报价驱动市场",
+    "经销商报价市场"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bid-ask-spread",
+      "context": "在提供双向经销商报价的机制中，以买价和卖价之间的差额表达部分交易条件。"
+    }
+  ],
+  "summary": "通过经销商买卖报价组织交易对手与成交的市场方式。",
+  "description": "报价驱动市场以经销商或做市商愿意买入和卖出的报价组织交易，客户或其他参与者选择报价方成交。报价可以公开或仅向特定对手提供，是否具有可执行承诺、数量与信用条件由具体机制规定；电子展示不自动意味着订单能在公共簿中相互撮合。\n\n报价方需要管理库存和信息风险，买卖价差通常是交易条件的一部分。电子流式报价、询价与非电子沟通都是可能的交互形式；固定收益和外汇市场存在多种协议，不能把这一市场类型统一限定为人工或电话交易。\n\n市场也可混合报价和订单竞价。LSE 的 SETSqx 官方说明就把周期电子竞价簿与独立报价机制区分，SEAQ 报价服务也有自身执行边界。比较报价时必须保持产品、数量、交易对手和可执行性条件一致，屏幕最优价格未必对所有参与者均可用。\n\n## 参考\n\n- [LSE：SETSqx 与 SEAQ 的报价、竞价及混合市场](https://www.londonstockexchange.com/trade/equity-trading/trading-services/setsqx-and-seaq?lang=en)\n- [BIS：交易协议、订单簿与经销商市场的研究正文](https://www.bis.org/publ/mktc07.pdf)\n- [CME：EBS 订单簿与关系报价交易模式](https://www.cmegroup.com/markets/ebs.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

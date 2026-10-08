@@ -1,0 +1,41 @@
+{
+  "id": "schema-validation",
+  "name": "Schema Validation",
+  "aliases": [
+    "模式校验",
+    "模式验证",
+    "运行时模式校验",
+    "Runtime Schema Validation"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-services",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "采用 JSON 声明模式时，按选定方言解释结构和取值约束。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-schema",
+      "context": "在 TypeScript 工具集成中，可通过通用 validate 接口调用支持该规范的校验库。"
+    }
+  ],
+  "summary": "运行时按数据模式检查输入结构与约束，并报告不符合项。",
+  "description": "## 机制与应用\n\n模式校验把字段、类型、必填项、取值范围和组合规则写成可执行约束，在请求、配置或消息进入应用时检查实际数据。校验器可返回通过与否、错误路径及原因；采用解析式接口的库还可能提供转换后的输出。规则应明确采用的模式方言、未知字段策略以及同步或异步执行方式。\n\nTypeScript 的静态类型推断在编译期约束代码，不能代替对未知输入的运行时执行。校验、转换和授权也承担不同职责：字符串是否转为数字取决于库与配置，满足字段规则并不证明调用者有权操作资源。使用解析结果时，应区分原始输入与经过默认值、转换或删字段后的输出。\n\n## 参考\n\n- [JSON Schema：校验词汇](https://json-schema.org/draft/2020-12/json-schema-validation)\n- [Standard Schema：校验结果与输入输出接口](https://standardschema.dev/schema)\n- [Hono：请求数据校验](https://hono.dev/docs/guides/validation)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

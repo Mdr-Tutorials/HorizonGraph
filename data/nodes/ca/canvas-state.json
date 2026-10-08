@@ -1,0 +1,39 @@
+{
+  "id": "canvas-state",
+  "name": "Canvas Drawing State",
+  "aliases": [
+    "画布绘制状态",
+    "Canvas 状态栈"
+  ],
+  "type": "concept",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interactive-graphics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "affine-transform",
+      "context": "通过保存及恢复当前矩阵，把对象的局部平移、旋转与缩放限定在对应绘制范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clipping-path",
+      "context": "保存裁剪区域后执行局部 clip，再通过 restore 回到先前可绘制区域。"
+    }
+  ],
+  "summary": "Canvas 2D 中可压栈恢复的样式、变换及裁剪状态。",
+  "description": "Canvas 2D 的绘制状态包括当前变换、裁剪区域、颜色与线条样式、透明度及合成等属性。save 将状态压入栈，restore 恢复最近一份，适合让不同对象的局部绘制互不污染。\n\n状态快照不包含已经画出的位图，也不包含当前默认路径。restore 因而不能撤销画面或恢复 beginPath 之前的路径；交互编辑的撤销历史要保存应用模型或其他快照。尺寸重设会重置上下文，不能依靠旧状态栈继续绘制。\n\n## 参考\n\n- [MDN：Canvas 绘制状态栈](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/save)\n- [WHATWG：Canvas 与渲染上下文](https://html.spec.whatwg.org/multipage/canvas.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

@@ -16,12 +16,38 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "packet-capture",
+      "context": "通过实时采集工作流和 dumpcap 等组件提供采集功能。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "libpcap",
+      "context": "支持 libpcap 的 Unix 等实时采集路径，离线文件分析不依赖实时采集。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "npcap",
+      "context": "Windows 实时采集通常经 Npcap；依部署及驱动支持。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pcap-format",
+      "context": "读取和保存受支持的传统抓包文件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pcapng-format",
+      "context": "分析多接口及可选元数据抓包文件。"
     }
   ],
-  "summary": "图形化网络协议分析器，抓包排障的世界标准。",
+  "summary": "提供报文采集、文件分析和协议解码的网络诊断工具。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "official_site": "https://www.wireshark.org"
+  "official_site": "https://www.wireshark.org",
+  "description": "Wireshark 是网络协议分析工具，提供图形化浏览、协议解码与显示过滤。实时采集、文件解析和呈现分别有明确职责，命令行生态还包含 TShark 和 dumpcap；解码结果取决于捕获字节、协议解析器及可获得的会话信息。\n\n实时采集使用平台适配的采集后端，Unix 等路径可经 libpcap，Windows 通常使用 Npcap。采集过滤器决定哪些报文进入记录，显示过滤器筛选已取得的数据，两者不能互相替代。离线打开 pcap 或 pcapng 不要求拥有实时采集权限。\n\n加密报文不会因为被抓取就自动变成明文，解密要满足协议、密钥材料和授权条件。进行交易链路诊断时，应检查截取长度、采集丢失、卸载影响与时间戳来源；工具能展示记录和派生统计，不能单凭时间字段位数证明跨主机同步精度或完整的订单处理时延。\n\n## 参考\n\n- [Wireshark 用户指南](https://www.wireshark.org/docs/wsug_html/)\n- [Wireshark 功能与边界](https://www.wireshark.org/docs/wsug_html_chunked/ChapterIntroduction.html)\n- [Wireshark 时间戳说明](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTimestamps.html)\n- [Npcap API 指南](https://npcap.com/guide/npcap-api.html)"
 }

@@ -8,7 +8,8 @@
   "type": "product",
   "ecosystems": [
     "unreal-engine-ecosystem",
-    "graphics_gaming"
+    "graphics_gaming",
+    "game-runtime-ecosystem"
   ],
   "domains": [
     "game-development",
@@ -21,18 +22,41 @@
       "target_id": "product"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "cpp"
-    },
-    {
       "relation_type": "developed_by",
       "target_id": "epic-games"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-engine"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-scene"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-loop"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "asset-loading"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resource-lifecycle",
+      "context": "在使用 Asset Manager 的加载和卸载接口及 Streamable Handle 时，控制资产驻留与释放；具体加载策略由项目配置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpp",
+      "context": "在编写原生游戏系统、扩展底层功能或向 Blueprint 暴露接口的项目中使用 C++；官方亦支持只用 Blueprint 的项目。"
     }
   ],
-  "summary": "以 C++ 为核心的高保真游戏引擎，也在影视与仿真里用。",
+  "summary": "以关卡、Actor、组件和 Blueprint/C++ 组织游戏的引擎。",
   "importance": 4,
   "official_site": "https://www.unrealengine.com",
-  "last_reviewed": "2026-08-29",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Unreal Engine 通过 Level 放置 Actor，由组件提供空间变换、渲染、碰撞、声音或玩法功能。Actor 的空间位置由根场景组件承接，组件层级表达局部与整体的变换关系。Blueprint 可将组件和事件逻辑保存为可复用类，C++ 可以定义系统并把接口开放给 Blueprint，两种路径可独立采用或组合。\n\nActor 与组件的 Tick 参与帧更新，可配置执行间隔、启停、Tick Group 和前置依赖。物理前、物理中、物理后的组划分决定所读状态属于哪个阶段，因此需要与物理结果一致的玩法逻辑不能随意安排回调。Asset Manager 与 Streamable Manager 支持按资产身份发现、异步加载并通过句柄管理驻留，项目仍需决定何时加载和卸载。\n\n官方明确支持只用 Blueprint 或只用 C++ 的项目；引擎内部的 C++ 实现与开发者是否编写 C++、用户设备是否安装编译器是不同层次。Blueprint 的执行开销与 C++ 的扩展能力各有适用场景，性能取决于实际工作负载和配置，不宜把语言选择等同于固定性能结论。\n\n## 参考\n\n- [Epic：Actors in Unreal Engine](https://dev.epicgames.com/documentation/unreal-engine/actors-in-unreal-engine)\n- [Epic：Coding in UE, Blueprint vs. C++](https://dev.epicgames.com/documentation/unreal-engine/coding-in-unreal-engine-blueprint-vs-cplusplus)\n- [Epic：Actor Ticking](https://dev.epicgames.com/documentation/en-us/unreal-engine/actor-ticking-in-unreal-engine)\n- [Epic：Asset Management](https://dev.epicgames.com/documentation/en-us/unreal-engine/asset-management-in-unreal-engine)"
 }

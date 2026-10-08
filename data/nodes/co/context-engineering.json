@@ -13,12 +13,13 @@
   ],
   "domains": [
     "machine-learning",
-    "natural-language-processing"
+    "natural-language-processing",
+    "agent-development"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "agent-systems-concept"
     },
     {
       "relation_type": "uses",
@@ -34,13 +35,23 @@
       "relation_type": "uses",
       "target_id": "rag",
       "context": "通过检索按需获取外部资料并组织进模型上下文。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-budgeting",
+      "context": "构造模型输入时为约束、历史、检索资料和工具结果分配可用 token 空间。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-compaction",
+      "context": "长期任务的历史过大时，用摘要与筛选减少后续模型可见内容。"
     }
   ],
   "summary": "组织指令、历史、工具结果和检索内容，构造模型所需上下文。",
-  "description": "上下文工程管理一次模型调用可见的信息，包括指令、检索资料、对话状态和工具反馈。常见工作有筛选、压缩、排序与按需加载，目标是在有限上下文中保留对任务有用的信息。来源可信度与工具权限也需要单独处理。\n\n参考：[权威资料](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)。",
+  "description": "上下文工程为一次模型调用组织可见信息，包括系统与任务指令、历史、结构化状态、工具定义、检索资料及操作反馈。它关注信息选择、排列、表示和更新，而不仅是写一段提示；存储中的完整记录与模型当轮可见内容可以不同。\n\n常用方法是分配上下文预算、按需加载资料、缩短工具结果、整理历史，以及为专门子代理构造独立上下文。选择方法需要依据任务、模型窗口和信息质量，长期任务还应保留目标、未完成步骤及关键证据，以便后续决策继续有依据。\n\n更大窗口不保证模型能同样准确地利用每条信息，压缩也可能丢失重要细节。上下文管理因此需要与状态、记忆和原始证据存储配合；信息是否可信、指令能否改变权限，以及工具动作是否允许执行，需要由独立规则处理。\n\n## 参考\n\n- [Anthropic: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)\n- [Gemini API token counting](https://ai.google.dev/gemini-api/docs/tokens)\n- [ADK context compaction](https://adk.dev/context/compaction/)\n- [Antigravity SDK subagents](https://www.antigravity.google/docs/sdk/subagents/)",
   "importance": 4,
   "official_site": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active"
 }

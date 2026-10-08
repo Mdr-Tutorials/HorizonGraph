@@ -1,0 +1,44 @@
+{
+  "id": "image-index",
+  "name": "Image Index",
+  "aliases": [
+    "镜像索引",
+    "Image Index",
+    "镜像清单列表"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-image-spec",
+      "context": "OCI 镜像索引使用规范约定的 manifests 描述符列表、平台元数据与嵌套索引规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-manifest",
+      "context": "索引引用各平台候选镜像的清单，由消费者选出满足目标平台要求的内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image-digest",
+      "context": "索引通过描述符摘要引用子清单或嵌套索引，索引自身也可按其字节摘要定位。"
+    }
+  ],
+  "summary": "聚合镜像清单并提供平台选择信息的上层文档",
+  "description": "## 机制与边界\n\n镜像索引是引用其他清单的上层内容文档，OCI Image Index 使用 manifests 数组保存这些内容描述符。它使同一个镜像引用可以提供不同平台的候选镜像，而无需把不同架构的全部文件放进同一个文件系统。Docker 的 manifest list 承担相近的聚合职责，但其媒体类型与 OCI Image Index 应按实际文档区分。\n\n索引条目的 platform 信息描述操作系统、处理器架构及可选变体等要求，客户端据此选择适合目标平台的清单。OCI 中 platform 字段是可选的，对平台相关内容建议提供；多个条目匹配时，规范建议使用首个匹配条目。选中的清单再引用其独立的配置与文件系统层。\n\n索引不等同于“至少包含两种架构的镜像”：OCI 允许 manifests 为空，也可只包含一个条目，并允许支持嵌套索引。它是一种内容聚合结构，多平台发布只是典型应用。检查一次部署实际拉取了什么时，应同时区分索引摘要、选中清单摘要和层摘要，避免把这些标识当成同一对象。\n\n## 参考\n\n- [OCI：Image Index](https://raw.githubusercontent.com/opencontainers/image-spec/main/image-index.md)\n- [OCI：Image Manifest](https://raw.githubusercontent.com/opencontainers/image-spec/main/manifest.md)\n- [Docker：多平台镜像结构与选择](https://docs.docker.com/build/building/multi-platform/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

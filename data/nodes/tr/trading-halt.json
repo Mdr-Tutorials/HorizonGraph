@@ -1,0 +1,34 @@
+{
+  "id": "trading-halt",
+  "name": "Trading Halt",
+  "aliases": [
+    "交易暂停",
+    "交易停牌",
+    "交易中断状态"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "algorithmic-trading",
+      "context": "在策略交易的具体证券或市场进入halt时，约束执行模块对连续成交、订单可用性和重开阶段的假设；是否允许新单或撤单按该场所状态处理。"
+    }
+  ],
+  "summary": "由场所或适用规则改变证券或市场可交易状态。",
+  "description": "交易暂停是证券或市场暂时不能按通常连续交易方式执行成交的状态，可由消息发布、监管关注、系统问题、波动控制或其他场所规则触发。它通常具有原因码、开始状态和恢复流程；不同场所对接受新单、允许撤单、显示报价和重开竞价的处理并不完全相同。\n\nNasdaq的官方状态代码区分新闻待发布、监管暂停、波动暂停和恢复报价/恢复交易等情形，说明“暂停成交”不能简单等同于“任何订单消息都被拒绝”。市场级熔断与单证券LULD也可以引发暂停，但触发条件和影响范围不同。SEC的法定交易停止等行政措施另有主体和期限，不能把一般场所halt的操作语义直接代入。\n\n交易程序需要依据权威市场状态和接口回报切换执行行为，并持续对账已经发生的成交及尚未撤回的委托。暂停后的重新开放可能通过竞价完成，原有挂单是否保留或重定价取决于场所；本地收到恢复通知也不意味着在所有交易场所同时恢复相同流动性。\n\n## 参考\n\n- [Nasdaq Trader：交易暂停和恢复状态代码](https://www.nasdaqtrader.com/Trader.aspx?id=TradeHaltCodes)\n- [NYSE：Trading Information，LULD与市场级熔断](https://www.nyse.com/trade/trading-information)\n- [CME官方Client Systems Wiki：Market Integrity Controls](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216065/Market+Integrity+Controls)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

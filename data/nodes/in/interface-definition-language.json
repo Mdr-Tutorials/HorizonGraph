@@ -1,0 +1,29 @@
+{
+  "id": "interface-definition-language",
+  "name": "Interface Definition Language",
+  "aliases": [
+    "接口定义语言",
+    "IDL"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    }
+  ],
+  "summary": "独立声明服务操作与数据类型，支撑多语言工件生成。",
+  "description": "接口定义语言以独立的声明描述可调用服务、方法、参数和消息结构，使接口边界可以在多个编程语言中实现。Protocol Buffers 的 proto 声明、Smithy 的服务模型和 TypeSpec 的 API 定义都体现这一作用，但各自的类型、约束、协议绑定与生成工具不同。IDL 是一类语言用途；本节点不把这些不同语言当作一个共同传输协议。\n\n编译器或生成器可以从声明产生消息类型、客户端存根、服务接口和接口描述。生成代码仍需要业务实现及目标运行库，模型本身也需要管理兼容性和各语言映射差异。声明字段形状不自动表达全部业务约束、访问控制或重试语义，这些能力必须由相应语言扩展、协议约定和运行时代码承载。\n\n## 参考\n\n- [Smithy：服务接口定义语言](https://smithy.io/2.0/spec/index.html)\n- [Protocol Buffers：格式与生成代码](https://protobuf.dev/overview/)\n- [TypeSpec：OpenAPI 发射器](https://typespec.io/docs/emitters/openapi3/openapi/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abbreviation": "IDL"
+}

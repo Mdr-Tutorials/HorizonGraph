@@ -18,11 +18,22 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pcap-format",
+      "context": "将采集记录保存为传统 pcap 文件时采用该文件结构。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pcapng-format",
+      "context": "需要多接口和可选元数据的保存路径可采用 pcapng。"
     }
   ],
-  "summary": "在网卡或网络接口镜像链路上实时捕获经过的原始通信报文并保存以供协议分析排障的技术。",
+  "summary": "在指定观测点获取报文及元数据，用于网络诊断与分析。",
   "importance": 5,
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08"
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "description": "报文采集是在选定观测点取得通信数据并交给分析器或保存文件的过程。接口选择、采集过滤器和截取长度决定能看到哪些字节；实时采集与读取既有抓包文件不同，后者不能扩展原来的可见范围。\n\n采集缓冲、消费者速度和内核或驱动路径可能造成丢包。校验和卸载、分段合并及虚拟网络路径还可能让记录与物理链路的报文表现不同，因此抓包文件不是默认完整的线上事实副本。排查异常时应同时记录观测点、丢包统计和相关卸载设置。\n\n记录时间戳要说明产生位置、时钟来源、单位与同步状态。纳秒字段只说明表达分辨率，不能证明硬件采集精度或两台机器时钟一致。低延迟交易分析可把采集作为证据之一，但计算端到端时延仍需定义事件边界并校验时钟与采集路径。\n\n## 参考\n\n- [libpcap 官方 API 手册源文件](https://github.com/the-tcpdump-group/libpcap/blob/master/pcap.3pcap.in)\n- [Wireshark 功能与边界](https://www.wireshark.org/docs/wsug_html_chunked/ChapterIntroduction.html)\n- [Wireshark 时间戳说明](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTimestamps.html)"
 }

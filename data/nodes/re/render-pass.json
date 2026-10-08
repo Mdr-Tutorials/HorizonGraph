@@ -1,0 +1,38 @@
+{
+  "id": "render-pass",
+  "name": "Render Pass",
+  "aliases": [
+    "渲染通道",
+    "绘制通道"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "render-target",
+      "context": "指定绘制的颜色、深度等附件及其开始和结束时的内容处理规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "draw-call",
+      "context": "在有效通道和兼容管线状态下编码面向附件的绘制命令。"
+    }
+  ],
+  "summary": "组织一组向指定附件绘制的命令及存取规则。",
+  "description": "渲染通道组织一组向指定附件执行的绘制工作，规定颜色、深度等输出以及开始和结束时如何处理其内容。常见设置包括加载或清除、写后存储，以及多重采样解析；通道内部可切换兼容管线并编码多项绘制。\n\nWebGPU 和 Metal 用相应 encoder 表达通道内绘制，Vulkan 还存在渲染通道对象、子通道及动态渲染等形式。它们围绕附件和绘制范围提供组织方式，但对象布局、同步和生命周期规则不完全相同；高层框架所称效果 pass 也不必等于一次底层 API 通道。\n\n把阴影、场景颜色和后处理分为若干步骤有助于明确资源流向，但仅划分步骤不保证写入对后续读取可见。应遵守后端的同步、资源用途和附件格式规则，并减少不必要的加载、存储和通道切换。\n\n## 参考\n\n- [Vulkan Render Pass](https://docs.vulkan.org/spec/latest/chapters/renderpass.html)\n- [Apple Metal Render Passes](https://developer.apple.com/documentation/metal/render-passes)\n- [WebGPU Render Pass Encoder](https://www.w3.org/TR/webgpu/#render-pass-encoder)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

@@ -1,0 +1,46 @@
+{
+  "id": "smart-order-routing",
+  "name": "Smart Order Routing",
+  "aliases": [
+    "智能订单路由",
+    "智能路由",
+    "SOR"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "在订单簿型场所路由时，使用可获得的盘口价格与数量评估候选目的地；不把显示盘口等同于全部可成交流动性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "maker-taker-fees",
+      "context": "比较场所净交易条件时，将适用的 maker/taker 费用、返佣及账户费率纳入路由决策。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-gateway",
+      "context": "选择目的地后，通过相应场所或券商网关提交子单并根据回报更新路由状态。"
+    }
+  ],
+  "summary": "按可访问流动性与执行约束选择订单目的地的方法",
+  "description": "智能订单路由（SOR）根据多个可访问交易场所的报价、数量、费用和执行条件选择订单目的地。它解决在哪里及如何分配子单的问题，与决定整体执行时间轨迹的母单调度、或者交易所内部撮合优先规则不同。\n\n路由可以持续重评估行情，分配或重新路由部分数量，并结合成交概率、延迟和可访问权限。IBKR 的实际 SmartRouting 说明纳入场所费用及返佣，也指出只能路由至有交易权限的场所；这些因素使最优屏幕报价不必等同于最优净执行结果。\n\n路由目标与约束依客户指令、资产类别和适用场所规则而变。多处同时发单可能出现超量成交或某一腿先成交，过期行情也可能使预期机会消失；SOR 不保证访问全市场、成交在最佳历史报价或实现任意监管意义上的最佳执行。\n\n## 参考\n\n- [IBKR：SmartRouting 的场所选择和费用因素](https://www.interactivebrokers.com/en/trading/smart-routing.php)\n- [IBKR UK：Order Execution Policy](https://www.interactivebrokers.com/en/accounts/legalDocuments/mifidExecPolicy.php)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "SOR"
+}

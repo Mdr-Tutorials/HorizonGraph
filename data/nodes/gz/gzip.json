@@ -11,18 +11,25 @@
   ],
   "domains": [
     "devops",
-    "networking"
+    "networking",
+    "web-services"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
+      "relation_type": "uses",
+      "target_id": "huffman",
+      "context": "gzip 成员采用 DEFLATE 的压缩块时，以 Huffman 编码表示字面量、长度与距离；DEFLATE 同时允许未压缩块。"
+    },
+    {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "protocol"
     }
   ],
-  "summary": "Deflate 压缩的实现，HTTP 传输压缩的老将。",
+  "summary": "封装压缩数据、元信息与校验值的格式，可用于文件及 HTTP 内容编码。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-06",
-  "importance": 3
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "description": "gzip 是 RFC 1952 定义的压缩数据格式，由一个或多个成员组成，每个成员包括头部、压缩载荷与尾部。常用压缩方法编号 8 表示 DEFLATE，尾部记录 CRC32 和未压缩长度的低 32 位。格式、DEFLATE 算法以及同名压缩程序是三个相关但不同的对象，gzip 本身不属于网络传输协议。\n\nDEFLATE 的压缩块结合重复字符串引用与 Huffman 编码，也允许保存未压缩块；gzip 在其外面提供成员边界、元信息与校验包装。CRC32 用于检测数据损坏，不提供密码学身份认证或防篡改保证，且格式并不为任意位置随机访问提供索引。\n\nHTTP 可用 Content-Encoding: gzip 表达表示内容经过 gzip 编码，并通过 Accept-Encoding 协商客户端接受的编码。它压缩的是内容，不等于 HTTP/2 或 HTTP/3 的字段压缩，也不等于传输加密；能否减少总体成本取决于数据可压缩性与编码、解码开销。\n\n## 参考\n\n- [RFC 1952：GZIP file format specification](https://www.rfc-editor.org/rfc/rfc1952.html)\n- [RFC 1951：DEFLATE compressed data format](https://www.rfc-editor.org/rfc/rfc1951.html)\n- [RFC 9110 §8.4：Content-Encoding](https://www.rfc-editor.org/rfc/rfc9110.html#section-8.4)"
 }

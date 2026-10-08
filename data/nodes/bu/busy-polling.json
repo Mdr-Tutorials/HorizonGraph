@@ -1,0 +1,35 @@
+{
+  "id": "busy-polling",
+  "name": "Busy Polling",
+  "aliases": [
+    "忙轮询",
+    "主动轮询",
+    "Busy Poll"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpu-affinity",
+      "context": "在采用专用轮询线程时可安排其CPU位置，减少迁移并避免挤占关联处理线程；并非所有轮询都必须绑核。"
+    }
+  ],
+  "summary": "持续检查事件或完成状态，用CPU占用换取部分唤醒等待的减少。",
+  "description": "忙轮询让执行线程反复检查设备、队列或完成状态，而不是每次没有事件就休眠并等待中断唤醒。它可缩短某些等待路径，但会消耗CPU周期和功耗。轮询事件是否到达与自旋锁等待锁所有权属于不同用途，两者都不能仅凭不休眠就称为无锁算法。\n\nLinux网络NAPI busy polling可让应用在设备中断触发前检查接收工作；SO_BUSY_POLL、相关sysctl和某些epoll接口提供有条件的配置。epoll方式需匹配NAPI ID等要求，并考虑驱动与内核支持。网络接收轮询、io_uring提交队列轮询和存储完成轮询不是同一个配置开关。\n\n轮询预算、事件批量和退出策略共同影响延迟、吞吐及公平性。持续占满一个核心可能挤压生产者、维护线程或同核心SMT任务；流量很低时收益也可能小于资源成本。需要在相同目标负载下比较分布，允许采用先短轮询再休眠等实现，而不是默认轮询必然更快。\n\n## 参考\n\n- [Linux：NAPI busy polling 与 epoll 条件](https://docs.kernel.org/networking/napi.html)\n- [Linux man-pages：SQPOLL、IOPOLL 与版本条件](https://man7.org/linux/man-pages/man2/io_uring_setup.2.html)\n- [Linux：网络 busy_poll 与 busy_read 配置](https://docs.kernel.org/admin-guide/sysctl/net.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

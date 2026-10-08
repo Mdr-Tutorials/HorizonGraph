@@ -1,0 +1,31 @@
+{
+  "id": "unified-diff",
+  "name": "Unified Diff",
+  "aliases": [
+    "统一差异格式",
+    "统一补丁格式",
+    "Unidiff"
+  ],
+  "type": "protocol",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "用文件头、上下文和增删行块表示文本差异。",
+  "description": "统一差异格式以旧文件和新文件头开始，随后用行块表示变化位置；行块包含上下文、删除行和新增行，便于阅读及按上下文应用文本修改。它是一种差异交换表示，不是语法树或对代码行为的解释。\n\n行块头记录两侧起始位置与行数，空格、减号和加号前缀分别标记上下文、删除和新增。Git 的补丁文本还会加入文件模式、重命名与对象标识等扩展头；这些扩展不能被简化为只有两份文本的普通逐行比较。\n\n补丁能否应用取决于目标文件和上下文匹配，成功应用也不保证程序正确。二进制差异和合并提交的 combined diff 有不同表示；Git 明确说明 combined diff 为合并变更审查而设计，不应当作普通统一补丁直接喂给 patch。\n\n## 参考\n\n- [GNU Diffutils：统一差异格式与行块](https://www.gnu.org/software/diffutils/manual/diffutils.html#Unified-Format)\n- [Git：补丁文本、扩展头与合并差异](https://git-scm.com/docs/diff-format)\n- [VS Code：审查代理修改、检查点与 worktree 集成](https://code.visualstudio.com/docs/agents/run/review-code-edits)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.gnu.org/software/diffutils/manual/diffutils.html#Unified-Format"
+}

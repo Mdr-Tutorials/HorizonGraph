@@ -11,7 +11,8 @@
     "web_frontend"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "browser-automation"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -25,29 +26,34 @@
     },
     {
       "relation_type": "embeds",
-      "target_id": "blink"
+      "target_id": "blink",
+      "context": "限定采用 Chromium 引擎的 Chrome 构建；不同操作系统发行版的引擎要求与实现边界需按平台核对。"
     },
     {
       "relation_type": "embeds",
-      "target_id": "v8"
+      "target_id": "v8",
+      "context": "限定采用 Chromium 引擎的 Chrome 构建；不同操作系统发行版的引擎要求与实现边界需按平台核对。"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "html"
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "浏览器把 HTML 文档解析为 DOM 并进行页面布局、渲染与交互；HTML 是处理对象，不是可链接的软件运行库。"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "http"
+      "relation_type": "implements",
+      "target_id": "http",
+      "context": "浏览器网络栈实现 HTTP 请求、响应和缓存等客户端协议行为；不是对某个 HTTP 软件包的直接构建依赖。"
     },
     {
       "relation_type": "competes_with",
       "target_id": "firefox"
     }
   ],
-  "summary": "市场份额最大的浏览器，Blink 与 V8 的出货通道。",
+  "summary": "Google 的 Web 浏览器，提供页面运行、扩展和内置开发工具。",
   "importance": 5,
   "official_site": "https://www.google.com/chrome/",
-  "last_reviewed": "2026-08-29",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Google Chrome 是 Google 提供的跨平台 Web 浏览器，包含页面浏览、标签页、扩展、安全与账号相关功能。Chromium 提供相应开源浏览器技术基础，Chrome 则是面向用户发行和提供支持的具体产品。网站、扩展和浏览器的更新机制不同，产品能力及支持范围应按所用操作系统和版本核对。\n\n采用 Chromium 引擎的 Chrome 构建结合 Blink 页面解析与布局、V8 JavaScript 执行以及浏览器的网络、进程和安全机制。HTML 是浏览器处理的文档语言，HTTP 是网页资源请求所用协议，这些职责应与链接某个软件库的构建依赖区分。不同系统的浏览器实现存在平台约束，不应把某一桌面构建的所有内嵌组件无条件套到每个移动发行版。\n\nChrome DevTools 是浏览器内置的开发工具集合，帮助开发者检查页面结构、网络、脚本和性能。Chrome DevTools MCP 则是外部工具进程，通过自动化和开发工具能力把受支持的 Chrome 实例暴露给代理；它既不是浏览器自身，也不意味着 Chrome 内嵌 MCP 服务器。代理取得网页状态、修改页面与验证用户实际体验是不同环节，应结合操作结果和性能实验条件判断。\n\n## 参考\n\n- [Google：Chrome 浏览器与支持入口](https://www.google.com/chrome/)\n- [Chromium：Blink 与 V8 的工程职责](https://www.chromium.org/developers/core-principles/)\n- [Chrome：内置 DevTools 的检查能力](https://developer.chrome.com/docs/devtools/overview/)\n- [Chromium：网络栈的 HTTP 实现](https://www.chromium.org/developers/design-documents/network-stack/)\n- [Chromium：HTML 渲染与多进程边界](https://www.chromium.org/developers/design-documents/multi-process-architecture/)"
 }

@@ -1,0 +1,41 @@
+{
+  "id": "cpu-affinity",
+  "name": "CPU Affinity",
+  "aliases": [
+    "CPU亲和性",
+    "处理器亲和性",
+    "线程绑核",
+    "CPU绑定"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "thread",
+      "context": "在Linux中为具体线程设置允许运行的逻辑CPU集合，多线程程序应逐线程检查。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numa",
+      "context": "为局部性优化选择CPU时，结合所访问页面的NUMA节点与设备位置。"
+    }
+  ],
+  "summary": "限定线程允许运行的CPU集合，需结合内存拓扑与共享资源评估。",
+  "description": "CPU亲和性限定任务允许被调度到的逻辑CPU集合，常用于减少迁移或安排工作线程与设备处理路径。在Linux中，sched_setaffinity作用于线程，设置进程中一个线程的掩码不自动完成所有线程的绑定。单CPU掩码也没有为该线程独占CPU，其他可运行任务仍可能竞争。\n\n线程位置应结合NUMA内存位置、设备队列和硬件拓扑安排。固定在某CPU但访问另一个NUMA节点的页面，可能增加远程内存代价；同一物理核心的SMT线程还可能共享执行和缓存资源。亲和集合也受CPU在线状态及cpuset允许范围约束，程序应检查实际有效配置。\n\n亲和性可能改善局部性和可重复性，也会限制调度器平衡负载的自由，使排队或热点更严重。它不关闭中断、内核工作或固件噪声，与CPU隔离的目标和配置不同。评估时应同时记录迁移、内存放置、吞吐和延迟分布，避免把一次绑定后的改善当成通用保证。\n\n## 参考\n\n- [Linux man-pages：线程 CPU 亲和性](https://man7.org/linux/man-pages/man2/sched_setaffinity.2.html)\n- [Linux：NUMA 内存策略与分配范围](https://docs.kernel.org/admin-guide/mm/numa_memory_policy.html)\n- [Linux：CPU 隔离、housekeeping 与残留噪声](https://docs.kernel.org/admin-guide/cpu-isolation.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

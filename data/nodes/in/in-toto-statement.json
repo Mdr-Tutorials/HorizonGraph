@@ -1,0 +1,42 @@
+{
+  "id": "in-toto-statement",
+  "name": "in-toto Statement",
+  "aliases": [
+    "in-toto 声明格式",
+    "Statement v1",
+    "in-toto Statement v1"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "以 JSON 表达 _type、subject、predicateType 与 predicate；字段含义由 Statement 及相应 predicate 规范决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sha-2",
+      "context": "subject 可采用 SHA-256 等内容摘要绑定工件，消费方据该算法重新计算并匹配实际内容。"
+    }
+  ],
+  "summary": "将工件摘要与有明确类型的 predicate 绑定的声明格式。",
+  "description": "in-toto Statement 是供应链 attestation 体系中的声明层数据规范，将所述工件与关于它们的元数据绑定。它具有独立规范及清晰字段，适合作为单独的交换格式节点。in-toto 框架的执行与验证工具、经典 layout/link 元数据和 Statement 数据格式是相关但不同的实体，不能把框架名称当作唯一的数据格式名称。\n\nv1 声明通过 _type 标记 Statement 类型；subject 包含所述工件的摘要，predicateType 使用 URI 识别元数据的语义，predicate 承载该类型规定的内容。subject 中的名称不能代替摘要匹配，验证应以实际内容摘要判断声明是否适用于目标。SLSA 的构建来源是一个 predicate 类型，其他用途可以采用各自定义的 predicate。\n\nStatement 本身不提供签名算法或可信签署者目录，认证由外层封装及相应签名验证完成。验证者还要检查接受的 predicateType、理解 predicate 的语义，并核查声明者是否有权作出该类声明。结构验证、外层签名验证、工件摘要匹配和事实可信性是不同层次，格式正确且签名有效的 Statement 仍可能包含不符合政策的内容。\n\n## 参考\n\n- [in-toto：Statement v1 字段与匹配语义](https://github.com/in-toto/attestation/blob/main/spec/v1/statement.md)\n- [SLSA 1.2：声明层与认证封装](https://slsa.dev/spec/v1.2/attestation-model)\n- [SLSA 1.2：构建来源 predicate](https://slsa.dev/spec/v1.2/build-provenance)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/in-toto/attestation/blob/main/spec/v1/statement.md"
+}

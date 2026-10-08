@@ -1,0 +1,46 @@
+{
+  "id": "workerd",
+  "name": "workerd",
+  "aliases": [
+    "Cloudflare workerd"
+  ],
+  "type": "tool",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "cloudflare"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "v8"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fetch-api"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runtime-compatibility",
+      "context": "通过配置兼容日期选择 API 行为，使运行时升级与应用采用新语义的时间分开。"
+    }
+  ],
+  "summary": "Cloudflare 开源的 JavaScript 与 WebAssembly 服务器运行时。",
+  "description": "workerd 是 Cloudflare 开源的 JavaScript 与 WebAssembly 服务器运行时，使用与 Cloudflare Workers 相同的运行时代码基础。它面向 HTTP 服务和 Fetch 风格的处理程序，可作为自托管应用服务器、本地开发测试环境或可编程 HTTP 代理；它不是以通用命令行脚本或桌面应用为主要目标的宿主。\n\nworkerd 嵌入 V8 执行代码，用配置描述服务、连接及能力绑定，允许多个服务在同一进程中协作。兼容日期选择相应的 API 行为配置，便于程序在运行时演进后继续采用既有语义。Wrangler 的本地开发通过 Miniflare 使用 workerd，因而能够接近 Workers 的代码执行路径。\n\n自托管 workerd 不会自动附带 Cloudflare 托管平台的全部云资源和分布式运营能力，本地服务替身也不等同于线上资源。项目文档还明确区分运行时提供的隔离机制与完整的安全部署：独立 workerd 本身不是对任意不可信代码的完整强化沙箱，部署者需要按应用场景配置额外的隔离层。\n\n## 参考\n\n- [Cloudflare workerd：项目文档](https://github.com/cloudflare/workerd/blob/main/README.md)\n- [Cloudflare：Workers 本地开发](https://developers.cloudflare.com/workers/local-development/)\n- [Cloudflare：兼容日期](https://developers.cloudflare.com/workers/configuration/compatibility-dates/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://github.com/cloudflare/workerd"
+}

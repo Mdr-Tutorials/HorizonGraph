@@ -1,0 +1,40 @@
+{
+  "id": "mount-namespace",
+  "name": "Linux Mount Namespace",
+  "aliases": [
+    "挂载命名空间",
+    "mount namespace",
+    "mnt namespace"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "namespace"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "user-namespace",
+      "context": "执行挂载特权检查和较低权限挂载限制时，依据该 mount namespace 的所属 user namespace 判定权限。"
+    }
+  ],
+  "summary": "为进程维护独立挂载视图，并控制挂载事件传播。",
+  "description": "Mount namespace 隔离进程看到的挂载列表；创建时通常复制调用方已有的挂载视图，之后各自可以进行受允许的挂载和卸载操作。它隔离的是挂载关系，不自动复制底层文件内容。两个命名空间中的挂载仍可指向同一文件系统或共享目录，写入能否互相影响取决于实际对象、只读设置与访问权限。\n\n挂载传播规则决定事件是否跨视图传播：shared 挂载可把相应事件传播到同伴，private 不参与传播，slave 可从上游接收而不向其回传。创建了新的 mount namespace 并不保证所有挂载立即成为私有；运行时需要为期望的隔离明确处理传播属性。递归传播、bind mount 和父子挂载关系还会影响实际可见结果。\n\n挂载操作通常结合所属 user namespace 的 capabilities 检查，较低权限命名空间还受到额外限制。建立容器根文件系统时，运行时可组合独立挂载视图、根目录切换和只读或受控共享挂载。改变挂载视图不能替代 seccomp、资源约束及其他访问控制，不能由目录在容器里不可见便推断所有外部访问途径已被封闭。\n\n## 参考\n\n- [Linux：挂载视图、传播规则与权限限制](https://man7.org/linux/man-pages/man7/mount_namespaces.7.html)\n- [Linux：user namespace 对挂载操作的限制](https://man7.org/linux/man-pages/man7/user_namespaces.7.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

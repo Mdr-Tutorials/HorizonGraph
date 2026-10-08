@@ -1,0 +1,33 @@
+{
+  "id": "immediate-or-cancel",
+  "name": "Immediate or Cancel",
+  "aliases": [
+    "立即成交否则撤销",
+    "即时成交剩余撤销",
+    "IOC",
+    "Fill and Kill",
+    "FAK"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    }
+  ],
+  "summary": "立即执行可成交数量并撤销其余数量的指令",
+  "description": "Immediate or Cancel（IOC）要求订单立即处理，允许全部或部分成交，未立即成交的数量随后取消。CME 等接口使用 Fill and Kill（FAK）表达相应的立即成交、剩余撤销语义；具体支持条件仍须以场所定义为准。\n\n例如需要买入一百单位而立即只有六十单位满足价格与其它条件时，IOC 可以成交六十并取消四十。FOK 则要求该次立即处理满足全量，二者不能仅因都含有“立即”或“撤销”而混用。\n\nIOC 不表示绕过限价、信用检查、最小成交量或交易状态，也不保证任何数量都能成交。执行系统应分别记录实际成交与取消剩余量，不能把最终 canceled 状态理解为此前没有成交，更不能因客户端超时自行判定请求未被接受。\n\n## 参考\n\n- [SEC：订单类型与交易指令](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14)\n- [CME EBS：IOC 与 FOK 的区别](https://www.cmegroup.com/tools-information/webhelp/ebs-workstation-quick-guide/Content/ChangingBUYSELLOrderType.html)\n- [CME Globex：订单与有效期、展示数量](https://www.cmegroup.com/cn-s/globex/globex-order-type.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "IOC"
+}

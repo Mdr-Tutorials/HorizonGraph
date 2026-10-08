@@ -1,0 +1,39 @@
+{
+  "id": "code-completion",
+  "name": "Code Completion",
+  "aliases": [
+    "代码补全",
+    "Autocomplete",
+    "代码自动完成"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "semantic-analysis",
+      "context": "语言感知补全路径利用名称绑定、类型和作用域信息筛选符号候选；纯文本或模板补全不要求此路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ai-code-generation",
+      "context": "模型驱动的补全以当前编辑上下文生成候选源码；此边只适用于 AI 补全。"
+    }
+  ],
+  "summary": "根据编辑位置与上下文提供可接受的代码候选。",
+  "description": "代码补全根据当前编辑位置和已有上下文提供标识符、参数、片段或多行文本候选。候选可以出现在列表或行内灰色文本中；既有语言规则和模板驱动实现，也有模型驱动实现，行内展示本身不证明使用 AI。\n\n语言服务可以解析名称、类型和作用域来限定候选，编辑器也能直接注册提供者或通过 LSP 请求结果。模型补全进一步利用附近代码与可用上下文预测片段。建议随后由用户接受或由配置的工作流处理，与自行运行多步代码任务的代理循环不同。\n\n候选的新鲜度受文档版本、项目配置和上下文限制影响。下一处编辑建议还会预测位置与替换内容，不能全部归为光标处插入补全。接受候选只是编辑操作，程序能否满足需求仍需检查和验证。\n\n## 参考\n\n- [VS Code：IntelliSense 与语言服务](https://code.visualstudio.com/docs/editing/intellisense)\n- [VS Code：直接语言 API 与 LSP 的能力对应](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [GitHub：IDE 中的补全、编辑建议与代理能力](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

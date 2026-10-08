@@ -1,0 +1,49 @@
+{
+  "id": "notation",
+  "name": "Notation",
+  "aliases": [
+    "Notation",
+    "Notation CLI",
+    "Notary Project Notation"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain",
+    "containerization"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "image-signing",
+      "context": "生成并验证 OCI 工件签名，将签署载荷中的内容摘要与目标镜像绑定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x509",
+      "context": "以签名证书、信任存储与受信任身份检查 OCI 工件的签署者。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-distribution-spec",
+      "context": "在支持的仓库与对应工具版本中使用 OCI 分发能力保存和发现签名工件。"
+    }
+  ],
+  "summary": "按 Notary Project 规范签署并验证 OCI 工件的命令行工具。",
+  "description": "Notation 是实现 Notary Project 签名与验证规范的命令行工具，能为 OCI 工件创建签名，并在消费时按照信任策略验证。CLI 是具体工程工件，Notary Project 是覆盖规范和多个实现的项目体系；历史 TUF-based notary 客户端也不是 Notation 的别名。明确这些身份可以避免把旧命令、规范和新工具混用。\n\n签署需要签名证书与对应密钥，或通过插件连接受支持的远程密钥及签署服务。验证将工件引用解析到 digest，再检查签名载荷、证书信任链、受信任身份以及适用策略。对 OCI 工件，仓库范围可以限定哪些策略适用；严格验证、审计或跳过等策略行为具有不同含义，不能把一次命令正常结束都理解为相同强度的真实性检查。\n\n签名发现与保存方式有版本边界：例如 1.2 的发布说明包含 OCI 1.1 referrers 支持与兼容性选项，而 2.0 alpha 更改默认保存方式并增加预览能力。预发布分支文档不能直接推导所有稳定版都支持普通 blob 等新功能。使用时需核对所选 CLI、规范与仓库能力；签名成功也不能替代来源证明、组件扫描和消费方自身的发布授权。\n\n## 参考\n\n- [Notation：CLI 身份与规范实现](https://github.com/notaryproject/notation)\n- [Notation：版本与预发布边界](https://github.com/notaryproject/notation/releases)\n- [Notary Project：签名和验证流程](https://github.com/notaryproject/specifications/blob/main/specs/signing-and-verification-workflow.md)\n- [Notary Project：信任策略与验证级别](https://github.com/notaryproject/specifications/blob/main/specs/trust-store-trust-policy.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/notaryproject/notation"
+}

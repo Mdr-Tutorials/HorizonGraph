@@ -14,18 +14,25 @@
   ],
   "domains": [
     "security",
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-cookie",
+      "context": "基于 Cookie 会话的 CSRF 借浏览器自动附带匹配 Cookie 的行为发送受认证请求；Cookie 的有效性不代表用户授权了该操作。"
     }
   ],
-  "summary": "借用户已登录身份伪造请求，靠令牌与 SameSite 防御。",
+  "summary": "借浏览器自动附带的凭据诱导受信服务执行用户未授权操作的攻击。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://owasp.org/www-community/attacks/csrf"
+  "official_site": "https://owasp.org/www-community/attacks/csrf",
+  "description": "CSRF 利用用户浏览器对目标站点已有的认证状态，诱导它发起用户未授权的操作。常见路径是恶意页面构造表单或请求，浏览器自动附带会话 Cookie，服务器却把“带有有效凭据”误当成“用户同意这次操作”。攻击者通常无需读取响应，能够促成副作用就可能造成损害。\n\n防御可使用与会话绑定、不可预测的同步令牌，或正确签名并绑定会话的双提交 Cookie 方案，并在状态变更请求中验证。Origin、Referer 和 Fetch Metadata 可提供请求来源信号；安全方法应遵守不改变业务状态的约定，不能把敏感变更挂在 GET 上后寄望浏览器阻拦。\n\nSameSite 可以减少跨站请求携带 Cookie，但“同站”与“同源”不同，同站子域或客户端脚本受攻击等情形仍需评估。CORS 限制响应读取也不能替代 CSRF 防御。具体保护要结合凭据发送方式和应用流程设计，XSS 能破坏许多来源与令牌假设。\n\n## 参考\n\n- [OWASP：Cross-Site Request Forgery Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)\n- [WHATWG Fetch：CORS 协议的响应共享范围](https://fetch.spec.whatwg.org/#http-cors-protocol)"
 }

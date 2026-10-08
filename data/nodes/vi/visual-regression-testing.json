@@ -1,0 +1,41 @@
+{
+  "id": "visual-regression-testing",
+  "name": "Visual Regression Testing",
+  "aliases": [
+    "视觉回归测试",
+    "截图回归测试",
+    "Visual Testing"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-screenshot",
+      "context": "取得实际页面或元素像素图，与受控预期基线按选定规则比较。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-context-isolation",
+      "context": "浏览器测试采用独立上下文时，减少认证与存储残留对待比较画面的影响。"
+    }
+  ],
+  "summary": "比较页面视觉结果与受控基线以发现呈现变化。",
+  "description": "视觉回归测试把当前页面或组件的截图与经认可的基线比较，发现布局、文字、颜色或绘制结果的变化。判定通常包含像素差异阈值及输出差异图；它关注呈现变化，和验证数据保存、访问权限或业务计算的功能断言具有不同覆盖范围。\n\nPlaywright 的截图断言会等待连续捕获的画面稳定后再与预期图比较，基线文件和报告记录差异。环境中的字体、操作系统、浏览器、渲染设备和视口均可能影响结果，因此基线应与运行配置对应；动画、时间和随机内容需要受控处理，否则噪声会掩盖有意义的变化。\n\n遮罩或宽松阈值可以减少偶发差异，也可能把真实缺陷过滤掉。更新基线是一项需要审阅的预期变更，不能把自动接受新截图当成修复测试。测试通过只说明在所选捕获范围和差异规则内一致，仍应结合可访问性与端到端业务结果检查。\n\n## 参考\n\n- [Playwright：Visual comparisons](https://playwright.dev/docs/test-snapshots)\n- [Playwright：Screenshots](https://playwright.dev/docs/screenshots)\n- [Playwright：Trace viewer](https://playwright.dev/docs/trace-viewer)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

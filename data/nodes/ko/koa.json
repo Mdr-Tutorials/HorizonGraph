@@ -1,0 +1,49 @@
+{
+  "id": "koa",
+  "name": "Koa",
+  "aliases": [
+    "Koa.js",
+    "Koa Web 框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "http-middleware"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-context",
+      "context": "为每次请求建立 Context，通过 ctx.state 等位置在中间件间传递数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nodejs",
+      "context": "在常规 Node HTTP 部署中将 app.callback() 接入原生 http.createServer 请求回调。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "content-negotiation",
+      "context": "需要匹配请求接受的表示类型时采用 ctx.accepts 等内容协商辅助接口。"
+    }
+  ],
+  "summary": "以异步中间件和每请求上下文组织 Node HTTP 服务。",
+  "description": "Koa 在 Node HTTP 服务上提供每请求 Context，并将异步中间件按调用栈组合。中间件 await next() 时进入下游，随后回到上游继续处理，适合把日志、错误处理和响应变换围绕业务处理安排；没有调用 next 的路径可以停止向下继续。\n\nctx.request 和 ctx.response 是 Koa 包装，ctx.req、ctx.res 则访问原生 Node 对象。app.callback() 返回适合 Node http.createServer 的回调，这与接收标准 Request、返回 Response 的服务器函数不是同一接口；在外部适配前不能仅因名称相同就混用对象。\n\nKoa 核心提供状态、头部、内容协商和 Cookie 等便利操作，但不内置完整路由器及所有中间件，应用按需要组合扩展。ctx.state 可传递每请求数据，绕过框架直接写底层响应可能破坏中间件行为；选用异步局部上下文等功能也应遵循所用版本的配置与生命周期。\n\n## 参考\n\n- [Koa 官方 API 文档](https://koajs.com/)\n- [Koa 官方中间件文档](https://github.com/koajs/koa/blob/master/docs/guide.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://koajs.com/"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "bezier-curve",
+  "name": "Bézier Curve",
+  "aliases": [
+    "贝塞尔曲线",
+    "Bezier Curve"
+  ],
+  "type": "concept",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interactive-graphics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "affine-transform",
+      "context": "变换 Bézier 几何时，可对控制点应用同一仿射映射以获得对应的变换曲线。"
+    }
+  ],
+  "summary": "由端点与控制点定义的参数曲线，常用于矢量路径。",
+  "description": "Bézier 曲线用控制点的 Bernstein 多项式组合定义参数位置。二次曲线有三个控制点，三次曲线有四个，首尾控制点是端点；中间控制点通常不位于曲线上，其位置影响切线与曲率。\n\n矢量编辑器用控制柄调整路径，复杂轮廓通常由多段曲线拼接，而不是无限提高单段次数。端点重合只保证位置连续，平滑连接还需切线等条件；几何曲线与动画时间上的 easing 曲线采用相似数学形式，但用途与参数解释不同。\n\n## 参考\n\n- [W3C：SVG 路径与 Bézier 曲线](https://www.w3.org/TR/SVG2/paths.html)\n- [Paper.js：Path 与控制柄](https://paperjs.org/reference/path/)\n- [Paper.js：Segment 控制点](https://paperjs.org/reference/segment/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

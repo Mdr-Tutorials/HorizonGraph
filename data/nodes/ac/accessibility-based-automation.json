@@ -1,0 +1,40 @@
+{
+  "id": "accessibility-based-automation",
+  "name": "Accessibility-based Automation",
+  "aliases": [
+    "基于可访问性的自动化",
+    "语义树自动化",
+    "AX-based Automation"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "accessibility-tree",
+      "context": "从界面语义结构中读取角色、名称和状态，选择当前可观察的交互目标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "element-locator",
+      "context": "采用浏览器语义定位路径时，用角色和名称等查询规则解析当前页面目标。"
+    }
+  ],
+  "summary": "利用界面可访问性语义识别并操作目标控件。",
+  "description": "基于可访问性的自动化使用界面公开的角色、名称、状态和节点结构识别交互目标，避免只凭固定像素位置猜测控件。浏览器路径可以读取可访问性快照并将目标引用交给控制工具，桌面路径则可能通过平台可访问性接口获取对应信息，具体动作能力由执行环境决定。\n\nWebArena 的结构化观察和 Playwright MCP 的可访问性快照展示了这一方法的实际采用。调用方可以根据“按钮”“输入框”等角色及名称选择目标，再执行支持的点击或输入；当前快照中产生的引用需要跟随界面变化更新，不能假设跨导航和组件重建继续有效。\n\n这种方法依赖应用提供有意义的语义，自绘控件、Canvas 内容或错误命名会造成信息缺口。可访问性树、DOM 查询和像素观察可互相补充，但读取角色不等于通过无障碍审计。动作后的业务结果仍需要独立检查，方法有效性也不能外推到所有桌面应用和浏览器实现。\n\n## 参考\n\n- [WebArena：官方实现与观察动作接口](https://github.com/web-arena-x/webarena)\n- [Microsoft：Playwright MCP官方README](https://github.com/microsoft/playwright-mcp)\n- [Chrome DevTools：Accessibility features reference](https://developer.chrome.com/docs/devtools/accessibility/reference)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

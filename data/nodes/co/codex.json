@@ -1,0 +1,43 @@
+{
+  "id": "codex",
+  "name": "Codex",
+  "aliases": [
+    "OpenAI Codex",
+    "Codex Agent"
+  ],
+  "type": "product",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-harness",
+      "context": "通过代理宿主管理会话上下文、工具调用和执行约束；具体执行环境由所用 Codex 界面及配置决定。"
+    }
+  ],
+  "summary": "OpenAI 面向编写、审查与执行代码任务的代理产品。",
+  "description": "Codex 是 OpenAI 的编码代理产品入口，接受软件工程任务并结合源码、工具及执行结果推进工作。当前官方文档覆盖应用、编辑器、终端和远端任务等使用界面；本节点记录这一产品身份。2021 年同名 Codex 代码生成模型是历史模型身份，不能把当前产品当作那个模型的单个版本，也不能把界面、宿主和模型混为一个组件。\n\nCodex 的工作方式是代理循环：选择任务上下文，调用读取、编辑、命令等工具，把结果带回模型，再决定下一步。模型负责生成决策与内容，harness 负责会话状态、工具编排和执行约束；能调用什么工具、在哪里执行，取决于相应界面和环境配置。因此它既能实施修改，也能以只读方式解释、调试或审查代码。\n\nCodex CLI 提供本地终端入口，官方 SDK 则把本地代理会话接入脚本和自动化。不同入口共享产品能力，但本地工作区与托管任务具有不同的文件、网络、凭据和审批边界。生成差异、命令结果及测试记录是评估任务完成的证据，产品具有编码能力不意味着每项修改都正确，也不意味着必须使用某个 IDE 或固定模型。\n\n## 参考\n\n- [OpenAI：代码生成与 Codex 产品入口](https://developers.openai.com/api/docs/guides/code-generation)\n- [OpenAI：Codex 作为模型、harness 与可编程平台](https://developers.openai.com/blog/codex-as-a-platform)\n- [OpenAI：Codex CLI](https://learn.chatgpt.com/docs/codex/cli)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://developers.openai.com/codex"
+}

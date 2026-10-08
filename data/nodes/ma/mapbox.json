@@ -1,0 +1,59 @@
+{
+  "id": "mapbox",
+  "name": "Mapbox GL JS",
+  "aliases": [
+    "Mapbox",
+    "MapboxGL",
+    "Mapbox GL"
+  ],
+  "type": "library",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "web-map"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "map-style-specification"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mapbox-vector-tile"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "使用 WebGL 绘制地图及可见样式图层。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geojson",
+      "context": "使用 GeoJSON 源加载和展示自有地理要素。"
+    }
+  ],
+  "summary": "通过图层、样式和 WebGL 构建交互式 Web 地图。",
+  "description": "Mapbox GL JS 是 JavaScript Web 地图库，使用 WebGL 绘制地图，并以数据源、图层、样式和相机组织内容。应用可设置中心、缩放、方向与倾斜，添加业务要素，响应地图事件并控制显示样式。此节点指 GL JS 库，Mapbox 公司、托管数据服务、Studio 编辑器及移动 SDK 是独立对象。\n\nMapbox 样式文档定义数据源及其显示图层；源可以包含矢量瓦片、栅格、GeoJSON 等内容。同一源可被多个样式图层复用，图层的 layout 与 paint 属性分别描述布局和外观。库与 Mapbox 的地图、托管和其他服务有配套用法，也可以按受支持的数据源方式载入自有业务数据。\n\n与 MapLibre 等客户端比较或迁移时，应查看当前 API 与样式规范的具体能力。历史共同基础不代表所有新增图层类型、表达式或投影都能直接互换；选用的 SDK 版本、数据服务和许可边界需要分别辨认。\n\n## 参考\n\n- [Mapbox GL JS Guide](https://docs.mapbox.com/mapbox-gl-js/guides/)\n- [Mapbox Style Specification](https://docs.mapbox.com/style-spec/guides/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://docs.mapbox.com/mapbox-gl-js/"
+}

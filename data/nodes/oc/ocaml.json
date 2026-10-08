@@ -17,18 +17,15 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "language"
-    },
-    {
-      "relation_type": "bases_for",
-      "target_id": "jane-street-core"
     }
   ],
-  "summary": "ML 语言的工业落点，Jane Street 的主技术栈。",
+  "summary": "结合静态类型、函数式编程与本机编译的通用 ML 语言。",
   "status": "active",
-  "origin": "curated",
-  "first_released": "1996-01-01",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "first_released": "1996-05-09",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
   "popular": 45,
-  "official_site": "https://ocaml.org"
+  "official_site": "https://ocaml.org",
+  "description": "OCaml 是 ML 谱系的通用程序设计语言，组合静态类型推断、代数数据类型、模式匹配、模块与函子，以及函数式、命令式和面向对象能力。早期以 Objective Caml 为名，1.00 版本发布公告日期为 1996 年 5 月 9 日。它具有自动内存管理，适用于复杂系统、工具与应用开发；金融行业的采用是用途之一，而不是语言定义的唯一范围。\n\n官方工具提供字节码编译器和本机代码编译器。ocamlopt 把源代码编译为目标代码并链接为可执行文件，不要求以 ocamlrun 解释执行；模块接口与实现分别处理，库通过明确的编译和链接关系进入应用。语言能力、具体编译器优化和程序的分配行为应分别理解。\n\nJane Street 公开说明以 OCaml 为主要开发平台，使用范围从交易系统到自动化、监控和研究，并发布 Core 等通用库。选用 Core 时，构建与链接需符合该包要求的 OCaml 编译器和运行时版本。静态类型和本机编译提高工程可控性，但不会自动消除垃圾回收、调度抖动或业务风险。\n\n## 参考\n\n- [OCaml：语言特点与历史](https://ocaml.org/about)\n- [OCaml：本机代码编译](https://ocaml.org/manual/5.4/native.html)\n- [Jane Street：OCaml 使用范围](https://www.janestreet.com/technology/)\n- [Xavier Leroy：OCaml 1.00 首次发布公告日期](https://discuss.ocaml.org/t/25-years-of-ocaml/7813)"
 }

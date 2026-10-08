@@ -1,0 +1,38 @@
+{
+  "id": "execution-based-evaluation",
+  "name": "Execution-based Evaluation",
+  "aliases": [
+    "执行式评估",
+    "基于执行的评估"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-oracle",
+      "context": "运行完成后使用预期输出、测试断言或状态谓词判断是否满足任务条件，并注明判定的覆盖范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reproducible-evaluation-environment",
+      "context": "比较同一候选系统的功能性结果时固定任务初态及执行依赖，避免环境漂移被当作能力变化。"
+    }
+  ],
+  "summary": "执行候选代码或操作后依据功能与状态判定结果。",
+  "description": "执行式评估让候选程序、补丁或动作在指定环境中实际运行，再检查输出与状态是否满足任务条件。函数生成可运行单元测试，仓库修复可应用补丁并执行测试套件，网页或桌面任务可检查目标数据库、文件或应用状态。\n\n它需要明确测试判定器，而不只是启动命令。退出码、断言、状态比较和约束检查分别提供不同证据；应记录测试覆盖什么、哪些输入或行为不在检查范围内。任务允许多种实现时，功能判定通常比强制复现唯一文本答案或动作序列更合适。\n\n运行环境和候选代码都可能失败，环境故障应与功能失败区分。生成代码需要按执行器的隔离要求运行，资源与网络条件也要披露。测试通过只支持被测试条件下的结论，不能替代完整规格证明、人工需求审查或未覆盖场景的验证。\n\n## 参考\n\n- [HumanEval 官方数据与执行器](https://github.com/openai/human-eval)\n- [SWE-bench：评估环境、报告与结果缓存](https://www.swebench.com/SWE-bench/guides/evaluation/)\n- [WebArena 原论文：任务与功能性判定](https://arxiv.org/html/2307.13854v3)\n- [测试判定问题：作者公开的原研究](https://philmcminn.com/publications/barr2015.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

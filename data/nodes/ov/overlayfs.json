@@ -1,0 +1,39 @@
+{
+  "id": "overlayfs",
+  "name": "OverlayFS",
+  "aliases": [
+    "Overlay 文件系统",
+    "叠加文件系统"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming",
+    "containerization"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "copy-on-write",
+      "context": "下层文件被修改时，copy-up 将对应对象复制到可写上层以保留下层。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "filesystem-mount",
+      "context": "通过 OverlayFS 挂载选项把上下层目录树组合为可访问视图。"
+    }
+  ],
+  "summary": "合并多层目录树并把修改写入上层的 Linux 文件系统。",
+  "description": "OverlayFS 在 Linux 中把下层与上层目录树合成一个视图。下层可以保持只读，上层承接修改；同名对象通常由上层覆盖，目录内容按规则合并。它提供联合视图，不是把下层所有文件在开始时完整复制到上层，也不是容器卷的同义词。\n\n修改下层文件时可能触发 copy-up，把需要修改的对象复制到可写上层；删除或遮蔽通过 whiteout、opaque 等机制表达。底层文件系统需满足对应特性要求，inode、扩展属性和持久化语义也有细节条件，因此不能假定所有可挂载文件系统都适合作为可写上层。\n\n容器存储实现可以用 OverlayFS 组织镜像层与容器可写层，但具体驱动、快照器和部署版本决定实际使用路线。可写层与独立卷的生命周期不同，绑定挂载会把外部树呈现在目标位置；层合并、持久化和跨宿主共享应沿各自机制连接。\n\n## 参考\n\n- [Linux Kernel：Overlay Filesystem](https://docs.kernel.org/filesystems/overlayfs.html)\n- [Docker：Volumes](https://docs.docker.com/engine/storage/volumes/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

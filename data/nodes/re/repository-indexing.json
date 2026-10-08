@@ -1,0 +1,39 @@
+{
+  "id": "repository-indexing",
+  "name": "Repository Indexing",
+  "aliases": [
+    "仓库索引",
+    "Codebase Indexing",
+    "代码库索引"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "symbol-index",
+      "context": "构建语言感知的跨文件索引时存储符号身份、源码位置和引用关系，供后续导航查询。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "采用 clangd 等编译器驱动的符号索引路径时，从解析后的 AST 提取声明与引用；文本索引不要求 AST。"
+    }
+  ],
+  "summary": "为代码仓库构建可检索的文本、符号或语义表示。",
+  "description": "仓库索引遍历选定的代码文件，构建面向检索、导航或上下文选择的可查询表示。索引可以覆盖词项、符号、引用或语义片段；它是一组构建与更新机制，不是某一种固定数据库，也不意味着已经把整仓源码放入模型上下文。\n\n索引需要处理文件修改、工作区范围、项目配置与排除规则。clangd 区分当前打开文件的动态索引、后台全项目索引与可选静态或远程索引；VS Code 的 AI 上下文则按产品配置使用本地或远程语义索引，并保留不需索引的文本搜索工具。\n\n陈旧索引、遗漏依赖或不完整构建配置可能造成结果缺失。符号索引强调声明与引用身份，语义检索侧重按查询含义排序，字面搜索寻找确切字符串或正则匹配；一种能力的存在不能证明另外两种已经实现。文件排除也不是文件权限隔离的等价物。\n\n## 参考\n\n- [clangd：跨文件符号、引用与索引层次](https://clangd.llvm.org/design/indexing)\n- [VS Code：仓库上下文、索引与搜索工具](https://code.visualstudio.com/docs/agents/reference/workspace-context)\n- [Google Antigravity：字面与正则代码搜索](https://antigravity.google/docs/cli/commands/codesearch/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

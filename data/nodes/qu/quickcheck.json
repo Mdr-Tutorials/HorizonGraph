@@ -1,0 +1,40 @@
+{
+  "id": "quickcheck",
+  "name": "QuickCheck",
+  "aliases": [
+    "QuickCheck 性质测试库",
+    "QuickCheck 2"
+  ],
+  "type": "library",
+  "domains": [
+    "programming-languages",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem",
+    "languages_runtimes"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "property-based-testing"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "haskell"
+    }
+  ],
+  "summary": "用随机生成与反例缩减检验 Haskell 程序性质。",
+  "description": "QuickCheck 是 Haskell 的性质测试库，用函数或 Property 描述应该成立的程序行为，再由 quickCheck 等运行入口生成输入并寻找反例。常见性质包括函数的代数关系、序列化往返与数据结构不变量。这里的节点指 Haskell 项目；其他语言的同名移植和受其启发的库各有独立实现，不能把 QuickCheck 这个名称解释为唯一的跨语言协议。\n\nArbitrary 类型类提供值生成与缩减接口，Gen 及其组合器用于构造定制输入。自定义类型通常需要设计适合的生成策略；满足类型约束，并不表示所有业务上重要的输入类别都会自动出现。缩减器尝试找到更简单、仍能违反性质的样例，自定义数据的不变量也应在缩减时保持，否则测试可能报告不属于预期输入域的反例。\n\nQuickCheck 可配置成功样例数量、大小、丢弃比例和重放信息，并通过分类、标签等机制观察生成输入的分布。过强的前置条件可能让大量输入被丢弃，过于一般的多态性质也需要注意实际测试的类型。测试通过表示当前生成策略下没有找到反例，不等于穷举输入或证明性质；发现的重要反例应进一步转为稳定的回归测试。\n\n## 参考\n\n- [QuickCheck：官方项目](https://github.com/nick8325/quickcheck)\n- [QuickCheck：性质执行 API](https://hackage.haskell.org/package/QuickCheck/docs/Test-QuickCheck.html)\n- [QuickCheck：Arbitrary 生成与缩减](https://hackage.haskell.org/package/QuickCheck/docs/Test-QuickCheck-Arbitrary.html)\n- [QuickCheck：官方接口源码与说明](https://github.com/nick8325/quickcheck/blob/master/src/Test/QuickCheck.hs)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/nick8325/quickcheck"
+}

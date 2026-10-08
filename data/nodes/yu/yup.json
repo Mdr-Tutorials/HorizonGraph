@@ -1,0 +1,49 @@
+{
+  "id": "yup",
+  "name": "Yup",
+  "aliases": [
+    "Yup 校验库"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services",
+    "web-development"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "standard-schema",
+      "context": "实现该规范的版本以统一接口返回校验输出及 issues。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "通过 InferType 由模式提取 TypeScript 输出类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "在 JavaScript 运行时执行字段转换、条件模式和同步或异步约束测试。"
+    }
+  ],
+  "summary": "组合数据转换和约束测试，并从模式推导静态类型的库。",
+  "description": "## 机制与应用\n\nYup 用对象、字段与条件模式表达数据，通过 transforms 做解析与转换，再通过 tests 执行约束断言。validate 可处理异步规则并返回成功数据，错误提供字段与原因；InferType 从模式提取 TypeScript 静态类型。模式可在表单、服务端输入或其他应用边界复用，支持 Standard Schema 供通用工具调用。\n\ncast 主要执行转换，不能代替配置在模式上的完整约束测试；strict 校验会跳过解析和强制转换，检查原值。缺省值、可空性、未知字段与异步测试都会影响结果和类型。应根据实际数据来源选择这些行为，不把类型推导或成功转换理解为业务规则与授权已全部满足。\n\n## 参考\n\n- [Yup：模式、转换、测试与 TypeScript](https://github.com/jquense/yup)\n- [Yup：strict、cast 与验证 API](https://github.com/jquense/yup#api)\n- [Standard Schema：Yup 兼容实现](https://standardschema.dev/schema)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/jquense/yup"
+}

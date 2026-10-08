@@ -1,0 +1,46 @@
+{
+  "id": "runhcs",
+  "name": "runhcs",
+  "aliases": [
+    "Windows OCI 容器运行工具",
+    "runHCS"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "windows-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci-runtime-spec",
+      "context": "按官方 Windows 容器平台说明实现 OCI 容器运行时配置与生命周期；平台专属资源仍通过 Windows HCS 管理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hcsshim",
+      "context": "runhcs 的 Windows 实现使用同仓库提供的 Go 包装与管理代码调用 HCS。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "host-compute-service",
+      "context": "在 Windows 运行容器时经 HCS 创建、启动和控制计算系统与其中的进程；隔离模式决定具体执行环境。"
+    }
+  ],
+  "summary": "调用 HCS 运行 OCI 容器工作负载的 Windows 命令行工具。",
+  "description": "runhcs 是 Windows 上的容器运行命令行工具，Microsoft 将其描述为 runc 的 Windows 对应实现和代码分支。它接收 OCI runtime bundle 的配置，向 Host Compute Service 请求创建和管理执行环境，而不是直接采用 Linux 的系统调用实现 Windows 容器。工具实现 OCI 运行时语义，并不意味着它能脱离宿主平台运行任意操作系统的镜像。\n\nrunhcs 提供创建、启动、执行额外进程、查询状态、停止和删除等生命周期命令。容器 bundle 的 config.json 与镜像下载、解包及更高层编排职责不同，runhcs 不是完整镜像仓库客户端或 Kubernetes 调度器。官方文档说明其路径包括 Windows 进程容器及 Hyper-V 隔离容器；具体镜像、平台和内核兼容性仍要服从所选容器类型，而非依据命令名称推断。\n\n实现位于 hcsshim 仓库并使用相应 HCS 包装能力；containerd 在 Windows 上还有专门的 shim 集成路径。应将 runhcs CLI 与名称含 runhcs 的 containerd shim 区分，两者不会因名字相近就成为完全相同的进程接口。它与 WSLc 的 Linux 会话容器执行路径也分别管理：共同使用 Windows 虚拟化能力不能证明相同的用户空间、网络模型或生命周期。\n\n## 参考\n\n- [Microsoft：runhcs 与 Windows 容器平台](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/containerd)\n- [Microsoft hcsshim：runhcs 源码](https://github.com/microsoft/hcsshim/tree/main/cmd/runhcs)\n- [Microsoft hcsshim：containerd shim 的不同实现](https://github.com/microsoft/hcsshim)\n- [OCI：Runtime Specification](https://github.com/opencontainers/runtime-spec)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/microsoft/hcsshim/tree/main/cmd/runhcs"
+}

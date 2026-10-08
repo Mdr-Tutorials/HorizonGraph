@@ -1,0 +1,34 @@
+{
+  "id": "limit-order",
+  "name": "Limit Order",
+  "aliases": [
+    "限价单",
+    "限价订单"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "time-in-force",
+      "context": "限价指令组合有效期字段时，用 TIF 决定未成交数量能否继续挂单、跨日保持或立即终止。"
+    }
+  ],
+  "summary": "限定买入最高价或卖出最低价的交易订单",
+  "description": "限价单规定可接受的价格边界：买入成交价不得高于限价，卖出成交价不得低于限价。价格条件限制的是成交价格，不保证订单一定成交，也不保证在市场触及该价格时立刻获得全量成交。\n\n可立即与对手盘匹配的限价单可能主动成交；不可立即匹配的剩余部分则可能入簿等待，也可能依据有效期被取消。因而限价单并不天然等于被动挂单、maker 或特定收费角色，队列优先、展示属性及场所撮合规则仍会影响结果。\n\n限价可以与 IOC、FOK、GTC 等指令组合，但各产品和接口允许的组合不同。研究回放时，需要同时保留价格、数量、到达时间、状态及有效期，不能仅以历史价格穿过限价推断自己的订单已经成交。\n\n## 参考\n\n- [SEC：订单类型与交易指令](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14)\n- [CME Globex：订单与有效期、展示数量](https://www.cmegroup.com/cn-s/globex/globex-order-type.html)\n- [Nasdaq：FIX 订单入口规范](https://nasdaqtrader.com/content/technicalsupport/specifications/tradingproducts/inet_fix_sb.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

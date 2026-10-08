@@ -1,0 +1,34 @@
+{
+  "id": "market-order",
+  "name": "Market Order",
+  "aliases": [
+    "市价单",
+    "市价订单"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "time-in-force",
+      "context": "订单入口同时设置有效期或立即处理指令时，以 TIF 限定市价请求的存续及剩余数量处理；可用组合取决于交易场所。"
+    }
+  ],
+  "summary": "优先按可得价格成交而不预设成交价格边界的订单",
+  "description": "市价单把尽快与可用对手方成交作为主要指令，普通买入市价单不设买方最高成交价，普通卖出市价单不设卖方最低成交价。屏幕上的最新成交价或最优报价只是提交时的信息，不能保证请求到达撮合处后仍可按该价格成交。\n\n订单规模超过某档可用数量时，成交可能跨越多个价位，最终均价还受传播延迟、先到订单和价格跳动影响。成交优先也不是在停牌、无对手盘或交易限制条件下的无条件执行保证；价格风险与未成交风险需要分别描述。\n\n场所可提供带保护范围的变体，例如 CME Globex 的 Market with Protection 将超出保护范围的剩余数量按规定处理。普通市价单、保护市价单以及券商模拟订单不能只凭相同界面名称视为同物；接受时段、有效期和剩余数量处理须按实际接口核对。\n\n## 参考\n\n- [SEC：订单类型与交易指令](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14)\n- [CME Globex：订单与有效期、展示数量](https://www.cmegroup.com/cn-s/globex/globex-order-type.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

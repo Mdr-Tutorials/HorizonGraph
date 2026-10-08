@@ -1,0 +1,35 @@
+{
+  "id": "pcap-format",
+  "name": "pcap File Format",
+  "aliases": [
+    "PCAP",
+    "pcap 保存格式",
+    ".pcap"
+  ],
+  "type": "protocol",
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "pcapng-format",
+      "context": "均用于保存报文采集数据，结构和元数据能力不同。"
+    }
+  ],
+  "summary": "使用文件头和报文记录保存采集数据的格式。",
+  "description": "传统 pcap 文件使用一个全局文件头和连续报文记录。文件头给出链路类型、截取长度等参数，每个记录保存时间戳、已捕获长度、原始长度和报文字节；截取长度不足时，文件没有保存的尾部不能在分析阶段凭空恢复。\n\n魔数可标识字节序及微秒或纳秒时间戳单位。单位决定文件能够表达的分辨率，不能证明来源时钟的 UTC 偏差、报文到达顺序或端到端延迟测量精度。单文件的全局链路类型等限制也使它不能直接承担所有多接口元数据场景。\n\n截至 2026 年 10 月，IETF 对这一既有格式的文档仍为 Internet-Draft，目标类别为 Historic，不能写成已经发布的 RFC。目标文档类别也不是宣布现有抓包文件失效。libpcap 和 Wireshark 等工具沿用该格式时，仍应保留采集设备与时钟条件。\n\n## 参考\n\n- [IETF pcap 格式草案状态](https://datatracker.ietf.org/doc/draft-ietf-opsawg-pcap/)\n- [libpcap 官方 API 手册源文件](https://github.com/the-tcpdump-group/libpcap/blob/master/pcap.3pcap.in)\n- [Wireshark 时间戳说明](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTimestamps.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool"
+}

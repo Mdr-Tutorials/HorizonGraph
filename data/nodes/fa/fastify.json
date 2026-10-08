@@ -1,0 +1,53 @@
+{
+  "id": "fastify",
+  "name": "Fastify",
+  "aliases": [
+    "Fastify Web 框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "http-routing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-context",
+      "context": "通过每次请求的 request/reply 包装及装饰器传递处理数据，并遵守插件封装作用域。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ajv",
+      "context": "采用默认路由校验编译器时使用 Ajv 验证模式；应用可选择替换编译器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "在配置路由输入校验或响应序列化模式时描述数据结构。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-response",
+      "context": "需要发送 Web Response 时经 Reply 支持的输出路径转为响应，核心 request/reply 接口仍保持独立。"
+    }
+  ],
+  "summary": "以路由、插件封装和模式校验组织 Node HTTP 服务。",
+  "description": "Fastify 是面向 Node.js HTTP 应用的 Web 框架，用路由注册、生命周期钩子和插件组织处理逻辑。其 request 与 reply 是框架抽象，raw 属性可访问有关 Node 请求、响应对象；这些包装不是 Web Fetch 的 Request、Response，函数签名不能与 Fetch 风格入口直接互换。\n\n插件的封装上下文控制路由可见的装饰器、钩子和子插件，避免所有扩展都成为全局状态。路由模式可描述请求数据和响应序列化；默认验证路径使用 Ajv，校验编译器可替换，模式校验也不等于授权或业务规则检查。\n\n当前 Reply 可发送标准 Response 和 Web ReadableStream，因而能在特定输出路径复用 Web 对象，但这不把整个核心请求接口改成 Request 到 Response。框架钩子与传统 Express 风格中间件也不同，后者需相应插件桥接；应根据实际生命周期和输入输出接口设计扩展，而不靠通用跑分推断业务性能。\n\n## 参考\n\n- [Fastify Reference](https://fastify.dev/docs/latest/Reference/)\n- [Fastify Request](https://fastify.dev/docs/latest/Reference/Request/)\n- [Fastify Reply](https://fastify.dev/docs/latest/Reference/Reply/)\n- [Fastify Validation and Serialization](https://fastify.dev/docs/latest/Reference/Validation-and-Serialization/)\n- [Fastify Encapsulation](https://fastify.dev/docs/latest/Reference/Encapsulation/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://fastify.dev"
+}

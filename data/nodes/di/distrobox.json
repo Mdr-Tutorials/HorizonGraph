@@ -1,0 +1,40 @@
+{
+  "id": "distrobox",
+  "name": "Distrobox",
+  "aliases": [
+    "Distrobox 发行版容器工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "containerization"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "podman",
+      "context": "选择 Podman 为容器管理器时创建发行版环境，并按配置使用 rootless 或 rootful 执行路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker",
+      "context": "选择 Docker 为容器管理器时调用其客户端创建和进入紧密集成的发行版容器。"
+    }
+  ],
+  "summary": "将容器发行版用户空间与 Linux 宿主紧密集成的工具。",
+  "description": "Distrobox 通过 Podman、Docker 或其他受支持容器管理器运行所选 Linux 发行版用户空间，使开发者在同一宿主上使用不同发行版的软件包和工具链。它共享宿主内核，不能把容器里的发行版名称理解成独立启动该发行版内核的虚拟机。\n\ncreate 和 enter 准备并进入环境，export 可把容器程序集成到宿主应用入口，assemble 依据 manifest 批量创建或删除环境。它有意共享用户目录、显示与音频接口、设备和其他宿主资源，适合在稳定或不可变宿主上提供可修改的开发工具空间。\n\n紧密集成意味着 Distrobox 不能被当成强沙箱。rootless 与 rootful 后端具有不同权限风险，挂载的用户文件也可能被容器程序修改。声明镜像和初始化步骤有助重建，但日常交互安装和共享 HOME 仍会产生状态，不能仅凭使用容器断言环境完全可重复。\n\n## 参考\n\n- [Distrobox：目标、后端和安全边界](https://distrobox.it/)\n- [Distrobox assemble：声明式批量环境](https://distrobox.it/usage/distrobox-assemble/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://distrobox.it/"
+}

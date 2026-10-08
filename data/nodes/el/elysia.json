@@ -1,0 +1,58 @@
+{
+  "id": "elysia",
+  "name": "Elysia",
+  "aliases": [
+    "ElysiaJS",
+    "Elysia Web 框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "web-standard-http-handler"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "http-routing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-request",
+      "context": "在处理上下文中通过标准 Request 访问原始方法、URL 和头部等信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typebox",
+      "context": "选用 Elysia.t 模式构建路径时采用其基于 TypeBox 的数据结构表示。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-schema",
+      "context": "选用兼容验证库时通过 Standard Schema 协议接入路由运行时校验。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runtime-adapter",
+      "context": "在 Node 等非默认部署路径选择相应官方运行时适配器。"
+    }
+  ],
+  "summary": "结合标准请求对象、模式校验和类型推导构建 HTTP 应用。",
+  "description": "Elysia 用路由、生命周期处理和模式组织 HTTP 应用，其处理上下文可访问标准 Request，并提供已解析的参数、正文及响应设置。app.fetch 可接收标准请求并生成响应，适合直接调用和无监听测试；高层上下文仍是框架自己的接口，不应与标准请求对象混为一谈。\n\n路由模式可以同时帮助运行时校验和静态类型推导，Elysia.t 基于 TypeBox，还可采用支持 Standard Schema 的校验库。具体模式决定哪些输入或输出受到检查，编译期类型不替代运行时校验，数据符合模式也不代表调用者拥有相应业务权限。\n\nElysia 有 Bun 相关路径，也提供当前官方 Node 适配器 @elysia/node，不能再把它描述为只能运行在 Bun。部署需要选择匹配的适配器和平台功能；不同宿主的 WebSocket、流和服务对象能力应分别核对，不由共享 Request 接口保证。\n\n## 参考\n\n- [Elysia Handler](https://elysiajs.com/essential/handler)\n- [Elysia Validation](https://elysiajs.com/essential/validation)\n- [Elysia Node Integration](https://elysiajs.com/integrations/node)\n- [Elysia Fetch Testing](https://elysiajs.com/tutorial/features/unit-test/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://elysiajs.com"
+}

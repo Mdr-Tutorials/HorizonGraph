@@ -1,0 +1,45 @@
+{
+  "id": "http-routing",
+  "name": "HTTP Application Routing",
+  "aliases": [
+    "HTTP 应用路由",
+    "请求路由",
+    "Web 路由"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-method",
+      "context": "用 GET、POST 等请求方法与路径共同选择处理器，保持资源操作的 HTTP 语义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "url-api",
+      "context": "在 Web 标准处理器中可解析请求 URL，再把 pathname 等组件用于路由匹配。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authorization",
+      "context": "路由匹配后，按主体、目标资源和操作执行服务端访问权限检查。"
+    }
+  ],
+  "summary": "依据请求方法和资源路径选择应用处理器。",
+  "description": "HTTP 应用路由把方法、路径及可选的主机等条件映射到处理器。参数路径把 URL 中的片段提取为输入，通配符覆盖一组路径，子应用挂载可以组织公共前缀。Hono 还提供路由分组、链式声明和不同匹配实现；匹配顺序及框架规则决定哪些处理器会执行。\n\n路由选择与网络路由器转发 IP 分组是不同层次的工作。匹配到处理器也不表示请求已获授权；路径参数、查询参数与消息体仍须按边界验证，资源访问权限由业务检查决定。方法不受支持与资源不存在可分别表达为 405 和 404，不能只依赖路径字符串判断结果。\n\n## 参考\n\n- [Hono：应用路由与路径匹配](https://hono.dev/docs/api/routing)\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

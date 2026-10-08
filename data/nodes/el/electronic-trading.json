@@ -1,0 +1,33 @@
+{
+  "id": "electronic-trading",
+  "name": "Electronic Trading",
+  "aliases": [
+    "电子交易"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "matching-engine",
+      "context": "在采用电子订单撮合的场所，由引擎处理相容交易意向并按场所规则生成成交。"
+    }
+  ],
+  "summary": "通过电子系统传递交易意向、报价并完成成交的市场方式。",
+  "description": "电子交易通过计算机系统与通信接口传递订单或报价、发现交易对手并报告成交。决策可以由人工或算法完成，市场也可以采用匿名订单簿、经销商报价或询价机制；电子化描述交易交互方式，不自动指定策略或市场结构。\n\n订单驱动的电子场所通常把订单交给撮合引擎；关系报价平台则可能向特定客户提供流式可执行价格。访问权限、交易对手信用、报价是否承诺可成交以及价格可见范围都会影响用户看到的市场，因此不能将所有电子报价当成统一公共订单簿。\n\n电子化便于自动处理和记录事件，也把连接中断、重复消息、规则校验与恢复状态变成工程问题。行情传播、订单接受、实际成交与后续清算结算属于不同环节；看到报价或收到连接确认不意味着订单已成交，更不意味着交易风险已经结束。\n\n## 参考\n\n- [BIS：固定收益市场电子交易研究](https://www.bis.org/publications/electronic-trading-fixed-income-markets)\n- [CME：EBS 订单簿与关系报价交易模式](https://www.cmegroup.com/markets/ebs.html)\n- [CME：FX Spot+ 订单簿、网关与撮合引擎](https://www.cmegroup.com/articles/faqs/faq-fx-spot-plus.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

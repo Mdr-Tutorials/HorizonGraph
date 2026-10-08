@@ -1,0 +1,38 @@
+{
+  "id": "keyframe-animation",
+  "name": "Keyframe Animation",
+  "aliases": [
+    "关键帧动画"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "easing-function",
+      "context": "关键帧区间需要非线性时间节奏时，先映射区间进度再求属性插值。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "animation-timeline",
+      "context": "制作多属性动画时，用时间线排列关键帧并调整播放位置。"
+    }
+  ],
+  "summary": "记录若干时刻的属性值并计算区间变化的动画方法。",
+  "description": "关键帧动画在选定时刻保存对象属性或角色姿势，由播放系统根据当前时间求出相应结果。关键帧可以描述位置、旋转、颜色、透明度或形变权重；每个属性的轨道可以有独立的关键帧安排。\n\n区间内既可连续插值，也可采用保持值或离散切换。缓动控制时间进度，属性本身的插值规则控制值如何变化，两者共同决定画面；关键帧数量与最终显示帧数不必相同。编辑器时间线和浏览器动画接口都可以组织这一方法。\n\n## 参考\n\n- [W3C：Web Animations 关键帧效果](https://www.w3.org/TR/web-animations-1/#keyframe-effects)\n- [Spine：关键帧与属性插值](https://eu.esotericsoftware.com/spine-keys)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

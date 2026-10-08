@@ -1,0 +1,42 @@
+{
+  "id": "rive-file-format",
+  "name": "Rive Runtime File Format",
+  "aliases": [
+    "Rive 文件格式",
+    ".riv",
+    "RIV"
+  ],
+  "type": "protocol",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "graphics-asset-format"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "keyframe-animation",
+      "context": "文件以动画与关键帧对象存储随时间变化的属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "animation-state-machine",
+      "context": "文件记录状态及其转换逻辑，让运行库根据应用输入推进交互。"
+    }
+  ],
+  "summary": "用于交付画板、动画与状态机的 Rive 二进制格式。",
+  "description": "Rive Runtime File Format 是编辑器导出的 .riv 二进制数据格式，用于把画板、形状、动画和状态机交给各平台运行库。文件头标记格式身份与版本，后续对象和属性按其类型键编码，供读取器重建内容。\n\n格式主版本需要与读取它的运行库匹配。同一主版本中，字段类型信息帮助读取器跳过不理解的扩展内容，但可成功加载不等于完整支持新功能；交付时仍需核对运行库的功能支持与动画效果。它与编辑器工具以及执行文件的 SDK 分别建档。\n\n## 参考\n\n- [Rive：.riv 二进制结构与兼容性](https://rive.app/docs/runtimes/advanced-topic/format)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://rive.app/docs/runtimes/advanced-topic/format"
+}

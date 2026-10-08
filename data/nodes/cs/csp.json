@@ -14,18 +14,25 @@
   ],
   "domains": [
     "security",
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "通过 Content-Security-Policy 或 Content-Security-Policy-Report-Only 响应字段交付强制或报告策略；meta 交付仅支持部分功能。"
     }
   ],
-  "summary": "声明页面允许加载与执行的来源，收窄注入攻击面。",
+  "summary": "由浏览器执行资源与执行权限策略，限制注入代码及嵌入风险。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 3,
-  "official_site": "https://www.w3.org/TR/CSP/"
+  "official_site": "https://www.w3.org/TR/CSP/",
+  "description": "CSP 让站点声明由浏览器执行的内容安全策略。script-src 等指令限制脚本来源及执行条件，connect-src 限制相关网络连接，frame-ancestors 限制哪些页面能够嵌入当前资源；nonce 或哈希可授权特定内联脚本，策略范围比简单的域名白名单更细。\n\n策略通常由 Content-Security-Policy 响应字段交付；Content-Security-Policy-Report-Only 用于观察违规而不阻止行为。HTML meta 也能交付部分策略，但不支持报告模式或 frame-ancestors 等指令，而且不能追溯约束在该元素之前已经处理的内容，因此并不等同于响应字段。\n\nCSP 可降低内容注入和某些 XSS 的影响，却不代替输出编码、输入处理或授权检查。宽泛来源许可和 unsafe-inline 等选择会削弱保护；nonce 必须按响应生成并避免被攻击者获知或复用。报告适合辅助部署和排查，策略效果仍取决于指令、资源结构与浏览器执行环境。\n\n## 参考\n\n- [W3C：Content Security Policy Level 3](https://www.w3.org/TR/CSP3/)"
 }

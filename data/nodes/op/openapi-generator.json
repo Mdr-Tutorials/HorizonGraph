@@ -1,0 +1,48 @@
+{
+  "id": "openapi-generator",
+  "name": "OpenAPI Generator",
+  "aliases": [
+    "OpenAPI 代码生成器",
+    "OpenAPITools Generator"
+  ],
+  "type": "tool",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-client-generation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-documentation-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "以 OpenAPI 文档作为所选客户端、服务端或文档生成器的输入。"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "swagger-codegen"
+    }
+  ],
+  "summary": "根据 OpenAPI 描述生成多语言客户端、服务骨架与文档。",
+  "description": "OpenAPI Generator 是 OpenAPITools 的生成工具项目，根据 OpenAPI 描述和目标生成器产出客户端 SDK、服务端骨架、数据模型或文档。命令行及构建插件共享生成选项；使用时先选择目标语言和生成器，再配置包名、HTTP 库、模型类型与输出位置。目标生成器各自有不同的功能支持和稳定性，不能把项目支持 OpenAPI 理解为所有生成器对每个规范特性都采用相同实现。\n\n项目提供规范校验、配置查询、选择性生成、模板定制和类型映射等能力，可以纳入持续集成。生成的服务骨架仍需实现业务逻辑，生成的客户端也要验证序列化、错误处理与服务端交互。规范校验检查描述本身；它与调用实际服务的契约测试承担不同职责。定制模板和手写扩展应与可重复生成的输出分开管理，以免重新生成覆盖人工实现。\n\n## 参考\n\n- [OpenAPI Generator：使用](https://openapi-generator.tech/docs/usage/)\n- [OpenAPI Generator：生成器清单](https://openapi-generator.tech/docs/generators/)\n- [OpenAPI Generator：定制](https://openapi-generator.tech/docs/customization/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://openapi-generator.tech"
+}

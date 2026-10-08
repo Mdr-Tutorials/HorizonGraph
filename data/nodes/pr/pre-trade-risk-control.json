@@ -1,0 +1,49 @@
+{
+  "id": "pre-trade-risk-control",
+  "name": "Pre-trade Risk Control",
+  "aliases": [
+    "交易前风控",
+    "事前交易风险控制",
+    "Pre-trade Controls"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "credit-limit",
+      "context": "在为客户提供美国证券市场接入的场景，将订单可能产生的累计金融敞口与预设客户授信阈值比较并拒绝超限订单。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fat-finger-check",
+      "context": "在订单发送前用价格、数量、金额和重复报单参数检查异常输入；涵盖人工和算法生成的订单。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "position-limit",
+      "context": "在实施账户或策略持仓预算的场景，以已持仓与潜在新增敞口检查订单；与交易所法定持仓限额分别核算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-rate-limits",
+      "context": "在RTS6或具体场所消息控制场景，对订单提交、修改、撤销及重复执行数量设置前置限制。"
+    }
+  ],
+  "summary": "在订单进入市场前检查价格、数量、敞口与权限。",
+  "description": "交易前风控是在订单进入交易场所之前判断是否允许发送的控制层，既检查单笔价格和数量，也检查客户、账户或机构的累计风险敞口和交易权限。它面向异常订单、失控算法和未满足前置条件的交易，不能替代成交后的仓位对账、市场监控或紧急处置。\n\n具体控制必须说明计量对象和聚合范围。美国证券市场接入规则要求相关券商设置客户授信及自营资本阈值，并阻止价格、数量或重复订单异常；欧盟RTS6还规定价格带、最大订单金额和数量、最大消息数及重复自动执行限制。跨场所或多网关发送订单时，分散的检查不能各自遗漏同一主体的其他未完成订单。\n\n风控预算并非只在成交后扣减：设计需要覆盖已发出而尚未得到最终回报的订单，并在撤单、拒单和成交处理之间维持一致的状态。阈值、例外、告警和恢复权限需要按业务复核；采购交易所或第三方功能并不自动转移受监管机构的控制责任。低延迟是工程目标，不能据此省略适用的前置检查。\n\n## 参考\n\n- [SEC：市场接入风险控制最终规则](https://www.sec.gov/rules/final/2010/34-63241.pdf)\n- [SEC工作人员：Rule 15c3-5常见问题与适用范围](https://www.sec.gov/rules-regulations/staff-guidance/trading-markets-frequently-asked-questions/divisionsmarketregfaq-0)\n- [EUR-Lex：Regulation (EU) 2017/589，算法交易组织与风险控制](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0589)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,40 @@
+{
+  "id": "cpu-isolation",
+  "name": "CPU Isolation",
+  "aliases": [
+    "CPU隔离",
+    "处理器隔离",
+    "内核噪声隔离"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpu-affinity",
+      "context": "将敏感线程显式安排到已隔离的CPU范围，并把外围线程安排到维护CPU。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cgroup",
+      "context": "在Linux支持的配置中用cgroup v2 cpuset隔离分区管理调度域，具体能力取决于内核及配置。"
+    }
+  ],
+  "summary": "为选定CPU减少调度、中断与内核工作干扰，保留维护资源。",
+  "description": "CPU隔离把特定处理器安排给敏感工作负载，并减少来自调度器、设备中断、定时器和内核工作线程的干扰。它不只是给应用设置CPU亲和性，也不是容器安全隔离。Linux提供调度域、IRQ和完整动态时钟等不同隔离路径，能力和条件需要分别配置。\n\n内核维护工作必须由housekeeping CPU承担，隔离核心不能让这些工作凭空消失。cpuset隔离分区可管理调度范围；中断亲和性处理设备干扰；nohz_full在符合条件的用户态单任务场景减少周期tick。频繁系统调用、多个可运行任务或特定计时需求可能破坏预期效果，并带来额外内核进出成本。\n\n隔离不能消除共享缓存、SMT资源竞争、缺页、电源状态变化和固件中断。应按NUMA拓扑为维护CPU留足容量，再用事件追踪和负载测试检查残留噪声。它适合经测量确认对抖动敏感的工作，过度隔离则可能降低整机利用率或使外围服务拥堵。\n\n## 参考\n\n- [Linux：CPU 隔离、housekeeping 与残留噪声](https://docs.kernel.org/admin-guide/cpu-isolation.html)\n- [Linux：实时内核配置与最坏延迟](https://docs.kernel.org/core-api/real-time/kernel-configuration.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

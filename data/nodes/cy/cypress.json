@@ -5,11 +5,13 @@
   "type": "framework",
   "ecosystems": [
     "static-analysis-testing-ecosystem",
-    "web_frontend"
+    "web_frontend",
+    "browser-automation-ecosystem"
   ],
   "domains": [
     "devops",
-    "web-development"
+    "web-development",
+    "browser-automation"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -24,12 +26,29 @@
     {
       "relation_type": "competes_with",
       "target_id": "playwright"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-automation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "auto-waiting"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "element-locator"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-context-isolation"
     }
   ],
-  "summary": "浏览器内运行的 E2E 测试框架，调试体验出名。",
+  "summary": "以查询重试、断言和状态管理组织 Web 应用测试。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.cypress.io"
+  "official_site": "https://www.cypress.io",
+  "description": "Cypress 是面向 Web 应用的自动化测试框架，提供端到端、组件等测试组织与浏览器交互能力，并可测试 HTTP 接口。它的查询、命令队列、断言和调试界面形成特定执行模型，不宜仅用“浏览器内工具”推导它与其他控制库具有完全相同的进程结构或能力边界。\n\n查询链和断言可以在超时内重试，动作前也会等待需要的状态；产生副作用的动作与可重试查询具有不同边界。这一机制减少固定休眠的需求，和失败后重跑整个测试的 retries 配置不同。端到端测试可通过真实浏览器访问应用，组件测试则把范围缩小到挂载的单个组件。\n\n启用 testIsolation 时，Cypress 清理页面以及 cookie、localStorage、sessionStorage 等规定状态，但官方明确 IndexedDB 等其他存储不会因此全部清空。恢复 cy.session 认证或关闭隔离还会改变后续状态，因此不能把该机制无条件等同于全新的浏览器容器或后端重置。截图、查询成功和一次断言通过各有覆盖范围，仍需与业务目标及配置一致。\n\n## 参考\n\n- [Cypress：Testing types](https://docs.cypress.io/app/core-concepts/testing-types)\n- [Cypress：Test isolation](https://docs.cypress.io/app/core-concepts/test-isolation)\n- [Cypress：Retry-ability](https://docs.cypress.io/app/core-concepts/retry-ability)"
 }

@@ -1,0 +1,40 @@
+{
+  "id": "bloomberg-company",
+  "name": "Bloomberg L.P.",
+  "aliases": [
+    "Bloomberg",
+    "彭博",
+    "彭博有限合伙企业"
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "market-data-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "bloomberg-b-pipe"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "blpapi"
+    }
+  ],
+  "summary": "提供金融信息、数据、分析与技术服务的公司。",
+  "description": "Bloomberg L.P. 是提供金融信息、数据、分析与技术服务的公司主体，亦经营新闻相关业务。组织名称与 Bloomberg Terminal、B-PIPE 等产品各有身份，不能将公司本身当作一个行情 API 或交易所。\n\n公司向金融机构提供桌面工作流和企业数据服务。B-PIPE 面向应用分发实时市场数据，覆盖与终端相关的资产类别，但其订阅、部署和非展示使用场景需要分别管理；开发接口与数据授权也不因属于同一供应商而成为同一产品。\n\n本节点以真实提供关系连接企业行情产品与 BLPAPI 等开发工件。作为行业入口，它帮助区分信息供应商、交易执行服务与市场运营者；市场数据产品能够向策略和风控应用供数，并不意味着该公司是客户订单最终撮合的交易所。\n\n## 参考\n\n- [Bloomberg 原厂公司资料](https://about.bloomberg.co.jp/corporate-profile/)\n- [Bloomberg L.P. 公司历史与业务主体](https://data.bloomberglp.com/company/sites/26/2016/09/about-bloomberg.pdf)\n- [Bloomberg 实时市场数据馈送](https://professional.bloomberg.com/products/data/enterprise-catalog/real-time-data-feed/)\n- [Bloomberg 云行情交付](https://professional.bloomberg.com/products/data/data-connectivity/cloud-access/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.bloomberg.com/company/"
+}

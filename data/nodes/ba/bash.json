@@ -1,0 +1,46 @@
+{
+  "id": "bash",
+  "name": "Bash",
+  "aliases": [
+    "Bourne-Again Shell",
+    "Bash Shell"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "posix",
+      "context": "实现 POSIX Shell and Tools 部分所定义的 Shell 语义，并提供 POSIX 模式及标准外扩展；不代表单个 Shell 实现完整操作系统规范。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "windows-terminal",
+      "context": "在安装了 Bash 的 WSL 发行版等可选环境中，Windows Terminal 可承载 Bash 命令行会话。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl-interop",
+      "context": "在 WSL 发行版内调用 .exe 工具或与 Windows 命令组合管道时，采用 WSL 提供的跨系统进程互操作。"
+    }
+  ],
+  "summary": "GNU 的命令解释器与 Shell 脚本执行工具。",
+  "description": "Bash 是 GNU 的命令语言解释器与 Shell，可用于交互式终端和非交互脚本执行。它解析命令、执行展开和重定向，并启动内建命令或外部程序；函数、条件和循环可以把现有工具组合成自动化流程。本节点覆盖 Bash 解释器工具身份，脚本语言是它提供的接口；Bash 本身不提供 Linux 内核、发行版软件包或图形终端。\n\nShell 的引号、变量展开、路径名展开和命令替换决定实际传给程序的参数。Bash 继承 Bourne Shell 的基本机制，并提供数组、交互编辑和作业控制等扩展；POSIX 模式用于调整与标准 Shell 行为相关的兼容性。可移植脚本应按需要采用 POSIX Shell 子集，依赖 Bash 扩展的脚本则需要明确解释器，而不能把所有 `sh` 都视为 Bash。\n\n在 WSL 中，Bash 通常来自用户安装的发行版，用于操作其 Linux 用户空间；WSL 也能够直接启动其他 Shell 或可执行程序。Windows Terminal 可通过 WSL profile 承载 Bash，Bash 还可经 WSL 互操作调用 Windows 可执行文件。跨边界调用时仍应分别处理 Shell 引号、路径表示和外部程序输出，Bash 的可用性不等于任意 Linux 内核功能均已实现。\n\n## 参考\n\n- [GNU：What is Bash?](https://www.gnu.org/software/bash/manual/html_node/What-is-Bash_003f.html)\n- [GNU：What is a shell?](https://www.gnu.org/software/bash/manual/html_node/What-is-a-shell_003f.html)\n- [GNU：Bash Reference Manual](https://www.gnu.org/s/bash/manual/bash.html)\n- [Microsoft：Working across Windows and Linux](https://learn.microsoft.com/en-us/windows/wsl/interop)\n- [Microsoft：Terminal 支持的 Shell](https://learn.microsoft.com/en-us/windows/terminal/faq)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.gnu.org/software/bash/"
+}

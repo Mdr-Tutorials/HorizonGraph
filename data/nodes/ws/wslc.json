@@ -1,0 +1,39 @@
+{
+  "id": "wslc",
+  "name": "WSLc",
+  "aliases": [
+    "wslc.exe",
+    "container.exe",
+    "WSL 容器命令行"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "wsl-containers"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "Windows 内置的 WSL Containers 命令行入口",
+  "description": "WSLc 是 WSL Containers 的 Windows 命令行客户端，随支持该功能的 WSL 分发，命令为 wslc.exe，并提供 container.exe 别名。它让用户从 Windows 终端操作 Linux 容器，无需先进入某个 Linux 发行版的交互 shell；客户端入口与承载容器的会话运行环境是不同层。\n\n命令覆盖拉取、构建、创建、启动、执行、日志、网络和卷等操作，并通过会话选择把操作定位到相应环境。WSL 3.0.1 的正式发布包含 WSL Containers GA；2026 年 9 月公告新增 restart、cp、events、健康检查等能力，具体参数仍应按安装版本的帮助和官方文档核对。\n\nWSLc 并非把 Docker CLI 的全部命令逐项承诺为兼容接口。GA 公告把 Compose 列为后续计划，3.0.1 命令注册中也没有 compose 子命令；已有 Dockerfile 构建或内部 dockerd 使用不能推导任意 Docker 插件、客户端端点及 Compose 功能已经可用。\n\n## 参考\n\n- [WSL Containers GA 公告](https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/)\n- [WSL 3.0.1 发布记录](https://github.com/microsoft/WSL/releases/tag/3.0.1)\n- [WSL 3.0.1 CLI 命令注册](https://github.com/microsoft/WSL/blob/3.0.1/src/windows/wslc/commands/RootCommand.cpp#L31)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool"
+}

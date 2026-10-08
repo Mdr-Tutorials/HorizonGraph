@@ -1,0 +1,27 @@
+{
+  "id": "confused-deputy",
+  "name": "Confused Deputy",
+  "aliases": [
+    "混淆代理问题",
+    "混淆代理人问题"
+  ],
+  "type": "concept",
+  "domains": [
+    "security"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "代理混淆请求者权限与自身权限，替请求者执行越权操作。",
+  "description": "混淆代理问题发生在拥有资源访问权的代理替请求者执行操作时，没有正确区分请求者可用权限与代理自身权限。代理可能按自己的广泛授权访问目标，却未验证发起方是否有权驱动这次操作。它可以出现在传统服务、OAuth 代理和智能体工具链，并不要求代理本身恶意。\n\nMCP 当前安全指南给出特定 OAuth 代理场景：共享的静态第三方 client ID、动态客户端注册、已有同意 Cookie 以及缺少逐客户端同意检查共同产生攻击条件。该案例不表示采用 OAuth 或静态 client ID 就必然存在漏洞；检查需要识别用户、请求客户端、实际代理与下游资源之间的授权关系。\n\n明确委托主体、下游受众和每次资源操作的权限可以避免把代理权利直接传给请求者。能力安全设计也关注消除过多隐含环境权限。仅校验令牌签名或模型声称已获用户允许不足以完成这项检查，代理同意、对象级授权和审计应由可信执行组件实施。\n\n## 参考\n\n- [MCP 2026-07-28：Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)\n- [IETF RFC 8693：OAuth 2.0 Token Exchange](https://www.rfc-editor.org/rfc/rfc8693.html)\n- [FreeBSD：capsicum(4)](https://man.freebsd.org/cgi/man.cgi?query=capsicum&sektion=4)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

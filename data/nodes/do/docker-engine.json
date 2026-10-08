@@ -1,0 +1,55 @@
+{
+  "id": "docker-engine",
+  "name": "Docker Engine",
+  "aliases": [
+    "dockerd",
+    "Docker 容器引擎"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "containers"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "container-runtime"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "containerd",
+      "context": "Docker Engine 用 containerd 管理容器执行；在启用 containerd image store 的路径中也管理镜像和快照，进程模式与存储模式按版本配置区分。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "namespace",
+      "context": "仅 Linux daemon 的容器进程隔离路径采用配置的 Linux namespaces；Windows 原生容器走不同平台机制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cgroup",
+      "context": "仅 Linux daemon 的资源管理路径按主机与容器设置使用 Linux cgroups；不声明为 Windows Engine 的全局依赖。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "docker-inc"
+    }
+  ],
+  "summary": "由 daemon、API 与客户端组成的 Docker 容器引擎",
+  "description": "Docker Engine 是 Docker 的开源容器化引擎，官方将其描述为客户端—服务器系统：dockerd 管理容器、镜像、网络和卷，API 接收操作请求，docker CLI 则提供用户入口。它与 Docker Desktop 的桌面集成产品、Docker Hub 服务和底层 OCI 执行器具有不同职责。\n\nEngine 使用 containerd 参与容器生命周期和底层任务管理。在 Docker Engine 29.0 及以后新安装的 image store 路径中，containerd snapshotter 也承担镜像与快照存储；升级安装仍可能保留旧存储驱动。当前文档另有可选的实验性嵌入 containerd 模式，不能据此把所有部署描述为固定的独立进程拓扑。\n\nLinux 与 Windows daemon 路径使用不同平台机制和存储实现。Linux 的 namespace/cgroup 和 runc 路径不能扩展为 Windows 原生容器的统一硬依赖；Windows 镜像与 Linux 镜像也不能因共享 Docker API 而跨内核直接互换。Engine API endpoint 的权限与配置由部署控制，客户端命令可用不等于公开了无需认证的远程服务。\n\n## 参考\n\n- [Docker Engine 官方说明](https://docs.docker.com/engine/)\n- [Docker Engine 的 containerd image store](https://docs.docker.com/engine/storage/containerd/)\n- [Docker daemon 的可选嵌入 containerd 模式](https://docs.docker.com/engine/daemon/embedded-containerd/)\n- [Docker Engine 的 Windows 存储驱动](https://docs.docker.com/engine/storage/drivers/windowsfilter-driver/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm"
+}

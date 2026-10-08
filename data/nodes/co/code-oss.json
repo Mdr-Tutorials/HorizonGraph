@@ -1,0 +1,52 @@
+{
+  "id": "code-oss",
+  "name": "Code - OSS",
+  "aliases": [
+    "Code OSS",
+    "Visual Studio Code Open Source",
+    "VS Code 开源代码基础"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-editor"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "vscode"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "monaco-editor"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "上游编辑器与工作台源码主要以 TypeScript 开发；用户所编辑项目不必使用 TypeScript。"
+    }
+  ],
+  "summary": "以 MIT 许可开放的 VS Code 上游代码编辑器项目。",
+  "description": "Code - OSS 是微软与社区开发代码编辑器及其工作台的开放源码项目，位于 microsoft/vscode 仓库，源码采用 MIT 许可。微软发行的 Visual Studio Code 在此基础上加入产品定制与资产，采用产品发行许可；上游项目与产品需要分别识别。\n\n源码包括编辑器核心、工作台、服务和扩展机制，主要使用 TypeScript，并按桌面与 Web 环境组织实现。其他发行或衍生编辑器可以据上游源码构建，但源码基础关系不表示运行时必须先安装微软 VS Code，也不能自动推导微软产品服务与扩展许可都适用于衍生发行。\n\nMonaco Editor 的官方说明指出，其库由 VS Code 编辑器源码生成并适配到独立浏览器环境；这体现共享编辑器核心的来源，不表示整个 Code - OSS 工作台都随 Monaco 分发。编译上游、使用已构建发行与把编辑器库嵌入应用是不同层次的工程行为。\n\n## 参考\n\n- [Microsoft：Code - OSS 仓库与发行身份](https://github.com/microsoft/vscode)\n- [VS Code：Code - OSS 与产品发行许可](https://code.visualstudio.com/docs/supporting/faq#licensing)\n- [VS Code：源码层次、TypeScript 与桌面/Web 环境](https://github.com/microsoft/vscode/wiki/Source-Code-Organization)\n- [Microsoft：Monaco 与 VS Code 源码的关系](https://github.com/microsoft/monaco-editor)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/microsoft/vscode"
+}

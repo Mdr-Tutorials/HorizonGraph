@@ -1,0 +1,35 @@
+{
+  "id": "incremental-market-data",
+  "name": "Incremental Market Data",
+  "aliases": [
+    "增量行情",
+    "行情增量更新"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-sequence-number",
+      "context": "带有序号的增量流中，按相应包或消息作用域检测缺口与重复。"
+    }
+  ],
+  "summary": "以变化事件持续更新已建立市场状态的行情方式。",
+  "description": "增量行情发布相对已知状态的变化，例如订单新增、数量修改、价位删除和市场状态调整。它减少重复发送完整状态，但接收端必须知道基准及事件语义。每条消息能独立解释还是依赖此前状态，由源规范与表示模式决定，不能只凭消息被称为增量作出判断。\n\n消息、数据包和市场事件具有不同边界。CME 的基于事件消息可以让一个事件跨多个数据包，也可以在一包中包含多个消息；事件结束标志与包序号承担不同作用。应用若在未完成的事件中计算状态，得到的可能只是中间视图。\n\n缺失更新、重复应用或错误排序会使本地状态偏离源。恢复时需要缓存仍在到达的增量，并按服务规定接到快照或重放后的状态；一条后续价格更新不必然能修复全部旧缺口。清簿、会话切换与金融工具变更同样属于必须显式处理的状态变化。\n\n## 参考\n\n- [CME：基于事件的增量行情消息](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457325420/MDP%2B3.0%2B-%2BEvent%2BBased%2BMarket%2BData%2BMessaging)\n- [CME：消息、数据包与事件边界](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457326496)\n- [CME：双路增量行情仲裁](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457672396/MDP%2B3.0%2B-%2BIncremental%2BFeed%2BArbitration)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

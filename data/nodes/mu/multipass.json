@@ -1,0 +1,40 @@
+{
+  "id": "multipass",
+  "name": "Multipass",
+  "aliases": [
+    "Multipass Ubuntu 虚拟机工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "virtualization"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ubuntu",
+      "context": "从 Ubuntu 镜像创建客体开发实例，在其中准备 Linux 工具链和测试环境。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "qemu",
+      "context": "在当前 Linux 和 macOS 的 QEMU 驱动路径中运行客体；Windows 或其他驱动路径不需要同一后端。"
+    }
+  ],
+  "summary": "快速创建、配置和管理跨平台 Ubuntu 虚拟机的工具。",
+  "description": "Multipass 是 Canonical 提供的 Ubuntu VM 管理工具，可在 Linux、macOS 和 Windows 上准备本地云式客体环境。它从可用镜像创建实例，设置 CPU、内存和磁盘，并提供启动、停止、shell 和 exec 工作流，适合开发工具链与云部署原型验证。\n\n创建时可以提交 cloud-init 配置，在首次启动流程中准备用户、文件和软件。mount、transfer 和命令别名连接宿主文件或工具调用与客体环境。实例具有独立磁盘和生命周期，宿主端 CLI 负责向 Multipass 服务发出管理操作，实际运行由平台驱动完成。\n\n支持的虚拟化驱动随平台和版本而异，不能把历史 Hyperkit、LXD 或 VirtualBox 列表写成所有现行安装的能力。镜像的 lts 等动态别名也可能随发布变化；需要固定输入时应记录具体版本。客体内再运行 Docker 是可选用途，Multipass 本身不要求 Docker Desktop。\n\n## 参考\n\n- [Multipass：用途、平台与实例工作流](https://canonical.com/multipass/docs/stable/)\n- [Multipass：使用 cloud-init 创建定制实例](https://canonical.com/multipass/docs/stable/how-to-guides/manage-instances/launch-customized-instances-with-multipass-and-cloud-init/)\n- [Multipass：现行驱动与平台差异](https://canonical.com/multipass/docs/latest/explanation/driver/)\n- [Multipass：镜像与动态别名](https://documentation.ubuntu.com/multipass/en/latest/reference/command-line-interface/find)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://canonical.com/multipass"
+}

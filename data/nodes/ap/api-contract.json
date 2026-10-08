@@ -1,0 +1,38 @@
+{
+  "id": "api-contract",
+  "name": "API Contract",
+  "aliases": [
+    "API 契约",
+    "接口契约"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "用语言无关的文档记录 HTTP 接口操作、参数、响应与安全声明。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "protocol-buffers",
+      "context": "在采用 Protobuf IDL 的 RPC 服务中声明方法和消息形状。"
+    }
+  ],
+  "summary": "约定接口操作、数据形状与可观察响应的共同边界。",
+  "description": "API 契约描述调用方与服务提供方共同遵守的接口边界，包括可以调用的操作、输入参数、输出结构、状态或错误形式，以及双方需要理解的行为约定。它可以写成 OpenAPI 文档、服务 IDL 或共享的类型化路由定义，使接口设计、实现和客户端开发使用同一份可检查的描述。数据仓库里的数据契约还涉及数据质量、交付和治理，本节点专指可调用接口之间的约定。\n\n工程实践需要分别检查描述是否完整、运行中的请求和响应是否符合约定、真实消费者是否按约定调用。共享 TypeScript 类型可以在编译期发现形状变化；运行时模式校验可检查外部值；契约测试可验证消费者与提供者之间的交互。契约中声明身份认证或权限要求也需要服务端实施，接口文档和生成客户端不会自动执行授权。\n\n## 参考\n\n- [OpenAPI：接口描述与工具用途](https://spec.openapis.org/oas/latest.html)\n- [ts-rest：共享接口契约](https://ts-rest.com/contract/overview)\n- [Pact：集成契约与提供者描述检查](https://docs.pact.io/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

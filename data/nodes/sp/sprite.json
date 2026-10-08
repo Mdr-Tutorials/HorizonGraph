@@ -1,0 +1,38 @@
+{
+  "id": "sprite",
+  "name": "Sprite",
+  "aliases": [
+    "精灵",
+    "精灵图对象"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "把纹理的像素或图集子区域映射为精灵可见图像。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-transform",
+      "context": "依据精灵局部位置、旋转、缩放及父级变换计算显示位置。"
+    }
+  ],
+  "summary": "以纹理区域和对象变换绘制二维图像。",
+  "description": "精灵是二维图像的显示对象：它持有纹理或纹理区域、位置、旋转、缩放和透明度等状态，渲染器把图像映射到可绘制的几何上。图像像素、精灵对象和 GPU 纹理资源是不同层次；许多精灵可共用同一张纹理，不需要各自分配一份图像。\n\n锚点决定图像中哪个位置对应对象原点，缩放和旋转围绕有关变换设置发生。使用图集时，精灵的纹理视图选择一块子区域，裁切或旋转打包信息需要在显示时还原。逐帧动画可以更换纹理视图，精灵概念本身并不要求动画。\n\n精灵常用于角色、图标、粒子和图形界面。兼容状态的精灵可由渲染器合批，但遮罩、滤镜、混合模式及绘制顺序可能分割批次；一个精灵也不必恒对应一个独立绘制调用。\n\n## 参考\n\n- [PixiJS Sprite](https://pixijs.com/8.x/guides/components/scene-objects/sprite)\n- [PixiJS Textures](https://pixijs.com/8.x/guides/components/textures)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

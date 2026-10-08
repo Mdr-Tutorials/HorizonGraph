@@ -1,0 +1,34 @@
+{
+  "id": "api-documentation-generation",
+  "name": "API Documentation Generation",
+  "aliases": [
+    "API 文档生成",
+    "接口参考文档生成"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "在 HTTP API 参考文档生成与渲染路径中读取操作说明、数据结构及示例。"
+    }
+  ],
+  "summary": "将接口描述和注释转换为可发布、可浏览的 API 文档。",
+  "description": "API 文档生成把接口模型、说明文字、示例与认证信息整理成面向使用者的参考资料。OpenAPI 工具链中需要区分两个阶段：先由手写规范、接口模型或应用代码产生机器可读的接口描述，再由文档工具生成静态页面或在浏览器中渲染操作、参数与响应结构。后一阶段常提供导航、搜索、调用示例和交互请求界面，其输入仍是已有的接口描述。\n\n生成和展示共享描述可减少手写文档与实现之间的重复，但文档质量仍取决于输入是否准确、示例是否有效以及发布是否与接口版本同步。交互界面发出一次成功请求只能验证该次交互；文档页面本身不会证明所有实现满足契约，也不会自动产生客户端运行时校验。接口说明生成、文档渲染、SDK 生成和契约测试应在工程流程中分别检查。\n\n## 参考\n\n- [Redoc CE：从 OpenAPI 构建或嵌入文档](https://redocly.com/docs/redoc)\n- [Swagger UI：分发和部署方式](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/)\n- [Scalar API Reference：使用入口](https://scalar.com/products/api-references/getting-started)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

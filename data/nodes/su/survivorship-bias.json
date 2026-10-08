@@ -1,0 +1,40 @@
+{
+  "id": "survivorship-bias",
+  "name": "Survivorship Bias",
+  "aliases": [
+    "幸存者偏差",
+    "生存偏差",
+    "Survival Bias"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "backtesting",
+      "context": "仅用回测期结束仍存续的证券而遗漏退出对象，会改变历史可交易集合和表现估计。"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "quantitative-factor",
+      "context": "若因子研究样本根据后来的存续或指数成员资格筛选，相关性与风险暴露估计可能失真。"
+    }
+  ],
+  "summary": "历史研究遗漏已退出对象，导致样本选择和表现估计失真。",
+  "description": "幸存者偏差发生在样本保留某一观察时点仍存在的对象，却遗漏已经退出、关闭或不再收录的对象时。证券回测中的退市公司、基金研究中的关闭基金、策略数据库中未保留的失败方案都可能影响样本；偏差的方向和大小取决于退出机制，不能一律归结为固定收益上调。\n\n用今日指数成分或当前可交易证券回测过去，会把后来的存续和入选信息带入历史证券集合。处理时需要恢复各时点的成员、上市退市、标识变化和相关收益，明确缺失数据与退出后持仓如何处置。只加入退市证券名单，而缺少退市价格或历史成员关系，仍可能留下选择问题。\n\n该偏差主要源于样本纳入条件；它可以与前视偏差同时出现，但修正特征时间戳并不会自动修正证券集合。研究应报告筛选准则、数据覆盖和无法恢复的退出记录，并比较时点成员与当前成员结果。原始基金研究展示了存续筛选可制造表现持续性的表象，不意味着所有市场和指标都受相同程度影响。\n\n## 参考\n\n- [Brown 等：Survivorship Bias in Performance Studies 原始论文](https://academic.oup.com/rfs/article-abstract/5/4/553/1590264)\n- [QuantConnect：研究流程、前视与幸存者偏差](https://www.quantconnect.com/docs/v2/writing-algorithms/key-concepts/research-guide)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

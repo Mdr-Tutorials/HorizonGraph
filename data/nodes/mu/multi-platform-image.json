@@ -1,0 +1,39 @@
+{
+  "id": "multi-platform-image",
+  "name": "Multi-platform Image",
+  "aliases": [
+    "多平台镜像",
+    "多架构镜像",
+    "Multi-platform Image"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-index",
+      "context": "采用 OCI 多平台发布时，使用索引聚合各平台候选清单并提供平台选择信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-manifest",
+      "context": "各目标平台变体使用独立清单引用对应的配置和文件系统层。"
+    }
+  ],
+  "summary": "以同一引用分发多个目标平台的镜像变体",
+  "description": "## 机制与边界\n\n多平台镜像把多个目标平台的镜像变体组织在同一个发布引用下，例如同时提供 linux/amd64 与 linux/arm64。不同变体分别拥有配置与层，镜像索引或 manifest list 把它们聚合起来。用户使用同一个标签时，客户端根据目标平台读取匹配的单平台清单。\n\n构建这些变体可以使用指令集模拟、多个原生构建节点或交叉编译。选择哪条路径取决于工具链和项目构建过程：模拟方便覆盖非本机架构，原生节点适合直接执行目标平台工具，交叉编译则让编译器在一种平台生成另一种平台的产物。构建产物仍须与各变体所包含的运行库和平台要求一致。\n\n多平台分发解决候选内容的组织和选择，不会把一个任意二进制变成可在所有架构及操作系统上执行的程序。目标平台没有对应变体时，客户端不能仅靠索引补出缺失内容；选中正确变体后，也仍需满足宿主机与运行时要求。核对发布结果应检查索引所引用的平台条目，以及各条目实际指向的清单。\n\n## 参考\n\n- [Docker：多平台构建与三类构建策略](https://docs.docker.com/build/building/multi-platform/)\n- [OCI：Image Index 平台描述](https://raw.githubusercontent.com/opencontainers/image-spec/main/image-index.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

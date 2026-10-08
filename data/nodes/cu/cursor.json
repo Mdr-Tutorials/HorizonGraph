@@ -5,29 +5,23 @@
   "type": "product",
   "ecosystems": [
     "editor-ide-ecosystem",
-    "llm-agent-ecosystem"
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
   ],
   "domains": [
     "machine-learning",
-    "programming-languages"
+    "programming-languages",
+    "ai-assisted-software-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "saas"
+      "target_id": "product"
     },
     {
       "relation_type": "developed_by",
       "target_id": "anysphere"
-    },
-    {
-      "relation_type": "depends_on",
-      "target_id": "vscode"
-    },
-    {
-      "relation_type": "depends_on",
-      "target_id": "typescript"
     },
     {
       "relation_type": "competes_with",
@@ -38,14 +32,25 @@
       "target_id": "windsurf"
     },
     {
-      "relation_type": "extends",
-      "target_id": "vscode"
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-rule",
+      "context": "加载项目规则、个人规则或 AGENTS.md，将适用的工作指导加入代理上下文。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-checkpointing",
+      "context": "Agent 修改文件时保存本地检查点，用于恢复代码状态；该机制独立于 Git 提交历史。"
     }
   ],
-  "summary": "AI 原生代码编辑器，模型介入编辑循环。",
+  "summary": "结合代码编辑器、项目指导与代理工具循环的开发产品。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "official_site": "https://cursor.com"
+  "official_site": "https://cursor.com",
+  "description": "Cursor 是 Anysphere 的 AI 开发产品，结合代码编辑器和代理工作入口。Agent 可读取与搜索代码、编辑文件、运行终端命令并使用其他工具；当前文档还区分更大任务的项目协调与代理委派。Cursor 编辑器基于 VS Code 源码演进，历史工程文章说明其复用编辑器和语言服务基础，但这不表示运行时必须先安装独立 VS Code。\n\nAgent 由指令、工具和所选模型共同形成执行循环。项目规则、个人规则及 AGENTS.md 提供可复用的任务指导，文件和命令结果进入后续上下文；规则作用于模型提示，不自动成为 shell 权限或操作系统隔离。源码实现语言也不等于用户项目必须使用该语言，不能因为工程中采用 TypeScript 就把所有 Cursor 用户任务写成依赖 TypeScript。\n\n官方 Agent 文档提供检查点以恢复已修改文件，并明确检查点存于本地、独立于 Git。它用于回退代理编辑，永久版本管理仍需要相应版本控制工作流；恢复文件也不会抹掉已有会话消息。编辑、终端和浏览器等具体能力取决于当前产品入口和权限配置，实施或审查任务时仍应结合差异、诊断与测试判断结果。\n\n## 参考\n\n- [Cursor：Agent 工具、协调与检查点](https://cursor.com/docs/agent/overview)\n- [Cursor：项目与个人规则](https://cursor.com/docs/rules)\n- [Cursor：VS Code 基础与语言服务的工程说明](https://cursor.com/blog/shadow-workspace)"
 }

@@ -1,0 +1,36 @@
+{
+  "id": "gemini-enterprise-agent-platform",
+  "name": "Gemini Enterprise Agent Platform",
+  "aliases": [
+    "Agent Platform",
+    "Vertex AI",
+    "Google Vertex AI"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "cloud-infrastructure"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "Google Cloud 的模型开发与智能体部署、治理平台。",
+  "description": "Gemini Enterprise Agent Platform 是 Google Cloud 面向技术团队的模型与智能体开发平台，提供模型访问、开发、部署、治理和优化能力。当前官方产品页以“formerly Vertex AI”标识连续身份；2026 年的发布说明明确把 Vertex AI 和 Agent Builder 的能力纳入此平台。本节点保留改名与范围扩展的连续产品身份，不把旧品牌再次建成并列的新平台。\n\n平台既承接模型选择、构建与调优能力，也提供智能体生命周期服务。Agent Studio 是协作式设计与提示开发工作区，Agent Runtime 是托管运行服务，ADK 则是可独立使用的开源框架。各组成服务有独立配置、区域和支持范围，平台品牌的扩大不代表所有旧 API 资源名、客户端包名和运行合同同时发生破坏性改动。\n\n面向员工访问和治理代理的 Gemini Enterprise app 是另一应用入口，并不等于开发平台本身。旧 Agent Builder 是此前的开发、扩展和治理产品集合，当前被整合进 Agent Platform；它也不是 Gemini Enterprise app 中的无代码 Agent Designer。阅读旧教程时，应把历史品牌、当前功能名和实际 API 服务逐项对应，而非只按包含 Agent 或 Gemini 的名称归并。\n\n## 参考\n\n- [Google Cloud：当前平台与 Vertex AI 连续品牌](https://cloud.google.com/products/gemini-enterprise-agent-platform)\n- [Google Cloud：平台初始发布与正式名称映射](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes)\n- [Google Cloud：企业应用与开发平台的不同入口](https://cloud.google.com/gemini-enterprise/agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://cloud.google.com/products/gemini-enterprise-agent-platform"
+}

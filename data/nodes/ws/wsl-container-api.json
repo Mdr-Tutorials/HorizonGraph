@@ -1,0 +1,39 @@
+{
+  "id": "wsl-container-api",
+  "name": "WSL Container API",
+  "aliases": [
+    "WSL Containers API",
+    "WSL 容器 API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "containerization",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "wsl-containers"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "microsoft",
+      "context": "微软通过 WSL 官方 API 文档和仓库维护本机容器管理接口及语言投影契约。"
+    }
+  ],
+  "summary": "Windows 应用管理 WSL Linux 容器的接口约定",
+  "description": "WSL Container API 是面向 Windows 应用的容器管理接口约定，公开的对象层次为 Session → Container → Process。它使应用能够配置环境、取得镜像、创建并运行容器、观察子进程和处理输入输出；此处的 API 身份是本机软件接口，不能把名称中的容器理解为另一个网络传输协议。\n\n官方参考给出 C、C# 与 C++ 投影：C 入口使用 wslcsdk.h，托管和 WinRT 层使用 Microsoft.WSL.Containers 名称空间。服务预检、会话创建、容器启动和进程退出具有各自调用与错误边界，应用应在失败路径释放句柄、处理退出事件并明确容器删除及会话终止策略。\n\n接口定义、SDK 投影与底层功能的可用范围必须分别核对。官方参考列出未实现调用及各语言投影差异，例如原始 native handle 在 C# 中被事件和流包装；功能 GA 也不表示所有声明的参数、投影与能力都已实现。使用者应根据所安装的 WSL/SDK 版本检测错误结果，避免从某语言样例推导全部接口等价。\n\n## 参考\n\n- [WSL Container API 开发者参考](https://wsl.dev/api-reference/)\n- [WSL C API 尚未实现的接口](https://wsl.dev/api-reference/c/not-yet-implemented-apis/)\n- [WSL C# 投影的能力边界](https://wsl.dev/api-reference/csharp/known-gaps/)\n- [Microsoft Learn：WSL container](https://learn.microsoft.com/en-us/windows/wsl/wsl-container)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "false-sharing",
+  "name": "False Sharing",
+  "aliases": [
+    "伪共享",
+    "缓存行伪共享"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    }
+  ],
+  "summary": "独立数据共处缓存行，至少一个写者导致额外一致性通信。",
+  "description": "伪共享发生于不同线程访问逻辑上独立的数据，但这些数据位于同一缓存行，且至少有一方频繁写入。缓存一致性以整行维护状态，一个字段的写入会使另一个核心为读取其他字段重新获取该行。只读共享通常不会形成同类写入失效代价；真正争用同一变量则是另一种共享需求。\n\n常见例子是相邻线程计数器、生产者与消费者索引，或频繁更新的引用计数紧邻只读元数据。诊断应结合结构体布局和可用硬件事件，区分缓存未命中、真实共享和伪共享。perf c2c等工具可帮助定位热点缓存行，但事件支持与解释依赖处理器及采样环境。\n\n拆分写热点、使用每线程数据或按实际缓存行对齐可减少干扰，却会增加内存和TLB占用。缓存行尺寸不能在所有平台上固定假设为64字节，布局变化还可能引入新的热点。是否优化要以相同负载下的测量为准，不能从存在共享缓存行就断定它是主要瓶颈。\n\n## 参考\n\n- [Linux：伪共享成因、检测与布局权衡](https://docs.kernel.org/kernel-hacking/false-sharing.html)\n- [perf c2c：共享缓存行分析](https://man7.org/linux/man-pages/man1/perf-c2c.1.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

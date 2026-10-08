@@ -1,0 +1,60 @@
+{
+  "id": "feed-handler",
+  "name": "Feed Handler",
+  "aliases": [
+    "行情接入处理",
+    "行情流处理器机制"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-sequence-number",
+      "context": "接入带序号行情时，追踪源规定的通道或会话顺序并检测重复与缺口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-gap-recovery",
+      "context": "流缺失或初始状态不完整时，执行源支持的恢复流程后再交付可用状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-normalization",
+      "context": "采用统一下游模式的实现中，把源字段与事件转换成明确的数据约定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "financial-instrument-reference-data",
+      "context": "按源金融工具定义解释标识、单位和模式相关字段。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "direct-market-feed",
+      "context": "接入场所直接行情的处理器部署中，选用该场所的数据通道并按其规范解码和恢复。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "securities-information-processor",
+      "context": "接入美国股票合并行情的处理器部署中，选用适用计划下 SIP 发布的数据服务；不表示所有行情处理器都采用 SIP。"
+    }
+  ],
+  "summary": "接收、解码并组织行情流完整性与输出的处理机制。",
+  "description": "Feed handler 描述接收和处理行情流的系统职责：识别通道与会话，解析封装和消息，再把可用事件交给状态维护或下游模块。具体软件、网卡或 FPGA 可以实现不同部分；这里建模接入处理机制，避免把一个通用职责冒充某个可安装产品。\n\n接入过程需按模式及版本解码字段，同时处理心跳、重复、丢包和状态切换。双路 UDP 行情仲裁按发布序号选择可用数据，而非假定某一路永远更早；收到字节与得到可用盘口状态是不同阶段。格式正确但尚未完成恢复的数据，也可能不宜直接用于状态推导。\n\n处理器可按接入范围选用场所直接行情，或在美国股票合并行情场景选用适用 SIP 服务，两类来源有不同覆盖和解释规则。接入处理可以包含源格式输出或规范化输出，并记录收到数据的时间与质量状态。参考数据、恢复服务和事件边界应与解码协作，性能目标不能取消完整性检查。下游订单生成和交易回报处理则承担其他职责，不能把一个行情 handler 写成完整撮合或订单执行系统。\n\n## 参考\n\n- [CME：MDP 3.0 的 SBE 编码](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457418645/MDP%2B3.0%2B-%2BSimple%2BBinary%2BEncoding)\n- [CME：双路增量行情仲裁](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457672396/MDP%2B3.0%2B-%2BIncremental%2BFeed%2BArbitration)\n- [CME：模式、配置与参考数据支持服务](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457572789/MDP%2B3.0%2B-%2BSupport%2BServices)\n- [NYSE：行情数据的类别与覆盖范围](https://www.nyse.com/article/understanding-the-market-for-us-equity-market-data)\n- [UTP Plan：处理器职能与行情服务](https://utpplan.com/PageParts/Technical.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

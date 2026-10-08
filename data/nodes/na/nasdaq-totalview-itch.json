@@ -1,0 +1,58 @@
+{
+  "id": "nasdaq-totalview-itch",
+  "name": "Nasdaq TotalView-ITCH",
+  "aliases": [
+    "TotalView-ITCH",
+    "Nasdaq ITCH",
+    "ITCH 5.0"
+  ],
+  "type": "protocol",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "nasdaq",
+      "context": "Nasdaq 发布并维护 TotalView-ITCH 技术规范；具体行情场所为规范中的 The Nasdaq Stock Market LLC。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-by-order",
+      "context": "以订单引用号关联逐单生命周期消息，维护该场所可发布的订单状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "financial-instrument-reference-data",
+      "context": "通过证券目录与当日 Stock Locate 映射解释后续金融工具消息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "soupbintcp",
+      "context": "选用软件行情的 SoupBinTCP 路线时，通过其封装与会话机制传送消息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "moldudp64",
+      "context": "选用 UDP 行情路线时，通过 MoldUDP64 承载消息并支持相应重传。"
+    }
+  ],
+  "summary": "规定 Nasdaq 系统逐单行情与市场事件消息的规范。",
+  "description": "Nasdaq TotalView-ITCH 规定 Nasdaq 执行系统发布的逐单行情、成交、证券目录、状态与事件控制消息。本节点描述该接口的消息规范，TotalView 数据产品及其接入服务另有身份。其他交易所上市证券可以出现在这条流中，但内容仍描述其在 Nasdaq 系统中的相关活动，不是所有场所订单簿的合并流。\n\nITCH 通过订单引用号关联新增、执行、取消、删除和替换等消息，接收端按类型维护可见状态。5.0 规范区分带 MPID 和不带 MPID 的新增消息，也为不可显示订单的成交提供相应消息；不能写成每条消息都公开参与者身份，或可从未公开订单完整还原隐藏储备。目录中的 Stock Locate 还具有交易日作用域。\n\n消息内容与分帧、排序及恢复通路分开：软件源的选项包含 SoupBinTCP 和 MoldUDP64，FPGA 版本具有自己的传输限制。接入需按选定源及版本处理序号、起始状态和快照衔接。ITCH 只发布行情，不接受用户订单；订单入口 OUCH 承担另一方向的业务。\n\n## 参考\n\n- [Nasdaq：TotalView-ITCH 5.0 规范（2026 更新）](https://assets.ctfassets.net/mx0rke14e5yt/5Uz6MGJxbo4wRPou8KveFs/4d76437c8e57694acee9d767587a8dfa/6-11-26_TVITCH_5.0_1.pdf)\n- [Nasdaq：2026 年行情规范更新及正式文件链接](https://www.nasdaqtrader.com/TraderNews.aspx?id=DTN2026-10)\n- [Nasdaq：GLIMPSE 5.0 接口规范（2026 更新）](https://assets.ctfassets.net/mx0rke14e5yt/1dHPeoYuayePQFxQcJFXtr/abd72648a068aa9a22631e8914a237dd/6-11-26_NQGlimpseSpecification_1.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://assets.ctfassets.net/mx0rke14e5yt/5Uz6MGJxbo4wRPou8KveFs/4d76437c8e57694acee9d767587a8dfa/6-11-26_TVITCH_5.0_1.pdf"
+}

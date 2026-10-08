@@ -1,0 +1,36 @@
+{
+  "id": "smithy",
+  "name": "Smithy",
+  "aliases": [
+    "Smithy 接口定义语言",
+    "Smithy IDL"
+  ],
+  "type": "language",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "选择 OpenAPI 转换插件和支持的 HTTP 协议时输出接口描述，并接受文档列明的信息损失。"
+    }
+  ],
+  "summary": "通过 shape 与 trait 建模服务契约并驱动多语言工件生成。",
+  "description": "Smithy 是接口定义语言与建模工具体系，通过有身份的数据形状、成员引用和 trait 描述服务契约。模型包含数据结构、操作的输入输出与错误、服务和资源；trait 为校验、序列化、认证或生成器添加语义。文本 IDL 与 JSON AST 是同一模型的表示方式，不能把 JSON AST 误认为独立网络传输协议。模型关注服务接口与抽象，具体传输规则由相应的协议 trait 和实现确定。\n\n工具可以对模型执行校验、投影和变换，并为具体语言生成客户端、服务端或其他工件。Smithy 到 OpenAPI 的转换只适用于可表达的 HTTP 协议路径，并存在信息损失，例如某些动态 endpoint、资源元数据与自定义 trait 不能直接保留；Smithy 因此不只是 OpenAPI 的另一种文件语法。部署到某个云服务并非语言建模的必要条件，生成产物的重试、认证和序列化行为仍取决于所选生成器与协议实现。\n\n## 参考\n\n- [Smithy：规范入口](https://smithy.io/2.0/spec/index.html)\n- [Smithy：shape 与 trait 模型](https://smithy.io/2.0/spec/model.html)\n- [Smithy：协议 trait](https://smithy.io/2.0/spec/protocol-traits.html)\n- [Smithy：OpenAPI 转换及信息损失](https://smithy.io/2.0/guides/model-translations/converting-to-openapi.html)\n- [Smithy：代码生成器构建](https://smithy.io/2.0/guides/building-codegen/index.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://smithy.io"
+}

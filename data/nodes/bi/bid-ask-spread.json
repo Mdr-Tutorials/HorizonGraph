@@ -1,0 +1,34 @@
+{
+  "id": "bid-ask-spread",
+  "name": "Bid-Ask Spread",
+  "aliases": [
+    "买卖价差",
+    "买卖报价差"
+  ],
+  "type": "metric",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "best-bid-and-offer",
+      "context": "计算报价价差时，取同一有效观测范围和时点的最优买价与卖价之差。"
+    }
+  ],
+  "summary": "同一口径最优卖价与最优买价之间的差额。",
+  "description": "买卖价差衡量同一市场范围、产品和时点下最优卖价 a 与最优买价 b 的距离，报价价差为 a−b。它可以用价格单位、tick 数或相对于中间价的比例表示；买价是对方愿意买入的价，卖价是对方愿意卖出的价。\n\n报价价差是交易成本的一个观测量，并不等于某次交易的完整费用。交易可以获得价内改善，也可能因大单吃到更深价位而付出更多成本；有效价差以实际成交和参考中点计算，与屏幕报价价差属于不同口径。\n\n价差反映流动性紧密程度，但不能单独表示可成交数量或市场韧性。比较时应固定行情来源、报价有效性和单位，过期、单侧、锁定或交叉报价需明确处理。较窄报价也不证明任意数量都能按该价成交，库存与信息风险会影响报价方的价差选择。\n\n## 参考\n\n- [CME：盘口深度、价差与跨产品单位比较](https://www.cmegroup.com/content/dam/cmegroup/education/files/new-treasury-market-paradigm.pdf)\n- [BIS：市场流动性与韧性的多个维度](https://www.bis.org/publ/qtrpdf/r_qt2403.pdf)\n- [Glosten 与 Milgrom：信息差、报价价差与交易价格原始论文](https://www.sciencedirect.com/science/article/pii/0304405X85900443)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

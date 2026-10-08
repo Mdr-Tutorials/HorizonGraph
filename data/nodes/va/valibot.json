@@ -1,0 +1,49 @@
+{
+  "id": "valibot",
+  "name": "Valibot",
+  "aliases": [
+    "Valibot 校验库"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "standard-schema",
+      "context": "支持规范的模式通过统一接口提供校验结果和输入输出类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "从组合后的模式推导 TypeScript 输入与输出类型，避免重复声明。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "需要模式交换时，通过官方独立转换包导出可表示的模式部分。"
+    }
+  ],
+  "summary": "以组合式小函数构建模式、校验数据并推导类型的库。",
+  "description": "## 机制与应用\n\nValibot 用独立的模式与动作函数组合对象、规则和转换管线。parse 返回输出或抛出 ValiError，safeParse 返回成功标记、输出或 issues；InferInput 与 InferOutput 提取转换前后的 TypeScript 类型。模块化函数可按实际使用导入，是否剔除未使用代码取决于构建工具处理。\n\n默认值和转换会使输入输出类型不同，不能只凭静态标注跳过未知数据校验。Valibot 实现 Standard Schema 以供通用工具调用。JSON Schema 导出由官方独立包 @valibot/to-json-schema 提供，并非核心模式天然采用 JSON Schema；转换函数和超出 JSON 数据模型的能力不能保证完整导出。\n\n## 参考\n\n- [Valibot：模块化设计](https://valibot.dev/guides/introduction/)\n- [Valibot：输入输出类型](https://valibot.dev/guides/infer-types/)\n- [Valibot：JSON Schema 独立转换包](https://valibot.dev/guides/json-schema/)\n- [Standard Schema：兼容实现](https://standardschema.dev/schema)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://valibot.dev/"
+}

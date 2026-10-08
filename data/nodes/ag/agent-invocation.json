@@ -1,0 +1,27 @@
+{
+  "id": "agent-invocation",
+  "name": "Agent Invocation",
+  "aliases": [
+    "智能体调用",
+    "智能体执行调用"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "由一次输入或请求启动并可追踪的执行单元。",
+  "description": "智能体调用是一次输入或请求在运行时中启动的执行单元，可以经过模型、工具和多个代理才完成。它与长期存在的会话分开标识：同一会话内可连续发生多次调用，而一次调用中的工具返回也不应误计为新的用户会话。\n\n运行时可为调用分配标识，把事件、日志、临时状态及错误关联到同一过程。ADK 使用 invocation_id 追踪一次用户请求，并在其 InvocationContext 中传递服务与执行信息；这种关联有助于定位某次输入触发的完整执行路径。\n\n调用的生命周期取决于接口，可能一次性返回结果，也可能逐步产出事件、暂停等待外部响应或接受取消。调用完成不表示会话被删除；新的调用也未必继承所有临时变量，状态延续应由显式会话或持久化规则决定。\n\n## 参考\n\n- [ADK runtime event loop](https://adk.dev/runtime/event-loop/)\n- [ADK events](https://adk.dev/events/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

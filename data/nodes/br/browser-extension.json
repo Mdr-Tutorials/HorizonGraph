@@ -9,20 +9,33 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "web_frontend"
+    "web_frontend",
+    "browser-automation-ecosystem"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "browser-automation"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "扩展采用内容脚本路径且具有页面访问权限时，读取或更新网页文档节点。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "在浏览器扩展脚本实现中编写内容脚本、消息处理和相关界面逻辑。"
     }
   ],
-  "summary": "给浏览器装能力的标准机制，Manifest V3 变局中心。",
+  "summary": "通过浏览器扩展 API 和权限模型增加交互能力。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "description": "浏览器扩展通过浏览器公开的扩展 API 为页面和浏览器交互增加功能，常包括工具栏界面、内容脚本及后台逻辑。通用扩展机制是一种能力组织方式，具体规范、权限模型和实现由浏览器决定；它与历史上装载原生二进制的浏览器插件不是同一技术身份。\n\n内容脚本可以在获准页面中读取或更新 DOM，并通过消息与扩展的其他部分通信。Chrome 的 Manifest V3 与 Firefox 的 WebExtensions 在接口和后台生命周期上存在差异，跨浏览器兼容需要实际核对，不能把某一种后台实现或全部 Chrome API 当作所有扩展的通用要求。\n\n扩展的页面访问、文件访问和权限范围影响它能够观察与控制什么，能力随安装和授权状态变化。自动化工具可选择通过扩展连接现有浏览器，但该连接方式不构成所有浏览器自动化的必要依赖。扩展代码与页面代码的执行环境也需要按实现区分，读取 DOM 不意味着共享全部页面脚本变量或拥有任意系统权限。\n\n## 参考\n\n- [Chrome：Extensions development](https://developer.chrome.com/docs/extensions/develop)\n- [Chrome：Content scripts](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts)\n- [Mozilla：Browser extensions与WebExtensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)"
 }

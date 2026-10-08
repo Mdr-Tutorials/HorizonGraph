@@ -1,0 +1,43 @@
+{
+  "id": "wsl-1",
+  "name": "WSL 1",
+  "aliases": [
+    "适用于 Linux 的 Windows 子系统第一代",
+    "WSL1"
+  ],
+  "type": "architecture",
+  "domains": [
+    "developer-environments",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "wsl"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "windows-nt",
+      "context": "由 NT 内核承载 Pico 进程，并通过兼容层将 Linux 系统调用映射到 NT 能力或自行实现相应语义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "elf",
+      "context": "加载未修改的 Linux ELF 用户态可执行文件；不把该文件格式等同于 Win32 PE 格式。"
+    }
+  ],
+  "summary": "通过 Windows NT 内核兼容层执行 Linux 系统调用的 WSL 架构。",
+  "description": "WSL 1 是 WSL 的第一代执行架构：未修改的 Linux ELF 用户程序由 Windows 的 Pico 进程承载，相关内核组件接收 Linux 系统调用并实现其语义。微软最初的架构说明将 Pico provider 驱动、用户态生命周期服务和 Pico 进程分开描述；驱动尽可能使用 NT 内核能力完成请求，不能直接映射的语义则由兼容层处理。这是操作系统接口兼容，不是把 Linux 程序重新编译成 Win32 应用。\n\n这一路径不启动 Linux 客户内核或 WSL 2 Utility VM，因此不需要以虚拟机方式承载发行版。它的能力边界取决于兼容层所实现的系统调用和行为；有 Linux 用户空间并不保证需要特定内核设施的程序能够工作。微软仍在版本比较中保留 WSL 1，并指出某些密集跨 Windows/Linux 文件系统操作的场景可能适合它，不能简单把“第一代”解释为已经废弃。\n\nWSL 1 与 WSL 2 可以对不同发行版并行使用，发行版可通过 WSL 的版本管理命令选择架构。WSLg 的官方实现只支持 WSL 2，不应从 Bash 命令行可用推导 WSL 1 支持相同的图形、内核或设备路径。历史架构文章可解释 Pico 与系统调用转译原理，但其中早期组件名称和限制不宜直接充当所有现行 WSL 发布版的完整清单。\n\n## 参考\n\n- [Microsoft：Windows Subsystem for Linux Overview（原始架构）](https://learn.microsoft.com/en-us/archive/blogs/wsl/windows-subsystem-for-linux-overview)\n- [Microsoft：WSL System Calls](https://learn.microsoft.com/en-us/archive/blogs/wsl/wsl-system-calls)\n- [Microsoft：WSL 版本比较](https://learn.microsoft.com/en-us/windows/wsl/compare-versions)\n- [Microsoft：WSLg 的 WSL 2 前提](https://github.com/microsoft/wslg#install-instructions-existing-wsl-install)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "kernel_os"
+}

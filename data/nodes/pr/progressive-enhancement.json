@@ -1,0 +1,40 @@
+{
+  "id": "progressive-enhancement",
+  "name": "渐进增强",
+  "aliases": [
+    "Progressive Enhancement",
+    "渐进式增强"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "以原生链接、表单和内容语义建立不依赖附加脚本的基础操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "在基础路径之上可选地增加局部请求、状态反馈与交互增强。"
+    }
+  ],
+  "summary": "先提供基础可用体验，再按客户端能力增加交互。",
+  "description": "渐进增强从可用的基础内容和操作开始，再按客户端能力增加样式与交互。在 Web 中，可以先让语义化 HTML、可导航链接和表单完成核心任务，再用 CSS 与 JavaScript 改善反馈、减少整页刷新或增加局部状态。是否具备渐进增强，取决于基础路径能否独立工作，而不是页面是否引用了某个支持增强的库。\n\n原生表单通过 action、method 与带 name 的控件把用户输入提交给服务端；脚本可以拦截同一操作、请求局部 HTML 并更新页面。htmx 的 hx-boost 能增强既有链接与表单，但只有 hx-get 属性而缺少可工作的原生操作，并不会自动获得禁用脚本时的功能。服务端也应为普通导航或表单请求提供可使用的完整页面。\n\n这一方法与 SSR、孤岛架构可以结合，但三者各自解决不同问题：SSR 决定 HTML 在哪里生成，孤岛决定哪些区域运行客户端组件，渐进增强决定基础体验与附加能力之间的依赖关系。需要浏览器专有能力的功能可以有明确的能力条件，不能把局部可降级推广成整个应用在所有客户端环境下都拥有相同体验。\n\n## 参考\n\n- [WHATWG HTML：Forms](https://html.spec.whatwg.org/multipage/forms.html)\n- [htmx：Progressive Enhancement](https://htmx.org/docs/#progressive-enhancement)\n- [htmx：hx-boost](https://htmx.org/attributes/hx-boost/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

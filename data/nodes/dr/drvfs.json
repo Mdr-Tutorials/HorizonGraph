@@ -1,0 +1,45 @@
+{
+  "id": "drvfs",
+  "name": "DrvFs",
+  "aliases": [
+    "Windows 驱动器互操作文件系统",
+    "DrvFS"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "windows-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "filesystem-mount",
+      "context": "把 Windows 驱动器或目录接入 Linux 可见路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "plan9-file-protocol",
+      "context": "选择 WSL 2 的 Plan 9 共享后端时，通过文件协议访问宿主目录。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "virtiofs",
+      "context": "选择支持的 virtiofs 文件共享后端时，通过宿主与虚拟机共享接口访问文件。"
+    }
+  ],
+  "summary": "WSL 中将 Windows 驱动器接入 Linux 路径的互操作机制。",
+  "description": "DrvFs 是 WSL 访问 Windows 驱动器的文件系统互操作入口，常见路径位于 /mnt 下。挂载后的文件仍来自 Windows 存储，不因为出现 Linux 路径就变成 ext4 文件。WSL 的 mount.drvfs 挂载入口会根据版本与配置选择实际后端；当前技术文档区分 WSL 1 的 drvfs 与 WSL 2 可采用的 Plan 9、virtio-plan9 或 virtiofs。\n\nWindows ACL、Linux 权限表示、大小写行为和可选 metadata 决定跨系统访问语义。启用 Linux 权限元数据并不能绕过 Windows 侧访问权限，也不能保证 Windows 与 Linux 对所有文件属性具有相同理解。读写位置、权限和文件事件需要分别判断，路径名称不足以说明完整语义。\n\n此节点描述驱动器互操作机制，而非一个独立网络协议。WSLc 的 Windows 目录共享另有会话设置和 virtiofs 加 bind mount 路线；普通发行版的 DrvFs 挂载说明不应被推广成所有 WSLc 会话的固定实现。开发流程需根据文件实际所在系统选择挂载与观察方式。\n\n## 参考\n\n- [WSL：Drvfs & Plan9](https://wsl.dev/technical-documentation/drvfs/)\n- [Microsoft：WSL 文件权限](https://learn.microsoft.com/en-us/windows/wsl/file-permissions)\n- [Microsoft：WSLc Architecture Deep Dive](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

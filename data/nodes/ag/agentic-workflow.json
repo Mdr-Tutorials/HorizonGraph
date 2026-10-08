@@ -1,0 +1,42 @@
+{
+  "id": "agentic-workflow",
+  "name": "Agentic Workflow",
+  "aliases": [
+    "智能体工作流",
+    "代理式工作流"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sequential-agent-orchestration",
+      "context": "流程存在资料收集、生成、审核等先后依赖时，按明确顺序安排代理步骤。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "parallel-agent-orchestration",
+      "context": "流程包含可独立查询或审核的分支时，并发执行后汇集结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "loop-agent-orchestration",
+      "context": "流程需要依据评审反馈反复修改时，配置跨步骤循环与终止条件。"
+    }
+  ],
+  "summary": "在任务流程中组合模型决策、工具动作与显式控制步骤。",
+  "description": "智能体工作流把模型判断、工具动作和任务阶段组织成可执行流程。它可以预先固定部分路径，再在特定步骤允许模型选择行动；以模型自主决定下一步的代理系统与主要由程序控制路径的工作流之间存在不同控制方式，不能仅凭名称断言自主程度。\n\n常见组合包括顺序生成与审核、按输入路由、并发收集资料以及按反馈迭代修改。ADK 的工作流代理、CrewAI Flows 和 LangGraph 状态图分别提供实现方式；流程可以只含一个智能体，也可以把多个专门代理作为不同节点。\n\n流程设计需要说明输入输出、状态流转、停止规则、失败路径及外部动作的责任。使用代理步骤不意味着每一步都必须调用模型，也不保证最终结果正确；可观测事件、检查点和必要的人工响应可按任务需要加入。\n\n## 参考\n\n- [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)\n- [ADK workflow patterns](https://adk.dev/workflows/patterns/)\n- [CrewAI flows](https://docs.crewai.com/en/concepts/flows)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

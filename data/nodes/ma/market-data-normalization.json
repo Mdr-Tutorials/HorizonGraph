@@ -1,0 +1,40 @@
+{
+  "id": "market-data-normalization",
+  "name": "Market Data Normalization",
+  "aliases": [
+    "行情规范化",
+    "行情标准化映射"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "financial-instrument-reference-data",
+      "context": "映射源标识、价格尺度、数量单位与有效金融工具定义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-by-price",
+      "context": "选择将逐单深度降为价位聚合的统一模式时，按价格汇总数量并明确丢失的信息。"
+    }
+  ],
+  "summary": "把不同源的行情映射为约定模式并保留关键语义的过程。",
+  "description": "行情规范化把不同源的消息格式、事件类型和字段映射到约定的数据模式，使下游以一致接口处理数据。工作不仅是改字段名，还包括金融工具标识、价格尺度、数量单位、时间和状态语义。统一后的模式应标出来源及转换约定，否则外观相同的记录仍可能表达不同事件。\n\n规范化可能有损：逐单状态被聚合到价位、时间精度被截断，或源中特有的事件被省略。Databento 的实现文档还区分原生 MBO 与由顶部或价位源映射的记录；带有相同结构并不表示拥有相同信息量。是否保留源序号、多个时间及质量标记，应依据下游需要明确选择。\n\n参考数据与日内变更参与字段解释，不能把持续合约符号或当天的短标识永远视为同一工具。核对原始消息与转换结果有助于发现错误，但规范化不能创造源未发布的信息，也不能替代缺口恢复。其边界应记录为可审核规则，供回放、分析和交易输入共同使用。\n\n## 参考\n\n- [Databento：行情规范化及信息损失](https://databento.com/docs/knowledge-base/new-users/normalization)\n- [Databento：源数据差异与规范化约定](https://databento.com/docs/standards-and-conventions)\n- [CME：模式、配置与参考数据支持服务](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457572789/MDP%2B3.0%2B-%2BSupport%2BServices)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

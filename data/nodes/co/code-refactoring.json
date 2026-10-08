@@ -1,0 +1,39 @@
+{
+  "id": "code-refactoring",
+  "name": "Code Refactoring",
+  "aliases": [
+    "代码重构",
+    "源码重构",
+    "Refactoring"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "semantic-analysis",
+      "context": "语言感知重构利用名称绑定、类型及作用域分析识别应修改的符号和引用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "symbol-index",
+      "context": "跨文件符号重命名等操作查询可用的项目符号及引用位置，覆盖范围依语言服务配置。"
+    }
+  ],
+  "summary": "在保持可观察行为的前提下调整代码结构。",
+  "description": "代码重构调整程序内部组织，同时保持需要保留的对外行为，例如符号重命名、提取方法和拆分重复逻辑。保留行为是目标与验证约束，不是任意名为重构的编辑都能自动满足的性质。\n\n语言感知重构利用语法、绑定与引用信息定位变更，并可以通过编辑器代码操作返回跨文件修改。VS Code 的重构支持来自相应语言服务；模型也能协助调查调用者与设计变换，但纯文本替换和生成式改写没有同样的符号解析保证。\n\n实施前应明确输入、返回值、错误、顺序与副作用等需保留的约定，修改后结合相关测试和调用者检查确认。静态引用结果可能遗漏动态消费者，已有缺陷也不应被悄然当作应保留的设计。新增行为与结构整理的边界应在实际任务中明确。\n\n## 参考\n\n- [VS Code：语言服务提供的重构与代码操作](https://code.visualstudio.com/docs/editing/refactoring)\n- [VS Code：保留行为的重构与验证](https://code.visualstudio.com/docs/agents/guides/refactor-safely)\n- [clangd：导航、补全与语义重构](https://clangd.llvm.org/features)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

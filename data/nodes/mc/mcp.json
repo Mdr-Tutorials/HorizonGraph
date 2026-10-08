@@ -12,7 +12,8 @@
     "llm-agent-ecosystem"
   ],
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "agent-development"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -23,12 +24,18 @@
     {
       "relation_type": "developed_by",
       "target_id": "anthropic"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-rpc",
+      "context": "MCP 核心操作采用 JSON-RPC 消息及请求响应结构，上层约束按 MCP 版本确定。"
     }
   ],
-  "summary": "统一模型与工具、数据源连接的开放协议。",
+  "summary": "连接模型宿主与工具、资源及提示模板的开放协议。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "official_site": "https://modelcontextprotocol.io"
+  "official_site": "https://modelcontextprotocol.io",
+  "description": "Model Context Protocol 是模型应用与外部能力之间的开放上下文协议，由宿主管理客户端，服务器提供工具、资源和提示模板等接口。MCP 使用 JSON-RPC 表达操作，并与具体模型及工具业务实现分离。它最初由 Anthropic 发布；后来进入 Linux Foundation 的 Agentic AI Foundation，历史研发归属不应被解释为当前由单一公司独占治理。\n\n2026-10 核对的正式核心版本为 2026-07-28，协议请求自包含，在元数据中携带版本、客户端信息和能力，不再依靠旧 initialize 会话保存协议状态。当前核心的服务器输入需求通过 MRTR 的 input_required 结果交付，由客户端补齐后用新请求重试。stdio 与 Streamable HTTP 是不同传输路线；HTTP 授权有独立适用范围，无会话核心也不禁止业务用明确句柄保存应用状态。\n\n版本兼容和可选扩展应分别核对：Tasks 已从旧实验性核心移出成为扩展，Apps 与已发布的 Skills 扩展也需要客户端及服务端实际支持。Roots、Sampling、Logging 在 2026-07-28 已弃用但仍存在；于或晚于 2027-07-28 发布的首个规范修订才具备移除资格，实际移除仍由维护者决定。支持 MCP 不能证明完整实现最新版全部能力，也不自动授予工具执行权限或保证业务幂等、安全和结果正确。\n\n## 参考\n\n- [MCP：基础协议](https://modelcontextprotocol.io/specification/2026-07-28/basic)\n- [MCP：2026-07-28 发布记录](https://blog.modelcontextprotocol.io/posts/2026-07-28/)\n- [MCP：变更记录](https://modelcontextprotocol.io/specification/2026-07-28/changelog)\n- [MCP：MRTR](https://modelcontextprotocol.io/specification/2026-07-28/basic/patterns/mrtr)\n- [MCP：扩展机制](https://modelcontextprotocol.io/extensions/overview)\n- [MCP：弃用特性](https://modelcontextprotocol.io/specification/2026-07-28/deprecated)\n- [MCP：进入 AAIF 的治理说明](https://blog.modelcontextprotocol.io/posts/2025-12-09-mcp-joins-agentic-ai-foundation/)"
 }

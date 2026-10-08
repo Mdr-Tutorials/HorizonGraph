@@ -1,0 +1,35 @@
+{
+  "id": "usdz",
+  "name": "USDZ",
+  "aliases": [
+    "USDZ 资产包",
+    "Universal Scene Description Zip"
+  ],
+  "type": "protocol",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "graphics-asset-format"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "usd",
+      "context": "使用包内默认 USD 层作为场景描述入口，并组织其资源。"
+    }
+  ],
+  "summary": "把 USD 场景层及相关资源打包的三维资产容器。",
+  "description": "USDZ 是用于打包 USD 场景与所需资源的容器格式，基于满足特定限制的 ZIP 文件布局。默认层作为包中的场景入口，其他层和图像等资源可以随包交付，以便分发包含多个文件的资产。\n\nUSDZ 容器不把所有数据变成一个新的三维语义体系，场景仍由 USD 描述。规范对压缩、文件排列和对齐等有要求，普通 ZIP 文件改后缀并不必然有效；查看器还需要支持所用模式、材质与资源类型。\n\n## 参考\n\n- [USDZ 文件格式规范](https://openusd.org/release/spec_usdz.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://openusd.org/release/spec_usdz.html"
+}

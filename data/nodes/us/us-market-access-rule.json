@@ -1,0 +1,44 @@
+{
+  "id": "us-market-access-rule",
+  "name": "US Market Access Rule",
+  "aliases": [
+    "SEC Rule 15c3-5",
+    "美国证券市场接入风险控制规则",
+    "Market Access Rule"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "pre-trade-risk-control",
+      "context": "对Rule 15c3-5适用的美国证券市场接入券商，约束交易前金融与监管控制、主体范围及直接控制责任；不推广到全部交易者或普通期货交易。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "credit-limit",
+      "context": "对该规则适用券商，要求按客户累计授信及自营资本阈值限制市场接入金融敞口，并持续复核阈值。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "fat-finger-check",
+      "context": "对该规则适用券商，要求合理阻止异常价格、数量或重复订单进入证券市场；参数由产品与业务风险确定。"
+    }
+  ],
+  "summary": "约束提供美国证券市场接入的券商风险控制。",
+  "description": "美国证券市场接入规则指Exchange Act Rule 15c3-5对具有或提供证券交易所、ATS市场接入的经纪交易商规定的风险管理控制和监督程序要求。本节点是辖区和主体限定的监管要求概念，法律文本是来源；它不是证券交易线协议，也不是所有期货或所有投资者通用的一组接口参数。\n\n规则要求相关券商限制市场接入产生的金融敞口，包括累计客户授信/自营资本阈值及异常价格、数量、重复订单控制，并覆盖适用的交易前监管检查、授权接入和即时成交报告。控制原则上须由该券商直接、独占管理，只有规则允许的特定监管控制可按条件书面分配；持续复核和年度管理层认证同样属于框架。\n\nSEC工作人员FAQ解释，报价以及人工和自动订单均可在范围内；只提供清算而不提供市场接入、或者只经另一接入券商交易的主体，不能因此就被视为同一规则的直接责任方。该规则一般不适用于期货或期货期权，证券期货另有范围和主体例外。FAQ是工作人员解释而非新增法规，交易所提供工具也不自动转移原券商责任。\n\n## 参考\n\n- [SEC：市场接入风险控制最终规则](https://www.sec.gov/rules/final/2010/34-63241.pdf)\n- [SEC工作人员：Rule 15c3-5常见问题与适用范围](https://www.sec.gov/rules-regulations/staff-guidance/trading-markets-frequently-asked-questions/divisionsmarketregfaq-0)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

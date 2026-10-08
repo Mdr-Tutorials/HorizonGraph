@@ -1,0 +1,32 @@
+{
+  "id": "mcp-resource",
+  "name": "MCP Resource",
+  "aliases": [
+    "MCP 资源原语",
+    "MCP 上下文资源"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 中用于上下文内容发现和读取的资源原语。"
+    }
+  ],
+  "summary": "以 URI 标识并供 MCP 客户端读取的上下文内容。",
+  "description": "MCP 资源是服务器提供、以 URI 标识的上下文内容，例如文档、记录或生成材料。资源读取面向内容获取，区别于工具的命名操作接口；URI 可以指向虚拟内容，不表示客户端拥有一个同名本地文件。内容可为文本或编码后的二进制数据。\n\n客户端通过列表或模板发现可读资源，再用 resources/read 获取内容。资源模板可表达带参数的 URI；订阅和变化通知属于服务器声明的可选能力。2026-07-28 按当前通知机制处理更新，宿主决定何时读取以及是否将内容加入模型上下文，而不是连接后必须读取全部内容。\n\n资源的应用控制模式不代表内容可信或具有执行权限。MCP Skills 扩展利用资源原语传递 SKILL.md 及附带文件，但普通读取不自动激活技能。需要核对来源、授权与缓存时，宿主应保留服务器和 URI 等身份，不能仅靠相同显示名称认定是同一资源。\n\n## 参考\n\n- [MCP：资源规范](https://modelcontextprotocol.io/specification/2026-07-28/server/resources)\n- [MCP Skills：资源读取与激活边界](https://modelcontextprotocol.io/extensions/skills/overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

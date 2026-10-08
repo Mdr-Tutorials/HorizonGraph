@@ -1,0 +1,46 @@
+{
+  "id": "http-session",
+  "name": "HTTP Application Session",
+  "aliases": [
+    "HTTP 应用会话",
+    "Web 会话",
+    "用户会话"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "security"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-cookie",
+      "context": "采用浏览器 Cookie 会话方案时，在后续请求中发送会话标识，并配置适合应用的属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authentication",
+      "context": "在需要登录的应用中，将认证建立的主体与会话凭据关联，并在身份变化时处理会话更新。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authorization",
+      "context": "使用会话身份访问资源时，仍需按本次操作、对象和租户执行授权检查。"
+    }
+  ],
+  "summary": "以会话标识或受保护令牌关联多个 HTTP 请求的应用状态。",
+  "description": "应用会话在无状态 HTTP 请求之间关联登录主体和其他应用状态。常见设计用不可预测的会话标识指向服务器记录，并通过 Cookie 携带标识；另一类设计把部分状态放入受保护的客户端令牌。两种方式都需要定义创建、续期、过期与失效规则，并在身份或权限变化时正确处理凭据。\n\n请求上下文只覆盖一次处理，会话可以跨多个请求；OSI 会话层也不是 Web 登录会话。服务端存储与客户端令牌在撤销、大小和泄露风险上有不同边界。会话固定防护、空闲及绝对超时、退出失效和每次资源授权都需要应用落实，Cookie helper 或签名功能不会自动提供完整会话系统。\n\n## 参考\n\n- [OWASP：会话管理](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html)\n- [Hono：独立会话与其他中间件组合](https://hono.dev/docs/middleware/third-party)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

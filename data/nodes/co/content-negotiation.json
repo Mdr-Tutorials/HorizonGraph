@@ -1,0 +1,38 @@
+{
+  "id": "content-negotiation",
+  "name": "HTTP Content Negotiation",
+  "aliases": [
+    "HTTP 内容协商",
+    "内容协商"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "http"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "读取 Accept 系列偏好，并在响应中声明 Content-Type 与影响缓存选择的 Vary。"
+    }
+  ],
+  "summary": "按客户端偏好和资源可用表示选择响应内容形式。",
+  "description": "内容协商让同一资源具有多种表示。主动协商由服务器依据 Accept、Accept-Language、Accept-Encoding 等请求字段选择媒体类型、语言或内容编码；被动协商可以先返回可选表示，再由客户端选择。客户端偏好与服务器可用内容不一致时，接口需定义回退行为或使用 406 等结果表达不能满足。\n\n请求的 Content-Type 描述已经提交的内容，并不是声明希望收到什么响应。若选定表示取决于请求字段，Vary 指出缓存匹配需要考虑的字段，避免把一种语言或编码的响应误用于另一请求。偏好声明不替代输入验证，也不会自动决定应用数据模型。\n\n## 参考\n\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)\n- [IETF：HTTP 缓存（RFC 9111）](https://www.rfc-editor.org/rfc/rfc9111.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

@@ -1,0 +1,51 @@
+{
+  "id": "cache-api",
+  "name": "Cache API",
+  "aliases": [
+    "Web缓存接口",
+    "Cache",
+    "CacheStorage"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-request",
+      "context": "缓存查询与写入使用 Request 表示匹配地址和方法，写入还受 Cache 对 HTTP(S) GET 等条件的限制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-response",
+      "context": "Cache.put 存储响应及其正文，match 返回匹配的 Response 供调用方消费。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-api",
+      "context": "Cache.add 或 addAll 的规范路径先通过获取流程取得响应，再安排写入缓存。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-headers",
+      "context": "缓存匹配读取响应首部中的 Vary，并在适用时比较请求 Headers 所提供的字段值。"
+    }
+  ],
+  "summary": "显式存储与匹配请求响应对，由应用安排更新、删除和版本。",
+  "description": "Cache 存储 Request 与 Response 对，CacheStorage 管理具名缓存。match、put、delete 等操作让应用显式查询、写入和删除；浏览器中接口位于安全上下文的 Window 或 Worker，不限定只能在 Service Worker 内使用。\n\n缓存匹配默认检查地址、方法及 Vary 等条件，生命周期由应用管理，不能等同浏览器的 HTTP cache。规范的匹配不以 Cache-Control 新鲜度自动判断命中；但 add 等方法内部获取资源时，网络路径仍可能受 HTTP 缓存规则影响。\n\nput 会读取响应正文，同一响应还需消费时应使用可克隆的副本。无自动过期不保证永久保存，配额及存储策略仍可清除数据；边缘或服务端同名接口还可能调整缓存指令与可用方法，例如 Cloudflare 明确列出实现差异。\n\n## 参考\n\n- [W3C Service Workers：Cache接口](https://w3c.github.io/ServiceWorker/#cache-interface)\n- [W3C Service Workers：缓存生命周期](https://w3c.github.io/ServiceWorker/#cache-lifetimes)\n- [W3C Service Workers：缓存匹配](https://w3c.github.io/ServiceWorker/#request-matches-cached-item-algorithm)\n- [W3C Service Workers：put操作](https://w3c.github.io/ServiceWorker/#cache-put)\n- [WHATWG Storage：存储压力](https://storage.spec.whatwg.org/#storage-pressure)\n- [Cloudflare：Cache接口差异](https://developers.cloudflare.com/workers/runtime-apis/cache/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://w3c.github.io/ServiceWorker/#cache-interface"
+}

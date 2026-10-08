@@ -1,0 +1,47 @@
+{
+  "id": "islands-architecture",
+  "name": "孤岛架构",
+  "aliases": [
+    "Islands Architecture",
+    "Islands",
+    "交互孤岛",
+    "岛屿架构"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hydration",
+      "context": "预渲染的交互岛启用客户端组件时，可按指定条件复用已有 HTML 并建立交互。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssg",
+      "context": "选择构建时生成页面的路线时，以静态 HTML 作为岛的页面外壳。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssr",
+      "context": "选择按请求生成页面的路线时，由服务端生成页面外壳与可预渲染组件内容。"
+    }
+  ],
+  "summary": "在静态 HTML 中按区域选择性启用客户端组件。",
+  "description": "孤岛架构把大部分页面保持为无需客户端组件运行时的 HTML，仅为需要交互的区域加载和执行组件代码。页面上的搜索框、购物车或图表可以各自成为交互岛，组件的加载时机与执行范围不必扩展到整页。多个岛仍可交换状态或协调交互，独立入口并不意味着它们必须在业务上完全隔离。\n\nAstro 的客户端孤岛提供具体实现：组件默认可以只输出 HTML 与 CSS，选择 client 指令后才启用客户端执行；部分指令按页面加载、浏览器空闲或元素可见等条件调度。对已有预渲染 HTML 的岛可以执行水合，client:only 一类路径则跳过服务端组件渲染并在浏览器挂载。因此，孤岛不能简单定义为“每个组件都进行水合”。\n\n页面外壳可在构建时生成，也可在服务端按请求生成；孤岛描述的是客户端交互分区与调度方式。Astro 还区分服务器孤岛，通过独立取得动态服务端内容延后渲染某些区域，不能把这一机制与客户端水合混为一谈。采用孤岛需要明确组件边界、共享状态和加载条件，收益取决于实际减少的客户端代码和执行工作。\n\n## 参考\n\n- [Astro：Islands Architecture](https://docs.astro.build/en/concepts/islands/)\n- [Astro：Preact Integration](https://docs.astro.build/en/guides/integrations-guide/preact/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

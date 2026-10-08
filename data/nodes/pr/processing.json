@@ -1,0 +1,35 @@
+{
+  "id": "processing",
+  "name": "Processing",
+  "aliases": [
+    "Processing 创意编程环境"
+  ],
+  "type": "tool",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "java",
+      "context": "在默认 Java 模式中，用 Java 风格的草图代码调用绘图和输入接口。"
+    }
+  ],
+  "summary": "用于视觉草图、教学和交互艺术的编程环境。",
+  "description": "Processing 是面向视觉创作的开源编程环境及软件体系，提供草图编辑、运行与绘图接口。它把编程概念和即时视觉反馈结合起来，常用于图形实验、设计教学以及交互装置。这里记录 Processing 环境，具体附加模式和扩展库需要按各自能力区分。\n\n默认 Java 模式的草图使用 Java 风格语法，setup 执行初始化，draw 在运行期间持续执行并更新画面。鼠标和键盘事件、帧率控制与媒体加载构成基础工作流；p5.js 沿用视觉草图思路，在浏览器使用 JavaScript，已有 Java 草图不能据此假定可直接运行。\n\n## 参考\n\n- [Processing：软件与创作定位](https://processing.org/overview/)\n- [Processing：draw 运行结构](https://processing.org/reference/draw_)\n- [Processing：环境与模式](https://processing.org/environment/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://processing.org/"
+}

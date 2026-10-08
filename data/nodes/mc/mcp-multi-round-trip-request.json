@@ -1,0 +1,37 @@
+{
+  "id": "mcp-multi-round-trip-request",
+  "name": "MCP Multi Round-Trip Request",
+  "aliases": [
+    "MCP 多轮请求",
+    "MCP MRTR"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 2026-07-28 引入的补充输入消息模式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-rpc",
+      "context": "用 JSON-RPC 响应携带 input_required，并在独立的新请求中回传补充输入。"
+    }
+  ],
+  "summary": "以输入需求结果和客户端重试完成 MCP 补充交互。",
+  "description": "MCP 多轮请求机制在 2026-07-28 版引入，用结果中的 input_required 表达原操作还需要客户端提供信息。服务器将输入需求返回给调用方，客户端完成相关交互后重新提交原操作。这取代当前核心中的旧式服务器主动 JSON-RPC 请求，不是新增网络传输或代理会话。\n\n支持此模式的核心操作包括 tools/call、resources/read 和 prompts/get。输入需求以 inputRequests 映射表达，服务器可附带不透明 requestState；客户端回传对应 inputResponses 和原样状态。初次调用与重试是独立请求，JSON-RPC id 必须不同，客户端不解析或修改服务器状态。\n\n请求自包含便于跨实例处理，但业务仍可能需要存储或幂等控制。影响授权和资源访问的 requestState 应由服务器保护并验证完整性；签名、期限和调用绑定也不自动提供一次性使用保证。服务器不能假定客户端会满足需求，客户端也只能履行已经声明支持的输入能力。\n\n## 参考\n\n- [MCP：MRTR 正式规范](https://modelcontextprotocol.io/specification/2026-07-28/basic/patterns/mrtr)\n- [MCP：2026-07-28 核心变化](https://modelcontextprotocol.io/specification/2026-07-28/changelog)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

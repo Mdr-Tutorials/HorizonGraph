@@ -1,0 +1,35 @@
+{
+  "id": "url-api",
+  "name": "URL",
+  "aliases": [
+    "URL对象接口",
+    "WHATWG URL API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "url-search-params",
+      "context": "URL.searchParams 提供与地址查询部分关联的参数对象，其参数更新按规范回写 URL 查询记录。"
+    }
+  ],
+  "summary": "解析、修改与序列化资源地址，并提供关联查询参数对象。",
+  "description": "URL 接口把输入解析为规范化地址记录，并通过 protocol、host、pathname、search、hash 等属性访问组成部分。相对地址通常需要明确基地址；构造器解析失败会抛出 TypeError。\n\nURL.searchParams 返回关联的 URLSearchParams，修改参数列表会更新地址的查询部分。地址处理本身不发起网络请求，也不会因修改 URL 对象就导航页面；浏览器与服务端均可实现这一接口。\n\n解析与序列化不保证保留输入的原始拼写，不同组成部分有各自编码规则。可解析也不等于业务上可接受或可信的目标，使用前仍应按应用要求检查协议、主机和用途；对象接口与任意字符串地址概念需要区分。\n\n## 参考\n\n- [WHATWG URL：URL接口](https://url.spec.whatwg.org/#url-class)\n- [WHATWG URL：API适用范围](https://url.spec.whatwg.org/#api)\n- [Deno：URL标准接口](https://docs.deno.com/api/web/url/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://url.spec.whatwg.org/#url-class"
+}

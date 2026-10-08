@@ -1,0 +1,43 @@
+{
+  "id": "oci-runtime-spec",
+  "name": "OCI Runtime Specification",
+  "aliases": [
+    "OCI Runtime Spec",
+    "OCI 运行时规范",
+    "runtime-spec"
+  ],
+  "type": "protocol",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "oci"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "open-container-initiative",
+      "context": "OCI 的 runtime-spec 项目维护容器执行配置、平台扩展与生命周期规范。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "规范要求 bundle 根目录中的 config.json 以 JSON 表示容器进程及执行配置。"
+    }
+  ],
+  "summary": "约定容器配置、执行环境与生命周期的 OCI 规范",
+  "description": "OCI Runtime Specification 规定容器的配置、执行环境与生命周期，输入通常是已经准备好的文件系统 bundle。bundle 的 config.json 描述进程、挂载和平台设置，并按配置引用根文件系统；运行时消费这些本地内容，而镜像的打包格式和远程分发分别由其他 OCI 规范负责。\n\n生命周期约定创建、启动、查询状态、信号和删除等动作，平台章节进一步定义具体执行属性。规范覆盖多个平台，不仅有 Linux namespaces/cgroups，也有 Windows、虚拟机等配置范围；runc 的 Linux 支持范围不能代表规范族只允许 Linux。\n\n规范含主机相关设置，因此把 bundle 复制到另一台机器时可能仍需调整挂载、权限或设备配置。实现需要按所声明的规范版本、平台和功能检查兼容性；符合 Runtime Spec 并不自动证明镜像供应链可信、支持 CRI、具有镜像构建能力，或为所有工作负载提供相同隔离强度。\n\n## 参考\n\n- [OCI Runtime Specification](https://github.com/opencontainers/runtime-spec/blob/main/spec.md)\n- [OCI Filesystem Bundle](https://github.com/opencontainers/runtime-spec/blob/main/bundle.md)\n- [OCI Runtime and Lifecycle](https://github.com/opencontainers/runtime-spec/blob/main/runtime.md)\n- [OCI Runtime Configuration](https://github.com/opencontainers/runtime-spec/blob/main/config.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "blpapi",
+  "name": "Bloomberg BLPAPI",
+  "aliases": [
+    "BLPAPI",
+    "Bloomberg API SDK",
+    "彭博 BLPAPI"
+  ],
+  "type": "library",
+  "domains": [
+    "data-engineering",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "bloomberg-company"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data",
+      "context": "通过有权限的 Bloomberg 数据服务请求或订阅报价、交易等市场数据；服务内容依产品与授权而异。"
+    }
+  ],
+  "summary": "访问 Bloomberg 数据服务的事件驱动 SDK。",
+  "description": "BLPAPI 是 Bloomberg 提供的数据服务 SDK，包含 C++、Java、C# 和 Python 等接口。客户端通过 Session 建立连接，打开 Service，发送请求或注册订阅，并通过 Event 与 Message 接收结果。它属于访问服务的客户端库，不能把 SDK 本身等同于彭博终端、交易所直连行情或完整订单执行系统。\n\n请求与订阅具有不同生命周期：一次请求可能先产生多个部分响应，再收到完成响应；订阅持续接收更新或状态消息。CorrelationId 帮助应用把返回消息对应到具体请求或订阅。同步轮询和异步回调有不同线程与对象生命周期要求，开发者需要正确处理会话中断、授权状态及数据错误。\n\n软件接口公开并不意味着所访问的数据免费或无权限限制。具体服务、字段、历史和实时内容取决于 Bloomberg 产品与用户授权，研究数据的时间戳、来源、调整参数也必须与分析目的对应。数据接入接口的存在不能保证它适合所有微秒级撮合路径，也不代表可以获得所有交易所逐笔数据。\n\n## 参考\n\n- [Bloomberg BLPAPI 官方文档入口](https://bloomberg.github.io/blpapi-docs/)\n- [Bloomberg：BLPAPI Session API](https://bloomberg.github.io/blpapi-docs/python/3.26.9/_autosummary/blpapi.Session.html)\n- [Bloomberg：核心开发指南](https://data.bloomberglp.com/professional/sites/10/2017/03/BLPAPI-Core-Developer-Guide.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://bloomberg.github.io/blpapi-docs/"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "zencoder",
+  "name": "Zencoder",
+  "aliases": [
+    "Zencoder AI",
+    "Zencoder Coding Agent"
+  ],
+  "type": "product",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "Coding Agent 需要已连接服务器的工具时调用该服务器；外部工具随实际配置启用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-skill",
+      "context": "在任务中加载已定义的技能来提供代码风格、测试模式或重复工作指导。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git-worktree",
+      "context": "使用 Zenflow Code 的工作树任务流程时，将并行代码工作安排到独立工作树；不表达每个 IDE 对话都创建工作树。"
+    }
+  ],
+  "summary": "组合编码代理、Zenflow 工作台与 IDE 助手的 AI 平台。",
+  "description": "Zencoder 是面向代码与工作流的 AI 代理平台。当前官方说明三个入口为 Zenflow Code、Zenflow Work 和 IDE Agents；本节点记录这套产品体系，不把某个 IDE 插件当作全部平台。这里的 Zencoder 指 zencoder.ai 的开发工具，与视频转码领域的同名服务是不同身份。\n\n其 Coding Agent 读取项目结构、相关文件和指导，制定修改计划，跨文件编辑并调用构建、lint 或测试命令，把失败结果纳入下一轮修正。工作台还提供并行代理和面向任务的组织方式；Zenflow Code 的工作树流程帮助安排独立修改，但使用不同工作树不代表工具或凭据已经被进程级隔离。模型能力、任务上下文和执行后端分别影响结果。\n\nMCP 连接使已配置的外部服务器工具可参与任务，Skills 则提供重复使用的项目标准或工作指导。平台可呈现变更差异并让用户接受、拒绝和继续调整，验证机制并不构成任意代码正确性的证明。具体可用模型、团队控制与工具权限应按当前入口配置核对，不能因为平台支持集成就推断所有任务必须访问第三方服务。\n\n## 参考\n\n- [Zencoder：当前三种产品入口](https://docs.zencoder.ai/welcome)\n- [Zencoder：Coding Agent 执行与验证流程](https://docs.zencoder.ai/features/coding-agent)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://zencoder.ai/"
+}

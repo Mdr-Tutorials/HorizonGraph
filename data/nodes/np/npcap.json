@@ -1,0 +1,40 @@
+{
+  "id": "npcap",
+  "name": "Npcap",
+  "aliases": [
+    "Windows Npcap"
+  ],
+  "type": "tool",
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "windows-ecosystem",
+    "tcp-ip-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "packet-capture",
+      "context": "Windows 驱动与用户接口提供实时采集路径。"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "windows",
+      "context": "面向 Windows 的驱动和软件包。"
+    }
+  ],
+  "summary": "Windows 报文采集驱动及用户态接口软件包。",
+  "description": "Npcap 是 Windows 网络采集软件包，包含内核驱动和用户态接口。其驱动按 NDIS 机制接入网络路径，用户程序可以通过与 libpcap 相近的 API 获取报文；驱动、兼容接口与分析应用分别承担不同工作。\n\nAPI 指南列出通用调用与 Windows 特有扩展。兼容模式便于迁移已有应用，但不是传输协议兼容性，也不表示所有 Linux 采集选项或设备都能在 Windows 上照搬。安装、驱动权限及无线监控功能要依软件版本和系统支持判断。\n\nWireshark 等程序可在 Windows 实时采集路径使用 Npcap。实际可见范围由选择的接口、虚拟网络路径和驱动能力决定，不能据此断言能看到全部 WSL、容器或交换机流量；硬件卸载与采集丢包也会影响记录和诊断。\n\n## 参考\n\n- [Npcap API 指南](https://npcap.com/guide/npcap-api.html)\n- [Npcap 内部结构](https://npcap.com/guide/npcap-internals.html)\n- [Wireshark 用户指南](https://www.wireshark.org/docs/wsug_html/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://npcap.com/"
+}

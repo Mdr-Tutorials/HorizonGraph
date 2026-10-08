@@ -1,0 +1,30 @@
+{
+  "id": "maker-taker-fees",
+  "name": "Maker-Taker Fees",
+  "aliases": [
+    "做市吃单费用",
+    "挂单吃单费率",
+    "Maker-Taker 费用"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    }
+  ],
+  "summary": "按提供或移除流动性角色安排成交费用和返佣的规则",
+  "description": "Maker-Taker 费用模式通常向移除流动性的一方收取成交费，向提供流动性的一方支付返佣；也存在反向 Taker-Maker、双方收费或其它结构。具体收费角色取决于成交行为及场所规则，不是把限价单一律视为 maker、把市价单一律视为全部费用来源。\n\n费率可能随会员资格、成交量等级、资产、订单属性和商业安排变化，费用模式本身也可调整。SEC 的 EDGA 申报记录即展示场所从反向模式改为 Maker-Taker 的过程，所以词条不固定推广某一历史费率或永久交换方向。\n\n路由与报价决策应比较净价格和执行概率，不能只选屏幕价格或最高返佣。返佣可能被不利价格变化、价差、借券及库存风险抵消，场所返佣是否传递给最终客户还取决于券商安排；费用激励、执行质量与适用交易义务分别评估。\n\n## 参考\n\n- [SEC：Maker-Taker 与 Taker-Maker 费用结构](https://www.sec.gov/newsroom/speeches-statements/statement-clayton-open-meeting-nms-2018-03-14)\n- [SEC：EDGA 费用模式变更申报](https://www.sec.gov/rules-regulations/self-regulatory-organization-rulemaking/sr-cboeedga-2024-045)\n- [IBKR：SmartRouting 的场所选择和费用因素](https://www.interactivebrokers.com/en/trading/smart-routing.php)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

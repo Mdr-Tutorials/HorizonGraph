@@ -1,0 +1,45 @@
+{
+  "id": "ef-vi",
+  "name": "ef_vi",
+  "aliases": [
+    "Etherfabric Virtual Interface",
+    "ef_vi API"
+  ],
+  "type": "library",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "kernel-bypass"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dma",
+      "context": "注册缓冲区并通过虚拟接口描述符让支持的设备在受限地址映射中传送包内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ethernet",
+      "context": "原始包 API 处理兼容 Ethernet 网卡上的帧，应用负责上层封装。"
+    }
+  ],
+  "summary": "为兼容网卡提供用户态虚拟接口、帧收发与事件 API。",
+  "description": "ef_vi 是 AMD 网卡用户态虚拟接口 API 及其库实现，提供接收、发送描述符、事件队列和内存注册等能力。它常随 Onload 软件分发，但使用原始帧 API 的应用与通过 onload 拦截 socket 的应用是不同接口层，不应把二者合成一个抽象协议栈。\n\n应用向接收队列投递已注册缓冲区，再通过事件判断收发进展并回收资源。帧内容和上层协议通常由应用负责，API 本身不会替原始包程序实现通用 TCP 连接语义；不同硬件和驱动支持的事件、功能与限制须逐项核验。\n\n保护域和地址映射限定设备可访问的内存，正确注册、所有权转交和资源生命周期关系到安全与正确性。物理地址等特殊模式可能削弱隔离，不能把直接设备访问理解为任意内存都可无权限读写，或把事件返回统一解释成线上发包时间戳。\n\n## 参考\n\n- [OpenOnload ef_vi API 使用与安全说明](https://github.com/Xilinx-CNS/onload/blob/master/src/onload/distfiles/README.ef_vi)\n- [AMD ef_vi User Guide：虚拟接口、事件与保护域](https://docs.amd.com/api/khub/documents/PhDqWIW_vwYMa_9U3H35kQ/content)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/Xilinx-CNS/onload"
+}

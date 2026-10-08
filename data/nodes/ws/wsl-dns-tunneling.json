@@ -1,0 +1,39 @@
+{
+  "id": "wsl-dns-tunneling",
+  "name": "WSL DNS Tunneling",
+  "aliases": [
+    "WSL DNS 隧道",
+    "DNS Tunneling"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "virtualization",
+    "networking"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "wsl-networking"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dns",
+      "context": "代理 Linux 环境中的域名解析请求，由 Windows 解析服务返回 DNS 结果。"
+    }
+  ],
+  "summary": "通过虚拟化通路把 Linux DNS 解析请求交给 Windows。",
+  "description": "WSL DNS tunneling 改变 Linux 到 Windows 的 DNS 请求代理方式，通过虚拟化通路请求宿主解析服务，减少依赖传统 VM 到宿主 DNS 数据包路径。它改变请求如何到达 Windows，不改变 DNS 的名称、记录和解析语义，也不等同于 DNS over HTTPS 或给全部应用网络流量建立加密隧道。\n\n这一机制用于适配 VPN、解析策略和其他复杂网络配置；Windows 侧规则如何影响解析以及 resolv.conf 如何生成，仍有对应条件。官方将普通 WSL 中的可用宿主范围、默认值与相关配置列在网络和高级设置文档，手工覆盖解析配置可能改变预期通路。解析成功也不保证目标服务的路由或端口可达。\n\nWSLc 3.0.1 的会话设置同样包含默认启用的 dnsTunneling，但使用的是会话配置体系，应与普通发行版 .wslconfig 的作用范围区分。判断故障时要分清解析请求、Windows 返回结果、后续连接和平台防火墙，不能以 DNS 设置代替容器网络或端口发布。\n\n## 参考\n\n- [Microsoft：WSL 网络](https://learn.microsoft.com/en-us/windows/wsl/networking)\n- [Microsoft：WSL 高级配置](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)\n- [Microsoft：WSL DNS 与网络排查](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting)\n- [WSL 3.0.1：WSLCUserSettings 默认设置](https://github.com/microsoft/WSL/blob/3.0.1/src/windows/common/wslc/settings/WSLCUserSettings.h#L100)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

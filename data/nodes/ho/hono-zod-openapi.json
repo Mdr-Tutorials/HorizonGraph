@@ -1,0 +1,55 @@
+{
+  "id": "hono-zod-openapi",
+  "name": "Zod OpenAPI Hono",
+  "aliases": [
+    "@hono/zod-openapi",
+    "OpenAPIHono"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "hono"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "zod"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "openapi"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-documentation-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "api-contract",
+      "context": "通过声明式路由记录请求和各状态码的响应，让文档与处理函数共享接口形状。"
+    }
+  ],
+  "summary": "在 Hono 扩展类中统一路由、Zod 请求校验与 OpenAPI 描述。",
+  "description": "Zod OpenAPI Hono 是 @hono/zod-openapi 包提供的 Hono 扩展类，使用 createRoute、Zod 模式和 OpenAPIHono 将请求参数、响应声明及处理函数组织在一起。它可以生成 OpenAPI 描述，并在支持的请求目标上执行 Zod 校验。这个项目虽然位于中间件仓库，其核心是扩展类；它与 hono-openapi 的普通路由中间件方案具有不同入口。\n\n路由响应模式为文档和处理函数提供类型约束，不应由此推断每个已发出的响应都自动进行运行时校验。官方说明请求体校验限于带 Zod 模式的 JSON 和表单媒体类型，其他媒体类型需要对应解析与校验实现。OpenAPI 的 security 声明需要实际鉴权中间件执行；路由注册方式和纯 Hono 子应用的混合也会影响描述合并与 RPC 类型保留。\n\n## 参考\n\n- [Zod OpenAPI Hono：官方 README 与限制](https://raw.githubusercontent.com/honojs/middleware/main/packages/zod-openapi/README.md)\n- [Hono：Zod OpenAPI 示例](https://hono.dev/examples/zod-openapi)\n- [Zod：JSON Schema 转换边界](https://zod.dev/json-schema)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/honojs/middleware/tree/main/packages/zod-openapi"
+}

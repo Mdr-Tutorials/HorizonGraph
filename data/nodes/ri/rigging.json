@@ -1,0 +1,40 @@
+{
+  "id": "rigging",
+  "name": "Rigging",
+  "aliases": [
+    "绑定",
+    "角色绑定",
+    "骨架绑定"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "computer-animation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "skeletal-animation",
+      "context": "建立关节与蒙皮控制，为后续骨骼动画提供可变形角色。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "morph-target-animation",
+      "context": "把表情等目标形状纳入动画控制系统。"
+    }
+  ],
+  "summary": "为动画对象建立控制器、约束及变形关系的过程。",
+  "description": "绑定为模型或其他对象建立可操纵的控制系统，可能包括骨架、蒙皮权重、约束、驱动器和形状控制。骨架定义关节层级，蒙皮定义顶点怎样受到关节影响，动画师通过控制器调整姿态；绑定本身不等于一段已录制的动画。\n\n制作工具中的完整控制系统通常比运行时需要的数据丰富。导出时可能只交付骨架、蒙皮和已采样的动画，而把工具专用约束或驱动计算烘焙成可播放的数据。应核对静止姿态、关节层级、权重、坐标以及变形结果。\n\n## 参考\n\n- [Blender 动画与绑定机制](https://docs.blender.org/manual/sr/4.5/animation/introduction.html)\n- [Blender 骨架对象](https://docs.blender.org/manual/sr/4.5/animation/armatures/introduction.html)\n- [Khronos glTF 2.0 规范](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

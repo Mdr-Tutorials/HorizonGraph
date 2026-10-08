@@ -1,0 +1,54 @@
+{
+  "id": "skopeo",
+  "name": "Skopeo",
+  "aliases": [
+    "Skopeo 镜像交换工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-registry",
+      "context": "registry transport 下直接查询、复制、删除或同步镜像内容，并按需要配置凭据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-image-spec",
+      "context": "读取或写入 OCI 镜像与 OCI layout transport 时解析、保存对应结构；也支持 Docker 镜像格式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-manifest",
+      "context": "inspect 获取清单元数据，copy 转移清单及其引用的配置和层。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-index",
+      "context": "复制清单列表或 OCI index 时依平台选择、--all 或 multi-arch 选项决定实例范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image-digest",
+      "context": "报告内容摘要，并在 --preserve-digests 模式要求复制前后保留相应标识。"
+    }
+  ],
+  "summary": "直接检查、复制和同步仓库或本地存储中的容器镜像。",
+  "description": "Skopeo 是对容器镜像与仓库执行检查、复制、删除和同步的命令行工具。它可以获取远端清单与配置，显示平台、层和标签信息，检查镜像元数据时无需先把全部镜像导入本地引擎。多数操作不需要 root 权限，也不要求 Docker daemon；认证凭据和证书仍按所访问仓库及 transport 配置提供。\n\ncopy 的源和目标可以分别采用 registry、OCI layout、本地容器存储、Docker archive 或其他支持的 transport，因此仓库到仓库迁移可直接进行。docker:// 表示 Registry HTTP API V2 传输，而 docker-daemon: 才访问 Docker 引擎本地镜像库；同名 transport 不能混写为相同接口。支持格式转换时，输出清单及层的具体字节可能改变，相应内容摘要也可能变化。\n\n面对多平台镜像，默认复制匹配当前系统的平台实例，--all 才尝试复制完整清单列表及其实例；精确范围还可用 multi-arch 选项控制。--preserve-digests 要求复制保留摘要，无法保留时失败，并不会自动改变所复制平台集合。sync 可将外部镜像材料同步到目录或内部仓库，为受限网络部署准备内容；可访问的目的地、权限和完整平台内容应在迁移时分别核对。\n\n## 参考\n\n- [Skopeo 官方项目与 transport](https://raw.githubusercontent.com/podman-container-tools/skopeo/main/README.md)\n- [Skopeo copy：平台与摘要控制](https://raw.githubusercontent.com/podman-container-tools/skopeo/main/docs/skopeo-copy.1.md)\n- [Skopeo inspect](https://raw.githubusercontent.com/podman-container-tools/skopeo/main/docs/skopeo-inspect.1.md)\n- [Skopeo sync](https://github.com/podman-container-tools/skopeo/blob/main/docs/skopeo-sync.1.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/podman-container-tools/skopeo"
+}

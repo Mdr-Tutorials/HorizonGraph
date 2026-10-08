@@ -1,0 +1,45 @@
+{
+  "id": "walk-forward-validation",
+  "name": "Walk-forward Validation",
+  "aliases": [
+    "滚动前推验证",
+    "滚动样本外验证",
+    "Walk-forward Testing"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "out-of-sample-validation",
+      "context": "每次只在未参与当次拟合和方案选择的后续窗口评估冻结后的规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "point-in-time-data",
+      "context": "各训练截止点只使用当时已可得的记录与修订版本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backtesting",
+      "context": "评估交易策略的后续窗口时，以一致成本和执行假设模拟冻结后的规则。"
+    }
+  ],
+  "summary": "仅用过去窗口拟合，再在随后未参与选择的窗口检验。",
+  "description": "滚动前推验证按时间依次移动训练和评估窗口：在每个截止点使用此前可得的数据拟合或选参数，冻结规则后在随后窗口评估，再推进到下一个截止点。训练窗口可滚动保持长度，也可随历史增加；需区分用于调参的内部验证与报告最终表现的外部评估。\n\n窗口边界要遵守特征、标签和公告的可得时间。若标签覆盖未来区间或样本窗口重叠，单纯按记录日期切分仍可能泄露，应依据实际标签区间留出间隔或排除冲突样本。TimeSeriesSplit 的 gap 排除指定数量样本，不能自动替用户推断不规则事件的持续时间和标签重叠。\n\n应预先说明训练长度、重训频率、评估跨度、费用和模型选择准则，并记录所有试验。反复查看外部评估再改窗口会使该评估参与选择；各窗口表现也受市场变化和样本相关影响。滚动流程用于检验指定更新制度在历史上的表现，无法自动消除多重尝试或保证下一时段稳定。\n\n## 参考\n\n- [QuantConnect：Walk Forward Optimization](https://www.quantconnect.com/docs/v2/writing-algorithms/optimization/walk-forward-optimization)\n- [scikit-learn：TimeSeriesSplit 的时间顺序与 gap](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)\n- [Bailey 等：The Probability of Backtest Overfitting 原始论文](https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

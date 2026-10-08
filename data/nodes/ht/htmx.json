@@ -1,0 +1,56 @@
+{
+  "id": "htmx",
+  "name": "htmx",
+  "aliases": [
+    "HTMX",
+    "htmx.js"
+  ],
+  "type": "library",
+  "domains": [
+    "web-services",
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "通过 HTML 属性配置交互，并在常见请求路径中接收 HTML 片段作为更新内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "以请求和响应取得服务端 HTML 并提交用户操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "server-driven-ui",
+      "context": "采用超媒体路线时，让服务端生成界面表示，浏览器执行请求与局部内容交换。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "progressive-enhancement",
+      "context": "使用 hx-boost 且已有链接和表单具备原生可用路径时，增强既有导航与提交行为。"
+    }
+  ],
+  "summary": "通过 HTML 属性请求服务端内容并更新局部 DOM 的库。",
+  "description": "htmx 是浏览器端 JavaScript 库，通过 hx-get、hx-post、hx-trigger、hx-target 与 hx-swap 等 HTML 属性表达请求、触发条件、更新位置和替换方式。其常见路线是服务端返回 HTML 片段，浏览器直接更新相应 DOM，使链接、表单和其他元素可以发起局部界面更新。它不要求使用 JSX，也不要求服务端采用 Hono 或某个特定语言框架。\n\n在服务端驱动 UI 的超媒体路线中，服务端负责生成内容和业务操作后的界面表示，htmx 负责浏览器侧的请求与片段交换。响应通常是 HTML，而非要求客户端先把业务 JSON 映射成独立组件树。传统整页响应与局部响应可以并存，导航历史和可直接访问的 URL 也需要服务端提供相应完整页面。\n\nhx-boost 可增强已有链接与表单的导航和提交行为，但渐进增强需要真实可用的 href、action、method 等基础路径。仅靠 hx-* 属性触发的操作不一定能够在关闭 JavaScript 后工作。htmx 自身仍需 JavaScript 执行；它与 Alpine.js 之类局部状态工具可以按项目需要配合，但并不必然依赖这些工具或客户端组件水合。\n\n## 参考\n\n- [htmx：Documentation](https://htmx.org/docs/)\n- [htmx：hx-boost](https://htmx.org/attributes/hx-boost/)\n- [htmx：Hypermedia-Driven Applications](https://htmx.org/essays/hypermedia-driven-applications/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://htmx.org"
+}

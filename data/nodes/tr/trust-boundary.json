@@ -1,0 +1,26 @@
+{
+  "id": "trust-boundary",
+  "name": "Trust Boundary",
+  "aliases": [
+    "信任边界"
+  ],
+  "type": "concept",
+  "domains": [
+    "security"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "标出数据或操作跨越身份、权限与信任假设的分界。",
+  "description": "信任边界是安全模型中信任假设或授权责任发生变化的分界，例如用户输入进入服务、外部页面进入模型上下文、工具执行器访问数据库。它不必对应一台机器或一条网络线，同进程中的不同组件也可能按不同可信来源和权限运行。\n\n威胁建模用数据流明确跨边界的主体、数据与操作，再识别哪一方负责认证、授权、格式校验和执行。外部数据进入可信组件后不应仅因经过转发就升级为控制指令，代理也不能把自己对下游的权限当作请求者的权限。边界模型有助于找到检查遗漏，而不是自动产生强制隔离。\n\n智能体系统常同时存在提示来源、工具元数据、运行时策略、浏览资料和资源服务几个边界。MCP 当前指南中的令牌受众校验、状态句柄授权与代理同意检查是具体例子。模型标签、独立浏览 profile 或一次人工确认各有作用，需要分别说明其覆盖的边界，不能互相推导为全系统可信。\n\n## 参考\n\n- [OWASP：Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)\n- [MCP 2026-07-28：Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)\n- [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

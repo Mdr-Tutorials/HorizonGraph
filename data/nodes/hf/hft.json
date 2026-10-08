@@ -1,0 +1,45 @@
+{
+  "id": "hft",
+  "name": "High-Frequency Trading",
+  "aliases": [
+    "高频交易",
+    "High Frequency Trading"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "algorithmic-trading",
+      "context": "由算法自动确定和管理个体订单，将自动交易方法应用于低延迟、高消息活动场景。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-microstructure",
+      "context": "设计订单簿市场中的高频策略时，建模撮合规则、交易成本与信息到达次序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "liquidity",
+      "context": "采用主动成交的高频策略时，消耗对手可交易兴趣完成买卖；提供流动性的路径不概括为同一种行为。"
+    }
+  ],
+  "summary": "以低延迟自动决策和高频订单消息参与市场的交易技术。",
+  "description": "高频交易通常指在电子市场中，以低延迟基础设施和自动逐笔决策处理行情、发送与管理订单的算法交易技术。速度优势可以用于更新报价、管理短期库存或捕捉跨市场价格变化；高消息活动、较短持仓等是常见特征，不能据此假定每笔交易都有相同期限。\n\nHFT 不是一种统一的盈利策略。参与者可能提供流动性，也可能主动成交；做市、套利和其他策略采用的订单类型与风险不同。订单簿状态、撮合优先级和信息到达次序影响实际成交，较快的程序也会承担库存、逆向选择和系统故障风险。实现可采用不同软硬件组合，FPGA 并非定义前提。\n\n监管口径须按辖区说明。欧盟 MiFID II 将低延迟设施、自动逐笔决策和高日内消息率结合定义，配套消息率计算不能作为全球统一阈值。一般算法执行并不都属于 HFT；高频成交、频繁撤单或使用快速网络本身也不能单独证明操纵，具体行为应另按适用交易规则判断。\n\n## 参考\n\n- [SEC：2020 年算法交易研究报告](https://www.sec.gov/files/algo_trading_report_2020.pdf)\n- [ESMA：MiFID II 第 4 条的算法与高频技术定义](https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-4-definitions)\n- [EUR-Lex：2017/565 第 19 条的辖区消息率口径](https://eur-lex.europa.eu/eli/reg_del/2017/565/oj/eng)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "abbreviation": "HFT"
+}

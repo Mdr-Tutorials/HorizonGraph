@@ -1,0 +1,30 @@
+{
+  "id": "abort-signal",
+  "name": "AbortSignal",
+  "aliases": [
+    "取消信号",
+    "中止信号"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    }
+  ],
+  "summary": "以状态、原因和事件通知协作取消，并可组合信号或设置超时。",
+  "description": "AbortSignal 继承事件接口，以 aborted、reason 和 abort 事件暴露取消状态。采用此信号的 API 或应用检查状态并响应通知；throwIfAborted 在已取消时抛出相同原因，信号不会恢复为未取消。\n\n信号可来自 AbortController，也可由静态 abort、timeout 或 any 方法产生。any 在输入信号取消时采用对应原因，timeout 产生超时取消；具体方法是否提供需核对目标运行时。\n\nDOM 超时规则结合 HTML 的活动时间与任务调度，不能理解为绝对墙钟硬期限。信号携带的是取消请求而非工作回滚证明，已完成或未采用它的操作不会自动撤销；取消状态与业务成功、失败需要分别记录。\n\n## 参考\n\n- [WHATWG DOM：AbortSignal接口与状态](https://dom.spec.whatwg.org/#abortsignal)\n- [WHATWG DOM：组合取消信号](https://dom.spec.whatwg.org/#dom-abortsignal-any)\n- [WHATWG DOM：超时信号](https://dom.spec.whatwg.org/#dom-abortsignal-timeout)\n- [WHATWG HTML：超时调度](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#run-steps-after-a-timeout)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://dom.spec.whatwg.org/#abortsignal"
+}

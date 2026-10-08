@@ -1,0 +1,28 @@
+{
+  "id": "credit-limit",
+  "name": "Credit Limit",
+  "aliases": [
+    "交易授信限额",
+    "信用额度上限"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    }
+  ],
+  "summary": "限制客户交易可能产生的累计金融敞口。",
+  "description": "交易授信限额为客户经由某机构进入市场可能产生的金融敞口设置预先确定的预算。它与自营资本阈值、单笔最大订单金额、保证金和法律持仓限额是不同维度；如何估算敞口、聚合多个入口以及处理未成交单，必须在具体风控模型中明确。\n\n美国证券市场接入规则15c3-5要求相关券商阻止超出适当预设客户授信或自营资本阈值的订单。SEC工作人员FAQ说明，阈值需基于客户业务、财务情况和交易模式等尽职调查设置，并持续判断其是否仍有意义；不能仅将数值设得极大，就宣称已经形成实质风险控制。\n\n当同一主体经由多个独立风控系统接入不同场所时，各处预算需要协调以覆盖累计敞口，而不是把相同剩余额度重复使用。信用预算会影响订单接受与人工调整权限，但合格阈值不承诺客户不会违约，也不能替代适用的清算、保证金及持续信用管理。\n\n## 参考\n\n- [SEC：市场接入风险控制最终规则](https://www.sec.gov/rules/final/2010/34-63241.pdf)\n- [SEC工作人员：Rule 15c3-5常见问题与适用范围](https://www.sec.gov/rules-regulations/staff-guidance/trading-markets-frequently-asked-questions/divisionsmarketregfaq-0)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

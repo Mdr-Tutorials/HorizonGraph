@@ -1,0 +1,41 @@
+{
+  "id": "kdb-plus",
+  "name": "kdb+",
+  "aliases": [
+    "KX kdb+",
+    "kdb+ 数据库"
+  ],
+  "type": "product",
+  "domains": [
+    "databases",
+    "data-engineering",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem",
+    "market-data-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "kx"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "k-lang",
+      "context": "产品提供 q 查询与程序执行接口，用于向量分析和数据库操作。"
+    }
+  ],
+  "summary": "结合列式时序数据库、内存计算与流式处理的 KX 产品。",
+  "description": "kdb+ 是 KX 提供的数据库与计算产品，组合历史时序列式存储、内存分析和实时流处理，随产品提供 q 语言。q 是编程与查询语言，K 是其底层实现谱系；数据库产品、公开语言与实现语言具有不同身份，应用选型需同时区分语言能力与数据库产品功能。\n\n典型 kdb+tick 系统由 feed handler 转换行情，tickerplant 记录日志并向订阅者发布，实时数据库保存当日数据，历史数据库读取按日期分区的列文件，gateway 汇总或路由查询。该架构是参考设计，各进程可按需求拆分，不能把 tickerplant 的低延迟目标解释成任意部署的端到端保证。\n\n电子交易中可以用它记录报价与成交、分析订单簿或回放历史；官方案例也包括传感器等非金融时序数据。存储和分析能力不直接产生可盈利策略，性能取决于分区、字段类型、属性、计算量及机器资源。具体机构的采购和使用情况需由其公开材料支持。\n\n## 参考\n\n- [KX：kdb+ 与 q](https://code.kx.com/q/)\n- [KX：kdb+ 系统架构](https://code.kx.com/q/architecture/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://code.kx.com/q/"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "open-container-initiative",
+  "name": "Open Container Initiative",
+  "aliases": [
+    "OCI",
+    "开放容器倡议",
+    "开放容器标准组织"
+  ],
+  "type": "organization",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "linux-foundation",
+      "context": "OCI 作为 Linux Foundation 支持的开放治理项目制定容器行业规范，其技术项目按 OCI 章程维护。"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "runc"
+    }
+  ],
+  "summary": "治理容器运行、镜像与分发规范的开放组织",
+  "description": "Open Container Initiative（OCI）是在 Linux Foundation 支持下成立的开放治理项目，目标是制定容器格式与运行时方面的行业规范。它于 2015 年由 Docker、CoreOS 和其他产业参与者发起；作为治理组织，它与名为 OCI Specifications 的规范族，以及实现规范的容器工具具有不同身份。\n\nOCI 的主要规范分别覆盖 Runtime、Image 和 Distribution。Runtime 约定已准备好的本地 bundle 如何执行，Image 约定可分发镜像的内容表示，Distribution 约定内容传输接口；组织协调这些项目并不意味着某个参与厂商的产品自动实现所有版本和平台。\n\n技术治理章程规定项目维护者及技术监督职责。runc 是 OCI 关联项目中的运行时实现，规范则由相应社区维护。治理、原始代码贡献和商业产品提供需要区分：会员或赞助关系不足以推导组织开发了所有实现，规范兼容也不等于统一安全隔离保证。\n\n## 参考\n\n- [Open Container Initiative：组织与规范范围](https://opencontainers.org/about/overview/)\n- [OCI 技术治理章程](https://github.com/opencontainers/tob/blob/main/CHARTER.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://opencontainers.org/"
+}

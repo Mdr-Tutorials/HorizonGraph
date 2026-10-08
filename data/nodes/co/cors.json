@@ -14,7 +14,8 @@
   ],
   "domains": [
     "security",
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "relations": [
     {
@@ -22,13 +23,20 @@
       "target_id": "theory"
     },
     {
-      "relation_type": "part_of",
-      "target_id": "same-origin-policy"
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "CORS 通过 Origin 和 Access-Control-Allow-* 等请求、响应字段协商跨源响应共享，凭据模式对允许源有额外限制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-method",
+      "context": "需要 CORS 预检时，以 OPTIONS 查询拟用的方法和请求字段；并非所有跨源请求都进行预检。"
     }
   ],
-  "summary": "在同源策略之上放开受控跨域读取的浏览器机制。",
+  "summary": "通过 HTTP 字段与预检协商浏览器对跨源响应的读取权限。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "description": "CORS 是 Fetch 标准规定的跨源响应共享协议。浏览器随相关请求携带 Origin，服务端通过 Access-Control-Allow-Origin 等响应字段选择是否把响应暴露给调用脚本。它与浏览器同源隔离规则协作，具体范围是 Fetch 响应共享。\n\n某些方法或请求字段触发 OPTIONS 预检；浏览器先询问目标源允许的方法与字段，再决定是否发送实际请求。预检并非每次跨源请求都会发生，允许预检结果的缓存也有独立规则。携带凭据的共享响应需要明确的允许源和 Access-Control-Allow-Credentials，允许源不能使用通配符星号。\n\nCORS 控制的是浏览器能否向脚本共享响应，不能替代服务器身份认证与资源授权，也不阻止所有跨源请求被发送。跨源表单等请求可能已经产生服务端副作用，因此 CORS 失败不能充当 CSRF 防线；按 Origin 动态生成允许源时，还须避免缓存错误复用其他来源的响应。\n\n## 参考\n\n- [WHATWG Fetch：CORS protocol 与预检](https://fetch.spec.whatwg.org/#http-cors-protocol)\n- [RFC 9111：Vary 与缓存响应选择](https://www.rfc-editor.org/rfc/rfc9111.html)"
 }

@@ -1,0 +1,35 @@
+{
+  "id": "nasdaq",
+  "name": "Nasdaq, Inc.",
+  "aliases": [
+    "Nasdaq",
+    "纳斯达克集团",
+    "Nasdaq OMX Group"
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "nasdaq-totalview"
+    }
+  ],
+  "summary": "经营交易所、市场数据与金融技术的集团。",
+  "description": "Nasdaq, Inc. 是经营交易所、数据及金融技术业务的公司主体。本节点的 Nasdaq 指集团组织；具体美国上市与交易场所 The Nasdaq Stock Market LLC、股票指数和行情产品有各自范围，不能把它们都当作该公司的同义实体。\n\n在电子交易链路中，集团旗下市场产生订单和成交事件，发布 TotalView 等市场数据产品，并维护 ITCH、OUCH 等面向订阅者或交易成员的技术接口。行情消费权限、订单接入资格以及对外提供交易所技术是不同业务关系；购买数据并不自动获得交易会员资格。\n\nNasdaq 的产业角色同时覆盖市场运营者、数据提供方和金融技术供应商。TotalView 本节点族区分商业数据产品与消息规范；具体行情内容以实际交易场所及产品许可为界，即使证券在 NYSE 上市，其在 Nasdaq 执行系统中的订单也不代表 NYSE 自身的完整订单簿。\n\n## 参考\n\n- [Nasdaq 公司介绍](https://www.nasdaq.com/about)\n- [Nasdaq 投资者关系与公司主体](https://ir.nasdaq.com/)\n- [Nasdaq TotalView 产品与交付方式](https://www.nasdaq.com/products/data/equities/nasdaq-totalview)\n- [Nasdaq TotalView-ITCH 5.0 规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/Totalview-ITCH-cloud.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.nasdaq.com/"
+}

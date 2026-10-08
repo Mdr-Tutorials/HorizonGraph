@@ -1,0 +1,42 @@
+{
+  "id": "limit-order-book",
+  "name": "Limit Order Book",
+  "aliases": [
+    "限价订单簿",
+    "订单簿",
+    "LOB",
+    "Central Limit Order Book",
+    "CLOB"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tick-size",
+      "context": "在采用离散报价规则的场所，按指定最小价格增量组织合法报价价位。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lot-size",
+      "context": "场所规定按交易单位申报或展示时，将订单数量与对应产品单位保持一致。"
+    }
+  ],
+  "summary": "按买卖方向和价格组织尚未成交订单的市场状态。",
+  "description": "限价订单簿记录尚未完全成交、撤销或失效的买卖限价订单，并按价格组织可交易数量。买侧较高报价与卖侧较低报价构成最优价位；各价位内的分配顺序取决于场所规则，不应把“订单簿”直接等同价格时间优先。\n\n新增、部分成交、撤单、替换和删除事件改变簿内状态。逐单视图保留订单标识和可见数量，逐价视图聚合相同价位的数量；两者的信息量不同。公开行情通常只反映其发布范围内的交易兴趣，隐藏或未显示数量不能简单从可见簿中完整恢复。\n\n交易系统使用订单簿计算最优报价、深度及部分排队状态，研究系统也可以按事件序列重建历史状态。重建必须遵守具体消息语义和规则版本，成交报告并非都可直接当作某个可见订单的扣减；单场所订单簿更不代表跨场所全部流动性。\n\n## 参考\n\n- [Nasdaq：Nordic TotalView-ITCH 3.04，订单簿重建附录](https://www.nasdaq.com/docs/2025/11/13/Nordic-Equity-TotalView-ITCH_3.04.X.pdf)\n- [CME：逐单行情、优先级与排队位置](https://www.cmegroup.com/articles/faqs/market-by-order-mbo.html)\n- [CME：EBS Market 订单簿、撮合与引擎规则文件](https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2023/8/23-356_APPA.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

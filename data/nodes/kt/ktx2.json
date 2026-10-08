@@ -1,0 +1,41 @@
+{
+  "id": "ktx2",
+  "name": "KTX 2",
+  "aliases": [
+    "KTX2",
+    "Khronos Texture 2",
+    "KTX 2.0"
+  ],
+  "type": "protocol",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "graphics-asset-format"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "khronos-group",
+      "context": "Khronos 维护 KTX 格式规范及其注册内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "组织将上传到图形 API 的纹理图像及其层级数据。"
+    }
+  ],
+  "summary": "为跨平台 GPU 纹理保存图像层级与编码信息的格式。",
+  "description": "KTX 2 是 Khronos 的纹理容器格式，可保存纹理尺寸、类型、mip 层级及数据编码信息。它支持多种纹理数据表示，并可使用通用纹理与超压缩方案；读取器依据声明恢复或转码为目标图形 API 可使用的纹理。\n\nKTX2 是容器，不等于一种固定压缩算法。设备支持的 GPU 格式、解压或转码器、颜色信息和加载器扩展共同决定能否使用资产。glTF 工作流可以通过相应纹理扩展采用 KTX2，仍要确认交付编码与目标加载器相匹配。\n\n## 参考\n\n- [Khronos KTX 2.0 规范](https://registry.khronos.org/KTX/specs/2.0/ktxspec.v2.html)\n- [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://registry.khronos.org/KTX/specs/2.0/ktxspec.v2.html"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "oci-image-spec",
+  "name": "OCI Image Specification",
+  "aliases": [
+    "OCI 镜像规范",
+    "OCI Image Format Specification"
+  ],
+  "type": "protocol",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "oci"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "open-container-initiative",
+      "context": "由 Open Container Initiative 的相应规范项目及维护流程制定、维护和发布，不属于单一容器产品的私有接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-manifest",
+      "context": "以镜像清单结构连接镜像配置和有序文件系统层。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-index",
+      "context": "以索引描述符集合引用多个清单并表达平台选择信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image-digest",
+      "context": "在内容描述符中按具体字节的密码学摘要引用和校验组件。"
+    }
+  ],
+  "summary": "规定容器镜像的清单、配置、层和内容寻址结构。",
+  "description": "OCI Image Specification 规定容器镜像的交换格式，由 Open Container Initiative 维护。镜像清单引用配置对象和按顺序排列的文件系统层；配置保存目标平台、默认启动参数、环境和根文件系统信息。镜像索引进一步引用多个清单，使同一发布入口能描述不同平台的镜像。该规范定义数据结构，构建工具据此生成内容，镜像消费者据此解析和准备运行材料。\n\n组件之间用 content descriptor 连接，描述符包含媒体类型、原始字节大小和内容摘要，因而形成可校验的内容引用图。摘要校验以所引用对象的具体字节为对象；传输层的压缩层摘要与配置中的未压缩层 DiffID 有不同语义。规范也定义本地 image layout，使镜像能以目录中的 index、layout 标记和 blobs 交换，而无需把某一家仓库的存储目录当作通用格式。\n\n镜像格式、仓库传输 API 与容器运行生命周期分别由不同 OCI 规范负责。把镜像解包并转换成运行时 bundle，需要结合平台和运行时规范；仅有合法镜像结构不能保证任意宿主可执行其中程序。媒体类型、平台字段及版本能力应由生产者和消费者共同支持，镜像内容也可以按规范承载附加工件元数据。\n\n## 参考\n\n- [OCI Image Specification](https://raw.githubusercontent.com/opencontainers/image-spec/main/spec.md)\n- [OCI Image Manifest](https://raw.githubusercontent.com/opencontainers/image-spec/main/manifest.md)\n- [OCI Content Descriptors](https://raw.githubusercontent.com/opencontainers/image-spec/main/descriptor.md)\n- [OCI Image Configuration：DiffID 与启动配置](https://raw.githubusercontent.com/opencontainers/image-spec/main/config.md)\n- [OCI Image Project：运行、交换与职责](https://raw.githubusercontent.com/opencontainers/image-spec/main/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://specs.opencontainers.org/image-spec/"
+}

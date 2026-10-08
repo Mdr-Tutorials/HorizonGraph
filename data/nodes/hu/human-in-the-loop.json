@@ -1,0 +1,30 @@
+{
+  "id": "human-in-the-loop",
+  "name": "Human-in-the-Loop",
+  "aliases": [
+    "人在回路",
+    "人工介入"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "把人工检查、批准、纠错或停止能力纳入智能体运行流程。",
+  "description": "人在回路指系统在任务设计或执行环节保留人的实质参与，例如检查方案、核对高影响操作、修正工具参数或停止运行。安全场景中重点是人能看见待执行行为并作出有效决定；仅能看到完成后的摘要，未必构成对副作用的事前控制。\n\n参与方式可以按影响和可逆性分层，而不要求每个只读调用都逐一确认。人需要明确的目标、数据来源和授权范围，也需要可取消的等待状态与拒绝后的处理路径。无人响应时如何保持任务状态属于执行策略，不能把超时自动视作批准。\n\nMCP 对人类否决工具调用的建议与 OWASP 对高影响智能体操作的人工审核措施，说明了常见使用场景。人工介入的效果取决于信息质量、人的权限、注意力和执行器是否落实决定；它不会替代服务端授权、隔离或对外部输入的校验。\n\n## 参考\n\n- [MCP 2026-07-28：Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)\n- [OWASP LLM06:2025：Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -7,10 +7,12 @@
   "type": "language",
   "ecosystems": [
     "graphics-api-ecosystem",
-    "rendering-ecosystem"
+    "rendering-ecosystem",
+    "real-time-rendering-ecosystem"
   ],
   "domains": [
-    "graphics"
+    "graphics",
+    "real-time-rendering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -19,13 +21,19 @@
       "target_id": "language"
     },
     {
-      "relation_type": "part_of",
-      "target_id": "directx"
+      "relation_type": "implements",
+      "target_id": "shader"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uniform-buffer",
+      "context": "使用 HLSL cbuffer 或 ConstantBuffer 声明着色参数时，按目标编译路径的布局与绑定规则读取常量缓冲数据。"
     }
   ],
-  "summary": "DirectX 的着色语言，Windows 游戏渲染的主力。",
+  "summary": "表达图形与计算着色的语言，编译目标可覆盖Direct3D与Vulkan。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "description": "## 机制\n\nHLSL 是源于 Microsoft DirectX 的高级着色语言，用类型、函数、语义和资源声明编写 GPU 程序。它可表达顶点、像素、计算等阶段，目标 profile 与 Shader Model 决定可使用的功能。\n\n在 Direct3D 路径中，程序经相应编译工具处理并绑定至管线。HLSL 也可由 DirectX Shader Compiler 的 SPIR-V 后端编译给 Vulkan 使用；运行目标、资源绑定规则和能力映射需要按这条编译路径确认。\n\n## 边界与应用\n\n语言名称不等同于唯一图形 API。跨 Direct3D 与 Vulkan 复用源码时，需要处理阶段入口、语义、资源位置及不完全对应的能力；HLSL 的 cbuffer 可提供统一参数，但其布局规则不能自动套用到其他语言的缓冲声明。\n\n## 参考\n\n- [Microsoft：HLSL概览](https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl)\n- [Microsoft HLSL：常量缓冲](https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-constants)\n- [Khronos：HLSL与Vulkan编译路径](https://docs.vulkan.org/guide/latest/hlsl.html)"
 }

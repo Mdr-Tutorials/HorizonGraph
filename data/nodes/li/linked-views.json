@@ -1,0 +1,35 @@
+{
+  "id": "linked-views",
+  "name": "Coordinated Multiple Views",
+  "aliases": [
+    "多视图联动",
+    "协调多视图",
+    "Linked Views",
+    "Brushing and Linking"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "interaction-brushing",
+      "context": "用一个视图的区间选择驱动其他视图的数据筛选、高亮或尺度范围。"
+    }
+  ],
+  "summary": "让不同视图共享选择状态以协同探索同一批数据。",
+  "description": "协调多视图用多个图表、地图或表格呈现数据的不同属性，并通过共享选择、过滤或高亮状态把它们联系起来。例如在散点图中选中一组记录，可在地图上高亮同一组对象，并在统计图中显示其分布。联动建立在明确的数据身份或选择谓词上，不要求各视图采用相同图表类型。\n\n实现时要规定选择来源、传播方向及空选择的行为，并区分过滤掉记录与仅改变外观。概览加细节可以通过共享范围调整细节视图的尺度，多个并列视图也可独立布局后共享参数。避免将视图内的像素坐标直接当成跨视图的数据身份，否则尺度、投影或聚合不同会导致联动错误。\n\n## 参考\n\n- [Vega-Lite Interactive Parameters](https://vega.github.io/vega-lite/docs/parameter.html)\n- [Vega-Lite Multi-View Composition](https://vega.github.io/vega-lite/docs/composition.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

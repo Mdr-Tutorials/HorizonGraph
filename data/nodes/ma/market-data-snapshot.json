@@ -1,0 +1,35 @@
+{
+  "id": "market-data-snapshot",
+  "name": "Market Data Snapshot",
+  "aliases": [
+    "行情快照",
+    "订单簿快照"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-sequence-number",
+      "context": "提供序号检查点的源中，用快照关联的位置与缓存实时流建立一致衔接。"
+    }
+  ],
+  "summary": "表示特定衔接位置市场状态的行情基准。",
+  "description": "行情快照给出特定范围和衔接位置的状态，例如某金融工具的可见订单或聚合价位。它用来建立初始状态或替换失效状态，与保存此前全部事件的历史重放不同。快照可能跨多个记录或数据包，接收完成条件与覆盖范围由服务规范定义。\n\n要与实时增量衔接，需要源提供的序号、检查点或其他一致性规则。Nasdaq GLIMPSE 的结束消息带 TotalView-ITCH 衔接序号；合成 MBO 快照也需要明确开始、结束与状态清理方式。不能假定所有源都应从快照序号加一开始，或把本地接收时间当作发布者的一致性检查点。\n\n快照建立后应按规则处理缓存增量，避免重复应用和跨会话拼接。快照只能恢复其包含的状态，通常不能还原中间错过的全部成交或统计事件。使用快照恢复当前簿和获取完整事件历史属于不同目标，应分别说明何时可以恢复实时处理以及哪些历史信息仍然缺失。\n\n## 参考\n\n- [Nasdaq：GLIMPSE 5.0 接口规范（2026 更新）](https://assets.ctfassets.net/mx0rke14e5yt/1dHPeoYuayePQFxQcJFXtr/abd72648a068aa9a22631e8914a237dd/6-11-26_NQGlimpseSpecification_1.pdf)\n- [Databento：MBO 快照与重建](https://databento.com/docs/standards-and-conventions/mbo-snapshot)\n- [CME：MBP 与 MBOFD 快照恢复](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457672425/MDP%2B3.0%2B-%2BMBP%2Band%2BMBOFD%2BMarket%2BRecovery)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

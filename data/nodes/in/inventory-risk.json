@@ -1,0 +1,34 @@
+{
+  "id": "inventory-risk",
+  "name": "Inventory Risk",
+  "aliases": [
+    "做市库存风险",
+    "库存头寸风险",
+    "交易库存风险"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "market-making",
+      "context": "在考虑库存风险的做市模型中，当前仓位、价格波动与风险厌恶约束报价偏移、规模和库存边界；这是模型与风险设计原则，不是统一收益承诺。"
+    }
+  ],
+  "summary": "做市等活动持有未平衡仓位而承受的价格风险。",
+  "description": "交易库存风险是做市商或其他交易者持有资产净仓位时，因未来价格变化和仓位难以及时抵销而承担的风险。双边报价并不保证双边同时成交：一侧被动成交后，交易者可能积累库存，后续盈亏就不仅来自买卖价差。这里的库存指金融头寸，不是实物仓储管理术语。\n\nAvellaneda–Stoikov的原始做市模型将库存风险与信息不对称风险区分，研究风险厌恶、价格波动、剩余时间和库存如何影响报价。Guéant、Lehalle和Fernandez-Tapia进一步分析库存边界下的做市控制。它们是具有价格和成交到达假设的数学模型，不能把模型最优报价或仿真结论当作真实市场收益保证。\n\n工程设计需要把净仓位、可成交挂单、跨场所敞口和风险预算放在一致的状态中解释，并明确何时缩量、调整报价或采用对冲。库存上限限制风险规模，但在途成交、相关性变化和退出成本仍可能留下风险；将日末库存压到零也不代表消除了日内损失、模型风险或交易对手风险。\n\n## 参考\n\n- [Avellaneda与Stoikov：High-frequency trading in a limit order book](https://math.nyu.edu/faculty/avellane/HighFrequencyTrading.pdf)\n- [Guéant、Lehalle与Fernandez-Tapia：Dealing with the Inventory Risk](https://arxiv.org/abs/1105.3115)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

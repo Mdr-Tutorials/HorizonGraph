@@ -1,0 +1,45 @@
+{
+  "id": "queue-position-model",
+  "name": "Queue Position Model",
+  "aliases": [
+    "排队位置模型",
+    "订单队列位置估计",
+    "Queue Position Estimation"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "queue-position",
+      "context": "逐事件更新前方数量时，将此前估计的队列位置作为状态，结合本次成交或撤单更新新位置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-by-price",
+      "context": "处理价位汇总数据时，依据队列总量变化并结合撤单分配假设估计前方数量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-by-order",
+      "context": "逐订单数据可用且序列完整时，利用个体订单事件恢复更多优先顺序信息。"
+    }
+  ],
+  "summary": "按数据粒度和撮合规则估计订单前方数量及被动成交机会。",
+  "description": "排队位置模型估计挂单在某个价格队列中的优先位置及其变化，再用于判断何时可能获得成交。队列位置是订单的状态，模型是观察或推断该状态的方法；规则取决于交易场所的撮合优先级，FIFO 的前方数量模型不能未经调整直接套用比例分配市场。\n\n逐订单数据在字段和事件完整的条件下能提供更多优先顺序信息；价位汇总数据只给出总量，通常无法区分一次撤单发生在本单之前还是之后。估计方法可以保守地把撤单归于队尾，也可以按前后数量等变量分配概率；初始位置还受订单到达延迟与行情更新合并影响。\n\n成交模拟需要推进前方数量、处理可观察的交易量和部分成交，而非见到价格触及就默认全部成交。隐藏订单、丢包、撤改丧失优先权及数据不同步都会削弱估计，逐订单公开信息也不保证完整掌握真实队列。应以自身订单回报校准并做假设敏感性分析，区分队列估计误差和市场冲击误差。\n\n## 参考\n\n- [Erik Rigtorp：Estimating Order Queue Position 原始方法说明](https://rigtorp.se/2013/06/08/estimating-order-queue-position.html)\n- [HftBacktest：成交与排队模型及历史重放限制](https://hftbacktest.readthedocs.io/en/latest/order_fill.html)\n- [NautilusTrader：数据粒度与模拟市场配置](https://nautilustrader.io/docs/latest/concepts/backtesting/data-and-venues/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

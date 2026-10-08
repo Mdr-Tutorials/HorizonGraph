@@ -13,17 +13,39 @@
   ],
   "domains": [
     "security",
-    "cloud-infrastructure"
+    "cloud-infrastructure",
+    "agent-development"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authentication",
+      "context": "管理人和软件主体的访问生命周期时，认证流程验证访问请求的身份或凭据依据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authorization",
+      "context": "授予、更新和撤销身份可用访问权时，对资源和动作实施权限策略。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-identity",
+      "context": "管理 AI 智能体工作负载的部署中，识别实际执行主体并区分操作员和被代理用户，供凭据签发与审计使用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "short-lived-credentials",
+      "context": "支持短期凭据签发的身份基础设施中，以有限有效期凭据交付服务或任务访问权，并管理续签。"
     }
   ],
-  "summary": "管理身份与权限的平台层，云厂商与 SaaS 的标配能力。",
+  "summary": "治理身份、凭据、授权与访问生命周期的制度和技术体系。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "IAM 是身份与访问管理体系，覆盖主体建立、认证凭据、权限授予、变更、撤销及审计。主体可以是人，也可以是服务账号、软件工作负载或其他非人身份。它不是某一类云平台的同义词，组织制度、应用控制和具体身份产品可以共同实现这些能力。\n\n认证与授权在体系中有不同职责：认证建立调用者身份依据，授权根据资源、动作和上下文限制访问。账号存在或凭据签发成功不会自动授予所有资源权限，凭据权限还需要与对象级策略和生命周期管理一致。服务账号应限定用途和管理权限，避免多个无关工作负载共享长期高权限秘密。\n\n智能体场景增加了操作员、被代理用户、执行实例及下游服务的身份关系。身份管理可给实际工作负载分配可验证主体，并用短期、受限范围的凭据交付任务权限。NIST NCCoE 2026-02 概念草案研究这些问题，它不是已普遍采用的智能体身份标准，不能由产品声称具备 IAM 就推导委托与审计已正确完成。\n\n## 参考\n\n- [OWASP：Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)\n- [Google Cloud IAM：服务账号最佳实践](https://docs.cloud.google.com/iam/docs/best-practices-service-accounts)\n- [NIST NCCoE：软件与 AI 智能体身份、授权概念草案（2026-02）](https://www.nccoe.nist.gov/sites/default/files/2026-02/accelerating-the-adoption-of-software-and-ai-agent-identity-and-authorization-concept-paper.pdf)"
 }

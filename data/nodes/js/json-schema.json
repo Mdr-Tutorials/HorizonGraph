@@ -1,0 +1,35 @@
+{
+  "id": "json-schema",
+  "name": "JSON Schema",
+  "aliases": [
+    "JSON 模式",
+    "JSON Schema 规范"
+  ],
+  "type": "protocol",
+  "domains": [
+    "api-engineering",
+    "data-engineering"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "模式文档及被描述的数据实例采用 JSON 数据模型；模式对象也可在内存中构造。"
+    }
+  ],
+  "summary": "以 JSON 表达数据结构、校验约束与注解的通用模式规范。",
+  "description": "## 机制与应用\n\nJSON Schema 用 JSON 对象或布尔值描述实例可接受的结构与约束。核心规范定义模式资源、引用和词汇机制，校验词汇定义类型、长度、数值范围、必填属性等断言。作者可用 $schema 声明方言，并通过 $ref 复用定义；同一套模式可服务于 API、配置文件和数据交换，而不局限于 HTTP 接口。\n\n模式自身是声明，需要具体校验器执行。不同草案、词汇和实现支持范围应明确配套；Draft 2020-12 将 format 的注解与断言行为分开，不能默认所有实现都检查格式。default 等注解不会自动给实例填值，强制转换与删除字段也不是纯 JSON Schema 校验的通用效果。\n\n## 参考\n\n- [JSON Schema：核心规范](https://json-schema.org/draft/2020-12/json-schema-core)\n- [JSON Schema：校验与格式词汇](https://json-schema.org/draft/2020-12/json-schema-validation)\n- [JSON Schema：注解与默认值](https://json-schema.org/understanding-json-schema/reference/annotations)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://json-schema.org/"
+}

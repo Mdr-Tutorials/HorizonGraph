@@ -9,21 +9,25 @@
   "type": "concept",
   "ecosystems": [
     "cloud_native",
-    "public-cloud-ecosystem"
+    "public-cloud-ecosystem",
+    "edge-serverless-ecosystem"
   ],
   "domains": [
     "cloud-infrastructure",
-    "devops"
+    "devops",
+    "edge-computing",
+    "web-services"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "edge-runtime-concept"
     }
   ],
-  "summary": "按请求付费、平台管扩缩容，函数是最小部署单位。",
+  "summary": "由平台管理基础设施供给与弹性的应用执行和服务模型。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "description": "Serverless 把服务器供给、维护及部分扩缩容责任交给平台，让应用通过托管计算、数据和集成服务交付。函数计算是常见形式，范围也包括容器计算与其他托管服务；具体部署单位和计费维度由服务决定，不能把它统一定义为只按请求付费或只部署函数。\n\n平台仍使用服务器，应用也仍要处理并发、权限、错误、重试和外部状态。常规按需函数在新执行环境中可能先做初始化，也可能复用已有环境；预置并发等配置会改变初始化时机。Serverless 描述运行管理方式，边缘计算描述部署位置，两者可以组合而不等同。\n\n## 参考\n\n- [AWS：Serverless 的计算、集成与数据服务](https://aws.amazon.com/serverless/)\n- [AWS Lambda：初始化、按需执行与环境复用](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtime-environment.html)\n- [ETSI：边缘部署位置](https://www.etsi.org/technical-groups/mec/)"
 }

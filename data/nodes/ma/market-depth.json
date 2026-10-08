@@ -1,0 +1,35 @@
+{
+  "id": "market-depth",
+  "name": "Market Depth",
+  "aliases": [
+    "市场深度",
+    "盘口深度",
+    "订单簿深度"
+  ],
+  "type": "metric",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "统计指定价位、档数或价格带的买卖挂单数量，并保留源订单簿的可见范围。"
+    }
+  ],
+  "summary": "指定买卖价位或价格范围内可观察的挂单数量。",
+  "description": "市场深度在订单簿语境下表示指定价位或价格范围内的买卖挂单数量。可以分别观察最优价位、前若干档或距参考价格一定范围的累计数量；结果必须同时说明买卖侧、统计范围和股数或合约等数量单位。\n\n深度比只观察价差提供更多供需信息，但可见挂单会因撤单、成交和补充而变化，隐藏兴趣也可能不在数据中。逐单与逐价行情可提供不同的分解能力，是否全深度还取决于数据源；“深度行情”不能证明看到跨场所全部可交易数量。\n\n执行分析可以估计某一规模订单沿价位消耗的即时成本，流动性研究则会比较数量与价格冲击。屏幕深度是状态观测，并非大单实际成交后的不变供给曲线；不同资产间比较还需调整价格、合约规模或经济敞口，单看挂单数量容易产生误判。\n\n## 参考\n\n- [CME：盘口深度、价差与跨产品单位比较](https://www.cmegroup.com/content/dam/cmegroup/education/files/new-treasury-market-paradigm.pdf)\n- [CME：逐单行情、优先级与排队位置](https://www.cmegroup.com/articles/faqs/market-by-order-mbo.html)\n- [Farmer 等：订单簿流动性缺口与大幅价格变动](https://arxiv.org/abs/cond-mat/0312703)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -1,0 +1,52 @@
+{
+  "id": "substance-3d-painter",
+  "name": "Adobe Substance 3D Painter",
+  "aliases": [
+    "Substance Painter",
+    "Substance 3D Painter",
+    "Painter"
+  ],
+  "type": "product",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "substance-3d"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "adobe"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "texture-painting"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "texture-baking"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pbr",
+      "context": "在物理材质通道与预览着色工作流中制作表面内容。"
+    }
+  ],
+  "summary": "为三维模型绘制材质通道并导出纹理的制作软件。",
+  "description": "Substance 3D Painter 面向三维网格的纹理绘制，提供图层、填充、笔刷与材质通道等制作方式。作者在模型上查看结果，并将可编辑项目导出为供其他软件使用的位图贴图等资产。\n\n烘焙生成的法线、曲率等信息可供智能材质或遮罩使用。交付时应检查 UV、贴图通道与目标着色器约定；Painter 的预览效果依赖其材质和环境设置，不能直接等同于另一引擎中的最终呈现。\n\n## 参考\n\n- [Substance 3D Painter 使用指南](https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/home)\n- [Substance 3D Painter 烘焙机制](https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/baking/baking)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.adobe.com/products/substance3d-painter.html"
+}

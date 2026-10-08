@@ -1,0 +1,27 @@
+{
+  "id": "tool-schema",
+  "name": "Tool Schema",
+  "aliases": [
+    "工具模式",
+    "工具参数模式"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "声明工具名称、用途与参数结构，供模型选择和调用校验。",
+  "description": "工具模式描述可调用工具的名称、功能和输入参数，并可声明字段类型、必填项及限制。它让模型知道可以提出哪些结构化调用，也让执行器能够在调用前检查参数；具体函数实现和执行权限不由模式本身提供。\n\nGemini API 的函数声明用受支持的模式结构表达参数，SDK 也可从带类型和说明的 Python 函数生成声明。Antigravity SDK 支持注册自定义函数工具，工具描述应解释实际行为、输入要求和返回内容，而不是只提供缺少语义的字段列表。\n\n模式需要与实现同步，特别是枚举、可选字段、资源标识和错误格式。即使参数符合类型，也仍可能越权、引用不存在的资源或触发不允许的副作用；因此结构校验与授权、业务校验和工具执行策略必须分别完成。\n\n## 参考\n\n- [Gemini API function calling](https://ai.google.dev/gemini-api/docs/function-calling)\n- [Antigravity SDK tools](https://www.antigravity.google/docs/sdk/tools/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

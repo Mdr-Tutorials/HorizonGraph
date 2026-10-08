@@ -1,0 +1,40 @@
+{
+  "id": "regression-evaluation",
+  "name": "Regression Evaluation",
+  "aliases": [
+    "回归评估",
+    "智能体回归评估"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "evaluation-harness",
+      "context": "在固定保护任务集上重复运行新旧候选配置，保持版本与初始化协议一致并保存逐任务失败证据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "task-success-rate",
+      "context": "当保护任务有二元验收规则时比较新旧配置的完成比例，并结合重复运行解释随机波动。"
+    }
+  ],
+  "summary": "在可比任务和条件下检查更新是否破坏已有能力。",
+  "description": "回归评估检查模型、提示、工具或宿主更新后，系统是否仍能完成先前能够完成的任务。它与探索尚未掌握能力的评估有不同目的：一组已通过的代表性任务可作为持续比较的保护集，而不是只追求更高的新能力分数。\n\n评估应对齐任务版本、初始状态和判定器，并记录候选配置的变化。除了任务是否完成，也可比较错误种类、工具使用和运行费用。随机系统的一次失败未必表示确定性回归，需要结合重复试验及具体运行证据判断。\n\n资源不足、外部服务变化、共享状态或缓存都能产生类似回归的信号。应先区分基础设施问题与被测系统行为，再解释变化的来源。保护集需要维护和扩展，但若同时改动任务及评分规则，应将其记录为新评估协议，不能与旧分数无条件对比。\n\n## 参考\n\n- [Anthropic：Agent 评估的任务、轨迹与判定器](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)\n- [Anthropic：Agent 代码评估的基础设施噪声实验](https://www.anthropic.com/engineering/infrastructure-noise)\n- [SWE-bench：评估环境、报告与结果缓存](https://www.swebench.com/SWE-bench/guides/evaluation/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

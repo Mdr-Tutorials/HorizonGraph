@@ -8,25 +8,29 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "graphics-api-ecosystem"
+    "graphics-api-ecosystem",
+    "real-time-rendering-ecosystem"
   ],
   "domains": [
-    "graphics"
+    "graphics",
+    "real-time-rendering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "real-time-rendering-concept"
     },
     {
-      "relation_type": "part_of",
-      "target_id": "graphics-pipeline"
+      "relation_type": "uses",
+      "target_id": "gpu-buffer",
+      "context": "着色程序在绑定缓冲作为参数、存储输入或结果资源时，通过声明的数据布局访问对应内容。"
     }
   ],
-  "summary": "跑在 GPU 上的小程序，决定顶点如何动、像素什么颜色。",
+  "summary": "在GPU阶段执行的程序，覆盖图形着色与计算任务。",
   "importance": 5,
   "popular": 50,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 机制\n\n着色器是 GPU 执行的可编程工作单元，包含阶段入口以及它访问的函数、数据和资源接口。顶点程序处理顶点并产生裁剪位置，片元程序处理光栅化结果；其他图形接口还可以定义更多可编程阶段。\n\n计算着色器通过计算管线及工作组调度执行，读取或写入资源，毋须沿顶点到光栅化再到片元的绘制过程。因此通称 shader 的程序不能全部无条件归为经典图形管线的组成部分。\n\n## 边界与应用\n\nGLSL、HLSL 和 WGSL 是编写着色程序的语言，接口与编译路径决定可用阶段、资源类型和执行规则。源码编译成功后，仍需正确创建管线、匹配绑定与输入，并提交命令；着色器名称也不意味着它只负责颜色或光照。\n\n## 参考\n\n- [W3C WGSL：着色器与阶段](https://www.w3.org/TR/WGSL/#shader-stages)\n- [Microsoft HLSL：图形与计算着色](https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl)\n- [Khronos GLSL：着色阶段概览](https://docs.vulkan.org/glsl/latest/chapters/overview.html)"
 }

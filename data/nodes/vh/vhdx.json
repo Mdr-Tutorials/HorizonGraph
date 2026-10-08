@@ -1,0 +1,31 @@
+{
+  "id": "vhdx",
+  "name": "VHDX",
+  "aliases": [
+    "Virtual Hard Disk v2",
+    "虚拟硬盘 VHDX"
+  ],
+  "type": "protocol",
+  "domains": [
+    "virtualization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "virtualization-ecosystem",
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "以文件表示虚拟块设备内容与元数据的磁盘格式。",
+  "description": "VHDX 是 Microsoft 公开规定的虚拟硬盘文件格式，提供把磁盘表示为文件的抽象。文件内包含标识、头部、区域、元数据与块分配等结构，供实现恢复和定位虚拟磁盘内容。它是存储格式规范，既不是虚拟机管理器，也不是磁盘内部的文件系统。\n\n同一虚拟磁盘容器可以承载分区和文件系统；WSL 2 的常见发行版磁盘是装有 ext4 的 ext4.vhdx。虚拟磁盘容量、宿主文件占用与文件系统可用空间是不同层次，动态增长或空间回收的行为取决于磁盘类型和使用环境，不能只看文件扩展名判断。\n\n在 WSLc 中，会话持久状态与 VHD 支撑的卷也属于虚拟磁盘存储路线。将磁盘附加到虚拟机之后，Linux 才能识别块设备并挂载其中的文件系统；Windows 路径共享则通过另一条文件级接口完成。备份或移动时应保持磁盘结构一致，并区分文件格式与运行中的挂载状态。\n\n## 参考\n\n- [Microsoft Open Specifications：MS-VHDX](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-vhdx/83e061f8-f6e2-4de1-91bd-5d518a43d477)\n- [Microsoft：WSL 磁盘空间](https://learn.microsoft.com/en-us/windows/wsl/disk-space)\n- [Microsoft：WSLc Architecture Deep Dive](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-vhdx/83e061f8-f6e2-4de1-91bd-5d518a43d477"
+}

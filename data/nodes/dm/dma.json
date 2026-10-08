@@ -1,0 +1,35 @@
+{
+  "id": "dma",
+  "name": "Direct Memory Access",
+  "aliases": [
+    "DMA",
+    "直接内存访问"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pcie",
+      "context": "采用 PCIe 总线主设备的实现中，以 PCIe 内存事务进行 DMA；该总线不是 DMA 概念的唯一实现。"
+    }
+  ],
+  "summary": "由设备在获准的映射中直接搬运数据的机制。",
+  "description": "直接内存访问让设备按软件配置的地址与描述符搬运数据，无需 CPU 为每个字节执行复制指令。CPU 仍需分配或注册缓冲区、建立映射、发起操作并处理完成；DMA 地址与 CPU 虚拟地址、物理地址不应混为同一种地址。\n\nLinux 区分一致性分配和流式 DMA 映射，并规定同步与所有权转交规则。缓存一致性不等于所有写入顺序都自动正确：在把描述符交给设备之前，软件可能仍需内存屏障来保证内容先于有效标志被观察。\n\nIOMMU、驱动映射和设备保护域能够限制可访问的内存，具体隔离取决于平台与模式。DMA 不是绕过权限读取任意内存的许可；映射存活期、缓冲区回收和错误路径若处理不当，会形成数据损坏或安全风险。\n\n## 参考\n\n- [Linux DMA 地址、映射与所有权指南](https://docs.kernel.org/core-api/dma-api-howto.html)\n- [Linux DMA API 与一致性内存顺序](https://docs.kernel.org/core-api/dma-api.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "DMA"
+}

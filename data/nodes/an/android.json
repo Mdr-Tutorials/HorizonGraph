@@ -24,7 +24,8 @@
     },
     {
       "relation_type": "depends_on",
-      "target_id": "linux-kernel"
+      "target_id": "linux-kernel",
+      "context": "Android 平台以内核层的 Linux 及 Android 专用内核机制承载进程、内存、驱动和安全基础；此边限定操作系统平台。"
     },
     {
       "relation_type": "competes_with",
@@ -39,12 +40,13 @@
       "target_id": "ios"
     }
   ],
-  "summary": "Google 的移动操作系统，Linux 内核上的应用生态。",
+  "summary": "基于 Linux 内核的移动软件平台，AOSP 提供公开平台源码。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
   "popular": 96,
   "official_site": "https://www.android.com",
-  "first_released": "2008-09-23"
+  "first_released": "2008-09-23",
+  "description": "Android 是基于 Linux 内核的移动设备软件平台，包含运行时、系统服务、应用框架和设备相关接口。Android Open Source Project（AOSP）提供可公开获取和修改的平台源代码，是开发者、设备厂商及社区构建系统的基础。Android 平台本身、Google 发布的应用和服务、设备厂商的系统发行版本以及桌面开发工具具有不同身份。\n\n平台架构通过内核、硬件抽象层、系统服务与应用框架协调设备资源和应用执行。AOSP 是完整的平台源码基础，但不包含所有应用后端云服务、Google Play 应用或设备商业支持安排。兼容要求和测试用于约束具体设备与软件实现，不能从某个系统基于 AOSP 推断它已经取得相同的商业服务、认证或安全更新承诺。\n\nAndroid Studio 提供编辑、构建、调试和设备分析环境，Android CLI 则帮助外部代理与终端工作流操作 SDK、设备及适用的 IDE 能力。Android Skills 和 Gemini in Android Studio 可提供 AI 时代的开发辅助，它们不替代操作系统与应用运行时。开发工具、模型服务和应用所需的设备 API 应按各自版本与权限检查，而不是统一写成 Android 运行的直接依赖。\n\n## 参考\n\n- [AOSP：平台架构与源码边界](https://source.android.com/docs/core/architecture)\n- [AOSP：Linux 内核及 Android 内核结构](https://source.android.com/docs/core/architecture/kernel)\n- [Android：官方 IDE 的开发职责](https://developer.android.com/studio/intro)"
 }

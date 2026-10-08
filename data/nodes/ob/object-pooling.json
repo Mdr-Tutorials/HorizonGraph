@@ -1,0 +1,35 @@
+{
+  "id": "object-pooling",
+  "name": "Object Pooling",
+  "aliases": [
+    "对象池",
+    "对象池化",
+    "对象复用"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "memory-preallocation",
+      "context": "要求热路径避免池增长时，可预先准备足够槽位并规定耗尽处理；动态对象池不一定预分配。"
+    }
+  ],
+  "summary": "复用对象或其存储，需明确重置、归还、容量与并发所有权。",
+  "description": "对象池保存可复用的对象或对象存储，使调用方通过借用与归还减少重复分配及初始化。仅复用内存块的池和保留已构造对象的池具有不同生命周期语义。Boost对象存储池与Apache Commons Pool等对象借还体系可提供不同工程实现，本条记录通用方法而非某个库。\n\n池可在准备阶段分配，也可在不足时增长，因此使用对象池本身不保证热路径没有分配。借出对象的所有权、重置状态、异常归还和销毁时机必须明确；带外部资源或异步使用者的对象不能提前回收。共享池也可能需要锁，线程局部池则会带来跨线程归还和资源分散问题。\n\n池化会延长存储或资源寿命，增加内存占用，并可能保留陈旧状态或扩大容量压力。需要测试耗尽行为、并发竞争和恢复过程；对于便宜对象，现代分配器的正常路径可能已经足够高效。是否改善延迟取决于对象成本与负载，不能仅由减少new次数推导整体收益。\n\n## 参考\n\n- [Boost.Pool：对象存储复用与池扩容](https://www.boost.org/doc/libs/latest/libs/pool/doc/html/boost/object_pool.html)\n- [Apache Commons Pool：对象池生命周期](https://commons.apache.org/proper/commons-pool/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

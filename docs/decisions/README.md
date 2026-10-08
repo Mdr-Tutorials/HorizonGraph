@@ -38,3 +38,8 @@
 | [0025](0025-versioned-engine-and-offline-release.md) | 版本化数据快照、端侧查询引擎与完整离线发布 | 已接受 | 2026-10-01 |
 | [0026](0026-foundational-content-classification.md) | 基础领域内容的分类与消歧 | 已接受 | 2026-10-01 |
 | [0027](0027-whole-domain-content-expansion.md) | 整领域内容扩展与工程路径 | 已接受 | 2026-10-01 |
+| [0028](0028-interactive-graphics-content.md) | 实时图形、交互内容与资产工程 | 已接受 | 2026-10-07 |
+| [0029](0029-web-services-and-api-contracts.md) | Web 服务、边缘运行时与 API 契约 | 已接受 | 2026-10-07 |
+| [0030](0030-wsl-and-container-engineering.md) | WSL、跨宿主开发与容器工程 | 已接受 | 2026-10-08 |
+| [0031](0031-hft-and-electronic-trading.md) | HFT、电子交易与低延迟系统 | 已接受 | 2026-10-08 |
+| [0032](0032-antigravity-and-agent-development.md) | Google Antigravity 与智能体开发 | 已接受 | 2026-10-08 |

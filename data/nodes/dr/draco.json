@@ -1,0 +1,39 @@
+{
+  "id": "draco",
+  "name": "Draco",
+  "aliases": [
+    "Draco 几何压缩",
+    "Google Draco"
+  ],
+  "type": "library",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "asset-compression"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpp",
+      "context": "核心编解码库以 C++ 源码提供接口与实现。"
+    }
+  ],
+  "summary": "用于三维网格和点云几何压缩与解码的开源库。",
+  "description": "Draco 是压缩与解码三维网格和点云几何的开源库，处理位置、连接信息、纹理坐标及其他顶点属性。项目提供 C++ 源码，以及供 Web 场景使用的 JavaScript 或 WASM 解码路径。\n\n在 glTF 中采用 Draco 几何压缩时，加载器需要识别相应扩展并接入解码器。量化设置可能影响精度，压缩级别也影响解码成本；几何压缩不会代替纹理压缩，也不应被视为所有模型都必需的格式组成。\n\n## 参考\n\n- [Google Draco 编解码库](https://github.com/google/draco)\n- [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://google.github.io/draco/"
+}

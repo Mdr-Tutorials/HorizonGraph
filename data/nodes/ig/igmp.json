@@ -1,0 +1,36 @@
+{
+  "id": "igmp",
+  "name": "IGMP",
+  "aliases": [
+    "Internet Group Management Protocol",
+    "互联网组管理协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ip"
+    }
+  ],
+  "summary": "在 IPv4 本地链路管理组播接收成员与来源过滤。",
+  "description": "IGMP 在 IPv4 主机和相邻组播路由器之间交换成员状态。路由器查询成员，主机报告希望接收的组与相关状态，以确定本地接口仍需哪些组播流量；它管理接收意愿，并不独立完成跨网络组播路由。\n\nIGMPv3 以 INCLUDE 与 EXCLUDE 来源列表表达源过滤，使成员状态不仅限于一个组地址。截至本次核验，当前规范是 2025 年发布的 RFC 9776，取代 RFC 3376；引用旧编号时应说明其历史身份而非当成现行版本。\n\nIGMP 使用 IPv4 承载控制消息，不是运行于 UDP 的应用可靠传输。成员查询和报告不保证行情包的确认、排序或补发，也不代表应用层访问授权；IPv6 的组播成员发现是 MLD，不能沿用 IGMP 名称。\n\n## 参考\n\n- [RFC 9776：当前 IGMPv3 规范](https://www.rfc-editor.org/rfc/rfc9776.html)\n- [RFC 1112：IP Host Multicasting](https://www.rfc-editor.org/rfc/rfc1112.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "abbreviation": "IGMP",
+  "official_site": "https://www.rfc-editor.org/rfc/rfc9776.html"
+}

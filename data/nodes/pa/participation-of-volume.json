@@ -1,0 +1,43 @@
+{
+  "id": "participation-of-volume",
+  "name": "Participation of Volume",
+  "aliases": [
+    "成交量参与率执行",
+    "参与成交量执行",
+    "POV",
+    "Percent of Volume",
+    "Percentage of Volume"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-lifecycle",
+      "context": "根据市场量更新目标执行量时，同时读取子单实际成交和在途数量，避免只按已发送请求计算参与率。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order",
+      "context": "设置执行价格边界的 POV 路径中，用限价子单落实允许的成交范围，未成交可能导致参与率落后目标。"
+    }
+  ],
+  "summary": "根据市场成交量和目标参与率调整订单执行数量",
+  "description": "Participation of Volume（POV）把目标参与率用于执行调度，让累计或局部执行数量随市场成交量变化。实现可响应已发生的量，也可结合不断更新的量预测；它与预先安排固定时间切片的 TWAP、跟踪某一 VWAP 价格基准的目标各有不同。\n\n参与率的分母必须明确，包括选定场所、成交来源与窗口，以及自己的成交是否计入市场量。实时反馈、预测更新和子单在途状态可能使瞬时比率偏离目标，所谓 10% 目标也不等于任何实现都精确、无延迟地占据每笔成交的十分之一。\n\n市场低量时调度可能变慢甚至无法在期限内完成，成交量突增又可能促使算法加快。价格边界、追赶行为、费用与结束时间处理由具体实现决定；控制参与率旨在约束执行强度，不能保证固定完成时间、固定冲击或零信息泄露。\n\n## 参考\n\n- [IBKR：Percentage of Volume 算法](https://www.interactivebrokers.com/docs/general/order-types/algorithmic-orders/ib-algorithms/percentage-of-volume)\n- [IBKR：Fox River Percent of Volume 参数](https://www.interactivebrokers.com/docs/general/order-types/fox-river-algos/percent-of-volume-pov)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "POV"
+}

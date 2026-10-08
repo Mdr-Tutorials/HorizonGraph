@@ -15,12 +15,13 @@
   ],
   "domains": [
     "machine-learning",
-    "natural-language-processing"
+    "natural-language-processing",
+    "agent-development"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "agent-systems-concept"
     },
     {
       "relation_type": "uses",
@@ -36,13 +37,23 @@
       "relation_type": "uses",
       "target_id": "context-engineering",
       "context": "基于大模型的实现需要为每轮调用组织指令、状态和反馈。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-execution-loop",
+      "context": "需要依据多步环境或工具反馈继续决策时，采用有停止条件的迭代执行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "subagent-delegation",
+      "context": "需要分解任务给专门子代理的实现中，限定其任务、上下文和结果返回要求。"
     }
   ],
   "summary": "根据目标感知环境并选择行动的系统，常结合模型与工具。",
-  "description": "智能体围绕目标观察环境、选择动作并根据反馈继续执行。在基于大模型的系统中，模型可以决定工具调用和后续步骤；预先固定执行路径的工作流则由程序显式控制。是否自主规划、保留状态或跨会话记忆，需要看具体设计。\n\n参考：[权威资料](https://www.anthropic.com/engineering/building-effective-agents)。",
+  "description": "AI 智能体围绕目标感知环境、选择动作，并依据反馈继续执行。它是更广泛的人工智能概念，不要求一定采用大模型；在大模型应用中，模型常负责决定下一步或提出工具调用，而实际执行仍由程序和运行环境承担。\n\n一次智能体执行可以包含多轮模型与工具交互，并使用显式状态、记忆或子代理。预先固定路径的工作流主要由程序控制，智能体则可以在允许的范围内选择步骤；两种方式能在同一系统内组合，自主程度应按实际控制边界判断。\n\n实现需要定义目标、可用动作、信息来源与停止条件，并处理失败、预算和外部副作用。保存历史不自动产生长期记忆，提供工具也不自动授予执行权限；模型、运行支撑层、会话和执行检查点各自承担不同职责。\n\n## 参考\n\n- [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)\n- [LangChain agents](https://docs.langchain.com/oss/python/langchain/agents)\n- [Shoham and Leyton-Brown: Multiagent Systems](https://www.masfoundations.org/)",
   "importance": 5,
   "official_site": "https://www.anthropic.com/engineering/building-effective-agents",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active"
 }

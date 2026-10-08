@@ -1,0 +1,52 @@
+{
+  "id": "host-network-service",
+  "name": "Host Networking Service",
+  "aliases": [
+    "宿主网络服务",
+    "HNS",
+    "Host Network Service"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "networking"
+  ],
+  "ecosystems": [
+    "windows-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "windows"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hyper-v",
+      "context": "在 Windows 容器网络配置路径中管理 Hyper-V 虚拟交换资源；不表示每个容器必须采用 Hyper-V 隔离。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nat",
+      "context": "在 Windows 容器 NAT 网络模式中配置 WinNAT 地址转换和端口映射，不推广到 transparent 等其他模式。"
+    }
+  ],
+  "summary": "管理 Windows 容器网络、端点及相应策略的宿主服务。",
+  "description": "Host Networking Service（HNS）在 Windows 容器平台上管理网络资源及端点，把容器连接到所选宿主网络。官方 Windows 网络文档使用 Host Networking Service 名称，hcsshim 等项目也沿用 HNS 缩写。它与 HCS 配合完成连接，但网络服务与计算系统服务职责不同，不能把 HNS 描述为负责执行容器进程的运行时。\n\n创建网络时，HNS 按模式建立相应的虚拟交换资源，以及需要的 NAT 和地址池；创建端点时配置虚拟网卡、地址、DNS 和路由等信息。策略实现随网络类型变化，例如默认 NAT 路径涉及 WinNAT 端口映射及防火墙规则，其他路径使用 Virtual Filtering Platform 等能力。不能从某种模式的实现推导所有网络都采用 NAT、同一地址分配方式或相同平台支持范围。\n\n容器管理工具可通过原生网络接口或包装库调用 HNS，HCS 与它协作连接端点及计算系统。HNS 是控制与配置资源的宿主服务，而非独立定义 DNS、TCP 或 OCI 等协议的标准；应用端口发布、网络隔离和宿主路由要分别理解。普通 Windows 容器、WSL 2 以及新 WSLc 的网络路径不能仅因同在 Windows 上就等同，WSLc 的用户态会话网络模型有独立实现说明。\n\n## 参考\n\n- [Microsoft：Windows container networking architecture](https://learn.microsoft.com/en-us/virtualization/windowscontainers/container-networking/architecture)\n- [Microsoft：Windows container network drivers 与 IPAM](https://learn.microsoft.com/en-us/virtualization/windowscontainers/container-networking/network-drivers-topologies)\n- [Microsoft：hcsshim 的 HNS 包装能力](https://github.com/microsoft/hcsshim)\n- [Microsoft：WSLc 会话网络模型](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "abbreviation": "HNS",
+  "official_site": "https://learn.microsoft.com/en-us/virtualization/windowscontainers/container-networking/architecture"
+}

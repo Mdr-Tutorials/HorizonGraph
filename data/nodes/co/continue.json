@@ -1,0 +1,46 @@
+{
+  "id": "continue",
+  "name": "Continue",
+  "aliases": [
+    "Continue AI",
+    "Continue.dev",
+    "Continue CLI"
+  ],
+  "type": "tool",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-rule",
+      "context": "在 IDE 或 cn 配置中加载项目、个人或 --rule 指定的任务指导。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "配置并启用 MCP 服务器后连接外部工具；服务器和权限取决于实际助手配置。"
+    }
+  ],
+  "summary": "可配置模型、规则与工具的编辑器及终端编程助手。",
+  "description": "Continue 提供 IDE 扩展和名为 cn 的终端编码代理。当前 CLI 官方文档说明它采用与编辑器扩展相同的代理，可读写文件、运行命令并处理多步任务；因此 Continue 的身份范围已超过单纯的编辑器补全插件。终端交互模式用于对话和工具批准，headless 模式用于一次性自动化任务和标准输出。\n\n模型、MCP 服务器、规则等配置可由启动参数、已保存选择或本地 config.yaml 提供。项目规则和传入文件上下文用于约束具体任务，MCP 配置扩展代理可调用的外部工具；这两者分别是任务指导与工具接入，不能互相替代。账户与模型凭据要求取决于所采用入口和提供方，不能从一个示例推断所有配置都必须绑定同一家模型服务。\n\n无人交互的 cn -p 任务仍受工具权限控制。当前 headless 文档说明 normally ask 的工具会被排除，写文件和 shell 等操作需显式允许相应权限，不能把非交互理解为默认全部批准。它适合将仓库分析、文档维护和代码任务接入脚本或 CI；若任务需要修改源码，应同时核对配置、可执行工具与结果验证，而不是仅检查命令正常结束。\n\n## 参考\n\n- [Continue：CLI 与 IDE 的共同代理](https://docs.continue.dev/cli/quickstart)\n- [Continue：模型、MCP 与规则配置](https://docs.continue.dev/cli/configuration)\n- [Continue：Headless mode 与工具权限](https://docs.continue.dev/cli/headless-mode)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://docs.continue.dev/"
+}

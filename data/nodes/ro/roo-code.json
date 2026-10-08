@@ -1,0 +1,40 @@
+{
+  "id": "roo-code",
+  "name": "Roo Code",
+  "aliases": [
+    "RooCode"
+  ],
+  "type": "tool",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "历史扩展配置 MCP 服务器后调用其外部工具；此关系记录归档实现的可选能力，不表示官方服务现仍运行。"
+    }
+  ],
+  "summary": "已停止维护服务的 VS Code 编程代理扩展与开源项目。",
+  "description": "Roo Code 是曾提供于 VS Code 的开源编码代理扩展，能够读写文件、运行终端命令并处理多步任务。官方说明它源自 Cline，并提供可配置的模型提供方和工作模式；本节点记录该扩展和项目的历史身份。它不是大模型，也不应与原官网现时指向的 Roomote 产品合并。\n\n扩展以 Code、Architect、Ask 等模式组织不同任务，模式指导模型如何开展工作，工具和自动批准配置决定实际操作范围。启用 MCP 服务器时可调用扩展外部的工具；未配置这些服务器并不妨碍使用内置编辑和终端能力。多步执行、模式协作和模型选择属于宿主功能，不能据此推断模型自身实现了编辑器或 MCP 协议。\n\n官方文档明确 Roo Code Extension 于 2026 年 5 月 15 日关闭，源代码仓库同日归档为只读。本条因此标记为已废弃并记录停止日期；保留源码和旧文档不意味着原官方服务仍持续可用。官方建议的社区分支和其他代理是不同项目，它们有各自维护者、配置和更新路径，不能以原扩展的身份自动继承其服务状态。\n\n## 参考\n\n- [Roo Code：扩展关闭公告及原有能力](https://roocodeinc.github.io/Roo-Code/)\n- [Roo Code：2026-05-15 归档的官方源代码](https://github.com/RooCodeInc/Roo-Code)",
+  "status": "deprecated",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 2,
+  "abstraction_level": "application_tool",
+  "official_site": "https://roocodeinc.github.io/Roo-Code/",
+  "deprecated_at": "2026-05-15"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "kata-containers",
+  "name": "Kata Containers",
+  "aliases": [
+    "Kata 容器",
+    "Kata Runtime"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "virtualization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "container-ecosystem",
+    "virtualization-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "container-isolation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "system-virtual-machine",
+      "context": "将 sandbox 工作负载放入具有客体内核的轻量虚拟机；具体粒度由运行时集成决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "namespace",
+      "context": "在客体 Linux 内核中建立容器的进程及资源视图，不把客体内部命名空间误写为宿主内核共享。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cgroup",
+      "context": "在客体 Linux 内核中组织和管理容器进程资源，实际限制还需结合宿主 VM 配置。"
+    }
+  ],
+  "summary": "通过轻量虚拟机和客体内核增强隔离的容器运行时。",
+  "description": "Kata Containers 是以轻量虚拟机形成客体边界的容器运行时项目，通过 OCI 和 containerd shim 等接口连接容器管理系统。工作负载在客体 Linux 内核上运行，客体内的 agent 协助创建和管理容器。运行时、agent、客体内核与具体虚拟机监控器共同承担职责，Kata 项目本身不能等同于唯一的 hypervisor。\n\n隔离粒度由 sandbox 和集成方式决定；在 Kubernetes 中通常按 pod sandbox 组织虚拟机，同一虚拟机可包含多个容器。客体内仍借助 Linux namespaces、cgroups 等机制管理进程和资源，因此同一 sandbox 的容器可共享客体内核与部分资源。不能将这一方案概括成每个容器都必然拥有独立虚拟机或独立内核。\n\n项目支持 QEMU、Cloud Hypervisor、Firecracker、Dragonball 等后端，其设备、共享文件系统、热插拔和运行时集成能力存在差异。增强客体边界仍需审查 VMM、宿主内核、文件共享和管理通信的攻击面，并评估启动、内存及 I/O 成本。后端与平台应按配置核对，不能把某个可选 VMM 变成整个 Kata 项目的唯一硬依赖，或假设它是 WSL 容器环境的固定组成。\n\n## 参考\n\n- [Kata Containers：runtime、agent 与 sandbox 架构](https://github.com/kata-containers/kata-containers/blob/main/docs/design/architecture/README.md)\n- [Kata Containers：虚拟化后端与能力差异](https://github.com/kata-containers/kata-containers/blob/main/docs/design/virtualization.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://katacontainers.io/"
+}

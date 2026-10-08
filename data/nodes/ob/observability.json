@@ -20,10 +20,11 @@
       "target_id": "theory"
     }
   ],
-  "summary": "用指标、日志与追踪从系统外部推断内部状态。",
+  "summary": "通过遥测和关联上下文理解系统运行状态与故障原因。",
   "importance": 4,
   "popular": 55,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "软件系统的可观测性指利用系统发出的遥测证据理解其运行状态与行为，尤其是在外部症状出现时定位原因。日志、数值指标和追踪是常见信号，但仅拥有一个监控面板或很多日志，不等于能回答实际的诊断问题。\n\n仪表化需要记录有意义的操作、时间、错误及关联上下文。指标提供聚合趋势，日志保存事件，追踪把一次请求跨越的服务和操作联系起来。OpenTelemetry 提供通用信号与上下文关联机制；Google SRE 则区分面向用户症状和内部原因的监控用途。\n\n采样、缺失上下文和测量口径会限制判断，系统可用也不代表业务结果正确。例如成功 HTTP 状态下返回错误内容仍可能属于用户层面的失败。可观测性服务于诊断与验证，不能单独证明根因；智能体可观测性是在任务与工具运行中采用这些方法的专门场景。\n\n## 参考\n\n- [OpenTelemetry：可观测性、信号与追踪](https://opentelemetry.io/docs/concepts/observability-primer/)\n- [Google SRE：监控、症状与原因](https://sre.google/sre-book/monitoring-distributed-systems/)"
 }

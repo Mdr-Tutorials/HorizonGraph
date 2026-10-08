@@ -1,0 +1,42 @@
+{
+  "id": "houdini",
+  "name": "Houdini",
+  "aliases": [
+    "胡迪尼"
+  ],
+  "type": "product",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "procedural-modeling"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "polygon-modeling"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture-baking",
+      "context": "在制作游戏资产时将高密度模型信息转成可交付贴图。"
+    }
+  ],
+  "summary": "以节点网络构建模型、特效和程序化资产的制作软件。",
+  "description": "Houdini 是 SideFX 的数字内容制作软件，其节点网络记录生成、修改和组合内容的操作。程序化建模可以通过参数调整同一制作流程，生成道具、环境或其他资产，并与特效和动画工作流配合。\n\n节点网络可以封装为 Houdini Digital Asset，向作者暴露所需参数。Houdini Engine 插件允许支持的宿主编辑器使用这些资产，但这不表示每个运行时都直接执行完整制作网络；可选择在制作阶段生成并导出普通网格或其他优化内容。\n\n## 参考\n\n- [Houdini 程序化建模](https://www.sidefx.com/products/houdini/modeling/)\n- [Houdini 数字资产机制](https://www.sidefx.com/docs/houdini/assets/intro.html)\n- [Houdini 游戏内容工作流](https://www.sidefx.com/industries/games/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.sidefx.com/products/houdini/"
+}

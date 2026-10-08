@@ -1,0 +1,37 @@
+{
+  "id": "cboe-bzx-market",
+  "name": "Cboe BZX Equities Market",
+  "aliases": [
+    "Cboe BZX 股票市场",
+    "BZX Equities",
+    "BZX 股票交易服务"
+  ],
+  "type": "product",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "BZX 股票交易服务以本场所订单及对应流动性池进行执行；具体订单类型、优先级和路由条件以场所规则为准。"
+    }
+  ],
+  "summary": "提供美国股票交易与行情接入的 BZX 市场服务。",
+  "description": "Cboe BZX Equities Market 表示 Cboe 提供的 BZX 股票交易市场服务，按对外电子交易场所建档。它不表示整个 Cboe 集团，也不将 BZX 股票市场与 BZX 期权市场或名为 Cboe BZX Exchange 的法律实体混为一个产品。\n\n该场所属于 Cboe 的四个美国股票交易市场之一，成员依相应规则发送订单、获取执行和使用行情。四个市场具有各自的流动性池、参与者结构及交易特点，客户应选择匹配自身接入和执行要求的场所，不能将 BZX 的规则自动当作 BYX、EDGA 或 EDGX 的规则。\n\n公开资料提供会员、监管、订单路由及风险管理入口，订单生命周期包含接入检查和实时监控。技术接入资格、市场数据许可和经纪商安排是独立事项；这里的 product 类型用于具体市场服务身份，不表示一个可以下载安装的终端应用。\n\n## 参考\n\n- [Cboe 美国股票交易所](https://www.cboe.com/markets/us/equities/)\n- [Cboe 股票交易、风控与监管](https://www.cboe.com/markets/us/equities/trading/)\n- [Cboe 股票交易所会员与规则](https://www.cboe.com/markets/us/equities/membership)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.cboe.com/markets/us/equities/"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "gpu-buffer",
+  "name": "GPU Buffer",
+  "aliases": [
+    "GPU缓冲区",
+    "图形处理器缓冲区"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgpu",
+      "context": "以 WebGPU 表达缓冲资源时，通过 GPUBuffer 的大小、用途、映射及队列传输接口管理数据。"
+    }
+  ],
+  "summary": "供GPU读取或写入的线性数据资源，用途与布局由接口约束。",
+  "description": "## 机制\n\nGPU 缓冲区提供线性字节存储，可承载顶点、索引、统一参数或计算数据。用途标记决定允许的操作，绑定方式和着色程序接口决定如何解释内容；它与具有维度及采样语义的纹理是不同资源。\n\n以 WebGPU 为例，创建时声明大小和 usage，数据可通过队列写入、复制或合法映射路径传输。映射使主机访问缓冲内容，映射中的缓冲不能同时提交给 GPU 使用，完成访问后须解除映射。\n\n## 边界与应用\n\n缓冲对象并不自行规定元素类型，也不保证物理上位于独立显存。访问还受范围、对齐、资源状态和执行顺序约束；把数据上传到缓冲后，仍需正确绑定并安排使用它的命令。\n\n## 参考\n\n- [W3C WebGPU：缓冲及映射](https://www.w3.org/TR/webgpu/#buffers)\n- [Khronos Vulkan：资源与缓冲](https://docs.vulkan.org/spec/latest/chapters/resources.html#resources-buffers)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

@@ -1,0 +1,41 @@
+{
+  "id": "docker-compose",
+  "name": "Docker Compose",
+  "aliases": [
+    "Docker Compose 命令行工具",
+    "docker compose",
+    "docker-compose"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "containerization"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "compose-spec"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker-engine",
+      "context": "以 Docker 引擎为目标时创建、启动和清理服务容器、网络与卷；引擎可以位于远端。"
+    }
+  ],
+  "summary": "按 Compose 规范管理多容器应用生命周期的工具。",
+  "description": "Docker Compose 是 Compose Specification 的具体实现，读取 compose.yaml 等配置后创建和管理服务容器、网络与卷。当前工作流常通过 Docker CLI 的 docker compose 子命令使用；Docker Desktop 包含该工具，Linux 也可独立安装 CLI 插件。\n\nup 解析配置并建立或更新应用资源，logs 和 ps 提供运行视图，exec 进入服务容器，down 删除相应容器和网络。资源名称与项目标签用于区分并行运行的应用实例。多文件覆盖、环境插值、profiles 与构建配置会影响最终执行模型，可以先检查展开后的配置。\n\nCompose 默认等待依赖容器启动，并不自动保证应用已就绪；健康就绪需配置受支持的 healthcheck 与依赖条件。持久卷是否删除取决于具体操作选项。CLI 插件、独立程序和旧版 Python 实现的调用形式不同，不能把命令历史名称等同特定版本或平台的全部支持。\n\n## 参考\n\n- [Docker：Compose 应用模型与命令](https://docs.docker.com/compose/intro/compose-application-model/)\n- [Docker：Linux CLI 插件独立安装](https://docs.docker.com/compose/install/linux/)\n- [Docker：启动与关闭条件](https://docs.docker.com/compose/how-tos/startup-order/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://docs.docker.com/compose/"
+}

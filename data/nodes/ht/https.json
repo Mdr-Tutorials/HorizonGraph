@@ -14,7 +14,8 @@
   "domains": [
     "networking",
     "security",
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -31,9 +32,10 @@
       "target_id": "http"
     }
   ],
-  "summary": "在 TLS 之上跑 HTTP，Web 流量的默认加密形态。",
+  "summary": "以受认证的加密连接交换 HTTP 消息，保护传输机密性与完整性。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-07",
+  "importance": 5,
+  "description": "HTTPS 是使用 https URI 方案访问 HTTP 资源的安全通信方式。客户端需要建立受保护的连接，并确认对端有权代表目标源；证书身份检查须与 URI 所指主机匹配。TLS 提供握手、密钥协商和受保护的数据交换，从而支持传输机密性、完整性与对端认证。\n\nHTTPS 沿用 HTTP 的方法、状态码、字段与表示语义，而非另一套业务接口。HTTP/1.1 与 HTTP/2 常在 TCP 上使用 TLS，HTTP/3 则通过集成 TLS 的 QUIC 提供保护，因此 https 不能被缩写为仅有 TCP 加 TLS 的固定栈。连接也可能在反向代理终止，保护范围取决于每一段连接的部署。\n\n受保护的传输不能替应用完成身份授权、输入验证或 CSRF 防御，也不保证通信端点本身安全。TLS 的端点仍能读取应用数据，部分流量长度和连接元数据也可能可见；应用应把传输保护与资源访问控制分别设计。\n\n## 参考\n\n- [RFC 9110 §4.2.2、§4.3.3：https URI 与源认证](https://www.rfc-editor.org/rfc/rfc9110.html#section-4.3.3)\n- [RFC 8446：TLS 1.3 的安全信道性质](https://www.rfc-editor.org/rfc/rfc8446.html)\n- [RFC 9114：HTTP/3 的 QUIC 安全传输](https://www.rfc-editor.org/rfc/rfc9114.html)"
 }

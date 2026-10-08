@@ -13,12 +13,13 @@
   ],
   "domains": [
     "machine-learning",
-    "natural-language-processing"
+    "natural-language-processing",
+    "agent-development"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "agent-systems-concept"
     },
     {
       "relation_type": "uses",
@@ -27,10 +28,10 @@
     }
   ],
   "summary": "保存和检索交互信息，使智能体能延续任务或跨会话利用经验。",
-  "description": "短期记忆通常保存当前任务状态和会话历史，长期记忆则跨会话保存事实、偏好或经验。记忆可以存入数据库并在需要时选择性读取，并不都以向量形式存储。应用保存的记忆也不同于模型权重中形成的知识。\n\n参考：[权威资料](https://docs.langchain.com/oss/python/concepts/memory)。",
+  "description": "智能体记忆保存并按需取回交互信息，使任务能够延续或在新的会话中利用事实、偏好和经验。短期记忆常与当前会话或执行线程相关，长期记忆跨越会话；这些应用保存的信息不同于模型训练后形成的权重知识。\n\n记忆可以存为结构化字段、消息记录、文件或数据库条目，也可以使用检索索引。ADK 的 MemoryService 面向跨会话信息，LangChain 和 LangGraph 把当前线程状态与跨线程存储区分；向量表示和 RAG 是可选实现路径，不是所有记忆的共同前提。\n\n记录存在于存储中不表示每轮都会送给模型，应用需要依据任务与权限选择读取内容。记忆还需要归属、更新与删除规则，避免把过时或不可信的内容当作事实；会话持久化、上下文摘要和执行恢复也不能笼统视为同一种记忆机制。\n\n## 参考\n\n- [ADK memory services](https://adk.dev/sessions/memory/)\n- [LangChain short-term memory](https://docs.langchain.com/oss/python/langchain/short-term-memory)\n- [LangGraph persistence](https://docs.langchain.com/oss/python/langgraph/persistence)",
   "importance": 4,
-  "official_site": "https://docs.langchain.com/oss/python/concepts/memory",
-  "last_reviewed": "2026-09-12",
+  "official_site": "https://docs.langchain.com/oss/python/langchain/short-term-memory",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active"
 }

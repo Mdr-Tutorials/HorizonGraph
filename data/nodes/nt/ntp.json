@@ -9,7 +9,8 @@
     "tcp-ip-ecosystem"
   ],
   "domains": [
-    "networking"
+    "networking",
+    "low-latency-systems"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -20,12 +21,23 @@
     {
       "relation_type": "depends_on",
       "target_id": "udp"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clock-offset",
+      "context": "以 NTP 消息时间戳估计参考相对本地时钟偏移，为样本筛选和相位校正提供输入；符号按 NTP 定义解释。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clock-drift",
+      "context": "时钟纪律估计和调节频率误差，减少偏移随时间积累。"
     }
   ],
-  "summary": "网络时间同步协议，毫秒级对时的老资格。",
+  "summary": "以时间戳交换、样本筛选与时钟纪律同步网络时钟。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.ntp.org"
+  "official_site": "https://www.ntp.org",
+  "description": "NTP 通过网络交换时间戳并运行时钟纪律来同步本地时间。NTPv4 的四时间戳模型估计往返时延和参考相对偏移，再筛选样本并校正时钟相位与速率；它使用 UDP 承载消息，不能与本机计时接口或 PTP 硬件打点混为一体。\n\n时间服务器的 stratum 表示同步层级，不是准确度排名或固定误差上界。参考源、路径非对称、拥塞、采样和时钟稳定性都会影响结果，既不能把 NTP 限定成总是毫秒级，也不能从协议字段精度推导实际校时精度。\n\n时钟纪律可渐进调频，也可能在特定状态进行时间调整；应用测持续时间宜选择合适的单调时钟。分析 UTC 准确度与跨主机测量时，应记录源和同步状态、偏移估计与不确定度，协议同步本身不保证每个单向时延结果正确。\n\n## 参考\n\n- [RFC 5905：NTPv4 时间同步与算法](https://www.rfc-editor.org/rfc/rfc5905.html)\n- [NTP 官方时间偏移与往返时延模型](https://www.ntp.org/reflib/time/)\n- [NTP Clock Discipline Algorithm](https://www.ntp.org/documentation/4.2.8-series/discipline/)"
 }

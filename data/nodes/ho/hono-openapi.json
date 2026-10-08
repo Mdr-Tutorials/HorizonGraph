@@ -1,0 +1,51 @@
+{
+  "id": "hono-openapi",
+  "name": "hono-openapi",
+  "aliases": [
+    "Hono OpenAPI 中间件"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "hono"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "openapi"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-documentation-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-schema",
+      "context": "连接兼容校验模式及其输入输出信息，具体转换器按验证库选择。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "在可转换模式上取得数据结构描述，再构建 OpenAPI 的请求与响应 schema。"
+    }
+  ],
+  "summary": "从 Hono 路由元数据及兼容验证模式生成 OpenAPI 描述。",
+  "description": "hono-openapi 是独立的 Hono 插件，通过 describeRoute、模式 resolver 和文档处理器，为已有路由添加接口说明并生成 OpenAPI 文档。它支持 Standard Schema 兼容的验证库，允许在 Zod、Valibot、ArkType、TypeBox 等实现之间选择。它使用中间件与元数据连接普通 Hono 路由，与 @hono/zod-openapi 的扩展类方案分开发布。\n\n模式转换还依赖相应库的 JSON Schema 或 OpenAPI 转换能力；部分库需要额外转换包，任意自定义运行时逻辑不能保证完整写入规范。描述响应与安全要求不会自动验证响应或完成授权，运行时请求校验由所配置的 validator 执行。生成描述之后，Swagger UI 或 Scalar 等独立渲染器可以展示交互文档，生成器与显示组件应分别理解。\n\n## 参考\n\n- [Hono OpenAPI：维护者文档](https://honohub.dev/docs/openapi)\n- [Hono：hono-openapi 官方集成示例](https://hono.dev/examples/hono-openapi)\n- [hono-openapi：项目仓库](https://github.com/rhinobase/hono-openapi)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://honohub.dev/docs/openapi"
+}

@@ -12,11 +12,11 @@
       "target_id": "application-security-concept"
     }
   ],
-  "summary": "不可信输入驱动服务器向非预期目标发起请求。",
-  "description": "## 机制\n\nURL 抓取、代理或回调服务若让外部输入控制目标，可使服务器访问内网、元数据端点或其他受限服务。攻击借用服务器所在网络和身份，而不是直接从浏览器访问目标。\n\n## 边界与应用\n\n防护要按业务限制协议、目标和出站网络，同时处理重定向、DNS 解析及地址规范化。仅检查字符串前缀或只封禁少量 IP 不足以覆盖解析差异和目标变化。\n\n## 参考\n\n- [OWASP：SSRF 防护](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)",
+  "summary": "让不可信输入驱动服务端请求非预期或受限目标。",
+  "description": "SSRF 发生在服务器、代理或具备受信网络位置的程序按不可信输入发起请求时，攻击者由此接触本来不能直接访问的目标。常见触点包括 URL 抓取、预览、回调及元数据发现。这里的服务端角色也可能由 MCP 客户端所在服务承担，不能因组件名字叫客户端就忽略它对内网的可达性。\n\n防护需按业务限制协议、目的地和实际连接路径，并处理 URL 规范化、解析结果、重定向及检查后变化。字符串前缀、少量被禁 IP 或 HTTPS 单独都不能覆盖目标授权。允许访问的内部服务应根据明确业务范围处理，不能把开发环境允许的 loopback 规则无条件推广到生产部署。\n\n当前 MCP 安全指南指出，受攻击者影响的 resource_metadata、authorization_servers 和端点 URL 可让服务端部署的客户端访问内网或云元数据地址。对应控制可组合地址与重定向验证、出站代理和网络规则；授权服务器抓取客户端元数据时也有类似风险。验证应覆盖真正发出的请求，而非只验证最初看见的 URL。\n\n## 参考\n\n- [OWASP：Server Side Request Forgery Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)\n- [MCP 2026-07-28：Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)",
   "importance": 4,
   "official_site": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
-  "last_reviewed": "2026-10-01",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active",
   "ecosystems": [
@@ -24,7 +24,8 @@
   ],
   "domains": [
     "security",
-    "web-development"
+    "web-development",
+    "agent-development"
   ],
   "abbreviation": "SSRF"
 }

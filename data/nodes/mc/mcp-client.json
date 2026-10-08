@@ -1,0 +1,46 @@
+{
+  "id": "mcp-client",
+  "name": "MCP Client",
+  "aliases": [
+    "MCP 客户端"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 架构中面向特定服务器的客户端角色。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-stdio-transport",
+      "context": "接入本地子进程服务器的 stdio 路线时，通过标准输入输出承载消息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-streamable-http-transport",
+      "context": "接入 HTTP 服务器路线时，按 Streamable HTTP 绑定发送协议请求。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-multi-round-trip-request",
+      "context": "使用 2026-07-28 并收到 input_required 时，补齐请求输入后以新 ID 重试原操作。"
+    }
+  ],
+  "summary": "在宿主与特定 MCP 服务器之间执行协议交互的角色。",
+  "description": "MCP 客户端是宿主内部向特定服务器发送协议操作的角色。宿主可以组合多个客户端，而每个客户端对应一个服务器。客户端处理能力声明、消息关联和通知等交互，不能与负责模型对话及全局授权的宿主混为一体。\n\n客户端可按部署路线使用 stdio 启动本地服务器，或使用 Streamable HTTP 接入远程端点，再调用工具、读取资源或获取模板。2026-07-28 版在每个请求的元数据中携带协议版本和客户端能力，并可用 server/discover 发现服务器能力，不依赖旧版初始化会话保存这些信息。\n\n某个客户端能够连接 MCP 不等于它支持全部原语、扩展或授权路线。遇到需要输入的结果时，客户端按 MRTR 构造后续请求；Apps、Tasks、Skills 等仍需要相应实现与声明。模型产生工具调用意图后，真正发送请求和处理结果的是客户端及其宿主代码。\n\n## 参考\n\n- [MCP：架构与角色](https://modelcontextprotocol.io/specification/2026-07-28/architecture)\n- [MCP：基础协议](https://modelcontextprotocol.io/specification/2026-07-28/basic)\n- [MCP：客户端开发](https://modelcontextprotocol.io/docs/2026-07-28/develop/build-client)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

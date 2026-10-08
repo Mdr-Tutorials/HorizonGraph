@@ -1,0 +1,37 @@
+{
+  "id": "deepmind-science-skills",
+  "name": "Science Skills",
+  "aliases": [
+    "Google DeepMind Science Skills",
+    "GDM Science Skills",
+    "科学研究技能包"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "scientific-computing",
+    "bioinformatics",
+    "computational-chemistry"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "Google DeepMind 的科学研究代理技能与辅助资源集合。",
+  "description": "Science Skills 是 Google DeepMind 发布的科学研究技能集合，覆盖基因组学、结构生物学、化学信息与文献检索等任务。每个技能提供指令、辅助脚本和参考资源，用于把专项工具或数据库知识交给代理。此节点是可交付的资料与代码包，不是 Gemini 的模型版本，也不等于 AlphaFold 模型或任何被访问的科学数据库。\n\n官方仓库给出独立安装方式，并提供在 Antigravity 的 Science 插件中加载精选集合的路径。不同技能可能需要运行时、软件依赖或 API 密钥；例如某些数据库具有独立访问条款和限额，不能从安装一个集合推出全部外部资源已获得授权或能够离线使用。技能名称也不能代替实际查询的数据版本与来源记录。\n\nREADME 明确声明 Science Skills 不是正式 Google 产品；这里的 product 类型表示可交付的技能资料与代码制品，不表示商业服务、正式产品支持或 GA 承诺。软件与其他资料按相应开源许可分发，文档说明按现状提供；Google 的作者与版权归属也不能代替服务保证。这些资源帮助代理建立可执行且可复查的科学工作流，模型回答、数据库记录和实验结论仍属于不同证据层次。结构预测、数据库查询和临床或实验验证不具有自动等价关系。集合的维护版本和单项资源的依赖应分别核对，Antigravity 是可安装精选集合的宿主之一，科学技能包并不与某个代理界面不可分离。\n\n## 参考\n\n- [Google DeepMind：Science Skills 结构、安装与外部前提](https://github.com/google-deepmind/science-skills/blob/main/README.md)\n- [Google DeepMind：Science 插件的官方分发元数据](https://github.com/google-deepmind/science-skills/blob/main/plugin.json)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/google-deepmind/science-skills"
+}

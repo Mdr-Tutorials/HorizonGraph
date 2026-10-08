@@ -1,0 +1,49 @@
+{
+  "id": "low-latency-systems-engineering",
+  "name": "Low-Latency Systems Engineering",
+  "aliases": [
+    "低延迟系统工程",
+    "低时延系统工程"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "latency-budget",
+      "context": "按端到端目标向关键处理阶段分配时间，并用实际负载验证预算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tail-latency",
+      "context": "在稳定及突发负载下以高分位延迟检查少数慢请求对目标的影响。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "benchmark",
+      "context": "用明确负载、边界和环境的可重复实验比较设计选择。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hdr-histogram",
+      "context": "在以Java直方图库记录延迟样本的测量路径中，配置单位、范围与精度并合并分布；采样设计及协调遗漏处理仍由测量者明确。"
+    }
+  ],
+  "summary": "围绕端到端时限，协同测量、并发、内存、调度与I/O的工程方法。",
+  "description": "低延迟系统工程以可观察的完成时间为目标，定义输入事件、输出结果与可接受时限，再协调软件路径和硬件资源。它适用于交互服务、设备控制、数据处理和交易系统等场景；本条记录通用工程方法，具体业务的交易规则与价值目标由各自领域解释。\n\n工程工作先建立延迟预算和负载模型，分离排队、执行、线程交接及I/O等贡献，并观察分布与突发期间的长尾。仅缩短某段代码的平均耗时，可能把等待移到另一个队列；需要把优化结果放回同一端到端边界，连同吞吐、丢弃率和资源消耗一起验证。\n\nCPU绑定、预分配、有界队列和轮询都是有条件的设计选择。它们可能降低部分波动，也会增加内存、CPU占用或运维约束。低平均延迟不等于实时期限保证；测试还要覆盖容量耗尽、恢复路径和测量遗漏，保留能够复现环境与负载的证据。\n\n## 参考\n\n- [Linux：实时内核配置与最坏延迟](https://docs.kernel.org/core-api/real-time/kernel-configuration.html)\n- [Google SRE：过载、排队与期限](https://sre.google/sre-book/handling-overload/)\n- [HdrHistogram：范围、精度、并发与遗漏修正](https://github.com/HdrHistogram/HdrHistogram)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

@@ -1,0 +1,43 @@
+{
+  "id": "order-driven-market",
+  "name": "Order-Driven Market",
+  "aliases": [
+    "订单驱动市场"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "在记录持续有效限价订单的实现中，用订单簿维护待匹配的买卖兴趣。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "continuous-double-auction",
+      "context": "在连续交易阶段，允许买卖订单随到达逐次匹配。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "call-auction",
+      "context": "采用开盘、收盘或周期性竞价阶段时，集中匹配累积订单。"
+    }
+  ],
+  "summary": "由参与者订单相互匹配并形成成交价格的市场组织方式。",
+  "description": "订单驱动市场把买卖双方提交的交易意向放入共同规则下进行匹配，而不是必须与指定经销商逐一议价。限价订单表达价格约束，能够立即成交的订单需求消耗可用交易兴趣；提供流动性的订单也可以来自做市商。\n\n交易可以连续发生，也可以在集合竞价时集中处理。订单簿记录未成交状态，撮合规则决定哪些价格和哪些同价订单获得成交；规则可能采用时间、数量或特定参与者优先，因此“订单驱动”不等于某一种分配算法。\n\n这一组织方式可以具有不同的匿名性、透明度和接入条件，还可能与经销商报价并存。可见簿只是可观察交易兴趣的一部分；研究其市场质量需要同时考察价差、可用数量、成交后的价格变化和规则限制，不能仅凭是否有做市商判断市场属于报价驱动。\n\n## 参考\n\n- [CME：EBS Market 订单簿、撮合与引擎规则文件](https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2023/8/23-356_APPA.pdf)\n- [Nasdaq：2023 年 Nordic 市场模型的连续交易与竞价机制](https://www.nasdaq.com/docs/2023/07/03/Nasdaq-Nordic-Market-Model-2023_06_.pdf)\n- [NYSE：期权市场的价格时间、比例及客户优先模型](https://www.nyse.com/data-insights/us-equity-options-market-models)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

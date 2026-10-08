@@ -1,0 +1,68 @@
+{
+  "id": "cme-mdp-3",
+  "name": "CME MDP 3.0",
+  "aliases": [
+    "MDP 3.0",
+    "CME Market Data Platform 3.0",
+    "CME 行情消息规范"
+  ],
+  "type": "protocol",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cme-group",
+      "context": "CME Group 发布和维护 MDP 3.0 行情技术规范、模式及客户端约定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "simple-binary-encoding",
+      "context": "以 SBE 模式和对应模板编码行情业务字段。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "udp",
+      "context": "期货及期权等 UDP 市场组中，以相应组播通道分发增量和恢复数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "采用 conflated TCP 的市场组或对应 TCP 恢复服务时，通过 TCP 通路处理相应接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-sequence-number",
+      "context": "按具体市场组技术头的通道、连接及包或消息作用域跟踪顺序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-gap-recovery",
+      "context": "客户端发现缺口或状态失步时，执行适用市场组的重放或快照恢复流程。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "financial-instrument-reference-data",
+      "context": "通过 Security Definition 及参考数据服务解释金融工具和属性。"
+    }
+  ],
+  "summary": "规定 CME 行情消息、编码与分发处理的 3.0 接口。",
+  "description": "CME MDP 3.0 描述 CME 行情分发体系中的消息、二进制编码及客户端处理接口。本节点按消息和接口规范建模，CME 数据服务与 Globex 市场平台另有身份。该体系包含报价、成交、状态和金融工具定义等信息，各市场组的深度、消息集合及分发路线需按配置解释。\n\n消息采用 SBE 模式，客户端按模板和字段约定解释数据。期货及期权常见 UDP 路线提供双路增量行情并按包排序，而某些市场组采用 conflated TCP；不能写成所有 MDP 3.0 都是同一种 UDP 路线，也不能因 iLink 使用 FIXP 就推断全部 MDP 使用相同会话层。消息、包与市场事件的边界还需分别处理。\n\n接入包括金融工具定义、双路仲裁、恢复及状态衔接，重放与快照各有用途和限制。行情客户端需按所接市场组验证模式版本、序号作用域和事件结束条件。MDP 是行情接口，报单和执行回报由 iLink 等入口组织，不能把两者合成一条双向公开市场流。\n\n## 参考\n\n- [CME：直接行情与 MDP 3.0 接口](https://www.cmegroup.com/market-data/distributor/market-data-platform.html)\n- [CME：MDP 3.0 的 SBE 编码](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457418645/MDP%2B3.0%2B-%2BSimple%2BBinary%2BEncoding)\n- [CME：MDP 3.0 技术头与序号作用域](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457638617/MDP%2B3.0%2B-%2BSBE%2BTechnical%2BHeaders)\n- [CME：消息、数据包与事件边界](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457326496)\n- [CME：MBP 与 MBOFD 快照恢复](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457672425/MDP%2B3.0%2B-%2BMBP%2Band%2BMBOFD%2BMarket%2BRecovery)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://www.cmegroup.com/market-data/distributor/market-data-platform.html"
+}

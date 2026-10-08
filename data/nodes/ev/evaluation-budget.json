@@ -1,0 +1,33 @@
+{
+  "id": "evaluation-budget",
+  "name": "Evaluation Budget",
+  "aliases": [
+    "评估预算",
+    "评估运行预算"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "agent-evaluation",
+      "context": "在明确评估协议内规定尝试次数、步骤、时间和资源上限，使结果有可解释的条件；不设所有任务共用的统一预算。"
+    }
+  ],
+  "summary": "定义尝试、步骤、时间与资源限制以约束评估协议。",
+  "description": "评估预算规定一次任务和整个评估允许消耗的尝试次数、动作、模型调用、时间或计算资源。它是实验协议的约束，与运行后观测到的费用不同。对于可反复生成和验证候选的智能体，预算会直接改变取得成功的机会。\n\n不同基准使用不同预算单位：BrowserGym 的基准建议动作集、种子数和最大步骤，OSWorld 2.0 的评估规定动作步数与推理设置。一个批量工具调用可能含多个动作，不能把消息数、动作数、token 数及墙钟时间无条件互换。\n\n比较需说明预算如何执行，超限是否终止、工具失败和重试是否计入，以及内存保证量与硬上限等环境条件。预算增加可以提高成绩但也改变测试问题；应在相同条件下比较，或同时报告不同预算下的能力和成本，避免把更多资源误当成方法进步。\n\n## 参考\n\n- [AI Agents That Matter：预算、成本与泛化边界](https://arxiv.org/html/2407.01502v1)\n- [BrowserGym 论文：环境接口、动作空间与实验](https://arxiv.org/html/2412.05467v1)\n- [OSWorld 2.0：长流程任务与检查点评分](https://arxiv.org/html/2606.29537v1)\n- [Anthropic：Agent 代码评估的基础设施噪声实验](https://www.anthropic.com/engineering/infrastructure-noise)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

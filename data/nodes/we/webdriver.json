@@ -1,0 +1,50 @@
+{
+  "id": "webdriver",
+  "name": "WebDriver",
+  "aliases": [
+    "W3C WebDriver",
+    "WebDriver Classic",
+    "浏览器远程控制协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "经典协议通过远端命令的 HTTP 路由提供请求响应控制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "经典协议以 JSON 表示命令参数、结果和错误。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "元素发现、属性查询和交互命令以当前网页的 DOM 元素为目标。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "webdriver-bidi"
+    }
+  ],
+  "summary": "以会话和命令规定浏览器远程控制的 W3C 接口。",
+  "description": "WebDriver 是 W3C 定义的浏览器远程控制接口与协议，以语言和平台无关的方式发现页面元素、执行导航和输入，并查询浏览器状态。该节点指规范；Selenium WebDriver 的语言绑定、ChromeDriver 等远端实现以及测试脚本分别是使用或实现该规范的软件。\n\n经典 WebDriver 通过建立会话协商能力，再使用 HTTP 请求响应和 JSON 数据发送命令。元素引用、超时、窗口与 frame 切换都具有明确的会话语义，执行中的 DOM 更新可能使旧元素引用失效。成功响应只保证该命令的规范结果，页面业务断言需要测试流程另外定义。\n\n2018 年 WebDriver 已发布 W3C Recommendation；截至本次核对，当前 WebDriver 2 页面仍标为 Working Draft，不能把所有后续变化写成同一已完成标准。BiDi 另行定义双向事件连接，可与经典会话衔接，但不是 Selenium 工具的同义名，也不意味着所有驱动版本具备相同扩展能力。\n\n## 参考\n\n- [W3C：WebDriver Recommendation 2018](https://www.w3.org/TR/2018/REC-webdriver1-20180605/)\n- [W3C：WebDriver当前发布版本](https://www.w3.org/TR/webdriver/)\n- [Selenium：WebDriver](https://www.selenium.dev/documentation/webdriver/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://www.w3.org/TR/webdriver/"
+}

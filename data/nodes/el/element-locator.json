@@ -1,0 +1,39 @@
+{
+  "id": "element-locator",
+  "name": "Element Locator",
+  "aliases": [
+    "元素定位器",
+    "网页元素定位",
+    "Locator"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "执行 CSS、文字或属性等网页查询时，在当前文档及所选作用域中解析目标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wai-aria",
+      "context": "采用角色与可访问名称定位策略时，依据相关原生及 ARIA 命名角色语义匹配控件。"
+    }
+  ],
+  "summary": "用查询规则在当前网页中识别交互或断言目标。",
+  "description": "元素定位器是识别网页操作目标的查询规则，常见条件包括控件角色、可访问名称、文字、测试标识和 CSS 选择器。它表达如何找到目标，而固定元素句柄表达某次查询取得的对象；在动态界面中，两者的生命周期和失效方式不同。\n\nPlaywright 等库在实际动作时重新解析定位器，配合唯一性检查和自动等待，减少组件重建后旧引用失效的问题。角色或用户可见文字有助于让测试对应界面语义，稳定测试标识可建立显式契约；长结构路径或过宽文字匹配则可能在页面变化时指向错误元素。\n\n定位器仍受到 frame、Shadow DOM、重复控件和页面标注质量影响，匹配成功需要结合当前作用域理解。它不等于坐标识别或无障碍审核：找到“提交”按钮之后，还需要满足动作条件，并检查提交后的状态，而不是仅凭一个匹配结果宣布测试成功。\n\n## 参考\n\n- [Playwright：Locators](https://playwright.dev/docs/locators)\n- [Puppeteer：Page interactions](https://pptr.dev/guides/page-interactions)\n- [W3C：WebDriver Recommendation 2018](https://www.w3.org/TR/2018/REC-webdriver1-20180605/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

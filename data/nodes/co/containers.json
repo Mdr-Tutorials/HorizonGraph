@@ -9,21 +9,34 @@
   "type": "concept",
   "ecosystems": [
     "cloud_native",
-    "virtualization-ecosystem"
+    "virtualization-ecosystem",
+    "container-ecosystem"
   ],
   "domains": [
     "devops",
-    "cloud-infrastructure"
+    "cloud-infrastructure",
+    "containerization"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "namespace",
+      "context": "在 Linux 操作系统容器路径中，用内核 namespace 分离进程、挂载、网络等资源视图；不表示 Windows 隔离机制就是 Linux namespace。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cgroup",
+      "context": "在 Linux 容器路径中，对一组进程进行资源统计与限制，并与资源视图隔离分工。"
     }
   ],
-  "summary": "用内核隔离打包进程，比虚拟机轻的标准化部署单元。",
+  "summary": "以隔离与资源管理组织应用进程的执行单元，承载方式因平台而异。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "description": "容器把应用进程及其所需的文件系统、运行配置和资源视图组织为可管理的执行单元。镜像提供创建容器所用的内容与默认配置，运行中的容器还包含进程、挂载、网络及可写状态，二者不能互换。常见操作系统容器共享承载它们的内核，不需要每个实例都启动一套完整来宾操作系统。\n\nLinux 容器通常组合 namespace 的资源视图隔离与 cgroup 的资源统计、分配或限制。两者解决的问题不同，权限、挂载、内核漏洞和运行参数仍会影响隔离；capabilities、seccomp 等机制可以进一步缩小暴露面。共享内核并不自动形成对任意不可信代码的完整安全保证，资源限制也不能代替访问权限检查。\n\n容器的可移植性有平台边界：镜像的操作系统、处理器架构和所需内核接口必须匹配执行环境。Windows 的进程隔离容器共享 Windows 内核，Hyper-V 隔离容器则用精简虚拟机提供单独内核；Windows 上的 Linux 容器需要 Linux 承载环境。运行时管理单机生命周期，Kubernetes 等系统通过控制与调度机制管理跨节点工作负载，这些层次不属于同一身份。\n\n## 参考\n\n- [Docker：镜像、运行实例与生命周期](https://docs.docker.com/get-started/docker-overview/)\n- [Docker：Linux 隔离与资源控制](https://docs.docker.com/engine/security/)\n- [Microsoft：Windows 进程与 Hyper-V 隔离](https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container)\n- [Docker：Windows 上不同容器后端](https://docs.docker.com/desktop/setup/install/windows-install/)"
 }

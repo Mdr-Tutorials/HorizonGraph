@@ -13,7 +13,8 @@
   ],
   "domains": [
     "systems-programming",
-    "embedded-systems"
+    "embedded-systems",
+    "low-latency-systems"
   ],
   "relations": [
     {
@@ -21,10 +22,11 @@
       "target_id": "theory"
     }
   ],
-  "summary": "设备或异常打断当前指令流，强迫 CPU 进入处理例程。",
+  "summary": "以事件通知转入处理例程，并按类型和平台协调响应。",
   "importance": 4,
   "popular": 45,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "中断让处理器响应设备等事件并转入相应处理例程，典型硬件 IRQ 相对于当前指令流异步到达。同步的故障、陷阱和异常具有不同触发语义，不能把全部异常都直接解释成设备中断；具体体系还可能定义软件触发的中断形式。\n\n控制器与操作系统协调优先级、屏蔽、确认和路由，处理器并非在任何时刻都立即响应所有请求。Linux IRQ 框架按设备和触发方式组织处理流程，驱动还可将较长工作放到线程或延后处理路径，降低关键处理段的负担。\n\n网络驱动常由中断安排 NAPI 轮询，再以预算完成收包工作；中断合并则改变通知频率。轮询和中断可以组合，减少中断数量并不自动降低应用尾延迟，分析应同时考虑处理位置、队列等待、CPU 预算与实际负载。\n\n## 参考\n\n- [Linux Generic IRQ 处理、屏蔽与确认接口](https://docs.kernel.org/core-api/genericirq.html)\n- [Intel 软件开发手册：体系结构、中断与计时](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)\n- [Linux NAPI 调度、预算与中断处理](https://docs.kernel.org/networking/napi.html)"
 }

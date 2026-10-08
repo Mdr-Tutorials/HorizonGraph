@@ -1,33 +1,48 @@
 {
   "id": "k-lang",
-  "name": "q/kdb+",
+  "name": "q",
   "aliases": [
     "q 语言",
-    "k 语言",
-    "kdb+"
+    "q language",
+    "KX q"
   ],
   "type": "language",
   "ecosystems": [
-    "fintech-ecosystem"
+    "languages_runtimes",
+    "quantitative-research-ecosystem"
   ],
   "domains": [
     "databases",
-    "quantitative-finance"
+    "quantitative-finance",
+    "programming-languages"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "kx"
+    },
+    {
+      "relation_type": "implemented_by",
+      "target_id": "kdb-plus",
+      "context": "kdb+ 分发并执行 q 语言。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "k-array-language",
+      "context": "KX k4 实现层和 q.k 以 k 表达式定义部分 q 关键词；另有原生 C 功能。"
     }
   ],
-  "summary": "kdb+ 的时序流式数据库查询语言。",
-  "description": "q/kdb+ 的语法根在 APL 系数组语言（k 是核心，q 是可读层）。量化行业高频与时序数据的专用板，Jane Street / Citadel 同行普遍在用。",
+  "summary": "随 kdb+ 提供的数组编程与数据库查询语言。",
+  "description": "q 是随 kdb+ 提供的数组编程与数据库查询语言，支持原子、列表、字典、表、函数和迭代器，并用 q-SQL 模板表达表查询。它是一种语言，kdb+ 是承载语言和数据库能力的产品。q 的公开语言接口与 K 的底层实现能力应分别理解。\n\nq 延续 APL 系数组语言的向量思维，许多操作隐式作用于列表。KX 的 k4 是底层实现语言，q.k 将不少可读关键词定义为 k 操作，另有 C 原生实现。q-SQL 的 select、exec、update、delete 具有自己的语法和语义，不能据此视为完整 SQL 标准实现。\n\n它可用于时序查询、流式分析和量化研究，也可编写一般程序。语言的表达能力与实际数据系统性能需分开评价；不能仅凭某机构属于量化行业断言其采用 q。官方历史材料记载 q 于 2003 年问世；语言历史与具体产品版本的发布节奏需分别核对。\n\n## 参考\n\n- [KX：q 语法](https://code.kx.com/q/basics/syntax/)\n- [KX：q 与 k 实现层](https://code.kx.com/q/basics/parsetrees/)\n- [KX：q 的演化与发布时间背景](https://code.kx.com/q4m3/0_Overview/)",
   "status": "active",
-  "origin": "curated",
-  "first_released": "2003-01-01",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
   "popular": 42,
-  "official_site": "https://kx.com"
+  "official_site": "https://code.kx.com/q/"
 }

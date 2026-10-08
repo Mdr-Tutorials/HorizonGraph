@@ -1,0 +1,27 @@
+{
+  "id": "agent-handoff",
+  "name": "Agent Handoff",
+  "aliases": [
+    "智能体交接",
+    "代理控制权转移"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "把当前交互的处理控制权转交给另一代理。",
+  "description": "智能体交接把当前任务或对话的处理控制权转给另一代理，例如由客服协调者转给账单专家。接收方继续处理交互，区别于协调者只调用一个子代理工具并取得结果后自行继续；具体交接协议也可以规定后续返还或再次转移。\n\nADK 用代理层级和转移调用实现这种模式，Microsoft Agent Framework 提供 handoff 编排。交接时需要决定传递哪些消息、状态与权限；框架对历史同步有自己的规则，不能假设所有参与者共享同一会话对象或收到全部工具内部消息。\n\n控制转移需要限定可选接收方、触发条件和结束条件，防止循环转移而无法完成任务。接收方的专业描述可辅助模型选择，但不替代运行时验证与授权；用户是否继续直接与接收方交互，也应由应用模式明确决定。\n\n## 参考\n\n- [ADK workflow patterns](https://adk.dev/workflows/patterns/)\n- [Microsoft Agent Framework handoff orchestration](https://learn.microsoft.com/en-us/agent-framework/workflows/orchestrations/handoff)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

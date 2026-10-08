@@ -8,24 +8,33 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "rendering-ecosystem"
+    "rendering-ecosystem",
+    "real-time-rendering-ecosystem"
   ],
   "domains": [
-    "graphics"
+    "graphics",
+    "real-time-rendering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "real-time-rendering-concept"
     },
     {
-      "relation_type": "part_of",
-      "target_id": "graphics-pipeline"
+      "relation_type": "uses",
+      "target_id": "rendering-geometry",
+      "context": "在追踪几何表面时对相应图元或其加速表示执行射线求交。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "brdf",
+      "context": "采用表面反射的光传输计算时用 BRDF 处理射线命中点的方向反射响应。"
     }
   ],
-  "summary": "反向追踪光路的渲染范式，物理真实但算力昂贵。",
+  "summary": "沿射线求几何交点，可用于成像或空间查询。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "description": "光线追踪沿射线求场景几何的交点，再根据具体任务处理命中与未命中结果。图像渲染中，射线可从相机出发，也可为阴影或反射生成；求交通常借助空间加速结构减少候选几何，避免每条射线都逐一检查整个场景。\n\n射线求交机制与完整光传输算法不同。路径追踪会进一步采样和累积光路贡献，而一次反射或阴影射线并不自动生成完整全局照明。是否物理可信取决于材质、光源、积分和近似，不能仅凭使用射线就称图像物理真实。\n\nVulkan 区分光追管线与可在其他着色路径中执行的 ray query，硬件及扩展能力需分别检查。实时应用可将射线结果与光栅图像结合，成本受加速结构更新、射线数量、求交和着色影响；它不必是经典光栅图形管线中的一个固定阶段。\n\n## 参考\n\n- [Vulkan Ray Traversal](https://docs.vulkan.org/spec/latest/chapters/raytraversal.html)\n- [PBRT Primitives and Intersection Acceleration](https://pbr-book.org/4ed/Primitives_and_Intersection_Acceleration)\n- [PBRT Surface Reflection](https://pbr-book.org/4ed/Radiometry,_Spectra,_and_Color/Surface_Reflection)"
 }

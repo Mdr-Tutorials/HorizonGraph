@@ -1,0 +1,32 @@
+{
+  "id": "agent-as-tool",
+  "name": "Agent as Tool",
+  "aliases": [
+    "代理作为工具",
+    "智能体工具包装"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "function-calling",
+      "context": "在大模型协调者的工具调用实现中，选择包装后的代理工具并提交结构化输入。"
+    }
+  ],
+  "summary": "把代理封装成可调用工具，由调用者接收结果并继续执行。",
+  "description": "代理作为工具把一个代理的执行入口封装成工具接口，使另一个代理可以向它传入任务并收到结果。调用者保留整体流程的控制权，专门代理完成限定工作后返回；这种方式适合把检索、分析或审核能力作为可复用的子任务能力。\n\nADK 的 AgentTool 是具体实现之一，官方层级研究示例让上层代理调用研究代理，再由研究代理调用搜索与摘要代理。工具接口需要说明输入、结果格式和错误行为，子代理使用独立上下文还是继承选定内容由实现决定。\n\n工具包装与会话交接的区别在于调用者是否继续主导任务，不由是否出现多个模型请求决定。嵌套调用还需要考虑调用深度、总预算和重复副作用；返回文本可作为证据或建议，但上层仍应按任务要求检查其内容。\n\n## 参考\n\n- [ADK workflow patterns](https://adk.dev/workflows/patterns/)\n- [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

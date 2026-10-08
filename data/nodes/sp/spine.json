@@ -1,0 +1,52 @@
+{
+  "id": "spine",
+  "name": "Spine",
+  "aliases": [
+    "Spine 骨骼动画编辑器"
+  ],
+  "type": "tool",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "skeletal-animation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "keyframe-animation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rigging",
+      "context": "制作角色时，配置骨骼层级、附件及网格权重以建立可动画化的绑定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture-atlas",
+      "context": "打包导出资源时，用纹理图集组织角色附件图像。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "spine-runtimes"
+    }
+  ],
+  "summary": "面向二维角色的骨骼绑定与动画制作工具。",
+  "description": "Spine 是二维骨骼动画编辑器，通过骨骼、图像附件、槽位与网格组织角色，用关键帧制作姿势变化。父子骨骼的变换传播使肢体可以协同运动，网格与权重则支持图像随多个骨骼变形。\n\n编辑器能导出供 Spine Runtimes 读取的骨骼与动画数据，并配合图集交付纹理。运行库负责在应用或游戏引擎中加载、混合和呈现动作；制作项目、运行时数据与传统图片序列具有不同用途，选择交付方式时需要核对目标运行库的版本与支持能力。\n\n## 参考\n\n- [Spine：编辑器用户手册](https://eu.esotericsoftware.com/spine-user-guide)\n- [Spine：骨骼](https://us.esotericsoftware.com/spine-bones)\n- [Spine：导出](https://us.esotericsoftware.com/spine-export/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://esotericsoftware.com/"
+}

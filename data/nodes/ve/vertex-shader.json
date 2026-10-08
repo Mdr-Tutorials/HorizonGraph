@@ -1,0 +1,48 @@
+{
+  "id": "vertex-shader",
+  "name": "Vertex Shader",
+  "aliases": [
+    "顶点着色器",
+    "Vertex Shader Stage"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vertex-buffer",
+      "context": "在通过输入布局提供顶点属性的绘制路径中，读取顶点缓冲内的位置、法线或 UV。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-transform",
+      "context": "对采用模型与视图变换的几何，顶点程序把输入坐标转换到后续裁剪所用的空间。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "camera-projection",
+      "context": "采用相机投影的绘制路径中，根据投影参数生成裁剪空间位置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uniform-buffer",
+      "context": "当变换参数通过统一变量缓冲绑定时，顶点程序从中读取模型、视图或投影数据。"
+    }
+  ],
+  "summary": "处理单个顶点的属性并输出裁剪位置与后续阶段所需数据。",
+  "description": "## 机制\n\n顶点着色器执行顶点阶段的可编程工作，读取顶点属性或内建编号，输出裁剪空间位置以及传往后续阶段的数据。坐标变换、蒙皮和顶点变形可在此阶段实现。\n\n典型绘制把模型空间位置经模型、视图和投影变换得到裁剪坐标。顶点输出中的颜色或 UV 等属性经过后续图元处理和插值，才成为片元阶段输入；顶点着色器本身不完成光栅化或逐片元着色。\n\n## 边界与应用\n\n在 WGSL 中，@vertex 标记顶点入口，位置通过 @builtin(position) 输出。输入可以来自顶点缓冲，也可按顶点编号程序生成，因此不能把顶点缓冲写成所有顶点程序的必备输入；执行次数也不等同于可见像素数量。\n\n## 参考\n\n- [Microsoft：顶点着色阶段](https://learn.microsoft.com/en-us/windows/win32/direct3d11/vertex-shader-stage)\n- [W3C WGSL：阶段入口](https://www.w3.org/TR/WGSL/#shader-stage-attributes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

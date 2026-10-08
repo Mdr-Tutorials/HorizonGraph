@@ -1,0 +1,61 @@
+{
+  "id": "antigravity-ide",
+  "name": "Antigravity IDE",
+  "aliases": [
+    "Google Antigravity IDE",
+    "Antigravity 独立 IDE"
+  ],
+  "type": "tool",
+  "domains": [
+    "agent-development",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "google-antigravity",
+      "context": "属于官方文档所列的 Antigravity 产品与能力体系；不表示必须安装其他家族入口。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "integrated-development-environment"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coding-agent",
+      "context": "在工作区内委派会使用编辑器、终端和浏览器的开发任务。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "artifact-review",
+      "context": "用计划、walkthrough 和截图等材料配合代码差异进行审阅。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-automation",
+      "context": "IDE 文档列出的浏览器操作参与开发验证；不指定未经官方披露的底层实现。"
+    }
+  ],
+  "summary": "在单个工作区内结合编辑、终端与智能体浏览器操作的 IDE。",
+  "description": "Antigravity IDE 是可独立安装的 AI 开发环境，围绕一个工作区组织代码编辑、终端和智能体任务。2025 年 11 月 18 日的初次 Antigravity 公告介绍了这种开发环境；当前产品文档继续单列 IDE，并将它与新的独立 2.0 桌面控制台、CLI 及其他编辑器的 Antigravity 扩展区分。IDE 提供编辑器体验、Tab 补全与 Agent 面板，用户可以在直接写代码和委派任务之间切换。\n\n智能体可以协同使用编辑器、终端和浏览器完成开发任务，并产出 implementation plan、walkthrough 或截图等 artifacts。IDE 的作用包括提供上下文、展示代码差异和接受审阅反馈，工具操作还要遵守适用的执行设置。浏览器操作是公开能力，具体底层传输或实现没有因为这项能力自动成为图谱依赖；也不能从 IDE 的截图与浏览器功能推导托管 Gemini API Agent 支持 computer_use。\n\n企业 overview 明确指出 standalone Antigravity IDE 当前不支持企业方案，企业支持的编辑器路径是 IDE extensions 等入口。个人模型权限、额度和使用地区要结合现行方案与模型文档。现有 IDE workflows 文档宣布从 2026 年 10 月 19 日起停止该功能并迁移到 skills；以本次 10 月 8 日核对时间看，这仍是未来变更，不应提前把整个 IDE 或当前 workflows 写为已经废弃。\n\n## 参考\n\n- [Antigravity IDE overview](https://antigravity.google/docs/ide/overview/)\n- [Introducing Google Antigravity](https://antigravity.google/blog/introducing-google-antigravity)\n- [Antigravity in Gemini Enterprise](https://antigravity.google/docs/enterprise/)\n- [Antigravity Models](https://antigravity.google/docs/models/)\n- [Antigravity IDE Workflows](https://antigravity.google/docs/ide/workflows/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://antigravity.google/docs/ide/overview/",
+  "first_released": "2025-11-18"
+}

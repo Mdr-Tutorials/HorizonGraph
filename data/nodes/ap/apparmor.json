@@ -1,0 +1,38 @@
+{
+  "id": "apparmor",
+  "name": "AppArmor",
+  "aliases": [
+    "Application Armor",
+    "AppArmor 强制访问控制"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux-kernel",
+      "context": "通过启用的 Linux Security Module 检查点对附着 profile 的任务实施访问控制。"
+    }
+  ],
+  "summary": "以任务 profile 对 Linux 程序实施附加访问控制。",
+  "description": "AppArmor 是 Linux 的强制访问控制软件体系，通过内核 LSM 接口对任务实施 profile 策略。用户空间工具负责创建、解析和加载策略，内核在相应访问路径检查规则。它以任务和程序配置为中心，文件规则主要使用路径表达，也可限制 capabilities、网络及其他受支持操作；具体能力取决于内核、策略格式和用户空间版本。\n\nProfile 必须实际加载并附着于目标任务，才产生预期约束。Enforce 模式阻止策略禁止的访问并记录相关信息；complain 模式主要帮助发现超出规则的行为，不能当作相同的强制保护。未受 profile 约束的任务处于 unconfined 状态，仍受普通 Linux 权限及其他启用的机制控制。\n\n容器运行时可为工作负载选择默认或自定义 AppArmor profile；Docker 的 docker-default 与守护进程自身的策略是不同对象。审查时需要确认宿主或 Linux 后端启用了该 LSM、容器实际使用的 profile，以及特权选项是否绕开相应限制。AppArmor 补充共享内核容器的访问控制，不会把它转换成独立虚拟机，也不代表任何发行版或运行后端都默认具备同样策略。\n\n## 参考\n\n- [Linux 内核：AppArmor 任务策略与启用条件](https://docs.kernel.org/admin-guide/LSM/apparmor.html)\n- [Docker：profile 集成、enforce 与 complain](https://docs.docker.com/engine/security/apparmor/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "official_site": "https://gitlab.com/apparmor"
+}

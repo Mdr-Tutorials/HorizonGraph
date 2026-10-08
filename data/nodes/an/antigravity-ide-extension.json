@@ -1,0 +1,57 @@
+{
+  "id": "antigravity-ide-extension",
+  "name": "Antigravity IDE Extensions",
+  "aliases": [
+    "Antigravity for IDEs",
+    "Google Antigravity IDE Extensions",
+    "Antigravity 编辑器扩展"
+  ],
+  "type": "tool",
+  "domains": [
+    "agent-development",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "google-antigravity",
+      "context": "属于官方文档所列的 Antigravity 产品与能力体系；不表示必须安装其他家族入口。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coding-agent",
+      "context": "在既有编辑器侧栏委派多步工程任务并检查结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "artifact-review",
+      "context": "通过交互式计划与 inline diff 审阅智能体提出的变更。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "vscode",
+      "context": "官方 Marketplace 扩展把 Antigravity 接入 VS Code；这是此家族的一条宿主路径。"
+    }
+  ],
+  "summary": "把 Antigravity 智能体接入现有编辑器的官方扩展家族。",
+  "description": "Antigravity IDE Extensions 是官方把智能体开发能力接入既有编辑器的扩展家族。用户在原编辑器中与智能体对话、检查 inline diff、审阅交互式计划并执行多步工程任务，无须因为选择扩展路径而改用独立 Antigravity IDE。现行 overview 分别列出 Visual Studio Code、Visual Studio、JetBrains、Zed 和 Xcode；这些是宿主集成入口，不能由统一扩展品牌推导完全相同的宿主实现或版本要求。\n\nVS Code 路径是 Marketplace 中的扩展，覆盖 macOS、Linux、Windows；Visual Studio 路径明确为 Visual Studio 2026 的官方 VSIX。JetBrains 列出 IntelliJ IDEA、PyCharm、WebStorm、GoLand、CLion、Rider 等产品，Zed 和 Xcode 则有各自文档。overview 在 JetBrains、Zed、Xcode 的介绍中将企业支持标为 Preview，这个限定针对企业支持，不能无依据扩大为每个平台全部功能都预览或全部 GA。\n\n扩展、CLI 和 2.0 的登录身份决定模型权限、配额与数据政策。个人路径使用相应 Google 账号；企业路径按 Cloud 项目、许可证及 BYOID/WIF 等官方方案配置，并受组织管理控制。enterprise overview 明确支持 IDE extensions 而不支持 standalone IDE，说明“Antigravity for IDEs”品牌下仍需辨认具体交付物。Cloud 发布记录说明 2026 年 8 月已将这些扩展纳入 AI developer tools，但这不足以确定所有宿主扩展相同的首次发布日期。\n\n## 参考\n\n- [Antigravity IDE extensions](https://antigravity.google/docs/ide/extensions/)\n- [Antigravity in Gemini Enterprise](https://antigravity.google/docs/enterprise/)\n- [Gemini Enterprise AI developer tools overview](https://docs.cloud.google.com/gemini/enterprise/docs/ai-developer-tools-overview)\n- [Gemini Enterprise release notes](https://docs.cloud.google.com/gemini/enterprise/docs/release-notes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://antigravity.google/docs/ide/extensions/"
+}

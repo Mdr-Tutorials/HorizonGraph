@@ -1,0 +1,41 @@
+{
+  "id": "openapi-typescript",
+  "name": "openapi-typescript",
+  "aliases": [
+    "OpenAPI TypeScript 类型生成器"
+  ],
+  "type": "tool",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "读取接口描述中的路径、schema 及响应定义，映射为静态类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "输出可由 TypeScript 编译器检查与索引的路径、组件和操作类型声明。"
+    }
+  ],
+  "summary": "把 OpenAPI 模型、路径和响应转换为 TypeScript 类型声明。",
+  "description": "openapi-typescript 根据 OpenAPI 描述生成 TypeScript 类型文件，可从本地或远程读取 JSON、YAML 输入。生成结果将路径、操作、参数、请求体、状态码对应响应以及可复用 schema 表达为类型，使用者可以通过索引类型取出所需的模型或某个操作的请求与响应类型。工具提供 CLI 和 Node.js API，适合在构建阶段维护与接口描述一致的静态类型。\n\n这些产物是无需运行时代码的类型声明：编译后不会留下解析器或校验器，也不会自行发送网络请求。openapi-fetch 等客户端可以消费生成的路径类型，但 HTTP 调用实现属于客户端库自身；对远程响应进行运行时校验仍需要独立 schema 和校验流程。当前官方文档列明 OpenAPI 3.0、3.1 的支持范围，使用其他规范版本时应按对应工具版本确认兼容性。\n\n## 参考\n\n- [openapi-typescript：概览和基本用法](https://openapi-ts.dev/introduction)\n- [openapi-typescript：Node.js API](https://openapi-ts.dev/node)\n- [openapi-fetch：消费生成的路径类型](https://openapi-ts.dev/openapi-fetch/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://openapi-ts.dev/introduction"
+}

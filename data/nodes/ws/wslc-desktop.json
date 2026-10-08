@@ -1,0 +1,39 @@
+{
+  "id": "wslc-desktop",
+  "name": "WSLC Desktop",
+  "aliases": [
+    "WSLc 社区桌面工具",
+    "bacarndiaye/wslc-desktop"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "containerization"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "wslc"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "electron"
+    }
+  ],
+  "summary": "调用 WSLc 管理容器资源的社区 Electron 桌面客户端。",
+  "description": "WSLC Desktop 是 Bacar Ndiaye 维护的 Windows 桌面工具，以 Electron 实现图形界面，调用 wslc.exe 管理容器、镜像、卷和网络。它不自带替代 WSLc 的容器引擎，也不是微软内置桌面组件；同名或近名的其他社区桌面项目应以仓库身份区分。\n\n界面提供容器状态、日志、检查、启动与停止、镜像拉取及资源管理，还可以打开已发布端口或交互式终端。它识别 wslc-compose 的项目标签，将容器按 Compose 项目分组。客户端向实际 WSLc 会话发命令，所显示资源取决于当前用户、权限上下文和会话。\n\n当前 0.1.7 工件面向 Windows，命令调用与错误处理受所用 WSLc 版本影响。项目 README 仍有 preview 时期描述，平台状态应以微软 2026-09-29 GA 公告为准。管理界面的存在不证明原生 Compose 已提供，也不意味着可以无差异替代 Docker Desktop 的所有引擎、插件或客户端接口。\n\n## 参考\n\n- [项目作者：功能、会话和 Compose 项目分组](https://github.com/bacarndiaye/wslc-desktop)\n- [桌面包：Electron、Windows 构建和版本](https://github.com/bacarndiaye/wslc-desktop/blob/main/package.json)\n- [Microsoft：WSL Containers GA 与功能范围](https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 2,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/bacarndiaye/wslc-desktop"
+}

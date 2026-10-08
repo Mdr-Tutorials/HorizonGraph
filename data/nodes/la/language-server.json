@@ -1,0 +1,38 @@
+{
+  "id": "language-server",
+  "name": "Language Server",
+  "aliases": [
+    "语言服务器",
+    "语言服务进程"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "language-server-protocol",
+      "context": "采用 LSP 的语言服务器与编辑器客户端按初始化能力和文档请求交换语言智能信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "semantic-analysis",
+      "context": "语言感知诊断、导航与补全路径分析名称、类型和项目规则；具体分析器由语言实现决定。"
+    }
+  ],
+  "summary": "为编辑器提供诊断、补全与导航等语言智能的服务。",
+  "description": "语言服务器封装某种语言的分析与编辑能力，向编辑器客户端提供诊断、补全、悬浮信息、导航或重构等服务。采用 LSP 的实现通过统一协议复用到不同编辑器，服务器和编辑器可以使用不同实现语言。\n\n客户端通常同步文档变化并提交能力请求，服务器维护解析与项目状态后返回位置、诊断或编辑结果。实际能力由初始化协商和实现支持决定；本地进程、远程服务等启动方式由宿主配置，协议本身不规定某个产品必须如何安装和托管服务。\n\n语言服务器可以使用编译器、解释器或专门分析器，未必都采用 Tree-sitter。VS Code 还允许扩展直接注册语言能力提供者，因此编辑器具备补全或诊断不意味着全部功能都通过 LSP。语言智能与生成模型的代码建议也可并存，但用途和正确性依据不同。\n\n## 参考\n\n- [Microsoft：Language Server Protocol 官方入口](https://microsoft.github.io/language-server-protocol/)\n- [VS Code：语言服务器扩展架构](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide)\n- [VS Code：直接语言 API 与 LSP 的能力对应](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

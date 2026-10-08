@@ -1,0 +1,50 @@
+{
+  "id": "vagrant",
+  "name": "Vagrant",
+  "aliases": [
+    "Vagrant 开发环境工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "virtualization"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ruby",
+      "context": "以 Ruby 语法编写 Vagrantfile，声明开发机器及 provider/provisioner 配置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssh",
+      "context": "在采用 SSH communicator 的客体路径中连接机器，执行配置或进入开发 shell。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker",
+      "context": "选择 Docker provider 或 Docker provisioner 时，用容器后端创建环境或供应软件；并非所有 provider 都需 Docker。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ansible",
+      "context": "选择 Ansible provisioner 时自动配置客体中的软件与服务。"
+    }
+  ],
+  "summary": "以 Vagrantfile、provider 和配置脚本管理开发机器的工具。",
+  "description": "Vagrant 使用统一工作流创建和管理开发机器，项目 Vagrantfile 声明机器、基础 box、网络、共享目录和自动配置。它通过 provider 操作具体虚拟化或容器后端，通过 provisioner 安装软件与调整系统，从而让团队把环境准备过程纳入代码库。\n\nvagrant up 创建或启动机器，配置可使用 Ruby 语法描述多个机器及其差异。首次创建时通常运行 provisioning，恢复已有机器时不会默认重跑全部配置；需要 provision 或显式选项触发。SSH 连接用于在客体内继续开发，共享目录则连接宿主源码与客体工具链。\n\nVirtualBox、Hyper-V、Docker 和通过插件加入的 provider 都是不同选项，不是每个工作区的共同硬依赖。box、provider、插件和包版本影响可移植性；同一 Vagrantfile 不能自动消除后端差异或浮动下载输入。销毁机器前还需要区分客体磁盘和宿主共享目录的状态。\n\n## 参考\n\n- [Vagrant：环境管理和用途](https://developer.hashicorp.com/vagrant/intro)\n- [Vagrantfile：项目配置与版本管理](https://developer.hashicorp.com/vagrant/docs/vagrantfile)\n- [Vagrant：providers 的可选实现](https://developer.hashicorp.com/vagrant/docs/providers)\n- [Vagrant：配置脚本的执行时机](https://developer.hashicorp.com/vagrant/docs/provisioning)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://developer.hashicorp.com/vagrant"
+}

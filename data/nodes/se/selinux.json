@@ -1,0 +1,38 @@
+{
+  "id": "selinux",
+  "name": "SELinux",
+  "aliases": [
+    "Security-Enhanced Linux",
+    "安全增强 Linux"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux-kernel",
+      "context": "在 Linux LSM 访问检查中按已加载的 SELinux 策略判断进程对带标签资源的操作。"
+    }
+  ],
+  "summary": "根据安全标签与策略规则实施 Linux 强制访问控制。",
+  "description": "SELinux 是包含内核访问控制子系统、用户空间工具和策略的安全软件体系。进程与资源具有 SELinux context，策略根据主体、对象和操作决定是否允许访问。Context 包含用户、角色、类型及安全级别等字段，常见策略主要按类型约束交互；它不只是文件路径或普通 Unix 用户权限的另一种显示方式。\n\n普通 DAC 权限与 SELinux 检查分层工作：普通权限已经拒绝的访问不会由 SELinux 策略重新放行。Enforcing 模式实施策略，permissive 模式记录本应拒绝的操作而允许其继续，disabled 状态又具有不同含义。标签和规则需要一致，移动或共享文件时还要检查文件系统与挂载是否保留了预期的安全上下文。\n\n在启用 SELinux 的容器环境中，运行时可利用进程、文件类型及 MCS 类别实施分离。Podman 的共享与私有卷标签选项具有不同语义，同一 pod 的容器可以共享标签，因此不能推断每个容器都具有唯一的标签边界。实际保证依赖宿主策略、运行时集成、挂载标签与选项；关闭标签分离、广泛共享资源或使用过宽策略都会改变效果。\n\n## 参考\n\n- [SELinux：内核与用户空间项目入口](https://docs.kernel.org/admin-guide/LSM/SELinux.html)\n- [Red Hat：安全上下文、DAC 与模式边界](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/using_selinux/getting-started-with-selinux_using-selinux)\n- [Podman：SELinux 标签与共享卷条件](https://docs.podman.io/en/latest/markdown/podman-run.1.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "official_site": "https://github.com/SELinuxProject/selinux"
+}

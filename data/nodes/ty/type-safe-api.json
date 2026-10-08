@@ -1,0 +1,44 @@
+{
+  "id": "type-safe-api",
+  "name": "Type-safe API",
+  "aliases": [
+    "类型安全 API",
+    "端到端类型安全 API",
+    "End-to-end Typesafe API"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "通过路由、过程及模式定义推导调用参数与返回类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "schema-validation",
+      "context": "在服务边界检查实际收到的数据，补充静态类型的覆盖范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "api-contract",
+      "context": "从共享路由类型或规范描述获得调用双方一致的接口形状。"
+    }
+  ],
+  "summary": "把接口输入、输出与客户端调用纳入一致的类型检查。",
+  "description": "类型安全 API 让接口的输入、输出和客户端调用共享可检查的类型信息，减少手写参数类型与服务端实现各自变化造成的偏差。全栈 TypeScript 可以由路由或过程定义推导客户端类型，也可以从 OpenAPI 等契约生成静态类型。检查覆盖哪些状态码、错误响应、转换前输入和转换后输出，取决于具体框架和声明方式。\n\n这类保证首先作用于被类型检查的代码：错误的字段或调用路径能够在开发与构建时暴露，但网络对端、持久化数据和未参与检查的客户端仍可能发送任意值。边界上的模式解析、响应校验、身份认证和授权需要分别实施。类型断言、any、陈旧的生成文件或不同版本的服务会削弱保证，因此端到端类型推导应与运行时校验及接口兼容性检查配合。\n\n## 参考\n\n- [tRPC：端到端类型化 API](https://trpc.io/docs)\n- [Hono：RPC 与客户端类型推导](https://hono.dev/docs/guides/rpc)\n- [TypeScript：静态检查与类型擦除](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

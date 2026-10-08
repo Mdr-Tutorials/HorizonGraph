@@ -17,46 +17,27 @@
     },
     {
       "relation_type": "uses",
-      "target_id": "ssrf",
-      "context": "评审代理抓取、URL 预览和回调服务时分析 SSRF 是否跨越网络信任边界。"
-    },
-    {
-      "relation_type": "uses",
-      "target_id": "idor",
-      "context": "评审对象读取或修改 API 时检查跨用户、角色或租户的对象级访问风险。"
-    },
-    {
-      "relation_type": "uses",
-      "target_id": "command-injection",
-      "context": "系统设计需要调用外部命令时识别输入与命令解释边界。"
-    },
-    {
-      "relation_type": "uses",
-      "target_id": "path-traversal",
-      "context": "上传、下载或模板服务接受路径输入时检查越出允许目录的风险。"
-    },
-    {
-      "relation_type": "uses",
-      "target_id": "insecure-deserialization",
-      "context": "评审接受外部对象编码的接口时检查类型重建与回调执行风险。"
-    },
-    {
-      "relation_type": "uses",
       "target_id": "mitre-attack",
       "context": "评审企业环境的攻击路径时可用 ATT&CK 行为知识补充威胁识别，不将其当作所有应用的唯一模板。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "trust-boundary",
+      "context": "构建系统数据流模型时，以信任假设和权限责任变化的边界划分跨组件检查位置。"
     }
   ],
-  "summary": "建模资产与信任边界，识别威胁并验证应对措施。",
-  "description": "## 机制\n\n先明确系统、资产、参与者和数据流，再沿信任边界识别威胁，确定应对与验证方式。模型应随设计和部署变化维护，可使用不同方法组织风险讨论。\n\n## 边界与应用\n\n威胁建模不是一次漏洞扫描，也不存在适合所有系统的唯一模板。分类框架帮助系统地提问，但业务风险、实际暴露和缓解效果仍需场景证据。\n\n## 参考\n\n- [OWASP：威胁建模](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)",
+  "summary": "沿资产、主体、数据流与信任边界分析威胁和应对措施。",
+  "description": "威胁建模先明确系统、资产、参与者与数据流，再分析跨信任边界时可能出现的威胁，选择应对措施并验证其效果。模型随架构、部署和权限变化维护，可用弱点分类或攻击行为知识辅助检查遗漏。分类不能替代具体的数据流、攻击条件与业务影响分析。\n\n智能体评审需要同时画出可信任务输入、外部页面与文档、工具元数据、执行器、凭据发行者和下游资源。由谁读取数据、谁提出动作、谁决定权限、谁真正执行应分开记录。混淆代理与间接注入是不同检查角度，权限范围内的误操作也可能造成损失，不能只围绕提示文本建模。\n\n专项分析可以用过度代理能力和数据外泄等风险模式检验具体路径：哪些工具权限超出任务需要，哪些秘密可被读取并送到错误接收方，哪些代理同意或对象授权被跳过。缓解后还要检查执行层是否落实、审批范围是否匹配和日志是否能追踪实际主体。模型与扫描或人工确认互相补充，均不能单独构成安全保证。\n\n## 参考\n\n- [OWASP：Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)\n- [MCP 2026-07-28：Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)\n- [OWASP LLM06:2025：Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/)\n- [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)",
   "importance": 4,
   "official_site": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html",
-  "last_reviewed": "2026-10-01",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active",
   "ecosystems": [
     "cybersecurity-ecosystem"
   ],
   "domains": [
-    "security"
+    "security",
+    "agent-development"
   ]
 }

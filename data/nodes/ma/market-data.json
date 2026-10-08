@@ -1,0 +1,45 @@
+{
+  "id": "market-data",
+  "name": "Market Data",
+  "aliases": [
+    "行情数据",
+    "市场数据"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-by-order",
+      "context": "采用逐单深度源时，用带订单标识的事件表示可发布的订单状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-by-price",
+      "context": "采用价位聚合源时，按买卖方向及价格组织数量与可选订单数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "top-of-book",
+      "context": "采用盘口顶部层级时，仅呈现最优价位及相应字段。"
+    }
+  ],
+  "summary": "描述报价、成交、盘口及市场状态的金融市场信息。",
+  "description": "行情数据描述交易场所或数据发布者可观测的报价、成交、订单簿和市场状态。它包括事件更新与状态表示，覆盖范围可以是单一场所、若干市场的汇总或特定金融工具集合。行情记录与本机构收到的订单执行回报具有不同身份，成交价也不等同于当前可交易的最佳报价。\n\n行情按数据粒度可以呈现逐单、价位聚合或盘口顶部信息，按发布方式又可分为快照与增量。来源、交易时段、单位和状态字段共同决定解释方式；上市于某交易所的证券在另一场所成交，并不使该场所的行情自动覆盖全部市场。数据深度与更新频率也不能只靠 Level 1/2/3 这样的名称推断。\n\n接入系统需要保留来源与时间语义，核对金融工具定义、完整性及恢复状态。直接行情与美国股票 SIP 汇总行情承担不同覆盖职责，不存在一个对所有资产类别都通用的统一信息源。实时数据可用于市场观察和交易系统输入，但是否完整、是否过时及是否允许分发仍由相应服务和使用约定决定。\n\n## 参考\n\n- [NYSE：行情数据的类别与覆盖范围](https://www.nyse.com/article/understanding-the-market-for-us-equity-market-data)\n- [CME：直接行情与 MDP 3.0 接口](https://www.cmegroup.com/market-data/distributor/market-data-platform.html)\n- [UTP Plan：处理器职能与行情服务](https://utpplan.com/PageParts/Technical.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

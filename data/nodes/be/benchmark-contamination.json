@@ -1,0 +1,39 @@
+{
+  "id": "benchmark-contamination",
+  "name": "Benchmark Contamination",
+  "aliases": [
+    "基准污染",
+    "评测污染",
+    "Evaluation Contamination"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "coding-agent-evaluation",
+      "context": "当已知评估问题或修复补丁进入训练、调优或任务专用实现时，解答可能部分依靠先前接触，使仓库任务分数不能纯粹反映对新问题的泛化。"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "pass-at-k",
+      "context": "若题目或通过测试的答案提前被模型或生成策略接触，候选通过比例可能反映记忆或专门适配，影响 pass@k 作为未见任务能力估计的解释。"
+    }
+  ],
+  "summary": "评估任务或答案被提前接触，可能混淆记忆与泛化。",
+  "description": "基准污染指任务、答案、修复补丁或等价内容进入训练、调优或针对基准构造的系统知识，使测试不再充分隔离先前接触。公开软件问题可能在训练语料中出现，智能体实现也可能被直接写入已知任务的特定答案，二者都可能影响对新任务能力的推断。\n\n应区分内容重叠的检测证据、可能的接触路径与实际分数影响。高分或基准发布早于模型并不能单独证明污染。SWE-rebench 研究使用新近收集的任务分析潜在污染；时间过滤有助于减少暴露，却不能在训练数据未知时证明每项任务完全未被接触。\n\n缓解方法包括保留独立测试任务、去重与接触审计、收集新任务，以及隔离开发时可见的反馈。反复依据同一测试集选择提示或策略还会产生对评估集的适配，应注明调优过程。污染检查与环境复现是不同问题，不能靠固定容器解决训练阶段的暴露。\n\n## 参考\n\n- [SWE-rebench 原论文：新任务收集与污染分析](https://arxiv.org/html/2505.20411v1)\n- [AI Agents That Matter：预算、成本与泛化边界](https://arxiv.org/html/2407.01502v1)\n- [HumanEval 原论文：函数级任务与 pass@k](https://arxiv.org/html/2107.03374v1)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

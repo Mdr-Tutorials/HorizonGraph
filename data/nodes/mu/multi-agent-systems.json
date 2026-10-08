@@ -1,0 +1,42 @@
+{
+  "id": "multi-agent-systems",
+  "name": "Multi-Agent Systems",
+  "aliases": [
+    "多智能体系统",
+    "多代理系统"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "subagent-delegation",
+      "context": "采用层级协作时，由协调者分配限定子任务并收集下级代理结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-handoff",
+      "context": "采用会话交接协作时，把当前交互的处理权转给被选中的专门代理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-routing",
+      "context": "按用户请求或任务状态选择承担当前工作阶段的代理。"
+    }
+  ],
+  "summary": "多个智能体通过协调或交互共同参与任务的系统。",
+  "description": "多智能体系统由多个能够选择行动的参与者组成，通过消息、共享环境或协调机制共同完成任务，也可研究其合作与竞争行为。在大模型应用中，常见实现把研究、执行和审核分给不同代理；这一领域的含义并不限于大模型或聊天角色。\n\nLLM 多代理实现可以采用中心协调、层级委派、代理工具或会话交接，也可以让团队按既定顺序或并行分工。AutoGen AgentChat 提供团队组件，ADK 展示多代理工作流；多个角色名称本身不足以说明控制权、状态隔离和协作方式。\n\n多个代理会增加通信、模型调用和整合成本，任务可分解性及结果验证通常比代理数量更关键。设计需要说明代理身份、任务边界、信息共享、冲突处理和终止条件；子代理的独立上下文也不代表共享资源和外部副作用已被隔离。\n\n## 参考\n\n- [Shoham and Leyton-Brown: Multiagent Systems](https://www.masfoundations.org/)\n- [AutoGen AgentChat user guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/index.html)\n- [ADK workflow patterns](https://adk.dev/workflows/patterns/)\n- [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

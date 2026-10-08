@@ -1,0 +1,36 @@
+{
+  "id": "samba",
+  "name": "Samba",
+  "aliases": [
+    "Samba 文件共享实现",
+    "Samba Suite"
+  ],
+  "type": "tool",
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "windows-ecosystem",
+    "tcp-ip-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "smb"
+    }
+  ],
+  "summary": "实现 SMB 与 Active Directory 互操作的开源软件套件。",
+  "description": "Samba 是在 Linux 和其他类 Unix 系统上提供 SMB 与 Active Directory 互操作的开源软件套件。它可提供文件和打印共享，并按角色作为域成员或域控制器使用。SMB 是协议，Samba 是实现这些能力的软件，二者应保留独立身份；使用 SMB 的服务端并不必然运行 Samba。\n\nsmbd 处理文件与打印服务等请求，访问控制结合协议认证、共享配置与宿主文件权限。服务是否能够访问某个目录、是否允许写入及支持哪些协议功能，由配置与实现版本共同决定，不能把共享目录出现在线路上当作绕过原有权限或保证所有 SMB 方言都兼容。\n\n跨 Windows 与 Linux 的网络文件共享可以采用 Samba，但 WSL 的 Plan 9 或 WSLc 的 virtiofs 属于不同实现路径，不需要因为都共享文件而合并身份。部署 Samba 也不自动配置虚拟机路由、宿主防火墙或容器端口；文件共享服务与跨宿主通路需分别组织。\n\n## 参考\n\n- [Samba：项目与实现身份](https://www.samba.org/)\n- [Samba：smbd 手册](https://www.samba.org/samba/docs/current/man-html/smbd.8.html)\n- [Microsoft Open Specifications：MS-SMB2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.samba.org/"
+}

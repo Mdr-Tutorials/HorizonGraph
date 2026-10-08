@@ -4,8 +4,8 @@
   "aliases": [],
   "type": "product",
   "ecosystems": [
-    "unreal-engine-ecosystem",
-    "graphics_gaming"
+    "graphics_gaming",
+    "game-runtime-ecosystem"
   ],
   "domains": [
     "game-development",
@@ -20,11 +20,16 @@
     {
       "relation_type": "developed_by",
       "target_id": "netease"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-engine"
     }
   ],
-  "summary": "网易自研的次世代游戏引擎。",
+  "summary": "网易自研、已用于移动游戏项目的游戏引擎。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
-  "importance": 3
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "description": "NeoX 是网易自研引擎。网易年报记载其最初于 2005 年推出，后来适配 iOS 和 Android；EVE Echoes 的官方公告明确说明该移动游戏采用网易自有 NeoX 图形引擎。公开材料能够确认研发归属、游戏开发用途和具体移动项目应用。\n\n网易公开报告将 NeoX 与 Messiah 的部分引擎能力合并介绍，两款引擎的功能应分别核对。公开材料尚不足以确认 NeoX 的统一渲染架构、脚本语言、编辑器接口或公开 SDK 获取方式；具体版本能力与授权条件仍需对应产品资料确认。\n\n## 参考\n\n- [网易：2021 Annual Report](https://ir.netease.com/static-files/5e8f4599-c552-43e2-bf73-8e2cbb60bd16)\n- [网易与 CCP：EVE Echoes announcement](https://ir.netease.com/static-files/628b10e3-d879-435b-9dcf-e8a1b490bbf6)\n- [网易：官方上市材料中的自研游戏引擎说明](https://ir.netease.com/static-files/33daf0cf-0009-44c1-a9e5-c025298d3902)"
 }

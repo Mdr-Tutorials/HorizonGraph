@@ -1,0 +1,49 @@
+{
+  "id": "devpod",
+  "name": "DevPod",
+  "aliases": [
+    "DevPod 开发工作区工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "containerization",
+    "cloud-infrastructure"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dev-container-spec"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssh",
+      "context": "通过 agent 在受保护的 provider 通道中提供 SSH 工作区连接与端口转发。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker",
+      "context": "选择 Docker provider 时在指定 Docker 主机创建开发容器，不要求创建云 VM。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kubernetes",
+      "context": "选择 Kubernetes provider 时通过集群控制面创建并连接开发容器工作区。"
+    }
+  ],
+  "summary": "以 provider 在本地、远端或云中创建开发容器的工具。",
+  "description": "DevPod 是使用 devcontainer.json 创建开发工作区的工具，通过 provider 选择本地容器主机、SSH 可达机器、Kubernetes 或云 VM 等基础设施。它提供 CLI 与桌面入口，把本地 IDE 连接到所创建工作区；环境定义与托管平台选择分别维护。\n\nprovider.yaml 描述创建、连接和删除资源所需命令。machine provider 可创建并管理 VM，非 machine provider 在已有主机或容器基础设施中创建工作区。DevPod 客户端会向宿主和容器部署 agent，再经所选后端的连接通道提供 SSH、端口转发、凭据转发和日志能力。\n\n文档中的 client-only 表示用户无需单独运营一个常驻中央服务端，不代表远端没有 agent 或执行进程。凭据转发、自动停止与资源清理依 provider 及配置而定，访问权限和成本由所用基础设施决定；不能将“支持云 provider”写成所有云产品行为完全相同。\n\n## 参考\n\n- [DevPod：开发容器与 provider 范围](https://devpod.sh/docs/what-is-devpod)\n- [DevPod：client-agent 架构](https://devpod.sh/docs/how-it-works/overview)\n- [DevPod：machine 与 non-machine providers](https://devpod.sh/docs/managing-providers/what-are-providers)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://devpod.sh/"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "http-basic-authentication",
+  "name": "HTTP Basic Authentication",
+  "aliases": [
+    "HTTP Basic 认证",
+    "HTTP 基本认证",
+    "Basic Auth"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-services",
+    "web-development",
+    "security"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "用 WWW-Authenticate 发出挑战，并读取 Authorization 中 Basic 编码的用户名与密码。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "https",
+      "context": "通过经过验证的 HTTPS 连接保护每次发送的 Basic 凭据，避免把 Base64 当作加密。"
+    }
+  ],
+  "summary": "通过 HTTP 认证字段传递用户名和密码的认证方案。",
+  "description": "Basic 是 RFC 7617 定义的 HTTP 认证方案：服务器可以用 WWW-Authenticate 发出带 realm 的挑战，客户端把用户名、冒号与密码组成的数据编码后放入 Authorization: Basic 字段。realm 区分保护空间，用户名与密码的验证以及访问权限仍由服务器实现。\n\nBase64 只提供编码，不保护凭据机密性，使用场景需要可靠的加密传输。凭据可在多个请求中重复发送，退出、浏览器凭据缓存和业务账号管理也不是方案自动解决的问题。Hono basicAuth 是实现该方案的可选中间件，不等同于 OAuth 授权服务或完整用户会话系统。\n\n## 参考\n\n- [IETF：HTTP Basic 认证（RFC 7617）](https://www.rfc-editor.org/rfc/rfc7617.html)\n- [Hono：Basic Auth 中间件](https://hono.dev/docs/middleware/builtin/basic-auth)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.rfc-editor.org/rfc/rfc7617.html"
+}

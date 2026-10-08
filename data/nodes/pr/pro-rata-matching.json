@@ -1,0 +1,34 @@
+{
+  "id": "pro-rata-matching",
+  "name": "Pro-Rata Matching",
+  "aliases": [
+    "比例撮合",
+    "按比例分配撮合"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lot-size",
+      "context": "规则要求按整数交易单位获配时，将比例结果按相应单位取整并处理剩余量。"
+    }
+  ],
+  "summary": "在合格同价订单间按规定数量比例分配成交的规则。",
+  "description": "比例撮合在选定价位上，根据合格订单数量在可分配总量中的占比，将到达的成交需求分配给各订单。简化情形中，订单数量为 q_i、合格总量为 Q、待分配量为 V，则理论分配为 V×q_i/Q；实际分配必须满足整数交易单位和场所规则。\n\n取整后剩余数量需要另一步骤处理，产品还可能设置最小分配、优先参与者、顶部订单奖励或 FIFO 与比例的混合步骤。CME 技术文档明确比例步骤的取整与后续分配，因此不能把简单浮点比例公式当成完整生产撮合算法。\n\n比例分配改变挂单数量和先到时间的激励，较大的合格数量通常获得较高理论份额，但不保证最终每笔订单按同一比例成交。回放或策略评估需要知道该产品采用的算法和规则版本；它与价格时间优先是可选分配模式，不能把二者都写成所有交易引擎的硬前提。\n\n## 参考\n\n- [NYSE：期权市场的价格时间、比例及客户优先模型](https://www.nyse.com/data-insights/us-equity-options-market-models)\n- [CME：比例分配、取整与剩余数量分配步骤](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457218521/CME+Globex+Matching+Algorithm+Steps)\n- [CME：FIFO、比例与混合撮合算法](https://www.cmegroup.com/education/matching-algorithm-overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

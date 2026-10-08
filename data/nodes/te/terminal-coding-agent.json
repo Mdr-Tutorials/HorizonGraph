@@ -1,0 +1,44 @@
+{
+  "id": "terminal-coding-agent",
+  "name": "Terminal Coding Agent",
+  "aliases": [
+    "终端编码代理",
+    "终端编程智能体",
+    "CLI Coding Agent"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-assisted-software-engineering",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "function-calling",
+      "context": "在采用结构化工具调用的实现中，把代理选择的读文件、写文件和运行项目命令交给 CLI 宿主配置的工具执行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-engineering",
+      "context": "从项目目录、选定文件与命令输出组织当前终端任务的输入信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "完成代码修改后核对文件差异与命令验证结果，再由相应工作流保留或集成修改。"
+    }
+  ],
+  "summary": "通过命令行界面与项目工具协作的编码代理。",
+  "description": "终端编码代理把任务输入、对话和执行反馈放在命令行或终端界面中，围绕当前项目调用文件与开发工具。它描述代理的交互和部署方式，不是终端模拟器，也不等同于只生成一条 shell 命令的问答助手。\n\n终端界面可以采用交互式 TUI，也可以提供无界面的脚本入口，实际模式由产品决定。Antigravity 当前入门文档分别列出 CLI、IDE 与 2.0，并描述 CLI 在项目目录启动后读取工作区；不能把 IDE 的所有窗口、插件或浏览器能力直接归给 CLI。\n\n命令执行依赖宿主环境中的工具、依赖与访问权限，运行失败需要把输出纳入后续诊断。即使 CLI 运行在 IDE 内置终端中，它仍有自己的进程和会话边界；远程控制、并行任务与持久会话也必须依据具体产品配置说明。\n\n## 参考\n\n- [Google Antigravity：产品入口、项目与 CLI](https://antigravity.google/docs/getting-started)\n- [GitHub：IDE 中的补全、编辑建议与代理能力](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides)\n- [VS Code：编码代理的执行循环与会话](https://code.visualstudio.com/docs/agents/concepts/agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

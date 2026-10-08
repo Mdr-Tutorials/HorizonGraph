@@ -1,0 +1,34 @@
+{
+  "id": "browser-actionability",
+  "name": "Browser Actionability",
+  "aliases": [
+    "浏览器元素可操作性",
+    "Actionability",
+    "动作可执行条件"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "检查当前目标属性、呈现与交互状态，判断所选网页动作的前置条件。"
+    }
+  ],
+  "summary": "在执行网页输入前检查目标能否承接所选动作。",
+  "description": "浏览器元素可操作性是一组动作前置条件，用来判断目标当前是否能够承接点击、输入或选择等操作。常见条件包括目标可见、位置稳定、处于启用状态以及输入点能够接收事件；文本输入还可能要求可编辑。不同动作需要的条件不同，并非所有操作都套用同一检查清单。\n\nPlaywright 在执行定位器动作前等待相关条件，Puppeteer 的定位器也提供相应检查。遮罩、动画或延迟启用会使“已找到元素”与“可以点击元素”分离；框架的可见性定义也未必等于人眼可见，例如具体实现可能把透明但具有尺寸的元素视作可见。\n\n强制动作可以跳过部分检查，因此不能把它当作修复页面状态的通用办法。前置条件通过只说明此次输入具备所需执行条件，后续网络请求、数据保存或提示内容仍需要另外验证。动作检查与自动等待分别描述要满足什么条件、如何等到条件满足。\n\n## 参考\n\n- [Playwright：Auto-waiting与Actionability](https://playwright.dev/docs/actionability)\n- [Puppeteer：Page interactions](https://pptr.dev/guides/page-interactions)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

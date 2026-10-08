@@ -1,0 +1,58 @@
+{
+  "id": "gltf-transform",
+  "name": "glTF Transform",
+  "aliases": [
+    "glTF Transform SDK",
+    "gltf-transform"
+  ],
+  "type": "tool",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gltf",
+      "context": "读取、变换并写出 glTF 或 GLB 资产。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mesh-optimization"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "asset-validation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "draco",
+      "context": "选择 Draco 编码步骤时压缩几何数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "meshoptimizer",
+      "context": "选择 Meshopt 编码或网格简化步骤时处理几何。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ktx2",
+      "context": "选择纹理转码与压缩流程时输出 KTX2 纹理容器。"
+    }
+  ],
+  "summary": "编辑、检查与优化 glTF 资产的 SDK 和命令行工具。",
+  "description": "glTF Transform 提供读写和修改 glTF 内容的 SDK，也提供命令行工具执行检查、打包、去重、简化与压缩等任务。它适合把资产处理步骤组织成可重复的构建流程，而无需在浏览器渲染循环中执行全部制作操作。\n\n优化应结合 inspect 报告与目标需求选择具体步骤。几何、纹理与绘制数量可能分别构成瓶颈，默认组合未必适合每个场景；压缩选项需要目标解码器，处理后还应验证文件并在实际加载器中检查材质和动画。\n\n## 参考\n\n- [glTF Transform CLI](https://gltf-transform.dev/cli)\n- [glTF Transform SDK 与优化流程](https://gltf-transform.dev/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://gltf-transform.dev/"
+}

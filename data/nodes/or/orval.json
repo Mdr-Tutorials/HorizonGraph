@@ -1,0 +1,50 @@
+{
+  "id": "orval",
+  "name": "Orval",
+  "aliases": [
+    "Orval API 生成工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-client-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "从接口操作及数据 schema 生成 TypeScript 请求函数、模型或所选服务模板。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "以 TypeScript 源码承载模型、请求函数以及可选的查询库绑定。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "zod",
+      "context": "选择 Zod 生成配置后产出可由应用主动调用的运行时 schema。"
+    }
+  ],
+  "summary": "从 OpenAPI 生成 TypeScript 请求函数、查询绑定与模拟处理器。",
+  "description": "Orval 将 OpenAPI 或 Swagger 描述转成 TypeScript 模型与 HTTP 请求函数，并提供查询库绑定、运行时 schema 和测试模拟等生成路径。当前官方工具链以 Fetch 为默认 HTTP 客户端，同时允许配置其他客户端和自定义调用器；TanStack Query、SWR 等生成模式把操作包装为对应的数据获取接口。按标签拆分、独立模型目录与输出配置可以组织较大的接口项目。\n\n运行时验证和模拟各有明确配置：Zod 模式生成 schema，应用需要在实际输入或响应边界调用验证；MSW 模式产出网络请求处理器，供开发和测试拦截请求。生成 TypeScript 类型、生成 Zod schema 和执行校验属于不同步骤，模拟结果也不验证真实提供者。Orval 还可从 OpenAPI 生成 Hono 路由及处理器模板、上下文类型与校验组件，业务逻辑和所选运行环境仍由应用实现与部署。\n\n## 参考\n\n- [Orval：概览](https://orval.dev/docs/)\n- [Orval：客户端与 Zod](https://orval.dev/docs/guides/client-with-zod/)\n- [Orval：MSW 生成](https://orval.dev/docs/guides/msw/)\n- [Orval：Hono 服务模板](https://orval.dev/docs/guides/hono/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://orval.dev"
+}

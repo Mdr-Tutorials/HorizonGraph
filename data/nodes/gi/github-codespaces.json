@@ -1,0 +1,48 @@
+{
+  "id": "github-codespaces",
+  "name": "GitHub Codespaces",
+  "aliases": [
+    "GitHub 云开发环境",
+    "Codespaces"
+  ],
+  "type": "product",
+  "domains": [
+    "developer-environments",
+    "cloud-infrastructure"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dev-container-spec"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "github"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "按仓库分支或提交创建云工作区，将源代码克隆到工作区并进行版本控制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dev-container-cli",
+      "context": "通过参考实现配置开发容器，使托管工作区解释共同的开发环境定义。"
+    }
+  ],
+  "summary": "基于开发容器配置的 GitHub 托管云开发工作区。",
+  "description": "GitHub Codespaces 是托管云开发服务。每个 codespace 位于云端 Linux 虚拟机内的开发容器，可从仓库分支或提交创建，再通过浏览器、VS Code 或 GitHub CLI 连接。本地操作系统不会改变远端客体身份；它不提供 Windows 或 macOS 开发容器。\n\n仓库中的 devcontainer.json 定义工具栈、Features 和生命周期步骤。可选预构建预先执行创建与内容更新阶段，保存快照以缩短新工作区准备时间；postCreateCommand 留到用户工作区创建阶段执行。计算资源、组织策略、地域与计费规则属于托管产品层。\n\n工作区中的 /workspaces 持久目录可跨停止、启动和容器重建保留，容器内其他手工修改通常会在重建时丢失。配置应记录共同依赖，个人 dotfiles 与秘密单独维护；停止工作区与删除工作区也不是同一存储生命周期操作。\n\n## 参考\n\n- [GitHub：Codespaces 的运行结构与客体平台](https://docs.github.com/en/codespaces/about-codespaces/what-are-codespaces)\n- [GitHub：预构建阶段](https://docs.github.com/en/codespaces/prebuilding-your-codespaces/about-github-codespaces-prebuilds)\n- [GitHub：配置和文件持久性](https://docs.github.com/en/codespaces/developing-in-a-codespace/persisting-environment-variables-and-temporary-files)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/features/codespaces"
+}

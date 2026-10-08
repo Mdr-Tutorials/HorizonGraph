@@ -1,0 +1,35 @@
+{
+  "id": "blob-api",
+  "name": "Blob",
+  "aliases": [
+    "二进制数据对象接口",
+    "Blob API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "web-streams-api",
+      "context": "Blob.stream 按 File API 定义返回可逐块读取其字节内容的 ReadableStream。"
+    }
+  ],
+  "summary": "封装不可变字节数据，并提供切片、文本与流读取接口。",
+  "description": "Blob 表示不可变原始字节数据，size 按字节计数，type 描述媒体类型。构造可组合字符串与缓冲数据；字符串经 UTF-8 编码，提供的缓冲字节按规范复制，因此随后修改原缓冲不会改变这些 Blob 字节。\n\nslice 创建指定字节范围的新 Blob，text、arrayBuffer 与 stream 提供不同读取方式。text 按 UTF-8 解码，stream 提供可读字节流；选择读取方式应与数据内容和处理需求一致。\n\n媒体类型标签不会自动转换或验证内部字节，改变标签也不等同重新编码。Blob 对象不是磁盘文件路径，不必具有文件名，也不会自行上传；文件包装、HTTP 正文提取和资源获取分别由使用它的接口承担。\n\n## 参考\n\n- [W3C File API：Blob接口](https://www.w3.org/TR/FileAPI/#blob-section)\n- [W3C File API：构造字节数据](https://www.w3.org/TR/FileAPI/#process-blob-parts)\n- [W3C File API：文本读取](https://www.w3.org/TR/FileAPI/#dom-blob-text)\n- [W3C File API：流读取](https://www.w3.org/TR/FileAPI/#dom-blob-stream)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://www.w3.org/TR/FileAPI/#blob-section"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "plan9-file-protocol",
+  "name": "9P",
+  "aliases": [
+    "Plan 9 File Protocol",
+    "Plan 9 文件协议",
+    "9P2000"
+  ],
+  "type": "protocol",
+  "domains": [
+    "networking",
+    "virtualization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "virtualization-ecosystem",
+    "wsl-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    }
+  ],
+  "summary": "以请求与响应访问远端文件树的 Plan 9 协议。",
+  "description": "9P 是 Plan 9 文件协议，客户端通过请求和响应导航文件树，并执行打开、读取、写入、创建和删除等操作。协议使用消息类型、事务标记和文件标识把远端树映射成可访问资源；文件服务器既可对应持久磁盘，也可以动态合成文件内容。它描述文件访问语义，并不等同于某个特定共享目录工具。\n\nLinux 的 v9fs 提供对应客户端支持，具体传输可依部署选择网络或虚拟化通道。9P 的协议版本与 Linux 扩展需要由双方协商或支持，不能把基础 9P、9P2000.L 和每个实现的权限或缓存行为视作完全一致。将文件树挂载到路径后，应用才能通过本地文件操作接口访问它。\n\nWSL 的 Plan 9 文件服务器是跨 Windows 与 Linux 文件访问的一种实现路径，当前配置也存在其他共享后端。WSLc 采用 virtiofs 的路线应分别描述，不能把两种接口合成一个节点；传输性能的比较也不能替代对文件属性与变更通知语义的核对。\n\n## 参考\n\n- [Plan 9：9P 协议手册](https://9p.io/magic/man2html/5/0intro)\n- [Linux Kernel：v9fs](https://docs.kernel.org/filesystems/9p.html)\n- [WSL：Drvfs & Plan9](https://wsl.dev/technical-documentation/drvfs/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "9P",
+  "official_site": "https://9p.io/magic/man2html/5/0intro"
+}

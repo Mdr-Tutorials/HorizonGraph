@@ -10,19 +10,29 @@
   ],
   "type": "concept",
   "domains": [
-    "quantitative-finance"
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data",
+      "context": "计算相对于市场基准的滑点时，取对应时点和市场的报价或价格并对齐成交记录。"
     }
   ],
   "summary": "成交价格相对于预期或参考价格的偏离，可有利也可不利。",
-  "description": "滑点描述实际或模拟成交价与选定参考价格的差异。参考价格可能是下单时的报价或模型预期价格，比较时必须说明基准、买卖方向与数量；价格偏离对交易方既可能有利，也可能不利。\n\n流动性、订单规模、市场变化及执行延迟都可能影响结果。回测通常通过滑点模型近似这种差异，模型假设并非真实成交的保证。滑点与佣金不是同一项目，也不应在已经包含相关影响的成本模型中再次机械相加。\n\n参考：[QuantConnect：滑点模型](https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/slippage/key-concepts)。",
+  "description": "滑点描述实际或模拟成交价与预期或选定参考价格的偏离。比较须说明基准时点、买卖方向、成交数量和单位；价格改善与恶化都可能出现，不同系统对正负号的约定也可能不同。下单报价、决策价和模型预期价各有用途，未经说明的“滑点为几跳”难以比较。\n\n延迟、价格变化、可用深度、订单规模和流动性都会影响执行价格。回测可以用固定、概率或深度相关规则估计偏离，但其输出是模型假设下的成交，并非真实市场保证。被动订单还有排队和不成交风险，不能用固定滑点补偿就忽略成交资格与数量。\n\n滑点与佣金属于不同口径，但可能已覆盖价差或冲击，应在汇总交易成本时排除重叠。成交后的 markout 使用另一时点的价格回答后续价格变化问题，不能直接当成下单时的滑点或持仓总损益。研究应按场所、订单和市场状态对照真实成交，保留基准选择、样本范围及不确定性。\n\n## 参考\n\n- [QuantConnect：滑点定义与模型](https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/slippage/key-concepts)\n- [NautilusTrader：成交、滑点与概率模型](https://nautilustrader.io/docs/latest/concepts/backtesting/fill-models/)\n- [Databento：Markout 定义、时间窗口与价格口径](https://databento.com/microstructure/markout)",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-20",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/slippage/key-concepts"
+  "official_site": "https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/slippage/key-concepts",
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ]
 }

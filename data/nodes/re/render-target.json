@@ -1,0 +1,33 @@
+{
+  "id": "render-target",
+  "name": "Render Target",
+  "aliases": [
+    "渲染目标",
+    "离屏渲染目标"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "离屏结果需要后续采样时以支持相应用途的纹理或纹理视图保存输出。"
+    }
+  ],
+  "summary": "接收绘制输出的颜色、深度等图像附件。",
+  "description": "渲染目标是绘制结果写入的图像资源或其视图，可以是最终呈现的图像，也可以是离屏颜色、深度或其他数据附件。目标的尺寸、格式、采样数和用途必须匹配绘制管线及渲染通道；颜色和深度不必采用同一种存储形式。\n\n离屏目标允许把一个场景先画成纹理，再在另一场景或后处理通道中读取，例如监视器画面、阴影、反射近似和对象标识拾取。纹理需要具备相应写入及后续读取用途，不应在不受支持的同一读写反馈路径中直接使用。\n\n工程上还需明确清除、保留、存储和多重采样解析策略，并在目标尺寸改变时同步更新相机或后处理配置。一个逻辑目标可能包含多个附件，增加目标分辨率、精度或数量也会增加内存、带宽及绘制成本。\n\n## 参考\n\n- [Three.js Render Targets](https://threejs.org/manual/pages/rendertargets.html)\n- [Vulkan Render Pass](https://docs.vulkan.org/spec/latest/chapters/renderpass.html)\n- [Apple Metal Render Passes](https://developer.apple.com/documentation/metal/render-passes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

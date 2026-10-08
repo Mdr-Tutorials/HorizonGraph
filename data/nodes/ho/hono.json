@@ -1,0 +1,98 @@
+{
+  "id": "hono",
+  "name": "Hono",
+  "aliases": [
+    "Hono Web 框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "web-standard-http-handler"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-routing",
+      "context": "根据 HTTP 方法和路径注册路由，并选择本次请求的处理函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-middleware",
+      "context": "按注册顺序执行中间件，在下游处理前后修改响应或传递每请求变量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-request",
+      "context": "以标准 Request 作为应用入口输入，并通过请求包装读取原始请求。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-response",
+      "context": "由处理函数或上下文构造标准 Response，交给宿主发送。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "hono-node-server",
+      "context": "在选择 Node.js HTTP 服务部署时，通过官方独立适配器接入 app.fetch。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "hono-zod-validator",
+      "context": "需要 Zod 运行时输入校验时，使用独立的 @hono/zod-validator 中间件。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "hono-standard-validator",
+      "context": "需要采用 Standard Schema 校验器时，使用独立的 @hono/standard-validator 中间件。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "hono-zod-openapi",
+      "context": "需要结合 Zod 路由模式与 OpenAPI 输出时，选用独立 @hono/zod-openapi 扩展。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "hono-openapi",
+      "context": "需要从相应校验模式与路由元数据生成 OpenAPI 文档时，选用独立 hono-openapi 扩展。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssr",
+      "context": "选择服务器 HTML 响应路径时，用 JSX 支持等方式在服务端生成页面内容；纯 JSON API 不要求此路径。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "orpc",
+      "context": "安装 oRPC 并选择其 Fetch 处理器时，作为 Hono 中间件挂载 RPC 或 OpenAPI 路由。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "orval",
+      "context": "选择 OpenAPI 驱动的生成流程时，用 Orval 的 Hono 目标生成服务模板、上下文及校验模式。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "scalar-api-reference",
+      "context": "需要交互式接口文档页面时，选择相应 Scalar Hono 集成加载已生成的 OpenAPI 定义。"
+    }
+  ],
+  "summary": "基于 Web 标准对象组织路由、中间件与 HTTP 响应。",
+  "description": "Hono 以 Web 标准的 Request 和 Response 为基础组织 HTTP 应用：路由匹配方法与路径，处理函数通过请求上下文读取输入并产生响应，app.fetch 可作为宿主调用的入口。框架自己的请求包装和 Context 提供便利接口，但不等同于原生 Request；app.request 还可直接调用应用做测试，无需实际网络监听。\n\n中间件可在路由执行前后处理请求、响应或上下文变量，注册顺序影响执行路径。Hono 的核心请求处理能用于多种兼容宿主，Node.js 等环境通过相应适配器接入；标准对象减少平台耦合，文件、连接升级和部署绑定等能力仍取决于宿主。\n\n类型推导、运行时校验和接口文档分别解决不同问题。RPC 可共享路由类型，独立校验器或 OpenAPI 插件按需要安装，不能把 TypeScript、Zod、数据库、OpenAPI 或某个运行时写成 Hono 的普遍运行要求。类型检查也不替代身份认证、授权或外部输入检查。\n\nHono 也可按需要用内置 JSX 支持在服务器生成 HTML，这与纯 JSON API 路径分别配置。oRPC 可把 Fetch 处理器挂为中间件，Orval 可生成 Hono 服务模板，Scalar 可接入接口文档页面；这些都是选择相应工具后的具体集成，不是核心应用的统一依赖，仍需保持路由、模式和实际业务实现一致。\n\n## 参考\n\n- [Hono 官方文档](https://hono.dev/docs)\n- [Hono App](https://hono.dev/docs/api/hono)\n- [Hono Middleware](https://hono.dev/docs/guides/middleware)\n- [Hono Context](https://hono.dev/docs/api/context)\n- [Hono RPC](https://hono.dev/docs/guides/rpc)\n- [Hono 第三方中间件清单](https://hono.dev/docs/middleware/third-party)\n- [Hono JSX](https://hono.dev/docs/guides/jsx)\n- [oRPC Hono Adapter](https://orpc.dev/docs/adapters/hono)\n- [Orval Hono Templates](https://orval.dev/docs/guides/hono/)\n- [Scalar Hono Integration](https://scalar.com/products/api-references/integrations/hono)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://hono.dev"
+}

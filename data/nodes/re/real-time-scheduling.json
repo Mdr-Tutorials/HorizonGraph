@@ -1,0 +1,40 @@
+{
+  "id": "real-time-scheduling",
+  "name": "Real-Time Scheduling",
+  "aliases": [
+    "实时调度",
+    "实时线程调度",
+    "实时调度策略"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "thread",
+      "context": "调度策略和参数作用于任务或线程，配置范围应按所用系统接口逐项核对。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpu-affinity",
+      "context": "需要限定执行资源时可结合CPU亲和性安排实时线程，仍须检查任务集合可调度性。"
+    }
+  ],
+  "summary": "按优先级或期限安排执行，保证范围取决于预算、准入和环境。",
+  "description": "实时调度围绕任务的时间约束安排执行，目标是满足所声明的响应或完成期限，而不是仅追求较小平均耗时。Linux提供SCHED_FIFO、SCHED_RR和SCHED_DEADLINE等不同策略：前两者按实时优先级组织，后者结合运行预算、期限和周期及准入控制，不能把它们当作一个通用加速开关。\n\n任务的最坏执行成本、可用CPU、资源竞争与优先级关系影响可调度性。SCHED_DEADLINE对预算过用进行约束，参数应满足相应规则；高优先级线程仍可能因锁、缺页和设备工作受阻。线程优先级、CPU亲和性和内核抢占配置分别解决不同问题，单独提高优先级不证明业务按时完成。\n\n实时任务必须为系统维护和外围服务留出资源，失控的持续运行任务可能使低优先级工作难以前进。实际部署需要检查权限、资源限制及锁协议，并区分硬期限证明与统计分位目标。低延迟应用不一定需要实时策略，收益与代价应在包含异常和过载的负载下验证。\n\n## 参考\n\n- [Linux man-pages：调度策略与实时约束](https://man7.org/linux/man-pages/man7/sched.7.html)\n- [Linux：Deadline 调度、预算及准入](https://docs.kernel.org/scheduler/sched-deadline.html)\n- [Linux：实时内核配置与最坏延迟](https://docs.kernel.org/core-api/real-time/kernel-configuration.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

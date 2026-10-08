@@ -1,0 +1,44 @@
+{
+  "id": "spdx",
+  "name": "System Package Data Exchange",
+  "aliases": [
+    "SPDX",
+    "系统物料数据交换规范",
+    "Software Package Data Exchange",
+    "软件包数据交换规范"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom",
+      "context": "定义组件、内容和关系的信息交换模型，用于表达并交换软件物料清单。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "SPDX 3.0.1 的 JSON-LD 和规范化序列化采用 JSON 表示；完整语义仍由 SPDX 模型及上下文限定。"
+    }
+  ],
+  "summary": "交换软件及系统物料清单、许可、构建与安全元数据。",
+  "description": "SPDX 是交换物料清单信息的开放数据规范，定义元素、关系及其序列化，便于不同工具共享软件组成、来源、许可与安全信息。包、文件和文件片段可以在模型中表达，组件间关系用于连接依赖和组成。这里记录 SPDX 数据交换规范；SPDX 的许可列表与许可表达式能力属于该体系的相关部分，不能把某份 SPDX 文档直接当作许可合规结论。\n\n3.0 系列将官方展开名从 Software Package Data Exchange 扩为 System Package Data Exchange，规范范围包含软件、安全、许可、数据集、AI 与构建等 profile。已发布的 3.0.1 基于 RDF 模型，可使用 JSON-LD 等序列化，并规定相应结构与语义约束。历史 2.x 的字段与序列化不能无条件当作 3.x 模型；生产者与消费者必须明确支持的规范版本及 profile。\n\nSPDX 能为容器镜像或普通软件提供可交换的 SBOM，但数据格式正确不代表清单完整、来源声明真实或组件没有漏洞。使用者仍需知道生成方法、所述工件和覆盖边界，并按需要结合签名或工件声明证明。工具声称支持 SPDX 时，还应核对实际导入导出的版本和信息保留范围，不能从规范的最新能力推断所有工具已经完整实现。\n\n## 参考\n\n- [SPDX 3.0.1：名称与模型演进](https://spdx.github.io/spdx-spec/v3.0.1/front/introduction/)\n- [SPDX 3.0.1：规范范围](https://spdx.github.io/spdx-spec/v3.0.1/scope/)\n- [SPDX 3.0.1：模型与序列化](https://spdx.github.io/spdx-spec/v3.0.1/serializations/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "abbreviation": "SPDX",
+  "official_site": "https://spdx.dev/"
+}

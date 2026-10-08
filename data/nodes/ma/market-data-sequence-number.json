@@ -1,0 +1,30 @@
+{
+  "id": "market-data-sequence-number",
+  "name": "Market Data Sequence Number",
+  "aliases": [
+    "行情序号",
+    "行情序列号"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    }
+  ],
+  "summary": "在指定会话或通道中标识行情包或消息顺序的序号。",
+  "description": "行情序号在发布者定义的作用域中标识数据顺序，作用域可能是会话、通道或连接。序号单位也可能是数据包或逻辑消息；MoldUDP64 包头给出包内第一条消息的序号，CME UDP 行情则按包排序。必须先确定这些定义，才能比较记录和计算下一预期位置。\n\n序号可以显式携带，也可以由登录时的起点和随后收到的消息隐式计数。它与交易编号、订单编号以及时间戳不同，数值相等不构成跨通道或跨会话相同事件。重置、回绕与结束标志需要按源处理，不能把所有服务的每日或每周重置规则混为一条通用约定。\n\n序号有助于检测缺口、丢弃冗余副本与关联恢复检查点，但不单独提供历史存储、网络可靠性或全市场因果顺序。快照中的衔接字段还可能引用另一条流，需要服务规定的比较方式。保留原始作用域及序号，比仅保留一个无来源的递增整数更有利于审核完整性。\n\n## 参考\n\n- [CME：MDP 3.0 技术头与序号作用域](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457638617/MDP%2B3.0%2B-%2BSBE%2BTechnical%2BHeaders)\n- [Nasdaq：MoldUDP64 规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/moldudp64.pdf)\n- [Nasdaq：SoupBinTCP 规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/soupbintcp.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -1,0 +1,42 @@
+{
+  "id": "soupbintcp",
+  "name": "SoupBinTCP",
+  "aliases": [
+    "SoupBinTCP Session Protocol",
+    "Nasdaq TCP 会话封装"
+  ],
+  "type": "protocol",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "nasdaq",
+      "context": "Nasdaq 发布 SoupBinTCP 规范并在相应交易和行情接口中维护其使用约定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "通过 TCP 字节流承载带长度和类型的逻辑会话包。"
+    }
+  ],
+  "summary": "为 TCP 上应用消息提供分帧、登录、心跳和序列恢复。",
+  "description": "SoupBinTCP 在 TCP 连接上组织登录、逻辑消息分帧、心跳和结束标志，承载上层应用消息而不定义其业务内容。逻辑包带长度和类型，TCP 可以拆分或合并实际传输，因此一次 socket 读取不必然得到一个完整逻辑消息。客户端必须按封装边界解析字节。\n\n服务端 Sequenced Data 的序号由登录起点与消息计数隐式确定，断线后可以用同一可用会话及下一预期序号请求续传。客户端 Unsequenced Data 不享有同一种序列恢复保障。会话不可用、终结或上层处理状态丢失时，需要按对应服务解决，不能把服务端的顺序交付扩大为双向业务恰好执行一次。\n\nNasdaq ITCH 可通过该机制传送行情，OUCH 也可用它传送服务端回报，业务解释仍由各自规范决定。连接、逻辑会话与订单或行情状态是不同层次；维护正确接收位置和已处理状态，才能按服务支持的范围恢复。使用该封装本身也不自动提供应用权限或传输加密。\n\n## 参考\n\n- [Nasdaq：SoupBinTCP 规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/soupbintcp.pdf)\n- [Nasdaq：TotalView-ITCH 5.0 规范（2026 更新）](https://assets.ctfassets.net/mx0rke14e5yt/5Uz6MGJxbo4wRPou8KveFs/4d76437c8e57694acee9d767587a8dfa/6-11-26_TVITCH_5.0_1.pdf)\n- [Nasdaq：OUCH 5.0 Order Entry Specification](https://www.nasdaqtrader.com/content/technicalsupport/specifications/TradingProducts/OUCH5.0.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/soupbintcp.pdf"
+}

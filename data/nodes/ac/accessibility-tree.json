@@ -1,0 +1,40 @@
+{
+  "id": "accessibility-tree",
+  "name": "Accessibility Tree",
+  "aliases": [
+    "可访问性树",
+    "无障碍树",
+    "AX Tree"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "浏览器依据文档节点、原生控件语义和呈现信息计算可访问性表示。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wai-aria",
+      "context": "页面采用 ARIA 时，把显式角色、状态和相关命名信息映射到可访问性属性。"
+    }
+  ],
+  "summary": "表达界面角色、名称和状态的可访问性结构。",
+  "description": "可访问性树是平台向辅助技术表达界面语义的结构，节点包含角色、名称、状态及相关属性。浏览器从 DOM、原生元素语义、ARIA 信息和呈现状态计算这一表示，屏幕阅读器或检查工具可以据此理解控件与内容。它是对界面的语义投影，不是 DOM 的逐节点复制。\n\n在浏览器自动化和智能体环境中，工具可获取树或其文本快照，让调用方以角色和可访问名称识别目标。不同浏览器和操作系统的暴露方式、过滤规则及节点标识可能不同；当前快照中的标识也不应被视为跨页面更新永远稳定的句柄。\n\n可访问性结构不能完整表达图像像素、Canvas 绘制内容和所有视觉关系，错误标注还会提供误导语义。能够读取这棵树或通过角色找到按钮，只说明存在相应观察路径；是否满足 WCAG、是否可用键盘完成流程和是否业务成功仍需要专项检查。\n\n## 参考\n\n- [Chrome DevTools：Accessibility features reference](https://developer.chrome.com/docs/devtools/accessibility/reference)\n- [Chromium：Accessibility架构](https://www.chromium.org/developers/design-documents/accessibility/)\n- [Playwright：ARIA snapshots](https://playwright.dev/docs/aria-snapshots)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

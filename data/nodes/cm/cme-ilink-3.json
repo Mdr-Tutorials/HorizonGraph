@@ -1,0 +1,47 @@
+{
+  "id": "cme-ilink-3",
+  "name": "CME iLink 3",
+  "aliases": [
+    "iLink 3",
+    "iLink 3 Binary Order Entry"
+  ],
+  "type": "protocol",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "fintech-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cme-group",
+      "context": "CME Group 发布并维护 iLink 3 订单入口、会话约定和业务模式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "simple-binary-encoding",
+      "context": "按 CME iLink 3 的模式与模板编码订单业务和相关消息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fixp",
+      "context": "采用 CME iLink 3 指定的 FIXP 会话约定组织连接与双向流，不宣称支持标准全部可选模式。"
+    }
+  ],
+  "summary": "为 CME Globex 提供二进制订单请求与回报的接口规范。",
+  "description": "CME iLink 3 是 CME Globex 的二进制订单入口规范，组织订单请求、对应回报及相关控制交互。市场或网关支持范围需按 CME 当前接入文档核对；它与 MDP 3.0 的公开行情消息职责不同。使用同一二进制编码思路不会使两个接口成为同一协议。\n\niLink 3 以 SBE 编码业务字段，并通过相应 FIXP 会话约定建立与管理双向消息流。CME 的会话测试覆盖周初连接、周中连接、UUID 处理、心跳与消息缺口，具体状态及重置规则不能由一般 FIXP 文档代替。连接成功或收到传输数据也不等于一笔订单业务已经完成。\n\n恢复要管理实时回报与重传消息的衔接，按接口规则处理序号和业务标识。认证测试和部署环境对支持范围有具体要求，不能把可下载的模式或公开规范当作已经取得生产下单资格。实现应分别验证会话、业务状态与行情输入，避免把一个接口的恢复流程套到另一条流。\n\n## 参考\n\n- [CME：iLink 3 CGW 会话指南](https://www.cmegroup.com/globex/files/ilink-3-cgw-session-guidelines.pdf)\n- [CME：iLink 3 会话管理测试](https://www.cmegroup.com/tools-information/webhelp/acp-cgw-fo/Content/session-layer.html)\n- [CME：iLink 3 缺口与重传测试](https://www.cmegroup.com/tools-information/webhelp/acp-cgw-fo/Content/message-gaps.html)\n- [CME：iLink 3 实时消息处理测试](https://www.cmegroup.com/tools-information/webhelp/acp-cgw-fo/Content/process-real-time.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://www.cmegroup.com/tools-information/webhelp/acp-cgw-fo/Content/session-layer.html"
+}

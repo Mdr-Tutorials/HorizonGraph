@@ -1,0 +1,40 @@
+{
+  "id": "linux-capabilities",
+  "name": "Linux Capabilities",
+  "aliases": [
+    "Linux 权能",
+    "Linux 能力集",
+    "进程权能"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "user-namespace",
+      "context": "执行命名空间相关特权检查时，根据所属 user namespace 判断权能覆盖的资源范围。"
+    }
+  ],
+  "summary": "将传统 root 权限拆成可按线程与执行文件管理的权能。",
+  "description": "Linux capabilities 把传统上由超级用户集中获得的权限拆成独立权能，例如配置网络、绑定受限制端口或改变路径根目录。内核检查线程的 effective 集合来判断相关操作是否获准；permitted、inheritable、bounding 和 ambient 等集合影响保留与执行程序时的权限变化。执行文件也可通过扩展属性携带 file capabilities，不能把整个机制简单视作用户账号的一张权限表。\n\nUser namespace 为权能提供作用范围：在一个命名空间中拥有 CAP_SYS_ADMIN，通常只允许管理该命名空间拥有的资源，并不自动取得初始 user namespace 中的权限。容器运行时可为工作负载保留少量实际需要的权能，避免交付所有 root 能力。某些权能覆盖很广，尤其 CAP_SYS_ADMIN 不能因其被拆为一个标志就被视为细粒度授权。\n\n权能检查与普通文件权限、LSM 策略和 seccomp 过滤互相配合；通过一个检查不保证其他检查也通过。需要审查的是实际线程集合、文件权能、身份映射和 exec 转换结果，而不是只看容器进程是否显示 root。减少 capabilities 也不会创建独立内核，或阻止通过已授权文件、套接字和接口进行的所有不当访问。\n\n## 参考\n\n- [Linux：线程集合、文件权能与 exec 转换](https://man7.org/linux/man-pages/man7/capabilities.7.html)\n- [Linux：权能在 user namespace 中的作用域](https://man7.org/linux/man-pages/man7/user_namespaces.7.html)\n- [Docker：容器权能与安全边界](https://docs.docker.com/engine/security/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,41 @@
+{
+  "id": "maplibre-style-specification",
+  "name": "MapLibre Style Specification",
+  "aliases": [
+    "MapLibre 样式规范",
+    "MapLibre Style Spec"
+  ],
+  "type": "protocol",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "通过 JSON 的根属性、sources 和 layers 保存地图设计。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "visual-encoding",
+      "context": "使用图层属性与表达式控制数据驱动的视觉映射。"
+    }
+  ],
+  "summary": "规定 MapLibre 地图源、图层、表达式和样式文档。",
+  "description": "MapLibre Style Specification 定义 MapLibre 地图样式的 JSON 属性体系，覆盖根属性、数据源、图层、表达式、字体、精灵、地形和投影等内容。样式文档负责描述地图外观与绘制顺序，MapLibre GL JS 和 MapLibre Native 按各自支持的能力消费这些定义。\n\n数据源描述要加载的内容，图层描述如何使用该数据源绘制，视角属性则提供初始中心、缩放和倾斜等默认值。它与 Mapbox 样式规范具有历史关联，但当前功能应以各自规范及 SDK 支持说明为准。保存或迁移样式时，需要核对规范版本、表达式及特有属性，而不能仅依靠样式文件的版本字段判断完全兼容。\n\n## 参考\n\n- [MapLibre Style Specification](https://maplibre.org/maplibre-style-spec/)\n- [MapLibre Style Layers](https://maplibre.org/maplibre-style-spec/layers/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "runtime_vm"
+}

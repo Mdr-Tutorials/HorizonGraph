@@ -1,0 +1,44 @@
+{
+  "id": "mcp-apps",
+  "name": "MCP Apps",
+  "aliases": [
+    "MCP Apps 扩展",
+    "MCP 交互界面规范"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-extensions",
+      "context": "以 Apps 扩展标识和双方能力支持启用 MCP 之外的 UI 交互。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-resource",
+      "context": "客户端通过 MCP 资源机制读取工具所关联的 UI 内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "扩展的 UI 资源使用 HTML 内容供宿主的受控嵌入环境展示。"
+    }
+  ],
+  "summary": "将 MCP 工具与宿主中的可交互界面连接的扩展规范。",
+  "description": "MCP Apps 是把工具调用与交互界面相连的官方扩展规范。工具可声明相关 UI 资源，宿主读取界面并在受控嵌入环境展示，用于表单、结果浏览或交互分析。它是协议扩展，区别于具体 HTML 工件、React 组件或 ext-apps SDK 的类。\n\nApps 通过工具元数据和 UI 资源建立关联，宿主与嵌入界面按扩展约定交换消息。规范定义界面初始化、工具结果及相关能力，常见实现使用隔离 iframe 与消息通道；其双向 UI 通信不能直接当成最新 MCP 核心允许任意服务器主动请求的依据。\n\n是否显示界面以及可用的宿主功能取决于实际 Apps 实现，未支持的客户端不能被假定具有同一交互体验。界面加载还受到来源、内容安全策略及宿主访问限制，UI 请求的工具操作继续受用户和宿主权限约束。支持此规范也不要求采用某一特定前端框架。\n\n## 参考\n\n- [MCP：Apps 概览](https://modelcontextprotocol.io/extensions/apps/overview)\n- [MCP Apps：正式扩展规范](https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/2026-01-26/apps.mdx)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://modelcontextprotocol.io/extensions/apps/overview"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "algorithmic-trading",
+  "name": "Algorithmic Trading",
+  "aliases": [
+    "算法交易",
+    "自动化交易算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "electronic-trading",
+      "context": "把算法决定的订单参数通过电子交易接口提交、修改或撤销，并处理执行反馈。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-impact",
+      "context": "安排需要影响市场供需的执行任务时，估计不同订单规模和速度带来的价格冲击。"
+    }
+  ],
+  "summary": "由计算机算法决定订单参数或管理执行过程的交易方法。",
+  "description": "算法交易由程序按规则自动决定是否下单、时间、价格、数量或提交后的订单管理。决策可以来自交易策略，也可以服务于既定目标的分批执行；不要求采用机器学习，也不要求在微秒内响应。电子界面上的人工下单和自动交易因此需要分别描述。\n\n策略回答要达到什么交易目标，算法回答如何把信息转换为个体订单决策。一个策略可以组合多个算法，且人的监督、设置目标或批准提交不一定排除算法已经决定订单参数这一事实。欧盟现行监管说明明确区分仅提示投资机会、只做无其他参数判断的路由，与实际决定执行参数的系统。\n\n订单执行必须结合场所规则和市场冲击进行评估。分批并不保证降低总成本，主动成交与等待都承担风险；相同决策逻辑也可能被部署在不同时间尺度。HFT 是采用高频技术的细分形式，不能把所有自动拆单、报价程序或算法交易都归入这一类。\n\n## 参考\n\n- [ESMA：2026 年算法交易监管说明，定义与人工干预边界](https://www.esma.europa.eu/sites/default/files/2026-02/ESMA74-1505669079-10311_Supervisory_Briefing_on_Algorithmic_Trading_in_the_EU.pdf)\n- [ESMA：MiFID II 第 4 条的算法与高频技术定义](https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-4-definitions)\n- [SEC：2020 年算法交易研究报告](https://www.sec.gov/files/algo_trading_report_2020.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

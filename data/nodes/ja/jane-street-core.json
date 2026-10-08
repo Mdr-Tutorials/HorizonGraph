@@ -3,7 +3,8 @@
   "name": "Jane Street Core",
   "aliases": [
     "janestreet core",
-    "Base/Core"
+    "OCaml Core",
+    "Jane Street Core library"
   ],
   "type": "library",
   "ecosystems": [
@@ -23,14 +24,20 @@
     {
       "relation_type": "developed_by",
       "target_id": "jane-street"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ocaml",
+      "context": "Core 是 OCaml 库，构建与链接要求匹配其包版本的 OCaml 编译器及运行时。"
     }
   ],
-  "summary": "Jane Street 开源的 OCaml 工业标准库。",
+  "summary": "Jane Street 维护的 OCaml 通用工程库。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
   "popular": 35,
   "display_primary": "Core",
-  "official_site": "https://opensource.janestreet.com"
+  "official_site": "https://github.com/janestreet/core",
+  "description": "Core 是 Jane Street 维护的 OCaml 通用库，为标准库之外的容器、时间、序列化和工程接口提供统一 API。它与 Base 属于同一套库体系，但不是同一个包；目前 Core 的系统无关部分和 Unix 专用的 Core_unix 也应区分，不能仅用 Base/Core 的合称替代包边界。\n\nCore 包的构建声明直接依赖 OCaml、Base 及一组配套库，使用时必须符合相应 OCaml 和包版本要求。接口与实现通过 OCaml 模块体系组合，应用可以选择自己需要的函数和数据结构。构建时的传递包依赖，不等于业务代码必然调用每个包的功能。\n\nJane Street 将 OCaml 用于交易、自动化、研究和监控，并公开发布 Core；这些用途提供产业关联，却不把 Core 变成独立 HFT 策略或交易引擎。其他 OCaml 应用也可以使用该库，选择 Core 不自动保证低延迟。异步服务、操作系统接口和业务逻辑还需要各自的库或代码。\n\n## 参考\n\n- [Jane Street Core 官方仓库](https://github.com/janestreet/core)\n- [Core 包声明与系统边界](https://github.com/janestreet/core/blob/master/core.opam)\n- [Jane Street：技术与 OCaml 应用](https://www.janestreet.com/technology/)"
 }

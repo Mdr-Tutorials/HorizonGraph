@@ -1,0 +1,29 @@
+{
+  "id": "agent-identity",
+  "name": "Agent Identity",
+  "aliases": [
+    "智能体身份"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem",
+    "iam-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "识别智能体执行主体，并区分运行实例、操作员和被代理用户。",
+  "description": "智能体身份是资源访问和审计中对实际执行主体的可验证标识，不是模型在文本中自称的名字。系统可区分产品、软件工作负载、任务实例、操作员及被代理用户，这些层次的身份关系影响谁能获得凭据、谁可以修改策略以及谁对操作负责。\n\n身份通过可信发行和认证机制与工作负载建立关联，再由授权策略决定其访问范围。一个任务标识可以帮助追踪日志，却不一定是认证凭据；模型家族或项目名称也不能直接证明调用者拥有用户的数据权限。跨服务委托应保留实际执行者与被代理主体的区别，并避免多个任务共用无法区分的高权限秘密。\n\nNIST NCCoE 2026-02 概念文件讨论软件及 AI 智能体身份、委托、授权和审计需求，属于草案与项目探索，不是所有产品已经遵循的统一认证标准。现有服务账号与短期凭据提供可用实现路径，但身份生命周期、任务隔离与终止后的权限回收仍要按部署明确。\n\n## 参考\n\n- [NIST NCCoE：软件与 AI 智能体身份、授权概念草案（2026-02）](https://www.nccoe.nist.gov/sites/default/files/2026-02/accelerating-the-adoption-of-software-and-ai-agent-identity-and-authorization-concept-paper.pdf)\n- [Google Cloud IAM：服务账号最佳实践](https://docs.cloud.google.com/iam/docs/best-practices-service-accounts)\n- [IETF RFC 8693：OAuth 2.0 Token Exchange](https://www.rfc-editor.org/rfc/rfc8693.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

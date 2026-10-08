@@ -1,0 +1,34 @@
+{
+  "id": "eu-business-clock-synchronization",
+  "name": "EU Business Clock Synchronization",
+  "aliases": [
+    "欧盟业务时钟同步要求",
+    "MiFIR业务时钟要求",
+    "欧盟交易时间戳同步"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "audit-trail",
+      "context": "对EU 2025/1155与MiFIR Article 22c范围内可报告交易事件，约束记录所用业务时钟的UTC可追溯性、最大偏差及时间戳粒度；精度档位按主体和活动类别选取。"
+    }
+  ],
+  "summary": "按现行MiFIR规则限定交易业务时钟误差与粒度。",
+  "description": "欧盟业务时钟同步要求约束指定市场基础设施及参与者为可报告事件记录日期和时间所使用的业务时钟。其核心不仅是“运行了某个校时协议”，还包括UTC可追溯性、打时间戳的位置、系统设计说明及活动类别对应的容许误差。本节点属于辖区限定的控制要求，不是NTP或PTP协议本身。\n\n截至2026年10月8日，现行依据是MiFIR Article 22c及Regulation (EU) 2025/1155的Articles 11–16和Annex IV；旧2017/574已自2026年3月2日起废止。Annex IV对使用HFT技术的参与者规定最大UTC偏差100微秒、时间戳粒度0.1微秒或更细。场所网关延迟、人工/语音方式和其他活动类别另有档位，不能把这一HFT数值作为所有实体的统一要求。\n\n最大UTC偏差与记录粒度是两个维度：显示更多小数位不会自动使时钟更准确，配置PTP也不自动证明满足规则。实施需要验证打点链路、漂移和可追溯证据，并按实际身份与活动类别确定要求。EU新规的废止日期和数值不能直接套用于英国本国制度，也不能继续把旧RTS25的1微秒粒度当作EU HFT当前标准。\n\n## 参考\n\n- [EUR-Lex：Regulation (EU) 2025/1155，Articles 11–16及Annex IV](https://eur-lex.europa.eu/eli/reg_del/2025/1155/oj/eng/pdf)\n- [ESMA法规入口：MiFIR Article 22c业务时钟同步](https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifir/article-22c-synchronisation-business-clocks)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

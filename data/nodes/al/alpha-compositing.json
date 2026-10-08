@@ -1,0 +1,34 @@
+{
+  "id": "alpha-compositing",
+  "name": "Alpha Compositing",
+  "aliases": [
+    "透明度合成",
+    "Porter–Duff 合成"
+  ],
+  "type": "concept",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interactive-graphics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "premultiplied-alpha",
+      "context": "在 source-over 等合成计算中，以已乘 alpha 的颜色累计各图像的贡献。"
+    }
+  ],
+  "summary": "根据透明度及覆盖关系合并源图像与背景的运算。",
+  "description": "透明度合成把源图像与目标图像按 alpha 和覆盖关系组合。Porter–Duff 的 over、in、out 等算子确定哪些区域保留；常见 source-over 在预乘表示下给出 c_out=c_src+c_dst(1−α_src)，结果 alpha 也需要相应计算。\n\n合成算子不同于 multiply、screen 等颜色混合函数，颜色混合可与覆盖合成共同使用。绘制顺序和分组隔离影响最终结果；本节点讨论图像合成语义，GPU alpha-blending 则讨论用混合方程与因子实现有关运算的管线状态，两者不能直接当作同一接口。\n\n## 参考\n\n- [W3C：合成与颜色混合](https://www.w3.org/TR/compositing-1/)\n- [MDN：globalCompositeOperation](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

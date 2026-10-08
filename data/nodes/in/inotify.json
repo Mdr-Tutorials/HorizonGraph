@@ -1,0 +1,35 @@
+{
+  "id": "inotify",
+  "name": "inotify",
+  "aliases": [
+    "Linux 文件变更通知",
+    "文件事件通知接口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "systems-programming",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    }
+  ],
+  "summary": "向用户态报告被观察文件与目录事件的 Linux API。",
+  "description": "inotify 是 Linux 的文件系统事件通知 API。程序创建通知实例，为文件或目录注册 watch，再读取事件队列中的事件类型、watch 标识和相关名称。创建、删除、修改与移动等事件可用于开发服务器重载、缓存失效和目录监测；事件通知与读取文件内容是不同操作。\n\n目录监测不会自动覆盖整个递归树，应用需管理新增目录的 watch。队列可能溢出，重命名与后续路径访问也存在竞态，事件不包含触发它的用户或进程信息。远端或其他宿主直接修改底层数据是否产生可观察事件，取决于文件系统实现，不能把通知接口当作无遗漏的变化日志。\n\nDocker Desktop 的 WSL 2 文档将 Linux 容器收到文件事件的推荐路径限定为原始文件位于 Linux 文件系统的 bind mount。WSLc 中 Windows 路径经 virtiofs 共享的场景应单独验证；挂载成功、内容更新可见或访问更快，都不是该事件传播能力的替代证据。\n\n## 参考\n\n- [Linux man-pages：inotify(7)](https://man7.org/linux/man-pages/man7/inotify.7.html)\n- [Docker Desktop：WSL 2 文件系统实践](https://docs.docker.com/desktop/features/wsl/best-practices/)\n- [Linux Kernel：virtiofs](https://docs.kernel.org/filesystems/virtiofs.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "official_site": "https://man7.org/linux/man-pages/man7/inotify.7.html"
+}

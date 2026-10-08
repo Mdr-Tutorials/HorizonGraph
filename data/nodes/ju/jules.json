@@ -1,0 +1,38 @@
+{
+  "id": "jules",
+  "name": "Jules",
+  "aliases": [
+    "Google Jules"
+  ],
+  "type": "product",
+  "domains": [
+    "ai-assisted-software-engineering",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini",
+      "context": "Jules 使用服务提供的 Gemini 模型进行任务规划与代码处理；所用型号和可用配置随层级及官方更新变化。"
+    }
+  ],
+  "summary": "在托管虚拟机中异步处理代码任务并提供 GitHub 变更的代理服务。",
+  "description": "Jules 是 Google 提供的托管异步编码代理，连接用户选定的 GitHub 仓库与分支，根据任务生成计划并修改代码。官方环境文档说明每个任务在短期虚拟机中克隆仓库、准备依赖并运行测试，用户可以离开页面后再查看结果。它与本地终端编码代理、IDE 插件及 Antigravity 托管代理有不同服务身份，不能仅凭都使用 Gemini 就自动合并。\n\n服务提供计划、变更审阅和拉取请求工作流，并具有定时或建议任务以及外部构建反馈等能力。仓库配置与环境准备脚本帮助运行项目，运行成功和测试结果仍只覆盖所检查的条件。云端任务环境不等于生产部署环境，生成 PR 也不意味着变更已经被用户合并或应用已经发布。\n\nJules 的官方更新记录持续描述 CI 修复、仓库任务以及模型演进，服务具有独立的账号、任务限制和管理界面。Jules Tools 和 REST API 是访问此服务的接口，具备不同认证与能力边界。当前可用模型、限制和套餐应按对应说明查看，模型名称或旧主页示例不能当作所有用户的固定额度承诺。\n\n## 参考\n\n- [Jules：当前任务、仓库与计划工作流](https://jules.google/docs/)\n- [Jules：托管虚拟机与环境配置](https://jules.google/docs/environment/)\n- [Jules：2026 年官方服务更新记录](https://jules.google/docs/changelog/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://jules.google/"
+}

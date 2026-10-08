@@ -18,9 +18,13 @@
       "target_id": "algorithm"
     }
   ],
-  "summary": "带启发式函数的最短路搜索，游戏寻路的事实标准。",
+  "summary": "按路径代价与启发式估计引导图上路径搜索的算法。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "description": "A* 在图上用 f(n)=g(n)+h(n) 评价待展开节点，其中 g(n) 是当前已找到的起点到节点路径代价，h(n) 是到目标的剩余代价估计。搜索维护候选节点与当前路径，在扩展节点时更新邻接节点的代价和前驱，从而由局部候选逐步寻找目标路径。\n\n最小代价保证依赖图与搜索实现的条件。对非负边权图，启发式不高估真实剩余最小代价时，配合正确处理更优路径的搜索可得到最小代价结果；一致性可支持无需重新开放已关闭节点的实现。若实现允许不一致启发式，就要在发现更优代价时妥善重新开放节点，不能只凭使用 A* 名称判断正确性。\n\n启发式高估时通常失去最短路径保证。算法搜索的是已经建模的图，不直接完成碰撞检测、可通行区域构建或动态障碍处理；游戏中的路径质量也取决于节点连接、边权、角色约束和启发式选择。\n\n## 参考\n\n- [Hart、Nilsson、Raphael：A Formal Basis for the Heuristic Determination of Minimum Cost Paths](https://ai.stanford.edu/~nilsson/OnlinePubs-Nils/PublishedPapers/astar.pdf)\n- [Hart、Nilsson、Raphael：1972 Correction](https://cse.sc.edu/~MGV/csce580f12/astarHNR1972.pdf)\n- [Boost.Graph：A* Search](https://www.boost.org/doc/libs/latest/libs/graph/doc/html/graph/algorithms/shortest_paths/astar_search.html)",
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ]
 }

@@ -1,0 +1,35 @@
+{
+  "id": "http-cookie",
+  "name": "HTTP Cookie",
+  "aliases": [
+    "HTTP Cookie",
+    "浏览器 Cookie"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "security"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "通过响应 Set-Cookie 下发 Cookie，并通过后续请求的 Cookie 字段携带匹配的状态数据。"
+    }
+  ],
+  "summary": "由服务器设置、用户代理按作用域随请求携带的状态数据。",
+  "description": "服务器通过 Set-Cookie 设置名称、值和属性，用户代理保存后按 Domain、Path、过期时间、Secure、SameSite 等规则决定是否随请求发送 Cookie 字段。Cookie 可以携带会话标识或其他状态，但自身不规定会话存储和业务权限。未指定 Domain 的 host-only Cookie 与允许子域匹配的 Cookie 有不同作用域。\n\nCookie 隔离规则不等同于同源策略；端口不是 Cookie 的隔离键，Path 也不能作为同一站点内可信安全边界。HttpOnly 限制脚本接口读取，Secure 约束安全传输，SameSite 约束跨站发送，三者不能互相替代。Fetch 的凭证模式、浏览器隐私政策及跨站 Cookie 限制也会影响实际发送。\n\n## 参考\n\n- [IETF：HTTP Cookie 状态管理（RFC 6265）](https://www.rfc-editor.org/rfc/rfc6265.html)\n- [HTTP 工作组：Cookie 扩展工作草案](https://httpwg.org/http-extensions/draft-ietf-httpbis-rfc6265bis.html)\n- [Hono：Cookie 属性与操作接口](https://hono.dev/docs/helpers/cookie)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

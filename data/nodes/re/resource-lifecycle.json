@@ -1,0 +1,31 @@
+{
+  "id": "resource-lifecycle",
+  "name": "Runtime Resource Lifecycle",
+  "aliases": [
+    "运行时资源生命周期"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reference-counting",
+      "context": "在 Godot Resource 等基于 RefCounted 的资源对象中，通过持有引用控制对象存续；循环引用需另行处理。"
+    }
+  ],
+  "summary": "管理资源获取、共享、使用和释放之间的状态与责任。",
+  "description": "资源生命周期跟踪加载和创建后的资源由谁持有、是否共享，以及何时可以释放。CPU 对象、图形资源和音频资源可能具有不同管理机制；Godot Resource 以引用计数支持数据对象共享。\n\n退出场景不自动意味着共享资源不再使用，删除缓存条目也不必等于底层对象已释放。引用计数无法自动解决循环引用，垃圾回收也不能替代所有原生资源的显式清理；须区分内存对象与设备资源。\n\n## 参考\n\n- [Godot：资源与共享](https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html)\n- [Godot：引用计数及循环引用](https://docs.godotengine.org/en/stable/classes/class_refcounted.html)\n- [Phaser：资源加载与缓存](https://docs.phaser.io/phaser/concepts/loader)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

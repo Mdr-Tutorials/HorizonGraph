@@ -1,0 +1,43 @@
+{
+  "id": "hdr-histogram",
+  "name": "HdrHistogram",
+  "aliases": [
+    "高动态范围直方图库",
+    "HDR Histogram",
+    "HdrHistogram Java"
+  ],
+  "type": "library",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "jvm-ecosystem",
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java",
+      "context": "此节点限定官方Java实现，其源代码及库构建需要Java；其他语言移植不合并为这个实现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "memory-preallocation",
+      "context": "在固定范围和精度的配置下复用预备的计数数组，避免常规记录路径分配。"
+    }
+  ],
+  "summary": "以配置范围和有效位精度记录值分布的Java直方图库。",
+  "description": "HdrHistogram是用于记录和分析数值分布的开源Java库，以可配置整数值范围及有效位精度表达较宽动态范围。这里记录官方Java实现；同组织中其他语言移植共享部分概念和表示能力，但并发接口及版本能力应各自核对。它不是采集时间戳的硬件，也不会自动确定所记录值的时间单位。\n\n调用方可按自己的单位记录延迟，再计算分位数或合并兼容记录，需保持单位、范围、精度和统计窗口一致。不同相邻值可能因量化落入同一桶，记录超范围值和自动扩展行为应按所选配置处理。固定容量的常规记录路径可以复用计数存储，开启增长或使用其他操作时仍须查具体成本。\n\n普通Histogram不自动提供所有并发访问所需的同步，应选择线程私有记录、适当同步或库提供的Recorder等方案。预期间隔修正API可推算协调遗漏期间的值，但其假设必须符合负载模型，不能恢复真实缺失请求。准确的直方图表示也不能修复起止边界、超时筛选或采样模型的错误。\n\n## 参考\n\n- [HdrHistogram：范围、精度、并发与遗漏修正](https://github.com/HdrHistogram/HdrHistogram)\n- [HdrHistogram：Java Histogram API](https://hdrhistogram.github.io/HdrHistogram/JavaDoc/org/HdrHistogram/Histogram.html)\n- [HdrHistogram：Java 实现的构建身份](https://github.com/HdrHistogram/HdrHistogram/blob/master/pom.xml)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/HdrHistogram/HdrHistogram"
+}

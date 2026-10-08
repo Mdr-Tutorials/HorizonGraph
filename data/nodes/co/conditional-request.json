@@ -1,0 +1,43 @@
+{
+  "id": "conditional-request",
+  "name": "Conditional HTTP Request",
+  "aliases": [
+    "HTTP 条件请求",
+    "条件请求"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "http"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "etag",
+      "context": "在 If-Match 或 If-None-Match 中携带表示标签，按所选条件执行强或弱比较。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-method",
+      "context": "根据 GET/HEAD 验证与修改资源的方法区分 304 复用和前提失败等结果语义。"
+    }
+  ],
+  "summary": "仅在资源验证器或修改时间满足前提时执行请求。",
+  "description": "条件请求通过 If-Match、If-None-Match、If-Modified-Since 等字段把执行与资源状态关联。GET/HEAD 的缓存验证可在表示未变化时返回 304；写入请求可使用 If-Match 要求当前强验证器匹配，以发现并发修改，而失败的前提通常以 412 表达。不同前提有规范规定的优先次序。\n\nIf-None-Match 的标签判断使用弱比较，If-Match 使用强比较，因此不能把弱 ETag 用于要求强匹配的更新控制。条件写入也不是数据库事务、锁或完整冲突合并系统；服务器须把前提判断与操作正确实现，客户端还要处理重试、失败和资源已变化的结果。\n\n## 参考\n\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)\n- [IETF：HTTP 缓存（RFC 9111）](https://www.rfc-editor.org/rfc/rfc9111.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

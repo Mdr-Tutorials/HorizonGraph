@@ -1,0 +1,58 @@
+{
+  "id": "cosign",
+  "name": "Cosign",
+  "aliases": [
+    "Cosign",
+    "Sigstore Cosign"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain",
+    "containerization"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "image-signing",
+      "context": "为容器镜像生成签名并核对签名载荷中的目标摘要。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "artifact-attestation",
+      "context": "生成、签署和验证关于工件的 in-toto 声明，并可结合 predicate 策略检查。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fulcio",
+      "context": "采用身份签名的 keyless 路径时，向 Fulcio 申请绑定身份与临时公钥的证书。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rekor",
+      "context": "采用 Sigstore 签名透明度路径时，提交或验证对应工件的日志材料。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "in-toto-statement",
+      "context": "签署供应链声明时采用 Statement 表达 subject 与 predicate，并通过外层封装认证载荷。"
+    }
+  ],
+  "summary": "签署并验证镜像、普通文件和供应链声明的命令行工具。",
+  "description": "Cosign 是 Sigstore 项目中的签名与验证工具，面向容器镜像，也支持普通文件和供应链声明。镜像签名载荷包含内容摘要，验证时需要确保摘要与目标工件一致。文件签名可以通过 bundle 或分别保存的签名、证书材料交付；存储在何处和怎样发现材料取决于目标类型与使用的工具版本。\n\n它支持基于身份的 keyless 流程，以及自管理密钥、KMS 和硬件令牌等路径。在典型 keyless 路径中，客户端生成临时密钥，通过 OIDC 与 Fulcio 取得短期证书，并使用 Rekor 的透明度证据。身份验证还须约束预期证书身份及 issuer，不能只接受任何由同一受信任 CA 签发的证书；采用自管理公钥时则需自行建立公钥信任。\n\nCosign 的 attest 与 verify-attestation 能处理 in-toto 声明，相关政策检查可进一步解释 predicate 的内容。验证成功只说明配置要求下的签名、身份和工件绑定等检查通过；构建记录的可信性还依赖声明者和构建平台，软件漏洞另由扫描与分析处理。Fulcio、Rekor 和 KMS 是不同路径中的组件选择，不能把公共 keyless 服务写成所有 Cosign 用法的硬依赖。\n\n## 参考\n\n- [Cosign：签名机制概览](https://docs.sigstore.dev/cosign/signing/overview/)\n- [Cosign：验证身份、issuer 与工件摘要](https://docs.sigstore.dev/cosign/verifying/verify/)\n- [Cosign：in-toto 声明支持](https://docs.sigstore.dev/cosign/verifying/attestation/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://docs.sigstore.dev/cosign/"
+}

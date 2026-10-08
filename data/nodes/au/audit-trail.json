@@ -1,0 +1,40 @@
+{
+  "id": "audit-trail",
+  "name": "Audit Trail",
+  "aliases": [
+    "审计轨迹",
+    "交易审计记录",
+    "审计追踪"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "describes",
+      "target_id": "algorithmic-trading",
+      "context": "在算法交易订单路由与前端记录场景，记录算法或交易员责任标识、订单发送撤改和场所回报，供重建该交易过程；不是全部模型参数或所有内部事件的天然副本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "drop-copy",
+      "context": "在将前端日志与交易所订单和成交回报对账的部署中，以Drop Copy作为外部副本；CME明确该副本不能替代完整前端审计轨迹。"
+    }
+  ],
+  "summary": "保留可关联、可重放的事件及责任主体记录。",
+  "description": "审计轨迹是为事后重建过程和归属责任而保存的事件记录，通常包含事件标识、时间戳、操作者或算法身份、输入、状态变化及结果。在电子交易中，它需要串联前端收到或生成的订单、路由、改单、撤单和场所回报，而不只是保存最终成交结果或普通应用报错日志。\n\nCME的iLink审计认证资料要求订单路由/前端记录完整覆盖连接活动，并明确交易所Drop Copy不能单独满足前端审计要求，因为后者还包含机构内部的信息。记录格式、字段精度、保留期限和提交责任按所适用的场所与规则确定；不能将CME的具体要求推广为所有系统统一标准。\n\n审计记录需要保持事件之间的关联和原始时间语义，区分本地接收、发送、交易所接受和成交时间，并能验证遗漏或不一致。适用EU业务时钟要求时，还须按规定保留UTC可追溯性、误差和打点位置说明。完整日志为调查与对账提供证据，不能仅凭“有日志”断言其不可篡改、已满足所有记录义务或证明交易合法。\n\n## 参考\n\n- [CME：Audit Trail for iLink认证要求与Drop Copy边界](https://www.cmegroup.com/tools-information/webhelp/autocert-audit-trail-ilink3/Content/GettingStarted.html)\n- [CME：Rule 536.B订单路由与前端审计记录要求](https://www.cmegroup.com/rulebook/files/cme-group-Rule-536-B.pdf)\n- [EUR-Lex：Regulation (EU) 2017/589，算法交易组织与风险控制](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0589)\n- [EUR-Lex：Regulation (EU) 2025/1155，Articles 11–16及Annex IV](https://eur-lex.europa.eu/eli/reg_del/2025/1155/oj/eng/pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

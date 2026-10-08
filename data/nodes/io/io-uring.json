@@ -4,22 +4,37 @@
   "display_primary": "io_uring",
   "display_secondary": "io_uring",
   "aliases": [],
-  "type": "concept",
+  "type": "protocol",
   "ecosystems": [
-    "linux-gnu-ecosystem"
+    "linux-gnu-ecosystem",
+    "low-latency-systems-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "low-latency-systems",
+    "high-performance-computing"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ring-buffer",
+      "context": "常规ABI通过共享的提交与完成环表达队列状态；具体配置可能提供其他提交组织方式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "busy-polling",
+      "context": "配置SQPOLL、支持的IOPOLL或NAPI轮询时采用主动检查路径；各模式条件不同且并非默认都启用。"
     }
   ],
-  "summary": "Linux 最快的异步 IO 接口，提交与完成两个环。",
+  "summary": "Linux提交与完成队列接口，异步能力和轮询收益取决于操作及环境。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "io_uring是Linux内核向用户空间提供的I/O接口及共享队列ABI，应用通过提交队列表达操作，再从完成队列获取结果。这里记录接口规范；内核实现提供机制，liburing等用户态库封装队列与系统调用，它们不是io_uring这个稳定条目的同一实体。完成通知与epoll的就绪通知具有不同语义。\n\n共享提交和完成区域可减少部分控制路径的系统调用及复制，但操作的数据载荷并非自动零复制。SQPOLL可由内核线程轮询提交，IOPOLL可在支持的设备和操作上轮询完成，两种配置的用途与前提不同。缓冲区生命周期、注册资源、队列容量及错误结果仍需按具体操作处理，不能仅看提交成功。\n\n不同内核版本、文件类型、驱动、权限和应用并发方式影响可用功能与收益。有些操作会借助工作线程，轮询也会消耗CPU，批量可能增加等待。官方手册要求按场景评估，因此不应把接口概括成Linux无条件最快的I/O方式；比较应保持消息尺寸、负载和完成边界一致，并观察尾延迟与资源成本。\n\n## 参考\n\n- [Linux man-pages：io_uring 提交及完成接口](https://man7.org/linux/man-pages/man7/io_uring.7.html)\n- [Linux man-pages：SQPOLL、IOPOLL 与版本条件](https://man7.org/linux/man-pages/man2/io_uring_setup.2.html)\n- [Linux：NAPI busy polling 与 epoll 条件](https://docs.kernel.org/networking/napi.html)",
+  "abstraction_level": "kernel_os"
 }

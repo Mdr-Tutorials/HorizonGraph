@@ -1,0 +1,39 @@
+{
+  "id": "mcp-authorization-profile",
+  "name": "MCP Authorization Profile",
+  "aliases": [
+    "MCP 授权配置规范",
+    "MCP HTTP 授权"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 为 HTTP 接入定义的授权配置及发现约定，非所有传输的必选流程。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oauth",
+      "context": "HTTP MCP 接入采用该授权配置时，复用 OAuth 授权服务器、访问令牌和受保护资源机制。"
+    }
+  ],
+  "summary": "规定 MCP HTTP 接入的授权发现和凭证使用约定。",
+  "description": "MCP 授权配置规定基于 HTTP 的客户端如何发现授权信息、取得凭证并访问受保护资源。它复用 OAuth 相关标准来组织 MCP 接入，属于应用协议的授权约定，区别于 OAuth 母体，也不是每个本地工具调用都必须进行的登录流程。\n\n客户端需根据服务器的受保护资源和授权服务器信息开展授权，并将访问令牌用于目标 MCP 请求。授权服务器、MCP 资源服务器和宿主各有职责，凭证受众、作用域及用户同意需匹配实际资源。客户端不能把登录成功泛化成所有业务操作均已获准。\n\nstdio 接入不套用此 HTTP 授权流程，产品自定义 API Key 或固定请求头也不能自动称为实现完整配置。2026-07-28 对部分旧发现与注册方式作了弃用安排，应核对采用的版本。规范强调避免令牌透传和混淆代理等问题，服务端仍须验证每次请求的业务访问权限。\n\n## 参考\n\n- [MCP：Authorization 规范](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization)\n- [MCP：安全实践](https://modelcontextprotocol.io/specification/2026-07-28/basic/security_best_practices)\n- [MCP：弃用特性](https://modelcontextprotocol.io/specification/2026-07-28/deprecated)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "offscreen-canvas",
+  "name": "OffscreenCanvas",
+  "aliases": [
+    "离屏画布"
+  ],
+  "type": "protocol",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-2d",
+      "context": "选择离屏 2D 上下文时，用路径、图像和绘制状态生成位图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "在支持 Worker 或离屏 WebGL 的环境中，使用 GPU 图形上下文绘制并更新画布。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgpu",
+      "context": "在支持离屏 GPUCanvasContext 的环境中，配置 WebGPU 画布并提交渲染命令。"
+    }
+  ],
+  "summary": "可脱离 DOM 并转移到 Worker 的标准画布接口。",
+  "description": "OffscreenCanvas 将画布位图和渲染上下文从 DOM 元素中分离，可直接创建，也可通过 HTMLCanvasElement.transferControlToOffscreen() 接管页面上的占位画布。它是可转移对象，因此能把绘制工作交给 Worker；也能在主线程作为离屏绘制目标使用。\n\n绘制者选择受实现支持的 2D、WebGL 或 WebGPU 上下文，使用相应 API 更新结果；并非每种上下文在每个浏览器与执行环境中都可用。可通过 transferToImageBitmap 或 convertToBlob 交接或导出位图，需要考虑缓冲区生命周期与资源释放。\n\n从 DOM 画布转移控制权前，该元素不能已经创建渲染上下文。转移不会让 Worker 获得 DOM 访问能力，布局、尺寸与输入数据仍需由应用协调；减少主线程绘制负担也不保证总耗时更短。\n\n## 参考\n\n- [WHATWG：Canvas 与渲染上下文](https://html.spec.whatwg.org/multipage/canvas.html)\n- [MDN：OffscreenCanvas 接口](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas"
+}

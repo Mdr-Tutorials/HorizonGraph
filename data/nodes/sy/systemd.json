@@ -5,10 +5,12 @@
   "aliases": [],
   "type": "tool",
   "ecosystems": [
-    "linux-gnu-ecosystem"
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "containerization"
   ],
   "abstraction_level": "kernel_os",
   "relations": [
@@ -21,15 +23,17 @@
       "target_id": "linux"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "cgroup"
+      "relation_type": "uses",
+      "target_id": "cgroup",
+      "context": "以 service、scope 和 slice 组织 Linux 进程资源，并通过支持的控制器设置资源预算或委派容器管理子树。"
     }
   ],
-  "summary": "多数发行版的 init 与服务管理器，用单元文件描述依赖。",
+  "summary": "Linux 系统与服务管理器，按 unit 组织生命周期和资源。",
   "importance": 4,
   "popular": 62,
   "official_site": "https://systemd.io",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "systemd 是 Linux 的系统与服务管理软件体系；作为系统 PID 1 运行时，它组织启动、服务和关闭流程，也可为用户会话运行独立的服务管理实例。服务、socket、timer、mount 等 unit 表达不同资源和触发方式，依赖关系与执行顺序需要分别配置。运行 systemd 服务管理器不意味着每个容器都应把它作为内部 PID 1。\n\n资源管理把 service、scope 与 slice 单元映射到 Linux cgroup 层级，按可用控制器计量或配置 CPU、内存、I/O 和任务数量。Service 通常包含管理器启动的进程，scope 包含由其他管理方创建并注册的进程，slice 组织层级分支。当前官方指南以统一 cgroup v2 为目标，旧 legacy 和 hybrid 模式在 v256 弃用并于 v258 移除，因此兼容性应按实际 systemd 版本确认。\n\n容器管理器可以通过服务或 scope 的 Delegate 设置取得控制组子树的管理权，避免与 systemd 同时写入同一层级。委派是权限和管理职责的分界，请求控制器不保证所有请求均可用，实际启用仍受内核和上级配置约束。系统级服务、用户级服务与容器中的实例具有不同环境；WSL 或其他运行场景是否启用 systemd，应由该平台的启动和支持条件决定。\n\n## 参考\n\n- [systemd：管理器与 unit 定义源码](https://raw.githubusercontent.com/systemd/systemd/main/man/systemd.xml)\n- [systemd：控制组 API、统一层级与委派](https://systemd.io/CGROUP_DELEGATION/)\n- [systemd：资源控制选项定义](https://raw.githubusercontent.com/systemd/systemd/main/man/systemd.resource-control.xml)\n- [systemd：委派文档源码与层级版本演进](https://github.com/systemd/systemd/blob/main/docs/CGROUP_DELEGATION.md)"
 }

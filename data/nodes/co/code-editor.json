@@ -1,0 +1,38 @@
+{
+  "id": "code-editor",
+  "name": "Code Editor",
+  "aliases": [
+    "代码编辑器",
+    "Source Code Editor"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-completion",
+      "context": "启用补全提供者时在光标上下文展示可接受的候选文本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "editor-extension",
+      "context": "采用扩展架构的编辑器通过扩展接入语言服务、命令与其他工作台能力。"
+    }
+  ],
+  "summary": "面向源代码文件与工作区提供编辑和辅助功能。",
+  "description": "代码编辑器管理源码文档、光标、选区与文本修改，并提供文件树、搜索和差异查看等开发操作。语法高亮、补全与导航可由内置实现或扩展增强；支持哪些语言服务不能仅从编辑器界面推断。\n\n编辑器可以独立使用，也可以成为 IDE 的编辑组件。VS Code 把自身核心称为代码编辑器，并通过扩展、调试器和终端组成开发工作台。一个拥有丰富集成的编辑器可以承担接近 IDE 的工作，二者不是按是否支持 AI 划分。\n\n语言感知编辑依赖相应服务和项目配置，文本编辑本身不保证改动保持程序行为。浏览器发行、本地桌面与远程工作区还具有不同文件访问和扩展运行能力；具体产品是否采用 LSP、增量解析或语义检索，应依据其实现资料分别说明。\n\n## 参考\n\n- [VS Code：代码编辑器的工作台与文件视图](https://code.visualstudio.com/docs/editing/getting-started/userinterface)\n- [VS Code：直接语言 API 与 LSP 的能力对应](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [JetBrains：IDE 的代码智能、构建与调试集成](https://www.jetbrains.com/help/idea/discover-intellij-idea.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

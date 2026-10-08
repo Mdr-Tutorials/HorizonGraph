@@ -1,0 +1,49 @@
+{
+  "id": "mcp-inspector",
+  "name": "MCP Inspector",
+  "aliases": [
+    "MCP 调试检查器",
+    "MCP Inspector 工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mcp",
+      "context": "作为测试客户端发送其当前版本所支持的 MCP 消息，不表示实现全部版本和可选扩展。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-tool",
+      "context": "在服务器调试中列举并调用工具接口，查看模式、输入和执行结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-resource",
+      "context": "调试服务器资源能力时发现和读取 URI 内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-prompt",
+      "context": "调试提示模板能力时获取模板和相应参数化消息。"
+    }
+  ],
+  "summary": "交互检查与测试 MCP 服务器的可视化和命令行工具。",
+  "description": "MCP Inspector 是官方开源的服务器检查工具，提供可视化客户端及命令行测试路径。它让开发者连接待测服务器，查看能力、调用工具并检查资源或提示模板等接口；其身份是实际软件实现，区别于 MCP 协议、角色概念和某项扩展规范。\n\n可视化部分通过客户端界面与连接代理协调通信，开发者选择接入方式和相应配置，再发送协议操作查看返回内容。CLI 适合脚本化检查服务器接口。测试时仍需依照所用 Inspector 及 SDK 的版本核对支持范围，不能把一次连接成功认定为服务器支持最新规范全部能力。\n\nInspector 会触发真实请求，测试端点可能产生业务副作用，连接凭证和代理访问应按开发环境配置。它可以帮助定位接口、模式和传输问题，但不是业务正确性、安全认证或跨客户端完整兼容性的证明。将其用于服务器调试不要求把该工具部署进生产代理的每次调用路径。\n\n## 参考\n\n- [MCP Inspector：官方源码与使用说明](https://github.com/modelcontextprotocol/inspector)\n- [MCP：服务器开发及 Inspector 调试](https://modelcontextprotocol.io/docs/2026-07-28/develop/build-server)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/modelcontextprotocol/inspector"
+}

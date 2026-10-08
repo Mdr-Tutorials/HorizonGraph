@@ -1,0 +1,35 @@
+{
+  "id": "pcapng-format",
+  "name": "pcapng File Format",
+  "aliases": [
+    "PCAPNG",
+    "PCAP Next Generation",
+    ".pcapng"
+  ],
+  "type": "protocol",
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ietf",
+      "context": "IETF OPSAWG 正在形成该格式的说明文档；截至复核日期仍为草案。"
+    }
+  ],
+  "summary": "以分区、接口及报文块保存采集数据的格式。",
+  "description": "pcapng 采用块结构组织抓包文件。Section Header 划分独立分区，Interface Description 描述接口，报文块关联接口编号；这使同一文件能够表达多接口及更多可选元数据，而不是仅给传统 pcap 文件增加一个扩展名。\n\n接口选项可以表达时间戳分辨率等属性，其他块和选项可携带注释、统计或扩展信息。读取者必须遵守块长度、字节序和接口引用规则，也应处理未知可选信息。不同接口时钟的分辨率相同，不等于已同步，更不保证文件中的记录按真实事件时间全局排序。\n\n截至 2026 年 10 月，IETF 格式说明仍为目标类别 Informational 的 Internet-Draft，不能称为已经发布的 RFC。工具支持还要按实现核验；转换为 pcap 可能丢失多接口和可选元数据。保存更丰富的文件结构也无法补回采集端已经丢掉的报文。\n\n## 参考\n\n- [IETF pcapng 格式草案状态](https://datatracker.ietf.org/doc/draft-ietf-opsawg-pcapng/)\n- [Wireshark 用户指南](https://www.wireshark.org/docs/wsug_html/)\n- [Wireshark 时间戳说明](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTimestamps.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool"
+}

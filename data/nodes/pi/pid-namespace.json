@@ -1,0 +1,35 @@
+{
+  "id": "pid-namespace",
+  "name": "Linux PID Namespace",
+  "aliases": [
+    "PID 命名空间",
+    "进程编号命名空间",
+    "pid namespace"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "namespace"
+    }
+  ],
+  "summary": "为 Linux 进程提供分层 PID 视图与局部 init 生命周期。",
+  "description": "PID namespace 使 Linux 进程在不同层级中具有不同的进程编号。一个进程可以在当前及祖先命名空间中拥有 PID，祖先能看到后代命名空间中的进程，而后代的视图受到限制。新命名空间中创建的第一个进程取得 PID 1，承担该命名空间的 init 角色；这不要求它必然运行 systemd 或完整发行版的启动流程。\n\n局部 init 需要处理后代生命周期和被收养的孤儿进程，信号行为也有特殊规则。如果该 init 退出，内核会终止命名空间内其余进程。因此容器主进程应正确处理终止信号和子进程回收，必要时使用轻量 init 包装。通过 setns 或 unshare 调整 PID namespace 时，变化作用于后续创建的子进程，不能据此声称调用者自己的 PID 立即被重新编号。\n\n进程可见性还涉及 procfs 的挂载视图：通常需要在合适的 mount namespace 中挂载对应 PID namespace 的 /proc。PID 隔离不限制 CPU 或内存消耗，也不单独阻止通过已授权 IPC、文件或网络交互。共享宿主 PID 视图和进入其他命名空间会改变边界，实际容器配置应与其进程管理、权限及资源限制一起核对。\n\n## 参考\n\n- [Linux：PID 层级、init 与信号规则](https://man7.org/linux/man-pages/man7/pid_namespaces.7.html)\n- [Linux：命名空间 API 与 proc 视图](https://man7.org/linux/man-pages/man7/namespaces.7.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

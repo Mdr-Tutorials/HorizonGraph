@@ -1,0 +1,36 @@
+{
+  "id": "utility-vm",
+  "name": "Utility Virtual Machine",
+  "aliases": [
+    "实用虚拟机",
+    "轻量实用虚拟机",
+    "Utility VM",
+    "UVM"
+  ],
+  "type": "concept",
+  "domains": [
+    "virtualization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "virtualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hyper-v",
+      "context": "在 Windows 的 WSL2 和 Hyper-V 隔离容器场景中，以 Hyper-V 技术提供客体内核所在的虚拟机边界。"
+    }
+  ],
+  "summary": "由上层平台管理、为特定工作负载承载内核的虚拟机。",
+  "description": "## 托管执行环境\n\nUtility VM 指上层平台为特定功能管理的虚拟机形态，Microsoft 的 WSL2 和容器基础设施使用这一称谓。它仍提供客体内核、处理器与内存资源，但创建、启动、资源配置和工作负载交互通常由平台服务或容器运行时负责。轻量和用途专门化描述其配置目标，不表示它只是宿主中的一个普通进程，也不意味着没有虚拟机开销。\n\n## 生命周期与管理\n\n在 Windows 容器实现中，Microsoft hcsshim 的 UtilityVM 对象通过 HCS 创建计算系统，维护其 VM 标识，并在该 VM 中创建容器或进程。HCS 管理 VM/容器的生命周期句柄，而虚拟磁盘、网络等宿主资源仍需调用方准备。上层平台可以把这些操作隐藏在启动容器或子系统的接口之后；utility VM 本身与负责管理它的服务应分别建模。\n\n## 隔离与共享粒度\n\nMicrosoft 对 Windows 容器 Hyper-V 隔离的说明中，每个容器在高度优化的虚拟机内运行，获得自己的内核，与直接共享宿主内核的进程隔离不同。VM 的存在改变容器与宿主之间的边界；容器镜像和通常的容器管理方式仍可以保持一致。实际实例复用粒度应以相应平台和运行时模型为准，不能将这一案例推成所有 utility VM 都只承载一个工作负载。\n\nWSL2 则把 Linux 发行版作为受管理 VM 内的隔离容器：它们共享 Linux 内核、CPU/内存/交换资源及网络命名空间，同时各有 PID、Mount、User、Cgroup 命名空间和 init 进程。因此普通 WSL2 的多个发行版不能被描述成每个各有一台独立系统虚拟机；发行版生命周期与承载它们的 VM 生命周期需要区分。\n\n## 参考\n\n- [Microsoft：WSL2 utility VM 与发行版共享资源](https://learn.microsoft.com/en-us/windows/wsl/about)\n- [Microsoft：Windows 容器的进程隔离与 Hyper-V 隔离](https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container)\n- [Microsoft：HCS 的计算系统与生命周期](https://learn.microsoft.com/en-us/virtualization/api/hcs/overview)\n- [Microsoft hcsshim：UtilityVM 创建与容器托管实现](https://github.com/microsoft/hcsshim/blob/main/internal/uvm/create.go)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "UVM"
+}

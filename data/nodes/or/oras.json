@@ -1,0 +1,56 @@
+{
+  "id": "oras",
+  "name": "ORAS",
+  "aliases": [
+    "OCI Registry As Storage",
+    "ORAS CLI",
+    "OCI 工件传输工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-distribution-spec",
+      "context": "作为客户端通过 OCI 分发接口上传、下载清单与 blob，服务端能力及权限决定可用操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-image-spec",
+      "context": "使用 OCI image manifest 结构封装工件时，以描述符和媒体类型记录内容，不把任意工件解释为可运行镜像。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-registry",
+      "context": "将远程 Registry 作为软件工件的存储和分发端，工具自身承担客户端操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authentication",
+      "context": "登录受保护的 Registry 时使用配置中的凭据或外部凭据 helper，并参与相应令牌流程。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cncf",
+      "context": "ORAS 官方文档列为 CNCF Sandbox 项目，基金会承担项目托管与社区治理。"
+    }
+  ],
+  "summary": "通过 OCI Registry 推拉和管理通用软件工件的客户端工具。",
+  "description": "ORAS 以 OCI Registry 为工件分发渠道，提供推送、拉取和清单管理等客户端能力。工件可以包含单个文件或多个 blob，清单通过内容摘要和媒体类型描述它们。它强调使用恰当的工件类型表达内容：能够存入 Registry 的文件不因此成为具有根文件系统、入口命令和可运行平台的容器镜像；还需要识别该类型的使用方解释其内容。\n\nCLI 按 OCI 分发接口与远程仓库交互，并处理登录凭据和令牌流程。它可以复用 Docker 格式的客户端凭据配置与外部 credential helper，但使用 ORAS 不要求运行 Docker daemon，也不要求安装 Docker Desktop。ORAS 项目还提供供开发者构建客户端的库；这些库与命令行工具是同一项目的不同使用入口，ORAS 本身并不是负责长期托管内容的 Registry 服务。\n\n推拉能力取决于服务端支持的媒体类型、认证方式和访问权限。明确的摘要用于定位内容，标签则提供名称引用；保存工件、证明内容来源、执行扫描与决定能否部署各有自己的机制，成功上传不能替代这些验证。缓存只有按相应配置启用后才参与拉取，不应把本地缓存、Docker 环境或某个云仓库列为所有调用的硬依赖。\n\n## 参考\n\n- [ORAS：项目与 OCI 工件角色](https://oras.land/docs/)\n- [ORAS：推送、拉取、媒体类型与缓存](https://oras.land/docs/how_to_guides/pushing_and_pulling/)\n- [ORAS：认证与 Docker daemon 边界](https://oras.land/docs/how_to_guides/authentication/)\n- [ORAS：兼容的 OCI Registries](https://oras.land/docs/compatible_oci_registries/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://oras.land"
+}

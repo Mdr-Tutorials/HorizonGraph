@@ -1,0 +1,51 @@
+{
+  "id": "hono-jsx",
+  "name": "Hono JSX",
+  "aliases": [
+    "hono/jsx",
+    "hono/jsx/dom",
+    "Hono JSX Renderer"
+  ],
+  "type": "library",
+  "domains": [
+    "web-services",
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "hono"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "jsx",
+      "context": "通过 JSX 编译配置选择 Hono 运行时以构造组件与元素。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ssr"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "选用 hono/jsx/dom 的浏览器组件路径时，将组件渲染到指定 DOM 容器。"
+    }
+  ],
+  "summary": "Hono 内置的 JSX 渲染与浏览器组件能力。",
+  "description": "Hono JSX 是 Hono 包内的 JSX 能力，服务端常从 hono/jsx 导入类型与组件工具，把 TSX 组件通过 c.html 等响应路径输出为 HTML。它支持组件组合、Fragment、上下文与异步组件，TSX 的 JSX 编译配置应指向 Hono 的运行时。Hono 采用 JSX 不代表安装或依赖 React，生成 HTML 本身也不会自动建立浏览器中的组件事件和状态。\n\n内置的 JSX Renderer 中间件为 c.render 提供共享页面布局、嵌套布局和渲染入口，并可按配置使用流式响应。这些能力属于同一套 Hono JSX 工具链；异步组件、流式发送和客户端交互是不同环节，具体高级能力需按使用的 Hono 版本核对，官方目前将部分 Suspense、ErrorBoundary 与 StreamingContext 用法标为实验性。\n\n浏览器交互入口 hono/jsx/dom 可把组件渲染到 DOM，并提供状态等 Hook 能力。官方将相关 Hook 描述为与 React 兼容或部分兼容，因此不能据此保证任意 React 组件都可直接迁移。服务端 JSX 与客户端 JSX 可以按项目需要配合使用；文档中的客户端 render 路径不能直接等同于自动复用服务端 HTML 的水合流程。\n\n## 参考\n\n- [Hono：JSX](https://hono.dev/docs/guides/jsx)\n- [Hono：JSX DOM](https://hono.dev/docs/guides/jsx-dom)\n- [Hono：JSX Renderer Middleware](https://hono.dev/docs/middleware/builtin/jsx-renderer)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://hono.dev/docs/guides/jsx"
+}

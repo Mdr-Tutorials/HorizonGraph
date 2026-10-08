@@ -14,7 +14,9 @@
   "type": "concept",
   "domains": [
     "quantitative-finance",
-    "machine-learning"
+    "machine-learning",
+    "statistics",
+    "electronic-trading"
   ],
   "relations": [
     {
@@ -25,13 +27,21 @@
       "relation_type": "uses",
       "target_id": "backtesting",
       "context": "量化策略在保留的历史时段做样本外验证时，可用回测执行既定规则，避免根据该时段结果反复调参。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "point-in-time-data",
+      "context": "金融历史验证的每个训练截止点限制可用版本与发布信息。"
     }
   ],
   "summary": "用未参与拟合或方案选择的数据评估模型及策略的泛化表现。",
-  "description": "样本外验证使用未参与模型拟合或方案选择的数据评估表现。它用于检查在已见数据上得到的规律能否适用于新的数据；训练集、用于调参的验证集和最终测试集承担不同任务。\n\n在时间序列与量化研究中，应尊重信息发生和可获得的顺序，避免把未来记录混入过去的训练。若根据测试结果反复修改策略，这些数据便参与了选择，不能继续当作独立的最终检验。滚动划分或保留后续时段可以用于验证，但并不消除市场变化的不确定性。\n\n参考：[scikit-learn：数据划分与时间序列验证](https://scikit-learn.org/stable/modules/cross_validation.html)；[QuantConnect：回测研究指南](https://www.quantconnect.com/docs/v2/cloud-platform/backtesting/research-guide)。",
+  "description": "样本外验证用未参与拟合、调参和方案选择的数据检验规则对新样本的适用性。训练集用于学习，内部验证可参与选择，最终评估承担独立检验；某段数据的身份由真实研究过程决定，不能仅因文件或变量名包含“测试”就视为样本外。\n\n金融时间序列通常保留后续时段或采用滚动前推流程，以符合过去训练、随后评估的顺序。特征和预处理也只可从训练部分学习，标签跨期重叠时要检查实际覆盖区间并设置相应间隔。按时间切分不自动处理公告滞后、数据修订、证券存续或所有标签泄露。\n\n策略评估应保持成本、成交和风险口径一致，同时报告窗口差异与不确定性。如果看完保留集表现又修改策略或挑选方案，该数据已进入选择过程，后续不能继续作为完全独立证据。样本外通过只支持所测条件下的历史结论，市场变化和多次尝试仍可能使下一时段结果不同。\n\n## 参考\n\n- [scikit-learn：TimeSeriesSplit 的时间顺序与 gap](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)\n- [scikit-learn：训练、测试与数据泄露](https://scikit-learn.org/stable/common_pitfalls.html)\n- [Bailey 等：The Probability of Backtest Overfitting 原始论文](https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf)",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-20",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://scikit-learn.org/stable/modules/cross_validation.html"
+  "official_site": "https://scikit-learn.org/stable/modules/cross_validation.html",
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ]
 }

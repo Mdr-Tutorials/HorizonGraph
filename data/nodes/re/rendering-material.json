@@ -1,0 +1,43 @@
+{
+  "id": "rendering-material",
+  "name": "Rendering Material",
+  "aliases": [
+    "渲染材质",
+    "图形材质"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shader",
+      "context": "把材质选定的外观计算和参数绑定转为 GPU 着色程序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lighting-model",
+      "context": "在选择受光材质时采用相应光照模型；不受光材质不要求此路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "color-management",
+      "context": "把颜色参数与颜色纹理正确转换到着色工作空间，并区分数值纹理。"
+    }
+  ],
+  "summary": "用着色模型、参数与渲染状态描述对象外观。",
+  "description": "渲染材质描述对象如何产生可见外观，包括着色模型、颜色和纹理参数，以及透明度、双面、深度写入等有关状态。它不同于几何：同一几何可以赋予不同材质，多对象也可共享材质；材质系统最终将这些高层设置转为具体管线、着色程序与资源绑定。\n\n材质可以是不受光照影响的图像颜色，也可以采用漫反射、经验高光或基于物理的反射模型。金属度、粗糙度和法线纹理等参数需要符合选定模型及输入约定，不能仅靠把着色器命名为 PBR 就保证真实外观。\n\n材质影响批次兼容性、阴影和透明排序。颜色纹理通常需转换到线性工作空间，法线或粗糙度纹理则是数值数据；若输入解释、输出转换或深度设置不一致，几何与材质参数正确也会得到错误图像。\n\n## 参考\n\n- [Three.js Materials](https://threejs.org/manual/pages/materials.html)\n- [Three.js Material](https://threejs.org/docs/pages/Material.html)\n- [Three.js MeshStandardMaterial](https://threejs.org/docs/pages/MeshStandardMaterial.html)\n- [Three.js Color Management](https://threejs.org/manual/pages/color-management.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

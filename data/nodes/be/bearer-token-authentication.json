@@ -1,0 +1,43 @@
+{
+  "id": "bearer-token-authentication",
+  "name": "HTTP Bearer Token Authentication",
+  "aliases": [
+    "HTTP Bearer 令牌认证",
+    "Bearer Auth",
+    "持有者令牌认证"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-services",
+    "web-development",
+    "security"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "采用标准请求字段方式时，使用 Authorization: Bearer 发送令牌并按挑战结果处理失败。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "https",
+      "context": "用可靠的加密传输保护 Bearer 令牌，降低其在通信中被窃取后重放的风险。"
+    }
+  ],
+  "summary": "以持有令牌作为使用凭据依据的 HTTP 认证方案。",
+  "description": "Bearer 令牌的关键属性是持有者可以使用它，无需另证明某个密码学私钥的持有。RFC 6750 为 OAuth 2.0 Bearer 令牌定义 HTTP 使用方式，常见路径是在 Authorization: Bearer 字段传递凭据。接收端验证令牌、有效期、权限范围及适用资源，再决定是否允许操作。\n\nBearer 不规定令牌一定使用 JWT；它可以是不透明值，也可以是受保护的结构化令牌。Hono bearerAuth 允许比对指定 token 或调用 verifyToken，不因此成为 OAuth/OIDC 提供方。令牌泄露可能使持有者获得权限，因此传输、日志、存储和验证规则都属于应用边界，单纯字段存在不表示认证成功。\n\n## 参考\n\n- [IETF：OAuth Bearer 令牌的 HTTP 使用（RFC 6750）](https://www.rfc-editor.org/rfc/rfc6750.html)\n- [Hono：Bearer Auth 中间件](https://hono.dev/docs/middleware/builtin/bearer-auth)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.rfc-editor.org/rfc/rfc6750.html"
+}

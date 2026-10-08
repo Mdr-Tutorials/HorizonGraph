@@ -9,7 +9,10 @@
   "type": "metric",
   "domains": [
     "networking",
-    "databases"
+    "databases",
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
   ],
   "relations": [
     {
@@ -17,9 +20,13 @@
       "target_id": "metric"
     }
   ],
-  "summary": "单位时间完成的处理量，容量规划的第一问。",
+  "summary": "单位时间内完成的工作量，须说明工作单位、窗口与可持续条件。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "description": "吞吐量表示指定时间窗口内完成的工作量与窗口时长之比，例如每秒完成请求、消息、事务或字节数。必须说明计数单位、成功条件和时间边界；输入速率、已提交任务数和最终完成速率不是同一指标，bit/s与byte/s也不能直接混用。业务TPS、网络包速率和存储带宽具有不同工作含义。\n\n短时峰值可能利用缓存、批量和已有排队，与长期可持续能力不同。系统接近或超过可处理容量时，队列长度、拒绝率和延迟可能明显上升，即使完成速率仍维持较高。批量处理也可能提高吞吐同时增加等待，因此目标需要结合延迟分布、错误和资源限制设定。\n\n吞吐与单个请求延迟没有通用倒数关系：并发度、排队和完成边界共同决定它们的联系。比较应保持负载、消息尺寸、统计窗口与成功定义一致，并报告发起、完成和拒绝的数量。基准实验的饱和吞吐还需同实际工作流核对，避免把微基准容量当作端到端系统容量。\n\n## 参考\n\n- [Google SRE：延迟、流量与分布监控](https://sre.google/sre-book/monitoring-distributed-systems/)\n- [Google SRE：过载、排队与期限](https://sre.google/sre-book/handling-overload/)\n- [Prometheus：直方图、分位数与聚合](https://prometheus.io/docs/practices/histograms/)",
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ]
 }

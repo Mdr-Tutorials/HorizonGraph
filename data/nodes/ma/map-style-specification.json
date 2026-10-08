@@ -1,0 +1,41 @@
+{
+  "id": "map-style-specification",
+  "name": "Mapbox Style Specification",
+  "aliases": [
+    "Mapbox 样式规范",
+    "Mapbox Style Spec"
+  ],
+  "type": "protocol",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "以 JSON 文档保存地图根属性、数据源与有序图层定义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "visual-encoding",
+      "context": "通过属性与表达式将数据字段映射为颜色、大小等样式值。"
+    }
+  ],
+  "summary": "用 JSON 定义地图数据源、显示图层及绘制样式。",
+  "description": "Mapbox Style Specification 规定地图样式 JSON 文档的结构与属性。样式把数据源、显示图层和视觉设置分开描述，决定绘制哪些内容、按什么顺序绘制以及怎样设置颜色、布局和标注。文档还可包含字体、精灵、视角默认值和表达式，使地图设计能够被保存、生成和加载。\n\n样式规范与矢量瓦片编码不同：同一数据源可以由多个图层以不同样式呈现，样式也可以引用栅格、GeoJSON 或其他源类型。迁移客户端时应逐项核对源类型、表达式、投影和图层能力。Mapbox 与 MapLibre 的当前样式规范分别演进，存在共同基础也可能存在客户端特有属性。\n\n## 参考\n\n- [Mapbox Style Specification](https://docs.mapbox.com/style-spec/guides/)\n- [MapLibre Style Specification](https://maplibre.org/maplibre-style-spec/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "runtime_vm"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "netmap",
+  "name": "netmap",
+  "aliases": [
+    "netmap Packet I/O Framework"
+  ],
+  "type": "framework",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "kernel-bypass"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "zero-copy",
+      "context": "在支持缓冲区交换的 netmap 端口转发路径中复用包缓冲区，不能推广为所有兼容驱动路径均无复制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ethernet",
+      "context": "处理物理 Ethernet 端口上的原始网络帧时，由应用识别链路层帧与上层封装。"
+    }
+  ],
+  "summary": "以共享缓冲区与批量同步提供快速原始包收发框架。",
+  "description": "netmap 是快速包 I/O 框架，通过设备接口映射共享描述符环和数据缓冲区，再用批量同步操作推进收发。它可连接支持的物理网卡、软件交换端口和 netmap pipe，应用围绕这些端口处理原始网络帧。\n\n原生网卡支持与兼容驱动路径的复制、同步和性能特征不同。缓冲区交换可以在适当端口组合下减少复制，但不能仅看到 mmap 就推断所有路径均零拷贝；绑定方式与驱动能力应由具体平台和配置确认。\n\nnetmap 自身并不是透明加速 POSIX TCP socket 的完整协议栈。应用要自行处理或接入更高层协议，并负责环容量、突发流量和缓冲区生命周期；旁路部署仍需要操作系统建立映射、管理设备和限制访问权限。\n\n## 参考\n\n- [netmap 官方实现与适用范围](https://github.com/luigirizzo/netmap)\n- [FreeBSD netmap(4) 接口手册](https://man.freebsd.org/cgi/man.cgi?query=netmap&sektion=4)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/luigirizzo/netmap"
+}

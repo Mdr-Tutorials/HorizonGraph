@@ -1,0 +1,49 @@
+{
+  "id": "ethtool",
+  "name": "ethtool",
+  "aliases": [
+    "Linux ethtool"
+  ],
+  "type": "tool",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "linux"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "receive-side-scaling",
+      "context": "在驱动支持时查询或设置 RSS 哈希字段与重定向表，调整接收流到队列的映射。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "interrupt-coalescing",
+      "context": "在驱动支持的字段和单位范围内查询或调整静态、自适应中断合并参数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hardware-timestamping",
+      "context": "查询设备的硬件时间戳能力及相应配置接口；能力查询本身不校准 PHC 或保证时间同步。"
+    }
+  ],
+  "summary": "查询或配置 Linux 网卡能力、队列与通知参数的工具。",
+  "description": "ethtool 是 Linux 网卡查询与配置工具，可读取设备信息、链路能力、统计、队列、RSS、中断合并和时间戳支持等内容。它调用内核和驱动接口，命令存在并不表示任意网卡都实现该选项。\n\n当前接口包括 Generic Netlink 消息与部分旧 ioctl 路径，查询、设置和动作具有不同权限与语义。修改配置一般需要相应网络管理权限，部分操作可能改变链路、队列或统计状态，不能把一组参数视为无需核验的通用低延迟方案。\n\n调参应先记录硬件与驱动能力，再结合丢包、队列统计、CPU 使用和明确定义的延迟样本比较。RSS 队列和中断合并改变处理位置与通知节奏，查询时间戳能力则不等于已经同步设备时钟，三类结果须分别解释。\n\n## 参考\n\n- [ethtool(8) 官方手册](https://man7.org/linux/man-pages/man8/ethtool.8.html)\n- [Linux ethtool Generic Netlink 接口](https://www.kernel.org/doc/html/latest/networking/ethtool-netlink.html)\n- [Intel ice 驱动性能优化与中断合并](https://docs.kernel.org/networking/device_drivers/ethernet/intel/ice.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.kernel.org/pub/software/network/ethtool/"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "headless-browser",
+  "name": "Headless Browser",
+  "aliases": [
+    "无头浏览器",
+    "Headless Mode",
+    "浏览器无头模式"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-screenshot",
+      "context": "无人值守流程需要查看页面呈现时，通过截图接口取得可检查的像素结果。"
+    }
+  ],
+  "summary": "在不显示可见窗口的模式下运行浏览器。",
+  "description": "无头浏览器指没有可见交互窗口的浏览器运行模式，仍可加载文档、执行脚本、进行布局与渲染，适用于自动化和无人值守环境。它不是另一个网络传输协议，也不是省略网页执行过程的 HTTP 下载器；具体浏览器可同时提供无头和有窗口模式。\n\nChrome 自 112 起统一了新无头模式与普通浏览器代码路径，旧实现则在后续版本中以 chrome-headless-shell 独立提供。Puppeteer 可以选择普通无头模式、有窗口模式或旧 shell，历史说明中的行为差别需要对应具体实现，不能把“无头”一词当成稳定不变的产品版本。\n\n无头执行仍受到字体、视口、权限、设备和图形环境影响，并不天然等同于用户桌面的呈现。它也不提供额外的安全隔离或业务成功保证。需要视觉验证时仍可捕获截图，并将运行模式与基线配置一并记录，避免把环境差异误判为页面回归。\n\n## 参考\n\n- [Chrome：Headless mode](https://developer.chrome.com/docs/automation-and-testing/headless)\n- [Puppeteer：Headless modes](https://pptr.dev/guides/headless-modes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

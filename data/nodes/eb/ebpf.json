@@ -14,7 +14,8 @@
   "domains": [
     "systems-programming",
     "networking",
-    "security"
+    "security",
+    "low-latency-systems"
   ],
   "abstraction_level": "kernel_os",
   "relations": [
@@ -31,11 +32,12 @@
       "target_id": "bpf"
     }
   ],
-  "summary": "Linux 内核中的安全沙箱虚拟机，可在内核态动态加载程序。",
+  "summary": "由验证器、程序类型与受限接口约束的可编程执行机制。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
   "popular": 72,
-  "official_site": "https://ebpf.io"
+  "official_site": "https://ebpf.io",
+  "description": "eBPF 提供可加载程序的指令与执行模型，Linux 将不同程序类型挂到网络、跟踪等具体入口，并可采用解释或 JIT 执行。程序通过规定上下文、map 和允许的 helper 等接口工作，不是可以任意调用内核函数的通用插件。\n\n验证器跟踪寄存器状态、指针来源与访问边界，并检查对应程序类型的约束。验证通过仍依赖内核与验证器正确性以及加载权限，不能把它描述为无条件安全沙箱；可用能力也不能从一种挂载点推及全部 eBPF 程序。\n\nXDP 是 eBPF 可服务的网络执行路径之一，套接字相关程序、跟踪程序和其他挂载点具有不同对象与限制。eBPF 本身不等于内核旁路、零拷贝或某个协议栈；性能与隔离应依据实际程序、接口和平台能力说明。\n\n## 参考\n\n- [Linux BPF verifier 的状态和访问验证](https://docs.kernel.org/bpf/verifier.html)\n- [Linux BPF Design Q&A：程序上下文与受限能力](https://docs.kernel.org/bpf/bpf_design_QA.html)"
 }

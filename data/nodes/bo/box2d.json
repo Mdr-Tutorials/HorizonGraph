@@ -4,7 +4,8 @@
   "aliases": [],
   "type": "library",
   "ecosystems": [
-    "graphics_gaming"
+    "graphics_gaming",
+    "game-runtime-ecosystem"
   ],
   "domains": [
     "game-development"
@@ -14,12 +15,26 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "rigid-body-dynamics"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "collision-detection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fixed-timestep",
+      "context": "在由应用调用 b2World_Step 推进二维物理世界时按官方建议采用固定时间步；渲染可独立于模拟步长更新。"
     }
   ],
-  "summary": "经典 2D 刚体物理引擎，Angry Birds 的底座。",
+  "summary": "通过碰撞、接触和关节约束推进二维刚体运动的物理库。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 3,
-  "official_site": "https://box2d.org"
+  "official_site": "https://box2d.org",
+  "description": "Box2D 是面向游戏的二维刚体模拟库。World 管理刚体、形状、接触与关节；形状提供碰撞几何，接触和关节约束物体之间的运动。应用设置物体状态和作用力，再通过 b2World_Step 推进模拟，随后读取位置或移动事件以更新游戏对象。\n\n官方建议使用固定时间步推进世界，子步可以提高关节等约束的求解精度。模拟步长与渲染频率是不同设置；应用需要协调积累时间、模拟推进和画面更新，而不是每次绘制都使用随意变化的步长。步长、单位尺度、速度和约束配置影响模拟的稳定性及成本。\n\nBox2D 负责物理，绘制由应用完成，示例中的可视化不属于库本体。二维刚体与碰撞能力不能直接推广成通用三维或软体模拟，也不保证任意形状和高速运动配置都得到期望行为。API 和事件读取方式应按所用版本核对。\n\n## 参考\n\n- [Box2D：Overview](https://box2d.org/documentation/)\n- [Box2D：Simulation](https://box2d.org/documentation/md_simulation.html)\n- [Box2D：FAQ](https://box2d.org/documentation/md_faq.html)"
 }

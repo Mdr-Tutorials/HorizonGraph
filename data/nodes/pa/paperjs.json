@@ -1,0 +1,55 @@
+{
+  "id": "paperjs",
+  "name": "Paper.js",
+  "aliases": [
+    "PaperJS"
+  ],
+  "type": "library",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-2d",
+      "context": "把项目中的矢量对象与栅格对象绘制到 HTML Canvas 显示。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bezier-curve",
+      "context": "通过 Segment 点与控制柄保存并编辑三次 Bézier 路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "drawing-path",
+      "context": "以 Path 和 CompoundPath 组织轮廓并执行路径几何操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "svg",
+      "context": "将 SVG 转换为项目对象或把可表达的项目图形导出为 SVG。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scene-graph",
+      "context": "通过 Project、Layer 和 Group 的对象层级管理图形及其变换。"
+    }
+  ],
+  "summary": "以 Bézier 路径与几何操作为核心的 Canvas 矢量库。",
+  "description": "Paper.js 在 HTML Canvas 上维护自己的 Project、Layer、Group、Path 和 Raster 对象。Path 由 Segment 和曲线组成，Segment 保存点与前后控制柄；库内部用三次 Bézier 表示曲线，二次曲线接口可转换为三次形式。\n\n它提供路径并、交、差等布尔操作及曲线查询，适合程序化绘图和矢量编辑。项目对象不是浏览器 DOM，路径的几何运算也不同于把两张已经光栅化的图片做透明度合成；几何复杂度和容差会影响编辑结果。\n\nProject 可进行 JSON 和 SVG 的导入导出，SVG 内容被转换为库对象；输出可选择 DOM 或字符串。Canvas 显示与 SVG 交换是不同环节，不能据此给 Paper.js 添加 WebGL/WebGPU 渲染能力或承诺任意文档无损转换。\n\n## 参考\n\n- [Paper.js：项目介绍](https://paperjs.org/about/)\n- [Paper.js：矢量与几何功能](https://paperjs.org/features/)\n- [Paper.js：Path 几何与布尔操作](https://paperjs.org/reference/path/)\n- [Paper.js：Project 导入导出](https://paperjs.org/reference/project/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://paperjs.org/"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "firebase-cli",
+  "name": "Firebase CLI",
+  "aliases": [
+    "Firebase Command Line Tools",
+    "firebase-tools"
+  ],
+  "type": "tool",
+  "domains": [
+    "devops",
+    "web-services"
+  ],
+  "ecosystems": [
+    "node-js-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "nodejs",
+      "context": "限定官方 firebase-tools 的 npm 安装和执行路径：该发行方式需要受支持的 Node.js 才能运行；独立二进制发行另有安装方式，被部署应用的运行时不同。"
+    }
+  ],
+  "summary": "管理 Firebase 项目、部署与本地仿真的官方命令行工具。",
+  "description": "Firebase CLI 是 Firebase 的官方命令行工具，主要发行包为 firebase-tools。它提供项目初始化、配置、服务部署和本地仿真等开发运维操作，并随版本增加针对具体 Firebase 服务的命令。CLI 工具、Firebase 客户端 SDK 和云端服务属于不同层次；安装命令行工具并不会自动创建或授予全部后端资源。\n\n命令以身份、项目和本地配置为上下文，开发者可以针对选择的服务初始化或部署，配合本地仿真验证应用。不同操作的环境、认证和计费前提各不相同，不能把 CLI 支持某个服务误写成所有项目都必须采用该服务。npm 安装路径要求受支持的 Node.js，官方另提供独立二进制发行；CLI 的安装运行环境与被部署应用采用哪种语言也需要分清。\n\n官方发行物同时提供 mcp 子命令，将 Firebase 能力供给 AI 工具；MCP 服务器是该工具中的具体组件，不覆盖其他命令的全部用途。Studio 项目迁移还使用 studio:export 等命令，说明退出的云工作区与持续提供的 Firebase 工具链具有不同生命周期。命令行为和最低环境要求应以对应 CLI 版本文档为准。\n\n## 参考\n\n- [Firebase：CLI 官方命令参考](https://firebase.google.com/docs/cli)\n- [Firebase：firebase-tools 官方发行与组件](https://github.com/firebase/firebase-tools)\n- [Firebase：CLI 发布记录与 Studio 导出命令](https://firebase.google.com/support/release-notes/cli)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://firebase.google.com/docs/cli"
+}

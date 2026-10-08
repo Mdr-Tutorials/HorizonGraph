@@ -1,0 +1,33 @@
+{
+  "id": "agent-rule",
+  "name": "Agent Rule",
+  "aliases": [
+    "代理规则",
+    "智能体规则",
+    "代理项目指令"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "markdown",
+      "context": "AGENTS.md 及 Antigravity 的 Markdown 规则路径使用文本说明表达项目指令，具体加载语义由宿主定义。"
+    }
+  ],
+  "summary": "按作用域和触发条件向代理注入的持久任务说明。",
+  "description": "代理规则是宿主在工作过程中持续或按条件提供的任务说明，可以约束项目风格、检查步骤、代码习惯及任务处理方式。规则参与模型的上下文，不等于传统规则引擎中的确定性条件计算，也不应与操作系统访问控制或工具权限混为一体。\n\n规则可以来自项目目录和用户设置，宿主按层级、作用域及触发策略加载。Antigravity 将 AGENTS.md、GEMINI.md 用作目录范围的持续说明，规则文件还可使用 always_on、model_decision、glob 和 manual 等触发方式；更具体路径的规则优先关系属于该宿主的约定。\n\n通用规则机制与具体文件格式应分开理解。不同应用对名称、frontmatter、路径继承及手动启用的处理可能不同，不能仅复制文件就假定行为相同。规则文本影响代理判断，但无法自行授予执行权限；由外部内容提供的规则还需要宿主保持来源与信任边界。\n\n## 参考\n\n- [Antigravity：Rules](https://www.antigravity.google/docs/rules)\n- [AGENTS.md：项目指令文件约定](https://agents.md/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

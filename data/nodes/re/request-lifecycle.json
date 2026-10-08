@@ -1,0 +1,43 @@
+{
+  "id": "request-lifecycle",
+  "name": "Request Lifecycle",
+  "aliases": [
+    "HTTP 请求生命周期",
+    "请求存续"
+  ],
+  "type": "concept",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "edge-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "web-streams-api",
+      "context": "在基于 Web Streams 的 HTTP 流式正文路径中，通过读流、取消和完成信号控制响应生产与清理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cloudflare-workers-execution-context",
+      "context": "Workers 的请求处理通过 ctx.waitUntil 显式登记响应后的有限延续工作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backpressure",
+      "context": "在持续传输响应正文时依据下游消费进度控制上游读取与缓冲，避免生产速率无限超过发送速率。"
+    }
+  ],
+  "summary": "描述请求接收、响应传输、取消与清理的执行过程。",
+  "description": "HTTP 请求生命周期描述服务器接收请求、形成调用上下文、执行处理程序、产生响应以及完成正文传输和清理的过程。处理程序返回 Response 并不必然代表整个请求已经结束：流式响应的正文仍可被读取和发送，连接关闭、生产者完成或传输错误也会改变后续执行。\n\n以 Deno 的 HTTP 服务为例，响应正文可由 ReadableStream 按需产生；客户端断开会触发相应流的取消，生产者应停止定时器或其他持续产出工作。背压、取消和错误处理决定是否还应继续读取上游或分配缓冲，不能仅凭处理函数已返回就忽略这些资源。\n\n在 Cloudflare Workers 中，请求调用的 ctx 可以通过 waitUntil 登记允许在响应后继续执行的任务，但延续时间受平台规则限制。正在传输的响应流、登记的后台 Promise 和外部持久任务队列各有不同的存续条件；单次请求上下文也不能当作隔离实例全局状态或永久作业管理器。\n\n## 参考\n\n- [Deno：HTTP 服务及响应流取消](https://docs.deno.com/runtime/fundamentals/http_server/)\n- [Cloudflare：Fetch handler](https://developers.cloudflare.com/workers/runtime-apis/handlers/fetch/)\n- [Cloudflare：Context](https://developers.cloudflare.com/workers/runtime-apis/context/)\n- [Cloudflare：执行限制](https://developers.cloudflare.com/workers/platform/limits/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

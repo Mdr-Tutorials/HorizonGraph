@@ -1,0 +1,48 @@
+{
+  "id": "agrona",
+  "name": "Agrona",
+  "aliases": [
+    "Agrona Java utilities"
+  ],
+  "type": "library",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "jvm"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ring-buffer",
+      "context": "提供面向并发与 IPC 的环形缓冲区实现。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "spsc-queue",
+      "context": "提供 OneToOneConcurrentArrayQueue 等单生产者单消费者结构。"
+    }
+  ],
+  "summary": "为 Java 高性能应用提供缓冲区、并发与基础数据结构。",
+  "description": "Agrona 是 Java 高性能基础库，提供缓冲区、原始类型集合、时钟、计数器、队列、定时器以及 agent 服务结构。它的定位是可复用系统组件，而不是交易策略、交易引擎或网络传输协议。官方项目说明 Aeron 使用其中多项工具，SBE Java 编解码器也可以使用其 buffer 接口。\n\n缓冲区接口覆盖堆内和堆外访问，并用内存顺序约束处理原子与并发操作；原始类型集合减少装箱。库同时提供不同生产者模型的队列以及适合 IPC 的环形与广播缓冲区。选择数据结构时必须匹配生产者、消费者数量和生命周期，不能把某个单生产者实现推广到任意并发用法。\n\n它可用于低延迟事件处理、指标记录与编码路径，具体收益要通过实际负载测量。使用 off-heap 数据不意味着应用完全没有垃圾回收，选择非阻塞结构也不会消除全部调度或缓存抖动。Agrona 可以独立使用，不需要把 Aeron、金融行情或某一种消息 schema 当作每个应用的必要依赖。\n\n## 参考\n\n- [Agrona 官方项目与功能范围](https://github.com/aeron-io/agrona)\n- [Agrona：OneToOneRingBuffer 实现](https://github.com/aeron-io/agrona/blob/master/agrona/src/main/java/org/agrona/concurrent/ringbuffer/OneToOneRingBuffer.java)\n- [Agrona：SPSC 队列实现](https://github.com/aeron-io/agrona/blob/master/agrona/src/main/java/org/agrona/concurrent/OneToOneConcurrentArrayQueue.java)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/aeron-io/agrona"
+}

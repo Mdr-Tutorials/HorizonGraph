@@ -1,0 +1,55 @@
+{
+  "id": "runc",
+  "name": "runc",
+  "aliases": [
+    "runC",
+    "OCI Linux 运行时 runc"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci-runtime-spec"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "container-runtime"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "linux"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "namespace",
+      "context": "按 OCI Linux 配置创建或加入指定 namespace，为容器进程设置隔离视图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cgroup",
+      "context": "在配置启用相应资源管理时，以 Linux cgroups 应用容器进程组的资源限制；rootless 情况受可用委派与内核能力限制。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "open-container-initiative",
+      "context": "runc 作为 OCI 关联项目，由项目维护者在 OCI 开放治理框架中维护。"
+    }
+  ],
+  "summary": "按 OCI 运行时规范执行 Linux 容器的底层工具",
+  "description": "runc 是在 Linux 上按 OCI 规范创建和运行容器的底层命令行工具。它消费 bundle 中的 rootfs 与 config.json，执行容器的创建、启动及状态管理；准备镜像、解析镜像名和安排集群工作负载通常由调用它的更高层工具负责。\n\nrunc 的执行实现处理 Linux 进程隔离及资源配置，配置可选择 namespaces、cgroups、挂载、权限和其他安全属性。containerd、CRI-O 等组件可通过各自执行路径调用它；这些上层组件还承担守护服务、监控或接口适配，不能与单个 runc 二进制的职责合并。\n\n官方项目明确只支持 Linux。rootless 执行和可选 seccomp、checkpoint/restore 等能力仍取决于内核、权限、配置或编译特性；因此不能把 runc 直接当作 Windows 本机容器执行器，也不能把 OCI 兼容理解为消除了宿主内核风险或允许任意资源限制配置。\n\n## 参考\n\n- [runc 官方 README](https://github.com/opencontainers/runc/blob/main/README.md)\n- [OCI Runtime Configuration](https://github.com/opencontainers/runtime-spec/blob/main/config.md)\n- [OCI Runtime Specification](https://github.com/opencontainers/runtime-spec/blob/main/spec.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm"
+}

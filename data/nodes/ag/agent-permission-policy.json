@@ -1,0 +1,38 @@
+{
+  "id": "agent-permission-policy",
+  "name": "Agent Permission Policy",
+  "aliases": [
+    "智能体权限策略"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tool-allowlisting",
+      "context": "按已核验的工具来源和名称限制可调度操作集合，并继续检查允许工具的参数范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authorization",
+      "context": "在派发请求时判断当前主体是否可对指定文件、网络目标或业务对象执行相应动作。"
+    }
+  ],
+  "summary": "按动作与资源范围规定智能体可执行、拒绝或需审核的操作。",
+  "description": "智能体权限策略描述执行器如何处理命令、文件、网页和外部工具访问。规则应标明动作类别、资源范围、作用域及冲突处理方式，执行器负责匹配和强制实施。自然语言任务目标与访问策略可以同时存在，用户让智能体完成工作并不等于所有可用凭据都应暴露给模型。\n\nAntigravity 2.0 独立桌面当前 macOS/Linux 的权限规则按 Deny、Ask、Allow 的优先顺序匹配，读文件、写文件、读取 URL 与执行网页操作具有不同授权含义。Windows 仍使用文档中单独列出的设置。SDK 的策略对象、组合顺序与人工处理器属于其编程接口，不能把桌面规则优先级直接套用到 SDK 自定义策略或独立 IDE 产品。\n\n权限策略要在实际调用位置重新验证对象和上下文，尤其是工具参数改写、资源重定向及委托执行之后。工具白名单可以减少暴露的操作集合，细粒度授权仍需限制具体租户、对象与动作。策略中出现 allow 并不能绕过下游服务自己的访问控制，审批也不应让工具输出获得修改规则的权限。\n\n## 参考\n\n- [Google Antigravity：权限规则](https://www.antigravity.google/docs/permissions)\n- [Google Antigravity SDK：Policies](https://www.antigravity.google/docs/sdk/policies/)\n- [OWASP：Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

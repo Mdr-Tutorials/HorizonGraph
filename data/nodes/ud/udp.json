@@ -24,12 +24,13 @@
       "target_id": "ip"
     }
   ],
-  "summary": "无连接的用户数据报传输，牺牲可靠换低延迟。",
+  "summary": "保留数据报边界，不保证可靠交付、顺序或时延的传输协议。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "1980-08-28",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
   "popular": 88,
-  "official_site": "https://www.rfc-editor.org/rfc/rfc768"
+  "official_site": "https://www.rfc-editor.org/rfc/rfc768",
+  "description": "UDP 提供保留数据报边界的传输接口，头部包含端口、长度和校验和等信息。协议本身不提供可靠交付、重传或顺序保证，应用必须允许数据报丢失、重复或乱序；它也不承诺更小或更稳定的时延。\n\nUDP 应用仍需处理拥塞、报文大小和路径 MTU。过大的数据报可能发生 IP 分片，丢失一个分片会影响整个报文的重组。RFC 8085 讨论在没有协议内置拥塞控制时应用的责任，不能把没有 TCP 会话机制理解为可以无限发送或忽略网络容量。\n\n金融行情可能采用 UDP 多播，把传输与业务恢复拆开：接收者用行情序号识别缺口，再按馈送规范重传或取得快照。恢复、重置和丢包统计属于上层契约，不能因使用 UDP 自动推导某个馈送的可靠性、排序规则或最优延迟。\n\n## 参考\n\n- [RFC 768：UDP](https://www.rfc-editor.org/rfc/rfc768.html)\n- [RFC 8085：UDP 应用指南](https://www.rfc-editor.org/rfc/rfc8085.html)"
 }

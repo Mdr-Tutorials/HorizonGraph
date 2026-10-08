@@ -11,7 +11,9 @@
     "fintech-ecosystem"
   ],
   "domains": [
-    "quantitative-finance"
+    "quantitative-finance",
+    "industry-landscape",
+    "electronic-trading"
   ],
   "relations": [
     {
@@ -19,10 +21,11 @@
       "target_id": "organization"
     }
   ],
-  "summary": "以机器学习驱动的量化投资公司。",
+  "summary": "将数据科学与系统化方法应用于多类金融业务的组织。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.twosigma.com"
+  "official_site": "https://www.twosigma.com",
+  "description": "Two Sigma 是将数据科学与技术应用于金融业务的组织，公开业务包括 Investment Management、Securities 及其他投资方向。组织品牌涵盖不同业务，不能将集团或投资管理业务的名称直接作为 Two Sigma Securities 做市主体的别名。\n\nInvestment Management 以系统化研究管理机构等客户的资本，通过数据、研究和技术构建投资过程。数据科学、机器学习和迭代实验描述研究方法，并不自动确定所有策略均为日内或高频交易；持有周期与交易执行仍取决于具体业务和策略。\n\nTwo Sigma Securities 的官方业务另行说明做市、日内 alpha 及客户交易服务，并在相关路径采用超低延迟执行。图谱以正文明确两者职责边界，不把投资管理、经纪交易、做市和公开科学方法混为一条 HFT 产品线，也不推导未公开的完整技术栈。\n\n## 参考\n\n- [Two Sigma 各业务主体范围](https://www.twosigma.com/businesses/)\n- [Two Sigma 投资管理](https://www.twosigma.com/businesses/investment-management/)\n- [Two Sigma Securities 做市与日内业务](https://www.twosigma.com/businesses/securities/)"
 }

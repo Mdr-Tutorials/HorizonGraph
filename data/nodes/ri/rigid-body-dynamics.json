@@ -1,0 +1,36 @@
+{
+  "id": "rigid-body-dynamics",
+  "name": "Rigid Body Dynamics",
+  "aliases": [
+    "刚体动力学"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ordinary-differential-equation",
+      "context": "在牛顿—欧拉运动模型中，用关于时间的微分方程描述刚体的平动与转动状态演化；接触冲量和约束求解需另外处理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "collision-detection",
+      "context": "在包含物体接触的刚体仿真中，先获取接触几何信息供约束和响应求解；无接触运动可不使用此步骤。"
+    }
+  ],
+  "summary": "以不变形物体的平动、转动及约束描述运动的力学模型。",
+  "description": "刚体模型把物体视为形状不随受力改变的对象，以质量、惯量、位置、方向及速度描述状态。牛顿—欧拉方程用关于时间的微分关系表达力、力矩与平动、转动变化。游戏模拟在此基础上推进状态，并处理接触冲量或关节等约束。\n\n刚体假设不覆盖软体或材料变形。时间步进与约束求解使计算机仿真具有近似性；连续运动模型也不等于一种固定的离散求解算法。直接设置位置与施加力是不同控制方式，不能把碰撞形状本身当作完整动力学。\n\n## 参考\n\n- [Box2D：刚体仿真和时间步](https://box2d.org/documentation/md_simulation.html)\n- [Box2D：几何查询与碰撞检测](https://box2d.org/documentation/md_collision.html)\n- [Box2D：速度和位置积分的求解器源码](https://github.com/erincatto/box2d/blob/main/src/solver.c)\n- [MIT：牛顿—欧拉刚体运动方程](https://ocw.mit.edu/courses/2-12-introduction-to-robotics-fall-2005/c7caaa2376b8ec01e270328a3b80b029_chapter7.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

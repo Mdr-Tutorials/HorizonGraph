@@ -10,7 +10,8 @@
   ],
   "domains": [
     "graphics",
-    "human-computer-interaction"
+    "human-computer-interaction",
+    "digital-content-creation"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -21,13 +22,19 @@
     {
       "relation_type": "developed_by",
       "target_id": "adobe"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "在图形资产制作流程中编辑将作为纹理源的图像。"
     }
   ],
   "summary": "Adobe 的位图图像编辑软件。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
   "official_site": "https://www.adobe.com",
-  "first_released": "1990-02-19"
+  "first_released": "1990-02-19",
+  "description": "Photoshop 是 Adobe 的图像编辑产品，使用图层、蒙版、选区和调整等方式组织位图编辑与图像合成。图层分离不同内容，蒙版控制可见区域，可编辑工程文件保存制作结构，导出图像用于后续发布或资源制作。\n\n在交互内容管线中，Photoshop 可以制作和修整二维图像、界面素材或模型所用贴图。交付时应按目标要求核对分辨率、颜色空间和透明度；图像编辑项目不等同于运行时精灵、纹理对象或三维材质定义。\n\n## 参考\n\n- [Adobe Photoshop 官方产品页](https://www.adobe.com/products/photoshop.html)\n- [Photoshop 图层机制](https://helpx.adobe.com/uk/photoshop/desktop/create-manage-layers/get-started-layers/layers-overview.html)\n- [Photoshop 图层蒙版](https://helpx.adobe.com/photoshop/desktop/create-masks/layer-masks/add-layer-masks.html)"
 }

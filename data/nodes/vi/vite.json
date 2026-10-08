@@ -5,11 +5,13 @@
   "type": "tool",
   "ecosystems": [
     "web_frontend",
-    "modern-web-frameworks-ecosystem"
+    "modern-web-frameworks-ecosystem",
+    "web-service-ecosystem"
   ],
   "domains": [
     "web-development",
-    "devops"
+    "devops",
+    "web-services"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -24,12 +26,23 @@
     {
       "relation_type": "competes_with",
       "target_id": "webpack"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssr",
+      "context": "选用 SSR 模式时，为服务端和客户端入口提供模块处理、开发与构建集成，HTML 由应用渲染器生成。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "jsx",
+      "context": "在 JSX 项目中把 JSX 源码转换为所配置运行时使用的 JavaScript。"
     }
   ],
-  "summary": "基于原生 ESM 的前端构建工具，开发服务器秒级冷启动。",
+  "summary": "提供 Web 开发服务器、模块处理与生产构建的工具。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://vite.dev"
+  "official_site": "https://vite.dev",
+  "description": "Vite 是面向 Web 开发的构建工具，提供开发服务器、模块转换、热更新和生产构建。开发环境围绕模块加载与按需转换组织反馈，生产环境则生成适合部署的资源；JavaScript、TypeScript、JSX、CSS 与静态资源等能力可以结合插件和框架集成使用。具体构建后端与 API 随版本演进，应以所用版本的文档为准，不能把早期某个后端永久视为 Vite 的唯一实现。\n\nVite 的 SSR 支持主要面向服务端与客户端入口的协同开发和构建。服务端入口调用所选框架的 SSR API 生成 HTML，客户端入口按应用路线进行挂载或水合；Vite 负责相关模块环境、资源构建和集成，而非替代 Hono、React 或 Preact 的 HTML 渲染器。低层 SSR API 更适合框架和集成作者，应用通常采用相应框架提供的集成。\n\n部署时可分别生成客户端资源与服务端产物，并按需要使用 SSR manifest 关联资源；开发服务器的运行方式不等于生产服务的部署方式。SSR 默认目标与浏览器代码存在运行环境差异，面向其他运行时需核对相应目标、依赖与适配条件。Environment API 还在演进，项目应随所用版本检查集成边界，不把一次构建成功理解为服务端数据、缓存或交互策略已经完成。\n\n## 参考\n\n- [Vite：Features](https://vite.dev/guide/features)\n- [Vite：Server-Side Rendering](https://vite.dev/guide/ssr)\n- [Vite：Environment API](https://vite.dev/guide/api-environment)\n- [Vite：Build Options](https://vite.dev/config/build-options)"
 }

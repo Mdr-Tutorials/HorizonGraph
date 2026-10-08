@@ -1,0 +1,38 @@
+{
+  "id": "depth-testing",
+  "name": "Depth Testing",
+  "aliases": [
+    "深度测试",
+    "Z 测试"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "render-target",
+      "context": "采用深度测试的绘制通道需要兼容深度附件来保存和比较样本深度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "camera-projection",
+      "context": "根据实际投影的深度映射设置比较、清除值及适当近远裁剪范围。"
+    }
+  ],
+  "summary": "比较片元深度与深度附件以控制遮挡。",
+  "description": "深度测试把候选片元或样本的深度与目标中保存的深度比较，根据配置保留或拒绝其贡献。常见不透明绘制同时启用比较和深度写入，以保留前方表面；比较函数、清除值及投影深度约定需要配套设置。\n\n深度比较与深度写入是两个设置：对象可接受测试但不更新深度，例如某些透明渲染路径。深度有限精度会带来相近表面的争夺，近远平面、格式及所用深度映射影响精度。不同 API 或 reversed-Z 路径的比较方向不能照搬。\n\n它用于可见表面判定、阴影比较等机制，但普通深度测试并不自动解决透明物体的正确合成，也不同于 CPU 侧视锥剔除。硬件可在满足条件时提前执行有关测试，着色器副作用或深度输出会影响这种优化，逻辑规则不应理解为固定物理执行时间。\n\n## 参考\n\n- [WebGPU GPUDepthStencilState](https://www.w3.org/TR/webgpu/#dictdef-gpudepthstencilstate)\n- [Vulkan Fragment Operations](https://docs.vulkan.org/spec/latest/chapters/fragops.html)\n- [Three.js Material](https://threejs.org/docs/pages/Material.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

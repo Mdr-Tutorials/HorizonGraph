@@ -1,0 +1,34 @@
+{
+  "id": "hardware-timestamping",
+  "name": "Hardware Timestamping",
+  "aliases": [
+    "硬件时间戳",
+    "硬件打点"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "network-interface-card",
+      "context": "网络硬件打点场景由支持该能力的网卡在其定义的收发位置采集时钟读数。"
+    }
+  ],
+  "summary": "由设备在指定处理位置采集本地时钟读数的机制。",
+  "description": "硬件时间戳由网卡等设备在特定收发阶段采集时钟读数，减少由驱动调度或应用读取造成的部分误差。具体位置可能在设备的不同处理层，须以实现说明为准；硬件读数与内核软件时间戳、应用调用时间是不同测量对象。\n\nLinux 将产生时间戳的配置与向应用报告结果的选项区分，发送时间戳通常经错误队列回报并需要关联原消息。发送完成通知也不是同义打点：TX_COMPLETION 可表示设备报告完成的时间，而非帧实际上线时间。\n\n设备能力、驱动过滤条件、PHC 时钟域和外部同步状态都会影响可用结果。纳秒字段只说明表示或分辨率，不能单独证明纳秒准确度；不同主机的硬件读数仍需建立时钟关系和误差预算才能用于跨主机测量。\n\n## 参考\n\n- [Linux 网络时间戳接口与测量位置](https://docs.kernel.org/networking/timestamping.html)\n- [Linux PTP Hardware Clock 驱动接口](https://docs.kernel.org/driver-api/ptp.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

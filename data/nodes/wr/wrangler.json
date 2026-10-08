@@ -1,0 +1,48 @@
+{
+  "id": "wrangler",
+  "name": "Wrangler",
+  "aliases": [
+    "Cloudflare Wrangler"
+  ],
+  "type": "tool",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "cloudflare"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "workerd",
+      "context": "本地 Workers 开发路径通过 Miniflare 使用 workerd 执行应用代码。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cloudflare-worker-bindings",
+      "context": "在 Workers 项目配置中声明各环境的资源绑定，并选择支持的本地模拟或远程连接模式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runtime-compatibility",
+      "context": "通过项目兼容日期和兼容标志配置要采用的 Workers API 行为。"
+    }
+  ],
+  "summary": "开发、配置与部署 Cloudflare Workers 的命令行工具。",
+  "description": "Wrangler 是 Cloudflare Workers 的命令行开发工具，用于创建项目、运行开发服务器、配置环境与资源绑定，以及把代码发布到 Workers。部署和管理远程资源需要相应的账户身份及权限；工具操作与运行时处理每一次请求是两个不同的阶段。\n\n本地开发使用 workerd，并由 Miniflare 提供相应的模拟环境。支持本地模拟的绑定默认使用本地资源，也可以为支持该模式的绑定显式连接远程资源；此时执行代码仍在本地，资源操作却可能作用于真实云端数据。某些绑定没有完整的本地模拟路径，需要按其开发模式支持表配置。\n\nWrangler 配置中的兼容日期、兼容标志和绑定会影响应用的运行行为与可访问能力，必须与部署环境一致地核对。本地开发适合验证代码和配置，但不能由一次本地运行推断生产网络延迟、资源额度或云服务行为全部等同。\n\n## 参考\n\n- [Cloudflare：Wrangler](https://developers.cloudflare.com/workers/wrangler/)\n- [Cloudflare：Workers 本地开发](https://developers.cloudflare.com/workers/local-development/)\n- [Cloudflare：兼容日期](https://developers.cloudflare.com/workers/configuration/compatibility-dates/)\n- [Cloudflare：Bindings](https://developers.cloudflare.com/workers/runtime-apis/bindings/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://developers.cloudflare.com/workers/wrangler/"
+}

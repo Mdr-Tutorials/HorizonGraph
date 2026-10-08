@@ -1,0 +1,41 @@
+{
+  "id": "netfilter",
+  "name": "Netfilter",
+  "aliases": [
+    "Linux 数据包处理框架",
+    "Netfilter Hooks"
+  ],
+  "type": "framework",
+  "domains": [
+    "systems-programming",
+    "networking",
+    "security",
+    "containerization"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "nat"
+    }
+  ],
+  "summary": "在 Linux 网络栈挂钩位置组织过滤和地址转换的框架。",
+  "description": "Netfilter 是 Linux 内核网络栈中的数据包处理框架，允许模块在不同处理位置注册回调。相关子系统提供过滤、连接跟踪、地址转换、队列和日志等能力，数据包按照实际经过的路径进入相应挂钩。它不是单独一份用户防火墙规则，也不是 iptables 命令的别名。\n\niptables 与 nftables 相关工具和内核处理机制在这套基础设施上组织规则。规则如何匹配与采取何种动作，由使用的规则体系、连接状态和路径决定；通过内核挂钩实现并不表示每个包一定经过全部功能。用户态工具主要负责配置，实际持续处理发生在内核路径。\n\n容器桥接的转发、masquerade 与访问控制可以使用该框架，但网络后端与版本决定实际规则组织。Windows 宿主的防火墙和 WSLc 的用户态网络路径属于其他层，不能把 Linux Netfilter 描述为跨宿主所有流量的唯一处理者，或据其存在推断统一安全边界。\n\n## 参考\n\n- [Netfilter 项目：内核框架与工具](https://netfilter.org/)\n- [Docker：iptables 后端](https://docs.docker.com/engine/network/firewall-iptables/)\n- [Docker：nftables 后端](https://docs.docker.com/engine/network/firewall-nftables/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "official_site": "https://netfilter.org/"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "gsap",
+  "name": "GSAP",
+  "aliases": [
+    "GreenSock Animation Platform",
+    "GreenSock"
+  ],
+  "type": "library",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "tweening"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "animation-timeline"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "easing-function",
+      "context": "为补间指定 ease，以控制属性变化的时间节奏。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "motion-path-animation",
+      "context": "配置 MotionPathPlugin 时，根据 SVG 路径或坐标序列更新目标的位置和朝向。"
+    }
+  ],
+  "summary": "用补间和时间线编排对象与网页属性动画的库。",
+  "description": "GSAP 是 JavaScript 动画库，Tween 在给定持续时间内更新目标对象的属性，Timeline 把多个补间或嵌套时间线编排到同一时间轴。应用可以播放、暂停、跳转或改变进度，适合网页过渡和复杂动作序列。\n\n动画目标可以是 DOM 元素、SVG 对象或普通 JavaScript 对象，绘图结果仍由相应页面或渲染系统呈现。路径运动等能力通过具体插件提供；项目应按实际使用的插件与目标属性组织动画，避免同一属性同时被多个更新来源覆盖。\n\n## 参考\n\n- [GSAP：Tween](https://gsap.com/docs/v3/GSAP/Tween/)\n- [GSAP：Timeline](https://gsap.com/docs/v3/GSAP/Timeline/)\n- [GSAP：MotionPathPlugin](https://gsap.com/docs/v3/Plugins/MotionPathPlugin/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "abbreviation": "GSAP",
+  "official_site": "https://gsap.com/"
+}

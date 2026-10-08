@@ -1,0 +1,40 @@
+{
+  "id": "vector-tiles",
+  "name": "Vector Tiles",
+  "aliases": [
+    "矢量瓦片",
+    "Vector Map Tiles"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "map-tile-pyramid",
+      "context": "在分级地图服务中将矢量要素按瓦片网格组织并按视口加载。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vector-geospatial-data",
+      "context": "瓦片内容以几何要素及其属性表达地理信息。"
+    }
+  ],
+  "summary": "将地图要素分块传输并在客户端按样式绘制。",
+  "description": "矢量瓦片把地图的点、线、面及属性组织为分块的数据内容，客户端读取后再决定颜色、线宽、标注和可见性。与预先绘制的栅格瓦片相比，它保留了可供交互查询和重新设定样式的几何与属性。实际数据通常会按层级做裁剪或简化，地图展示用瓦片与完整分析用要素数据需分别看待。\n\n瓦片的编码格式、网格定位、传输地址和样式规则是独立层次。Mapbox Vector Tile 是常用的二进制编码规范，但它本身不规定完整的服务接口或样式系统。客户端还要管理数据源层与显示图层的对应、跨瓦片要素身份和标签布局，避免把单块瓦片内的局部坐标直接当作经纬度。\n\n## 参考\n\n- [Mapbox Vector Tile Standards](https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/)\n- [MapLibre VectorTileSource](https://maplibre.org/maplibre-gl-js/docs/API/classes/VectorTileSource/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

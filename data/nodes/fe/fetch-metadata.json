@@ -1,0 +1,37 @@
+{
+  "id": "fetch-metadata",
+  "name": "Fetch Metadata Request Headers",
+  "aliases": [
+    "Fetch 元数据请求头",
+    "Fetch Metadata"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-services",
+    "web-development",
+    "security"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "用户代理在请求字段中传递站点关系和资源上下文，供服务器资源隔离规则读取。"
+    }
+  ],
+  "summary": "由用户代理提供请求来源关系、模式和目标上下文的字段。",
+  "description": "Fetch Metadata 规范定义 Sec-Fetch-Site、Sec-Fetch-Mode、Sec-Fetch-Dest 和 Sec-Fetch-User 等请求字段。它们描述请求与目标的站点关系、导航或访问模式、资源用途以及部分用户激活信息，服务器可据此制定资源隔离策略，拒绝不符合预期的跨站使用。\n\n这些元数据不证明用户身份，不覆盖所有客户端，缺失字段时也需要明确兼容政策。服务端可结合 Origin、允许来源和具体资源用途决策；非浏览器客户端不能被假设受同样的不可修改字段限制。Hono csrf 使用 Sec-Fetch-Site 与 Origin 检查，但其方法、内容类型和任一检查通过即放行的规则是具体中间件范围，而不是规范自动提供的全部防护。\n\n## 参考\n\n- [W3C：Fetch Metadata 请求字段规范](https://w3c.github.io/webappsec-fetch-metadata/)\n- [Hono：CSRF 来源检查与适用范围](https://hono.dev/docs/middleware/builtin/csrf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://w3c.github.io/webappsec-fetch-metadata/"
+}

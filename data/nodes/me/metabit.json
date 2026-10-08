@@ -13,18 +13,24 @@
   ],
   "domains": [
     "quantitative-finance",
-    "machine-learning"
+    "machine-learning",
+    "industry-landscape",
+    "electronic-trading"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "metabit-platform"
     }
   ],
-  "summary": "以 AI 为核心的量化投资机构，在云上构建投研平台。",
+  "summary": "在公开案例中构建云上机器学习投研平台的量化投资机构。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "official_site": "https://juicefs.com/zh-cn/quantitative-trading/metabit-with-juicefs"
+  "description": "Metabit Trading，中文名乾象投资，是量化投资机构。JuiceFS 原厂发布的用户案例以客户团队第一人称介绍其机器学习与云上研究基础设施；本节点据此记录该公开案例中的机构与工程场景，不把案例发布日期之前的规模或部署状态写成当前保证。\n\n案例说明团队重视 Research Infrastructure，将数据预处理、特征计算、训练与研究任务放入可扩展的云上工具链。它选择 POSIX 兼容的共享存储以满足数据访问、任务弹性和隔离需求；这说明了研究系统的工程设计，并不能据此推导生产订单热路径由同一云存储承载。\n\n组织与其内部投研平台分别建档。公开案例支持平台当时采用 JuiceFS，并将 Kubernetes 生态支持列为存储需求，后者不能独自证明实际调度平台。案例不能证明名为 MetaBit Platform 的商业 SaaS 对外销售，也不能将与其他 Metabit 品牌同名的加密资产网站当作该机构官网或产品。\n\n## 参考\n\n- [乾象投资在 JuiceFS 发布的投研平台案例](https://juicefs.com/zh-cn/quantitative-trading/metabit-with-juicefs)\n- [2024 年 Metabit 投研基础设施用户案例](https://juicefs.com/en/blog/user-stories/build-cloud-quantitative-platform-posix-compatible-storage)"
 }

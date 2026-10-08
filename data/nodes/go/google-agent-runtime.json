@@ -1,0 +1,40 @@
+{
+  "id": "google-agent-runtime",
+  "name": "Agent Runtime",
+  "aliases": [
+    "Vertex AI Agent Engine",
+    "Agent Engine",
+    "Google Agent Runtime"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "cloud-infrastructure"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "gemini-enterprise-agent-platform",
+      "context": "平台内提供智能体部署、运行和扩展的托管服务；承接旧 Agent Engine 身份。"
+    }
+  ],
+  "summary": "Agent Platform 的托管智能体部署、运行与扩展服务。",
+  "description": "Agent Runtime 是 Gemini Enterprise Agent Platform 的托管智能体运行服务，负责部署、运行和扩展智能体应用，并抽象部分底层基础设施。它承接旧 Vertex AI Agent Engine 的连续服务身份；官方明确说明 API 参考中仍保留 ReasoningEngine 资源名以兼容既有调用，不能由资源名反推这是另一套独立产品。\n\n服务支持按运行合同部署容器化应用，也为特定框架提供更高层的模板和集成。官方当前文档区分任意符合容器合同的应用、SDK 模板集成和 ADK 的完整集成层次。托管服务、应用使用的模型以及应用内部的工作流不同，接入某种模型并不必然要求把应用部署到此服务。\n\n部署涉及项目、身份、网络、容器、运行版本和生命周期管理，具体能力与可用范围需要结合对应服务说明。Agents CLI 可以提供部署与观测流程，ADK 也可以通过官方流程部署；这些都是受支持的接入路径，不能写成运行服务只接受一种框架。会话、Memory Bank、Sandbox 等平台能力的配置和状态也应分别核对。\n\n## 参考\n\n- [Google Cloud：Agent Runtime 与运行合同](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime)\n- [Google Cloud：Agent Engine 改名与服务映射](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/runtime"
+}

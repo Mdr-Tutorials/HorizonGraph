@@ -12,17 +12,29 @@
   ],
   "domains": [
     "distributed-systems",
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lru",
+      "context": "缓存空间受限时可采用 LRU 选择淘汰对象；它管理容量，不能替代数据失效和时效验证。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "redis",
+      "context": "应用可将 Redis 用作缓存存储，或利用其客户端跟踪与失效通知维护本地副本；该实现选择不代表所有缓存都依赖 Redis。"
     }
   ],
-  "summary": "把热点数据放到更近的层，用一致性换读性能。",
+  "summary": "保存并按规则复用计算或访问结果，减少重复工作并控制数据时效。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-07",
+  "importance": 5,
+  "description": "缓存保存已取得或计算出的结果，使后续访问能够复用，减少网络往返、存储读取或重复计算。复用是否正确取决于缓存键和适用条件：不同用户、权限、语言或请求参数的结果不能在没有相应隔离与判定时混用；命中率与访问成本共同决定收益。\n\n容量淘汰、有效期与失效通知解决不同问题。LRU 等淘汰策略在空间不足时选择移除对象，TTL 限制保留或复用时间，更新后的失效或重新验证则用于处理数据变化。缓存不必然以牺牲一致性为前提，但保持时效需要协议、通知或校验成本，不能仅靠设置淘汰算法实现。\n\nRedis 可作为应用缓存存储，也支持客户端跟踪和失效通知，让本地副本随服务端键的变化移除；丢失连接或失效消息时需谨慎处理已有副本。HTTP 缓存另有新鲜度、验证器和复用规则。两者是缓存的具体应用，缓存概念本身不限定某种数据库、协议或固定一致性等级。\n\n## 参考\n\n- [Redis：Client-side caching 与失效通知](https://redis.io/docs/latest/develop/reference/client-side-caching/)\n- [Redis：Key eviction 与近似 LRU](https://redis.io/docs/latest/develop/reference/eviction/)\n- [RFC 9111：HTTP Caching](https://www.rfc-editor.org/rfc/rfc9111.html)"
 }

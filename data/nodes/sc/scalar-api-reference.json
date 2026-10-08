@@ -1,0 +1,46 @@
+{
+  "id": "scalar-api-reference",
+  "name": "Scalar API Reference",
+  "aliases": [
+    "Scalar API 参考文档",
+    "Scalar 文档渲染器",
+    "@scalar/api-reference"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-documentation-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "以传入的 OpenAPI 对象或文档 URL 渲染参考说明与调用示例。"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "swagger-ui"
+    }
+  ],
+  "summary": "以开源组件渲染 OpenAPI 文档、调用示例与交互请求。",
+  "description": "Scalar API Reference 指 Scalar 开源项目中的 API 参考文档渲染组件。它消费已有的 OpenAPI 或 Swagger 描述，组织操作说明、schema、认证信息和多语言调用示例，并提供交互请求界面。组件可以经 HTML 与 JavaScript 嵌入页面，也有不同 Web 框架的集成包；这里的实体范围是 MIT 许可的开源参考文档组件，不把同品牌的公司、托管文档、独立 API 客户端或商业 SDK 生成服务当作别名。\n\n在 Hono 集成中，中间件接收文档 URL 或文档对象并提供参考文档页面；OpenAPI 描述通常由 @hono/zod-openapi 或 hono-openapi 等上游组件生成。展示页面与产生接口描述因此可分别替换。官方的联合挂载能力可以一起提供页面和描述文件，但描述仍来自传入对象或生成函数；渲染器不会凭空获得业务路由的完整契约，也不自动验证实际服务的响应。\n\n## 参考\n\n- [Scalar API Reference：入门](https://scalar.com/products/api-references/getting-started)\n- [Scalar API Reference：HTML 和 JavaScript](https://scalar.com/products/api-references/integrations/html-js)\n- [Scalar API Reference：Hono 集成](https://scalar.com/products/api-references/integrations/hono)\n- [Scalar：开源组件及许可证](https://github.com/scalar/scalar)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://scalar.com/products/api-references/getting-started"
+}

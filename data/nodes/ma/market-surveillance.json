@@ -1,0 +1,50 @@
+{
+  "id": "market-surveillance",
+  "name": "Market Surveillance",
+  "aliases": [
+    "市场交易监控",
+    "交易行为监测",
+    "交易监察"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "audit-trail",
+      "context": "在算法交易事后监控中读取和重放订单、撤改、成交及责任主体记录，并与外部记录交叉检查以复核告警。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-to-trade-ratio",
+      "context": "在交易所监控未执行报单密度的场景按工具、参与者和观察时段计算报撤成交比，以筛查消息负载或失序风险；指标不单独证明操纵意图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "drop-copy",
+      "context": "在获准接收交易场所Drop Copy的机构中，以独立成交和订单回报副本辅助实时监控及内部日志对账；不能覆盖全部前端行为。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "trading-kill-switch",
+      "context": "当异常监控触发需要停止算法或撤回未成交订单的处置决策时，授权人员可使用kill功能；不表示所有告警自动触发或全市场同步清仓。"
+    }
+  ],
+  "summary": "重建订单与成交行为以识别异常并调查市场滥用。",
+  "description": "市场交易监控从订单、撤改、成交及账户信息中寻找失序交易或市场滥用迹象，并对告警开展调查、留痕和必要上报。交易所侧和参与机构侧拥有不同的数据可见范围与义务；它不同于只监视行情变化的策略信号，也不同于只检查CPU和网络状态的系统运维监控。\n\n欧盟RTS6 Article 13要求相关投资公司的自动化监控覆盖其系统中的交易活动，产生告警和报告，并能以足够时间粒度事后读取、重放和分析订单数据。可疑信号要与其他相关交易交叉检查，参数和过滤器需要复核以减少误报和漏报；ESMA 2026年简报也讨论持续监控、控制调整和处置职责，但简报本身不另创法律义务。\n\n高报撤成交比、价格冲击或自成交迹象属于调查入口，并不自动证明意图或违规。监控需要对照内部交易日志与场所、券商或清算机构记录，明确告警负责人和升级路线。触发紧急撤单可以是异常处置的一环，但风控动作不能替代证据分析，也不能把所有告警都直接等同于操纵认定。\n\n## 参考\n\n- [EUR-Lex：Regulation (EU) 2017/589，算法交易组织与风险控制](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0589)\n- [ESMA：2026年算法交易监管简报（非约束性）](https://www.esma.europa.eu/sites/default/files/2026-02/ESMA74-1505669079-10311_Supervisory_Briefing_on_Algorithmic_Trading_in_the_EU.pdf)\n- [EUR-Lex：Regulation (EU) 2017/566，未执行订单与交易比率](https://eur-lex.europa.eu/eli/reg_del/2017/566/oj/eng)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

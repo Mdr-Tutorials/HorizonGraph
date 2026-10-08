@@ -1,0 +1,26 @@
+{
+  "id": "agent-session",
+  "name": "Agent Session",
+  "aliases": [
+    "智能体会话"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "以会话标识关联多轮消息、状态和执行记录。",
+  "description": "智能体会话把同一交互过程中的多轮输入、输出与状态关联起来，通常具有会话标识及用户、应用等归属信息。一次会话可包含多次调用；一次调用内部又可产生多个模型响应、工具操作或代理交接，会话长度因此不等于执行步数。\n\n不同框架把消息历史、状态映射和执行引用放在不同对象或服务中。ADK 的 Session 记录状态与事件，Microsoft Agent Framework 的会话对象保存继续对话所需信息。会话接口可以由内存或持久后端承载，创建会话不自动意味着进程重启后仍可恢复。\n\n模型每轮真正接收的是运行时构造的上下文，保存的完整会话未必全部发送给模型。会话标识还应与用户授权和存储作用域一起校验；仅知道某个标识，不应被视为有权读取其历史或跨用户使用状态。\n\n## 参考\n\n- [ADK sessions and SessionService](https://adk.dev/sessions/session/)\n- [Microsoft Agent Framework sessions](https://learn.microsoft.com/en-us/agent-framework/concepts/agents/conversations/session)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

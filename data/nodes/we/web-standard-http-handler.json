@@ -1,0 +1,44 @@
+{
+  "id": "web-standard-http-handler",
+  "name": "Web Standard HTTP Handler",
+  "aliases": [
+    "Web 标准 HTTP 处理函数",
+    "Request–Response 处理函数",
+    "Fetch 风格服务端入口"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-request",
+      "context": "使用标准 Request 表达本次 HTTP 输入，而不把 Node 原生请求对象当作同一接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-response",
+      "context": "返回标准 Response 或其异步结果，使宿主负责最终发送。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-lifecycle",
+      "context": "按宿主规则处理正文消费、取消、连接关闭和处理函数完成后的资源生命周期。"
+    }
+  ],
+  "summary": "以标准 Request 输入、Response 输出隔离 HTTP 业务逻辑。",
+  "description": "Web 标准 HTTP 处理函数是以 Request 为主要输入、以 Response 或其 Promise 为输出组织服务器逻辑的应用模式。框架或运行时可另传环境绑定、执行上下文等参数；业务处理通过标准对象表达方法、URL、头部和正文，监听端口与具体连接由宿主负责。\n\n这种模式使用 Fetch 定义的对象，但不意味着服务器函数本身就是客户端 fetch()，也不是 WHATWG Fetch 统一规定的所有服务器入口签名。Hono app.fetch、H3 fetch 入口等在宿主或适配层中采用这类接口；测试可以直接构造 Request 调用处理函数，而无需真实网络往返。\n\n可移植性仍有边界：正文流通常只能按规定消费，取消、背压、连接升级和响应发送完成的时机涉及宿主生命周期。文件系统、数据库连接或后台任务若采用平台能力仍需要适配；共享标准对象不保证部署环境的所有特性或错误行为完全一致。\n\n## 参考\n\n- [WHATWG Fetch](https://fetch.spec.whatwg.org/)\n- [Hono App.fetch](https://hono.dev/docs/api/hono)\n- [H3.fetch](https://h3.dev/guide/api/h3)\n- [Hono Node Adapter](https://github.com/honojs/node-server)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

@@ -8,7 +8,8 @@
     "virtualization-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "virtualization"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -17,15 +18,22 @@
       "target_id": "tool"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "kvm"
+      "relation_type": "implements",
+      "target_id": "system-virtual-machine",
+      "context": "系统模拟模式提供 CPU、内存与设备模型并启动客体内核；用户态模拟模式不属于这一实现范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kvm",
+      "context": "仅在 Linux 上选择可用的 KVM accelerator 的系统虚拟化路径中，通过 KVM API 配置和执行客体；TCG 软件模拟及其他加速器不要求 KVM。"
     }
   ],
-  "summary": "机器模拟器与虚拟化前端，常与 KVM 搭配跑云主机。",
+  "summary": "提供系统与用户态模拟，可选硬件虚拟化加速的工具。",
   "importance": 4,
   "popular": 55,
   "official_site": "https://www.qemu.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "## 系统模拟与用户态模拟\n\nQEMU 是机器模拟器与虚拟化工具。系统模拟提供 CPU、内存和设备模型，可启动完整客体操作系统；不同体系结构和 machine 类型支持的设备与选项并不相同。用户态模拟则翻译受支持平台的应用指令和系统调用，由宿主内核执行相应操作，通常不启动另一套完整客体内核。这两种模式的环境与用途需要分别选择。\n\n## TCG 与可选加速器\n\nTCG（Tiny Code Generator）以动态翻译实现软件 CPU 模拟，能在受支持的主机平台上模拟多种客体架构，不要求存在 KVM。QEMU 官方系统手册将 TCG 列为默认纯模拟路径；选择 KVM、Xen、macOS Hypervisor Framework 或 Windows Hypervisor Platform 等加速器时，才利用相应平台的虚拟化能力。可用加速器受构建选项、宿主系统、处理器架构和权限等条件约束。\n\n## 与 KVM 的协作\n\n在 Linux 上显式选择 KVM 的系统虚拟化路径中，QEMU 通过 KVM API 配置和驱动客体执行，并提供机器配置、设备模型和存储等外围能力；KVM 负责相应内核执行机制。硬件加速通常要求客体执行架构与宿主能力兼容，不能把它视作任意跨指令集模拟的替代。移除 KVM 会影响这一选定路径，却不会让 QEMU 的 TCG 模拟或其他可用加速器路径失去定义，因此二者是带条件的使用关系。\n\n## 控制与应用\n\nQEMU 的块设备层可组合文件、设备或网络后端，管理接口可查询和控制机器状态；QMP 为上层工具提供机器可读的控制接口。它可用于客体系统运行、内核和固件调试以及跨架构软件验证。具体启动方式、设备直通、迁移与性能结果取决于目标机器、加速器和后端配置，不能从 QEMU 支持某功能推导每个模式和架构都具备相同能力。\n\n## 参考\n\n- [QEMU：系统模拟与可选虚拟化加速器](https://www.qemu.org/docs/master/system/introduction.html)\n- [QEMU：TCG 与受支持客体架构](https://www.qemu.org/docs/master/about/emulation.html)\n- [QEMU：用户态模拟与系统调用翻译](https://www.qemu.org/docs/master/user/main.html)\n- [QEMU：系统模拟器参数与 KVM 选项](https://www.qemu.org/docs/master/system/qemu-manpage.html)\n- [Linux Kernel：KVM 的 VM、vCPU 与设备 API](https://docs.kernel.org/virt/kvm/api.html)"
 }

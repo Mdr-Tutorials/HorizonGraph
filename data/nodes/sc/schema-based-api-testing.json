@@ -1,0 +1,46 @@
+{
+  "id": "schema-based-api-testing",
+  "name": "Schema-Based API Testing",
+  "aliases": [
+    "Schema 驱动 API 测试",
+    "基于模式的 API 测试",
+    "Schema-Based Testing"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "以 OpenAPI 操作、参数、请求体、响应和约束作为生成测试与验证结果的依据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "graphql",
+      "context": "以 GraphQL Schema 中的操作、类型与参数约束生成查询并检验接口行为。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "property-based-testing",
+      "context": "采用性质测试生成器时，在 Schema 约束的输入空间中探索样例并缩减失败用例；该方法也可结合固定示例与边界测试。"
+    }
+  ],
+  "summary": "从接口 Schema 生成输入，并检验响应与边界行为。",
+  "description": "Schema 驱动 API 测试利用 OpenAPI 或 GraphQL 等机器可读接口描述，提取操作、参数、请求体、响应与取值约束，自动构造测试输入。输入可以来自文档示例、约束边界和生成器，也可以故意违反类型、枚举或必填要求，以检查服务如何处理无效请求。响应检查可覆盖状态码、内容类型、头字段及消息体的模式一致性，而不只判断请求是否返回成功。\n\n性质测试可以作为其中一种生成机制，在满足指定 Schema 的输入空间内反复执行断言，发现失败后缩减复现样例。对于创建后查询等场景，测试器还可以利用接口描述中的链接，或受控的依赖分析，把先前响应中的标识符传入后续请求。哪些输入合法、哪些错误需要拒绝，必须结合接口描述、鉴权条件与测试配置解释，不能仅凭任意一个错误码判断实现正确。\n\n这一方法擅长寻找实现与描述不一致、输入校验遗漏和服务器异常，但覆盖能力受 Schema 完整度、生成策略与断言质量限制。Schema 没有表达的业务不变量需要额外断言，Schema 本身写错也可能造成误报或漏报。它与消费者驱动契约测试分别建立不同证据：自动探索提供者的描述空间，不能自动证明某个消费者的实际调用和解析逻辑兼容。\n\n## 参考\n\n- [Schemathesis：数据生成、有效与无效输入](https://schemathesis.readthedocs.io/en/stable/explanations/data-generation/)\n- [Schemathesis：响应与输入检查](https://schemathesis.readthedocs.io/en/stable/reference/checks/)\n- [Schemathesis：有状态测试](https://schemathesis.readthedocs.io/en/stable/explanations/stateful/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

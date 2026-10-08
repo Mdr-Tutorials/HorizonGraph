@@ -1,0 +1,38 @@
+{
+  "id": "k-array-language",
+  "name": "K",
+  "aliases": [
+    "K 语言",
+    "k 语言",
+    "K array language",
+    "KX k4"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "languages_runtimes",
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "kx",
+      "context": "本条限定 KX 的 k/k4 实现谱系。"
+    }
+  ],
+  "summary": "数组语言 K；在 KX k4 中承担 q 的底层实现层。",
+  "description": "K 是数组编程语言谱系的一员；在本条的 KX 语境下，重点是 kdb+ 中也称 k4 的底层语言。KX 文档明确区分 q 与 k：q 提供更可读的公开编程接口，q 解释器可切换到 k 模式；这种实现层关系不使 K、q 和 kdb+ 成为三个同义名称。\n\nq 会话启动时加载 q.k，其中许多 q 关键词由 k 表达式定义。parse 可以暴露相应的 k 表示，解释器能够计算这些表达式；也有由 C 原生实现、没有 k 表示的功能。因此理解 k 对解析树与调试有帮助，但不能把所有 q 运算都说成纯 k 代码。\n\nKX 说明其 k 实现面向内部实现者，没有作为外部使用接口提供完整文档和支持。这里不把 k4 的支持政策推广到其他独立 K 方言或后续数组语言，也不把简洁语法等同于交易性能保证。公开 kdb+ 应用通常应按 q 文档学习与开发。\n\n## 参考\n\n- [KX：k4、q 与 q.k](https://code.kx.com/q/basics/parsetrees/)\n- [KX：q 的演化](https://code.kx.com/q4m3/0_Overview/)\n- [KX：C/C++ 接口与底层 k](https://code.kx.com/q/interfaces/c-client-for-q/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://code.kx.com/q/basics/parsetrees/"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "index-buffer",
+  "name": "Index Buffer",
+  "aliases": [
+    "索引缓冲区",
+    "索引缓冲"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gpu-buffer",
+      "context": "在索引绘制路径中，用 GPU 缓冲保存按索引格式解释的整数编号。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vertex-buffer",
+      "context": "在从顶点缓冲读取属性的索引绘制中，索引编号选择顶点属性记录以组织图元。"
+    }
+  ],
+  "summary": "用顶点编号组织图元，在索引绘制中复用顶点数据。",
+  "description": "## 机制\n\n索引缓冲区存放整数顶点编号。索引绘制按编号读取顶点属性，再按所选图元拓扑组装三角形或其他图元；共享顶点可以复用同一组属性，减少重复存储。\n\n以 WebGPU 为例，setIndexBuffer 绑定缓冲和 uint16 或 uint32 格式，drawIndexed 指定索引数量、起始位置及基顶点。索引元素的编号与缓冲绑定的字节偏移属于不同层次，需要分别处理。\n\n## 边界与应用\n\n索引引用的是完整顶点属性记录。几何位置相同但 UV 或法线不同的顶点仍可能需要分开存储；索引复用也不保证更快，收益取决于数据规模、访问次序与具体实现。\n\n## 参考\n\n- [Microsoft：索引缓冲与索引绘制](https://learn.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-resources-buffers-intro#index-buffer)\n- [W3C WebGPU：索引绘制命令](https://www.w3.org/TR/webgpu/#gpurendercommandsmixin)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

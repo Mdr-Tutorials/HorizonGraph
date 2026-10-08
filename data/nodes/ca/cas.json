@@ -10,20 +10,29 @@
   "type": "concept",
   "ecosystems": [
     "hardware_iot",
-    "languages_runtimes"
+    "languages_runtimes",
+    "low-latency-systems-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "low-latency-systems",
+    "high-performance-computing"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "memory-model",
+      "context": "按相应语言或内核模型指定比较更新成功与失败时的可见性和访问排序。"
     }
   ],
-  "summary": "比较内存位置内容与预期值并在相同时原子写入新值的硬件级无锁原子指令。",
+  "summary": "按预期值比较并原子更新共享位置的条件原语，不单独保证算法无锁。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "CAS即比较并交换，是比较共享位置的当前内容与预期值，并在符合条件时原子替换为新值的原语。具体API可以返回旧值或成功状态，语言层通常称compare-exchange。它可能映射到硬件指令、条件存储序列或其他实现，不能在所有类型和平台上统一宣称为一条无锁硬件指令。\n\n在C++接口中，失败通常会更新调用方的expected值；弱compare-exchange可以伪失败，而强版本具有不同要求。成功和失败的内存顺序也有约束，必须按语言规范理解，Linux内核atomic接口的排序规则不能直接代替用户态C++规则。共享内容从A变到B再回A时，比较相等还可能掩盖中间变化，需结合版本或生命周期协议处理ABA。\n\nCAS常用于无锁数据结构，也可用来实现自旋锁或其他会等待特定线程的协议。重试、内存分配与回收都会影响整个算法的进度和耗时，因此CAS成功原子性不等于整体无锁，更不等于无等待。实际性能还受竞争和缓存行通信影响，安全性、进度和负载表现应分别验证。\n\n## 参考\n\n- [C++ 工作草案：compare-exchange 与原子操作](https://eel.is/c++draft/atomics.types.operations)\n- [Linux：原子读改写接口与排序](https://docs.kernel.org/core-api/wrappers/atomic_t.html)\n- [Boost.Lockfree：内存管理与 ABA 防护](https://www.boost.org/latest/doc/html/lockfree/rationale.html)"
 }

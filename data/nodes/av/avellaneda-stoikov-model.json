@@ -1,0 +1,35 @@
+{
+  "id": "avellaneda-stoikov-model",
+  "name": "Avellaneda–Stoikov Model",
+  "aliases": [
+    "Avellaneda-Stoikov 模型",
+    "阿韦拉内达–斯托伊科夫模型",
+    "A-S Model"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inventory-risk",
+      "context": "经典模型以指数效用和库存持有下的价格波动权衡做市商报价。"
+    }
+  ],
+  "summary": "在价格与到达强度假设下权衡库存风险和做市报价距离。",
+  "description": "Avellaneda–Stoikov 模型研究有限期限内做市商如何提交双边限价报价，权衡获得成交的机会与库存价格风险。经典设定用无漂移、恒定波动的算术布朗运动表示中间价，并以终期财富的指数效用表达风险厌恶；该数学模型与其某个软件策略实现应分别理解。\n\n模型先根据库存、风险厌恶、波动及剩余期限计算保留价格，再根据距离中间价的成交到达强度选择报价。经典到达模型把买卖成交建模为强度随报价距离下降的泊松过程；常用指数强度设定可导出便于分析的报价近似，但参数要依市场数据校准，保留价格也不是可无成本交易的市价。\n\n原始设定没有完整刻画真实队列、撤改单延迟、费用、离散跳价和逆向选择；临近终期的库存估值与实际清仓成本亦需区分。研究应检验这些假设和库存约束下的敏感性，而非把闭式报价直接视为可获利规则。加入方向观点或不同库存罚项的后续模型属于扩展，不能反向宣称经典模型已包含全部能力。\n\n## 参考\n\n- [Avellaneda、Stoikov：High-frequency Trading in a Limit Order Book 原始论文](https://math.nyu.edu/inmemoriam/avellaneda/HighFrequencyTrading.pdf)\n- [Fodra、Labadie：库存约束与方向观点下的做市扩展研究](https://arxiv.org/abs/1206.4810)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

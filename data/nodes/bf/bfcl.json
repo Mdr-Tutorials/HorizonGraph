@@ -1,0 +1,41 @@
+{
+  "id": "bfcl",
+  "name": "Berkeley Function Calling Leaderboard",
+  "aliases": [
+    "伯克利函数调用基准",
+    "BFCL"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tool-call-evaluation",
+      "context": "各版本按自身任务类别检查函数选择、参数、执行输出或多轮状态，不把全部类别混成同一种判定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-trajectory-evaluation",
+      "context": "BFCL V3 多轮的 response-based 检查验证只读任务所需的最小可行执行路径，补充每轮后端状态检查。"
+    }
+  ],
+  "summary": "以版本化任务和判定方法评估模型的工具调用能力。",
+  "description": "Berkeley Function Calling Leaderboard（BFCL）是包含数据、评估方法与榜单的工具调用基准家族。早期任务覆盖不同编程语言、函数选择、参数、多函数和并行调用，也包含工具与请求无关时的判断。它不是一个单独的通用正确率指标。\n\n早期协议组合 AST 检查与可执行函数检查，分别验证调用结构或运行输出。V3 增加多轮、多步骤任务，在每轮检查后端状态与必要执行路径；V4 的 Web Search 任务还按规定格式及归一化后的答案判定，不能把整个家族描述成只检查函数名。\n\n报告需要标明版本、任务类别、模型调用模式和对应评分方法。后端动态响应、可执行性的差异与数据修订都会影响比较，榜单总分也不能直接代表开放业务中的全部端到端能力。具体模型排名与价格会变化，应依据当次发布的可复核设置解释。\n\n## 参考\n\n- [BFCL：AST、执行及相关性检查](https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html)\n- [BFCL V3：多轮状态与调用路径判定](https://gorilla.cs.berkeley.edu/blogs/13_bfcl_v3_multi_turn.html)\n- [BFCL V4：Web Search 任务与答案评分](https://gorilla.cs.berkeley.edu/blogs/15_bfcl_v4_web_search.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "BFCL",
+  "official_site": "https://gorilla.cs.berkeley.edu/leaderboard.html"
+}

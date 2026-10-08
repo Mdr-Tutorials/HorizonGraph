@@ -1,0 +1,36 @@
+{
+  "id": "order-book-imbalance",
+  "name": "Order Book Imbalance",
+  "aliases": [
+    "订单簿失衡",
+    "盘口失衡",
+    "买卖挂单失衡"
+  ],
+  "type": "metric",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "按指定档位、时点和相同数量单位统计买卖挂单存量，以归一化差额或明示的替代公式计算。"
+    }
+  ],
+  "summary": "指定盘口范围内买卖挂单存量的相对不平衡程度。",
+  "description": "订单簿失衡衡量某一时点、某一价位范围的买卖挂单存量差异。常见归一化形式为 I=(Q_b−Q_a)/(Q_b+Q_a)，以相同单位统计两侧可见数量；也有研究采用 Q_b/(Q_b+Q_a) 或不同档位加权，必须注明定义而不能混用数值范围。\n\n正值表示按所选口径买侧较多，但不意味着这些订单一定维持或成交。指标可以只看最优档，也可以统计多档；挂单撤销、隐藏兴趣和数据范围影响含义。静态盘口失衡不同于一个窗口内新增、成交与撤单事件构成的订单流失衡，也不同于集合竞价发布的未配对数量。\n\nGould 与 Bonart 在特定股票样本中考察了失衡对下一次中间价方向的预测，效果随 tick 特征等条件不同。应用时应验证样本外关系并保持事件顺序，不能把某一阈值当普遍买卖信号；双侧总量为零时该归一化式没有定义，需要明确缺失处理。\n\n## 参考\n\n- [Gould 与 Bonart：队列失衡预测下一次中间价变化](https://arxiv.org/abs/1512.03492)\n- [Cont、Kukanov 与 Stoikov：订单簿事件的价格冲击](https://arxiv.org/abs/1011.6402)\n- [CME：逐单行情、优先级与排队位置](https://www.cmegroup.com/articles/faqs/market-by-order-mbo.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "OBI"
+}

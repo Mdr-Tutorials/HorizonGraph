@@ -1,0 +1,44 @@
+{
+  "id": "google-agent-studio",
+  "name": "Agent Studio",
+  "aliases": [
+    "Vertex AI Studio",
+    "Google Agent Studio"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "gemini-enterprise-agent-platform",
+      "context": "属于平台内用于模型、提示与智能体开发的工作区；不是独立的 Google AI Studio。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini",
+      "context": "在 Agent Studio 中试验和调整受支持的 Gemini 模型提示；可用模型与能力依项目和服务范围而定。"
+    }
+  ],
+  "summary": "Agent Platform 内的模型试验、提示优化与协作开发工作区。",
+  "description": "Agent Studio 是 Gemini Enterprise Agent Platform 中面向模型和智能体开发的协作工作区。官方发布说明把旧 Vertex AI Studio 映射为 Agent Studio，当前概览说明它用于发现模型、细化系统指令和优化提示。它与 Developer API 侧的 Google AI Studio 具有不同平台和项目语境，也不能与 Gemini Enterprise app 的 Agent Designer 混为同一界面。\n\n工作区提供交互式画布、提示比较、代码预览、参数与安全设置，并可结合搜索、地图或企业检索能力进行 grounding。用户可以借此试验模型行为，再把提示和生成代码转成应用。界面能够调用某项平台能力，并不意味着该能力成为每个提示或每个用户项目的必需组件。\n\nAgent Studio 属于设计和调试阶段的产品入口，正式应用的运行和扩展由所选部署目标承担。模型版本、区域、项目权限和部署条件应分别查看；一个试验工作区不自动成为完整的生产后端。旧文档中的 Vertex AI Studio App Builder 等名称也需按正式映射理解，避免把历史标签误建成互不关联的平行产品。\n\n## 参考\n\n- [Google Cloud：Agent Studio 当前概览](https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio)\n- [Google Cloud：Vertex AI Studio 的正式名称映射](https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/agent-studio"
+}

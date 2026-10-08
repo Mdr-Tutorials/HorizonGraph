@@ -1,0 +1,39 @@
+{
+  "id": "wsl-configuration",
+  "name": "WSL Configuration",
+  "aliases": [
+    "WSL 配置",
+    "wsl.conf",
+    ".wslconfig",
+    "wsl-distribution.conf"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "wsl"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "systemd",
+      "context": "在支持的 WSL 2 发行版中通过 boot 配置启用 systemd 作为初始化和服务管理器；配置节点不把它规定为全部发行版的必需项。"
+    }
+  ],
+  "summary": "分别配置 WSL 2 虚拟机、发行版启动与发行版发布体验的机制。",
+  "description": "WSL 配置按作用域分开：Windows 用户目录下的 `.wslconfig` 设置普通 WSL 2 环境的虚拟机参数，包括内存、处理器数量和内核等；发行版内部的 `/etc/wsl.conf` 设置该发行版的启动、挂载、用户与互操作行为。两者位置和对象不同，不能把某发行版的用户名或自动挂载设置放进全局 VM 配置，也不能把全局资源上限解释为每个发行版独立享有的资源。\n\n`.wslconfig` 的相关虚拟机设置仅作用于 WSL 2，不影响不运行客户虚拟机的 WSL 1。某些配置还受 WSL 版本、宿主功能与实验选项支持范围限制，复制示例并不保证旧版本具备对应能力。WSL 在相应环境启动时读取设置，关闭一个终端窗口未必使环境停止；需要区分结束指定发行版与关闭整个共享 WSL 2 虚拟机，避免把尚未重新加载的配置误判为无效。\n\n发行版发布者还可使用 `/etc/wsl-distribution.conf` 配置首次使用命令、默认登记名称和 Windows Terminal profile 等发布体验，它与普通用户编辑的 wsl.conf 职责不同。在支持 systemd 的发行版中，`[boot]` 配置与发行版默认值共同决定其启用方式；在支持互操作的配置中，`[interop]` 可控制启动 Windows 程序及 PATH 拼接。WSL 配置管理环境行为，不是项目依赖锁文件，也不会替项目安装所有开发工具。\n\n## 参考\n\n- [Microsoft：Advanced settings configuration in WSL](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)\n- [Microsoft：WSL 的关闭与终止命令](https://learn.microsoft.com/en-us/windows/wsl/basic-commands)\n- [Canonical：发行版发布配置与启动配置](https://documentation.ubuntu.com/wsl/latest/howto/custom-ubuntu-distro/)\n- [Microsoft：WSL 中的 systemd](https://learn.microsoft.com/en-us/windows/wsl/systemd/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

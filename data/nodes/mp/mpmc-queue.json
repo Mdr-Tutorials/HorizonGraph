@@ -1,0 +1,41 @@
+{
+  "id": "mpmc-queue",
+  "name": "Multiple-Producer Multiple-Consumer Queue",
+  "aliases": [
+    "多生产者多消费者队列",
+    "MPMC队列",
+    "MPMC Queue"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cas",
+      "context": "采用CAS式无锁实现时原子竞争共享节点或槽位状态；MPMC拓扑也允许使用其他同步方案。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "memory-model",
+      "context": "并发发布、读取与回收采用对应语言的原子及可见性协议。"
+    }
+  ],
+  "summary": "支持多个生产者与消费者，需定义竞争、顺序、容量和进度保证。",
+  "description": "MPMC队列允许多个线程同时入队和出队，适用于共享任务入口或多路处理工作。它只描述生产消费角色数量，不代表无锁、无等待、全局FIFO或固定容量。具体实现可能使用互斥锁、链式节点或带序号的有界数组，应分别声明排序与失败语义。\n\n采用无锁设计时，常以CAS或其他原子操作竞争共享位置，并解决槽位提交或节点回收。预留位置与实际发布内容需要一致协议；某线程暂停后是否妨碍其他操作，决定了算法能否提供所声称的进度保证。动态扩容和内存分配可能引入额外阻塞，不能只分析一个CAS循环。\n\n线程越多不一定越快，共享更新、缓存行迁移和NUMA访问可能使重试成本上升。应测试容量耗尽、生产者停顿和消费者不均衡等情形，记录吞吐及尾延迟。按业务拆分成独立SPSC通道是一种选择，但会改变路由、负载平衡或全局顺序，不能无条件替换原队列语义。\n\n## 参考\n\n- [Boost：多生产者多消费者队列实现](https://www.boost.org/latest/doc/html/doxygen/classboost_1_1lockfree_1_1queue.html)\n- [Boost.Lockfree：进度保证及阻塞来源](https://www.boost.org/latest/doc/html/lockfree.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "MPMC"
+}

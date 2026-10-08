@@ -11,7 +11,9 @@
     "fintech-ecosystem"
   ],
   "domains": [
-    "quantitative-finance"
+    "quantitative-finance",
+    "industry-landscape",
+    "electronic-trading"
   ],
   "relations": [
     {
@@ -19,10 +21,11 @@
       "target_id": "organization"
     }
   ],
-  "summary": "对冲基金与做市集团，量化技术栈的代表雇主。",
+  "summary": "采用多策略及量化研究的另类投资管理机构。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.citadel.com"
+  "official_site": "https://www.citadel.com",
+  "description": "Citadel 是多策略另类投资管理机构，为投资者配置和管理资本。它与全球做市公司 Citadel Securities 是两个独立、业务方向不同的金融公司；旧摘要把投资管理与做市概括为一个集团身份，容易混淆资金管理和交易执行服务。\n\n公开投资业务涵盖基本面、宏观、商品和量化等策略。Global Quantitative Strategies 自 2012 年末形成，采用系统化研究和自动化交易方法；一个具体策略团队的自动化性质不能代表所有 Citadel 团队的持有期、速度或技术实现。\n\nCitadel 在量化领域的角色是投资管理和研究应用场景。公开材料支持理解其研究与技术组织方式，但不能由公司名称推导它等同于 HFT、交易所或面向经纪商的做市服务；节点保留组织身份，相关业务边界在正文分别说明。\n\n## 参考\n\n- [Citadel 投资管理主体与独立性](https://www.citadel.com/who-we-are/)\n- [Citadel Global Quantitative Strategies](https://www.citadel.com/what-we-do/global-quantitative-strategies/)\n- [Citadel Securities 身份与独立性](https://www.citadelsecurities.com/who-we-are/)"
 }

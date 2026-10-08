@@ -1,0 +1,49 @@
+{
+  "id": "direct3d",
+  "name": "Direct3D",
+  "aliases": [
+    "Direct3D 图形接口",
+    "Direct3D API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "graphics",
+    "real-time-rendering",
+    "game-development"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "graphics-pipeline"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "compute-shader"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hlsl",
+      "context": "在 Direct3D 可编程着色路径中，用适配版本的 HLSL 编译工具链准备 GPU 程序。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "DirectX 家族中组织 GPU 绘制与计算的接口。",
+  "description": "Direct3D 是 Microsoft 提供的低层 GPU 图形接口，属于 DirectX 家族，规定资源、可编程管线与绘制工作的组织方式，也提供相应计算着色路径。它与 DirectX 家族名不同：二维图形、文字和其他多媒体接口各有职责，不能将 Direct3D 视为实现整个 DirectX 的独立工件。\n\n应用创建缓冲、纹理与管线状态，通过相关接口绑定资源并编码绘制或计算命令。HLSL 通常用于准备可编程着色代码；Direct3D 11 与 Direct3D 12 的对象、命令提交和同步管理方式不同，采用哪个版本应匹配应用设计及设备能力，而不是仅替换名称。\n\nDirect3D 用于游戏、桌面与科学可视化等 GPU 应用。Direct3D 12 可录制命令列表供队列执行，应用需遵守资源状态、执行完成和生命周期规则；API 调用返回不表示 GPU 已完成工作。显示适配器枚举和呈现还涉及 DXGI 等有关接口，具体功能和 feature level 应按所用接口与硬件查询。\n\n## 参考\n\n- [Microsoft Direct3D](https://learn.microsoft.com/en-us/windows/win32/direct3d)\n- [Microsoft Direct3D 12 Graphics](https://learn.microsoft.com/en-us/windows/win32/direct3d12/direct3d-12-graphics)\n- [Microsoft DirectX Graphics 入门](https://learn.microsoft.com/en-us/windows/win32/getting-started-with-directx-graphics)\n- [Direct3D 12 Command Lists](https://learn.microsoft.com/en-us/windows/win32/direct3d12/recording-command-lists-and-bundles)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "D3D",
+  "official_site": "https://learn.microsoft.com/en-us/windows/win32/direct3d"
+}

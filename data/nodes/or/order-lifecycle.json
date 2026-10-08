@@ -1,0 +1,54 @@
+{
+  "id": "order-lifecycle",
+  "name": "Order Lifecycle",
+  "aliases": [
+    "订单生命周期",
+    "订单状态机"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fix-protocol",
+      "context": "采用 FIX 的订单处理链中，用 ExecutionReport 的事件和状态字段维护订单状态，不能将 Pending Cancel/Replace 视为成功确认。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "time-in-force",
+      "context": "计算订单终止与剩余数量状态时读取适用的 TIF，区分立即处理、当日到期与跨日存续。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "immediate-or-cancel",
+      "context": "在 IOC 生命周期中，将立即部分成交与未成交剩余取消分别登记，最终 canceled 不能覆盖已经成交的事实。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fill-or-kill",
+      "context": "在 FOK 生命周期中，根据立即全量成功或未执行终止的回报确定结果，避免按 IOC 的部分成交规则解释。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "good-till-cancelled",
+      "context": "管理 GTC 状态时跨交易日保持有效订单的身份和剩余量，并按场所或券商规则处理到期与撤销。"
+    }
+  ],
+  "summary": "用确认和执行事件维护订单状态及剩余数量的过程",
+  "description": "订单生命周期覆盖提交、接受或拒绝、工作中、部分成交、全部成交、撤销及到期等事件。FIX 用 ExecType 区分回报事件，用 OrdStatus 表达回报后的订单状态；请求被发送、被收到和最终生效是不同事实。\n\n撤单或改单在途时原订单仍可能成交。Pending Cancel 与 Pending Replace 不表示操作已经成功，系统需关联订单标识与执行标识，更新累计和剩余数量，并处理重复回报、拒绝、成交更正或连接恢复后的状态差异。\n\n生命周期不是一条固定无分支流水线：订单可能立即成交、被拒绝或因有效期结束，长期订单也跨越会话。确认是交易状态证据，但成交更正和最终清算还有各自边界；不能把本地 UI 状态、网络断开或消息发出视为最终成交与撤销结果。\n\n## 参考\n\n- [FIX Application Layer：Order State Changes](https://www.fixtrading.org/wp-content/uploads/download-manager-files/Order-State-Changes.pdf)\n- [Nasdaq：OUCH 5.0 订单入口规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/TradingProducts/OUCH5.0.pdf)\n- [CME：Order Management](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216217/Order+Management)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

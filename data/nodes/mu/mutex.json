@@ -10,10 +10,13 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "operating_systems"
+    "operating_systems",
+    "low-latency-systems-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "low-latency-systems",
+    "high-performance-computing"
   ],
   "relations": [
     {
@@ -22,16 +25,23 @@
     },
     {
       "relation_type": "alternative_to",
-      "target_id": "semaphore"
+      "target_id": "semaphore",
+      "context": "仅在简单串行化临界区的场景中，与容量为1且借还协议受控的二元信号量比较；mutex所有权及所选优先级继承协议不能由一般信号量等价替代。"
     },
     {
       "relation_type": "alternative_to",
       "target_id": "spinlock"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-switch",
+      "context": "竞争路径进入休眠及后续唤醒时可能发生线程切换；无竞争快路径不要求每次切换。"
     }
   ],
-  "summary": "防止多个线程同时访问共享临界区资源的排他性同步原语。",
+  "summary": "以明确所有权保护临界区，等待与唤醒成本依具体实现和竞争决定。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "互斥锁使同一时刻只有获锁的执行者进入受保护临界区，通常具有所有权和匹配解锁要求。它保护的是按协议访问的共享状态，未使用该锁的其他读写不会自动获得同步保证。递归、健壮性、优先级协议与错误检查等行为需要按具体API属性解释。\n\n实现可能包含无竞争的原子快路径、短时乐观自旋以及竞争后的休眠唤醒，不能简单认为每次加锁都发生系统调用或上下文切换。Linux内核mutex与POSIX线程mutex在调用环境、属性和实现细节上不同。避免死锁需要一致锁顺序与正确生命周期，优先级继承也必须由所用协议明确提供。\n\n锁竞争、临界区中的I/O或动态分配会影响延迟和可调度性，应分别测量等待与实际工作。mutex可以是可靠且合适的设计，无锁或自旋替代方案也有内存回收、重试和CPU成本。优化应以共享需求和真实负载为准，不能把锁名字直接当作性能结论或任何实时期限保证。\n\n## 参考\n\n- [POSIX：mutex 所有权与锁定语义](https://man7.org/linux/man-pages/man3/pthread_mutex_lock.3p.html)\n- [Linux：mutex 快路径、自旋及休眠路径](https://docs.kernel.org/locking/mutex-design.html)\n- [Linux：锁类型、所有权与优先级继承](https://docs.kernel.org/locking/locktypes.html)"
 }

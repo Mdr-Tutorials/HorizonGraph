@@ -3,23 +3,31 @@
   "name": "ext4",
   "display_primary": "ext4",
   "display_secondary": "ext4",
-  "aliases": [],
+  "aliases": [
+    "Fourth Extended Filesystem",
+    "第四代扩展文件系统"
+  ],
   "type": "concept",
   "ecosystems": [
-    "linux-gnu-ecosystem"
+    "linux-gnu-ecosystem",
+    "wsl-ecosystem",
+    "container-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "virtualization",
+    "containerization"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "os-mechanism"
     }
   ],
-  "summary": "Linux 默认文件系统，久经考验的日志式老将。",
+  "summary": "组织 Linux 磁盘数据、目录与日志的文件系统。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "description": "ext4 是 Linux 的磁盘文件系统，组织目录、inode、数据块、空间分配与日志。它延续 ext 系列，并使用 extent 等结构管理文件数据；实际启用的特性由格式化参数、文件系统版本与内核支持决定。它描述磁盘内部的数据布局与访问机制，不能与 VHDX 虚拟磁盘容器或容器卷管理对象合并。\n\n日志主要用于在中断后恢复一致的文件系统结构，日志模式决定哪些内容进入日志。常见 ordered 模式对元数据做日志处理，并在相关元数据提交前组织文件数据写入；这并不表示每次应用写入都已经持久化，也不保证全部文件内容在断电后保持最新状态。应用仍需按文件操作与同步接口处理自身的数据一致性要求。\n\nWSL 2 发行版常把 ext4 放在 VHDX 虚拟磁盘内，WSLc 的 VHD 卷示例也采用 ext4。先附加块设备，再挂载文件系统，容器才可看到目标路径；Windows 文件经 virtiofs 共享时则属于其他存储路线。开发工具需要原生 Linux 文件语义的场景，应区分原始文件位置、跨宿主共享与绑定挂载，不把一项环境默认值推广到所有 Linux 部署。\n\n## 参考\n\n- [Linux Kernel：ext4 High Level Design](https://docs.kernel.org/filesystems/ext4/overview.html)\n- [Linux Kernel：ext4 Journal](https://docs.kernel.org/filesystems/ext4/journal.html)\n- [Microsoft：WSL 磁盘空间](https://learn.microsoft.com/en-us/windows/wsl/disk-space)\n- [Microsoft：WSLc Architecture Deep Dive](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)"
 }

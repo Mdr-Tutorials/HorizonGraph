@@ -1,0 +1,36 @@
+{
+  "id": "citadel-securities-equities-services",
+  "name": "Citadel Securities Equities Services",
+  "aliases": [
+    "Citadel Securities 股票执行服务",
+    "Citadel Securities 股票流动性服务"
+  ],
+  "type": "product",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-making",
+      "context": "公开股票业务包含提供双边或主事人流动性、ETF 大宗报价及交易所指定做市职责；各路径义务分别限定。"
+    }
+  ],
+  "summary": "向股票客户提供流动性、执行与做市的服务集合。",
+  "description": "Citadel Securities Equities Services 表示原厂公开列出的股票流动性与交易执行服务集合。本节点采用描述性服务名称，未宣称它是独立软件商标、统一客户端产品或新的法律实体；服务提供方仍是 Citadel Securities 的相应业务实体。\n\n官方股票业务包括寻找流动性、替客户执行小额及大额订单、ETF 大宗流动性和面向发行人的交易所做市服务。不同客户、资产与业务路径的服务方式和义务有区别；指定做市商职责、机构交易和经纪商订单执行也不能合并为同一个算法。\n\n专业客户服务条款与交易安排定义具体业务关系和适用条件。服务集合通过实际提供关系连接公司，通过限定场景连接做市方法；客户使用这些服务不意味着成为交易所成员，也不能从公司公开业务简介推导任意接口、通用软件依赖或单一执行延迟。\n\n## 参考\n\n- [Citadel Securities 股票执行与做市服务](https://www.citadelsecurities.com/what-we-do/equities/)\n- [Citadel Securities 专业客户服务条款](https://www.citadelsecurities.com/wp-content/uploads/sites/2/2022/10/CitSec_ProfessionalClient_ECP_TermsofBusiness_September_2022.pdf)\n- [Citadel Securities 公开业务](https://www.citadelsecurities.com/what-we-do/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.citadelsecurities.com/what-we-do/equities/"
+}

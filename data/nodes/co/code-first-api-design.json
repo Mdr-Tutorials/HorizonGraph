@@ -1,0 +1,39 @@
+{
+  "id": "code-first-api-design",
+  "name": "Code-first API Design",
+  "aliases": [
+    "代码优先 API 设计",
+    "实现优先 API 设计",
+    "Implementation-first API"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "在 Hono、tRPC 等实现优先接口中由路由或函数签名推导调用类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "api-documentation-generation",
+      "context": "在具有声明式参数、模型和元数据的框架中导出接口描述及文档。"
+    }
+  ],
+  "summary": "从路由、过程或模型实现派生接口类型与描述。",
+  "description": "代码优先 API 设计从路由、处理函数和数据模型开始，把这些代码作为接口形状的主要来源，再派生客户端类型或机器可读描述。Hono RPC 与 tRPC 可以从路由或过程返回值推导 TypeScript 客户端；FastAPI 可以从声明的参数和响应模型建立 OpenAPI 描述。实现优先不等于只编写代码而不维护契约，关键在于契约如何从实现导出。\n\n派生工具通常只能保留其支持的结构与元数据。遗漏错误响应、在全局处理中添加响应或改变序列化形式，都可能超出自动推导范围；客户端消费的类型或生成文档也需要随实现更新。运行时转换和任意业务断言未必能无损映射到 JSON Schema，工程上仍需补充文档、校验与兼容性检查。\n\n## 参考\n\n- [Hono：RPC 与客户端类型推导](https://hono.dev/docs/guides/rpc)\n- [oRPC：从过程实现建立接口](https://orpc.dev/docs/getting-started)\n- [FastAPI：响应模型与接口描述](https://fastapi.tiangolo.com/tutorial/response-model/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

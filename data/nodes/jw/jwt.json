@@ -10,19 +10,26 @@
     "cybersecurity-ecosystem"
   ],
   "domains": [
-    "security"
+    "security",
+    "web-services"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
+      "relation_type": "uses",
+      "target_id": "cryptography",
+      "context": "需要令牌内保护时，JWT 通过 JWS 使用数字签名或 MAC，或通过 JWE 加密；具体算法和验证规则由应用配置限定。"
+    },
+    {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "protocol"
     }
   ],
-  "summary": "自包含的签名令牌格式，无状态会话与 API 授权标配。",
+  "summary": "以 JSON 声明集传递信息的令牌格式，可使用签名、MAC 或加密保护。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 5,
-  "official_site": "https://jwt.io"
+  "official_site": "https://jwt.io",
+  "description": "JWT 是表示 JSON 声明集的紧凑令牌格式。声明可通过 JWS 进行数字签名或 MAC 保护，也可通过 JWE 加密，或采用嵌套结构。规范还定义由外部机制保护的无签名 JWT，因此不能把 JWT 的定义缩写为“签名令牌”；常见 JWS 载荷的 Base64url 编码本身不提供保密性。\n\n接收方需要按具体应用规则验证算法、密钥、发行者、受众和时间声明，而不能只解析 JSON 或相信令牌声明的算法。JWT 中的注册声明不是每个应用都必填的统一权限模型，签名通过也只说明相应密钥保护了内容，资源授权还要按发行者信任和业务规则决定。\n\nJWT 可用于身份协议或 API 凭据，但格式本身不强制采用完全无服务端状态的会话。令牌撤销、权限变化和重放风险需要应用另行处理，可能依赖短有效期、服务端记录或其他协议机制；是否把声明全部放入令牌也取决于用途与数据暴露要求。\n\n## 参考\n\n- [RFC 7519：JSON Web Token 的结构与声明](https://www.rfc-editor.org/rfc/rfc7519.html)\n- [RFC 8725：JWT 安全验证最佳实践](https://www.rfc-editor.org/rfc/rfc8725.html)"
 }

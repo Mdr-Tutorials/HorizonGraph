@@ -1,0 +1,42 @@
+{
+  "id": "slsa",
+  "name": "Supply-chain Levels for Software Artifacts",
+  "aliases": [
+    "SLSA",
+    "软件工件供应链等级",
+    "供应链安全分级框架"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "build-provenance",
+      "context": "Build Track 用构建来源记录描述生产者、构建过程与输入，并按等级加强记录可靠性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "artifact-attestation",
+      "context": "较高 Build 等级通过认证的工件声明将来源记录与输出绑定，消费方据此核验信任和预期。"
+    }
+  ],
+  "summary": "以分轨等级和可验证来源要求改善软件供应链完整性。",
+  "description": "SLSA 是软件供应链完整性的安全要求与分级框架，用等级说明来源记录、构建平台和源码控制的保护能力。它用于评估生产过程及消费方验证政策，是方法与要求体系，不能当作一套执行构建的命令行软件。某个工具能够生成 SLSA 格式的 JSON，并不因此让使用它的整个项目自动达到某个安全等级。\n\n1.2 将要求分为 Build 与 Source 两条 track。Build Track 的 L0 没有保证；L1 要求存在构建来源记录；L2 要求由托管构建平台生成并认证来源，消费者验证其真实性；L3进一步要求隔离构建执行，并保护来源签署材料不被用户定义构建步骤取得。旧版单一 SLSA 1–4 的编号不能直接当作当前 Build Track 的等级。\n\n消费方以预先信任的签署者与 builder 身份核验工件绑定、构建方式和输入，而不是只读取声明中的自报等级。SLSA 强化来源与生产过程的完整性，不证明源码没有缺陷，也不把 SBOM、漏洞扫描或逐位可复现构建统统列为每个等级的同一项必备能力。信任构建平台仍是明确前提，平台自身被恶意控制不由一份有效来源签名自动解决。\n\n## 参考\n\n- [SLSA 1.2：Build Track 等级与历史边界](https://slsa.dev/spec/v1.2/build-track-basics)\n- [SLSA 1.2：Source Track 与版本变化](https://slsa.dev/spec/v1.2/whats-new)\n- [SLSA 1.2：工件验证与信任根](https://slsa.dev/spec/v1.2/verifying-artifacts)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "SLSA",
+  "official_site": "https://slsa.dev/"
+}

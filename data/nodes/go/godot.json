@@ -6,7 +6,8 @@
   ],
   "type": "product",
   "ecosystems": [
-    "graphics_gaming"
+    "graphics_gaming",
+    "game-runtime-ecosystem"
   ],
   "domains": [
     "game-development"
@@ -27,13 +28,45 @@
     },
     {
       "relation_type": "implements",
-      "target_id": "a-star"
+      "target_id": "a-star",
+      "context": "通过 AStar2D 与 AStar3D 类提供基于显式点、连接和权重的 A* 路径搜索，不表示所有导航系统都采用 A*。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-engine"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-scene"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-loop"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fixed-timestep"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gdscript",
+      "context": "在选择 GDScript 的项目中为节点扩展行为、响应 signals 和实现引擎回调；Godot 也提供其他脚本与扩展路径。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "spine-runtimes",
+      "context": "可通过 Esoteric Software 官方提供的对应引擎适配运行时加载与播放 Spine 动画；属于可选集成，不表示引擎默认安装或要求 Spine。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "animation-retargeting"
     }
   ],
-  "summary": "开源免费的游戏引擎，节点场景模型轻快易上手。",
+  "summary": "通过节点树、可复用场景和脚本构建二维与三维游戏的引擎。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://godotengine.org"
+  "official_site": "https://godotengine.org",
+  "description": "Godot 用节点表达对象的功能，将节点树保存为可复用、可嵌套的场景，并在运行时汇入 SceneTree。脚本扩展节点行为，signals 连接事件和响应，场景实例可以组合角色、界面与关卡。场景是组织运行对象的单位，节点层级和信号连接分别处理结构与通信。\n\n_process(delta) 随渲染帧率更新，_physics_process(delta) 按固定物理步长调用；二者的频率和用途不同，物理相关控制需与物理处理时序配合。GDScript 是一种可选脚本路径，不能据其紧密集成推断所有 Godot 项目必须使用该语言。\n\n引擎提供 AStar2D、AStar3D 等 A* 实现，AStar2D 以二维点与连接构成搜索图，并包装 AStar3D。实际路径结果依赖图的连接、权重及启发式设置；提供 AStar 类不表示所有导航都使用 A*，场景编辑、导航图准备和动态障碍处理也不是同一步骤。\n\nGodot 的三维场景导入器提供骨骼动画重定向，借助 BoneMap 和 SkeletonProfile 对齐骨骼名称、关系与参考姿态。共享动画需要处理参考姿态和轨道差异，不能仅凭相同骨骼名称假定兼容；Spine 二维动画则可经官方引擎适配运行时接入，两种动画工作流具有不同数据与处理方式。\n\n## 参考\n\n- [Godot：Key concepts overview](https://docs.godotengine.org/en/stable/getting_started/introduction/key_concepts_overview.html)\n- [Godot：Idle and Physics Processing](https://docs.godotengine.org/en/stable/tutorials/scripting/idle_and_physics_processing.html)\n- [Godot：AStar2D](https://docs.godotengine.org/en/stable/classes/class_astar2d.html)\n- [Godot：GDScript reference](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html)\n- [Esoteric Software：Official Spine Runtimes](https://en.esotericsoftware.com/spine-runtimes)\n- [Godot：Retargeting 3D Skeletons](https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/retargeting_3d_skeletons.html)"
 }

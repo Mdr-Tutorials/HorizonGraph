@@ -1,0 +1,31 @@
+{
+  "id": "collision-detection",
+  "name": "Collision Detection",
+  "aliases": [
+    "碰撞检测"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spatial-index",
+      "context": "在采用动态包围体树等结构的粗检测中，用空间索引缩小潜在接触对象集合，而非直接把包围盒重叠作为精确碰撞。"
+    }
+  ],
+  "summary": "判断几何对象的重叠、接触或运动中潜在相交的方法。",
+  "description": "碰撞检测根据形状和变换计算重叠、距离、射线命中或接触信息。粗检测可先筛选包围盒候选，精检测再计算具体形状关系；连续检测还考虑对象在时间区间内的运动。\n\n检测接触不等于计算碰撞响应，也不要求存在完整刚体模拟。离散采样可能遗漏高速穿越，几何精度与容差影响结果；应按形状、运动和用途选择算法。\n\n## 参考\n\n- [Box2D：几何查询与碰撞检测](https://box2d.org/documentation/md_collision.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

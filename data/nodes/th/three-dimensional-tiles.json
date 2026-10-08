@@ -1,0 +1,41 @@
+{
+  "id": "three-dimensional-tiles",
+  "name": "3D Tiles",
+  "aliases": [
+    "三维瓦片",
+    "OGC 3D Tiles"
+  ],
+  "type": "protocol",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gltf",
+      "context": "3D Tiles 1.1 将 glTF 用作可渲染瓦片内容的主要格式。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ogc",
+      "context": "作为 OGC 社区标准发布和维护标准文档。"
+    }
+  ],
+  "summary": "以分层瓦片流式传输和呈现大规模三维地理内容。",
+  "description": "3D Tiles 是 OGC 社区标准，用于流式传输和渲染大规模三维地理内容，如倾斜摄影、三维建筑、BIM/CAD 和点云。它定义瓦片集的层级结构及可渲染内容组织，使客户端按视角、包围范围和细节需求选择加载内容。标准描述数据组织与交换，具体交互方式和最终视觉效果由客户端决定。\n\n3D Tiles 1.1 将 glTF 作为主要可渲染内容格式，并提供元数据等能力，以支持对象属性及更灵活的数据组织。地图瓦片通常按二维网格覆盖地表，而三维瓦片可以采用更一般的空间层级与包围体；两者不能只按文件名或 z/x/y 地址混同。客户端、内容生产工具与托管服务可以独立选择。\n\n## 参考\n\n- [OGC 3D Tiles Standard](https://www.ogc.org/standards/3dtiles/)\n- [3D Tiles Specification](https://github.com/CesiumGS/3d-tiles)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm"
+}

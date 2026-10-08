@@ -1,0 +1,39 @@
+{
+  "id": "browser-tracing",
+  "name": "Browser Automation Tracing",
+  "aliases": [
+    "浏览器自动化追踪",
+    "Browser Trace",
+    "浏览器操作追踪"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom-snapshot",
+      "context": "启用文档快照采集时，用动作前后的页面结构辅助定位失败与状态变化。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-screenshot",
+      "context": "启用截图采集时，将像素帧关联到动作和时间线以提供视觉证据。"
+    }
+  ],
+  "summary": "关联浏览器动作、页面状态和事件以检查执行过程。",
+  "description": "浏览器自动化追踪把动作、持续时间、定位条件和相关页面状态按执行过程关联起来，还可记录网络、控制台、源代码位置及截图。它帮助解释测试或智能体在哪一步出现问题，与只关注 CPU 和渲染耗时的性能追踪存在不同侧重，具体采集项由工具配置决定。\n\nPlaywright Trace Viewer 可以检查动作前后 DOM 快照、点击位置、网络和时间线，追踪文件形成可审阅工件。其底层 context.tracing 接口记录浏览器操作和网络活动，却不会自动记录测试的 expect 断言；通过 Playwright Test 配置开启的追踪具有更完整的测试信息，二者不能混同。\n\n追踪查看器的前后移动是在检查已经保存的观察，不会对原网站再次发出相同操作，也不保证确定性重执行。Antigravity IDE 的操作录像同样用于过程审阅，但录像不等同于包含所有 DOM 和网络字段的结构化 trace。证据完整性取决于采集范围、保留策略及其与实际测试版本的对应关系。\n\n## 参考\n\n- [Playwright：Trace viewer](https://playwright.dev/docs/trace-viewer)\n- [Playwright：Tracing API及断言记录边界](https://playwright.dev/docs/api/class-tracing)\n- [Antigravity IDE：Browser recordings](https://antigravity.google/docs/ide/browser-recordings/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

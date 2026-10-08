@@ -1,0 +1,37 @@
+{
+  "id": "mcp-server",
+  "name": "MCP Server",
+  "aliases": [
+    "MCP 服务器",
+    "MCP 服务端"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 架构中提供专门上下文及操作的服务端角色。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-multi-round-trip-request",
+      "context": "在 2026-07-28 支持的读取、模板获取或工具调用中需要额外输入时，返回 input_required 让客户端补齐。"
+    }
+  ],
+  "summary": "通过 MCP 提供工具、资源和提示模板等能力的服务角色。",
+  "description": "MCP 服务器是对外提供上下文和操作能力的协议角色，可以是宿主启动的本地进程，也可以是远程服务。它按已声明的能力提供工具、资源或提示模板，不要求每个服务器都提供全部原语；服务器角色与实现它的库、SDK 或产品应分开建模。\n\n服务器将业务系统映射成协议接口，例如用 tools/list 发布操作、用 resources/read 提供数据。2026-07-28 的核心请求携带版本与能力等必要信息，服务器不能依赖隐含协议会话来关联前后调用；需要持续业务状态时，应通过明确输入或业务句柄建立联系。\n\n需要客户端补充信息时，当前核心通过 MRTR 回复 input_required，而不是任意发起旧式服务器请求。服务器仍负责检查输入和业务权限，暴露工具名或收到句柄都不是充分授权。MCP 只组织接口与消息，数据库事务、保留期限和外部副作用由具体服务实现。\n\n## 参考\n\n- [MCP：架构与角色](https://modelcontextprotocol.io/specification/2026-07-28/architecture)\n- [MCP：服务器开发](https://modelcontextprotocol.io/docs/2026-07-28/develop/build-server)\n- [MCP：工具与有状态业务句柄](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

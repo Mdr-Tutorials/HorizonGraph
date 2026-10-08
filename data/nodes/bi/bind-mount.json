@@ -1,0 +1,39 @@
+{
+  "id": "bind-mount",
+  "name": "Bind Mount",
+  "aliases": [
+    "绑定挂载",
+    "Bind 挂载"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming",
+    "containerization"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "filesystem-mount",
+      "context": "复用已有文件对象，在目标路径建立另一挂载视图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mount-namespace",
+      "context": "容器部署中在目标挂载命名空间呈现所选择的文件树。"
+    }
+  ],
+  "summary": "将已有文件或目录树呈现在另一挂载位置的机制。",
+  "description": "Bind mount 把已有文件或目录子树呈现在另一个路径，不需要复制一份数据。Linux 的绑定挂载复用原对象，在新的挂载位置提供访问视图；普通绑定与递归绑定对嵌套挂载的处理不同。它是挂载方式，不是一个新文件系统格式，也不是与宿主数据自动隔离的存储副本。\n\n在 Docker 中，绑定源来自 daemon 所在宿主，而非必然来自发出命令的客户端。远端 daemon 无法直接读取客户端的本地目录；Docker Desktop 可通过共享机制桥接本机路径。写权限、只读设置与挂载传播会影响宿主和容器双方的行为，覆盖容器中的非空目标还会遮蔽其原有内容。\n\n开发工作流常用绑定挂载共享代码与构建结果。WSLc 的 Windows 目录先进入虚拟机的共享挂载，再绑定进容器；原始文件的系统、共享后端和观察接口共同决定事件与权限行为，不能因为容器中出现路径就推断它等价于原生 ext4。\n\n## 参考\n\n- [Linux man-pages：mount(2)](https://man7.org/linux/man-pages/man2/mount.2.html)\n- [Docker：Bind Mounts](https://docs.docker.com/engine/storage/bind-mounts/)\n- [Microsoft：WSLc Architecture Deep Dive](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)\n- [Docker Desktop：WSL 2 文件系统实践](https://docs.docker.com/desktop/features/wsl/best-practices/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

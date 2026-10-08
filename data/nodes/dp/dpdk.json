@@ -1,0 +1,44 @@
+{
+  "id": "dpdk",
+  "name": "DPDK",
+  "aliases": [
+    "Data Plane Development Kit"
+  ],
+  "type": "library",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "kernel-bypass"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "af-xdp",
+      "context": "选择 AF_XDP PMD 时，通过 Linux AF_XDP socket、UMEM 和关联队列收发包；这不是所有 PMD 的后端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "numa",
+      "context": "将设备队列、工作核与包缓冲区放在相近 NUMA 节点，评估跨节点访问成本。"
+    }
+  ],
+  "summary": "提供用户态包处理、设备抽象与轮询驱动的库集。",
+  "description": "DPDK 是数据平面开发库集，应用通过设备抽象、队列、缓冲区池和 Poll Mode Driver 批量接收或发送数据包。常见模型由工作核完成一批包的处理，也可将处理阶段分给不同工作核；它没有替应用提供完整通用 TCP/IP 套接字语义。\n\n驱动模式决定旁路边界：有些设备交给 VFIO，有些 bifurcated driver 保留内核设备控制并把数据处理交给 PMD，AF_XDP PMD 则利用 Linux socket 与 UMEM 接口。不能把全部 DPDK 部署描述为解绑内核驱动；使用无 IOMMU 模式也会削弱隔离。\n\n轮询、批量大小、队列深度和 NUMA 内存位置会共同影响吞吐、等待和 CPU 预算。选用某个 PMD 前应核验其能力与资源要求，低负载、饱和与突发流量分别测量；库名或链路带宽本身不能保证应用的延迟上界。\n\n## 参考\n\n- [DPDK Poll Mode Driver 编程模型](https://doc.dpdk.org/guides/prog_guide/poll_mode_drv.html)\n- [DPDK Linux 驱动、VFIO 与 bifurcated driver](https://doc.dpdk.org/guides/linux_gsg/linux_drivers.html)\n- [DPDK AF_XDP PMD](https://doc.dpdk.org/guides/nics/af_xdp.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://www.dpdk.org"
+}

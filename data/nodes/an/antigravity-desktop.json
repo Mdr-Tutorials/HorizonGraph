@@ -1,0 +1,77 @@
+{
+  "id": "antigravity-desktop",
+  "name": "Antigravity 2.0",
+  "aliases": [
+    "Google Antigravity 2.0",
+    "Antigravity Desktop",
+    "Antigravity 桌面应用"
+  ],
+  "type": "tool",
+  "domains": [
+    "agent-development",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "google-antigravity",
+      "context": "属于官方文档所列的 Antigravity 产品与能力体系；不表示必须安装其他家族入口。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-harness",
+      "context": "独立桌面应用用共享执行机制驱动各项目的智能体会话。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-session",
+      "context": "按项目管理、切换并继续智能体任务会话。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "artifact-review",
+      "context": "通过计划、walkthrough、截图与代码变更材料审阅任务执行结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-permission-policy",
+      "context": "按照当前操作系统支持的权限预设与规则决定工具操作是否允许或需要确认。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "antigravity-remote-control",
+      "context": "显式启用后，从浏览器继续该主机上的桌面会话；执行仍在自有主机。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-automation",
+      "context": "公开 overview 所述智能体可操作 Chrome；不据此推断底层自动化协议或第三方实现。"
+    }
+  ],
+  "summary": "独立桌面智能体控制台，跨项目安排任务并审阅执行结果。",
+  "description": "Antigravity 2.0 是独立的桌面智能体控制台，官方于 2026 年 5 月 19 日公开介绍。它从早期 IDE 内的 Agent Manager 演进，但当前 overview 明确说明它独立于 IDE：用户可以在多个项目之间安排任务、切换会话、检查进度与审阅变更，同时继续使用熟悉的代码编辑器。这里的“2.0”是当前桌面应用的官方名称，不能用它把仍在文档中单列的 Antigravity IDE 合并掉。\n\n桌面应用把执行过程组织为会话、项目和 artifacts，智能体可以执行命令、编辑文件、搜索资料并操作 Chrome。计划、walkthrough 和截图等材料用于呈现过程与结果；使用这些材料仍需要结合实际差异和验证结果评审。MCP、skills 与自定义子智能体是扩展入口，部分多智能体功能受方案与预览状态限制。Remote Control 已有现行文档，可从浏览器查看和继续该主机上的会话。\n\n权限与沙箱需要按操作系统区分。现行 macOS、Linux 权限页采用 Deny 优先于 Ask、Ask 优先于 Allow 的规则，Default 预设开启沙箱；Windows 文档保留另一套行为，终端沙箱仍标为 Preview 且须手动开启，预设本身不会自动开启它。企业使用可走相应 Cloud 项目或许可证授权。2026 年 10 月 6 日的 changelog 将 Scheduled Tasks 页签改名为 Automations，名称变化不代表任务已经迁移到 Google 托管云运行。\n\n## 参考\n\n- [Antigravity 2.0 overview](https://antigravity.google/docs/overview)\n- [Introducing Google Antigravity 2.0](https://antigravity.google/blog/introducing-google-antigravity-2)\n- [Agent permissions](https://antigravity.google/docs/permissions/)\n- [Terminal sandbox](https://antigravity.google/docs/sandbox/)\n- [Antigravity Remote Control](https://antigravity.google/docs/remote-control/)\n- [Antigravity in Gemini Enterprise](https://antigravity.google/docs/enterprise/)\n- [Antigravity Changelog](https://antigravity.google/docs/changelog)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://antigravity.google/docs/overview",
+  "first_released": "2026-05-19"
+}

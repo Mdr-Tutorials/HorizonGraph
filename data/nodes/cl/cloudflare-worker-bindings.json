@@ -1,0 +1,33 @@
+{
+  "id": "cloudflare-worker-bindings",
+  "name": "Cloudflare Workers Bindings",
+  "aliases": [
+    "Workers 绑定",
+    "Cloudflare 资源绑定"
+  ],
+  "type": "concept",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "edge-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-lifecycle",
+      "context": "对于要求请求上下文的绑定 I/O，在有效的 Worker 请求调用内执行资源操作，避免在模块加载阶段发起该类 I/O。"
+    }
+  ],
+  "summary": "向 Worker 提供命名资源与受控访问能力的配置机制。",
+  "description": "Cloudflare Workers bindings 是 Worker 配置中声明的命名能力和资源入口，通过处理程序的 env 等接口暴露给代码。绑定可以提供存储、服务调用和其他平台资源的专用对象，也可以表示配置值；因此并非每个绑定都是字符串环境变量。声明特定资源绑定会授予相应访问能力，应用通常不必自行拼接该资源的 REST 凭据调用。\n\n绑定的名称、资源目标与环境配置共同决定代码实际访问的对象。本地开发对支持模拟的资源默认使用本地替身，也可显式选择受支持的远程绑定；远程绑定会访问实际云资源，本地成功并不能证明生产数据或权限配置相同。\n\n绑定对象与请求执行上下文也有边界。官方文档允许在模块中取得 env，但某些绑定的 I/O 必须发生在请求上下文内；模块加载阶段并不因此获得任意网络或资源操作机会。更新绑定配置可能复用已有隔离实例，缓存从旧绑定派生出的客户端或凭据时需要考虑其失效，而不能假定每次配置更新都重新执行所有全局初始化。\n\n## 参考\n\n- [Cloudflare：Bindings 语义与作用域](https://developers.cloudflare.com/workers/runtime-apis/bindings/)\n- [Cloudflare：Fetch handler 的 env](https://developers.cloudflare.com/workers/runtime-apis/handlers/fetch/)\n- [Cloudflare：本地和远程绑定开发](https://developers.cloudflare.com/workers/local-development/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

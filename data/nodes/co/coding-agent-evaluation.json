@@ -1,0 +1,50 @@
+{
+  "id": "coding-agent-evaluation",
+  "name": "Coding Agent Evaluation",
+  "aliases": [
+    "代码智能体评估",
+    "软件工程智能体评估"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "swe-bench",
+      "context": "采用仓库级问题修复任务时使用具体 SWE-bench 子集、基础提交与评估协议，不能混合各版本分母。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "humaneval",
+      "context": "采用函数级 Python 代码生成任务时使用 HumanEval 题目与测试，所得结果只覆盖该任务层级。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "execution-based-evaluation",
+      "context": "应用候选补丁或运行生成函数后，以指定测试和状态检查验证功能性结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "artifact-review",
+      "context": "对测试通过的候选补丁补充需求、差异及回归证据审查，避免把有限测试当作完整正确性证明。"
+    }
+  ],
+  "summary": "通过仓库任务、执行测试和补丁审查评估代码智能体。",
+  "description": "代码智能体评估考察系统能否理解代码库中的问题、修改正确位置并交付可运行的改动。函数补全、仓库级修复和长程开发各有不同的输入与工作范围；某种任务的分数不能直接替代另一种任务的能力结论。\n\n仓库级任务可固定基础提交、问题描述、依赖环境和评估测试，将生成补丁应用后检查应修复的用例及原有行为。SWE-bench 提供这类任务；HumanEval 则提供函数级题目。评估要区分补丁无法应用、环境故障、测试失败和满足既定测试条件。\n\n测试只是需求的可执行近似。通过评估测试的补丁仍可能遗漏需求、造成未覆盖回归或引入额外行为，因此代码差异与验收产物审查可以补充执行结果。发布比较时还要披露允许使用的工具、反馈、重试预算和具体任务版本。\n\n## 参考\n\n- [SWE-bench 原论文：真实仓库问题与执行测试](https://arxiv.org/html/2310.06770v3)\n- [SWE-bench：评估环境、报告与结果缓存](https://www.swebench.com/SWE-bench/guides/evaluation/)\n- [原研究：SWE-bench 测试通过与补丁正确性的差别](https://software-lab.org/publications/icse2026_SWE-bench-correctness.pdf)\n- [HumanEval 原论文：函数级任务与 pass@k](https://arxiv.org/html/2107.03374v1)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

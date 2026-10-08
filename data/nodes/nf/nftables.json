@@ -1,0 +1,38 @@
+{
+  "id": "nftables",
+  "name": "nftables",
+  "aliases": [
+    "nftables 数据包过滤框架",
+    "nft"
+  ],
+  "type": "framework",
+  "domains": [
+    "systems-programming",
+    "networking",
+    "security",
+    "containerization"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "netfilter",
+      "context": "复用 Linux 内核 Netfilter 的挂钩、连接跟踪与 NAT 基础设施。"
+    }
+  ],
+  "summary": "以可组合规则与内核虚拟机组织 Linux 数据包处理的框架。",
+  "description": "nftables 提供 Linux 内核中的数据包分类框架，并配套 nft 用户态命令与 libnftables 等接口。用户态把规则表达转换为内核可处理形式，内核在挂钩位置执行匹配与动作。此节点描述 nftables 体系，nft 是其命令入口，不把规则编写工具与内核持续处理过程混作同一步骤。\n\nnftables 复用 Netfilter 的挂钩、连接跟踪与 NAT 等基础设施，并以表、链、集合与映射组织规则。其语法和事务处理不同于旧 iptables 规则体系；兼容层可以接受 iptables 风格入口，却不代表两种后端的全部链名、优先级和行为完全相同。\n\n容器平台能按配置采用 nftables 组织桥接规则。当前 Docker 文档将 29.0.0 引入的 nftables 后端标为实验性，并说明 Swarm 与 overlay 相关限制，不能推断所有 Docker 部署已经统一切换。迁移应按平台版本和实际后端理解转发规则，不凭命令名称判断整个网络路径。\n\n## 参考\n\n- [Netfilter：nftables](https://netfilter.org/projects/nftables/index.html)\n- [Docker：nftables 后端](https://docs.docker.com/engine/network/firewall-nftables/)\n- [Docker：iptables 后端](https://docs.docker.com/engine/network/firewall-iptables/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "official_site": "https://netfilter.org/projects/nftables/index.html"
+}

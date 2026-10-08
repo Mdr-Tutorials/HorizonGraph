@@ -1,0 +1,44 @@
+{
+  "id": "browsergym",
+  "name": "BrowserGym",
+  "aliases": [
+    "浏览器智能体实验框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "web-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "evaluation-harness"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "playwright",
+      "context": "BrowserGym 核心路径通过 Playwright page 对象及动作映射控制 Chromium，并按官方安装步骤准备浏览器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webarena",
+      "context": "选择 browsergym-webarena 可选适配包时接入 WebArena 任务，仍需按该基准配置并恢复自托管站点。"
+    }
+  ],
+  "summary": "为网页智能体提供统一环境、动作接口和基准适配。",
+  "description": "BrowserGym 是用于网页智能体实验的 Python 框架，以 Gym 风格的 reset、step 和终止信号组织浏览器环境。任务实现通过 setup 准备初态、validate 返回判定结果；观察可以包括页面结构和视觉信息，具体暴露内容由环境配置决定。\n\n核心执行路径使用 Playwright 控制 Chromium，并把受限的高级动作映射为执行代码。研究者也可使用更自由的 Python 动作空间，但这种可执行性不自动提供安全隔离。框架将浏览器动作、任务接口与具体智能体策略分开，用户仍需提供策略及其运行设置。\n\nWebArena、WorkArena 等通过不同的可选包接入，各自仍需自己的数据、站点和初始化过程；只安装核心包并不等于全部基准已经可用。AgentLab 是配套但独立的实验项目，不是 BrowserGym 的别名。统一接口也不能消除各基准任务、评分及版本之间的差异。\n\n## 参考\n\n- [BrowserGym 论文：环境接口、动作空间与实验](https://arxiv.org/html/2412.05467v1)\n- [BrowserGym 官方框架与可选基准包](https://github.com/ServiceNow/BrowserGym)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/ServiceNow/BrowserGym"
+}

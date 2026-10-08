@@ -1,0 +1,60 @@
+{
+  "id": "docker-buildx",
+  "name": "Docker Buildx",
+  "aliases": [
+    "Buildx",
+    "Docker 构建客户端"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "buildkit",
+      "context": "执行 build 或 bake 时向所选 BuildKit builder 提交、跟踪构建；不将该服务写成全部仓库管理子命令的前提。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dockerfile",
+      "context": "以 Dockerfile 构建路径传入定义、参数与上下文，由 builder 的 frontend 解析。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "multi-platform-image",
+      "context": "在多平台构建或 imagetools 组织清单的路径中管理各平台结果与发布入口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "build-cache",
+      "context": "通过构建参数配置所支持 backend 的缓存导入、导出或清理。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "docker-engine",
+      "context": "docker driver 使用引擎内置 BuildKit；docker-container driver 通过引擎创建专用 BuildKit 容器，remote 等其他 driver 不要求同一路径。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "kubernetes",
+      "context": "仅在选择 kubernetes driver 时于集群中创建、管理 BuildKit worker。"
+    }
+  ],
+  "summary": "管理 BuildKit builder 并发起多平台与多种输出构建。",
+  "description": "Docker Buildx 是 Docker CLI 的构建插件和客户端，负责解析构建选项、选择 builder、提交请求并显示执行进度；BuildKit 负责求解和实际执行构建。当前 Docker 文档说明 docker build 通过 Buildx 发起默认构建，而 docker buildx build 还能使用所选择的 builder。build、bake、builder 管理及 imagetools 等命令具有各自职责，仓库清单操作不应被理解为一定先启动一次构建。\n\nbuilder driver 决定 BuildKit 在何处运行：docker 使用引擎内置后端，docker-container 创建专用容器，kubernetes 使用集群 worker，remote 连接外部服务，cloud 连接托管构建器。缓存导出、多平台构建、配置选项与默认加载行为会随 driver 不同。构建结果应明确选择 --push、--load 或 exporter；能够构建某平台的镜像并不保证目标本地镜像库支持加载和保存全部平台变体。\n\n--platform 指定输出平台，实际执行可以利用模拟、多台原生 worker 或交叉编译，并由索引组织各平台清单。一个具体调用案例是 Microsoft WSL 3.0.1 中 WSLCSession 的内部构建实现：它在 guest 中调用 docker buildx build 并处理构建进度。此源码证据说明实现采用 Buildx，WSLc 对外提供的参数和 API 能力仍以其公开接口为准，不能由内部命令反推其完整开放了 Buildx 功能。\n\n## 参考\n\n- [Docker Build Overview](https://docs.docker.com/build/concepts/overview/)\n- [Buildx Drivers](https://docs.docker.com/build/builders/drivers/)\n- [Multi-platform Builds](https://docs.docker.com/build/building/multi-platform/)\n- [WSL 3.0.1：WSLCSession 构建实现](https://github.com/microsoft/WSL/blob/3.0.1/src/windows/wslcsession/WSLCSession.cpp#L985)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/docker/buildx"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "good-till-cancelled",
+  "name": "Good Till Cancelled",
+  "aliases": [
+    "撤销前有效",
+    "长期有效订单",
+    "GTC",
+    "Good Til Canceled",
+    "Good Till Canceled"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    }
+  ],
+  "summary": "可跨交易日持续等待成交的有效期指令",
+  "description": "Good Till Cancelled（GTC）通常使未成交订单跨交易日保持，直到全部成交、被取消或按适用规则终止。它是有效期指令，与价格类型不同；限价或触发类订单能否搭配 GTC 由场所和券商决定。\n\n“撤销前有效”并不意味着永不过期。券商可能设置最大保留期限、自动到期日或公司行动处理规则，衍生品还受到合约到期约束；IBKR 的官方说明即列出若干自动撤销条件，不能把某一券商的期限推广成全市场统一规则。\n\n跨日订单需要恢复未成交数量、累计成交与场所身份，并处理拆股、分红或会话切换等事件。结束本地程序、清空界面或重启连接不能代替场所撤单确认，长期存续也不意味着订单在所有延长交易时段都可执行。\n\n## 参考\n\n- [SEC：订单类型与交易指令](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14)\n- [CME Globex：订单与有效期、展示数量](https://www.cmegroup.com/cn-s/globex/globex-order-type.html)\n- [IBKR：GTC 的自动撤销边界](https://www.interactivebrokers.com/en/trading/ordertypes.php?m=goodAfterTimeDateModal)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "GTC"
+}

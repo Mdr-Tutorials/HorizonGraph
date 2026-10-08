@@ -1,0 +1,48 @@
+{
+  "id": "goose",
+  "name": "goose",
+  "aliases": [
+    "Goose AI Agent",
+    "Block Goose"
+  ],
+  "type": "tool",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ai-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "用户配置本地或远端扩展后以 MCP 接入其工具；仅启用且可连接的扩展参与任务。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-skill",
+      "context": "根据任务加载已配置技能的指导与资源，技能和扩展分别提供工作说明与可执行工具。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-client-protocol"
+    }
+  ],
+  "summary": "通过模型、MCP 扩展和工作流执行本地任务的开源代理。",
+  "description": "goose 是可在本机运行的通用开源 AI 代理，提供桌面应用、CLI 及编程接入。编写和调试代码是它的应用场景之一，也能用于研究、数据分析和一般自动化；不能将产品范围缩成单一 IDE 补全插件。项目当前属于 Agentic AI Foundation，官方文档从原 Block 路径迁移到 goose-docs.ai，旧品牌路径不代表独立的新代理。\n\n代理借助所选模型和工具处理任务，MCP 扩展可接入本地命令或远端服务。用户在配置中选择扩展、提供必要凭据并设置工作区，服务器提供的工具才参与执行。技能提供可复用指导，recipes 则用配置表达工作流中的指令、扩展和参数；它们是不同的组织层次，不能把一个 recipe 自动理解为已安装的全部工具。\n\n桌面与终端入口适合交互工作，可复用工作流也可用于自动化。权限、沙箱模式和防御功能约束部分行为，但安全性仍取决于实际工具、授权和宿主环境。当前官方还提供 ACP 接入能力：代理对编辑器通信与 MCP 对外部工具通信处在不同边界，支持二者不意味着所有外部服务都兼容或能够在未配置凭据时调用。\n\n## 参考\n\n- [goose：现行产品、工作流与项目治理](https://goose-docs.ai/)\n- [goose：扩展配置、MCP Roots 与远端接入](https://goose-docs.ai/docs/getting-started/using-extensions/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://goose-docs.ai/"
+}

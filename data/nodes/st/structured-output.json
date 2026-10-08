@@ -1,0 +1,27 @@
+{
+  "id": "structured-output",
+  "name": "Structured Output",
+  "aliases": [
+    "结构化模型输出",
+    "结构化输出"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "按声明的模式生成机器可解析并可进一步校验的模型结果。",
+  "description": "结构化模型输出要求结果遵守预先声明的字段与数据类型，例如输出包含分类、证据和数值字段的 JSON 对象。它用于把模型结果交给程序继续处理；函数调用则通常提出一个要执行的动作，两者可以采用相近模式但承担不同职责。\n\nGemini API 提供受支持的 JSON Schema 子集，Antigravity SDK 可用 Pydantic 模型配置 response_schema，并通过结构化结果接口读取。Microsoft Agent Framework 的示例也展示了声明响应模式后反序列化成类型化结果，具体可用能力仍取决于模型与接口。\n\n结构符合声明并不保证事实正确、数值合理或满足业务约束，应用仍需验证内容和边界条件。流式输出在完整结果形成前可能只有片段，拒绝、取消或错误也可能中断生成；调用者应按接口的完成状态决定何时解析和使用结果。\n\n## 参考\n\n- [Gemini API structured outputs](https://ai.google.dev/gemini-api/docs/structured-output)\n- [Antigravity SDK structured output](https://www.antigravity.google/docs/sdk/structured-output/)\n- [Microsoft Agent Framework structured output sample](https://github.com/microsoft/agent-framework/blob/main/dotnet/samples/02-agents/Agents/Agent_Step02_StructuredOutput/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

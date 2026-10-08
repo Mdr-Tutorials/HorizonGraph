@@ -1,0 +1,49 @@
+{
+  "id": "clock-synchronization",
+  "name": "Clock Synchronization",
+  "aliases": [
+    "时钟同步",
+    "Clock Discipline"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ntp",
+      "context": "采用 NTP 消息与时钟纪律实现 IP 网络上的参考时间同步。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ptp",
+      "context": "在采用指定 PTP profile 和传输映射的网络中，以事件时间交换同步时钟。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clock-offset",
+      "context": "同步伺服以估计偏移判断相位校正方向与幅度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clock-drift",
+      "context": "同步与失去参考后的保持分析中估计时钟速率偏差，减少偏移随时间积累。"
+    }
+  ],
+  "summary": "估计并校正时钟相位与速率，使时钟接近选定参考。",
+  "description": "时钟同步通过估计本地时钟与参考之间的偏移、速率差及路径延迟，校正相位和走时速率。参考可以是另一台设备或可追溯时间源；两个时钟彼此接近与二者都准确符合 UTC 是不同性质，不能互相替代。\n\nNTP 和 PTP 采用不同的消息、部署与测量位置，但实现都需要筛选样本和运行时钟伺服。校正可能采取逐步调频或时间跳变，失去参考后的保持状态也需要单独记录；通信路径的非对称可使偏移估计出现系统误差。\n\n本机单调时钟适合测量经过时间，不能直接作为跨主机公共 UTC 时间轴。分析同步质量时要区分时间戳粒度、偏移不确定度、频率漂移与源可追溯性，使用协议或调用校时工具都不等于获得固定精度保证。\n\n## 参考\n\n- [RFC 5905：NTPv4 时间同步与算法](https://www.rfc-editor.org/rfc/rfc5905.html)\n- [LinuxPTP ptp4l 时钟、传输与伺服选项](https://www.linuxptp.org/documentation/ptp4l/)\n- [RFC 7679：单向时延的时钟与误差边界](https://www.rfc-editor.org/rfc/rfc7679.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

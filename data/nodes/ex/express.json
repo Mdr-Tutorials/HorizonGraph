@@ -10,7 +10,8 @@
     "modern-web-frameworks-ecosystem"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -21,12 +22,23 @@
     {
       "relation_type": "depends_on",
       "target_id": "nodejs"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-middleware",
+      "context": "Express 按注册和匹配顺序调用 req、res、next 中间件，显式结束响应或通过 next 进入后续处理器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-routing",
+      "context": "Express 的 app.METHOD 与 Router 按路径和 HTTP 方法选择处理函数，并支持挂载路由模块。"
     }
   ],
-  "summary": "最经典的 Node.js Web 框架，中间件模型的开山之作。",
+  "summary": "基于 Node.js 的 Web 框架，以路由和 req、res、next 中间件组织请求处理。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://expressjs.com"
+  "official_site": "https://expressjs.com",
+  "description": "Express 是基于 Node.js 的 Web 框架，核心以路由和中间件函数组织请求响应周期。app.use 与路由方法可按挂载路径连接处理函数，Router 可形成可组合的路由模块。函数通过 req 和 res 读取请求、构造响应，并通过 next 将控制交给后续匹配处理器。\n\n中间件执行顺序影响鉴权、解析、路由和错误处理。处理器必须结束响应或调用 next，否则请求可能停留在处理链中；next(error) 转入错误路径，错误处理中间件使用 err、req、res、next 四个参数。这是显式回调传递模型，不能直接理解为 await next() 后自动回到上游的洋葱执行契约。\n\nExpress 5 对返回 Promise 的处理器支持把拒绝结果自动传入错误处理；其他异步回调仍需正确转交错误。Express 提供路由和部分通用中间件，但业务校验、数据库访问与授权策略需要应用及所选组件负责。\n\n## 参考\n\n- [Express：Using middleware](https://expressjs.com/en/guide/using-middleware/)\n- [Express：Error handling 与 Express 5 Promise 行为](https://expressjs.com/en/guide/error-handling/)"
 }

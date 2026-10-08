@@ -1,0 +1,39 @@
+{
+  "id": "symbol-navigation",
+  "name": "Symbol Navigation",
+  "aliases": [
+    "符号导航",
+    "代码导航",
+    "Go to Definition"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "symbol-index",
+      "context": "查询跨文件声明、定义与引用位置时使用语言服务维护的符号索引；当前文件导航也可直接查询解析状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "semantic-analysis",
+      "context": "语言感知导航通过名称绑定与类型信息把源码名称关联到具体声明，而非仅比较文本。"
+    }
+  ],
+  "summary": "按符号身份跳转定义、引用和实现位置。",
+  "description": "符号导航把源码中的名称关联到声明、定义、引用或实现，提供跳转与结果列表。导航针对语言服务识别的实体，而不是只搜索同样的字符，因此两个同名局部变量可能有完全不同的结果。\n\n编辑器可以通过直接提供者 API 或 LSP 请求导航位置，语言服务使用当前文档信息与可用的全项目索引返回结果。跨文件查询受构建配置、依赖解析、文档更新与索引覆盖范围影响；文档符号列表和工作区符号搜索也有不同查询范围。\n\n动态反射、字符串配置和运行时生成代码可能无法由静态导航完整覆盖。查到某个定义不说明已经找到所有运行时调用者；用于重构或代理分析时，应结合实际接口、搜索与测试核对。结果同时返回多个候选也可能是合法的语言或项目情况。\n\n## 参考\n\n- [VS Code：直接语言 API 与 LSP 的能力对应](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [clangd：导航、补全与语义重构](https://clangd.llvm.org/features)\n- [clangd：跨文件符号、引用与索引层次](https://clangd.llvm.org/design/indexing)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

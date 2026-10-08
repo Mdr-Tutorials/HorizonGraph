@@ -1,0 +1,33 @@
+{
+  "id": "camera-projection",
+  "name": "Camera Projection",
+  "aliases": [
+    "相机投影",
+    "观察投影"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-transform",
+      "context": "结合相机视图变换与投影矩阵，将世界几何映射到齐次裁剪空间。"
+    }
+  ],
+  "summary": "把相机观察空间映射为可裁剪的图像视域。",
+  "description": "相机投影定义观察空间中的几何如何映射到齐次裁剪空间。透视投影使远处物体看起来更小，常由视场角、宽高比和近远裁剪距离确定；正交投影使投影尺度不随深度改变，适合工程视图、二维界面和某些阴影视图。\n\n投影矩阵与相机的视图矩阵分工不同：前者决定视域和投影关系，后者由相机世界变换的逆得到。裁剪之后还要进行透视除法和视口映射。这里讨论渲染相机，和地理信息系统中把地球表面映射到平面的地图投影是不同语境。\n\n窗口或渲染目标尺寸改变时，应同步更新宽高比等投影设置。近远裁剪距离也影响深度表达与精度，不能只把它们看作可见距离开关；拾取射线和视锥剔除应使用当前实际绘制的相机参数。\n\n## 参考\n\n- [Three.js Cameras](https://threejs.org/manual/pages/cameras.html)\n- [Three.js Picking](https://threejs.org/manual/pages/picking.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

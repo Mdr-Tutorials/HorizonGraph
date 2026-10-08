@@ -1,0 +1,34 @@
+{
+  "id": "order-spoofing",
+  "name": "Order Spoofing",
+  "aliases": [
+    "诱骗性报单",
+    "虚假报单操纵",
+    "交易幌骗"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order",
+      "context": "在以显示报价形成虚假供需信号的spoofing行为中，滥用限价订单的公开价格与数量；限价单本身合法，不把正常取消等同于操纵。"
+    }
+  ],
+  "summary": "以禁止的撤单意图或虚假供需信号实施报单滥用。",
+  "description": "交易语境的spoofing涉及以并非真实交易目的的报单诱导市场，必须按具体法律和交易所规则判断。美国CEA section 4c(a)(5)(C)及CFTC正式解释聚焦报单时意图在执行前取消；其专门意图标准不能和其他扰乱交易条款中的鲁莽行为标准混为一谈。本节点是交易行为与合规风险概念，不是网络身份伪造技术。\n\n合法订单在市场条件改变后撤销或修改，并不因此成为spoofing。CFTC解释区分真实交易意图与禁止意图；CME现行Rule 575的2026年7月30日公告进一步说明，没有统一的最短存活期安全港，部分或全部成交也不会自动证明原始订单合规。单纯高撤单率、短订单寿命或使用冰山单均不能独立确定操纵。\n\n调查需要结合原始订单目的、订单与成交的顺序、关联账户、市场背景和完整记录，不能将一个统计告警作为最终结论。真实限价委托、双边不同数量报价和风险管理撤单有正常用途；它们与虚假信号的区别在于事实和适用规则，而不只在于技术字段或报单速度。\n\n## 参考\n\n- [CFTC：Antidisruptive Practices Authority正式解释与政策声明](https://www.cftc.gov/LawRegulation/FederalRegister/FinalRules/2013-12365.html)\n- [CME Rule 575：RA2608-5，2026年7月30日](https://www.cmegroup.com/rulebook/files/cme-group-Rule-575.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

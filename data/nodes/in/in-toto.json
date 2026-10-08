@@ -1,0 +1,46 @@
+{
+  "id": "in-toto",
+  "name": "in-toto",
+  "aliases": [
+    "in-toto",
+    "软件供应链完整性框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "artifact-attestation",
+      "context": "以可签署元数据记录并验证工件相关过程声明，同时用规则限定被信任步骤与执行者。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "public-key-cryptography",
+      "context": "经典 layout/link 流程用项目负责人和获准执行者公钥检查各自签署的元数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "in-toto-statement",
+      "context": "其通用 attestation 交换体系采用 Statement 表达工件与 predicate；经典 layout/link 数据不因此视作同一格式。"
+    }
+  ],
+  "summary": "以签署的步骤记录和规则验证软件供应链过程的框架。",
+  "description": "in-toto 是验证软件供应链完整性的开源框架，结合元数据规范、实现库和命令行工具，描述应该由谁执行哪些生产步骤以及步骤之间的工件约束。它关注从源码到发布物的过程链路，不是一个编译器，也不等于任意形式的软件签名。项目的声明交换体系与经典完整性验证工具具有各自的文档和数据结构。\n\n经典实现由项目负责人签署 layout，指定步骤、获准执行者的公钥及材料和产物规则；执行者用工具记录并签署 link 元数据，验证方检查 layout、执行者签名和跨步骤的工件匹配。in-toto-run 只记录显式指定的材料与产物，不能据此假定自动观察了进程读取的全部文件。规则和记录范围共同决定能够验证的保证。\n\nin-toto 的通用 attestation 体系另行定义 Statement，用 subject 和 predicate 支持构建来源等可交换声明；Statement v1 不能直接当作经典 layout 或 link 文件。框架可与签名和政策工具组合，但验证通过依赖获准执行者、正确规则和可信记录环境，不会证明全部源码安全，也不会凭一条签署的记录自动判断未被记录的行为。\n\n## 参考\n\n- [in-toto：项目与声明体系](https://in-toto.io/)\n- [in-toto：经典实现、layout、link 与记录边界](https://github.com/in-toto/in-toto)\n- [in-toto：独立 Statement 规范](https://github.com/in-toto/attestation/blob/main/spec/v1/statement.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://in-toto.io/"
+}

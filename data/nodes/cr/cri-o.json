@@ -1,0 +1,56 @@
+{
+  "id": "cri-o",
+  "name": "CRI-O",
+  "aliases": [
+    "CRIO",
+    "Kubernetes OCI 运行时 CRI-O"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "cri"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "container-runtime"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runc",
+      "context": "当 CRI-O 配置选择 runc 作为 OCI 执行器时，在准备容器 rootfs 和 OCI 配置后调用它运行 Linux 容器进程；可替换其它兼容执行器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-runtime-spec",
+      "context": "CRI-O 准备并提交 OCI 运行配置给低层执行器，自己的 kubelet 服务边界仍是 CRI。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cni",
+      "context": "CRI-O 在创建和删除 Pod 网络时使用配置的 CNI 插件。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cncf",
+      "context": "CRI-O 是 CNCF 正式托管的毕业项目，由其社区维护者治理与开发。"
+    }
+  ],
+  "summary": "将 Kubernetes CRI 请求映射到 OCI 执行器的服务",
+  "description": "CRI-O 是 Kubernetes Container Runtime Interface 的实现，负责把 kubelet 的容器管理请求连接到 OCI 兼容执行器。它是节点上的运行时服务，而不是单纯的 runc 替代二进制；低层执行器仍负责建立并运行实际容器进程。\n\n项目范围包括镜像获取与管理、容器生命周期、CRI 所需日志监控和资源隔离，并使用 CNI 配置 Pod 网络。它可选择 runc 等 OCI 执行器，在准备 rootfs 和运行配置后调用该后端；具体运行时选择和能力需要按 CRI-O 配置、版本与主机支持核对。\n\n官方明确把构建、签名和推送镜像排除在 CRI-O 的主要范围之外，因此不能当作完整开发构建 CLI。其发布兼容策略跟随 Kubernetes 的 minor 版本和维护范围，部署仍需检查版本矩阵。CRI-O 是 CNCF 毕业项目；基金会托管不表示全部代码由基金会亲自开发。\n\n## 参考\n\n- [CRI-O 官方项目说明与范围](https://github.com/cri-o/cri-o/blob/main/README.md)\n- [CRI-O 架构与 CNCF 托管](https://cri-o.io/)\n- [Kubernetes：容器运行时配置](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm"
+}

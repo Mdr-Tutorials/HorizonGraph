@@ -10,7 +10,9 @@
     "tcp-ip-ecosystem"
   ],
   "domains": [
-    "networking"
+    "networking",
+    "containerization",
+    "developer-environments"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -19,14 +21,21 @@
       "target_id": "application-protocol"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "udp"
+      "relation_type": "uses",
+      "target_id": "udp",
+      "context": "普通 DNS 的 UDP 传输路线以数据报发送查询与响应；响应大小和重试处理有相应条件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "DNS 标准 TCP 传输用于查询与响应，通用实现需要支持，并可处理 UDP 截断后的重试。"
     }
   ],
-  "summary": "把域名翻译成 IP 的分布式查询系统，UDP 53 承载查询。",
+  "summary": "以分层名称与资源记录组织查询，支持 UDP 和 TCP 传输。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
-  "official_site": "https://datatracker.ietf.org/doc/html/rfc1034"
+  "official_site": "https://datatracker.ietf.org/doc/html/rfc1034",
+  "description": "域名系统（DNS）通过分层名称空间、资源记录和委派组织分布式查询。它既可返回名称对应的地址，也可描述邮件路由、别名与其他类型记录；权威服务器、递归解析器和客户端具有不同职责。将 DNS 只称为一个域名到 IP 的静态列表，会遗漏委派、缓存和失败响应等实际行为。\n\n普通 DNS 查询可以经 UDP 传输，TCP 也属于标准传输路径。RFC 7766 要求通用 DNS 实现支持 TCP，并说明 UDP 响应截断后的重试以及复用连接等处理；TCP 不应被写成只有区域传送才能使用的特例。因此 UDP 不是 DNS 的唯一硬依赖，UDP 和 TCP 的使用应按传输场景分别表达。\n\n解析结果有相应 TTL 与缓存语义，查询成功不等于网络路由或目标服务可用。容器平台可提供自己的名称解析配置，WSL DNS tunneling 则把客户机请求交给 Windows 解析服务；这种代理通路与 DNS 协议身份不同。排查跨宿主服务连接时，应分清查到什么记录、结果是否仍有效，以及后续连接采用的地址与端口。\n\n## 参考\n\n- [IETF RFC 1034：Domain Names](https://datatracker.ietf.org/doc/html/rfc1034)\n- [IETF RFC 7766：DNS Transport over TCP](https://datatracker.ietf.org/doc/html/rfc7766)\n- [Docker：Networking Overview](https://docs.docker.com/engine/network/)\n- [Microsoft：WSL 网络](https://learn.microsoft.com/en-us/windows/wsl/networking)"
 }

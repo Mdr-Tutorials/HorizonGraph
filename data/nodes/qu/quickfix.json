@@ -1,0 +1,50 @@
+{
+  "id": "quickfix",
+  "name": "QuickFIX",
+  "aliases": [
+    "QuickFIX/C++",
+    "QuickFIX C++"
+  ],
+  "type": "library",
+  "domains": [
+    "electronic-trading",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cpp"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fix-protocol",
+      "context": "支持 FIX 业务消息及其数据字典校验。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fix-session-protocol",
+      "context": "实现登录、心跳、序号与重发等经典 FIX/FIXT 会话语义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "基于 socket 的 FIX initiator/acceptor 通过 TCP 与对手方建立连接。"
+    }
+  ],
+  "summary": "C++ FIX 消息引擎，提供会话管理和业务消息接口。",
+  "description": "QuickFIX 是以 C++ 实现的开源 FIX 消息引擎。它提供 initiator 与 acceptor、消息编解码、数据字典校验以及应用回调，应用仍需实现订单或成交的业务处理。实现 FIX 业务消息与实现会话层是不同能力：序号、心跳、登录和重发维持会话，业务消息承载交易含义。\n\n引擎支持可插拔消息存储和日志，并提供可选 Python、Ruby 绑定。文件存储与数据库存储可按配置选择，MySQL、PostgreSQL、ODBC 不是所有部署的硬依赖；启用 TLS 的构建才需要相应 OpenSSL 集成。语言绑定使用 C++ 核心，不代表 QuickFIX/J 也通过同一原生核心运行。\n\n它适合构建 FIX 网关、客户连接和测试对手方，但会话连通并不自动证明订单规则、交易所接入或风控符合要求。FIX 版本、字典、自定义字段、持久化和重发策略必须与对手方约定。这里没有把 FIXP 或 SBE 等其他规范自动算作 QuickFIX 的实现能力，也不采用无条件的最快或零延迟结论。\n\n## 参考\n\n- [QuickFIX 官方仓库与构建选项](https://github.com/quickfix/quickfix)\n- [QuickFIX：创建应用](https://quickfixengine.org/c/documentation/getting-started/creating-your-application.html)\n- [QuickFIX：配置](https://quickfixengine.org/c/documentation/getting-started/configuration.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://quickfixengine.org/c/"
+}

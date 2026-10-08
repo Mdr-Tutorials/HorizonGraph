@@ -1,0 +1,46 @@
+{
+  "id": "lima",
+  "name": "Lima",
+  "aliases": [
+    "Linux Machines",
+    "Lima 虚拟机工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "virtualization"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "qemu",
+      "context": "选择 QEMU VM 驱动时，由 QEMU 启动客体；VZ 等驱动不要求这条路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "containerd",
+      "context": "选择内置 containerd 容器模板时，在客体内运行 containerd 管理容器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nerdctl",
+      "context": "在 containerd 容器工作流中，以 nerdctl 客户端管理客体内的镜像与容器。"
+    }
+  ],
+  "summary": "自动共享文件与转发端口的跨宿主虚拟机管理工具。",
+  "description": "Lima 最初为 macOS 上使用 containerd 和 nerdctl 提供 Linux 虚拟机，后来扩展为可运行容器与普通 Linux 应用的 VM 管理工具。limactl 根据模板和配置创建实例，配置客体镜像、资源、文件共享与端口转发，宿主 CLI 可将命令送入客体执行。\n\nVM 驱动依宿主和配置选择：macOS 的 VZ 驱动使用 Apple Virtualization.framework，QEMU 路径使用 QEMU；不能将 QEMU 写成全部实例的必需后端。containerd 是内置容器场景，Docker 和 Podman 也有模板，不使用容器时仍可运行一般客体程序。\n\n现行文档把 macOS 与 Linux 列为主要宿主，Windows 等另有未测试或实验边界，Windows 的 wsl2 模式明确为实验模式。挂载可用 virtiofs、9p 或 SSHFS 等机制，缓存、权限和变更通知不完全相同；跨架构运行的支持也需区分虚拟化与模拟路径。\n\n## 参考\n\n- [Lima：范围和非容器应用](https://lima-vm.io/docs/)\n- [Lima：宿主支持范围](https://lima-vm.io/docs/installation/)\n- [Lima：macOS VZ 驱动](https://lima-vm.io/docs/config/vmtype/vz/)\n- [Lima：Windows WSL2 实验驱动](https://lima-vm.io/docs/config/vmtype/wsl2/)\n- [Lima：文件共享与变更通知](https://lima-vm.io/docs/config/mount/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://lima-vm.io/"
+}

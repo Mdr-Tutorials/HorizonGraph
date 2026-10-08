@@ -1,0 +1,35 @@
+{
+  "id": "url-search-params",
+  "name": "URLSearchParams",
+  "aliases": [
+    "URL查询参数接口",
+    "查询参数列表"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-message-body",
+      "context": "当 URLSearchParams 作为 Fetch 请求体输入时，其名称值列表按 application/x-www-form-urlencoded 编码为 HTTP 消息体。"
+    }
+  ],
+  "summary": "按有序名称值列表处理查询参数，并采用表单编码序列化。",
+  "description": "URLSearchParams 管理有序的名称和值列表，允许同名参数；append 追加条目，set 处理同名条目，getAll 取得全部匹配值。它可以独立构造，也可以与 URL.searchParams 关联。\n\n其序列化采用 application/x-www-form-urlencoded 规则，空格转为加号，其他字符按相应规则百分号编码。它与 URL 的查询序列化不完全相同，改动关联对象可能改变地址的编码拼写；输入应是参数部分，而非直接交入完整 URL。\n\n将参数对象交给 Fetch 作为请求体时，规范按此表单格式提取正文及媒体类型。该表示面向字符串参数，不等同携带文件的 multipart FormData，也不提供业务字段类型、必填性或合法性校验。\n\n## 参考\n\n- [WHATWG URL：URLSearchParams接口](https://url.spec.whatwg.org/#interface-urlsearchparams)\n- [WHATWG URL：表单格式序列化](https://url.spec.whatwg.org/#urlencoded-serializing)\n- [WHATWG Fetch：正文输入提取](https://fetch.spec.whatwg.org/#concept-bodyinit-extract)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://url.spec.whatwg.org/#interface-urlsearchparams"
+}

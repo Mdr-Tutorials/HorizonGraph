@@ -1,0 +1,28 @@
+{
+  "id": "pass-power-k",
+  "name": "pass^k",
+  "aliases": [
+    "重复全成功率",
+    "Pass power k"
+  ],
+  "type": "metric",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "衡量同一任务重复 k 次全部成功的可靠性指标。",
+  "description": "pass^k 由 τ-bench 用于衡量同一任务的 k 次试验全部成功的概率，并在任务集合上平均。它针对跨重复运行的一致性：pass@k 只要求至少一次成功，pass^k 要求每次都成功，两者不应互为别名或混用。\n\n在每题 n 次试验中有 c 次成功、且 n≥k 时，原论文给出估计式 C(c,k)/C(n,k)。k=1 时与单次平均成功率一致；k 增大时全部成功的要求更严格。只有在固定任务的独立同分布成功概率为 p 的模型下，才可将理论值写成 p 的 k 次方。\n\n重复运行应按协议重置任务并注明模型、用户模拟、随机设置和判定规则。共享环境故障或未恢复的状态会破坏试验假设。有限任务上的高 pass^k 不保证任意新任务可靠，且原始 τ-bench 的状态判定并不覆盖所有政策细节，过程合规需要另行检查。\n\n## 参考\n\n- [τ-bench 原论文：工具、用户模拟与 pass^k](https://arxiv.org/html/2406.12045v1)\n- [τ-bench 官方原始仓库与继任版本提示](https://github.com/sierra-research/tau-bench)\n- [HumanEval 官方 pass@k 估计实现](https://raw.githubusercontent.com/openai/human-eval/master/human_eval/evaluation.py)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

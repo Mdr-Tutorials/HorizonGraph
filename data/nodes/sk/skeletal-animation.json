@@ -1,0 +1,44 @@
+{
+  "id": "skeletal-animation",
+  "name": "Skeletal Animation",
+  "aliases": [
+    "骨骼动画",
+    "骨架动画"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rigging",
+      "context": "制作可动画化角色时，配置骨骼层级以及附件或顶点权重，供运行时应用姿势。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "通过矩阵组合关节层级变换，并按蒙皮权重变换角色顶点。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-transform",
+      "context": "运行时把骨骼局部变换按父子层级组合到角色世界坐标空间。"
+    }
+  ],
+  "summary": "用关节层级和蒙皮关系驱动角色或对象运动。",
+  "description": "骨骼动画用关节或骨骼的层级变换描述姿势，再把变换作用于附件或网格顶点。二维系统可以将图像附在骨骼上；三维蒙皮通常记录每个顶点受哪些关节影响以及对应权重，使表面随角色姿态改变。\n\n运行时需要按层级得到全局变换，并结合绑定姿势计算变形。动作可来自关键帧采样，也可在播放后加上程序化修正；绑定配置、动画播放与实际绘制属于不同阶段，关节数和影响权重也会影响计算与存储开销。\n\n## 参考\n\n- [Khronos：glTF 蒙皮与关节矩阵](https://github.khronos.org/glTF-Tutorials/gltfTutorial/gltfTutorial_020_Skins.html)\n- [Spine：二维骨骼层级](https://us.esotericsoftware.com/spine-bones)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

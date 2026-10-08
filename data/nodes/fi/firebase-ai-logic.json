@@ -1,0 +1,41 @@
+{
+  "id": "firebase-ai-logic",
+  "name": "Firebase AI Logic",
+  "aliases": [
+    "Vertex AI in Firebase",
+    "Firebase AI 逻辑"
+  ],
+  "type": "product",
+  "domains": [
+    "machine-learning",
+    "web-services"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "android-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini-api",
+      "context": "选择 Gemini Developer API 提供者时，Firebase 代理代表移动或 Web 客户端调用该模型服务；也支持另行配置的 Agent Platform Gemini API 提供者。"
+    }
+  ],
+  "summary": "为移动与 Web 应用提供模型客户端 SDK 和受保护的代理网关。",
+  "description": "Firebase AI Logic 是 Firebase 面向移动与 Web 应用提供的模型访问产品，包含客户端 SDK、代理服务及相关集成。它在 2025 年 5 月由 Vertex AI in Firebase 更名和重新打包，范围扩大到 Gemini Developer API 等后端。此名称表示客户端与网关的产品组合，不是 Google GenAI SDK、Gemini 模型或 Firebase Studio 的别名。\n\n应用通过 Swift、Kotlin/Java、JavaScript、Dart 或 Unity 等客户端实现发送请求，Firebase 代理在应用和选定 Gemini API 提供者之间处理请求。当前文档区分 Developer API 和 Agent Platform Gemini API 两种提供者；两者的配置、配额及功能差异要单独查看。选用 Developer API 时，代理与 App Check 集成可以让模型 API 密钥留在服务端。\n\n产品还可结合用户级限制、Remote Config、服务端提示模板以及部分平台的混合或端侧推理能力。App Check 用于限制未授权客户端的滥用，并不替代应用业务层身份与数据权限，也不能保证所有客户端版本都支持同样的模型功能。Firebase AI Logic 仍可脱离正在退出的 Firebase Studio 使用，后者的迁移时间线不能被套用到此模型接入产品。\n\n## 参考\n\n- [Firebase：AI Logic 客户端、代理与 API 提供者](https://firebase.google.com/docs/ai-logic)\n- [Firebase：AI Logic SDK 范围与历史名称](https://firebase.google.com/docs/ai-logic/ref-docs)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://firebase.google.com/docs/ai-logic"
+}

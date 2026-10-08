@@ -1,0 +1,40 @@
+{
+  "id": "order-cancel-replace",
+  "name": "Order Cancel/Replace",
+  "aliases": [
+    "订单撤换",
+    "撤单改单",
+    "Cancel Replace"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fix-protocol",
+      "context": "采用 FIX 的订单修改流程中，以 OrderCancelReplaceRequest 及相关确认或拒绝消息关联订单版本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-lifecycle",
+      "context": "替换工作中订单时，依生命周期回报处理 pending、在途成交、成功或拒绝，保持真实有效的数量和版本。"
+    }
+  ],
+  "summary": "关联原订单并请求替换价格或数量的订单修改过程",
+  "description": "Order Cancel/Replace 请求修改工作中订单的价格、数量或其它允许字段，并关联原订单与新的请求身份。在 FIX 中它有专门的消息语义，不能简单等同于先确认撤销旧单、再无关联地提交一笔新单；场所也可采用不同原生改单机制。\n\n替换请求待处理时原订单仍可能成交，Pending Replace 只表明处理中。系统需要用累计成交、剩余数量及拒绝原因确定哪个版本实际有效，并按接口语义解释新的总数量还是剩余数量，避免改小数量时忽略已经成交的部分。\n\n更改价格、增加数量或某些属性可能导致时间优先重新计算，具体规则由场所定义。重试和连续改单也可能被拒绝或受频率限制，因此客户端不能在发出修改后立即把旧订单当作不存在，更不能承诺所有修改都保留原队列位置。\n\n## 参考\n\n- [FIX Application Layer：Order State Changes](https://www.fixtrading.org/wp-content/uploads/download-manager-files/Order-State-Changes.pdf)\n- [Nasdaq：OUCH 5.0 订单入口规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/TradingProducts/OUCH5.0.pdf)\n- [CME：Order Management](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457216217/Order+Management)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -1,0 +1,33 @@
+{
+  "id": "debug-adapter",
+  "name": "Debug Adapter",
+  "aliases": [
+    "调试适配器",
+    "DA"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "debug-adapter-protocol",
+      "context": "采用 DAP 的适配器接收通用客户端请求，并把具体后端状态映射为协议响应与事件。"
+    }
+  ],
+  "summary": "把通用调试客户端请求转换为具体调试后端操作。",
+  "description": "调试适配器在调试客户端与具体调试器或运行时之间转换消息，使通用调试界面能够接入不同语言和后端。采用 DAP 的适配器接收断点、继续执行或变量查询等请求，再调用后端接口，并把运行状态转成协议事件与响应。\n\n适配器可以是独立进程或服务，也可以按编辑器支持的方式内联运行。VS Code 区分可执行文件、服务连接与内联适配器，调试扩展负责注册和配置；一个扩展可以仅提供声明式包装，不能因此把扩展宿主、适配器与实际被调试程序视为同一进程。\n\n适配器支持哪些断点、线程和求值行为取决于后端及双方协商的能力。它不会凭空补齐缺失调试信息或让所有目标均可附加；launch 与 attach 的具体参数也由实现规定。调试适配是语言服务集成之外的独立职责。\n\n## 参考\n\n- [Microsoft：Debug Adapter Protocol 消息与启动流程](https://microsoft.github.io/debug-adapter-protocol/overview.html)\n- [VS Code：调试器、适配器与扩展的边界](https://code.visualstudio.com/api/extension-guides/debugger-extension)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

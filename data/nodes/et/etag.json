@@ -1,0 +1,33 @@
+{
+  "id": "etag",
+  "name": "Entity Tag (ETag)",
+  "aliases": [
+    "实体标签",
+    "ETag 验证器"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "http"
+    }
+  ],
+  "summary": "由源服务器提供的表示验证器，用于比较资源版本。",
+  "description": "ETag 是源服务器为选定表示提供的不透明验证器，响应字段通常用双引号包围标签；W/ 前缀表示弱验证器。强比较要求标签相同且双方都不是弱标签，弱比较可以忽略弱标记，分别服务于要求字节等同与允许语义等同的条件判断。\n\n标签的生成方法由源服务器选择，不要求一定使用内容哈希。不同内容编码的表示需要满足对应强验证语义，不能把共享标签直接当作字节相同。Hono 的 ETag 中间件可生成标签并处理 If-None-Match，但应用仍需根据表示变化、流式内容和写入并发等场景选择适当策略。\n\n## 参考\n\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)\n- [Hono：ETag 中间件](https://hono.dev/docs/middleware/builtin/etag)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

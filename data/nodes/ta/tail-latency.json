@@ -1,0 +1,35 @@
+{
+  "id": "tail-latency",
+  "name": "Tail Latency",
+  "aliases": [
+    "尾延迟",
+    "长尾延迟",
+    "高分位延迟"
+  ],
+  "type": "metric",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "latency",
+      "context": "对同一观测边界的延迟样本分布计算明确的高分位数。"
+    }
+  ],
+  "summary": "描述耗时分布中较慢部分的指标，须注明分位数、样本和窗口。",
+  "description": "尾延迟描述耗时分布中较慢的部分，常用P95、P99或P99.9等高分位数表达。P99表示在约定统计方法下约99%的样本不超过该值，并不是最大延迟或对未来请求的期限保证。它仍以时间为单位，分位比例、观测窗口、样本数和失败处理方式应同时记录。\n\n分布式动作如果必须等待多个子任务，少量慢子任务可能明显影响最终完成时间。平均数无法独自展示这种波动，但高分位数也会受到样本量、采样和负载类型影响。各机器或各时间段的P99不能直接取平均得到总体P99，应使用可合并的分布记录或原始样本重新计算。\n\n报告尾延迟时要说明分桶或量化精度，并覆盖突发负载和长时间停顿。服务变慢时同步停发的闭环测量可能遗漏本应等待的请求，使尾部看上去过于乐观。优化还要观察吞吐和拒绝率，避免用大量丢弃慢请求来换取看似较低的成功请求分位数。\n\n## 参考\n\n- [Google Research：The Tail at Scale](https://research.google/pubs/the-tail-at-scale/)\n- [Prometheus：直方图、分位数与聚合](https://prometheus.io/docs/practices/histograms/)\n- [HdrHistogram：范围、精度、并发与遗漏修正](https://github.com/HdrHistogram/HdrHistogram)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

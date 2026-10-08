@@ -1,0 +1,44 @@
+{
+  "id": "mcp-streamable-http-transport",
+  "name": "MCP Streamable HTTP Transport",
+  "aliases": [
+    "MCP Streamable HTTP",
+    "MCP 流式 HTTP 传输"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 定义的 HTTP 承载绑定，其行为须按采用的协议版本解释。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "通过 HTTP POST 端点提交 MCP 消息，并处理相应响应和请求头。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sse",
+      "context": "服务器选择事件流响应或订阅流时，使用 SSE 承载 MCP 返回消息和通知。"
+    }
+  ],
+  "summary": "在 HTTP 端点上承载 MCP 请求和流式响应的协议绑定。",
+  "description": "MCP Streamable HTTP 是 MCP 的 HTTP 传输绑定，以协议端点承载客户端请求及服务器响应。2026-07-28 中客户端使用 POST 发送 JSON-RPC 请求，服务器按操作返回 JSON 或请求范围内的 SSE 流。HTTP 网络连接和 SSE 输出不等于 MCP 保存协议会话。\n\n请求正文携带协议版本、客户端信息和能力元数据；相应 HTTP 头可供路由等中间件处理，正文元数据仍是协议依据。流式返回适用于进度或通知等场景，客户端应区分 JSON 响应与事件流，并依照服务器能力使用订阅机制，而不是假设所有端点永远保持双向连接。\n\nStreamable HTTP 与旧版独立 HTTP+SSE 传输有不同端点和交互约定。2026-07-28 不再沿用旧流恢复与 Last-Event-ID 的协议行为；连接中断后的重发也不保证业务只执行一次。远程部署还需处理来源验证、授权和访问控制，支持 HTTP 绑定不等于默认公开所有工具。\n\n## 参考\n\n- [MCP：Streamable HTTP 规范](https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http)\n- [MCP：2026-07-28 变更记录](https://modelcontextprotocol.io/specification/2026-07-28/changelog)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http"
+}

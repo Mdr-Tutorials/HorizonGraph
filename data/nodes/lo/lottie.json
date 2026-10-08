@@ -1,0 +1,46 @@
+{
+  "id": "lottie",
+  "name": "Lottie Animation Format",
+  "aliases": [
+    "Lottie",
+    "Lottie 动画格式"
+  ],
+  "type": "protocol",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "graphics-asset-format"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "Lottie 文档以 JSON 对象和数组序列化动画及资源结构。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "keyframe-animation",
+      "context": "动画属性保存按时间排序的关键帧，由播放器据此计算对应时刻的值。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "easing-function",
+      "context": "关键帧区间可记录缓动切线，用于控制属性插值进度。"
+    }
+  ],
+  "summary": "以 JSON 表达图层、形状与关键帧的动画数据格式。",
+  "description": "Lottie 是基于 JSON 的动画数据格式，用结构化数据表达动画对象、图层、形状和随时间变化的属性。它把设计输出与播放实现分开，播放器读取数据后计算当前帧并绘制，文件本身不等同于某个 JavaScript 库。\n\n社区正式规范仍在编制，已批准部分定义属性、关键帧时间和缓动等语义。不同导出工具、播放器平台和渲染后端的支持范围需要实际核对；复杂效果能否保真取决于这些能力的交集。lottie-web 是浏览器播放器的独立条目。\n\n## 参考\n\n- [Lottie：正式规范与当前状态](https://lottie.github.io/lottie-spec/latest/)\n- [Lottie：动画属性与关键帧](https://lottie.github.io/lottie-spec/latest/single-page/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://lottie.github.io/lottie-spec/latest/"
+}

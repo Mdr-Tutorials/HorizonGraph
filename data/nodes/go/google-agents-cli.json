@@ -1,0 +1,45 @@
+{
+  "id": "google-agents-cli",
+  "name": "Agents CLI",
+  "aliases": [
+    "Google Agents CLI",
+    "google-agents-cli",
+    "agents-cli"
+  ],
+  "type": "tool",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "google-adk",
+      "context": "创建、运行和评估 ADK 智能体项目，并向编码助手提供对应框架的代码技能与模板。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "google-agent-runtime",
+      "context": "执行面向 Agent Runtime 的部署和观测流程时，管理该托管服务上的智能体；其他部署目标和本地工作流也可用。"
+    }
+  ],
+  "summary": "为 ADK 应用提供脚手架、评估、部署与技能的命令行工具。",
+  "description": "Agents CLI 是 Google 面向智能体开发生命周期的命令行工具和配套技能集合。发布包名为 google-agents-cli，命令为 agents-cli；它帮助开发者和编码助手创建、运行、评估、部署、发布并观测 ADK 应用。它不自行承担通用编码代理的身份，用户也可以直接从终端调用其命令。\n\n工具提供项目模板、代码扩展和升级、评估数据与评分、部署配置以及观测工作流。配套技能说明 ADK API、开发步骤和云端操作约定，让支持技能的编码环境能够调用同一工具链。技能只是可加载的指令和资源，不意味着任何宿主必须绑定一种模型，也不代表所有评估命令都会自动改动生产环境。\n\n本地创建、运行和评估可使用 AI Studio 提供的 Gemini API 凭据；部署到 Google Cloud 时才需要相应项目和凭据。官方部署流程可面向 Agent Runtime、Cloud Run 或 GKE，部分基础设施流程采用 Terraform。应将具体命令的环境要求与整个工具的要求区分，不能把全部可选云服务写成直接运行依赖。\n\n## 参考\n\n- [ADK：Agents CLI 入门与认证范围](https://adk.dev/get-started/agents-cli/)\n- [Google：Agents CLI 代码、命令与技能](https://github.com/google/agents-cli)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/google/agents-cli"
+}

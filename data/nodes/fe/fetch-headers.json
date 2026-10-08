@@ -1,0 +1,35 @@
+{
+  "id": "fetch-headers",
+  "name": "Headers",
+  "aliases": [
+    "Fetch首部接口",
+    "Headers API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "Headers 对象封装 HTTP 首部字段名称和值，并按 Fetch 定义的校验与列表操作语义提供访问。"
+    }
+  ],
+  "summary": "规范化首部列表的读写接口，其修改能力由guard限制。",
+  "description": "Headers 为 Fetch 首部列表提供 append、set、get、delete 与迭代等操作，字段名称比较忽略大小写。它保留首部列表的语义，不能直接当作区分大小写的普通 JavaScript 字典。\n\n对象的 guard 限定修改能力：immutable 首部不可修改，请求、响应及 no-cors 路径还具有对应约束。独立构造的 Headers 与从获取结果取得的 Headers 因而未必具有相同写权限。\n\n该接口管理脚本可见的字段，不代表原始报文字节或网络层最终发送的全部字段。服务端实现可能调整禁止字段或可见范围；Deno 官方明确列出与浏览器首部策略的差异，移植代码时需按实现核对。\n\n## 参考\n\n- [WHATWG Fetch：Headers接口](https://fetch.spec.whatwg.org/#headers-class)\n- [WHATWG Fetch：首部guard](https://fetch.spec.whatwg.org/#concept-headers-guard)\n- [Deno：首部实现差异](https://docs.deno.com/runtime/reference/web_platform_apis/#spec-deviations)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://fetch.spec.whatwg.org/#headers-class"
+}

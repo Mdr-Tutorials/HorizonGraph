@@ -1,0 +1,34 @@
+{
+  "id": "semantic-code-search",
+  "name": "Semantic Code Search",
+  "aliases": [
+    "语义代码搜索",
+    "语义代码检索",
+    "Natural-language Code Search"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-assisted-software-engineering",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "repository-indexing",
+      "context": "在依赖语义索引的实现中查询预先构建和更新的仓库表示；与不依赖索引的字面搜索区分。"
+    }
+  ],
+  "summary": "按查询含义召回相关代码并提供可核查的位置。",
+  "description": "语义代码搜索尝试按查询含义定位相关代码，使描述功能、行为或概念的查询能够找到没有相同字面词项的实现。它服务于仓库理解和上下文召回，不等同于编译器检查名称与类型的语义分析，也不同于准确定位同一符号的引用查询。\n\n采用语义索引的工具先为源码建立可检索表示，再对查询召回和排序，常与字符串搜索、文件筛选及符号查询协同。VS Code 官方仓库上下文说明区分需要索引的语义检索与无需索引的 grep，并根据仓库与产品配置选用本地或远程索引。\n\n结果只是候选相关性，需要打开源码和调用者核查。索引时效、文件范围与片段划分会影响召回，无法据一次搜索证明某段逻辑不存在。Antigravity 当前 /codesearch 文档描述字面与正则匹配，不能把该功能直接当作已采用语义向量检索的证据。\n\n## 参考\n\n- [VS Code：仓库上下文、索引与搜索工具](https://code.visualstudio.com/docs/agents/reference/workspace-context)\n- [clangd：跨文件符号、引用与索引层次](https://clangd.llvm.org/design/indexing)\n- [Google Antigravity：字面与正则代码搜索](https://antigravity.google/docs/cli/commands/codesearch/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

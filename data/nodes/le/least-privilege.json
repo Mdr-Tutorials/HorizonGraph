@@ -1,0 +1,36 @@
+{
+  "id": "least-privilege",
+  "name": "Least Privilege",
+  "aliases": [
+    "最小权限原则"
+  ],
+  "type": "concept",
+  "domains": [
+    "security"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "agent-permission-policy",
+      "context": "智能体权限设计应将工具、资源、动作和持续时间收敛到任务所需范围，而非预先授予所有可用能力。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "scoped-credentials",
+      "context": "凭据允许的资源与动作应限制到用途所需范围；限制范围本身不增加原主体权限。"
+    }
+  ],
+  "summary": "只授予完成指定任务所需的最小资源与操作权限。",
+  "description": "最小权限原则要求用户、服务及代用户运行的进程仅获得完成指定职责所需的资源和授权。最小并非只把账号改成非管理员，而是同时考虑资源、动作、租户、时间和执行环境；一个普通账号仍可能持有过宽的数据读取或发布权限。\n\n应用设计可把读取与写入、发现工具与调用工具、任务执行与凭据签发分开，并按实际需要增加授权。范围受限凭据和短期凭据分别限制可访问的对象与暴露时间，两者并不互相替代。已授予的权限还应随任务结束、角色变化和凭据撤销而收回。\n\n在智能体场景，工具集合和代用户权限都需按具体任务约束，模型说明某项操作有用并不能构成提权依据。最小权限指导设计和部署，但不承诺消除已有权限范围内的误操作；实际效果仍取决于策略匹配、资源服务授权和凭据使用端。\n\n## 参考\n\n- [NIST CSRC：Least privilege](https://csrc.nist.gov/glossary/term/least_privilege)\n- [OWASP：Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)\n- [OWASP LLM06:2025：Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

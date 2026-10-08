@@ -9,21 +9,25 @@
   "type": "concept",
   "ecosystems": [
     "cloud_native",
-    "hardware_iot"
+    "hardware_iot",
+    "edge-serverless-ecosystem"
   ],
   "domains": [
     "cloud-infrastructure",
-    "networking"
+    "networking",
+    "edge-computing",
+    "web-services"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "edge-runtime-concept"
     }
   ],
-  "summary": "算力下沉到离数据源近的地方，延迟与带宽的解药。",
+  "summary": "把计算与数据处理部署到更接近用户或数据源的位置。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "description": "边缘计算将部分计算和数据处理放到接近终端、用户或数据源的部署位置，以减少跨远端网络传输并利用本地上下文。位置可以是现场设备附近、企业现场、接入网络或服务商网络；ETSI MEC 是其中针对多种接入网络组织应用与平台能力的一条标准化路径。\n\n部署位置与执行管理模型属于不同维度：边缘服务可以采用容器、长期进程或托管事件运行时，Serverless 也可以部署在区域数据中心。靠近用户并不保证所有操作低延迟；访问远端数据库、路由和资源限制仍会影响结果，数据与状态的放置需要一起设计。\n\n## 参考\n\n- [ETSI：MEC 的现场、接入与网络边缘部署](https://www.etsi.org/technical-groups/mec/)\n- [Cloudflare：分布式执行与实例路由](https://developers.cloudflare.com/workers/reference/how-workers-works/)\n- [AWS：Serverless 计算与数据服务范围](https://aws.amazon.com/serverless/)"
 }

@@ -1,0 +1,39 @@
+{
+  "id": "auto-waiting",
+  "name": "Auto-waiting",
+  "aliases": [
+    "自动等待",
+    "浏览器自动等待",
+    "条件驱动等待"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-actionability",
+      "context": "为网页动作提供自动等待时，将该动作要求的可见、稳定、启用等条件作为继续执行的判据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "element-locator",
+      "context": "采用定位器等待路径时，根据查询规则反复解析当前页面目标直到满足要求或超时。"
+    }
+  ],
+  "summary": "在超时约束内自动等待动作或断言条件满足。",
+  "description": "自动等待是在执行流程中检查目标条件并等待其满足的同步机制，条件可以是元素出现、达到可操作状态或断言结果符合预期。它与固定时长的休眠不同：条件提前满足可以继续运行，未满足则受超时约束，不需要假设网页总在同一时间完成更新。\n\nPlaywright 的动作等待与自动重试断言、Puppeteer 的定位器等待、Cypress 的查询重试分别提供相关实现，具体边界不同。等待通常重新检查状态或查询目标，并不意味着把产生副作用的点击、支付等动作不加区分地重复执行；同样不等于失败后重新运行整个测试。\n\n等待条件应对应真实的业务或交互阶段，元素存在、页面加载完成和后端操作完成是不同事实。超时只能指出条件没有按期满足，不能修复错误选择器或应用缺陷。Selenium 的隐式与显式等待还具有组合边界，混用可能产生难以预测的总等待时间，应按所选框架设计同步策略。\n\n## 参考\n\n- [Playwright：Auto-waiting与Actionability](https://playwright.dev/docs/actionability)\n- [Puppeteer：Page interactions](https://pptr.dev/guides/page-interactions)\n- [Cypress：Retry-ability](https://docs.cypress.io/app/core-concepts/retry-ability)\n- [Selenium：Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

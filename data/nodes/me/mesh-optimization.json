@@ -1,0 +1,43 @@
+{
+  "id": "mesh-optimization",
+  "name": "Mesh Optimization",
+  "aliases": [
+    "网格优化",
+    "几何优化"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-geometry",
+      "context": "调整顶点属性、索引及表面复杂度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "level-of-detail",
+      "context": "生成用于不同观察条件的简化几何。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asset-compression",
+      "context": "对准备好的几何数据进行交付编码。"
+    }
+  ],
+  "summary": "调整网格表示、访问顺序与精度以降低处理成本。",
+  "description": "网格优化包括合并可共享顶点、重排索引改善缓存访问、优化顶点获取、量化属性，以及在允许误差的情况下简化表面。不同操作针对存储、带宽、变换或绘制成本，不能用文件大小这一项代替全部性能判断。\n\n简化可能改变轮廓、UV、法线或动画变形，需要设定误差并检查结果。属性接缝和材质边界限制合并；合适的索引顺序也与目标 GPU 和场景有关。优化后的产物应在实际运行时中验证画面与加载、渲染表现。\n\n## 参考\n\n- [meshoptimizer 官方库及优化说明](https://github.com/zeux/meshoptimizer)\n- [meshoptimizer 简化及误差控制 API](https://github.com/zeux/meshoptimizer/blob/master/src/meshoptimizer.h)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

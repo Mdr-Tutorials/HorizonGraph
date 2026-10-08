@@ -22,16 +22,18 @@
     }
   ],
   "summary": "在语法结构上验证名称、类型与语言约束。",
-  "description": "## 机制\n\n语义分析把名称绑定到声明，检查表达式与控制结构是否满足类型和其他语言规则，并为语法树补充解析后的语义信息。在 Clang 中 Sema 与 Parser 协作生成有语义属性的 AST。\n\n## 边界与应用\n\n语法正确不代表程序类型或含义合法。静态检查能验证的范围取决于语言设计，不自动证明程序无运行时错误，也不一定要求前后端阶段严格独立。\n\n## 参考\n\n- [Clang 内部架构手册](https://clang.llvm.org/docs/InternalsManual.html)",
+  "description": "语义分析把名称绑定到声明，检查表达式类型、作用域及其他语言规则，并为程序结构补充解析后的语义信息。在 Clang 中 Parser 与 Sema 协作构造有语义属性的 AST，而不是要求所有编译器都具有严格独立的先后阶段。\n\n语言服务可利用这些信息提供诊断、补全、符号导航与语义重命名；跨文件工具还需结合索引和正确的项目配置。当前文档、宏与依赖变化会影响分析结果，支持编辑过程的工具需要维护相应版本和状态，不能把一个旧索引结果当作完整当前程序。\n\n这里的语义分析是语言规则和实体绑定层面的分析，与按自然语言含义召回代码的语义搜索不同。语法合法并不保证类型合法，静态检查的保证范围也依语言设计而定；分析成功不自动证明无运行时错误或符合业务需求。\n\n## 参考\n\n- [Clang：Parser、Sema 与 AST 的协作](https://clang.llvm.org/docs/InternalsManual.html)\n- [Clang：抽象语法树、类型与源码位置](https://clang.llvm.org/docs/IntroductionToTheClangAST.html)\n- [clangd：导航、补全与语义重构](https://clangd.llvm.org/features)\n- [VS Code：仓库上下文、索引与搜索工具](https://code.visualstudio.com/docs/agents/reference/workspace-context)",
   "importance": 4,
   "official_site": "https://clang.llvm.org/docs/InternalsManual.html",
-  "last_reviewed": "2026-10-01",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active",
   "ecosystems": [
     "languages_runtimes"
   ],
   "domains": [
-    "compilers"
+    "compilers",
+    "developer-environments",
+    "ai-assisted-software-engineering"
   ]
 }

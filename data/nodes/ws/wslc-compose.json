@@ -1,0 +1,48 @@
+{
+  "id": "wslc-compose",
+  "name": "wslc-compose",
+  "aliases": [
+    "WSLc 社区 Compose 包装工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "containerization"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "wslc"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "wslc-desktop",
+      "context": "包装器写入的 Compose 项目标签由社区桌面客户端识别并分组，普通 WSLc 资源管理不要求安装包装器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "compose-spec",
+      "context": "解析并映射其当前支持的 Compose 配置子集；不支持字段的警告不能视为完整规范实现。"
+    }
+  ],
+  "summary": "将部分 Compose 配置转换成 WSLc 命令的社区 Python 工具。",
+  "description": "wslc-compose 是 Bacar Ndiaye 维护的社区 Python CLI，通过读取 Compose YAML、环境插值与内部模型生成 WSLc 命令。它独立于微软 WSL 发行物。当前包还提供 wslc 命令包装入口，使 compose 子命令交给包装器，其他命令再转发真实 WSLc 可执行程序。\n\n工具为服务规划网络与卷、镜像构建和拉取、依赖顺序、项目命名和副本数量，再调用 wslc 执行；容器标签中的配置哈希用于判断已有资源是否需要重建。Python 3.9 及以上、PyYAML 与可用 WSLc 是其执行前提，dry-run 可以显示将要调用的命令。\n\n所读 0.2.1 项目明确只映射部分 Compose 属性，healthcheck、secrets 等字段会警告后忽略，健康依赖条件可降为启动条件。因此接受文件不等于完整实现该文件意图。微软于 2026-09-29 宣布平台 GA，但原生 wslc compose 仍在路线图；社区文档遗留 preview 用语和旧平台限制不能覆盖 GA 状态或证明新能力已被包装器采用。\n\n## 参考\n\n- [项目作者：命令映射与未支持字段](https://github.com/bacarndiaye/wslc-compose)\n- [包元数据：版本、Python 和命令入口](https://github.com/bacarndiaye/wslc-compose/blob/main/pyproject.toml)\n- [Microsoft：GA 与原生 Compose 路线图](https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 2,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/bacarndiaye/wslc-compose"
+}

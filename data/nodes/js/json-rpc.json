@@ -1,0 +1,34 @@
+{
+  "id": "json-rpc",
+  "name": "JSON-RPC",
+  "aliases": [
+    "JSON-RPC 2.0",
+    "JSON 远程调用规范"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "JSON-RPC 2.0 使用 JSON 对象表示请求、响应和通知的消息结构。"
+    }
+  ],
+  "summary": "以 JSON 定义请求、响应和通知的远程调用消息规范。",
+  "description": "JSON-RPC 是传输无关的远程调用消息协议，2.0 规范用 JSON 对象描述方法、参数、请求标识和结果。它将调用双方的消息约定与 TCP、HTTP、标准输入输出等承载方式分开，也不同于仅描述数据语法的 JSON 和校验形状的 JSON Schema。\n\n请求带 jsonrpc、method 和可选 params；有 id 的请求关联结果或错误响应。没有 id 的通知不要求响应，错误对象表达代码和说明。批量消息属于规范能力，但具体采用 JSON-RPC 的上层协议可以施加更窄约束，不能假定任意调用方支持所有可选消息形式。\n\nJSON-RPC 不定义业务授权、事务隔离、重试幂等性或代理会话。MCP 使用它表达上下文接口，Agent Client Protocol 使用它协调编辑器与编码代理；这些上层协议各自定义方法及生命周期。请求标识用于关联消息，不能单独证明操作仅执行一次。\n\n## 参考\n\n- [JSON-RPC：2.0 正式规范](https://www.jsonrpc.org/specification)\n- [MCP：基础协议](https://modelcontextprotocol.io/specification/2026-07-28/basic)\n- [Agent Client Protocol：消息模型](https://agentclientprotocol.com/protocol/v1/overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://www.jsonrpc.org/specification"
+}

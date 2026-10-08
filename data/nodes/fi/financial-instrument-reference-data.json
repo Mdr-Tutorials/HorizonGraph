@@ -1,0 +1,30 @@
+{
+  "id": "financial-instrument-reference-data",
+  "name": "Financial Instrument Reference Data",
+  "aliases": [
+    "金融工具参考数据",
+    "证券及合约参考数据"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    }
+  ],
+  "summary": "定义金融工具标识、属性与字段解释的参考信息。",
+  "description": "金融工具参考数据定义行情和订单所指对象，以及解释字段所需的属性，例如源标识、符号、币种、到期与合约结构。行情中的短整型标识通常需要映射到这些定义，不能单凭字符串相同就认定来自不同场所的记录是同一工具。价格尺度和数量单位也应按具体字段及产品定义核对。\n\n参考数据既可由文件或 API 分发，也可作为行情中的定义消息发布。CME 的 Security Definition 与相应支持服务显示，静态文件和日内更新具有不同覆盖时点；交易日开始后新增或删除的工具可能尚未反映在先前文件中。参考数据常比行情变化慢，但不等于永不变化。\n\n恢复和规范化需要正确的有效定义，否则连续消息仍可能被解释为错误对象或单位。数据系统应保留来源、有效时点及更新动作，区分交易标识与更广泛的金融工具主数据。具备定义信息也不代表已获得完整实时行情或下单权限，这些来自另外的服务约定。\n\n## 参考\n\n- [CME：Security Definition](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457672532/MDP%2B3.0%2B-%2BSecurity%2BDefinition)\n- [CME：模式、配置与参考数据支持服务](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457572789/MDP%2B3.0%2B-%2BSupport%2BServices)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

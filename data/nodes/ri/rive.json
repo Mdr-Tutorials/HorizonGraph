@@ -1,0 +1,52 @@
+{
+  "id": "rive",
+  "name": "Rive Editor",
+  "aliases": [
+    "Rive",
+    "Rive 动画编辑器"
+  ],
+  "type": "tool",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "keyframe-animation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "interactive-animation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "animation-state-machine"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rive-file-format",
+      "context": "向应用和游戏交付交互内容时，导出可由官方运行库读取的 .riv 文件。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "rive-runtime"
+    }
+  ],
+  "summary": "制作带时间线、交互状态和数据绑定的动画编辑器。",
+  "description": "Rive Editor 是用于设计、动画和交互逻辑制作的编辑器。作者组织画板与矢量对象，用时间线创建动作，再通过状态、转换和输入描述内容如何响应应用交互；产物可用于界面、网站或游戏中的实时图形。\n\n发布到运行环境时，编辑器导出 .riv 文件，由相应平台的 Rive Runtimes 加载执行。编辑器、文件格式与运行库有独立职责；设计中使用的功能还需要目标运行库与渲染器支持，导出视频或图片则属于另一种交付方式。\n\n## 参考\n\n- [Rive：编辑器定位](https://www.rive.app/editor)\n- [Rive：状态机](https://rive.app/docs/editor/state-machine/state-machine)\n- [Rive：导出到运行环境](https://rive.app/docs/editor/exporting/exporting-for-runtime)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://rive.app/"
+}

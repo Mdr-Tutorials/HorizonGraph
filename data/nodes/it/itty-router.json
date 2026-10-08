@@ -1,0 +1,49 @@
+{
+  "id": "itty-router",
+  "name": "itty-router",
+  "aliases": [
+    "itty-router 微型路由框架",
+    "Itty Router"
+  ],
+  "type": "framework",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "http-routing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-request",
+      "context": "以标准请求作为常见 router.fetch 输入，读取方法与 URL 并传给匹配函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-response",
+      "context": "在基础 Router 的末端格式化或 AutoRouter 路径中形成宿主要求的标准响应。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-middleware",
+      "context": "按注册顺序运行匹配的辅助处理函数，按返回值决定是否继续后续路由。"
+    }
+  ],
+  "summary": "以顺序路由和可组合处理函数构建小型 HTTP 服务。",
+  "description": "itty-router 是面向轻量 HTTP 应用的微型路由框架，通过 router.fetch(request, ...args) 把请求及其他上下文参数传给匹配处理函数。处理函数既可用于业务，也可用作中间处理；返回有效值会结束当前路由处理，异步结果由框架等待。\n\n基础 Router 不要求每个处理函数都直接返回 Response，可在最后使用响应辅助函数或 finally 阶段格式化；AutoRouter 则提供更完整的默认响应组织。要接入要求标准响应的宿主，应保证最终输出成为合适 Response，不能只凭函数名 fetch 推断任意返回值都可发送。\n\n它适合边缘函数和小型 API，也有其他运行时接入说明。路由顺序、匹配规则及显式中间处理是应用设计的一部分；框架体积小不等于自动提供数据库、认证、模式校验或完整后台任务系统。这里的中间函数控制流也不应照搬 Koa 的 await next 回栈规则。\n\n## 参考\n\n- [itty-router](https://itty.dev/itty-router/)\n- [itty-router Concepts](https://itty.dev/itty-router/concepts)\n- [itty-router Getting Started](https://itty.dev/itty-router/getting-started)\n- [itty-router Middleware](https://itty.dev/itty-router/middleware/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://itty.dev/itty-router/"
+}

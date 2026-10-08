@@ -1,0 +1,63 @@
+{
+  "id": "buildah",
+  "name": "Buildah",
+  "aliases": [
+    "Buildah 镜像构建工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci-image-spec",
+      "context": "输出格式选择 oci 时生成对应配置、清单与文件系统层。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "multi-stage-build"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "build-cache",
+      "context": "启用中间层缓存或相应远程缓存参数时复用构建结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dockerfile",
+      "context": "build 命令读取 Dockerfile 或采用相同基本语法的 Containerfile；脚本操作方式不要求构建文件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image",
+      "context": "以基础镜像初始化工作容器，并将工作文件系统与配置提交为新镜像。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-registry",
+      "context": "在 pull、push 或启用远程中间镜像缓存时读取、写入仓库内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-runtime",
+      "context": "RUN 使用 OCI 或 rootless 隔离路径时调用兼容运行时执行构建命令；chroot 路径使用不同执行实现。"
+    }
+  ],
+  "summary": "通过构建文件或工作容器操作生成 OCI 与 Docker 镜像。",
+  "description": "Buildah 是专注容器镜像构建的工具，能够从基础镜像或 scratch 建立工作容器，修改文件系统和配置，再提交生成镜像。build 命令读取 Dockerfile 或兼容语法的 Containerfile；也能通过 from、run、copy、config、commit 等命令和脚本直接组织构建。官方提供 OCI 与 Docker 镜像格式输出，格式选择由相应参数决定，Dockerfile 不是使用 Buildah 的唯一入口。\n\nBuildah 采用 fork-exec 模型执行操作，无需常驻 Docker daemon。工作容器用于准备将写回镜像的内容，buildah run 对应构建期间执行命令的角色；面向长期应用容器的运行与管理由容器引擎承担。Podman 的构建能力使用 Buildah 的 Go API，这种库集成与是否安装独立 Buildah CLI 是不同问题。\n\n执行 RUN 时可以选择 OCI、rootless 或 chroot 等隔离路径，具体权限和宿主配置决定可用能力。中间结果缓存与远程缓存参数须按 Buildah 机制使用；例如当前文档说明 --cache-from/--cache-to 需要启用 --layers，并通过远程中间镜像存取。多阶段、目标平台和 manifest list 的构建选项支持组织不同产物，但实际跨架构指令执行仍需相应原生或模拟环境。\n\n## 参考\n\n- [Buildah 官方项目与 Podman 的关系](https://raw.githubusercontent.com/podman-container-tools/buildah/main/README.md)\n- [Buildah build：缓存、格式与隔离](https://raw.githubusercontent.com/podman-container-tools/buildah/main/docs/buildah-build.1.md)\n- [Buildah Working Container Commit](https://github.com/podman-container-tools/buildah/blob/main/docs/buildah-commit.1.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://buildah.io/"
+}

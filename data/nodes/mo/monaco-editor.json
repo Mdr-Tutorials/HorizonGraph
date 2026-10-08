@@ -1,0 +1,43 @@
+{
+  "id": "monaco-editor",
+  "name": "Monaco Editor",
+  "aliases": [
+    "Monaco",
+    "Monaco 编辑器",
+    "Monaco Editor Library"
+  ],
+  "type": "library",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-editor"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-completion"
+    }
+  ],
+  "summary": "把 VS Code 编辑器核心嵌入浏览器应用的编辑器库。",
+  "description": "Monaco Editor 是可嵌入浏览器应用的代码编辑器库，由 VS Code 编辑器源码生成，并为独立 Web 环境适配所需服务。它与完整 VS Code 产品和 Code - OSS 工作台有共同源码基础，但没有相同的分发形态和功能集合，版本号也没有直接一一对应关系。\n\n应用以 model 表示文本、语言和编辑历史，用 URI 区分文档，再创建挂载到 DOM 的 editor 视图。补全、悬浮等 provider 在 model 上运行；语言服务可使用 Web Worker 把较重计算移出界面线程，嵌入方负责正确配置模块、worker 与资源释放。\n\nMonaco 的 provider API 不是 LSP 的同义词，外部语言服务器接入需要相应集成。VS Code 扩展不会因为同源编辑器核心就直接在 Monaco 浏览器环境运行；完整工作台、扩展宿主、终端和代理能力也不会仅靠嵌入该库自动出现。\n\n## 参考\n\n- [Microsoft：Monaco 库、模型与 VS Code 边界](https://github.com/microsoft/monaco-editor)\n- [Microsoft：Monaco ESM 与 worker 的嵌入配置](https://github.com/microsoft/monaco-editor/blob/main/docs/integrate-esm.md)\n- [VS Code：源码层次、TypeScript 与桌面/Web 环境](https://github.com/microsoft/vscode/wiki/Source-Code-Organization)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://microsoft.github.io/monaco-editor/"
+}

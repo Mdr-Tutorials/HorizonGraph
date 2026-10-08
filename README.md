@@ -46,8 +46,8 @@ JSON 包含环境、数据版本、median/p95 和加载字节数。数据预先�
 
 仅编辑节点时，`pnpm gen` 和 `pnpm validate` 可独立检查契约、路径、字段和关系。`pnpm build:data` 只重建数据；更新可部署站点仍需完整构建。
 
-**内容入口**：[八个基础领域补全清单与来源](docs/content-foundations-2026-10.md) · [十二个领域补全清单与来源](docs/content-domains-2026-10.md)。
+**内容入口**：[八个基础领域补全清单与来源](docs/content-foundations-2026-10.md) · [十二个领域补全清单与来源](docs/content-domains-2026-10.md) · [实时图形与交互内容补全清单](docs/content-interactive-graphics-2026-10.md) · [Hono 与 Web 服务补全清单](docs/content-web-services-2026-10.md) · [WSL 与容器工程补全清单](docs/content-wsl-container-engineering-2026-10.md) · [HFT 与电子交易补全清单](docs/content-hft-and-electronic-trading-2026-10.md) · [Antigravity 与智能体开发补全清单](docs/content-antigravity-and-agent-development-2026-10.md)。
 
-**架构入口**：`docs/decisions/`（ADR 0001–0027）· [端侧引擎与离线发布](docs/decisions/0025-versioned-engine-and-offline-release.md) · [基础内容分类](docs/decisions/0026-foundational-content-classification.md) · [整领域内容扩展](docs/decisions/0027-whole-domain-content-expansion.md) · `contracts/`（Schema 唯一来源）
+**架构入口**：`docs/decisions/`（ADR 0001–0032）· [端侧引擎与离线发布](docs/decisions/0025-versioned-engine-and-offline-release.md) · [基础内容分类](docs/decisions/0026-foundational-content-classification.md) · [整领域内容扩展](docs/decisions/0027-whole-domain-content-expansion.md) · [实时图形与交互内容](docs/decisions/0028-interactive-graphics-content.md) · [Web 服务与 API 契约](docs/decisions/0029-web-services-and-api-contracts.md) · [WSL 与容器工程](docs/decisions/0030-wsl-and-container-engineering.md) · [HFT 与电子交易](docs/decisions/0031-hft-and-electronic-trading.md) · [Antigravity 与智能体开发](docs/decisions/0032-antigravity-and-agent-development.md) · `contracts/`（Schema 唯一来源）
 
 **许可**：代码 MIT，数据 CC BY-NC-SA 4.0

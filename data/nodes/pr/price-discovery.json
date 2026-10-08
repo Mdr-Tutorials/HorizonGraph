@@ -1,0 +1,38 @@
+{
+  "id": "price-discovery",
+  "name": "Price Discovery",
+  "aliases": [
+    "价格发现"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "call-auction",
+      "context": "市场采用开盘或收盘竞价时，通过集中买卖兴趣形成该阶段的成交价格。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "continuous-double-auction",
+      "context": "采用连续交易机制的市场中，通过逐次相容订单成交更新价格信息。"
+    }
+  ],
+  "summary": "交易意向与信息经市场互动形成和更新价格的过程。",
+  "description": "价格发现是信息、买卖意向和交易制度共同形成并更新市场价格的过程。成交、报价与竞价指示价格可以各自反映供需，交易规则则决定这些信息如何被汇集和表达；市场价格不因此自动等于不可直接观察的真实价值。\n\n不同机制具有不同的汇集路径。连续市场逐次吸收订单事件，集合竞价在指定阶段汇集大量兴趣，经销商报价则结合交易对手条件和报价方判断。信息更充分的成交也可能推动价格调整，但暂时性供需和有限流动性同样能改变价格。\n\n研究价格发现时需要区分样本范围、时间尺度、参考价格以及短期噪声，不能仅用更多成交或更快更新证明过程更有效。开收盘竞价可形成特定官方价格，行情快照中的报价中点则是观察量；两者的机制和适用用途不同。\n\n## 参考\n\n- [NYSE：竞价价格、配对数量和不平衡发布](https://www.nyse.com/trade/auctions)\n- [Nasdaq：开盘与收盘 Cross 的交易机制](https://www.nasdaqtrader.com/content/productsservices/trading/crosses/fact_sheet.pdf)\n- [Glosten 与 Milgrom：信息差、报价价差与交易价格原始论文](https://www.sciencedirect.com/science/article/pii/0304405X85900443)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

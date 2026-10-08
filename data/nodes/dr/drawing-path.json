@@ -1,0 +1,39 @@
+{
+  "id": "drawing-path",
+  "name": "Drawing Path",
+  "aliases": [
+    "绘图路径",
+    "图形路径"
+  ],
+  "type": "concept",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interactive-graphics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bezier-curve",
+      "context": "构造平滑曲线段时，以端点和控制点表达轮廓几何。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fill-rule",
+      "context": "对复合或自交路径填充时，按绕数或奇偶规则判断内部区域。"
+    }
+  ],
+  "summary": "用线段、曲线和子路径表示可填充或描边的几何。",
+  "description": "绘图路径记录几何轮廓，由起点、线段、曲线及多个子路径组成。填充、描边与裁剪是对路径的不同操作，填充颜色和线宽属于绘制样式，不能与路径坐标混为一个对象。\n\n开放路径可以用于描边，填充通常按相应规则把子路径视为闭合区域；显式 closepath 还会影响连接处的描边。复合路径可能形成孔洞或自交，必须说明填充规则，而不是仅凭点的顺序猜测内部区域。\n\n## 参考\n\n- [W3C：SVG 路径与 Bézier 曲线](https://www.w3.org/TR/SVG2/paths.html)\n- [MDN：Canvas 路径绘制](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

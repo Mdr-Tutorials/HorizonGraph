@@ -1,0 +1,37 @@
+{
+  "id": "iceberg-order",
+  "name": "Iceberg Order",
+  "aliases": [
+    "冰山订单",
+    "冰山单",
+    "Reserve Order",
+    "Display Quantity Order",
+    "展示数量订单"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order",
+      "context": "在采用原生限价储备订单的场所接口中，以限价决定价格边界，再由展示数量规则控制公开峰值。"
+    }
+  ],
+  "summary": "只显示总订单的一部分并按规则补充展示量的订单",
+  "description": "冰山订单把总数量分为可见展示部分与未展示储备，展示量耗尽后按规则补充。CME 使用 Display Quantity 或 MaxShow 名称，Nasdaq Canada 的 X-Berg 属于储备数量变体；全部隐藏的订单与有展示峰值的冰山订单不是同一指令。\n\n原生冰山的储备由场所管理，模拟冰山则由券商或客户端持续提交子单。展示量固定还是随机、补充是否改变时间优先、隐藏部分如何参与分配，以及允许的最小数量，均依产品和接口而变，不能假设整个总量始终占据原队列位置。\n\n减少即时展示不等于不会泄露交易意图，补充节奏和成交数据仍可能被识别。执行系统需要区分母单剩余量、当前展示量与已经提交的子单，处理撤换和在途成交，避免把隐藏储备当成独立于风险限额之外的数量。\n\n## 参考\n\n- [CME Globex：订单与有效期、展示数量](https://www.cmegroup.com/cn-s/globex/globex-order-type.html)\n- [Nasdaq Canada：Advanced Orders](https://www.nasdaq.com/products/north-american-markets/canada/advanced-orders)\n- [Nasdaq：OUCH 5.0 订单入口规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/TradingProducts/OUCH5.0.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

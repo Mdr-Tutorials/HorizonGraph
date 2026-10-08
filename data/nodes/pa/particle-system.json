@@ -1,0 +1,34 @@
+{
+  "id": "particle-system",
+  "name": "Particle System",
+  "aliases": [
+    "粒子系统",
+    "粒子特效"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering",
+    "game-development"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "以小图像纹理绘制烟雾、火花等粒子时，复用贴图并逐帧更新粒子的显示属性"
+    }
+  ],
+  "summary": "管理大量粒子的发射、生命周期与更新，用于视觉特效",
+  "description": "粒子系统以许多小图像或网格共同构成烟雾、火焰、火花等效果。每个粒子具有位置、速度、寿命及可随时间变化的大小、颜色、透明度等属性；系统负责发射、逐帧更新和到期移除。发射率和粒子寿命共同影响同时存活的粒子数量，局部空间或世界空间的选择则影响发射器移动后的轨迹。\n\n模拟与绘制是两个环节，可按实现放在 CPU 或 GPU 上；粒子数量、属性上传、透明叠加和覆盖面积都会影响性能。PixiJS v8 的 ParticleContainer 通过轻量 Particle 与静态、动态属性区分来减少更新开销，作为绘制容器并不自动提供所有发射或物理行为；其粒子也没有普通 Sprite 的完整事件、子对象和滤镜能力。选用粒子路径时应同时设计生命周期、资源复用与适用的渲染功能。\n\n## 参考\n\n- [Unity：粒子系统的发射、寿命与动态行为](https://docs.unity3d.com/cn/2018.3/Manual/PartSysWhatIs.html)\n- [PixiJS v8：ParticleContainer 的属性更新与能力边界](https://pixijs.com/8.x/guides/components/scene-objects/particle-container)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

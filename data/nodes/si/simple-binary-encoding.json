@@ -1,0 +1,43 @@
+{
+  "id": "simple-binary-encoding",
+  "name": "Simple Binary Encoding",
+  "aliases": [
+    "SBE",
+    "简单二进制编码"
+  ],
+  "type": "protocol",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "fix-trading-community",
+      "context": "FIX Trading Community 的技术委员会和工作组制定并维护 SBE 编码规范。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "xml",
+      "context": "使用官方 XML 消息模式描述格式时，表达字段、类型与模式约定；不要求每个解码器运行时解析 XML。"
+    }
+  ],
+  "summary": "按消息模式将金融消息字段编码为紧凑二进制的规范。",
+  "description": "Simple Binary Encoding（SBE）是 FIX Trading Community 的消息编码规范，规定字段类型、位置、重复组和可变数据如何表示为二进制。它使用模式驱动的结构减少文本解析和转换开销，可用于行情或交易消息。SBE 只定义编码层，不同时定义完整订单业务、会话恢复和网络传输。\n\n模式及其版本给出字段解释、空值、精度与布局，常用消息头关联模板和模式标识。固定位置有利于直接访问，但存在重复组与可变长度内容，不能把所有 SBE 消息描述为完全固定大小。字节序及扩展兼容条件应按引用规范与部署模式核对，而不是把某交易所的编码选项推广到所有实现。\n\nCME 在 MDP 3.0 和 iLink 3 中采用 SBE，使用者仍需取得相应交易所模式并处理其业务约定。标准、交易所模板与代码生成器版本是不同概念，SBE 规范库也区分正式技术规范与候选版本。支持编码不意味着支持 FIXP 会话或某个交易所全部消息，不能由一个共同缩写推导整套兼容性。\n\n## 参考\n\n- [FIX Trading Community：SBE 标准](https://www.fixtrading.org/standards/sbe/)\n- [FIX Trading Community：SBE 规范库与版本阶段](https://github.com/FIXTradingCommunity/fix-simple-binary-encoding)\n- [CME：MDP 3.0 的 SBE 编码](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457418645/MDP%2B3.0%2B-%2BSimple%2BBinary%2BEncoding)\n- [CME：iLink 3 CGW 会话指南](https://www.cmegroup.com/globex/files/ilink-3-cgw-session-guidelines.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "SBE",
+  "official_site": "https://www.fixtrading.org/standards/sbe/"
+}

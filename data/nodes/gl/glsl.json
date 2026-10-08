@@ -7,10 +7,12 @@
   "type": "language",
   "ecosystems": [
     "graphics-api-ecosystem",
-    "rendering-ecosystem"
+    "rendering-ecosystem",
+    "real-time-rendering-ecosystem"
   ],
   "domains": [
-    "graphics"
+    "graphics",
+    "real-time-rendering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -19,18 +21,24 @@
       "target_id": "language"
     },
     {
-      "relation_type": "part_of",
-      "target_id": "opengl"
-    },
-    {
       "relation_type": "stewarded_by",
       "target_id": "khronos-group",
       "context": "相关图形接口或着色语言规范由 Khronos 工作组维护。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "shader"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uniform-buffer",
+      "context": "在 GLSL uniform block 参数路径中，声明块成员及布局，并通过 API 对应绑定读取缓冲内的统一参数。"
     }
   ],
-  "summary": "OpenGL 的着色语言，写顶点与片元着色器。",
+  "summary": "用于GPU着色的语言，可按目标环境编译至OpenGL或Vulkan路径。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "description": "## 机制\n\nGLSL 是 Khronos 定义的着色语言，使用向量、矩阵和阶段相关接口表达 GPU 程序。不同阶段执行不同工作，包括顶点、片元以及受目标版本支持的计算着色；语言规范与图形 API 的调用接口分开规定。\n\n在 OpenGL 路径中，应用创建、编译和链接着色程序。在面向 Vulkan 的工具链中，GLSL 可先编译成 SPIR-V，由 Vulkan 消费；该路径具有对应的资源接口和能力约束，不能仅按源文件语言名称判断运行环境。\n\n## 边界与应用\n\nGLSL 的版本、目标环境与扩展共同决定有效语法及能力。GLSL ES 具有自己的版本规范，并非桌面 GLSL 的任意源码都可直接运行于 WebGL。跨接口移植还需检查绑定、数据布局和阶段接口，而非只替换编译命令。\n\n## 参考\n\n- [Khronos GLSL：规范与编译目标](https://docs.vulkan.org/glsl/latest/chapters/introduction.html)\n- [Khronos GLSL：可编程阶段](https://docs.vulkan.org/glsl/latest/chapters/overview.html)\n- [Khronos：Vulkan GLSL接口约束](https://docs.vulkan.org/glslext/latest/glslext/khr/GL_KHR_vulkan_glsl.html)"
 }

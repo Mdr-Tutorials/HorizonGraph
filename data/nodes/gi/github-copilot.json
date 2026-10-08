@@ -7,11 +7,13 @@
   "type": "product",
   "ecosystems": [
     "editor-ide-ecosystem",
-    "llm-agent-ecosystem"
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
   ],
   "domains": [
     "devops",
-    "machine-learning"
+    "machine-learning",
+    "ai-assisted-software-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -22,12 +24,27 @@
     {
       "relation_type": "developed_by",
       "target_id": "github"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "在支持并启用 MCP 的代理入口中连接额外工具与数据，实际服务器和可用能力受配置及组织策略控制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-skill",
+      "context": "委派任务需要已配置的技能时加载其专门指导和资源，不表示所有客户端都启用同一技能集合。"
     }
   ],
-  "summary": "最早规模化的 AI 代码补全与助手，长在编辑器里。",
+  "summary": "提供补全、对话、审查及本地和云端代理的开发服务。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "official_site": "https://github.com/features/copilot"
+  "official_site": "https://github.com/features/copilot",
+  "description": "GitHub Copilot 是 GitHub 提供的 AI 开发产品，包含代码补全、对话、编辑建议和代理工作方式。当前可用入口已覆盖编辑器、CLI 与 GitHub 上的任务和审查流程；它不是仅存在于编辑器光标处的补全功能。这里的 Copilot 专指 GitHub 产品，与其他厂商同名助手分开，具体模型选择不改变产品身份。\n\n交互式助手协助开发者处理当前工作，云端代理则在指定仓库中执行委派任务、形成分支和拉取请求；代码审查也可独立收集相关上下文并报告问题。这些入口的文件位置、会话和执行生命周期不同，不能把云端任务等同于已在本地启动的 CLI 会话，也不能因用户使用某个编辑器就推断所有执行发生在编辑器进程。\n\n自定义指导、代理技能、MCP 工具和 hooks 用于特定任务的行为与集成；可用功能受方案、客户端及组织策略约束。仓库规则与服务权限会限制云端任务，生成代码和审查建议仍可能错误。用于团队维护时，应核对实际启用的入口、上下文与访问权限，并以变更、测试和审查反馈验证任务，不把宣传中的助手能力写成默认全自动操作权。\n\n## 参考\n\n- [GitHub：Copilot 的产品范围与管理策略](https://docs.github.com/en/copilot/get-started/about-github-copilot)\n- [GitHub：Web、云端代理与审查的边界](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)"
 }

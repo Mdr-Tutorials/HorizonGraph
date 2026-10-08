@@ -1,0 +1,36 @@
+{
+  "id": "self-trade-prevention",
+  "name": "Self-trade Prevention",
+  "aliases": [
+    "自成交防护",
+    "Self-match Prevention",
+    "STP",
+    "SMP"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "在撮合阶段部署SMP的场景，比较新单与订单簿中潜在匹配挂单的SMP身份，并按选定策略取消或减量；只覆盖场所规定的匹配条件。"
+    }
+  ],
+  "summary": "按参与者标识阻止指定订单彼此成交的控制机制。",
+  "description": "自成交防护在订单可能与指定同属主体的挂单匹配时，按规则取消新单、取消旧单或减少双方数量，以避免这对订单形成自成交。判断依据是具体场所的参与者标识、共同所有权、分组ID和策略配置，并非仅比较网络连接或相同交易员姓名。\n\nCME的SMP是可选功能，可覆盖共同所有权账户的不同GFID或清算机构；生产标识需要按其注册流程维护。Nasdaq的说明则列出MPID、组织、关联实体和Group ID等匹配条件，以及Decrement Both、Cancel Oldest、Cancel Newest等处理方式。同名功能在各场所的触发条件、余量保留和订单回报可能不同，策略不能假设所有接口都采用同一语义。\n\n技术上避免一次自成交并不等于完成全部洗售或市场操纵合规判断：意图、关联账户和其他订单行为仍需审查。CME现行Rule 575说明，使用SMP撤单本身不是违规与否的判据；若初始订单本就不真实，或功能被用于扰乱市场，防护标记并不会使行为自动合规。\n\n## 参考\n\n- [CME：Self-Match Prevention注册与共同所有权范围](https://www.cmegroup.com/tools-information/webhelp/cme-request-center-nr-cert/Content/self-match-prevention-smp.html)\n- [Nasdaq：Self Match Prevention功能说明](https://www.nasdaq.com/docs/self-match-prevention-overview)\n- [CME Rule 575：RA2608-5，2026年7月30日](https://www.cmegroup.com/rulebook/files/cme-group-Rule-575.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "STP"
+}

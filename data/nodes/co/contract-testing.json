@@ -1,0 +1,36 @@
+{
+  "id": "contract-testing",
+  "name": "Contract Testing",
+  "aliases": [
+    "契约测试",
+    "API 契约测试",
+    "接口契约测试"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "提供者契约测试可按 OpenAPI 描述检查实现与文档一致性；这一检查本身不验证消费者实际代码。"
+    }
+  ],
+  "summary": "验证服务边界的请求、响应或消息是否符合约定。",
+  "description": "契约测试检查应用之间交换的信息能否满足双方约定，关注请求构造、响应解释、消息字段与错误场景等集成边界。消费者和提供者可以分别执行测试，再用同一份交互契约关联结果，无须为每次验证部署所有服务。HTTP 请求与响应只是其中一种通信形式，异步消息也可以建立契约。\n\n提供者按 OpenAPI 文档检查实际响应，能够发现实现与文档的偏离；消费者驱动的契约则从消费者实际调用生成交互样例，并在提供者侧验证。两者提供的证据范围不同：单独符合 Schema 不能证明所有消费者都会正确构造请求、解释响应，共享静态类型也不能验证已部署的服务版本是否兼容。\n\n契约断言应围绕使用方会依赖的通信行为，避免把数据库副作用、完整业务流程和界面体验全部塞入同一契约。例如创建订单返回约定字段，并不自动证明订单已正确持久化或支付完成；这些行为仍需相应的功能测试与集成测试。契约版本、测试数据和验证结果必须对应实际参与发布的服务版本，才便于判断兼容性。\n\n## 参考\n\n- [Pact：契约测试与提供者 Schema 检查的区别](https://docs.pact.io/)\n- [Pact：契约测试与功能测试](https://docs.pact.io/consumer/contract_tests_not_functional_tests)\n- [Pact：提供者验证](https://docs.pact.io/provider)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

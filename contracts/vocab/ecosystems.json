@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.7.0",
   "policy": "树形注册表：10 个根（宏观层）为闭集，变更走 major 版本；根以下深度开放、随数据 PR 登记。parents 可多亲（DAG）；CI 校验无环且所有链路终于根。节点字段 ecosystems 只声明所属圈层，任意层级可命名，祖先与宏观归属由 build 派生。blurb / maintainers 可选，供生态页叙事。生态与本体的分界：生态回答“谁在这个圈里”，本体回答“这是什么”；成员含组织、人物等产业主体时建生态，清一色同类型实体优先考虑本体分类。",
   "entries": [
     { "value": "languages_runtimes", "en": "Languages & Runtimes", "zh": "编程语言与运行时", "parents": [] },
@@ -76,6 +76,27 @@
     { "value": "scientific-computing-ecosystem", "en": "Scientific Computing Ecosystem", "zh": "科学计算生态", "parents": ["ai_data_science", "hardware_iot"] },
     { "value": "signal-processing-ecosystem", "en": "Signal Processing Ecosystem", "zh": "信号处理生态", "parents": ["networking_security", "hardware_iot"] },
     { "value": "materials-chemistry-ecosystem", "en": "Materials & Computational Chemistry Ecosystem", "zh": "材料与计算化学生态", "parents": ["ai_data_science", "enterprise_industry"] },
-    { "value": "knowledge-engineering-ecosystem", "en": "Knowledge Engineering Ecosystem", "zh": "知识工程生态", "parents": ["ai_data_science", "enterprise_industry"] }
+    { "value": "knowledge-engineering-ecosystem", "en": "Knowledge Engineering Ecosystem", "zh": "知识工程生态", "parents": ["ai_data_science", "enterprise_industry"] },
+    { "value": "interactive-graphics-ecosystem", "en": "Interactive Graphics Ecosystem", "zh": "交互图形生态", "parents": ["graphics_gaming", "web_frontend"] },
+    { "value": "real-time-rendering-ecosystem", "en": "Real-Time Rendering Ecosystem", "zh": "实时渲染生态", "parents": ["graphics_gaming", "hardware_iot"] },
+    { "value": "game-runtime-ecosystem", "en": "Game & Interactive Runtime Ecosystem", "zh": "游戏与交互运行时生态", "parents": ["graphics_gaming"] },
+    { "value": "digital-content-ecosystem", "en": "Digital Content Production Ecosystem", "zh": "数字内容制作生态", "parents": ["graphics_gaming", "enterprise_industry"] },
+    { "value": "creative-coding-ecosystem", "en": "Creative Coding & Animation Ecosystem", "zh": "创意编程与动画生态", "parents": ["graphics_gaming", "web_frontend"] },
+    { "value": "data-visualization-ecosystem", "en": "Data Visualization Ecosystem", "zh": "数据可视化生态", "parents": ["web_frontend", "ai_data_science"] },
+    { "value": "web-geospatial-ecosystem", "en": "Web Geospatial Ecosystem", "zh": "Web 地理空间生态", "parents": ["geospatial-ecosystem", "web_frontend"] },
+    { "value": "web-service-ecosystem", "en": "Web Service Ecosystem", "zh": "Web 服务生态", "parents": ["web_frontend", "cloud_native"] },
+    { "value": "edge-serverless-ecosystem", "en": "Edge & Serverless Ecosystem", "zh": "边缘与无服务器生态", "parents": ["cloud_native", "web_frontend"] },
+    { "value": "typed-api-ecosystem", "en": "Typed API & Contract Ecosystem", "zh": "类型化 API 与契约生态", "parents": ["web-service-ecosystem", "languages_runtimes"] },
+    {"value":"container-ecosystem","en":"Container Engineering Ecosystem","zh":"容器工程生态","parents":["cloud_native","virtualization-ecosystem"]},
+    {"value":"wsl-ecosystem","en":"WSL & Windows/Linux Interoperability Ecosystem","zh":"WSL 与 Windows/Linux 互操作生态","parents":["windows-ecosystem","linux-gnu-ecosystem","container-ecosystem"]},
+    {"value":"dev-container-ecosystem","en":"Development Container Ecosystem","zh":"开发容器生态","parents":["container-ecosystem","editor-ide-ecosystem"]},
+    {"value":"software-supply-chain-ecosystem","en":"Software Supply Chain Ecosystem","zh":"软件供应链生态","parents":["cybersecurity-ecosystem","cicd-ecosystem"]},
+    {"value":"electronic-trading-ecosystem","en":"Electronic Trading Ecosystem","zh":"电子交易生态","parents":["fintech-ecosystem"]},
+    {"value":"market-data-ecosystem","en":"Market Data Ecosystem","zh":"市场数据生态","parents":["fintech-ecosystem"]},
+    {"value":"quantitative-research-ecosystem","en":"Quantitative Research Ecosystem","zh":"量化研究生态","parents":["fintech-ecosystem","ai_data_science"]},
+    {"value":"low-latency-systems-ecosystem","en":"Low-Latency Systems Ecosystem","zh":"低延迟系统生态","parents":["operating_systems","networking_security","hardware_iot"]},
+    {"value":"ai-software-engineering-ecosystem","en":"AI-assisted Software Engineering Ecosystem","zh":"AI 辅助软件工程生态","parents":["ai_data_science","devops_tooling"]},
+    {"value":"browser-automation-ecosystem","en":"Browser Automation Ecosystem","zh":"浏览器自动化生态","parents":["web_frontend","devops_tooling"]},
+    {"value":"google-ai-ecosystem","en":"Google AI Ecosystem","zh":"Google AI 生态","parents":["ai_data_science"]}
   ]
 }

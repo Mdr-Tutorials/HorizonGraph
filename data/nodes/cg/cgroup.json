@@ -7,29 +7,32 @@
     "控制组",
     "cgroups"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
-    "linux-gnu-ecosystem"
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
   ],
   "domains": [
     "systems-programming",
-    "cloud-infrastructure"
+    "cloud-infrastructure",
+    "containerization",
+    "security"
   ],
-  "abstraction_level": "kernel_os",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "platform"
+      "target_id": "os-mechanism"
     },
     {
       "relation_type": "part_of",
       "target_id": "linux-kernel"
     }
   ],
-  "summary": "Linux 用来限制与计量一组进程的 CPU、内存与 IO。",
+  "summary": "按层级组织进程并计量、分配或限制 Linux 系统资源。",
   "importance": 4,
   "popular": 58,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "cgroup 是 Linux 按层级组织进程并控制资源分配的内核机制，由维护归属结构的核心与资源控制器组成。CPU、内存、I/O、进程数量等控制器承担计量、限制或分配职责，是否可用取决于内核配置、控制器启用和管理方的权限。它服务于容器、普通服务及用户会话，不是容器专用的软件平台。\n\nv1 可以按控制器建立多套层级，v2 使用统一层级并提供更一致的控制与委派规则，两者的接口和语义不能直接互换。v2 的 cpu.max 按周期约束 CPU 时间预算；memory.high 施加回收压力和节流，不直接触发 OOM；memory.max 在达到限额且无法回收时可触发该组的 OOM 处理。权重、预算、硬上限与观测统计分别表达不同含义。\n\n委派允许管理方在授权的子树中组织工作负载，但子树不能绕过祖先的资源限制，也不能假设所有控制器均已交付给普通用户。容器的资源参数需要检查实际驱动、层级和启用结果，特别是 rootless 环境。cgroup 的资源预算不会自动建立文件或网络访问策略，也不复制内核；cgroup-BPF 等附加策略另须配置。它与 namespaces、访问控制和沙箱运行时配合，而不是独立安全边界。\n\n## 参考\n\n- [Linux 内核：cgroup v2 核心、控制器与资源语义](https://docs.kernel.org/admin-guide/cgroup-v2.html)\n- [Linux 内核：cgroup v1 文档入口](https://docs.kernel.org/admin-guide/cgroup-v1/index.html)\n- [systemd：控制组委派与管理方职责](https://systemd.io/CGROUP_DELEGATION/)\n- [Linux 内核：cgroup BPF 附加程序挂载点](https://docs.kernel.org/bpf/libbpf/program_types.html)"
 }

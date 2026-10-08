@@ -11,7 +11,8 @@
   ],
   "domains": [
     "systems-programming",
-    "cloud-infrastructure"
+    "cloud-infrastructure",
+    "developer-environments"
   ],
   "abstraction_level": "kernel_os",
   "relations": [
@@ -24,23 +25,31 @@
       "target_id": "canonical"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "linux-kernel"
-    },
-    {
       "relation_type": "implements",
       "target_id": "posix"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "systemd"
+      "relation_type": "uses",
+      "target_id": "linux-kernel",
+      "context": "普通 Ubuntu 系统及 WSL 2 部署使用 Linux 内核接口；Ubuntu 的 WSL 1 用户空间由 Windows 兼容层承载，不能认定其自带并运行 Linux 内核。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "systemd",
+      "context": "在一般完整系统或默认/启用了 systemd 的当前 Ubuntu WSL 2 实例中进行初始化与服务管理；不推广到全部历史版本、容器及精简 rootfs。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "wsl",
+      "context": "Canonical 提供专门的 Ubuntu WSL 发布物和实例管理文档，通过 WSL 承载 Ubuntu Linux 用户空间。"
     }
   ],
-  "summary": "Canonical 的 Linux 发行版，云镜像的默认选择。",
+  "summary": "Canonical 与社区维护的 Linux 发行版，提供桌面、服务器及 WSL 用户空间。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
   "official_site": "https://ubuntu.com",
-  "first_released": "2004-10-20"
+  "first_released": "2004-10-20",
+  "description": "Ubuntu 是 Canonical 与社区维护的 Linux 发行版，提供面向桌面、服务器、云与其他部署形态的软件集合和发布维护机制。Linux 内核、GNU 等用户空间工具、软件包及系统配置共同构成一般 Ubuntu 系统；LTS 是发布与维护周期属性，不代表一种新的内核架构。它作为可交付发行版，与 WSL 承载环境、Bash Shell 和某个单独内核版本分别具有身份。\n\n在通常的完整 Ubuntu 系统和 WSL 2 部署中，程序通过 Linux 内核接口运行，systemd 在相应默认或启用配置下负责初始化与服务管理。但精简根文件系统、容器或历史 WSL 1 运行方式不会一律自带并启动同一初始化系统；WSL 1 使用 Ubuntu 用户空间，系统调用由 Windows 兼容层处理。当前默认 Ubuntu WSL 2 的 systemd 支持不能倒推所有过去版本和镜像都必须以 systemd 启动。\n\nCanonical 提供面向 WSL 的 Ubuntu 发布物，用户可以在 Windows 上注册实例并使用其包管理和开发工具。Ubuntu 版本、实例登记名称、WSL 软件包版本以及 WSL 1/2 架构是不同维度；导入根文件系统与普通安装也可能具有不同首次配置流程。宿主与共享 VM 设置属于 WSL，Ubuntu 软件包和发行版升级则由用户空间管理，不能用一次 WSL 更新替代 Ubuntu 的发行版升级。\n\n## 参考\n\n- [Canonical：About the Ubuntu project](https://ubuntu.com/about)\n- [Canonical：Install Ubuntu on WSL 2](https://documentation.ubuntu.com/wsl/latest/guides/install-ubuntu-wsl2/)\n- [Canonical：Customise an Ubuntu distro for WSL](https://documentation.ubuntu.com/wsl/latest/howto/custom-ubuntu-distro/)\n- [Microsoft：Use systemd in WSL](https://learn.microsoft.com/en-us/windows/wsl/systemd/)\n- [Microsoft：WSL 1/2 架构差异](https://learn.microsoft.com/en-us/windows/wsl/compare-versions)"
 }

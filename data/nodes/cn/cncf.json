@@ -8,10 +8,12 @@
   "type": "organization",
   "ecosystems": [
     "cloud_native",
-    "kubernetes-ecosystem"
+    "kubernetes-ecosystem",
+    "container-ecosystem"
   ],
   "domains": [
-    "cloud-infrastructure"
+    "cloud-infrastructure",
+    "containerization"
   ],
   "relations": [
     {
@@ -24,10 +26,11 @@
       "context": "CNCF 属于 Linux 基金会旗下的基金会，具有自身的社区和治理机制。"
     }
   ],
-  "summary": "托管 Kubernetes 等云原生项目的基金会。",
+  "summary": "为云原生开源项目提供中立托管、治理支持和生态协作的基金会。",
   "importance": 5,
   "official_site": "https://www.cncf.io",
-  "last_reviewed": "2026-08-29",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Cloud Native Computing Foundation 是 Linux Foundation 旗下的非营利基金会，为云原生开源项目提供中立的托管与协作环境。其范围包含容器、服务网格、微服务、不可变基础设施和声明式 API 等能力，不局限于某个容器产品。Kubernetes 和 containerd 是其正式项目，但项目托管身份与技术最初由谁研发属于不同事实。\n\n治理职责由不同机构分担：Governing Board 处理业务监督、预算与市场等事务，Technical Oversight Committee 维护技术愿景、评估项目接纳及演进，并协调共同实践。CNCF 章程要求既有项目延续自身技术治理结构，基金会支持项目生态、商标与协作，并不把所有仓库的日常设计和代码维护归到基金会工作人员。\n\n项目生命周期区分 Sandbox、Incubation、Graduated 与 Archived，阶段评估结合治理、采用情况和技术成熟度等依据。毕业体现项目发展与生产采用的评估结果，并非针对任意部署的无条件安全或兼容保证。社区会议、培训、认证及项目服务帮助采用者学习和协作；普通公司会员、赞助或相关技术集成也不等于被正式托管的项目身份。\n\n## 参考\n\n- [CNCF：机构身份与范围](https://www.cncf.io/about/who-we-are/)\n- [CNCF：现行章程与治理分工](https://raw.githubusercontent.com/cncf/foundation/main/charter.md)\n- [CNCF：项目生命周期与阶段流程](https://github.com/cncf/toc/blob/main/process/README.md)\n- [CNCF：Kubernetes 项目](https://www.cncf.io/projects/kubernetes/)\n- [CNCF：containerd 项目](https://www.cncf.io/projects/containerd/)"
 }

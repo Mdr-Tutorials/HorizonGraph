@@ -1,0 +1,57 @@
+{
+  "id": "playwright-mcp",
+  "name": "Playwright MCP",
+  "aliases": [
+    "Playwright MCP server",
+    "@playwright/mcp",
+    "Playwright MCP 服务器"
+  ],
+  "type": "tool",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "playwright"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mcp"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-automation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "accessibility-based-automation",
+      "context": "默认工具交互通过结构化可访问性快照和当前目标引用支持网页操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-context-isolation",
+      "context": "选择 isolated 模式时，在独立的内存上下文中管理浏览器任务状态。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "通过 MCP 暴露 Playwright 浏览器能力的服务器实现。",
+  "description": "Playwright MCP 是 Microsoft 发布的 MCP server 实现，使用 Playwright 向智能体客户端提供浏览器观察和操作工具。其主要交互路径采用结构化可访问性快照，不要求客户端先从截图中识别所有目标；项目同时提供可配置的附加能力，不能把默认观察方式理解为完全不支持像素工件。\n\n服务器可以使用默认持久配置文件、隔离上下文，或通过扩展连接已有浏览器，状态生命周期各不相同。配置还涉及输出目录、超时、浏览器端点和可选能力。它是连接客户端与浏览器的具体工具，既不是 MCP 协议本身，也不是 Playwright Test、Playwright CLI 或某个智能体产品的别名。\n\n官方说明来源允许或阻止规则不构成安全边界，且有重定向等覆盖限制；文件访问、浏览器权限和运行环境需要另行约束。结构化工具返回值只说明观察或动作的结果，任务成功仍需独立判定。项目列出的客户端配置方式证明可以进行可选集成，不能推导 Antigravity 内置浏览器子智能体默认采用了这个 server。\n\n## 参考\n\n- [Microsoft：Playwright MCP官方README](https://github.com/microsoft/playwright-mcp)\n- [Microsoft：Playwright MCP配置类型与边界](https://github.com/microsoft/playwright-mcp/blob/main/config.d.ts)\n- [Microsoft：Playwright MCP安全政策](https://github.com/microsoft/playwright-mcp/blob/main/SECURITY.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/microsoft/playwright-mcp"
+}

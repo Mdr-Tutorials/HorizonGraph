@@ -1,0 +1,31 @@
+{
+  "id": "fill-or-kill",
+  "name": "Fill or Kill",
+  "aliases": [
+    "立即全部成交否则撤销",
+    "全部成交或撤销",
+    "FOK"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    }
+  ],
+  "summary": "要求立即全量成交否则终止订单的交易指令",
+  "description": "Fill or Kill（FOK）要求在立即处理阶段全量成交，否则不执行该订单而将其终止。其核心是立即性与全量条件同时成立，不同于可以立即部分成交的 IOC，也不同于允许等待全量条件的 All or None。\n\n“全量”通常可以由同一场所的多个合格对手单共同满足，不必只对应一笔对手订单。可否聚合、哪些流动性合格以及信用或最小数量规则如何应用，都由场所及产品定义，界面名称本身不能代替撮合规范。\n\nFOK 是单笔指令的处理条件，不是跨交易所多腿事务的原子提交协议。两处同时发出的 FOK 仍可能只有一处成交，取消或拒绝回报也必须独立确认；需要避免把全量条件误写为无滑点、无暴露或跨场所同步成交保证。\n\n## 参考\n\n- [SEC：订单类型与交易指令](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14)\n- [CME EBS：IOC 与 FOK 的区别](https://www.cmegroup.com/tools-information/webhelp/ebs-workstation-quick-guide/Content/ChangingBUYSELLOrderType.html)\n- [Coinbase Exchange：Create a New Order](https://docs.cdp.coinbase.com/api-reference/exchange-api/rest-api/orders/create-new-order)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "FOK"
+}

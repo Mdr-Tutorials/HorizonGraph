@@ -13,7 +13,8 @@
   ],
   "domains": [
     "networking",
-    "systems-programming"
+    "systems-programming",
+    "low-latency-systems"
   ],
   "abstraction_level": "kernel_os",
   "relations": [
@@ -30,11 +31,12 @@
       "target_id": "linux-kernel"
     }
   ],
-  "summary": "在网卡驱动最早路径用 eBPF 处理数据包，用于 DDoS 缓解与负载均衡。",
+  "summary": "Linux 可编程早期包处理路径，含 native、generic 与 offload 模式。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
   "popular": 35,
-  "official_site": "https://www.kernel.org/doc/html/latest/networking/af_xdp.html"
+  "official_site": "https://www.kernel.org/doc/html/latest/networking/af_xdp.html",
+  "description": "XDP 是 Linux 的可编程早期包处理路径，程序可以选择放行、丢弃、发送或重定向数据包。native 模式在支持的驱动较早阶段运行；generic 模式位于较后的通用软件路径，offload 模式又依赖设备能力，三者不应都描述为同一网卡最早入口。\n\nXDP 程序按其 eBPF 类型获得有限上下文和可用操作，包边界与访问仍须验证。通过 XSKMAP 重定向到 AF_XDP 是一种应用路径，与在内核中继续处理或向其他设备重定向不同；模式、动作和队列支持需依驱动核验。\n\nnative XDP 并不自动意味着 AF_XDP 零拷贝，后者还要看 socket 绑定模式和驱动能力。XDP 可用于过滤、转发和用户态收包，但不是完整 TCP 协议栈，也不意味着所有 Linux 网络流量都绕开内核或具有固定延迟。\n\n## 参考\n\n- [Linux AF_XDP socket、UMEM 与环所有权](https://docs.kernel.org/networking/af_xdp.html)\n- [Linux BPF Design Q&A：程序上下文与受限能力](https://docs.kernel.org/bpf/bpf_design_QA.html)\n- [DPDK AF_XDP PMD](https://doc.dpdk.org/guides/nics/af_xdp.html)"
 }

@@ -1,0 +1,43 @@
+{
+  "id": "object-picking",
+  "name": "Object Picking",
+  "aliases": [
+    "对象拾取",
+    "图形拾取"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hit-testing",
+      "context": "在二维显示树或几何候选上用命中测试确定可选择对象。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "camera-projection",
+      "context": "采用三维射线拾取时由当前相机和屏幕位置构造观察射线。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "render-target",
+      "context": "采用 GPU 标识拾取时离屏存储对象标识，并读取交互位置的像素。"
+    }
+  ],
+  "summary": "把屏幕交互位置映射为选中的场景对象。",
+  "description": "对象拾取根据屏幕位置确定用户选中了哪个场景对象，并可返回交点等信息。三维常见路径是依据相机投影构造射线，先测试包围体再测试几何；二维则可遍历显示层级并执行命中测试，结合交互规则选择结果。\n\n另一种路径把对象标识写入离屏渲染目标，再读取对应像素判定对象。标识输出需避免混合、色调映射和颜色空间转换改变编码，并使透明裁切、深度和几何变形尽可能匹配可见图像。GPU 拾取需增加绘制或读回，不能默认比 CPU 射线测试更快。\n\n拾取服务于编辑器、地图标注和交互可视化。CPU 的静态几何相交结果可能与着色器变形或纹理透明区域不一致；需要明确使用包围体、几何还是可见像素语义。拾取射线的交点查询不等同于模拟光传输的光线追踪渲染。\n\n## 参考\n\n- [Three.js Picking](https://threejs.org/manual/pages/picking.html)\n- [PixiJS Events](https://pixijs.com/8.x/guides/components/events)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

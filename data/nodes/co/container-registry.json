@@ -1,0 +1,44 @@
+{
+  "id": "container-registry",
+  "name": "Container Registry",
+  "aliases": [
+    "镜像注册表",
+    "容器镜像仓库",
+    "Container Registry"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-distribution-spec",
+      "context": "采用 OCI 分发接口的注册表使用该规范约定的清单和 blob 上传、下载及内容发现接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image-digest",
+      "context": "通过内容摘要寻址清单与 blob，并支持客户端检验返回字节与目标内容是否一致。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-tag",
+      "context": "在 repository 范围内维护可读标签到清单内容的引用，支持按名称查找镜像。"
+    }
+  ],
+  "summary": "存储并分发容器镜像清单、配置和层内容的服务",
+  "description": "## 机制与边界\n\n容器镜像注册表提供镜像内容的上传、保存、发现与下载，是构建端和运行端交换制品的服务。Registry 是服务边界，repository 是其中一组内容的命名范围；中文“镜像仓库”经常同时指这两者，描述具体资源时需要区分注册表地址与仓库路径。\n\n采用 OCI Distribution Specification 的注册表通过约定的接口分发清单和 blob。客户端先取得镜像清单或索引，再按其中的内容摘要读取配置、层或子清单，并校验返回内容。标签为用户提供可读名称，摘要负责定位具体内容；多个标签可以引用同一份清单。\n\n注册表既可以公开提供，也可以在组织内部部署，并结合访问控制和内容管理策略使用。分发协议与镜像格式承担不同职责：前者规定内容如何传输，后者规定配置、层和清单如何表达。注册表保存和提供制品，其本身不承担在宿主机上执行这些容器的职责。\n\n## 参考\n\n- [Docker：镜像注册表概念](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-registry/)\n- [OCI：Distribution Specification](https://raw.githubusercontent.com/opencontainers/distribution-spec/main/spec.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

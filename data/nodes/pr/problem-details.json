@@ -1,0 +1,42 @@
+{
+  "id": "problem-details",
+  "name": "Problem Details for HTTP APIs",
+  "aliases": [
+    "HTTP API 问题详情",
+    "Problem Details",
+    "RFC 9457"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-status-code",
+      "context": "以实际响应状态提供通用 HTTP 结果，再在消息内容中补充问题类型与实例详情。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "content-negotiation",
+      "context": "接口需要多种错误表示时，可通过 Accept 与响应媒体类型协商 Problem Details 格式。"
+    }
+  ],
+  "summary": "为 HTTP API 错误定义可扩展的机器可读详情格式。",
+  "description": "RFC 9457 通过 application/problem+json 等格式表达 HTTP API 的错误详情，定义 type、title、status、detail 和 instance，并允许扩展字段。type 的 URI 识别问题类型；detail 提供此次问题的可读说明，客户端应依明确类型与扩展字段处理，而不是解析说明文字猜测业务结果。\n\n格式补充实际 HTTP 状态，不替代状态码；出现 status 成员时，生成方必须在实际 HTTP 响应中使用相同状态码。它也不是所有接口必需采用的错误格式，已存在合适的领域错误表示时可以沿用。实现应控制对外错误信息，不把调用栈、内部数据库信息或秘密写进公共详情。RFC 9457 已取代 RFC 7807。\n\n## 参考\n\n- [IETF：HTTP API 问题详情（RFC 9457）](https://www.rfc-editor.org/rfc/rfc9457.html)\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.rfc-editor.org/rfc/rfc9457.html"
+}

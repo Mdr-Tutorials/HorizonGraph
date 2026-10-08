@@ -1,0 +1,53 @@
+{
+  "id": "trivy",
+  "name": "Trivy",
+  "aliases": [
+    "Trivy",
+    "Aqua Trivy"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain",
+    "containerization"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vulnerability-scanning",
+      "context": "发现受支持的软件组件并匹配相关已知漏洞公告，结果受目标、识别和数据库覆盖限制。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom",
+      "context": "为受支持目标生成结构化软件组件清单，生成范围取决于目标与分析器配置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image",
+      "context": "镜像扫描路径分析镜像文件系统及包信息；文件系统、仓库与 SBOM 扫描不因此依赖镜像输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "以已有 SBOM 为扫描目标时读取其中组件并做漏洞比对，与生成 SBOM 是不同使用路径。"
+    }
+  ],
+  "summary": "扫描镜像与软件目标的漏洞、配置、秘密并处理 SBOM。",
+  "description": "Trivy 是 Aqua 的开源安全扫描工具，可面向容器镜像、文件系统、代码仓库及其他受支持目标进行检查。其漏洞、错误配置、秘密和许可检查属于不同扫描能力，目标类型与启用的扫描器共同决定实际范围。镜像扫描可从受支持的本地镜像源、归档或远程仓库读取内容，不要求所有扫描场景都运行 Docker Engine。\n\n漏洞检测先识别操作系统包和语言依赖，再选择对应公告数据源。操作系统包通常采用发行版厂商的安全公告，以处理修复回移与厂商版本语义；语言包采用其支持的生态数据源。Trivy 也支持部分含嵌入依赖信息的二进制或 SBOM 路径，但不能从这些能力推断任意自编译程序都能被完整识别。\n\n它可以生成或读取支持的 SBOM 格式，便于把组件清单与后续检查组合。结果依赖扫描配置、包识别、数据库更新和公告覆盖，精确模式与扩大覆盖模式在误报、漏报之间有不同取舍。命中候选漏洞仍需确认版本、厂商修复、配置与可达性；未命中不能证明目标安全，扫描完成也不表示镜像获得了发布授权。\n\n## 参考\n\n- [Trivy：官方工具与扫描能力](https://github.com/aquasecurity/trivy)\n- [Trivy：漏洞扫描的来源选择与边界](https://trivy.dev/docs/latest/scanner/vulnerability/)\n- [Trivy：容器镜像扫描来源](https://trivy.dev/docs/latest/target/container_image/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://trivy.dev/"
+}

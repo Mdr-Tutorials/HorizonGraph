@@ -1,0 +1,39 @@
+{
+  "id": "request-context",
+  "name": "Request Context",
+  "aliases": [
+    "请求上下文",
+    "请求级上下文"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-request",
+      "context": "Hono 通过 c.req.raw 暴露原始 Web Request，供使用标准请求接口的处理逻辑读取。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-response",
+      "context": "Hono 的 c.res 及处理器返回值使用 Web Response 表达状态、字段和内容。"
+    }
+  ],
+  "summary": "在单次请求处理范围内承载输入、响应与共享变量。",
+  "description": "请求上下文为一次请求提供处理范围，通常承载请求对象、待返回响应、运行时绑定与中间件共享变量。Hono 为每个请求建立 Context：c.req 是 HonoRequest 包装器，c.req.raw 才是原始 Web Request，c.res 表示响应；c.set 与 c.get 可把认证或验证结果传给同一请求的下游处理器。\n\n上下文变量应具有清楚的请求作用域，不能当成多个用户共享的全局容器。它也不是跨请求会话：会话需要独立的标识、存储或签名令牌生命周期。处理器返回、流式响应完成和运行时允许的后台任务之间有不同边界，平台绑定或后台执行能力也不是所有 Context 实现共同保证的功能。\n\n## 参考\n\n- [Hono：Context API 与变量范围](https://hono.dev/docs/api/context)\n- [Hono：HonoRequest 与原始 Request](https://hono.dev/docs/api/request)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

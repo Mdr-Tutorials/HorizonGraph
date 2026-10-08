@@ -1,0 +1,52 @@
+{
+  "id": "network-interface-card",
+  "name": "Network Interface Card",
+  "aliases": [
+    "NIC",
+    "网络接口卡",
+    "网卡",
+    "Network Interface Controller"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ethernet",
+      "context": "Ethernet 类型的网卡在 MAC/PHY 和帧收发路径中采用 IEEE 802.3 规范。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dma",
+      "context": "具备主机 DMA 能力的网卡按照注册或映射的描述符缓冲区搬运包内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pcie",
+      "context": "采用 PCIe 主机接口的网卡以 PCIe 事务交换数据和设备状态；并非所有 NIC 的唯一总线。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "receive-side-scaling",
+      "context": "在支持 RSS 的网卡配置中按包头哈希选择接收队列，保持特定流的队列亲和性。"
+    }
+  ],
+  "summary": "连接主机与网络并管理帧收发、队列和设备接口的硬件类别。",
+  "description": "网络接口卡是将主机接入网络的硬件类别，可是独立扩展卡，也可是集成控制器。Ethernet 网卡结合 MAC、物理接口、收发队列和主机接口处理网络帧；这里的 NIC 不指管理交换机或无线网络的控制软件。\n\n常见 PCIe 网卡通过 DMA 描述符把收到的帧放入主机缓冲区，更新队列状态，再以中断或轮询通知软件。RSS、校验和卸载、分段和硬件时间戳是需逐设备核验的能力，不能当作所有网卡都具备的定义条件。\n\n主机侧性能由链路、队列、驱动、内存位置、通知方式和应用消费速率共同决定。更高链路带宽不会自动降低软件等待，扩大队列也可能增加排队；数据手册中的网卡功能应和操作系统实际暴露的能力分别确认。\n\n## 参考\n\n- [Intel I350 Ethernet Controller 数据手册](https://cdrdv2-public.intel.com/333171/ethernet-controller-i350-datasheet.pdf)\n- [Linux RSS、RPS、RFS 与队列扩展](https://docs.kernel.org/networking/scaling.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "NIC"
+}

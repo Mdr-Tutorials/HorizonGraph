@@ -1,0 +1,43 @@
+{
+  "id": "pydantic",
+  "name": "Pydantic",
+  "aliases": [
+    "Pydantic 校验库"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "python-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "由模型或 TypeAdapter 导出可供 API 文档与其他工具消费的 JSON Schema，区分验证和序列化模式。"
+    }
+  ],
+  "summary": "用 Python 类型注解解析校验数据并生成模型与 JSON Schema。",
+  "description": "## 机制与应用\n\nPydantic 根据 Python 类型注解和字段约束构造模型，执行验证后返回符合输出类型与约束的对象，失败时提供 ValidationError。模型及 TypeAdapter 能导出 JSON Schema，也可序列化结果，适合 API、配置和消息处理。类型注解在这里作为校验库的定义输入，仍需实际执行模型解析来处理外部数据。\n\n默认解析可能转换输入，例如把数字字符串转为整数，因此保证的是成功输出符合模型要求，不是原始数据从未改变。strict 模式减少强制转换，但 Python 输入与 JSON 输入的规则仍可能不同，日期等类型尤其需要按转换表核对。JSON Schema 的校验视图与序列化视图也可能有差别，应按消费者需要选择。\n\n## 参考\n\n- [Pydantic：模型解析与输出保证](https://pydantic.dev/docs/validation/latest/concepts/models/)\n- [Pydantic：严格模式](https://pydantic.dev/docs/validation/latest/concepts/strict_mode/)\n- [Pydantic：JSON Schema 与生成视图](https://pydantic.dev/docs/validation/latest/concepts/json_schema/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://pydantic.dev/"
+}

@@ -7,8 +7,8 @@
   ],
   "type": "product",
   "ecosystems": [
-    "unreal-engine-ecosystem",
-    "graphics_gaming"
+    "graphics_gaming",
+    "game-runtime-ecosystem"
   ],
   "domains": [
     "game-development",
@@ -23,13 +23,18 @@
     {
       "relation_type": "developed_by",
       "target_id": "valve"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-engine"
     }
   ],
-  "summary": "Valve 的 Source 游戏引擎家族。",
+  "summary": "Valve 的游戏引擎家族，涵盖 Source 与继任的 Source 2。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
   "display_primary": "Source",
-  "official_site": "https://www.valvesoftware.com"
+  "official_site": "https://www.valvesoftware.com",
+  "description": "Source 与 Source 2 是 Valve 不同代际的游戏引擎，Source 2 是 Source 的继任者。Valve 的 Source 2 发布公告明确区分代际，Dota 2 Reborn 则展示了 Source 2 在具体游戏中的应用与内容制作工具。\n\n相关开发工作流通过工具制作、编辑并接入关卡与资产。以 Half-Life: Alyx 的 Workshop 工具为例，Hammer 处理关卡，Material Editor、ModelDoc、AnimGraph 和 Particle Editor 分别服务于材质、模型、动画图与粒子内容；这些工具说明对应游戏的制作路径，不代表全部 Source 产品提供相同编辑器或文件能力。\n\nValve Source SDK 2013 仓库公开的是指定游戏的代码与构建工作流，不能据此将其称为完整 Source 引擎源码。第一代 Source 与 Source 2 的可用工具、项目配置和授权范围应分别核对，两代引擎的接口兼容性、物理实现和授权条件不能互相套用。\n\n## 参考\n\n- [Valve：Source SDK 2013](https://github.com/ValveSoftware/source-sdk-2013)\n- [Valve：Source 2 announcement](https://store.steampowered.com/news/16000/)\n- [Valve：Dota 2 Reborn, Part 3](https://www.dota2.com/reborn/part3?l=english)\n- [Valve：Half-Life Alyx Workshop tools announcement](https://store.steampowered.com/news/posts/?appgroupname=Half-Life:+Alyx&appids=546560&enddate=1592263154&feed=steam_community_announcements)"
 }

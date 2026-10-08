@@ -13,7 +13,8 @@
   ],
   "domains": [
     "security",
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "relations": [
     {
@@ -21,10 +22,11 @@
       "target_id": "theory"
     }
   ],
-  "summary": "协议、主机与端口一致才共享 DOM 与 Cookie，Web 安全的底线。",
+  "summary": "按源隔离浏览器脚本对其他页面和资源的访问，Cookie 作用域另有规则。",
   "importance": 5,
   "popular": 62,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "同源策略是浏览器对不同源之间访问的隔离规则。常规元组源由协议方案、主机和端口组成，三者相同才是同源；不同文档脚本访问对方 DOM 或相关对象时受到限制。不透明源具有自己的身份，不能因为它们序列化为相同的 null 字符串就认为它们同源。\n\n同源规则与其他浏览器作用域需要区分。Cookie 按域或主机、路径以及 Secure 等属性决定发送条件，不提供按端口隔离；同一主机不同端口可共享符合条件的 Cookie，却是不同的脚本源。Cookie 的 Path 也不能被当作保护互不信任应用的安全边界，同站判断同样不等于同源判断。\n\n浏览器仍允许许多跨源嵌入、导航或请求，而是否允许脚本读取响应是另一层检查。CORS 通过服务端许可为相应 Fetch 请求共享响应，跨文档通信也有受控机制；这些规则不会自动保护非浏览器客户端，也不能代替服务器对资源的认证和授权。\n\n## 参考\n\n- [WHATWG HTML：Origins 与 same origin](https://html.spec.whatwg.org/multipage/browsers.html#same-origin)\n- [RFC 6265：Cookie 域、路径与缺乏端口隔离](https://www.rfc-editor.org/rfc/rfc6265.html)\n- [WHATWG Fetch：跨源响应共享](https://fetch.spec.whatwg.org/#http-cors-protocol)"
 }

@@ -1,0 +1,67 @@
+{
+  "id": "babylonjs",
+  "name": "Babylon.js",
+  "aliases": [
+    "BabylonJS",
+    "Babylon.js 三维引擎",
+    "Babylon"
+  ],
+  "type": "framework",
+  "domains": [
+    "graphics",
+    "web-development",
+    "game-development"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "digital-content-ecosystem",
+    "graphics-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "scene-graph"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "选择 WebGL 引擎后端时提交三维渲染。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgpu",
+      "context": "在支持的浏览器中选择并初始化 WebGPUEngine 后端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gltf",
+      "context": "通过注册的 glTF 加载器导入三维场景资产。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "skeletal-animation",
+      "context": "在角色动画播放中更新骨骼与蒙皮。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-material",
+      "context": "组织模型表面着色与物理材质属性。"
+    }
+  ],
+  "summary": "提供场景、材质、动画和交互能力的 Web 三维引擎。",
+  "description": "Babylon.js 是面向 Web 三维应用的引擎，提供场景对象、相机、网格、材质、动画与交互等能力。它可通过不同引擎后端使用 WebGL 或 WebGPU，应用需按目标环境选择并初始化相应后端。\n\n三维内容通过受支持的加载器进入场景，glTF 等格式的材质、动画与压缩扩展需要匹配加载路径。引擎功能、可选物理集成与具体浏览器能力应分别确认；内容制作源文件则经过资产管线转换为可交付资源。\n\n## 参考\n\n- [Babylon.js 引擎功能](https://www.babylonjs.com/specifications/)\n- [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader.html)\n- [Babylon.js glTF 加载说明](https://doc.babylonjs.com/features/featuresDeepDive/importers/glTF/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://www.babylonjs.com/"
+}

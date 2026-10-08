@@ -1,0 +1,45 @@
+{
+  "id": "almgren-chriss-model",
+  "name": "Almgren–Chriss Model",
+  "aliases": [
+    "Almgren-Chriss 模型",
+    "阿尔姆格伦–克里斯模型",
+    "A-C Model"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transaction-cost",
+      "context": "执行优化目标纳入按所选模型定义的预期交易成本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-impact",
+      "context": "经典成本结构分别建模交易速率造成的暂时及永久市场冲击。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inventory-risk",
+      "context": "未完成执行的剩余库存承受价格变化，形成与冲击成本权衡的风险项。"
+    }
+  ],
+  "summary": "用冲击成本与未执行库存风险的权衡求解交易轨迹。",
+  "description": "Almgren–Chriss 模型研究在指定期限内执行或清算给定数量时，如何安排交易轨迹。目标权衡预期执行成本与尚未完成部分承受的价格风险；经典均值—方差形式把成本期望与风险厌恶系数乘以成本方差组合，而不是直接预测下一笔价格并据此择时。\n\n经典分析区分永久与暂时市场冲击，并在价格随机游走、给定波动和冲击函数等设定下推导有效前沿与最优轨迹。每单位冲击可随交易速率线性变化，此时总交易成本可能随数量呈二次关系；“线性冲击”不能误读成任意规模成本均线性或市场不受策略影响。\n\n更快完成订单会缩短库存暴露，但通常增加冲击成本；具体轨迹取决于期限、数量、波动、流动性参数和风险偏好。真实限价排队、隐藏流动性、费用、非线性冲击和市场状态变化需要另行建模校准。该模型提供研究执行权衡的基准，不保证给定市场中的实际成交路径或成本达到理论最优。\n\n## 参考\n\n- [Almgren、Chriss：Optimal Execution of Portfolio Transactions 原始出版页](https://www.risk.net/journal-risk/2161150/optimal-execution-portfolio-transactions)\n- [Almgren、Chriss：Value under Liquidation 原始技术论文](https://www.risk.net/sites/default/files/import_unmanaged/risk.net/data/Pay_per_view/risk/technical/1999/risk_1299_liquidity.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

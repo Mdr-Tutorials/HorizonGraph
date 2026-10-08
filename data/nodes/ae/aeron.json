@@ -1,0 +1,46 @@
+{
+  "id": "aeron",
+  "name": "Aeron",
+  "aliases": [
+    "Aeron Transport",
+    "Aeron 消息传输"
+  ],
+  "type": "library",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "distributed-systems"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "udp",
+      "context": "aeron:udp 通道采用 UDP 单播或多播；aeron:ipc 不要求 UDP。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agrona",
+      "context": "Java 客户端和驱动使用 Agrona 的缓冲区、计数器和并发工具；原生路径需分别评价。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ring-buffer",
+      "context": "客户端与驱动的控制消息路径使用环形缓冲区；消息数据使用各 publication 的 log buffers。"
+    }
+  ],
+  "summary": "支持可靠 UDP 与共享内存 IPC 的低延迟消息传输库。",
+  "description": "Aeron 是低延迟消息传输项目，以 publication 和 subscription 为应用接口，由 Media Driver 管理网络发送、接收及通信状态。它支持 UDP 单播、多播和同机 IPC；IPC 路径通过共享内存工作，不经过 UDP。因此 Aeron 的 UDP 能力是可选通道，不能写成所有部署必需的网络依赖。\n\n客户端向 log buffer 发布数据，订阅者轮询片段；Media Driver 可以嵌入应用，也可以独立运行。Java 路径使用 Agrona 的缓冲区与并发工具，项目还有原生 C 驱动及不同客户端实现。消息尺寸、分片重组、背压、线程分配和 idle strategy 都需要按负载配置，接收应用必须理解相关 API 返回状态。\n\n电子交易可以采用它连接内部行情或执行服务，但项目服务于通用高性能消息系统。基础 Transport 与提供记录回放的 Archive、提供状态机复制的 Cluster 应分清功能范围；可靠传输不等于业务交易恰好执行一次，也不等于自动持久化。生产延迟取决于消息、CPU 调度、网络与消费者行为。\n\n## 参考\n\n- [Aeron 官方项目](https://github.com/aeron-io/aeron)\n- [Aeron：Media Driver](https://aeron.io/docs/aeron/media-driver/)\n- [Aeron：基础 IPC 示例](https://aeron.io/docs/aeron/basic-sample/)\n- [Aeron：Publication 与 Subscription](https://aeron.io/docs/aeron/publications-subscriptions/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://aeron.io/"
+}

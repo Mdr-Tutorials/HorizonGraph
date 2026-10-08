@@ -1,0 +1,32 @@
+{
+  "id": "mcp-extensions",
+  "name": "MCP Extensions",
+  "aliases": [
+    "MCP 扩展机制",
+    "MCP 协议扩展"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 的可选能力发现和扩展约定。"
+    }
+  ],
+  "summary": "通过标识与能力声明启用可选 MCP 协议能力的机制。",
+  "description": "MCP 扩展机制让客户端和服务器在核心协议之外采用明确命名的附加能力。官方扩展、实验性工作与私有扩展具有不同治理和发布状态；扩展是协议能力约定，区别于浏览器插件及包含技能或配置的代理插件包。\n\n扩展使用标识和能力声明确定支持范围。2026-07-28 客户端在请求元数据中声明能力，服务器通过发现结果发布自身支持。应用必须显式实现并选择相应能力，不能因双方支持 MCP 就推断 Apps、Tasks 或 Skills 同时可用，支持情况应按客户端版本核对。\n\n把功能移入扩展可以使核心演进与可选能力分开，但扩展并不自动为所有 SDK 添加代码或界面。Tasks 已从旧实验性核心移出，Skills 扩展已正式发布而 SDK 和宿主覆盖仍在推进。适用的部署需要核对双方声明、版本与交互语义，不能把官方发布等同于默认启用。\n\n## 参考\n\n- [MCP：扩展机制](https://modelcontextprotocol.io/extensions/overview)\n- [MCP：当前扩展支持矩阵](https://modelcontextprotocol.io/extensions/client-matrix)\n- [MCP：核心与扩展迁移](https://modelcontextprotocol.io/specification/2026-07-28/changelog)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

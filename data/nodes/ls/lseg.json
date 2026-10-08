@@ -1,0 +1,35 @@
+{
+  "id": "lseg",
+  "name": "London Stock Exchange Group",
+  "aliases": [
+    "LSEG",
+    "伦敦证券交易所集团"
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "lseg-realtime-direct"
+    }
+  ],
+  "summary": "提供金融市场基础设施、数据与分析服务的集团。",
+  "description": "London Stock Exchange Group，简称 LSEG，是金融市场基础设施与数据服务集团。它与具体 London Stock Exchange 交易所具有不同范围；Data & Analytics、市场交易和交易后服务等业务也不能仅凭集团名称归为同一种执行系统。\n\n对电子交易系统而言，LSEG 既提供数据和分析产品，也在集团业务中提供交易与清算相关设施。Real-Time – Direct 是其具体市场数据服务，负责托管接入、行情处理、统一模型和运营支持；行情供应关系与客户向某个交易场所发送订单是两条独立链路。\n\n集团的数据、市场及风险产品适用于不同延迟和功能要求。不能把一个服务页面上的处理性能写成全部 LSEG 产品的端到端承诺，也不能把 LSEG 等同于 Refinitiv 历史品牌或单一伦敦股票订单簿；节点通过真实产品连接表达具体提供关系。\n\n## 参考\n\n- [LSEG 公司及业务范围](https://www.lseg.com/en/about-us/what-we-do)\n- [LSEG Real-Time – Direct 产品](https://www.lseg.com/en/data-analytics/market-data/data-feeds/direct-feeds)\n- [LSEG Real-Time – Direct 产品说明](https://www.lseg.com/content/dam/data-analytics/en_us/documents/fact-sheets/real-time-direct-factsheet.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "LSEG",
+  "official_site": "https://www.lseg.com/"
+}

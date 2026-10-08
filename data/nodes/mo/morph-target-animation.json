@@ -1,0 +1,46 @@
+{
+  "id": "morph-target-animation",
+  "name": "Morph Target Animation",
+  "aliases": [
+    "形变目标动画",
+    "Blend Shapes",
+    "Shape Keys",
+    "混合形状动画"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "对每个顶点按目标权重叠加位置差量，从基础网格计算当前形状。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "keyframe-animation",
+      "context": "需要随时间改变表情时，以关键帧轨道采样各形变目标的权重。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-geometry",
+      "context": "形变计算以基础网格及对应目标的顶点属性差量产生当前绘制几何。"
+    }
+  ],
+  "summary": "按权重组合顶点形变目标以改变模型表面。",
+  "description": "形变目标动画保存基础网格与若干形状差异，通过改变权重把这些差异组合到顶点上。它常用于表情、口形及其他表面变形，在不同制作软件中也称 Blend Shapes 或 Shape Keys。\n\n在 glTF 中，目标记录位置以及可选法线、切线的差量，动画可以驱动网格节点的形变权重。它可与骨骼蒙皮共同使用；数据规模取决于顶点和目标数量，目标的顶点对应关系以及组合后的视觉效果需要保持一致。\n\n## 参考\n\n- [Khronos：glTF 形变目标示例](https://github.com/KhronosGroup/glTF-Tutorials/blob/main/gltfTutorial/gltfTutorial_017_SimpleMorphTarget.md)\n- [Khronos：形变目标与表情动画](https://github.khronos.org/Vulkan-Site/tutorial/latest/Advanced_glTF/Morph_Targets_Facial_Animation/01_introduction.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

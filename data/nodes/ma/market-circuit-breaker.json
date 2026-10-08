@@ -1,0 +1,35 @@
+{
+  "id": "market-circuit-breaker",
+  "name": "Market Circuit Breaker",
+  "aliases": [
+    "市场熔断机制",
+    "Market-wide Circuit Breaker",
+    "MWCB"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "trading-halt",
+      "context": "当适用市场基准触及熔断阈值时，按相应级别和时段启动跨市场交易暂停；以美国股票MWCB为示例，不推广其阈值到其他市场。"
+    }
+  ],
+  "summary": "市场达到规定波动阈值时协调暂停交易的机制。",
+  "description": "市场熔断是市场或交易场所按预先规定的价格波动条件协调暂停交易的机制，目的在于给价格发现和参与者处理异常波动留出时间。本节点关注市场层面的暂停控制；单证券价格带、账户紧急开关和订单速率限制具有不同触发对象，不能因都被称为“熔断”而混用。\n\n美国股票市场的Market-Wide Circuit Breakers以标普500指数相对上一交易日收盘的下跌幅度为基准，当前NYSE说明列出7%、13%和20%三个级别。常规交易日9:30至15:25（美国东部时间）之间一级或二级触发至少15分钟暂停，每一级当日仅触发一次；三级触发后暂停当日余下交易。不同司法辖区、资产类别和场所采用的基准、阈值和交易阶段不能套用这组参数。\n\n熔断影响市场交易状态，而不消除既有持仓损失，也不保证复牌后的价格连续或流动性。系统需识别停市与恢复状态、保留有效订单及成交回报，并按场所规则处理重开竞价和跨市场暂停。市场级熔断与单证券LULD可能分别生效，不能只实现一套本地阈值就推断已覆盖所有波动控制。\n\n## 参考\n\n- [NYSE：Trading Information，LULD与市场级熔断](https://www.nyse.com/trade/trading-information)\n- [NYSE：Market-Wide Circuit Breakers FAQ](https://nyse.com/publicdocs/nyse/NYSE_MWCB_FAQ.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "MWCB"
+}

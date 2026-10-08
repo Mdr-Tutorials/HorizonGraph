@@ -1,0 +1,31 @@
+{
+  "id": "receive-side-scaling",
+  "name": "Receive Side Scaling",
+  "aliases": [
+    "RSS",
+    "接收端扩展",
+    "接收侧扩展"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    }
+  ],
+  "summary": "按流哈希把接收处理分配到队列和处理核的机制。",
+  "description": "接收侧扩展根据指定包头字段计算哈希，再经重定向表选择队列或处理核，使多个网络流能够分散处理。硬件 RSS 的能力层次依网卡和操作系统而异；它与订阅协议 Really Simple Syndication 的缩写相同，但属于不同实体。\n\n同一流通常保持在同一处理路径，以减少并发处理导致的额外重排和状态争用。哈希不保证按字节数平均负载，也通常不会把一条连接逐包均匀分给全部 CPU；Linux RPS 在更后面的软件路径分配处理，不能与硬件 RSS 混称。\n\n队列数、哈希字段、重定向表、中断亲和与内存位置共同影响效果。更多队列不一定更快，跨 NUMA 访问和中断总开销可能抵消收益；调整后应同时核验吞吐、丢包和实际应用的等待分布。\n\n## 参考\n\n- [Linux RSS、RPS、RFS 与队列扩展](https://docs.kernel.org/networking/scaling.html)\n- [Microsoft RSS 驱动与硬件机制](https://learn.microsoft.com/en-us/windows-hardware/drivers/network/introduction-to-receive-side-scaling)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "RSS"
+}

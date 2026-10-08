@@ -1,0 +1,32 @@
+{
+  "id": "mcp-prompt",
+  "name": "MCP Prompt",
+  "aliases": [
+    "MCP 提示模板",
+    "MCP Prompt 原语"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 中发现并获取参数化提示模板的原语。"
+    }
+  ],
+  "summary": "由 MCP 服务器提供并可带参数获取的消息模板。",
+  "description": "MCP Prompt 是服务器提供的可复用消息模板，可包含名称、说明和参数，客户端通过 prompts/list 发现并用 prompts/get 获取具体消息。它属于上下文接口，不是提示工程这一设计方法，也不等同于宿主长期生效的项目规则。\n\n模板可以将参数组织成用户或助手消息，并携带内容引用。规范将提示模板描述为 user-controlled，强调由用户选择适用模板的交互方式，而不是要求模板必须由用户亲自编写。客户端可以提供菜单或命令等入口，协议不规定唯一界面。\n\n取得模板不保证模型会完成其指令，也不自动授权模板建议的外部操作。宿主负责把模板与当前对话结合并处理来源信任。2026-07-28 的 prompts/get 可使用 MRTR 返回补充输入需求，具体版本与能力必须匹配，不能把模板获取当成无条件执行流程。\n\n## 参考\n\n- [MCP：2026-07-28 提示模板正式源码](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/specification/2026-07-28/server/prompts.mdx)\n- [MCP：模板获取的 MRTR 交互](https://modelcontextprotocol.io/specification/2026-07-28/basic/patterns/mrtr)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

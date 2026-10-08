@@ -1,0 +1,35 @@
+{
+  "id": "color-management",
+  "name": "Color Management",
+  "aliases": [
+    "色彩管理",
+    "颜色管理",
+    "Linear Color Workflow"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering",
+    "game-development"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "根据纹理承载的是颜色还是法线、粗糙度等非颜色数据，选择正确的输入色彩空间和转换规则"
+    }
+  ],
+  "summary": "明确输入、计算与输出色彩空间，保持渲染颜色一致",
+  "description": "实时渲染中的色彩管理明确颜色数据的色域、白点和传递函数，并在输入、工作与输出空间之间进行转换。同一个 RGB 数值在不同色彩空间中未必表示相同的光强；光照、插值等计算通常需要在线性工作空间进行，而显示输出和许多颜色纹理使用非线性编码。Three.js 的常见流程以 Linear-sRGB 为工作空间、以 sRGB 处理常见显示输出。\n\n颜色贴图与数据贴图应分开解释：基础颜色或发光颜色纹理通常需要正确的色彩空间标记，法线、粗糙度等纹理承载数值数据，不能默认进行 sRGB 颜色解码。输入标记错误或重复输出转换会产生偏暗、偏亮等结果；后处理链也需要安排正确的输出转换。具体 API 的默认值和支持色域随实现而变，应以运行时文档和资产元数据为准。\n\n## 参考\n\n- [Three.js：Color Management](https://threejs.org/manual/pages/color-management.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

@@ -1,0 +1,50 @@
+{
+  "id": "exchange-simulator",
+  "name": "Exchange Simulator",
+  "aliases": [
+    "交易所仿真",
+    "交易所模拟器",
+    "模拟交易所机制"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-lifecycle",
+      "context": "模拟市场维护订单接受、拒绝、部分成交、撤改和最终状态，并生成相应事件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "queue-position-model",
+      "context": "在历史价位汇总数据不足以观察个体订单先后时，用排队位置模型估计被动成交。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "queue-reactive-model",
+      "context": "采用合成订单流生成市场时，可按当前队列状态校准事件到达强度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "latency",
+      "context": "仿真配置分别作用于行情可见、请求到达撮合和执行回报的延迟。"
+    }
+  ],
+  "summary": "以撮合、订单状态和延迟假设模拟交易所对订单的处理。",
+  "description": "交易所仿真在研究环境中模拟订单进入市场后受到的处理，包括价格精度与数量约束、优先规则、订单状态变化、撮合、部分成交和回报。此节点表示通用仿真机制；具体软件框架、真实交易所和生产撮合引擎有各自独立身份，不能由“模拟器”一词混为一体。\n\n一种实现消费历史行情并据此估计模拟订单的成交，另一种实现让多个代理或随机订单流在生成的市场中交互。前者保留历史市场路径，不能直接观察策略改变市场后的反事实；后者能产生内生反馈，但其队列、代理行为与价格形成取决于校准和设定。\n\n仿真应分别配置行情可见延迟、订单入场与撤改延迟、回报延迟，以及排队和隐藏流动性假设。触价不代表排队订单立即全部成交，发送撤单也不等于订单已经撤销。检验应对照真实订单和成交记录，并检查费用、库存暴露、市场时段及异常事件；实现更多细节仍不构成真实成交保证。\n\n## 参考\n\n- [Byrd、Hybinette、Balch：ABIDES 原始框架论文](https://arxiv.org/abs/1904.12066)\n- [HftBacktest：成交与排队模型及历史重放限制](https://hftbacktest.readthedocs.io/en/latest/order_fill.html)\n- [NautilusTrader：回测事件、计时器和命令处理顺序](https://nautilustrader.io/docs/latest/concepts/backtesting/execution-flow/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

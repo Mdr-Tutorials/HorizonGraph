@@ -1,0 +1,39 @@
+{
+  "id": "code-action",
+  "name": "Code Action",
+  "aliases": [
+    "代码操作",
+    "代码修复操作",
+    "Code Actions"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-refactoring",
+      "context": "提供提取方法等重构类操作时执行语言服务支持的结构变换；快速修复等其他操作不必属于重构。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "language-server-protocol",
+      "context": "通过 LSP 接入的代码操作提供者用相应请求、编辑结果和命令表示建议；编辑器直接 API 是另一种路径。"
+    }
+  ],
+  "summary": "在源码位置提供可执行的修复、重构或源文件操作。",
+  "description": "代码操作是编辑器在某个文档位置、选区或诊断上下文提供的可执行建议，常见类型包括快速修复、重构及源文件级操作。它描述语言工具返回和执行操作的机制，不是某个模型的一段自然语言建议。\n\n编辑器可以通过直接提供者 API 或 LSP 请求取得操作，再应用文本编辑或执行关联命令。代码操作提供者可以先返回概要，再在支持的解析步骤补充信息；其作用范围与能力取决于语言服务和客户端。\n\n快速修复可能改变程序行为，例如补齐缺失代码；重构则以保持行为为目标，两者不能因共用灯泡入口而混同。工具返回操作也不保证修改符合业务需求，涉及多个文件或公共接口时仍要查看预览、调用者和验证结果。\n\n## 参考\n\n- [VS Code：直接语言 API 与 LSP 的能力对应](https://code.visualstudio.com/api/language-extensions/programmatic-language-features)\n- [VS Code：语言服务提供的重构与代码操作](https://code.visualstudio.com/docs/editing/refactoring)\n- [Microsoft：LSP 3.18 规范](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.18/specification/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

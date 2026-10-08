@@ -1,0 +1,34 @@
+{
+  "id": "browser-session",
+  "name": "Browser Automation Session",
+  "aliases": [
+    "浏览器自动化会话",
+    "Browser Session",
+    "浏览器控制会话"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-context-isolation",
+      "context": "选择隔离会话策略时，使用独立上下文分离控制流程的认证与浏览器存储状态。"
+    }
+  ],
+  "summary": "管理受控浏览器连接、页面和状态生命周期的会话。",
+  "description": "浏览器自动化会话管理一段控制流程使用的连接、能力配置、页面以及关联状态。WebDriver 以创建会话和会话标识组织命令，其他库则通过 Browser、BrowserContext 与 Page 等对象组合管理生命周期。这里的控制会话与网站登录会话、HTTP cookie 名称不是同一实体。\n\n会话可能启动新的浏览器，也可能连接到已有实例；多个页面还可共享同一上下文中的认证和存储状态。持久配置文件允许后续运行继续使用账号状态，独立内存上下文则适合从干净状态开始。关闭页面、关闭上下文、断开连接和退出浏览器对保留状态的影响不同，需按工具接口理解。\n\n流程应明确谁负责创建、清理和恢复状态，尤其在并行任务、共享账号和故障重试中。Antigravity IDE 的独立 Chrome 配置文件保留登录状态，不能据此假设每次控制会话都是全新账号环境。结束控制会话也不一定注销网站或撤销服务端权限；这两种生命周期需要分别管理。\n\n## 参考\n\n- [W3C：WebDriver Recommendation 2018](https://www.w3.org/TR/2018/REC-webdriver1-20180605/)\n- [Puppeteer：Browser management](https://pptr.dev/guides/browser-management)\n- [Antigravity IDE：Separate Chrome profile](https://antigravity.google/docs/ide/separate-chrome-profile)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

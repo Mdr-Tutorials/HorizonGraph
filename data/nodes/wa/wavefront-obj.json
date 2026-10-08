@@ -1,0 +1,41 @@
+{
+  "id": "wavefront-obj",
+  "name": "Wavefront OBJ",
+  "aliases": [
+    "OBJ 模型格式",
+    "Wavefront .obj",
+    "OBJ"
+  ],
+  "type": "protocol",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "graphics-asset-format"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-geometry",
+      "context": "编码并交换模型的网格几何与相关顶点属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uv-mapping",
+      "context": "通过纹理坐标描述表面与图像的对应关系。"
+    }
+  ],
+  "summary": "用于交换网格几何、法线及纹理坐标的三维格式。",
+  "description": "Wavefront OBJ 是三维模型交换格式，常用于传递静态网格几何及相关法线、纹理坐标等信息。材质信息可以通过配套 MTL 文件交付，实际加载能力取决于读取器对具体内容的支持。\n\nOBJ 网格加载不等于完整角色或场景导入。Three.js 将 OBJLoader 和 MTLLoader 作为分别导入的附加组件，应用还需组织材质和贴图路径；需要完整骨架、动画或更丰富物理材质语义的交付通常应选择相应格式。\n\n## 参考\n\n- [Three.js OBJLoader](https://threejs.org/docs/pages/OBJLoader.html)\n- [Three.js MTLLoader](https://threejs.org/docs/pages/MTLLoader.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://threejs.org/docs/pages/OBJLoader.html"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "agent-plugins-specification",
+  "name": "Agent Plugins Specification",
+  "aliases": [
+    "Agent Plugins 便携规范",
+    "代理插件包规范"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-skills-specification",
+      "context": "便携包中的 skills 组件必须使用 Agent Skills 规定的目录与 SKILL.md 格式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "用版本对应的 JSON Schema 校验 plugin.json 与 mcp.json，解释语义以规范正文为准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "mcp.json 定位并配置 MCP 服务器连接，客户端映射至自己的配置并按所支持版本运行 MCP。"
+    }
+  ],
+  "summary": "统一代理技能与 MCP 接入配置的便携插件包规范。",
+  "description": "Agent Plugins Specification 是开放的代理插件包格式。2026-10 核对时，1.0.0 为已发布版本，1.1.0 是工作草案。规范由独立项目治理，其核心目标是让符合格式的技能及 MCP 接入配置被不同客户端发现和加载，不能把项目写成 AAIF 的组成项目或把草案当作已发布要求。\n\n1.0.0 要求根目录 plugin.json 包含 name 和对应版本的 $schema，技能位于 skills 下，MCP 接入信息位于 mcp.json。技能遵循 Agent Skills 格式；MCP 配置描述 stdio、Streamable HTTP 或兼容旧 HTTP+SSE 的服务器连接。格式规范定义配置映射，实际 MCP 线上行为仍由 MCP 规范规定。\n\nv1 只统一技能和 MCP 服务器两个组件类型；其他能力可置于客户端拥有的扩展命名空间，不能由此推导统一钩子、规则或子代理语义。规范的包内路径约束也不是子进程沙箱。Antigravity 原生插件具有不同配置名称和字段约定，符合某一原生插件格式不自动证明符合此便携格式。\n\n## 参考\n\n- [Agent Plugins：已发布的 1.0.0 规范](https://github.com/agentplugins/agent-plugins-spec/blob/main/spec/1.0.0.md)\n- [Agent Plugins：版本状态与官方仓库](https://github.com/agentplugins/agent-plugins-spec/blob/main/README.md)\n- [Agent Plugins：治理约定](https://github.com/agentplugins/agent-plugins-spec/blob/main/GOVERNANCE.md)\n- [AAIF：独立 Agent Plugins 项目的介绍](https://aaif.io/blog/from-skills-and-tools-to-portable-agent-plugins)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://agent-plugins.org/"
+}

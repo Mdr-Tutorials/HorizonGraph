@@ -1,0 +1,33 @@
+{
+  "id": "clock-drift",
+  "name": "Clock Drift",
+  "aliases": [
+    "时钟漂移"
+  ],
+  "type": "metric",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clock-offset",
+      "context": "以同一参考和明确采样区间的偏移变化估计漂移或速率误差，并单独标记调时跳变与参考切换。"
+    }
+  ],
+  "summary": "时钟偏移随时间变化的现象及其积累或速率度量。",
+  "description": "时钟漂移描述时钟偏移随经过时间变化。漂移积累量可用秒表示，速率误差可用秒每秒或 ppm 表示；资料中的 drift 有时指频率误差，使用指标时必须明确所指量与观察区间，不能把固定偏移、漂移量和漂移率当成同一单位。\n\n振荡器温度、硬件状态和参考质量都可能影响走时速率，失去外部参考时偏移会继续积累。NTP 的时钟纪律同时估计相位和频率并进行调节，测到的漂移可能已包含校正行为，不能简单当作未校准硬件的固有常数。\n\n根据多个偏移样本估计变化率时，应剔除或标明时间跳变、参考切换、采样间断和异常路径。对两个端点的单向时延测量，相对频率误差还会随测量区间改变结果；短期偏移很小并不能证明长期保持性能满足目标。\n\n## 参考\n\n- [NTP Clock Discipline Algorithm](https://www.ntp.org/documentation/4.2.8-series/discipline/)\n- [RFC 7679：单向时延的时钟与误差边界](https://www.rfc-editor.org/rfc/rfc7679.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

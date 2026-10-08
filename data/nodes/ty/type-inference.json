@@ -8,7 +8,8 @@
   ],
   "type": "concept",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "api-engineering"
   ],
   "relations": [
     {
@@ -19,6 +20,7 @@
   "summary": "编译器自动推导表达式类型，省标注而不失检查。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "description": "类型推断由类型系统从表达式、函数调用及上下文确定类型信息，减少重复标注，同时继续检查代码中的操作是否符合约束。TypeScript 会从变量初值、函数返回值和上下文推导类型；泛型、条件类型与索引访问等机制也可把已有结构中的类型继续传递给调用方。推断能力与精度取决于语言及声明方式，不意味着编译器能够理解任意运行时业务行为。\n\n类型化 API 将这种机制应用到路由和模式：Hono Client 接收路由类型后推导调用输入及 JSON 响应，tRPC 则从过程定义推导客户端。链式注册和保留具体泛型能影响信息是否被保留；宽泛注解或 any 可能丢失检查能力。静态推断不会解析网络收到的值，输入转换和运行时校验仍需实际执行相应模式。\n\n## 参考\n\n- [TypeScript：类型推断](https://www.typescriptlang.org/docs/handbook/type-inference.html)\n- [TypeScript：由类型创建类型](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html)\n- [Hono：RPC 与客户端类型推导](https://hono.dev/docs/guides/rpc)"
 }

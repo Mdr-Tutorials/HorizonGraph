@@ -1,0 +1,50 @@
+{
+  "id": "wgsl",
+  "name": "WGSL",
+  "aliases": [
+    "WebGPU着色语言",
+    "WebGPU Shading Language"
+  ],
+  "type": "language",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "shader"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uniform-buffer",
+      "context": "使用 var<uniform> 声明只读参数资源，并以绑定属性对接 WebGPU 中对应的统一变量缓冲。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture-sampling",
+      "context": "在允许的阶段和资源类型下，以 WGSL 采样内建函数读取绑定纹理。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "w3c",
+      "context": "WGSL 规范由 W3C 的相关标准工作流程推进，与 WebGPU 接口规范配套。"
+    }
+  ],
+  "summary": "WebGPU的着色语言，以阶段入口和资源接口描述GPU程序。",
+  "description": "## 机制\n\nWGSL 是 WebGPU 的着色语言，使用显式类型、函数和属性定义 GPU 程序。@vertex、@fragment 与 @compute 标记三种阶段入口，WebGPU 创建管线时选择模块中的入口并验证接口。\n\n程序用 @group 和 @binding 标明资源位置，并通过 uniform、storage 等地址空间区分访问语义。顶点及片元的阶段接口与缓冲绑定属于不同数据通道，主机端配置必须分别匹配。\n\n## 边界与应用\n\nWGSL 定义程序语义和布局，WebGPU API 负责资源创建、绑定及命令提交。语言的地址空间、控制流和操作阶段约束影响可移植性；存在源码或入口函数并不代表已创建可执行管线，也不能直接把 GLSL/HLSL 源码当作 WGSL 提交。\n\n## 参考\n\n- [W3C：WGSL语言规范](https://www.w3.org/TR/WGSL/)\n- [W3C WebGPU：着色模块及可编程阶段](https://www.w3.org/TR/webgpu/#shader-modules)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "WGSL",
+  "official_site": "https://www.w3.org/TR/WGSL/"
+}

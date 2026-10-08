@@ -1,0 +1,40 @@
+{
+  "id": "continuous-double-auction",
+  "name": "Continuous Double Auction",
+  "aliases": [
+    "连续双向竞价",
+    "连续竞价",
+    "CDA"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "采用限价订单簿的连续市场中，以待成交订单与新到达订单逐次匹配。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "price-time-priority",
+      "context": "场所选用价格时间优先时，以更优价格和同价到达先后分配连续成交。"
+    }
+  ],
+  "summary": "买卖双方持续提交订单并在满足规则时逐次成交的机制。",
+  "description": "连续双向竞价允许买方和卖方在交易阶段持续提交交易意向，订单到达后若与已有兴趣在价格等条件上相容，就按规则生成成交；否则可保留符合条件的未成交部分。双向表示双方都可报价，连续表示无需等统一批次的竞价时点。\n\n电子订单簿常用于维护尚未成交的交易兴趣，价位内的分配可以采用价格时间优先或其他规则。“连续”不表示计算机在数学上无离散处理步长，也不保证市场每一瞬间都有成交；消息排序和场所状态决定哪一笔先参与匹配。\n\n它与集合竞价的关键差别是串行到达处理和统一批次配对的时间组织。市场可以在日内连续交易前后使用开收盘集合竞价。研究文献讨论过用更频繁的批量竞价减弱微小速度优势，但这种设计提案不能被表述为所有现行市场的统一规则。\n\n## 参考\n\n- [Budish、Cramton 与 Shim：连续订单簿与批量竞价的原始研究](https://ericbudish.org/files/high_frequency_trading_arms_race.pdf)\n- [Nasdaq：2023 年 Nordic 市场模型的连续交易与竞价机制](https://www.nasdaq.com/docs/2023/07/03/Nasdaq-Nordic-Market-Model-2023_06_.pdf)\n- [CME：EBS Market 订单簿、撮合与引擎规则文件](https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2023/8/23-356_APPA.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

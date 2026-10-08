@@ -1,0 +1,44 @@
+{
+  "id": "typia",
+  "name": "typia",
+  "aliases": [
+    "typia 类型校验库"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "编译转换读取具体 TypeScript 类型及标签约束，生成构建后执行的检查代码。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "运行时执行由构建过程生成的 JavaScript 验证函数。"
+    }
+  ],
+  "summary": "在构建期从 TypeScript 类型生成运行时校验与序列化代码。",
+  "description": "## 机制与应用\n\ntypia 在编译转换阶段分析带具体类型参数的 is、assert、validate 等调用，生成针对该类型的检查代码，运行时执行生成的逻辑。is 给出布尔判断，assert 在失败时抛错，validate 返回错误路径、期望类型及实际值；类型标签还可描述格式、范围和长度。这样可以用类型定义驱动运行时检查，但仍必须调用生成的函数。\n\n普通 TypeScript 编译擦除类型，typia 也不会在运行时自动读取任意类型声明。项目需配置与所用版本对应的编译转换或 bundler 集成；当前指南和 legacy 指南分别说明不同工具链，不能混用旧配置。普通 validate 允许额外对象属性，严格检查需使用相应 Equals 接口；它检查结构和约束，不自动执行数据强制转换或授权判断。\n\n## 参考\n\n- [typia：类型驱动的 AOT 原理](https://typia.io/docs/pure/)\n- [typia：当前构建集成](https://typia.io/docs/setup/)\n- [typia：旧版本工具链](https://typia.io/docs/setup/legacy/)\n- [typia：validate 与 Equals 检查边界](https://typia.io/docs/validators/validate/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://typia.io/"
+}

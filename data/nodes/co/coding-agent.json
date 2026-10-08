@@ -1,0 +1,43 @@
+{
+  "id": "coding-agent",
+  "name": "Coding Agent",
+  "aliases": [
+    "编码代理",
+    "编程智能体"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-assisted-software-engineering",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "function-calling",
+      "context": "在采用结构化工具调用的实现中，宿主将模型选择的工具请求交给文件、命令或其他已配置工具执行，并把结果返回决策循环。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-engineering",
+      "context": "每次决策选择需求、相关源码、历史操作与验证结果作为上下文。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "在完成实现或提出修改后审查差异与验证证据；审查也可作为独立代理任务。"
+    }
+  ],
+  "summary": "围绕代码任务循环读取、修改、调用工具并验证结果。",
+  "description": "编码代理接受一个软件工程目标，在读取上下文、选择操作、调用工具和检查结果之间反复推进。与一次性给出代码建议相比，执行循环把文件修改、命令输出和验证失败纳入后续决策；它是通用 AI 智能体在代码任务中的应用形态。\n\n代理可以在本地工作区、独立工作树或远端开发环境运行。会话保存任务与执行状态，宿主负责连接模型与工具；编辑器界面、代理宿主和工具所在环境可以不同。VS Code 当前文档区分独立 Agent Host 与保留的扩展宿主会话，不能假定所有产品都把执行循环放进编辑器扩展进程。\n\n代理能否读取文件、修改代码、运行命令或访问网络取决于实际工具与权限。一次工具成功只提供该步骤的证据；完成声明还需结合差异、测试和需求核对。编码代理可以参与只读研究和审查，因而自主循环不必总是生成代码或提交变更。\n\n## 参考\n\n- [VS Code：编码代理的执行循环与会话](https://code.visualstudio.com/docs/agents/concepts/agents)\n- [GitHub：云端编码代理与审查流程](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)\n- [Microsoft：Agent Host 与扩展宿主的运行边界](https://github.com/microsoft/vscode-docs/blob/main/docs/agents/concepts/agent-host.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

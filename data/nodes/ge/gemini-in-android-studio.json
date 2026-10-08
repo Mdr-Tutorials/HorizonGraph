@@ -1,0 +1,40 @@
+{
+  "id": "gemini-in-android-studio",
+  "name": "Gemini in Android Studio",
+  "aliases": [
+    "Android Studio Gemini",
+    "Android Studio AI agent"
+  ],
+  "type": "product",
+  "domains": [
+    "ai-assisted-software-engineering",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "android-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini",
+      "context": "Android 编码辅助向选定的 Gemini 模型发出请求，模型与配额的可用范围受接入层级和配置约束。"
+    }
+  ],
+  "summary": "结合 Android IDE 上下文提供编码、UI 和代理式开发辅助的服务。",
+  "description": "Gemini in Android Studio 是 Google 专门为 Android 开发提供的 AI 编码辅助，集成在 Android Studio 的项目与工具环境中。它能回答开发问题、生成代码、帮助处理 Compose UI、Gradle 构建错误以及 Logcat 和应用质量信息。此名称表示一项 IDE 内服务，既不是 Gemini 模型族，也不是 Gemini CLI 或整个 Android Studio 的别名。\n\nAgent Mode 可以围绕目标规划并修改多个文件，调用相关开发工具，帮助开发者完成更连续的项目工作。支持的技能可以补充专项 Android 指导，人工审核和工具反馈仍是确认代码及运行行为的环节。服务与 IDE 的功能组合不意味着所有模式都采用同样的自动执行权限，也不能把模型提出的修复等同于已经通过构建与设备验证。\n\n官方当前区分个人免费、API 密钥及会员路径和面向企业的订阅路径，并限定可接入云服务的 IDE 版本范围。最新稳定版及此前十个月内主要版本的兼容说明需要按发布文档核对。此服务的个人接入仍有自己的现行说明，Gemini CLI 与 Code Assist 消费账户的 2026 年退出计划不能被泛化成所有 Android IDE 用户停止服务。\n\n## 参考\n\n- [Android：Gemini in Android Studio 的服务与账号范围](https://developer.android.com/studio/gemini/overview)\n- [Android：Agent Mode 的具体能力与工作流](https://developer.android.com/studio/gemini/agent-mode)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://developer.android.com/studio/gemini/overview"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "tick-size",
+  "name": "Tick Size",
+  "aliases": [
+    "最小价格变动单位",
+    "报价最小增量"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "limit-order-book"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "matching-engine"
+    }
+  ],
+  "summary": "交易规则允许的最小报价价格增量。",
+  "description": "Tick size 是交易规则允许的最小价格增量，用于限定订单或报价可以采用的价格网格。它可能按产品、价格区间或交易类型变化；这里的 tick 是价格单位，不能与行情事件记录或时间计量混为一谈。\n\n报价以价格单位表示，tick value 则表示一次 tick 变动对应某个持仓单位的金额，两者不同。例如合约报价的增量要结合该合约的计价和规模规则，才能换算货币变化；不能把价格增量直接当成每单交易金额。\n\n价格网格影响同价挂单的集中程度与允许改善报价的幅度，但更小的 tick 不自动保证更好流动性。研究价差或设计订单校验应使用产品在相应日期适用的规则；中间价可能落在半个 tick 上，作为观察指标有效却未必是可提交订单价格。\n\n## 参考\n\n- [CME：最小价格变动与 tick value](https://www.cmegroup.com/education/courses/introduction-to-futures/tick-movements-understanding-how-they-work)\n- [CME：合约规模、报价单位与 tick 的区别](https://www.cmegroup.com/education/courses/master-the-trade-futures/expanding-your-futures-knowledge/master-the-trade-contract-specifications.hideSubnav.educationIframe.html?hideAddThisExt=y&hideFooter=y&hideHeader=y&hideRightRail=y)\n- [SEC：2024 年报价增量与 round lot 改革的说明](https://www.sec.gov/newsroom/speeches-statements/gensler-statement-regulation-nms-091824)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

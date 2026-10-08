@@ -1,0 +1,50 @@
+{
+  "id": "openai-codex-sdk",
+  "name": "OpenAI Codex SDK",
+  "aliases": [
+    "@openai/codex-sdk",
+    "openai-codex",
+    "openai_codex",
+    "OpenAI 官方 Codex SDK"
+  ],
+  "type": "library",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "codex"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "codex-cli",
+      "context": "调用官方本地 Codex 运行时来执行任务；TypeScript 线程封装与 Python app-server 通道按各自包实现使用 CLI 运行时。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-session",
+      "context": "通过开始、运行和恢复线程或会话的 API 保存并继续代理任务，不能把恢复会话等同于模型永久记忆。"
+    }
+  ],
+  "summary": "以 TypeScript 或 Python 编程控制本地 Codex 会话。",
+  "description": "OpenAI Codex SDK 是官方用于编程控制本地 Codex 代理的库入口，当前文档提供 TypeScript 的 @openai/codex-sdk 和 Python 的 openai-codex 包。Python 导入名为 openai_codex。两者属于 Codex 的可编程能力，不是用于直接发送模型推理请求的通用 OpenAI API SDK，也不是名为 @cursor/sdk 的另一套产品接口。\n\nSDK 将开始会话、提交任务、读取执行输出与继续已有会话转成程序调用。TypeScript 文档以 startThread、run 和 resumeThread 展示线程生命周期；Python 包通过本地 app-server 的 JSON-RPC 通道工作，并提供同步、异步和类型化事件入口。所控制的是本地代理运行过程，工具调用和工作区修改仍由 Codex 运行时执行，不是把模型生成文本直接当作 shell 命令。\n\nSDK 适合把代码任务嵌入脚本、CI 或内部自动化；自定义完整交互客户端时，官方还区分直接使用 app-server 的路径。运行需要相应语言环境和 Codex 本地运行时，具体包的启动与运行时分发按各自文档核对。程序应明确工作目录、权限和任务边界，并检查运行结果与差异；提供 API 调用入口不等于自动取得云端托管环境或无限制机器权限。\n\n## 参考\n\n- [OpenAI：TypeScript 与 Python Codex SDK](https://learn.chatgpt.com/docs/codex-sdk)\n- [OpenAI：SDK 与 app-server 的平台边界](https://developers.openai.com/blog/codex-as-a-platform)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://learn.chatgpt.com/docs/codex-sdk"
+}

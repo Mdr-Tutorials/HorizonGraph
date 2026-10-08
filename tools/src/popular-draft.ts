@@ -38,18 +38,18 @@ const P: Record<string, number> = {
   // 协议
   http: 97, tcp: 92, ip: 92, tls: 90, pdf: 91, oauth: 82, bitcoin: 85, ethereum: 72, quic: 68, "http-3": 66, vulkan: 66, posix: 62, oci: 55, "fix-protocol": 42, udp: 88, wasi: 45, webgpu: 55, solana: 60,
   // 框架/库
-  react: 96, kubernetes: 90, vscode: 98, nodejs: 90, pytorch: 92, openssl: 85, numpy: 85, pandas: 83, nextjs: 78, cilium: 45, "delta-lake": 50, transformers: 72, openmmlab: 40, megengine: 22, "dji-sdk": 30, core: 40, opentelemetry: 52,
+  react: 96, kubernetes: 90, vscode: 98, pytorch: 92, openssl: 85, numpy: 85, pandas: 83, cilium: 45, "delta-lake": 50, transformers: 72, megengine: 22, "dji-sdk": 30, core: 40, opentelemetry: 52,
   // 工具
   git: 94, docker: 94, llvm: 82, gcc: 81, matlab: 80, gradle: 68, maven: 65, clang: 66, terraform: 66, cargo: 66, npm: 78, pip: 78, pnpm: 60, yarn: 72, qemu: 55, systemd: 62, nodejs: 90, bpftrace: 25,
   // 产品
-  chrome: 95, firefox: 78, "h-100": 85, snapdragon: 80, photoshop: 85, postgresql: 82, mysql: 82, redis: 78, mongodb: 72, elasticsearch: 75, prometheus: 70, slack: 75, jira: 72, cursor: 74, autocad: 78, "unreal-engine": 76, unity: 74, ubuntu: 78, etcd: 52, "s3": 80, claude: 92, "wps-office": 60, "wps": 60, wechat: 100, alipay: 85, "zhi-pu-qing-yan": 45, "s-4hana": 46, "now-platform": 44, "sales-cloud": 46, foundry: 44, datadog: 68, snowflake: 72, "hyped-os": 0, hyperos: 45, "meta-mask": 45, metamask: 45, "juice-filesystem": 0, juicefs: 35, "ksqldb": 30, "cppreference": 75,
+  chrome: 95, firefox: 78, "h-100": 85, snapdragon: 80, photoshop: 85, postgresql: 82, mysql: 82, redis: 78, mongodb: 72, elasticsearch: 75, prometheus: 70, slack: 75, jira: 72, cursor: 74, autocad: 78, "unreal-engine": 76, unity: 74, ubuntu: 78, etcd: 52, "s3": 80, claude: 92, "wps-office": 60, "wps": 60, wechat: 100, alipay: 85, "zhi-pu-qing-yan": 45, "s-4hana": 46, "now-platform": 44, "sales-cloud": 46, foundry: 44, datadog: 68, snowflake: 72, "hyped-os": 0, hyperos: 45, "meta-mask": 45, metamask: 45, "juice-filesystem": 0, juicefs: 35, "ksqldb": 30,
   "github-actions": 72, "gitlab-ci": 55, "cloudflare-workers": 50, "openshift": 52, "aws-ec2": 0,
   // 公司 — 极高档
   google: 98, microsoft: 96, apple: 95, amazon: 94, nvidia: 94, meta: 92, github: 93, ibm: 88, intel: 90, tsmc: 90, oracle: 88, qualcomm: 86, amd: 85, huawei: 88, tencent: 88, alibaba: 88, bytedance: 84, baidu: 84, openai: 96, anthropic: 88, "samsung": 85, sony: 82, deepseek: 84,
   // 公司 — 高档
-  "red-hat": 76, canonical: 62, cloudflare: 76, snowflake: 72, databricks: 72, stripe: 75, salesforce: 74, adobe: 74, "hugging-face": 75, jetbrains: 70, atlassian: 70, xiaomi: 78, "unity-technologies": 68, valve: 65, "docker-inc": 70, gitlab: 74, vercel: 60, "mongodbi": 0,
+  "red-hat": 76, canonical: 62, cloudflare: 76, databricks: 72, stripe: 75, salesforce: 74, adobe: 74, "hugging-face": 75, jetbrains: 70, atlassian: 70, xiaomi: 78, "unity-technologies": 68, valve: 65, "docker-inc": 70, gitlab: 74, vercel: 60, "mongodbi": 0,
   // 公司 — 中档/低档(金融/行业/硬件长尾)
-  "jane-street": 48, citadel: 45, "two-sigma": 42, palantir: 60, okta: 55, hashicorp: 55, confluent: 45, elastic: 55, "jane-street-core": 35, metabit: 25, okta2: 0, workday: 52, servicenow: 55, fortinet: 45, "palo-alto-networks": 50, crowdstrike: 55, zscaler: 45, "check-point": 40, "two-sigma": 42, coinbase: 60, binance: 62, metamask2: 0, "solana-labs": 45, consensys: 30,
+  "jane-street": 48, citadel: 45, "two-sigma": 42, palantir: 60, okta: 55, hashicorp: 55, confluent: 45, elastic: 55, "jane-street-core": 35, metabit: 25, okta2: 0, workday: 52, servicenow: 55, fortinet: 45, "palo-alto-networks": 50, crowdstrike: 55, zscaler: 45, "check-point": 40, coinbase: 60, binance: 62, metamask2: 0, "solana-labs": 45, consensys: 30,
   "smic": 55, "sk-hynix": 45, micron: 45, "media-tek": 55, mediatek: 55, "tokyo-electron": 35, asml: 55, "loongson": 35, "moore-threads": 25, cambricon: 35, biren: 25, "supermicro": 45, "juicedata": 20, "suse": 45, "net-ease": 60, kuaishou: 55, "meituan": 60, jd: 62, pdd: 58, "kingsoft": 45, "i-flytek": 55, iflytek: 55, senseTime: 40, sensetime: 40, megvii: 35, "momenta": 0,
   "unitree": 45, dji: 70, nokia: 60, ericsson: 55, "zte": 50, huawei2: 0, cisco: 72, juniper: 45, arista: 40, broadcom: 55, naver: 50,
   // AI 公司/实验室

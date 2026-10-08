@@ -1,0 +1,41 @@
+{
+  "id": "multipart-form-data",
+  "name": "multipart/form-data",
+  "aliases": [
+    "多部分表单数据",
+    "Multipart 表单编码"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-message-body",
+      "context": "在 HTTP 表单提交与文件上传中，将多个字段和文件编码到请求消息内容中。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "HTTP 使用 Content-Type 声明 multipart/form-data 及解析内容所需的 boundary 参数。"
+    }
+  ],
+  "summary": "以边界分隔多个字段或文件的表单数据格式。",
+  "description": "multipart/form-data 是 RFC 7578 定义的媒体类型和数据格式，不是独立的网络传输协议。内容由 boundary 分隔的多个部分构成，每部分有 Content-Disposition: form-data 与 name 参数，文件部分还可包含 filename 与自身的 Content-Type。同名字段可以重复，多个文件可通过多个同名部分表示。\n\nHTTP 上传是它的常见应用，但格式可以用于其他传输方式。接收端不能把客户端 filename 直接当作可信存储路径，也不能把声明的媒体类型当作文件已通过验证。使用 FormData 交由 Fetch 编码时，边界应由实现生成并与 Content-Type 配套；还需独立限制总大小、字段数量与业务允许的文件内容。\n\n## 参考\n\n- [IETF：multipart/form-data（RFC 7578）](https://www.rfc-editor.org/rfc/rfc7578.html)\n- [WHATWG：Fetch 标准](https://fetch.spec.whatwg.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.rfc-editor.org/rfc/rfc7578.html"
+}

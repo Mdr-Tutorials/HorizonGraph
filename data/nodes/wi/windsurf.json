@@ -1,15 +1,20 @@
 {
   "id": "windsurf",
-  "name": "Windsurf",
-  "aliases": [],
+  "name": "Devin Desktop",
+  "aliases": [
+    "Windsurf",
+    "Windsurf Editor"
+  ],
   "type": "product",
   "ecosystems": [
     "editor-ide-ecosystem",
-    "llm-agent-ecosystem"
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
   ],
   "domains": [
     "devops",
-    "machine-learning"
+    "machine-learning",
+    "ai-assisted-software-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -18,14 +23,25 @@
       "target_id": "product"
     },
     {
-      "relation_type": "extends",
-      "target_id": "vscode"
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "在 Cascade 等支持的桌面代理中配置并启用服务器后调用外部工具，具体代理与团队策略决定可用范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-checkpointing",
+      "context": "使用 Cascade 的检查点路径恢复其代码修改，恢复范围按该代理功能限定。"
     }
   ],
-  "summary": "代理式 AI IDE，以 Cascade 智能体流著称。",
+  "summary": "Windsurf 更名后的代理工作台与代码编辑器产品。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://windsurf.com"
+  "official_site": "https://devin.ai/desktop",
+  "description": "Devin Desktop 是 Windsurf 的现行名称。本节点保留原稳定 ID windsurf，以历史名称供检索；官方 FAQ 明确这是同一编辑器产品的更名与持续演进，现有扩展、设置和工作流通过更新迁移。它把代理管理工作台与完整 IDE 放在同一应用中，不能把这一桌面产品直接当作所有 Devin 云端服务或历史 Windsurf 编辑器插件的集合。\n\n当前产品区分 Devin Local 与 Cascade 等代理入口。Cascade 文档说明其 Code 与 Chat 工作方式、代码工具、规划和检查点；Code 模式可修改仓库，Chat 模式侧重问答并提供可采纳建议。选择哪一代理和工作模式会改变执行行为，不能继续把 Cascade 描述为桌面产品唯一的代理，也不能从品牌更名推断所有代理都共享完全相同配置。\n\nCascade 可通过已配置 MCP 服务器调用外部工具，记忆和规则则为任务提供上下文与项目指导。代理界面能展示编辑及执行过程，但工具权限、服务凭据和受限工作区仍形成实际边界。更名不等于另一个独立产品上线，也不意味着现有客户端自动获得全部云端执行能力；判断功能时应按桌面、具体代理和已启用工具分别核对。\n\n## 参考\n\n- [Cognition：Windsurf 更名为 Devin Desktop 的官方 FAQ](https://devin.ai/desktop)\n- [Devin Desktop：Cascade 模式、工具与其他本地代理](https://docs.devin.ai/desktop/cascade/cascade)\n- [Devin Desktop：MCP 服务器配置及团队控制](https://docs.devin.ai/desktop/cascade/mcp)"
 }

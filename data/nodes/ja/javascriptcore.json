@@ -1,0 +1,40 @@
+{
+  "id": "javascriptcore",
+  "name": "JavaScriptCore",
+  "aliases": [
+    "JSC",
+    "JavaScriptCore 引擎"
+  ],
+  "type": "architecture",
+  "domains": [
+    "compilers",
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtual-machine"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "jit"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "garbage-collection"
+    }
+  ],
+  "summary": "WebKit 中执行 ECMAScript 的虚拟机与优化编译引擎。",
+  "description": "JavaScriptCore 是 WebKit 的 JavaScript 引擎，实现 ECMAScript 的语言执行语义，也被其他宿主嵌入使用，例如 Bun。它负责解析、执行代码与管理语言对象；宿主提供的 HTTP 服务、文件访问和权限接口属于运行时集成层，不能仅凭使用 JavaScriptCore 就推断具备完整浏览器或 Bun API。\n\nJavaScriptCore 采用解释执行与分层即时编译，包括 LLInt、Baseline JIT、DFG 和 FTL 等层级。优化可利用运行时反馈进行投机，在假设失效时退出优化代码并回到合适的执行路径；各层需要维持相同的语言语义。具体层级配置和启用条件会随版本、构建和平台而变化，不能把编译层级直接当作固定速度保证。\n\n引擎还实现垃圾收集以管理不再可达的 JavaScript 对象，相关分配、标记和并发协调属于虚拟机内部机制。自动内存回收不替代宿主资源的显式取消与关闭：流、定时器、连接等资源仍需由其接口和应用生命周期正确管理。\n\n## 参考\n\n- [WebKit：JavaScriptCore 架构与执行层级](https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html)\n- [WebKit：JavaScriptCore 中的投机优化](https://webkit.org/blog/10308/speculation-in-javascriptcore/)\n- [WebKit：JavaScriptCore 垃圾收集机制](https://webkit.org/blog/12967/understanding-gc-in-jsc-from-scratch/)\n- [Bun：运行时与 JavaScriptCore](https://bun.sh/docs)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html"
+}

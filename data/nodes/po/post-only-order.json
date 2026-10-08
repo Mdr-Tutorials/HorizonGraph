@@ -1,0 +1,35 @@
+{
+  "id": "post-only-order",
+  "name": "Post-Only Order",
+  "aliases": [
+    "只挂单订单",
+    "仅挂单订单",
+    "Post Only"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order",
+      "context": "在所引用的 Nasdaq 与 Coinbase 订单入口中，以限价约束为基础再附加 Post-Only 入簿或执行规则。"
+    }
+  ],
+  "summary": "以提供流动性为目标但由场所定义具体行为的指令",
+  "description": "Post-Only 用来控制订单入簿及提供流动性的行为，通常与限价结合。某些接口把它定义为严格 maker-only：若会立即吃单则拒绝或取消；这是一种具体场所语义，不能直接套用到所有同名订单。\n\nNasdaq 的 Post-Only 功能说明包含改价、锁价处理和特定执行情形，Nasdaq Canada 也说明其被动改价行为。Coinbase Exchange 的 post_only 字段则明确 maker-only。实现应核对市场、端口配置、展示属性、费用和规则版本，避免把一种处理方式当成统一规范。\n\n即使严格只挂单被接受，也不保证最终成交、返佣或净收益；费用等级、路由及撤换可能影响结果。研究与执行系统应记录场所实际接受价格和回报，而不能仅用最初限价或客户端选项推导最终的流动性角色。\n\n## 参考\n\n- [Nasdaq：Post-Only Order 功能说明](https://nasdaqtrader.com/content/ProductsServices/Trading/postonly_factsheet.pdf)\n- [Nasdaq Canada：Advanced Orders](https://www.nasdaq.com/products/north-american-markets/canada/advanced-orders)\n- [Coinbase Exchange：Create a New Order](https://docs.cdp.coinbase.com/api-reference/exchange-api/rest-api/orders/create-new-order)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

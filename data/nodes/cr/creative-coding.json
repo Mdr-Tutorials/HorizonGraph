@@ -1,0 +1,39 @@
+{
+  "id": "creative-coding",
+  "name": "Creative Coding",
+  "aliases": [
+    "创意编程",
+    "创造性编程"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "processing",
+      "context": "制作桌面视觉草图或交互装置时，用 Processing 的绘图接口进行快速视觉实验。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "p5js",
+      "context": "创作运行在浏览器中的视觉和交互草图时，使用 p5.js 绘图及输入接口。"
+    }
+  ],
+  "summary": "用代码探索图像、声音与交互表达的创作方法。",
+  "description": "创意编程把程序作为表达与实验的媒介，用规则、几何、时间和输入生成图像、声音或互动体验。作品可以是静态生成图、逐帧动画、数据艺术或实体装置，创作过程通常依靠小规模草图不断调整参数和观察结果。\n\nProcessing 与 p5.js 提供面向视觉实践的绘图接口和运行结构，便于把编程基础直接映射为可见变化。学习路径既包括颜色、坐标和构图，也包括循环、数据结构以及输入响应；所用工具取决于最终运行平台和作品媒介。\n\n## 参考\n\n- [Processing：创作与教育定位](https://processing.org/overview/)\n- [p5.js：项目定位](https://p5js.org/about/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

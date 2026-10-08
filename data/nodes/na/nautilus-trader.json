@@ -1,0 +1,51 @@
+{
+  "id": "nautilus-trader",
+  "name": "NautilusTrader",
+  "aliases": [
+    "Nautilus Trader",
+    "NautilusTrader 交易框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "event-driven-backtesting",
+      "context": "历史事件、模拟时钟和订单回报驱动框架的策略及账户组件。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "exchange-simulator",
+      "context": "回测中的模拟交易所和撮合逻辑按配置处理订单、成交和状态事件。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "historical-market-data-replay",
+      "context": "历史数据流更新回测的已记录市场状态，而不生成订单对原市场的真实反作用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "latency",
+      "context": "可配置订单命令延迟影响请求何时到达模拟市场，具体规则按所用版本核对。"
+    }
+  ],
+  "summary": "以共享事件组件支持研究、交易仿真和实盘执行的框架。",
+  "description": "NautilusTrader 是开源交易引擎与系统框架，当前官方文档以 Rust 原生核心、Python 策略和配置控制层描述其架构，也可在 Rust 中构建系统。它面向多资产与多市场的研究、仿真、账户和执行流程；此处采用项目的机制与身份说明，不把随版本变化的接口或适配器范围写成永久承诺。\n\n回测使用历史数据驱动共享引擎组件，模拟市场配置要与 L1 报价、L2 价位汇总或 L3 逐订单等数据粒度对应。当前回测文档分别说明市场更新、策略回调、命令送达和计时器的顺序，及成交、滑点和延迟模型；重放的历史订单簿仍不因模拟成交而真实改变。\n\n同一策略代码可用于回测与实盘，有助于降低行为迁移差异，却不能保证两者成交相同。数据缺口、账户规则、队列可见性、费用和接入延迟都需检查，较粗柱线不能生成缺失的真实高粒度市场事件。可重复的结果是指定版本和仿真假设下的研究产物，应以样本外数据及真实执行记录检验。\n\n## 参考\n\n- [NautilusTrader 官方文档：Rust 引擎与 Python 控制层](https://nautilustrader.io/docs/latest/)\n- [NautilusTrader：回测引擎与共享组件](https://nautilustrader.io/docs/latest/concepts/backtesting/)\n- [NautilusTrader：数据粒度与模拟市场配置](https://nautilustrader.io/docs/latest/concepts/backtesting/data-and-venues/)\n- [NautilusTrader：回测事件、计时器和命令处理顺序](https://nautilustrader.io/docs/latest/concepts/backtesting/execution-flow/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://nautilustrader.io/"
+}

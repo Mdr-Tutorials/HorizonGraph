@@ -1,0 +1,59 @@
+{
+  "id": "harbor",
+  "name": "Harbor",
+  "aliases": [
+    "Harbor 镜像仓库",
+    "Harbor 工件仓库"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "container-registry"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rbac",
+      "context": "以项目角色限制成员在仓库、工件及项目管理中的操作权限。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authentication",
+      "context": "验证访问主体的身份；具体身份来源与模式由 Harbor 实例配置决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "object-storage",
+      "context": "选择 S3 等外部对象后端保存工件 blob 时使用；本地文件系统存储路径不要求对象存储服务。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "postgresql",
+      "context": "当前官方配置使用 PostgreSQL 保存元数据，可以选择内置或外部实例；该数据库不等同于镜像 blob 存储。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cncf",
+      "context": "Harbor 官方网站列为 CNCF Graduated 项目，由基金会托管其社区项目。"
+    }
+  ],
+  "summary": "提供项目权限、复制策略和可接扫描器的自托管工件 Registry。",
+  "description": "Harbor 是开源的自托管工件 Registry，围绕项目和仓库管理容器镜像及其他软件工件，提供网页、管理 API、配额与审计等管理能力。项目角色限制成员可执行的操作，身份认证与仓库授权分别决定用户是谁以及能访问哪些资源。它是 CNCF 托管项目，可以部署在支持 Docker 的系统或 Kubernetes 环境中；部署方式不能被扩大成所有使用者都必须采用某一种编排平台。\n\n镜像和工件的持久存储可以使用本地文件系统，也可配置 S3 等外部存储后端，因此对象存储属于可选择的部署能力。Harbor 的元数据数据库与工件 blob 存储承担不同职责，内置或外部 PostgreSQL 的选择也应与外部文件存储分开考虑。复制规则按过滤条件及触发方式在 Registry 之间执行推或拉，目标权限不足会失败；复制工件不意味着同时复制项目成员或认证配置。\n\n漏洞扫描通过启用的 Trivy 或配置的其他扫描器执行，可手动或按策略触发。扫描器适配、漏洞数据库、工件类型和结果策略决定实际检查范围，Registry 并不会因接受上传就自动证明所有内容无漏洞。配置文件、扫描报告、工件存储和发布准入需要在使用时分别核对；外部扫描器、对象存储和特定身份提供者都不能被写成所有 Harbor 实例共有的硬依赖。\n\n## 参考\n\n- [Harbor：项目角色、部署与治理](https://goharbor.io/)\n- [Harbor：存储、数据库及部署参数](https://goharbor.io/docs/2.15.0/install-config/configure-yml-file/)\n- [Harbor：复制规则与边界](https://goharbor.io/docs/2.15.0/administration/configuring-replication/)\n- [Harbor：可配置漏洞扫描器](https://goharbor.io/docs/2.15.0/administration/vulnerability-scanning/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://goharbor.io"
+}

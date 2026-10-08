@@ -1,0 +1,36 @@
+{
+  "id": "frames-per-second",
+  "name": "Frames per Second",
+  "aliases": [
+    "帧率",
+    "每秒帧数",
+    "Frame Rate"
+  ],
+  "type": "metric",
+  "domains": [
+    "graphics",
+    "real-time-rendering",
+    "game-development"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "frame-time",
+      "context": "在同一窗口统计 N 个连续帧间隔时，用 FPS = 1000 / 平均帧间隔毫秒数换算吞吐率；不套用于 GPU 分段耗时或端到端延迟"
+    }
+  ],
+  "summary": "按采样窗口计数的每秒帧数，反映实时画面的帧吞吐率",
+  "description": "帧率表示单位时间内生成、提交或实际呈现的帧数，常用单位为 FPS。统计时应明确所计数的帧、采样窗口和场景条件；渲染循环的更新次数、向 GPU 提交的次数与显示器最终呈现的次数可能不同。垂直同步和目标帧率限制也会影响读数，因此帧率本身不能指出瓶颈来自 CPU、GPU 还是呈现等待。\n\n若同一窗口覆盖 N 个连续帧间隔、总时长为 T 毫秒，则窗口帧率为 1000N/T，平均帧间隔为 T/N，两者满足 FPS = 1000 / 平均帧间隔。逐帧瞬时 FPS 的算术平均通常不等于平均帧间隔的倒数。平均 FPS 还可能掩盖偶发长帧，需要结合帧时间序列、长帧和分位数分析；它也不等于输入到屏幕反馈的端到端延迟。\n\n## 参考\n\n- [Unity：URP 渲染调试器的帧统计与瓶颈](https://docs.unity3d.com/cn/current/Manual/urp/features/rendering-debugger-reference.html)\n- [Unity：FrameTiming 的 CPU 与 GPU 计时口径](https://docs.unity3d.com/cn/6000.0/ScriptReference/FrameTiming.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abbreviation": "FPS"
+}

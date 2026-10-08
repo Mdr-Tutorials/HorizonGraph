@@ -1,15 +1,17 @@
 {
   "id": "trae",
-  "name": "Trae",
+  "name": "TRAE",
   "aliases": [],
   "type": "product",
   "ecosystems": [
     "editor-ide-ecosystem",
-    "llm-agent-ecosystem"
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
   ],
   "domains": [
     "devops",
-    "machine-learning"
+    "machine-learning",
+    "ai-assisted-software-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -22,14 +24,20 @@
       "target_id": "bytedance"
     },
     {
-      "relation_type": "extends",
-      "target_id": "vscode"
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "用户在 IDE 或 SOLO 中授权并启用 Supabase 等 MCP 集成后调用服务工具；不是所有任务的默认依赖。"
     }
   ],
-  "summary": "字节跳动的免费 AI IDE，国内版集成豆包模型。",
+  "summary": "结合 IDE 协作与 SOLO 多步任务的 AI 开发产品。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.trae.ai"
+  "official_site": "https://www.trae.ai",
+  "description": "TRAE 是字节跳动的 AI 开发产品。当前官网区分 TraeCode 与工作类产品，代码入口包括 IDE 和 SOLO 等工作方式；本节点沿用既有 TRAE 产品身份，重点记录软件开发能力，不将通用工作助手混成代码模型。品牌名称、IDE 界面、SOLO 代理和开源 trae-agent 研究项目有不同交付边界，不能因为名称接近就视为同一软件包。\n\nIDE 工作方式围绕开发者当前编辑、对话和补全开展协作，SOLO 承接更长的编码任务。官方产品资料描述仓库上下文、任务规划、多代理以及规则指导，实际模型和工具能力随入口、区域及配置而变。旧摘要中的免费与固定模型绑定不是稳定的产品定义，不应把某次发布或特定区域方案推广到全部当前用户。\n\nTRAE 官方集成示例说明 IDE 和 SOLO 可通过 MCP 接入外部服务，在授权配置后把相应服务工具交给代理。外部数据操作、后端创建或部署是具备权限的特定工作流，不代表所有任务都访问这些服务。它可以辅助实现、调试和项目维护，但代码差异、命令结果和部署状态仍需分别检查；宣传的端到端能力不能替代实际验证。\n\n## 参考\n\n- [TRAE：当前产品入口](https://www.trae.ai/)\n- [TRAE：IDE、SOLO 与开源研究项目的范围](https://www.trae.ai/blog/trae_2025_yearly_review)\n- [TRAE：IDE/SOLO 的 Supabase MCP 集成](https://www.trae.ai/blog/supabase_112?v=1)"
 }

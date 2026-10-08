@@ -1,0 +1,28 @@
+{
+  "id": "pass-at-k",
+  "name": "pass@k",
+  "aliases": [
+    "至少一次通过率",
+    "Pass at k"
+  ],
+  "type": "metric",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "衡量同一任务的 k 个候选中至少一个通过的概率。",
+  "description": "pass@k 描述给定生成与判定协议下，同一问题的 k 个候选中至少一个通过的概率，再按指定任务集合平均。HumanEval 用它衡量代码样本能否通过函数测试。它反映获得候选解的能力，不表示系统已经知道该选哪个候选。\n\n当一个任务生成 n 个样本、其中 c 个通过且 n≥k 时，HumanEval 采用估计式 1−C(n−c,k)/C(n,k)。官方实现只对每个任务样本数都足够的 k 汇总；每题只采一个样本时，不能据此直接估计 pass@10 或 pass@100。\n\n比较时要固定采样策略、候选数、测试与预算，报告是否使用额外反馈或筛选。增大 k 会增加获得至少一个合格候选的机会，却不代表单次运行更稳定；pass^k 衡量全部 k 次都成功，是另一个指标。通过有限测试的定义也不等于程序在全部输入上正确。\n\n## 参考\n\n- [HumanEval 原论文：函数级任务与 pass@k](https://arxiv.org/html/2107.03374v1)\n- [HumanEval 官方 pass@k 估计实现](https://raw.githubusercontent.com/openai/human-eval/master/human_eval/evaluation.py)\n- [τ-bench 原论文：工具、用户模拟与 pass^k](https://arxiv.org/html/2406.12045v1)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

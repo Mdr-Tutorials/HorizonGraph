@@ -1,0 +1,33 @@
+{
+  "id": "network-egress-control",
+  "name": "Network Egress Control",
+  "aliases": [
+    "网络出站控制",
+    "出站访问控制"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "firewall",
+      "context": "采用网络层执行方案时，以防火墙规则限制进程或工作负载的出站地址、端口与协议；代理方案不必以此为直接依赖。"
+    }
+  ],
+  "summary": "限制程序外连的协议、目的地或请求路径。",
+  "description": "网络出站控制约束程序向外发起的连接或请求，可在防火墙、代理、沙箱或调用执行层限制协议、域名、地址与端口。它用于缩小可触达服务和外传通道；获准连接一个目标并不代表发送任意数据都已被业务授权，也不能仅由启用 HTTPS 推导为数据不会外泄。\n\n域名与实际连接地址之间存在解析、重定向和检查后变化的边界。SSRF 防护中应根据部署限制内部地址、链路本地地址及重定向目标，并让约束覆盖实际网络路径。MCP 当前安全指南将 OAuth 元数据抓取中的受控 URL 列为具体应用，服务端部署可采用出站代理与网络策略进行强制限制。\n\nAntigravity 启用终端沙箱时可把 read_url 允许域加入出站范围，而 execute_url 另行约束浏览器交互。浏览器导航、终端网络和第三方工具服务可能走不同执行路径，不能只设置其中一条就认为全部网络都受控。退出沙箱或调用独立远端工具后，应重新确认约束在何处生效。\n\n## 参考\n\n- [OWASP：Server Side Request Forgery Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)\n- [MCP 2026-07-28：Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)\n- [Google Antigravity：Terminal sandbox](https://www.antigravity.google/docs/sandbox/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

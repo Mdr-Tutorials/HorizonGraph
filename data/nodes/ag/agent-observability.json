@@ -1,0 +1,39 @@
+{
+  "id": "agent-observability",
+  "name": "Agent Observability",
+  "aliases": [
+    "智能体可观测性",
+    "Agent 可观测性"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "devops"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "observability",
+      "context": "诊断端到端智能体运行时采用日志、指标和追踪关联方法，将模型、工具与环境事件连接到任务试验。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "opentelemetry",
+      "context": "在采用 OpenTelemetry 的 Agent 仪表化路径中以 span 关联 Agent、工作流及工具执行；GenAI 专门语义约定截至 2026-10-08 为 Development，不表示每个宿主都已支持。"
+    }
+  ],
+  "summary": "关联任务步骤、工具结果和运行消耗以诊断智能体。",
+  "description": "智能体可观测性为任务运行建立可关联的外部证据，包括模型调用、工具及其返回、环境变化、错误和耗时。任务与试验标识用于把这些事件连接到同一次运行，支持发现无进展循环、工具失败及最终结果与宣称完成不一致等问题。\n\n它可使用通用日志、指标和追踪方法，并在交互式实验中保存观察与动作。AgentLab 的结果结构和 AgentXray 展示了按任务、种子及步骤查看证据的做法。OpenTelemetry 另有 Agent、工作流及工具执行的 span 语义约定，截至 2026-10-08 仍标为 Development；它是选择该仪表化方式时的具体约定，不是全部宿主均已支持的稳定接口。\n\n收集得多不等于评估得准，遥测必须与任务验收或诊断问题关联。采样、缺失事件和外部状态可限制解释，输入输出还可能包含敏感内容，需要决定访问和留存范围。可观察记录不能保证暴露模型全部内部推理，也不能单独证明任务成功。\n\n## 参考\n\n- [AgentLab：实验结果、轨迹与 AgentXray](https://github.com/ServiceNow/AgentLab)\n- [OpenTelemetry：可观测性、信号与追踪](https://opentelemetry.io/docs/concepts/observability-primer/)\n- [Anthropic：以真实任务评估工具设计](https://www.anthropic.com/engineering/writing-tools-for-agents)\n- [OpenTelemetry：开发中的 Agent 与框架 span 语义约定](https://raw.githubusercontent.com/open-telemetry/semantic-conventions-genai/main/docs/gen-ai/gen-ai-agent-spans.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

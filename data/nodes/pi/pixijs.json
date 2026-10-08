@@ -1,0 +1,66 @@
+{
+  "id": "pixijs",
+  "name": "PixiJS",
+  "aliases": [
+    "Pixi.js",
+    "Pixi"
+  ],
+  "type": "library",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "选择 WebGL 后端时，通过 GPU 图形上下文提交二维场景的绘制工作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgpu",
+      "context": "选择受环境支持的 WebGPU 后端时，通过对应管线和命令提交渲染场景。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-2d",
+      "context": "在 v8.16.0 引入的实验性 CanvasRenderer 路径中绘制受支持的二维内容；不表示所有 GPU 特性均可回退。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scene-graph",
+      "context": "通过 Container 层级组织显示对象，累计父子变换和显示顺序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sprite",
+      "context": "用 Sprite 把纹理或纹理区域作为可变换的二维显示对象。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "graphics-batching",
+      "context": "对满足材质、纹理及顺序等条件的对象合并绘制工作，以减少适用场景的提交成本。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "spine-runtimes",
+      "context": "通过 Spine 官方 PixiJS 适配加载并渲染骨骼动画；此集成不是 PixiJS 的硬依赖。"
+    }
+  ],
+  "summary": "以 GPU 渲染二维场景、精灵与互动图形的 JavaScript 库。",
+  "description": "PixiJS 用 Container 组织显示对象，以 Sprite、Graphics 和 Text 表达二维内容，再由渲染器把场景转换为绘制命令。v8 的主要 GPU 后端是 WebGL/WebGL2 与 WebGPU；对象变换、纹理复用和适用对象的批处理影响实际吞吐量。\n\n它提供互动应用和游戏的显示基础，资源加载、事件与时钟等组件可参与工作流，但不自动完成游戏规则或通用文档编辑器。cacheAsTexture 可把变化较少的容器预绘制为纹理；内容变化后需按缓存接口更新，缓存也占用显存并受分辨率限制。\n\nv8.16.0 发布说明引入实验性 CanvasRenderer，称 GPU 上下文不可用时可回退；该版本覆盖精灵、图形、文本及基础滤镜，不能据此承诺 GPU 功能完整等效。后端与特性须按所用版本核对，ExtractSystem 的位图提取也不等于完整 SVG 或编辑文档导出。\n\n## 参考\n\n- [PixiJS：渲染器指南](https://pixijs.com/8.x/guides/components/renderers)\n- [PixiJS：8.16.0 实验性 CanvasRenderer](https://pixijs.com/blog/8.16.0)\n- [PixiJS：Container 与缓存](https://pixijs.com/8.x/guides/components/scene-objects/container)\n- [PixiJS：ExtractSystem](https://pixijs.download/release/docs/rendering.ExtractSystem.html)\n- [Spine：官方 PixiJS 运行时适配](https://en.esotericsoftware.com/spine-runtimes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://pixijs.com/"
+}

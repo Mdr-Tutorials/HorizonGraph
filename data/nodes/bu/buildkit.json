@@ -1,0 +1,69 @@
+{
+  "id": "buildkit",
+  "name": "BuildKit",
+  "aliases": [
+    "BuildKit 构建引擎",
+    "Moby BuildKit"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "build-cache"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "multi-stage-build",
+      "context": "通过 Dockerfile frontend 和求解器执行命名阶段及其依赖，并按目标裁剪无关阶段。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci-image-spec",
+      "context": "在选择 OCI 媒体类型或 OCI layout exporter 的镜像导出路径中生成对应格式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dockerfile",
+      "context": "在采用 Dockerfile frontend 时把构建指令转换为 LLB 构建图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-registry",
+      "context": "拉取基础镜像、推送镜像，或选择 registry cache backend 时交换构建相关内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runc",
+      "context": "Linux OCI worker 配置采用 runc 时，由其执行需要容器隔离的构建进程。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "crun",
+      "context": "Linux OCI worker 配置选用 crun 时，使用这一可替换的 OCI 运行时执行构建进程。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "containerd",
+      "context": "选择 containerd worker 时连接其服务来管理构建执行和相关存储；其他 worker 不要求此后端。"
+    }
+  ],
+  "summary": "用构建依赖图执行步骤、复用缓存并导出镜像或文件。",
+  "description": "BuildKit 是构建执行工具包，可通过独立 buildkitd 服务与 buildctl 客户端使用，也可作为 Docker 构建后端。Dockerfile frontend 把输入转换为 Low-Level Build（LLB）依赖图，求解器按依赖执行必要步骤、并行处理可独立阶段，并跳过对选定输出无影响的阶段。frontend 是可扩展接口，因此 BuildKit 的整体能力不限于一种构建文件语法。\n\n其缓存模型跟踪构建操作和挂载输入内容的校验信息，复用已有结果；缓存可以按所支持 backend 导入、导出和回收。exporter 决定最终保存镜像、推送仓库、写出 OCI layout，或只导出阶段文件系统；完成求解不意味着结果已进入某个本地引擎镜像库。普通执行缓存与 RUN 缓存挂载的用途也不同，构建材料变化和 exporter 配置须分别处理。\n\nLinux 服务可配置 OCI worker 或 containerd worker，前者按配置使用 runc、crun 等执行构建进程，后者连接 containerd；这些是实际后端选择。独立 BuildKit 服务无需把 Docker Engine 作为唯一宿主。客户端与服务支持的平台不同，当前官方 Docker 文档仍将 Windows 容器构建能力列为实验支持；跨平台构建还取决于 worker、基础镜像及编译或模拟路径。\n\n## 参考\n\n- [BuildKit 官方项目与 worker 配置](https://raw.githubusercontent.com/moby/buildkit/master/README.md)\n- [BuildKit：LLB 与 Windows 支持](https://docs.docker.com/build/buildkit/)\n- [Build Exporters](https://docs.docker.com/build/exporters/)\n- [BuildKit Rootless](https://github.com/moby/buildkit/blob/master/docs/rootless.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/moby/buildkit"
+}

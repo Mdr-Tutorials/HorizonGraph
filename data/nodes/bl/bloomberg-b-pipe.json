@@ -1,0 +1,43 @@
+{
+  "id": "bloomberg-b-pipe",
+  "name": "Bloomberg B-PIPE",
+  "aliases": [
+    "B-PIPE",
+    "Bloomberg Market Data Feed"
+  ],
+  "type": "product",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance",
+    "data-engineering"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "market-data-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "blpapi",
+      "context": "官方 BLPAPI 提供连接 B-PIPE 的客户端接口；具体数据权限仍由订阅及授权决定，不表述为服务端必然调用客户 SDK。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data",
+      "context": "向企业内部、第三方及非展示应用供应归一化市场行情与相关参考字段。"
+    }
+  ],
+  "summary": "面向企业应用的归一化实时市场数据服务。",
+  "description": "Bloomberg Market Data Feed，简称 B-PIPE，是面向机构应用的企业市场数据服务。它将多市场、多个来源的实时行情按 Bloomberg 模型提供给客户，区别于桌面终端本身、原始交易所报文和客户订单执行系统。\n\n服务提供实时或延迟数据、行情深度、证券状态和参考字段等内容，供内部、第三方及非展示应用消费。可通过云等交付方式部署，客户可使用官方 BLPAPI 建立会话并订阅事件；开发者需要处理订阅、数据含义、数据源权限与故障恢复，而不是仅完成网络连接就认为获得所有交易所数据的任意使用权。\n\nB-PIPE 的归一化内容和接口有助于跨市场处理，但归一化行情并不等同于某个交易所原始完整报文，也不保证每个数据包具有同样延迟。企业权限管理、部署位置、源授权和数据处理边界要分别考虑，服务不能替代订单网关或交易场所撮合引擎。\n\n## 参考\n\n- [Bloomberg 实时市场数据馈送](https://professional.bloomberg.com/products/data/enterprise-catalog/real-time-data-feed/)\n- [Bloomberg 云行情交付](https://professional.bloomberg.com/products/data/data-connectivity/cloud-access/)\n- [Bloomberg BLPAPI 核心开发指南与 B-PIPE 接入](https://data.bloomberglp.com/professional/sites/10/2017/03/BLPAPI-Core-Developer-Guide.pdf)\n",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://professional.bloomberg.com/products/data/enterprise-catalog/real-time-data-feed/"
+}

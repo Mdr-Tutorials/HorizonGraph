@@ -1,0 +1,84 @@
+{
+  "id": "asset-pipeline",
+  "name": "Asset Pipeline",
+  "aliases": [
+    "资产管线",
+    "资源制作管线",
+    "内容管线"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gltf",
+      "context": "为 Web 与原生图形运行时交付三维资产。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asset-validation",
+      "context": "检查文件结构、引用、扩展及目标引擎兼容性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mesh-optimization",
+      "context": "在构建阶段降低几何存储与渲染开销。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asset-compression",
+      "context": "按目标解码器能力压缩几何和纹理资源。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openusd",
+      "context": "在使用 USD 的跨工具场景组装路线中，通过 OpenUSD API 读写、解析和组合场景层。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "usd",
+      "context": "在需要分层协作与场景组合的内容路线中交换 USD 场景描述。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "photoshop",
+      "context": "在以 Photoshop 制作二维图像资源的路线中编辑源图像，再导出目标需要的文件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "houdini",
+      "context": "在程序化游戏资产制作路线中，调用 Houdini 制作流程生成可导出的内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "procedural-modeling",
+      "context": "在程序化资产路线中根据参数生成并重新导出模型及其变体。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asset-loading",
+      "context": "在发布后的运行阶段读取、解析交付资源；它与离线导入及构建转换分属不同阶段。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resource-lifecycle",
+      "context": "在交付资源进入应用后管理缓存、引用及 CPU/GPU 资源释放。"
+    }
+  ],
+  "summary": "把制作源文件转换、验证并交付给运行时的流程。",
+  "description": "资产管线连接内容工具、交换文件与运行时资源。典型过程包括保存制作源文件、按目标规则导出、导入转换、生成压缩纹理或简化网格、验证产物，再将可加载资源随应用发布；每一环节需要明确输入、参数和产物。\n\n源文件与导入缓存承担不同职责。Godot 等引擎根据源资源及导入设置生成运行时可用内容，源文件变化可以触发重新导入。管线还应在目标查看器中核对材质、坐标、动画与性能，因为文件结构合法并不代表运行时效果与制作工具完全一致。\n\n运行时读取与解析交付资源属于资产加载，随后缓存、引用与 CPU/GPU 资源释放由应用的资源生命周期管理负责。离线导入和构建转换决定交付内容，运行时加载决定何时把这些内容接入场景，两者需要相互匹配。\n\n## 参考\n\n- [Godot 资产导入流程](https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/import_process.html)\n- [glTF Transform CLI](https://gltf-transform.dev/cli)\n- [Khronos glTF 2.0 规范](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html)\n- [OpenUSD 场景描述与组合机制](https://openusd.org/release/intro.html)\n- [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader.html)\n- [Adobe Photoshop 产品页](https://www.adobe.com/products/photoshop.html)\n- [Houdini 游戏内容工作流](https://www.sidefx.com/industries/games/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

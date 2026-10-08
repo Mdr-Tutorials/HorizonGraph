@@ -10,20 +10,33 @@
   "type": "concept",
   "ecosystems": [
     "web_frontend",
-    "modern-web-frameworks-ecosystem"
+    "modern-web-frameworks-ecosystem",
+    "web-service-ecosystem"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "在服务端生成 HTML 作为页面或局部内容的浏览器可解析表示。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "用于 Web 页面交付时，将渲染后的 HTML 经请求响应路径发送给浏览器。"
     }
   ],
-  "summary": "服务器直接渲染出 HTML，首屏与 SEO 更友好。",
+  "summary": "在服务端生成 HTML，再按应用需要选择客户端交互方式。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "description": "服务端渲染（SSR）在服务器或服务端运行时中把应用数据与页面结构转换为 HTML，再通过响应交给浏览器。在按请求渲染的路线中，内容可以依据用户、URL 和当前数据生成；静态站点生成则通常提前在构建阶段产生可复用页面。HTML 可以一次返回，也可由支持流式输出的渲染器分段发送，具体能力取决于渲染器与部署环境。\n\nSSR 本身不要求客户端水合。普通 HTML 页面、链接、表单或服务端生成的局部片段可以直接使用浏览器提供的能力；当应用选择 React、Preact 等客户端组件接管路线时，才需要对应水合入口复用 HTML 并建立交互。Hono 的 JSX 服务端路径也能生成 HTML，不能仅凭使用 JSX 就推断必须加载 React 或执行客户端组件水合。\n\n服务端尽早提供页面内容可以改善某些访问与抓取路径，但首屏表现仍受数据获取、服务器响应、传输与资源加载影响；采用水合的应用还需支付客户端代码与初始化成本。框架、渲染器和构建工具各有职责：例如 Vite 支持服务端与客户端入口的构建集成，具体把组件转换为 HTML 的操作由所选框架或渲染器执行。\n\n## 参考\n\n- [Hono：JSX](https://hono.dev/docs/guides/jsx)\n- [React：renderToString](https://react.dev/reference/react-dom/server/renderToString)\n- [React：hydrateRoot](https://react.dev/reference/react-dom/client/hydrateRoot)\n- [Vite：Server-Side Rendering](https://vite.dev/guide/ssr)"
 }

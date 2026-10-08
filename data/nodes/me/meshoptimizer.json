@@ -1,0 +1,49 @@
+{
+  "id": "meshoptimizer",
+  "name": "meshoptimizer",
+  "aliases": [
+    "Meshoptimizer",
+    "Meshopt",
+    "网格优化库"
+  ],
+  "type": "library",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mesh-optimization"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "asset-compression"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpp",
+      "context": "以 C++ 库提供网格处理与编码接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "level-of-detail",
+      "context": "以受控误差的网格简化生成不同细节层级。"
+    }
+  ],
+  "summary": "提供网格缓存优化、简化、量化与数据编码的开源库。",
+  "description": "meshoptimizer 提供优化顶点与索引访问、量化属性、简化网格以及编码几何数据等能力。优化步骤可以在资产构建阶段执行，解码器则在需要加载压缩数据的应用中使用，两者承担不同任务。\n\n简化需要指定目标和误差，并检查属性接缝、边界与动画变形。glTF 的 Meshopt 扩展需要兼容解码器，使用库的缓存优化或简化功能并不自动意味着资产采用了压缩扩展；性能收益也需在实际平台测量。\n\n## 参考\n\n- [meshoptimizer 官方库及优化说明](https://github.com/zeux/meshoptimizer)\n- [meshoptimizer 简化及误差控制 API](https://github.com/zeux/meshoptimizer/blob/master/src/meshoptimizer.h)\n- [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/zeux/meshoptimizer"
+}

@@ -12,18 +12,36 @@
   ],
   "domains": [
     "graphics",
-    "human-computer-interaction"
+    "human-computer-interaction",
+    "digital-content-creation"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "photoshop"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "substance-3d"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "substance-3d-painter"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "substance-3d-designer"
     }
   ],
-  "summary": "创意软件公司，Photoshop、PDF 与 Figma 的东家。",
+  "summary": "提供 Photoshop 与 Substance 等创意软件的公司。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://www.adobe.com"
+  "official_site": "https://www.adobe.com",
+  "description": "Adobe 是提供创意软件与相关服务的公司，Photoshop 面向图像编辑，Substance 3D 产品家族参与三维材质和内容制作。公司主体与具体产品分开建模，产品功能、格式支持及使用条件需依据各自说明确认。\n\nAdobe 与 Figma 在 2023 年 12 月宣布终止此前的合并协议，因此不能把这项未完成的收购写成 Figma 属于 Adobe。这里的提供关系只连接已确认的 Photoshop 与 Substance 产品，避免将公司业务范围和拟议交易混为事实。\n\n## 参考\n\n- [Adobe Photoshop 官方产品页](https://www.adobe.com/products/photoshop.html)\n- [Adobe Substance 3D 官方文档](https://experienceleague.adobe.com/en/docs/substance-3d)\n- [Adobe 与 Figma 终止合并协议的官方公告](https://news.adobe.com/news/news-details/2023/adobe-and-figma-mutually-agree-to-terminate-merger-agreement)"
 }

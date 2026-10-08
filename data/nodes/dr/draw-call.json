@@ -1,0 +1,38 @@
+{
+  "id": "draw-call",
+  "name": "Draw Call",
+  "aliases": [
+    "绘制调用",
+    "绘制命令"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vertex-buffer",
+      "context": "采用顶点输入路径时从绑定的顶点缓冲读取位置和其他属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "index-buffer",
+      "context": "采用索引绘制时通过索引缓冲指定本次图元的顶点引用。"
+    }
+  ],
+  "summary": "按当前管线与绑定资源请求 GPU 绘制图元。",
+  "description": "绘制调用向图形 API 编码一项绘图工作：使用当前管线状态、资源绑定和给定范围生成点、线或三角形等图元。非索引绘制按顶点序号推进，索引绘制从索引缓冲区取得顶点引用；实例参数还可让同一组几何按不同实例数据重复绘制。\n\n一次调用不是一次完整帧，也不必对应一个场景对象或一次立即执行。现代 API 可以先录制命令再提交，CPU 返回时间与 GPU 完成时间不同。绘制数量、资源切换和命令编码开销会影响 CPU 负担，但 GPU 耗时还取决于几何量、覆盖像素、着色复杂度和带宽。\n\n工程中用合批、实例化或间接绘制减少提交成本，应以测量定位瓶颈，不能把绘制调用数当作画面性能的唯一指标。程序化顶点生成可以不读取顶点缓冲；只有选用相应输入路径时，顶点、索引缓冲等资源才是该次绘制的要求。\n\n## 参考\n\n- [WebGPU drawIndexed](https://www.w3.org/TR/webgpu/#dom-gpurendercommandsmixin-drawindexed)\n- [Direct3D 12 Command Lists](https://learn.microsoft.com/en-us/windows/win32/direct3d12/recording-command-lists-and-bundles)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

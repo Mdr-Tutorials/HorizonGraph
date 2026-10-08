@@ -6,11 +6,13 @@
   ],
   "type": "protocol",
   "ecosystems": [
-    "web_frontend"
+    "web_frontend",
+    "edge-serverless-ecosystem"
   ],
   "domains": [
     "networking",
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -19,14 +21,26 @@
       "target_id": "application-protocol"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "tcp"
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "RFC 6455 经典连接及 HTTP/2 承载路径使用 TCP；HTTP/3 扩展路径使用 QUIC，不把此关系视为所有版本硬依赖。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "以 HTTP/1.1 Upgrade 或支持相应扩展的 HTTP/2、HTTP/3 Extended CONNECT 建立通道；后续数据以 WebSocket 帧交换。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ietf",
+      "context": "WebSocket 及其 HTTP/2、HTTP/3 建立扩展由 IETF RFC 标准流程制定。"
     }
   ],
-  "summary": "HTTP 升级出的全双工长连接，实时推送的标准通道。",
+  "summary": "建立持久双向消息通道并规定帧与关闭交互的协议。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://datatracker.ietf.org/doc/html/rfc6455"
+  "official_site": "https://datatracker.ietf.org/doc/html/rfc6455",
+  "description": "WebSocket 通过握手建立持久双向消息通道，规定文本与二进制消息的帧组织、分片和关闭等交互。RFC 6455 的经典路径从 HTTP/1.1 Upgrade 握手切换到 TCP 上的 WebSocket 帧，wss 路径使用 TLS；持续消息交换不需要为每条消息重新发起 HTTP 请求。\n\n后续规范扩展了建立方式：RFC 8441 在 HTTP/2 中通过 Extended CONNECT 建立单个流上的通道，RFC 9220 把该机制适配到 HTTP/3。HTTP/3 采用 QUIC 传输，因此整个 WebSocket 规范族不能统一写成对 TCP 的硬依赖；实际客户端、服务器与代理还需支持对应扩展。\n\n双向通道不自动提供业务消息持久化、重连后补发或统一应用背压。标准 WebSocket API 的事件式接收与 Web Streams 的消费需求信号不同，包装成流也不能自动让源端暂停；鉴权、心跳、缓冲和应用协议仍由具体系统设计。\n\n## 参考\n\n- [IETF RFC 6455：WebSocket 协议与经典握手](https://datatracker.ietf.org/doc/html/rfc6455)\n- [IETF RFC 8441：HTTP/2 Extended CONNECT](https://datatracker.ietf.org/doc/html/rfc8441)\n- [IETF RFC 9220：HTTP/3 建立机制](https://datatracker.ietf.org/doc/html/rfc9220)\n- [IETF RFC 9114：HTTP/3 的 QUIC 承载](https://datatracker.ietf.org/doc/html/rfc9114)\n- [WHATWG Streams：WebSocket 事件源的背压边界](https://streams.spec.whatwg.org/)"
 }

@@ -1,0 +1,30 @@
+{
+  "id": "request-animation-frame",
+  "name": "requestAnimationFrame",
+  "aliases": [
+    "动画帧请求接口",
+    "rAF"
+  ],
+  "type": "protocol",
+  "domains": [
+    "game-development",
+    "web-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    }
+  ],
+  "summary": "请求浏览器在更新渲染时执行一次动画回调的接口。",
+  "description": "requestAnimationFrame 登记一次回调，浏览器在更新渲染的相应阶段调用并提供时间戳。连续动画通常在回调中申请下一次回调，应用可依据时间差更新状态，而非假设每次回调都代表固定时长。\n\n回调频率通常与显示刷新有关，后台页面还可能被暂停；它不保证固定 60 Hz、实际完成绘制或固定物理步。cancelAnimationFrame 可取消未执行请求，游戏模拟时钟与该调度接口仍应分别设计。\n\n## 参考\n\n- [WHATWG：动画帧回调接口](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#animation-frames)\n- [MDN：requestAnimationFrame 调度语义](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#animation-frames"
+}

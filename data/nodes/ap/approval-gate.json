@@ -1,0 +1,39 @@
+{
+  "id": "approval-gate",
+  "name": "Approval Gate",
+  "aliases": [
+    "审批关口",
+    "操作审批门"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "human-in-the-loop",
+      "context": "对策略判定需要审核的具体动作，执行流程暂停等待具备权限的人工决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authorization",
+      "context": "审批记录仅允许在审批主体与目标资源权限成立且批准范围匹配时解锁该动作。"
+    }
+  ],
+  "summary": "在特定操作生效前暂停执行，接收有范围的批准或拒绝。",
+  "description": "审批关口是执行路径上的同步控制点：待执行操作满足审核条件时，执行器停止在副作用之前，展示工具、参数、目标和预期效果，再根据审批结果决定是否继续。计划被同意、修改结果被查看与某次具体外部写入被批准，是不同范围的决定。\n\n人工审核需要绑定稳定的操作内容与授权范围。若审核后工具参数、文件内容或目标服务发生改变，执行层应确认原批准是否仍适用；一次性批准、当前任务的规则和持久规则应明确区分。审批者仍需具备相应权限，界面确认不能为无权访问的业务对象创造授权。\n\nMCP 2026-07-28 的工具文档建议保留人工否决能力，并向用户展示敏感操作的输入，但协议并未规定唯一的审批界面。Antigravity 的审批行为受平台、模式和规则影响。审核疲劳、错误描述或不可信页面伪装都可能削弱人的判断，因此审批通常与资源范围限制和审计配合使用。\n\n## 参考\n\n- [MCP 2026-07-28：Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)\n- [Google Antigravity：权限规则](https://www.antigravity.google/docs/permissions)\n- [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,44 @@
+{
+  "id": "matching-engine",
+  "name": "Matching Engine",
+  "aliases": [
+    "撮合引擎",
+    "订单撮合引擎"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "在订单簿撮合实现中维护尚未成交的买卖订单和可用数量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "price-time-priority",
+      "context": "产品选择 FIFO 价格时间模式时，按价位与规则认可的时间先后分配成交。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pro-rata-matching",
+      "context": "产品选择比例或混合分配模式时，在相应步骤按合格数量比例分配成交。"
+    }
+  ],
+  "summary": "按场所规则管理交易意向并确定成交结果的系统功能。",
+  "description": "撮合引擎是电子交易场所中接受交易意向、维护匹配状态并决定成交结果的系统功能。本节点描述通用机制，并不指某一交易所的软件工件。引擎依据产品、交易阶段、订单属性与优先级规则选择可成交的对手和数量。\n\n订单簿场景中，引擎处理新增、撤销、修改与成交，连续阶段逐次匹配，竞价阶段集中计算配对。订单入口网关负责连接和传递请求，撮合负责场所认可的状态变化，两者不能因为都处在下单路径中而视为同一个功能。\n\n不同产品可采用时间、比例或混合分配，还可能施加参与者优先和交易对手条件。完整交易平台另有风控、行情发布、恢复与后续结算环节；低撮合延迟不代表端到端执行时间、行情到达时间或成交质量都相同，更不表示所有客户端请求最终被接受。\n\n## 参考\n\n- [CME：EBS Market 订单簿、撮合与引擎规则文件](https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2023/8/23-356_APPA.pdf)\n- [CME：FX Spot+ 订单簿、网关与撮合引擎](https://www.cmegroup.com/articles/faqs/faq-fx-spot-plus.html)\n- [CME：FIFO、比例与混合撮合算法](https://www.cmegroup.com/education/matching-algorithm-overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

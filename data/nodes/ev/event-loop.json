@@ -12,18 +12,25 @@
     "web_frontend"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "queue",
+      "context": "浏览器按任务来源组织队列，Node 各调度阶段具有回调队列；具体选择与执行顺序由环境规则决定。"
     }
   ],
-  "summary": "单线程里用队列驱动回调与微任务，撑起浏览器与 Node 的并发。",
+  "summary": "调度任务、回调与异步完成通知的运行机制。",
   "importance": 5,
   "popular": 65,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "事件循环把待执行任务与异步完成通知按运行环境的规则调度到执行线程。浏览器 HTML 标准区分任务队列与微任务检查点；Node.js 则组织定时器、I/O 轮询与其他回调阶段。它们共享事件驱动思想，不能用一个固定回调顺序概括所有环境与版本。\n\nNode.js 默认在一个 JavaScript 线程执行回调，同时可以由系统内核和工作线程池推进部分操作。单次耗时回调仍可能阻塞后续处理；async 和 Promise 组织异步控制流，不把普通计算自动变成并行计算。持续生成微任务或长回调也可能延迟其他任务。\n\n请求在等待异步操作时，运行时可以推进其他请求，同一执行实例也可以包含多个请求的在途状态。事件循环的调度顺序与请求、流和服务器关闭的生命周期是不同层次，应用仍需明确取消、清理及状态归属。\n\n## 参考\n\n- [WHATWG HTML：任务队列与事件循环](https://html.spec.whatwg.org/multipage/webappapis.html#event-loops)\n- [Node.js：事件循环阶段与回调](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick)\n- [Node.js：事件循环与工作线程池阻塞](https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop)\n- [Cloudflare：同实例多个在途请求](https://developers.cloudflare.com/workers/reference/how-workers-works/)"
 }

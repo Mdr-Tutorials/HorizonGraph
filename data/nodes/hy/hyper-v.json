@@ -1,0 +1,49 @@
+{
+  "id": "hyper-v",
+  "name": "Hyper-V",
+  "aliases": [
+    "微软 Hyper-V",
+    "Microsoft Hyper-V"
+  ],
+  "type": "architecture",
+  "domains": [
+    "virtualization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "virtualization-ecosystem",
+    "windows-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "hypervisor"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "system-virtual-machine",
+      "context": "通过客体分区、虚拟处理器、内存与设备支持提供可承载独立客体内核的机器环境。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hardware-assisted-virtualization",
+      "context": "在符合主机要求的 Hyper-V 虚拟化组件中使用处理器虚拟化扩展与第二级地址翻译，执行并隔离客体。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "微软以分区隔离客体、提供管理与虚拟化 I/O 的平台。",
+  "description": "## 平台与分区\n\nHyper-V 是微软在 Windows 与 Windows Server 中提供的虚拟化平台，采用 Type 1 hypervisor 架构。底层 hypervisor 提供处理器、内存与分区隔离机制；完整平台还包括管理分区中的虚拟化服务、设备支持和管理接口。它能承载具有自己内核的系统虚拟机，平台名称与泛指虚拟机监控器的 hypervisor 概念应分别理解。\n\n## 管理与设备路径\n\n常规 Hyper-V 主机的 root 管理分区运行 Windows，管理裸机并创建、配置和维护 child 客体分区。TLFS 更精确地区分管理裸机的 root 与创建、管理子分区的 parent；在嵌套环境中二者不必是同一个角色。常见合成设备路径由客体的 VSC 经 VMBus 与管理分区的 VSP 通信，减少完整设备模拟的成本；设备直通等功能另有硬件和配置条件。\n\n## 硬件与应用\n\n在文档列出的常规主机配置中，Hyper-V 虚拟化组件需要处理器虚拟化扩展、第二级地址翻译等能力，并要求固件启用相应支持。CPU 虚拟化、内存翻译和 I/O DMA 重映射是不同机制，不能把 VT-x、EPT 与 VT-d 混作同一个开关。独立安装管理工具与实际运行虚拟机也有不同要求。\n\nHyper-V 的应用既包括一般客体操作系统，也包括上层平台托管的轻量虚拟机。例如 Windows 容器的 Hyper-V 隔离用独立内核建立容器与宿主的边界，WSL2 则以受管理 utility VM 承载 Linux 内核。启用了这一底层技术，不意味着所有这些工作负载都以普通 Hyper-V Manager 虚拟机的方式配置和展示。\n\n## 参考\n\n- [Microsoft：Hyper-V 虚拟化概览](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/overview)\n- [Microsoft：Hyper-V 的 Type 1 架构](https://learn.microsoft.com/en-us/windows-server/administration/performance-tuning/role/hyper-v-server/architecture)\n- [Microsoft：Hyper-V 分区、VMBus 与 I/O 架构](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/architecture)\n- [Microsoft TLFS：虚拟化宿主与分区生命周期](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/tlfs/virtualization-host)\n- [Microsoft：Hyper-V 的硬件与功能要求](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/host-hardware-requirements)\n- [Microsoft：Windows 容器的进程隔离与 Hyper-V 隔离](https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container)\n- [Microsoft：WSL2 utility VM 与发行版共享资源](https://learn.microsoft.com/en-us/windows/wsl/about)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "kernel_os",
+  "official_site": "https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/overview"
+}

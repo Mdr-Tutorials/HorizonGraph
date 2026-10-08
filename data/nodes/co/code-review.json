@@ -1,0 +1,40 @@
+{
+  "id": "code-review",
+  "name": "Code Review",
+  "aliases": [
+    "代码审查",
+    "源码审查",
+    "Patch Review",
+    "变更审查"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unified-diff",
+      "context": "采用统一补丁视图审查文本修改时，以上下文行和增删行定位变更区域；其他差异视图和二进制检查仍有各自表示。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "symbol-navigation",
+      "context": "追踪修改涉及的定义与调用者时使用语言服务导航，结合搜索核对可见引用范围。"
+    }
+  ],
+  "summary": "结合需求、代码差异与验证证据评估变更。",
+  "description": "代码审查围绕一组变更核对正确性、可维护性和项目约定，可以由开发者、自动化工具或编码代理辅助。它需要理解改动目的和相关上下文；生成一份变更摘要或把文件标记为已看过，并不等于已经完成审查。\n\n差异视图帮助定位新增、删除和修改，审查者再结合调用者、测试及运行证据检查影响。代理工作流允许对文件差异提交反馈并继续修改，Git 工作树或远程分支上的结果也可在集成前审查。具体审查状态与保存时机依工具版本和宿主路径不同。\n\n审查发现的建议需要与需求和证据核对，模型结论不能直接视为验证事实。差异之外的未跟踪文件、配置与依赖变化也可能影响行为；通过测试只能说明检查覆盖的部分。最终采用哪些修改、是否发布或合并属于相应工程工作流的决定。\n\n## 参考\n\n- [Google：代码审查的职责与检查方法](https://google.github.io/eng-practices/review/reviewer/)\n- [VS Code：审查代理修改、检查点与 worktree 集成](https://code.visualstudio.com/docs/agents/run/review-code-edits)\n- [Google Antigravity：文件差异审查与反馈](https://antigravity.google/docs/ide/review-changes-editor/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

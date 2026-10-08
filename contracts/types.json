@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.5.0",
+  "schema_version": "3.5.1",
   "source_of_truth": "TechTermSchema 唯一来源，tools/src/gen 从本文件生成 TS 类型与校验 schema。",
   "layers": {
     "L0": "首屏必载：搜索预览、悬浮卡片、邻域面板",
@@ -9,11 +9,11 @@
     "EntityType": {
       "meta_concept": "分类骨架节点，仅存在于 contracts/ontology.json，数据平面禁止出现",
       "concept": "具象理论/特性概念，如 Closure、CAP Theorem、注意力机制",
-      "protocol": "通信/数据协议，如 HTTP/3、QUIC、FIX",
+      "protocol": "通信、数据格式与接口规范，如 HTTP/3、glTF、WebGPU",
       "language": "编程语言与 DSL，如 Rust、C++、SQL",
       "framework": "应用/系统框架，如 Spring Boot、React",
       "library": "工具库/SDK/组件，如 Tokio、PyTorch",
-      "tool": "CLI/构建/运维工具，如 Docker、pnpm、GCC",
+      "tool": "开发、内容创作、分析与运维工具，如 GCC、Blender、QGIS",
       "architecture": "执行环境/硬件体系/虚拟机架构，如 JVM、WebAssembly、RISC-V",
       "metric": "量化与性能指标，如 FPS、Latency、TPS",
       "model_family": "AI 大模型与算法族，如 GLM、Llama、GPT",
@@ -42,7 +42,7 @@
     },
     "Origin": {
       "curated": "人工撰写或人工校验",
-      "ai_draft": "AI 生成待审，L0 存根，信任降级展示"
+      "ai_draft": "AI 生成待审，可包含存根或完整正文，信任降级展示"
     }
   },
   "fields": {
@@ -200,7 +200,7 @@
     },
     "protocol": {
       "realm": "technical",
-      "summary": "通信与数据协议",
+      "summary": "通信、数据格式与接口规范",
       "examples": ["HTTP/3", "QUIC", "FIX"],
       "applicability": {
         "id": "required", "name": "required", "aliases": "required", "type": "required",
@@ -236,7 +236,7 @@
     },
     "tool": {
       "realm": "technical",
-      "summary": "CLI、构建与运维工具",
+      "summary": "开发、内容创作、分析与运维工具",
       "examples": ["Docker", "pnpm", "GCC"],
       "applicability": {
         "id": "required", "name": "required", "aliases": "required", "type": "required",
@@ -272,7 +272,7 @@
     },
     "product": {
       "realm": "technical",
-      "summary": "商业软硬件产品与服务",
+      "summary": "可交付的软硬件、服务与资料制品",
       "examples": ["NVIDIA H100", "AWS EC2", "ChatGPT"],
       "applicability": {
         "id": "required", "name": "required", "aliases": "required", "type": "required",

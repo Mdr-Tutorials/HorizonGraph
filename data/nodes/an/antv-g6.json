@@ -1,0 +1,39 @@
+{
+  "id": "antv-g6",
+  "name": "AntV G6",
+  "aliases": [
+    "G6",
+    "@antv/g6"
+  ],
+  "type": "framework",
+  "domains": [
+    "data-visualization",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "visual-encoding",
+      "context": "通过节点、边与组合对象的形状、颜色等属性表达关系数据。"
+    }
+  ],
+  "summary": "面向关系数据的图布局、绘制和交互可视化框架。",
+  "description": "G6 是 AntV 的图可视化框架，面向节点、边和组合对象等关系数据。它提供绘制、布局、交互行为、动画、主题和插件机制，适合构建关系探索、知识网络与树状结构界面。此节点覆盖 G6 软件项目，与统计图表项目 G2 或地理可视化项目 L7 分别建模。\n\n图布局决定元素的位置，G6 提供力导向、分层、圆形、树等算法选择，并允许组合与自定义布局。布局计算与绘制是不同步骤，数据更新后可重新运行布局；某些迭代布局也可被停止。部分布局支持 Worker、WASM 或 GPU 扩展，采用 G6 不代表每一种布局都使用这些加速路径。\n\n工程中需要稳定的节点和边身份，并明确选择、拖动、缩放及聚合行为。复杂图的可读性还取决于布局规则、标签密度与交互设计，不能仅用是否支持更多节点判断图表达的质量。\n\n## 参考\n\n- [AntV G6 Repository](https://github.com/antvis/G6)\n- [G6 Layout Overview](https://g6.antv.antgroup.com/en/manual/layout/overview)\n- [G6 Layout API](https://g6.antv.antgroup.com/en/api/layout)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://g6.antv.antgroup.com/"
+}

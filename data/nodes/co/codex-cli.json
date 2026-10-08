@@ -1,0 +1,57 @@
+{
+  "id": "codex-cli",
+  "name": "Codex CLI",
+  "aliases": [
+    "OpenAI Codex CLI",
+    "@openai/codex"
+  ],
+  "type": "tool",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "codex"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-harness",
+      "context": "在本地 CLI 中维护代理循环、会话和工具执行，交互或 exec 模式选择实际调用方式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "用户配置外部 MCP 服务器时以客户端方式接入工具；不表示当前 CLI 仍提供已移除的 mcp-server 命令。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-skill",
+      "context": "任务需要已安装或项目提供的技能时加载相应指导与资源，是否启用及允许执行由宿主配置控制。"
+    }
+  ],
+  "summary": "在本地终端读取、修改并执行仓库任务的 Codex 工具。",
+  "description": "Codex CLI 是 Codex 产品的本地终端工具，围绕当前工作目录或指定仓库运行编码代理。它可检查文件、提出并应用修改、调用命令以及读取运行结果，交互式终端界面用于持续协作；非交互的 codex exec 入口可接入脚本和 CI。CLI 是代理宿主的一个交付形态，而不是 OpenAI 模型名称或某种代码补全格式。\n\n执行过程中，模型选择工具，CLI 维护任务与会话并执行工具操作。权限和执行限制控制可写位置、网络访问及需要批准的行为；会话恢复用于继续已有工作，而不是假定模型天然记住所有仓库信息。官方工具也支持使用技能、项目指导以及连接 MCP 服务器，外部服务器只在相应配置、可用工具及授权下参与任务。\n\n终端交互、自动化调用和 SDK 调用各有宿主责任。当前官方 SDK 文档已说明旧 codex mcp-server 命令和独立二进制入口被移除，连接 MCP 工具与把 Codex 暴露为 MCP 服务器不能混写。需要定制客户端生命周期和流式事件时应核对当前 app-server 接口；不应沿用过时示例，或把可选 MCP 服务器和某个编辑器写成 CLI 的必装依赖。\n\n## 参考\n\n- [OpenAI：CLI 的终端与非交互使用](https://learn.chatgpt.com/docs/codex/cli)\n- [OpenAI：官方 SDK 与已移除的 MCP server 入口](https://learn.chatgpt.com/docs/codex-sdk)\n- [OpenAI：Codex 平台与代理宿主](https://developers.openai.com/blog/codex-as-a-platform)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://learn.chatgpt.com/docs/codex/cli"
+}

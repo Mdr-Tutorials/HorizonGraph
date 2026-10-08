@@ -1,0 +1,32 @@
+{
+  "id": "brdf",
+  "name": "Bidirectional Reflectance Distribution Function",
+  "aliases": [
+    "双向反射分布函数"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "pbr"
+    }
+  ],
+  "summary": "刻画表面同一点入射与出射方向的反射分布。",
+  "description": "BRDF 描述表面同一点上，某方向入射的微分辐照度对另一方向出射辐射亮度的贡献。它随入射方向、出射方向和波长等因素变化，可表示粗糙漫反射或方向集中的高光；它不是纹理颜色值，也不是取值必须在零到一之间的简单比例。\n\n通常的物理反射模型需满足相应的能量守恒与互易条件。能量约束体现为对方向分布的积分，不要求每一个 BRDF 函数值都小于一。透射由 BTDF 描述，反射与透射可合为 BSDF；光从一个位置进入又从另一位置离开的次表面散射需要更一般的表示。\n\n基于物理的材质和渲染器采用 BRDF 来计算反射外观，再结合照明、几何和可见性得到图像。实时模型经常作近似，BRDF 本身不指定采用光栅化还是光线追踪，也不替代光照采样、阴影或颜色管理。\n\n## 参考\n\n- [PBRT Surface Reflection](https://pbr-book.org/4ed/Radiometry,_Spectra,_and_Color/Surface_Reflection)\n- [Three.js MeshStandardMaterial](https://threejs.org/docs/pages/MeshStandardMaterial.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abbreviation": "BRDF"
+}

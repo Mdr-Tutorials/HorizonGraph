@@ -8,20 +8,29 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "operating_systems"
+    "operating_systems",
+    "low-latency-systems-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "low-latency-systems",
+    "high-performance-computing"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cas",
+      "context": "某些自旋锁以CAS原子竞争锁状态；其他实现可用交换指令或排队协议，这仍是等待持锁者的有锁同步。"
     }
   ],
-  "summary": "线程在获取锁失败时通过忙等待循环持续轮询而不放弃 CPU 的轻量级同步锁。",
+  "summary": "以持续检查锁状态等待互斥的同步方法，适合条件受控的短临界区。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "自旋锁提供互斥，竞争线程在获取失败时持续检查锁状态，而不是直接睡眠。持锁者的进展决定等待者何时能进入临界区，所以它是有锁同步，不具备无锁算法的整体进度保证。不进入休眠系统调用也不表示线程不会被操作系统抢占。\n\n实现可用test-and-set、CAS或排队式原子协议；竞争时频繁写同一缓存行会产生通信成本。自旋是否合适取决于临界区长度、持锁者能否运行、线程数和CPU资源。在单核或持锁线程被暂停的环境中，持续自旋可能徒耗资源，用户态和内核环境的前提也不同。\n\nLinux内核还需结合中断、抢占以及所用锁类型解释语义，PREEMPT_RT下某些普通spinlock实现与raw spinlock具有区别。持锁期间允许做什么由具体接口决定，不能把通用说明当作所有锁的规则。低延迟设计应限制锁竞争和临界区，并测量缓存通信、尾延迟及公平性，而不是默认自旋一定比mutex更快。\n\n## 参考\n\n- [Linux：自旋锁与内核临界区](https://docs.kernel.org/locking/spinlocks.html)\n- [Boost.Lockfree：进度保证及阻塞来源](https://www.boost.org/latest/doc/html/lockfree.html)\n- [Linux：实时内核配置与最坏延迟](https://docs.kernel.org/core-api/real-time/kernel-configuration.html)"
 }

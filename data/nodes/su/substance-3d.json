@@ -1,0 +1,35 @@
+{
+  "id": "substance-3d",
+  "name": "Adobe Substance 3D",
+  "aliases": [
+    "Substance 3D",
+    "Substance",
+    "Adobe Substance"
+  ],
+  "type": "product",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "adobe"
+    }
+  ],
+  "summary": "Adobe 的三维材质与内容制作产品家族。",
+  "description": "Adobe Substance 3D 是一组用于三维内容制作的产品与资源体系。Painter 面向模型纹理绘制，Designer 面向程序化材质与纹理生成；其他应用与资源服务承担不同制作任务，家族名称不能替代具体工具身份。\n\n共同工作流把可编辑材质或绘制项目转换为目标软件使用的纹理等内容。选择通道、导出预设和颜色解释时需要遵守接收材质的约定；支持某个 Substance 资源格式或一款工具，并不意味着宿主支持整个产品家族的全部功能。\n\n## 参考\n\n- [Adobe Substance 3D 官方文档](https://experienceleague.adobe.com/en/docs/substance-3d)\n- [Substance 3D Designer 概览](https://experienceleague.adobe.com/en/docs/substance-3d-designer/using/getting-started/overview/overview)\n- [Substance 3D Painter 使用指南](https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/home)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.adobe.com/products/substance3d.html"
+}

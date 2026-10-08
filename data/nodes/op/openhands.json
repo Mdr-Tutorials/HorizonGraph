@@ -1,0 +1,44 @@
+{
+  "id": "openhands",
+  "name": "OpenHands",
+  "aliases": [
+    "OpenHands AI",
+    "OpenDevin"
+  ],
+  "type": "product",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-harness",
+      "context": "通过 Software Agent SDK 与 Agent Server 维护代理会话、工具和工作区；Canvas 作为可分离的客户端连接执行后端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "在所用 SDK、CLI 或服务端配置 MCP 服务器后注册工具并分派实际调用；不意味着所有服务器默认启用。"
+    }
+  ],
+  "summary": "组合代理 SDK、执行服务和工作台的软件开发平台。",
+  "description": "OpenHands 是面向 AI 软件开发的开源组件与商业服务体系。当前官方入口区分 Agent Canvas 浏览器工作台、Software Agent SDK、Agent Server，以及 Cloud、Enterprise 和 Sandbox Server；本节点记录产品体系入口，不把这些角色当作同一个进程。早期 Local GUI 与 runtime 架构已有历史快照，不能将旧版 Docker 浏览器应用描述为当前全部产品。\n\nAgent Canvas 管理代理会话与自动化，连接一个或多个 Agent Server；Python SDK 和同仓库的 Server 承担代理、工具、工作区及执行 API。实际代理可以运行在本机、远端或托管后端，任务调度服务决定何时分派，会话执行组件决定如何运行。当前源码还支持接入其他兼容代理，这意味着工作台、代理实现和模型服务可以分别选择。\n\n配置 MCP 服务器时，OpenHands 注册其工具并将调用路由到相应服务器。执行后端与隔离路径必须单独核对：直接在宿主运行 agent-server 和放入容器或独立沙箱具有不同的文件与凭据边界；不能把 Docker 写成所有方式的硬依赖，也不能把浏览器客户端当作隔离保证。它可承载跨文件实现、审查和重复维护任务，完成结果仍需结合差异及验证记录判断。\n\n## 参考\n\n- [OpenHands：现行组件与已废弃项目边界](https://docs.openhands.dev/overview/introduction)\n- [OpenHands：当前 Agent Canvas 架构与执行后端](https://github.com/OpenHands/OpenHands)\n- [OpenHands：MCP 工具注册与调用](https://docs.openhands.dev/overview/model-context-protocol)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://docs.openhands.dev/"
+}

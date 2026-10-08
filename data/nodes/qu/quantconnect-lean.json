@@ -1,0 +1,47 @@
+{
+  "id": "quantconnect-lean",
+  "name": "LEAN Algorithmic Trading Engine",
+  "aliases": [
+    "QuantConnect LEAN",
+    "LEAN",
+    "LEAN 量化交易引擎"
+  ],
+  "type": "framework",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "event-driven-backtesting",
+      "context": "LEAN 通过行情时间片与订单事件推进回测中的策略和账户状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transaction-cost",
+      "context": "历史仿真使用适用的费用模型，并与所选执行成本口径保持一致。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slippage",
+      "context": "引擎的可配置滑点模型估计模拟成交价与参考价格的偏离。"
+    }
+  ],
+  "summary": "QuantConnect 开源的多资产事件驱动回测与实盘交易引擎。",
+  "description": "LEAN 是 QuantConnect 开源的模块化算法交易引擎，支持通过 C# 或 Python 编写策略，在历史回测和实盘接入中处理多资产数据、订单与账户模型。此实体使用 quantconnect-lean 标识，与定理证明语言 Lean 分开；QuantConnect 云服务和用于运行引擎的 LEAN CLI 也有各自产品或工具边界。\n\n引擎按数据时间片与事件推动策略，提供费用、滑点、成交和经纪商等可配置模型。数据时间前沿有助于按顺序处理已可用记录，但自定义数据的发布滞后、修订版本、特征生成和证券选择仍需调用方正确设置；事件驱动结构不能自动消除所有前视或研究选择偏差。\n\n共用策略和引擎组件有助于对照研究与生产行为，但回测与实盘可能在数据到达、合并、成交及市场反馈上不同。其一般多资产引擎能力不构成对真实高频排队、微秒级延迟和完整交易所成交流程的默认复刻。执行敏感研究需核对所用数据粒度、模型和接入版本，并用真实订单回报校准。\n\n## 参考\n\n- [QuantConnect LEAN 官方仓库：事件驱动算法交易引擎](https://github.com/QuantConnect/Lean)\n- [QuantConnect：Timeslices 与数据可用顺序](https://www.quantconnect.com/docs/v2/writing-algorithms/key-concepts/time-modeling/timeslices)\n- [QuantConnect：回测与实盘的对照及前视风险](https://www.quantconnect.com/docs/v2/writing-algorithms/live-trading/reconciliation)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://www.lean.io/"
+}

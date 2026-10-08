@@ -1,0 +1,32 @@
+{
+  "id": "agent-skill",
+  "name": "Agent Skill",
+  "aliases": [
+    "代理技能",
+    "智能体技能"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-skills-specification",
+      "context": "以开放 Agent Skills 格式分发技能时，采用其目录及 SKILL.md 元数据约定。"
+    }
+  ],
+  "summary": "按需加载任务说明与附带资源的代理能力单元。",
+  "description": "代理技能是围绕一类任务组织的说明与支持资源，例如检查步骤、脚本、参考资料和模板。它向已有代理提供可复用的操作知识，通常不需要重新训练模型，也不等同于创建一个独立代理。技能中的指令描述如何开展任务，工具则提供能够被调用的具体操作。\n\n常见宿主先读取名称和适用说明，在选择技能后加载正文，再按任务需要读取支持文件。这种逐步加载减少无关内容进入上下文。按开放 Agent Skills 格式分发时，技能以包含 SKILL.md 的目录保存；发现位置、手动选择、自动选择和执行环境仍由宿主决定。\n\n技能内容不能自行扩大用户授权，也不意味着附带脚本会自动运行。Antigravity 的原生加载器允许省略 name 后采用目录名，而开放格式要求 name 与 description，编写跨宿主技能时应分别核对。旧 Antigravity IDE workflows 已公告于 2026-10-19 停止工作，其流程可按迁移文档转为技能，但这不是所有产品的统一生命周期。\n\n## 参考\n\n- [Google Antigravity：技能](https://www.antigravity.google/docs/skills)\n- [Agent Skills：正式格式规范](https://agentskills.io/specification)\n- [Anthropic：Agent Skills 的设计](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)\n- [Antigravity：Workflows 向技能迁移](https://www.antigravity.google/docs/migration/workflows-to-skills/)\n- [Antigravity IDE：旧 Workflows 的停止公告](https://www.antigravity.google/docs/ide/workflows/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

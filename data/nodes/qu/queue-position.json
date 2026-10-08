@@ -1,0 +1,39 @@
+{
+  "id": "queue-position",
+  "name": "Queue Position",
+  "aliases": [
+    "排队位置",
+    "订单队列位置"
+  ],
+  "type": "metric",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "按具体撮合规则观察订单相对顺序或前方数量，并随簿内事件更新。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-by-order",
+      "context": "数据源发布可排序逐单信息时，用订单与优先级字段追踪可见队列；不推断隐藏兴趣。"
+    }
+  ],
+  "summary": "订单在指定撮合优先规则下的当前相对获配顺序。",
+  "description": "排队位置描述一个订单在指定价格、订单类别和撮合优先规则下的当前相对获配顺序。采用同价 FIFO 时，可记录前方订单数或前方剩余数量；这些量的单位和估计口径不同，且不能用于概括比例分配下的全部成交份额。\n\n位置会随前方成交、撤单及规则认可的重新排序变化。可靠的逐单行情可能提供匿名订单和优先级标识，使位置更容易追踪；只有价位聚合数量时，无法唯一知道减少的数量来自自己前方还是后方，必须承认估计的不确定性。\n\n排队位置用于分析被动订单的成交机会和等待风险，既不等于发送时间排名，也不是成交保证。替换、数量增加和冰山补充的处理依场所规则而异，稳定订单 ID 未必表示稳定优先级；真实成交还受价位变化、隐藏兴趣和撮合阶段影响。\n\n## 参考\n\n- [CME：逐单行情、优先级与排队位置](https://www.cmegroup.com/articles/faqs/market-by-order-mbo.html)\n- [Nasdaq：Nordic TotalView-ITCH 3.04，订单簿重建附录](https://www.nasdaq.com/docs/2025/11/13/Nordic-Equity-TotalView-ITCH_3.04.X.pdf)\n- [NYSE：期权市场的价格时间、比例及客户优先模型](https://www.nyse.com/data-insights/us-equity-options-market-models)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

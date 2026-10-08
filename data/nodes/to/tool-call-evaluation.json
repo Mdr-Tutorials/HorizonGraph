@@ -1,0 +1,38 @@
+{
+  "id": "tool-call-evaluation",
+  "name": "Tool Call Evaluation",
+  "aliases": [
+    "工具调用评估",
+    "Function Calling Evaluation"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "execution-based-evaluation",
+      "context": "对可执行工具任务运行候选调用并检查返回或后端状态，补充仅解析调用结构的检查。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-oracle",
+      "context": "使用函数、参数、预期输出和业务状态规则判断调用是否满足任务，而不是只确认响应可解析。"
+    }
+  ],
+  "summary": "检查工具选择、参数、执行结果与多轮任务状态。",
+  "description": "工具调用评估检查系统能否根据任务与工具说明选择合适函数、提供符合要求的参数，并利用执行结果继续完成任务。合法 JSON 或符合参数类型只是格式正确，不能证明选对工具、使用正确业务值或达到用户目标。\n\n单轮方法可以解析调用结构、对照函数和参数，或实际执行后检查返回。多轮方法还需要固定初始后端状态，检查读写效果与必要的查询路径；BFCL V3 对状态变化及只读调用采用不同检查，并要求符合每轮的判定条件。\n\n评估要包含不该调用或缺少信息的情形，以及多种合法调用路径的处理规则。工具描述、后端数据、参数校验和宿主的执行策略都会影响结果，应分别记录。特定函数调用分数不能替代完整业务任务成功率，也不能证明宿主已正确实施授权。\n\n## 参考\n\n- [BFCL：AST、执行及相关性检查](https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html)\n- [BFCL V3：多轮状态与调用路径判定](https://gorilla.cs.berkeley.edu/blogs/13_bfcl_v3_multi_turn.html)\n- [Anthropic：以真实任务评估工具设计](https://www.anthropic.com/engineering/writing-tools-for-agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

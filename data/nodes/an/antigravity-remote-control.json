@@ -1,0 +1,46 @@
+{
+  "id": "antigravity-remote-control",
+  "name": "Antigravity Remote Control",
+  "aliases": [
+    "Antigravity 远程控制",
+    "agy remote-control"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "google-antigravity",
+      "context": "属于官方文档所列的 Antigravity 产品与能力体系；不表示必须安装其他家族入口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-session",
+      "context": "远程查看并继续主机已有或新建的桌面和 CLI 任务会话。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "approval-gate",
+      "context": "远程界面可以回应当前会话所提出的工具确认，与本地执行授权流程相连。"
+    }
+  ],
+  "summary": "从浏览器继续自有主机上的 Antigravity 桌面或 CLI 会话。",
+  "description": "Antigravity Remote Control 是已运行桌面应用和 CLI 的远程交互能力。启用后，用户以相应 Google 账号从浏览器查看会话、提交任务、审阅计划和 artifacts，并响应工具确认。任务与命令继续使用被连接主机的开发环境，因此这里建模为远程控制能力，而不是额外的 Google 托管智能体运行服务。主机需要保持在线且未休眠，账号或组织也需要允许这项功能。\n\nCLI 有两种连接生命周期。交互模式通过 /remote-control 或 agy --remote-control 为当前进程建立反向连接，退出该进程即断开；多个终端会话可以拥有不同实例。后台模式通过 agy remote-control start 注册 daemon，在没有打开终端窗口时仍提供主机入口。它按系统使用 systemd user service、macOS LaunchAgent 或 Windows Scheduled Task，具体登录、启动与注销后的存活行为要按各平台表格判断。\n\n远程与本地界面可同步任务事件、差异和审批输入，但当前 CLI 远程页面不能直接切换 CLI 的设置，仍由 CLI 控制。Windows daemon 的开机启动需要相应管理员安装路径，普通登录路径在重启后须用户再次登录。Remote Control 延续已有会话及其授权，并不把本地 SDK 工具迁入 Gemini API sandbox，也不消除权限预设和终端沙箱的操作系统差异。2026 年 5 月公告中的未来计划已经有现行文档，不能继续描述为尚未提供。\n\n## 参考\n\n- [Antigravity Remote Control](https://antigravity.google/docs/remote-control/)\n- [Agent permissions](https://antigravity.google/docs/permissions/)\n- [Terminal sandbox](https://antigravity.google/docs/sandbox/)\n- [Introducing Google Antigravity 2.0](https://antigravity.google/blog/introducing-google-antigravity-2)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://antigravity.google/docs/remote-control/"
+}

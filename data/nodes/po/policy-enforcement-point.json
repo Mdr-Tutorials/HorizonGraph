@@ -1,0 +1,34 @@
+{
+  "id": "policy-enforcement-point",
+  "name": "Policy Enforcement Point",
+  "aliases": [
+    "策略执行点"
+  ],
+  "type": "concept",
+  "domains": [
+    "security"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "iam-ecosystem",
+    "zero-trust-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "policy-decision-point",
+      "context": "在决策与执行分离的访问控制设计中，执行点提交请求上下文求取决定，并在实际访问路径落实返回约束。"
+    }
+  ],
+  "summary": "在资源访问路径上落实授权决定及其附加约束。",
+  "description": "策略执行点位于请求能够产生实际效果的路径上，拦截访问、取得策略决定并落实允许或拒绝。它可以是 API 服务、代理、工具执行器或操作系统机制中的逻辑角色。仅展示权限结果或在模型提示中写出限制，不能替代真正阻止未授权操作的执行点。\n\n采用决策与执行分离的设计时，执行点将可信请求信息交给策略决策点，再根据返回决定限制操作和附加条件。请求路径必须完整覆盖，避免某个直接访问接口绕过执行点；决策后更换对象、动作或身份时，也应确认原结果仍适用。具体组件可以同进程运行，不要求每个应用都使用远端权限服务。\n\n智能体的本地工具执行检查与第三方资源服务授权是不同执行点。客户端允许调用一个工具，不会替代数据库、云 API 或业务应用对最终对象的检查。NIST 的角色定义和 OWASP 的逐请求授权要求支持这种边界划分，审计需要记录实际执行主体与已生效的操作。\n\n## 参考\n\n- [NIST CSRC：Policy enforcement point](https://csrc.nist.gov/glossary/term/policy_enforcement_point)\n- [NIST SP 800-207：Zero Trust Architecture](https://csrc.nist.gov/pubs/sp/800/207/final)\n- [OWASP：Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "PEP"
+}

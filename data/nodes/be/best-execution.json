@@ -1,0 +1,33 @@
+{
+  "id": "best-execution",
+  "name": "Best Execution",
+  "aliases": [
+    "最佳执行",
+    "客户订单最佳执行义务"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "algorithmic-trading",
+      "context": "在FINRA规则或欧盟MiFID II Article 27适用的客户订单算法执行场景，约束执行政策、路由因素和持续审查；不将客户义务无差别施加给全部自营HFT。"
+    }
+  ],
+  "summary": "按适用客户义务综合评估订单执行结果与安排。",
+  "description": "最佳执行是为客户执行订单时，按适用规则采取足够或合理勤勉步骤取得有利执行结果的义务和决策原则。它面向客户关系与执行安排，不是承诺每笔订单事后都得到全市场最低买价或最高卖价，也不能简化为只选择延迟最低的接口。\n\nFINRA现行Rule 5310要求会员在客户相关交易中以合理勤勉寻找最佳市场，考虑市场特征、订单规模与类型、可达报价以及客户指示等因素，并按规则评估执行质量。欧盟MiFID II Article 27要求投资公司综合价格、成本、速度、执行与结算可能性、规模和性质等因素；零售客户总对价和客户具体指示又有相应规定。两套框架的法律范围与措辞不能互换。\n\n执行政策、路由选择和持续审查需要与客户类型、工具和订单目的相匹配，保留能够说明安排有效性的证据。交易成本或速度指标可以支持评估，却不能代替全部义务。对纯粹自营、做市或不同辖区的交易不能不加判断地套用本节点的客户最佳执行要求，2026年的拟议修改也不等于现行规则已被替换。\n\n## 参考\n\n- [FINRA Rule 5310：Best Execution and Interpositioning](https://www.finra.org/rules-guidance/rulebooks/finra-rules/5310)\n- [ESMA法规入口：MiFID II Article 27客户最佳执行](https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-27-obligation-execute-orders)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

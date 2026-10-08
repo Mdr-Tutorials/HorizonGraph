@@ -1,0 +1,45 @@
+{
+  "id": "market-data-gap-recovery",
+  "name": "Market Data Gap Recovery",
+  "aliases": [
+    "行情缺口恢复",
+    "行情丢包恢复"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-sequence-number",
+      "context": "以源规定的会话、通道和序号作用域确定缺失范围与衔接位置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-snapshot",
+      "context": "采用状态重建路线时，取得完整快照并验证覆盖和结束条件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "incremental-market-data",
+      "context": "恢复期间缓存实时增量，并在恢复基准后按源规则应用更新。"
+    }
+  ],
+  "summary": "按源检查点和恢复服务修复行情连续性或当前状态的过程。",
+  "description": "行情缺口恢复在发现缺失数据或本地状态失效后，按发布者提供的服务修复连续性。可以先从冗余流取回遗漏，再请求重传，或在大范围中断后重建快照。序号跳跃指示异常范围，但本身不能补回消息，也不能证明所有缺口都在一个恢复服务的保留窗口内。\n\n小规模重放和快照重建有不同目标。CME TCP recovery 按通道及包范围请求历史，存在范围与时间限制；快照路线恢复当前状态并按相应检查点衔接实时增量。MoldUDP64 则定义按会话与消息序号请求重传，不能混用包序号和消息序号，或把其他服务的参数直接套入。\n\n恢复期间应按源要求管理到达的实时数据、丢弃重复并验证状态是否一致。跨会话重置、缺少金融工具定义或不完整快照会破坏衔接。恢复当前订单簿不等于恢复此前全部事件历史，完成条件必须跟踪所选目标，不能把序号归零当作已经恢复。\n\n## 参考\n\n- [CME：小规模 TCP 行情恢复](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457574209/MDP%2B3.0%2B-%2BTCP%2BRecovery)\n- [CME：MBP 与 MBOFD 快照恢复](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457672425/MDP%2B3.0%2B-%2BMBP%2Band%2BMBOFD%2BMarket%2BRecovery)\n- [Nasdaq：MoldUDP64 规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/moldudp64.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

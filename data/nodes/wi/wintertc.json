@@ -1,0 +1,34 @@
+{
+  "id": "wintertc",
+  "name": "WinterTC",
+  "aliases": [
+    "Ecma TC55",
+    "TC55"
+  ],
+  "type": "organization",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "ecma-international",
+      "context": "WinterTC 是 Ecma 的 TC55 技术委员会，按其章程与标准化治理规则开展工作。"
+    }
+  ],
+  "summary": "推动服务器 JavaScript Web API 互操作的 Ecma 技术委员会。",
+  "description": "WinterTC 是 Ecma International 技术委员会 TC55 的非正式名称，工作目标是使非浏览器的 ECMAScript 服务器运行时能够使用共同的 Web API。其任务包括定义最小接口集合、处理不同宿主中的行为差异，并与 W3C、WHATWG 等已有标准工作协作。\n\nTC55 的成立承接了 WinterCG 社区推动 Web 互操作服务器运行时的工作，但 WinterCG 与 Ecma 技术委员会的组织身份及治理流程不同。WinterTC 在 Ecma 的规则和专利政策下开展标准化工作；不能把前身名称直接当作当前委员会的同一组织别名。\n\nWinterTC 的范围是共享接口与互操作要求，并不替代 Fetch、Streams 或 ECMAScript 的原始标准，也不承诺各服务器平台具备相同的文件系统、权限模型、资源额度或部署方式。ECMA-429 将其中的最小公共 Web API 集合固化为可引用的标准版本。\n\n## 参考\n\n- [Ecma：TC55 章程与工作计划](https://ecma-international.org/technical-committees/tc55/)\n- [Ecma：WinterTC 成立与跨组织协作](https://ecma-international.org/news/collaborating-across-w3c-and-ecma-for-web-interoperable-server-runtimes-through-wintertc/)\n- [Ecma：ECMA-429](https://ecma-international.org/publications-and-standards/standards/ecma-429/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "official_site": "https://wintertc.org/"
+}

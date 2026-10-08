@@ -8,7 +8,9 @@
     "modern-web-frameworks-ecosystem"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "api-engineering",
+    "web-services"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -27,12 +29,25 @@
     {
       "relation_type": "competes_with",
       "target_id": "flask"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pydantic"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-documentation-generation"
     }
   ],
   "summary": "类型注解驱动的异步 Python API 框架，自动生成文档。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://fastapi.tiangolo.com"
+  "official_site": "https://fastapi.tiangolo.com",
+  "description": "FastAPI 是 Python 的 API 应用框架，使用参数类型注解和 Pydantic 模型声明请求与响应，基于这些声明进行解析、校验和 OpenAPI 描述生成。框架构建在 Starlette 的 Web 能力与 Pydantic 的数据模型能力之上，处理函数可以按实际任务使用同步或异步形式。接口文档组件展示生成规范，客户端生成则由另行选择的工具完成。\n\n请求模型控制输入的解析与错误反馈，声明的返回类型或 response_model 可以校验、序列化并过滤输出。Python 注解本身不会完成这些运行时行为，而是由 FastAPI 和 Pydantic 执行；直接返回某些 Response 工件或关闭响应模型时，应按对应规则理解校验范围。依赖注入与鉴权逻辑需要在应用中配置，生成文档和类型提示不会自动完成业务访问控制。\n\n## 参考\n\n- [FastAPI：基础能力与依赖](https://fastapi.tiangolo.com/features/)\n- [FastAPI：请求体解析](https://fastapi.tiangolo.com/tutorial/body/)\n- [FastAPI：响应模型](https://fastapi.tiangolo.com/tutorial/response-model/)"
 }

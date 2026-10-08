@@ -1,0 +1,46 @@
+{
+  "id": "web-map",
+  "name": "Web Mapping",
+  "aliases": [
+    "Web 地图",
+    "浏览器地图",
+    "交互式网页地图"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "map-projection",
+      "context": "二维地图将地理位置投影到平面显示空间；具体投影由地图配置决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "map-tile-pyramid",
+      "context": "采用瓦片底图时按视口和缩放层级选择待加载的数据块。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geojson",
+      "context": "GeoJSON 可用于在浏览器中加载和展示点、线、面及其属性。"
+    }
+  ],
+  "summary": "在网页中组合地理数据、底图、视角和交互控件。",
+  "description": "Web 地图在网页中组织地理数据源、可见图层、地图视角和交互行为，使用户通过缩放、平移、点击和弹出信息探索位置数据。底图可以来自瓦片服务，业务对象可以来自 GeoJSON、矢量瓦片或其他数据接口。地图客户端负责呈现与交互，数据生产、瓦片生成和空间数据库通常是另外的组件。\n\n实现需要对齐数据的坐标参考系统、地图投影、瓦片方案和经纬度顺序，并处理视口变化带来的加载、缓存和渲染更新。地图 SDK 与底图供应商可独立选择，使用某个前端库不会自动获得全部底图或地理编码能力。三维地球还需要地形、相机和分层内容加载，可与二维地图采用不同的数据组织方式。\n\n## 参考\n\n- [Leaflet Quick Start](https://leafletjs.com/examples/quick-start/)\n- [OpenLayers Quick Start](https://openlayers.org/doc/quickstart.html)\n- [CesiumJS Overview](https://cesium.com/platform/cesiumjs/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

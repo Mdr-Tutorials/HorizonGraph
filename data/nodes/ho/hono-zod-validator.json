@@ -1,0 +1,47 @@
+{
+  "id": "hono-zod-validator",
+  "name": "Hono Zod Validator",
+  "aliases": [
+    "@hono/zod-validator",
+    "Hono Zod 校验中间件"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "hono"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "zod"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "向路由提供所验证目标的输入与解析后值类型，供 Hono Client 推导调用。"
+    }
+  ],
+  "summary": "把 Zod 模式接入 Hono 请求解析与输入类型推导。",
+  "description": "Hono Zod Validator 是独立发布的 @hono/zod-validator 中间件，使用 Zod 模式检查 Hono 请求中的 JSON、表单、查询等选定目标。通过 zValidator 指定目标与模式，处理函数从 c.req.valid 取得成功解析后的值。它默认调用 Zod 的异步安全解析接口，可以接入自定义 hook 处理失败，也允许配置验证函数。\n\n中间件同时向 Hono 路由提供输入类型，因此可参与官方客户端的类型推导；这不意味着客户端发送前自动运行同一份 Zod 校验。请求目标、Content-Type 和模式转换会影响实际输入输出，查询字符串中的数字也应明确解析策略。它负责所配置的请求模式校验，响应验证与业务授权需要另外实施，Hono 本体无需强制安装 Zod。\n\n## 参考\n\n- [Hono Zod Validator：官方 README](https://raw.githubusercontent.com/honojs/middleware/main/packages/zod-validator/README.md)\n- [Hono：校验目标与中间件](https://hono.dev/docs/guides/validation)\n- [Hono：RPC 与客户端类型推导](https://hono.dev/docs/guides/rpc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/honojs/middleware/tree/main/packages/zod-validator"
+}

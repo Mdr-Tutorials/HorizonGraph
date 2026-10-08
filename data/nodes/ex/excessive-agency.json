@@ -1,0 +1,29 @@
+{
+  "id": "excessive-agency",
+  "name": "Excessive Agency",
+  "aliases": [
+    "过度代理能力",
+    "过度自主行动能力"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "工具功能、权限或自主执行范围过宽，放大智能体错误的影响。",
+  "description": "过度代理能力描述系统赋予智能体过多功能、权限或自主执行空间，从而让模型错误产生不必要的破坏或暴露。OWASP 将过多工具功能、过宽资源权限与过度自主分别讨论。风险可以由恶意提示触发，也可以来自理解错误或幻觉，不要求先存在外部攻击者。\n\n设计时应按任务选择必要工具，把读取、修改和删除等能力分开，并让真正的用户权限限制下游资源访问。高影响操作可通过明确的审批关口接入人工否决，自动化流程仍要有停止与权限回收路径。仅换成更可靠的模型，不能直接收缩工具的系统权限或数据访问范围。\n\n该风险与未校验输出后直接执行代码的输出处理问题有交集，但关注点不同：一个参数格式正确的合法工具调用，也可能因为授权过宽而造成严重影响。智能体权限策略、最小权限和资源执行点要在具体操作处生效，不把某个默认预设或存在确认按钮当作消除风险的证明。\n\n## 参考\n\n- [OWASP LLM06:2025：Excessive Agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/)\n- [NIST CSRC：Least privilege](https://csrc.nist.gov/glossary/term/least_privilege)\n- [OWASP：Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

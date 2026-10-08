@@ -10,11 +10,13 @@
   "type": "tool",
   "ecosystems": [
     "web_frontend",
-    "browser-engine-ecosystem"
+    "browser-engine-ecosystem",
+    "browser-automation-ecosystem"
   ],
   "domains": [
     "web-development",
-    "devops"
+    "devops",
+    "browser-automation"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -23,17 +25,20 @@
       "target_id": "tool"
     },
     {
-      "relation_type": "part_of",
-      "target_id": "chrome"
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "页面检查器展示当前文档节点、属性和结构，并允许检查或编辑相关状态。"
     },
     {
-      "relation_type": "part_of",
-      "target_id": "firefox"
+      "relation_type": "uses",
+      "target_id": "accessibility-tree",
+      "context": "提供可访问性检查的实现中，展示页面对辅助技术暴露的角色、名称与结构。"
     }
   ],
-  "summary": "浏览器内置的检查、调试与性能分析工具集。",
+  "summary": "浏览器提供的页面、脚本、网络与状态调试工具集。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "浏览器开发者工具是浏览器提供的页面检查、调试、网络与性能分析工具集。Chrome DevTools 与 Firefox Developer Tools 是各自浏览器的具体实现，常见功能包括检查 DOM 与样式、调试脚本、查看请求和存储；通用词条汇总这一工具类别，不指同一个软件组件同时装入所有浏览器。\n\n开发者工具可把页面状态与网络、脚本运行信息关联，帮助判断交互失败来自目标、事件、请求还是呈现问题。Chrome 还提供可访问性树与计算属性检查，开发者可以比较 DOM 节点与其暴露给辅助技术的语义，而非仅查看可见像素。\n\n调试工具、自动化控制协议和测试框架具有不同职责，Chrome 的 CDP 不能泛化为所有浏览器开发者工具的统一内部协议。手工查看或修改页面也不形成可重复的测试结论，业务断言与受控执行配置仍需另外保存。开发者工具的 DOM、可访问性和网络观察提供的是各自范围的证据。\n\n## 参考\n\n- [Chrome DevTools：Accessibility features reference](https://developer.chrome.com/docs/devtools/accessibility/reference)\n- [Mozilla：Firefox DevTools User Docs](https://firefox-source-docs.mozilla.org/devtools-user/)\n- [Chrome DevTools Protocol：官方说明与版本](https://chromedevtools.github.io/devtools-protocol/index.html)"
 }

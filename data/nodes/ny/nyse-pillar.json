@@ -1,0 +1,41 @@
+{
+  "id": "nyse-pillar",
+  "name": "NYSE Pillar",
+  "aliases": [
+    "Pillar",
+    "NYSE Pillar Integrated Trading Technology"
+  ],
+  "type": "product",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fix-protocol",
+      "context": "Pillar 的 FIX 网关按 NYSE 官方场所规范接收订单与返回状态；原生二进制网关是另一路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-gateway",
+      "context": "成员通过场所对应的 Pillar 网关进入交易平台，网关处理会话和接入，不等于全部撮合规则。"
+    }
+  ],
+  "summary": "为多个 NYSE 市场提供统一技术接入的平台。",
+  "description": "NYSE Pillar 是 NYSE 的集成交易技术平台，多个股票及期权市场通过其共同接口向成员提供接入。平台统一的是技术和连接能力，NYSE、Arca、American 等具体交易市场仍保留各自的规则和运营身份。\n\n官方分别发布二进制网关、FIX 网关、Floor Broker 接口及行情资料，并提供订单类型矩阵、原因码和风险控制文档。交易客户端需按对应市场和接口建立会话、下单、处理确认与恢复，不能将通用 FIX 名称视作完整覆盖 Pillar 私有字段和业务约束。\n\n公开延迟表明确统计分位数、市场、接口和测量排除项，例如网关口径排除边缘网络。读者应同时考察尾部而非仅中位数；相同平台并不会使所有市场具有相同撮合分配或相同延迟，客户网络与应用处理也不包含在所有网关指标内。\n\n## 参考\n\n- [NYSE Pillar 平台、规范与延迟口径](https://www.nyse.com/trade/pillar)\n- [NYSE 股票市场与市场模型](https://www.nyse.com/trade/equities)\n- [NYSE parity/priority 撮合模型](https://www.nyse.com/trade/parity-priority-explainer)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.nyse.com/trade/pillar"
+}

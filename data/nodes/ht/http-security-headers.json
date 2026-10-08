@@ -1,0 +1,45 @@
+{
+  "id": "http-security-headers",
+  "name": "HTTP Security Response Headers",
+  "aliases": [
+    "HTTP 安全响应头",
+    "安全响应字段"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "security"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hsts",
+      "context": "面向浏览器的 HTTPS 站点可发送 HSTS 策略，约束后续连接必须使用安全传输。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "csp",
+      "context": "需要控制页面资源与执行来源时，显式设置适合页面功能的 CSP 策略或先以报告模式观测。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "把不同浏览器策略写入相应 HTTP 响应字段，并处理网关与中间件的覆盖顺序。"
+    }
+  ],
+  "summary": "通过响应字段声明浏览器执行的安全策略。",
+  "description": "安全响应头是一组用途不同的浏览器策略入口，例如 HSTS 要求安全传输，CSP 约束资源加载或执行，nosniff 约束类型嗅探，Referrer-Policy 控制引用信息，frame-ancestors 等限制页面嵌入。应用、网关或中间件可以设置这些字段，最终效果取决于策略值、上下文和客户端支持。\n\n它们不替代输入验证、认证或对象授权，也不是发送一个固定字段列表就消除注入风险。Hono secureHeaders 可提供一组默认字段，但 CSP、CSP Report-Only 与 Trusted Types 需要显式配置；多个中间件同时修改字段时，执行顺序影响最终响应。报告模式与强制执行模式也应分别检查。\n\n## 参考\n\n- [OWASP：HTTP 安全响应头](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html)\n- [Hono：Secure Headers 中间件与默认配置](https://hono.dev/docs/middleware/builtin/secure-headers)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

@@ -1,0 +1,33 @@
+{
+  "id": "incremental-parsing",
+  "name": "Incremental Parsing",
+  "aliases": [
+    "增量解析",
+    "Incremental Syntax Parsing"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "compiler-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "parser",
+      "context": "用解析器和已有语法树处理新文本，复用未受影响的结构并重新解析必要区域。"
+    }
+  ],
+  "summary": "根据文档变化复用已有解析结果并更新语法结构。",
+  "description": "增量解析在源码局部变化后复用未受影响的解析结果，更新变化相关的语法结构，从而支持编辑过程中频繁查询。它是一种解析更新策略，不等于对整个项目重新编译，也不自动执行名称绑定或类型检查。\n\n解析器需要知道文本编辑的字节和位置范围，调整旧树的位置后把旧树与新文本交给后续解析。Tree-sitter 用可复用语法节点维护具体语法树，并提供树编辑与重新解析接口；这种机制适合不断变化且暂时不完整的编辑文档。\n\n复用范围受到文法与编辑形态影响，不能保证每次修改只解析固定大小的片段。错误恢复让编辑器继续显示结构，但结构可用不代表程序合法。语法变化之后，语言服务仍需更新相应语义状态、索引或诊断。\n\n## 参考\n\n- [Tree-sitter：增量解析库与生成器](https://tree-sitter.github.io/tree-sitter/)\n- [Tree-sitter：编辑旧树与增量重新解析](https://tree-sitter.github.io/tree-sitter/using-parsers/3-advanced-parsing.html)\n- [Tree-sitter：官方源码与项目身份](https://github.com/tree-sitter/tree-sitter)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

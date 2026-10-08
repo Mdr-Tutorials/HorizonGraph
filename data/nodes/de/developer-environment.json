@@ -1,0 +1,37 @@
+{
+  "id": "developer-environment",
+  "name": "Developer Environment",
+  "aliases": [
+    "开发环境",
+    "Development Environment"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "团队维护环境定义时，将配置与初始化脚本随代码库版本管理，便于审查与恢复。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vscode",
+      "context": "选择 VS Code 为编辑器时，用工作区、任务和调试配置组织开发操作；开发环境也可使用其他编辑器。"
+    }
+  ],
+  "summary": "支撑编辑、构建、运行与调试的工具和配置环境。",
+  "description": "开发环境是针对代码库组织的工具链、运行时、依赖、编辑器、调试器和配置的集合。它既可以直接位于宿主系统，也可以置于容器、虚拟机或远程工作区。环境承担开发与测试工作；应用部署到生产时可以采用不同的镜像、权限与资源布局。\n\n环境定义需要说明源代码如何进入工作区、构建命令在哪里运行、服务端口如何访问，以及依赖安装和用户身份如何设置。容器化方案可以把工具放入镜像，把代码挂载或克隆到工作区；VM 方案还定义客体操作系统与机器资源，编辑器可以保留在本地界面。\n\n团队共用配置应记录代码库需要的工具和初始化步骤，个人主题和界面偏好可以独立维护。仅保存编辑器设置不等于保存整个环境；手工安装的软件、宿主凭据和外部数据库仍可能改变执行结果，需要在环境维护中明确其生命周期。\n\n## 参考\n\n- [Dev Container CLI：开发环境的本地、远程和 CI 使用场景](https://github.com/devcontainers/cli)\n- [GitHub：开发容器配置与个人定制的区别](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)\n- [Vagrant：开发环境工作流](https://developer.hashicorp.com/vagrant/intro)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -1,0 +1,47 @@
+{
+  "id": "chrome-devtools-protocol",
+  "name": "Chrome DevTools Protocol",
+  "aliases": [
+    "Chrome 开发者工具协议",
+    "CDP",
+    "DevTools Protocol"
+  ],
+  "type": "protocol",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "websocket",
+      "context": "远程调试连接以 WebSocket 承载命令、响应和异步事件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "协议消息按 JSON 对象编码命令参数、结果和事件数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "DOM 域按照文档节点及相关接口语义公开页面检查和修改能力。"
+    }
+  ],
+  "summary": "控制和观测 Chromium 系浏览器的调试协议。",
+  "description": "Chrome DevTools Protocol 是 Chrome、Chromium 及相关 Blink 浏览器公开的调试接口规范。它把能力分成 Page、DOM、Runtime、Network 等域，通过命令、响应和异步事件描述导航、脚本执行、网络观测及页面检查。协议本身是接口定义，调用它的客户端、浏览器实现和开发者工具属于不同实体。\n\n远程调试通常以 WebSocket 连接交换 JSON 消息，并按目标和会话路由命令；使用方还需处理目标附加、事件订阅和连接中断。DOMSnapshot 或 Accessibility 域提供的结构化观察，与 Page 截图捕获的像素结果有不同语义，不能把一类返回值视为完整页面状态。\n\n官方区分持续变化的 tip-of-tree 与较早的稳定协议快照，最新域和方法不保证向后兼容。客户端应核对浏览器版本与协议能力，而不是把稳定 1.3 当作当前 Chrome 的完整接口。CDP 的 Chromium 范围也不等同于跨浏览器 WebDriver BiDi；产品公开浏览器操作能力不足以证明其内部使用 CDP。\n\n## 参考\n\n- [Chrome DevTools Protocol：官方说明与版本](https://chromedevtools.github.io/devtools-protocol/index.html)\n- [ChromeDevTools：协议定义仓库](https://github.com/ChromeDevTools/devtools-protocol/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "CDP",
+  "official_site": "https://chromedevtools.github.io/devtools-protocol/"
+}

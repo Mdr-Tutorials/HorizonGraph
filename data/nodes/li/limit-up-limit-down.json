@@ -1,0 +1,39 @@
+{
+  "id": "limit-up-limit-down",
+  "name": "Limit Up-Limit Down",
+  "aliases": [
+    "LULD",
+    "美国单证券动态价格带机制"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "trading-halt",
+      "context": "在当前日间LULD中，Limit State持续等规定情形触发主上市场所Trading Pause；已批准的未来隔夜触带不自动触发此暂停，不与市场整体MWCB混为同一机制。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "limit-order",
+      "context": "对当前日间LULD覆盖证券，约束限价订单实际可执行价格范围；超出价格带的接受、重定价或保留方式按场所规则处理，未来隔夜安排按其实施日期另行判断。"
+    }
+  ],
+  "summary": "以单证券价格带和必要暂停限制异常波动。",
+  "description": "Limit Up-Limit Down是美国国家市场体系针对NMS股票异常波动建立的价格带计划，限制相关股票在允许价格带之外成交。它围绕单证券运行，与以标普500整体跌幅触发的市场级熔断不同，也不是账户信用额度或本地交易软件的价格保护按钮。\n\nLULD计划由参与交易所及FINRA组成的委员会管理，2019年获批准为永久规则。当前日间保护在美国东部时间9:30至16:00的常规交易时段运行，按此前五分钟合格成交的平均参考价格计算上下价格带，并根据Tier 1/Tier 2等类别确定比例；权利与权证等范围例外按计划处理。证券进入Limit State后15秒仍未退出时，主上市场所须宣布Trading Pause，至少五分钟后尝试重开，条件不满足时可以延长。\n\nSEC已于2026年8月5日批准Amendment 27，建立第一阶段隔夜保护，但截至2026年10月8日尚未开始；文件预计2026年12月6日启用，仍取决于行情处理系统变更。计划隔夜时段为周日至周四21:00至次日04:00（美国东部时间），使用官方收盘价和19:45合并最后整手成交价两个基准，设置20%上下带，并对最低带宽及杠杆ETP另作规定。此阶段的价格带与日间动态带具有不同计算与运行规则。\n\n已批准的隔夜安排不会因触及价格带自动启动Trading Pause；主上市场所可在规则允许的情况下宣布Regulatory Halt，且该夜间暂停不在同一隔夜时段重开。日间的Limit State、暂停和重开流程不能直接复制到隔夜。LULD也不等同于其他国家的涨跌停板，价格带控制不保证波动、跳价或流动性风险消失。\n\n## 参考\n\n- [LULD Operating Committee：计划范围与价格带计算](https://www.luldplan.com/)\n- [LULD Operating Committee：现行计划、修改案与报告附件](https://www.luldplan.com/plans)\n- [NYSE：Trading Information，LULD与市场级熔断](https://www.nyse.com/trade/trading-information)\n- [SEC：2026年8月5日批准LULD Amendment 27的隔夜保护](https://www.sec.gov/files/rules/sro/nms/2026/34-106042.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "LULD"
+}

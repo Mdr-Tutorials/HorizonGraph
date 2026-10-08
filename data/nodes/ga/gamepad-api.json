@@ -1,0 +1,34 @@
+{
+  "id": "gamepad-api",
+  "name": "Gamepad API",
+  "aliases": [
+    "游戏手柄接口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "game-development",
+    "web-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "w3c",
+      "context": "W3C 通过其规范制定与发布流程维护浏览器游戏手柄接口的 Gamepad 规范。"
+    }
+  ],
+  "summary": "让 Web 应用读取游戏手柄连接、按钮与轴状态的接口规范。",
+  "description": "Gamepad API 定义设备连接事件和 navigator.getGamepads 等接口，通过 Gamepad 对象读取按钮、轴、映射和时间戳。应用通常在自己的更新循环中轮询状态，按需转换为游戏动作。\n\n返回列表可能包含空位，连接状态和可访问性也受用户交互及浏览器规则影响。标准映射不代表任意设备都具有相同布局，振动等扩展需另查支持；它是 Web 接口规范而非网络传输协议。\n\n## 参考\n\n- [W3C：Gamepad API](https://www.w3.org/TR/gamepad/)\n- [Phaser：输入管理](https://docs.phaser.io/phaser/concepts/input)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://www.w3.org/TR/gamepad/"
+}

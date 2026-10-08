@@ -1,0 +1,35 @@
+{
+  "id": "artifact-review",
+  "name": "Artifact Review",
+  "aliases": [
+    "产物审查",
+    "智能体产物审查"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "execution-based-evaluation",
+      "context": "软件补丁的交付后审查可复跑需求与回归测试，用执行证据补充对代码差异和说明的检查；不要求所有计划或图像产物都能执行。"
+    }
+  ],
+  "summary": "对计划、代码和交付成果核对需求、证据与边界。",
+  "description": "产物审查围绕智能体提交的可查看成果进行反馈和验收，例如实现计划、代码差异、文件、图表及验证报告。它把注意力放在交付内容与任务要求的对应关系上，而非要求用户同步监视每一步工具调用。产物存储与审查流程是不同机制。\n\n审查可在执行前核对计划范围和验收条件，也可在交付后检查结果并反馈具体问题。Antigravity 的官方产物工作流提供查看与逐行评论，是否暂停由具体审查策略决定；批准实施计划只是允许按计划继续，不证明未来代码已经通过测试。\n\n对软件补丁，审查可结合需求、差异和复跑测试来判断有无遗漏、回归及额外语义变化。截图、视频或成功测试记录均是特定范围的证据，需要核对其对应版本和状态；有可审查产物不等于成果已经被独立验证或全面满足需求。\n\n## 参考\n\n- [Antigravity CLI：产物审查与逐行反馈](https://www.antigravity.google/docs/cli/artifacts/)\n- [Antigravity：产物审查策略](https://antigravity.google/docs/artifact-review)\n- [原研究：SWE-bench 测试通过与补丁正确性的差别](https://software-lab.org/publications/icse2026_SWE-bench-correctness.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

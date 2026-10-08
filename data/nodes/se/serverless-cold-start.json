@@ -1,0 +1,33 @@
+{
+  "id": "serverless-cold-start",
+  "name": "Serverless Cold Start",
+  "aliases": [
+    "无服务器冷启动",
+    "函数冷启动"
+  ],
+  "type": "concept",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "edge-runtime-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "benchmark",
+      "context": "仅当基准目标是热环境 handler 的稳态处理时间，却把含 Init 或 Restore 的端到端冷请求时间混入结果时，启动成本会被误归于稳态处理成本；衡量真实端到端体验且明确冷暖比例的测试不据此判为有偏。"
+    }
+  ],
+  "summary": "新执行环境准备与初始化给调用增加的启动开销。",
+  "description": "无服务器冷启动指按需调用需要准备新的执行环境、启动运行时并执行应用初始化时产生的额外等待或开销。以 AWS Lambda 默认函数环境为例，Init 阶段包含扩展初始化、运行时启动和函数静态代码执行；运行时、部署包、依赖初始化及配置都会影响这一过程，因此不能给所有函数套用同一个固定延迟。\n\n已有执行环境可能被保留并复用，使后续调用避开部分初始化，但服务维护、扩容或失败会重新创建环境，复用不是永久保证。Lambda 的预置并发通过提前准备环境降低按需初始化影响，SnapStart 则在支持的运行时和已发布函数版本中保存初始化状态，并在创建新环境时从快照恢复。恢复阶段自身仍有工作；当前支持范围列出指定 Java、Python 与 .NET 版本，不支持 Node.js，不能把这一路径直接套到 Hono 的 Node Lambda 部署。\n\n不同无服务器平台采用的启动单位不同。Cloudflare Workers 在已有运行时中创建 V8 隔离实例，其文档将这一模型与为每个函数准备进程或虚拟机的模型区分，不能把 Lambda 的 Init 流程原样套到 Workers。应用仍需观察自身初始化和首个请求的行为，也不应把热环境中的全局状态当作长期持久数据。\n\n基准测试需要先定义测量目标。如果目标是热环境中 handler 的稳态处理时间，却把包含 Init 或 Restore 的端到端冷请求时间混入同一结果，就会把启动成本归入稳态处理成本，造成相对该目标的测量偏差。这是依据 AWS 分阶段指标作出的测量推论，并非所有测试必然失真；衡量真实端到端体验时可以保留冷请求，但应报告冷暖比例与阶段范围，AWS 的 SnapStart 监控示例也按 coldstart 标识分组统计。\n\n## 参考\n\n- [AWS：Lambda 执行环境、Init 与 Restore](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtime-environment.html)\n- [AWS：SnapStart 支持范围与发布版本要求](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)\n- [AWS：SnapStart 阶段指标与冷暖分组](https://docs.aws.amazon.com/lambda/latest/dg/snapstart-monitoring.html)\n- [Cloudflare：Workers 隔离实例与分布式执行](https://developers.cloudflare.com/workers/reference/how-workers-works/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

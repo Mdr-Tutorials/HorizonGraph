@@ -1,0 +1,39 @@
+{
+  "id": "uv-mapping",
+  "name": "UV Mapping",
+  "aliases": [
+    "UV 映射",
+    "UV 展开",
+    "UV Unwrapping"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "为图像纹理采样建立表面坐标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-geometry",
+      "context": "将纹理坐标作为网格顶点或角属性保存。"
+    }
+  ],
+  "summary": "用二维纹理坐标描述三维表面与图像的对应关系。",
+  "description": "UV 映射为网格表面指定二维纹理坐标，使渲染器能够从图像中采样相应位置。UV 展开把表面划分并铺到二维空间，常涉及接缝、UV 岛、拉伸控制和布局；UV 坐标本身与三维顶点位置承担不同作用。\n\n纹理绘制与烘焙需要合适的 UV 布局。角色表面、重复材质和光照贴图可能采用不同的坐标或重叠规则；打包时要为过滤和 mipmap 留出间距。同一个几何模型可以拥有多套 UV，导出时需要确认目标格式及材质使用哪一套。\n\n## 参考\n\n- [Blender 使用 UV 贴图](https://docs.blender.org/manual/id/4.5/modeling/meshes/uv/applying_image.html)\n- [Blender UV 布局工作流](https://docs.blender.org/manual/ko/4.5/modeling/meshes/uv/workflows/layout.html)\n- [Blender Cycles 渲染烘焙](https://docs.blender.org/UATEST/manual/en/4.5/render/cycles/baking.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

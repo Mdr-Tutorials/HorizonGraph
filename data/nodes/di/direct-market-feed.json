@@ -1,0 +1,30 @@
+{
+  "id": "direct-market-feed",
+  "name": "Direct Market Feed",
+  "aliases": [
+    "直接行情",
+    "交易场所直接行情源"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    }
+  ],
+  "summary": "直接接收交易场所发布行情的分发路线。",
+  "description": "直接行情是从交易场所的数据发布体系取得行情的路线，通常保留该场所规定的消息格式、范围与事件语义。它与厂商规范化数据及跨场所合并行情具有不同组织方式；直接接入可以经授权网络服务提供者完成，并不意味着只能把一根物理线直接接入撮合机。\n\n场所专有行情可以提供更细的价位或逐单信息，但覆盖仍由其发布范围决定。Nasdaq 对其他交易所上市证券提供的 TotalView 信息描述这些证券在 Nasdaq 系统中的状态，不代表取得其他交易所全部订单簿。数据产品、消息规范和底层传输接口也应分别识别。\n\n使用直接源需要处理接入资格、源配置、版本及恢复服务，接收端还需解释字段并维护状态。直接不自动等于无延迟、无丢包或适用于所有分析目标；与 SIP 或其他汇总源比较时应同时比较范围和发布时间，避免只比较一个延迟数字。\n\n## 参考\n\n- [NYSE：行情数据的类别与覆盖范围](https://www.nyse.com/article/understanding-the-market-for-us-equity-market-data)\n- [Nasdaq：TotalView 产品与直接数据接入](https://www.nasdaq.com/products/data/equities/nasdaq-totalview)\n- [CME：直接行情与 MDP 3.0 接口](https://www.cmegroup.com/market-data/distributor/market-data-platform.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

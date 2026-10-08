@@ -11,7 +11,8 @@
   ],
   "domains": [
     "graphics",
-    "web-development"
+    "web-development",
+    "interactive-graphics"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -23,11 +24,35 @@
       "relation_type": "stewarded_by",
       "target_id": "w3c",
       "context": "相关规范由 W3C 对应工作组按其标准流程推进。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vector-graphics"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "drawing-path"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fill-rule",
+      "context": "对复合路径填充时，用 fill-rule 指定 nonzero 或 evenodd 内部判定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "affine-transform",
+      "context": "通过变换属性及坐标系统映射改变图形在文档中的位置和方向。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clipping-path",
+      "context": "使用 clipPath 与 clip-path 限定元素可见的几何区域。"
     }
   ],
-  "summary": "XML 矢量图形格式，图标与插画的 Web 标准。",
+  "summary": "以元素、路径和样式描述二维图形的 XML 语言。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-06",
-  "importance": 4
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "description": "SVG 是基于 XML 的二维图形语言，包含路径、基本形状、文字和可嵌入的栅格图像。浏览器将元素纳入 DOM，可通过 CSS 和脚本修改属性；viewBox 与变换把用户坐标映射到显示区域，图像文件、内联 SVG 和应用对象模型是不同使用形式。\n\n路径通过填充与描边生成可见图形，复合路径使用填充规则处理孔洞，裁剪与遮罩各有语义。矢量几何可以重新光栅化到目标尺寸，但图片、滤镜缓冲及其他栅格内容不因此成为无限分辨率。\n\nSVG 不等于 Canvas：前者以图形文档描述内容，后者的 2D 接口以命令更新位图。元素存在也不自动保证完整的键盘与辅助技术操作，导入图形编辑库时则应核对其支持的 SVG 子集和转换边界。\n\n## 参考\n\n- [W3C：SVG 2 概述](https://www.w3.org/TR/SVG2/intro.html)\n- [W3C：SVG 路径与 Bézier 曲线](https://www.w3.org/TR/SVG2/paths.html)\n- [W3C：SVG 填充、描边与填充规则](https://www.w3.org/TR/SVG2/painting.html)\n- [W3C：裁剪路径与遮罩](https://www.w3.org/TR/css-masking-1/)"
 }

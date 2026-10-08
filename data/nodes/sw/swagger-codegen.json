@@ -1,0 +1,43 @@
+{
+  "id": "swagger-codegen",
+  "name": "Swagger Codegen",
+  "aliases": [
+    "Swagger 代码生成器"
+  ],
+  "type": "tool",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-client-generation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-documentation-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "在版本兼容范围内解析 OpenAPI 或其 Swagger 历史格式，作为模板生成输入。"
+    }
+  ],
+  "summary": "用模板从 Swagger 或 OpenAPI 描述生成 SDK、骨架与文档。",
+  "description": "Swagger Codegen 是 Swagger 工具链中的模板驱动代码生成项目。它解析 Swagger 或 OpenAPI 接口描述，按所选语言、框架和模板生成客户端库、服务端骨架及文档。CLI 的输入、输出目录和语言选择构成基本调用；包名、类型映射、生成范围与自定义模板进一步决定产物的接口和工程结构。这个节点表示生成工具，不把 Swagger 品牌、OpenAPI 规范与 Swagger UI 文档组件合并为一个实体。\n\nCodegen 的不同维护分支具有不同的规范兼容范围，官方文档区分 2.x 与 3.x，并说明 OpenAPI 3.0 由 3.x 分支支持。迁移时应核对输入规范与目标生成器的兼容清单，不能由品牌名称推断支持任意 OpenAPI 版本。生成的骨架不包含完整业务实现；生成的类型和示例也不等于服务已经通过契约验证。项目允许选择性生成与配置定制，适合将可再生代码纳入构建流程。\n\n## 参考\n\n- [Swagger Codegen：项目、版本兼容与生成方式](https://github.com/swagger-api/swagger-codegen)\n- [Swagger Codegen：官方文档入口](https://swagger.io/docs/open-source-tools/swagger-codegen/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/swagger-api/swagger-codegen"
+}

@@ -9,17 +9,33 @@
   "type": "concept",
   "domains": [
     "personal-finance",
-    "quantitative-finance"
+    "quantitative-finance",
+    "financial-risk-management",
+    "electronic-trading"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "covariance",
+      "context": "在最小方差交叉对冲模型中，以原敞口价格变化与对冲工具变化的协方差及工具方差估计对冲比率；该估计依赖样本与模型假设。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-regression",
+      "context": "在使用股指期货对冲股票组合的beta估计场景，通过组合收益对市场收益的线性回归估计风险敏感度；不是所有对冲都必须回归。"
     }
   ],
-  "summary": "配置负相关资产或发展第二技能曲线，化解单点行业衰退或意外裁员的灭顶风险。",
+  "summary": "建立抵销特定风险敞口的头寸，仍需处理残余风险。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "风险对冲的金融本义是建立与既有风险敞口相抵销的头寸或合同，以减少特定价格、利率、汇率等变化造成的损失波动。它围绕已经识别的风险和对冲工具设计，不等于所有资产分散投资，也不保证消除全部风险或取得正收益。商业持仓、做市库存与投资组合可以有不同的对冲目标。\n\n对冲方向、规模和期限需要匹配被保护的敞口；当工具与原资产并不完全相同，仍有基差、相关性、流动性和执行风险。在最小方差对冲模型中，可以用原敞口变化与工具变化的协方差及工具方差估计对冲比率；股指对冲中也可通过回归估计组合beta。估计窗口、模型假设、成本和再平衡会影响效果，历史关系不保证未来仍然稳定。\n\nCFTC词汇表与CME教材区分对冲、交叉对冲和基差风险，说明期货对冲可能把一类价格风险转化为基差风险，而不是简单让风险归零。作为职业规划类比，发展其他技能可以被称为分散单一收入来源，但其相关性、可兑现性和保护范围并未因此成为金融对冲合同；这类比不承诺能够抵消裁员或行业衰退损失。\n\n## 参考\n\n- [CFTC Futures Glossary：Hedging、Cross Hedging及Basis Risk](https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CFTCGlossary/index.htm)\n- [CME教材：Learn about Basis，期货对冲与基差风险](https://www.cmegroup.com/education/courses/introduction-to-grains-and-oilseeds/learn-about-basis-grains)\n- [MIT OpenCourseWare：Investments，Futures and Risk Management](https://ocw.mit.edu/courses/15-433-investments-spring-2003/2bca024b70143e5d8f63df171c30e83f_1543316riskmanagement.pdf)\n- [CME教材：Hedging with E-mini S&P 500 Future](https://www.cmegroup.com/education/whitepapers/hedging-with-e-mini-sp-500-future)",
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ]
 }

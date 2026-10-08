@@ -1,0 +1,34 @@
+{
+  "id": "fix-trading-community",
+  "name": "FIX Trading Community",
+  "aliases": [
+    "FIX Protocol Limited",
+    "FIX Protocol Ltd",
+    "FPL",
+    "FIX 交易标准社区"
+  ],
+  "type": "organization",
+  "domains": [
+    "electronic-trading",
+    "quantitative-finance",
+    "industry-landscape"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "market-data-ecosystem",
+    "fintech-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "制定并维护 FIX 业务及相关技术标准的非营利组织。",
+  "description": "FIX Trading Community 是独立、非营利、由行业参与者推动的标准组织，维护 FIX 消息标准及相关技术规范。其工作涵盖业务消息、编码、会话和实施指南，网站及规范也以 FIX Protocol Ltd 名义发布。组织身份应与 FIX 协议、具体软件引擎及交易场所分别保留。\n\n社区通过委员会和工作组收集需求、制定方案、评审技术文档并推进标准维护。正式技术规范、草案和候选版具有不同阶段，工作组正在讨论的功能不等于已经在所有实现中可用。SBE、FAST 与 FIXP 的维护职责说明它们属于同一标准家族，但没有把这些不同层次合并成单一报文。\n\n行业成员与实现厂商可采用标准并参与治理，组织本身不执行用户订单，也不提供所有交易所的生产接入权限。标准治理、代码开发与市场运营具有不同职责；相关关系应按规范维护和具体实现分别连接，避免把企业会员关系写成技术硬依赖。\n\n## 参考\n\n- [FIX Trading Community：组织与标准治理职能](https://fixtrading.org/who-we-are/)\n- [FIX Trading Community：技术与业务委员会](https://fixtrading.org/committees/)\n- [FIX Trading Community：FIX Latest 规范引言](https://www.fixtrading.org/online-specification/introduction/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "official_site": "https://fixtrading.org/who-we-are/"
+}

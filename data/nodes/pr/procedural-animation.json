@@ -1,0 +1,39 @@
+{
+  "id": "procedural-animation",
+  "name": "Procedural Animation",
+  "aliases": [
+    "程序化动画",
+    "程序驱动动画"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inverse-kinematics",
+      "context": "按环境位置设置手脚目标时，通过逆运动学求出骨骼链的姿势。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "skeletal-animation",
+      "context": "在角色预制骨骼动作播放后调整局部骨骼，使姿势响应当前输入与环境。"
+    }
+  ],
+  "summary": "通过规则、约束或运行数据实时计算动作。",
+  "description": "程序化动画用代码或约束在运行时生成姿势和运动。例如根据光标方向调整角色瞄准角度，或根据地面位置修正脚部目标，让预制动作对当前环境作出响应。它可以独立生成动作，也可以作为已有动画之上的调整层。\n\n在骨骼系统中，常见流程是先应用采样姿势，再修改局部骨骼或约束目标，最后重新计算世界变换。执行顺序影响最终结果；若同时混合多个动作和约束，需要明确各层控制哪些属性，以便保持运动连续。\n\n## 参考\n\n- [Spine：程序化骨骼调整](https://eu.esotericsoftware.com/spine-runtime-skeletons)\n- [Spine：IK 约束和运行时目标](https://en.esotericsoftware.com/spine-ik-constraints)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

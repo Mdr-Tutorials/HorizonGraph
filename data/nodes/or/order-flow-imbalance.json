@@ -1,0 +1,41 @@
+{
+  "id": "order-flow-imbalance",
+  "name": "Order Flow Imbalance",
+  "aliases": [
+    "订单流不平衡",
+    "订单流失衡",
+    "OFI"
+  ],
+  "type": "metric",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "按照所选 OFI 定义提取订单簿价格、数量和队列变化事件并计算有符号贡献。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "incremental-market-data",
+      "context": "逐事件计算时消费序列完整的订单簿更新，按可见时间聚合窗口。"
+    }
+  ],
+  "summary": "聚合订单簿事件对买卖两侧供需的有符号变化。",
+  "description": "订单流不平衡（OFI）是按区间聚合订单簿供需事件的测量量。经典最佳档定义把限价加入、交易消耗和撤单引起的最优买卖价及数量变化按规则赋予符号，再累加区间贡献；它覆盖订单事件流，与某一瞬间两侧挂量的静态订单簿不平衡是不同指标。\n\n计算需要约定档位、价格变化时队列切换规则、时间或事件窗口、数量单位和归一化。原始研究观察到短区间价格变化与最佳档 OFI 的关系，后续研究也讨论多档组合与跨资产滞后信息；经典最佳档与多档整合变量不可不加定义地混用，成交方向差也不是所有 OFI 口径的别名。\n\n把 OFI 作为特征时，要仅使用决策前已接收的订单事件，并区分同期解释和对后续价格的预测。漏包、聚合、行情延迟和撤单分类会改变结果，历史线性关系与深度依赖需在相应市场重新检验。统计解释力不直接证明可交易收益或因果冲击，费用、排队和样本外评估仍不可省略。\n\n## 参考\n\n- [Cont、Kukanov、Stoikov：The Price Impact of Order Book Events 原始论文](https://arxiv.org/abs/1011.6402)\n- [Cont、Cucuringu、Zhang：Cross-Impact of Order Flow Imbalance in Equity Markets](https://arxiv.org/abs/2112.13213)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "OFI"
+}

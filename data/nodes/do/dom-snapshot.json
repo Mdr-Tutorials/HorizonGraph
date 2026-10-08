@@ -1,0 +1,33 @@
+{
+  "id": "dom-snapshot",
+  "name": "DOM Snapshot",
+  "aliases": [
+    "DOM 快照",
+    "文档对象模型快照"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "读取某一时刻的文档对象和节点关系，形成记录页面结构的观察工件。"
+    }
+  ],
+  "summary": "记录某一观察时刻文档结构及选定页面信息的快照。",
+  "description": "DOM 快照把观察时刻的文档节点、属性和相关页面信息保存为可检查的数据。它关注当时已经形成的对象结构，不等同于服务器最初返回的 HTML，也不是包含所有运行时变量、网络连接和后台状态的完整应用检查点。\n\nCDP 的 DOMSnapshot 域可同时获取文档、布局和选定样式信息，并以其协议定义的扁平结构表示相关内容。Playwright 的追踪也会在动作前后保存可供查看的 DOM 快照；这两者实现与格式各自定义，不能把“DOM 快照”误当作统一的独立交换标准。\n\n快照便于分析目标位置、页面更新和失败步骤，却无法自行证明事件处理逻辑或服务端业务已经正确执行。动态资源、跨文档边界和截图中的绘制内容还需要补充观察。查看保存的文档状态是证据检查，不会把原来的脚本、时间和外部服务确定地重新执行一遍。\n\n## 参考\n\n- [ChromeDevTools：DOMSnapshot协议定义](https://github.com/ChromeDevTools/devtools-protocol/blob/master/pdl/domains/DOMSnapshot.pdl)\n- [Playwright：Trace viewer](https://playwright.dev/docs/trace-viewer)\n- [Playwright：Tracing API及断言记录边界](https://playwright.dev/docs/api/class-tracing)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

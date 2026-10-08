@@ -1,0 +1,36 @@
+{
+  "id": "agent-client-protocol",
+  "name": "Agent Client Protocol",
+  "aliases": [
+    "ACP",
+    "编码代理客户端协议",
+    "编辑器代理互操作协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-rpc",
+      "context": "按 ACP 消息模型传递初始化、会话提示、权限和编辑相关请求及通知。"
+    }
+  ],
+  "summary": "连接编辑器与编码代理的会话、权限和编辑接口协议。",
+  "description": "Agent Client Protocol 将编辑器或 IDE 与编码代理之间的接口标准化。客户端负责用户界面及编辑环境，代理程序处理提示并发起需要的文件或权限交互。它面向编辑器到代理的边界，区别于 A2A 的远程代理服务协作和 MCP 的工具接入。\n\n协议采用 JSON-RPC 请求、响应和通知。官方 v1 文档包括初始化与能力交换、创建会话、提示处理、进度更新和取消，恢复会话及部分操作需要相应能力支持。常见接入是客户端启动本地代理子进程并使用 stdio；当前入门文档把远程 HTTP 和 WebSocket 支持列为进行中的工作。\n\n实现应核对协议版本、客户端能力和权限请求，而不是假设所有编辑器与代理行为相同。ACP 也曾指 IBM 的 Agent Communication Protocol，两者不可合并为别名实体；后者已并入 A2A 路线。某产品提供某个编辑器扩展，也不能仅凭编辑器名称推断它实现 Agent Client Protocol。\n\n## 参考\n\n- [Agent Client Protocol：正式介绍](https://agentclientprotocol.com/get-started/introduction)\n- [Agent Client Protocol：v1 交互规范](https://agentclientprotocol.com/protocol/v1/overview)\n- [IBM：另一 ACP 项目的身份](https://research.ibm.com/projects/agent-communication-protocol)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "ACP",
+  "official_site": "https://agentclientprotocol.com/"
+}

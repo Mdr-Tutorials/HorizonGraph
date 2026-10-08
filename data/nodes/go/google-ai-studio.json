@@ -1,0 +1,39 @@
+{
+  "id": "google-ai-studio",
+  "name": "Google AI Studio",
+  "aliases": [
+    "AI Studio",
+    "谷歌 AI Studio"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini",
+      "context": "在模型试验与 Build 工作流中调用可用的 Gemini 模型；不同模型及应用模式支持的能力需要分别核对。"
+    }
+  ],
+  "summary": "在浏览器试用模型、管理 API 密钥并构建应用的开发环境。",
+  "description": "Google AI Studio 是 Google 面向开发者的浏览器开发环境，可以试验模型和提示、调整参数与安全设置，并取得接入 Gemini API 的代码。它与面向日常对话的 Gemini 应用、Gemini 模型族以及 Google Cloud Agent Studio 分属不同产品边界，即使都能接触 Gemini 模型，也不共享所有账号与部署能力。\n\n当前 Build 模式可以根据自然语言创建并迭代应用，展示生成代码和实时预览。官方说明区分包含客户端与 Node.js 服务端运行时的 Web 应用，以及 Kotlin 和 Compose 的原生 Android 项目；原生 Android 构建的能力限制应单独查看，不能把 Web 模式的秘密管理和服务端集成概括为每种生成应用都支持。\n\n应用代码可以导出或与 GitHub 同步，Web 应用可部署到 Cloud Run；模型试验与正式服务的配额、密钥和访问控制仍需分别管理。Build 的核心代理 harness 来自 Antigravity 技术，但 AI Studio 仍是独立浏览器产品，不能因此合并为 Antigravity 的桌面或终端界面。Firebase Studio 官方迁移方案把浏览器原型工作流引向 AI Studio，也不表示 Firebase 后端服务一并停用。\n\n## 参考\n\n- [Google AI：AI Studio 提示与模型试验](https://ai.google.dev/gemini-api/docs/ai-studio-quickstart)\n- [Google AI：AI Studio 当前 Build 模式与应用边界](https://ai.google.dev/gemini-api/docs/aistudio-build-mode)\n- [Firebase：开发环境迁移方案](https://firebase.google.com/docs/studio/migrating-project)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://aistudio.google.com/"
+}

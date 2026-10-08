@@ -11,19 +11,34 @@
   ],
   "type": "concept",
   "domains": [
-    "quantitative-finance"
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-impact",
+      "context": "研究隐性执行成本时，可采用经校准的冲击模型描述订单规模和速率对价格的影响。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slippage",
+      "context": "按明确基准衡量成交价格偏离时，将滑点纳入成本口径并检查与其他项目的重叠。"
     }
   ],
   "summary": "执行交易产生的显性费用与隐性成本，口径需按市场和模型明确。",
-  "description": "交易成本是为完成交易付出的成本。显性项目可以包括佣金及市场收取的费用；分析隐性执行成本时，还可能考虑买卖价差、市场冲击和成交价格相对参考价格的偏离。\n\n具体口径取决于市场、经纪商、订单与分析方法。滑点模型可能已经反映部分价差或冲击，汇总时需避免重复计算同一成本。回测中遗漏费用或采用过于理想的成交条件，会使净表现难以代表可实现结果。\n\n参考：[QuantConnect：交易费用模型](https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/transaction-fees/key-concepts)；[QuantConnect：滑点模型](https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/slippage/key-concepts)。",
+  "description": "交易成本是在完成交易过程中付出的显性费用与按选定基准定义的隐性成本。佣金、交易场所费率与相关税费须按市场规则处理，返佣可能抵减显性费用；价差、冲击、延迟和未完成部分的机会成本则取决于研究问题与参考价格，不能只用一个统一费率代表全部成本。\n\n执行成本分析应声明买卖方向、数量、决策与成交时间、计价单位和费用币种。已成交价相对于基准的滑点可能已经包含价差或部分冲击，如果再机械追加同一价差和冲击估计就会重复计算。市场冲击模型也有规模、速率及市场状态条件，不能无条件沿用历史小订单成本。\n\n回测需把成本模型与成交概率、部分成交和库存变化结合，净表现要按实际完成量和适用费用计算。交易成本分析还应检查未成交订单与延迟完成，区分市场自然波动和自身执行的反作用。忽略这些项目会影响历史估计；校准与敏感性分析只在明确口径和样本范围内提供证据。\n\n## 参考\n\n- [QuantConnect：交易费用、费率模型与返佣](https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/transaction-fees/key-concepts)\n- [Almgren、Chriss：Optimal Execution of Portfolio Transactions 原始出版页](https://www.risk.net/journal-risk/2161150/optimal-execution-portfolio-transactions)\n- [Markov：Bayesian Trading Cost Analysis and Ranking of Broker Algorithms](https://arxiv.org/abs/1904.01566)",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-20",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/transaction-fees/key-concepts"
+  "official_site": "https://www.quantconnect.com/docs/v2/writing-algorithms/reality-modeling/transaction-fees/key-concepts",
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ]
 }

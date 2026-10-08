@@ -1,0 +1,40 @@
+{
+  "id": "firebase-studio",
+  "name": "Firebase Studio",
+  "aliases": [
+    "Project IDX",
+    "Firebase 工作室"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "web-development"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "deprecated_by",
+      "target_id": "google-ai-studio",
+      "context": "官方为浏览器原型开发提供迁移到 AI Studio 的路径；代码为主的工作流另有 Antigravity 路径，不是完全相同产品替换。"
+    }
+  ],
+  "summary": "正在退出的浏览器开发环境，既有工作区可运行到 2027 年。",
+  "description": "Firebase Studio 是 Google 曾以预览方式提供的云端开发环境，承接 Project IDX 的浏览器工作区路线，支持代码环境、AI 辅助和应用原型开发。它是开发应用的工具入口，不等于 Firebase 的数据库、认证、托管等后端服务；开发环境的生命周期变化不能被传播成已部署应用或整个 Firebase 服务停止运行。\n\n官方于 2026 年 3 月 19 日宣布退出计划，2026 年 6 月 22 日已经关闭新工作区创建和新用户注册。既有用户可以继续在已有工作区开发、测试和部署，直到 2027 年 3 月 22 日正式关闭；官方迁移页说明届时剩余工作区数据会被删除。此节点以宣布弃用日期记录状态，未来关闭日则在正文保留，不能把尚可使用的既有工作区写成已经关停。\n\n代码为主的工作流可迁移到 Google Antigravity，浏览器原型工作流可迁移到 Google AI Studio，具体导出和转换步骤依项目类型而定。核心 Firebase 产品和已部署应用不受此开发环境退出计划影响。Project IDX 是历史名称，迁移目的地是不同产品，也不能用简单改名关系把 Firebase Studio 与两个目的地合并。\n\n## 参考\n\n- [Firebase：Studio 退出与项目迁移的正式时间线](https://firebase.google.com/docs/studio/migrating-project)\n- [Firebase：Studio 发布记录与停用范围](https://firebase.google.com/support/release-notes/firebase-studio)\n- [Firebase：Project IDX 的改名和工作区承接](https://firebase.google.com/docs/studio/idx-is-firebase-studio)",
+  "status": "deprecated",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://firebase.google.com/docs/studio",
+  "deprecated_at": "2026-03-19"
+}

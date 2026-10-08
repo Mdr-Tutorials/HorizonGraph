@@ -1,0 +1,34 @@
+{
+  "id": "editor-extension",
+  "name": "Editor Extension",
+  "aliases": [
+    "编辑器扩展",
+    "IDE 插件",
+    "Editor Plugin"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "extension-host",
+      "context": "含可执行代码且采用宿主架构的扩展通过相应扩展宿主管理激活与运行；纯声明式贡献不要求执行入口。"
+    }
+  ],
+  "summary": "通过编辑器定义的扩展入口增加语言和工作台能力。",
+  "description": "编辑器扩展按宿主的扩展接口补充命令、语言能力、调试器、视图或其他工作台功能。这里描述扩展机制和工件角色，不指某个具体品牌插件；扩展包是否能跨编辑器复用取决于接口与版本兼容性。\n\nVS Code 扩展使用清单声明贡献点和支持条件，并通过激活事件与 API 注册具体行为。语言服务器和调试适配器可以由扩展注册或包装，却不必都运行在扩展的进程里。纯声明式贡献也可以不带可执行扩展代码。\n\n本地、远程与 Web 扩展宿主提供不同运行环境，扩展入口、位置偏好和平台依赖决定实际可运行方式。安装扩展不意味着其外部工具、项目依赖和凭据全部齐备；扩展进程与界面进程分离主要是执行架构，也不能直接当作严格权限沙箱。\n\n## 参考\n\n- [VS Code：扩展清单、激活与 API](https://code.visualstudio.com/api/get-started/extension-anatomy)\n- [Microsoft：扩展宿主的运行位置与环境](https://github.com/microsoft/vscode-docs/blob/main/api/advanced-topics/extension-host.md)\n- [VS Code：调试器、适配器与扩展的边界](https://code.visualstudio.com/api/extension-guides/debugger-extension)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,34 @@
+{
+  "id": "image-tag",
+  "name": "Image Tag",
+  "aliases": [
+    "镜像标签",
+    "Image Tag",
+    "Docker Tag"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image-digest",
+      "context": "按标签读取镜像时，将仓库内的当前可读指针解析为清单或索引的具体内容摘要；标签本身允许按注册表策略变更。"
+    }
+  ],
+  "summary": "在仓库名称范围内指向当前清单内容的可读标识",
+  "description": "## 机制与边界\n\n镜像标签是在 repository 范围内供人阅读和引用的名称，例如 app:1.4 或 app:stable。OCI 分发规范把 tag 定义为指向 manifest 的可读指针，同一份清单可以有多个标签，也可以没有标签。标签只在所属仓库的命名范围内有意义，不能脱离注册表和仓库路径当成全局唯一的镜像身份。\n\n标签本身没有保证内容固定的语义；在注册表策略允许时，同名标签可以被重新发布为另一份清单或索引。latest 也只是工具约定的默认标签名称，不会自动比较所有版本或保证它代表时间上最新的构建。需要确定具体字节内容时，应解析当前标签引用并记录对应的清单或索引摘要。\n\n给本地镜像增加标签，是为现有内容建立另一个名称引用，不会因此重新构建镜像或复制全部层；随后推送才把相应引用与内容发布到注册表。发布流程可以通过策略限制标签改写，也可以直接按摘要部署。命名方便性、仓库策略与内容寻址是不同层面的能力，需要分别说明。\n\n## 参考\n\n- [OCI：Distribution Specification 的 Tag 定义](https://raw.githubusercontent.com/opencontainers/distribution-spec/main/spec.md)\n- [Docker：image tag 与名称结构](https://docs.docker.com/reference/cli/docker/image/tag/)\n- [Docker：标签拉取与摘要固定](https://docs.docker.com/reference/cli/docker/image/pull/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

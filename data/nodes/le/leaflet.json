@@ -1,0 +1,50 @@
+{
+  "id": "leaflet",
+  "name": "Leaflet",
+  "aliases": [
+    "Leaflet.js",
+    "Leaflet JS"
+  ],
+  "type": "library",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "web-map"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "map-tile-pyramid",
+      "context": "瓦片图层通过 URL 模板按缩放级别和网格位置加载底图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geojson",
+      "context": "通过 GeoJSON 图层读取要素、属性并配置样式和交互。"
+    }
+  ],
+  "summary": "用于瓦片底图、地理要素和交互控件的 Web 地图库。",
+  "description": "Leaflet 是用于交互式网页地图的开放源码 JavaScript 库。应用创建地图视图后，可以添加瓦片底图、标记、折线、多边形和弹出信息，并通过鼠标或触摸进行平移、缩放与点击。它将地图交互和图层管理组合为易于接入网页的 API。\n\nLeaflet 可从不同提供方加载瓦片，也可读取 GeoJSON 并针对要素配置样式、过滤或事件。库本身与底图供应商是两层组件，选择 Leaflet 不会自动获得某家地图服务的全部内容或账号权限。业务位置的坐标顺序应与数据接口及库 API 的约定逐项对齐。\n\n基础地图可在独立网页或框架组件中使用，插件用于扩展编辑、聚类等能力。接入时要明确地图容器尺寸、图层生命周期和所用底图的署名要求；大规模向量数据的处理路径与三维地球渲染也应另行评估。\n\n## 参考\n\n- [Leaflet Quick Start](https://leafletjs.com/examples/quick-start/)\n- [Leaflet GeoJSON Guide](https://leafletjs.com/examples/geojson/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://leafletjs.com/"
+}

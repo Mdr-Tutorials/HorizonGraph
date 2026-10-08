@@ -1,0 +1,35 @@
+{
+  "id": "cboe-global-markets",
+  "name": "Cboe Global Markets",
+  "aliases": [
+    "Cboe",
+    "CBOE",
+    "Cboe Global Markets, Inc."
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "cboe-bzx-market"
+    }
+  ],
+  "summary": "经营股票、衍生品及其他市场基础设施的集团。",
+  "description": "Cboe Global Markets 是交易所与市场基础设施集团。品牌源自期权市场，但今天的公开业务覆盖股票、衍生品及其他市场；Cboe 集团、Cboe Options 交易所和 BZX/BYX/EDGA/EDGX 等股票交易市场不能互作别名。\n\n美国股票业务提供四个具有不同参与者结构和市场特点的交易场所。成员须根据相应交易所的会员、订单、行情及风控要求集成系统；一个场所的费率、订单类型或流动性结构不应自动外推到集团旗下全部市场。\n\n图谱把集团组织与 Cboe BZX 股票交易服务分开，便于从运营者追踪到具体市场接入。其技术与监管材料说明了订单生命周期中的检查、实时监控和市场监督；这些职责来自市场运营规则，不能据此将集团当作交易客户端使用的开源库或 HFT 自营机构。\n\n## 参考\n\n- [Cboe 公司与业务](https://www.cboe.com/about/)\n- [Cboe 美国股票交易所](https://www.cboe.com/markets/us/equities/)\n- [Cboe 股票交易、风控与监管](https://www.cboe.com/markets/us/equities/trading/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.cboe.com/"
+}

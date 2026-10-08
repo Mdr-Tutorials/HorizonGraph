@@ -1,0 +1,33 @@
+{
+  "id": "git-worktree",
+  "name": "Git Worktree",
+  "aliases": [
+    "Git 工作树",
+    "Git 多工作树",
+    "Linked Worktree"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "git"
+    }
+  ],
+  "summary": "在共享仓库中维护多个独立的检出目录和索引。",
+  "description": "Git worktree 让同一仓库拥有主工作树和一个或多个链接工作树，每个工作树可检出不同分支或提交。链接工作树共享对象库及多数引用，同时各自保存 HEAD、索引等工作树专属状态；它不同于复制一份完全独立仓库。\n\n多个任务可以在不同目录修改代码，避免直接混合未提交工作。编码代理产品可以选择 worktree 作为任务环境，但创建工作树不代表改动已经集成：完成后仍需审查差异，并按目的应用、提交或合并相应分支。\n\nworktree 隔离的是工作文件和相应 Git 状态，不隔离进程、端口、数据库或其他外部资源。共享分支、配置与维护操作也有约束，例如默认拒绝重复检出已被另一工作树使用的分支。删除和清理需考虑未跟踪及未提交内容，不能把工作树视作无条件可丢弃的临时目录。\n\n## 参考\n\n- [Git：链接工作树与共享仓库元数据](https://git-scm.com/docs/git-worktree)\n- [VS Code：审查代理修改、检查点与 worktree 集成](https://code.visualstudio.com/docs/agents/run/review-code-edits)\n- [Google Antigravity：产品入口、项目与 CLI](https://antigravity.google/docs/getting-started)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

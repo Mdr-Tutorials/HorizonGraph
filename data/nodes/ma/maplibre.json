@@ -1,0 +1,59 @@
+{
+  "id": "maplibre",
+  "name": "MapLibre GL JS",
+  "aliases": [
+    "MapLibre",
+    "MapLibre GL",
+    "MapLibreGL"
+  ],
+  "type": "library",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "web-map"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "maplibre-style-specification"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mapbox-vector-tile"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "采用 WebGL 绘制交互地图和数据图层。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geojson",
+      "context": "GeoJSON 数据源可用于绘制业务要素。"
+    }
+  ],
+  "summary": "按样式规范在浏览器中渲染交互式矢量地图。",
+  "description": "MapLibre GL JS 是以 TypeScript 开发的开放源码 Web 地图库，使用 WebGL 渲染浏览器中的交互地图。地图外观由 MapLibre 样式文档定义，数据源、显示图层与视角分别配置。此节点指 GL JS 库；MapLibre Native 和 MapLibre 项目治理组织并不与该 JavaScript 实现合并。\n\n地图可以加载矢量瓦片、栅格影像和 GeoJSON 等数据，应用通过图层样式和表达式设置视觉映射，并使用地图事件、标记与控件实现交互。底图和数据可以来自不同服务，采用库本身不限定唯一的数据提供方。数据源层与显示图层应分别命名并正确关联。\n\nMapLibre 与 Mapbox GL JS 具有历史关联，但现在分别演进。迁移项目时应核对样式规范、API、投影及渲染能力，而不把品牌名称当成完全兼容的保证；原生端支持情况也应独立检查。\n\n## 参考\n\n- [MapLibre GL JS Documentation](https://maplibre.org/maplibre-gl-js/docs/)\n- [MapLibre VectorTileSource](https://maplibre.org/maplibre-gl-js/docs/API/classes/VectorTileSource/)\n- [MapLibre Style Specification](https://maplibre.org/maplibre-style-spec/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://maplibre.org/maplibre-gl-js/docs/"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "fixed-timestep",
+  "name": "Fixed Timestep",
+  "aliases": [
+    "固定时间步"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    }
+  ],
+  "summary": "按固定模拟间隔推进状态、与可变显示帧率分开的更新方法。",
+  "description": "固定时间步让物理或其他模拟每次推进相同的模拟时长。显示帧与模拟步不必一一对应：某帧可能不推进物理，另一帧可能补做多个步骤；子步则进一步细分一个模拟间隔。\n\n固定步长有助于控制数值行为，但不保证跨平台确定性或实时截止时间。积压、最大补步数、插值和步长大小形成性能与精度取舍，减小步长也会增加计算工作。\n\n## 参考\n\n- [Unity：可变与固定时间步](https://docs.unity3d.com/6000.0/Documentation/Manual/time-handling-variations.html)\n- [Box2D：刚体仿真和时间步](https://box2d.org/documentation/md_simulation.html)\n- [Unity：固定更新与帧更新关系](https://docs.unity3d.com/6000.0/Documentation/Manual/fixed-updates.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

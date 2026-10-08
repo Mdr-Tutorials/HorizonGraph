@@ -1,0 +1,38 @@
+{
+  "id": "runtime-compatibility",
+  "name": "Runtime Compatibility",
+  "aliases": [
+    "运行时兼容性",
+    "宿主兼容性"
+  ],
+  "type": "concept",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "edge-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "minimum-common-web-api",
+      "context": "评估服务器 Web API 互操作时，以 ECMA-429 的最小接口集合和引用语义作为一个明确的兼容目标，而非完整宿主能力清单。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runtime-adapter",
+      "context": "目标宿主输入输出接口与框架的 Web 接口不同的部署路径中，使用适配层映射 HTTP 对象或函数事件。"
+    }
+  ],
+  "summary": "判断接口、行为和宿主能力能否满足应用运行要求。",
+  "description": "运行时兼容性描述程序所依赖的接口与行为能否在目标宿主成立，包括 API 是否可用、对象语义、模块解析、流式传输及宿主能力等层面。共同采用 Request 和 Response 等 Web 接口降低适配成本，但同名接口、可导入模块或一次启动成功均不足以证明所有行为等价；最小规范集合与额外平台扩展也应分开核对。\n\nCloudflare Workers 使用兼容日期和标志选择要采用的 API 行为变更。日期不是对一个旧运行时二进制的永久锁定：平台仍会更新运行时代码和修复问题，应用需要在提高兼容日期或切换标志时验证受影响行为。其 Node.js 兼容层还区分原生支持、部分支持和仅供导入但不能实际使用的接口。\n\nBun 的 Node.js 兼容工作同样按 API 分项说明，不能由其支持 npm 或部分 Node 模块推断所有程序无需调整。跨运行时框架通常结合共同 Web 接口与宿主适配器；部署前应按实际目标版本和配置验证所需能力，而不是把某个运行时使用同一 JavaScript 引擎作为完整兼容依据。\n\n## 参考\n\n- [ECMA-429 第一版：接口符合与偏离说明](https://ecma-international.org/wp-content/uploads/ECMA-429_1st_edition_december_2025.pdf)\n- [Cloudflare：兼容日期](https://developers.cloudflare.com/workers/configuration/compatibility-dates/)\n- [Cloudflare：Node.js 兼容范围](https://developers.cloudflare.com/workers/runtime-apis/nodejs/)\n- [Bun：Node.js 兼容状态](https://bun.sh/docs/runtime/nodejs-compat)\n- [Hono：Web 标准与适配器](https://hono.dev/docs/concepts/web-standard)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

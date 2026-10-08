@@ -1,0 +1,36 @@
+{
+  "id": "best-bid-and-offer",
+  "name": "Best Bid and Offer",
+  "aliases": [
+    "最优买卖报价",
+    "最佳买卖报价",
+    "最佳买价卖价"
+  ],
+  "type": "metric",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "在订单簿市场中，从指定范围的有效买卖订单提取最优报价，不推断未显示或他场所兴趣。"
+    }
+  ],
+  "summary": "指定观测范围与时点的最高买价和最低卖价报价对。",
+  "description": "最优买卖报价是指定产品、观测范围和时点下的最高合格买价 b 与最低合格卖价 a 所组成的报价对，常缩写为 BBO；offer 与 ask 在这一语境下均指卖出报价。两侧价格可来自同一场所，也可按明示口径汇集多个来源。\n\nBBO 是观察到的报价对，top-of-book 是行情表示的深度层级，通常还包含最优档数量或来源等字段，二者不是同一个对象。美国 National Best Bid and Offer 有国家市场系统的计算和合格报价规则，单场所 BBO 或自行聚合的价格不应直接命名为 NBBO。\n\n有效使用要求同步产品单位、范围、行情时间和报价资格，并检查是否缺少一侧或出现锁定、交叉。最优价不表示任意数量都能成交，也不直接证明某位客户可访问全部报价；参考计算应保留这些条件，避免把不同来源的异步价格当成同一可执行市场。\n\n## 参考\n\n- [SEC：BBO、保护报价与跨市场报价的不同口径](https://www.sec.gov/divisions/marketreg/nmsfaq610-11.htm)\n- [Nasdaq：Best Bid、Best Offer 与 National Best 的规则术语](https://listingcenter.nasdaq.com/rulebook/nasdaq/rules/Nasdaq%20Equity%201)\n- [CME：EBS Market 订单簿、撮合与引擎规则文件](https://www.cmegroup.com/content/dam/cmegroup/market-regulation/rule-filings/2023/8/23-356_APPA.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "BBO"
+}

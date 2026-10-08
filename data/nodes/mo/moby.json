@@ -1,0 +1,36 @@
+{
+  "id": "moby",
+  "name": "Moby",
+  "aliases": [
+    "Moby Project",
+    "Moby 容器系统框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "docker-inc"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "docker-engine"
+    }
+  ],
+  "summary": "用于组装容器系统的开源组件与框架项目",
+  "description": "Moby 是 Docker 发起的开源项目，为开发者提供构建容器系统的组件工具箱和组装框架。其定位是允许工程师复用、替换和组合运行、构建及其它组件，面向容器系统开发与集成；这与供终端用户使用的完整 Docker 产品交付具有不同目标。\n\n官方说明 Docker 把 Moby 作为上游，同时也欢迎其它项目复用组件。Docker Engine 是根据 Moby 引擎代码构建的实际系统之一，但 Moby 的模块化边界不要求所有使用者采用相同引擎、编排方案或用户界面，也不能把项目中的所有组件当作不可替换依赖。\n\n仓库当前把根模块 github.com/moby/moby/v2 定位为生成引擎二进制的代码库，而 client 与 api 模块分别提供受支持的客户端和共享 API 类型；根模块并不承诺可作为稳定 Go 库导入。依赖开发应核对相应模块及版本，社区项目维护也不等于自动获得某商业产品的支持服务。\n\n## 参考\n\n- [Moby 项目官方 README](https://github.com/moby/moby/blob/master/README.md)\n- [Docker Engine 官方说明](https://docs.docker.com/engine/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library"
+}

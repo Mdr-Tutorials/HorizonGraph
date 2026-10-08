@@ -1,0 +1,42 @@
+{
+  "id": "image-signing",
+  "name": "Image Signing",
+  "aliases": [
+    "镜像签名",
+    "容器镜像签名",
+    "Container Image Signing"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain",
+    "containerization"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image-digest",
+      "context": "签署并验证镜像时，用不可变 digest 绑定实际内容，避免可变标签混淆签名对象。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "public-key-cryptography",
+      "context": "以签署者私钥生成签名，并以受信任的公钥或证书中公钥验证签名。"
+    }
+  ],
+  "summary": "以数字签名绑定镜像内容，并按预期发布者身份验收。",
+  "description": "镜像签名把容器镜像的不可变内容标识与签署者的密钥或证书身份绑定，使接收方能够验证签名所对应的内容。签名对象通常包含镜像清单的 digest；镜像标签可能重新指向其他内容，验证时需要解析并核对实际 digest，而不能只凭同名标签推断镜像相同。镜像内容的哈希校验与发布者身份的验证承担不同职责。\n\n消费方需要预先建立信任策略，确定哪些公钥、证书链或工作负载身份有权为某类镜像签名，再检查签名、内容绑定和适用的时间证据。Cosign 的身份验证路径要求匹配预期证书身份和 OIDC issuer；Notary Project 的路径结合信任存储、仓库范围和受信任证书身份。存在一个数学上有效的签名，并不等于签署者已获本地部署策略授权。\n\n签名支持在镜像发布、拉取和部署准入阶段发现内容替换或不符合策略的发布者，但不会自动证明镜像按照某个源码构建，也不会证明镜像没有漏洞。构建来源证明、SBOM 与扫描结果可以另行绑定到同一工件，再由消费方组合检查。签名材料的存储和发现还取决于具体工具与仓库支持，不能假定所有 OCI 仓库实现完全相同的流程。\n\n## 参考\n\n- [Cosign：签名验证与镜像 digest 绑定](https://docs.sigstore.dev/cosign/verifying/verify/)\n- [Notary Project：签名与验证工作流](https://github.com/notaryproject/specifications/blob/main/specs/signing-and-verification-workflow.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

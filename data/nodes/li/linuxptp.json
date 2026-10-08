@@ -1,0 +1,48 @@
+{
+  "id": "linuxptp",
+  "name": "LinuxPTP",
+  "aliases": [
+    "linuxptp"
+  ],
+  "type": "tool",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ptp"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "linux"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hardware-timestamping",
+      "context": "在网卡和驱动支持的硬件时间戳模式中，以设备事件读数运行 PTP；软件模式不以硬件打点为必需。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clock-offset",
+      "context": "ptp4l 与 phc2sys 的同步伺服根据时钟偏移估计校正相位和速率。"
+    }
+  ],
+  "summary": "在 Linux 上实现 PTP 与硬件、系统时钟协调的工具集。",
+  "description": "LinuxPTP 是 Linux 时钟同步工具集。ptp4l 实现 PTP 的普通、边界或透明时钟等配置，支持选择硬件或软件时间戳以及 Ethernet、UDP/IP 传输；具体网卡、驱动和 profile 能力决定可部署组合。\n\nphc2sys 在系统时钟和设备 PHC 等时钟之间同步，方向随本机角色与配置改变。硬件 PTP 配置中的 PHC 可运行于 PTP 时间尺度，而系统时钟通常使用 UTC；UTC 偏移处理若错误，可留下整秒误差，不能认为启动工具后两个时间尺度自动相同。\n\n部署必须对齐 domain、profile、传输、延迟机制与参考源，并观察伺服与保持状态。已知链路非对称可以配置补偿，但工具不能自动消除所有未知非对称，也不独立保证法规符合性或某个单向时延测量的误差界。\n\n## 参考\n\n- [LinuxPTP ptp4l 时钟、传输与伺服选项](https://www.linuxptp.org/documentation/ptp4l/)\n- [LinuxPTP phc2sys 与 PTP/UTC 时间尺度](https://www.linuxptp.org/documentation/phc2sys/)\n- [Linux PTP Hardware Clock 驱动接口](https://docs.kernel.org/driver-api/ptp.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.linuxptp.org"
+}

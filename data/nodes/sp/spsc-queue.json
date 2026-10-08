@@ -1,0 +1,41 @@
+{
+  "id": "spsc-queue",
+  "name": "Single-Producer Single-Consumer Queue",
+  "aliases": [
+    "单生产者单消费者队列",
+    "SPSC队列",
+    "SPSC Queue"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ring-buffer",
+      "context": "常见有界SPSC实现循环复用固定槽位，分别由生产者和消费者推进位置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "memory-model",
+      "context": "通过适当的获取、释放及原子位置更新发布内容与槽位复用状态。"
+    }
+  ],
+  "summary": "限定一个生产者和一个消费者的并发队列，可简化索引所有权。",
+  "description": "SPSC队列限定同一时刻只有一个生产者负责入队、一个消费者负责出队。双方分别拥有自己的推进位置，常以有界环形存储减少竞争；这种角色约束是算法正确性条件，不能把多个调用线程未经串行化地接入同一端。SPSC描述并发拓扑，不自动规定所有实现的进度性质。\n\n常见方案先写槽位，再通过释放语义发布写位置；消费者以获取语义看到位置后读取内容，完成后发布可复用位置。精确规则取决于语言与实现，Linux内核示例不能直接当作用户态C++代码。索引分开布局可降低伪共享，但应根据硬件与实际测量判断成本。\n\nBoost等库的某些有界push/pop操作具有无等待保证，仍要求遵守角色、容量及元素操作限制。队列满或空时返回失败和外部反复等待是不同层次；等待数据的整个业务循环未必无等待。元素复制、生命周期以及生产消费速率仍会影响实际端到端延迟。\n\n## 参考\n\n- [Boost：单生产者单消费者队列约束](https://www.boost.org/latest/doc/html/doxygen/classboost_1_1lockfree_1_1spsc__queue.html)\n- [Linux：环形缓冲与发布顺序](https://docs.kernel.org/core-api/circular-buffers.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "SPSC"
+}

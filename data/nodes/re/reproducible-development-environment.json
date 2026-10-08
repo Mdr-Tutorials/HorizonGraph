@@ -1,0 +1,38 @@
+{
+  "id": "reproducible-development-environment",
+  "name": "Reproducible Development Environment",
+  "aliases": [
+    "可重复开发环境",
+    "可复现开发环境"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dev-container-spec",
+      "context": "采用开发容器方案时，以规范声明工具、运行时、工作区和初始化步骤，不表示该规范单独保证位级构建复现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "将环境定义与锁定输入纳入版本管理，使创建环境的依据可以审查和回退。"
+    }
+  ],
+  "summary": "以可审查配置与固定输入重建开发工具环境。",
+  "description": "可重复开发环境通过可版本管理的定义和受控输入，让成员或自动化流程重新创建满足相同开发要求的环境。关注点包括运行时版本、系统包、编辑器工具和初始化顺序。这里的目标是重建开发条件；它本身不保证应用的编译产物逐字节相同。\n\n开发容器可用 devcontainer.json 声明镜像、Features、用户和生命周期命令；参考 CLI 的 feature lockfile 固定解析后的 Feature 版本。基础镜像还可用 digest 固定内容，项目包管理器需要独立锁定依赖。Vagrant 则把机器定义和 provisioner 纳入同一个可重建工作流。\n\n浮动镜像标签、在线安装脚本、未固定的软件仓库和已修改的持久卷会造成环境漂移。即使固定镜像，CPU 架构、内核、挂载权限和外部服务也需要记录；digest 与锁文件的固定范围应分别解释。环境更新应重新验证工具链与测试，再记录新的输入版本。\n\n## 参考\n\n- [Dev Container CLI：Feature lockfile 的固定范围](https://github.com/devcontainers/cli/blob/main/README.md)\n- [Docker：基础镜像标签与 digest](https://docs.docker.com/build/building/best-practices/#pin-base-image-versions)\n- [Vagrant：自动配置与重建](https://developer.hashicorp.com/vagrant/docs/provisioning)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

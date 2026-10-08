@@ -1,0 +1,33 @@
+{
+  "id": "http-status-code",
+  "name": "HTTP Status Code",
+  "aliases": [
+    "HTTP 状态码",
+    "响应状态码"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "http"
+    }
+  ],
+  "summary": "以三位数字向客户端和中间设施表达请求结果。",
+  "description": "HTTP 状态码按首位分为信息、成功、重定向、客户端错误和服务端错误五类。状态是协议控制信息，浏览器、缓存、代理和客户端可以据此决定后续动作。例如 201 表示创建资源，304 支持复用已存储表示，401 对应认证挑战，403 表示服务器拒绝满足请求。\n\n状态码不取代应用错误详情，但错误 JSON 中的数字也不能覆盖实际 HTTP 状态。HEAD、1xx、204 与 304 等响应对内容有特殊约束，不能把所有成功响应都当作 JSON 文档。状态码表达结果语义，不单独保证事务是否提交或客户端是否成功读取完整响应。\n\n## 参考\n\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)\n- [Hono：设置响应状态与返回 Response](https://hono.dev/docs/api/context)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

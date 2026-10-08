@@ -1,0 +1,50 @@
+{
+  "id": "order-management-system",
+  "name": "Order Management System",
+  "aliases": [
+    "订单管理系统",
+    "OMS"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-lifecycle",
+      "context": "跟踪母单及场所订单时，根据确认、成交、拒绝和撤销事件维护业务状态与数量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-cancel-replace",
+      "context": "需要修改工作中订单时，关联原订单与替换请求，保留在途成交和拒绝后的有效版本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "execution-management-system",
+      "context": "在订单管理与执行职责分离的部署中，将执行任务交给 EMS 并汇总其回报；集成 OEMS 可在同一系统内承担两类职责。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "good-till-cancelled",
+      "context": "管理被接受的长期有效订单时，保留跨日身份、剩余数量和实际自动到期规则。"
+    }
+  ],
+  "summary": "组织交易意图、订单状态与业务工作流的系统角色",
+  "description": "订单管理系统（OMS）是管理交易指令与业务状态的系统角色，常涉及母单、账户、分配、状态追踪和后续业务衔接。这里表达通用职责，不指某一家厂商产品；资产类别、买方或卖方工作流会影响其功能范围。\n\nOMS 可以把执行任务交给 EMS、券商或自有网关，也可以与执行管理融合为 OEMS。LSEG TORA 等实际产品组合两类能力，说明 OMS 与 EMS 的职责区别不能被写成所有系统都必须采用两个独立进程或两个采购产品。\n\n可靠管理需要用确认与执行回报保持订单生命周期，关联撤换链、部分成交和跨日指令。发送成功不等于场所接受，单一连接的本地记录也未必覆盖全部成交；账户权限、风险检查、对账及后续清算应按部署明确接入边界。\n\n## 参考\n\n- [LSEG TORA：订单管理与执行管理功能](https://www.lseg.com/en/data-analytics/trading-solutions/multi-asset-trading/tora)\n- [LSEG：订单、执行与后续工作流](https://www.lseg.com/en/data-analytics/trading-solutions/multi-asset-trading/deeper-dive/connecting-market-context-orders-execution)\n- [FIX Application Layer：Order State Changes](https://www.fixtrading.org/wp-content/uploads/download-manager-files/Order-State-Changes.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "OMS"
+}

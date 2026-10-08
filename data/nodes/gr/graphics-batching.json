@@ -1,0 +1,43 @@
+{
+  "id": "graphics-batching",
+  "name": "Graphics Batching",
+  "aliases": [
+    "图形合批",
+    "渲染合批"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "draw-call",
+      "context": "把兼容对象整理为较少绘制命令，降低逐对象提交和状态切换成本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture-atlas",
+      "context": "在采用图集的精灵批次中让不同小图共享纹理来源，减少纹理绑定切换。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gpu-instancing",
+      "context": "对共享几何且实例属性可分离的对象采用实例化合批；不同对象几何不一定适用。"
+    }
+  ],
+  "summary": "合并兼容绘制工作以减少命令与状态切换。",
+  "description": "图形合批将共享或兼容渲染状态的多个对象整理为较少的绘制工作，降低命令编码、提交和状态切换成本。可通过拼接顶点与索引数据、为图集精灵生成统一几何，或对共享几何使用实例化实现；它区别于网络请求、数据库或机器学习中的通用 batching。\n\n是否可合批取决于管线、材质、纹理绑定、混合、遮罩和绘制顺序等条件。透明对象的可见结果可能依赖顺序，不能任意重排以追求更大批次；滤镜或离屏渲染也可能引入新的通道。不同渲染器、后端和硬件资源限制下，可兼容的组合并不相同。\n\n合批用于精灵、界面和重复几何等场景，但更少调用不自动意味着更快：合并过大可能增加不可见几何、动态上传或降低剔除粒度。应比较 CPU 提交与 GPU 绘制的实际开销，再选择静态合并、动态批次或实例化策略。\n\n## 参考\n\n- [PixiJS Performance Tips](https://pixijs.com/8.x/guides/concepts/performance-tips)\n- [Three.js BufferGeometry](https://threejs.org/docs/pages/BufferGeometry.html)\n- [WebGPU drawIndexed](https://www.w3.org/TR/webgpu/#dom-gpurendercommandsmixin-drawindexed)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

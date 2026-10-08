@@ -1,0 +1,61 @@
+{
+  "id": "canvas-2d",
+  "name": "Canvas 2D API",
+  "aliases": [
+    "二维画布 API",
+    "CanvasRenderingContext2D",
+    "Canvas 2D",
+    "Canvas API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "drawing-path"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "alpha-compositing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "path2d",
+      "context": "复用路径几何时，把 Path2D 传给 fill、stroke 或 clip 等绘制操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-state",
+      "context": "通过 save/restore 管理样式、当前变换和裁剪区域，避免局部绘制污染后续命令。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "affine-transform",
+      "context": "用当前变换矩阵将二维绘制坐标映射到画布坐标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clipping-path",
+      "context": "调用 clip 时限制后续绘制可影响的像素区域。"
+    }
+  ],
+  "summary": "通过路径、图像与绘制状态操作二维位图画布的标准接口。",
+  "description": "Canvas 2D 通过 getContext(\"2d\") 获得绘制上下文，用路径、文字和 drawImage 等命令更新位图。几何路径与画笔样式分开，变换、裁剪和合成状态决定一次绘制怎样进入像素；浏览器不会为每个画出的形状自动保留可编辑对象。\n\n动画或编辑器应自行保存模型，在对象变化后重绘所需区域。Path2D 可复用几何，save/restore 可隔离绘制状态；像素读写通过 ImageData 路线进行，不等同于修改矢量路径。\n\n画布的位图尺寸与 CSS 显示尺寸不同，重设 width/height 会清除内容并重置上下文状态。读回或导出还受 origin-clean 限制；此节点表示 API 规范，不是传输协议，也不保证固定的 GPU 加速方式。\n\n## 参考\n\n- [WHATWG：Canvas 与渲染上下文](https://html.spec.whatwg.org/multipage/canvas.html)\n- [MDN：Canvas 路径绘制](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)\n- [MDN：Canvas 绘制状态栈](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/save)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://html.spec.whatwg.org/multipage/canvas.html"
+}

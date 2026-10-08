@@ -12,23 +12,35 @@
   ],
   "domains": [
     "networking",
-    "web-development"
+    "web-development",
+    "api-engineering",
+    "web-services"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "protocol"
     },
     {
       "relation_type": "developed_by",
       "target_id": "google"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "interface-definition-language"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "schema-evolution",
+      "context": "按字段编号、保留字段及格式兼容规则管理消息 schema 的演进。"
     }
   ],
-  "summary": "二进制序列化格式，gRPC 的默认接口描述语言。",
+  "summary": "描述结构化消息并生成多语言编码解析代码的格式体系。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://protobuf.dev"
+  "official_site": "https://protobuf.dev",
+  "description": "Protocol Buffers 包含描述结构化消息的声明语言及其二进制序列化格式，通过带编号的字段描述消息，并由 protoc 等工具生成各语言的数据访问、编码与解析代码。它适用于跨语言消息交换与存储；proto 服务声明也常供 gRPC 插件生成接口。消息格式、声明语言与具体语言运行库需要分别理解，Protobuf 本身并不规定完整的网络服务传输。\n\n兼容性取决于字段编号、字段类型、保留规则以及实际采用的格式。二进制解析不会自动实施任意业务约束或权限，生成消息类型也不等于所有非法领域状态都已排除。ProtoJSON 等映射具有不同演进约束，不能直接套用二进制兼容结论；接口变更应结合读写双方、生成代码版本和运行库规则审查。\n\n## 参考\n\n- [Protocol Buffers：格式与生成代码](https://protobuf.dev/overview/)\n- [Protocol Buffers：proto3 字段与演进](https://protobuf.dev/programming-guides/proto3/)\n- [Protocol Buffers：JSON 映射与兼容性](https://protobuf.dev/programming-guides/json/)"
 }

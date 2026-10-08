@@ -1,0 +1,48 @@
+{
+  "id": "hono-standard-validator",
+  "name": "Hono Standard Schema Validator",
+  "aliases": [
+    "@hono/standard-validator",
+    "Hono Standard Schema 校验器"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "hono"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-schema",
+      "context": "调用兼容模式的标准验证接口，并使用其静态输入输出元数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "将模式的输入输出类型传入路由泛型，供处理函数和客户端检查。"
+    }
+  ],
+  "summary": "通过 Standard Schema 接口接入 Hono 请求校验。",
+  "description": "Hono Standard Schema Validator 是 @hono/standard-validator 包，使用 sValidator 将兼容 Standard Schema 的模式连接到 Hono 请求目标。它消费统一的 validate 接口和输入输出类型，使项目能够选用 Zod、Valibot、ArkType 等兼容实现，而不为每种验证库编写独立请求适配器。成功解析值通过 c.req.valid 进入后续处理函数。\n\nhook 可以定制错误响应，也可以将问题列表按表单字段组织；具体错误路径与转换结果仍取决于验证库。Standard Schema 规定验证与类型互操作，不要求每份模式都能转换成 JSON Schema 或 OpenAPI。中间件只处理实际配置的请求目标，类型推导、响应校验与访问控制应分别配置；headers 等目标还需遵守 Hono 的解析和名称归一约定。\n\n## 参考\n\n- [Hono Standard Validator：官方 README](https://raw.githubusercontent.com/honojs/middleware/main/packages/standard-validator/README.md)\n- [Standard Schema：验证与转换接口](https://standardschema.dev/)\n- [Hono：Standard Schema Validator](https://hono.dev/docs/guides/validation)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/honojs/middleware/tree/main/packages/standard-validator"
+}

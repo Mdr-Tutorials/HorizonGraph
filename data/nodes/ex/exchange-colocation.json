@@ -1,0 +1,36 @@
+{
+  "id": "exchange-colocation",
+  "name": "Exchange Colocation",
+  "aliases": [
+    "交易所托管",
+    "交易所机房托管",
+    "Exchange Co-location"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ethernet",
+      "context": "采用托管设施提供的 Ethernet 连接或交叉连接方案时，以该链路接入交易和行情网络；以具体服务支持范围为准。"
+    }
+  ],
+  "summary": "将交易设备部署在交易所数据中心附近以缩短连接路径。",
+  "description": "交易所托管把参与者设备部署在交易所提供或指定的数据中心，利用设施内连接缩短物理传播和部分网络路径。服务的机架、供电、连接和行情接入范围由具体交易所定义，不能以某家服务的营销延迟数字代表所有市场。\n\n例如部分设施提供受控交叉连接或等长连接安排，但规则、冗余和接入方式须按服务逐项确认。租用托管空间并不自动获得会员资格、交易权限、行情许可或完整直接市场接入，这些是独立的技术与商业条件。\n\n更短物理路径仍留下序列化、排队、网关、风控与撮合等待，测量应明确是入口到入口、订单到确认还是行情分发区间。托管同时涉及电力、网络冗余、故障恢复与运营成本，不能被简化为消除延迟或所有交易策略都必须使用的条件。\n\n## 参考\n\n- [Nasdaq Co-Location 服务与网络连接范围](https://www.nasdaq.com/products/north-american-markets/connectivity/co-location)\n- [CME Globex 连接、托管与 GLink 方案](https://www.cmegroup.com/solutions/market-access/globex/connectivity-options.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

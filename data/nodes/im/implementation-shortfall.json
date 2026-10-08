@@ -1,0 +1,32 @@
+{
+  "id": "implementation-shortfall",
+  "name": "Implementation Shortfall",
+  "aliases": [
+    "实施差额",
+    "实施短缺",
+    "实施落差",
+    "IS"
+  ],
+  "type": "metric",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    }
+  ],
+  "summary": "比较真实实施与基准纸面组合结果的交易成本指标",
+  "description": "Implementation Shortfall（IS）比较真实交易实施结果与按指定决策价格立即完成的纸面组合结果，用于衡量投资决策在实际执行中付出的成本。它与只比较已成交均价的指标不同，完整计算还需要未成交数量与评价终点。\n\n设方向符号 s 在买入时为 +1、卖出时为 -1，目标数量为 Q，决策基准为 p0，成交数量和价格为 qi、pi，期末未成交数量为 Qu、评价价格为 pT，可采用金额口径 IS = s·[Σ qi(pi−p0) + Qu(pT−p0)] + 显性费用。换算基点前还须约定名义金额分母、货币及费用口径；负值表示相对该基准改善而非计算必然错误。\n\n常见归因区分决策至提交的延迟、实施成交以及未完成的机会成本，拆分方法必须避免重复计入价差或冲击。决策价与到达价不是天然相同，窗口和未成交估值会影响结论；IS 用于描述总实施结果，不能单独识别全部因果来源或证明策略有稳定收益。\n\n## 参考\n\n- [CFA Institute：Trade Strategy and Execution，2026](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/trade-strategy-execution)\n- [CFA Institute：Trading Costs and Electronic Markets，2026](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/trading-costs-and-electronic-markets)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "IS"
+}

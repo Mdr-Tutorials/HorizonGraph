@@ -1,0 +1,39 @@
+{
+  "id": "visual-encoding",
+  "name": "Visual Encoding",
+  "aliases": [
+    "视觉编码",
+    "数据视觉映射",
+    "Visual Mapping"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-scale",
+      "context": "将字段值变换为位置、颜色或大小通道使用的视觉值。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "chart-axis",
+      "context": "在位置通道上提供刻度和标签以解释数据到位置的映射。"
+    }
+  ],
+  "summary": "将数据属性映射到位置、颜色、大小等视觉通道。",
+  "description": "视觉编码把数据字段、常量或计算结果映射到图形标记的可见属性，例如用横坐标表达时间、纵坐标表达金额、颜色区分类别。编码同时包含字段的语义类型与视觉通道：同样是数字，城市编号应按类别处理，而销售额可以按数量处理。标记形状、字段变换和通道配置共同决定图表表达的含义。\n\n尺度为编码提供数据值到屏幕值的映射，坐标轴和图例帮助读者解释这种映射。交互选择可以进一步改变颜色、高亮状态、过滤条件或尺度范围。设计时应明确面积与半径、离散与连续、原始值与聚合值之间的区别，使可见差异与实际数据语义相符。\n\n## 参考\n\n- [Vega-Lite Encoding](https://vega.github.io/vega-lite/docs/encoding.html)\n- [ECharts Visual Mapping](https://echarts.apache.org/handbook/en/concepts/visual-map/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

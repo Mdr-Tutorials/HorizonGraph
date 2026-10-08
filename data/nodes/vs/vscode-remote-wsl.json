@@ -1,0 +1,40 @@
+{
+  "id": "vscode-remote-wsl",
+  "name": "VS Code WSL",
+  "aliases": [
+    "VS Code WSL 扩展",
+    "Remote - WSL",
+    "WSL extension"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "dev-container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "vscode"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl",
+      "context": "连接本地或远程 Windows 宿主的 WSL 发行版，在其中部署 Server 并执行 Linux 工具链。"
+    }
+  ],
+  "summary": "连接 WSL 内工具链、终端与调试器的 VS Code 扩展。",
+  "description": "VS Code WSL 扩展让 Windows 侧编辑器连接 WSL 发行版中的开发环境。连接时在发行版内安装独立的 VS Code Server，由它执行文件操作、终端命令与调试任务；这与在 Linux 中启动完整桌面编辑器是不同路径，也不直接创建 WSLc 容器。\n\n界面相关扩展留在客户端，工作区扩展通常部署到 WSL 中。这样语言服务器和编译器可以使用发行版内的路径、系统库和工具链；本机安装同名扩展不代表远端已配置完成。源码可位于发行版文件系统或 Windows 挂载目录，路径、权限与跨文件系统行为需要分别考虑。\n\nWSL 1/2、发行版的 libc 和扩展原生依赖会影响可用能力。可以组合 Dev Containers 扩展进一步打开容器工作区，但这是附加的容器连接流程，不能把普通 WSL 连接写成 Docker Desktop 的统一硬依赖。远程 Windows 宿主的 WSL 也可通过受支持的 SSH 组合路径连接。\n\n## 参考\n\n- [VS Code：WSL 架构与扩展部署](https://code.visualstudio.com/docs/remote/wsl/)\n- [VS Code：远程扩展的执行位置](https://code.visualstudio.com/api/advanced-topics/remote-extensions)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://code.visualstudio.com/docs/remote/wsl/"
+}

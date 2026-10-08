@@ -1,0 +1,48 @@
+{
+  "id": "grype",
+  "name": "Grype",
+  "aliases": [
+    "Grype",
+    "Anchore Grype"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain",
+    "containerization"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vulnerability-scanning",
+      "context": "将组件与相应生态和发行版的漏洞数据匹配，并返回候选风险及修复信息。"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "syft",
+      "context": "实现内部链接 Syft 的 Go 库以生成和解析包清单；这不要求用户安装外部 syft 命令。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "读取支持的现有 SBOM 后进行漏洞匹配，扫描范围受该清单包含的组件及元数据约束。"
+    }
+  ],
+  "summary": "将镜像、文件系统或 SBOM 中的组件匹配到已知漏洞。",
+  "description": "Grype 是 Anchore 的开源软件组件漏洞扫描器，接受容器镜像、目录以及支持的 SBOM 输入。它把目标中的包与漏洞数据库匹配，关注已知问题及修复信息；组件清单生成由 Syft 负责，Grype 负责漏洞匹配。这种分工支持先保存同一工件的 SBOM，再用更新后的漏洞情报重新分析。\n\n直接扫描目标时，Grype 内部使用 Syft 的库生成组件信息；外部 SBOM 可以来自 Syft，也可以来自支持的 SPDX 或 CycloneDX 生产者。匹配会保留发行版和上游包等上下文，并按生态采用版本与公告数据，必要时使用 CPE 等后备策略。内部库依赖不表示用户还必须安装一个外部 syft CLI 才能运行 Grype。\n\n扫描结论受输入清单、匹配策略、数据库版本与更新时间影响。发行版回移修复、通用标识匹配或未知组件元数据可能造成误报或漏报，过滤和影响说明也应有明确依据。Grype 不会因为生成一份漏洞报告就证明全部代码的可达性、运行环境可利用性或未知问题不存在；发布流程还应把报告绑定到确切工件并执行自己的验收政策。\n\n## 参考\n\n- [Grype：实现架构与 Syft 关系](https://oss.anchore.com/docs/architecture/grype/)\n- [Grype：生态匹配与数据源](https://oss.anchore.com/docs/guides/vulnerability/ecosystems/)\n- [Grype：数据库及扫描配置](https://oss.anchore.com/docs/reference/grype/configuration/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/anchore/grype"
+}

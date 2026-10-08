@@ -1,0 +1,50 @@
+{
+  "id": "plotly",
+  "name": "Plotly.js",
+  "aliases": [
+    "Plotly",
+    "Plotly JS",
+    "Plotly JavaScript"
+  ],
+  "type": "library",
+  "domains": [
+    "data-visualization",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "svg",
+      "context": "SVG 轨迹用于部分二维图表；具体路径由图表类型决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "scattergl 和部分三维轨迹采用 WebGL 加速绘制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-scale",
+      "context": "图表轴与颜色尺度将数据值映射到视觉输出。"
+    }
+  ],
+  "summary": "面向统计、科学和业务数据的 JavaScript 交互图表库。",
+  "description": "Plotly.js 是 JavaScript 交互图表库，用数据轨迹（trace）、布局（layout）与配置描述可视化。它提供常见二维图表、统计图、科学图和三维图形等表达，配合悬停信息、缩放、选择及图表事件构建浏览器中的分析界面。此节点指 Plotly.js 库，Plotly 公司、Python 包和 Dash 应用框架有各自独立的身份。\n\n不同图表类型使用不同渲染路径，例如部分二维轨迹采用 SVG，scattergl 与某些三维轨迹采用 WebGL。选型应结合数据规模、所需图表类型与输出方式，不能把全部 Plotly 图表概括成单一 GPU 后端。更新接口与事件接口让宿主应用可以修改数据并响应用户操作。\n\n在仪表盘中需管理容器尺寸、图表实例、交互状态和更新频率；静态图片导出与交互图表也具有不同用途。配置数据字段和数值单位时，应检查尺度、轴范围及缺失值语义，使图表表达与分析目标一致。\n\n## 参考\n\n- [Plotly.js Getting Started](https://plotly.com/javascript/getting-started/)\n- [Plotly.js WebGL and SVG](https://plotly.com/javascript/webgl-vs-svg/)\n- [Plotly.js Fundamentals](https://plotly.com/javascript/plotly-fundamentals/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://plotly.com/javascript/"
+}

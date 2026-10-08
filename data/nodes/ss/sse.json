@@ -10,7 +10,8 @@
     "web_frontend"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -21,11 +22,22 @@
     {
       "relation_type": "depends_on",
       "target_id": "http"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "SSE 通过 Content-Type 声明 text/event-stream；EventSource 恢复连接时可携带 Last-Event-ID。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-message-body",
+      "context": "SSE 将 UTF-8 事件记录持续写入 HTTP 响应消息体，以空行界定事件边界。"
     }
   ],
-  "summary": "HTTP 上的单向服务器推送，LLM 流式输出的载体。",
+  "summary": "以 HTTP 事件流持续向客户端推送文本事件，并支持浏览器自动重连。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "description": "SSE 是服务端向客户端持续发送事件的 HTTP 流格式。响应使用 text/event-stream 媒体类型与 UTF-8 编码，以空行分隔事件；data 可由多行组成，event 指定事件类型，id 记录事件标识，retry 提供重连等待信息。浏览器 EventSource 消费该格式并派发消息。\n\n事件流断开后，EventSource 通常按规则重建连接，并可通过 Last-Event-ID 告知最后事件标识。这个机制只是恢复位置的协议信号，服务器仍须决定是否保留历史并从相应位置重放；SSE 不自动提供持久消息队列、业务确认或恰好一次交付。\n\nSSE 适用于通知、进度和逐步生成内容等服务端推送，方向主要是服务端到客户端，客户端上行操作仍需另发请求。应用需要处理断线、重复事件及代理缓冲等问题；它与支持双向消息交换的 WebSocket 有不同交互模型，不只用于大模型输出。\n\n## 参考\n\n- [WHATWG HTML：Server-sent events 与 EventSource](https://html.spec.whatwg.org/multipage/server-sent-events.html)"
 }

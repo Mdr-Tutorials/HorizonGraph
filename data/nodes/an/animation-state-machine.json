@@ -1,0 +1,26 @@
+{
+  "id": "animation-state-machine",
+  "name": "Animation State Machine",
+  "aliases": [
+    "动画状态机"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    }
+  ],
+  "summary": "依据条件在动画状态及过渡之间选择和转换的控制模型。",
+  "description": "动画状态机把待机、行走等动作组织成状态，并以参数、条件和过渡定义下一状态。Unity Animator Controller 可把状态与动画内容关联，再由控制逻辑驱动参数变化。\n\n状态图控制何时播放或转换，并不直接定义关键帧、骨骼或完整动作内容。过渡条件、混合、层次和优先级影响表现；动画状态正常也不能证明角色物理位置或游戏逻辑已经同步。\n\n## 参考\n\n- [Unity：动画状态机](https://docs.unity3d.com/6000.0/Documentation/Manual/AnimationStateMachines.html)\n- [Unity：可变与固定时间步](https://docs.unity3d.com/6000.0/Documentation/Manual/time-handling-variations.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

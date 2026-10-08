@@ -1,0 +1,35 @@
+{
+  "id": "screen-coordinate-action",
+  "name": "Screen Coordinate Action",
+  "aliases": [
+    "屏幕坐标动作",
+    "坐标点击",
+    "Coordinate-based Interaction",
+    "坐标式界面操作"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction",
+    "browser-automation"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-screenshot",
+      "context": "在基于网页像素的操作路径中，从当前截图识别目标并转换为所选浏览器输入坐标。"
+    }
+  ],
+  "summary": "以明确坐标系中的位置执行指针或触控动作。",
+  "description": "屏幕坐标动作通过位置而非元素查询指定点击、移动、拖拽或触控目标，常见于视觉智能体和没有可用语义树的图形界面。目标坐标可以来自图像识别或预先定义，但执行接口可能使用桌面、窗口、视口或相对元素坐标，必须先明确参考原点和单位。\n\n浏览器中的 Puppeteer Mouse 接口使用主 frame 视口左上角为原点的 CSS 像素，而桌面操作环境可能使用屏幕像素。截图缩放、设备像素比、窗口偏移和滚动都会改变二者之间的映射；不能把截图上的一个数值不经转换直接传给任意输入接口。\n\n坐标路径可覆盖 Canvas、图像控件等难以用选择器描述的目标，却对布局变化、遮罩和焦点状态敏感。自动化输入的具体事件语义也可能不同于物理设备输入。可靠控制需要使用新观察确认当前位置，并检查动作后的目标状态，旧坐标和一次成功输入不能保证始终命中同一控件。\n\n## 参考\n\n- [Puppeteer：Mouse坐标及输入语义](https://pptr.dev/api/puppeteer.mouse)\n- [W3C：WebDriver Recommendation 2018](https://www.w3.org/TR/2018/REC-webdriver1-20180605/)\n- [OSWorld原论文：真实计算机环境中的多模态智能体](https://arxiv.org/abs/2404.07972)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -4,20 +4,38 @@
   "display_primary": "HumanEval",
   "display_secondary": "HumanEval",
   "aliases": [],
-  "type": "metric",
+  "type": "product",
   "domains": [
     "machine-learning",
-    "programming-languages"
+    "programming-languages",
+    "agent-development",
+    "ai-assisted-software-engineering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "metric"
+      "target_id": "dataset"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pass-at-k",
+      "context": "官方评估程序对各题生成样本的测试通过情况计算至少一个候选通过的 pass@k，且只汇总样本数满足 n≥k 的指标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "execution-based-evaluation",
+      "context": "官方 HumanEval 执行器运行生成的 Python 函数并检查任务测试，以功能性通过条件判定样本。"
     }
   ],
-  "summary": "函数级代码生成基准，pass@k 衡量正确性。",
+  "summary": "包含 164 道 Python 函数题的代码生成评估数据集。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "description": "HumanEval 是 2021 年论文发布的手写 Python 函数级代码生成任务集，包含 164 道题，每题提供函数签名、文档字符串和测试。它作为评估数据制品存在，配有执行器；任务集合与用于汇总候选通过概率的 pass@k 指标具有不同身份。\n\n候选代码需按任务格式生成并实际执行测试，官方程序逐题记录通过情况，再在样本数足够时计算 pass@k。该指标检查多个候选中至少一个通过的机会，并不自动完成候选选择，也不表明单次结果一定可靠。\n\n函数题与完整仓库修复、工具交互或长期开发工作流的覆盖不同。测试只验证提供的有限条件，训练接触与调优过程也会影响对泛化的解释。官方执行器明确处理不受信任的生成代码，要求稳健的执行隔离；结果还应保留采样次数、执行配置和评估版本。\n\n## 参考\n\n- [HumanEval 原论文：函数级任务与 pass@k](https://arxiv.org/html/2107.03374v1)\n- [HumanEval 官方数据与执行器](https://github.com/openai/human-eval)\n- [HumanEval 官方 pass@k 估计实现](https://raw.githubusercontent.com/openai/human-eval/master/human_eval/evaluation.py)",
+  "abstraction_level": "application_tool",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
+  ]
 }

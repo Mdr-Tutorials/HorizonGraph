@@ -1,0 +1,35 @@
+{
+  "id": "call-auction",
+  "name": "Call Auction",
+  "aliases": [
+    "集合竞价",
+    "集中竞价",
+    "批量竞价"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "采用竞价订单簿的市场中，累积合格买卖兴趣并在竞价时统一配对。"
+    }
+  ],
+  "summary": "集中累积交易意向并按统一竞价规则生成成交的机制。",
+  "description": "集合竞价在一个收集阶段累积买卖意向，再于规定时点或触发条件下集中配对。许多证券市场在开盘、收盘或交易恢复时以单一竞价价格完成符合条件的成交；具体机制可以规定价格约束、可参与订单类型和同价分配方法。\n\n常见定价步骤先考察可配对数量，再结合未成交不平衡、参考价格或其他规则选择价格。交易所可以发布指示价格、已配对数量和剩余不平衡，供参与者观察累积兴趣；这些指示值会随订单变化，并非对最终价格或成交数量的保证。\n\n竞价阶段可能限制撤单、采用价格范围或在条件不满足时延长。算法回放必须按该阶段规则处理，不能沿用连续撮合的到达即成交逻辑。集合竞价集中价格发现，但并不消除信息差或保证所有订单成交，也不能用一个场所的细则概括所有市场。\n\n## 参考\n\n- [NYSE：竞价价格、配对数量和不平衡发布](https://www.nyse.com/trade/auctions)\n- [Nasdaq：开盘与收盘 Cross 的交易机制](https://www.nasdaqtrader.com/content/productsservices/trading/crosses/fact_sheet.pdf)\n- [LSE：SETSqx 与 SEAQ 的报价、竞价及混合市场](https://www.londonstockexchange.com/trade/equity-trading/trading-services/setsqx-and-seaq?lang=en)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

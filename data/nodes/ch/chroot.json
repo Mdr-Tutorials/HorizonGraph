@@ -1,0 +1,35 @@
+{
+  "id": "chroot",
+  "name": "chroot",
+  "aliases": [
+    "根目录切换",
+    "改变进程根目录"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux-capabilities",
+      "context": "在 Linux 上执行 chroot(2) 时检查调用者所属 user namespace 中的 CAP_SYS_CHROOT。"
+    }
+  ],
+  "summary": "改变进程路径解析的根目录，不单独建立安全沙箱。",
+  "description": "这里的 chroot 指 chroot(2) 所提供的根目录切换机制：调用后，进程解析绝对路径时使用指定目录作为根，其后代继承这一设置。它常用于组织受限文件视图或准备运行环境，既不创建独立虚拟机，也不提供单独内核、网络栈或资源预算。在 Linux 上，调用者需要在其 user namespace 中拥有 CAP_SYS_CHROOT。\n\n系统调用本身不改变当前工作目录，也不关闭已经打开的文件描述符，这些状态可能保留对新根之外资源的访问。GNU coreutils 的 chroot(1) 命令则是另一层工具包装，运行指定命令前默认切换工作目录到 /，并提供 --skip-chdir 等选项。系统调用与命令的行为应分别说明，不能把其中一层的默认动作推广到另一层。\n\nchroot 的路径根限制不是完整安全边界：具有相应权限的进程、继承的目录句柄以及配置错误都可能使限制不符合预期。容器运行时通常还需要挂载命名空间、权限收缩和其他访问控制，并可能使用不同的根文件系统切换流程。它也不是修改宿主根目录；检查时应关注实际调用进程的根、工作目录、打开句柄与权限。\n\n## 参考\n\n- [Linux：chroot 系统调用与安全边界](https://man7.org/linux/man-pages/man2/chroot.2.html)\n- [GNU chroot 命令：默认工作目录与选项](https://man7.org/linux/man-pages/man1/chroot.1.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

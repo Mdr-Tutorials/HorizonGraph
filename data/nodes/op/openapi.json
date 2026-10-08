@@ -13,19 +13,37 @@
   ],
   "domains": [
     "web-development",
-    "devops"
+    "devops",
+    "api-engineering",
+    "web-services"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "在 OAS 3.1 及后续支持的 Schema Object 中使用 JSON Schema 方言描述数据结构与约束。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "OpenAPI 描述可序列化为 JSON 对象，接口消息本身不限定必须是 JSON。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "yaml",
+      "context": "OpenAPI 描述可以按规范的兼容要求用 YAML 表示。"
     }
   ],
-  "summary": "RESTful API 的机器可读描述标准，文档与代码生成。",
+  "summary": "描述 HTTP API 操作、消息模式与安全声明的语言无关规范。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://spec.openapis.org"
+  "official_site": "https://spec.openapis.org",
+  "description": "OpenAPI Specification 是描述 HTTP API 的语言无关规范，文档记录操作、参数、请求体、响应、安全方案及相关元数据，可以用 JSON 或 YAML 表示。它描述服务边界，供人和工具理解接口；本规范不限于某一种 REST 设计风格，也不是实际传输请求的网络协议。Swagger 工具品牌与曾称 Swagger 的规范沿革需要区分。\n\n规范描述可供文档渲染、客户端和服务骨架生成、模式检查及 API 测试消费。各工具支持的 OpenAPI 版本和 JSON Schema 方言需要匹配：3.1 及后续版本的 Schema Object 使用 JSON Schema 体系，3.0 的规则与其存在差异。文档正确不代表服务实现已验证，更不代表 security 声明自动执行授权；生成静态类型也不等同于运行时响应校验。\n\n## 参考\n\n- [OpenAPI：接口描述与工具用途](https://spec.openapis.org/oas/latest.html)\n- [OpenAPI：Schema Object 与方言](https://spec.openapis.org/oas/v3.1.1.html#schema-object)\n- [Swagger：规范与工具身份](https://swagger.io/docs/specification/v3_0/about/)"
 }

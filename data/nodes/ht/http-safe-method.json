@@ -1,0 +1,34 @@
+{
+  "id": "http-safe-method",
+  "name": "Safe HTTP Method",
+  "aliases": [
+    "HTTP 安全方法",
+    "安全请求方法"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "http-routing",
+      "context": "将 GET、HEAD 等安全方法映射到应用处理器时，其语义约束处理器不承载客户端请求的资源写操作。"
+    }
+  ],
+  "summary": "定义上不请求改变资源状态的方法属性。",
+  "description": "HTTP 的安全性描述请求方法的语义：客户端不请求也不期待改变源服务器状态。GET、HEAD、OPTIONS 与 TRACE 被定义为安全方法，因此浏览器预取、爬虫和自动链接遍历可以按只读语义使用它们。应用不能把删除订单等写操作藏在 GET 的查询参数中。\n\n这里的安全不表示已认证、已加密或没有漏洞，也不要求实现完全没有副作用；访问日志和统计等附带行为仍可能发生。安全方法具有幂等语义，而 PUT、DELETE 等可以幂等但不安全。CSRF 防护可以按方法判断需保护的写操作范围，前提是服务实现确实遵守这些语义。\n\n## 参考\n\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)\n- [Hono：CSRF 中间件的方法范围](https://hono.dev/docs/middleware/builtin/csrf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

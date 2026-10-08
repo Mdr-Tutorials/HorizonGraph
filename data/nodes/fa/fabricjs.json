@@ -1,0 +1,55 @@
+{
+  "id": "fabricjs",
+  "name": "Fabric.js",
+  "aliases": [
+    "FabricJS"
+  ],
+  "type": "library",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-2d",
+      "context": "把可编辑对象绘制到主画布，并复用对象缓存的二维位图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "svg",
+      "context": "导入 SVG 为 Fabric 图形对象或将可表达的对象导出为 SVG。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "affine-transform",
+      "context": "用对象与视口矩阵处理平移、缩放、旋转及编辑坐标换算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "选择 WebGLFilterBackend 时，用 GPU 执行受支持的图片滤镜；主场景绘制仍是独立路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hit-testing",
+      "context": "在选择和指针交互时判断对应对象，按配置结合几何或逐像素检查。"
+    }
+  ],
+  "summary": "为 Canvas 提供可选择编辑对象与序列化的图形库。",
+  "description": "Fabric.js 在 Canvas 2D 上保存形状、路径、图片、文字和组等对象，提供选择控件、旋转缩放及视口变换，适合作为图形编辑器的绘制基础。对象缓存把部分复杂内容绘制到额外画布，再以 drawImage 复用；对象变脏或缩放策略会影响刷新与清晰度。\n\n对象模型可通过 JSON 序列化，也支持 SVG 导入导出与位图输出。编辑器仍需自行管理业务状态、历史、资源和格式兼容，保存图形对象不是保存完整应用；SVG 转换也不代表任意 SVG 文档都能无损往返。\n\n场景主要使用 Canvas 2D，WebGLFilterBackend 面向可组合的图片滤镜处理，不能把滤镜加速概括为整个场景默认由 WebGL 绘制。不同滤镜后端及浏览器限制应按具体版本和工作负载检查。\n\n## 参考\n\n- [Fabric.js：官方功能与渲染边界](https://www.fabricjs.com/)\n- [Fabric.js：Canvas API 与序列化](https://www.fabricjs.com/api/classes/canvas/)\n- [Fabric.js：对象缓存](https://www.fabricjs.com/docs/fabric-object-caching/)\n- [Fabric.js：WebGLFilterBackend](https://www.fabricjs.com/api/classes/webglfilterbackend/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://www.fabricjs.com/"
+}

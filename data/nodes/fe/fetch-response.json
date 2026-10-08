@@ -1,0 +1,45 @@
+{
+  "id": "fetch-response",
+  "name": "Response",
+  "aliases": [
+    "Fetch响应对象",
+    "Response API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-headers",
+      "context": "Response.headers 通过 Headers 提供可见的响应首部，修改能力取决于响应来源及其 guard。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "web-streams-api",
+      "context": "Response 的非空正文以可读流交付，可逐块消费或通过整体读取方法消费。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-status-code",
+      "context": "在 HTTP 响应路径中，Response.status 暴露状态码，ok 按成功状态范围派生。"
+    }
+  ],
+  "summary": "以状态、首部和可读正文表示获取或处理器产生的标准响应。",
+  "description": "Response 封装状态、类型、Headers 和正文，可由获取流程返回，也可由构造器或静态方法生成，供标准服务端处理器交付。ok 对应 200 至 299 的状态范围，不表示正文已完整传输或业务结果已验证。\n\n非空正文通过 ReadableStream 暴露；text、json 等整体读取方法消费正文，json 解析也可能失败。bodyUsed 检测正文是否已被扰动，不能单独替代流锁定检查；Response 已获得后，正文传输仍可能取消或出错。\n\nclone 在正文可克隆时分出流分支，既不重新请求资源，也不保证独立分支免费缓存无限数据。构造的响应对象与网络实际送达是不同步骤；浏览器的响应过滤规则还可能限制脚本可见的状态和首部。\n\n## 参考\n\n- [WHATWG Fetch：Response接口](https://fetch.spec.whatwg.org/#response-class)\n- [WHATWG Fetch：正文消费](https://fetch.spec.whatwg.org/#body-mixin)\n- [WHATWG Fetch：正文克隆](https://fetch.spec.whatwg.org/#concept-body-clone)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://fetch.spec.whatwg.org/#response-class"
+}

@@ -5,10 +5,13 @@
   "type": "tool",
   "ecosystems": [
     "static-analysis-testing-ecosystem",
-    "devops_tooling"
+    "devops_tooling",
+    "browser-automation-ecosystem"
   ],
   "domains": [
-    "devops"
+    "devops",
+    "browser-automation",
+    "web-development"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -19,12 +22,31 @@
     {
       "relation_type": "implements",
       "target_id": "e2e-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-automation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webdriver",
+      "context": "语言绑定和浏览器驱动按经典 WebDriver 会话命令组织远程控制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webdriver-bidi",
+      "context": "选择受支持的 BiDi 接口时，通过双向连接订阅事件并执行相应浏览器操作。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "element-locator"
     }
   ],
-  "summary": "老牌浏览器自动化与 E2E 测试工具，多语言 WebDriver。",
+  "summary": "提供 WebDriver 绑定、远程控制与分布式执行的工具。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.selenium.dev"
+  "official_site": "https://www.selenium.dev",
+  "description": "Selenium 是浏览器自动化工具项目，包含 WebDriver 的语言绑定、远程执行及 Grid 等能力。W3C WebDriver 是接口规范，浏览器驱动是实现或接入该规范的软件；Selenium WebDriver 的日常称谓同时涉及绑定和控制实现，不能把整个工具项目直接作为规范本身。\n\n测试代码通过绑定与浏览器驱动通信，驱动可在本地或远端运行，Grid 可以组织分布式执行。经典控制主要采用会话和命令响应，BiDi 接口进一步允许订阅网络、日志等事件。浏览器与客户端的版本决定具体支持范围，Selenium 文档中的迁移方向也不意味着 CDP 与 BiDi 的所有功能已经完全等价。\n\nWebDriver 控制不自带完整业务判定，测试框架、断言和报告需要另外组织。动态页面还需要合理等待与新鲜的元素查询，隐式等待和显式等待混用可能产生不可预测的时间。新的浏览器状态、测试数据准备和动作后结果检查，是建立可靠端到端流程的必要设计，而非远程控制命令自动提供的保证。\n\n## 参考\n\n- [Selenium：WebDriver](https://www.selenium.dev/documentation/webdriver/)\n- [Selenium：WebDriver BiDi](https://www.selenium.dev/documentation/webdriver/bidi/)\n- [Selenium：Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/)\n- [W3C：WebDriver Recommendation 2018](https://www.w3.org/TR/2018/REC-webdriver1-20180605/)"
 }

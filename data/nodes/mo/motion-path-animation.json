@@ -1,0 +1,44 @@
+{
+  "id": "motion-path-animation",
+  "name": "Motion Path Animation",
+  "aliases": [
+    "路径运动动画",
+    "沿路径动画"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bezier-curve",
+      "context": "采用贝塞尔控制点定义运动路线时，根据曲线进度求当前位置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "svg",
+      "context": "以 SVG path 作为运动路线时，读取路径数据并映射到目标对象的坐标空间。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "easing-function",
+      "context": "需要加速或减速沿路径移动时，用缓动映射路径采样进度。"
+    }
+  ],
+  "summary": "沿曲线或路径采样位置和朝向的动画方法。",
+  "description": "路径运动动画把对象的运动位置约束到一条曲线或路径上，通过推进路径上的进度得到当前坐标。应用还可根据路径方向更新朝向，用于图标轨迹、装饰动效或沿路线移动的对象。\n\n路径几何与时间缓动分别决定运动轨迹和运动节奏。SVG 路径或贝塞尔控制点可作为输入；与其他对象对齐时需要处理路径坐标和目标坐标之间的变换，并检查缩放后的位置与旋转结果。\n\n## 参考\n\n- [GSAP：MotionPathPlugin 的路径与坐标对齐](https://gsap.com/docs/v3/Plugins/MotionPathPlugin/)\n- [Rive：Follow Path 约束](https://rive.app/docs/editor/constraints/follow-path-constraint)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

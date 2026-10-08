@@ -1,0 +1,39 @@
+{
+  "id": "agent-trajectory-evaluation",
+  "name": "Agent Trajectory Evaluation",
+  "aliases": [
+    "智能体轨迹评估",
+    "轨迹评估",
+    "Trajectory Evaluation"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-observability",
+      "context": "在评估运行中收集并关联工具调用、返回值和任务步骤，提供可追溯的过程判定证据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rubric-based-evaluation",
+      "context": "对交互与政策遵守等需要解释的过程条件使用事先定义的评分准则，允许符合要求的替代路径。"
+    }
+  ],
+  "summary": "依据可观察步骤和政策要求审查智能体运行过程。",
+  "description": "智能体轨迹评估检查一次任务中记录下来的观察、消息、动作、工具调用及返回结果。其对象是可获得的运行过程证据，不应推定记录能揭示模型全部内部推理。它可用于定位参数错误、重复操作、遗漏确认或过早宣布完成。\n\n过程判定与结果判定不同。数据库最终状态正确，仍可能经过不合规的操作；只读任务没有状态变化，也需要证据证明完成了必要的信息获取。τ-bench 讨论了最终状态判定的政策覆盖限制，BFCL 多轮协议则结合状态与特定执行路径的检查。\n\n轨迹规则需要来自任务的真实要求：必须征求确认或使用指定授权渠道时才能检查对应步骤。对于允许多种解法的任务，不宜要求动作逐字匹配唯一示范路径。应保存证据位置、判定规则和失败原因，并把不可观察的部分标成未验证。\n\n## 参考\n\n- [τ-bench 原论文：工具、用户模拟与 pass^k](https://arxiv.org/html/2406.12045v1)\n- [BFCL V3：多轮状态与调用路径判定](https://gorilla.cs.berkeley.edu/blogs/13_bfcl_v3_multi_turn.html)\n- [Anthropic：以真实任务评估工具设计](https://www.anthropic.com/engineering/writing-tools-for-agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

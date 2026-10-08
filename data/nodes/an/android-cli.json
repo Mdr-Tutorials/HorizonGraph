@@ -1,0 +1,39 @@
+{
+  "id": "android-cli",
+  "name": "Android CLI",
+  "aliases": [
+    "Android 命令行工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "android-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "android-studio",
+      "context": "android studio 等命令可连接运行中的 IDE 获取语义分析、Compose 预览和依赖信息；独立设备与 SDK 工作流不都要求此集成。"
+    }
+  ],
+  "summary": "为代理和脚本提供 Android 开发、设备检查与技能管理入口。",
+  "description": "Android CLI 是 Google 为 Android 开发提供的命令行入口，面向代理、脚本和常规自动化工作流。当前官方说明涵盖 Android SDK 环境准备、项目模板、设备和模拟器管理、APK 安装以及屏幕和 UI 层次检查。它是具体开发工具，不是 Android 操作系统，也不应与早期 SDK 中同名命令或 Android Debug Bridge 自动合并。\n\n工具可以连接运行中的 Android Studio，利用 IDE 的语义代码分析、Compose 预览与依赖版本信息，并向开发代理提供 Android 文档和技能管理入口。此类连接需要对应组件与工作环境可用，不代表 Android Studio 是每一种 CLI 操作的硬依赖。CLI 提供操作能力，代理如何选择并组合命令仍由宿主工作流控制。\n\n官方当前文档记录部分平台限制，例如 Windows 上的特定模拟器命令限制以及 PowerShell 下载流程的支持边界。开发者应按系统与版本核对命令能力，而非把一个演示当作跨平台全功能承诺。android init 安装的配套技能与 Android Skills 资料集合属于指令资源，工具二进制和指令包不是同一实体。\n\n## 参考\n\n- [Android：CLI 具体命令能力与平台限制](https://developer.android.com/tools/agents/android-cli)\n- [Android：官方代理工具与下载入口](https://developer.android.com/tools/agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://developer.android.com/tools/agents/android-cli"
+}

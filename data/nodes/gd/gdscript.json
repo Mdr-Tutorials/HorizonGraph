@@ -6,7 +6,8 @@
   ],
   "type": "language",
   "ecosystems": [
-    "graphics_gaming"
+    "graphics_gaming",
+    "game-runtime-ecosystem"
   ],
   "domains": [
     "game-development",
@@ -17,13 +18,29 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "language"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "type-inference"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reference-counting",
+      "context": "脚本类继承 RefCounted（包括默认基类）或 Resource 时按引用计数管理寿命；Node 与普通 Object 仍需显式释放。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resource-lifecycle",
+      "context": "在 Godot 脚本中按对象基类选择引用计数、free 或 queue_free，并处理可能阻止回收的引用环。"
     }
   ],
-  "summary": "Godot 的 Python 式脚本语言。",
+  "summary": "为 Godot 设计、支持可选类型标注的缩进式脚本语言。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "2014-01-01",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-07",
   "importance": 2,
-  "popular": 30
+  "popular": 30,
+  "description": "GDScript 是为 Godot 设计并与其引擎集成的面向对象、命令式、渐进类型语言，使用缩进表达代码结构。类文件可通过 extends 继承引擎或脚本类，以属性、方法、signals 和引擎回调扩展对象行为；语法虽与 Python 相似，语言本身独立于 Python。\n\n开发者可以在动态代码中加入显式类型标注和类型推导，让工具较早发现部分类型问题并改善补全。类型标注是可选特性，动态与静态部分可以混用；它们不自动证明运行逻辑正确，也不能消除对象为空或生命周期结束等状态问题。\n\n实例释放规则取决于基类。未显式指定基类的脚本类默认继承 RefCounted，Resource 也使用引用计数；Node 与普通 Object 需要显式 free，节点可用 queue_free 延后释放。引用环可能阻止自动回收，需要设计所有权或使用弱引用，不能把引用计数推广为所有游戏节点都自动释放。\n\n## 参考\n\n- [Godot：GDScript reference](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html)\n- [Godot：Static typing in GDScript](https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html)",
+  "official_site": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html"
 }

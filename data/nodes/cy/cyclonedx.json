@@ -1,0 +1,42 @@
+{
+  "id": "cyclonedx",
+  "name": "CycloneDX",
+  "aliases": [
+    "CycloneDX",
+    "CycloneDX 物料清单规范",
+    "OWASP CycloneDX"
+  ],
+  "type": "protocol",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom",
+      "context": "以组件、服务、依赖及覆盖信息定义软件物料清单的可交换表示。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "采用 JSON 序列化交换 CycloneDX BOM 时，依据所选规范版本验证结构和字段语义。"
+    }
+  ],
+  "summary": "以组件、服务和关系表达供应链清单及安全上下文。",
+  "description": "CycloneDX 是面向供应链透明度的物料清单数据规范，其模型包含组件、服务、依赖及组合信息，支持直接和传递关系。软件 SBOM 是其中一种用途；规范也能表示硬件、密码资产及其他清单。它是数据模型与交换格式，不是自动识别所有软件的扫描程序，也不只适用于容器镜像。\n\n官方概览列出的 1.7 提供 JSON、XML 与 Protocol Buffers 表示，并在 Ecma 标准化体系中对应 ECMA-424。依赖图描述组件关系，compositions 可说明完整、不完整或未知的清单覆盖；漏洞信息与影响声明则为后续风险调查提供上下文。这些字段要由生产者提供相应证据，不能因结构支持某项信息就认为每份文档都含有它。\n\n在镜像发布与消费流程中，CycloneDX 清单可交给扫描器做组件匹配，也可作为工件声明的 predicate 传递。接收方需要核对文档版本、所述对象、生成阶段和覆盖范围，并区分发现组件、报告漏洞与确认实际影响。签署清单能够绑定声明者与载荷，仍不会自动证明清单完整，格式转换也可能损失两种模型间无法对应的信息。\n\n## 参考\n\n- [CycloneDX：规范概览、版本与对象模型](https://cyclonedx.org/specification/overview/)\n- [CycloneDX：官方 SBOM 指南](https://cyclonedx.org/guides/sbom/relationships/)\n- [Syft：SBOM 格式及版本支持](https://oss.anchore.com/docs/guides/sbom/formats/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://cyclonedx.org/"
+}

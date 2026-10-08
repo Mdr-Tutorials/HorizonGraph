@@ -8,27 +8,31 @@
     "modern-web-frameworks-ecosystem"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "api-engineering",
+    "web-services"
   ],
   "abstraction_level": "framework_library",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
-    },
-    {
-      "relation_type": "competes_with",
-      "target_id": "grpc"
+      "target_id": "api-specification"
     },
     {
       "relation_type": "alternative_to",
       "target_id": "rest"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "schema-validation",
+      "context": "按 GraphQL 自身 schema 校验查询文档并转换变量输入；此处不表示采用 JSON Schema。"
     }
   ],
   "summary": "客户端按需描述数据的 API 查询语言与运行时规范。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://graphql.org"
+  "official_site": "https://graphql.org",
+  "description": "GraphQL 定义类型化查询语言、模式与请求执行规则，客户端通过选择字段表达所需结果，服务端按 schema 校验文档并解析执行。对象、输入类型、枚举及根操作共同描述接口边界，查询、变更与订阅承担不同操作语义。这里记录规范身份，具体解析器、服务框架和客户端 SDK 属于实现工件。\n\n规范包含文档校验、变量输入转换、结果完成及错误传播等规则，不限定请求必须使用某种序列化或传输。订阅定义响应流，也不直接规定底层消息确认、缓冲或重发。输入文档符合 schema 不等于调用者有权限访问对应对象，官方建议在业务逻辑中执行授权；客户端类型生成和缓存也需要相应工具，而非规范自动提供。\n\n## 参考\n\n- [GraphQL：规范与执行规则](https://spec.graphql.org/September2025/)\n- [GraphQL：请求文档校验](https://graphql.org/learn/validation/)\n- [GraphQL：业务层授权](https://graphql.org/learn/authorization/)"
 }

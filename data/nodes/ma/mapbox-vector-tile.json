@@ -1,0 +1,42 @@
+{
+  "id": "mapbox-vector-tile",
+  "name": "Mapbox Vector Tile Specification",
+  "aliases": [
+    "Mapbox 矢量瓦片规范",
+    "MVT",
+    "Mapbox Vector Tile"
+  ],
+  "type": "protocol",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vector-tiles"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "protocol-buffers",
+      "context": "以 Protocol Buffers 序列化图层、要素、属性表和几何指令。"
+    }
+  ],
+  "summary": "规定矢量瓦片几何、属性和图层的二进制编码。",
+  "description": "Mapbox Vector Tile 规范定义矢量瓦片的数据编码：瓦片含有命名图层，图层含有点、线、面要素和属性。内容采用 Protocol Buffers 编码，几何以瓦片局部网格中的整数坐标及指令表达，属性通过键和值的表进行索引。MVT 是地图数据格式，可由不同客户端和服务实现。\n\n该规范规定编码与几何约束，但不完整定义瓦片 URL、请求协议、地理投影、数据裁剪策略或地图样式。具有 .pbf 后缀的文件也不一定是 MVT，例如 OpenStreetMap 数据 PBF 使用不同结构。实现互操作时应分别核对瓦片格式、坐标网格、要素属性及数据源配置。\n\n## 参考\n\n- [Mapbox Vector Tile Specification](https://github.com/mapbox/vector-tile-spec)\n- [Mapbox Vector Tile Encoding Guide](https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "MVT"
+}

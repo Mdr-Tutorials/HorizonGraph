@@ -1,0 +1,75 @@
+{
+  "id": "google-adk",
+  "name": "Agent Development Kit",
+  "aliases": [
+    "Google ADK",
+    "代理开发套件"
+  ],
+  "type": "framework",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini",
+      "context": "使用 ADK 的 Gemini 模型适配器时，智能体向 Gemini 模型发出推理与工具选择请求；其他模型适配器也受支持。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "google-agent-runtime",
+      "context": "官方提供 ADK 应用与托管 Agent Runtime 的完整部署、状态和观测集成；本地执行不要求此云服务。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-session",
+      "context": "Session 和 SessionService 按应用、用户、会话标识跟踪对话历史与状态，并提供会话生命周期操作。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-session-state",
+      "context": "会话 state 与 EventActions 的状态增量协同更新应用数据；具体持久性取决于 SessionService 实现。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-invocation",
+      "context": "Runner 为单次运行创建 InvocationContext，关联 invocation_id、输入、当前会话与配置服务，并向智能体核心逻辑提供执行生命周期控制。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-event-stream",
+      "context": "Runner、智能体、模型和工具通过 Event 表示执行活动、内容及控制信号，事件历史归入会话；不是另一个网络传输协议。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-artifact-store",
+      "context": "配置 ArtifactService 时，InMemoryArtifactService 或 GcsArtifactService 等实现保存、加载和列举按会话或用户作用域命名的版本化二进制工件；GCS 后端是可选实现。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "context-compaction",
+      "context": "配置 EventsCompactionConfig、contextCompactors 或相应 Runner 设置时，按令牌或交互阈值压缩会话事件；具体配置与支持范围依语言实现而异。"
+    }
+  ],
+  "summary": "Google 的多语言开源智能体开发与编排框架。",
+  "description": "Agent Development Kit（ADK）是 Google 开发的开源智能体框架，提供模型调用、工具、事件、会话以及工作流等组件。当前官方文档涵盖 Python、TypeScript、Go、Java 和 Kotlin；具体语言实现的版本和能力应分别核对。它是编写智能体应用的程序框架，开发环境中的编码助手则帮助人编写这些应用。\n\nADK 可把模型驱动的智能体与确定性控制流程组合起来，支持工具调用、多智能体协作、评估和调试。ADK 2.0 的图工作流为执行路径、状态和人工输入提供显式结构；模型选择与框架控制逻辑属于不同层次。Gemini 是其原生接入对象之一，官方也提供其他服务和本地模型的适配方式。\n\n应用可以在本地或自有基础设施运行，也可以部署到 Google Cloud 的 Agent Runtime、Cloud Run 或 GKE。Agent Runtime 的集成提供托管部署能力，并不使云服务成为所有 ADK 应用的硬依赖。Agents CLI 则在框架之上提供脚手架、评估、发布和观测流程，不能与 ADK 或通用编码代理混为同一身份。\n\nSessionService 按应用、用户和会话管理对话历史与状态，Event 则在 Runner、模型与工具之间承载内容、控制信号及状态增量。Runner 为单次执行创建 InvocationContext，关联执行标识、用户输入、当前会话、智能体与已配置服务，并让核心逻辑控制该次执行的生命周期。配置 ArtifactService 后，工具和回调能够保存、加载和列举具名、版本化的二进制工件；内存实现与 GCS 实现具有不同持久性和权限前提。上下文压缩需要相应配置，按令牌或交互阈值保留近期事件并处理较早历史，不能据此假定所有语言实现或默认会话都启用了相同策略。\n\n## 参考\n\n- [ADK：当前多语言框架与部署范围](https://adk.dev/)\n- [Google：ADK Python 官方实现](https://github.com/google/adk-python)\n- [ADK：Session 与 SessionService](https://adk.dev/sessions/session/)\n- [ADK：事件和状态增量](https://adk.dev/events/)\n- [ADK：ArtifactService 实现与版本化工件](https://adk.dev/artifacts/)\n- [ADK：InvocationContext 与运行生命周期](https://adk.dev/context/)\n- [ADK：可配置的上下文压缩策略](https://adk.dev/context/compaction/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "abbreviation": "ADK",
+  "official_site": "https://adk.dev/"
+}

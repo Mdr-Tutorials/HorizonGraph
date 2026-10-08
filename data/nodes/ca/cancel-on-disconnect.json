@@ -1,0 +1,35 @@
+{
+  "id": "cancel-on-disconnect",
+  "name": "Cancel on Disconnect",
+  "aliases": [
+    "断线撤单",
+    "断联自动撤单",
+    "COD"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fix-protocol",
+      "context": "在Nasdaq Nordic PRM的FIX Drop断线保护部署中，依据指定FIX监控会话被主机检测到的断联事件触发撤单及阻断；不推广为所有场所COD实现必须使用FIX。"
+    }
+  ],
+  "summary": "按预设会话规则在断联后撤销相应有效订单。",
+  "description": "断线撤单在交易场所检测到指定连接失效或关闭后，按已配置规则取消相关未成交订单，减少客户端失去控制时残留委托的风险。它需要明确由哪条连接触发、覆盖哪些账户和订单，以及是否还阻断后续订单；交易进程退出本身并不意味着交易所已经确认连接失效或完成撤单。\n\nCME FADB当前说明将COD限定为会话发生非正常断联时的在途非GTC/GTD订单，并明确不能用于GTC或GTD，且由清算机构管理员配置。Nasdaq Nordic PRM Guide 3.5的FIX Drop断线保护则可在主机检测到正常或非正常断联后取消指定PRM账户的未成交单并阻止新单；如果当日监控客户端从未建立该连接，文档说明该保护不会触发。\n\n因此COD不能被描述为跨场所、所有有效期订单的可靠清仓保证。恢复连接后可能仍需人工重新开放订单入口，并应先对账取消、成交和残留订单。它与人工或风险触发的紧急开关具有不同触发条件，不能靠主动断网代替已经验证的撤单与应急流程。\n\n## 参考\n\n- [CME FADB：Cancel on Disconnect的会话和订单范围](https://www.cmegroup.com/tools-information/webhelp/fadb/Content/enable-disable-cod.html)\n- [Nasdaq Nordic：Pre-Trade Risk Management Service Guide 3.5](https://www.nasdaq.com/docs/2024/05/29/Nasdaq-Nordic-PRM-Service-Guide-3.5.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "COD"
+}

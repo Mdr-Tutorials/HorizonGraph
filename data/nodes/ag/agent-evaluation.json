@@ -1,0 +1,48 @@
+{
+  "id": "agent-evaluation",
+  "name": "Agent Evaluation",
+  "aliases": [
+    "智能体评估",
+    "Agent 评估"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "evaluation-harness",
+      "context": "在离线任务评估中由评估执行框架初始化任务、运行试验并汇总判定结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "task-success-rate",
+      "context": "在具有明确二元验收条件的任务集合上汇总完成比例，并保留任务和重复试验的口径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-trajectory-evaluation",
+      "context": "需要验证工具使用、用户确认或操作政策时，另行检查可观察运行轨迹，补充最终状态评分。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-evaluation-cost",
+      "context": "比较端到端智能体方案时记录定义范围内的运行费用，结合任务结果解释成本与能力的取舍。"
+    }
+  ],
+  "summary": "在明确任务、环境和预算下验证智能体的结果与行为。",
+  "description": "智能体评估把自然语言目标转成可运行的任务、初始环境和验收条件，评估模型与执行宿主组成的系统。一次试验是一条完整运行；同一任务的多次试验用于观察随机性和稳定性。任务覆盖范围必须与希望推断的能力范围相符。\n\n结果维度检查实际交付或环境状态，行为维度检查工具调用、用户交互和约束遵守。可以组合程序判定、人工审查与模型裁判，但应分开报告各自证据。智能体宣称完成、顺利退出或留下日志，都不能单独替代任务验收。\n\n比较结果时需记录任务与评估器版本、模型和宿主设置、尝试次数及步骤、时间、资源预算。成功率之外还可报告成本与失败类别；有限任务上的高分只支持该协议下的结论，不自动证明面对新场景或生产环境的普遍可靠性。\n\n## 参考\n\n- [Anthropic：Agent 评估的任务、轨迹与判定器](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)\n- [AI Agents That Matter：预算、成本与泛化边界](https://arxiv.org/html/2407.01502v1)\n- [WebArena 原论文：任务与功能性判定](https://arxiv.org/html/2307.13854v3)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

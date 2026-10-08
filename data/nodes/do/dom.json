@@ -3,29 +3,32 @@
   "name": "Document Object Model",
   "display_primary": "DOM",
   "aliases": [
-    "文档对象模型"
+    "文档对象模型",
+    "DOM Standard",
+    "DOM 规范"
   ],
-  "type": "concept",
+  "type": "protocol",
   "ecosystems": [
-    "web_frontend"
+    "web_frontend",
+    "browser-automation-ecosystem"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "browser-automation"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "programming-paradigm"
-    },
-    {
-      "relation_type": "part_of",
-      "target_id": "html"
+      "target_id": "api-specification"
     }
   ],
-  "summary": "把 HTML 变成可脚本操作的树，前端框架都在对它做差分。",
+  "summary": "规定文档节点、对象树与事件操作的 DOM API 规范。",
   "importance": 5,
   "popular": 70,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Document Object Model（DOM）是访问和操作文档的对象与行为接口规范，WHATWG DOM Standard 定义节点树、文档、事件及相关操作。此节点指文档对象模型及其规范身份，按 API 规范建模；具体浏览器引擎提供实现，页面脚本则使用实现暴露的接口，DOM 不是一种编程范式。\n\nDOM 可以表达 HTML 和 XML 文档，HTML 标准进一步规定具体元素和文档语义。文档对象树可能随脚本执行发生变化，因此它不同于服务器原始 HTML 文本，也不是所有视觉内容的完整表示。HTML 与 DOM 是衔接的规范，不能将通用 DOM 定义成 HTML 独有的组成部分。\n\n前端库可以直接更新 DOM，也可以在内部使用虚拟 DOM 等策略决定更新，不是所有框架都必须做同一种差分。浏览器自动化基于当前节点查询元素，可访问性树再形成另一种语义表示，截图则捕获渲染结果。DOM 快照仅保存观察时刻的信息，不保证保存全部运行状态或业务正确性。\n\n## 参考\n\n- [WHATWG：DOM Standard](https://dom.spec.whatwg.org/)\n- [WHATWG HTML：Documents与DOM接口衔接](https://html.spec.whatwg.org/multipage/dom.html)",
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://dom.spec.whatwg.org/"
 }

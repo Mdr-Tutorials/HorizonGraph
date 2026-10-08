@@ -1,0 +1,40 @@
+{
+  "id": "artifact-attestation",
+  "name": "Artifact Attestation",
+  "aliases": [
+    "工件声明证明",
+    "软件工件证明",
+    "Software Attestation"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "in-toto-statement",
+      "context": "采用 in-toto 体系交换声明时，用 Statement 将受述工件与具有明确类型的 predicate 绑定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "public-key-cryptography",
+      "context": "通过签名认证声明者并保护声明载荷，事实真实性仍由声明者与生产过程的信任边界决定。"
+    }
+  ],
+  "summary": "把关于工件的结构化声明与工件内容、声明者绑定。",
+  "description": "软件工件的 attestation 是关于一个或一组工件的经过认证的结构化声明，可表达构建来源、测试结果、组件清单或其他生产与审查信息。与仅对工件签名相比，它将要表达的元数据显式写入声明。这里的 attestation 指软件供应链中的声明证明，不能与可信计算中证明设备或执行环境状态的远程证明直接视作同一种机制。\n\n一种常用表示采用 in-toto Statement：subject 以摘要绑定工件，predicateType 标识声明语义，predicate 承载对应数据。Statement 负责声明结构，外层签名封装负责认证声明者和保护载荷完整性。验证需要同时处理内容绑定、签署者身份和声明语义；单独解析一个合法 JSON 文档，或者单独确认签名有效，都不足以作出完整的工件验收判断。\n\n可信程度取决于声明者是否获准作出该类声明，以及声明产生过程的可信边界。例如，构建来源应来自受信任构建系统，而漏洞扫描声明还应说明扫描器、数据库和扫描时间。一个有效签名不会自动让虚假的测试结果变真，也不会让过期的扫描结果保持有效。消费方以明确策略组合证据，避免把任何一种声明扩大解释为全面安全认证。\n\n## 参考\n\n- [SLSA 1.2：软件声明证明模型](https://slsa.dev/spec/v1.2/attestation-model)\n- [in-toto：Statement v1 规范](https://github.com/in-toto/attestation/blob/main/spec/v1/statement.md)\n- [Cosign：in-toto 声明签名与验证](https://docs.sigstore.dev/cosign/verifying/attestation/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

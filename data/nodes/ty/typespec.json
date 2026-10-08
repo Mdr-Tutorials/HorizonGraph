@@ -1,0 +1,50 @@
+{
+  "id": "typespec",
+  "name": "TypeSpec",
+  "aliases": [
+    "TypeSpec 接口描述语言",
+    "Cadl"
+  ],
+  "type": "language",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "使用 OpenAPI emitter 时，将模型及 HTTP 协议绑定转换为所配置版本的 OpenAPI 描述。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "使用 JSON Schema emitter 时，把建模的数据形状输出为 JSON Schema 工件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "protocol-buffers",
+      "context": "选择 Protobuf emitter 及适用的模型命名空间时生成 Protocol Buffers 描述。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "用模型、操作与装饰器描述 API，再经 emitter 生成接口工件。",
+  "description": "TypeSpec 是面向 API 建模的语言与配套工具体系，使用模型、操作、接口、联合类型、模板和装饰器描述数据与服务。它是接口定义用途的 DSL，语法与 TypeScript 有相近之处，但不会因此成为可直接执行应用业务逻辑的 TypeScript 程序。可复用的模型和库把共同约定集中到描述层，编译器负责检查并提供结构化的语义模型。\n\nEmitter 根据模型和所选协议绑定产出工件，例如 OpenAPI、JSON Schema 或 Protocol Buffers；HTTP 库中的服务、路由与参数描述可以由 OpenAPI emitter 映射为相应的规范内容。不同 emitter 有不同支持范围，输出格式与规范版本应按配置核对。共享接口模型可作为生成器的输入，但输出规范、SDK、运行时校验和业务实现仍各有自己的工具与验证职责。\n\n## 参考\n\n- [TypeSpec：语言概览](https://typespec.io/docs/language-basics/overview/)\n- [TypeSpec：Emitter 机制](https://typespec.io/docs/extending-typespec/emitters-basics/)\n- [TypeSpec：OpenAPI 映射](https://typespec.io/docs/emitters/openapi3/openapi/)\n- [TypeSpec：OpenAPI emitter 范围](https://typespec.io/docs/emitters/openapi3/reference/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://typespec.io"
+}

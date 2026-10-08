@@ -1,0 +1,53 @@
+{
+  "id": "oak",
+  "name": "oak",
+  "aliases": [
+    "Oak Web 框架",
+    "@oak/oak"
+  ],
+  "type": "framework",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "http-middleware"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "http-routing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-context",
+      "context": "用每请求 oak Context 在中间件和路由处理间传递状态与请求响应操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "web-standard-http-handler",
+      "context": "在 serve/route 桥接路径中适配标准 Request 输入、Response 输出的业务处理函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-response",
+      "context": "需要复用标准响应时通过 ctx.response.with 接入，并遵守其覆盖和完成规则。"
+    }
+  ],
+  "summary": "用上下文、中间件与路由组织多运行时 HTTP 应用。",
+  "description": "oak 是受 Koa 和 Express 启发的中间件框架，最初用于 Deno，当前官方文档支持 Deno、Node.js、Bun 和 Cloudflare Workers 等路径。Application 组合中间件，Router 提供方法与路径匹配，ctx.request 与 ctx.response 是 oak 自己的包装对象，不能仅因同名就当作原生 Fetch 对象。\n\n其标准对象接入因路径而异：Deno 下 ctx.request.source 可访问来源 Request，Node 路径并不保证有这个来源对象；ctx.response.with 可采用标准 Response，并会覆盖此前 oak 响应设置。serve/route 等辅助入口还能把标准 Request 到 Response 的处理函数适配为 oak 中间件。\n\nWorkers 示例通过 app.fetch 处理入站请求，而不是监听端口；其他宿主可采用监听路径。静态文件、升级及其他功能应按具体目标文档确认，不能把 Deno 的全部特性直接承诺给所有宿主。应用可复用中间件结构，但仍需理解请求正文、异常和响应完成的生命周期。\n\n## 参考\n\n- [oak 官方网站](https://oakserver.org/)\n- [oak 官方源码与 API 说明](https://github.com/oakserver/oak)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://oakserver.org/"
+}

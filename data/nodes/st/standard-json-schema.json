@@ -1,0 +1,40 @@
+{
+  "id": "standard-json-schema",
+  "name": "Standard JSON Schema",
+  "aliases": [
+    "标准 JSON Schema 接口",
+    "StandardJSONSchemaV1"
+  ],
+  "type": "protocol",
+  "domains": [
+    "api-engineering",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "input 与 output 转换器生成调用方选择方言的 JSON Schema 文档。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "泛型接口暴露转换前后静态类型，并为消费者约定方法签名。"
+    }
+  ],
+  "summary": "统一类型化模式向 JSON Schema 导出的输入与输出接口。",
+  "description": "## 机制与应用\n\nStandard JSON Schema 定义 ~standard.jsonSchema.input 与 output，使工具用统一接口取得输入或输出对应的 JSON Schema。调用方指定 target 方言，接口还可携带输入输出的静态类型。库可由模式对象直接实现，也可由独立转换函数包装；这样文档和契约工具可以消费不同模式库的导出能力。\n\n规范约定转换接口，没有运行时 validate 方法的要求，也不是 JSON Schema 本身的新方言。实现应对不支持的目标报告错误；input 与 output 可能因默认值或转换而不同。自定义函数和非 JSON 值不一定能无损表达，导出时应核对具体库支持范围，不能仅凭接口兼容就假定转换保留全部校验语义。\n\n## 参考\n\n- [Standard JSON Schema：接口、目标与实现方式](https://standardschema.dev/json-schema)\n- [Standard Schema 项目：独立的接口族](https://standardschema.dev/)\n- [Zod：JSON Schema 转换边界](https://zod.dev/json-schema)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://standardschema.dev/json-schema"
+}

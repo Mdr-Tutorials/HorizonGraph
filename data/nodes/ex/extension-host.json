@@ -1,0 +1,38 @@
+{
+  "id": "extension-host",
+  "name": "Extension Host",
+  "aliases": [
+    "扩展宿主",
+    "编辑器扩展宿主"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nodejs",
+      "context": "VS Code 的本地及远程 Node.js 扩展宿主使用该运行时执行相应扩展入口；Web 宿主采用浏览器环境。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inter-process-communication",
+      "context": "在工作台和扩展执行位于不同进程或远程位置的实现中，交换扩展 API 请求与结果。"
+    }
+  ],
+  "summary": "负责激活和执行编辑器扩展的运行环境。",
+  "description": "扩展宿主负责按编辑器配置激活扩展、执行入口并提供与工作台协作的 API 环境。它把可执行扩展与界面组织解耦，具体进程和位置由编辑器实现决定；不是每个插件系统都采用同一种宿主设计。\n\nVS Code 区分本地 Node.js 宿主、Web 宿主以及远程 Node.js 宿主。扩展具有 main 或 browser 入口和位置偏好，编辑器结合可用宿主与能力选择运行位置；工作区扩展可以靠近远程源码和工具执行，界面相关扩展可以保留在客户端。\n\n独立扩展宿主有助于隔离扩展性能问题，但不等于文件或网络权限沙箱。当前 VS Code 的编码代理还可运行在独立 Agent Host，而旧会话可保留扩展宿主路径；不能把扩展运行环境与所有长期代理任务的宿主生命周期混为一体。\n\n## 参考\n\n- [Microsoft：扩展宿主的运行位置与环境](https://github.com/microsoft/vscode-docs/blob/main/api/advanced-topics/extension-host.md)\n- [VS Code：远程扩展与工作区执行架构](https://code.visualstudio.com/api/advanced-topics/remote-extensions)\n- [Microsoft：Agent Host 与扩展宿主的运行边界](https://github.com/microsoft/vscode-docs/blob/main/docs/agents/concepts/agent-host.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,44 @@
+{
+  "id": "texture-baking",
+  "name": "Texture Baking",
+  "aliases": [
+    "纹理烘焙",
+    "贴图烘焙",
+    "Mesh Map Baking"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uv-mapping",
+      "context": "将采样得到的表面信息写入目标纹理布局。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "保存可供材质在运行时读取的烘焙结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-material",
+      "context": "计算或承载要烘焙的颜色、表面与光照信息。"
+    }
+  ],
+  "summary": "将几何、材质或光照计算结果写入纹理的制作方法。",
+  "description": "纹理烘焙预先计算几何或着色信息，并把结果写入图像或其他可采样数据。常见产物包括高模到低模的法线贴图、环境遮蔽、曲率、颜色以及光照贴图，后续材质或工具可以读取这些结果。\n\n烘焙需要匹配源模型、目标模型、UV 与采样设置。接缝间距、投射笼、法线空间、颜色解释和输出通道会影响结果；把光照烘焙到纹理也会限制可变化的光照条件。它减少运行时部分计算，但不会自动解决网格复杂度、透明排序或所有动态光照问题。\n\n## 参考\n\n- [Blender Cycles 渲染烘焙](https://docs.blender.org/UATEST/manual/en/4.5/render/cycles/baking.html)\n- [Substance 3D Painter 烘焙机制](https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/baking/baking)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

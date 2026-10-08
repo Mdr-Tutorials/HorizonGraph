@@ -1,0 +1,41 @@
+{
+  "id": "request-body-limit",
+  "name": "HTTP Request Body Size Limit",
+  "aliases": [
+    "HTTP 请求体大小限制",
+    "请求体字节限制",
+    "Body Limit"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "security"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-message-body",
+      "context": "在接收上传、JSON 或流式输入时检查消息内容的声明或已读取字节数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-status-code",
+      "context": "拒绝超过内容限额的请求时，可使用 413 Content Too Large 表达失败原因。"
+    }
+  ],
+  "summary": "约束接收或读取的请求内容字节数，控制资源消耗。",
+  "description": "请求体限制设定允许接收的内容大小，可以先检查可用的 Content-Length，再在读取流时统计实际字节，超限则停止处理并返回适当错误。Hono bodyLimit 对有 Content-Length 的请求先检查该值，对没有该字段的请求读取流并判断大小，413 是表示内容过大的标准响应状态。\n\n声明长度和实际消费资源不是同一个量，具体中间件不能被描述成所有层次的完整上传防护。反向代理或平台可能先执行自身限额，压缩展开、JSON 深度、表单字段数与文件格式也需要另行限制。大小限制与单位时间请求频率限流分别处理单次内容规模和请求速率，不能互相替代。\n\n## 参考\n\n- [Hono：Body Limit 检查路径与平台限制](https://hono.dev/docs/middleware/builtin/body-limit)\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

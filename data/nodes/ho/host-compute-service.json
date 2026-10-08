@@ -1,0 +1,47 @@
+{
+  "id": "host-compute-service",
+  "name": "Host Compute Service",
+  "aliases": [
+    "宿主计算服务",
+    "HCS"
+  ],
+  "type": "tool",
+  "domains": [
+    "virtualization",
+    "containerization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "windows-ecosystem",
+    "virtualization-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "windows"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "host-network-service",
+      "context": "Windows 容器创建过程中，与 HNS 协作将计算系统的虚拟网卡/端点连接到相应网络，计算和网络生命周期职责分别保留。"
+    }
+  ],
+  "summary": "通过计算系统接口管理 Windows 虚拟机与容器生命周期的服务。",
+  "description": "Host Compute Service（HCS）是 Windows 的宿主计算管理服务，容器和受管理虚拟机工具通过相关 Host Compute System API 请求创建和控制计算系统。计算系统代表 API 管理的一台虚拟机或一个容器，API 以句柄和配置描述操作它。服务、原生 API 与上层包装库属于不同身份；本节点记录服务能力，不把某个 Go SDK 或 runhcs 命令行当成 HCS 本身。\n\nHCS 接口支持计算系统的创建、启动、关闭和终止，以及系统内进程的启动与交互；虚拟机路径另有暂停、保存和恢复等操作。配置文档使用 JSON schema，异步操作和事件通知描述请求完成及状态变化。计算系统结束后，其运行期对象会被清理，应用要再次启动工作负载须建立新的计算系统，而不是把旧句柄看作永久虚拟机资源。\n\n客户端仍需准备磁盘、网络和必要通信资源，HCS 的创建操作不会自动完成全部宿主环境配置。Windows 容器平台通过 HCS 管理执行，普通 WSL 2 启动流程也由 Windows 服务经 HCS 创建其虚拟机；网络端点配置则与 HNS 等能力配合。HCS 的管理职责不意味着它是 Hypervisor，也不能由共享服务推导所有上层工具采用相同的虚拟机生命周期或容器粒度。\n\n## 参考\n\n- [Microsoft：Host Compute System overview](https://learn.microsoft.com/en-us/virtualization/api/hcs/overview)\n- [Microsoft：Host Compute System API reference](https://learn.microsoft.com/en-us/virtualization/api/hcs/reference/apioverview)\n- [WSL 项目：通过 HCS 创建 WSL 2 VM](https://wsl.dev/technical-documentation/boot-process/)\n- [Microsoft：Windows 容器的 HCS/HNS 配合](https://learn.microsoft.com/en-us/virtualization/windowscontainers/container-networking/architecture)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "abbreviation": "HCS",
+  "official_site": "https://learn.microsoft.com/en-us/virtualization/api/hcs/overview"
+}

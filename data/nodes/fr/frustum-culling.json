@@ -1,0 +1,38 @@
+{
+  "id": "frustum-culling",
+  "name": "Frustum Culling",
+  "aliases": [
+    "视锥剔除",
+    "视域剔除"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "camera-projection",
+      "context": "从当前相机视图和投影确定可见视域的边界平面。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-transform",
+      "context": "使对象包围体与视域边界在一致坐标空间内进行相交测试。"
+    }
+  ],
+  "summary": "排除可证明不与相机视域相交的对象。",
+  "description": "视锥剔除利用相机可见视域的边界平面，排除在视域外的对象，避免提交无关绘制工作。透视相机常形成截头锥体，正交相机形成盒状视域；实际测试通常采用对象的包围球或包围盒，而非逐三角形检查。\n\n包围体应与相机平面处于同一坐标空间，或正确变换后测试。保守测试允许保留少量不可见对象，避免误删可见部分；动态、骨骼或着色器变形几何若超出旧包围体，错误边界可能造成对象突然消失。\n\n它适合大型场景和可视化的候选过滤，但并不判断对象是否被另一个对象遮挡，也不同于背面剔除。过大合并批次降低对象级剔除粒度；判断成本与节省的绘制工作需要结合场景衡量。\n\n## 参考\n\n- [Three.js Frustum](https://threejs.org/docs/pages/Frustum.html)\n- [Three.js Object3D](https://threejs.org/docs/pages/Object3D.html)\n- [PixiJS Performance Tips](https://pixijs.com/8.x/guides/concepts/performance-tips)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

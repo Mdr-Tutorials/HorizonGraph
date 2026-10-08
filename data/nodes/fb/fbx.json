@@ -1,0 +1,45 @@
+{
+  "id": "fbx",
+  "name": "FBX",
+  "aliases": [
+    "Filmbox",
+    "FBX 资产格式"
+  ],
+  "type": "protocol",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "graphics-asset-format"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-geometry",
+      "context": "在三维交换文件中传递模型网格及相关属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "skeletal-animation",
+      "context": "在受支持的导入导出工作流中交换角色骨架与动画内容。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "autodesk",
+      "context": "Autodesk 维护 FBX 技术及其三维交换格式，并提供相关 SDK；此边不表示该公司为格式的原始发明者。"
+    }
+  ],
+  "summary": "用于模型、场景与动画交换的 Autodesk 三维格式。",
+  "description": "FBX 是用于三维资产交换的文件格式，与 Autodesk 的 FBX 技术及 SDK 配合使用。制作工具和转换程序可以读取、写入或转换模型、场景与动画等内容，常用于内容工具与游戏制作管线之间传递资产。\n\n交换结果取决于文件版本、导入导出选项和接收工具的支持。坐标、单位、骨架、动画与材质需要在导入后检查，工具专用控制和着色能力未必原样保留。FBX 文件格式与处理它的 FBX SDK 是不同身份，不能把格式本身当成内容编辑器。\n\n## 参考\n\n- [Autodesk FBX SDK](https://forge.autodesk.com/developer/overview/fbx-sdk)\n- [Maya 建模、绑定与管线功能](https://www.autodesk.com/uk/products/maya/features.3d-modeling)\n- [Autodesk 官方词汇表中的 FBX 维护归属](https://download.autodesk.com/global/docs/showcase2014/en_us/files/GUID-34AB8C78-EDA1-46E2-8AD8-B0A7E4AF13F5.htm)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://forge.autodesk.com/developer/overview/fbx-sdk"
+}

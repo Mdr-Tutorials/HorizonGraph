@@ -1,0 +1,34 @@
+{
+  "id": "browser-context-isolation",
+  "name": "Browser Context Isolation",
+  "aliases": [
+    "浏览器上下文隔离",
+    "浏览器测试隔离",
+    "Browser Session Isolation"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-session",
+      "context": "将任务的页面和存储状态置于明确的会话生命周期内，并在边界创建或清理独立容器。"
+    }
+  ],
+  "summary": "分离浏览器状态容器以减少任务或测试间干扰。",
+  "description": "浏览器上下文隔离通过分离 cookie、存储及相关浏览器状态，使不同测试或账号交互拥有各自状态容器。Playwright 的 BrowserContext 类似独立的隐私配置环境，可在同一浏览器进程中创建多个上下文；Puppeteer 也提供对应管理接口，隔离不必意味着每个任务都启动一台虚拟机。\n\n从干净上下文开始与在旧上下文中清理状态是不同策略，清理遗漏会影响执行顺序和并行结果。持久配置文件还具有不同生命周期：Antigravity IDE 官方说明使用与日常 Chrome 分开的配置文件，但该配置文件中的登录会保留到后续使用；这不是每次动作后自动清空状态的保证。\n\n隔离范围应按具体实现核对，不可推导服务端数据库、账号权限或文件系统也已分离。某些框架仅清理部分存储，重用认证状态也会主动恢复数据。它是一种测试与会话状态管理机制，完整安全沙箱和可复现执行环境还需要额外的操作系统、网络及后端措施。\n\n## 参考\n\n- [Playwright：Isolation](https://playwright.dev/docs/browser-contexts)\n- [Puppeteer：Browser management](https://pptr.dev/guides/browser-management)\n- [Antigravity IDE：Separate Chrome profile](https://antigravity.google/docs/ide/separate-chrome-profile)\n- [Cypress：Test isolation](https://docs.cypress.io/app/core-concepts/test-isolation)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

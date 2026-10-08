@@ -1,0 +1,35 @@
+{
+  "id": "firebase-js-sdk",
+  "name": "Firebase JavaScript SDK",
+  "aliases": [
+    "Firebase Web SDK",
+    "Firebase JS SDK"
+  ],
+  "type": "library",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "node-js-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "供 JavaScript 应用访问 Firebase 服务的客户端 SDK。",
+  "description": "Firebase JavaScript SDK 是 Firebase 官方客户端库，发行在 firebase npm 包及官方 CDN，用于 JavaScript 应用接入认证、数据库、存储等具体服务。此节点限定 Web 与 JavaScript 实现，不能用泛称 Firebase SDK 将 Android、Apple、Admin SDK 或整个 Firebase 平台合并为同一个库。\n\nSDK 使用应用初始化和按服务导入的 API，当前模块化 API 可以配合构建工具进行 tree-shaking。应用配置用于定位项目和注册应用，不应当作可以绕过后端规则的授权凭据；读取和写入数据仍受所调用服务的身份、规则和权限约束。兼容命名空间 API 与模块化 API 的导入方式也需要区分。\n\n库可以在受支持的 JavaScript 环境中使用，但不同服务在浏览器、服务端或其他运行环境的支持并不相同。官方代码仓库的构建所需 Node.js、Java 和包管理工具属于 SDK 开发流程要求，不能一概写成每个浏览器应用的运行硬依赖。Firebase Studio 的退出只涉及开发环境，不会使独立发布的客户端库与 Firebase 服务同步失效。\n\n## 参考\n\n- [Firebase：JavaScript 应用初始化与模块化接入](https://firebase.google.com/docs/web/setup)\n- [Firebase：JavaScript SDK 官方实现与环境边界](https://github.com/firebase/firebase-js-sdk)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/firebase/firebase-js-sdk"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "hypothesis",
+  "name": "Hypothesis",
+  "aliases": [
+    "Hypothesis 性质测试库",
+    "Python 性质测试库"
+  ],
+  "type": "library",
+  "domains": [
+    "programming-languages",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem",
+    "python-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "property-based-testing"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "用策略生成 Python 测试输入，并缩减、保存失败样例。",
+  "description": "Hypothesis 是 Python 的性质测试库，通过 strategies 描述输入空间，以 given 装饰器把生成输入传给测试函数，探索手写示例之外的边界与组合。策略可以组合、映射或定制以满足领域约束，断言则表达结果应该具备的性质。Python 类型提示能够辅助部分策略构造，但不会自动提供完整业务性质，也不会把任意函数变成已验证程序。\n\nHypothesis 会缩减生成的失败样例，并把失败保存到示例数据库以便后续重放；也可用 example 显式保留重要回归输入。数据库与复现编码可能随版本或测试代码变化而失效，因此不能只把本地缓存当作永久测试依据。显式 example 是固定样例，与生成器产生的输入在缩减行为上也有区别。\n\n除了单次函数输入，Hypothesis 提供状态测试机制，以规则、前置条件和不变量描述操作序列，检验简化模型与系统状态。它能配合 pytest、unittest 或直接调用测试函数，pytest 是一种集成方式。输入策略、环境隔离与断言质量决定测试能够发现什么；有限测试没有找到反例，不等于形式证明性质对所有输入都成立。\n\n## 参考\n\n- [Hypothesis：官方文档](https://hypothesis.readthedocs.io/en/latest/)\n- [Hypothesis：失败重放与示例数据库](https://hypothesis.readthedocs.io/en/latest/tutorial/replaying-failures.html)\n- [Hypothesis：规则与不变量的状态测试](https://hypothesis.readthedocs.io/en/latest/stateful.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://hypothesis.readthedocs.io/"
+}

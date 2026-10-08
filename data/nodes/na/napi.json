@@ -1,0 +1,38 @@
+{
+  "id": "napi",
+  "name": "NAPI",
+  "aliases": [
+    "New API",
+    "Linux NAPI"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "interrupt",
+      "context": "普通中断驱动的 NAPI 接收路径由设备 IRQ 安排轮询，并在处理期间协调屏蔽和重新启用中断；忙轮询并非要求每轮先触发 IRQ。"
+    }
+  ],
+  "summary": "Linux 网络驱动中按预算轮询处理收发工作的机制。",
+  "description": "NAPI 是 Linux 网络驱动的事件处理与轮询机制。典型接收路径由中断安排 NAPI 轮询，驱动暂时屏蔽相应中断，在一次调用的接收预算内处理工作；队列清空并完成轮询后，再按驱动规则重新开放通知。\n\n预算、完成状态与重新启用中断的顺序需要遵守内核接口约束。NAPI 实例、设备队列和中断并不在所有设备上严格一一对应，发送完成与接收预算也有不同规则，因此不能套用一个网卡布局推断所有驱动行为。\n\n忙轮询和线程化 NAPI 是可选调度方式，需要在等待、CPU 使用和负载间权衡。无论通知方式如何，NAPI 仍属于 Linux 内核网络路径，不能因为出现 poll 一词就把它归为用户态内核旁路。\n\n## 参考\n\n- [Linux NAPI 调度、预算与中断处理](https://docs.kernel.org/networking/napi.html)\n- [Linux RSS、RPS、RFS 与队列扩展](https://docs.kernel.org/networking/scaling.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

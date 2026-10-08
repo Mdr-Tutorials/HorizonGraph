@@ -11,7 +11,9 @@
   ],
   "type": "concept",
   "domains": [
-    "quantitative-finance"
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
   ],
   "relations": [
     {
@@ -22,13 +24,21 @@
       "relation_type": "can_bias",
       "target_id": "backtesting",
       "context": "若历史决策使用当时尚不可得的数据，回测的决策与表现可能失真；该边说明失真机制，并不表示所有回测都存在前视偏差。"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "quantitative-factor",
+      "context": "因子变量或拟合参数若使用决策时尚不可得的信息，历史信号质量和风险暴露估计可能失真。"
     }
   ],
   "summary": "历史评估使用决策当时尚不可获得的信息而造成的结果偏差。",
-  "description": "前视偏差发生在历史模拟或验证使用了决策时尚不可获得的信息时。例如，把财报所属期间的结束日当成公告可得日，或用完整时段的数据处理结果影响更早的决策，都可能让策略获得现实中没有的信息。\n\n检查时需要区分数据事件时间、公开时间与系统实际获取时间，并让特征计算和交易决策遵守时间顺序。“未来函数”是量化讨论中的常见说法，但问题也可能来自数据修订或处理管线，不能仅靠检查函数名称排除。\n\n参考：[QuantConnect：回测与实盘差异](https://www.quantconnect.com/docs/v2/writing-algorithms/live-trading/reconciliation)。",
+  "description": "前视偏差是历史决策或评估使用当时尚不可得的信息而产生的失真。财报所属期结束不能代替实际公告时间，宏观数据最终修订值不能当成更早初值；今日成分股、后见价格处理或用完整区间形成的特征也可能把未来信息引入过去决策。\n\n审查需区分事件时间、首次公开、修订和系统接收时间，并沿数据、特征、拟合及订单整个流程检查。例如柱线收盘才确定的数值不可在该柱开始时使用，预处理参数不能在全体训练测试数据上拟合。数据时间前沿只约束所声明的时间，错误标注的自定义数据仍可穿过限制。\n\n时点版本、因果窗口与明确发布滞后有助于降低问题，但近似滞后不等于恢复真实可用记录；公司行动、成员和缺失样本也要单独核查。前视偏差可以与数据泄露、幸存者偏差及回测过拟合并存，按时间运行且曲线稳定不足以排除它们。应记录可用时间规则并对照历史公告与实际输入。\n\n## 参考\n\n- [圣路易斯联储：FRED / ALFRED Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html)\n- [QuantConnect：回测与实盘的对照及前视风险](https://www.quantconnect.com/docs/v2/writing-algorithms/live-trading/reconciliation)\n- [scikit-learn：训练、测试与数据泄露](https://scikit-learn.org/stable/common_pitfalls.html)",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-20",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.quantconnect.com/docs/v2/writing-algorithms/live-trading/reconciliation"
+  "official_site": "https://www.quantconnect.com/docs/v2/writing-algorithms/live-trading/reconciliation",
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ]
 }

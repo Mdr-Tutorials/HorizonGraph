@@ -2,20 +2,79 @@
   "id": "containerd",
   "name": "containerd",
   "display_primary": "containerd",
-  "aliases": ["容器运行时"],
+  "aliases": [],
   "type": "tool",
-  "ecosystems": ["cloud_native", "kubernetes-ecosystem"],
-  "domains": ["cloud-infrastructure", "devops"],
+  "ecosystems": [
+    "cloud_native",
+    "kubernetes-ecosystem",
+    "container-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops",
+    "containerization"
+  ],
   "abstraction_level": "framework_library",
   "relations": [
-    { "relation_type": "is_instance_of", "target_id": "tool" },
-    { "relation_type": "implements", "target_id": "oci" },
-    { "relation_type": "developed_by", "target_id": "cncf" }
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "container-runtime"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci-image-spec",
+      "context": "按支持的 OCI 镜像结构解析内容、管理镜像并准备根文件系统；平台选择与 snapshotter 配置仍由实际部署决定。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci-distribution-spec",
+      "context": "作为 registry 客户端访问 OCI Distribution 兼容仓库，完成镜像内容传输与管理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-runtime-spec",
+      "context": "配置 OCI 执行器时生成和传递 bundle 及运行配置；实际容器进程的低层执行由相应 runtime shim 与执行器承担。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "cri",
+      "context": "启用并正确配置 CRI 插件时提供 Kubernetes 所需的容器运行接口；插件可被发行包或部署配置禁用。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "runc",
+      "context": "在常见 Linux OCI 执行路径中，通过相应 runtime shim 调用 runc；不排除其他执行器。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "hcsshim",
+      "context": "在 Windows 容器执行路径中使用 Microsoft 平台组件衔接 Windows 容器功能。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "kubernetes",
+      "context": "Kubernetes kubelet 经已启用并正确配置的 containerd CRI 接入管理工作节点容器。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cncf",
+      "context": "CNCF 正式接纳并托管 containerd，提供中立项目治理与生态支持；不表示基金会承担原始代码研发。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "docker-inc",
+      "context": "containerd 从 Docker 的核心容器运行时工作拆出；此边表达早期研发来源，当前由开放项目社区维护。"
+    }
   ],
-  "summary": "管理容器生命周期的工业级核心运行时。",
+  "summary": "供上层系统使用的容器生命周期守护进程，支持 Linux 与 Windows。",
   "importance": 5,
   "official_site": "https://containerd.io/",
-  "last_reviewed": "2026-09-08",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "containerd 是面向上层容器系统的守护进程，提供镜像传输与存储、容器执行监督、存储和网络连接等生命周期能力。它支持 Linux 和 Windows，设计重点是作为可嵌入大型系统的基础组件；Docker Engine 或 Kubernetes 可以在其上组织用户工作流。它并不自动提供完整的镜像构建、桌面集成或集群调度产品。\n\n内容存储保存按内容地址组织的镜像数据，snapshotter 将层应用为可挂载文件系统，再建立供实例使用的可写快照。容器的持久元数据与正在运行的任务也属于不同对象。实际创建和监督进程通过 runtime shim 与执行器衔接：常见 Linux 路径采用 runc，Windows 路径依靠 hcsshim 等平台组件，其他 shim 或存储插件也可以替换具体后端，不能把一种组合写成整个项目的唯一实现。\n\ncontainerd 支持 OCI 镜像结构和兼容 OCI Distribution 的仓库，下载镜像、解包与生成运行配置属于不同阶段。调用 OCI 执行器时使用 OCI bundle 与配置语义，底层运行规范的实际执行由相应后端承担。作为 Kubernetes 后端还需启用与配置 CRI 接入；containerd 的服务或镜像可用，并不等于其 CRI 插件已启用或节点配置正确。\n\n项目从 Docker 的核心运行时工作拆出，Docker 在 2016 年公开独立组件计划，CNCF 于 2017 年接纳 containerd，项目于 2019 年毕业。原始研发来源、基金会托管和当前维护者贡献是不同事实：CNCF 提供中立项目治理与生态支持，代码发展由开放的项目社区推进，不能把基金会托管直接记作基金会亲自研发。\n\n## 参考\n\n- [containerd：职责、平台与仓库支持](https://github.com/containerd/containerd/blob/main/README.md)\n- [containerd：内容、镜像与快照流程](https://github.com/containerd/containerd/blob/main/docs/content-flow.md)\n- [containerd：runtime v2 与 shim](https://raw.githubusercontent.com/containerd/containerd/main/docs/runtime-v2.md)\n- [containerd：插件机制](https://github.com/containerd/containerd/blob/main/docs/PLUGINS.md)\n- [Kubernetes：containerd CRI 配置](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)\n- [Docker：containerd 拆分起源](https://www.docker.com/blog/introducing-containerd/)\n- [CNCF：2017 年接纳 containerd](https://www.cncf.io/announcements/2017/03/29/containerd-joins-cloud-native-computing-foundation/)\n- [CNCF：containerd 项目与毕业记录](https://www.cncf.io/projects/containerd/)"
 }

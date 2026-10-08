@@ -1,0 +1,29 @@
+{
+  "id": "task-success-rate",
+  "name": "Task Success Rate",
+  "aliases": [
+    "任务成功率",
+    "任务完成率",
+    "TSR"
+  ],
+  "type": "metric",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "在指定任务集合和验收规则下统计成功试验的比例。",
+  "description": "任务成功率是符合指定成功条件的试验数除以纳入口径的试验数。成功条件可以是目标数据库状态、文件内容或任务所需测试全部通过，不能仅由智能体的最后一条回复决定。定义指标时还需写清统计单位是任务还是任务的重复试验。\n\n简单试验平均让每条运行获得相同权重；先在每个任务内平均再聚合则可让每个任务获得相同权重。任务数、重复次数和领域权重不均时，两者可能不同。超时、不可行任务与环境故障的处理也应事先规定，不能仅删除失败运行来提高比例。\n\n成功率必须随任务版本、初始状态、预算及判定器一起解释。部分进度分数与严格完成率衡量不同结果；OSWorld 2.0 对检查点进度和全部满足的二元完成另设口径。有限样本比例也不等于未来每次运行都能成功。\n\n## 参考\n\n- [WebArena 原论文：任务与功能性判定](https://arxiv.org/html/2307.13854v3)\n- [τ-bench 原论文：工具、用户模拟与 pass^k](https://arxiv.org/html/2406.12045v1)\n- [OSWorld 2.0：长流程任务与检查点评分](https://arxiv.org/html/2606.29537v1)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

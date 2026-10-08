@@ -1,0 +1,34 @@
+{
+  "id": "http-header",
+  "name": "HTTP Header Field",
+  "aliases": [
+    "HTTP 字段",
+    "HTTP 头字段",
+    "HTTP Header"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "http"
+    }
+  ],
+  "summary": "随请求或响应携带消息元数据与协议控制信息。",
+  "description": "HTTP 字段以名称和值表达内容类型、缓存控制、认证、条件请求等元数据；字段名称不区分大小写，字段值的语法和组合规则由各字段定义。某些字段可以在内容之后作为 trailer 发送，而 HTTP/2 与 HTTP/3 的伪头字段承担另一类控制信息，不是可任意添加的普通字段。\n\n多个同名字段不能一律按通用逗号规则处理，Set-Cookie 等需要保留其专门语义。Fetch Headers 是操作字段列表的接口容器，并通过 guard 限制部分修改；浏览器脚本能读取哪些跨源响应字段也受 CORS 规则约束。应用字段、传输帧结构和接口对象应分别理解。\n\n## 参考\n\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)\n- [WHATWG：Fetch 标准](https://fetch.spec.whatwg.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

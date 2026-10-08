@@ -1,0 +1,38 @@
+{
+  "id": "multi-stage-build",
+  "name": "Multi-stage Build",
+  "aliases": [
+    "多阶段构建",
+    "Multi-stage Build"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dockerfile",
+      "context": "Docker 多阶段构建使用多个 FROM、阶段名称和 COPY --from 表达环境划分及产物传递。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image",
+      "context": "各 FROM 阶段可以使用基础镜像或先前阶段镜像；FROM scratch 是空基础的特殊情况。"
+    }
+  ],
+  "summary": "在独立构建阶段间传递选定产物以形成最终镜像",
+  "description": "## 机制与边界\n\n多阶段构建把镜像构建划分为多个具有各自基础环境的阶段。Dockerfile 中每个 FROM 开始一个阶段，可用 AS 命名；后续阶段可通过 COPY --from 取得先前阶段的指定文件。典型做法是在含编译器的阶段生成应用，再将必要产物复制进适合运行应用的最终阶段。\n\n阶段之间的内容传递由显式依赖决定。仅从构建阶段复制可执行文件时，该阶段的编译器、包缓存和未复制的中间文件不会自动进入最终镜像；若最终阶段以先前阶段作为 FROM 基础，则会继承它的镜像内容。阶段也可以复用外部镜像，scratch 则表示从空基础开始，不能理解为必须从注册表下载的普通镜像。\n\n命名阶段和指定构建目标便于保留开发、测试或发布所需的不同输出，也使依赖关系更清晰。减少最终镜像内容有助于缩小传输和运行环境，但复制产物本身不保证它能执行：目标架构、动态链接库和必要配置仍需匹配。是否复用阶段结果以及执行哪些阶段，还取决于构建器及其依赖分析和缓存行为。\n\n## 参考\n\n- [Docker：Multi-stage Builds](https://docs.docker.com/build/building/multi-stage/)\n- [Dockerfile：FROM 与 COPY --from](https://docs.docker.com/reference/dockerfile/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

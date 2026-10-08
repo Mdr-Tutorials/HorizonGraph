@@ -1,0 +1,28 @@
+{
+  "id": "indirect-prompt-injection",
+  "name": "Indirect Prompt Injection",
+  "aliases": [
+    "间接提示注入"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "把恶意指令藏在模型读取的外部数据或工具内容中。",
+  "description": "间接提示注入通过模型会读取的外部来源携带指令，例如页面、文档、仓库文件或工具返回。攻击者不必直接控制用户的任务输入，只需影响被读取的材料，并诱使模型把材料中的要求当作对自身行为的控制。正常外部文档包含操作说明，并不自动构成攻击，应结合操纵意图和执行路径判断。\n\n在带工具的智能体中，注入可能改变下一次工具参数、诱导读取秘密、选择外传目标或跳过必要检查。是否能造成实际影响取决于模型行为、可用工具和资源授权；RAG、浏览器或 MCP 只是可能携带内容的路径，协议或检索机制本身不等于恶意指令。\n\n研究和防护应记录可信任务、攻击者可控制的来源以及最终副作用，不能仅统计模型是否复述了某句话。来源标识、权限收窄、调用前审批及执行层校验可以组合使用，但没有某个通用文本过滤规则能够据此证明所有间接注入失效。NIST 的劫持评估属于具体实验，而非对任一产品安全性的认证。\n\n## 参考\n\n- [OWASP LLM01：Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)\n- [NIST：AI Agent Hijacking 评估研究](https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations)\n- [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

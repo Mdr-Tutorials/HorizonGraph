@@ -1,0 +1,37 @@
+{
+  "id": "kx",
+  "name": "KX",
+  "aliases": [
+    "KX Systems",
+    "Kx Systems",
+    "KX Software"
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "market-data-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "kdb-plus"
+    }
+  ],
+  "summary": "提供时序数据与金融市场分析软件的供应商。",
+  "description": "KX 是提供时序数据基础设施与分析软件的技术供应商，kdb+ 及其相关产品构成公开产品组合的基础。本节点指供应商组织，不指数据库进程、q 语言或某个内部交易策略。\n\nkdb+ 将实时和历史市场数据用于查询、研究、执行分析及风险或监督工作流。供应商提供数据计算能力，具体机构仍需设计行情接入、数据质量、策略验证和交易接入；采用同一数据库不会自动决定交易频率或收益性质。\n\n图谱分别保留 KX 组织、kdb+ 数据库产品以及 q/K 语言身份。产品与实现语言可以紧密配合，但不应因同一品牌把商业许可、语言规范和计算引擎合并；性能比较也需要结合硬件、数据结构、查询和输入输出边界。\n\n## 参考\n\n- [KX 公司与时序数据业务](https://kx.com/about/)\n- [KX kdb+ 产品](https://kx.com/products/kdb/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://kx.com/"
+}

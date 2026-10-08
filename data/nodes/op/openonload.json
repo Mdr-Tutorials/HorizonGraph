@@ -1,0 +1,60 @@
+{
+  "id": "openonload",
+  "name": "OpenOnload",
+  "aliases": [
+    "Onload",
+    "AMD OpenOnload"
+  ],
+  "type": "tool",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "kernel-bypass"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "socket",
+      "context": "以用户态库拦截兼容的 socket 调用，为选定网络操作提供加速或回退路径。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "tcp",
+      "context": "由用户态协议栈处理受支持的 TCP 连接与传输状态。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "udp",
+      "context": "由用户态协议栈处理受支持的 UDP 数据报操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ef-vi",
+      "context": "在支持的原生网卡加速后端中调用 ef_vi 访问设备队列与事件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "af-xdp",
+      "context": "在官方源码中尚非发布质量的社区 AF_XDP 后端中使用该 socket 接口，不表示原生后端也依赖 AF_XDP。"
+    }
+  ],
+  "summary": "通过用户态 TCP/UDP 栈与套接字拦截加速兼容应用。",
+  "description": "OpenOnload 是 AMD 维护的网络加速软件，包含用户态 TCP/UDP 栈、库与 onload 启动工具。它通过拦截兼容的 socket 调用，将合适流量放入加速路径，使部分现有应用无需改为原始包处理模型；未支持的操作或流量可能继续走内核路径。\n\n原生加速路径使用 ef_vi 访问支持的网卡资源。当前官方源码也包含 AF_XDP 后端以面向更多网卡，但该后端被说明为社区工作中的实现、尚非发布质量；不能据此宣称所有网卡、所有功能或所有发行版已获得等价正式支持。\n\n应用兼容性取决于实际 socket 操作、协议特性、网卡、驱动与软件版本。应区分用户态协议栈加速、ef_vi 原始帧 API 和 AF_XDP 接口，并以运行负载核验回退、隔离、可观测性与尾延迟；OpenOnload 不是高频交易的全局必需组件。\n\n## 参考\n\n- [AMD OpenOnload 官方源码与后端支持说明](https://github.com/Xilinx-CNS/onload)\n- [OpenOnload ef_vi API 使用与安全说明](https://github.com/Xilinx-CNS/onload/blob/master/src/onload/distfiles/README.ef_vi)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/Xilinx-CNS/onload"
+}

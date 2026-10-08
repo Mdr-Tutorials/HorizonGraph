@@ -1,0 +1,43 @@
+{
+  "id": "polygon-modeling",
+  "name": "Polygon Modeling",
+  "aliases": [
+    "多边形建模",
+    "Polygonal Modeling"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-geometry",
+      "context": "制作供渲染使用的顶点、拓扑与表面属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uv-mapping",
+      "context": "为图像纹理建立表面采样坐标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "retopology",
+      "context": "在雕刻或扫描模型基础上重建更适合后续使用的拓扑。"
+    }
+  ],
+  "summary": "用顶点、边与面构造三维对象表面的建模方法。",
+  "description": "多边形建模通过编辑顶点、边和面构造网格表面，常见操作包括挤出、倒角、切分与合并。建模工具可以编辑三角面、四边面或更多边的面；实时渲染交付常把面转换成三角形。\n\n拓扑结构影响轮廓、表面法线、UV 接缝和动画变形。制作阶段方便修改的拓扑不一定直接适合最终交付；导出时的三角化、属性接缝和硬边可能改变实际顶点数量，因此需要观察导出后的网格。\n\n## 参考\n\n- [Maya 多边形建模](https://help.autodesk.com/cloudhelp/2023/ENU/Maya-Modeling/files/GUID-7941F97A-36E8-47FE-95D1-71412A3B3017.htm)\n- [Khronos glTF 2.0 规范](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

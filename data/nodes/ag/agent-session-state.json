@@ -1,0 +1,26 @@
+{
+  "id": "agent-session-state",
+  "name": "Agent Session State",
+  "aliases": [
+    "智能体会话状态"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "保存任务变量、阶段和中间结果的运行时状态。",
+  "description": "智能体会话状态是运行时保存的任务变量、中间结果、阶段标记与配置等数据，用于决定后续步骤。它可以包含结构化字段，并非只是聊天文本；状态中保存了某个值，也不代表该值已经进入模型输入，读取与上下文构造仍由应用或代理逻辑负责。\n\n状态作用域依实现而定。ADK 区分会话状态、用户和应用共享状态，以及调用结束后丢弃的临时状态；通过 ToolContext 或 CallbackContext 形成的增量，需要由运行时处理事件并提交服务。其他框架可以采用不同名称、数据模型与提交边界。\n\n持久后端通常要求状态可序列化，较大二进制文件可以另存为工件并在状态中保留引用。并发代理写入共享字段时，需要约定所有者、合并或同步策略；本地变量已经改变与服务已经保存是两件事，应按具体运行时的提交规则判断。\n\n## 参考\n\n- [ADK state scopes and updates](https://adk.dev/sessions/state/)\n- [ADK runtime event loop](https://adk.dev/runtime/event-loop/)\n- [Microsoft Agent Framework sessions](https://learn.microsoft.com/en-us/agent-framework/concepts/agents/conversations/session)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

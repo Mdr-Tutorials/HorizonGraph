@@ -5,23 +5,40 @@
   "type": "tool",
   "ecosystems": [
     "llm-agent-ecosystem",
-    "editor-ide-ecosystem"
+    "editor-ide-ecosystem",
+    "ai-software-engineering-ecosystem"
   ],
   "domains": [
     "devops",
-    "machine-learning"
+    "machine-learning",
+    "ai-assisted-software-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-rule",
+      "context": "根据项目、全局及显式 instructions 配置加载工作指导；兼容文件回退按文档优先级处理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "需要外部工具时连接配置的 MCP 服务器，实际工具调用继续受 permission 规则控制。"
     }
   ],
-  "summary": "开源终端编程 Agent，社区驱动的 Claude Code 替代。",
+  "summary": "具备终端、桌面及编辑器入口的可配置开源编码代理。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://opencode.ai"
+  "official_site": "https://opencode.ai",
+  "description": "OpenCode 是开源编码代理，当前官方文档提供终端交互、桌面应用和 IDE 扩展等入口。它可读取仓库、生成计划并使用工具修改代码或运行命令，模型提供方按配置选择；本节点记录具体工具项目，不把 OpenCode 当作某种通用开源代码称谓。Windows 文档建议 WSL 的使用路径不表示每种平台都依赖 WSL。\n\n项目 AGENTS.md、全局指导和配置中的 instructions 为任务提供规则；某些 Claude Code 文件约定可作为兼容回退，优先级由文档明确规定。规则提供模型工作指导，工具权限另由 permission 配置决定。Plan 与 Build 等角色组织不同工作方式，但角色标签不应替代对实际编辑、shell 和外部目录权限的检查。\n\n权限规则将动作解析为 allow、ask 或 deny，还能根据输入模式限定操作；自动批准模式也不解除显式 deny。配置 MCP 服务器可增加工具，代码仓库、远端服务和会话的访问范围仍由配置及凭据限制。OpenCode 适合在可见执行反馈下开展修改或审查，完成判断应检查生成差异与测试结果，而不是把执行多步任务当作没有人为边界的自动开发。\n\n## 参考\n\n- [OpenCode：当前入口、规划与执行](https://opencode.ai/docs/)\n- [OpenCode：规则加载与兼容回退](https://opencode.ai/docs/rules/)\n- [OpenCode：allow、ask、deny 与自动模式](https://opencode.ai/docs/permissions/)\n- [OpenCode：MCP 服务器](https://opencode.ai/docs/mcp-servers/)"
 }

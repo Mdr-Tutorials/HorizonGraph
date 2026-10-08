@@ -1,0 +1,31 @@
+{
+  "id": "order-to-trade-ratio",
+  "name": "Order-to-trade Ratio",
+  "aliases": [
+    "报撤成交比",
+    "订单成交比",
+    "OTR",
+    "未执行订单与交易比率"
+  ],
+  "type": "metric",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    }
+  ],
+  "summary": "以明确计数和窗口衡量报单活动相对成交的密度。",
+  "description": "报撤成交比衡量订单或交易消息活动相对于已成交活动的密度。其名称并不保证统一公式：需要说明分子是否包含报单、修改、撤单，分母是成交笔数、成交订单数或成交量，以及工具、账户、场所和时间窗口；零成交情况下的处理也必须由采用该指标的规则定义。\n\n欧盟Regulation 2017/566为相应电子交易系统规定未执行订单与交易比率，订单输入包括提交、修改和取消，按数量与笔数分别计算“总订单/总交易−1”，并按参与者及金融工具观察。CME现行Messaging Efficiency Program则以消息类别加权评分和产品组成交量构造Volume Ratio；其2026文档还区分时段、产品组和独立的过量消息规则，两种口径不能直接互换。\n\n高比率可以提示消息负载、报价撤改密度或失序风险，却不单独证明spoofing、layering或非法高频交易。它也不是中国证券市场单账户每秒300或单日20000申报加撤单笔数的识别阈值。比较策略或制定控制前，应同时报告公式、样本范围和成交条件，避免把低流动性导致的分母变化误当成交易意图。\n\n## 参考\n\n- [EUR-Lex：Regulation (EU) 2017/566，未执行订单与交易比率](https://eur-lex.europa.eu/eli/reg_del/2017/566/oj/eng)\n- [CME：2026 Messaging Efficiency Program说明，v11.9](https://www.cmegroup.com/globex/files/2024-revised-mep.pdf)\n- [上交所：程序化交易细则答记者问，申报与撤单合计口径](https://www.sse.com.cn/aboutus/mediacenter/hotandd/c/c_20250403_10776805.shtml)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "OTR"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "hit-testing",
+  "name": "Hit Testing",
+  "aliases": [
+    "命中测试",
+    "图形命中检测"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-transform",
+      "context": "把指针或测试点转换到对象局部坐标后检测相应交互区域。"
+    }
+  ],
+  "summary": "判断指针或测试位置是否落入对象可交互区域。",
+  "description": "命中测试判断一个位置是否落入对象定义的可交互区域。二维场景中，通常把指针从画布或全局坐标变换到对象局部坐标，再检查矩形、圆、路径或自定义 hitArea；对象的显示区域和交互区域可以不同。\n\n显示树遍历、交互开关和层级顺序决定测试哪些对象以及向谁派发事件。PixiJS 可通过 hitArea 覆盖默认边界，并跳过不参与交互的子树。包围盒命中只是近似，不自动意味着指针下对应的是不透明像素，也不等同于物理碰撞检测。\n\n命中测试用于按钮、精灵拖动和图形编辑器；三维拾取可把射线与几何相交作为一种测试。高精度像素或路径测试有额外成本，应根据交互需求选择。CSS 缩放、设备像素比及相机变化都可能改变坐标换算。\n\n## 参考\n\n- [PixiJS Events](https://pixijs.com/8.x/guides/components/events)\n- [Three.js Picking](https://threejs.org/manual/pages/picking.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

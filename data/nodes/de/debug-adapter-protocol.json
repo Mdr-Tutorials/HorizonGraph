@@ -1,0 +1,36 @@
+{
+  "id": "debug-adapter-protocol",
+  "name": "Debug Adapter Protocol",
+  "aliases": [
+    "DAP",
+    "调试适配器协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "请求、响应和事件的消息体使用 JSON 对象，外层头部负责标记消息体长度。"
+    }
+  ],
+  "summary": "定义调试客户端与适配器之间的请求、响应和事件。",
+  "description": "Debug Adapter Protocol 把通用调试界面与具体调试后端分离，规定客户端和适配器之间的初始化、启动或附加、断点、线程、堆栈、变量和控制执行等消息。适配器负责转换后端接口，协议本身不是某个调试器库。\n\nDAP 的线格式使用带 Content-Length 的头部和 JSON 消息体，并有自己的请求、响应与事件结构。seq、command 和 request_seq 等字段表达顺序与响应关联；它不是因为使用 JSON 就成为 JSON-RPC。新增能力主要通过初始化和后续能力信息协商，缺少能力不能视作默认支持。\n\n适配器的进程启动、传输连接和具体 launch 或 attach 参数由宿主与后端配置。客户端可按源码位置设置断点，但适配器可能先返回未验证状态，待加载代码后更新。不同后端的运行资源与调试权限也不由协议统一保证。\n\n## 参考\n\n- [Microsoft：Debug Adapter Protocol 消息与启动流程](https://microsoft.github.io/debug-adapter-protocol/overview.html)\n- [VS Code：调试器、适配器与扩展的边界](https://code.visualstudio.com/api/extension-guides/debugger-extension)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "DAP",
+  "official_site": "https://microsoft.github.io/debug-adapter-protocol/"
+}

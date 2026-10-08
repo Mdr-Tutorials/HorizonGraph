@@ -1,0 +1,44 @@
+{
+  "id": "event-driven-backtesting",
+  "name": "Event-driven Backtesting",
+  "aliases": [
+    "事件驱动回测",
+    "事件式回测"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "exchange-simulator",
+      "context": "订单执行敏感的事件式回测调用模拟市场处理订单接收、撮合和回报。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "deterministic-replay",
+      "context": "比较策略实现或模型配置时，固定输入和事件调度规则，重放同一实验路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "point-in-time-data",
+      "context": "策略回调只能消费其模拟决策时点已经可得的数据版本。"
+    }
+  ],
+  "summary": "按行情、订单与计时器事件推进历史策略和成交仿真。",
+  "description": "事件驱动回测以行情更新、计时器、订单请求和成交回报等事件推进模拟时钟，逐步更新策略、订单与账户状态。它适合研究事件先后和执行反馈会改变决策的系统；回测中的时钟推进速度可以快于现实，模拟时间与程序运行耗时需要分别理解。\n\n引擎必须明确同一时间戳下的处理顺序：先更新市场还是先调用策略、何时送达新订单、成交后生成的撤单或对冲何时生效。行情接收时间、下单延迟与交易所收到请求的时间也应分开，否则刚看见的市场变化可能被错误地用来获得此前的成交机会。\n\n事件式实现本身不保证数据无前视或成交可信。仅有 OHLC 柱线时，柱内价格路径和排队无法恢复；历史深度数据也不能自动反映模拟订单引发的市场反应。研究结果应记录成交规则、部分成交、费用、库存及延迟假设，并在未参与方案选择的时段检验。\n\n## 参考\n\n- [QuantConnect：Timeslices 与数据可用顺序](https://www.quantconnect.com/docs/v2/writing-algorithms/key-concepts/time-modeling/timeslices)\n- [NautilusTrader：回测事件、计时器和命令处理顺序](https://nautilustrader.io/docs/latest/concepts/backtesting/execution-flow/)\n- [NautilusTrader：数据粒度与模拟市场配置](https://nautilustrader.io/docs/latest/concepts/backtesting/data-and-venues/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

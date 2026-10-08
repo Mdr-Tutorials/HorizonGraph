@@ -1,0 +1,46 @@
+{
+  "id": "fulcio",
+  "name": "Fulcio",
+  "aliases": [
+    "Fulcio",
+    "Sigstore Fulcio"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oidc",
+      "context": "验证受支持身份提供方签发的 ID token，并将主体与 issuer 等信息绑定到代码签名证书。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x509",
+      "context": "以 X.509 证书封装客户端公钥、身份与代码签名相关扩展。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "public-key-cryptography",
+      "context": "验证客户端的私钥持有证明，并使用 CA 密钥签发证书；不接收客户端私钥来替其签署工件。"
+    }
+  ],
+  "summary": "将 OIDC 身份与公钥绑定到短期代码签名证书的服务。",
+  "description": "Fulcio 是 Sigstore 的开源代码签名证书服务端软件，用于向已认证的身份签发 X.509 证书。此处记录可以部署的 CA 实现，而不是一个证书格式或一个独立基金会。公共实例是该软件的一种部署；采用其他身份提供方、签发后端或私有基础设施时，其信任根与配置也需要相应定义。\n\n客户端提交 OIDC 身份令牌、公钥以及证明持有对应私钥的挑战签名或 CSR。Fulcio 验证令牌及私钥持有证明，把身份和 issuer 等信息写入证书，再由 CA 后端签发。签署工件的临时私钥由客户端使用，Fulcio 负责证书签发；CA 自身用于签发证书的密钥与客户端用于签署工件的密钥也属于不同角色。\n\n签发流程使用证书透明度日志，使证书发行可供审计。该 CT 日志记录证书，与 Rekor 记录工件签名和声明的签名透明度日志不同。消费者仍需检查证书链、预期身份、issuer 与签署时间证据；短期证书不能替代项目的发布授权，也不能自动证明身份账户未被入侵或软件工件内容安全。\n\n## 参考\n\n- [Fulcio：官方实现仓库](https://github.com/sigstore/fulcio)\n- [Fulcio：证书签发全过程](https://docs.sigstore.dev/certificate_authority/certificate-issuing-overview/)\n- [Sigstore：证书及身份信任边界](https://docs.sigstore.dev/about/security/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/sigstore/fulcio"
+}

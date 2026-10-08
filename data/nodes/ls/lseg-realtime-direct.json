@@ -1,0 +1,38 @@
+{
+  "id": "lseg-realtime-direct",
+  "name": "LSEG Real-Time – Direct",
+  "aliases": [
+    "LSEG Real-Time Direct",
+    "Real-Time – Direct"
+  ],
+  "type": "product",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance",
+    "data-engineering"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "market-data-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data",
+      "context": "为交易、分析与风险应用交付多交易所来源的归一化行情。"
+    }
+  ],
+  "summary": "托管多交易所直接来源行情的低延迟数据服务。",
+  "description": "LSEG Real-Time – Direct 是托管式市场数据服务，为客户接入多个交易所来源的完整深度行情，并通过一致的数据模型、符号和 API 处理。节点表示实际对外交付服务，区别于 LSEG 公司、具体交易所原生协议和 Real-Time – Ultra Direct 库产品。\n\n供应商管理硬件、软件、监控、交易所变更和运营支持，提供共享托管、专用托管或客户部署等模式。客户端消费统一模型的数据与测试环境，减少自行维护多套 feed handler 的工作；服务中的交易所直接来源不意味着客户永远收到未经处理的原生报文。\n\n官方同时区分 Direct 托管服务与 Ultra Direct 的优化 feed handler 路径。所公布的微秒数字有适用场所及 ingress-to-egress 边界，历史产品说明的数字也可能与当前网页不同；这些不能被外推为交易所到客户策略乃至订单完成的端到端延迟保证。\n\n## 参考\n\n- [LSEG Real-Time – Direct 产品](https://www.lseg.com/en/data-analytics/market-data/data-feeds/direct-feeds)\n- [LSEG Real-Time – Direct 产品说明](https://www.lseg.com/content/dam/data-analytics/en_us/documents/fact-sheets/real-time-direct-factsheet.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.lseg.com/en/data-analytics/market-data/data-feeds/direct-feeds"
+}

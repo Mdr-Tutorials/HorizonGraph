@@ -1,0 +1,38 @@
+{
+  "id": "marshmallow",
+  "name": "marshmallow",
+  "aliases": [
+    "marshmallow 序列化库"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "python-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "summary": "以显式字段模式完成 Python 数据反序列化、校验与序列化。",
+  "description": "## 机制与应用\n\nmarshmallow 通过 Schema 类和 fields 声明需要读写的数据结构。load 把输入转换为 Python 数据并检查字段约束，dump 把对象序列化为可交换的数据；ValidationError 提供字段级错误。还可用 validates_schema 检查多个字段之间的条件，或配置处理缺失值与未知字段的方式。\n\n字段模式与应用对象模型分开定义，可服务于不同 Web 框架及数据层，并不要求由 Python 类型注解自动推导全部模式。反序列化时的验证不等同于序列化时再次验证：dump 默认把输入视为有效，因此不能拿输出序列化替代 load 检查。跨字段业务规则仍需显式编写，成功反序列化也不代表获得操作授权。\n\n## 参考\n\n- [marshmallow：序列化、反序列化与校验](https://marshmallow.readthedocs.io/en/stable/quickstart.html)\n- [marshmallow：跨字段模式校验](https://marshmallow.readthedocs.io/en/stable/extending/schema_validation.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://marshmallow.readthedocs.io/"
+}

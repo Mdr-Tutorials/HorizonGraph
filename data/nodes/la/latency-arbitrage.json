@@ -1,0 +1,44 @@
+{
+  "id": "latency-arbitrage",
+  "name": "Latency Arbitrage",
+  "aliases": [
+    "延迟套利",
+    "时延套利"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "在连续限价订单簿竞速研究或实现中，观察报价及可执行深度，但需额外消息数据区分失败交易和撤单尝试。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-gateway",
+      "context": "在具体场所实施交易请求时，通过订单入口提交并观察确认，端到端结果不只取决于本地计算速度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transaction-cost",
+      "context": "核算竞速的净经济结果时，考虑适用交易费用、接入和实施成本及失败成交路径。"
+    }
+  ],
+  "summary": "利用信息与订单响应速度差异争夺短暂交易机会",
+  "description": "延迟套利利用行情更新、相关资产定价或订单撤换之间的速度差异，争取在报价更新前成交等短暂机会。它与利用长期统计关系偏离的策略、以及一般把订单更快发送出去的工程优化有所区别，不能把所有低延迟交易都归为延迟套利。\n\n连续订单簿中的竞速可能由主动成交请求和撤销陈旧报价请求共同构成。Aquilina 等的原始研究使用交易所消息观察成功与失败的尝试；只有成交结果或快照的历史订单簿通常不能完整恢复竞速参与者和失败路径。\n\n机会价值需要扣除接入、基础设施、费用和成交失败成本，还受到对手方响应及场所市场设计影响。研究中的策略类别并不是法律判断，是否违反交易规则须看实际行为、市场与司法辖区；速度优势也不保证持续盈利或取得每次竞速的成交。\n\n## 参考\n\n- [Aquilina–Budish–O’Neill：Quantifying the High-Frequency Trading Arms Race](https://www.nber.org/papers/w29011)\n- [Budish–Cramton–Shim：The High-Frequency Trading Arms Race](https://academic.oup.com/qje/article/130/4/1547/1916146)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

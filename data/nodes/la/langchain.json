@@ -4,11 +4,14 @@
   "aliases": [],
   "type": "framework",
   "ecosystems": [
-    "llm-agent-ecosystem"
+    "llm-agent-ecosystem",
+    "python-ecosystem",
+    "node-js-ecosystem"
   ],
   "domains": [
     "machine-learning",
-    "devops"
+    "devops",
+    "agent-development"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -18,7 +21,8 @@
     },
     {
       "relation_type": "depends_on",
-      "target_id": "python"
+      "target_id": "python",
+      "context": "本依赖仅限定 Python 的 langchain 软件包，运行它需要 Python；JavaScript 实现不属于此依赖范围。"
     },
     {
       "relation_type": "implements",
@@ -42,12 +46,38 @@
       "relation_type": "implements",
       "target_id": "ai-agent",
       "context": "提供构建基于大模型的智能体及工具协作流程的能力。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-harness",
+      "context": "create_agent 组合模型、工具、提示及中间件，提供可配置的外围运行支撑。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-execution-loop",
+      "context": "代理在模型决策与工具执行之间迭代，直到生成完成结果或满足停止条件。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "tool-schema",
+      "context": "函数工具接口描述名称、用途与参数结构，并交由相应模型适配器声明。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-session-state",
+      "context": "代理状态保存消息及按应用模式扩展的结构化字段，用于连续执行。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-lifecycle-hooks",
+      "context": "代理中间件在模型或工具执行边界提供可配置的行为处理。"
     }
   ],
   "summary": "LLM 应用开发框架，把模型、检索与工具串起来。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "official_site": "https://www.langchain.com"
+  "official_site": "https://www.langchain.com",
+  "description": "LangChain 是大模型与智能体应用开发框架，提供模型、工具、提示和中间件等可组合接口。当前 create_agent 提供可配置的运行支撑层，把模型决策与工具结果反馈组成执行循环；应用可以在此基础上逐步配置所需行为。\n\nLangChain 的代理基于 LangGraph 的状态与运行能力，LangGraph 也可以独立使用。框架有 Python 和 JavaScript 实现，所需语言运行时应按具体软件包判断；模型连接器、检索器、文档处理与其他可选集成也有各自安装和配置要求。\n\n代理的会话记忆、结构化结果和中间件可按任务配置，检索与文档切分能力还可由生态包提供。LangChain 与更底层的 LangGraph、提供额外预构建能力的 Deep Agents 和观察平台 LangSmith 分工不同，不应把整个生态都视为同一软件包或强制依赖。\n\n## 参考\n\n- [LangChain overview](https://docs.langchain.com/oss/python/langchain/overview)\n- [LangChain agents](https://docs.langchain.com/oss/python/langchain/agents)\n- [LangChain JavaScript overview](https://docs.langchain.com/oss/javascript/langchain/overview)\n- [LangChain short-term memory](https://docs.langchain.com/oss/python/langchain/short-term-memory)"
 }

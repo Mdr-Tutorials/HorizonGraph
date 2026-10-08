@@ -1,0 +1,44 @@
+{
+  "id": "http-middleware",
+  "name": "HTTP Middleware",
+  "aliases": [
+    "HTTP 中间件",
+    "请求中间件"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-context",
+      "context": "在采用请求上下文的框架中，跨处理器传递同一请求的身份、验证结果与响应状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-routing",
+      "context": "按路径或路由注册中间件时，通过应用路由匹配限定处理链的执行范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-security-headers",
+      "context": "选择安全响应头中间件时，在下游响应形成后设置或修改浏览器策略字段。"
+    }
+  ],
+  "summary": "组合请求预处理、下游调用与响应后处理的函数链。",
+  "description": "HTTP 中间件把日志、认证、验证或响应变换组织成可组合的处理链。每一层可以调用下游处理器，也可以提前返回响应。Hono 的 await next() 使代码按注册顺序进入、逆序返回，前置与后置逻辑包围下游；路径匹配、注册位置和提前返回都会影响实际执行范围。\n\n中间件模式不等于一个统一的跨框架函数签名。Express 使用 Node 请求、响应和 next 回调，Hono 使用请求上下文与 Web Response；错误传播也依框架而定。Hono 会把下游异常交给 onError 或默认错误处理，再沿链返回，因此不能假设所有 next 调用都通过抛出异常报告失败。\n\n## 参考\n\n- [Hono：中间件组合与执行顺序](https://hono.dev/docs/guides/middleware)\n- [Express：使用中间件](https://expressjs.com/en/guide/using-middleware.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

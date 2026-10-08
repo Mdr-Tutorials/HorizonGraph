@@ -1,0 +1,36 @@
+{
+  "id": "frame-time",
+  "name": "Frame Time",
+  "aliases": [
+    "帧时间",
+    "帧耗时",
+    "Frametime",
+    "Frame Duration"
+  ],
+  "type": "metric",
+  "domains": [
+    "graphics",
+    "real-time-rendering",
+    "game-development"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "frames-per-second",
+      "context": "制定逐帧性能预算时，将目标 FPS 换算为 1000 / FPS 毫秒的帧间隔预算；实际 CPU/GPU 分段耗时需单独测量"
+    }
+  ],
+  "summary": "以毫秒记录逐帧时间，区分帧间隔及 CPU、GPU 耗时",
+  "description": "帧时间是实时图形性能分析中的时间指标，通常以毫秒表示。它可能指相邻帧起点或呈现点之间的间隔，也可能指 CPU 主线程、渲染线程或 GPU 完成某帧工作的耗时；报告必须注明起止事件和计时口径。CPU 与 GPU 能并行处理不同帧，等待垂直同步或目标帧率也可能进入总帧时间，因此不能把各阶段耗时直接相加来推断帧间隔。\n\n目标为 60 FPS 时，相邻帧的时间预算约为 16.67 毫秒；120 FPS 对应约 8.33 毫秒。这是由目标吞吐率推导的预算，而非实际 GPU 耗时或交互延迟的保证。性能排查通常保留逐帧序列并检查长帧、分位数和 CPU/GPU 时间线，避免平均值掩盖卡顿；只有同一窗口、同一帧计数口径下的平均帧间隔，才可与窗口 FPS 做倒数换算。\n\n## 参考\n\n- [Unity：FrameTiming 的 CPU 与 GPU 计时口径](https://docs.unity3d.com/cn/6000.0/ScriptReference/FrameTiming.html)\n- [Unity：URP 渲染调试器的帧统计与瓶颈](https://docs.unity3d.com/cn/current/Manual/urp/features/rendering-debugger-reference.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

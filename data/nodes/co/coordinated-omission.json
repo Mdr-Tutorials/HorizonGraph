@@ -1,0 +1,41 @@
+{
+  "id": "coordinated-omission",
+  "name": "Coordinated Omission",
+  "aliases": [
+    "协调遗漏",
+    "协同遗漏",
+    "协同省略",
+    "协调性遗漏"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "tail-latency",
+      "context": "独立到达负载下，测试端在服务停顿时也停发请求，遗漏等待样本，可能低估高分位耗时。"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "end-to-end-latency",
+      "context": "若只从延迟的实际发起时刻计时，未计入计划发起到实际发起的等待，可能低估整个动作耗时。"
+    }
+  ],
+  "summary": "测试端随系统停顿而少发样本，可能低估排队等待与尾延迟。",
+  "description": "协调遗漏是一种性能测量偏差：系统变慢或停止服务时，负载发生器也因等待前一次响应而减少发起请求，于是本应在这段时间经历等待的事件没有进入样本。记录下来的处理时间可能是真实的，但样本所代表的到达模型已经改变，不能据此推断独立到达流量的体验。\n\n典型情形是单线程发送请求、等响应再发送下一次的闭环测试。若预期场景有独立的固定或随机到达，应区分计划发起时刻与实际发起时刻，并计入测试端和系统中的等待。闭环模型本身并非总是错误，关键是它是否符合所要评价的用户行为及并发约束。\n\n部分直方图库能够按预期采样间隔补入推算值，帮助展示停顿期间遗漏的等待；这属于带假设的修正，不是恢复未采集的真实请求。需要公开到达模型、修正参数和原始结果，且避免对已经计入计划等待的样本重复修正。准确记录高分位数仍不能弥补错误的采样设计。\n\n## 参考\n\n- [HdrHistogram：范围、精度、并发与遗漏修正](https://github.com/HdrHistogram/HdrHistogram)\n- [HdrHistogram：Java Histogram API](https://hdrhistogram.github.io/HdrHistogram/JavaDoc/org/HdrHistogram/Histogram.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

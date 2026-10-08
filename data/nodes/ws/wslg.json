@@ -1,0 +1,49 @@
+{
+  "id": "wslg",
+  "name": "Windows Subsystem for Linux GUI",
+  "aliases": [
+    "WSL 图形应用支持",
+    "WSLg"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "wsl"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl-2",
+      "context": "官方 WSLg 运行在 WSL 2 的受管理 Linux 环境及配对系统发行版中，WSL 1 不支持该路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rdp",
+      "context": "通过 Weston/FreeRDP 与 Windows RDP 客户端之间的应用集成通道传递窗口、输入和音频；同机路径采用相应共享内存优化。"
+    }
+  ],
+  "summary": "将 WSL 2 中的 Linux 图形应用集成到 Windows 桌面的组件。",
+  "description": "WSLg 为 WSL 2 的 Linux 图形应用提供与 Windows 桌面集成的显示、输入和音频路径，支持应用使用 X11 或 Wayland 接口。应用仍在 Linux 用户发行版中运行；WSLg 负责让其窗口、开始菜单入口、剪贴板和音频等能力连接到宿主体验。它不是将 Linux GUI 应用移植为 Windows 二进制，也不是要求用户自行运行一个完整 Linux 桌面会话。\n\n官方架构将图形服务放在 WSLg 系统发行版：其中运行 Weston、XWayland 和音频服务，并把通信端点投射给用户发行版。Weston 的 RDP 后端与 Windows 客户端配合，借助应用远程集成及同机优化传递窗口与交互。每个用户发行版配对一个系统发行版实例，但同一 Windows 用户的这些用户空间仍共享 WSL 虚拟机和单个 Linux 内核，不能把“配对实例”写成每应用或每发行版一台虚拟机。\n\nWSLg 仅适用于 WSL 2，普通 WSL 1 的系统调用兼容层不提供同一图形路径。系统发行版由 Microsoft 服务更新，默认只读装载，不是日常安装开发包的用户发行版；图形功能也可通过 WSL 设置关闭。GPU 加速依赖适用的宿主驱动和虚拟 GPU 支持，官方明确软件路径也能运行，因此不能为所有 WSLg 应用强加独立 GPU 或指定图形 API 的硬依赖。\n\n## 参考\n\n- [Microsoft WSLg：项目与架构](https://github.com/microsoft/wslg)\n- [Microsoft：WSLg Architecture](https://devblogs.microsoft.com/commandline/wslg-architecture/)\n- [Microsoft：Run Linux GUI apps on WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps)\n- [Microsoft：WSL GUI 开关与配置](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "kernel_os",
+  "abbreviation": "WSLg",
+  "official_site": "https://github.com/microsoft/wslg"
+}

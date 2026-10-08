@@ -11,7 +11,8 @@
     "cloud_native"
   ],
   "domains": [
-    "distributed-systems"
+    "distributed-systems",
+    "web-services"
   ],
   "relations": [
     {
@@ -19,10 +20,11 @@
       "target_id": "distributed-systems"
     }
   ],
-  "summary": "同一请求执行一次与多次，可观察结果相同。",
+  "summary": "重复执行同一操作不会增加其预期效果，是分布式安全重试的重要条件。",
   "importance": 4,
   "popular": 55,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "幂等性描述重复执行同一操作时，其预期效果与执行一次相同。在分布式调用中，请求可能已执行但响应丢失，调用方无法仅凭超时知道结果；幂等契约使重试能够避免重复创建资源或反复扣减。该性质约束业务效果，不要求每次响应字节、日志或执行次数都相同。\n\n实现可让操作本身设置确定状态，也可让调用方提供标识同一次业务意图的唯一键，服务端记录并识别重试。只按参数内容判重可能误伤两个合法的相同操作；去重标识记录与业务变更也需要原子协调，避免记录成功而业务未完成，或业务完成而未记录。\n\n键的调用者范围、保留期限、并发请求以及同键不同参数都属于契约边界。Stripe 例如复用已保存的状态码与响应体，并检查参数；其他服务可返回语义等价而非完全相同的响应。幂等性不保证请求一定成功或一定被交付，HTTP 方法的幂等分类也需要相应业务实现遵守。\n\n## 参考\n\n- [AWS Builders’ Library：Making retries safe with idempotent APIs](https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/)\n- [Stripe：Idempotent requests 的键与结果保存契约](https://docs.stripe.com/api/idempotent_requests)\n- [RFC 9110 §9.2.2：HTTP 幂等方法的预期效果](https://www.rfc-editor.org/rfc/rfc9110.html#section-9.2.2)"
 }

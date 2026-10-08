@@ -1,0 +1,37 @@
+{
+  "id": "agent-plugin",
+  "name": "Agent Plugin",
+  "aliases": [
+    "代理插件",
+    "智能体插件"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-plugins-specification",
+      "context": "采用 Agent Plugins 便携包路线时，按规范保存清单、技能位置和 MCP 接入配置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-lifecycle-hooks",
+      "context": "在 Antigravity 等支持原生钩子的插件路线中注册生命周期处理；该能力属于宿主扩展，不是便携规范 v1 必选项。"
+    }
+  ],
+  "summary": "打包技能与接入配置等能力供代理宿主加载的扩展单元。",
+  "description": "代理插件将可复用的扩展内容组织成一个可发现、可安装和可加载的包。它可以提供技能、MCP 服务器接入配置或宿主支持的其他组件，面向代理应用而非浏览器页面，因此与浏览器扩展属于不同身份。插件包也不等同于包内启动的服务器进程。\n\n插件的便携程度取决于采用的格式及客户端实现。Agent Plugins 1.0.0 统一技能与 MCP 服务器两个核心组件，根目录包含 plugin.json，并在相应位置提供 skills 和 mcp.json。Antigravity 的原生插件还可声明规则、子代理和生命周期钩子，其配置布局属于自身产品接口。\n\n相同组件概念不保证原生包能够直接互换。Antigravity 的 mcp_config.json 与便携格式的 mcp.json 不能简单等同，宿主特定的规则和钩子也不属于便携规范 v1 的核心语义。加载包之后，凭证、子进程执行、用户同意和工具权限仍由客户端控制，插件说明不是自动授权。\n\n## 参考\n\n- [Antigravity：原生 Plugins](https://www.antigravity.google/docs/plugins/)\n- [Agent Plugins：已发布的 1.0.0 规范](https://github.com/agentplugins/agent-plugins-spec/blob/main/spec/1.0.0.md)\n- [Agent Plugins：便携组件说明](https://agent-plugins.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

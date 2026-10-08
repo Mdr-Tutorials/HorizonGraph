@@ -1,0 +1,54 @@
+{
+  "id": "oci-distribution-spec",
+  "name": "OCI Distribution Specification",
+  "aliases": [
+    "OCI 分发规范",
+    "OCI 仓库分发规范"
+  ],
+  "type": "protocol",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "oci"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "open-container-initiative",
+      "context": "由 Open Container Initiative 的相应规范项目及维护流程制定、维护和发布，不属于单一容器产品的私有接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "通过规范规定的 HTTP 方法、状态和 /v2/ 仓库端点交换清单与 blob。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-image-spec",
+      "context": "分发 OCI 镜像及相应工件时复用其清单、索引和描述符；分发 API 本身不限定内容类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image-digest",
+      "context": "以内容摘要请求 blob、引用清单并校验所传输的具体字节。"
+    }
+  ],
+  "summary": "规定仓库客户端交换清单与内容 blob 的 HTTP API。",
+  "description": "OCI Distribution Specification 定义客户端与内容仓库之间的 API，来源于 Docker Registry HTTP API V2 的演进，由 Open Container Initiative 维护。API 面向内容分发，不限定只有可运行容器镜像；OCI 镜像是其重要应用，其他工件也能通过适当清单和媒体类型交换。此处仓库 API 负责清单与 blob 的传输，Docker Engine API 则管理引擎对象和操作，二者具有不同服务端与职责。\n\n客户端按 repository 范围获取清单，清单引用可用标签或内容摘要；blob 则按摘要寻址。规范规定拉取、上传、内容发现与内容管理等类别，支持内容存在性检查、分块上传和相关恢复流程。声称符合规范的仓库至少必须实现 Pull 类别；Push、发现和管理等能力及各类别内的完整实现，应按具体符合性声明核对，不能凭一个可拉取端点推断所有操作都存在。\n\n内容类型协商决定客户端能读取的清单格式，内容摘要使传输后的字节可以与预期标识校验。subject 与 referrers 机制可关联工件，并有旧仓库兼容流程；采用前须核对双方所支持规范版本和接口。规范的分发能力与部署中的访问控制、保留策略、配额及后端存储配置是不同层面的约定，仓库产品会在这些方面提供各自管理功能。\n\n## 参考\n\n- [OCI Distribution Specification](https://raw.githubusercontent.com/opencontainers/distribution-spec/main/spec.md)\n- [OCI Distribution Conformance](https://raw.githubusercontent.com/opencontainers/distribution-spec/main/conformance/README.md)\n- [OCI Content Negotiation](https://github.com/opencontainers/distribution-spec/blob/main/content-negotiation.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://specs.opencontainers.org/distribution-spec/"
+}

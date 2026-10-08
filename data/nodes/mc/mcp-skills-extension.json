@@ -1,0 +1,44 @@
+{
+  "id": "mcp-skills-extension",
+  "name": "MCP Skills Extension",
+  "aliases": [
+    "Skills over MCP",
+    "MCP 技能扩展"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-extensions",
+      "context": "双方声明 io.modelcontextprotocol/skills 后使用技能发现与获取能力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-skills-specification",
+      "context": "服务端提供的技能目录和 SKILL.md 必须满足 Agent Skills 格式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-resource",
+      "context": "以 resources/read 按需传输 SKILL.md 及清单中的支持文件，读取与激活分开。"
+    }
+  ],
+  "summary": "通过 MCP 发现并读取 Agent Skills 及其支持文件。",
+  "description": "MCP Skills 扩展允许服务器提供可复用技能说明与支持文件，客户端用 skills/list 和 skills/get 发现技能，用已有资源读取接口取得内容。官方扩展标识为 io.modelcontextprotocol/skills，规范已发布且 SEP-2640 为 Final；SDK 与宿主支持仍在推进，不能泛化成所有 MCP 产品均已兼容。\n\n扩展传递符合 Agent Skills 格式的 SKILL.md，并保留 frontmatter 和文件信息。技能身份由来源服务器和资源 URI 共同确定，名称只是标签。具有稳定清单的技能需要校验文件字节大小、摘要及元数据一致性，宿主按需读取内容，而不因建立连接或显示列表就预取全部技能文件。\n\n普通 resources/read 不自动激活技能；宿主经过自己的技能加载路径处理来源、校验和用户同意。摘要只能证明内容与服务器清单一致，不能证明指令可信。支持目录读取是单独的可选能力，执行脚本或授予工具权限也不由此协议读取动作自动完成。\n\n## 参考\n\n- [MCP：Skills 扩展正式说明](https://modelcontextprotocol.io/extensions/skills/overview)\n- [MCP Skills：正式规范仓库](https://github.com/modelcontextprotocol/ext-skills)\n- [Agent Skills：正式格式规范](https://agentskills.io/specification)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://modelcontextprotocol.io/extensions/skills/overview"
+}

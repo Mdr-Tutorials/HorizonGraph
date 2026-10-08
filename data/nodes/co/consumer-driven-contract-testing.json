@@ -1,0 +1,32 @@
+{
+  "id": "consumer-driven-contract-testing",
+  "name": "Consumer-Driven Contract Testing",
+  "aliases": [
+    "消费者驱动契约测试",
+    "消费者驱动契约",
+    "CDC Testing"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    }
+  ],
+  "summary": "由消费者实际调用生成契约，在提供者侧验证兼容性。",
+  "description": "消费者驱动契约测试从使用方实际需要的交互出发：消费者测试调用真实的 API 客户端或消息处理代码，通过受控的提供者替身检验请求与响应，并产生可供提供者验证的契约。提供者随后针对自己的实现重放这些交互，在约定的状态与匹配规则下检查结果。契约只约束已记录、会影响消费者的通信行为，而不是替提供者定义所有业务需求。\n\n有用的契约应包含会让消费者走不同分支的正常、缺失和错误场景。只在测试里直接调用一个通用 HTTP 客户端，跳过实际应用的序列化和解析代码，会留下消费者侧的盲点；从 OpenAPI 文件直接生成样例，也不能替代对真实消费者代码的执行。字段内容应按实际依赖选择精确匹配或类型、模式匹配，过度严格会把无害的提供者变化误报为破坏。\n\n提供者状态用于为每个交互准备可复现的前置条件，例如“商品存在”与“商品不存在”，不要求消费者测试按创建、查询、删除的整条业务流程串行执行。多消费者系统通常还需要保存契约版本与提供者验证结果，在发布时检查相关版本的兼容性。这些结果覆盖已建契约的消费者；未登记客户端与未测试行为仍需要其他证据。\n\n## 参考\n\n- [Pact：编写消费者测试](https://docs.pact.io/consumer)\n- [Pact：消费者契约的生成与边界](https://docs.pact.io/)\n- [Pact：验证提供者](https://docs.pact.io/provider)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abbreviation": "CDC"
+}

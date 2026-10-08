@@ -1,0 +1,41 @@
+{
+  "id": "hydration",
+  "name": "水合",
+  "aliases": [
+    "Hydration",
+    "客户端水合",
+    "界面水合"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "以已有预渲染 DOM 为起点，建立组件与节点的对应关系并附加交互行为。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "浏览器执行客户端 UI 运行时代码以初始化组件状态和事件处理。"
+    }
+  ],
+  "summary": "复用预渲染 HTML 并建立客户端组件与交互的过程。",
+  "description": "水合是客户端 UI 运行时接管已有预渲染 HTML 的过程：在尽量复用 DOM 的同时建立组件树、初始化状态并附加事件处理。已有 HTML 可以由服务器按请求渲染，也可以在构建时生成。与向空容器首次挂载组件相比，水合从已存在的页面结构开始；页面可被浏览器显示与组件已经能够处理交互，是两个不同阶段。\n\nReact 的 hydrateRoot 与 Preact 的 hydrate 提供了这种入口，客户端首次渲染应与已有 HTML 相匹配。时间、随机值、环境差异和数据不一致可能造成不匹配；React 官方将不匹配视为需要修复的错误，而非承诺运行时总能修正。水合仍需要相关 JavaScript 的下载与执行，其耗时不因先返回 HTML 就消失。\n\nSSR 并不强制要求水合：普通链接、表单、静态页面或 HTML 片段交换可以直接使用服务端 HTML。孤岛架构可只为需要交互的预渲染区域执行水合，并按空闲、可见等条件调度；跳过服务器预渲染而仅在浏览器创建的组件则属于客户端挂载路径。\n\n## 参考\n\n- [React：hydrateRoot](https://react.dev/reference/react-dom/client/hydrateRoot)\n- [Preact：API Reference / hydrate](https://preactjs.com/guide/v11/api-reference/#hydrate)\n- [Astro：Islands Architecture](https://docs.astro.build/en/concepts/islands/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

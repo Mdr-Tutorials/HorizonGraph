@@ -1,0 +1,33 @@
+{
+  "id": "hardware-assisted-virtualization",
+  "name": "Hardware-assisted Virtualization",
+  "aliases": [
+    "硬件辅助虚拟化",
+    "硬件虚拟化辅助"
+  ],
+  "type": "concept",
+  "domains": [
+    "virtualization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "virtualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-table",
+      "context": "当采用 EPT/NPT 第二阶段地址翻译时，硬件读取监控器配置的页表，将客体物理地址转换为宿主物理地址并检查权限。"
+    }
+  ],
+  "summary": "以处理器扩展辅助客体执行、控制转移和内存隔离。",
+  "description": "## 处理器执行支持\n\n硬件辅助虚拟化利用处理器扩展，为客体执行状态与监控器控制状态提供专门支持。以 x86 为例，Intel VT-x 的 VMX root/non-root 操作与 VM entry/exit 让监控器配置客体状态和拦截事件；AMD SVM 以 VMCB 描述客体，VMRUN 启动客体执行。客体可继续使用自身内核所需的特权级，但其行为仍受虚拟化控制约束。\n\n## 内存与设备机制\n\nCPU 执行支持和地址翻译辅助应分开看待。Intel EPT、AMD NPT 等第二阶段页表将客体物理地址映射到宿主物理地址；客体开启分页时，客体虚拟地址还需先经过其自己的页表。监控器负责建立映射、权限和失效处理，硬件完成相应翻译，减少软件维护影子映射的部分成本。IOMMU 的 DMA 重映射用于设备访问隔离，作用路径又不同于 CPU 的地址翻译。\n\n## 软件栈与部署形态\n\n硬件提供的是可被软件配置的执行与隔离机制，并不替软件建立完整设备模型、存储后端或管理服务，也不把任意客体指令集转换成宿主指令集。Type 1/Type 2 是 hypervisor 的部署分类，二者都可能采用硬件辅助；QEMU TCG 的指令翻译则是软件模拟路径。硬件支持、固件启用和软件可用性需要分别满足。\n\n嵌套虚拟化还要求外层平台把适当能力呈现给客体，使内层监控器能够再管理客体机器。仅在物理 CPU 上存在 VT-x 或 AMD-V，不保证任意 VM 内都能直接使用它；能否暴露扩展及支持哪些功能取决于外层配置、处理器和虚拟化实现。\n\n## 参考\n\n- [Intel：架构软件开发者手册中的 VMX 与虚拟化支持](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)\n- [Microsoft：AMD SVM VMRUN 与 VMCB](https://learn.microsoft.com/en-us/cpp/intrinsics/svm-vmrun?view=msvc-170)\n- [Oracle：硬件虚拟化、VMCS 与嵌套分页](https://www.virtualbox.org/manual/ch10.html)\n- [Linux Kernel：KVM x86 MMU 与 EPT/NPT 地址翻译](https://docs.kernel.org/virt/kvm/x86/mmu.html)\n- [Microsoft：Hyper-V 的硬件与功能要求](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/host-hardware-requirements)\n- [Linux Kernel：KVM 嵌套客体的架构与条件](https://docs.kernel.org/virt/kvm/x86/running-nested-guests.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

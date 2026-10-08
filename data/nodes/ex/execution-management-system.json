@@ -1,0 +1,55 @@
+{
+  "id": "execution-management-system",
+  "name": "Execution Management System",
+  "aliases": [
+    "执行管理系统",
+    "EMS"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-lifecycle",
+      "context": "管理执行中的子单时，以确认和成交事件更新状态与已执行数量，避免只按计划数量累计。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "smart-order-routing",
+      "context": "启用跨场所路由能力时，把子单交给 SOR 选择可访问场所并处理重新路由。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vwap-execution",
+      "context": "支持成交量基准算法的部署中，以 VWAP 调度完成母单的分时执行目标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "twap-execution",
+      "context": "支持时间计划算法的部署中，以 TWAP 调度生成和监控分时子单。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-gateway",
+      "context": "接入具体交易场所或券商的执行路径中，通过对应订单网关发送请求并接收回报。"
+    }
+  ],
+  "summary": "管理订单执行、场所接入与执行算法的系统角色",
+  "description": "执行管理系统（EMS）聚焦交易执行工作台或自动执行层，常展示行情、连接券商与场所、提交执行算法并追踪成交。它接收交易目标并组织实现目标的执行活动，与投资研究、组合决策和清算系统有不同职责。\n\n典型能力包括多场所接入、路由、子单控制、交易员干预与执行质量观察。具体系统可选择 VWAP、TWAP 等调度或智能路由，功能并非全部实现的统一最小集合；订单管理与执行管理也可在 OEMS 中合并。\n\nEMS 需要区分预定计划、在途子单和真实成交，依据回报更新剩余量，处理拒绝、暂停和恢复。较低延迟与更多可用算法不自动构成最佳执行或盈利保证；可用市场、权限、成本及风险约束仍由实际业务和接入定义。\n\n## 参考\n\n- [LSEG TORA：订单管理与执行管理功能](https://www.lseg.com/en/data-analytics/trading-solutions/multi-asset-trading/tora)\n- [LSEG：订单、执行与后续工作流](https://www.lseg.com/en/data-analytics/trading-solutions/multi-asset-trading/deeper-dive/connecting-market-context-orders-execution)\n- [CFA Institute：Trade Strategy and Execution，2026](https://www.cfainstitute.org/insights/professional-learning/refresher-readings/2026/trade-strategy-execution)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "EMS"
+}

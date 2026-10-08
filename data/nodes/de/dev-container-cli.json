@@ -1,0 +1,49 @@
+{
+  "id": "dev-container-cli",
+  "name": "Dev Container CLI",
+  "aliases": [
+    "开发容器命令行工具",
+    "@devcontainers/cli"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "containerization"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dev-container-spec"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker",
+      "context": "选择 Docker 后端时调用客户端构建、检查和启动容器；客户端可连接本地或远程引擎。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wslc",
+      "context": "CLI 0.88.0 起选择 WSLc 驱动时调用 WSLc 管理开发容器，具体支持受该驱动和平台版本限制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker-compose",
+      "context": "选择 dockerComposeFile 场景并采用 Docker 后端时，调用 Compose 组织相关服务。"
+    }
+  ],
+  "summary": "根据开发容器规范构建、创建和配置工作区的参考 CLI。",
+  "description": "Dev Container CLI 是 Development Containers Specification 的开源参考实现，独立于编辑器 UI。它读取 devcontainer.json，合并所需配置，构建或选择镜像，创建开发容器并配置用户、环境与工作区；编辑器和服务可以复用这条环境创建路径。\n\nbuild 支持构建与预构建镜像，up 创建工作区，exec 在配置后的用户和环境中执行命令，run-user-commands 运行生命周期钩子。自 0.87.0 起 build/up 默认生成 Feature lockfile，frozen-lockfile 要求既有锁定内容不变；其范围是 Features，不自动冻结所有系统与项目依赖。\n\nCLI 自 0.88.0 加入 WSLc 后端支持，可按支持的驱动连接 Docker 或 WSLc。后端适配与 Compose 兼容性是不同能力：WSLc 的原生 Compose 在 2026-09-29 GA 公告中仍属路线图。CLI 不要求所有用户安装 Docker Desktop，也不因更换命令名就让所有 Docker 子命令获得等价支持。\n\n## 参考\n\n- [Dev Container CLI：参考实现与命令](https://github.com/devcontainers/cli)\n- [CLI 变更记录：稳定 lockfile 与 WSLc](https://github.com/devcontainers/cli/blob/main/CHANGELOG.md)\n- [WSLc 支持的合并实现](https://github.com/devcontainers/cli/pull/1249)\n- [Microsoft：GA 与后续 Compose 计划](https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/devcontainers/cli"
+}

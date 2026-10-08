@@ -1,0 +1,39 @@
+{
+  "id": "hypervisor",
+  "name": "Hypervisor",
+  "aliases": [
+    "虚拟机监控器",
+    "Virtual Machine Monitor",
+    "VMM"
+  ],
+  "type": "concept",
+  "domains": [
+    "virtualization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "virtualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hardware-assisted-virtualization",
+      "context": "在采用处理器虚拟化扩展的实现路径中配置客体进入、退出与敏感操作拦截；该路径不定义 Type 1/Type 2 部署分类。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "page-table",
+      "context": "在使用 EPT/NPT 等第二阶段翻译的实现中维护客体物理页到宿主物理页的映射与权限。"
+    }
+  ],
+  "summary": "控制客体执行并仲裁底层资源的系统虚拟化软件层。",
+  "description": "## 职责\n\nHypervisor，也称虚拟机监控器，是控制客体执行并维持系统虚拟机隔离的软件层。它向客体提供虚拟处理器和受控制的内存资源，使客体内核能够在自己的机器视图中运行，同时保留对关键硬件状态和敏感操作的控制。虚拟机是被提供的执行环境，hypervisor 是参与实现和控制这一环境的机制，两者不是同一个实体。\n\n## 部署形态\n\nType 1 与 Type 2 描述监控器在系统软件栈中的部署关系：前者直接位于硬件之上，后者依靠既有宿主操作系统提供服务。这一划分与是否使用硬件辅助虚拟化是两个维度。Microsoft 将 Hyper-V 描述为 Type 1 架构；Oracle 将 VirtualBox 描述为 hosted、即 Type 2 监控器，同时它也能利用处理器虚拟化扩展。\n\n## 实现边界\n\n在硬件辅助路径中，监控器配置客体状态和拦截条件；客体的大量指令可直接执行，指定事件再把控制权交回监控器。内存隔离还需要管理客体可访问的物理页和相应地址翻译。软件模拟、设备模型、调度策略与管理界面可能由其他组件协作完成，不能仅由监控器这一名称推断所有虚拟化功能都放在同一个程序或特权层。\n\nHyper-V 的合成 I/O 常由管理分区的 VSP 与客体 VSC 协作；KVM 把 VM、vCPU 和设备控制接口暴露给用户态程序。这些例子说明监控器与外围虚拟化栈可以分工。分析性能和隔离边界时，应分别检查处理器执行、内存映射、设备后端及宿主管理路径。\n\n## 参考\n\n- [Microsoft：Hyper-V 的 Type 1 架构](https://learn.microsoft.com/en-us/windows-server/administration/performance-tuning/role/hyper-v-server/architecture)\n- [Microsoft：Hyper-V 分区、VMBus 与 I/O 架构](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/architecture)\n- [Oracle：Hosted hypervisor 与虚拟机](https://docs.oracle.com/en/virtualization/virtualbox/7.2/user/Introduction.html)\n- [Oracle：硬件虚拟化、VMCS 与嵌套分页](https://www.virtualbox.org/manual/ch10.html)\n- [Linux Kernel：KVM 的 VM、vCPU 与设备 API](https://docs.kernel.org/virt/kvm/api.html)\n- [Linux Kernel：KVM x86 MMU 与 EPT/NPT 地址翻译](https://docs.kernel.org/virt/kvm/x86/mmu.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

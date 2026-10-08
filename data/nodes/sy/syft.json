@@ -1,0 +1,53 @@
+{
+  "id": "syft",
+  "name": "Syft",
+  "aliases": [
+    "Syft",
+    "Anchore Syft"
+  ],
+  "type": "tool",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain",
+    "containerization"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sbom",
+      "context": "分析受支持镜像、文件系统和归档以生成组件清单，覆盖受 cataloger 和文件选择配置约束。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx",
+      "context": "选择受支持的 SPDX 输出格式和版本时，将组件清单映射为其交换模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclonedx",
+      "context": "选择受支持的 CycloneDX 输出格式和版本时，生成对应 BOM 供后续工具消费。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image",
+      "context": "镜像分析路径读取目标镜像中的软件信息；工具亦可独立扫描目录和归档。"
+    }
+  ],
+  "summary": "从镜像、目录与归档发现软件组件并生成 SBOM 的工具。",
+  "description": "Syft 是 Anchore 提供的开源 CLI 与 Go 库，用于从容器镜像、文件系统、文件和归档中发现软件组件并生成 SBOM。它通过不同 cataloger 识别操作系统包、语言依赖和受支持二进制的元数据。此处记录官方同一项目的工具及库能力，不能把 Syft 的组件发现与 Grype 的漏洞匹配当作同一个扫描步骤。\n\n工具提供原生 Syft JSON，以及 SPDX、CycloneDX 等输出格式，可以同时生成多份表示，并在受支持范围内选择格式版本。原生模型、各交换格式和特定版本能够表达的信息不同，转换时需要检查字段与关系保留情况。支持一个格式名称不意味着支持其所有历史及未来版本，更不意味着消费者必然能够处理生产者输出的全部 profile。\n\n目标类型与 cataloger 配置共同影响清单结果：已安装组件、声明依赖和嵌入元数据的识别路径并不相同，排除目录或替换默认分析器会改变覆盖。SBOM 可以供 Grype 继续扫描，也可以参与签署的工件声明，但生成清单本身不会评估所有已知漏洞或证明信息完整真实。接收方应保留所述工件、生成配置和时间，避免把一次成功生成理解为全面安全认证。\n\n## 参考\n\n- [Syft：官方 CLI 与库实现](https://github.com/anchore/syft)\n- [Syft：输出格式与版本支持](https://oss.anchore.com/docs/guides/sbom/formats/)\n- [Syft：组件分析器与覆盖配置](https://oss.anchore.com/docs/guides/sbom/catalogers/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/anchore/syft"
+}

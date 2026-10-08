@@ -1,0 +1,36 @@
+{
+  "id": "usd",
+  "name": "Universal Scene Description",
+  "aliases": [
+    "通用场景描述",
+    "USD",
+    "USD Scene Description"
+  ],
+  "type": "protocol",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "graphics-asset-format"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scene-graph",
+      "context": "组织并组合具有层级、属性和关系的三维场景描述。"
+    }
+  ],
+  "summary": "定义可分层组合的三维场景描述与持久化格式。",
+  "description": "Universal Scene Description 定义三维场景的对象、属性、层与组合语义。内容可以通过引用、子层、变体和覆盖等方式组装，组合求值后得到统一场景视图，适合协作制作、资产复用和场景交换。\n\nUSD 场景层可由文本或二进制文件等表示，OpenUSD 则是实现这些语义及读写 API 的软件库。它重视丰富场景的组合与编辑；运行时交付仍要考虑资源解析、材质支持与成本，不能假定所有浏览器加载器都能直接读取完整制作场景。\n\n## 参考\n\n- [OpenUSD 场景描述及组合机制](https://openusd.org/release/intro.html)\n- [USD 场景描述与文件层](https://openusd.org/release/api/sdf_page_front.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://openusd.org/release/intro.html"
+}

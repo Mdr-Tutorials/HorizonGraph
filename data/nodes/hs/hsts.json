@@ -1,0 +1,43 @@
+{
+  "id": "hsts",
+  "name": "HTTP Strict Transport Security",
+  "aliases": [
+    "HTTP 严格传输安全",
+    "HSTS"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-services",
+    "web-development",
+    "security"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "https",
+      "context": "用户代理按已建立的主机策略，将后续访问限制为可验证的 HTTPS 连接。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "通过安全响应的 Strict-Transport-Security 字段传达有效期与子域覆盖策略。"
+    }
+  ],
+  "summary": "让用户代理在策略有效期内强制以 HTTPS 访问主机。",
+  "description": "HSTS 是 RFC 6797 定义的 HTTP 安全策略规范。用户代理在可信的安全连接上收到 Strict-Transport-Security 后保存主机策略，在 max-age 有效期内把后续不安全访问改为安全连接，并按规范拒绝证书错误；includeSubDomains 可以将策略覆盖到子域。\n\n在不安全 HTTP 连接上收到该字段不能建立可信策略，首次访问前的风险也不能单靠尚未接收的响应头消除。浏览器预加载名单是额外的部署路径，不是普通字段值自动保证的行为。部署方需要确认 HTTPS 和子域可持续使用；HSTS 不加密消息本身，也不取代 TLS 配置、认证或授权。\n\n## 参考\n\n- [IETF：HSTS（RFC 6797）](https://www.rfc-editor.org/rfc/rfc6797.html)\n- [OWASP：HSTS 响应策略](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "abbreviation": "HSTS",
+  "official_site": "https://www.rfc-editor.org/rfc/rfc6797.html"
+}

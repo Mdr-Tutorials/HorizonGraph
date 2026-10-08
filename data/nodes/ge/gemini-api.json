@@ -1,0 +1,49 @@
+{
+  "id": "gemini-api",
+  "name": "Gemini Developer API",
+  "aliases": [
+    "Gemini API",
+    "Gemini 开发者 API"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini",
+      "context": "Developer API 服务按客户端选择的模型执行 Gemini 推理；型号和多模态能力受具体模型文档约束。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "gemini-interactions-api",
+      "context": "服务提供 Interactions 资源、创建与检索方法以及状态、事件等接口约定；同时继续支持其他 Gemini API 接口。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "google-genai-sdk",
+      "context": "SDK 的 Developer API 客户端支持调用此模型与代理服务，云端 Agent Platform 后端另有配置。"
+    }
+  ],
+  "summary": "面向开发者提供 Gemini 模型与托管代理访问的云 API 服务。",
+  "description": "Gemini Developer API 是 Google 面向开发者提供的模型与代理访问服务，通过 generativelanguage.googleapis.com 等官方端点提供能力，并配套 API 密钥、配额和开发文档。此节点限定 Developer API 服务身份；Google Cloud Agent Platform 上的 Gemini 接入具有不同项目、认证和服务边界，不能仅因模型相同便当作相同端点。\n\n服务提供多模态输入、生成、结构化结果、工具协作等能力，实际支持项由所选模型、端点和服务版本决定。Google AI Studio 是试用模型、管理密钥与构建应用的用户界面，Google GenAI SDK 是客户端代码库；两者都不是模型服务本身。直接在浏览器发布秘密 API 密钥与通过受保护的应用服务调用，安全边界也不同。\n\n截至 2026 年 10 月的官方说明，Interactions API 已在 2026 年 6 月成为通用可用且推荐的新项目接口，原 generateContent 接口仍受支持，但被列为 legacy。Interactions 同时可调用标准模型与特定托管代理，代理的运行能力、状态和定价应按具体产品核对。Antigravity 托管代理是此接口可访问的服务之一，不应把整个 Gemini API 改名为 Antigravity。\n\n## 参考\n\n- [Google AI：Gemini API 当前入口与接口选择](https://ai.google.dev/gemini-api/docs)\n- [Google AI：Interactions 概览与兼容边界](https://ai.google.dev/gemini-api/docs/interactions-overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://ai.google.dev/gemini-api/docs"
+}

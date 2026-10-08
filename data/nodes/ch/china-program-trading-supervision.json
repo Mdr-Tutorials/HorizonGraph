@@ -1,0 +1,43 @@
+{
+  "id": "china-program-trading-supervision",
+  "name": "China Program Trading Supervision",
+  "aliases": [
+    "中国程序化交易监管",
+    "中国证券期货程序化交易管理"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "algorithmic-trading",
+      "context": "在中国证监会证券或期货程序化交易规定及相应交易所规则适用的活动中，约束交易前报告、技术系统、监测和风险处置；证券与期货的细则分别判断。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "hft",
+      "context": "对沪深证券市场适用账户，高频识别采用申报与撤单合计最高300笔/秒或20000笔/日等条件并实施相应差异化管理；不套用到所有中国期货或所有全球HFT。"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "market-surveillance",
+      "context": "在相关中国交易所和参与机构职责范围内，要求对程序化交易异常活动及技术风险进行监测处置；数据范围和具体标准以适用规则确定。"
+    }
+  ],
+  "summary": "按证券与期货规则分开管理程序化交易报告及风控。",
+  "description": "中国程序化交易监管由证券市场与期货市场的证监会规定及对应交易所实施规则构成，涵盖报告、交易监测、客户管理、技术系统及高频差异化管理。本节点描述范围和控制要求，不把法律、交易所细则或业务报告表当作统一网络协议，也不把程序化交易等同于违法交易。\n\n证券市场规定自2024年10月8日起施行，上交所现行细则自2025年7月7日起施行。沪深证券细则中的高频识别包括单账户每秒申报加撤单合计最高达到300笔以上，或单账户单日合计达到20000笔以上，以及交易所认定的其他情形。这里统计申报与撤单，不是成交数、净持仓或日均每秒速率；为减少冲击或保障组合公平而拆单等规定例外仅涉及特定额外报告信息，不能理解为全部程序化交易报告豁免。\n\n期货市场的程序化交易规定自2025年10月9日起施行，具体场所与主体限制须另查期货交易所规则，不能把证券阈值自动推广到所有期货。交易所可采取差异化管理或收费的授权也不等于每种费用标准已经统一实施。技术系统故障、异常交易处置与日常记录应按实际适用业务落实，并依据正式现行文件而非未核实的网络速率传闻判断范围。\n\n## 参考\n\n- [中国证监会：证券市场程序化交易管理规定（试行）发布说明](https://www.csrc.gov.cn/csrc/c100028/c7480577/content.shtml)\n- [上交所：程序化交易管理实施细则，2025年7月7日施行](https://www.sse.com.cn/lawandrules/sselawsrules2025/trade/universal/c/c_20250612_10781696.shtml)\n- [上交所：程序化交易细则答记者问，申报与撤单合计口径](https://www.sse.com.cn/aboutus/mediacenter/hotandd/c/c_20250403_10776805.shtml)\n- [深交所：程序化交易管理实施细则正式文本](https://docs.static.szse.cn/www/lawrules/rule/trade/W020250403603802169453.pdf)\n- [中国证监会：期货市场程序化交易管理规定（试行）发布说明](https://www.csrc.gov.cn/csrc/c100028/c7564353/content.shtml)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

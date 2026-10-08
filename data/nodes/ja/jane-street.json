@@ -11,18 +11,25 @@
     "fintech-ecosystem"
   ],
   "domains": [
-    "quantitative-finance"
+    "quantitative-finance",
+    "industry-landscape",
+    "electronic-trading"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "jane-street-core"
     }
   ],
-  "summary": "以 OCaml 技术栈著称的量化交易公司。",
+  "summary": "以定量研究与技术提供跨市场流动性的交易机构。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.janestreet.com"
+  "official_site": "https://www.janestreet.com",
+  "description": "Jane Street 是全球交易与流动性提供机构，公开业务从 ETF 扩展至股票、债券、期权等市场。公司结合定量分析与对市场机制的理解从事交易；做市、定价和风险承接是具体业务，不应以一个 HFT 标签概括所有资产、交易方式和团队。\n\n官方说明它在多个电子交易所及其他场所持续交易，并在内部构建关键交易和风险系统。OCaml 是其公开的重要软件语言选择，技术材料解释静态类型与函数式编程的工程作用；这种采用事实不表示所有外围研究工具、硬件逻辑或每一个软件组件都有统一语言依赖。\n\n公司向社区提供 Core 等 OCaml 开源库，组织与具体语言、库的身份分别建档。开源项目可展示工程实践，但不能视为公司的生产策略或完整交易系统；研究、交易和技术协作以及人工判断仍是公开业务叙述的重要部分。\n\n## 参考\n\n- [Jane Street 业务与市场参与角色](https://www.janestreet.com/what-we-do/overview/)\n- [Jane Street 技术与 OCaml](https://www.janestreet.com/technology/)\n- [Jane Street 开源项目](https://opensource.janestreet.com/)"
 }

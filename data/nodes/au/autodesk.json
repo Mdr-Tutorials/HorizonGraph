@@ -13,7 +13,8 @@
   "domains": [
     "graphics",
     "scientific-computing",
-    "computational-engineering"
+    "computational-engineering",
+    "digital-content-creation"
   ],
   "relations": [
     {
@@ -23,13 +24,17 @@
     {
       "relation_type": "provides",
       "target_id": "autocad"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "maya"
     }
   ],
   "summary": "设计与工程软件公司，AutoCAD 与 Maya 的东家。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-10-01",
+  "last_reviewed": "2026-10-07",
   "importance": 3,
   "official_site": "https://www.autodesk.com",
-  "description": "Autodesk 是提供设计与制作软件的公司，AutoCAD 是其 CAD 产品之一。公司主体与具体产品承担不同角色：公司的业务范围不能当作单一软件的全部功能，产品能力也需按对应版本与组件确认。\n\n工程工作流中的 CAD 描述几何与图纸，CAM 组织制造加工，仿真软件分析给定模型的物理行为。Autodesk 的相关产品可参与这些环节，但建模、加工准备和数值验证仍是不同任务，成果的可靠性依赖各自输入和方法。\n\n参考：[Autodesk CAD 说明](https://www.autodesk.com/solutions/cad-software)；[Autodesk CAD/CAM 说明](https://www.autodesk.com/ca-en/solutions/cad-cam)；[AutoCAD 官方产品页](https://www.autodesk.com/products/autocad/overview.htm)。"
+  "description": "Autodesk 是提供设计与制作软件的公司，AutoCAD 是其 CAD 产品之一。公司主体与具体产品承担不同角色：公司的业务范围不能当作单一软件的全部功能，产品能力也需按对应版本与组件确认。\n\n工程工作流中的 CAD 描述几何与图纸，CAM 组织制造加工，仿真软件分析给定模型的物理行为。Autodesk 的相关产品可参与这些环节，但建模、加工准备和数值验证仍是不同任务，成果的可靠性依赖各自输入和方法。\n\n数字内容制作方向的 Maya 提供三维建模、绑定与动画工作流，FBX SDK 则帮助开发交换资产的程序。Maya、AutoCAD 与相关 SDK 具有不同产品职责，不能把 CAD 软件的工程功能或公司旗下其他产品能力自动归到 Maya。\n\n## 参考\n\n- [Autodesk CAD 说明](https://www.autodesk.com/solutions/cad-software)\n- [Autodesk CAD/CAM 说明](https://www.autodesk.com/ca-en/solutions/cad-cam)\n- [AutoCAD 官方产品页](https://www.autodesk.com/products/autocad/overview.htm)\n- [Maya 官方产品说明](https://www.autodesk.com/products/maya/overview.htm)\n- [Autodesk FBX SDK](https://forge.autodesk.com/developer/overview/fbx-sdk)"
 }

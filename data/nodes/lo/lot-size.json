@@ -1,0 +1,35 @@
+{
+  "id": "lot-size",
+  "name": "Lot Size",
+  "aliases": [
+    "交易单位",
+    "每手单位",
+    "手数单位"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "limit-order-book",
+      "context": "场所按整手或交易单位组织相应订单簿时，约束该路径的数量单位和交易资格；不推导所有订单的最小数量，碎股路径另按规则处理。"
+    }
+  ],
+  "summary": "市场或产品规定的一手或常规交易单位的数量。",
+  "description": "Lot size 表示市场或产品定义的一手、整手或常规交易单位对应的数量。证券可以按若干股构成 board lot 或 round lot，衍生品订单也常以合约张数计数；具体含义必须结合市场和产品，不能把一个市场的“手”数值推广到所有资产。\n\n常规交易单位、最小允许订单量、数量递增步长与每张合约对应的标的规模是不同规则。碎股或零股市场说明小于一整手的数量可能仍有专门交易路径；一张期货合约对应多少标的，也不等于必须一次交易多少张合约。\n\n交易单位用于解释申报数量、分配取整和行情展示口径。不同股票的整手规则和司法辖区的 round lot 定义可以变化，查询或回放需保留当时产品参数。比较深度时也应统一股数、合约张数或经济敞口，不能仅用屏幕上的“100 手”判断跨产品规模相同。\n\n## 参考\n\n- [HKEX：证券交易单位与碎股市场](https://www.hkex.com.hk/Global/Exchange/FAQ/Securities-Market/Trading/Securities-Market-Operations?sc_lang=en)\n- [SEC：2024 年报价增量与 round lot 改革的说明](https://www.sec.gov/newsroom/speeches-statements/gensler-statement-regulation-nms-091824)\n- [CME：合约规模、报价单位与 tick 的区别](https://www.cmegroup.com/education/courses/master-the-trade-futures/expanding-your-futures-knowledge/master-the-trade-contract-specifications.hideSubnav.educationIframe.html?hideAddThisExt=y&hideFooter=y&hideHeader=y&hideRightRail=y)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -1,0 +1,46 @@
+{
+  "id": "tabby",
+  "name": "Tabby AI Coding Assistant",
+  "aliases": [
+    "Tabby",
+    "Tabby AI",
+    "Tabby 编程助手"
+  ],
+  "type": "tool",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-assistant"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-engineering",
+      "context": "模型服务根据相关源码与符号信息构造补全上下文，编辑器扩展提供当前编辑状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker-engine",
+      "context": "选择官方容器部署路径时由 Docker Engine 运行 Tabby 服务镜像；其他安装方式不经过该后端。"
+    }
+  ],
+  "summary": "把模型服务与编辑器接入组合成自托管代码助手。",
+  "description": "Tabby 是开源、自托管的 AI 编程助手，核心交付包括模型服务和编辑器连接。团队可以运行自己的代码补全服务器，编辑器将相关上下文发送给服务器获取建议；官方部署示例还区分 completion model 与 chat model。本节点所指是 TabbyML 的编程助手，区别于同名终端模拟器，不把项目名称当作一种大模型。\n\n官方说明它优化从 IDE 扩展到模型服务的链路：扩展处理流式结果、取消与缓存，服务侧利用相关源码和符号构造提示。补全发生在开发者编辑过程中，代码接受与执行仍由具体工作流决定；提供补全和对话能力不能自动证明系统具备任意命令执行、多代理调度或完全自主实现功能的能力。\n\nDocker/CUDA 是官方展示的一条部署路径，镜像启动参数选择补全、聊天模型及计算设备，持久化目录保存服务数据。文档也列出其他平台和部署方式，因此 Docker 和某种 GPU 不应被写成全局硬依赖。自托管把服务运行与数据管理责任交给团队；实际隐私边界还取决于模型位置、网络连接、身份配置及日志策略，而不是单凭自托管名称获得保证。\n\n## 参考\n\n- [Tabby：自托管助手与端到端架构](https://tabby.tabbyml.com/docs/welcome/)\n- [Tabby：Docker 部署与独立模型参数](https://tabby.tabbyml.com/docs/quick-start/installation/docker/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://tabby.tabbyml.com/"
+}

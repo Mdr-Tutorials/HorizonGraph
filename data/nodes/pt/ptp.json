@@ -1,0 +1,53 @@
+{
+  "id": "ptp",
+  "name": "Precision Time Protocol",
+  "aliases": [
+    "PTP",
+    "精确时间协议",
+    "IEEE 1588"
+  ],
+  "type": "protocol",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hardware-timestamping",
+      "context": "在支持硬件打点的 PTP 配置中获取发送和接收事件时间，降低部分软件路径时间戳误差。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "udp",
+      "context": "选择 UDP over IPv4 或 IPv6 的 PTP 传输映射时承载消息；Ethernet 映射不以 UDP 为硬依赖。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ethernet",
+      "context": "选择 IEEE 802.3 链路层 PTP 映射时直接在 Ethernet 上传递协议消息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "clock-offset",
+      "context": "以协议交换的事件时间估计本地与参考时钟偏移，供同步伺服处理。"
+    }
+  ],
+  "summary": "以消息交换与时钟伺服对齐网络时钟的协议。",
+  "description": "PTP 是 IEEE 1588 定义的网络时钟同步协议，通过同步和延迟测量消息估计时钟关系，再由实现的伺服机制修正时钟。IEEE 1588-2019 对应 PTP v2.1；时钟角色、主时钟选择和配置由采用的 profile 及网络部署决定。\n\nPTP 可以按选定映射运行于 Ethernet 或 UDP/IP，并有端到端与点到点等延迟测量机制。硬件时间戳有助于减小软件路径造成的时间戳误差，但并非所有 PTP 配置的必要条件；参与设备的 profile、传输和延迟机制必须兼容。\n\n链路非对称、交换路径、主时钟质量与伺服状态都可能影响同步结果。协议名不保证固定精度、UTC 可追溯性或正确单向时延；报告结果时应分开描述偏移误差、时间戳分辨率、采集位置与实际参考时钟。\n\n## 参考\n\n- [IEEE 1588-2019 Precision Time Protocol 标准](https://standards.ieee.org/ieee/1588/6825/)\n- [IEEE 1588 工作组 PTP Profiles](https://sagroups.ieee.org/1588/ptp-profiles/)\n- [LinuxPTP ptp4l 时钟、传输与伺服选项](https://www.linuxptp.org/documentation/ptp4l/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "PTP",
+  "official_site": "https://standards.ieee.org/ieee/1588/6825/"
+}

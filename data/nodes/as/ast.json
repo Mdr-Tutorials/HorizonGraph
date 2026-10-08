@@ -9,7 +9,9 @@
   ],
   "type": "concept",
   "domains": [
-    "compilers"
+    "compilers",
+    "developer-environments",
+    "ai-assisted-software-engineering"
   ],
   "relations": [
     {
@@ -20,7 +22,7 @@
   "summary": "用声明和表达式等节点表示源程序抽象语法结构。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-10-01",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "description": "## 机制\n\nAST 保留对后续分析有意义的结构，通常省略部分标点或文法辅助节点。Clang 的节点还可保存源码位置、类型和声明绑定，支持诊断与工具访问。\n\n## 边界与应用\n\nAST 与完整解析树或目标机器 IR 不同，但抽象程度由工具设计决定。源码改写若需保留注释和格式，不能只靠缺少这些信息的 AST。\n\n## 参考\n\n- [Clang AST 简介](https://clang.llvm.org/docs/IntroductionToTheClangAST.html)"
+  "description": "AST 用声明、表达式和语句等节点表达源程序的抽象语法结构，通常省略部分标点或文法辅助节点。抽象程度由工具设计决定；Clang 的 AST 还保留与源码接近的结构、源码位置、类型和声明信息，便于诊断及源码工具访问。\n\n语言服务可以在 AST 上读取符号、引用和类型，支持代码导航、诊断以及部分重构。Clang 的 Parser 与 Sema 协作构造带有语义属性的 AST；并非所有语言都严格先完成一个独立语法树阶段再统一分析，树中有哪些绑定信息需按实际实现说明。\n\nAST 与完整解析树、Tree-sitter 的具体语法树以及目标机器中间表示不同。语法结构本身不证明程序正确，缺失注释或格式信息的 AST 也不能直接保证源码改写保留原文；代码工具需要结合相应位置、词法或编辑机制。\n\n## 参考\n\n- [Clang：抽象语法树、类型与源码位置](https://clang.llvm.org/docs/IntroductionToTheClangAST.html)\n- [Clang：Parser、Sema 与 AST 的协作](https://clang.llvm.org/docs/InternalsManual.html)\n- [clangd：跨文件符号、引用与索引层次](https://clangd.llvm.org/design/indexing)\n- [Tree-sitter：增量解析库与生成器](https://tree-sitter.github.io/tree-sitter/)"
 }

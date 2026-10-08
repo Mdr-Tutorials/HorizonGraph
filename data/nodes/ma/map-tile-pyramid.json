@@ -1,0 +1,37 @@
+{
+  "id": "map-tile-pyramid",
+  "name": "Map Tile Pyramid",
+  "aliases": [
+    "地图瓦片金字塔",
+    "XYZ Tiles",
+    "Slippy Map Tiles",
+    "地图分级瓦片"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "map-projection",
+      "context": "常见二维瓦片网格在选定投影空间中划分范围；不同服务可采用不同网格。"
+    }
+  ],
+  "summary": "按缩放级别把地图分块以支持视口加载和缓存。",
+  "description": "地图瓦片金字塔把地图在不同缩放层级划分为可独立加载的小块。常见 XYZ 方案以 z 表示缩放级别、x 和 y 表示网格位置，视口移动后只请求覆盖当前区域的瓦片。瓦片可以承载已渲染的栅格图像，也可以承载等待客户端绘制的矢量数据；地址方案与内容格式是两层约定。\n\n不同服务可能采用不同投影、瓦片尺寸、y 轴方向和层级范围，不能只替换 URL 而忽略网格定义。连续地图展示还需处理父子层级替换、视口边缘、缓存和重复世界等行为。金字塔的作用是组织分级数据访问，不保证一个层级包含全部原始数据，也不要求所有地图都使用同一种 Web Mercator 网格。\n\n## 参考\n\n- [OpenStreetMap Slippy Map Tilenames](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames)\n- [OpenLayers TileGrid API](https://openlayers.org/en/latest/apidoc/module-ol_tilegrid_TileGrid-TileGrid.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

@@ -1,0 +1,40 @@
+{
+  "id": "cross-venue-arbitrage",
+  "name": "Cross-Venue Arbitrage",
+  "aliases": [
+    "跨场所套利",
+    "跨交易所套利",
+    "跨市场套利"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-gateway",
+      "context": "执行多场所交易腿时，分别通过各目的地的订单网关提交并关联回报；不据此获得跨场所原子成交。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transaction-cost",
+      "context": "比较可实施跨场所价差时，纳入双边交易费、价差、转移及资金再平衡成本。"
+    }
+  ],
+  "summary": "针对不同交易场所的相对价格差实施多腿交易",
+  "description": "跨场所套利针对不同场所中同一或可比资产的价格差，通常尝试在较低净价格处买入、较高净价格处卖出。报价必须按可成交数量、手续费、计价货币和可交付条件比较，屏幕上的两条最新成交价不能单独证明存在可实施机会。\n\n多腿成交不是天然原子事务：某一场所可能拒绝、延迟或只部分成交。预先配置资金和资产可以减少交易时转移需求，却仍需管理各场所库存、资金再平衡和交易对手风险；在区块链资产中，结算时延是原始研究明确分析的套利限制之一。\n\nMakarov–Schoar 的研究展示跨交易所价格偏离与资本流动限制的关系，说明机会可以长期存在而不易被消除。具体实现还受到借券、资金占用、到账、账户权限和场所规则约束，跨场所价差既不保证全腿同时成交，也不保证扣除成本后有利润。\n\n## 参考\n\n- [Makarov–Schoar：Trading and Arbitrage in Cryptocurrency Markets](https://dspace.mit.edu/entities/publication/7f91bfb5-ba77-4d0e-9c79-ec75e104e6cc)\n- [Hautsch–Scheuch–Voigt：Building Trust Takes Time](https://arxiv.org/abs/1812.00595)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,43 @@
+{
+  "id": "asset-compression",
+  "name": "Asset Compression",
+  "aliases": [
+    "资产压缩",
+    "图形资源压缩"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "draco",
+      "context": "在选择 Draco 几何编码时压缩与解码网格数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "meshoptimizer",
+      "context": "在选择 Meshopt 编码时处理顶点、索引或其他支持的数据流。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ktx2",
+      "context": "在纹理交付时保存带 mip 层级及相应编码信息的纹理容器。"
+    }
+  ],
+  "summary": "按内容特点编码几何和纹理以减少交付及存储成本。",
+  "description": "图形资产压缩针对网格属性、索引、动画或纹理采用相应编码方式。几何编码可能结合属性量化与拓扑压缩，纹理则可以压缩为 GPU 可用的块格式，或在交付后转码为设备支持的格式。\n\n压缩率、画质、解码时间、GPU 内存和兼容性需要一起评估。Draco 与 meshoptimizer 提供几何相关编解码能力，KTX2 可以承载纹理及超压缩数据；这些结果不等同于对普通文件做 gzip，运行时必须具备相应解码或转码路径。\n\n## 参考\n\n- [Google Draco 编解码库](https://github.com/google/draco)\n- [Khronos KTX 2.0 规范](https://registry.khronos.org/KTX/specs/2.0/ktxspec.v2.html)\n- [glTF Transform SDK 与优化流程](https://gltf-transform.dev/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

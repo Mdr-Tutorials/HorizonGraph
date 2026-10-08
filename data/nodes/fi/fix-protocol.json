@@ -7,24 +7,53 @@
   ],
   "type": "protocol",
   "ecosystems": [
-    "fintech-ecosystem"
+    "fintech-ecosystem",
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
   ],
   "domains": [
     "quantitative-finance",
-    "networking"
+    "networking",
+    "electronic-trading"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "fix-trading-community",
+      "context": "FIX Trading Community 维护 FIX 业务消息及相关技术规范。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fix-session-protocol",
+      "context": "采用传统 FIX 会话路线时，以经典会话协议管理登录、序号、重传与退出。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fixp",
+      "context": "采用 FIXP 技术路线及相应部署 profile 时，以 FIXP 组织消息流与会话交付。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "simple-binary-encoding",
+      "context": "采用 SBE 编码路线时，按部署指定的模式将相应业务字段编码为二进制消息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fast-protocol",
+      "context": "采用 FAST 编码路线时，以模板和字段算子压缩相应消息流，不表示全部 FIX 接口采用 FAST。"
     }
   ],
-  "summary": "证券与期货电子交易的会话与消息标准。",
+  "summary": "电子交易业务消息及相关会话、编码技术的标准家族。",
   "importance": 4,
   "popular": 42,
   "official_site": "https://www.fixtrading.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Financial Information eXchange（FIX）是一组电子交易消息与相关技术标准，业务层描述报价、订单、成交回报及交易后处理等交互。具体版本与扩展包定义消息、字段和业务规则，FIX Latest 持续整合标准演进。标准家族身份与 FIX Trading Community 组织、软件引擎以及交易所的具体接入接口应分别保留。\n\nFIX 的业务消息、会话、编码和传输具有不同职责。传统部署常把标签值编码与经典 FIX 会话结合，FIX 5.0 起业务与会话规范分离；官方也提供 SBE、FAST 等编码及 FIXP 会话技术。采用某一种业务消息或编码并不意味着同时采用其他所有成员，具体组合由接入规范和双方配置决定。\n\n实现需要明确业务版本、允许字段、会话 profile、编码和恢复规则，并结合对端要求验证交互。会话序号完整或传输成功不能证明订单已经接受、成交或只执行一次；业务回报及应用状态仍需单独处理。支持经典 FIX 的引擎也不自动支持 FIXP、SBE 或某家交易所扩展，兼容范围应按实际实现与部署说明核对。\n\n## 参考\n\n- [FIX Trading Community：FIX 业务消息与标准分层](https://fixtrading.org/standards/fix-protocol/)\n- [FIX Trading Community：FIX Latest 规范引言](https://www.fixtrading.org/online-specification/introduction/)\n- [FIX Trading Community：FIX Session Layer](https://fixtrading.org/standards/fixsession/)\n- [FIX Trading Community：FIXP 标准及发布阶段](https://fixtrading.org/standards/fixp/)"
 }

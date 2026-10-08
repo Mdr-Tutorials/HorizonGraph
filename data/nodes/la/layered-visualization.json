@@ -1,0 +1,34 @@
+{
+  "id": "layered-visualization",
+  "name": "Layered Visualization",
+  "aliases": [
+    "图层化可视化",
+    "数据图层",
+    "Visualization Layer"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "visual-encoding",
+      "context": "每个图层通过位置、颜色和大小等属性独立表达其数据。"
+    }
+  ],
+  "summary": "用独立图层叠加不同数据与视觉表达并统一交互。",
+  "description": "图层化可视化把不同数据集合或图元表达封装成独立图层，再在共享视图中按顺序组合。例如底图、路线、点位和标签分别管理数据与样式，而共同使用视角和交互空间。deck.gl 的图层以数据、访问器和属性描述可视化类型，地图框架则常把图层与数据源分别建模。\n\n图层顺序、透明度、深度测试和坐标体系会影响最终叠加结果。更新时需要稳定的图层身份与明确的数据变化规则，以便复用状态并更新 GPU 属性；移除图层还要清理资源。图层属于可视化组织方式，数据源可被多个图层复用，一个图层也不等于一个业务实体或单次绘制调用。\n\n## 参考\n\n- [deck.gl Using Layers](https://deck.gl/docs/developer-guide/using-layers)\n- [OpenLayers Basic Concepts](https://openlayers.org/doc/tutorials/concepts.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

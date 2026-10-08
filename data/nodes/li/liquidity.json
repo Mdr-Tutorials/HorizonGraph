@@ -1,24 +1,33 @@
 {
   "id": "liquidity",
   "name": "Liquidity",
-  "display_primary": "资产流动性",
-  "display_secondary": "Asset Liquidity",
+  "display_primary": "流动性",
+  "display_secondary": "Liquidity",
   "aliases": [
-    "流动性"
+    "流动性",
+    "资产流动性",
+    "市场流动性",
+    "资金流动性"
   ],
   "type": "concept",
   "domains": [
-    "personal-finance"
+    "personal-finance",
+    "market-microstructure",
+    "quantitative-finance"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "market-microstructure-concept"
     }
   ],
-  "summary": "资产在不承担显著折价损失的前提下，迅速转换变现为可用现金的敏捷程度。",
+  "summary": "资产变现、市场交易与资金支付能力的金融概念。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "金融流动性描述资产或市场在需要时支持资金转移、交易或支付的能力。资产流动性强调资产能否较快变现而不承受显著折价，市场流动性强调一定规模交易能否以较低成本完成；后者既包含价格条件，也包含可用数量、及时性和受冲击后的恢复。\n\n订单簿市场常以买卖价差观察紧密程度，以指定价位的挂单数量观察深度，并考察交易后价格或报价恢复。交易量大、报价窄和盘口深不是同一事实；可见挂单也可能快速消失，因此单一快照不能证明压力情景中的实际可交易能力。\n\n资金流动性则涉及主体获得资金并按时履行支付、保证金或其他义务的能力。一个资产市场较易交易，不代表持有者总能借到现金；资金约束也可能迫使卖出资产，进一步影响市场流动性。这里的金融含义与工程中的流体性质不同，比较时应说明主体、资产、规模和时间条件。\n\n## 参考\n\n- [BIS：市场流动性与韧性的多个维度](https://www.bis.org/publ/qtrpdf/r_qt2403.pdf)\n- [BIS：资金流动性、风险及其与市场流动性的反馈](https://www.bis.org/publications/working-paper-316-funding-liquidity-risk-definition-and-measurement)\n- [CME：盘口深度、价差与跨产品单位比较](https://www.cmegroup.com/content/dam/cmegroup/education/files/new-treasury-market-paradigm.pdf)",
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ]
 }

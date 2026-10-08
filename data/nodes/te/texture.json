@@ -1,0 +1,33 @@
+{
+  "id": "texture",
+  "name": "Texture",
+  "aliases": [
+    "纹理",
+    "GPU 纹理"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "color-management",
+      "context": "加载和输出颜色纹理时区分编码颜色空间；法线等数值纹理采用相应数据解释。"
+    }
+  ],
+  "summary": "供 GPU 采样或写入的有格式图像数据。",
+  "description": "纹理是按维度、格式、层和 mip 级组织的图像数据资源，供 GPU 着色程序读取或作为渲染输出。它可以保存颜色，也可以保存法线、深度和其他数值。磁盘上的 PNG、加载后的像素数据、GPU 纹理以及指向其中区域的纹理视图不应混为同一个对象。\n\n在 PixiJS 中，TextureSource 管理图像来源与上传，Texture 描述同一来源上的帧区域等视图。采样器决定坐标越界和过滤规则；相同像素资源可以在不同采样配置或视图下被使用。资源创建、上传、更新与销毁有各自时机，完成文件加载并不总表示 GPU 上传已完成。\n\n纹理用于精灵图像、表面材质、阴影和离屏图像。颜色纹理需声明正确颜色空间，数值纹理则不能随意进行颜色转换；分辨率、格式和 mip 链影响内存及带宽。纹理可以直接按坐标读取，也可经采样器过滤，不能把所有纹理访问都归为插值采样。\n\n## 参考\n\n- [PixiJS Textures](https://pixijs.com/8.x/guides/components/textures)\n- [Vulkan Samplers](https://docs.vulkan.org/spec/latest/chapters/samplers.html)\n- [Three.js Color Management](https://threejs.org/manual/pages/color-management.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

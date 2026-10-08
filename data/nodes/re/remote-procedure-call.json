@@ -1,0 +1,34 @@
+{
+  "id": "remote-procedure-call",
+  "name": "Remote Procedure Call",
+  "aliases": [
+    "远程过程调用",
+    "RPC"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "api-contract",
+      "context": "通过服务方法、参数及结果的约定，使调用存根与服务实现对齐。"
+    }
+  ],
+  "summary": "把远端服务操作组织成可调用的过程或方法。",
+  "description": "远程过程调用把跨进程或跨机器的服务操作组织为过程、方法和参数，客户端通过存根或调用库发起请求，服务端解码参数、执行操作并返回结果或错误。不同 RPC 系统可以采用不同的接口定义、消息编码与传输方式；gRPC、tRPC 和 ONC RPC 都属于这一思路的具体实现，RPC 这个概念本身不规定统一的线缆协议。\n\n远程调用保留网络带来的延迟、超时、取消和部分失败。客户端未收到结果不能直接证明服务端没有执行操作，取消也不一定撤销已经产生的副作用。工程上需要为接口明确失败语义、截止时间和适用的重试策略；同步、异步、流式调用与是否生成存根由实现决定。共享静态类型可以约束调用形状，仍需要单独处理运行时数据与权限。\n\n## 参考\n\n- [RFC 5531：ONC RPC 模型与传输语义](https://datatracker.ietf.org/doc/html/rfc5531)\n- [gRPC：方法种类与调用生命周期](https://grpc.io/docs/what-is-grpc/core-concepts/)\n- [tRPC：端到端类型化 API](https://trpc.io/docs)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abbreviation": "RPC"
+}

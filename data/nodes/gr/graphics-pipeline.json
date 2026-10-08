@@ -8,21 +8,34 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "graphics-api-ecosystem"
+    "graphics-api-ecosystem",
+    "real-time-rendering-ecosystem"
   ],
   "domains": [
-    "graphics"
+    "graphics",
+    "real-time-rendering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "depth-testing",
+      "context": "在配置深度附件的光栅绘制路径中执行深度比较与可选写入，控制表面遮挡。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "alpha-blending",
+      "context": "在启用混合且格式支持的颜色输出路径中按混合方程组合片元与已有目标值。"
     }
   ],
-  "summary": "顶点进、像素出：变换、光栅、着色、测试按固定阶段推进。",
+  "summary": "把几何、着色与附件操作组织为图形绘制流程。",
   "importance": 5,
   "popular": 45,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "图形管线组织一次绘图如何从几何输入得到目标附件的输出。经典光栅路径包括顶点处理、图元组织、裁剪与光栅化、片元着色以及深度、模板和混合等操作；可编程着色阶段与固定状态共同决定结果，片元并不等同于最终像素。\n\n这里的阶段描述逻辑职责，并不是 GPU 必須串行执行的固定工序。细分和几何着色等阶段可选，网格着色等路径也会改变前端；计算管线与光追管线具有各自入口和工作组织，不能把所有 GPU 工作一概放进经典顶点到片元流程。\n\n应用需设置匹配的着色接口、缓冲、纹理、目标格式和绘制范围，再编码并提交工作。场景图和材质系统负责把对象转换为这些底层配置；相邻绘制或通道的资源访问仍需符合 API 同步规则，管线阶段图自身不构成全局执行保证。\n\n## 参考\n\n- [Vulkan Pipelines](https://docs.vulkan.org/spec/latest/chapters/pipelines.html)\n- [Direct3D 11 Graphics Pipeline](https://learn.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-graphics-pipeline)\n- [Vulkan Rasterization](https://docs.vulkan.org/spec/latest/chapters/primsrast.html)"
 }

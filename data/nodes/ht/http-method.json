@@ -1,0 +1,33 @@
+{
+  "id": "http-method",
+  "name": "HTTP Method",
+  "aliases": [
+    "HTTP 请求方法",
+    "HTTP 方法"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "http"
+    }
+  ],
+  "summary": "声明客户端希望对目标资源执行的操作语义。",
+  "description": "请求方法与目标 URI 一起决定操作含义。GET 请求获取选定表示，HEAD 请求相应元数据而不传输响应内容，PUT 表达创建或替换目标资源状态，POST 让资源按其自身语义处理所提交内容。方法名区分大小写；应用路由应遵循方法的定义，而不是仅把它当作任意函数名。\n\n安全性、幂等性和可缓存性是不同属性。安全方法的定义近似只读；幂等方法重复执行的预期服务端效果与执行一次相同，不要求响应字节、日志或时间戳相同。重试策略仍要考虑请求是否已发送、应用是否遵守方法语义及具体错误，不能把所有 POST 或写入请求自动重试。\n\n## 参考\n\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)\n- [Hono：按方法声明路由](https://hono.dev/docs/api/routing)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

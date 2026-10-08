@@ -1,0 +1,29 @@
+{
+  "id": "clock-offset",
+  "name": "Clock Offset",
+  "aliases": [
+    "时钟偏移",
+    "时间偏移"
+  ],
+  "type": "metric",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "两个时钟在同一物理时刻的读数差及其估计量。",
+  "description": "时钟偏移度量两个时钟在同一物理时刻的读数差，通常以秒及其子单位表示。可约定 θ(t)=本地时间−参考时间，但具体协议的符号必须按自身定义解释；偏移是相位差，不等于网络传输时延或时钟走时速率差。\n\n无法在同一地点同时读取两端时钟时，NTP 或 PTP 以消息时间戳和路径假设估计偏移。NTP 的四时间戳模型同时估计往返时间；未知路径非对称会影响偏移估计，时间戳粒度也不能替代估计不确定度。\n\n跨主机单向时延由不同端点时钟相减，因此时钟偏移误差直接进入结果。报告应说明参考源、采集位置、同步状态和误差界；同机同一时钟测区间时固定偏移可消去，但速率误差、时间跳变和时钟域变化仍需检查。\n\n## 参考\n\n- [NTP 官方时间偏移与往返时延模型](https://www.ntp.org/reflib/time/)\n- [RFC 7679：单向时延的时钟与误差边界](https://www.rfc-editor.org/rfc/rfc7679.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

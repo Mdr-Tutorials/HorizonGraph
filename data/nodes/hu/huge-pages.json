@@ -1,0 +1,36 @@
+{
+  "id": "huge-pages",
+  "name": "Huge Pages",
+  "aliases": [
+    "大页",
+    "巨页",
+    "大页面",
+    "Hugepages"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tlb",
+      "context": "利用TLB对较大页面映射的缓存能力，以每项覆盖更多地址；实际覆盖与硬件结构相关。"
+    }
+  ],
+  "summary": "以较大页映射扩大地址翻译覆盖，需区分显式页池与透明大页。",
+  "description": "大页使用比常规基页更大的内存映射单位，使有限TLB项能够覆盖更大的地址范围，可能减少翻译未命中和页表遍历。支持的页大小、对齐和缓存翻译能力取决于处理器与系统，不是所有平台都采用相同的2MiB或1GiB页。收益也与实际工作集及访问方式相关。\n\nLinux的HugeTLB使用显式管理的页池和映射接口；透明大页则按配置自动安排或合并映射，两者的预留、回收、失败和交换行为不同。页池保留不等于所有用户映射已经触页，页面的NUMA位置也需检查。不能把显式大页的驻留性质无条件推广给所有透明大页。\n\n较大页可增加内存浪费，分配、清零、压缩或合并还可能产生延迟尖峰。低延迟场景需要比较翻译收益与这些成本，按内核支持选择范围和策略，并关注初始化及过载路径。启用大页不自动保证无缺页或更低P99，应以同一环境和负载下的结果验证。\n\n## 参考\n\n- [Linux：HugeTLB 页池与映射](https://docs.kernel.org/admin-guide/mm/hugetlbpage.html)\n- [Linux：透明大页、合并及延迟权衡](https://docs.kernel.org/admin-guide/mm/transhuge.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -1,0 +1,39 @@
+{
+  "id": "hateoas",
+  "name": "Hypermedia as the Engine of Application State",
+  "aliases": [
+    "超媒体驱动应用状态",
+    "HATEOAS"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "uniform-interface"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-method",
+      "context": "在使用 HTTP 的超媒体服务中，按所发现控制的语义选择获取表示或提交操作的方法。"
+    }
+  ],
+  "summary": "让客户端依据资源表示中的超媒体控制推进应用交互。",
+  "description": "HATEOAS 是 REST 统一接口的四项约束之一。客户端获取资源表示后，从链接或其他超媒体控制发现可用交互，并据控制推进应用状态；服务器可以在表示中表达当前操作入口，而不要求客户端提前硬编码所有资源路径和状态迁移。\n\n返回任意几个 URL 不足以完整说明交互，客户端还需理解媒体类型、控制语义和可使用的方法。HATEOAS 不表示浏览器必须呈现某种页面，也不取代请求认证和服务端授权。在基于 HTTP 的服务中，客户端通常以方法和表示驱动操作；普通固定端点的 JSON API 是否满足该约束需要单独判断。\n\n## 参考\n\n- [Fielding：REST 架构风格原始论文](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abbreviation": "HATEOAS"
+}

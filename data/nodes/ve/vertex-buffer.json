@@ -1,0 +1,33 @@
+{
+  "id": "vertex-buffer",
+  "name": "Vertex Buffer",
+  "aliases": [
+    "顶点缓冲区",
+    "顶点缓冲"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gpu-buffer",
+      "context": "通过 GPU 缓冲保存顶点属性，绘制时依据输入格式、步幅和偏移读取。"
+    }
+  ],
+  "summary": "按输入布局向顶点阶段提供位置、法线、UV等属性的缓冲。",
+  "description": "## 机制\n\n顶点缓冲区存放绘制所需的属性，如位置、法线、颜色和纹理坐标。输入布局指定格式、字节偏移和步幅，使管线能从缓冲中取得属性，并对应到顶点着色器的输入。\n\n属性可交错存储在同一缓冲，也可分布于多个绑定。以 WebGPU 为例，arrayStride 指定元素间距，shaderLocation 对应着色器输入位置，stepMode 可让数据按顶点或按实例推进。\n\n## 边界与应用\n\n顶点缓冲描述属性，索引缓冲描述顶点的引用次序，两者职责不同。顶点着色器也可用内建顶点编号生成位置，因此顶点缓冲不是所有绘制的硬前提；绑定范围和输入布局必须与实际数据一致。\n\n## 参考\n\n- [Khronos Vulkan：顶点输入](https://docs.vulkan.org/spec/latest/chapters/fxvertex.html)\n- [Microsoft：顶点缓冲资源](https://learn.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-resources-buffers-intro#vertex-buffer)\n- [W3C WebGPU：顶点输入布局](https://www.w3.org/TR/webgpu/#vertex-state)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

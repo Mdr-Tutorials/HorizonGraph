@@ -1,0 +1,39 @@
+{
+  "id": "ip-multicast",
+  "name": "IP Multicast",
+  "aliases": [
+    "IP 组播",
+    "IP 多播"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ip",
+      "context": "以 IP 组地址标识目标接收集合，并由支持的网络在转发分支复制 IP 数据报。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "igmp",
+      "context": "在 IPv4 本地链路上通过 IGMP 报告或查询组成员关系；不适用于 IPv6 MLD。"
+    }
+  ],
+  "summary": "按组地址向多个接收者分发 IP 数据报的机制。",
+  "description": "IP 组播以组地址表示一组接收者，网络可以在转发分支处复制数据报，使发送者无需为每个接收者独立发送同一份数据。成员关系可动态改变，发送者和接收成员不必是同一集合；这是 IP 层分发机制，不是某种应用可靠消息协议。\n\nIPv4 本地链路成员管理通常使用 IGMP，IPv6 则使用不同的 MLD 机制。跨网络转发还需要适当的组播路由与网络配置；源特定组播按来源与组地址限定流量，不能仅以加入任意组来概括所有成员语义。\n\n组播数据报仍可能丢失、重复或乱序，加入成员组也不会获得重放和确认机制。UDP 常用于组播行情，但恢复、序号检查与权限由实际服务定义；本地订阅成功、路由可达和应用数据完整是需要分别验证的条件。\n\n## 参考\n\n- [RFC 1112：IP Host Multicasting](https://www.rfc-editor.org/rfc/rfc1112.html)\n- [RFC 9776：当前 IGMPv3 规范](https://www.rfc-editor.org/rfc/rfc9776.html)\n- [RFC 4607：Source-Specific Multicast](https://www.rfc-editor.org/rfc/rfc4607.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

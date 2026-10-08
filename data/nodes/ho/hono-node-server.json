@@ -1,0 +1,48 @@
+{
+  "id": "hono-node-server",
+  "name": "@hono/node-server",
+  "aliases": [
+    "Hono Node.js 服务端适配器"
+  ],
+  "type": "library",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "runtime-adapter"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "web-standard-http-handler",
+      "context": "把 Node 入站请求接到 Request 输入、Response 输出的处理入口，并将输出发送回原生连接。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "nodejs",
+      "context": "在 Node.js 的 HTTP/HTTPS 等服务接口上连接标准对象与原生请求响应生命周期。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "websocket",
+      "context": "选择 Node WebSocket 路径时通过 upgradeWebSocket 和已配置的 ws 服务处理连接升级。"
+    }
+  ],
+  "summary": "把标准 HTTP 处理函数接入 Node.js 服务与连接。",
+  "description": "@hono/node-server 是独立于 Hono 核心发布的 Node.js 适配库，负责把 Node HTTP 请求转换为应用采用的 Request 输入，再将返回的 Response 写回 Node 响应。serve 和相关服务器创建接口连接监听、请求处理与资源清理，而 Hono 的路由代码仍可保留标准入口形式。\n\nNode 原生 IncomingMessage、ServerResponse 与 Web Request、Response 的生命周期和流接口不同，适配不能只替换类型名。库提供相关绑定访问、入站请求清理和可配置对象覆盖等行为；应用若直接写原生响应，需要使用文档规定的已发送响应路径，避免和框架的正常响应处理同时写入。\n\n当前官方 WebSocket 用法已在 node-server 提供 upgradeWebSocket，并由应用安装和配置 ws 的 WebSocketServer；这不是只安装适配库就自动获得所有升级能力。HTTPS、HTTP/2、静态文件和连接相关配置应按 Node 入口文档核对，也不能把这一适配器写成其他宿主运行 Hono 的必需组件。\n\n## 参考\n\n- [Hono Node.js](https://hono.dev/docs/getting-started/nodejs)\n- [Hono node-server 官方源码与说明](https://github.com/honojs/node-server)\n- [Hono WebSocket Helper](https://hono.dev/docs/helpers/websocket)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/honojs/node-server"
+}

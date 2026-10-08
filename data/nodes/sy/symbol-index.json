@@ -1,0 +1,39 @@
+{
+  "id": "symbol-index",
+  "name": "Symbol Index",
+  "aliases": [
+    "符号索引",
+    "代码符号索引",
+    "Cross-file Symbol Index"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "compiler-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ast",
+      "context": "在 clangd 的编译器驱动索引中读取 AST 声明、定义与引用，形成跨文件记录。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "semantic-analysis",
+      "context": "在语言感知索引中通过名称绑定识别引用指向的声明，避免仅按同名文本合并实体。"
+    }
+  ],
+  "summary": "按符号身份记录跨文件声明、定义和引用位置。",
+  "description": "符号索引记录项目中的符号、源码位置、引用以及实现支持的符号间关系，便于跨文件查询。clangd 使用稳定的符号标识把同一实体的多处声明合并，并记录名称、类型与引用位置等信息；它与编译器当前作用域的符号表承担不同范围的工作。\n\n打开文件的动态索引反映未保存或近期修改，后台索引覆盖更多翻译单元，可选静态及远程索引服务较大项目。构建配置决定哪些头文件、宏与源码被正确解析；索引查询通常需要把不同来源结果合并并处理旧数据。\n\n索引能支持查找定义、引用和实现，但不意味着所有引用都可准确识别，例如动态调用与配置字符串可能超出语言服务能力。符号索引也不等同于按自然语言意义排序的代码检索；二者可以合作提供上下文，但结果的身份和证据不同。\n\n## 参考\n\n- [clangd：跨文件符号、引用与索引层次](https://clangd.llvm.org/design/indexing)\n- [clangd：导航、补全与语义重构](https://clangd.llvm.org/features)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

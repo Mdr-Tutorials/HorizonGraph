@@ -1,0 +1,38 @@
+{
+  "id": "market-microstructure",
+  "name": "Market Microstructure",
+  "aliases": [
+    "市场微观结构"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bid-ask-spread",
+      "context": "实证比较交易成本和报价质量时，采用明确市场范围与时点的买卖价差。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-depth",
+      "context": "研究订单簿市场吸收交易需求的能力时，观察指定价位范围的挂单数量。"
+    }
+  ],
+  "summary": "研究交易规则、订单行为、信息与价格流动性相互作用的领域。",
+  "description": "市场微观结构研究具体交易制度如何把交易意向与信息转化为成交、价格和交易成本。它关注订单驱动与报价驱动的区别、参与者信息差、订单优先级和流动性供需，分析尺度可以是单笔事件，也可以是更长的市场质量观察窗口。\n\n微观结构研究把观察到的成交价与潜在价值、报价和执行条件区分开来。价差既可能反映处理与库存成本，也可能包含逆向选择补偿；不同制度、数据范围和样本时段会改变实证结论。订单簿是重要研究对象，但经销商和混合市场同样在范围内。\n\n工程应用包括选择执行方式、估计排队成交概率以及验证回放模型是否遵循场所规则。价差、深度和成交后价格变化是常见观测量，不应把某一指标当成完整流动性，也不能仅凭高消息量推导价格发现更好或市场更公平。\n\n## 参考\n\n- [SEC：市场微观结构的研究问题](https://www.sec.gov/newsroom/speeches-statements/spch050605css-broad-themes-market-microstructure)\n- [Glosten 与 Milgrom：信息差、报价价差与交易价格原始论文](https://www.sciencedirect.com/science/article/pii/0304405X85900443)\n- [BIS：交易协议、订单簿与经销商市场的研究正文](https://www.bis.org/publ/mktc07.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

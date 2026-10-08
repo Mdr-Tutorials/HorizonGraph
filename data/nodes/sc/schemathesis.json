@@ -1,0 +1,59 @@
+{
+  "id": "schemathesis",
+  "name": "Schemathesis",
+  "aliases": [
+    "Schemathesis 接口测试",
+    "Schemathesis"
+  ],
+  "type": "tool",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem",
+    "python-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-based-api-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "property-based-testing"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "hypothesis"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "读取 OpenAPI 描述以生成 HTTP API 测试，并利用响应约束与链接检查结果和操作序列。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "graphql",
+      "context": "读取 GraphQL Schema 生成查询与参数，检验类型约束和接口错误行为。"
+    }
+  ],
+  "summary": "由 OpenAPI 或 GraphQL 生成性质测试的 API 工具。",
+  "description": "Schemathesis 读取 OpenAPI 或 GraphQL Schema，自动生成 API 请求并检查响应，提供命令行、Python API 和 pytest 集成。其生成流程建立在 Hypothesis 等策略机制之上，结合接口示例、边界探索、有效与无效输入，寻找服务器异常、响应模式偏离和输入校验遗漏。使用命令行测试非 Python 服务，并不要求被测应用采用 Python。\n\n它可检查状态码、内容类型、响应头和消息体是否符合描述，也可添加项目自定义检查。对于有关联的操作，能够利用 OpenAPI 链接、依赖分析或响应数据组织多步请求，把创建结果用于后续查询等场景；哪些连接可以推导取决于接口结构。失败缩减会进一步发出请求，生成便于复现的失败样例，所以测试环境和数据状态应支持重复执行。\n\nSchemathesis 的性质与生成来源于 Schema 及配置，不能从接口形状自动推导所有业务规则。认证、数据前置条件、合法输入的业务限制和预期错误状态需要正确设置，必要时用钩子与自定义检查补充。它提供 Schema 驱动测试的证据，不自动执行每个消费者的真实客户端代码，因此不能单独替代消费者契约验证或完整业务测试。\n\n## 参考\n\n- [Schemathesis：官方文档与支持范围](https://schemathesis.readthedocs.io/en/stable/)\n- [Schemathesis：数据生成与缩减](https://schemathesis.readthedocs.io/en/stable/explanations/data-generation/)\n- [Schemathesis：检查参考](https://schemathesis.readthedocs.io/en/stable/reference/checks/)\n- [Schemathesis：多步操作测试](https://schemathesis.readthedocs.io/en/stable/explanations/stateful/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://schemathesis.io/"
+}

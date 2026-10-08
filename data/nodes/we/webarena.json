@@ -1,0 +1,44 @@
+{
+  "id": "webarena",
+  "name": "WebArena",
+  "aliases": [
+    "网页操作任务基准"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "web-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "execution-based-evaluation",
+      "context": "原始基准的功能性判定依据网页操作后的回复、页面内容或网站状态，允许多条有效操作路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "task-success-rate",
+      "context": "按原始 WebArena 任务的功能性成功判定汇总端到端完成比例，必须标明实际评估子集。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reproducible-evaluation-environment",
+      "context": "自托管评估需要配置任务站点、登录状态和数据，并按官方协议恢复环境，避免上次运行的状态影响后续比较。"
+    }
+  ],
+  "summary": "以自托管网站和状态判定评估网页智能体完成任务。",
+  "description": "WebArena 原始基准提供 812 个长流程网页任务，环境包括购物、讨论、协作开发和内容管理网站，并配有地图及文档等资源。它以可交互、自托管的网站环境模拟现实操作，不是仅供预测下一步动作的静态截图数据。\n\n任务用自然语言表达目标，程序化评估检查回复、目标页面或后端状态是否满足预期功能结果。判定侧重实际完成情况而非与唯一动作序列完全相同，从而容纳达到同一目标的多种路径。官方实现要求配置站点并按规定恢复初始状态。\n\n演示站点用于理解内容，不能代替按协议搭建的评估环境。原始 WebArena 与后来 Verified、VisualWebArena 或 WebArena-x 生态中的其他集合应分别报告；网址、认证状态、网站数据及动作预算的变化都会影响可比性，原始 812 项不代表整个家族的任务总数。\n\n## 参考\n\n- [WebArena 原论文：任务与功能性判定](https://arxiv.org/html/2307.13854v3)\n- [WebArena 原始任务的官方实现](https://github.com/web-arena-x/webarena)\n- [BrowserGym 官方框架与可选基准包](https://github.com/ServiceNow/BrowserGym)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool"
+}

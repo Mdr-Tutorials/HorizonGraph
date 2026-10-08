@@ -1,0 +1,52 @@
+{
+  "id": "minimum-common-web-api",
+  "name": "Minimum Common Web API",
+  "aliases": [
+    "ECMA-429",
+    "最小公共 Web 平台 API",
+    "最小公共 Web API",
+    "Minimum Common Web Platform API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "wintertc",
+      "context": "ECMA-429 的标准化技术工作由 Ecma TC55 / WinterTC 负责。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-api",
+      "context": "最小接口集合规范性引用 Fetch Standard 的 Request、Response、Headers 和全局 fetch 行为。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "web-streams-api",
+      "context": "最小接口集合采用 Streams Standard 的读流、写流、转换流及相关控制器与策略接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "abort-controller",
+      "context": "最小接口集合采用 DOM Standard 定义的 AbortController 与 AbortSignal 取消接口。"
+    }
+  ],
+  "summary": "为浏览器与服务器运行时规定最小共同 Web 接口集合。",
+  "description": "Minimum Common Web API 是 ECMA-429 规范的主题，其第一版于 2025 年 12 月发布，记录一个面向浏览器和服务器 ECMAScript 运行时的最小 Web 接口集合。集合包括 Fetch 的 Request、Response、Headers 与 fetch，Web Streams 的读写及转换流，以及 AbortController、URL 等接口；接口的具体行为仍由其规范性引用的 WHATWG 或 W3C 标准定义。\n\n规范要求实现这些接口时遵循被引用标准及 ECMAScript 的相关语义，也允许运行时提供集合之外的扩展。服务器环境可能因宿主结构而存在差异，规范要求说明偏离、原因和影响；接口名字相同并不足以证明行为符合。集合也不要求完整浏览器 DOM 或必须提供 Web Workers。\n\n这套规范为可移植服务器代码提供共同的接口目标，应用仍需分别核对平台的资源限制、网络行为、权限和扩展 API。它不会使 Node.js 原生 HTTP 对象、云函数事件载荷或 Workers 的平台绑定自动成为同一接口，也不能仅凭某个运行时支持 fetch 就宣称完整符合 ECMA-429。\n\n## 参考\n\n- [Ecma：ECMA-429 标准入口](https://ecma-international.org/publications-and-standards/standards/ecma-429/)\n- [ECMA-429 第一版全文](https://ecma-international.org/wp-content/uploads/ECMA-429_1st_edition_december_2025.pdf)\n- [Ecma：TC55](https://ecma-international.org/technical-committees/tc55/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://ecma-international.org/publications-and-standards/standards/ecma-429/"
+}

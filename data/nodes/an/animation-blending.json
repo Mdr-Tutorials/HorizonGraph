@@ -1,0 +1,35 @@
+{
+  "id": "animation-blending",
+  "name": "Animation Blending",
+  "aliases": [
+    "动画混合",
+    "动作混合",
+    "Crossfade"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "skeletal-animation",
+      "context": "角色动作渐变或分层播放时，组合多段动画采样得到的骨骼姿势。"
+    }
+  ],
+  "summary": "按权重或过渡进度组合多个动画结果。",
+  "description": "动画混合把多个动画结果按权重组合，用于动作间渐变、连续速度变化或身体不同部位的分层控制。过渡混合可以让行走逐渐变为跑步，轨道过滤或遮罩则允许上半身动作与下半身移动同时呈现。\n\n混合系统需要明确各轨道的权重、覆盖或叠加规则及时间推进方式。骨骼姿势、颜色和离散事件具有不同处理语义；制作时应检查姿势连续性以及根运动和事件的处理，避免仅把两个播放实例叠放就当作完整动作混合。\n\n## 参考\n\n- [Godot：AnimationTree 的混合节点与轨道过滤](https://docs.godotengine.org/en/stable/tutorials/animation/animation_tree.html)\n- [Spine：过渡、轨道与分层](https://en.esotericsoftware.com/spine-applying-animations)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

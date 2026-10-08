@@ -1,0 +1,41 @@
+{
+  "id": "web-streams-api",
+  "name": "Web Streams API",
+  "aliases": [
+    "Web流接口",
+    "WHATWG Streams",
+    "Streams API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backpressure",
+      "context": "通过队列大小、desiredSize 和管道处理反馈消费速率，使配合的生产者避免持续超过下游处理能力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "abort-signal",
+      "context": "pipeTo 等管道操作可采用 AbortSignal 选项，按传播规则取消源或中止目标。"
+    }
+  ],
+  "summary": "用可读、可写和转换流组织逐块处理，并传递背压和取消。",
+  "description": "Web Streams API 定义 ReadableStream、WritableStream 与 TransformStream，使数据可逐块产生、读取、写入和转换。普通流的块可为任意值，字节流具有专门规则；一个块不必对应完整文本字符或应用消息。\n\n内部队列及大小策略产生背压反馈，读取者、写入者和管道据此协调处理速率。reader 或 writer 会锁定对应流；pipeTo 等操作还按选项传播关闭、错误与取消，应用自定义底层源也需配合这些规则。\n\n接口是可移植的数据处理模型，不等同 HTTP 流传输协议或所有运行时的原生流类型。Fetch 正文可以采用它，Deno 等服务端也提供相应类；逐块处理减少整体缓冲需求，但队列及消费者行为仍影响实际内存使用。\n\n## 参考\n\n- [WHATWG Streams：标准与流模型](https://streams.spec.whatwg.org/#model)\n- [WHATWG Streams：队列与策略](https://streams.spec.whatwg.org/#queuing-strategies)\n- [Deno：Streams接口](https://docs.deno.com/api/web/streams/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://streams.spec.whatwg.org/"
+}

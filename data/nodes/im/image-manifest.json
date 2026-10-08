@@ -1,0 +1,43 @@
+{
+  "id": "image-manifest",
+  "name": "Image Manifest",
+  "aliases": [
+    "镜像清单",
+    "Image Manifest"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-image-spec",
+      "context": "采用 OCI 表示的清单使用其 config 与 layers 描述符及镜像内容组合规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-layer",
+      "context": "容器镜像清单通过有序 layers 描述符引用用于重建根文件系统的变更集。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "container-image-digest",
+      "context": "清单中的内容描述符使用摘要定位和检验其配置对象与层内容。"
+    }
+  ],
+  "summary": "引用单个平台镜像配置与有序层的内容描述文档",
+  "description": "## 机制与边界\n\n镜像清单把单个平台镜像所需的配置与文件系统层组合起来。OCI Image Manifest 是 JSON 文档，config 描述符指向配置对象，layers 数组按应用顺序引用各个层。清单本身通常保存内容引用，而不是把所有文件数据直接嵌入其中；所引用的 blob 可以分别存储和传输。\n\n清单中的描述符提供媒体类型、摘要和原始内容字节长度，帮助消费者识别、寻址及校验内容。配置进一步记录操作系统、处理器架构、启动配置和未压缩层的 DiffID。层数组的顺序决定文件系统变更的应用顺序，不能仅按层摘要排序后重建镜像。\n\n镜像索引位于更高的选择层，引用清单以表达不同平台的候选内容；镜像清单则用于组装所选内容。在 OCI 的扩展用途里，相同清单结构也能承载其他制品，并通过 artifactType 等信息表明用途。因此遇到 manifest 文档时，还需要检查媒体类型和配置语义，不能只凭文件结构就认定它是可运行的容器镜像。\n\n## 参考\n\n- [OCI：Image Manifest](https://raw.githubusercontent.com/opencontainers/image-spec/main/manifest.md)\n- [OCI：Content Descriptor](https://raw.githubusercontent.com/opencontainers/image-spec/main/descriptor.md)\n- [OCI：Image Configuration](https://raw.githubusercontent.com/opencontainers/image-spec/main/config.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -8,20 +8,30 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "tcp-ip-ecosystem"
+    "tcp-ip-ecosystem",
+    "container-ecosystem",
+    "wsl-ecosystem"
   ],
   "domains": [
-    "networking"
+    "networking",
+    "containerization",
+    "virtualization"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ip",
+      "context": "在采用 IP 地址转换的路径中，修改地址及受影响的包信息。"
     }
   ],
-  "summary": "私网地址与公网端口的转换，IPv4 延寿功臣。",
+  "summary": "在地址域之间转换 IP 地址，可结合端口复用通信端点。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "网络地址转换（NAT）在不同地址域之间转换 IP 地址及相关包信息。传统 Basic NAT 主要映射地址，NAPT 进一步利用 TCP 或 UDP 端口区分多个通信端点，从而让多个内部地址共享较少外部地址。两者不能都简化成固定的私网地址与公网端口一一对应，转换本身也不规定全部访问策略。\n\n转换需要维护或取得相应映射，双向流量通常依靠一致的关联返回正确端点。包内携带地址的应用协议、主动入站连接与端到端身份可能受到影响；静态映射、端口发布和应用层配合各有不同作用。NAT 也不是防火墙的同义词，是否允许流量需要结合路由、规则与部署政策判断。\n\nDocker bridge 的默认路线可利用地址转换支持外部连接和端口映射，但直接路由模式不要求同样的转换路径。普通 WSL 的 NAT 网络与 WSLc 的 Consommé 用户态 NAT 也采用不同实现；应区分转换机制、实现位置和具体网络边界，不能因两种配置都叫 NAT 就推断它们具有相同的接口、性能或安全性质。\n\n## 参考\n\n- [IETF RFC 3022：Traditional NAT](https://datatracker.ietf.org/doc/html/rfc3022)\n- [Docker：Port Publishing and Mapping](https://docs.docker.com/engine/network/port-publishing/)\n- [WSL：NAT、Mirrored 与 Consomme](https://wsl.dev/technical-documentation/localhost/)"
 }

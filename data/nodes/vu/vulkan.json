@@ -5,16 +5,18 @@
   "aliases": [],
   "type": "protocol",
   "ecosystems": [
-    "graphics-api-ecosystem"
+    "graphics-api-ecosystem",
+    "real-time-rendering-ecosystem"
   ],
   "domains": [
-    "graphics"
+    "graphics",
+    "real-time-rendering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "api-specification"
     },
     {
       "relation_type": "implements",
@@ -24,13 +26,22 @@
       "relation_type": "stewarded_by",
       "target_id": "khronos-group",
       "context": "相关图形接口或着色语言规范由 Khronos 工作组维护。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "render-pass"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "draw-call"
     }
   ],
-  "summary": "Khronos 的显式图形与计算 API，把同步和内存交给应用。",
+  "summary": "以显式资源与同步规则组织跨平台 GPU 工作。",
   "importance": 4,
   "popular": 66,
   "official_site": "https://www.vulkan.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Vulkan 是 Khronos 维护的 GPU API 规范，围绕设备、队列、命令、资源绑定和管线组织图形及计算工作。应用准备缓冲、图像与管线后录制命令再提交；图形、计算和光追管线有不同工作路径，不能只把 Vulkan 理解为某一种着色算法。\n\n资源访问同步主要由应用明确管理，提交顺序本身不保证所需执行依赖或内存可见性。绘制可采用渲染通道或相应动态渲染路径，需匹配附件格式、布局及用途；显式控制允许更细调度，也提高了资源生命周期和同步设计的责任。\n\nVulkan 后端可服务游戏、可视化与计算，但具体设备的扩展和可选能力需查询。GLSL、HLSL 等源码通常经工具链生成相应 SPIR-V 模块，源码语言与 API 接口分别管理；不能把某种源码语言或硬件光追功能写成所有 Vulkan 应用的硬要求。\n\n## 参考\n\n- [Vulkan Pipelines](https://docs.vulkan.org/spec/latest/chapters/pipelines.html)\n- [Khronos Vulkan Synchronization Guide](https://docs.vulkan.org/guide/latest/synchronization.html)\n- [Vulkan Render Pass](https://docs.vulkan.org/spec/latest/chapters/renderpass.html)\n- [Vulkan Ray Traversal](https://docs.vulkan.org/spec/latest/chapters/raytraversal.html)"
 }

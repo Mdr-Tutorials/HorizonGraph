@@ -1,0 +1,57 @@
+{
+  "id": "consomme-networking",
+  "name": "Consommé Networking",
+  "aliases": [
+    "Consomme",
+    "Consommé",
+    "Consomme Networking",
+    "WSLc 用户态网络"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "virtualization",
+    "networking"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "virtualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "virtio",
+      "context": "通过 virtio-net 网络设备通路取得客户机以太网帧。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "socket",
+      "context": "宿主用户态进程把客户机流量转换为普通宿主 socket 操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nat",
+      "context": "按 Consommé 用户态 NAT 模型组织客户机与宿主外部网络之间的地址和会话关联。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dns",
+      "context": "在该网络模型中为客户机处理解析请求。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "port-publishing",
+      "context": "在配置服务端口映射的场景中，把选定客户机端口转发到宿主访问入口。"
+    }
+  ],
+  "summary": "把客户机以太网流量转换为宿主 socket 的用户态网络模型。",
+  "description": "Consommé 是 WSL 所采用的一种用户态网络模型，其底层来自 OpenVMM 项目。客户机拥有虚拟网络接口、地址、网关和 DNS，但帧交给宿主用户态进程解析并转为普通宿主 socket。它与由宿主传统 NAT 或网桥直接转发 VM 数据包的路线不同，概念身份是网络组织方式，具体用户态库承担实现。\n\n虚拟机通过 virtio-net 路线发送以太网帧，宿主服务处理 DNS、TCP 与 UDP 流量及端口映射。流量以会话拥有者身份经过宿主网络体系，因而会受到实际宿主防火墙、VPN 路由和代理条件的影响；这种集成目标不能被写成绕过网络策略，或保证所有网络软件完全兼容。\n\nWSLc 3.0.1 的会话配置将 Consommé 设为默认网络模式，源码和技术文档还说明端口转发具有具体实现入口与选项。普通 WSL、WSLc 会话和容器内部桥接属于不同层级，Consommé 不能替代全部 Linux 容器接口配置，也不能从默认模式推断所有版本使用同样后端。\n\n## 参考\n\n- [WSL：NAT、Mirrored 与 Consomme](https://wsl.dev/technical-documentation/localhost/)\n- [WSL 3.0.1：WSLCUserSettings 默认设置](https://github.com/microsoft/WSL/blob/3.0.1/src/windows/common/wslc/settings/WSLCUserSettings.h#L100)\n- [Microsoft：WSLc Architecture Deep Dive](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

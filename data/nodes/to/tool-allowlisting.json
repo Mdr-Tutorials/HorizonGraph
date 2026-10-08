@@ -1,0 +1,29 @@
+{
+  "id": "tool-allowlisting",
+  "name": "Tool Allowlisting",
+  "aliases": [
+    "工具白名单",
+    "允许工具清单"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "按可信来源和工具标识限制可发现或调用的操作集合。",
+  "description": "工具白名单为运行时明确列出允许向模型提供或由执行器派发的工具。限制对象可以是工具来源、命名空间、版本与名称，而不是仅凭自然语言说明认定安全。限制可发现集合能够减少不必要的操作面，执行器仍需对真正被调用的工具实施检查。\n\n聚合多个服务时，要使用能区分可信服务与工具的标识。MCP 工具名只在单个服务器范围内唯一，serverInfo.name 也不保证跨服务唯一；来自未受信服务器的工具注释不能当作安全承诺。名称匹配之后，仍需校验输入、资源范围和工具版本变化，避免白名单覆盖了超出预期的行为。\n\nAntigravity 权限规则可对 MCP 工具等动作设定允许、拒绝或询问，SDK 可按工具类别组合策略。白名单不表示被允许工具的每次调用都适当，也不阻止合法工具在过宽权限下产生危险效果。工具投毒、描述变化和参数中的外传目标应在来源核验及具体调用控制中另行处理。\n\n## 参考\n\n- [Google Antigravity：权限规则](https://www.antigravity.google/docs/permissions)\n- [Google Antigravity SDK：Policies](https://www.antigravity.google/docs/sdk/policies/)\n- [MCP 2026-07-28：Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

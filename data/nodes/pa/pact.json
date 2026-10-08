@@ -1,0 +1,45 @@
+{
+  "id": "pact",
+  "name": "Pact",
+  "aliases": [
+    "Pact 契约测试",
+    "Pact"
+  ],
+  "type": "tool",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "consumer-driven-contract-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "contract-testing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "使用 Pact 的 HTTP 交互模式时，记录并验证消费者与提供者之间的请求和响应；消息模式不要求使用 HTTP。"
+    }
+  ],
+  "summary": "支持 HTTP 与消息交互的消费者驱动契约测试工具。",
+  "description": "Pact 是面向消费者驱动契约测试的开源工具体系，覆盖 HTTP 交互和消息集成，并提供多种语言的实现。消费者测试通过 Pact 管理的替身执行实际客户端代码，记录请求、预期响应及匹配规则，产生契约工件；提供者验证器则在提供者实现上执行这些交互，检验双方对通信边界的理解。不同语言实现与插件的具体能力需要按其文档核对。\n\nPact 的匹配器帮助把“需要这一类型或模式的字段”与“必须具有这一精确内容”区分开，提供者状态则为交互建立独立、可重复的前置条件。Pact Broker 可以保存契约、服务版本与验证结果，并支持发布兼容性查询；Broker 是配套服务，不能据此认定每个本地 Pact 测试都必须依赖它。跨团队应用还需要明确契约更新、验证失败处理与服务版本标记。\n\nPact 重点验证真实消费者如何构造请求、处理消息，以及提供者能否满足这些期望，不承担提供者全部功能测试。把它仅当固定响应桩使用而不验证交互，或从接口文档生成契约却从未执行消费者代码，会削弱这一证据。支付副作用、持久化正确性和完整业务流程仍需相应测试，Pact 的通过结果也只覆盖被记录并验证的交互与版本。\n\n## 参考\n\n- [Pact：工具定位与消费者契约](https://docs.pact.io/)\n- [Pact：消费者测试实践](https://docs.pact.io/consumer)\n- [Pact：提供者验证与 Broker 结果](https://docs.pact.io/provider)\n- [Pact：契约与功能验证边界](https://docs.pact.io/consumer/contract_tests_not_functional_tests)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://docs.pact.io/"
+}

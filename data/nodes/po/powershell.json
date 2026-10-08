@@ -1,0 +1,45 @@
+{
+  "id": "powershell",
+  "name": "PowerShell",
+  "aliases": [
+    "PowerShell 命令行与自动化工具",
+    "微软 PowerShell"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "windows-ecosystem",
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "windows-terminal",
+      "context": "Windows Terminal 可用 PowerShell 可执行程序作为 profile，承载其命令行和脚本会话。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl-interop",
+      "context": "在 Windows 上需要调用 Linux 工具的可选工作流中，通过 wsl.exe 启动命令并连接其文本输入输出。"
+    }
+  ],
+  "summary": "使用对象管道的跨平台 Shell、脚本与任务自动化工具。",
+  "description": "PowerShell 是由命令行 Shell、脚本语言和自动化能力构成的工具体系，本节点覆盖可执行 Shell 与自动化工具身份。现代 PowerShell 可运行于 Windows、Linux 和 macOS，命令、函数、脚本及模块共同组成任务执行环境。它以系统管理、构建部署和重复任务为常见用途，不能因为最初服务 Windows 管理就将所有现行版本限定为 Windows 专用工具。\n\nPowerShell 的 cmdlet 管道可以传递 .NET 对象，使后续命令直接使用属性和方法进行筛选或组合，而不必先从终端显示文本恢复结构。对象管道与外部本机程序的标准输入输出边界需要区分：调用 `wsl.exe` 或其他外部程序并不让对方的文本输出自动成为其原始对象。格式化、字符串转义和调用参数也分别受 PowerShell 与被调用程序的规则影响。\n\nWindows PowerShell 5.1 使用 .NET Framework，现代 PowerShell 使用跨平台 .NET，二者的可执行入口和模块兼容性存在差异。Windows Terminal 可以承载 PowerShell 会话；在 Windows 上，PowerShell 可调用 `wsl.exe` 执行 Linux 工具，并通过 WSL 的互操作能力组合工作流。这样的集成是可选场景，PowerShell 无须安装 WSL 才能执行一般脚本，也不能把 Windows 专属管理模块推定为跨平台通用。\n\n## 参考\n\n- [Microsoft：What is PowerShell?](https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.5)\n- [Microsoft：Windows PowerShell 与 PowerShell 的差异](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/differences-from-windows-powershell?view=powershell-7.5)\n- [Microsoft：Windows/Linux 命令互操作](https://learn.microsoft.com/en-us/windows/wsl/interop)\n- [Microsoft：Windows Terminal FAQ](https://learn.microsoft.com/en-us/windows/terminal/faq)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://learn.microsoft.com/en-us/powershell/"
+}

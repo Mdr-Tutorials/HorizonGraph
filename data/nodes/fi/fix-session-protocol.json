@@ -1,0 +1,43 @@
+{
+  "id": "fix-session-protocol",
+  "name": "FIX Session Protocol",
+  "aliases": [
+    "FIX Session Layer",
+    "FIXT",
+    "FIX 会话协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "fix-trading-community",
+      "context": "FIX Trading Community 制定和维护 FIX 会话技术规范及 profile。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "采用经典 FIX over TCP 连接的部署中，用 TCP 字节流承载会话消息；逻辑会话可跨顺序连接存续。"
+    }
+  ],
+  "summary": "组织经典 FIX 登录、心跳、消息顺序与恢复的会话规范。",
+  "description": "FIX Session Protocol 规定经典 FIX 对端之间的登录、会话维持、消息序列、重传与退出。一个逻辑会话可以跨多次顺序连接维持序号状态，不能把 TCP 连接重新建立直接视为新会话。FIX 5.0 起会话与业务规范分开，FIXT 表达相应独立会话配置，协议还包含不同会话 profile。\n\n序号缺口由重传请求和相应响应处理，重传消息带可能重复标志；Gap Fill 则按规则跳过不重传的消息。跳过序号与实际恢复业务消息不是同一行为，接收者还需判断重复消息是否已经处理。持久状态、重置协商与双方配置决定恢复结果，不能把任意序号重置当作成功恢复。\n\n业务层决定报单或回报的含义，会话层组织交付，具体编码和连接路线另有约定。即使对端已经接收消息，订单是否被接受、成交或取消仍需业务回报确认。经典会话和 FIXP 具有各自的模式及配置，不应把支持 FIX 4.x 的引擎自动写成也支持 FIXP。\n\n## 参考\n\n- [FIX Trading Community：FIX Session Layer](https://fixtrading.org/standards/fixsession/)\n- [FIX Trading Community：FIX Session Layer 技术规范](https://www.fixtrading.org/wp-content/uploads/download-manager-files/FIX_Session_Layer_June_2020.pdf)\n- [FIX Trading Community：FIX Latest 规范引言](https://www.fixtrading.org/online-specification/introduction/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://fixtrading.org/standards/fixsession/"
+}

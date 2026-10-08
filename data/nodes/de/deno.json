@@ -4,11 +4,13 @@
   "aliases": [],
   "type": "tool",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "edge-serverless-ecosystem"
   ],
   "domains": [
     "web-development",
-    "devops"
+    "devops",
+    "web-services"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -21,18 +23,35 @@
       "target_id": "v8"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "rust"
-    },
-    {
       "relation_type": "competes_with",
       "target_id": "nodejs"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fetch-api",
+      "context": "HTTP 服务器和客户端采用 Fetch 的 Request、Response 与相应接口；服务端策略按 Deno 文档核对。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "web-streams-api",
+      "context": "HTTP 响应可通过标准可读流及转换流逐块发送，并支持取消。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "hono",
+      "context": "Hono 的 app.fetch 可直接传给 Deno.serve，按 Deno 原生 Request/Response 处理器路径运行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-lifecycle",
+      "context": "Deno.serve 管理请求处理和响应流，客户端断开触发取消，shutdown 等待在途请求完成。"
     }
   ],
-  "summary": "Node.js 作者重写的安全 JS/TS 运行时，默认权限收紧。",
+  "summary": "以 V8 执行 JS/TS，并提供权限控制与 Web 标准接口的运行时。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 3,
-  "official_site": "https://deno.com"
+  "official_site": "https://deno.com",
+  "description": "Deno 是使用 V8 的 JavaScript 与 TypeScript 运行时，以单一可执行文件交付。程序执行期的文件、网络和环境访问等敏感 I/O 受显式权限控制；同一线程中的依赖代码共享权限级别，权限模型不能把每个 npm 模块自动隔离成不同安全主体。\n\nDeno.serve 原生接受标准 Request 并返回 Response，Hono 可把 app.fetch 直接交给它。响应体可使用 ReadableStream；客户端断开会取消相应响应流，生产者需要在取消路径停止定时器和后续生产，避免继续积累无消费者的数据。shutdown() 停止监听并等待在途请求完成。\n\nDeno 提供 npm 包、Node 内置模块及 CommonJS 的兼容路径，但部分 API、原生扩展和包目录假设需要具体核对。运行时支持 Web 接口不意味着包含浏览器 DOM，也不保证所有 Node 包在任意权限与部署环境下工作；Deno CLI 与托管服务 Deno Deploy 是不同交付环境。\n\n## 参考\n\n- [Deno：单一可执行文件与安装方式](https://docs.deno.com/runtime/getting_started/installation/)\n- [Deno：安全与权限边界](https://docs.deno.com/runtime/fundamentals/security/)\n- [Deno：HTTP 处理器与响应流取消](https://docs.deno.com/runtime/fundamentals/http_server/)\n- [Deno：服务器优雅关闭](https://docs.deno.com/examples/http_server_graceful_shutdown/)\n- [Deno：Node 与 npm 兼容范围](https://docs.deno.com/runtime/fundamentals/node/)\n- [Hono：Deno 原生接入](https://hono.dev/docs/getting-started/deno)"
 }

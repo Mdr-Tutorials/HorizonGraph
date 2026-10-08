@@ -1,0 +1,34 @@
+{
+  "id": "order-rate-limits",
+  "name": "Order Rate Limits",
+  "aliases": [
+    "订单速率限制",
+    "报单限速",
+    "交易消息限速"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "algorithmic-trading",
+      "context": "在受适用前置消息上限或场所接口限速约束的策略中，限制可发送的报单、改单与撤单速率；窗口、消息类别和恢复规则按具体部署确定。"
+    }
+  ],
+  "summary": "限制指定窗口内的订单或交易消息发送数量。",
+  "description": "订单速率限制对特定账户、端口、会话或证券在指定时间窗口内允许发送的订单或消息数量设置上限。实施者需要明确计数是否包含新单、改单、撤单和管理消息，以及使用滑动窗口、固定窗口还是其他场所定义的口径。它限制瞬时负载，与按整个交易时段计算的报撤成交比不是同一个指标。\n\n欧盟RTS6要求受约束投资公司限制过量订单提交、修改和取消消息，并针对重复自动执行设置单独的停止机制。Nasdaq Nordic PRM Guide 3.5描述了按端口和按证券/PRM账户的1秒滑动窗口检查，超限后的拒绝或可选撤单动作；CME iLink的Messaging Controls也区分相关消息类别和会话处理规则。具体阈值必须由当前接口和账户配置确定。\n\n限速并不能保证策略内容正确：低速重复错误、累计风险超限和操纵性报单可能仍发生。限速状态下也必须理解撤单是否获准、超限请求是拒绝还是断开连接，以及恢复是否需要人工授权；简单在发送端排队可能使意图和市场状态脱节，不能用排队成功代替交易所已接受订单。\n\n## 参考\n\n- [EUR-Lex：Regulation (EU) 2017/589，算法交易组织与风险控制](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0589)\n- [Nasdaq Nordic：Pre-Trade Risk Management Service Guide 3.5](https://www.nasdaq.com/docs/2024/05/29/Nasdaq-Nordic-PRM-Service-Guide-3.5.pdf)\n- [CME官方Client Systems Wiki：Messaging Controls](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457317540/Messaging-Controls)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

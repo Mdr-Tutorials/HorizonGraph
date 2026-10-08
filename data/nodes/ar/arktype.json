@@ -1,0 +1,49 @@
+{
+  "id": "arktype",
+  "name": "ArkType",
+  "aliases": [
+    "ArkType 校验库"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "standard-schema",
+      "context": "支持规范的类型对象提供通用校验结果和类型信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "从类型表达式及转换管线解析 TypeScript 静态输入输出类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "调用模式导出能力时，将可表达的结构转换为 JSON Schema，并处理不可表示项。"
+    }
+  ],
+  "summary": "用接近 TypeScript 的定义同时表达静态类型与运行时校验。",
+  "description": "## 机制与应用\n\nArkType 的 type 函数接受字符串表达式与对象定义，创建可调用的类型对象。执行该对象可校验未知数据并返回数据或错误集合，infer 提取静态类型。pipe 与 morph 把解析或规范化加入管线，因而输入类型与输出类型可能不同；异常处理也应按转换接口的约定选择。\n\n类型对象需要在运行时执行，不会从已擦除的任意 TypeScript 声明自动恢复验证。默认的验证优化属于类型实例化时的 JIT 路径，可通过 jitless 关闭，在受限制环境采用相应配置。JSON Schema 导出受 morph、自定义谓词和非 JSON 值的表达限制；Standard Schema 兼容则用于校验工具的接口互操作。\n\n## 参考\n\n- [ArkType：定义、验证与类型推导](https://arktype.io/docs/intro/your-first-type)\n- [ArkType：转换与异常处理](https://arktype.io/docs/intro/morphs-and-more)\n- [ArkType：JIT 与 JSON Schema 配置](https://arktype.io/docs/configuration)\n- [Standard Schema：兼容实现](https://standardschema.dev/schema)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://arktype.io/"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "gemini-code-assist",
+  "name": "Gemini Code Assist",
+  "aliases": [
+    "Google Gemini Code Assist",
+    "Gemini 代码辅助"
+  ],
+  "type": "product",
+  "domains": [
+    "ai-assisted-software-engineering",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini",
+      "context": "编码辅助服务使用 Google 的 Gemini 模型进行代码生成、补全和项目任务处理；账号层级、模型和可用模式依当前服务说明而异。"
+    }
+  ],
+  "summary": "为团队提供 IDE 编码辅助、Agent Mode 与企业代码库定制的服务。",
+  "description": "Gemini Code Assist 是 Google 的编码辅助服务，当前官方业务入口继续提供 Standard 和 Enterprise。它支持 VS Code、JetBrains 系列 IDE 以及相应云端开发环境中的代码生成、补全、对话和开发帮助，也为合资格订阅提供 Gemini CLI 接入。这里保留整个产品的连续身份，终端应用 Gemini CLI 和 Android 专项 IDE 服务则分别建模。\n\nAgent Mode 能结合项目上下文规划较连续的任务和修改多个文件，使用适用的开发工具及 MCP 服务，并提供用户确认环节。Enterprise 还提供面向组织私有代码库的代码定制等能力，其配置、索引范围和数据边界应依相应文档核对。编码建议和自动修改仍需结合构建、测试和人工评审，安装扩展不表示已经完成私有仓库授权或运行部署。\n\n自 2026 年 6 月 18 日起，for individuals、Google AI Pro 和 Ultra 消费账号通过相关 IDE 扩展和 Gemini CLI 的请求停止服务，官方迁移目标是 Antigravity。弃用页明确说明 Standard 和 Enterprise 不受这次消费入口变化影响，因此本产品保持 active，并在正文限定退出范围。Android Studio 中的 Gemini 有独立接入说明，也不能把 Code Assist 的消费迁移时间线泛化到所有含 Gemini 名称的开发服务。\n\n## 参考\n\n- [Google：Code Assist Standard 与 Enterprise 当前产品范围](https://codeassist.google/products/business)\n- [Google Cloud：IDE 编码功能和企业代码定制](https://docs.cloud.google.com/gemini/docs/codeassist/code-overview)\n- [Google：消费入口退出与企业版本边界](https://developers.google.com/gemini-code-assist/docs/deprecations/code-assist-individuals)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://codeassist.google/products/business"
+}

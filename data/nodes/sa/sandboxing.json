@@ -1,0 +1,38 @@
+{
+  "id": "sandboxing",
+  "name": "Sandboxing",
+  "aliases": [
+    "沙箱隔离",
+    "受限执行环境"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "filesystem-access-control",
+      "context": "启用文件隔离的执行环境按路径或对象权限限制被隔离程序的读取、写入和可见范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "network-egress-control",
+      "context": "启用网络限制的执行环境把程序外连目的地或网络操作限制在配置允许的范围内。"
+    }
+  ],
+  "summary": "在执行层限制程序可触及的文件、进程、网络或系统能力。",
+  "description": "沙箱隔离通过受限执行环境缩小程序可触及的资源与操作。实现可以组合操作系统访问控制、命名空间、受限运行时或虚拟化，隔离粒度与可信计算基随方案变化。应用界面写出禁止访问的规则，只有在实际资源访问路径被强制执行时才构成相应的隔离边界。\n\n终端智能体常用文件范围与网络出站限制控制子进程：允许项目写入、保留必要的系统读取，并限制敏感目录和未经批准的目的地。Antigravity 文档分别描述 Linux 的命名空间与 macOS 的 sandbox-exec 实现路径，不要求为这些路径管理 Docker 镜像或虚拟机；这不能推广为所有沙箱都具有相同隔离强度。\n\n是否启用需按具体产品界面与平台判断：当前 Antigravity 2.0 独立桌面在 macOS/Linux 的默认预设启用沙箱，Windows 安全预设本身不自动开启沙箱，CLI 文档中的 enableTerminalSandbox 默认值则为 false；这些结论不能自动套到独立 IDE 产品。越出沙箱的命令遵循另外的审批或规则，批准沙箱绕过会改变执行边界。沙箱限制资源访问，不会自动识别允许资源内的恶意指令或业务误操作。\n\n## 参考\n\n- [NIST CSRC：Sandbox](https://csrc.nist.gov/glossary/term/sandbox)\n- [Google Antigravity：Terminal sandbox](https://www.antigravity.google/docs/sandbox/)\n- [Linux Kernel：Landlock 用户空间 API](https://docs.kernel.org/userspace-api/landlock.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

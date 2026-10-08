@@ -1,0 +1,40 @@
+{
+  "id": "fast-check",
+  "name": "fast-check",
+  "aliases": [
+    "fast-check 性质测试库",
+    "fast check"
+  ],
+  "type": "library",
+  "domains": [
+    "programming-languages",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "property-based-testing"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    }
+  ],
+  "summary": "为 JavaScript 与 TypeScript 提供生成、缩减与性质测试。",
+  "description": "fast-check 是 JavaScript 与 TypeScript 的性质测试库，以 arbitrary 生成器描述输入，用 property 或 asyncProperty 把这些生成器与同步、异步断言结合，再由 assert 等运行器反复检查。生成器可构造字符串、数组、对象和相互关联的数据，控制取值范围与结构；直接在生成器中编码约束，通常比大量生成后再过滤更容易得到有效测试。\n\n发现失败时，fast-check 会沿生成器的缩减规则简化反例，并报告供重放使用的种子与路径。修改输入对象、依赖非确定性外部状态或错误处理异步任务，会影响缩减与复现效果，应在测试中控制这些行为。库可以放入 Jest、Vitest、Mocha 等测试运行器，也能独立调用，任何一个特定运行器都不是它成立的必要条件。\n\n其模型测试能力用命令定义前置检查与操作执行，把简化的状态模型同真实系统逐步比较，可以生成和缩减操作序列。它提供生成与执行机制，业务性质、模型和断言仍需由测试作者定义；仅调用随机数据生成器而没有行为检查，不会自动成为有意义的性质测试。有限测试次数通过，也不能证明所有可能输入与调度都满足性质。\n\n## 参考\n\n- [fast-check：官方主页与运行器独立性](https://fast-check.dev/)\n- [fast-check：同步与异步性质](https://fast-check.dev/docs/core-blocks/properties/)\n- [fast-check：测试运行器](https://fast-check.dev/docs/core-blocks/runners/)\n- [fast-check：模型测试与重放](https://fast-check.dev/docs/advanced/model-based-testing/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://fast-check.dev/"
+}

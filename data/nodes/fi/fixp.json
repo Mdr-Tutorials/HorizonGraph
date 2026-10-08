@@ -1,0 +1,49 @@
+{
+  "id": "fixp",
+  "name": "FIX Performance Session Layer",
+  "aliases": [
+    "FIXP",
+    "FIX Performance Session Protocol",
+    "FIX 性能会话协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "market-data-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "fix-trading-community",
+      "context": "FIX Trading Community 高性能工作组制定并维护 FIXP 会话规范。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "选择面向流的 TCP 传输路线时，在该通路上组织会话与应用消息流。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "udp",
+      "context": "选择数据报或组播路线时，按相应 FIXP 流模式组织消息顺序与交付，不表示所有实现采用 UDP。"
+    }
+  ],
+  "summary": "为高性能消息流协商会话与交付模式的规范。",
+  "description": "FIX Performance Session Layer（FIXP）规定高性能消息流的协商、建立、维持、结束和恢复。它将会话职责与业务消息及编码分开，也支持不同传输路线。部署可以选择特定 profile 或消息模式，不能仅从采用 FIXP 推断具体交易字段、SBE 模板或网络地址。\n\n规范区分 recoverable、idempotent、unsequenced 等流模式，并允许双向采用不同语义。可恢复流通过重传处理遗漏，幂等流与无序流又有不同约束；会话层保证范围不能扩大为所有业务动作无条件恰好执行一次。编码不构成恢复策略，重置与逻辑流结束也应按模式处理。\n\nCME iLink 3 用 FIXP 组织订单入口会话，并给出自己的验证及恢复要求。一般 FIXP 支持的模式集合与某个交易所实现支持的集合应分开，标准官网也将不同文档标为技术规范、草案或候选版。接入需要核对部署采用的版本和 profile，不能把草案新增特性当作已有交易所接口能力。\n\n## 参考\n\n- [FIX Trading Community：FIXP 标准及发布阶段](https://fixtrading.org/standards/fixp/)\n- [FIX Trading Community：FIXP 分层与消息流模式](https://fixprotocol.io/fixp-specification/)\n- [CME：iLink 3 会话管理测试](https://www.cmegroup.com/tools-information/webhelp/acp-cgw-fo/Content/session-layer.html)\n- [CME：iLink 3 缺口与重传测试](https://www.cmegroup.com/tools-information/webhelp/acp-cgw-fo/Content/message-gaps.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "FIXP",
+  "official_site": "https://fixtrading.org/standards/fixp/"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "uniform-buffer",
+  "name": "Uniform Buffer",
+  "aliases": [
+    "统一变量缓冲区",
+    "Uniform缓冲区",
+    "UBO"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gpu-buffer",
+      "context": "使用 GPU 缓冲承载统一参数，并通过对应的资源绑定和成员布局供着色程序读取。"
+    }
+  ],
+  "summary": "向着色程序提供按布局组织的只读共享参数。",
+  "description": "## 机制\n\n统一变量缓冲区把矩阵、颜色或其他着色参数组织成可绑定的数据块。着色程序按声明的成员布局读取，应用负责上传数据并使资源绑定与程序接口一致；Direct3D 的 constant buffer 承担相近的参数供给职责。\n\n在 WebGPU/WGSL 路径中，资源绑定布局的 uniform 类型与 var<uniform> 声明相对应。成员偏移、大小、对齐和数组布局必须满足规范，不能直接假定主机结构体的内存表示适合着色程序。\n\n## 边界与应用\n\nuniform 表示此类绑定在着色程序中的只读访问，并非缓冲内容永久不变。应用可在合法时机更新数据；需要 GPU 写入结果的任务通常采用存储资源。可将相机投影参数放入此缓冲，但并非所有投影实现都必须采用这一资源形式。\n\n## 参考\n\n- [W3C WGSL：地址空间与数据布局](https://www.w3.org/TR/WGSL/#address-spaces)\n- [Khronos Vulkan：着色器资源接口](https://docs.vulkan.org/spec/latest/chapters/interfaces.html)\n- [Microsoft HLSL：常量缓冲](https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-constants)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

@@ -1,0 +1,43 @@
+{
+  "id": "gemini-cli",
+  "name": "Gemini CLI",
+  "aliases": [
+    "Google Gemini CLI"
+  ],
+  "type": "tool",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini",
+      "context": "终端代理调用选定的 Gemini 模型进行代码理解、规划与工具选择；具体可用模型取决于后端和账号。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mcp",
+      "context": "作为 MCP 客户端发现并调用配置的外部服务器工具；不是另一个 MCP 协议。"
+    }
+  ],
+  "summary": "开源终端智能体，使用 Gemini 并支持本地工具与 MCP。",
+  "description": "Gemini CLI 是 Google 发布的开源终端智能体，发行包为 @google/gemini-cli。它在本地项目上下文中使用 Gemini 模型理解和修改代码，调用文件、Shell、网页检索等工具，并支持非交互执行。模型本身、Gemini API、命令行应用以及可装载扩展具有不同身份，不能以 Gemini 名称合并。\n\n扩展可组合工具、配置和指令，MCP 连接器可以把外部服务暴露给代理；项目上下文文件、技能、会话与沙箱设置影响代理如何执行任务。这些能力需要配置和可用的后端凭据，插件清单或模型回答也不等于已经获得外部资源访问权。具体功能与权限应以当前发行版本及配置文档为准。\n\n自 2026 年 6 月 18 日起，Gemini Code Assist for individuals、Google AI Pro 和 Ultra 消费账户的相关请求停止服务，官方要求受影响用户迁移到 Antigravity CLI。此变化不影响 Code Assist Standard 或 Enterprise 订阅的访问，也不能推出整个开源 CLI 已终止。API 密钥与云端认证是另有文档的接入方式，旧 README 的免费登录额度不宜视作所有用户的现行承诺。\n\n## 参考\n\n- [Gemini CLI：官方代码和终端工具范围](https://github.com/google-gemini/gemini-cli)\n- [Google：消费账户弃用与不受影响的企业订阅](https://developers.google.com/gemini-code-assist/docs/deprecations/code-assist-individuals)\n- [Gemini CLI：认证设置](https://geminicli.com/docs/get-started/authentication/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://geminicli.com/docs/"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "docker-hub",
+  "name": "Docker Hub",
+  "aliases": [
+    "Docker 镜像仓库服务",
+    "DockerHub"
+  ],
+  "type": "product",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "container-registry"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci-distribution-spec"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rbac",
+      "context": "管理组织仓库时，组织角色及团队配置决定相应成员的仓库操作权限。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "oras",
+      "context": "官方文档使用 ORAS CLI 向 Docker Hub 推送和拉取通用 OCI 工件，具体操作仍需相应仓库权限。"
+    }
+  ],
+  "summary": "托管公共与私有镜像仓库，并支持 OCI 软件工件分发。",
+  "description": "Docker Hub 是 Docker 提供的托管 Registry 服务，按个人或组织命名空间管理仓库、标签和镜像内容。它提供公共内容检索、公共及私有仓库以及与开发工具配合的发布入口；用户通常通过 Registry 客户端推拉内容，也可以通过网页和管理 API 操作仓库元数据。Docker Hub 服务、Docker 开发工具和 Docker 公司是不同实体，自托管 Registry 也不必使用这个服务。\n\nDocker Hub 的 Registry API 按 OCI Distribution Specification 提供分发接口，仓库还可保存 OCI 工件，例如 Helm chart 或其他明确声明媒体类型的软件产物。ORAS 等客户端可以上传通用工件；这表示内容可经相应清单存储和传输，不表示任意工件都能作为容器启动。仓库管理 API 与处理 manifest、blob 推拉的分发接口也承担不同职责。\n\n公开与私有可见性、协作者权限、组织角色和团队设置共同决定内容的可发现性及推拉授权。登录成功并不自动获得所有仓库的写权限，公共仓库的拉取访问也不等于开放推送。使用限制和部分服务功能受账户及当前政策影响，因此部署流程需要处理授权失败和限流；能够拉取镜像或存入证明文件，也不能单独证明镜像安全或验证已经完成。\n\n## 参考\n\n- [Docker Hub：服务概览](https://docs.docker.com/docker-hub/)\n- [Docker Hub：OCI 工件与分发接口](https://docs.docker.com/docker-hub/repos/manage/hub-images/oci-artifacts/)\n- [Docker Hub：仓库访问管理](https://docs.docker.com/docker-hub/repos/manage/access/)\n- [Docker Hub：使用与限制](https://docs.docker.com/docker-hub/usage/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://hub.docker.com"
+}

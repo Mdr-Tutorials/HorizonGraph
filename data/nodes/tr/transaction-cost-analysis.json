@@ -1,0 +1,51 @@
+{
+  "id": "transaction-cost-analysis",
+  "name": "Transaction Cost Analysis",
+  "aliases": [
+    "交易成本分析",
+    "成交成本分析",
+    "TCA"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transaction-cost",
+      "context": "建立执行成本口径时区分显性费用、返佣和按基准定义的隐性成本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slippage",
+      "context": "按既定参考价格、方向和数量计算成交价格偏离，并核查与其他成本项的重叠。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "markout",
+      "context": "以多个事件后期限的价格变化检查成交质量和逆向选择，同时披露已成交样本限制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "implementation-shortfall",
+      "context": "以决策时纸面组合为基准分析执行时，可纳入执行、延迟及未完成部分的差额。"
+    }
+  ],
+  "summary": "用明确基准与成本口径评估交易执行及订单完成情况。",
+  "description": "交易成本分析是一套围绕订单、成交和市场数据评价执行质量的研究流程，包含交易前成本估计、交易中监控和交易后归因。它需要明确参考价格及时间、买卖方向、数量、显性费用与返佣；到达价、期间基准和成交后价格回答的问题不同，不宜混成单一“最好成交”指标。\n\n分析可汇总滑点、市场冲击、成交比例、执行时间和多个期限的 markout，并区分母单与子单、订单类型、交易场所和市场状态。比较执行算法时，还应处理订单规模、紧迫性、样本偏态与不确定性；否则不同订单集合的平均差异可能被误认成算法本身造成的效果。\n\n只分析已成交样本会遗漏未成交、延迟执行和机会成本，短期 markout 也不是完整的订单成本或持仓损益。汇总应检查价差、冲击和滑点是否已互相包含，避免重复加总。历史统计可用于校准和对照，但识别反事实执行成本或因果市场冲击仍需要额外模型与假设。\n\n## 参考\n\n- [Markov：Bayesian Trading Cost Analysis and Ranking of Broker Algorithms](https://arxiv.org/abs/1904.01566)\n- [Nasdaq Economic Research：Markouts 与成交样本选择](https://www.nasdaq.com/articles/what-markouts-are-and-why-they-dont-always-matter-2020-07-23)\n- [Almgren、Chriss：Optimal Execution of Portfolio Transactions 原始出版页](https://www.risk.net/journal-risk/2161150/optimal-execution-portfolio-transactions)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "TCA"
+}

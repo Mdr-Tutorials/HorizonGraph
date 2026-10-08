@@ -1,0 +1,40 @@
+{
+  "id": "rootless-container",
+  "name": "Rootless Containers",
+  "aliases": [
+    "Rootless 容器",
+    "无根容器",
+    "非特权容器运行模式"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "user-namespace",
+      "context": "在 Linux rootless 容器路径中映射容器与宿主 UID/GID，并限定命名空间内的权限。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cgroup",
+      "context": "在支持委派的 rootless 运行环境中计量或限制容器资源；Docker 的此路径要求 cgroup v2 与 systemd。"
+    }
+  ],
+  "summary": "以非 root 宿主身份管理容器，并映射内部用户权限。",
+  "description": "Rootless 容器指容器管理与工作负载以普通宿主用户身份运行的方式。在 Linux 上，它通常利用 user namespace 把容器内的 UID、GID 映射到宿主身份及允许的从属 ID 范围。容器内显示 UID 0，并不因此取得宿主初始 user namespace 的全部 root 权限。不同工具的进程结构有所区别：Docker 的 rootless 模式还使守护进程以非 root 身份运行。\n\n它与只给容器指定普通用户、以及 Docker 的 userns-remap 模式分别解决不同问题。userns-remap 可映射容器身份，但守护进程仍以宿主 root 身份运行；部分 rootless 工具仍可能使用受限的 UID/GID 映射辅助程序。是否能创建 user namespace、映射多个身份、挂载文件系统及配置网络，要核对内核、发行版政策和工具的实际支持。\n\n资源限制也有条件：Docker 当前要求 cgroup v2 与 systemd 才支持 rootless 的 cgroup 资源参数，并且实际可用控制器取决于委派。Rootless 缩小管理进程的宿主权限，却仍共享相应 Linux 内核，且可能访问挂载目录、运行时套接字或已授权设备。它不能替代访问控制、系统调用限制及工作负载的威胁模型；Windows 上的 Linux 后端路径还需分别确认。\n\n## 参考\n\n- [Docker：rootless 身份映射与 userns-remap 区别](https://docs.docker.com/engine/security/rootless/)\n- [Docker：rootless 网络与资源限制条件](https://docs.docker.com/engine/security/rootless/tips/)\n- [Linux：user namespace 权限范围](https://man7.org/linux/man-pages/man7/user_namespaces.7.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,40 @@
+{
+  "id": "reproducible-build",
+  "name": "Reproducible Build",
+  "aliases": [
+    "可复现构建",
+    "可重复构建",
+    "Reproducible Builds"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-supply-chain-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sha-2",
+      "context": "比较独立构建结果时，可用 SHA-256 等安全哈希核对指定输出的内容一致性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "build-provenance",
+      "context": "重建流程可读取构建来源中的源码、依赖与环境信息以确定输入，但仍需执行构建并比较实际输出。"
+    }
+  ],
+  "summary": "让相同源码、环境和指令产出逐位一致的指定工件。",
+  "description": "可复现构建要求在相同源码、相关构建环境和构建指令下，其他参与者能够重新生成逐位一致的指定输出工件。可比较的对象通常是二进制、软件包或文件系统镜像，而不是所有日志与临时文件。重复部署相同镜像、成功再次执行构建，或者得到功能相同的程序，都不自动满足逐位一致的要求。\n\n实现时需要明确依赖和工具链版本，并处理时间戳、构建路径、目录遍历顺序、区域设置、文件权限和随机输入等差异。SOURCE_DATE_EPOCH 能为采用它的工具提供稳定时间来源，但单独设置该变量不能消除全部不确定性。验证通常比较输出字节或其安全哈希，必要时进一步定位文件、归档元数据和编译结果之间的差异。\n\n独立重新构建并比较结果，可以为发布工件与公开源码之间的对应关系提供额外证据；其结论仍依赖选择的输入、工具链及验证方独立性。可复现的恶意源码也能产生一致工件，因此可复现性不等于代码无漏洞。构建来源证明帮助记录输入和执行环境，可与重建验证组合，但持有来源证明不代表工件已经实际经过独立重建。\n\n## 参考\n\n- [Reproducible Builds：定义与工件范围](https://reproducible-builds.org/docs/definition/)\n- [Reproducible Builds：构建环境差异](https://reproducible-builds.org/docs/env-variations/)\n- [Reproducible Builds：SOURCE_DATE_EPOCH 规范](https://reproducible-builds.org/specs/source-date-epoch/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

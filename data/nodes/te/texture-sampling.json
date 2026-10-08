@@ -1,0 +1,38 @@
+{
+  "id": "texture-sampling",
+  "name": "Texture Sampling",
+  "aliases": [
+    "纹理采样",
+    "纹理寻址与过滤"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "按坐标及兼容的格式读取颜色、深度或其他纹理数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mipmapping",
+      "context": "缩小采样且纹理提供 mip 链时选择和过滤适当层级，减少细节混叠。"
+    }
+  ],
+  "summary": "按坐标、寻址和过滤规则读取纹理值。",
+  "description": "纹理采样依据纹理坐标和采样器状态读取纹理值。寻址模式决定坐标越界时采用重复、镜像或边缘限制等方式，过滤规则决定如何在邻近 texel 间取值；直接整数坐标读取与通过采样器过滤的读取是不同操作。\n\n缩小图像时可以结合 mip 层选择和层间过滤，倾斜表面也可在支持条件下使用各向异性过滤。深度比较采样器用于相应比较用途，整数等纹理格式对可用操作及过滤能力有限制，不能默认任何纹理都支持线性过滤。\n\n采样用于精灵、材质和图像后处理。图集区域边界、纹理颜色空间、UV 插值和导数会影响结果，过滤无法弥补错误格式或边界数据。采样器配置在有些 API 中是独立对象，可由不同纹理或材质复用。\n\n## 参考\n\n- [WebGPU GPUSamplerDescriptor](https://www.w3.org/TR/webgpu/#dictdef-gpusamplerdescriptor)\n- [Vulkan Samplers](https://docs.vulkan.org/spec/latest/chapters/samplers.html)\n- [PixiJS Textures](https://pixijs.com/8.x/guides/components/textures)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

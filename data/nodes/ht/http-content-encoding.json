@@ -1,0 +1,38 @@
+{
+  "id": "http-content-encoding",
+  "name": "HTTP Content Coding",
+  "aliases": [
+    "HTTP 内容编码",
+    "HTTP 内容压缩"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "http"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gzip",
+      "context": "在客户端接受 gzip 且表示适合压缩的响应中，使用 gzip 内容编码减少传输数据量。"
+    }
+  ],
+  "summary": "声明对表示数据应用的压缩等编码及其解码顺序。",
+  "description": "HTTP 内容编码用 Content-Encoding 描述表示数据经过的编码，接收方按逆序解除编码，再依据 Content-Type 解释内容。Accept-Encoding 可表达客户端支持的编码；使用 gzip 等压缩可以减少传输字节，但是否值得压缩取决于内容特征、CPU 成本和传输场景。\n\n内容编码与字符集、Base64 应用字段或 HTTP/1.1 的 Transfer-Encoding 不是同一机制。压缩后的 Content-Length 也不能说明解压后的内存占用，服务端仍需控制解析和展开资源。协商产生不同编码表示时，还应考虑 Vary、ETag 和缓存匹配，避免复用错误表示。\n\n## 参考\n\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)\n- [Hono：Compress 中间件](https://hono.dev/docs/middleware/builtin/compress)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

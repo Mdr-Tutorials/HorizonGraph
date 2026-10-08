@@ -1,0 +1,44 @@
+{
+  "id": "vector-graphics",
+  "name": "Vector Graphics",
+  "aliases": [
+    "矢量图形",
+    "向量图形"
+  ],
+  "type": "concept",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interactive-graphics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "drawing-path",
+      "context": "用路径及其填充、描边样式表达可编辑的几何轮廓。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "affine-transform",
+      "context": "缩放、旋转或平移矢量对象时改变几何坐标到显示坐标的映射。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rasterization",
+      "context": "向像素显示器或位图目标输出时，把几何覆盖转换为像素结果。"
+    }
+  ],
+  "summary": "以几何对象和绘制属性描述图像的图形表示。",
+  "description": "矢量图形用路径、基本形状、文字及样式描述图像，而不是只存储一张固定分辨率的像素阵列。编辑时可操作几何和属性，显示或导出位图时仍需将图形光栅化；SVG 是一种具体表达语言，矢量图形是更一般的表示方式。\n\n几何缩放后可重新生成边缘像素，但文档中的嵌入图片、滤镜缓冲和缓存纹理仍可能受分辨率限制。矢量表示也不自动提供场景事件或编辑控件，复杂路径的计算与渲染成本需要实际评估。\n\n## 参考\n\n- [W3C：SVG 2 概述](https://www.w3.org/TR/SVG2/intro.html)\n- [Paper.js：矢量对象与几何能力](https://paperjs.org/features/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

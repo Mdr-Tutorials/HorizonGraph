@@ -1,0 +1,60 @@
+{
+  "id": "orpc",
+  "name": "oRPC",
+  "aliases": [
+    "oRPC API"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "remote-procedure-call"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "type-safe-api"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "contract-first-api-design"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-first-api-design"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-schema",
+      "context": "在过程定义传入兼容模式时验证输入输出并提取其类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "api-contract",
+      "context": "契约优先模式下由独立过程契约约束服务实现与客户端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "配置 HTTP 路由元数据和 OpenAPI 工具时生成描述并服务相应端点。"
+    }
+  ],
+  "summary": "同时支持类型化 RPC 与 OpenAPI 接口的 TypeScript 工具库。",
+  "description": "oRPC 以类型化过程连接服务端和客户端，既支持从实现推导接口，也支持先定义不含业务逻辑的 contract 再实现。输入和输出可以连接 Standard Schema 验证库；客户端可以从服务路由或共享契约取得类型信息。它提供 RPC 与面向 OpenAPI 的处理器，使同一组过程在配置相应路由元数据后也能作为普通 HTTP API 使用。\n\nOpenAPI 文档生成需要对应的处理器、生成工具和模式转换能力，不能把框架名字视为所有函数都自动成为合规接口。官方 Hono 适配通过 Fetch 请求与响应将处理器挂为中间件；具体运行时和网络服务入口由宿主配置。共享契约、输入输出校验与类型化错误提高接口一致性，业务授权、消费者兼容和副作用处理仍由服务实现与测试保证。\n\n## 参考\n\n- [oRPC：从过程实现建立接口](https://orpc.dev/docs/getting-started)\n- [oRPC：契约优先设计](https://orpc.dev/docs/contract-first)\n- [oRPC：Hono Fetch 适配](https://orpc.dev/docs/adapters/hono)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://orpc.dev"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "openapi-fetch",
+  "name": "openapi-fetch",
+  "aliases": [
+    "OpenAPI Fetch"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-client"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "type-safe-api"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "消费从 OpenAPI 描述提取的路径与响应类型，以约束请求和结果访问。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "openapi-typescript",
+      "context": "将生成的 paths 声明作为客户端泛型参数；生成器用于开发阶段，非发送请求时的硬依赖。"
+    }
+  ],
+  "summary": "利用 OpenAPI 生成类型约束请求的 Fetch 客户端。",
+  "description": "openapi-fetch 是基于 Fetch 的类型化 HTTP 客户端，使用从 OpenAPI 提取的 paths 类型约束方法、路径、参数、请求体和响应分支。它在运行时构造请求并解析结果，通常与 openapi-typescript 生成的声明文件配合；声明生成和实际发送请求是两个独立工件。客户端可以用于浏览器或提供相应 Fetch 能力的运行环境。\n\n库提供成功数据、错误数据与原始 Response 的访问，并允许配置请求序列化、中间件及替换 Fetch。这些类型保证依赖输入规范和 TypeScript 检查；生成的类型不会在运行时验证服务返回的每个字段。需要检查不可信响应时应额外配置模式解析或校验，也应测试实际客户端的请求构造与错误分支，确保契约更新和部署版本相符。\n\n## 参考\n\n- [openapi-fetch：基于接口类型的 Fetch 客户端](https://openapi-ts.dev/openapi-fetch/)\n- [OpenAPI TypeScript：运行时无关的类型生成目标](https://openapi-ts.dev/about)\n- [openapi-fetch：客户端测试](https://openapi-ts.dev/openapi-fetch/testing)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://openapi-ts.dev/openapi-fetch/"
+}

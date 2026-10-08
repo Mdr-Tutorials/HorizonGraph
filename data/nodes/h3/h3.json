@@ -1,0 +1,53 @@
+{
+  "id": "h3",
+  "name": "H3 (HTTP Framework)",
+  "aliases": [
+    "H3 Web 框架",
+    "h3 框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "web-standard-http-handler"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "http-routing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-request",
+      "context": "在 H3 v2 测试版处理事件中用标准 Request 表达输入，并供 app.fetch 调用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-response",
+      "context": "把处理结果或显式 Response 转为标准输出供宿主发送。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runtime-adapter",
+      "context": "通过当前 serve 服务层适配不同宿主的监听和运行时细节。"
+    }
+  ],
+  "summary": "以标准 Web 对象组织跨运行时 HTTP 路由和处理。",
+  "description": "H3 是 HTTP 框架名称，与 HTTP/3 协议及其 H3 缩写不是同一实体。本条按官网当前 H3 v2 测试版文档建模：它建立在 Request、Response、URL 和 Headers 等标准对象上，H3 实例注册路由，事件提供请求与响应操作，处理值被转换为适当 Web Response。\n\napp.fetch 可直接作为兼容宿主的处理入口，app.request 可在不监听端口时调用应用。serve 通过 srvx 等服务层接入 Node.js、Bun 和 Deno；核心处理对象与监听实现分别负责业务和连接，运行时特殊能力仍需相应接口。\n\nv1 到 v2 是有接口变化的迁移，旧 Node 请求访问与 web adapter 示例不能直接视为当前核心模型。请求正文消费、代理流转、错误响应和路由扩展应按实际主线文档处理。标准对象提高复用性，并不保证所有宿主具有相同升级、流或后台任务能力。\n\n## 参考\n\n- [H3 Getting Started](https://h3.dev/guide)\n- [H3 Class and Fetch](https://h3.dev/guide/api/h3)\n- [H3 v2 Migration](https://h3.dev/migration)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://h3.dev"
+}

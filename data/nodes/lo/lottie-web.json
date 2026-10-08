@@ -1,0 +1,54 @@
+{
+  "id": "lottie-web",
+  "name": "lottie-web",
+  "aliases": [
+    "Lottie Web 播放器",
+    "Bodymovin 播放器"
+  ],
+  "type": "library",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "lottie"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "svg",
+      "context": "选择 SVG renderer 时，以 SVG 图形元素呈现解析后的动画。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-2d",
+      "context": "选择 Canvas renderer 时，用二维画布绘制动画帧。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resource-lifecycle",
+      "context": "页面卸载或动画不再使用时，销毁播放器实例并释放其持有的资源。"
+    }
+  ],
+  "summary": "在浏览器解析 Lottie 数据并控制动画播放的库。",
+  "description": "lottie-web 是 Airbnb 发布的浏览器动画播放器，loadAnimation 接收动画数据或 JSON 资源路径，创建可播放、暂停、调整速度与跳转的动画实例。它与 Lottie 数据格式分别承担执行工件和内容协议的角色。\n\n库提供 SVG、Canvas 与 HTML 渲染路径，具体动画特性与效果应按所选后端验证。工程接入需要处理资源加载、外部图像路径、容器尺寸及实例生命周期；同一份数据被反复创建实例时，也应遵循播放器对数据复用的要求。\n\n## 参考\n\n- [Airbnb：lottie-web 官方源码和播放器 API](https://github.com/airbnb/lottie-web)\n- [lottie-web：渲染配置](https://github.com/airbnb/lottie-web/wiki/Renderer-Settings)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/airbnb/lottie-web"
+}

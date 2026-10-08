@@ -1,0 +1,38 @@
+{
+  "id": "retopology",
+  "name": "Retopology",
+  "aliases": [
+    "重拓扑",
+    "重新拓扑"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "polygon-modeling",
+      "context": "在原有表面上构造新的顶点、边和面布局。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture-baking",
+      "context": "在低密度交付模型上恢复原模型的表面细节。"
+    }
+  ],
+  "summary": "在既有表面上重建适合变形、编辑或交付的网格。",
+  "description": "重拓扑在雕刻、扫描或其他高密度模型的表面上建立新的网格布局。目标是获得需要的边流、面密度和结构，方便后续 UV、绑定、动画或资产交付；它可以结合手工绘制、吸附与自动重网格工具。\n\n重网格、减少三角形和角色重拓扑存在不同目标。自动均匀重网格未必得到适合关节变形的拓扑，简单减面也不能保证正确边流。重建后通常还需检查轮廓，并将高密度模型的表面细节烘焙到新网格的纹理上。\n\n## 参考\n\n- [Blender 重网格与重拓扑](https://docs.blender.org/manual/en/4.5/modeling/meshes/retopology.html)\n- [Houdini 程序化建模](https://www.sidefx.com/products/houdini/modeling/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

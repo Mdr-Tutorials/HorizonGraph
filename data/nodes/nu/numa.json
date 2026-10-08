@@ -8,11 +8,13 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "hardware_iot"
+    "hardware_iot",
+    "low-latency-systems-ecosystem"
   ],
   "domains": [
     "high-performance-computing",
-    "systems-programming"
+    "systems-programming",
+    "low-latency-systems"
   ],
   "relations": [
     {
@@ -20,10 +22,11 @@
       "target_id": "theory"
     }
   ],
-  "summary": "内存访问延迟随节点距离变化，绑核与分配必须感知拓扑。",
+  "summary": "内存访问代价随节点和放置变化，需协调线程位置与分配策略。",
   "importance": 3,
   "popular": 35,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "NUMA表示内存访问代价并非对所有处理器相同：处理器访问本地节点和远程节点的内存，可能经历不同互连和带宽限制。它是一种硬件组织及访问特性，不是某条绑定命令。距离、缓存命中和并发压力共同影响实际耗时，不能为所有机器给出固定的远程延迟倍数。\n\nLinux的内存策略规定从哪些节点分配页面，可以按任务或地址范围设定，并受可用节点与cpuset等约束。许多匿名页在首次实际访问时落实分配，因此负责初始化和触页的线程位置可能影响后续工作集。CPU亲和性只限定线程执行位置，不自动迁移所有已分配页面；已有页面、共享映射与策略变更也有各自规则。\n\n优化需要把处理线程、页面和设备位置一起考虑，权衡局部访问、带宽分布和负载平衡。强制单节点可能造成容量压力，跨节点交错则可能以更高单次访问代价换取带宽。应用应检查实际放置和迁移，按相同负载测量尾延迟及吞吐；NUMA感知策略是通用系统方法，不专属于金融应用。\n\n## 参考\n\n- [Linux：NUMA 内存策略与分配范围](https://docs.kernel.org/admin-guide/mm/numa_memory_policy.html)\n- [Linux man-pages：NUMA 策略查询](https://man7.org/linux/man-pages/man2/get_mempolicy.2.html)\n- [Linux man-pages：线程 CPU 亲和性](https://man7.org/linux/man-pages/man2/sched_setaffinity.2.html)"
 }

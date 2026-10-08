@@ -9,7 +9,8 @@
   "type": "metric",
   "domains": [
     "machine-learning",
-    "natural-language-processing"
+    "natural-language-processing",
+    "agent-development"
   ],
   "relations": [
     {
@@ -17,9 +18,13 @@
       "target_id": "metric"
     }
   ],
-  "summary": "模型单次能处理的 token 上限，决定长文本能力。",
+  "summary": "描述模型单次请求可处理上下文容量的 token 指标。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "上下文窗口描述模型一次请求能够接受或处理的上下文容量，通常以 token 表示。输入和输出上限由具体模型与接口规定，是否共享同一总预算也应查对应说明；模型版本不同，不能用单一数字代表整个产品家族。\n\n请求中的指令、消息、工具定义、工具结果及多模态资料都可能占用空间。应用应使用相应计数接口或分词规则估算输入，并保留所需输出容量；图片、音频等内容的 token 计算不能直接套用普通文本字符数。\n\n窗口上限是容量指标，不能单独决定长文本任务质量。实际结果还受信息选择、位置、任务结构及模型能力影响；当历史接近限制时，可以筛选、检索或压缩输入，而完整会话和文件仍可保存在外部存储中供按需读取。\n\n## 参考\n\n- [Gemini API token counting](https://ai.google.dev/gemini-api/docs/tokens)\n- [Anthropic: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ]
 }

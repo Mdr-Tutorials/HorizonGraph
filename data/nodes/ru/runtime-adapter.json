@@ -1,0 +1,38 @@
+{
+  "id": "runtime-adapter",
+  "name": "Runtime Adapter",
+  "aliases": [
+    "运行时适配器",
+    "HTTP 运行时适配"
+  ],
+  "type": "concept",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "edge-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-api",
+      "context": "在采用 Fetch 风格框架核心的适配路径中，把宿主请求和响应映射为 Request / Response 及其正文接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-lifecycle",
+      "context": "适配宿主连接关闭、请求体清理和流式响应结束，使框架处理结果遵守宿主的调用存续约定。"
+    }
+  ],
+  "summary": "连接框架的 Web 接口与具体服务器或云函数宿主。",
+  "description": "运行时适配器在此指连接 HTTP 框架与宿主执行接口的桥接层。例如以 Fetch 的 Request 输入、Response 输出为核心的框架，可以由适配器接收 Node.js 原生 HTTP 请求，或把云函数事件转换为相应的请求；应用返回的结果再转换为宿主接受的响应格式。\n\n适配的工作包含请求 URL、头部、正文与响应状态的映射，也可能包含二进制载荷编码、流式正文、连接终止和资源清理。Hono 的 Node.js 适配包与 AWS Lambda 适配入口采用不同的宿主约定；Lambda 的普通响应处理与流式响应处理也需要不同的部署和处理入口，不能把一个适配器的能力推及所有平台。\n\n适配器改善应用接口的复用，不能统一各宿主的文件系统、环境变量、权限和执行额度。验证跨平台应用时，除了路由结果，还应核对未消费请求体的清理、流取消、响应序列化及平台特有上下文的获得方式。\n\n## 参考\n\n- [Hono：Web 标准与宿主适配](https://hono.dev/docs/concepts/web-standard)\n- [Hono：Node.js 运行](https://hono.dev/docs/getting-started/nodejs)\n- [Hono Node.js Server：适配实现](https://github.com/honojs/node-server)\n- [Hono：AWS Lambda 的普通与流式适配](https://hono.dev/docs/getting-started/aws-lambda)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

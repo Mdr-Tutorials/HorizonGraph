@@ -1,0 +1,27 @@
+{
+  "id": "agent-checkpointing",
+  "name": "Agent Checkpointing",
+  "aliases": [
+    "智能体执行检查点",
+    "智能体工作流检查点"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "保存执行状态与待办信息，为智能体工作流恢复建立检查点。",
+  "description": "智能体执行检查点保存工作流在某个边界的状态与进度，供中断后继续、检查状态或重放路径。它可包含执行器状态、共享数据、待处理消息和等待响应的请求，因此比单纯保存聊天历史提供更多执行恢复信息。\n\nLangGraph 的 checkpointer 按执行线程保存状态快照，Microsoft Agent Framework 在工作流边界保存检查点并支持从记录恢复。是否跨进程持久取决于存储实现；恢复还需要可用的工作流定义、相容的数据模式以及应用资源配置。\n\n通用流处理检查点也保存状态和进度，但这里关注代理工作流、工具请求与交互暂停的恢复边界。检查点不会自动让外部写入具有 exactly-once 语义，也不能撤回已经发送的请求；副作用、幂等键和人工响应的处理应由具体应用设计。\n\n## 参考\n\n- [LangGraph persistence](https://docs.langchain.com/oss/python/langgraph/persistence)\n- [Microsoft Agent Framework checkpoints](https://learn.microsoft.com/en-us/agent-framework/workflows/checkpoints)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

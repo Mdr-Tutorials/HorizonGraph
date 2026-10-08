@@ -1,0 +1,40 @@
+{
+  "id": "signed-cookie",
+  "name": "Signed Cookie",
+  "aliases": [
+    "签名 Cookie",
+    "受完整性保护的 Cookie"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "security"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-cookie",
+      "context": "把经过完整性保护的值存入 Cookie，并随匹配的 HTTP 请求交回应用验证。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hmac",
+      "context": "采用共享密钥方案时，以 HMAC 认证 Cookie 的值；Hono 的 helper 使用 HMAC SHA-256。"
+    }
+  ],
+  "summary": "为 Cookie 值附加认证码或签名以检测未经授权的修改。",
+  "description": "签名 Cookie 把值与认证码或数字签名绑定，接收端先验证保护信息，再决定是否接受内容。使用共享密钥的实现通常采用消息认证码；Hono 的 signed cookie helper 使用 Web Crypto 产生和验证 HMAC SHA-256，并以异步接口区分缺失 Cookie 与验证失败。\n\n这种保护验证完整性及持有密钥者生成的内容，不把明文值加密，也不自动防止重放。内容的到期时间、用途、用户绑定、密钥轮换和撤销策略仍需设计，敏感信息也不应因加了认证码就直接暴露给客户端。签名 Cookie 可用于承载会话状态，但不等于完整的登录与授权系统。\n\n## 参考\n\n- [Hono：签名 Cookie 与 HMAC SHA-256](https://hono.dev/docs/helpers/cookie)\n- [IETF：HMAC 消息认证（RFC 2104）](https://www.rfc-editor.org/rfc/rfc2104.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

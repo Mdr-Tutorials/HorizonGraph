@@ -1,0 +1,52 @@
+{
+  "id": "hftbacktest",
+  "name": "HftBacktest",
+  "aliases": [
+    "HftBacktest 回测框架",
+    "hftbacktest",
+    "高频交易回测框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "event-driven-backtesting",
+      "context": "框架以行情和订单相关事件推进策略及执行模拟。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "historical-market-data-replay",
+      "context": "回测读取历史市场事件并保留原记录的市场路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "queue-position-model",
+      "context": "在需要估计被动成交的价位汇总数据路径中，采用可配置排队模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "latency",
+      "context": "框架提供行情延迟、订单进入和订单回报等执行相关延迟模型。"
+    }
+  ],
+  "summary": "以历史行情、排队成交和延迟模型研究高频订单执行的框架。",
+  "description": "HftBacktest 是面向高频交易研究的开源回测框架，提供 Rust 实现与 Python / Numba 使用路径，用历史行情驱动策略和订单执行仿真。项目强调行情与订单延迟、队列位置和成交模型；研究软件的存在不代表其示例策略或任一配置具有未来盈利能力。\n\n模型可分别描述行情到达、订单进入市场和订单回报延迟，并对被动挂单采用保守或概率排队假设及部分成交规则。当前项目提供不同数据和版本路径，包括逐订单相关能力；部分成交说明页的价位汇总场景不能概括为整个项目永久只支持 MBP，实际接口应对照所用版本及数据格式。\n\n历史重放不因模拟订单而改变原记录，因此大额流动性获取、冲击和其他参与者反应受到限制。其不允许部分成交的某些模型会对吃单采用理想化全量成交规则，不能作为通用真实撮合约定。使用时须选择并校准成交、队列、费率和延迟模型，对照真实回报；Rust 交易原型等能力也有各自支持范围。\n\n## 参考\n\n- [HftBacktest 官方仓库](https://github.com/nkaz001/hftbacktest)\n- [HftBacktest：成交与排队模型及历史重放限制](https://hftbacktest.readthedocs.io/en/latest/order_fill.html)\n- [HftBacktest：行情、下单和回报延迟模型](https://hftbacktest.readthedocs.io/en/latest/latency_models.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://hftbacktest.readthedocs.io/en/latest/"
+}

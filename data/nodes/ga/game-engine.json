@@ -1,0 +1,36 @@
+{
+  "id": "game-engine",
+  "name": "Game Engine",
+  "aliases": [
+    "游戏引擎"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "game-loop",
+      "context": "实时游戏运行中按更新与呈现循环推进世界；Godot 的逐帧和物理处理体现不同调度路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "input-handling",
+      "context": "在具有玩家交互的游戏中，将设备事件或状态转换为游戏动作。"
+    }
+  ],
+  "summary": "组织游戏世界更新、渲染及相关运行系统的软件基础。",
+  "description": "游戏引擎把对象与场景、逻辑更新、图形、输入、音频和可选物理等能力组合成运行环境。编辑器与资产处理工具可帮助构建内容，但运行核心和编辑工具承担不同职责。\n\n不同引擎提供的系统、对象模型和部署能力不同。2D 游戏框架、3D 通用引擎和单独渲染库的范围不能互换；采用一个引擎也不表示每个项目都启用所有内置模块。\n\n## 参考\n\n- [Phaser：场景系统及生命周期](https://docs.phaser.io/phaser/concepts/scenes)\n- [Godot：节点和场景](https://docs.godotengine.org/en/stable/getting_started/step_by_step/nodes_and_scenes.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

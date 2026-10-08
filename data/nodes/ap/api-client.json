@@ -1,0 +1,33 @@
+{
+  "id": "api-client",
+  "name": "API Client",
+  "aliases": [
+    "API 客户端",
+    "接口客户端"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "api-contract",
+      "context": "根据目标接口的操作与消息约定构造请求并解释响应。"
+    }
+  ],
+  "summary": "封装接口请求构造、发送、结果解析与错误处理。",
+  "description": "API 客户端在应用中封装访问远端接口所需的请求构造、消息序列化、传输调用、结果解析和错误处理。它可以是少量手写函数、根据接口规范生成的 SDK，或 Hono Client、openapi-fetch 这样的类型化库。客户端通常把地址、参数、认证信息和响应分支转换成应用容易调用的形式；RPC 存根则常表现为方法调用。\n\n静态类型描述的是客户端预期的形状，实际响应仍取决于服务版本和运行情况。运行时响应解析、取消、超时、重试及是否处理非 JSON 内容，应检查具体库的能力并在应用中配置。测试真实消费者的请求构造与响应处理，可以发现即使接口文档正确也可能存在的客户端错误；服务端仍需要执行自身的校验和权限逻辑。\n\n## 参考\n\n- [openapi-fetch：基于接口类型的 Fetch 客户端](https://openapi-ts.dev/openapi-fetch/)\n- [gRPC：服务、存根与默认序列化](https://grpc.io/docs/what-is-grpc/introduction/)\n- [Pact：消费者测试应执行真实客户端](https://docs.pact.io/consumer)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

@@ -1,0 +1,44 @@
+{
+  "id": "wsl-container-sdk",
+  "name": "WSL Container SDK",
+  "aliases": [
+    "Microsoft.WSL.Containers",
+    "wslcsdk.dll",
+    "WSL 容器 SDK"
+  ],
+  "type": "library",
+  "domains": [
+    "containerization",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "wsl-container-api"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl-containers",
+      "context": "执行会话、容器和进程管理调用时使用安装的 WSL Containers 后端；服务安装预检等 SDK 调用不因此要求后端已经可用。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "为 Windows 应用提供 WSL 容器 API 的库与投影",
+  "description": "WSL Container SDK 是调用 WSL Container API 的具体开发工件，包括 native C 头文件 wslcsdk.h、链接库 wslcsdk.lib、运行库 wslcsdk.dll，以及 Microsoft.WSL.Containers NuGet 包中的 C# 投影和 C++/WinRT 头文件。它为应用提供调用绑定，与 API 约定本身及 wslc.exe 命令行保持独立身份。\n\n应用通常先检查 WSL 服务和版本，再建立 Session、准备镜像、创建 Container 并处理 Process 的输出、信号和退出状态。官方 C、C++ 与 C# 示例展示这些对象的操作顺序；native 句柄、WinRT 流和托管事件并不是完全相同的资源表示，不能直接照搬另一个投影的所有权与释放方式。\n\nSDK 不替应用打包一个独立 Linux 容器后端：执行能力仍来自已安装的 WSL Containers 环境。Microsoft Learn 在整体功能 GA 后仍明确把 C++/WinRT 投影标为 preview，允许破坏性变更；各语言的已知缺口也应单独核对。采用包版本和接口能力检测，比只根据产品 GA 标签判断二进制或调用兼容更可靠。\n\n## 参考\n\n- [WSL Container API 开发者参考](https://wsl.dev/api-reference/)\n- [Microsoft Learn：WSL container](https://learn.microsoft.com/en-us/windows/wsl/wsl-container)\n- [WSL C# 投影的能力边界](https://wsl.dev/api-reference/csharp/known-gaps/)\n- [WSL 3.0.1 官方 SDK 示例](https://github.com/microsoft/WSL/blob/3.0.1/doc/samples/README.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "puppeteer",
+  "name": "Puppeteer",
+  "aliases": [
+    "Puppeteer 浏览器自动化库"
+  ],
+  "type": "library",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "chrome-devtools-protocol",
+      "context": "在选择 CDP 的受支持浏览器连接路径中发送浏览器控制与观察消息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webdriver-bidi",
+      "context": "在选择 WebDriver BiDi 的受支持连接路径中控制浏览器并订阅事件。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-automation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-context-isolation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "element-locator"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "auto-waiting"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-screenshot"
+    }
+  ],
+  "summary": "提供 Chrome 与 Firefox 自动化接口的 JavaScript 库。",
+  "description": "Puppeteer 是提供高层浏览器控制 API 的 JavaScript 库，当前官方说明覆盖 Chrome 和 Firefox，底层可使用 CDP 或 WebDriver BiDi。它提供页面导航、元素交互、截图和脚本执行等接口；库身份与协议规范不同，也不能把过去以 Chromium 为中心的能力描述直接当作当前完整范围。\n\n定位器会等待目标出现以及动作要求的可见、启用或稳定条件，浏览器上下文可以分离任务的 cookie 和本地存储。鼠标接口则在视口相对的 CSS 像素坐标中工作，适用于元素 API 不方便覆盖的交互；具体协议和浏览器组合存在能力差别，不能假设每项接口都具有相同行为。\n\n默认启动通常采用无头模式，亦可选择显示窗口或独立的旧 Headless Shell。运行时应核对浏览器版本、启动模式和状态配置，并对动作后的页面结果另外断言。库提供自动化能力，完整测试组织、任务评分及智能体决策需要使用者或上层框架负责。\n\n## 参考\n\n- [Puppeteer：官方介绍](https://pptr.dev/)\n- [Puppeteer：Page interactions](https://pptr.dev/guides/page-interactions)\n- [Puppeteer：Browser management](https://pptr.dev/guides/browser-management)\n- [Puppeteer：Headless modes](https://pptr.dev/guides/headless-modes)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://pptr.dev/"
+}

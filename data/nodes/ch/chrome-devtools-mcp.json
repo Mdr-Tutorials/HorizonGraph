@@ -1,0 +1,46 @@
+{
+  "id": "chrome-devtools-mcp",
+  "name": "Chrome DevTools MCP",
+  "aliases": [
+    "Chrome DevTools MCP server",
+    "Chrome 开发工具 MCP"
+  ],
+  "type": "tool",
+  "domains": [
+    "browser-automation",
+    "web-development",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mcp",
+      "context": "将浏览器控制、开发工具检查与性能跟踪功能提供为 MCP 服务端工具。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "chrome",
+      "context": "服务器启动或连接受支持的 Chrome 浏览器实例，通过自动化及开发工具能力检查和操作真实页面；不表示 Chrome 内嵌该 MCP 服务器。"
+    }
+  ],
+  "summary": "让代理控制 Chrome 并检查页面、网络与性能的 MCP 服务器。",
+  "description": "Chrome DevTools MCP 是 Chrome 团队提供的 MCP 服务器工具，发行包为 chrome-devtools-mcp，让编码代理连接真实 Chrome 浏览器并使用开发工具能力。当前官方将其纳入 Chrome DevTools for agents 工具套件，后者还包括 CLI 与技能；这里保留 MCP 服务器这一具体工件身份，不把整个浏览器或所有 DevTools 功能合并为另一个协议。\n\n服务器可帮助代理导航与操作页面、查看网络和控制台、取得截图以及记录和分析性能跟踪。官方实现使用 Puppeteer 自动化并等待动作结果，浏览器内容通过 MCP 工具暴露给已连接客户端。浏览器能被检查不代表模型推断必然正确，具体页面状态、动作结果和性能实验条件仍应作为验证依据。\n\n官方当前支持 Google Chrome 和 Chrome for Testing，其他 Chromium 浏览器不是无条件受支持对象。工具可由客户端启动浏览器，也有连接现有浏览器的配置；仅连接 MCP 进程不一定已经启动浏览器。DevTools 套件中的 CLI 只覆盖部分 Shell 自动化能力，MCP 与技能的组合也依宿主安装路径而异，不能把所有套件成员当作同一个二进制或不可分离硬依赖。\n\n## 参考\n\n- [Chrome：DevTools for agents 的套件与 MCP 边界](https://developer.chrome.com/docs/devtools/agents/get-started)\n- [Chrome DevTools：MCP 官方实现与支持范围](https://github.com/ChromeDevTools/chrome-devtools-mcp)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+}

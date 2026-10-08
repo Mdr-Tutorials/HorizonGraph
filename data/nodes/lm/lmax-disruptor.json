@@ -1,0 +1,49 @@
+{
+  "id": "lmax-disruptor",
+  "name": "LMAX Disruptor",
+  "aliases": [
+    "Disruptor",
+    "LMAX 环形缓冲库"
+  ],
+  "type": "library",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "jvm"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ring-buffer",
+      "context": "标准事件存储使用预分配环形缓冲区并以序号防止覆盖。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lock-free-programming",
+      "context": "sequencer 与可见性使用原子或内存屏障；BlockingWaitStrategy 仍采用锁和条件变量。"
+    }
+  ],
+  "summary": "以序号协调消费者依赖的 Java 线程间事件传递库。",
+  "description": "LMAX Disruptor 是 Java 线程间消息库，通过预分配事件存储、序号与 sequencer 协调生产和消费。它起源于 LMAX 的并发系统研究，但可服务通用异步事件架构。同一事件可以广播给多个消费者，并用依赖图规定某个处理阶段必须等待哪些前置消费者。\n\ngating sequence 防止生产者覆盖尚未消费的槽位，sequence barrier 协调事件可见性与阶段进度。单生产者和多生产者使用不同 sequencer，wait strategy 决定空闲时阻塞、休眠或忙等。官方明确说明 BlockingWaitStrategy 会用锁和条件变量，因此 Disruptor 不是在所有配置下都无锁。\n\n它主要在同一进程的线程之间传递事件，没有自动跨主机传输或持久化能力。低延迟选择要权衡 CPU 占用、线程数量、缓存竞争和慢消费者，事件预分配也不能代替应用对可变对象的正确使用。它的多消费者广播与依赖协调语义不同于简单 SPSC 工作队列。\n\n## 参考\n\n- [LMAX Disruptor 官方项目](https://github.com/LMAX-Exchange/disruptor)\n- [LMAX Disruptor 用户指南](https://lmax-exchange.github.io/disruptor/user-guide/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://lmax-exchange.github.io/disruptor/"
+}

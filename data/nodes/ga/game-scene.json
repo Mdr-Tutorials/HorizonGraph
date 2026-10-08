@@ -1,0 +1,36 @@
+{
+  "id": "game-scene",
+  "name": "Game Scene",
+  "aliases": [
+    "游戏场景"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asset-loading",
+      "context": "在 Phaser 等具有场景加载阶段的实现中，为该场景准备所需图片、声音和数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "prefab",
+      "context": "在 Unity 场景中使用预制体模板创建和复用配置好的对象；其他引擎有不同的场景复用机制。"
+    }
+  ],
+  "summary": "组织游戏对象、运行系统和加载切换生命周期的逻辑单元。",
+  "description": "游戏场景把关卡、菜单或其他功能段组织成可创建、启动、暂停、停止或销毁的运行单元。Phaser 的 Scene 带有更新和加载等能力；Godot 的可保存场景则组合节点并允许实例化复用。\n\n场景不必只有一个正在运行，也不必等于一张地图。场景图描述对象之间的父子组织，而场景还承担运行和生命周期职责；切换场景也不必自动销毁全局音频、缓存或其他共享资源。\n\n## 参考\n\n- [Phaser：场景系统及生命周期](https://docs.phaser.io/phaser/concepts/scenes)\n- [Godot：节点和场景](https://docs.godotengine.org/en/stable/getting_started/step_by_step/nodes_and_scenes.html)\n- [Unity：Prefab 在场景中的实例化](https://docs.unity3d.com/6000.0/Documentation/Manual/Prefabs.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

@@ -1,0 +1,27 @@
+{
+  "id": "agent-artifact-store",
+  "name": "Agent Artifact Store",
+  "aliases": [
+    "智能体工件存储",
+    "代理产物存储"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "按名称、作用域与版本保存代理使用或生成的文件工件。",
+  "description": "智能体工件存储保存代理读取或生成的文件、图像和其他二进制资料，并提供名称、版本及作用域等管理信息。会话状态可以只保存这些工件的引用；把大文件放入工件服务与把全文发送给模型是不同操作。\n\nADK 的 ArtifactService 提供保存和加载接口，保存可以返回版本，调用者可加载最新或指定版本。运行事件中的 artifact_delta 记录工件变动的引用信息；这类元数据与实际文件内容分开，具体存储后端可以是内存或外部服务。\n\n工件归属可以涉及应用、用户或会话，读取与更新需要按实际作用域验证权限。文件的内容类型、生命周期和引用有效性也需管理；版本化存储帮助追踪产物，但不保证模型已经理解文件，也不自动执行其中的代码或把它作为可信指令。\n\n## 参考\n\n- [ADK artifacts and ArtifactService](https://adk.dev/artifacts/)\n- [ADK runtime event loop](https://adk.dev/runtime/event-loop/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

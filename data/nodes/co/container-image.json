@@ -1,0 +1,43 @@
+{
+  "id": "container-image",
+  "name": "Container Image",
+  "aliases": [
+    "容器镜像",
+    "Container Image"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-image-spec",
+      "context": "采用 OCI 表示的容器镜像使用其配置、文件系统层及清单组合格式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-manifest",
+      "context": "单个平台的镜像使用清单把配置对象和有序文件系统层关联起来。"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "image-layer",
+      "context": "容器镜像的根文件系统内容通常由有序文件系统层组成；OCI 清单允许层列表为空，因此不把至少一层视为所有镜像的硬约束。"
+    }
+  ],
+  "summary": "封装容器文件系统内容与启动配置的可分发制品",
+  "description": "## 机制与边界\n\n容器镜像把应用文件、运行库、依赖与启动配置组织成可分发的制品。创建容器时，运行时依据镜像准备根文件系统和进程参数；镜像本身不包含正在运行的进程状态。基础镜像可以被其他镜像复用，使应用只增加自身所需的内容。\n\n在 OCI 表示中，镜像清单通过内容描述符引用配置对象和有序的文件系统层；配置描述目标平台、默认命令、环境变量等信息。容器镜像是制品概念，OCI Image Specification 则规定其格式与组合规则，两者应分别建模。镜像配置记录的构建历史也不意味着每条历史记录都对应一个新增文件系统层。\n\n固定内容的镜像可以通过摘要定位，便于分发、重复部署和回滚；名称上的标签则可能在后续推送时指向其他内容。镜像封装应用环境，但其执行仍需要适配的处理器架构、操作系统及运行时能力。实际容器写入的可写层与挂载数据也不等于镜像中的只读层。\n\n## 参考\n\n- [Docker：容器镜像概念](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/)\n- [OCI：Image Manifest](https://raw.githubusercontent.com/opencontainers/image-spec/main/manifest.md)\n- [OCI：Image Configuration](https://raw.githubusercontent.com/opencontainers/image-spec/main/config.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

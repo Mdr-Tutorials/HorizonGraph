@@ -1,0 +1,43 @@
+{
+  "id": "data-agent-kit",
+  "name": "Google Cloud Data Agent Kit",
+  "aliases": [
+    "Data Agent Kit",
+    "DAK",
+    "Google Data Agent Kit"
+  ],
+  "type": "tool",
+  "domains": [
+    "agent-development",
+    "data-engineering",
+    "databases"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "big-data-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "插件通过其配置的服务 MCP 连接器向编码代理提供 Google Cloud 数据操作工具；各工作流选用的后端与认证不同。"
+    }
+  ],
+  "summary": "把 Google Cloud 数据工具与技能接入 IDE 和编码代理的工具集。",
+  "description": "Google Cloud Data Agent Kit 是 Google 面向数据科学、数据工程和数据应用开发的工具集，把相关云服务操作引入开发环境。官方当前明确提供 IDE 扩展和编码代理插件两种界面；前者包含数据资源的统一视图，后者通过技能和工具支持自然语言任务。本节点保留整个工具产品族，不能将插件、数据服务和托管代理概括成同一个云端运行平台。\n\n工具可以帮助发现数据、编写查询与笔记本、处理数据管道和开展模型工作流，实际操作作用于已配置的 Google Cloud 项目与服务。插件组合服务技能和适用的 MCP 连接器，凭据、权限和各后端的能力决定可完成的任务。官方主页和仓库的服务数量会随发布变化，静态条目无需固化营销数字为恒定功能边界。\n\nIDE 扩展与 CLI 插件具有不同安装路径，当前上游仓库与早期 Starter Pack 或集中技能仓库也有分发层级差异。产品不是 Google Cloud 全部数据服务的替代接口，更不意味着所有可访问服务都成为每个工作流的硬依赖。官方特别记录数据库认证和部分自动部署流程的限制，执行前应结合选定服务核对，而非照搬另一个插件的权限与环境假设。\n\n## 参考\n\n- [Google Cloud：Data Agent Kit 两种界面与能力限制](https://docs.cloud.google.com/data-agent-kit/overview)\n- [Google Cloud：当前 Data Agent Kit 插件上游仓库](https://github.com/GoogleCloudPlatform/data-agent-kit-plugin)\n- [Google Cloud：Data Agent Kit 产品范围](https://cloud.google.com/products/data-agent-kit)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "abbreviation": "DAK",
+  "official_site": "https://docs.cloud.google.com/data-agent-kit/overview"
+}

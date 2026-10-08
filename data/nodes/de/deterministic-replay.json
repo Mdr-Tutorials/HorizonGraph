@@ -1,0 +1,40 @@
+{
+  "id": "deterministic-replay",
+  "name": "Deterministic Replay",
+  "aliases": [
+    "确定性重放",
+    "确定性回放",
+    "可重复事件重放"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data",
+      "context": "交易研究重放消费固定版本和顺序的行情事件，并保留时间戳与缺口处理信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "point-in-time-data",
+      "context": "恢复历史策略的信息集合时，重放输入按当时可得的数据版本限定；可重复性本身不代替该约束。"
+    }
+  ],
+  "summary": "固定输入、状态与调度条件，重复得到一致的事件处理结果。",
+  "description": "确定性重放在给定初始状态、输入事件和执行规则下重复运行系统，使可比较的状态转移与输出保持一致。在交易研究中，它支持定位订单状态差异、核对成交账本和比较代码改动；重放目标可以是已记录的市场事件，也可以是固定随机条件的仿真实验。\n\n实现时应保存数据与代码版本、配置、随机数生成器状态、模拟起始状态及同时间戳事件的排序约定。计时器、网络和计算延迟模型必须使用模拟时钟；若策略读取当前墙上时钟、外部服务或未受控并发结果，仅固定一个随机种子通常不足以恢复相同运行。\n\n一致结果只说明实验在这些条件下可重复。带有前视数据、错误撮合或不合实际延迟的运行也可以完全确定；反过来，跨平台浮点和并发差异可能需要定义数值容差，不能轻易承诺逐位相同。研究重放应另外核查数据可用时间、输入缺口以及模型与实盘成交的偏差。\n\n## 参考\n\n- [NautilusTrader：回测事件、计时器和命令处理顺序](https://nautilustrader.io/docs/latest/concepts/backtesting/execution-flow/)\n- [ABIDES 官方 Kernel.py：事件队列与随机状态](https://github.com/abides-sim/abides/blob/master/Kernel.py)\n- [QuantConnect：回测与实盘的对照及前视风险](https://www.quantconnect.com/docs/v2/writing-algorithms/live-trading/reconciliation)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

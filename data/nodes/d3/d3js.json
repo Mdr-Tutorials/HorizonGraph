@@ -7,10 +7,12 @@
   ],
   "type": "library",
   "ecosystems": [
-    "web_frontend"
+    "web_frontend",
+    "data-visualization-ecosystem"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "data-visualization"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -21,12 +23,34 @@
     {
       "relation_type": "depends_on",
       "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "data-join"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "data-scale"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "chart-axis"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "interaction-brushing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "svg",
+      "context": "可通过选择与形状模块组织 SVG 可视化，属于常见但非唯一的渲染方式。"
     }
   ],
-  "summary": "数据驱动文档的可视化基石库，SVG 与 DOM 直接操控。",
+  "summary": "提供数据绑定、尺度、布局和交互的可视化工具集合。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 3,
-  "official_site": "https://d3js.org"
+  "official_site": "https://d3js.org",
+  "description": "D3.js 是用于定制数据可视化的 JavaScript 工具集合，覆盖选择与数据绑定、尺度、坐标轴、形状、地理投影、布局及交互等模块。它允许开发者直接控制数据如何转成图形，既可组合成完整图表，也可只使用尺度或形状等独立能力。D3 不提供统一的高层图表对象，具体设计和更新逻辑由应用组织。\n\nselection 的数据连接把数据与 DOM 元素对应起来，通过 enter、update 和 exit 处理新增、更新与删除。尺度把字段值转换为位置或颜色，坐标轴解释位置尺度，brush 和 zoom 等模块管理范围选择与视角交互。部分模块直接操作 DOM，部分模块只计算数据，因此使用 D3 不意味着全部可视化必须通过 SVG 绘制。\n\nD3 可配合 SVG、Canvas 以及其他渲染方案使用。接入组件框架时应明确谁管理元素及生命周期，避免应用框架和 D3 同时修改同一区域而产生状态冲突；图表的交互含义、数据身份和视觉编码仍需由作者设计。\n\n## 参考\n\n- [What is D3](https://d3js.org/what-is-d3)\n- [D3 Data Join](https://d3js.org/d3-selection/joining)\n- [D3 Scale](https://d3js.org/d3-scale)"
 }

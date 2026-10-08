@@ -1,0 +1,52 @@
+{
+  "id": "ts-rest",
+  "name": "ts-rest",
+  "aliases": [
+    "ts-rest API"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "type-safe-api"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "contract-first-api-design"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "api-contract",
+      "context": "用共享的 HTTP 路由契约约束服务实现与客户端请求。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-schema",
+      "context": "在支持 Standard Schema 的版本、且契约使用兼容验证库时，连接模式的运行时校验和静态输入输出类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "采用 @ts-rest/open-api 和可转换模式时导出 HTTP 接口描述。"
+    }
+  ],
+  "summary": "以共享路由契约连接类型化 REST 服务与客户端的库。",
+  "description": "ts-rest 通过共享 contract 声明 HTTP 路由、参数、请求体和各状态码的响应，使 TypeScript 服务实现与客户端调用使用相同的接口形状。它保留 HTTP 方法和资源路径，不把所有操作改造成一个 RPC 过程端点。在支持 Standard Schema 的版本中，契约可以使用兼容接口的模式，也可以使用纯 TypeScript 类型；当前官方指南将相关支持标为候选版，采用时需要核对版本。具体运行时保证取决于所选声明与适配器。\n\n服务适配器把契约连接到框架的路由与校验过程，客户端按契约构造请求并得到类型化结果。OpenAPI 导出由独立的 @ts-rest/open-api 工具处理，需要匹配模式转换能力，纯 TypeScript 类型不会凭空产生完整的运行时模式。响应验证、身份认证和错误处理仍需依实际配置检查，契约优先和编译检查不能证明部署中的服务自动符合所有约定。\n\n## 参考\n\n- [ts-rest：共享接口契约](https://ts-rest.com/contract/overview)\n- [ts-rest：快速开始与两端实现](https://ts-rest.com/quickstart)\n- [ts-rest：OpenAPI 导出](https://ts-rest.com/openapi)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://ts-rest.com"
+}

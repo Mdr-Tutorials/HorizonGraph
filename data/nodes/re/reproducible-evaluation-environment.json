@@ -1,0 +1,38 @@
+{
+  "id": "reproducible-evaluation-environment",
+  "name": "Reproducible Evaluation Environment",
+  "aliases": [
+    "可复现评估环境"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "devops"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "containers",
+      "context": "在 SWE-bench 等选择容器化执行的评估中封装任务依赖，并将资源、缓存和环境版本纳入运行设置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "system-virtual-machine",
+      "context": "在 OSWorld 原始桌面任务等需要完整操作系统状态的评估中，以虚拟机和快照恢复任务初态。"
+    }
+  ],
+  "summary": "固定并恢复任务依赖、初态与资源以支持可比运行。",
+  "description": "可复现评估环境为任务规定依赖、系统及应用版本、文件和数据初态，并给出恢复步骤。它将开发时能运行的环境转成可重复试验的条件：例如在每次仓库修复前恢复基础提交，在桌面操作前准备一致的应用状态。\n\nSWE-bench 当前官方评估器使用容器准备任务依赖；OSWorld 原始环境采用虚拟机和快照重置桌面。带状态网页基准也需要恢复服务端数据与认证配置。选择哪种隔离机制取决于任务，容器与虚拟机并不是所有评估都必须同时使用的硬依赖。\n\n固定镜像不能消除外部服务变化、随机采样或资源竞争。CPU、内存、超时、并发、网络及缓存状态均可能影响端到端结果，应记录并区分任务失败与环境失败。可复现意味着提供并控制足够的实验条件，不承诺每次生成逐字相同。\n\n## 参考\n\n- [SWE-bench：评估环境、报告与结果缓存](https://www.swebench.com/SWE-bench/guides/evaluation/)\n- [OSWorld 原论文：桌面任务、虚拟机与状态判定](https://arxiv.org/html/2404.07972v1)\n- [Anthropic：Agent 代码评估的基础设施噪声实验](https://www.anthropic.com/engineering/infrastructure-noise)\n- [BrowserGym 论文：环境接口、动作空间与实验](https://arxiv.org/html/2412.05467v1)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

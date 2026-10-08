@@ -16,11 +16,17 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reproducible-evaluation-environment",
+      "context": "在有持久状态的交互式智能体基准中采用任务初态恢复和固定执行配置，避免上一轮状态与环境差异干扰比较。"
     }
   ],
-  "summary": "在标准化、可重复的严苛工作负载下定量评估软硬件系统或模型能力的度量实验套件。",
+  "summary": "在规定工作负载、条件和指标下比较软硬件或模型表现。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08",
-  "importance": 5
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "description": "基准测试使用规定的工作负载、执行条件和指标，对硬件、软件系统或模型进行可比较的测量。计算机性能基准可考察吞吐、时间或能耗，模型与智能体基准可考察任务完成；工作负载和指标的选择决定结果实际回答的问题，并不要求所有基准都是压力测试。\n\n运行结果应附足够的版本与配置，包括硬件、依赖、编译或推理设置、资源、缓存、任务子集及聚合方式。SPEC CPU 的运行和披露规则体现了这些要求；它只是具体性能基准实例，不能把其工作负载和指标推广到所有模型或应用评估。\n\n评估有持久状态的智能体时，还需固定或恢复任务初态、注明重试与运行预算，并区分基础设施失败。基准结果支持的是特定条件下的比较；训练污染、任务适配及不代表实际负载的任务选择会影响外推，排行榜顺序也不能替代用户场景的验证。\n\n## 参考\n\n- [SPEC CPU 2017：运行规则与配置披露](https://www.spec.org/cpu2017/Docs/runrules.html)\n- [SPEC CPU 2017：工作负载与指标范围](https://www.spec.org/cpu2017/Docs/overview.html)\n- [AI Agents That Matter：预算、成本与泛化边界](https://arxiv.org/html/2407.01502v1)\n- [Anthropic：Agent 代码评估的基础设施噪声实验](https://www.anthropic.com/engineering/infrastructure-noise)"
 }

@@ -1,0 +1,27 @@
+{
+  "id": "agent-routing",
+  "name": "Agent Routing",
+  "aliases": [
+    "智能体路由",
+    "代理选择路由"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "根据输入、状态或规则选择适合处理任务的代理路径。",
+  "description": "智能体路由把请求分配到合适的代理或执行分支，可以由确定性规则、分类器或模型决策完成。选择代理与选择底层模型是不同层次：一个代理内部可以选择模型，而请求路由到另一个代理还可能改变任务指令、工具集合及流程。\n\nADK 的路由代理与协调者模式展示了按请求选择处理者的实现，常见例子是把账单与技术支持分给不同专家。路由只决定执行路径；之后可以调用代理工具、转移会话控制权或执行工作流分支，这些方式的语义应分别说明。\n\n路由需要可解释的候选描述、默认或失败路径，以及对接收方标识的校验。分类不确定时可请求更多输入或返回协调者；专业分工也不意味着结果必然正确，需要用实际请求评估选择准确度和整体任务完成率。\n\n## 参考\n\n- [ADK routed agents](https://adk.dev/agents/routing/)\n- [ADK workflow patterns](https://adk.dev/workflows/patterns/)\n- [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

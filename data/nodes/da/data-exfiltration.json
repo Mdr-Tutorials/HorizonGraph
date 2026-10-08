@@ -1,0 +1,32 @@
+{
+  "id": "data-exfiltration",
+  "name": "Data Exfiltration",
+  "aliases": [
+    "数据外泄",
+    "未授权数据外传"
+  ],
+  "type": "concept",
+  "domains": [
+    "security"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "通过 Web 请求外传数据的攻击路径中，将未授权的信息放入 HTTP 请求发送给接收端；MCP 安全指南的 curl 示例是具体场景，不表示所有外泄都采用 HTTP。"
+    }
+  ],
+  "summary": "把系统中的信息未经授权传送到不应接收它的目的地。",
+  "description": "数据外泄是信息从系统未经授权转移出去的行为。目标可能是外部网络端点、工具参数、日志、消息或其他不应接收内容的位置，判断依据是数据与接收方的授权关系。正常导出与合法共享不能仅因发生网络传输就被归为外泄，使用加密传输也不能使未授权外传变成合法。\n\n智能体场景中，外部指令可能诱导模型将本地文件、令牌或业务数据附加到工具请求。执行器若能读取敏感内容且能连接攻击者目的地，就形成需要检查的数据流。MCP 安全指南示例包含以 curl HTTP 请求发送本地秘密的外传路径；工具指南建议在敏感调用前展示输入，秘密管理也需要限制凭据进入上下文、返回文本和日志。\n\n控制措施要同时考虑读取范围、接收端授权和发送路径，避免只限制写文件却遗漏网络请求，或只检查目的域却允许向合法域的错误租户发送信息。审计能帮助追踪实际传输，但不等同于阻止传输。安全评估应明确哪些信息离开了哪个边界，而非仅用工具调用成功与否代替外泄证据。\n\n## 参考\n\n- [NIST CSRC：Exfiltration](https://csrc.nist.gov/glossary/term/exfiltration)\n- [MCP 2026-07-28：Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)\n- [MCP 2026-07-28：Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)\n- [OWASP：Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)\n- [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

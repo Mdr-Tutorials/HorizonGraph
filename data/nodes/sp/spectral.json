@@ -1,0 +1,37 @@
+{
+  "id": "spectral",
+  "name": "Spectral",
+  "aliases": [
+    "Spectral API 规范检查器",
+    "Stoplight Spectral"
+  ],
+  "type": "tool",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "对 OpenAPI 描述应用预置或自定义规则，检查描述质量及项目风格约定。"
+    }
+  ],
+  "summary": "用可定制规则检查 JSON、YAML 接口描述与团队 API 约定。",
+  "description": "Spectral 是可定制的 JSON、YAML 检查引擎，常用于 OpenAPI、AsyncAPI 等接口描述的规范检查和 API 风格约束。它提供预置规则集，也允许团队通过规则目标、检查函数、诊断级别与自定义函数规定命名、描述完整性及其他设计约定。CLI、JavaScript API 和编辑器集成使同一套规则可以在本地开发与持续集成中运行。\n\n规则校验关注描述文件是否满足所配置的约束，不能仅由检查通过推断实际接口已经实现这些约定。JSON Schema 等结构约束、Spectral 的团队风格规则以及针对真实服务的契约测试各自检查不同对象。默认规则可以扩展或调整；新增自定义规则时应明确它是项目政策还是规范要求，避免把某个团队的风格偏好误写为所有 HTTP API 的必要条件。\n\n## 参考\n\n- [Spectral：官方概览](https://stoplight.io/open-source/spectral)\n- [Spectral：规则集、CLI 和集成](https://github.com/stoplightio/spectral)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://stoplight.io/open-source/spectral"
+}

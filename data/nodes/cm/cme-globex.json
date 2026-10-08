@@ -1,0 +1,41 @@
+{
+  "id": "cme-globex",
+  "name": "CME Globex",
+  "aliases": [
+    "Globex",
+    "CME Globex 电子交易平台"
+  ],
+  "type": "product",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cme-ilink-3",
+      "context": "CME Group 上市衍生品等支持 iLink 3 的 Globex 接入路径用于二进制订单录入；其他市场或版本以各自文档为准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cme-mdp-3",
+      "context": "Globex 支持 MDP 3.0 的市场数据路径提供实时行情；与订单录入及 Drop Copy 路径分别管理。"
+    }
+  ],
+  "summary": "承载 CME 等市场电子订单与行情接入的平台。",
+  "description": "CME Globex 是电子交易平台，公开接入范围包括 CME Group 上市衍生品以及 BrokerTec、EBS Market 的相关市场。它是具体平台身份，区别于 CME Group 公司、单个交易所法人和交易合约本身。\n\n客户端通过相应 iLink 接口发送订单，使用 MDP 3.0 接收行情，并可通过独立 Drop Copy 路径收到成交及确认副本。开发者需要处理会话、市场分段、恢复和认证；订单路径与行情路径互相配合，但不能将行情订阅消息当作发送订单的协议。\n\n官方要求与 Globex 交互的应用在接入生产前完成相应认证。具体产品的撮合算法、网关方式及时间安排仍受市场规则与接入配置约束；不能用平台名称保证单一分配规则，也不能把某次测量或迁移计划写成全部部署的普遍延迟。\n\n## 参考\n\n- [Globex 电子交易平台](https://www.cmegroup.com/solutions/market-access/globex.html)\n- [Globex 接入、行情与认证](https://www.cmegroup.com/solutions/market-access/globex/develop-to-globex.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.cmegroup.com/solutions/market-access/globex.html"
+}

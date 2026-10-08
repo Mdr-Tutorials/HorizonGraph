@@ -1,0 +1,33 @@
+{
+  "id": "texture-atlas",
+  "name": "Texture Atlas",
+  "aliases": [
+    "纹理图集",
+    "精灵图集"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "用共享纹理存储多幅图像，并通过区域视图和元数据分别访问。"
+    }
+  ],
+  "summary": "将多幅图像打包为共享纹理及区域元数据。",
+  "description": "纹理图集将多幅小图像打包到一张或一组较大的纹理中，并用区域元数据记录每幅图的位置、尺寸、裁切和可选旋转信息。显示对象选择相应纹理区域，避免为每幅图单独切换资源；PixiJS 的 Spritesheet 把帧记录解析成共享来源的多个 Texture 视图。\n\n图集可以支持图标、字体图形和逐帧动画，但图集与动画不是同义词。打包时的边界留白、像素扩展和 mip 级处理需配合过滤，避免相邻区域串色；旋转或裁边后的原点、尺寸和 UV 也需匹配元数据。\n\n图集常改善二维渲染器的纹理绑定与合批机会，实际收益仍受材质、混合状态、遮罩和对象顺序约束。过大的图集增加上传及常驻内存，多个图集或纹理数组可能更合适，不能仅凭共享图集就断言所有对象只需一次绘制。\n\n## 参考\n\n- [PixiJS Spritesheet](https://pixijs.download/dev/docs/assets.Spritesheet.html)\n- [PixiJS Textures](https://pixijs.com/8.x/guides/components/textures)\n- [PixiJS Performance Tips](https://pixijs.com/8.x/guides/concepts/performance-tips)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

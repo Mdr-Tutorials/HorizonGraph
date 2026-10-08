@@ -7,11 +7,14 @@
   "type": "product",
   "ecosystems": [
     "public-cloud-ecosystem",
-    "webassembly-ecosystem"
+    "webassembly-ecosystem",
+    "edge-serverless-ecosystem"
   ],
   "domains": [
     "cloud-infrastructure",
-    "web-development"
+    "web-development",
+    "edge-computing",
+    "web-services"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -32,14 +35,63 @@
       "target_id": "javascript"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "wasm"
+      "relation_type": "implements",
+      "target_id": "serverless"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fetch-api",
+      "context": "提供 Web 标准 Request、Response、Headers 与 fetch，并具有 Workers 专有扩展和服务端执行约束。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "web-streams-api",
+      "context": "通过标准流接口发送和转换请求或响应体；平台扩展与具体支持另行核对。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "cloudflare-worker-bindings"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "cloudflare-workers-execution-context"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "hono",
+      "context": "Hono 官方 Workers 模板通过 Module Worker 的 Fetch 入口部署，并按需访问 Workers 绑定和执行上下文。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "edge-computing",
+      "context": "在 Cloudflare 分布式网络运行应用处理器，实际延迟仍取决于请求路由和后端数据位置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wasm",
+      "context": "应用需要运行 WebAssembly 模块时使用该能力；普通 JavaScript 处理器不要求附带模块。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "event-loop",
+      "context": "同一 Workers 实例通过单线程事件循环交错处理多个请求，await 期间可能处理其他请求。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runtime-compatibility",
+      "context": "用兼容日期、兼容标志和 Node API 支持矩阵限定代码可移植范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-lifecycle",
+      "context": "区分请求处理、流式响应存续及 waitUntil 的有界延长，不把响应返回视为所有任务完成。"
     }
   ],
-  "summary": "Cloudflare 的边缘计算运行时，跑在 V8 isolate 上。",
+  "summary": "在 Cloudflare 网络运行事件处理器的托管计算平台。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://workers.cloudflare.com"
+  "official_site": "https://workers.cloudflare.com",
+  "description": "Cloudflare Workers 在 Cloudflare 的分布式网络执行应用处理器，运行时以 V8 isolate 隔离应用。一个实例可在单线程事件循环中交错处理多个请求，并非每次请求都创建独立虚拟机；平台也不保证两个请求落到同一实例，模块全局变量不能作为跨请求持久状态保证。\n\nModule Worker 的 fetch 处理器接收 Request、资源绑定 env 和执行上下文 ctx，并返回 Response。绑定授予访问指定资源的能力；Web Streams 支持逐块传输响应。WebAssembly 是可选执行能力，普通 JavaScript 处理器无需附带 Wasm 模块。Hono 可通过标准接口及其 Workers 接入路径运行。\n\n兼容日期与标志影响 API 行为，Node 兼容层同时包含原生实现、部分支持与仅可导入的 stub，能加载 npm 包不等于其方法都可执行。HTTP 调用在响应流仍传输时保持活动；waitUntil 可为响应结束或断开后的工作延长有界时间，不能替代可靠队列或无限后台任务。\n\n## 参考\n\n- [Cloudflare：isolate 与多请求执行](https://developers.cloudflare.com/workers/reference/how-workers-works/)\n- [Cloudflare：Web 标准运行时 API](https://developers.cloudflare.com/workers/runtime-apis/)\n- [Cloudflare：资源绑定及能力](https://developers.cloudflare.com/workers/runtime-apis/bindings/)\n- [Cloudflare：Web Streams](https://developers.cloudflare.com/workers/runtime-apis/streams/)\n- [Cloudflare：Node API 的支持与 stub 边界](https://developers.cloudflare.com/workers/runtime-apis/nodejs/)\n- [Cloudflare：waitUntil 与响应流存续](https://developers.cloudflare.com/workers/runtime-apis/context/)\n- [Hono：Cloudflare Workers 接入](https://hono.dev/docs/getting-started/cloudflare-workers)"
 }

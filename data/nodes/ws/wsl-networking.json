@@ -1,0 +1,50 @@
+{
+  "id": "wsl-networking",
+  "name": "WSL Networking",
+  "aliases": [
+    "WSL 网络",
+    "Windows Linux 网络互操作"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "virtualization",
+    "networking"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nat",
+      "context": "普通 WSL 2 采用 NAT 网络模式时，以地址转换组织虚拟机和宿主外部网络通路。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl-mirrored-networking",
+      "context": "在支持的宿主中选择 mirrored 模式时，采用 Windows 接口映射路线。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl-dns-tunneling",
+      "context": "启用 DNS tunneling 的部署中，通过虚拟化通路把解析请求交给 Windows。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "consomme-networking",
+      "context": "WSLc 3.0.1 默认会话网络模式为 Consommé，配置及处理路线与普通发行版分开。"
+    }
+  ],
+  "summary": "组织 WSL 与 Windows 之间地址、解析和访问通路的机制。",
+  "description": "WSL 网络组织 Linux 环境与 Windows 宿主、局域网及外部服务之间的通信。普通 WSL 2 的常见默认路线使用 NAT，Linux 与 Windows 地址及 localhost 行为需要按方向区分；较新宿主还可选择 mirrored 等模式。服务监听、名称解析、代理与防火墙共同影响访问，不能把一次 ping 成功当作所有服务都能连通。\n\n普通发行版的 .wslconfig 与发行版内部设置具有不同作用范围。mirrored 改变接口与路由组织，DNS tunneling 改变解析请求通路，二者不是同一个开关。localhost 转发、直接路由及绑定地址也各有条件，Windows 和 Linux 可能位于不同网络域。\n\nWSLc 会话采用自己的网络设置；3.0.1 会话默认值为 Consommé，客户机帧经用户态宿主处理后转为普通宿主 socket 流量。普通 WSL 的默认 NAT、共享 VM 或安全说明不能直接推广到 WSLc 会话。调试需要先确认产品入口、实际版本和模式，再沿容器、VM 与宿主网络边界查找问题。\n\n## 参考\n\n- [Microsoft：WSL 网络](https://learn.microsoft.com/en-us/windows/wsl/networking)\n- [Microsoft：WSL 高级配置](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)\n- [WSL：NAT、Mirrored 与 Consomme](https://wsl.dev/technical-documentation/localhost/)\n- [WSL 3.0.1：WSLCUserSettings 默认设置](https://github.com/microsoft/WSL/blob/3.0.1/src/windows/common/wslc/settings/WSLCUserSettings.h#L100)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

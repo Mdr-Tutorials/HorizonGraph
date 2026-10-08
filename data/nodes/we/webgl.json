@@ -11,13 +11,14 @@
   ],
   "domains": [
     "graphics",
-    "web-development"
+    "web-development",
+    "interactive-graphics"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "api-specification"
     },
     {
       "relation_type": "competes_with",
@@ -31,12 +32,23 @@
       "relation_type": "stewarded_by",
       "target_id": "khronos-group",
       "context": "相关图形接口或着色语言规范由 Khronos 工作组维护。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "glsl",
+      "context": "使用对应 WebGL 版本规定的 GLSL ES 编写和编译可编程着色阶段。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "premultiplied-alpha",
+      "context": "按上下文和纹理上传约定解释 alpha，确保绘制缓冲与页面合成采用一致颜色表示。"
     }
   ],
-  "summary": "浏览器里的 OpenGL ES，Web 3D 渲染的第一代标准。",
+  "summary": "为浏览器提供二维与三维 GPU 绘制能力的图形 API。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://www.khronos.org/webgl/"
+  "official_site": "https://www.khronos.org/webgl/",
+  "description": "WebGL 是浏览器图形 API，提供缓冲区、纹理、着色器程序和绘制命令，把数据送入 GPU 渲染管线。WebGL 1 基于 OpenGL ES 2.0，WebGL 2 基于 OpenGL ES 3.0，并加入适合 Web 的接口、验证与资源限制；它既能绘制 3D，也能承载精灵、图表等 2D 场景。\n\n应用负责组织对象、上传资源并管理状态，API 不自带场景图或游戏规则。纹理的来源许可、画布尺寸与 viewport、透明度表示及页面合成约定都影响结果；数据上传和读回开销也可能限制性能。\n\n上下文可能丢失，恢复后原有资源与扩展状态需要重新建立。WebGPU 是另外设计的 API，不是原有调用的自动升级；此节点表示图形接口规范，不是应用层网络协议，也不把浏览器实现写成对原生 OpenGL ES 库的固定硬依赖。\n\n## 参考\n\n- [Khronos：WebGL 1.0 规范](https://registry.khronos.org/webgl/specs/latest/1.0/)\n- [Khronos：WebGL 2.0 规范](https://registry.khronos.org/webgl/specs/latest/2.0/)"
 }

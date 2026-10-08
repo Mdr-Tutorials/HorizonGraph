@@ -7,10 +7,12 @@
   ],
   "type": "tool",
   "ecosystems": [
-    "node-js-ecosystem"
+    "node-js-ecosystem",
+    "edge-serverless-ecosystem"
   ],
   "domains": [
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -29,13 +31,39 @@
     {
       "relation_type": "implements",
       "target_id": "event-loop"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fetch-api",
+      "context": "现代 Node.js 提供标准形状的 fetch、Request、Response 与 Headers；版本和服务端运行策略仍需核对。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "web-streams-api",
+      "context": "提供 WHATWG ReadableStream、WritableStream 和 TransformStream，与 node:stream 区分。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "websocket",
+      "context": "Node.js 24 全局 WebSocket 实现客户端接口；服务端连接升级后的处理需相应服务器实现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "threadpool",
+      "context": "将部分文件系统、DNS、加密等原生异步任务提交到工作线程池；网络 I/O 并不都走该池。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-lifecycle",
+      "context": "node:http 和其框架适配路径区分输入消费、响应写入结束与连接关闭，并管理停机期间的在途请求。"
     }
   ],
-  "summary": "把 V8 拉到服务器的 JS 运行时，用事件循环处理 I/O。",
+  "summary": "以 V8、事件循环和系统接口运行 JavaScript 的服务端运行时。",
   "importance": 5,
   "popular": 90,
   "official_site": "https://nodejs.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Node.js 在浏览器之外执行 JavaScript，内嵌 V8，并以事件循环、系统网络能力和工作线程池协调 I/O。默认 JavaScript 回调线程与整个进程的线程数量是不同概念；长时间计算或同步阻塞仍会延迟其他请求，async 函数也不会自动把计算迁移到工作线程。\n\n现代版本提供 Fetch 的 Request、Response 和 fetch，以及 Web Streams；Node.js 24 文档分别列出这些接口与原有 node:stream。原生 node:http 服务器仍以 IncomingMessage、ServerResponse 处理请求与响应；Hono 的 Node 适配器负责接入 Fetch 处理器，拥有全局 Fetch 不代表服务器入口已是同一接口。\n\nHTTP 请求体与响应体按流推进，接收完整消息、写入结束和连接关闭需要分别判断。服务器关闭应停止接收新连接并等待在途请求，升级后的 WebSocket 等连接需另外管理；适配器还须处理应用未消费完的输入，不能把返回响应当成所有资源都已清理。\n\n## 参考\n\n- [Node.js：事件循环与工作线程池](https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop)\n- [Node.js 24：全局 Fetch 与 WebSocket 客户端接口](https://raw.githubusercontent.com/nodejs/node/v24.x/doc/api/globals.md)\n- [Node.js 24：Web Streams API](https://raw.githubusercontent.com/nodejs/node/v24.x/doc/api/webstreams.md)\n- [Node.js 24：原生 HTTP 消息与服务器关闭](https://raw.githubusercontent.com/nodejs/node/v24.x/doc/api/http.md)\n- [Hono：Node.js 接入和服务器关闭](https://hono.dev/docs/getting-started/nodejs)\n- [Hono Node Adapter：未消费请求体清理](https://github.com/honojs/node-server)"
 }

@@ -11,7 +11,9 @@
   ],
   "type": "concept",
   "domains": [
-    "quantitative-finance"
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
   ],
   "relations": [
     {
@@ -37,13 +39,31 @@
       "relation_type": "uses",
       "target_id": "sharpe-ratio",
       "context": "采用夏普比率评估时，以一致周期的收益差额序列衡量相对于波动的平均回报。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "event-driven-backtesting",
+      "context": "研究事件顺序与订单反馈敏感的策略时，采用事件式模拟推进历史状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "point-in-time-data",
+      "context": "历史决策使用当时已经可得的数据版本和证券信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "queue-position-model",
+      "context": "模拟价位汇总数据下的被动订单成交时，用队列模型估计前方数量变化。"
     }
   ],
-  "summary": "用历史数据模拟策略决策与执行，评估其在设定假设下的表现。",
-  "description": "回测按照给定规则，在历史数据上模拟当时能够作出的决策、订单和持仓变化，并据此计算收益与风险指标。它可以帮助检查策略实现、比较方案以及检验研究假设，结果依赖数据和模拟方式。\n\n有效的历史模拟需要处理信息的可得时间、交易费用、成交假设和滑点等条件。回测得到的是特定样本与假设下的结果，不能直接视为未来实盘收益。样本外验证、最大回撤和夏普比率可提供不同角度的检查，单一指标不足以说明策略质量。\n\n参考：[QuantConnect：回测入门](https://www.quantconnect.com/docs/v2/cloud-platform/backtesting/getting-started)；[QuantConnect：回测与实盘差异](https://www.quantconnect.com/docs/v2/writing-algorithms/live-trading/reconciliation)。",
+  "summary": "按可得信息与执行假设模拟历史策略，评估表现及实现。",
+  "description": "回测在历史数据和给定规则下模拟策略当时的决策、订单、成交与账户变化，用于检查实现和研究假设。有效结果描述的是指定数据、市场和执行假设下的历史表现；收益、最大回撤与夏普等指标各提供不同视角，不能单凭一个高分确认规律可泛化或实际能够成交。\n\n执行敏感策略通常需要逐步处理行情、订单与回报，明确同时间戳顺序、排队位置、部分成交和请求延迟。只按价格触及判定挂单全量成交，或用柱线最高最低值安排有利的柱内路径，会遗漏重要条件。历史订单簿重放也不能直接恢复模拟订单引发的市场反馈，冲击与流动性假设须另行披露。\n\n数据应按当时可用的发布和修订时间进入决策，证券集合包括应纳入的退出对象；费用、返佣、滑点和库存处理应形成一致口径。研究要记录试验与方案选择，冻结规则后做样本外或滚动检验，并对照真实执行。可重复历史曲线不等于无偏评估，任何历史结果都保留样本与模型条件。\n\n## 参考\n\n- [QuantConnect：回测与实盘的对照及前视风险](https://www.quantconnect.com/docs/v2/writing-algorithms/live-trading/reconciliation)\n- [HftBacktest：成交与排队模型及历史重放限制](https://hftbacktest.readthedocs.io/en/latest/order_fill.html)\n- [Bailey 等：The Probability of Backtest Overfitting 原始论文](https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf)",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-20",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://www.quantconnect.com/docs/v2/cloud-platform/backtesting/getting-started"
+  "official_site": "https://www.quantconnect.com/docs/v2/cloud-platform/backtesting/getting-started",
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ]
 }

@@ -1,0 +1,40 @@
+{
+  "id": "standard-schema",
+  "name": "Standard Schema",
+  "aliases": [
+    "标准模式接口",
+    "StandardSchemaV1"
+  ],
+  "type": "protocol",
+  "domains": [
+    "api-engineering",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "规范以泛型接口暴露校验对象、结果及输入输出类型，供 TypeScript 消费者集成。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "schema-validation",
+      "context": "validate 合同要求具体实现检查未知输入并返回输出或结构化 issues。"
+    }
+  ],
+  "summary": "统一 TypeScript 校验库的运行时结果与输入输出类型接口。",
+  "description": "## 机制与应用\n\nStandard Schema 定义校验库可实现的 TypeScript 接口，使框架通过对象的 ~standard 属性调用 validate，而不用为每个库编写专属适配。结果以 value 表示成功输出，或以 issues 表示失败，并可带错误路径；返回值可以同步，也可以是 Promise。接口还能暴露输入和输出的静态类型，供消费者提取。\n\n该规范不规定统一的模式描述语言，也不实现校验引擎或保证不同库接受完全相同的数据。消费者须使用具体库的校验结果和转换策略。它与负责导出 JSON Schema 的 Standard JSON Schema 分别定义能力；实现运行时 validate 接口不自动意味着支持模式导出。\n\n## 参考\n\n- [Standard Schema：完整接口与设计](https://standardschema.dev/schema)\n- [Standard Schema 项目：接口族](https://standardschema.dev/)\n- [Hono：Standard Schema 校验中间件](https://hono.dev/docs/guides/validation)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://standardschema.dev/schema"
+}

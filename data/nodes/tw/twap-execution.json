@@ -1,0 +1,40 @@
+{
+  "id": "twap-execution",
+  "name": "TWAP Execution",
+  "aliases": [
+    "TWAP 执行",
+    "时间加权均价执行",
+    "TWAP 算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-lifecycle",
+      "context": "按时间切片执行时，根据真实成交和在途子单更新下一切片数量，区分计划结束与订单已终止。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order",
+      "context": "带有成交价格边界的 TWAP 路径中，使用限价子单；订单可能因不可成交而落后计划。"
+    }
+  ],
+  "summary": "按时间轨迹分拆订单并跟踪时间价格基准的方法",
+  "description": "TWAP 执行通常在指定时间区间按时间分配目标数量，简单实现把母单等分为定时子单，较复杂实现可随机化或依据条件调整节奏。它侧重时间轨迹，与按市场成交量形状分配数量的 VWAP 调度不同。\n\nTWAP 价格基准需说明采样时间、价格来源与时间权重；等间隔采样时才可以直接采用相应样本的算术平均。计划均匀并不保证真实成交均匀，限价、交易时段与主动或被动订单方式都会改变执行进度。\n\n固定节奏容易实现，但可能在低流动性时段产生较大冲击，也可能暴露重复模式。IBKR 等实际实现允许条件限制、追赶和是否越过结束时间，订单仍可能未完成；计划截止、子单撤销和剩余风险应以实际回报处理，不能承诺取得基准价格。\n\n## 参考\n\n- [IBKR：TWAP 算法参数和未成交行为](https://www.interactivebrokers.com/docs/general/order-types/algorithmic-orders/ib-algorithms/twap)\n- [Nasdaq：执行算法与历史成交量轨迹](https://www.nasdaq.com/docs/execution-algos-member-presentation-december-2015.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

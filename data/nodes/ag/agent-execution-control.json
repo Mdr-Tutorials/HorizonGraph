@@ -1,0 +1,53 @@
+{
+  "id": "agent-execution-control",
+  "name": "Agent Execution Control",
+  "aliases": [
+    "智能体执行控制"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-permission-policy",
+      "context": "执行器在派发具体工具调用前，按动作、目标和调用上下文求取允许、拒绝或询问结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "approval-gate",
+      "context": "配置要求人工审核的操作在产生副作用前暂停，审批结果绑定到待执行动作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sandboxing",
+      "context": "启用操作系统隔离的部署把终端子进程放入受限执行环境；不表示所有模式默认启用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tool-output-validation",
+      "context": "工具返回进入模型上下文或交给下一工具前，执行层校验结构及应用约束。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "instruction-data-separation",
+      "context": "执行控制将外部内容保留为带来源的数据，权限策略由可信配置提供而不从工具文本中获得。"
+    }
+  ],
+  "summary": "在模型提出操作后，由执行层约束实际工具与资源访问。",
+  "description": "智能体执行控制位于模型提出动作与工具产生实际副作用之间。执行层把工具名、参数、操作目标和调用主体交给权限规则，决定拒绝、直接执行或进入审批，并记录结果。模型能生成调用建议，不意味着它有权改变执行器的策略或下游服务权限。\n\n落地时可组合权限策略、人工审批、操作系统沙箱和工具返回校验：策略回答哪些动作允许，沙箱约束进程实际可触及的资源，返回校验控制进入下一轮模型上下文的数据。不同控制点作用于不同边界，批准一次命令不自动授权后续网络、文件或业务对象操作。\n\nAntigravity 展示了产品中的配置差异：当前 Antigravity 2.0 独立桌面在 macOS/Linux 的 Default 预设允许沙箱内命令并审批越界动作；Windows 使用另一套终端与文件设置，SDK 则通过程序化策略组合。独立 IDE 产品不能自动继承这套预设。该概念记录执行机制，不把某个审批界面推导为提示注入免疫，也不把未启用的隔离能力当作已经生效。\n\n## 参考\n\n- [Google Antigravity：Agent settings](https://www.antigravity.google/docs/agent-settings)\n- [Google Antigravity SDK：Policies](https://www.antigravity.google/docs/sdk/policies/)\n- [MCP 2026-07-28：Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

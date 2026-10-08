@@ -1,0 +1,35 @@
+{
+  "id": "mipmapping",
+  "name": "Mipmapping",
+  "aliases": [
+    "多级渐远纹理",
+    "Mipmap",
+    "Mip Map"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering",
+    "game-development"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "纹理缩小过滤使用同一纹理的多级分辨率图像链，按采样尺度选择并过滤层级"
+    }
+  ],
+  "summary": "用逐级缩小的纹理图像进行缩小采样与细节层级过滤",
+  "description": "Mipmapping 为同一纹理保存分辨率逐级缩小的图像链，较低层级由较高层级过滤降采样得到。纹理映射到屏幕上的面积变小时，采样器按细节层级选择适合的图像，或在相邻层级间插值；这样可以减少高频纹理在缩小时出现的闪烁和走样。OpenGL 的纹理缩小过滤明确区分是否使用 mipmap 及层级内、层级间的过滤方式。\n\n完整的多级链需要额外存储及生成成本。层级选择取决于纹理在屏幕上的采样尺度，不只是物体到相机的距离；斜视表面的非均匀采样还可能需要各向异性过滤。Mipmapping 处理纹理的细节层级，不能代替几何网格的 LOD，也不保证消除所有锯齿或让任意纹理内容都变得更合适。\n\n## 参考\n\n- [Khronos：OpenGL 4.6 Core 规范 §8.14.3 Mipmapping](https://registry.khronos.org/OpenGL/specs/gl/glspec46.core.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

@@ -1,0 +1,34 @@
+{
+  "id": "dev-container-spec",
+  "name": "Development Containers Specification",
+  "aliases": [
+    "开发容器规范",
+    "Dev Container Specification",
+    "devcontainer.json"
+  ],
+  "type": "protocol",
+  "domains": [
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "compose-spec",
+      "context": "dockerComposeFile 场景引用 Compose 多服务配置，并由 service 选择附加工作区的服务。"
+    }
+  ],
+  "summary": "描述容器开发工具栈、工作区与生命周期的开放规范。",
+  "description": "Development Containers Specification 是开发容器的配置和元数据规范。devcontainer.json 可以指向现有镜像、Dockerfile 或 Compose 配置，进一步声明工具安装、用户、工作区、端口转发和产品专属定制。它属于配置接口规范，不是容器引擎、CLI 或网络传输协议。\n\n规范区分容器整体环境与连接工具的环境：containerEnv 作用于容器，remoteEnv 作用于工具及其子进程；containerUser 与 remoteUser 也具有不同范围。initializeCommand 在宿主执行，后续创建、启动和附加钩子在容器内按生命周期运行，失败会阻止后续钩子。\n\n多容器场景引用 Compose 的应用模型，service 表示工具附加到的服务，runServices 控制需要启动的服务。规范主要丰富开发所需设置，并不接管所有机器供应和编排语义。可执行钩子、凭据和挂载具有实际权限影响，具体后端与产品的支持范围仍需独立确认。\n\n## 参考\n\n- [Development Containers：规范入口](https://containers.dev/)\n- [devcontainer.json：通用属性、场景和生命周期](https://github.com/devcontainers/spec/blob/main/docs/specs/devcontainerjson-reference.md)\n- [Dev Container Features：可复用工具配置](https://github.com/devcontainers/spec/blob/main/docs/specs/devcontainer-features.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library"
+}

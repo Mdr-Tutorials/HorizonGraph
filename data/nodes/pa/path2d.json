@@ -1,0 +1,44 @@
+{
+  "id": "path2d",
+  "name": "Path2D",
+  "aliases": [
+    "二维路径接口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "drawing-path"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-2d",
+      "context": "把保存的路径传给二维上下文，按当前样式执行填充、描边或裁剪。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "svg",
+      "context": "通过字符串构造路径时采用 SVG 路径数据语法；这不解析完整 SVG 文档。"
+    }
+  ],
+  "summary": "保存并复用 Canvas 路径几何的标准接口。",
+  "description": "Path2D 保存由线段、曲线和子路径构成的几何，可从空路径、另一个 Path2D 或 SVG 路径数据字符串构造。addPath 可把另一条路径并入对象，并可指定附加变换；对象本身不保存填充颜色、线宽或整幅画布。\n\n将同一路径交给 Canvas 2D 的 fill、stroke、clip 或几何命中查询，可以用不同样式与变换重复使用。它与上下文的当前默认路径不同：复用 Path2D 时由调用时的当前矩阵变换几何。\n\nPath2D 是运行时几何接口，不是完整 SVG 文档，也不是带编辑历史的图形文件格式。复杂编辑器通常另存自己的路径模型；复用几何减少重复构造，不等于省去像素绘制成本。\n\n## 参考\n\n- [MDN：Path2D 接口](https://developer.mozilla.org/en-US/docs/Web/API/Path2D)\n- [WHATWG：Canvas 与渲染上下文](https://html.spec.whatwg.org/multipage/canvas.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://developer.mozilla.org/en-US/docs/Web/API/Path2D"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "backtest-overfitting",
+  "name": "Backtest Overfitting",
+  "aliases": [
+    "回测过拟合",
+    "策略回测过拟合",
+    "Backtesting Overfitting"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "backtesting",
+      "context": "从大量历史回测中选取最优规则并把同一数据上的表现当作独立证据，会产生选择偏差。"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "out-of-sample-validation",
+      "context": "若持续根据保留集结果修改方案，该数据参与选择，便削弱其最终样本外检验身份。"
+    }
+  ],
+  "summary": "反复选择历史表现最佳方案，可能把样本噪声当作规律。",
+  "description": "回测过拟合是研究者在有限历史数据上反复尝试规则、因子、窗口或参数后，选中了特别适合该样本噪声的方案。即便每次回测都按时间因果顺序执行，多次方案选择仍会产生问题；它与直接读到未来数据的前视偏差是不同机制，二者也可能并存。\n\n控制时需要记录完整试验与选择过程，保留未参与决策的评估数据，并把调参和最终检验分开。PBO 原始研究用组合对称交叉验证等方法研究样本内胜出配置在样本外相对落后的概率；具体估计依赖候选集合、分割和表现度量，不能把一个概率值当成通用的策略真实性认证。\n\n单次保留集和滚动验证在持续被研究者查看时也会逐渐参与方案选择，事后挑选最好窗口不能恢复独立性。评估还应纳入执行成本、不同时段与市场状态，并报告结果不确定性。高历史夏普或收益曲线本身不能区分可泛化规律与多重尝试产生的偶然结果。\n\n## 参考\n\n- [Bailey 等：The Probability of Backtest Overfitting 原始论文](https://www.davidhbailey.com/dhbpapers/backtest-prob.pdf)\n- [Bailey 等：Backtest Overfitting in Financial Markets](https://www.davidhbailey.com/dhbpapers/overfit-tools-at.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

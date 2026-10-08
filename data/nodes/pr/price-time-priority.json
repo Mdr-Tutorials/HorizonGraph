@@ -1,0 +1,29 @@
+{
+  "id": "price-time-priority",
+  "name": "Price-Time Priority",
+  "aliases": [
+    "价格时间优先",
+    "价格优先时间优先"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    }
+  ],
+  "summary": "先按价格再按同价订单时间顺序分配成交的规则。",
+  "description": "价格时间优先先选择最优可成交价格，再在同一价格和同一优先类别内按规则认可的时间先后分配。买方较高出价与卖方较低要价具有价格优先；典型 FIFO 步骤会先满足较早订单，剩余成交数量再分配给后续订单。\n\n时间顺序通常是场所接受和排序后的顺序，而不是用户电脑的发送时间。订单修改、数量增加或冰山显示数量补充是否失去原先优先级，须按具体场所规则判断；单个消息中的时间戳或稳定订单标识也未必直接代表当前优先级。\n\n这是一种分配规则，不是所有订单簿的统一性质。其他市场可采用比例分配、客户优先或混合步骤，且同一规则也可对不同订单类别设置覆盖条件。评估排队成交概率应先复现适用规则，不能只根据价格相同就推断所有数量组成一个无条件 FIFO 队列。\n\n## 参考\n\n- [NYSE：期权市场的价格时间、比例及客户优先模型](https://www.nyse.com/data-insights/us-equity-options-market-models)\n- [CME：FIFO、比例与混合撮合算法](https://www.cmegroup.com/education/matching-algorithm-overview)\n- [CME：逐单行情、优先级与排队位置](https://www.cmegroup.com/articles/faqs/market-by-order-mbo.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

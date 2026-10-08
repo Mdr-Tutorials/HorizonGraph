@@ -8,15 +8,17 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "rendering-ecosystem"
+    "rendering-ecosystem",
+    "real-time-rendering-ecosystem"
   ],
   "domains": [
-    "graphics"
+    "graphics",
+    "real-time-rendering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "real-time-rendering-concept"
     },
     {
       "relation_type": "part_of",
@@ -25,11 +27,17 @@
     {
       "relation_type": "alternative_to",
       "target_id": "ray-tracing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "viewport",
+      "context": "将规范化设备坐标映射到目标区域，使图元覆盖落在实际像素或样本网格上。"
     }
   ],
-  "summary": "把三角形打碎成像素的经典渲染范式，实时渲染主流。",
+  "summary": "把几何图元覆盖关系转换为可着色片元或样本。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "description": "光栅化把裁剪后的点、线或三角形等图元映射到帧缓冲采样网格，确定其覆盖的片元或样本，并为后续处理提供深度和有关插值信息。片元是候选贡献，不是已确定的最终像素；深度、模板、着色和混合还会影响最终存储。\n\n图元先处于合适裁剪坐标，再经透视除法和视口映射落到目标区域。多重采样会采用多个样本位置，覆盖与着色频率也可能不同；图形 API 规定具体填充和插值规则，而保守光栅化等额外能力应按设备支持确认。\n\n光栅化适合实时表面绘制，但不自动计算反射、阴影或间接光照。场景可同时使用光栅化与光线查询等机制，不能把光栅化和光追写成互不共存的完整引擎。视锥剔除与背面剔除分别发生在不同职责层次，也不等同于光栅化本身。\n\n## 参考\n\n- [Vulkan Rasterization](https://docs.vulkan.org/spec/latest/chapters/primsrast.html)\n- [Direct3D 11 Graphics Pipeline](https://learn.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-graphics-pipeline)"
 }

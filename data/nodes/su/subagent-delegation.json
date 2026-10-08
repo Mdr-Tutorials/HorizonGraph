@@ -1,0 +1,32 @@
+{
+  "id": "subagent-delegation",
+  "name": "Subagent Delegation",
+  "aliases": [
+    "子代理委派",
+    "子智能体委派"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-as-tool",
+      "context": "在协调者保留控制权的委派路径中，把专门代理包装成可调用工具并消费其返回结果。"
+    }
+  ],
+  "summary": "把限定子任务交给专门代理，并约定输入、权限和结果返回。",
+  "description": "子代理委派由协调者把一部分任务交给下级代理处理，给出目标、可用信息与结果要求，再把返回内容用于整体任务。子代理可以固定配置，也可以按任务动态生成；委派并不要求把整段用户对话和所有工具权限原样复制过去。\n\nAntigravity SDK 支持动态克隆和显式配置的子代理，每个子代理有独立上下文；ADK 的层级模式可通过工具包装或控制转移调用下级代理。不同路径的控制权和结果返回方式不同，应在设计中说明父代理何时等待、继续或汇总。\n\n独立上下文只描述模型可见信息的边界，不等于独立进程、文件系统或安全沙箱。共享仓库、外部资源与工具副作用仍可能互相影响；任务范围、写入所有权、取消传播、失败处理和结果可信度都需要显式约定。\n\n## 参考\n\n- [Antigravity SDK subagents](https://www.antigravity.google/docs/sdk/subagents/)\n- [ADK workflow patterns](https://adk.dev/workflows/patterns/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

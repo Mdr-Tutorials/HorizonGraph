@@ -1,0 +1,39 @@
+{
+  "id": "agent-skills-specification",
+  "name": "Agent Skills Specification",
+  "aliases": [
+    "Agent Skills 格式规范",
+    "SKILL.md 格式"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "yaml",
+      "context": "SKILL.md 使用 YAML frontmatter 表达技能名称、说明与可选元数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "markdown",
+      "context": "SKILL.md 在 frontmatter 后使用 Markdown 保存任务指令及资源引用。"
+    }
+  ],
+  "summary": "规定代理技能目录、元数据和支持文件的开放格式。",
+  "description": "Agent Skills Specification 是代理技能的开放文件格式，规定一个技能目录至少包含 SKILL.md，其内容为 YAML frontmatter 和 Markdown 正文。它描述技能工件如何保存和被识别，区别于技能这一能力组织机制，也不规定某个模型或编程语言的执行接口。\n\n规范要求 name 和 description；name 与父目录名称一致，并遵守长度和字符约束。license、compatibility、metadata 等为可选字段，scripts、references、assets 可保存配套材料。正文可以表达步骤与示例，宿主按需加载支持文件，而不是必须预先把整个目录加入上下文。\n\n格式兼容不等于宿主拥有相同工具或授权策略。allowed-tools 在规范中仍标为实验性，不能视为所有客户端都会执行的权限声明。产品可以提供更宽松的原生解析便利，例如 Antigravity 省略 name 时的默认规则；可移植文件仍应满足开放规范，而执行与审批由实际宿主处理。\n\n## 参考\n\n- [Agent Skills：正式格式规范](https://agentskills.io/specification)\n- [Google Antigravity：技能](https://www.antigravity.google/docs/skills)\n- [Agent Skills：官方规范仓库](https://github.com/agentskills/agentskills)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://agentskills.io/specification"
+}

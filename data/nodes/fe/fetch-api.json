@@ -1,0 +1,56 @@
+{
+  "id": "fetch-api",
+  "name": "Fetch API",
+  "aliases": [
+    "Fetch接口",
+    "fetch",
+    "WHATWG Fetch"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-request",
+      "context": "调用 fetch 时，规范将输入和初始化选项组织为 Request，以传递地址、方法和其他获取选项。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-response",
+      "context": "获取成功提供可读取的响应对象，调用方通过 Response 检查状态、首部和正文。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "在 HTTP(S) 资源获取路径中，Fetch 使用 HTTP 方法、首部和状态语义与服务器交换消息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "abort-signal",
+      "context": "当 fetch 初始化选项提供 signal 时，获取流程观察取消状态并按规范中止尚可中止的工作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cors",
+      "context": "在浏览器的跨源获取路径中，Fetch 按 CORS 规则限制请求与可向脚本暴露的响应。"
+    }
+  ],
+  "summary": "以请求与响应对象组织资源获取，并以Promise报告获取结果。",
+  "description": "Fetch API 以 fetch(input, init) 接收资源地址或 Request，返回 Promise<Response>。规范的获取流程可涉及 HTTP(S)、本地资源或 Service Worker；接口名称不等同某个 HTTP 版本。\n\nHTTP 路径中的 404 或 500 通常仍返回 Response，调用方需检查状态；网络错误或取消可以使获取失败。Promise 兑现表示响应对象已经可用，响应体仍可能继续传输，整体读取与解析是后续操作。\n\n浏览器实现还遵守相应跨源与凭据规则，服务端运行时也可提供这些接口。以 Deno 为例，其源与 Cookie 处理具有明确差异；因此不能把浏览器列为硬依赖，也不能从接口同名推导全部策略相同。\n\n## 参考\n\n- [WHATWG Fetch：获取接口](https://fetch.spec.whatwg.org/#fetch-method)\n- [WHATWG Fetch：HTTP获取](https://fetch.spec.whatwg.org/#http)\n- [Deno：Web平台接口及Fetch差异](https://docs.deno.com/runtime/reference/web_platform_apis/#fetch)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://fetch.spec.whatwg.org/"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "adverse-selection",
+  "name": "Adverse Selection",
+  "aliases": [
+    "逆向选择",
+    "交易逆向选择"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "quote-driven-market"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "order-driven-market"
+    }
+  ],
+  "summary": "交易对手的信息优势使流动性提供者承受不利成交选择的风险。",
+  "description": "交易中的逆向选择指成交对手更可能在价格对流动性提供者不利时接受其报价。对手可能掌握价值相关信息，也可能更快接收公共信息，使尚未更新的报价过时；信息差可以让成交后的价格变化对被动成交者不利。\n\nGlosten–Milgrom 原始模型说明，即使报价方风险中性且竞争到零期望利润，信息更充分的交易者也能导致正价差。该模型抽取信息渠道，不意味着现实价差全部来自逆向选择；库存、处理成本和交易制度同样需要区分。\n\n市场分析常考察成交后参考价格的方向变化，但单次亏损不能证明对手内幕交易，统计价格漂移也不直接识别原因。更新报价、调整数量或价差是可能的管理方式，其效果取决于市场和竞争条件；HFT 可以帮助报价方降低信息滞后，也可能形成他人的不利选择来源。\n\n## 参考\n\n- [Glosten 与 Milgrom：信息差、报价价差与交易价格原始论文](https://www.sciencedirect.com/science/article/pii/0304405X85900443)\n- [SEC：2020 年算法交易研究报告](https://www.sec.gov/files/algo_trading_report_2020.pdf)\n- [Budish、Cramton 与 Shim：连续订单簿与批量竞价的原始研究](https://ericbudish.org/files/high_frequency_trading_arms_race.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

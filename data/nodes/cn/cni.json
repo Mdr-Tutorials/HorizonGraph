@@ -1,0 +1,41 @@
+{
+  "id": "cni",
+  "name": "Container Network Interface",
+  "aliases": [
+    "CNI",
+    "容器网络接口规范"
+  ],
+  "type": "protocol",
+  "domains": [
+    "containerization",
+    "networking"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "执行协议以 JSON 序列化网络配置、插件结果与错误。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "network-namespace",
+      "context": "采用 Linux 网络命名空间的插件路线时，调用参数引用目标容器的网络隔离域。"
+    }
+  ],
+  "summary": "规定容器运行时与网络插件之间配置和执行接口的规范。",
+  "description": "Container Network Interface（CNI）规定运行时如何向网络插件传入配置、执行网络操作并取得结果。规范涵盖配置格式、执行协议、插件委派与结果类型，常见操作包括添加和删除网络连接。它是接口规范，具体插件、库和命令行工具是各自实现，不能仅用 CNI 名称推断采用哪种转发技术。\n\n插件通过执行文件接收环境参数与标准输入中的 JSON，并输出结果或错误。运行时和插件还需要匹配支持的规范版本，插件链可以把接口创建、地址分配和后续配置分工处理。CNI 规范版本与插件软件版本彼此独立；某个插件具备附加能力，不意味着所有实现必须提供相同功能。\n\nLinux bridge 插件展示了一条实现路线：容器取得 veth 一端，另一端接入宿主网桥，并可结合地址管理和可选 masquerade。规范本身没有把隔离域限定为唯一技术，因此不能把 CNI 与某座网桥、Docker 的全部网络实现或 Kubernetes 网络策略的完整行为合并。\n\n## 参考\n\n- [CNI：接口与执行协议](https://www.cni.dev/docs/spec/)\n- [CNI：Bridge Plugin](https://www.cni.dev/plugins/current/main/bridge/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "abbreviation": "CNI",
+  "official_site": "https://www.cni.dev/docs/spec/"
+}

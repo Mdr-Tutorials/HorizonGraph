@@ -1,0 +1,35 @@
+{
+  "id": "abort-controller",
+  "name": "AbortController",
+  "aliases": [
+    "取消控制器",
+    "中止控制器"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "abort-signal",
+      "context": "控制器通过持有的 signal 向采用取消协议的 API 传递已取消状态及首次取消原因。"
+    }
+  ],
+  "summary": "持有取消信号并发出一次取消通知，具体停止行为由接收方决定。",
+  "description": "AbortController 创建并持有一个 AbortSignal，调用 abort(reason) 将信号设为已取消并通知观察者。未给出原因时使用默认 AbortError；信号已取消后再次调用不会覆盖首次原因。\n\n把控制器的 signal 交给支持取消的 API 后，接收方按自身算法停止适用工作。Fetch 可终止尚未完成的获取或使后续正文读取失败；控制器本身不会强制中断任意 JavaScript，也不使已兑现的 Promise 改变结果。\n\n取消是协作通知，其保障范围取决于具体 API 与工作进度。由这些算法边界可知，发出取消并不证明远端业务操作未发生，更不提供事务回滚；在服务端采用支持该接口的运行时同样需要明确清理与副作用处理。\n\n## 参考\n\n- [WHATWG DOM：AbortController接口](https://dom.spec.whatwg.org/#interface-abortcontroller)\n- [WHATWG DOM：取消API集成](https://dom.spec.whatwg.org/#abortcontroller-api-integration)\n- [WHATWG Fetch：取消获取](https://fetch.spec.whatwg.org/#abort-fetch)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://dom.spec.whatwg.org/#interface-abortcontroller"
+}

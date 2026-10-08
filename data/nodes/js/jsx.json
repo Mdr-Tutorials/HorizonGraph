@@ -1,0 +1,35 @@
+{
+  "id": "jsx",
+  "name": "JSX",
+  "aliases": [
+    "JSX 语法",
+    "JavaScript XML"
+  ],
+  "type": "language",
+  "domains": [
+    "programming-languages",
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "javascript"
+    }
+  ],
+  "summary": "在 JavaScript 中表达元素与组件树的语法扩展。",
+  "description": "JSX 是 JavaScript 的语法扩展，用类似标记的写法描述元素、属性、子节点与组件，并允许在花括号中插入 JavaScript 表达式。它需要由支持 JSX 的编译工具转换成可执行 JavaScript；浏览器并不把 JSX 源码直接当作 HTML 解析。JSX 常与 React 一起出现，也被 Preact、Hono 等项目采用，语言语法与具体 UI 库的身份应分开。\n\n转换结果由编译配置和 JSX 运行时决定：同一类标签写法可以生成组件树，也可以参与服务端 HTML 渲染。属性名称、事件处理和组件行为取决于运行时约定，不能把 React 的所有 JSX 使用规则推广到其他实现。TypeScript 项目通常以 TSX 文件使用带类型的 JSX，配置中的 jsxImportSource 则决定自动 JSX 运行时从哪里导入。\n\n在服务端界面路线中，JSX 只是描述界面的手段。将组件输出为 HTML、通过 HTTP 返回内容、在浏览器建立事件处理，分别由渲染器、服务框架与客户端运行时完成；写了 JSX 并不自动选择 SSR、水合或某个前端框架。\n\n## 参考\n\n- [React：Writing Markup with JSX](https://react.dev/learn/writing-markup-with-jsx)\n- [Preact：Differences to React / JSX Constructor](https://preactjs.com/guide/v11/differences-to-react/)\n- [Hono：JSX](https://hono.dev/docs/guides/jsx)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm"
+}

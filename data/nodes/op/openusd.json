@@ -1,0 +1,39 @@
+{
+  "id": "openusd",
+  "name": "OpenUSD",
+  "aliases": [
+    "Open Universal Scene Description",
+    "开放通用场景描述"
+  ],
+  "type": "library",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "usd"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scene-graph",
+      "context": "通过 Stage 提供经过组合解析的场景对象与属性。"
+    }
+  ],
+  "summary": "实现 USD 场景描述、组合与查询的开源软件库。",
+  "description": "OpenUSD 是实现 Universal Scene Description 的开源软件项目，提供组织、组合、查询和编辑三维场景描述的 API。场景由图元、属性和可组合的层构成，组合引擎解析引用、覆盖和其他组合操作，形成可供应用查询的 Stage。\n\n这里的 OpenUSD 指软件实现，USD 节点描述交换与持久化语义。制作应用可以通过库与插件参与同一场景工作流，仍需协调材质、模式和资源解析约定；场景组合能力不会自动解决不同工具全部功能的互操作。\n\n## 参考\n\n- [OpenUSD 场景描述及组合机制](https://openusd.org/release/intro.html)\n- [USD 场景描述与文件层](https://openusd.org/release/api/sdf_page_front.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://openusd.org/"
+}

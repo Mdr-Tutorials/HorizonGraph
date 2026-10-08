@@ -1,0 +1,45 @@
+{
+  "id": "historical-market-data-replay",
+  "name": "Historical Market Data Replay",
+  "aliases": [
+    "历史行情重放",
+    "历史市场数据回放",
+    "Market Data Replay"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-snapshot",
+      "context": "回放需要重建订单簿时，使用与增量序列相匹配的起始快照恢复已记录市场状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "incremental-market-data",
+      "context": "按记录顺序应用订单簿更新，并处理缺口和重复后再向研究系统发布状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "deterministic-replay",
+      "context": "对照不同代码或模型时固定回放输入及调度条件，以便比较重复实验输出。"
+    }
+  ],
+  "summary": "按记录的事件顺序和可见时间向研究系统回放历史行情。",
+  "description": "历史行情重放把记录的报价、逐笔成交、订单簿增量或其他市场事件送入研究系统，使策略在模拟时钟下逐步观察市场。它可用于回测、排查行情处理和核对状态；输入可以来自结构化记录或更原始采集，回放前必须知道字段、事件顺序及交易所与接收时间的含义。\n\n重建订单簿时通常要由正确快照开始按序应用增量，处理序号缺口、重复、时段切换和证券标识变化。多源合并、同时间戳顺序与策略可见延迟会改变决策，不能只按某个时间列排序就假定所有信息已经可见。固定输入版本和调度规则可支持重放结果的重复比较。\n\n历史事件给出了实际发生的一条市场路径。模拟订单并未真实进入该路径，因此大额吃单、排队改变和其他参与者反应无法从同一记录直接恢复；常见成交模型依赖订单较小或忽略影响等条件。若需要策略改变市场后的结果，应另外引入冲击或生成式市场仿真，并明确其反事实假设。\n\n## 参考\n\n- [HftBacktest：成交与排队模型及历史重放限制](https://hftbacktest.readthedocs.io/en/latest/order_fill.html)\n- [NautilusTrader：数据粒度与模拟市场配置](https://nautilustrader.io/docs/latest/concepts/backtesting/data-and-venues/)\n- [NautilusTrader：回测事件、计时器和命令处理顺序](https://nautilustrader.io/docs/latest/concepts/backtesting/execution-flow/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

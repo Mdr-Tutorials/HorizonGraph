@@ -9,7 +9,9 @@
   ],
   "domains": [
     "networking",
-    "web-development"
+    "web-development",
+    "api-engineering",
+    "web-services"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -27,10 +29,6 @@
     },
     {
       "relation_type": "depends_on",
-      "target_id": "protocol-buffers"
-    },
-    {
-      "relation_type": "depends_on",
       "target_id": "http-2"
     },
     {
@@ -41,12 +39,26 @@
       "relation_type": "uses",
       "target_id": "exponential-backoff",
       "context": "连接失败后的重连采用带上限和抖动的退避过程。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "remote-procedure-call"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-client-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "protocol-buffers",
+      "context": "默认以 Protobuf IDL 与消息格式生成服务接口和客户端存根；官方允许其他格式。"
     }
   ],
   "summary": "基于 HTTP/2 与 Protobuf 的高性能 RPC 框架。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://grpc.io"
+  "official_site": "https://grpc.io",
+  "description": "gRPC 是多语言远程过程调用框架，围绕服务定义和客户端存根组织调用，支持一元、服务端流、客户端流和双向流方法。默认使用 Protocol Buffers 描述服务和消息，再借助编译器插件生成客户端与服务接口；服务端实现这些接口中的业务方法。原生 gRPC 采用其 HTTP/2 协议映射，面向浏览器的 gRPC-Web 等接入方案另有边界。\n\nProtobuf 是默认选择，官方允许采用其他接口定义或消息格式，因此不能把它写成每种 gRPC 实现不可移除的依赖。调用还涉及截止时间、取消、状态、元数据和流控制，客户端与服务端可能对完成状态有不同判断，取消不会自动回滚既有副作用。消息类型和生成存根约束接口形状，业务验证、鉴权及兼容性管理仍需相应实现。\n\n## 参考\n\n- [gRPC：服务、存根与默认序列化](https://grpc.io/docs/what-is-grpc/introduction/)\n- [gRPC：方法种类与调用生命周期](https://grpc.io/docs/what-is-grpc/core-concepts/)\n- [gRPC：原生 HTTP/2 协议映射](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md)"
 }

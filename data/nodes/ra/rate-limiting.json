@@ -13,17 +13,29 @@
   ],
   "domains": [
     "security",
-    "web-development"
+    "web-development",
+    "web-services"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-status-code",
+      "context": "HTTP 限流响应可使用 429 表达请求过多；限流算法与主体计数方式由部署定义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-header",
+      "context": "HTTP 限流响应可携带 Retry-After 提示何时重试；该字段不是每次限流都必须返回。"
     }
   ],
-  "summary": "控制单位时间请求量，保护服务不被突发流量打垮。",
+  "summary": "按主体与时间约束请求速率和突发量，保护配额与服务容量。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "description": "限流按用户、凭据、地址、路由等主体约束单位时间内的工作量，减少滥用并保护资源配额。它需要明确计数对象、时间范围、拒绝策略和突发预算；限制请求速率与限制同时执行任务数是不同控制，单靠每秒请求数无法约束所有资源消耗。\n\n令牌桶是常见实现：按配置间隔补充令牌，每次请求消耗令牌，容量决定允许的突发量。Envoy 的本地 HTTP 限流器可按进程或连接维持令牌桶；本地预算不天然等于多实例服务的总体预算，跨实例限制需要共享协调或明确的配额划分。\n\n在 HTTP 服务中，429 表示请求过多，服务可使用 Retry-After 提示等待时间。该状态不规定主体识别和计数算法，也不保证所有过载请求都会收到响应。客户端还须考虑退避、重试与业务幂等性，避免同一时刻大量重试重新压垮服务。\n\n## 参考\n\n- [RFC 6585 §4：429 Too Many Requests](https://www.rfc-editor.org/rfc/rfc6585.html#section-4)\n- [Envoy：HTTP Local rate limit filter](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/local_rate_limit_filter)\n- [Envoy：本地与全局限流的范围](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/other_features/local_rate_limiting)"
 }

@@ -1,0 +1,49 @@
+{
+  "id": "substance-3d-designer",
+  "name": "Adobe Substance 3D Designer",
+  "aliases": [
+    "Substance Designer",
+    "Substance 3D Designer",
+    "Designer"
+  ],
+  "type": "product",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "substance-3d"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "adobe"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "通过节点网络生成并输出表面使用的图像纹理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-material",
+      "context": "为目标材质生成颜色、粗糙度、法线等对应通道。"
+    }
+  ],
+  "summary": "以节点图生成参数化材质、纹理和图像效果的软件。",
+  "description": "Substance 3D Designer 用节点图组织纹理与材质制作操作。图像数据沿连接传递，修改参数或节点后重新计算相关输出，适合生成可重复调整的纹理、材质、图案和过滤效果。\n\n作者可以输出静态贴图，也可以交付带参数的 Substance 内容供支持的宿主使用。节点图描述制作逻辑，运行时是否执行该逻辑取决于接收软件；导出位图时应检查通道含义、精度与材质预设。\n\n## 参考\n\n- [Substance 3D Designer 概览](https://experienceleague.adobe.com/en/docs/substance-3d-designer/using/getting-started/overview/overview)\n- [Substance 3D Designer 节点工作流](https://experienceleague.adobe.com/en/docs/substance-3d-designer/using/getting-started/workflow-overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.adobe.com/products/substance3d-designer.html"
+}

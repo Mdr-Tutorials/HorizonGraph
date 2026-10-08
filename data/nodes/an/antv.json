@@ -4,11 +4,13 @@
   "aliases": [],
   "type": "library",
   "ecosystems": [
-    "web_frontend"
+    "web_frontend",
+    "data-visualization-ecosystem"
   ],
   "domains": [
     "web-development",
-    "graphics"
+    "graphics",
+    "data-visualization"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -23,12 +25,30 @@
     {
       "relation_type": "competes_with",
       "target_id": "echarts"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "visual-encoding",
+      "context": "G2 与 L7 等具体项目用视觉通道和属性映射表达数据。"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "antv-g2"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "antv-g6"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "antv-l7"
     }
   ],
-  "summary": "蚂蚁的数据可视化方案体系，G2/G6/L7 三线并举。",
+  "summary": "覆盖统计图表、关系网络和地理空间的可视化项目体系。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 3,
-  "official_site": "https://antv.antgroup.com"
+  "official_site": "https://antv.antgroup.com",
+  "description": "AntV 是蚂蚁集团发起的数据可视化项目体系，覆盖统计图表、关系数据、地理空间及相关可视化工具。现有节点保留库类入口身份，用于汇集体系中的工程项目；使用 AntV 通常意味着选择其某个具体库，而不是必须安装所有项目或采用同一种渲染后端。\n\nG2 以标记、尺度、坐标和组合等图形语法构建数据图表；G6 面向节点与边的关系可视化，提供布局和交互；L7 用地图与数据图层表达地理空间信息。它们处理的数据形态和工作流程不同，应分别考虑字段语义、关系结构及地理坐标，而不是仅按品牌归为一个通用绘图库。\n\n项目还可通过底层绘图能力和生态组件进行扩展。学习路径可以从视觉编码出发，再依据统计、网络或地图场景选择工具，并继续学习数据更新、交互设计与资源生命周期。具体版本的加速方式和集成能力应以相应项目文档为依据。\n\n## 参考\n\n- [AntV Projects](https://github.com/antvis)\n- [AntV G2](https://github.com/antvis/G2)\n- [AntV G6](https://github.com/antvis/G6)\n- [AntV L7](https://github.com/antvis/L7)"
 }

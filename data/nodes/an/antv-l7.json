@@ -1,0 +1,55 @@
+{
+  "id": "antv-l7",
+  "name": "AntV L7",
+  "aliases": [
+    "L7",
+    "@antv/l7"
+  ],
+  "type": "library",
+  "domains": [
+    "data-visualization",
+    "geospatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "web-geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "layered-visualization"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "通过 WebGL 绘制地理数据图层。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "geojson",
+      "context": "使用 GeoJSON 等格式接入空间要素。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "visual-encoding",
+      "context": "以颜色、大小、形状等图层属性映射位置数据。"
+    }
+  ],
+  "summary": "用数据驱动图层呈现地理空间信息的可视化引擎。",
+  "description": "L7 是 AntV 的地理空间数据可视化引擎，使用 WebGL 构建数据驱动的地图表达。它以点、线、面、热力等图层组织数据，并用颜色、大小、形状或体积表达属性，适合位置数据探索、地图分析界面和空间业务应用。\n\n应用通过 Scene 管理可视化环境和底图接入，再为数据图层配置来源、几何表达与样式映射。L7 支持包括 GeoJSON 在内的数据接入，底图适配与数据图层可以分开理解；具体底图能力、坐标要求和部署方式应依据所选适配器与数据来源核对。\n\nL7 负责客户端的视觉表达与交互，完整 GIS 应用还可能需要空间查询、分析服务和数据治理。将原始数据、分析结果与图层样式分开组织，可以避免把画出的热力图误当成已验证的空间统计结论。\n\n## 参考\n\n- [AntV L7 Repository](https://github.com/antvis/L7)\n- [AntV L7 Documentation](https://l7.antv.antgroup.com/en)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://l7.antv.antgroup.com/"
+}

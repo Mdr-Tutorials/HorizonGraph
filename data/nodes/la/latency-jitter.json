@@ -1,0 +1,35 @@
+{
+  "id": "latency-jitter",
+  "name": "Latency Jitter",
+  "aliases": [
+    "延迟抖动",
+    "时延抖动",
+    "延迟变化"
+  ],
+  "type": "metric",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "latency",
+      "context": "从相同起止边界的延迟样本按声明的差分或离散度公式计算变化。"
+    }
+  ],
+  "summary": "延迟随样本变化的程度，须明确差分、离散度或峰峰值口径。",
+  "description": "延迟抖动表示同类事件的耗时随时间或样本发生变化的程度。jitter在不同领域可能指相邻延迟之差、相对基准的偏差、标准差或峰峰值，没有一个适用于所有系统的统一公式。本条记录延迟变化这一指标族；网络协议规定的专用抖动估计应按其自身公式解释。\n\n测量首先保留可比边界的延迟样本，再说明配对规则、窗口和统计函数。差分值可有正负，绝对差、标准差和峰峰值通常为非负；它们一般以时间为单位，方差则有平方时间单位。稳定但较慢的系统可能抖动很小，因此抖动不能替代绝对延迟和尾延迟。\n\n调度抢占、共享缓存、缺页、设备中断及电源状态变化都可能形成波动。定位时需把时间分布与系统事件关联，并评估采样工具自身的开销。绑定CPU或隔离内核噪声只能针对部分成因，不会保证抖动为零；比较结果应保持相同负载、测量公式和硬件环境。\n\n## 参考\n\n- [IETF RFC 3393：延迟变化与 jitter 定义](https://www.rfc-editor.org/rfc/rfc3393)\n- [Linux：CPU 隔离、housekeeping 与残留噪声](https://docs.kernel.org/admin-guide/cpu-isolation.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

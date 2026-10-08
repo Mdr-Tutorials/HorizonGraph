@@ -1,0 +1,26 @@
+{
+  "id": "agent-event-stream",
+  "name": "Agent Event Stream",
+  "aliases": [
+    "智能体事件流"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "逐步传递消息、工具活动和状态变化的执行事件序列。",
+  "description": "智能体事件流把执行过程表示为连续到达的事件，供界面、调度器或监测组件消费。事件可以表示文本片段、工具请求与结果、代理选择、状态增量或完成信号；它比只流式输出最终回答涵盖更多运行信息。\n\nADK 的事件带有作者、调用标识及动作等字段，Runner 在消费事件时更新相关服务；AutoGen Core 采用事件驱动的消息运行模型。各框架的数据结构、顺序和可持久化范围不同，事件流这一概念并不规定通用的网络传输协议。\n\n消费者应区分局部输出与最终结果，以及收到事件与状态已提交的边界。长任务还需要处理错误、取消和消费者变慢的情况；日志或可见事件也只包含接口实际暴露的信息，不能据此推断能获取模型全部内部计算过程。\n\n## 参考\n\n- [ADK events](https://adk.dev/events/)\n- [ADK runtime event loop](https://adk.dev/runtime/event-loop/)\n- [AutoGen official repository](https://github.com/microsoft/autogen)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,33 @@
+{
+  "id": "system-virtual-machine",
+  "name": "System Virtual Machine",
+  "aliases": [
+    "系统虚拟机",
+    "Full-system Virtual Machine"
+  ],
+  "type": "concept",
+  "domains": [
+    "virtualization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "virtualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hypervisor",
+      "context": "在由监控器支持的系统虚拟化路径中，以虚拟处理器、受控制的内存和资源访问承载客体内核；纯软件系统模拟另有实现路径。"
+    }
+  ],
+  "summary": "向客体内核呈现处理器、内存与设备的完整机器环境。",
+  "description": "## 机器环境\n\n系统虚拟机向客体软件提供一台机器的执行环境，包括虚拟处理器、内存与所需设备，使其能启动客体操作系统内核并运行应用。机器视图由选定的体系结构、机器型号和设备配置决定，可以与宿主实际硬件不同；虚拟磁盘文件只是其中一种存储后端，不等于整台虚拟机。\n\n## 执行方式\n\n这一环境可以通过硬件辅助的虚拟化栈实现，也可以通过软件系统模拟实现。前者在支持的处理器和客体架构条件下直接执行大量客体指令，由监控器处理需要控制的事件；后者可翻译客体指令，在受支持范围内模拟不同指令集的机器。QEMU 的系统模拟以 CPU、内存和设备模型运行客体内核，KVM 等加速器与 TCG 是不同可选执行路径。\n\n## 与其他隔离方式的区别\n\n系统虚拟机的边界是客体机器及其内核，区别于为应用字节码提供运行时语义的进程虚拟机，也区别于直接共享宿主内核的进程隔离容器。容器也可以运行在系统虚拟机内部，此时容器隔离与虚拟机隔离同时存在。WSL2 的 Linux 发行版就以容器形式位于受管理 VM 内，不能按发行版数量推导系统虚拟机数量。\n\n创建、运行、暂停和销毁属于机器生命周期，而客体进程的退出属于 VM 内部的工作负载生命周期。Hyper-V 分区管理、KVM 的 VM/vCPU 句柄和用户态设备模型分别承担相关工作。关机、快照、迁移以及设备直通是否可用，取决于具体平台、机器类型和配置，不是系统虚拟机概念自动保证的功能。\n\n## 参考\n\n- [QEMU：系统模拟与可选虚拟化加速器](https://www.qemu.org/docs/master/system/introduction.html)\n- [QEMU：TCG 与受支持客体架构](https://www.qemu.org/docs/master/about/emulation.html)\n- [Linux Kernel：KVM 的 VM、vCPU 与设备 API](https://docs.kernel.org/virt/kvm/api.html)\n- [Microsoft TLFS：虚拟化宿主与分区生命周期](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/tlfs/virtualization-host)\n- [Microsoft：Windows 容器的进程隔离与 Hyper-V 隔离](https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container)\n- [Microsoft：WSL2 utility VM 与发行版共享资源](https://learn.microsoft.com/en-us/windows/wsl/about)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

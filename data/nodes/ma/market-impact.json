@@ -1,0 +1,30 @@
+{
+  "id": "market-impact",
+  "name": "Market Impact",
+  "aliases": [
+    "市场冲击",
+    "价格冲击",
+    "交易价格冲击"
+  ],
+  "type": "concept",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-microstructure-concept"
+    }
+  ],
+  "summary": "交易或订单活动通过供需与信息渠道引起价格变化的效应。",
+  "description": "市场冲击描述交易与订单活动对价格产生的影响。主动订单消耗现有流动性可使成交沿多个价位展开，新增和撤销挂单也会改变最优报价与未来可成交条件；因此不能把所有冲击只归因于成交量。\n\n执行模型可区分即时的流动性消耗、随后恢复的影响和信息相关的持续调整，但分解取决于模型与观察窗口。Cont 等研究在其股票样本的短时间窗口中发现订单流失衡与价格变化的关系；订单簿缺口研究也说明同样数量的交易可能导致不同幅度的价格跳动。\n\n设计执行任务时，冲击用于比较订单规模、速度与等待风险之间的取舍。估计必须注明方向、基准价格、市场状态和时间尺度，观察到价格随交易变化不自动证明完全由该交易造成。某个样本的线性或平方根规律也不能作为所有资产和行情条件下的硬定律。\n\n## 参考\n\n- [Cont、Kukanov 与 Stoikov：订单簿事件的价格冲击](https://arxiv.org/abs/1011.6402)\n- [Farmer 等：订单簿流动性缺口与大幅价格变动](https://arxiv.org/abs/cond-mat/0312703)\n- [BIS：市场流动性与韧性的多个维度](https://www.bis.org/publ/qtrpdf/r_qt2403.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

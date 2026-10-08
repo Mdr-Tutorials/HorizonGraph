@@ -1,0 +1,43 @@
+{
+  "id": "evaluation-harness",
+  "name": "Evaluation Harness",
+  "aliases": [
+    "评估执行框架",
+    "评估运行框架"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-oracle",
+      "context": "评估框架调用任务的断言或状态判定器，将运行证据转成规定的验收结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "evaluation-budget",
+      "context": "任务运行时使用预设步骤数、超时和资源配置，并将达到限制的试验按协议终止与记录。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reproducible-evaluation-environment",
+      "context": "初始化和重置评估任务时采用固定依赖、任务初态与环境配置，减少运行之间的状态串扰。"
+    }
+  ],
+  "summary": "组织任务初始化、试验执行、记录、判定和结果聚合。",
+  "description": "评估执行框架是评估端的运行机制，负责读取任务、准备环境、调用被测系统、收集输出与轨迹、运行判定器及汇总结果。它不同于让智能体实际行动的 Agent harness；一套评估框架可以调用不同被测宿主，宿主变化也属于需要记录的实验条件。\n\n软件修复执行器处理基础提交、补丁及测试报告，浏览器框架则处理站点状态、观察和动作循环。框架应保存任务标识、版本、运行配置和逐实例证据，以便定位分数下降来自候选结果还是执行环境。并发和任务顺序也可能影响带状态的基准。\n\n实现自动化并不保证判定正确或结果可重复。缓存键、初态恢复、超时与失败分类都需要对应真实协议。例如 SWE-bench 官方文档提醒同一 run_id 与 instance_id 的结果缓存可能复用旧结果；改动候选后重评必须避免把缓存结果当作新运行。\n\n## 参考\n\n- [Anthropic：Agent 评估的任务、轨迹与判定器](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)\n- [SWE-bench：评估环境、报告与结果缓存](https://www.swebench.com/SWE-bench/guides/evaluation/)\n- [BrowserGym 官方框架与可选基准包](https://github.com/ServiceNow/BrowserGym)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

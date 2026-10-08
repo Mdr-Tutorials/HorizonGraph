@@ -1,0 +1,34 @@
+{
+  "id": "cme-group",
+  "name": "CME Group",
+  "aliases": [
+    "芝商所集团",
+    "CME Group Inc."
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "cme-globex"
+    }
+  ],
+  "summary": "经营衍生品市场、清算与行情业务的集团。",
+  "description": "CME Group 是衍生品市场基础设施集团；旗下 CME、CBOT、NYMEX、COMEX 是不同的交易所和规则主体。集团名称、单个交易所、上市期货或期权合约以及 Globex 电子交易平台不应混为一个身份。\n\n集团提供跨资产类别的风险交易、清算和市场数据服务，Globex 承载其中的电子交易接入。交易客户端需要分别处理订单入口、行情分发、成交副本及接入认证，金融合约的撮合分配方法也取决于相应市场规则，不能由集团名称推断统一的 FIFO 或时间优先行为。\n\n将 CME Group 放入 HFT 相关领域，是因为它提供市场和技术接口，而不是将交易所公司当作高频自营交易机构。其公开接入文档是 iLink 和 MDP 等规范的来源；延迟与系统迁移信息需要绑定具体接口、测量边界和实施时间。\n\n## 参考\n\n- [CME Group 公司与旗下交易所](https://www.cmegroup.com/company/about-us.html)\n- [Globex 电子交易平台](https://www.cmegroup.com/solutions/market-access/globex.html)\n- [Globex 接入、行情与认证](https://www.cmegroup.com/solutions/market-access/globex/develop-to-globex.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "official_site": "https://www.cmegroup.com/"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "antigravity-cli",
+  "name": "Antigravity CLI",
+  "aliases": [
+    "agy",
+    "Google Antigravity CLI"
+  ],
+  "type": "tool",
+  "domains": [
+    "agent-development",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "google-antigravity",
+      "context": "属于官方文档所列的 Antigravity 产品与能力体系；不表示必须安装其他家族入口。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-harness",
+      "context": "终端和 headless 执行采用与 2.0 相同的核心智能体机制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-event-stream",
+      "context": "headless 的 stream-json 输出向脚本交付任务进度和执行事件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "structured-output",
+      "context": "headless 支持 JSON 输出和 --json-schema 结果约束，按 CLI 文档的模式使用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-permission-policy",
+      "context": "通过适用于当前平台的权限设置决定命令与其他工具动作的执行授权。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "antigravity-remote-control",
+      "context": "可显式启用当前会话连接或后台 daemon，远程继续自有主机上的任务。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "mcp",
+      "context": "按官方工具配置连接 MCP 服务；不是所有任务的必选依赖。"
+    }
+  ],
+  "summary": "以 agy 终端界面及无交互模式运行 Antigravity 智能体任务。",
+  "description": "Antigravity CLI 是命令行为 agy 的终端智能体工具，提供交互式 TUI 和面向脚本的无交互执行方式。它与 Antigravity 2.0 采用相同核心 harness 和设置体系，但普通会话不会因此默认自动共享；官方公告说明可在桌面应用导入 CLI 会话。Google 于 2026 年 5 月 19 日公开介绍 CLI，changelog 的 Initial public release 条目却另列 2026 年 1 月 1 日，因此这里不把公告日直接作为首次可用日期。\n\n无交互模式使用 -p 传入提示，可选择 text、json 或 stream-json 输出，并通过 --json-schema 对结构化结果施加约束。这适合脚本消费执行结果，事件流仍应区分任务进度、工具事件与最终结果。CLI 支持权限设置、MCP、skills 和 Remote Control；后者既可随当前终端会话建立连接，也可用后台 daemon 让自有主机持续可访问。Gemini CLI 的配置迁移是一次性导入路径，不代表两套 CLI 已成为同一产品。\n\n个人登录通常通过浏览器完成并使用本机凭据存储，远程 SSH 场景另有手工打开授权 URL 的流程。API key 模式需要同时设置 modelProvider=gemini 和 GEMINI_API_KEY，只有环境变量不会自动切换登录模式；企业 ADC 路径另按 enterprise 文档启用。终端沙箱专页的 CLI 配置表把 enableTerminalSandbox 默认列为 false、toolPermission 默认列为 request-review，启用须按 CLI 配置与对应版本判断。同页关于 macOS、Linux 默认启用的总述及桌面 Default 预设表，不能直接推广成 CLI 默认开启；Windows 的沙箱又有单独的手动 Preview 行为。\n\n## 参考\n\n- [Antigravity CLI overview](https://antigravity.google/docs/cli/overview)\n- [Google Antigravity CLI](https://antigravity.google/blog/introducing-google-antigravity-cli)\n- [Antigravity CLI Headless mode](https://antigravity.google/docs/cli/headless/)\n- [Antigravity CLI: Installation and auth](https://antigravity.google/docs/cli/install/)\n- [Antigravity Remote Control](https://antigravity.google/docs/remote-control/)\n- [Antigravity CLI migration from Gemini CLI](https://antigravity.google/docs/cli/gcli-migration/)\n- [Antigravity in Gemini Enterprise](https://antigravity.google/docs/enterprise/)\n- [Agent permissions](https://antigravity.google/docs/permissions/)\n- [Terminal sandbox: CLI configuration](https://antigravity.google/docs/sandbox/)\n- [Antigravity Changelog](https://antigravity.google/docs/changelog)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://antigravity.google/docs/cli/overview"
+}

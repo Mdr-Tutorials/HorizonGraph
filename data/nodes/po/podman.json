@@ -1,0 +1,51 @@
+{
+  "id": "podman",
+  "name": "Podman",
+  "aliases": [
+    "Pod Manager",
+    "Podman 容器引擎"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "containers"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "container-runtime"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "crun",
+      "context": "在 Podman Linux 容器执行路径选择 crun 时，由其消费 OCI 配置并创建容器进程；实际默认值受打包与配置影响。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runc",
+      "context": "Podman 可通过 --runtime 或配置选择已安装的 runc，作为替代的 Linux OCI 执行后端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "system-virtual-machine",
+      "context": "Podman machine 在 Windows/macOS 本地运行 Linux 工作负载时管理 Linux VM；不表示连接远程 Linux 服务也需本地 VM。"
+    }
+  ],
+  "summary": "提供本地及远程容器管理的开源容器引擎",
+  "description": "Podman 是开源容器管理工具，在 Linux 上提供无需常驻中央管理守护进程的本地操作方式，并管理容器、镜像、pod 和卷。它的命令体验与 Docker 相近，但执行管理采用自身的库和后端；命令相似不构成所有选项、服务或插件完全兼容的承诺。\n\n启动容器时，Podman 调用可配置的 OCI 运行时，例如 crun 或 runc；官方 --runtime 选项允许选择已安装执行器。rootless 是受支持的运行方式，但主机 user namespace、资源委派及网络配置仍会影响能力，不能理解为每个容器功能都无需权限或额外组件。\n\nPodman 也提供 REST 服务和远程客户端。Windows/macOS 的本地开发常通过 Podman machine 管理的 Linux VM 执行容器，而远程客户端也可连接已有 Linux 服务；这里的 Linux 工作负载不能泛化成 Windows 容器。daemonless 描述本地管理模型，不表示所有远程或 VM 工作流都没有服务进程。\n\n## 参考\n\n- [Podman 官方简介](https://docs.podman.io/en/latest/)\n- [Podman CLI 与运行时选项](https://docs.podman.io/en/latest/markdown/podman.1.html)\n- [Podman 安装与 OCI 运行时要求](https://podman.io/docs/installation)\n- [Podman machine：Windows/macOS 的 Linux VM](https://docs.podman.io/en/latest/markdown/podman-machine.1.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool"
+}

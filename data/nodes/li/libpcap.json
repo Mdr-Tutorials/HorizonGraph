@@ -1,0 +1,44 @@
+{
+  "id": "libpcap",
+  "name": "libpcap",
+  "aliases": [
+    "Packet Capture Library"
+  ],
+  "type": "library",
+  "domains": [
+    "networking",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "tcp-ip-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "packet-capture",
+      "context": "通过设备和文件句柄实现报文采集接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pcap-format",
+      "context": "传统保存文件的读取和输出格式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pcapng-format",
+      "context": "离线读取受支持的 pcapng 文件，须遵守具体读取限制。"
+    }
+  ],
+  "summary": "跨平台报文采集、过滤与离线抓包读取库。",
+  "description": "libpcap 为应用提供打开采集设备、读取报文、编译采集过滤器及处理保存文件的 C API。它把不同平台的采集机制封装在同一接口后面；可移植接口不意味着各后端具有相同设备、权限、监控模式或时间戳能力。\n\n实时采集需要先明确接口、过滤条件、截取长度、缓冲与激活选项，应用再消费报文和统计信息。离线读取从文件取记录，不需要获得实时采集权限；语言绑定调用该 API，也不意味着每个使用者必须用 C 编写整个应用。\n\n传统保存输出与 pcap 格式有关，读取路径还支持一定范围的 pcapng 文件。应核对库和后端版本的格式限制，而不是推导所有多接口元数据都能被同一采集句柄保留。抓包记录来自一个观测点，不能单凭库名证明线上报文完整、无丢失或具有硬件级时间精度。\n\n## 参考\n\n- [libpcap 官方 API 手册源文件](https://github.com/the-tcpdump-group/libpcap/blob/master/pcap.3pcap.in)\n- [libpcap 官方仓库](https://github.com/the-tcpdump-group/libpcap)\n- [Wireshark 时间戳说明](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTimestamps.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://www.tcpdump.org/"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "konva",
+  "name": "Konva",
+  "aliases": [
+    "Konva.js"
+  ],
+  "type": "library",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-2d",
+      "context": "把形状和对象变换转换为场景层与命中检测层的二维画布绘制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scene-graph",
+      "context": "用 Stage、Layer、Group 和 Shape 层级组织可变换的显示对象。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hit-testing",
+      "context": "通过隐藏命中画布及节点信息定位指针对应的可交互图形。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "affine-transform",
+      "context": "把节点的平移、旋转、缩放等属性组合成父子坐标映射。"
+    }
+  ],
+  "summary": "以对象层级和交互能力组织 Canvas 2D 图形的库。",
+  "description": "Konva 在 Canvas 2D 上维护 Stage、Layer、Group 和 Shape 对象层级，为图形提供变换、事件和拖拽等能力。每个 Layer 通常使用可见场景画布以及用于命中检测的隐藏画布，库把应用对象转换为像素绘制，而不是为每个图形创建 DOM 元素。\n\n它适合白板、标注和图形编辑界面。cache 把复杂形状或组预绘制到内部画布，后续复用；简单图形未必受益，缓存占用与刷新成本仍要衡量。选择、编辑状态和持久化策略由应用在图形基础上组织。\n\ntoDataURL、toImage 等接口导出位图，可按 pixelRatio 调整分辨率；嵌入图片和已缓存节点仍可能有放大限制。toJSON 记录可序列化节点属性，事件处理器与实际图片资源不会随它完整保存，不能把场景 JSON 当作完整应用快照。\n\n## 参考\n\n- [Konva：框架与双画布机制](https://konvajs.org/docs/overview.html)\n- [Konva：形状缓存](https://konvajs.org/docs/performance/Shape_Caching.html)\n- [Konva：高分辨率位图导出](https://konvajs.org/docs/data_and_serialization/High-Quality-Export.html)\n- [Konva：Stage 序列化边界](https://konvajs.org/docs/data_and_serialization/Serialize_a_Stage.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://konvajs.org/"
+}

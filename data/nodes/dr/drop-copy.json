@@ -1,0 +1,33 @@
+{
+  "id": "drop-copy",
+  "name": "Drop Copy",
+  "aliases": [
+    "交易回报副本",
+    "订单成交回报副本"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fix-protocol",
+      "context": "CME Globex Drop Copy向独立目标会话以FIX协议接口发送源iLink回报副本；这是该服务路径的协议，不把所有供应商Drop Copy抽象为统一FIX实现。"
+    }
+  ],
+  "summary": "向获授权接收者发送独立订单与成交回报副本。",
+  "description": "Drop Copy是在主订单入口之外向获授权的接收者提供订单确认、成交或其他回报副本的服务。它帮助清算机构、交易机构和监控系统聚合交易活动并与主路径对账，数据范围取决于源会话、目标会话、市场和授权配置；它不是向所有参与者公开的全市场订单簿数据。\n\nCME Drop Copy文档描述了从iLink源会话复制Execution Report、Acknowledgement及相关消息，通过FIX接口向独立目标会话发送，并可聚合获准来源。目标会话的序列与覆盖范围需要单独处理，多市场或网关部署不能默认只连一个目标就获得所有活动。\n\nCME明确该接口只读，不支持下单或撤单；同时，前端内部事件并不会因为交易所提供Drop Copy而自动记录在其中。重传、去重、断联恢复和业务状态对账需要按服务规范完成，数据副本可辅助风控与审计，但不能替代完整前端轨迹、风险控制执行路径或清算确认。\n\n## 参考\n\n- [CME：Drop Copy FAQ与只读边界](https://www.cmegroup.com/solutions/market-access/globex/trade-on-globex/faq-drop-copy.html)\n- [CME官方Client Systems Wiki：Drop Copy 4.0 Service for iLink](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/665190402/Drop+Copy+4.0+Service+for+iLink)\n- [CME：Audit Trail for iLink认证要求与Drop Copy边界](https://www.cmegroup.com/tools-information/webhelp/autocert-audit-trail-ilink3/Content/GettingStarted.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,40 @@
+{
+  "id": "form-data",
+  "name": "FormData",
+  "aliases": [
+    "表单数据接口",
+    "FormData API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "blob-api",
+      "context": "追加 Blob 文件内容时，FormData 按规则构造 File 条目，并可采用调用方提供的文件名。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "multipart-form-data",
+      "context": "当 FormData 交给 Fetch 作为正文时，其条目按 multipart/form-data 编码，并生成分隔各部分的 boundary。"
+    }
+  ],
+  "summary": "以有序且可重名的表单条目组织字符串与文件数据。",
+  "description": "FormData 接口管理有序表单条目，值为字符串或 File，允许多个同名字段。append 追加，set 替换同名项，getAll 取得全部同名值；添加 Blob 时可按规则包装为带文件名的文件条目。\n\n在浏览器中，可从表单控件构造条目列表，禁用或未选中的部分控件不会进入结果。也可直接在提供该接口的环境中程序化构造，不必依赖 DOM 表单或浏览器页面。\n\nFetch 以 FormData 为正文时执行 multipart 编码并生成 boundary。通常应让实现补充与正文一致的 Content-Type，手工设置裸 multipart/form-data 会缺少实际边界；对象也不替代服务端字段、文件类型与大小验证。\n\n## 参考\n\n- [WHATWG XHR：FormData接口](https://xhr.spec.whatwg.org/#interface-formdata)\n- [WHATWG HTML：表单条目收集](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#constructing-the-form-data-set)\n- [WHATWG HTML：multipart编码](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#multipart-form-data)\n- [WHATWG Fetch：提取正文输入](https://fetch.spec.whatwg.org/#concept-bodyinit-extract)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://xhr.spec.whatwg.org/#interface-formdata"
+}

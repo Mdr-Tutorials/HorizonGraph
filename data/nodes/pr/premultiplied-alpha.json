@@ -1,0 +1,35 @@
+{
+  "id": "premultiplied-alpha",
+  "name": "Premultiplied Alpha",
+  "aliases": [
+    "预乘透明度",
+    "预乘 Alpha",
+    "Associated Alpha"
+  ],
+  "type": "concept",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interactive-graphics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture-sampling",
+      "context": "对带透明度的纹理做插值时，按一致的预乘颜色与 alpha 约定采样，避免透明边缘的颜色污染。"
+    }
+  ],
+  "summary": "把颜色通道预先乘以透明度的 RGBA 表示约定。",
+  "description": "预乘表示存储 (αR, αG, αB, α)，与保存未乘颜色的 straight alpha 不同。它使透明度合成和带透明纹理的插值更容易保持正确的颜色贡献；表示约定不是一种颜色混合模式，也不替代色彩空间的选择。\n\n上传纹理、渲染到画布及导出图片时，需要让表示方式与混合因子、页面合成约定一致。WebGL 的 premultipliedAlpha 描述绘制缓冲交给页面合成器时的解释，不能据此推断所有纹理都已预乘。反预乘在 alpha 为零时无法恢复原色，有限精度转换也可能丢失信息。\n\n## 参考\n\n- [Khronos：WebGL 1.0 规范](https://registry.khronos.org/webgl/specs/latest/1.0/)\n- [W3C：合成与颜色混合](https://www.w3.org/TR/compositing-1/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

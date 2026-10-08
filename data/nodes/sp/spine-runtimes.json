@@ -1,0 +1,57 @@
+{
+  "id": "spine-runtimes",
+  "name": "Spine Runtimes",
+  "aliases": [
+    "Spine 运行库",
+    "Spine Runtime"
+  ],
+  "type": "library",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "skeletal-animation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "animation-blending"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "procedural-animation",
+      "context": "在应用已有动画后，通过代码调整骨骼或 IK 目标，使角色响应环境与输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture-atlas",
+      "context": "读取 Spine 导出资源时，用图集定位附件图像以完成渲染。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "unity"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "unreal-engine"
+    }
+  ],
+  "summary": "加载二维骨骼资源并混合、更新和渲染 Spine 动画的库族。",
+  "description": "Spine Runtimes 是加载和执行 Spine 导出数据的运行库体系，支持骨骼变换、附件、动画混合与程序化姿势调整。它既有面向具体游戏工具包的适配，也有与工具包无关的通用运行库，后者需要应用提供实际渲染部分。\n\n典型帧流程先推进动画时间并应用姿势，再计算骨骼世界变换，最后提交画面。官方对 PixiJS、Phaser、Unity、Godot 和 Unreal 等提供不同接入方式；JSON 或二进制骨骼数据与纹理图集仍需要按相应版本加载，运行库不是编辑器的别名。\n\n## 参考\n\n- [Spine：官方运行库和适配列表](https://en.esotericsoftware.com/spine-runtimes)\n- [Spine：运行时骨骼与程序化调整](https://eu.esotericsoftware.com/spine-runtime-skeletons)\n- [Spine：应用动画](https://en.esotericsoftware.com/spine-applying-animations)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://en.esotericsoftware.com/spine-runtimes"
+}

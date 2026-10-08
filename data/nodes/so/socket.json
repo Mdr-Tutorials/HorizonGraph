@@ -19,11 +19,22 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "面向流的网络端点可以绑定 TCP 协议，实现具体通信路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "udp",
+      "context": "数据报网络端点可以绑定 UDP，connect 不改变其交付保证。"
     }
   ],
-  "summary": "操作系统为应用程序提供的网络通信抽象端点，由IP地址、传输层端口与协议类型唯一确定。",
+  "summary": "供应用访问网络或本机通信机制的端点抽象。",
   "importance": 5,
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-08"
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "description": "套接字是应用与通信机制交互的端点抽象，接口可用于网络传输，也可用于本机进程通信。Linux 的地址族包含 IPv4、IPv6 与 Unix-domain 等；网络套接字这一通用概念应与某个平台的具体 socket API 规范区分。\n\n端点身份依地址族、协议、连接状态及命名空间判断。TCP 连接通常要同时区分本地与远端地址和端口，不能仅靠本地 IP、端口和协议唯一确定；地址复用也受系统规则约束。进程持有的文件描述符是本地句柄，并不是网络中全局唯一的端点编号。\n\nconnect 对 UDP 可以设置默认对端和过滤路径，但不会给 UDP 增加 TCP 的可靠连接语义。非阻塞套接字配合 epoll 等接口只报告就绪条件，应用仍负责错误、部分读写和业务帧解析。优化交易通信时，端点接口、传输协议与业务会话确认要分别测量和验证。\n\n## 参考\n\n- [Linux socket(7)](https://man7.org/linux/man-pages/man7/socket.7.html)\n- [Linux tcp(7)](https://man7.org/linux/man-pages/man7/tcp.7.html)\n- [Linux unix(7)](https://man7.org/linux/man-pages/man7/unix.7.html)"
 }

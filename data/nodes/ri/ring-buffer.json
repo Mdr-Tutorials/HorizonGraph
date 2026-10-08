@@ -1,0 +1,41 @@
+{
+  "id": "ring-buffer",
+  "name": "Ring Buffer",
+  "aliases": [
+    "环形缓冲区",
+    "环形缓冲",
+    "循环缓冲区",
+    "Circular Buffer"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "memory-preallocation",
+      "context": "有界实现可预先准备槽位，在稳定容量内循环复用，满缓冲策略由调用方约定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "memory-model",
+      "context": "跨线程共享的实现用正确的发布和读取顺序，确保索引可见前内容已准备。"
+    }
+  ],
+  "summary": "按循环索引复用固定容量存储，容量与并发协议需分别定义。",
+  "description": "环形缓冲区用循环移动的读写位置复用一段有限存储，常用于事件、字节流和线程交接。到达末尾后索引回绕，不表示旧数据可以任意覆盖；满时拒绝、等待或覆盖哪类数据必须由用途定义。头尾相同的歧义可由预留空槽、计数器或序号等不同方案解决。\n\n固定容量可在准备阶段分配，避免运行过程中不断扩容，并便于控制内存占用。二次幂容量可用掩码计算槽位，但不是所有环形缓冲的必需条件。存储结构本身不规定并发安全；单生产者单消费者方案和多生产者多消费者方案需要不同的所有权与提交协议。\n\n跨线程发布数据时，应先写内容，再按所选内存模型发布可见状态，消费者读取完成后才能让槽位复用。仅把索引声明为volatile不能完成用户态C++同步。队列长度还代表尚未处理的工作，较大容量可以吸收突发，也可能让过载期间的等待更长。\n\n## 参考\n\n- [Linux：环形缓冲与发布顺序](https://docs.kernel.org/core-api/circular-buffers.html)\n- [Linux：内存屏障与 CPU、设备交互](https://docs.kernel.org/core-api/wrappers/memory-barriers.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

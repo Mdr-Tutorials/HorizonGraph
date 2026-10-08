@@ -1,0 +1,39 @@
+{
+  "id": "mcp-stdio-transport",
+  "name": "MCP stdio Transport",
+  "aliases": [
+    "MCP 标准输入输出传输",
+    "MCP stdio"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 定义的本地子进程标准流承载绑定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-rpc",
+      "context": "将 JSON-RPC 消息逐行写入标准输入输出，日志保持在协议流之外。"
+    }
+  ],
+  "summary": "以本地子进程标准输入输出承载 MCP 消息的绑定。",
+  "description": "MCP stdio 传输用于客户端启动本地服务器进程，并通过标准输入和标准输出交换 JSON-RPC 消息。消息以换行分隔，协议输出与诊断日志应分开；服务器可以向标准错误写日志，而不能把普通日志混入协议标准输出。它是具体绑定，不是通用标准流概念。\n\n客户端管理子进程的启动、消息读取和退出清理，服务器在自身环境访问所需资源。2026-07-28 的请求携带版本及能力等元数据，即使进程长期存在，也不能因此依赖隐含协议会话关联业务调用。进程生命周期和宿主对话生命周期是不同层次。\n\nstdio 本身不使用 MCP 的 HTTP OAuth 授权配置；本地凭证通常通过受控环境等方式提供，但仍需限制进程权限和可访问资源。此路线不意味着进程处于沙箱，也不保证旧版 SDK 支持最新核心。需要客户输入时按当前 MRTR 模式交互，不任意发送旧式服务器请求。\n\n## 参考\n\n- [MCP：stdio 规范](https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/stdio)\n- [MCP：授权与 stdio 适用范围](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/stdio"
+}

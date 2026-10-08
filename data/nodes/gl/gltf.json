@@ -1,0 +1,56 @@
+{
+  "id": "gltf",
+  "name": "glTF",
+  "aliases": [
+    "图形传输格式",
+    "GL Transmission Format",
+    "glTF 2.0"
+  ],
+  "type": "protocol",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "graphics-asset-format"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "khronos-group",
+      "context": "Khronos 的 3D Formats 工作组维护 glTF 规范与扩展注册表。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "使用 JSON 对象描述三维资产结构与资源引用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pbr",
+      "context": "核心材质约定采用金属度与粗糙度等物理材质参数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scene-graph",
+      "context": "通过节点层级与局部变换组织场景。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "skeletal-animation",
+      "context": "使用 skin、关节与动画采样数据描述支持蒙皮的资产。"
+    }
+  ],
+  "summary": "面向运行时交付网格、材质、场景和动画的三维格式。",
+  "description": "glTF 是由 Khronos 维护的运行时三维资产交付格式，定义场景节点、网格、材质、纹理、骨架与动画等结构。JSON 描述与二进制缓冲区配合表示内容，应用加载后转换为自身的渲染对象；格式本身与具体图形 API 无关。\n\n核心规范包含金属度与粗糙度等 PBR 材质约定，并可通过声明的扩展增加能力。交付可以使用外部文件，也可以使用 GLB 容器；加载器是否支持扩展、动画和压缩数据要分别确认。glTF 面向资产传递，不是完整保留任意制作工具编辑历史的工程文件。\n\n## 参考\n\n- [Khronos glTF 2.0 规范](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html)\n- [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://registry.khronos.org/glTF/"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "hcsshim",
+  "name": "hcsshim",
+  "aliases": [
+    "Windows Host Compute Service Shim",
+    "HCS Go 包装库"
+  ],
+  "type": "library",
+  "domains": [
+    "containerization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "windows-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "host-compute-service",
+      "context": "通过 Go 接口包装 HCS 管理 Windows 容器和相关计算系统，具体能力以所选平台路径为准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "host-network-service",
+      "context": "在需要配置 Windows 容器网络的调用路径中，提供 Go 包装接口访问 HNS 资源。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "moby",
+      "context": "官方项目说明将 Moby 列为库的主要使用方之一，通过其 Windows 容器实现对接 HCS。"
+    }
+  ],
+  "summary": "为 Windows 计算与网络服务提供 Go 接口的容器管理库。",
+  "description": "hcsshim 是 Microsoft 提供的 Go 代码库，封装 Windows Host Compute Service 的调用，使上层容器工具能够启动和管理 Windows 容器。仓库还包含 Host Network Service 接口及容器相关辅助功能。这里的 shim 是连接宿主能力与上层运行平台的实现，不是重新定义 OCI 镜像，也不是把 Linux 的 runc 直接变成 Windows 服务。\n\n库调用将上层的容器与虚拟机配置转接到 HCS 和相关系统 API，并处理生命周期、进程与资源信息。仓库同时构建 containerd shim、runhcs 和部分客户代理等工件，库和这些可执行程序各有调用方式；选择某个 containerd shim 不等于必须额外启动独立 runhcs CLI。文档中的 Windows、Linux Utility VM 和 sandbox 路径还具有平台与隔离方式的范围，不能一律视为同一发行物的默认功能。\n\nMoby 与 containerd 是其官方说明列出的主要使用方，其他项目也可以调用该库。使用 hcsshim 不会免除宿主版本、镜像兼容性或所需 Windows 能力的检查；HCS 和 HNS 仍是实际管理资源的宿主服务。项目当前仓库涉及不同代际的 shim 设计，部署应对应已提供的构建和支持范围，不能把主分支中计划实现的模式自动当成所有稳定安装都已启用的能力。\n\n## 参考\n\n- [Microsoft hcsshim：README 与构建工件](https://github.com/microsoft/hcsshim)\n- [Microsoft：Container platform tools on Windows](https://learn.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/containerd)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/microsoft/hcsshim"
+}

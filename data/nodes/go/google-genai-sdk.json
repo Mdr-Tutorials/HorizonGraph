@@ -1,0 +1,39 @@
+{
+  "id": "google-genai-sdk",
+  "name": "Google GenAI SDK",
+  "aliases": [
+    "Google Gen AI SDK",
+    "Google 生成式 AI SDK"
+  ],
+  "type": "library",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini-interactions-api",
+      "context": "提供 interactions 客户端方法的语言实现按该接口发送请求、读取资源与流式事件；具体支持由该语言 SDK 版本决定。"
+    }
+  ],
+  "summary": "Google 官方客户端 SDK，接入 Gemini 与 Agent Platform 模型服务。",
+  "description": "Google GenAI SDK 是 Google 维护的生成式 AI 客户端 SDK 系列。官方入口列出 Python 的 google-genai、JavaScript/TypeScript 的 @google/genai、Go、Java 与 C# 等实现；不同语言包拥有各自版本。这里保留统一 SDK 产品族身份，不把某一个语言包的版本号、依赖或支持状态机械套到所有实现。\n\n客户端封装模型、交互和工具等服务接口，使用选定后端的认证及配置。Python 官方实现明确区分 Gemini Developer API 客户端与 Gemini Enterprise Agent Platform 客户端，两者共用部分编程模式，但认证、项目、区域和服务条款并不相同。SDK 调用模型服务，既不是 Gemini 模型，也不等于 ADK 的智能体编排层。\n\nGoogle 推荐新应用采用 GenAI SDK，并在文档中把旧 google-generativeai、@google/generativeai 等库列为不再积极维护的 legacy 库。这些旧发行包是需要迁移的不同实现，不能作为新版 SDK 的无条件同义包名。模型、接口和功能演进较快，开发者应核对所用语言版本，尤其分清 Interactions 与继续受支持的 generateContent 调用方式。\n\n## 参考\n\n- [Google AI：官方 SDK、语言实现与旧库迁移](https://ai.google.dev/gemini-api/docs/libraries)\n- [Google APIs：GenAI Python 客户端与后端选择](https://github.com/googleapis/python-genai)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://ai.google.dev/gemini-api/docs/libraries"
+}

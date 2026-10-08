@@ -1,0 +1,28 @@
+{
+  "id": "instruction-data-separation",
+  "name": "Instruction–Data Separation",
+  "aliases": [
+    "指令与数据分离"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    }
+  ],
+  "summary": "保留指令和外部数据的来源边界，避免数据获得控制权限。",
+  "description": "指令与数据分离要求系统区分可信的控制意图和用于完成任务的外部内容，例如网页、检索文档、邮件和工具返回。分离不仅是文本格式问题，还涉及谁能改变策略、哪些数据可影响动作及执行器从哪里获取授权。外部内容声称自己是系统消息，不应因此升级为可信控制来源。\n\n应用可以用结构化字段、来源标签及明确提示帮助模型识别数据，并在执行层独立校验工具调用的动作、参数与权限。模型同时处理语言和数据，分隔符或提示词并不能形成操作系统级的不可突破边界。低权限数据即便影响了模型建议，也不应改变执行器配置或绕过下游访问控制。\n\nOWASP 的提示注入防护资料和 NIST 的智能体劫持研究表明，多来源内容进入上下文时需要关注来源边界及实际工具权限。防护效果要在具体任务与攻击条件下评估，不能由使用固定模板或某种标签推导为注入已经解决。敏感数据仍需按授权交付，工具返回中的自然语言指示应保留其数据身份。\n\n## 参考\n\n- [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)\n- [NIST：AI Agent Hijacking 评估研究](https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

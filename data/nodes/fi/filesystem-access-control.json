@@ -1,0 +1,33 @@
+{
+  "id": "filesystem-access-control",
+  "name": "Filesystem Access Control",
+  "aliases": [
+    "文件系统访问控制",
+    "文件访问权限控制"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authorization",
+      "context": "文件访问请求在实际执行层检查调用主体对目标对象及读、写、执行等动作的权限。"
+    }
+  ],
+  "summary": "按主体、文件对象和操作限制读取、写入与执行。",
+  "description": "文件系统访问控制在打开、读取、修改或执行文件时判断主体对对象的权限。目录可见性、只读挂载、文件许可与额外的强制访问策略有不同作用，应明确保护的是路径、已打开对象还是操作本身。拒绝写入并不等于禁止读取或阻止通过其他接口取得同一数据。\n\n智能体执行器可以将可信路径授权转换为受限文件可见范围，并区分读与写。Antigravity 沙箱文档将 read_file 允许路径作为只读范围、write_file 允许路径作为可读写范围。Linux Landlock 提供另一种内核强制限制路径访问的机制，其可用权限随内核 ABI 变化；它是具体机制例子，不是 Antigravity 必然使用的后端。\n\n路径校验要考虑符号链接、相对路径、大小写和目标在校验后变化等因素，并与实际打开对象的执行路径一致。项目外访问许可、操作系统账号权限与进程沙箱范围可能同时约束访问，任何一层批准都不能推导为全部文件可用。被允许读取的凭据仍需在模型上下文和日志交付端受到保护。\n\n## 参考\n\n- [Linux Kernel：Landlock 用户空间 API](https://docs.kernel.org/userspace-api/landlock.html)\n- [Google Antigravity：Terminal sandbox](https://www.antigravity.google/docs/sandbox/)\n- [OWASP：Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

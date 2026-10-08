@@ -1,0 +1,50 @@
+{
+  "id": "docker-desktop",
+  "name": "Docker Desktop",
+  "aliases": [
+    "Docker 桌面应用"
+  ],
+  "type": "product",
+  "domains": [
+    "developer-environments",
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem",
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker-engine",
+      "context": "桌面产品提供并管理容器引擎，以执行镜像构建和容器生命周期操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker",
+      "context": "桌面安装提供客户端入口，通过当前 context 访问所管理的引擎。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker-compose",
+      "context": "桌面安装包含 Compose 工具，用 Compose 文件管理多容器应用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl-2",
+      "context": "在 Windows 上采用 WSL 2 后端运行 Linux 容器时，借助该架构承载引擎与发行版集成。"
+    }
+  ],
+  "summary": "集成容器引擎、命令行与图形管理的跨平台桌面产品。",
+  "description": "Docker Desktop 是面向 macOS、Windows 和受支持 Linux 发行版的桌面产品，集成 Docker Engine、客户端、构建和 Compose 工具以及图形管理。它帮助管理镜像、容器、端口与文件共享，但与独立安装的 Docker Engine 或 Docker CLI 各有身份。\n\nLinux 版同样通过专用 VM 承载容器，并使用 desktop-linux context 和独立存储位置，因此不会自动共享原生 Linux Engine 的容器与镜像。Windows 的 Linux 容器可采用 WSL 2 后端；启用发行版集成后，可在指定 WSL 发行版内调用客户端，也可以直接从 Windows 终端调用。\n\n桌面应用支持的平台、虚拟化要求与容器模式应分别确认。Linux 安装要求 KVM 等条件；Windows 可用后端不应推广成其他平台的架构。开发容器与 Compose 都有独立或远程引擎使用方式，Docker Desktop 是一种集成入口，而不是这些规范的必选组成。\n\n## 参考\n\n- [Docker Desktop：平台与内置工件](https://docs.docker.com/desktop/)\n- [Docker Desktop Linux：VM、context 与存储隔离](https://docs.docker.com/desktop/setup/install/linux/)\n- [Docker Desktop：WSL 2 后端与发行版集成](https://docs.docker.com/desktop/features/wsl/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://docs.docker.com/desktop/"
+}

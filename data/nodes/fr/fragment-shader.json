@@ -1,0 +1,39 @@
+{
+  "id": "fragment-shader",
+  "name": "Fragment Shader",
+  "aliases": [
+    "片元着色器",
+    "像素着色器",
+    "Pixel Shader"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture-sampling",
+      "context": "需要贴图的片元程序使用采样操作读取颜色、法线或其他纹理属性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lighting-model",
+      "context": "执行逐片元光照的程序使用选定光照模型结合材质与光源数据计算颜色。"
+    }
+  ],
+  "summary": "处理光栅化产生的片元，计算颜色或深度等输出。",
+  "description": "## 机制\n\n片元着色器处理光栅化产生的片元，结合插值属性、绑定参数与纹理数据计算输出。它可执行材质着色、纹理采样或屏幕空间效果；Direct3D 通常称对应阶段为 pixel shader。\n\n片元输出还要与深度、模板、混合及附件配置共同决定最终结果。程序可以丢弃片元，或按接口规则提供深度；因此片元输出颜色不等同于该颜色一定写入最终图像。\n\n## 边界与应用\n\n片元不能简单理解成最终像素，多重采样、覆盖和辅助调用都会影响执行及写入。WGSL 以 @fragment 声明入口；屏幕空间导数和某些隐式纹理采样操作还有执行阶段及控制流要求，需要按具体语言规范使用。\n\n## 参考\n\n- [Microsoft：像素着色阶段与输出](https://learn.microsoft.com/en-us/windows/win32/direct3d11/pixel-shader-stage)\n- [W3C WGSL：片元阶段](https://www.w3.org/TR/WGSL/#shader-stages)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

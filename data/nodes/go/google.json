@@ -10,11 +10,15 @@
   "type": "organization",
   "ecosystems": [
     "cloud_native",
-    "web_frontend"
+    "web_frontend",
+    "google-ai-ecosystem"
   ],
   "domains": [
     "cloud-infrastructure",
-    "web-development"
+    "web-development",
+    "machine-learning",
+    "agent-development",
+    "industry-landscape"
   ],
   "relations": [
     {
@@ -25,13 +29,109 @@
       "relation_type": "subsidiary_of",
       "target_id": "xxvi-holdings",
       "context": "FCC 2026-02-13 通知披露的截至 2025-04-25 控股信息显示，XXVI Holdings 持有 Google LLC 的全部股权及表决权；Alphabet 的 2025 年末主要子公司清单仍列示这两个主体。"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "google-adk"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "google-agents-cli"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "gemini-cli"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "gemini-api"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "google-genai-sdk"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "google-ai-studio"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "gemini-enterprise-agent-platform"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "google-agent-runtime"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "google-agent-studio"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "firebase-studio"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "firebase-js-sdk"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "firebase-ai-logic"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "firebase-mcp-server"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "firebase-cli"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "genkit"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "android-cli"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "android-skills"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "chrome-devtools-mcp"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "deepmind-science-skills"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "data-agent-kit"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "android-studio"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "gemini-in-android-studio"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "jules"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "gemini-code-assist"
     }
   ],
-  "summary": "搜索起家的科技公司，Android、Chrome、Go 与 Kubernetes 的源头。",
+  "summary": "提供搜索、软件平台、Gemini 模型与开发工具的科技公司。",
   "importance": 5,
   "official_site": "https://www.google.com",
-  "last_reviewed": "2026-09-20",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active",
-  "description": "Google（谷歌）是以搜索等互联网业务起家的科技公司，也是多个软件与平台项目的来源。2015 年的重组设立 Alphabet 为上市控股主体，Google 则作为其子公司继续存在。\n\nAlphabet 不是 Google 的简单改名或同义别名。近期公开文件披露 Google LLC 由 XXVI Holdings 直接持有，后者由 Alphabet 持有，因此图谱保留中间控股层。本节点继续承载 Google 原有技术关系，阅读证券与招聘资料时仍需辨认具体主体。\n\n参考：[Google：2015 年 Alphabet 重组公告](https://blog.google/alphabet/google-alphabet/)；[FCC：2026 年公开通知披露的控股链](https://docs.fcc.gov/public/attachments/DA-26-155A1.pdf)；[Alphabet：2025 年末主要子公司清单](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/googexhibit2101q42025.htm)。"
+  "description": "Google（谷歌）是以搜索等互联网业务起家的科技公司，提供网络服务、开发平台、开源项目与 AI 产品。Android、Chrome 和 Gemini 模型及其开发工具具有不同交付边界：操作系统、浏览器、模型、模型 API 与智能体框架不能仅因同属 Google 便合并成一个技术节点。Google 开发和提供这些项目的关系也应与社区治理或具体服务协议区分。\n\n2015 年的重组设立 Alphabet 为上市控股主体，Google 则继续作为子公司存在。公开控股资料披露 Google LLC 由 XXVI Holdings 直接持有，后者由 Alphabet 持有；图谱保留该中间控股层与已收录资料的时间限定。Alphabet 是不同法律主体，并不是 Google 的更名或同义别名，证券资料中的集团范围也不能代替直接股权关系。\n\nGoogle 的 AI 开发路线包含 Gemini 模型和 Developer API、AI Studio、GenAI SDK、ADK，以及 Google Cloud 的 Agent Platform、Studio 与 Runtime。浏览器原型环境、开源客户端、框架和托管执行服务分别覆盖开发与运行的不同环节。Firebase、Android 和 Chrome 的部分工具能够接入代理工作流，但它们的普通客户端和操作系统能力不必全部依赖 AI 服务。\n\n产品的账号、地区、版本和生命周期需按具体文档核对。Firebase Studio 已宣布退出，Code Assist 的消费入口迁移与仍提供的企业版本存在明确范围区别；这些变化不代表 Android、Chrome、Firebase 后端或 Google 的全部编码服务同时停用。Google 组织节点记录提供者及研发来源，服务配置和迁移时点则保留在相应产品节点。\n\n## 参考\n\n- [Google：2015 年 Alphabet 重组公告](https://blog.google/alphabet/google-alphabet/)\n- [FCC：2026 年公开通知披露的控股链](https://docs.fcc.gov/public/attachments/DA-26-155A1.pdf)\n- [Alphabet：2025 年末主要子公司清单](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/googexhibit2101q42025.htm)\n- [Google AI：模型与开发服务入口](https://ai.google.dev/gemini-api/docs)\n- [Google Cloud：模型与代理开发平台](https://cloud.google.com/products/gemini-enterprise-agent-platform)"
 }

@@ -1,0 +1,35 @@
+{
+  "id": "end-to-end-latency",
+  "name": "End-to-End Latency",
+  "aliases": [
+    "端到端延迟",
+    "端到端时延",
+    "E2E Latency"
+  ],
+  "type": "metric",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "latency",
+      "context": "采用时间差这一延迟度量，并把起止事件限定为完整业务动作的端点。"
+    }
+  ],
+  "summary": "从约定的输入事件到最终结果的耗时，包含边界内排队与处理。",
+  "description": "端到端延迟量化一次动作从约定起点到最终结果的时间差。起点可以是客户端发起动作或系统接收事件，终点可以是响应被客户端接收或结果完成交付；这些定义并不等价，报告必须说明所采用的边界。单位通常为秒、毫秒、微秒或纳秒，换算后才能比较。\n\n在边界内，耗时可能包含传输、排队、执行、线程调度和多个组件之间的等待。服务器处理耗时和网络单向耗时只是某些链路中的分段值，不能直接代替整个动作的耗时。并行工作还存在重叠，只有按同一请求与依赖关系关联的阶段记录才适合解释关键路径。\n\n测量要保持请求身份、时间基准和完成定义一致；跨设备时间戳需说明可比性与误差，不能把时钟偏移当成服务延迟。超时、失败和未完成请求应独立报告其处理方式。只统计成功完成的快速请求，或让测试端在系统停顿时也停发请求，会使观察到的体验失真。\n\n## 参考\n\n- [Google SRE：延迟、流量与分布监控](https://sre.google/sre-book/monitoring-distributed-systems/)\n- [IETF RFC 7679：单向延迟测量边界](https://www.rfc-editor.org/rfc/rfc7679)\n- [HdrHistogram：范围、精度、并发与遗漏修正](https://github.com/HdrHistogram/HdrHistogram)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5
+}

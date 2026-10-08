@@ -1,0 +1,45 @@
+{
+  "id": "port-publishing",
+  "name": "Port Publishing",
+  "aliases": [
+    "端口发布",
+    "容器端口映射",
+    "Port Mapping"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "networking",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nat",
+      "context": "采用 Docker bridge 的 NAT 网关模式时，通过地址和端口转换组织发布路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "发布 TCP 服务时，将 TCP 端口与所选地址及目标关联。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "udp",
+      "context": "发布 UDP 服务时，按 UDP 协议配置映射或转发，不能沿用 TCP 连接语义。"
+    }
+  ],
+  "summary": "按地址、协议与网络模式使容器服务可被外部访问。",
+  "description": "端口发布把容器内服务的访问能力关联到选定宿主地址、传输协议和端口，或在受支持网络模式中允许直接访问容器地址。Docker 的常见 -p 参数表达宿主与容器端口映射，TCP 与 UDP 需要区分；仅在镜像中声明端口或应用开始监听，并不等于平台已经完成发布。\n\nDocker bridge 的默认 NAT 路线使用地址和端口转换，但 routed 模式可直接路由到容器，此时发布参数中的宿主端口可能不参与实际通路。访问范围还取决于绑定地址、路由和防火墙，不能把所有发布理解为在宿主上创建同一种独占监听 socket。应用也需要监听能够收到相应请求的地址。\n\n跨 Windows 与 Linux 虚拟机的场景可能增加转发层。WSLc 的 Consommé 为宿主提供端口映射服务，普通 WSL 的 NAT 和 mirrored 又有不同处理方式。判断开发服务是否可访问，应沿容器、虚拟机、Windows 及外部客户端逐层检查，而不是只根据一个端口数字判断。\n\n## 参考\n\n- [Docker：Port Publishing and Mapping](https://docs.docker.com/engine/network/port-publishing/)\n- [WSL：NAT、Mirrored 与 Consomme](https://wsl.dev/technical-documentation/localhost/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

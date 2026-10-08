@@ -1,0 +1,40 @@
+{
+  "id": "network-namespace",
+  "name": "Linux Network Namespace",
+  "aliases": [
+    "网络命名空间",
+    "network namespace",
+    "netns"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "namespace"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux-capabilities",
+      "context": "管理网络接口、路由或防火墙时检查 CAP_NET_ADMIN 等对应权能，并结合所属 user namespace 限定作用范围。"
+    }
+  ],
+  "summary": "隔离 Linux 网络栈、接口、路由与端口等资源视图。",
+  "description": "Network namespace 为 Linux 提供相互分离的网络设备、IPv4/IPv6 协议栈、路由表、端口、部分网络参数和防火墙规则等资源。它还隔离抽象 UNIX 域套接字名称空间，而带文件系统路径的 UNIX 套接字另需考虑文件视图和权限。某个命名空间中的监听端口不直接占用另一个命名空间的相同端口。\n\n网络连接需由管理方明确建立，例如把 veth 的两端放到不同命名空间，再结合地址、路由、网桥或转发提供通信。物理网络设备同一时刻只属于一个 network namespace；独立视图本身不会自动获得外网或 DNS 能力。容器共享一个网络命名空间时也会共享其中的网络资源，因此不能由容器数量推断独立网络栈的数量。\n\n网络配置和进入命名空间涉及相应 capabilities 与所属 user namespace。隔离网络视图不等于默认拒绝所有通信，也不替代网络策略、应用鉴权或数据加密；host 网络模式及端口发布还会改变可达范围。这些都是 Linux 内核机制，Windows 原生容器和 Windows 上经 Linux 虚拟机运行的容器应分别确认其实际网络实现。\n\n## 参考\n\n- [Linux：网络资源、设备归属与 veth](https://man7.org/linux/man-pages/man7/network_namespaces.7.html)\n- [Linux：网络相关权能](https://man7.org/linux/man-pages/man7/capabilities.7.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

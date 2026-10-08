@@ -5,11 +5,13 @@
   "type": "product",
   "ecosystems": [
     "llm-agent-ecosystem",
-    "editor-ide-ecosystem"
+    "editor-ide-ecosystem",
+    "ai-software-engineering-ecosystem"
   ],
   "domains": [
     "devops",
-    "machine-learning"
+    "machine-learning",
+    "ai-assisted-software-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -24,12 +26,32 @@
     {
       "relation_type": "competes_with",
       "target_id": "github-copilot"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "claude",
+      "context": "使用所配置的受支持 Claude 模型执行代码理解与代理决策，具体模型及提供平台按当前部署选择。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "用户配置工具服务器时由 Claude Code 宿主接入和调用 MCP 工具，不由 Claude 模型本体实现客户端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-rule",
+      "context": "加载 CLAUDE.md 或路径适用的项目规则，为当前工作提供约定；规则文本与可执行工具权限分别处理。"
     }
   ],
-  "summary": "终端里的 AI 编程代理，读写代码、跑命令、开 PR。",
+  "summary": "Anthropic 提供于终端、IDE、桌面和 Web 的编码代理。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://docs.anthropic.com/en/docs/claude-code"
+  "official_site": "https://code.claude.com/docs/en/overview",
+  "description": "Claude Code 是 Anthropic 的编码代理产品，能够阅读仓库、修改文件、运行命令并使用开发工具。当前官方文档提供终端、IDE 扩展、桌面应用和浏览器入口，不能继续仅用终端工具概括整个产品。Claude 是可被它调用的模型家族，Claude Code 是负责工具、会话和工作区交互的应用；两者的能力与身份需要分开。\n\n代理把任务、相关代码和工具结果组织成上下文，在读取、实施和验证之间推进。CLAUDE.md 与项目规则用于持久化工作指导，实际加载位置和适用范围依文档规定；这些文本不是额外的模型训练或永久记忆。连接 MCP 服务器时，Claude Code 作为宿主协调工具调用和结果传递，协议客户端存在于应用执行层，而不是语言模型权重内部。\n\n操作权限由工具规则、模式与管理策略控制，读取文件、编辑文件、运行 shell 和访问网络具有不同边界；沙箱和批准策略也不是同一机制。用户可配置某些操作自动执行，但不能从代理能跑命令推断它始终拥有整机或服务凭据。用于修复、重构和审查时，应检查差异与实际验证结果；模型输出、宿主执行成功与任务正确完成分别提供不同证据。\n\n## 参考\n\n- [Anthropic：Claude Code 当前产品与界面](https://code.claude.com/docs/en/overview)\n- [Anthropic：Claude Code 的 MCP 接入](https://code.claude.com/docs/en/mcp)\n- [Anthropic：项目指导与 CLAUDE.md](https://code.claude.com/docs/en/memory)\n- [Anthropic：工具权限与模式](https://code.claude.com/docs/en/permissions)"
 }

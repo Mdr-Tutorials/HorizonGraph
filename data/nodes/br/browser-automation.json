@@ -1,0 +1,43 @@
+{
+  "id": "browser-automation",
+  "name": "Browser Automation",
+  "aliases": [
+    "浏览器自动化",
+    "Web Automation"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-session",
+      "context": "在一次控制流程中管理浏览器连接、页面和会话生命周期。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "element-locator",
+      "context": "选择基于元素的交互路径时，用查询条件找到当前页面上的操作目标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "auto-waiting",
+      "context": "在支持该机制的上层库中，等待页面目标或动作条件满足后继续执行。"
+    }
+  ],
+  "summary": "通过程序观察并控制浏览器状态与网页交互。",
+  "description": "浏览器自动化以程序建立浏览器会话、访问页面、查找目标并执行点击、输入或导航，还可以读取页面状态、网络事件和截图。它既服务于测试，也服务于数据采集、运维和智能体操作；采用固定脚本即可实现，是否使用语言模型属于另一层决策。\n\n执行接口可以是 WebDriver、WebDriver BiDi 或特定浏览器的调试协议，上层库进一步提供页面、定位器和等待机制。基于 DOM 或可访问性语义的动作与基于像素坐标的动作具有不同观察条件，实际系统会根据页面能力选择，不能把其中一种接口当作所有浏览器自动化的定义。\n\n可靠流程需要明确账号状态、视口、超时和页面生命周期，动作后还要检查目标业务状态。浏览器返回点击完成，只说明输入步骤按接口执行；测试断言或任务判定决定目标是否实现。截图和追踪帮助检查过程，跨测试的会话隔离则减少残留状态对结果的影响。\n\n## 参考\n\n- [W3C：WebDriver Recommendation 2018](https://www.w3.org/TR/2018/REC-webdriver1-20180605/)\n- [Playwright：Introduction](https://playwright.dev/docs/intro)\n- [Puppeteer：官方介绍](https://pptr.dev/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

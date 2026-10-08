@@ -1,0 +1,37 @@
+{
+  "id": "securities-information-processor",
+  "name": "Securities Information Processor",
+  "aliases": [
+    "SIP",
+    "证券信息处理器",
+    "美国股票合并行情处理机制"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "best-bid-and-offer",
+      "context": "按适用计划收集参与市场的最优买卖报价，并在合并范围及合格规则下形成相应输出。"
+    }
+  ],
+  "summary": "按适用市场计划收集并发布美国证券合并行情的机制。",
+  "description": "Securities Information Processor（SIP）是美国证券合并行情基础设施中的处理器职责，按适用计划收集、处理和分发来自参与市场中心的报价与成交。它不是一个通用二进制协议名称，也不应把这一职能直接等同于某家上市公司。CTA 与 UTP 的范围及服务分别由对应计划确定。\n\n处理器可提供场所最优报价及合并报价等信息。UTP 技术说明涵盖 Nasdaq 上市证券的参与方最佳报价与 NBBO，以及成交报告；CTA 也说明其合并与监管信息职责。合并行情所含字段和合格报价规则应按当前计划及规范解释，不能把它写成所有场所全部逐单深度。\n\nSIP 输出与交易所专有直接行情互补，发布时间、覆盖粒度及恢复机制存在各自边界。一个数据厂商自行合并直接源得到的报价，也不因形式相似就成为正式 SIP。使用合并记录时应保留计划、来源和时间语义，并区分处理器职能、运营实体与具体输出接口。\n\n## 参考\n\n- [UTP Plan：处理器职能与行情服务](https://utpplan.com/PageParts/Technical.html)\n- [NYSE：CTA 与 SIP 的职能](https://www.nyse.com/data/cta)\n- [NYSE：行情数据的类别与覆盖范围](https://www.nyse.com/article/understanding-the-market-for-us-equity-market-data)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "SIP"
+}

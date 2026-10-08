@@ -7,11 +7,13 @@
   "type": "product",
   "ecosystems": [
     "public-cloud-ecosystem",
-    "cloud_native"
+    "cloud_native",
+    "edge-serverless-ecosystem"
   ],
   "domains": [
     "cloud-infrastructure",
-    "devops"
+    "devops",
+    "web-services"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -30,12 +32,23 @@
     {
       "relation_type": "competes_with",
       "target_id": "cloudflare-workers"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "hono",
+      "context": "Hono 官方提供 Node Lambda 事件适配器，缓冲响应与函数 URL 流式调用使用不同接入函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "caching",
+      "context": "在 SnapStart 支持的运行时和启用该功能的已发布函数版本中，缓存初始化后的加密执行环境快照，供新环境恢复；当前不支持 Node.js，不将此优化推给 Hono Node Lambda 部署。"
     }
   ],
-  "summary": "AWS 的函数计算服务，Serverless 的代名词。",
+  "summary": "由 AWS 托管事件触发函数与执行环境的计算服务。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://aws.amazon.com/lambda/"
+  "official_site": "https://aws.amazon.com/lambda/",
+  "description": "AWS Lambda 托管函数执行，通过事件来源或调用接口启动处理器，并按函数配置管理资源、超时和运行环境。它是一种 Serverless 计算服务，不能代表所有 Serverless 产品；HTTP 请求可以经由相应服务与框架适配器转成调用事件，普通函数事件本身不自动等于 Fetch Request。\n\n常规按需执行环境经历初始化、调用和关闭，初始化包括启动运行时及执行处理器之外的静态代码。新环境的初始化会影响首次调用延迟，后续调用可能复用已经初始化的环境。预置并发提前准备环境，SnapStart 则对支持的运行时与已发布函数版本缓存初始化后的加密快照，再从快照恢复新环境；当前支持指定 Java、Python 与 .NET 版本，不支持 Node.js，不能把这一优化推给下述 Hono Node 部署。\n\n复用时，处理器之外的客户端对象、连接及临时目录可能保留，但环境可以被回收，连接也可能失效。可以按实际状态复用 SDK 客户端和连接，不应依靠全局变量保存用户请求数据或持久业务状态；未完成后台回调也不具有独立可靠任务的保证，代码需要在调用边界处理其责任。\n\n在 Hono 的 Node Lambda 接入路径中，@hono/aws-lambda 的 handle 负责应用与调用事件间的适配。函数 URL 采用 RESPONSE_STREAM 调用模式时，可使用 streamHandle 把 Hono 流式结果接到 Lambda 输出；普通返回对象和逐块输出是不同模式，需连同调用入口一起配置。\n\n## 参考\n\n- [AWS Lambda：执行环境生命周期与冷启动](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtime-environment.html)\n- [AWS Lambda：复用、用户数据与幂等实践](https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html)\n- [Hono：Lambda HTTP 事件接入适配](https://hono.dev/docs/getting-started/aws-lambda)\n- [AWS：Serverless 服务范围](https://aws.amazon.com/serverless/)\n- [AWS Lambda：SnapStart 支持的运行时与发布版本](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)"
 }

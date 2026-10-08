@@ -5,16 +5,18 @@
   "type": "protocol",
   "ecosystems": [
     "graphics-api-ecosystem",
-    "rendering-ecosystem"
+    "rendering-ecosystem",
+    "real-time-rendering-ecosystem"
   ],
   "domains": [
-    "graphics"
+    "graphics",
+    "real-time-rendering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "api-specification"
     },
     {
       "relation_type": "implements",
@@ -27,12 +29,25 @@
     {
       "relation_type": "developed_by",
       "target_id": "apple"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "render-pass"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "gpu-buffer"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "compute-shader"
     }
   ],
-  "summary": "苹果统一的低开销图形与计算 API。",
+  "summary": "Apple 平台的 GPU 图形与计算 API。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 3,
-  "official_site": "https://developer.apple.com/metal/"
+  "official_site": "https://developer.apple.com/metal/",
+  "description": "Metal 是 Apple 平台的 GPU 图形与计算 API，以设备、队列、命令缓冲、资源和管线状态组织工作。应用把命令编码后提交给 GPU；图形渲染和通用计算分别使用相应 encoder 与管线，不能把所有 Metal 着色程序都理解为计算像素颜色。\n\n渲染通道指定颜色、深度或模板附件及加载、存储等处理，渲染编码器绑定资源和管线并发出绘制命令。顶点程序处理几何，片元程序生成相关输出；GPU 函数通过 Metal Shading Language 准备，计算路径则以工作项处理缓冲或纹理数据。\n\nMetal 用于游戏、图形界面、影像和数值计算。资源能见性、生命周期和平台支持应遵守相应 API 规则；可选采样、光追和其他功能需要按设备能力确认，不能仅据品牌名推断每台 Apple 设备具备同一套特性。\n\n## 参考\n\n- [Apple Metal Render Passes](https://developer.apple.com/documentation/metal/render-passes)\n- [Apple Performing Calculations on a GPU](https://developer.apple.com/documentation/metal/performing-calculations-on-a-gpu)"
 }

@@ -1,0 +1,27 @@
+{
+  "id": "agent-lifecycle-hooks",
+  "name": "Agent Lifecycle Hooks",
+  "aliases": [
+    "智能体生命周期钩子",
+    "代理运行钩子"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "在会话、回合或工具执行边界调用注册的处理函数。",
+  "description": "智能体生命周期钩子是在会话开始或结束、执行回合前后、工具调用及错误等边界调用的扩展处理函数。应用可记录事件、调整输入、审计用量或处理异常；哪些钩子能够改变控制流及返回何种结果，应按具体接口说明。\n\nAntigravity SDK 提供 pre_turn、工具调用决定、工具异常及停止等钩子，并通过配置注册。CrewAI 的步骤、任务和 kickoff 回调也提供执行边界的扩展点；这些接口有不同粒度，不应假定不同框架共享装饰器名称或完全相同的执行顺序。\n\n钩子应具有明确的作用域和错误策略，避免在回调中重复执行有副作用的工作。允许或拒绝工具的回调只能覆盖实际经过它的路径，不能由一次允许返回推导完整的安全隔离；取消、重试和恢复后的回调是否再次触发也需按实现判断。\n\n## 参考\n\n- [Antigravity SDK lifecycle](https://www.antigravity.google/docs/sdk/lifecycle/)\n- [Antigravity SDK lifecycle hooks example](https://github.com/google-antigravity/antigravity-sdk-python/blob/main/examples/getting_started/hooks.py)\n- [CrewAI crews](https://docs.crewai.com/en/concepts/crews)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

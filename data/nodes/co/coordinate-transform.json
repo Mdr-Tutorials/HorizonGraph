@@ -1,0 +1,38 @@
+{
+  "id": "coordinate-transform",
+  "name": "Coordinate Transform",
+  "aliases": [
+    "坐标变换",
+    "图形坐标变换"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "用矩阵、向量及逆矩阵表示和组合图形坐标系之间的映射。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "affine-transform",
+      "context": "用仿射矩阵表示模型与观察空间中的平移、旋转和缩放；透视投影另行处理。"
+    }
+  ],
+  "summary": "在局部、世界、观察与裁剪空间之间转换几何。",
+  "description": "图形坐标变换把点和方向从一个坐标系表达为另一个坐标系。对象通常先从局部空间变到世界空间，再经相机视图变换进入观察空间，最后经投影进入齐次裁剪空间；透视除法和视口映射才产生屏幕位置。矩阵乘法顺序及行列向量约定必须一致。\n\n平移、旋转、缩放等模型变换通常属于仿射变换，齐次坐标可统一表达它们。透视投影包含齐次除法，不是一般仿射变换。位置、方向和法线也有不同规则，特别是在非均匀缩放下，法线不能总按位置矩阵直接处理。\n\n场景图用变换组合实现父子层级，顶点阶段用变换生成裁剪位置，交互系统则常用逆变换把指针或射线转换到对象局部空间。浏览器 CSS 像素、绘图缓冲区像素与规范化设备坐标还需单独换算；不同图形 API 的深度范围及坐标约定不能默认相同。\n\n## 参考\n\n- [Three.js Object3D](https://threejs.org/docs/pages/Object3D.html)\n- [Three.js Cameras](https://threejs.org/manual/pages/cameras.html)\n- [Three.js Picking](https://threejs.org/manual/pages/picking.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

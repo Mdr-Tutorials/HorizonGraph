@@ -8,23 +8,32 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "linux-gnu-ecosystem"
+    "linux-gnu-ecosystem",
+    "low-latency-systems-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "low-latency-systems",
+    "high-performance-computing"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "memory-preallocation",
+      "context": "采用固定或登记缓冲区的复制规避路径时，可预先准备可复用存储，复用仍须等待所有权归还。"
     }
   ],
   "tags": [
     "zero-copy"
   ],
-  "summary": "跳过内核与用户态之间的数据搬运，sendfile 与 mmap。",
+  "summary": "避免指定数据路径中的冗余复制，仍承担映射、所有权和完成通知成本。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "零复制是一类在明确数据路径中避免冗余复制的方法，例如不把文件数据经用户缓冲再写回内核，或让设备处理已登记的用户缓冲区。零复制必须说明省去哪段复制；它不代表没有数据传输、缓存填充、DMA、地址映射或所有元数据拷贝。mmap提供映射能力，本身也不能保证应用后续操作从不复制。\n\nLinux的sendfile与MSG_ZEROCOPY具有不同目标和约束。网络发送的复制规避可能以页固定、引用管理和完成通知替代逐字节复制成本，小缓冲未必受益，内核也可能按条件回退复制。发送系统调用返回不总表示共享缓冲已经可以改写；调用方必须遵循完成通知或对应接口的所有权协议。\n\nCPU与设备共享缓冲还需符合DMA映射及可见性规则，缓存一致性与屏障的责任不能忽略。复用固定缓冲有助于控制分配，但必须等待所有使用者完成，避免提前回收。应按消息尺寸、设备、带宽和延迟分布比较具体实现，不能从“零复制”名称推断所有负载都更快或完全没有CPU开销。\n\n## 参考\n\n- [Linux：MSG_ZEROCOPY 成本与完成通知](https://docs.kernel.org/networking/msg_zerocopy.html)\n- [Linux man-pages：sendfile 数据路径与约束](https://man7.org/linux/man-pages/man2/sendfile.2.html)\n- [Linux：内存屏障与 CPU、设备交互](https://docs.kernel.org/core-api/wrappers/memory-barriers.html)"
 }

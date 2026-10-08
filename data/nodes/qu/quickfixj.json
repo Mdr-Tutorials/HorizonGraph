@@ -1,0 +1,55 @@
+{
+  "id": "quickfixj",
+  "name": "QuickFIX/J",
+  "aliases": [
+    "QuickFIXJ",
+    "QuickFIX Java",
+    "QuickFIX/J 引擎"
+  ],
+  "type": "library",
+  "domains": [
+    "electronic-trading",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "jvm"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fix-protocol",
+      "context": "提供 FIX 业务消息类、字典校验与应用接口。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fix-session-protocol",
+      "context": "实现 FIX/FIXT 的会话生命周期、序号管理与恢复。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "socket initiator/acceptor 建立到 FIX 对手方的 TCP 会话。"
+    }
+  ],
+  "summary": "Java FIX 消息引擎，提供会话管理和可定制应用回调。",
+  "description": "QuickFIX/J 是 QuickFIX 思路的纯 Java 开源实现，具有自己的 Java 消息与会话引擎。应用通过 Application 接口接收行政和业务事件，用 MessageCracker 等机制分派消息，选择 initiator 或 acceptor 连接角色。它不依赖 C++ QuickFIX 的运行库，也不能仅凭名称当作该库的 JNI 包装。\n\n引擎通过配置选择 FIX/FIXT 版本、会话时间、字典、存储与日志工厂。行政消息维持会话序号和恢复过程，订单及执行报告则由应用处理。官方提供单线程处理与按会话分线程等模型；回调阻塞、背压和共享状态的线程安全属于集成者需要处理的实际问题。\n\n它可承担电子交易系统中的 FIX 连接层，但不能自动实现交易策略、风控决策或对手方的全部自定义业务。消息字典和重发行为要与会话配置匹配，选择何种持久化后端取决于部署。Java 实现的身份也不意味着所有交易关键路径都采用 Java，或与任何二进制行情协议自然兼容。\n\n## 参考\n\n- [QuickFIX/J 官方仓库](https://github.com/quickfix-j/quickfixj)\n- [QuickFIX/J 配置手册](https://quickfix-j.github.io/quickfixj/quickfixj-core/src/main/doc/usermanual/usage/configuration.html)\n- [QuickFIX/J 线程模型](https://github.com/quickfix-j/quickfixj/blob/master/docs/threading-model.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://www.quickfixj.org/"
+}

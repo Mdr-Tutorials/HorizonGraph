@@ -14,7 +14,8 @@
   ],
   "domains": [
     "security",
-    "natural-language-processing"
+    "natural-language-processing",
+    "agent-development"
   ],
   "relations": [
     {
@@ -27,11 +28,11 @@
       "context": "间接注入可借 RAG 返回的不可信文档传入恶意指令；RAG 本身不等于提示注入。"
     }
   ],
-  "summary": "让模型把不可信输入当成指令，从而偏离原定任务的攻击方式。",
-  "description": "提示注入可直接出现在用户输入中，也可藏在检索文档或工具返回等外部内容中。它利用模型共同处理指令与数据的边界，可能影响回答或工具行为。输入筛选并不能单独解决问题，应结合来源隔离、权限限制与必要的人工确认。\n\n参考：[权威资料](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)。",
+  "summary": "让模型将不可信输入当作行为指令，偏离原定任务。",
+  "description": "提示注入试图让模型将攻击者可控制内容当作应遵循的行为指令，从而偏离可信任务。直接注入发生在与模型交互的输入中，间接注入则经网页、检索文档或工具内容等外部来源进入。应区分恶意操纵、正常任务指示及需要分析的引用文本，不能把任何特殊语句都视作已成功攻击。\n\n带工具的系统不仅要检查回答偏移，还要检查后续读取、发布、外传与参数改写等副作用。RAG 返回可携带恶意材料，但检索机制本身不等于注入；工具的只读注释也不能为不可信内容提供控制权限。攻击是否成功取决于模型行为与执行层、资源服务的实际权限。\n\n来源标识、指令与数据分离、权限限制、工具调用校验及人工审核可共同缩小风险。提示模板或输入过滤只是其中的措施，不能推导为所有攻击都失效。NIST 的劫持研究强调具体任务和可控来源下的评估，结果应与实测副作用关联，不把个别防护或模型表现当作产品级安全保证。\n\n## 参考\n\n- [OWASP LLM01：Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)\n- [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)\n- [NIST：AI Agent Hijacking 评估研究](https://www.nist.gov/news-events/news/2025/01/technical-blog-strengthening-ai-agent-hijacking-evaluations)",
   "importance": 4,
   "official_site": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active"
 }

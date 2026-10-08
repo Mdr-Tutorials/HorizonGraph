@@ -1,0 +1,35 @@
+{
+  "id": "interrupt-coalescing",
+  "name": "Interrupt Coalescing",
+  "aliases": [
+    "中断合并",
+    "Interrupt Moderation",
+    "中断调节"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "interrupt",
+      "context": "设备根据累计事件或计时阈值触发一次中断通知，以调节处理器收到 IRQ 的频率。"
+    }
+  ],
+  "summary": "按时间或事件阈值合并设备通知，权衡 CPU 与等待。",
+  "description": "中断合并让设备在多个事件之间延迟或合并通知，常以时间阈值、事件数量或自适应策略降低中断频率。它改变的是何时通知处理器，不应与把网络包内容合并的 GRO、或设备自身的 DMA 合并混为同一机制。\n\n减少中断可降低处理成本，但较早到达的数据可能在通知前等待更久。低负载和饱和负载的结果不同，全部关闭合并也可能增加 CPU 压力及丢包，进而恶化尾延迟；调参不能只依据吞吐或平均等待一个数字。\n\n可配置字段、单位、精度和自适应模式由驱动与硬件决定，ethtool 暴露的参数不一定都被某设备支持。应保留配置与流量条件，结合队列统计和指定打点位置测量，避免把某一驱动的阈值当成通用低延迟设置。\n\n## 参考\n\n- [Intel ice 驱动性能优化与中断合并](https://docs.kernel.org/networking/device_drivers/ethernet/intel/ice.html)\n- [ethtool(8) 官方手册](https://man7.org/linux/man-pages/man8/ethtool.8.html)\n- [Intel I350 Ethernet Controller 数据手册](https://cdrdv2-public.intel.com/333171/ethernet-controller-i350-datasheet.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

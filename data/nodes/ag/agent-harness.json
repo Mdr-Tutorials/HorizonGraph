@@ -1,0 +1,37 @@
+{
+  "id": "agent-harness",
+  "name": "Agent Harness",
+  "aliases": [
+    "智能体运行支撑层",
+    "智能体 Harness"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-execution-loop",
+      "context": "在可连续决策与调用工具的实现中，驱动模型、工具及反馈的迭代执行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-engineering",
+      "context": "构造每轮模型输入时选择指令、会话内容和工具反馈。"
+    }
+  ],
+  "summary": "围绕模型组织工具、上下文、状态与执行控制的支撑层。",
+  "description": "Agent harness 是包围模型的执行支撑层，把提示构造、工具注册、结果回填、会话管理和停止条件组织起来。模型承担生成或决策，支撑层负责调用顺序与环境交互；同一模型可被用于不同的 harness，运行行为由模型与外围实现共同决定。\n\n具体实现可提供文件工具、上下文压缩、子代理、生命周期钩子和权限检查。Antigravity SDK 的本地运行层与 LangChain 的预构建智能体都是相关实现例子，但支持的组件、状态格式与部署方式各不相同，不能从名称推导所有实现都具备同一能力。\n\n设计支撑层需要明确哪些操作可自动执行、哪些信息进入下一轮上下文、失败后如何结束或恢复，以及调用者能观察到什么。提供工具接口不等于允许任意动作；上下文独立、运行时生命周期和操作系统隔离也需要分别描述。\n\n## 参考\n\n- [Google Antigravity SDK overview](https://www.antigravity.google/docs/sdk/overview)\n- [LangChain overview](https://docs.langchain.com/oss/python/langchain/overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,43 @@
+{
+  "id": "coding-assistant",
+  "name": "Coding Assistant",
+  "aliases": [
+    "编程助手",
+    "代码助手"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-assisted-software-engineering",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-engineering",
+      "context": "为解释和建议选择当前文件、相关符号与项目约定等输入上下文。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-completion",
+      "context": "以补全入口提供光标处或行内代码建议；能力依具体集成启用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ai-assisted-code-editing",
+      "context": "用户要求改写选区或相关文件时采用模型驱动的编辑建议。"
+    }
+  ],
+  "summary": "通过补全、解释和编辑建议辅助开发者编程。",
+  "description": "编程助手把模型能力接入源码编写、理解与修改过程，常见入口包括光标处补全、针对选区的对话、代码解释和编辑建议。它是交互角色与能力组合，同一产品可以同时提供助手和编码代理模式；产品是否称作助手并不能说明其全部执行权限。\n\n开发者可以逐条采纳建议，也可以要求助手根据相关文件、接口约定和诊断信息修改局部代码。当前文件、引用文件与历史对话属于输入上下文，代码补全和 AI 编辑属于具体工作方式；助手不必索引整仓，也不必自行运行命令。\n\n建议的可用性取决于语言、项目上下文和工具接入情况。生成内容仍需符合实际接口与行为约定；代码通过编译或看起来合理不能替代测试和审查。涉及多个文件、工具调用及连续纠错的任务，可由同一产品中的编码代理执行循环承接。\n\n## 参考\n\n- [GitHub：IDE 中的补全、编辑建议与代理能力](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides)\n- [VS Code：AI 辅助开发与代理工作方式](https://code.visualstudio.com/docs/agents/overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -5,7 +5,8 @@
   "type": "framework",
   "ecosystems": [
     "graphics_gaming",
-    "web_frontend"
+    "web_frontend",
+    "game-runtime-ecosystem"
   ],
   "domains": [
     "game-development",
@@ -20,12 +21,38 @@
     {
       "relation_type": "depends_on",
       "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-engine"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-scene"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-loop"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "input-handling"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "asset-loading"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "spine-runtimes",
+      "context": "可通过 Esoteric Software 官方提供的对应引擎适配运行时加载与播放 Spine 动画；属于可选集成，不表示引擎默认安装或要求 Spine。"
     }
   ],
-  "summary": "最流行的 HTML5 2D 游戏框架，浏览器即平台。",
+  "summary": "通过场景、加载器与更新循环组织浏览器二维游戏的框架。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 2,
-  "official_site": "https://phaser.io"
+  "official_site": "https://phaser.io",
+  "description": "Phaser 以 Scene 组织浏览器二维游戏的运行状态。场景拥有显示列表、相机、输入、加载器和更新处理：preload 将资源加入加载队列，加载完成后 create 建立对象，运行期间 update(time, delta) 更新玩法。场景管理器还支持暂停、休眠、停止和重启，使菜单、关卡和界面可以分别管理生命周期。\n\n物理系统需要按项目配置启用。Arcade Physics 面向矩形和圆形等轻量碰撞，Matter JS 提供更复杂的形状、约束和关节；两套物理系统中的物体不会互相碰撞。Phaser 3 提供 Canvas 与 WebGL 渲染；Phaser 4 仍保留 Canvas，但官方已将其视为弃用路径，新增渲染能力主要面向 WebGL。物理、场景更新与绘制承担不同职责，不能把一次渲染等同于一次完整物理模拟。\n\nPhaser 3 起采用为自身需求编写的渲染器；早期版本采用 Pixi 的历史不构成现代 Phaser 对 PixiJS 的普遍依赖。平台表现、资源加载完成时机和插件能力应按所用版本与配置确认，框架提供运行机制，具体玩法和资源释放策略仍由项目组织。\n\n在需要 Spine 骨骼动画的项目中，可选择 Esoteric Software 提供的 Phaser 官方运行时适配来加载和播放导出动画；这属于可选接入路径，不能作为 Phaser 的默认或硬依赖。\n\n## 参考\n\n- [Phaser：Scenes](https://docs.phaser.io/phaser/concepts/scenes)\n- [Phaser：Physics](https://docs.phaser.io/phaser/concepts/physics)\n- [Phaser：Scene API](https://docs.phaser.io/api-documentation/class/scene)\n- [Phaser Dev Log 158：Farewell Pixi](https://phaser.io/devlogs/158)\n- [Phaser：Phaser 4 Rendering Concepts](https://github.com/phaserjs/phaser/blob/master/docs/Phaser%204%20Rendering%20Concepts/Phaser%204%20Rendering%20Concepts.md)\n- [Esoteric Software：Official Spine Runtimes](https://en.esotericsoftware.com/spine-runtimes)"
 }

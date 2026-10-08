@@ -1,0 +1,52 @@
+{
+  "id": "maya",
+  "name": "Autodesk Maya",
+  "aliases": [
+    "Maya",
+    "玛雅"
+  ],
+  "type": "product",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "autodesk"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "polygon-modeling"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "rigging"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fbx",
+      "context": "通过支持的导入导出流程交换模型、骨架和动画资产。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openusd",
+      "context": "在 Maya 的 OpenUSD 场景工作流中组织和交换场景描述。"
+    }
+  ],
+  "summary": "用于三维建模、角色绑定、动画和特效的制作软件。",
+  "description": "Maya 是 Autodesk 的三维内容制作软件，提供多边形及其他建模方式、角色绑定、动画、材质与特效制作能力。它在内容制作阶段组织模型和控制系统，输出供其他制作环节或实时应用使用的资产。\n\n交换需要选择适合目标的格式与导出选项。FBX 可以参与模型与动画交换，OpenUSD 工作流则面向场景描述及协作；制作工具的约束、材质网络和插件效果可能需要转换或烘焙，不能仅凭文件后缀推断效果完整保留。\n\n## 参考\n\n- [Maya 官方产品说明](https://www.autodesk.com/products/maya/overview.htm)\n- [Maya 建模、绑定与管线功能](https://www.autodesk.com/uk/products/maya/features.3d-modeling)\n- [Autodesk FBX SDK](https://forge.autodesk.com/developer/overview/fbx-sdk)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.autodesk.com/products/maya/overview.htm"
+}

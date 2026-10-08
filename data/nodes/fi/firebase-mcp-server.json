@@ -1,0 +1,45 @@
+{
+  "id": "firebase-mcp-server",
+  "name": "Firebase MCP server",
+  "aliases": [
+    "Firebase MCP",
+    "Firebase MCP 服务器"
+  ],
+  "type": "tool",
+  "domains": [
+    "agent-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mcp",
+      "context": "通过 MCP 向编码客户端提供 Firebase 提示和工具，部分工具再代理云端服务请求。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "firebase-cli",
+      "context": "官方 firebase-tools 发行物提供 mcp 子命令；此节点限定该服务器组件而非全部 CLI 功能。"
+    }
+  ],
+  "summary": "将 Firebase 项目工具与提示提供给代理的本地 MCP 服务器。",
+  "description": "Firebase MCP server 是 Firebase 官方为 AI 开发工具提供的 MCP 服务器，随 Firebase Command Line Tools 分发，通过 firebase-tools mcp 命令运行。它把项目管理和具体服务操作提供给支持 MCP 的客户端；服务器工件与 MCP 协议不同，也不等于 Firebase Studio 内置的原型代理。\n\n服务器提供预写提示和供代理调用的工具，可以按项目目录与功能组配置。进程在本地运行，但部分工具会向远端 MCP 服务器或 Firebase 后端代理请求，因此本地进程不代表数据操作都发生在离线环境。工具可发现、可调用与实际拥有云资源权限是不同问题，执行仍受已配置身份、项目和后端权限约束。\n\n官方为多种编码环境提供配置以及结合技能的插件方式，但这些宿主集成不会改变服务器的核心身份。Firebase Studio 退出不等于 Firebase MCP server 退出；后者作为 firebase-tools 的组件仍可在其他环境接入。对工具能力应查看当前服务器清单和所启用功能，不能把一个预写提示或插件目录当作已经部署的云端资源。\n\n## 参考\n\n- [Firebase：MCP server 架构、配置与工具](https://firebase.google.com/docs/ai-assistance/mcp-server)\n- [Firebase：分发 MCP 组件的官方命令行代码](https://github.com/firebase/firebase-tools)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://firebase.google.com/docs/ai-assistance/mcp-server"
+}

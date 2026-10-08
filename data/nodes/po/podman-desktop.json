@@ -1,0 +1,45 @@
+{
+  "id": "podman-desktop",
+  "name": "Podman Desktop",
+  "aliases": [
+    "Podman 桌面工具"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "containerization"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "podman",
+      "context": "连接 Podman 引擎或 Podman machine，管理容器、镜像与 Pod。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker-compose",
+      "context": "在配置 Compose 参考实现的工作流中，用该实现解析配置并通过兼容连接管理 Podman 容器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kubernetes",
+      "context": "选择 Kubernetes 工作流时连接集群，管理上下文并部署容器或 Pod。"
+    }
+  ],
+  "summary": "可视化管理容器、Pod 和 Kubernetes 的跨平台桌面工具。",
+  "description": "Podman Desktop 是可在 Windows、macOS 和 Linux 使用的开源桌面工具，提供容器、镜像、注册表、Pod 和 Kubernetes 的可视化工作流。它与 Podman 引擎分别建模：桌面工具负责连接与管理资源，实际容器执行由选定引擎和宿主承担。\n\n在需要 Linux VM 的平台可创建 Podman machine，并管理其连接。扩展机制支持额外后端与本地集群工作流；Compose 需要配置实际的 Compose 实现，桌面工具可以安装参考实现，并让 podman compose 检测调用。它不因显示 Compose 文件就成为新的 Compose 规范。\n\nLinux 本机引擎与 macOS、Windows 的 machine 路径具有不同文件、网络与权限边界。Docker 兼容连接需要正确的 socket、context 和环境变量，不能等同所有 Docker 行为完全兼容。可视化工作流降低管理成本，但不会取代引擎的资源隔离与权限配置。\n\n## 参考\n\n- [Podman Desktop：引擎和 Kubernetes 工作流](https://podman-desktop.io/docs/intro)\n- [Podman Desktop：支持 Windows、macOS 与 Linux](https://podman-desktop.io/docs/installation)\n- [Podman Desktop：Compose 实现配置](https://podman-desktop.io/docs/compose/setting-up-compose)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://podman-desktop.io/"
+}

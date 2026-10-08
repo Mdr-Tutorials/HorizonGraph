@@ -1,0 +1,48 @@
+{
+  "id": "post-processing",
+  "name": "Post-processing",
+  "aliases": [
+    "后处理",
+    "图像后处理渲染"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "render-target",
+      "context": "在连续效果步骤中保存中间图像，使后一通道读取前一通道的结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fragment-shader",
+      "context": "采用全屏绘制路径时在片元阶段按输入图像计算输出效果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture-sampling",
+      "context": "读取场景图像或辅助纹理并执行效果所需采样。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "color-management",
+      "context": "安排工作颜色空间、色调映射和最终输出转换，避免重复或遗漏转换。"
+    }
+  ],
+  "summary": "对已渲染图像及辅助缓冲执行后续效果。",
+  "description": "后处理把场景绘制得到的图像及可选深度等辅助数据作为输入，执行色调映射、模糊、辉光或屏幕空间效果等后续计算。常见图形路径用全屏图元的片元着色器读取输入纹理，再写入另一个目标；具体效果也可采用支持的计算着色路径。\n\n多步效果需要组织输入输出和执行顺序。Three.js 的 EffectComposer 示例在渲染目标之间组织各个 pass；一般应避免直接对不支持反馈的同一图像同时读写。颜色转换和色调映射放在什么位置会影响结果，重复转换可能使图像过亮或偏色。\n\n后处理通常增加图像访问和绘制成本，并受目标分辨率、采样数和精度影响。屏幕空间方法只知道已有输入信息，不等于完整场景模拟；二维滤镜与三维后处理可以共享图像机制，但框架的具体通道接口和后端能力需分别确认。\n\n## 参考\n\n- [Three.js Post Processing](https://threejs.org/manual/pages/post-processing.html)\n- [Three.js Color Management](https://threejs.org/manual/pages/color-management.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

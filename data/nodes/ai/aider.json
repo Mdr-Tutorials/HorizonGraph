@@ -1,0 +1,43 @@
+{
+  "id": "aider",
+  "name": "aider",
+  "aliases": [
+    "Aider"
+  ],
+  "type": "tool",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "terminal-coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-engineering",
+      "context": "构建 repository map，并按源码引用关系和当前任务选择可放入 token 预算的关键定义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "启用 Git 集成时记录代码差异、提交和撤销操作；--no-git 等选项允许关闭该路径。"
+    }
+  ],
+  "summary": "以仓库映射、模型编辑和 Git 集成开展终端结对编程。",
+  "description": "aider 是在终端与大语言模型协作修改代码的开源工具。用户指定需求和需要编辑的文件，工具把源码及相关上下文交给模型，接收并应用修改，再展示差异和结果。它面向已有仓库的结对编程流程，可接入不同模型提供方；不是一种独立大模型，也不要求每次任务都由无人值守代理完成。\n\n其 repository map 提取代码中的重要符号及定义信息，并根据文件引用图的相关性在 token 预算内选择内容。这个映射帮助模型定位项目接口和可能需要进一步读取的文件，不意味着把完整代码库永久装入上下文。Git 集成能记录修改、组织提交并撤销变更；自动提交和整个 Git 集成都有禁用选项，因此 Git 是常用工作机制而不是所有模式下不可移除的硬依赖。\n\naider 可以在编辑后调用内置或指定的 linter，也可按用户配置运行测试命令，使用错误输出继续修复。测试自动执行需要相应配置，不能把存在测试入口写成每次修改都通过了测试。工具适合围绕可检查的差异逐步实现功能、重构和修复；仓库映射、命令结果及提交历史分别提供上下文、验证反馈和版本记录。\n\n## 参考\n\n- [aider：Repository map 与相关性预算](https://aider.chat/docs/repomap.html)\n- [aider：Git 集成与禁用选项](https://aider.chat/docs/git.html)\n- [aider：Linting and testing](https://aider.chat/docs/usage/lint-test.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://aider.chat/"
+}

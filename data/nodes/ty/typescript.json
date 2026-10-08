@@ -12,7 +12,8 @@
   ],
   "domains": [
     "programming-languages",
-    "web-development"
+    "web-development",
+    "api-engineering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -31,13 +32,18 @@
     {
       "relation_type": "developed_by",
       "target_id": "anders-hejlsberg"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "type-inference"
     }
   ],
   "summary": "给 JavaScript 加上静态类型的超集，编译回 JS 运行。",
   "importance": 5,
   "popular": 85,
   "official_site": "https://www.typescriptlang.org",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "TypeScript 在 JavaScript 语法与运行行为基础上增加静态类型系统，提供类型注解、推断、泛型和结构兼容检查。编译器可以检查程序并将支持的语法转换为 JavaScript；编辑器利用同一类型信息提供补全和诊断。目标运行环境仍执行 JavaScript，平台可执行的语言特性与标准库能力需要与构建目标和运行时匹配。\n\n网络接口可以通过共享路由类型、验证模式或 OpenAPI 生成的声明，连接服务端与客户端的静态检查。类型注解在输出中被擦除，类型断言也不会主动检查外部对象是否符合接口；运行时解析需要验证库或显式代码。严格检查选项可以加强空值和隐式 any 等约束，但静态类型仍不负责执行授权、验证部署版本或证明业务副作用正确。\n\n## 参考\n\n- [TypeScript：静态检查与类型擦除](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)\n- [TypeScript：类型推断](https://www.typescriptlang.org/docs/handbook/type-inference.html)\n- [TypeScript：结构类型兼容](https://www.typescriptlang.org/docs/handbook/type-compatibility.html)"
 }

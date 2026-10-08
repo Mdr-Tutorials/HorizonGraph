@@ -1,0 +1,46 @@
+{
+  "id": "computer-use-agent",
+  "name": "Computer-use Agent",
+  "aliases": [
+    "计算机操作智能体",
+    "GUI Agent",
+    "Computer Use Agent",
+    "桌面操作智能体"
+  ],
+  "type": "concept",
+  "domains": [
+    "machine-learning",
+    "human-computer-interaction",
+    "browser-automation"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "screen-coordinate-action",
+      "context": "采用视觉操作路径时，将观察中的目标位置转换为当前界面坐标输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "accessibility-based-automation",
+      "context": "在环境公开结构化可访问性信息且支持相关动作时，通过角色和名称定位界面目标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-screenshot",
+      "context": "执行浏览器任务时，可将当前页面像素图作为视觉观察输入。"
+    }
+  ],
+  "summary": "通过界面观察与输入动作完成计算机任务的智能体。",
+  "description": "计算机操作智能体把用户目标转换为图形界面的操作循环：观察当前状态、选择动作、执行输入，再依据新观察调整后续步骤。界面可以来自桌面应用或浏览器，观察可以包括截图和可访问性结构；它与仅调用业务 API 的智能体在动作空间、状态可见性和错误恢复上有所不同。\n\n像 OSWorld 这样的执行环境允许智能体在真实应用状态中完成跨应用任务，常见动作包括坐标点击、键盘输入和滚动。浏览器场景还可采用结构化元素语义。Antigravity IDE 官方公开了浏览器子智能体、页面观察和操作记录能力，但这些描述不能证明其内部采用某个特定自动化协议或库。\n\n界面变化、窗口焦点、登录状态和输入延迟都会影响操作结果，因此智能体需要在关键动作后重新观察。任务完成应以明确的最终状态或判定规则确认，不能由自然语言宣称、单张截图或工具调用成功替代。完整桌面环境的隔离和重置也比浏览器上下文隔离覆盖更广。\n\n## 参考\n\n- [OSWorld原论文：真实计算机环境中的多模态智能体](https://arxiv.org/abs/2404.07972)\n- [OSWorld：官方执行环境](https://github.com/xlang-ai/OSWorld)\n- [Antigravity IDE：Browser](https://antigravity.google/docs/ide/browser)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

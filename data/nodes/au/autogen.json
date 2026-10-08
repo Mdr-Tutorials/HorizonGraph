@@ -2,17 +2,19 @@
   "id": "autogen",
   "name": "AutoGen",
   "display_primary": "AutoGen",
-  "display_secondary": "微软多 Agent 对话式协作框架",
+  "display_secondary": "事件运行层与多智能体团队框架",
   "aliases": [
     "Microsoft AutoGen"
   ],
   "type": "framework",
   "ecosystems": [
     "llm-agent-ecosystem",
-    "python-ecosystem"
+    "python-ecosystem",
+    "dotnet-ecosystem"
   ],
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "agent-development"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -30,17 +32,35 @@
     },
     {
       "relation_type": "depends_on",
-      "target_id": "python"
+      "target_id": "python",
+      "context": "本依赖仅限定 Python 的 autogen-core、autogen-agentchat 等软件包，运行这些包需要 Python；不涵盖 .NET Core 实现。"
     },
     {
       "relation_type": "implements",
       "target_id": "ai-agent",
       "context": "提供构建基于大模型的智能体及工具协作流程的能力。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "multi-agent-systems",
+      "context": "AgentChat 的团队与代理组件组织多个参与代理交换信息并协作执行。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-as-tool",
+      "context": "AgentTool 将专门代理包装为协调代理可调用并取得结果的工具。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-event-stream",
+      "context": "AgentChat 的 run_stream 等接口向调用者传递逐步执行消息与结果。"
     }
   ],
-  "summary": "微软开源的多智能体协同框架，通过可对话 Agent 的自主交互解决复杂多步任务。",
+  "summary": "以事件运行层和团队接口组织多智能体协作的开源框架。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 4
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "AutoGen 是微软发起的多智能体应用框架，采用分层设计。Core 提供消息传递、事件驱动代理及本地或分布式运行时，AgentChat 在其上提供代理与团队协作接口，Extensions 承载模型客户端和执行工具等扩展；Core 也包含 Python 与 .NET 的跨语言能力。\n\nAgentChat 可以组织多个代理完成任务，模型客户端、工具与停止条件需要应用明确配置。官方示例把专门代理包装为 AgentTool，由协调者调用并读取结果；run_stream 可向调用者传递运行过程，这些功能不要求把所有可选模型供应商或执行扩展都启用。\n\n截至本节点复核时，官方仓库将 AutoGen 标注为维护模式，由社区管理并不再新增功能，建议新项目考虑 Microsoft Agent Framework，现有系统可依据迁移指南评估调整。两个项目仍具有不同身份和接口，迁移不是自动替换模型、团队与持久状态。\n\n## 参考\n\n- [AutoGen official repository](https://github.com/microsoft/autogen)\n- [AutoGen AgentChat user guide](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/index.html)\n- [Microsoft Agent Framework official repository](https://github.com/microsoft/agent-framework)",
+  "official_site": "https://github.com/microsoft/autogen"
 }

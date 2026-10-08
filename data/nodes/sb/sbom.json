@@ -8,27 +8,44 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "cybersecurity-ecosystem"
+    "cybersecurity-ecosystem",
+    "software-supply-chain-ecosystem"
   ],
   "domains": [
     "security",
-    "devops"
+    "devops",
+    "software-supply-chain"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "software-supply-chain-concept"
     },
     {
       "relation_type": "uses",
       "target_id": "cve",
       "context": "组件与版本识别后可关联 CVE 和厂商公告调查已知漏洞，仍需确认实际受影响范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "spdx",
+      "context": "以支持的 SPDX 版本交换组件、内容和关系信息，需与生产者及消费方实现能力匹配。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyclonedx",
+      "context": "采用 CycloneDX 表达组件、服务、依赖与清单覆盖信息，用于后续供应链分析。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "artifact-attestation",
+      "context": "需要认证清单对应的工件和声明者时，可将 SBOM 作为工件声明材料签署交付；不因此保证清单完整。"
     }
   ],
-  "summary": "记录软件组成和依赖，支撑供应链追踪与漏洞比对。",
+  "summary": "记录工件的组件与依赖，供供应链追踪和漏洞比对。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-10-01",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "description": "## 机制\n\nSBOM 以结构化形式列出组件、版本和关系，帮助接收方了解某个工件的组成。SPDX 等格式支持交换和后续分析，可与漏洞公告及其他证据组合。\n\n## 边界与应用\n\n清单不自动完整、准确或实时，需明确生成时间和覆盖边界。组件匹配 CVE 不代表必然可利用，实际版本、配置与可达性还需确认；SBOM 也不是安全认证。\n\n## 参考\n\n- [SPDX：SBOM 与安全应用](https://spdx.dev/learn/areas-of-interest/security/)"
+  "description": "SBOM 是关于某个软件产品或工件的结构化组件与依赖清单，帮助接收方了解其组成、版本、标识和关系。它可以从源码声明、构建过程或最终二进制中产生，不同生成阶段观察到的信息和覆盖范围会不同。容器镜像可以作为所述工件，但 SBOM 不是专属于容器的能力；构建来源证明描述生产过程，SBOM 主要描述组成，二者不能相互替代。\n\nSPDX 与 CycloneDX 提供可交换的表示，Syft 和 Trivy 等工具能在支持范围内发现组件或生成清单。清单应明确所述对象、生成工具、时间、关系和已知未知范围；包管理器元数据、文件排除和分析器配置都会影响组件识别。将清单绑定到工件摘要并以声明或签名交付，可以让消费者验证对应对象及声明者，但不会自动补全遗漏组件。\n\n漏洞扫描器能够复用 SBOM 与更新后的公告数据库匹配，不必每次重新发现同一工件中的组件。CVE 关联仍需确认实际版本、厂商回移修复、配置和可达性；没有匹配记录也不表示软件没有漏洞。清单格式合规、内容完整性、发布者授权、来源事实可信性与软件安全性属于不同判断，持有一份 SBOM 并不是安全认证。\n\n## 参考\n\n- [SPDX：SBOM 与安全应用](https://spdx.dev/learn/areas-of-interest/security/)\n- [CycloneDX：官方 SBOM 指南与覆盖范围](https://cyclonedx.org/guides/sbom/relationships/)\n- [Syft：SBOM 生成与组件识别](https://oss.anchore.com/docs/guides/sbom/)"
 }

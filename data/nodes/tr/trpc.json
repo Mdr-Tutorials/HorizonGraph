@@ -1,0 +1,47 @@
+{
+  "id": "trpc",
+  "name": "tRPC",
+  "aliases": [
+    "TypeScript RPC"
+  ],
+  "type": "framework",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "remote-procedure-call"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "type-safe-api"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "从 router、procedure 的输入解析器和返回值推导客户端调用类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-schema",
+      "context": "在传入兼容模式时调用标准校验接口，并获取输入输出类型。"
+    }
+  ],
+  "summary": "由服务端过程定义推导 TypeScript 客户端的 RPC 框架。",
+  "description": "tRPC 是面向 TypeScript 应用的 RPC 框架，服务端定义 router 与 procedure，客户端通过导入服务端路由的类型获得输入、返回值和错误形状的检查。它以 TypeScript 类型推断连接调用双方，基本流程不需要先编写独立 IDL 或执行客户端代码生成。这里的 tRPC 是具体框架，不能与通用 RPC 概念、JSON-RPC 规范或 gRPC 混作同一身份。\n\n过程可以通过 input 与 output 声明运行时校验，支持 Standard Schema 以及官方兼容的其他校验接口；Zod 是常见选择，而非所有程序的硬依赖。返回类型推导与实际输出校验是不同机制，output 校验需要明确配置。传输适配器、认证中间件、订阅和数据转换器按应用需求选择，完整类型信息不能替代运行时业务权限或跨版本消费者兼容性检查。\n\n## 参考\n\n- [tRPC：端到端类型化 API](https://trpc.io/docs)\n- [tRPC：输入与输出校验](https://trpc.io/docs/server/validators)\n- [tRPC：适配器与部署边界](https://trpc.io/docs/server/adapters)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://trpc.io"
+}

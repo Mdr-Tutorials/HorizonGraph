@@ -1,0 +1,40 @@
+{
+  "id": "user-namespace",
+  "name": "Linux User Namespace",
+  "aliases": [
+    "用户命名空间",
+    "user namespace",
+    "userns"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "namespace"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux-capabilities",
+      "context": "创建及管理命名空间资源时，将权能检查限定到所属 user namespace，而非授予宿主全局 root 权限。"
+    }
+  ],
+  "summary": "映射 Linux 用户身份，并限定命名空间内的特权范围。",
+  "description": "User namespace 隔离 Linux 的用户、组标识及相关安全属性，使同一进程在内外具有不同的 UID/GID 表示。通过 uid_map 与 gid_map 等接口定义映射后，内部 UID 0 可以对应外部普通身份；命名空间内部的 root 因此不等于宿主初始 user namespace 的 root。它支持嵌套，权限还需要结合进程所在位置和具体映射判断。\n\n创建者可在新 user namespace 中取得相应 capabilities，其他命名空间的特权操作通常按其所属 user namespace 检查。身份映射的写入受到内核规则限制，多身份映射常由 newuidmap、newgidmap 和从属 ID 配置配合完成。即使在内部拥有 CAP_SYS_ADMIN，也不自动允许操作所有宿主资源，某些未命名空间化的操作仍要求初始命名空间的权限。\n\n它是 Linux rootless 容器的重要组成，但是否允许普通用户创建及其可用能力受内核配置和系统政策影响。User namespace 不复制内核，也不自动创建完整的网络、挂载或 PID 隔离；绑定的共享目录和可用系统调用仍应单独审查。容器中的用户名、文件所有权与宿主看到的数字 ID 可能不同，文件权限问题应沿映射和实际挂载定位。\n\n## 参考\n\n- [Linux：user namespace、映射与权限作用域](https://man7.org/linux/man-pages/man7/user_namespaces.7.html)\n- [Docker：rootless 与身份映射](https://docs.docker.com/engine/security/rootless/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

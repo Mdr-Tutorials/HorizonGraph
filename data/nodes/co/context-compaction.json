@@ -1,0 +1,27 @@
+{
+  "id": "context-compaction",
+  "name": "Context Compaction",
+  "aliases": [
+    "上下文压缩",
+    "会话上下文压缩"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "通过摘要、筛选或整理减少后续模型输入的上下文体积。",
+  "description": "上下文压缩整理累积的消息、工具输出和任务记录，使后续模型调用在有限窗口内继续执行。常见做法是摘要较早历史并保留近期细节，也可移除重复或不再需要的内容；压缩所针对的是模型可见上下文，不要求删除原始存储记录。\n\nADK 支持按历史轮次或 token 条件触发压缩，Antigravity SDK 的示例通过 CompactionConfig 配置 token 阈值。阈值是某次运行的策略配置，应结合实际模型、输出预留与工具体积选择，不能把示例数字当成通用上下文上限。\n\n摘要可能遗漏细节，压缩不保证无损，也不等于把经验写入长期记忆。任务目标、未完成步骤、关键证据、权限约束和恢复所需引用应被有意识地保留；压缩后的输入还需要检验是否足以支持下一步判断。\n\n## 参考\n\n- [ADK context compaction](https://adk.dev/context/compaction/)\n- [Antigravity SDK compaction example](https://github.com/google-antigravity/antigravity-sdk-python/blob/main/examples/getting_started/compaction.py)\n- [Anthropic: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

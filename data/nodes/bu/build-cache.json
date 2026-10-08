@@ -1,0 +1,39 @@
+{
+  "id": "build-cache",
+  "name": "Build Cache",
+  "aliases": [
+    "构建缓存",
+    "镜像构建缓存",
+    "Build Cache"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "caching",
+      "context": "镜像构建按构建输入和依赖匹配已有结果，实际采用缓存命中、失效与复用机制。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "image-layer",
+      "context": "镜像构建缓存可复用此前步骤产生的文件系统层，但缓存还可能包含中间结果和元数据，不限定所有缓存均为镜像层。"
+    }
+  ],
+  "summary": "按构建输入和依赖复用镜像构建的中间结果",
+  "description": "## 机制与边界\n\n构建缓存保存已执行构建步骤的结果，使相同输入和依赖可以复用中间产物，减少重复下载、安装与编译。在镜像构建中，这些结果可能包含文件系统层及构建元数据；缓存概念的范围更广，不能把所有构建缓存都等同于最终镜像已发布的层。缓存命中要遵循具体构建器的输入与依赖匹配规则。\n\nDocker 构建会比较指令及相关输入；COPY、ADD 等步骤还会检查所涉及文件的变化。一个步骤失效后，依赖它的后续步骤通常需要重建，因此将变化少的依赖安装放在经常变化的源代码之前，有利于复用。RUN 缓存不会自动检查远程包仓库是否更新，改变构建 secret 的内容也不必然触发失效，所需的刷新条件应显式设计。\n\n缓存可以留在本机构建器，也可以按后端能力导出到本地目录、注册表等位置，再由后续构建导入；这对工作环境短暂的持续集成任务尤其有用。外部缓存需要配置导入、导出与写入范围，避免不同任务覆盖同一位置。选择导出多少中间结果时，应平衡命中率、传输体积和保存成本，缓存复用也不替代对构建输入可复现性的管理。\n\n## 参考\n\n- [Docker：Build Cache](https://docs.docker.com/build/cache/)\n- [Docker：缓存失效规则](https://docs.docker.com/build/cache/invalidation/)\n- [Docker：外部缓存存储后端](https://docs.docker.com/build/cache/backends/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

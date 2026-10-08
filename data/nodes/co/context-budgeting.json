@@ -1,0 +1,37 @@
+{
+  "id": "context-budgeting",
+  "name": "Context Budgeting",
+  "aliases": [
+    "上下文预算",
+    "上下文空间分配"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-window",
+      "context": "构造模型请求时依据所选模型的输入窗口与输出限制安排 token 空间。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-compaction",
+      "context": "历史占用达到设定预算时，压缩较早记录以保留继续执行所需空间。"
+    }
+  ],
+  "summary": "按模型输入限制为指令、历史、资料和工具结果分配空间。",
+  "description": "上下文预算是在构造模型调用前，对指令、工具定义、历史、检索资料及工具结果分配可用输入空间。应用需依据所选模型的输入与输出限制和实际 token 计数来估算容量；图片、音频或文件的计费与计数方式也应按接口规则处理。\n\n预算可以采用预留输出、限制工具结果长度、按相关性选取资料、保留最近消息以及触发压缩等方法。不同信息的重要性不同，例如系统约束和未完成任务的状态应有明确保留策略，不能只按最早到最晚机械截断。\n\n窗口容量描述可接收的规模，并不保证信息越多推理越好。预算还需要考虑响应时延、成本和内容干扰；为当前调用减少输入，与持久记录保留多久是不同决策，可以把完整原文保存后按需重新读取。\n\n## 参考\n\n- [Gemini API token counting](https://ai.google.dev/gemini-api/docs/tokens)\n- [Anthropic: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)\n- [ADK context compaction](https://adk.dev/context/compaction/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

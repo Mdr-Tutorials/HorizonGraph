@@ -1,0 +1,50 @@
+{
+  "id": "fetch-request",
+  "name": "Request",
+  "aliases": [
+    "Fetch请求对象",
+    "Request API"
+  ],
+  "type": "protocol",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-headers",
+      "context": "Request.headers 提供 Headers 容器，以读取和在允许的 guard 下修改请求首部。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "web-streams-api",
+      "context": "Request 包含非空正文时，以 ReadableStream 暴露可逐块读取的正文内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "abort-signal",
+      "context": "Request.signal 暴露请求所跟随的取消信号，采用它的获取流程可以观察取消状态。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-method",
+      "context": "当 Request 用于 HTTP 获取或处理时，method 表达所选 HTTP 请求方法，并受 Fetch 方法校验约束。"
+    }
+  ],
+  "summary": "封装获取地址、方法、首部、正文和取消信号的标准请求接口。",
+  "description": "Request 是 Fetch 标准的请求对象，承载 URL、方法、Headers、正文和 signal 等信息。构造它只建立接口对象；实际发送由 fetch 或接收它的运行时处理流程触发。\n\n非空正文以可读流呈现，也可从字符串、Blob、FormData 等输入提取。正文整体读取会消费流；已锁定或扰动的正文不能任意再次读取或克隆。规范还限制 GET、HEAD 请求的正文，而流式上传支持需核对实际环境。\n\nRequest 不等同线上 HTTP 报文，其 Headers 也未必包含运行时在网络层补充的全部字段。服务端处理器可以接收由适配层创建的 Request，同一对象模型因而可连接客户端获取与服务端处理，但不消除运行时的行为差异。\n\n## 参考\n\n- [WHATWG Fetch：Request接口](https://fetch.spec.whatwg.org/#request-class)\n- [WHATWG Fetch：正文接口](https://fetch.spec.whatwg.org/#body-mixin)\n- [Deno：Fetch实现范围](https://docs.deno.com/runtime/reference/web_platform_apis/#spec-deviations)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://fetch.spec.whatwg.org/#request-class"
+}

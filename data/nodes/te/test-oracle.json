@@ -1,0 +1,30 @@
+{
+  "id": "test-oracle",
+  "name": "Test Oracle",
+  "aliases": [
+    "测试判定器",
+    "测试预言机"
+  ],
+  "type": "concept",
+  "domains": [
+    "devops",
+    "formal-methods",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "static-analysis-testing-ecosystem",
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    }
+  ],
+  "summary": "判断被测行为是否满足预期的规则、依据或机制。",
+  "description": "测试判定器负责判断一次测试活动的观察结果是否符合预期，是通用软件测试概念。测试输入与执行步骤决定做什么，判定器决定什么算可接受；两者不同。依据可以来自规格、预期输出、断言、独立实现或人的判断。\n\n许多程序难以获得覆盖所有输入的准确答案，因而存在测试判定问题。判定器可能只覆盖部分性质，或者以概率和近似证据作判断。原研究区分来自明确规格、派生信息和隐含故障特征的判定依据，不把全部判定器都限定为简单字符串比较。\n\n代码生成基准使用测试套件作为可执行判定依据，但有限测试不是程序正确性的完整证明。判定器本身也会有误报、漏报或规格歧义，因此应说明其覆盖与限制，并复核新增用例是否符合合法输入和真实需求。测试通过与全部语义正确需要分开表达。\n\n## 参考\n\n- [测试判定问题：作者公开的原研究](https://philmcminn.com/publications/barr2015.pdf)\n- [HumanEval 官方数据与执行器](https://github.com/openai/human-eval)\n- [原研究：SWE-bench 测试通过与补丁正确性的差别](https://software-lab.org/publications/icse2026_SWE-bench-correctness.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

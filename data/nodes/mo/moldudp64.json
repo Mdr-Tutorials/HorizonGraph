@@ -1,0 +1,52 @@
+{
+  "id": "moldudp64",
+  "name": "MoldUDP64",
+  "aliases": [
+    "MoldUDP64 Protocol",
+    "Nasdaq UDP 行情封装"
+  ],
+  "type": "protocol",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "nasdaq",
+      "context": "Nasdaq 发布并维护用于相应行情分发的 MoldUDP64 技术规范。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "udp",
+      "context": "以 UDP 包承载实时消息及重传响应；组播和单播具有不同分发用途。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-sequence-number",
+      "context": "包头关联会话与首条消息序号，并以消息数量推进预期位置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data-gap-recovery",
+      "context": "接收端按会话和消息范围请求遗漏消息，重传结果仍须校验。"
+    }
+  ],
+  "summary": "以会话和消息序号封装 UDP 流并提供请求重传机制。",
+  "description": "MoldUDP64 在 UDP 数据包中承载上层消息流，包头包含会话、包内第一条消息的序号及消息数。多个消息可以装在一个包中，接收端要按消息边界推进预期序号；它与按每个包递增的序号体系不同。上层消息含义由 ITCH 等应用规范决定。\n\n实时流通常经组播发布，接收端发现缺口后可向重传服务请求指定会话和消息范围，响应通过单播返回。请求范围不保证一次全部装进一个 UDP 包，仍需检查返回数量及继续请求。心跳能在低流量时提示下一预期位置，结束标志则具有自己的控制含义。\n\n重传机制需要正确的会话、接收位置和可用服务器，UDP 本身仍可能丢失、重复或乱序。该封装不保证源永久保留历史，也不负责建立最初的完整订单簿。行情接入系统应结合服务提供的快照或起点处理状态，而不是把一次组播订阅当作获得全部历史。\n\n## 参考\n\n- [Nasdaq：MoldUDP64 规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/moldudp64.pdf)\n- [Nasdaq：TotalView-ITCH 5.0 规范（2026 更新）](https://assets.ctfassets.net/mx0rke14e5yt/5Uz6MGJxbo4wRPou8KveFs/4d76437c8e57694acee9d767587a8dfa/6-11-26_TVITCH_5.0_1.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/moldudp64.pdf"
+}

@@ -3,7 +3,7 @@
   "name": "SMB",
   "aliases": [
     "Server Message Block",
-    "Samba"
+    "服务器消息块"
   ],
   "type": "protocol",
   "ecosystems": [
@@ -11,7 +11,8 @@
     "tcp-ip-ecosystem"
   ],
   "domains": [
-    "networking"
+    "networking",
+    "systems-programming"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -20,9 +21,11 @@
       "target_id": "application-protocol"
     }
   ],
-  "summary": "Windows 局域网文件共享协议，Samba 让它跨平台。",
+  "summary": "协商会话并访问远端文件与共享资源的协议家族。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "Server Message Block（SMB）是访问远端文件、目录和共享资源的协议家族。Microsoft 的 SMB 2/3 规范组织会话、树连接与文件操作，客户端在协商支持的方言后访问服务器导出的共享。协议身份与运行在哪个操作系统或由哪个软件实现应分别描述，Samba 只是实现路线之一。\n\n认证、共享访问与文件权限共同决定哪些操作可用，缓存、锁、签名和加密也受方言、实现及策略影响。不能把所有 SMB 连接都写成相同版本或默认具备相同保护；客户端看见远端目录，也不意味着获得宿主所有文件的访问权。协议错误与服务配置、底层权限应分别检查。\n\nSMB 可用于 Windows 与 Linux 之间的网络文件共享，Samba 在类 Unix 平台提供相应服务。WSL 的 Plan 9 文件服务与 WSLc 的 virtiofs 共享并不是 SMB 的另一名称；它们采用不同接口和部署路径。跨虚拟机环境还需要配置可达路由与服务入口，不能因为目录共享协议存在就推断全部容器路径已经自动映射。\n\n## 参考\n\n- [Microsoft Open Specifications：MS-SMB2](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962)\n- [Samba：项目与实现身份](https://www.samba.org/)\n- [Samba：smbd 手册](https://www.samba.org/samba/docs/current/man-html/smbd.8.html)\n- [WSL：Drvfs & Plan9](https://wsl.dev/technical-documentation/drvfs/)\n- [Microsoft：WSLc Architecture Deep Dive](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)",
+  "official_site": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962"
 }

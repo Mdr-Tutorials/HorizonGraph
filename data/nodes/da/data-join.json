@@ -1,0 +1,35 @@
+{
+  "id": "data-join",
+  "name": "Data Join",
+  "aliases": [
+    "数据连接",
+    "D3 Data Join",
+    "Enter Update Exit",
+    "数据与图元绑定"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "D3 selection 将数据绑定到文档元素，并按匹配结果创建、更新或移除 HTML 等 DOM 元素。"
+    }
+  ],
+  "summary": "按数据身份同步新增、更新和移除可视化元素。",
+  "description": "数据连接把数据集合与现有图形元素建立对应关系，并划分新增（enter）、保留并更新（update）、移除（exit）三种情况。D3 的 selection.data 可以按索引或键函数匹配数据，selection.join 将新增、更新、删除与元素顺序调整组织为一次更新。这里的数据连接面向数据与界面元素的对应，不等同于数据库表连接。\n\n稳定的键让同一业务对象在排序、过滤和数值变化后继续关联原有元素，便于维持交互状态和动画连续性。键重复或使用易变索引会改变匹配结果，因此应明确对象身份、退出元素清理和重排策略。Canvas 应用也可在自有对象集合中维护类似映射，但 D3 selection API 直接操作的是 DOM 元素。\n\n## 参考\n\n- [D3 Joining Data](https://d3js.org/d3-selection/joining)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

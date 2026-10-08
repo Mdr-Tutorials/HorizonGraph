@@ -1,0 +1,27 @@
+{
+  "id": "parallel-agent-orchestration",
+  "name": "Parallel Agent Orchestration",
+  "aliases": [
+    "并行代理编排",
+    "并行智能体编排"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "并发启动独立代理分支，并显式汇集其结果。",
+  "description": "并行代理编排把相互独立或可分开的任务分支并发执行，再由汇总步骤处理各自结果。常见用途是查询不同来源、从多个角度审核同一内容或分别处理不同子问题；异步并发并不必然意味着操作系统多进程或多核计算。\n\nADK 的 ParallelAgent 并发运行子代理，Microsoft Agent Framework 提供 concurrent 编排。分支可能读取共同输入或共享上下文，但结果应按明确字段、命名空间或消息接口汇集；共享状态中同名字段的并发写入可能产生竞争。\n\n并发分支之间不能依赖未完成的结果；需要依赖时应拆成后续阶段。设计还要规定部分失败、超时、取消和预算分配，汇总者需要识别冲突与来源差异；并行执行本身不保证各分支结论一致或被自动正确合并。\n\n## 参考\n\n- [ADK ParallelAgent](https://adk.dev/agents/workflow-agents/parallel-agents/)\n- [Microsoft Agent Framework official repository](https://github.com/microsoft/agent-framework)\n- [ADK workflow patterns](https://adk.dev/workflows/patterns/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

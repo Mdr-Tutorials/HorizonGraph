@@ -8,10 +8,12 @@
   "type": "framework",
   "ecosystems": [
     "kubernetes-ecosystem",
-    "cloud_native"
+    "cloud_native",
+    "container-ecosystem"
   ],
   "domains": [
-    "cloud-infrastructure"
+    "cloud-infrastructure",
+    "containerization"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -25,27 +27,36 @@
     },
     {
       "relation_type": "runs_on",
-      "target_id": "linux"
-    },
-    {
-      "relation_type": "integrates_with",
-      "target_id": "containerd"
+      "target_id": "linux",
+      "context": "官方支持的 Kubernetes 控制平面运行在 Linux；工作节点另有 Linux 与受支持的 Windows Server 路径。"
     },
     {
       "relation_type": "developed_by",
       "target_id": "google"
     },
     {
-      "relation_type": "developed_by",
-      "target_id": "cncf"
+      "relation_type": "uses",
+      "target_id": "cri",
+      "context": "kubelet 通过 CRI 与已配置的容器后端通信，节点后端需支持相应 API 与运行条件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "windows-containers",
+      "context": "在受支持的 Windows Server 工作节点调度匹配的 Windows 容器 Pod；当前官方路径采用进程隔离，不支持 Hyper-V 隔离容器。"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cncf",
+      "context": "CNCF 正式托管 Kubernetes 项目并支持其中立社区治理，区别于 Google 的早期研发来源。"
     }
   ],
-  "summary": "容器编排系统，声明式管理集群中的工作负载与网络。",
+  "summary": "通过声明式 API 与控制器管理容器工作负载的集群系统。",
   "status": "active",
-  "origin": "curated",
+  "origin": "ai_draft",
   "first_released": "2014-06-07",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
   "popular": 90,
-  "official_site": "https://kubernetes.io"
+  "official_site": "https://kubernetes.io",
+  "description": "Kubernetes 用声明式 API 表达期望状态，再由持续运行的控制器、调度器和节点组件驱动实际状态趋近目标。控制平面接收与保存集群对象并决定工作负载放置，工作节点运行 Pod 中的容器；标准控制平面使用 etcd 保存集群数据。它管理部署、扩缩、服务发现和故障恢复等能力，镜像构建、应用代码发布与具体监控方案仍需配套工作流。\n\n节点上的 kubelet 通过 CRI 与容器后端通信，containerd 和 CRI-O 等提供相应接入，OCI 执行器则位于更低的运行层。内置 dockershim 在 1.24 移除，Docker Engine 接入需要另行使用适配器；这项变更针对节点运行接口，并不把 Docker 构建的兼容镜像排除在部署之外。镜像、运行时接口和 Engine API 不能被视为同一兼容承诺。\n\n官方支持边界明确区分操作系统角色：控制平面运行在 Linux，工作节点可以运行 Linux 或受支持的 Windows Server。Windows 工作节点上的 Pod 使用 Windows 容器，并需匹配镜像操作系统、节点及网络和存储能力；当前官方 Kubernetes Windows 路径支持进程隔离容器，不支持 Hyper-V 隔离容器。混合集群不意味着所有节点、Pod 或功能在两种系统上完全相同。\n\nGoogle 于 2014 年开放 Kubernetes 项目，后续由广泛的开放社区发展，并由 CNCF 正式托管。研发起源与基金会治理职责应分开记录；CNCF 项目成熟度或托管身份，也不能替代每个实际集群的版本、权限、备份、资源和网络配置检查。\n\n## 参考\n\n- [Kubernetes：职责与 Google 开源起源](https://kubernetes.io/docs/concepts/overview/)\n- [Kubernetes：控制平面与节点架构](https://kubernetes.io/docs/concepts/architecture/)\n- [Kubernetes：CRI 与可用后端](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)\n- [Kubernetes：dockershim 移除边界](https://kubernetes.io/blog/2022/02/17/dockershim-faq/)\n- [Kubernetes：Linux 控制平面与 Windows 工作节点](https://kubernetes.io/docs/concepts/windows/intro/)\n- [CNCF：Kubernetes 正式项目](https://www.cncf.io/projects/kubernetes/)"
 }

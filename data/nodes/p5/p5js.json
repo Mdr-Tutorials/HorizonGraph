@@ -1,0 +1,45 @@
+{
+  "id": "p5js",
+  "name": "p5.js",
+  "aliases": [
+    "p5",
+    "p5.js 创意编程库"
+  ],
+  "type": "library",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-2d",
+      "context": "草图采用默认二维绘制模式时，通过浏览器 Canvas 2D 绘制形状与图像。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "草图选择 WEBGL 模式时，使用 WebGL 渲染三维几何与着色器效果。"
+    }
+  ],
+  "summary": "面向浏览器艺术创作与交互草图的 JavaScript 库。",
+  "description": "p5.js 是面向艺术、教育和实验作品的开源 JavaScript 库。草图通常用 setup 完成初始化，再由 draw 持续更新画面与响应输入；绘制循环可以暂停或恢复，适合动画、可视化实验和交互原型。\n\ncreateCanvas 提供二维绘制和 WebGL 模式，使用哪种模式影响坐标规则、绘图能力与性能。p5.js 的浏览器库、Web Editor 和社区附加库是不同层次；这里记录核心绘图库，音频或其他扩展的安装需要按各自文档处理。\n\n## 参考\n\n- [p5.js：draw 绘制循环](https://p5js.org/reference/p5/draw/)\n- [p5.js：createCanvas 模式](https://p5js.org/reference/p5/createCanvas/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://p5js.org/"
+}

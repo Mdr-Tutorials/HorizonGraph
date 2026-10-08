@@ -1,0 +1,40 @@
+{
+  "id": "queue-reactive-model",
+  "name": "Queue-reactive Model",
+  "aliases": [
+    "队列反应模型",
+    "队列响应模型",
+    "Queue Reactive Model"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "模型以订单簿各价格队列的当前数量和事件变化定义状态及状态转移。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data",
+      "context": "利用历史订单事件和队列状态数据校准各状态下的事件强度与价格切换机制。"
+    }
+  ],
+  "summary": "以当前订单簿队列状态决定事件强度并生成市场路径。",
+  "description": "Queue-reactive 模型由 Huang、Lehalle 和 Rosenbaum 提出，用当前订单簿队列状态描述限价加入、成交消耗和撤单等事件的到达强度。它是生成订单簿动态的随机模型；估计某一个挂单排队位置的模型解决另一问题，两者不能因为都涉及队列而合并为同物。\n\n原始框架先把时间划为参考价格保持不变的区间，在区间内把订单簿视为马尔可夫排队系统，并假设事件强度只依赖当前状态。再通过参考价格切换机制连接各区间，产生更长时间的市场路径；参数需要用事件、队列状态和停留时间等数据校准。\n\n生成的路径可以支持市场仿真与复杂算法的成本分析，但不等于真实历史路径或无需条件的市场复制。基本状态依赖设定对长期事件记忆、代理策略、隐藏流动性和市场状态的处理有限，应检查校准窗口和样本外特征。加入过去事件激励的 queue-reactive Hawkes 研究是明确扩展，不能把其能力视为原始模型的默认属性。\n\n## 参考\n\n- [Huang、Lehalle、Rosenbaum：The Queue-reactive Model 原始论文](https://arxiv.org/abs/1312.0563)\n- [Wu 等：Queue-reactive Hawkes Models for the Order Flow 扩展研究](https://arxiv.org/abs/1901.08938)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

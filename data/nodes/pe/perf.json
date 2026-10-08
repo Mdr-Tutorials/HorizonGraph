@@ -1,0 +1,37 @@
+{
+  "id": "perf",
+  "name": "perf",
+  "aliases": [
+    "Linux perf",
+    "Linux性能分析工具",
+    "perf tools"
+  ],
+  "type": "tool",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "linux",
+      "context": "在具备相应性能事件支持的Linux系统上运行，权限与硬件能力影响可采集事件。"
+    }
+  ],
+  "summary": "Linux性能工具集，用事件计数、采样与追踪分析执行成本。",
+  "description": "perf是Linux性能分析工具集，结合内核性能事件接口、可用硬件计数器和软件事件观察运行中的程序。perf stat统计事件，perf record采集样本，相关报告工具解释热点和调用链；它是具体工具工件，不能把一次计数值当作程序正确性或端到端延迟保证。\n\n结果需要说明CPU型号、内核能力、事件名、权限、统计范围和时间窗口。硬件事件可能被复用并缩放，采样记录还受频率、调用链方法、符号信息和记录丢失影响。cycles或cache-misses等计数的意义依事件定义，不能未经条件校准就当作请求延迟或跨机器直接比较。\n\nperf c2c可在受支持的平台上帮助定位共享缓存行访问，调度和缺页相关事件也可辅助解释波动。采样会改变系统负载，最敏感路径宜在控制开销的实验中关联工具证据与应用自己的时间分布。工具显示热点只是定位线索，优化后仍需在目标负载下复测行为与资源成本。\n\n## 参考\n\n- [perf stat：计数范围、单位与事件复用](https://man7.org/linux/man-pages/man1/perf-stat.1.html)\n- [perf record：采样及调用链记录](https://man7.org/linux/man-pages/man1/perf-record.1.html)\n- [perf c2c：共享缓存行分析](https://man7.org/linux/man-pages/man1/perf-c2c.1.html)\n- [Linux man-pages：perf_event_open 能力与权限](https://man7.org/linux/man-pages/man2/perf_event_open.2.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://perf.wiki.kernel.org/"
+}

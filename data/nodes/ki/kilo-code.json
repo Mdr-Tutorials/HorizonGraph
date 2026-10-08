@@ -1,0 +1,45 @@
+{
+  "id": "kilo-code",
+  "name": "Kilo Code",
+  "aliases": [
+    "Kilo",
+    "Kilo AI"
+  ],
+  "type": "product",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-rule",
+      "context": "配置自定义代理的 Markdown 指令或 prompt 时为特定项目和任务提供行为指导；权限字段另行控制工具操作。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "用户安装并配置 MCP 服务器后连接其工具，当前产品不预装这些外部服务器。"
+    }
+  ],
+  "summary": "以编辑器、CLI 与自动化入口运行可配置编码代理。",
+  "description": "Kilo Code 提供编辑器扩展、CLI 和相关自动化能力，当前官方入口同时覆盖 Kilo 平台的编码代理与托管基础设施。其工作方式包括仓库读取、多文件编辑、命令执行和针对任务的代理配置；它是产品与工具体系，不是固定的大模型。不同入口及服务的状态应按对应文档核对，不能把某个旧扩展版本当作全部现行产品。\n\n当前 VS Code 扩展建立在 Kilo CLI 上，自定义代理可用带 frontmatter 的 Markdown 或配置项定义指令、角色、模型和工具权限。原 custom_modes.yaml 与 .kilocodemodes 属于旧版模式格式，官方给出迁移路径。任务特化可以限制代理仅阅读或只修改某类文件；角色名称本身不构成权限，实际访问由工具权限配置控制。\n\nMCP 用于连接已配置的工具服务器，当前文档说明 Kilo Code 不预装 MCP 服务器，用户须单独选择和连接。编程代理可以用外部工具获取文档或操作服务，但这些集成不是所有部署的硬依赖。编辑器与 CLI 配置也不应盲目互抄旧格式；进行迁移或自动化时需核对正在使用的实现、许可和工具可用范围，并检查实际生成差异。\n\n## 参考\n\n- [Kilo：现行产品入口](https://kilo.ai/docs)\n- [Kilo：当前代理配置与旧模式迁移](https://kilo.ai/docs/customize/custom-modes)\n- [Kilo：MCP 配置与独立服务器](https://kilo.ai/docs/automate/mcp/using-in-kilo-code)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://kilo.ai/"
+}

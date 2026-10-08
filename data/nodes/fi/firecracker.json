@@ -1,0 +1,61 @@
+{
+  "id": "firecracker",
+  "name": "Firecracker",
+  "aliases": [
+    "Firecracker microVM",
+    "Firecracker VMM"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "virtualization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "container-ecosystem",
+    "virtualization-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "hypervisor"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kvm"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "kata-containers"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "seccomp",
+      "context": "启用内置线程过滤时限制 VMM 宿主线程的系统调用，规则依据线程职责配置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "namespace",
+      "context": "使用 jailer 的 Linux 启动流程时准备隔离所需的命名空间；这不是所有运行方式都必须经过的包装。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cgroup",
+      "context": "采用 jailer 资源配置路径时为 VMM 宿主进程配置控制组与相关资源限制。"
+    }
+  ],
+  "summary": "基于 Linux KVM 的 microVM 虚拟机监控器。",
+  "description": "Firecracker 是面向 microVM 的虚拟机监控器，以 Linux KVM 提供硬件辅助虚拟化，一个 Firecracker 进程管理一台 microVM。工作负载运行于独立客体内核，项目支持的宿主架构包括 x86_64 和 aarch64，并要求对应 KVM 与内核能力。它是 VMM 工件，OCI 容器工作负载需要经另外的运行时或管理层集成，而不是直接把 Firecracker 当作完整容器引擎。\n\n精简的设备模型减少虚拟硬件实现的体积和客体可触及的接口，宿主 API 控制虚拟机的配置与生命周期。正常运行路径还使用按线程职责设置的 seccomp 过滤，并可配合 jailer 收缩宿主资源和权限。Firecracker 本体可由具备 /dev/kvm 及必要资源访问权限的非 root 用户运行，是否可启动取决于设备和文件授权，而不是只看 UID 是否为零。\n\njailer 先执行需要较高权限的根文件系统、命名空间及 cgroup 等准备，再切换 UID/GID 并执行 VMM；特权准备后降权与全链 rootless 是不同模式。microVM 的客体边界仍依赖 Firecracker、KVM、宿主内核与实际共享配置，精简设备不能保证任何部署都安全。用于 Kata 等容器系统时还应核对所选后端的功能和限制，不把该路径扩写为 WSL 或所有容器的默认依赖。\n\n## 参考\n\n- [Firecracker：VMM 设计与隔离机制](https://github.com/firecracker-microvm/firecracker/blob/main/docs/design.md)\n- [Firecracker：宿主架构、KVM 与权限条件](https://github.com/firecracker-microvm/firecracker/blob/main/docs/getting-started.md)\n- [Firecracker：jailer 的特权准备和降权流程](https://github.com/firecracker-microvm/firecracker/blob/main/docs/jailer.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://firecracker-microvm.github.io/"
+}

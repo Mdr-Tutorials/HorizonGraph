@@ -1,0 +1,50 @@
+{
+  "id": "nitro",
+  "name": "Nitro",
+  "aliases": [
+    "Nitro 服务端框架",
+    "Nitro Server"
+  ],
+  "type": "framework",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "h3",
+      "context": "使用 H3 的请求事件、处理函数和相关工具组织当前主线的 HTTP 处理。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-routing",
+      "context": "从路由文件和规则生成请求匹配，并在构建阶段组织路由代码。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-middleware",
+      "context": "在应用路由前后运行配置的服务器中间件，处理跨路由逻辑。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "runtime-adapter",
+      "context": "采用目标部署 preset 时为不同宿主生成适合的服务入口与运行时接入。"
+    }
+  ],
+  "summary": "构建 HTTP 服务并生成面向部署平台的服务端产物。",
+  "description": "Nitro 组织服务端路由、中间件、插件和构建输出，可独立用于 HTTP 应用，也可被上层全栈框架采用。它支持按文件布局定义服务器路由，并在构建阶段处理路由与代码拆分；请求处理采用 H3 相关工具，构建系统和单请求处理并非同一个职责。\n\n部署 preset 为目标平台准备入口及输出配置，兼容日期用于选择相应平台行为。相同源路由可能面向 Node 服务、边缘或无服务器环境构建，但文件、后台任务和绑定等能力仍受目标平台约束，不能将平台差异视为构建器自动消除的问题。\n\n官网当前 Nitro 3 测试版文档提供从 Nitro 2 升级到 Nitro 3 的迁移说明，涉及 H3 接口和服务器工具等变化。serverFetch 可在应用内部经过路由与中间件调用自身服务而不走网络，这与任意外部网络 fetch 不同；应区分开发服务器、生产构建与实际部署生命周期。\n\n## 参考\n\n- [Nitro Introduction](https://nitro.build/docs/)\n- [Nitro Routing](https://nitro.build/docs/routing)\n- [Nitro Deploy](https://nitro.build/deploy)\n- [Nitro Migration](https://nitro.build/docs/migration)\n- [Nitro Server Utilities](https://nitro.build/docs/utils)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://nitro.build"
+}

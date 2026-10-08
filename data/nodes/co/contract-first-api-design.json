@@ -1,0 +1,43 @@
+{
+  "id": "contract-first-api-design",
+  "name": "Contract-first API Design",
+  "aliases": [
+    "契约优先 API 设计",
+    "Design-first API"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "api-contract",
+      "context": "在业务实现之前明确可共享和可检查的接口形状。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "interface-definition-language",
+      "context": "采用 IDL 时先声明服务及消息，再生成各语言工件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "采用语言无关 HTTP 契约时先描述操作、参数与响应。"
+    }
+  ],
+  "summary": "先定义共享接口契约，再实现服务和客户端。",
+  "description": "契约优先 API 设计先确定接口操作、输入、输出和错误，再由服务端实现这些约定，客户端也围绕契约开发。契约可以是 OpenAPI 文档、IDL 或 ts-rest、oRPC 中不含业务实现的路由与过程定义。这种顺序允许不同团队在服务尚未完成时讨论接口，并用生成代码、类型检查和模拟服务开展并行工作。\n\n契约优先要求描述与实现持续保持一致。类型化契约可以约束实现函数的形状；规范生成工具能够生成客户端和服务骨架；提供者检查与消费者契约测试则覆盖实际消息。设计文件不替业务函数完成持久化、权限判定或外部系统集成，也不能仅凭生成文件推断所有消费者已经兼容新版本。\n\n## 参考\n\n- [oRPC：契约优先设计](https://orpc.dev/docs/contract-first)\n- [ts-rest：共享接口契约](https://ts-rest.com/contract/overview)\n- [TypeSpec：面向 OpenAPI 的设计](https://typespec.io/docs/getting-started/typespec-for-openapi-dev/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

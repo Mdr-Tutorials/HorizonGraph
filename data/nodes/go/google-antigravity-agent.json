@@ -1,0 +1,62 @@
+{
+  "id": "google-antigravity-agent",
+  "name": "Google Antigravity Agent",
+  "aliases": [
+    "Antigravity Agent",
+    "Gemini API Antigravity Agent",
+    "Antigravity 托管智能体"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "google-antigravity",
+      "context": "属于官方文档所列的 Antigravity 产品与能力体系；不表示必须安装其他家族入口。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-harness",
+      "context": "Google 托管的 Linux sandbox 运行 Antigravity harness，区别于本地 SDK 工具执行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gemini",
+      "context": "Gemini API 当前托管入口按文档列出的 Gemini Flash 模型范围选择推理模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agentic-workflow",
+      "context": "托管运行连续调用获准工具并使用结果推进任务，能力以服务入口当前支持列表为限。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "mcp",
+      "context": "Gemini API Antigravity Agent 可按当前服务文档配置远端 Streamable HTTP MCP；不表示支持所有 MCP transport。"
+    }
+  ],
+  "summary": "通过 Interactions API 调用、在 Google 托管环境执行的预览智能体。",
+  "description": "Google Antigravity Agent 是采用 Antigravity harness 的托管智能体服务，Gemini API 通过 Interactions API 提供调用，在 Google 管理的 Linux sandbox 执行工具。它属于托管 Agent 的产品身份，不是另造的 REST 协议，也不是本地 google-antigravity Python SDK。2026 年 10 月 7 日更新的 Gemini API 文档仍标为 Preview，示例 agent ID 为 antigravity-preview-09-2026，并给出自己的 Gemini Flash 模型允许列表；桌面应用的 Pro 或第三方模型选项不能直接套用。\n\nGemini API 入口默认提供 code_execution、google_search 和 url_context 等工具，还支持按文档配置远端 Streamable HTTP MCP 与自定义 agent。当前明确不支持 structured outputs、computer_use、file_search 或 google_maps，输入限文本与图片，音频、视频、文档输入也未支持。自定义 instructions、工具和环境配置可以存为命名 agent，但现行说明不提供子智能体委派；本地 SDK 的结构化输出、PDF 输入或子智能体能力不能因此移植到这个入口。\n\nGoogle Cloud Agent Platform 另有企业托管入口，公开 overview 适用 Pre-GA 条款并把 Agents API 标为 Preview：Agents API 管理配置与环境，Interactions API 执行会话。企业调用示例仍使用 05-2026 的 agent ID，端点、授权与区域也要按 Cloud 页面判断。网络默认尤其不同：Gemini API Agents 页允许 sandbox 默认 unrestricted outbound；Cloud Agent Platform 页说明默认无外部系统、网络或凭据访问，外部访问须显式配置。两种服务入口的版本与安全默认值不能合并为全家族承诺。\n\n## 参考\n\n- [Gemini API Antigravity Agent](https://ai.google.dev/gemini-api/docs/antigravity-agent)\n- [Gemini API Building managed agents](https://ai.google.dev/gemini-api/docs/custom-agents)\n- [Gemini API Agents overview](https://ai.google.dev/gemini-api/docs/agents)\n- [Agent Platform: Interact with agents](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/interact-with-agents)\n- [Managed Agents API on Agent Platform overview](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://ai.google.dev/gemini-api/docs/antigravity-agent"
+}

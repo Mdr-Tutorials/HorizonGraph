@@ -1,0 +1,44 @@
+{
+  "id": "http-message-body",
+  "name": "HTTP Message Content",
+  "aliases": [
+    "HTTP 消息内容",
+    "HTTP 消息体",
+    "HTTP Body"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-services",
+    "web-development",
+    "networking"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "http"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http-content-encoding",
+      "context": "根据 Content-Encoding 解释经过压缩等内容编码的表示数据，区别传输分帧。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "web-streams-api",
+      "context": "在 Fetch 标准运行时中，通过流逐步读取或产生 Request/Response 的消息内容。"
+    }
+  ],
+  "summary": "请求或响应承载的内容，解释方式由消息语义与字段决定。",
+  "description": "HTTP 消息内容可以表示资源、提交输入或错误说明，其含义由方法、状态与字段共同确定。Content-Type 标识媒体类型，Content-Encoding 表达应用于表示数据的内容编码；内容与特定版本的分帧、分块或消息定界机制不应混为同一层。HEAD 与某些状态码的响应没有内容。\n\nFetch 的 Request 与 Response 把内容暴露为可消费的流，并提供 text、json、formData 等读取方式。流可能已经被锁定或消费，读取整个 JSON 也可能占用与输入规模相关的内存；需要复用时应理解 clone 和分支流的缓存行为。解析格式成功只表示可读，还需要验证结构、字段限制和业务规则。\n\n## 参考\n\n- [IETF：HTTP 语义（RFC 9110）](https://www.rfc-editor.org/rfc/rfc9110.html)\n- [WHATWG：Fetch 标准](https://fetch.spec.whatwg.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

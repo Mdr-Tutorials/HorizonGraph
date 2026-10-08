@@ -1,0 +1,39 @@
+{
+  "id": "animation-timeline",
+  "name": "Animation Timeline",
+  "aliases": [
+    "动画时间线",
+    "动画时间轴"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "keyframe-animation",
+      "context": "在编辑器轨道中按时间排列和调整属性关键帧。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tweening",
+      "context": "在 GSAP 等程序动画系统中，为多个补间安排起始位置、重叠和先后关系。"
+    }
+  ],
+  "summary": "以共同时间坐标组织轨道、关键帧和动作序列。",
+  "description": "动画时间线把关键帧、补间或多个动作排列到共同的时间坐标上，使它们可以顺序执行、重叠或相对定位。编辑器中的轨道与播放头提供可视化控制，程序库也可通过标签、偏移和嵌套时间线表达相同的编排需求。\n\n统一时间坐标便于整体暂停、跳转和改变进度，也减少单独配置大量延迟带来的维护成本。时间线描述动作如何随时间展开；状态机决定在交互条件下选择什么动作，二者可配合使用。\n\n## 参考\n\n- [GSAP：时间线与嵌套编排](https://gsap.com/docs/v3/GSAP/Timeline/)\n- [Rive：编辑器时间线](https://rive.app/docs/editor/animate-mode/timeline)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

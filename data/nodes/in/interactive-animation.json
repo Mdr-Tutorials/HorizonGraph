@@ -1,0 +1,39 @@
+{
+  "id": "interactive-animation",
+  "name": "Interactive Animation",
+  "aliases": [
+    "交互式动画",
+    "交互动画"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "animation-state-machine",
+      "context": "以空闲、悬停、按下等状态组织动画时，用状态机根据输入选择动作及转换。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hit-testing",
+      "context": "使用指针操控画面对象时，通过命中测试确定应触发动画反馈的对象。"
+    }
+  ],
+  "summary": "随用户输入或应用状态变化而调整的动画。",
+  "description": "交互式动画根据指针、操作事件或应用数据改变动作状态和播放进度。悬停、按下、拖动、加载完成等条件可以决定当前动作以及如何转入下一动作，动画反馈因此参与交互本身。\n\n一种实现是用状态机管理动画及转换，再把应用输入或绑定数据传给运行系统。事件命中范围、可中断的转换以及快速重复操作需要共同设计；多个状态也可以混合动画，而无需每次交互都重新从头播放完整序列。\n\n## 参考\n\n- [Rive：动画状态与转换](https://rive.app/docs/editor/state-machine/state-machine)\n- [Rive：运行时交互与输入](https://rive.app/docs/runtimes/web/state-machines)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

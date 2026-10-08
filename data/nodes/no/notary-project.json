@@ -1,0 +1,49 @@
+{
+  "id": "notary-project",
+  "name": "Notary Project",
+  "aliases": [
+    "Notary Project",
+    "Notary",
+    "OCI 工件签名框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain",
+    "containerization"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "image-signing",
+      "context": "提供 OCI 工件签名、内容摘要绑定及消费方信任验证的规范与实现体系。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x509",
+      "context": "当前签名及信任策略体系采用 X.509 证书身份与受信任证书存储评估签署者。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-distribution-spec",
+      "context": "在支持的 OCI 仓库中存储和发现签名工件，具体发现方式须匹配仓库与工具版本能力。"
+    }
+  ],
+  "summary": "以规范和工具构成 OCI 工件签名及信任验证框架。",
+  "description": "Notary Project 是围绕软件供应链真实性建立的开源规范与工具项目，此处作为包含实际实现与互操作规则的签名框架记录。当前体系定义 OCI 工件的签名封装、签署与验证工作流、信任存储及策略，并提供 Notation CLI 和实现库。它不是一个名为 Notary Project 的单独命令，也不是负责保存镜像本体的 Registry 产品。\n\n项目历史上包含基于 TUF 的初代 notary 服务端与客户端，其签名元数据和密钥管理需要额外服务基础设施；当前 Notation 体系通过 OCI 工件及签名发现机制提供新的互操作路径。旧版 notary 与当前 Notation 具有不同协议和实现边界，不能视为同一个 CLI 的两个别名。具体部署还需要核对仓库、签名封装、规范版本和插件支持。\n\n验证围绕目标工件 digest、证书信任链和用户配置的信任策略展开，策略明确仓库范围、受信任证书身份与验证级别。一个 CA 受信任并不自动让其签发的所有身份都有权发布任意镜像。项目能够支持真实性和完整性检查，但签名验证仍不能替代构建来源核查、组件清单和漏洞分析，也不会自动决定每个组织的授权政策。\n\n## 参考\n\n- [Notary Project：项目范围与初代实现](https://github.com/notaryproject/.github/blob/main/README.md)\n- [Notary Project：互操作规范集合](https://github.com/notaryproject/specifications)\n- [Notary Project：信任存储与信任策略](https://github.com/notaryproject/specifications/blob/main/specs/trust-store-trust-policy.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/notaryproject/.github/blob/main/README.md"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "rive-runtime",
+  "name": "Rive Runtimes",
+  "aliases": [
+    "Rive 运行库",
+    "Rive Runtime",
+    "Rive SDK"
+  ],
+  "type": "library",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "rive-file-format"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "animation-state-machine"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wasm",
+      "context": "使用官方 Web 运行库时，以 JavaScript/WASM 接口加载和推进 Rive 动画。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resource-lifecycle",
+      "context": "Web 页面或组件销毁时，通过运行库清理接口释放动画、画板等底层实例。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "unity"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "unreal-engine"
+    }
+  ],
+  "summary": "在应用、网站和游戏中执行 Rive 交互动画的运行库族。",
+  "description": "Rive Runtimes 是跨平台的开源运行库族，用于加载 .riv 内容、推进动画及状态机，并呈现实时画面。Web、移动平台和游戏引擎具有不同接入方式；本条目表示这一运行库体系，具体包的 API 与渲染能力需要按平台核对。\n\nWeb 运行库提供 JavaScript 高层接口以及更直接的 WASM 控制接口，可选择相应渲染器并对接应用输入或绑定数据。实现接入时需要管理画布尺寸、资源加载、状态变化和实例清理；编辑器中的新特性也有对应运行库的最低支持条件。\n\n## 参考\n\n- [Rive：官方运行库与支持平台](https://rive.app/docs/runtimes/getting-started)\n- [Rive：Web 接入、WASM 和清理](https://rive.app/docs/runtimes/web/web-js)\n- [Rive：特性支持矩阵](https://rive.app/docs/feature-support)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://rive.app/docs/runtimes/getting-started"
+}

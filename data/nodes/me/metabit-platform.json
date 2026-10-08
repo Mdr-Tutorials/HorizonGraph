@@ -5,37 +5,38 @@
     "MetaBit Platform"
   ],
   "type": "product",
-  "ecosystems": [],
+  "ecosystems": [
+    "fintech-ecosystem",
+    "electronic-trading-ecosystem",
+    "cloud_native"
+  ],
   "domains": [
-    "quantitative-finance"
+    "quantitative-finance",
+    "industry-landscape",
+    "electronic-trading",
+    "cloud-infrastructure"
   ],
   "abstraction_level": "application_tool",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "saas"
+      "target_id": "product"
     },
     {
       "relation_type": "developed_by",
       "target_id": "metabit"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "juicefs"
-    },
-    {
-      "relation_type": "depends_on",
-      "target_id": "kubernetes"
-    },
-    {
-      "relation_type": "depends_on",
-      "target_id": "pytorch"
+      "relation_type": "uses",
+      "target_id": "juicefs",
+      "context": "2024 年原厂发布的 Metabit 用户案例披露其内部投研平台使用 JuiceFS 读取热数据、输出产物和缓存流水线中间结果；不宣称所有未来部署或交易热路径必须依赖它。"
     }
   ],
-  "summary": "Metabit 的量化研究与交易云平台。",
+  "summary": "乾象投资公开案例中的内部云上量化投研系统。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "display_primary": "MetaBit"
+  "display_primary": "MetaBit",
+  "description": "Metabit Platform 表示乾象投资在公开用户案例中描述的内部云上量化投研平台。名称沿用已有检索入口，身份限定为该机构的内部工程系统；来源没有证明它是面向外部客户销售的 SaaS 产品，也不将它与同名加密交易平台混淆。\n\n2024 年 JuiceFS 发布的客户案例介绍数据预处理、特征与模型训练任务、计算存储分离及共享热数据缓存。平台将 JuiceFS 用于计算任务的数据输入、日志和产物输出以及流水线数据传递；案例同时把支持 Kubernetes 列为存储要求。JuiceFS 的实际采用限定于该公开历史部署，不扩展为其他生态技术已经使用的事实。\n\n这种系统承载研究计算和数据协作，不能等同于交易所下单或微秒级执行热路径。来源明确披露的是 JuiceFS 存储采用及研究工作流，Kubernetes 生态支持仅作为存储需求出现，不能据此认定它已经承担平台调度；案例未明确确认的训练框架及未来部署也不能从云原生或机器学习标签推断。\n\n## 参考\n\n- [乾象投资在 JuiceFS 发布的投研平台案例](https://juicefs.com/zh-cn/quantitative-trading/metabit-with-juicefs)\n- [2024 年 Metabit 投研基础设施用户案例](https://juicefs.com/en/blog/user-stories/build-cloud-quantitative-platform-posix-compatible-storage)"
 }

@@ -5,11 +5,13 @@
   "type": "framework",
   "ecosystems": [
     "static-analysis-testing-ecosystem",
-    "web_frontend"
+    "web_frontend",
+    "browser-automation-ecosystem"
   ],
   "domains": [
     "devops",
-    "web-development"
+    "web-development",
+    "browser-automation"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -32,12 +34,45 @@
     {
       "relation_type": "depends_on",
       "target_id": "nodejs"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-automation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "element-locator"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-actionability"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "auto-waiting"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-context-isolation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-screenshot"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "browser-tracing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "visual-regression-testing"
     }
   ],
-  "summary": "微软的跨浏览器自动化与 E2E 测试框架，多语言 API。",
+  "summary": "提供跨浏览器控制与测试组织能力的自动化框架。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 4,
-  "official_site": "https://playwright.dev"
+  "official_site": "https://playwright.dev",
+  "description": "Playwright 是 Microsoft 开发的跨浏览器自动化项目，提供浏览器控制库以及 Playwright Test 等测试能力。它覆盖 Chromium、Firefox 与 WebKit，并提供多种语言的控制接口；测试运行器、浏览器引擎和底层驱动具有不同职责，不应把浏览器自动化等同于单个测试断言工具。\n\n项目使用定位器在动作时解析目标，以可操作性检查和自动等待处理动态页面；BrowserContext 将测试的浏览器状态分离。测试流程还能保存截图、DOM 快照和追踪，视觉回归检查则把渲染结果与受控基线比较。这些机制共同帮助定位失败，但各自覆盖的是目标选择、同步、状态管理或观察证据。\n\n可靠测试仍需设计业务断言、后端数据准备和环境配置。独立上下文不能代替数据库重置，动作等待不能证明业务完成；底层 context.tracing 不包含测试断言，Playwright Test 的追踪配置才提供更完整的测试记录。Playwright MCP 是采用该项目能力的独立 MCP server，不能把其工具会话与所有 Playwright 测试实现混为一体。\n\n## 参考\n\n- [Playwright：Introduction](https://playwright.dev/docs/intro)\n- [Playwright：Locators](https://playwright.dev/docs/locators)\n- [Playwright：Isolation](https://playwright.dev/docs/browser-contexts)\n- [Playwright：Tracing API及断言记录边界](https://playwright.dev/docs/api/class-tracing)"
 }

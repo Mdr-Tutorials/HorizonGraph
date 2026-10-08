@@ -1,0 +1,38 @@
+{
+  "id": "viewport",
+  "name": "Viewport",
+  "aliases": [
+    "视口",
+    "渲染视口"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-transform",
+      "context": "把透视除法后的规范化设备坐标映射到实际目标的像素区域。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "render-target",
+      "context": "依据实际目标尺寸选择绘制位置、大小与相应深度范围。"
+    }
+  ],
+  "summary": "把规范化设备坐标映射到目标中的像素区域。",
+  "description": "视口指定规范化设备坐标映射到渲染目标中的哪个矩形区域，并可规定有关深度映射范围。相机投影决定观察哪些几何，视口决定这些几何在目标上落到什么位置和尺寸；修改视口并不自动修改相机宽高比。\n\n视口与裁剪矩形 scissor 的职责不同：前者是坐标映射，后者限制可写入的矩形区域。图形 API 对坐标原点、轴向和范围有各自规则；网页上的 CSS 尺寸、绘图缓冲分辨率与视口像素也需要一致换算。\n\n视口用于分屏、多相机预览、编辑器面板和小地图等效果。目标重建或设备像素比改变后，应更新相应区域与相机设置；拾取还要按实际使用的子视口换算，而不能一律以整个窗口作为图像范围。\n\n## 参考\n\n- [WebGPU setViewport](https://www.w3.org/TR/webgpu/#dom-gpurenderpassencoder-setviewport)\n- [Three.js Cameras](https://threejs.org/manual/pages/cameras.html)\n- [Three.js Picking](https://threejs.org/manual/pages/picking.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

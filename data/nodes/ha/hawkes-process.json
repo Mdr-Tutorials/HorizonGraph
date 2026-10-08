@@ -1,0 +1,40 @@
+{
+  "id": "hawkes-process",
+  "name": "Hawkes Process",
+  "aliases": [
+    "霍克斯过程",
+    "自激点过程",
+    "Hawkes Processes"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "maximum-likelihood-estimation",
+      "context": "参数化 Hawkes 模型可通过事件序列的似然估计基准强度和核参数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "out-of-sample-validation",
+      "context": "用于金融事件预测时，在未参与拟合的后续事件上检验强度、校准和稳定性。"
+    }
+  ],
+  "summary": "用过去事件对条件到达强度的影响描述自激和互激事件流。",
+  "description": "Hawkes 过程是一类点过程，以过去事件对未来条件到达强度的作用描述事件聚集。常见线性多元形式由外生基准强度加上各类历史事件的核函数贡献构成，可以表达同类事件的自激和不同类型间的互激；它不等同于固定速率的独立泊松到达。\n\n金融研究可把成交、订单加入、撤单或价格变化区分为不同事件类型，估计强度和作用核，再用于事件预测或市场仿真。常见参数估计使用极大似然等方法，选择事件分类、时间精度、季节性基准和核形状会影响结果；指数核是一种方便计算的选择，不能代表所有 Hawkes 模型。\n\n对于常见非负线性模型，积分核矩阵的谱半径小于 1 是讨论平稳有限平均强度时的重要条件，不能无条件推广到所有非线性或非平稳扩展。还需检查边界截断、漏报、时间聚合与不同市场状态。拟合出的互激或统计因果结构并不单独证明经济机制上的因果关系，也不保证未来事件或交易表现。\n\n## 参考\n\n- [Hawkes：Spectra of Some Self-exciting and Mutually Exciting Point Processes 原始论文](https://academic.oup.com/biomet/article-abstract/58/1/83/224809)\n- [Bacry、Mastromatteo、Muzy：Hawkes Processes in Finance](https://arxiv.org/abs/1502.04592)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,49 @@
+{
+  "id": "google-antigravity",
+  "name": "Google Antigravity",
+  "aliases": [
+    "Antigravity",
+    "谷歌 Antigravity",
+    "反重力",
+    "Google 反重力"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "google-ai-ecosystem",
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-harness",
+      "context": "官方将桌面、CLI、SDK 和托管 Agent 描述为共享 Antigravity harness 的交付入口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agentic-workflow",
+      "context": "通过模型、工具调用和执行反馈持续完成开发任务，具体工具及控制方式按入口限定。"
+    }
+  ],
+  "summary": "Google 以共享智能体执行机制提供的开发工具与服务家族。",
+  "description": "Google Antigravity 是 Google 的智能体开发产品家族。2025 年 11 月 18 日的首发公告以 public preview 介绍面向编辑器、终端和浏览器的开发环境；现行文档则区分 Antigravity 2.0 独立桌面应用、CLI、本地 Python SDK、独立 IDE 与既有编辑器扩展。它们共同采用 Antigravity agent harness，但分别提供桌面管理、终端交互、编程嵌入或编辑器工作流，名称共享不能代替运行位置与接口的辨认。\n\n家族的核心是让模型围绕任务调用工具、观察结果并继续执行，人可以查看计划、代码变更和其他 artifacts，并在权限规则要求时审阅操作。Gemini 是重要的模型路径，现行模型表还按个人方案列出部分第三方模型；企业列的模型可用范围不同。工具接入、MCP、skills、子智能体与浏览器能力应按具体入口的文档判断，云端 Agent 不自动获得本地工具的全部功能。\n\n截至 2026 年 10 月 8 日，官网定价页把主 Antigravity 产品标为 Generally Available；SDK 最初以 Research Preview 发布，托管 Agent 与 Teamwork 等功能仍有自己的预览标记。个人 Google 登录、CLI API key、本地 SDK key 或 Cloud 企业授权各有适用路径。企业页支持 2.0、CLI 和 IDE 扩展，并明确独立 Antigravity IDE 不支持企业方案；主产品的 GA 和统一品牌不覆盖每个组件的发布阶段、计费与数据政策。\n\n## 参考\n\n- [Introducing Google Antigravity](https://antigravity.google/blog/introducing-google-antigravity)\n- [Google Antigravity Docs: Home](https://antigravity.google/docs/home)\n- [Google Antigravity Pricing](https://antigravity.google/pricing)\n- [Antigravity Models](https://antigravity.google/docs/models/)\n- [Antigravity in Gemini Enterprise](https://antigravity.google/docs/enterprise/)\n- [Google Antigravity SDK](https://antigravity.google/blog/introducing-google-antigravity-sdk)\n- [Gemini API Antigravity Agent](https://ai.google.dev/gemini-api/docs/antigravity-agent)\n- [Antigravity Teamwork](https://antigravity.google/docs/teamwork/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "abstraction_level": "application_tool",
+  "official_site": "https://antigravity.google/",
+  "first_released": "2025-11-18"
+}

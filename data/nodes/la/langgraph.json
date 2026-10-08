@@ -11,7 +11,8 @@
   ],
   "domains": [
     "machine-learning",
-    "natural-language-processing"
+    "natural-language-processing",
+    "agent-development"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -28,13 +29,28 @@
       "relation_type": "implements",
       "target_id": "agent-memory",
       "context": "通过状态、检查点与存储接口承载短期及长期记忆。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agentic-workflow",
+      "context": "状态图可连接确定性步骤与模型驱动步骤，组织任务输入、状态和控制路径。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-checkpointing",
+      "context": "配置 checkpointer 后按执行线程保存状态快照，以检查、恢复或重放运行。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-event-stream",
+      "context": "流式执行接口向消费者提供状态变化、消息或其他选定执行事件。"
     }
   ],
   "summary": "以状态图编排任务的运行框架，支持持久执行和人工介入。",
-  "description": "LangGraph 用状态、节点和边组织执行，可结合确定性步骤与模型决策。持久化检查点支持任务恢复和人工介入，也可承载短期与长期记忆。它能与 LangChain 集成，也能独立使用；Python 与 JavaScript 生态均有实现。\n\n参考：[权威资料](https://docs.langchain.com/oss/python/langgraph/overview)；[JavaScript 实现](https://docs.langchain.com/oss/javascript/langgraph/overview)。",
+  "description": "LangGraph 是用于长期、有状态任务的编排框架与运行时，以状态、节点和边组织执行。它允许在同一执行图中组合确定性代码与大模型决策，强调对状态流转和控制路径的明确描述，而不是必须采用固定的聊天或代理角色模板。\n\n框架提供流式执行、检查点和恢复等运行能力。checkpointer 为执行线程保存状态快照，跨会话存储则承担不同的记忆用途；恢复需要相应后端和可用的图定义，外部工具的副作用也需要应用按重试或重放路径处理。\n\nLangGraph 有 Python 与 JavaScript 实现，可以独立于 LangChain 使用。LangChain 的代理构建在其运行能力之上，而 LangSmith 是用于观察、评估和部署等工作的独立平台；是否使用这些集成，应由任务与具体部署决定。\n\n## 参考\n\n- [LangGraph overview](https://docs.langchain.com/oss/python/langgraph/overview)\n- [LangGraph persistence](https://docs.langchain.com/oss/python/langgraph/persistence)\n- [LangChain JavaScript overview](https://docs.langchain.com/oss/javascript/langchain/overview)",
   "importance": 4,
   "official_site": "https://docs.langchain.com/oss/python/langgraph/overview",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-08",
   "origin": "ai_draft",
   "status": "active"
 }

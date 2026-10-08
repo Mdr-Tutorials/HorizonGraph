@@ -4,11 +4,13 @@
   "aliases": [],
   "type": "tool",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "edge-serverless-ecosystem"
   ],
   "domains": [
     "web-development",
-    "devops"
+    "devops",
+    "web-services"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -17,22 +19,48 @@
       "target_id": "tool"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "zig"
-    },
-    {
       "relation_type": "competes_with",
       "target_id": "nodejs"
     },
     {
       "relation_type": "competes_with",
       "target_id": "deno"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "javascriptcore"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fetch-api",
+      "context": "提供 Fetch 接口，并以 Request 和 Response 对接原生 HTTP 处理器；Bun 扩展需另行核对。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "web-streams-api",
+      "context": "支持标准可读流等接口，并另外提供 direct 流等 Bun 扩展。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "websocket",
+      "context": "原生 HTTP 服务器通过明确升级路径提供 WebSocket 连接与消息处理器。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "hono",
+      "context": "Hono 官方 Bun 模板把应用接入 Bun 原生 Fetch 处理器与 HTTP 服务器路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-lifecycle",
+      "context": "Bun.serve 区分在途请求、响应流、超时及服务器停止，应用仍需处理连接终止与生产者结束。"
     }
   ],
-  "summary": "Zig 编写的一体化 JS 工具包：运行时、打包、测试。",
+  "summary": "集运行时、包管理、构建与测试于一体的 JS/TS 工具包。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 3,
-  "official_site": "https://bun.com"
+  "official_site": "https://bun.com",
+  "description": "Bun 把 JavaScript 与 TypeScript 运行时、包管理、测试和构建工具放入一个可执行文件。当前官方介绍将核心描述为 Rust 实现，并使用 JavaScriptCore 执行 JavaScript；实现语言与用户运行应用需要安装的工具链不能混为一谈，具体接口与兼容性仍须按使用版本核对。\n\nBun.serve 原生接受 Fetch 处理器，支持返回标准形状的 Response 与流式响应，Hono 可以直接接入。Bun 同时提供 Web Streams、Node 流及自身扩展，例如 direct 可读流和异步生成器响应体；跨运行时迁移时要区分标准接口与这些扩展。\n\nHTTP 空闲超时也适用于没有输出的长响应流，SSE 等路径可以按请求调整。stop() 等待在途请求与 WebSocket 完成，强制停止则关闭活动连接；原生 WebSocket 服务器需要明确升级请求。Node 包兼容是持续实现工作，不能只凭包能导入就认定全部 API、流行为和部署条件一致。\n\n## 参考\n\n- [Bun：当前核心、JavaScriptCore 与单一可执行文件](https://bun.sh/docs)\n- [Bun：HTTP 服务、超时与关闭](https://bun.sh/docs/runtime/http/server)\n- [Bun：标准流与运行时扩展](https://bun.sh/docs/runtime/streams)\n- [Bun：Web API 支持](https://bun.sh/docs/runtime/web-apis)\n- [Bun：原生 WebSocket 升级与处理器](https://bun.sh/docs/runtime/http/websockets)\n- [Hono：Bun 原生接入](https://hono.dev/docs/getting-started/bun)"
 }

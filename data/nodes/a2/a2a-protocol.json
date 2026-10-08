@@ -1,0 +1,40 @@
+{
+  "id": "a2a-protocol",
+  "name": "Agent2Agent Protocol",
+  "aliases": [
+    "A2A",
+    "A2A 协议",
+    "代理间互操作协议"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "采用官方 HTTP 服务绑定时，通过 HTTP 端点发现代理服务并交换消息或查询任务。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-rpc",
+      "context": "采用 A2A 的 JSON-RPC 绑定时，用该消息规范承载代理操作；不代表其他绑定必须使用 JSON-RPC。"
+    }
+  ],
+  "summary": "让独立代理发现能力、委托任务和交换产物的协议。",
+  "description": "Agent2Agent Protocol 面向相互独立的代理服务，规定能力发现、消息交换、任务状态和产物传递。它使调用方可以委托远程代理完成工作，而无需了解其内部模型、记忆或工具链。与 MCP 的上下文及工具接入不同，A2A 的主要边界是代理服务之间的协作。\n\nAgent Card 描述服务身份、能力及安全等信息，客户端按对应绑定发送消息，并处理直接回复或具有生命周期的任务。任务可要求进一步输入、发布产物和终结状态，流式或其他可选能力须按声明使用。Card 中的 skills 是服务能力描述，不是 Agent Skills 的 SKILL.md 工件格式。\n\n当前官方发布序列已经达到 1.0.0，具体部署仍须核对双方采用的版本及绑定。协议不要求代理共享完整对话或实现相同内部架构，也不保证委托结果满足业务目标。IBM 原 Agent Communication Protocol 已并入 A2A 的发展路线，但这不能将名称同缩写的 Agent Client Protocol 当成同一个协议。\n\n## 参考\n\n- [A2A：正式规范](https://a2a-protocol.org/latest/specification/)\n- [A2A：设计范围](https://a2a-protocol.org/latest/topics/what-is-a2a/)\n- [A2A：1.0 发布说明](https://a2a-protocol.org/latest/whats-new-v1/)\n- [IBM：Agent Communication Protocol 的归并说明](https://research.ibm.com/projects/agent-communication-protocol)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://a2a-protocol.org/"
+}

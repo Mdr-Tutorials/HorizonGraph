@@ -1,0 +1,37 @@
+{
+  "id": "wsl-interop",
+  "name": "WSL Interoperability",
+  "aliases": [
+    "WSL 互操作",
+    "Windows/Linux 命令互操作"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "wsl"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl-configuration",
+      "context": "由发行版 wsl.conf 的 interop 配置控制 Windows 可执行程序启动与 Windows PATH 添加等行为。"
+    }
+  ],
+  "summary": "连接 Windows 与 WSL Linux 进程、命令和环境变量的机制。",
+  "description": "WSL 互操作连接 Windows 进程与 Linux 用户空间的命令执行。Windows 端可以通过 `wsl.exe` 启动 Linux 程序，Linux 端可以调用 Windows 的 `.exe` 工具，并把输入输出接到已有工作流。程序继续由各自操作系统接口执行：启动 notepad.exe 不把它变成 Linux 二进制，调用 Linux 工具也不意味着 PowerShell 在自身内部解释其所有 Shell 语法。\n\n跨边界调用需要处理参数、引号、工作目录和路径表示；Windows 路径与 Linux 挂载路径不是可无条件互换的字符串。WSLENV 可按标记对选定环境变量进行路径或路径列表转换，并指定传播方向；它是显式桥接机制，不会复制两个系统的全部环境或软件安装状态。管道可组合文本输入输出，双方原生对象模型、换行和编码仍要分别处理。\n\n互操作入口受 WSL 的发行版配置控制，`wsl.conf` 的 interop 设置可以关闭启动 Windows 程序或控制 Windows PATH 的加入。Windows 程序按宿主的用户与访问控制运行，Linux 内的 root 身份不应被误解为自动获得 Windows 管理员权限。文件共享、图形应用与网络转接虽能参与同一开发流程，各有独立实现；本节点聚焦进程、命令和环境桥接，不能把互操作等同于安全隔离消失或两个系统完全一致。\n\n## 参考\n\n- [Microsoft：Windows/Linux command interoperability 与 WSLENV](https://learn.microsoft.com/en-us/windows/wsl/interop)\n- [Microsoft：Interop configuration](https://learn.microsoft.com/en-us/windows/wsl/wsl-config#interop-settings)\n- [WSL 项目：Interop 技术实现](https://wsl.dev/technical-documentation/interop/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

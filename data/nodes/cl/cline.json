@@ -5,23 +5,40 @@
   "type": "tool",
   "ecosystems": [
     "editor-ide-ecosystem",
-    "llm-agent-ecosystem"
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
   ],
   "domains": [
     "devops",
-    "machine-learning"
+    "machine-learning",
+    "ai-assisted-software-engineering"
   ],
   "abstraction_level": "application_tool",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-harness",
+      "context": "终端和编辑器入口通过共同的 Cline agent core 编排模型、工具、会话与执行反馈。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp",
+      "context": "用户启用服务器后调用其外部工具，CLI 与 IDE 按各自配置位置连接本地或远端端点。"
     }
   ],
-  "summary": "开源 IDE 插件式编程 Agent，可接多家模型。",
+  "summary": "提供终端及编辑器入口、以工具反馈推进任务的开源代理。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-08",
   "importance": 3,
-  "official_site": "https://cline.bot"
+  "official_site": "https://cline.bot",
+  "description": "Cline 是开源编码代理工具，当前官方入口包含终端、编辑器扩展以及建立在共同 agent core 上的其他应用。它可以阅读和修改文件、运行命令并调用浏览器等工具，在对话中推进多步任务；本节点保留既有工具身份，正文扩大到现行产品入口。Cline 核心、某个扩展、独立 SDK 和模型提供服务是不同层次，不能用单一插件描述全部实现。\n\n任务通过模型决策、工具执行和反馈继续推进，用户可以选择模型提供方与实际工具。人工批准是官方强调的交互方式，同时工具和 MCP 配置提供自动批准等控制项；应按具体入口与配置判断何时需要批准，而不是保证任意模式每一步都弹出相同确认。应用拥有文件或命令能力不等于模型直接拥有宿主权限。\n\nMCP 接入扩展内置工具之外的能力，配置区分本地 stdio 服务器和远端端点。CLI 与 IDE 的配置文件位置及管理入口不同，凭据和允许目录需要按相应服务器设置。它适合实现功能、修复代码和自动化仓库工作；接入更多工具会增加可执行操作，结果仍需通过差异和验证反馈评估，不能把工具连接视为安全或正确性保证。\n\n## 参考\n\n- [Cline：当前工具、应用入口与 agent core](https://docs.cline.bot/cline-overview)\n- [Cline：MCP 配置、传输与批准控制](https://docs.cline.bot/mcp/mcp-overview)"
 }

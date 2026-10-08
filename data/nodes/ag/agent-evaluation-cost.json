@@ -1,0 +1,28 @@
+{
+  "id": "agent-evaluation-cost",
+  "name": "Agent Evaluation Cost",
+  "aliases": [
+    "智能体评估成本",
+    "Agent 运行评估成本"
+  ],
+  "type": "metric",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    }
+  ],
+  "summary": "按明示范围和价格统计智能体试验及任务的运行费用。",
+  "description": "智能体评估成本衡量在给定协议下运行被测系统与相关评估过程所产生的费用。可以汇总模型请求、工具或环境服务等项目，但必须注明计费范围和货币单位。一次试验平均费用、全套评估总费用与每个成功任务的费用是不同口径。\n\n模型费用需要对应当次使用的版本、输入输出用量及价格设置；缓存、批处理和外部服务也可能改变费用。任务需要模拟用户或模型裁判时，可分别报告被测智能体与这些评估组件的成本。一次性调优投入与每次运行成本应分开，不宜只用参数量或调用次数代替货币费用。\n\n成本应与成功率、任务分布、重试和延迟共同解释。低价但失败较多的方案与高价且完成较多的方案有不同取舍；每个成功任务费用也要计入失败尝试，分母为零时不能给出有限结果。价格随时间变化，因此应保留用量记录与定价日期以支持重算。\n\n## 参考\n\n- [AI Agents That Matter：预算、成本与泛化边界](https://arxiv.org/html/2407.01502v1)\n- [τ-bench 原论文：工具、用户模拟与 pass^k](https://arxiv.org/html/2406.12045v1)\n- [BFCL：AST、执行及相关性检查](https://gorilla.cs.berkeley.edu/blogs/8_berkeley_function_calling_leaderboard.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

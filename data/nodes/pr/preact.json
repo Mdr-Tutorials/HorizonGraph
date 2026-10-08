@@ -1,0 +1,54 @@
+{
+  "id": "preact",
+  "name": "Preact",
+  "aliases": [
+    "Preact.js",
+    "PreactJS"
+  ],
+  "type": "library",
+  "domains": [
+    "web-services",
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "virtual-dom"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "hydration"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "jsx",
+      "context": "选用 JSX 写法时，将 JSX 编译为 Preact 的元素和组件创建调用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssr",
+      "context": "采用服务端 HTML 路线时，通过独立的 preact-render-to-string 配套渲染器输出组件 HTML。"
+    }
+  ],
+  "summary": "以虚拟 DOM 与组件组织界面并支持水合的 UI 库。",
+  "description": "Preact 是使用虚拟 DOM 与组件组织界面的 JavaScript UI 库，提供元素创建、组件渲染、Hook 及配套工具入口。JSX 可经编译配置生成 Preact 的元素与组件调用，也可以用元素创建 API 描述树；JSX 属于可选表达方式，Preact 的身份应与 JSX 语法、React 及服务端框架分开。\n\n浏览器中的 render 将组件树渲染到容器，hydrate 则用于已有预渲染或 SSR HTML，复用 DOM 并建立客户端组件和事件处理。服务端 HTML 渲染由独立的 preact-render-to-string 配套包提供，包含同步、异步和不同流式接口；Node Streams 与 Web Streams 的入口应按部署环境选择。生成 HTML 本身不表示浏览器组件已经初始化。\n\npreact/compat 为 React 风格的 API 和生态使用提供兼容层，但兼容目标不能理解为任意 React 特性与第三方包都无条件可用。Preact 核心采用浏览器原生事件，部分事件语义与 React 有差异，是否使用 compat 会影响这些行为。它也可以通过 Astro 的 Preact 集成用于预渲染组件与按条件启用的客户端孤岛，交互范围由页面配置决定。\n\n## 参考\n\n- [Preact：API Reference](https://preactjs.com/guide/v11/api-reference/)\n- [Preact：Server-Side Rendering](https://preactjs.com/guide/v11/server-side-rendering/)\n- [Preact：Differences to React](https://preactjs.com/guide/v11/differences-to-react/)\n- [Astro：Preact Integration](https://docs.astro.build/en/guides/integrations-guide/preact/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://preactjs.com"
+}

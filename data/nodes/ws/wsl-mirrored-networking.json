@@ -1,0 +1,34 @@
+{
+  "id": "wsl-mirrored-networking",
+  "name": "WSL Mirrored Networking",
+  "aliases": [
+    "WSL 镜像网络",
+    "Mirrored Networking"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "virtualization",
+    "networking"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "wsl-networking"
+    }
+  ],
+  "summary": "将 Windows 网络接口映射到 Linux 的 WSL 网络模式。",
+  "description": "Mirrored networking 是 WSL 的一种网络模式，目标是把 Windows 网络接口映射进 Linux，改善跨宿主连通和网络兼容。官方说明将普通 WSL 配置支持限定于相应 Windows 11 版本及设置；它改变网络架构，而不是在旧 NAT 规则上只修改一个端口。\n\n这一模式支持文档所列的 IPv6、组播和局域网访问等能力，Linux 可通过 IPv4 localhost 访问 Windows 服务。IPv6 localhost、端口保留与过滤行为仍有具体限制；网络可达性也受 Hyper-V 与 Windows 防火墙规则影响。不能由接口映射推断所有 VPN、所有地址或所有端口都无条件可用。\n\nWSL 的 localhost 进程在 mirrored 路线中协助跟踪绑定并通知 Windows，使流量路由到虚拟机。DNS tunneling 是可配合使用的解析通路，Consommé 则是另一种网络模型。WSLc 默认配置和普通 WSL 的 .wslconfig 必须分别核对，避免把 mirrored 写成全部 WSL 家族场景的唯一方案。\n\n## 参考\n\n- [Microsoft：WSL 网络](https://learn.microsoft.com/en-us/windows/wsl/networking)\n- [Microsoft：WSL 高级配置](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)\n- [WSL：NAT、Mirrored 与 Consomme](https://wsl.dev/technical-documentation/localhost/)\n- [Microsoft：WSL DNS 与网络排查](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

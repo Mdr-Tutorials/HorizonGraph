@@ -4,23 +4,33 @@
   "display_primary": "epoll",
   "display_secondary": "epoll",
   "aliases": [],
-  "type": "concept",
+  "type": "protocol",
   "ecosystems": [
-    "linux-gnu-ecosystem"
+    "linux-gnu-ecosystem",
+    "low-latency-systems-ecosystem"
   ],
   "domains": [
     "systems-programming",
-    "networking"
+    "networking",
+    "low-latency-systems",
+    "high-performance-computing"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "busy-polling",
+      "context": "在支持的Linux NAPI配置中，epoll可触发接收轮询，应用需满足同NAPI ID等条件。"
     }
   ],
-  "summary": "万级连接的事件通知机制，Nginx 与 Redis 的底座。",
+  "summary": "Linux文件描述符就绪通知接口，触发模式与处理策略决定等待行为。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "epoll是Linux文件描述符就绪通知API，应用维护关注集合并等待可读、可写等事件。这里记录具体接口；内核维护就绪机制，事件循环及语言库负责调用和业务状态管理。通知表示某类操作有机会继续，不等于I/O数据已经处理完毕，也不能自动给出端到端完成时间。\n\n默认水平触发在条件仍满足时继续报告，边缘触发需要正确处理非阻塞I/O及剩余数据，常在返回EAGAIN后再等待新事件。错误地只读一次就重新等待可能停住处理路径，反过来无限处理一个活跃连接又可能使其他连接饥饿。就绪列表、公平预算、关闭及复用文件描述符都需维护一致的生命周期。\n\nepoll能够减少逐个扫描关注集合的成本，但收益取决于活跃程度、连接数、批量和应用逻辑。等待超时也受时钟粒度和调度延迟影响。部分内核与网络配置支持基于NAPI的忙轮询，需满足文档条件；它不是所有epoll调用默认的行为，也不能由接口名称保证低尾延迟。\n\n## 参考\n\n- [Linux man-pages：epoll 就绪语义与边缘触发](https://man7.org/linux/man-pages/man7/epoll.7.html)\n- [Linux man-pages：epoll_wait 超时与调度](https://man7.org/linux/man-pages/man2/epoll_wait.2.html)\n- [Linux：NAPI busy polling 与 epoll 条件](https://docs.kernel.org/networking/napi.html)",
+  "abstraction_level": "kernel_os"
 }

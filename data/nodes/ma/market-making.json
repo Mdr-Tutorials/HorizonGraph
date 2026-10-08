@@ -1,0 +1,49 @@
+{
+  "id": "market-making",
+  "name": "Market Making",
+  "aliases": [
+    "做市",
+    "市场做市"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order",
+      "context": "在连续限价订单簿中，以买卖限价报价提供可接受价格的流动性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-cancel-replace",
+      "context": "市场与持仓变化时，通过撤换工作中报价调整价格或数量，仍需处理原订单在途成交。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "inventory-risk",
+      "context": "评估做市报价时，考虑成交后库存方向、规模及价格波动造成的持仓风险。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "maker-taker-fees",
+      "context": "在采用相关费用模式的场所，计算报价成交的适用返佣、费用及净收益条件。"
+    }
+  ],
+  "summary": "提供买卖报价并管理成交库存和报价风险的活动",
+  "description": "做市通过提供买卖报价帮助交易对手获得流动性，收入来源可能包括价差与适用费用激励。做市活动、注册做市商身份和特定场所的报价义务需要区分；研究中的自动报价策略不自动具有某市场的注册资格。\n\n成交使库存发生变化，报价可以根据持仓、价格风险、成交强度和市场状态调整。Avellaneda–Stoikov 的原始模型研究库存风险与报价控制的权衡，是特定假设下的策略框架；实际订单簿中的队列、离散价位与对手方信息还会影响结果。\n\n报价获得成交并不等于锁定价差利润，价格朝不利方向变化、逆向选择、对冲成本和撤单竞速都可能产生损失。费用返佣只是净经济结果的一部分，库存限额及在途订单也必须纳入控制，不能把高成交率或低延迟当作稳定收益保证。\n\n## 参考\n\n- [SEC：Market Makers](https://www.investor.gov/introduction-investing/investing-basics/glossary/market-makers)\n- [Avellaneda–Stoikov：High-frequency Trading in a Limit Order Book](https://math.nyu.edu/inmemoriam/avellaneda/HighFrequencyTrading.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -1,0 +1,44 @@
+{
+  "id": "fast-protocol",
+  "name": "FIX Adapted for Streaming",
+  "aliases": [
+    "FAST Protocol",
+    "FAST",
+    "FIX 流式编码"
+  ],
+  "type": "protocol",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "fix-trading-community",
+      "context": "FIX Trading Community 的 Market Data Optimization Working Group 制定并维护 FAST 规范。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "xml",
+      "context": "采用规范定义的具体模板语法时，用 XML 表达模板结构；实际处理器可使用其他获取模板方式。"
+    }
+  ],
+  "summary": "借助模板、字段算子和二进制表示压缩消息流的编码规范。",
+  "description": "FIX Adapted for Streaming（FAST）定义面向消息流的二进制编码，结合模板、字段算子与紧凑表示减少重复信息。模板给出字段顺序、结构和处理规则，部分算子利用先前值表达后续值。它起初用于优化 FIX 数据流，也可表达更广的消息结构，不是完整交易业务或网络会话协议。\n\n需要先前值的算子在字典中维护状态，缺失消息可能使后续解码状态失配。编码端和解码端必须遵循一致的模板及重置顺序；FAST 基础编码规范没有统一规定重置信号如何传送，相关约定应由部署或其他规范提供。不能把字典清空当作自动补回丢失行情。\n\nFAST 与 SBE 同属编码层，但目标和处理方式不同；编码标准的支持不证明某场所接口或会话恢复已经兼容。官方另行发布 FAST Session Control Protocol 等文件，应与基础编码规范区分。压缩收益和处理时延取决于数据及实现，不能把某次概念验证结果当作所有消息的固定性能保证。\n\n## 参考\n\n- [FIX Trading Community：FAST 标准](https://fixtrading.org/standards/fast/)\n- [FIX Trading Community：FAST 1.1 结构与字典语义](https://www.fixtrading.org/wp-content/uploads/download-manager-files/FAST-Specification-1-x-1.pdf)\n- [FIX Trading Community：FIX Latest 规范引言](https://www.fixtrading.org/online-specification/introduction/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "abbreviation": "FAST",
+  "official_site": "https://fixtrading.org/standards/fast/"
+}

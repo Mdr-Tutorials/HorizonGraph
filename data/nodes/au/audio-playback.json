@@ -1,0 +1,37 @@
+{
+  "id": "audio-playback",
+  "name": "Interactive Audio Playback",
+  "aliases": [
+    "交互音频播放",
+    "游戏音频播放"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "web-audio-api",
+      "context": "在支持 Web Audio 的浏览器实现中，以音源和处理节点调度、混合及输出声音；Phaser 还提供其他音频后端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asset-loading",
+      "context": "播放文件型音效或音乐前准备音频资源；加载与实际播放启动是不同阶段。"
+    }
+  ],
+  "summary": "管理声音的启动、暂停、混合及输出时序的运行能力。",
+  "description": "交互音频系统把资源、播放实例与输出控制联系起来，管理音效和背景音乐的开始、结束、音量及可选空间处理。音频时钟与显示帧循环不同，全局音频也可以跨场景保持播放。\n\n音频文件成功下载不代表已解码或可以立即发声。格式支持、缓冲、自动播放策略及设备状态影响行为；编码器、资源加载器与播放系统各有职责。\n\n## 参考\n\n- [Phaser：音频管理及后端](https://docs.phaser.io/phaser/concepts/audio)\n- [MDN：音源、处理节点和播放](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

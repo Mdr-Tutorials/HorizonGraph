@@ -1,0 +1,43 @@
+{
+  "id": "nasdaq-totalview",
+  "name": "Nasdaq TotalView",
+  "aliases": [
+    "TotalView",
+    "Nasdaq 全深度行情"
+  ],
+  "type": "product",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance",
+    "data-engineering"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "market-data-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nasdaq-totalview-itch",
+      "context": "在直接数据馈送交付路径中，TotalView-ITCH 消息规范编码订单生命周期及相关成交、拍卖事件；其他交付路径采用各自 API 或展示接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "产品提供 Nasdaq 执行系统的显示订单深度；证券上市地点不扩大为其他交易所订单簿。"
+    }
+  ],
+  "summary": "展示 Nasdaq 执行系统全深度订单的行情产品。",
+  "description": "Nasdaq TotalView 是市场深度数据产品，提供在 Nasdaq 执行系统交易的股票订单簿内容和相关拍卖信息。证券可以在 Nasdaq、NYSE 或其他交易所上市，但该覆盖指它们在 Nasdaq 上的交易，不表示同时获得所有上市市场的完整订单簿。\n\nTotalView 可通过直接数据馈送、Nasdaq Data Link API、网页产品或授权数据供应商交付。TotalView-ITCH 描述其中直接馈送路径的报文格式与订单事件；商业订阅产品、消息规范、传输封装和客户端 book reconstruction 分别具有不同身份。\n\n对交易系统而言，深度数据用于跟踪本场所显示订单及拍卖不平衡信息，仍需处理接入权限、事件恢复和实际内容边界。完整显示深度不等于预先揭示所有隐藏订单，订阅实时数据也不包含向 OUCH 订单接口提交订单的资格或执行服务。\n\n## 参考\n\n- [Nasdaq TotalView 产品与交付方式](https://www.nasdaq.com/products/data/equities/nasdaq-totalview)\n- [Nasdaq TotalView-ITCH 5.0 规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/Totalview-ITCH-cloud.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://www.nasdaq.com/products/data/equities/nasdaq-totalview"
+}

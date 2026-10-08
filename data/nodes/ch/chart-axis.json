@@ -1,0 +1,34 @@
+{
+  "id": "chart-axis",
+  "name": "Chart Axis",
+  "aliases": [
+    "图表坐标轴",
+    "Axis",
+    "坐标轴刻度"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-scale",
+      "context": "依据位置尺度产生刻度位置与标签，并在尺度范围改变时重新生成。"
+    }
+  ],
+  "summary": "用刻度、标签和基线解释位置尺度对应的数据值。",
+  "description": "图表坐标轴把位置尺度的映射以刻度、标签和轴线展示出来，帮助读者理解屏幕位置所代表的数值、类别或日期。尺度决定值如何映射，坐标轴负责展示这种映射；二者可以分别配置。D3 的轴生成器消费尺度并输出轴元素，Vega 等声明式系统则将尺度名称与轴定义关联。\n\n轴的方向、刻度间隔、数字与日期格式、标签密度、单位和网格线应随图表尺寸及数据范围调整。缩放后需要同步轴与图形使用的尺度，避免标签与数据位置错位；多图比较也应说明尺度是否共享。将轴对象与尺度对象分开理解，有助于区分布局问题与数据映射问题。\n\n## 参考\n\n- [D3 Axes](https://d3js.org/d3-axis)\n- [Vega Axes](https://vega.github.io/vega/docs/axes/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

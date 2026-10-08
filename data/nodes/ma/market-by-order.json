@@ -1,0 +1,37 @@
+{
+  "id": "market-by-order",
+  "name": "Market by Order",
+  "aliases": [
+    "MBO",
+    "逐单行情",
+    "订单级行情"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order-book",
+      "context": "在可见范围内，按源定义的订单事件维护限价订单簿状态。"
+    }
+  ],
+  "summary": "用订单标识和事件表示可发布订单状态的行情粒度。",
+  "description": "Market by Order（MBO）按订单标识表示行情中的单个订单，并以新增、修改、撤销和成交相关事件维护状态。能够观察哪些订单、多少价位以及是否提供优先级字段，由源规范决定；CME 的全深度与有限深度 MBO 就是不同覆盖模式，不能把 MBO 名称理解为无条件的全部真实订单。\n\n相对按价位聚合的数据，逐单事件保留更细的组成和生命周期信息，可支持在已知规则及可见范围内重建订单簿。订单标识的唯一性范围、改单是否更换标识，以及成交如何减少数量必须按场所处理。维护状态时还需区分成交事件与订单事件，避免重复累计或把已经移出的订单继续留在簿中。\n\nMBO 不自动揭示隐藏储备、未公开订单、交易者身份或真实撮合队列的所有约束。规范化后的统一格式也可能包含来自价位源的合成记录，不能仅看字段名 order_id 就认定拥有原生逐单信息。缺口或不完整初始状态会影响后续推导，队列位置等指标必须注明数据范围及假设。\n\n## 参考\n\n- [CME：MBP、MBOFD 与 MBOLD 盘口表示](https://cmegroupclientsite.atlassian.net/wiki/spaces/EPICSANDBOX/pages/457223312/MDP%2B3.0%2B-%2BBook%2BManagement)\n- [Databento：MBO 数据模式与逐单状态](https://databento.com/docs/schemas-and-data-formats/mbo)\n- [Databento：源数据差异与规范化约定](https://databento.com/docs/standards-and-conventions)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "MBO"
+}

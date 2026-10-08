@@ -9,7 +9,10 @@
   "type": "metric",
   "domains": [
     "networking",
-    "databases"
+    "databases",
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
   ],
   "relations": [
     {
@@ -17,9 +20,13 @@
       "target_id": "metric"
     }
   ],
-  "summary": "请求发出到响应的等待，P99 比均值更诚实。",
+  "summary": "约定起止事件之间的耗时，须注明单位、统计分布和测量边界。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 5
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "description": "延迟量化约定起止事件之间经过的时间，适用于网络、存储、服务和计算路径。单位可为秒及其子单位，但请求、事务或帧的开始和完成需要明确定义。服务处理时间、排队时间、网络往返时间和端到端时间都可产生延迟指标，彼此不能未经边界说明直接比较。\n\n一组样本可以用均值、中位数、高分位数及完整分布表达，各有不同用途。均值帮助理解总耗时与资源，P99展示较慢部分，两者都不自动给出最大值或未来保证。分位数受样本量和量化影响，多个窗口或实例的分位数不能直接平均成总体分位数。\n\n测量要说明负载模型、预热、时间基准、采样开销及失败处理；超时和未完成请求不能悄悄排除。与系统同时停顿的负载发生器可能漏掉等待样本。降低某一段延迟也可能把排队转移到其他环节，因此容量评估应在相同完成边界下结合吞吐和错误率，而不是只挑选一个“更诚实”的数字。\n\n## 参考\n\n- [Google SRE：延迟、流量与分布监控](https://sre.google/sre-book/monitoring-distributed-systems/)\n- [Prometheus：直方图、分位数与聚合](https://prometheus.io/docs/practices/histograms/)\n- [IETF RFC 7679：单向延迟测量边界](https://www.rfc-editor.org/rfc/rfc7679)\n- [HdrHistogram：范围、精度、并发与遗漏修正](https://github.com/HdrHistogram/HdrHistogram)",
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ]
 }

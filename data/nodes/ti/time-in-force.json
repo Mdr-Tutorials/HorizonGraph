@@ -1,0 +1,31 @@
+{
+  "id": "time-in-force",
+  "name": "Time in Force",
+  "aliases": [
+    "订单有效期",
+    "有效期指令",
+    "TIF"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    }
+  ],
+  "summary": "约定订单存续时长及即时执行条件的交易指令",
+  "description": "Time in Force（TIF）描述订单何时有效、何时终止，以及是否必须立即处理。它与决定价格约束的订单类型分属不同维度；同一限价单可以采用不同 TIF，立即执行指令也可以含有数量约束。\n\nDay、GTC、GTD、IOC 和 FOK 是常见指令。Day 的结束按交易场所的交易日和时段解释，GTC 可跨日保持，IOC 允许立即部分成交，FOK 要求立即全量成交；不同接口对代码、时区、会话切换与允许组合有各自规定。\n\n系统应以确认回报与实际终止事件维护存续状态。客户端到达本地截止时间、发出撤销请求或失去连接，都不自动证明场所订单已经消失；还需要结合场所到期规则、撤销结果和恢复查询处理剩余风险。\n\n## 参考\n\n- [SEC：订单类型与交易指令](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-14)\n- [CME Globex：订单与有效期、展示数量](https://www.cmegroup.com/cn-s/globex/globex-order-type.html)\n- [Nasdaq：FIX 订单入口规范](https://nasdaqtrader.com/content/technicalsupport/specifications/tradingproducts/inet_fix_sb.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abbreviation": "TIF"
+}

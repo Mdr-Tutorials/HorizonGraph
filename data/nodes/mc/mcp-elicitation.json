@@ -1,0 +1,42 @@
+{
+  "id": "mcp-elicitation",
+  "name": "MCP Elicitation",
+  "aliases": [
+    "MCP 用户输入征询",
+    "MCP 人工输入请求"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 定义的客户端用户输入协调能力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "表单征询模式使用规范限定的 JSON Schema 子集描述所需字段。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-multi-round-trip-request",
+      "context": "2026-07-28 核心操作需要用户输入时，通过 MRTR 的 inputRequests 交付征询需求。"
+    }
+  ],
+  "summary": "让 MCP 客户端协调用户补充输入的交互机制。",
+  "description": "MCP Elicitation 允许服务器在处理操作时向客户端提出用户输入需求，例如补充配置或完成外部账户交互。服务器描述所需信息，宿主决定如何展示和取得用户响应；它不同于模型采样、已有工具输出或自动替用户批准操作。\n\n表单模式用受限模式描述可收集的数据，客户端可返回接受、拒绝或取消等结果。服务器不得通过表单模式请求密码、API 密钥、访问令牌或支付凭证；涉及这些敏感信息的交互必须使用 URL 模式，在 MCP 客户端之外完成，凭证不得经 MCP 客户端收集或回传。服务器只能请求客户端声明支持的模式，也不能假定用户一定答复。\n\n2026-07-28 通过 MRTR 结果中的输入需求协调征询，客户端补齐后重试相应原请求，而不是继续使用旧式主动服务器请求。对异步 Tasks，待输入状态有自身更新流程。用户提供数据只解决当前交互条件，不能自动扩大其他资源或未来操作的授权。\n\n## 参考\n\n- [MCP：Elicitation 规范](https://modelcontextprotocol.io/specification/2026-07-28/client/elicitation)\n- [MCP：MRTR 消息模式](https://modelcontextprotocol.io/specification/2026-07-28/basic/patterns/mrtr)\n- [MCP Tasks：待输入更新](https://modelcontextprotocol.io/extensions/tasks/overview)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

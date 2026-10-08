@@ -1,0 +1,37 @@
+{
+  "id": "intercontinental-exchange",
+  "name": "Intercontinental Exchange",
+  "aliases": [
+    "ICE",
+    "洲际交易所集团",
+    "Intercontinental Exchange, Inc."
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "nyse-pillar",
+      "context": "ICE 2025 年报以公司及合并子公司口径说明 NYSE Pillar 与 NYSE 市场技术服务；该提供关系记录集团业务交付，不表达 NYSE 与 ICE 的直接法人母子关系。"
+    }
+  ],
+  "summary": "经营交易所、清算、数据及技术服务的集团。",
+  "description": "Intercontinental Exchange 是经营交易所、清算、固定收益数据及其他金融技术业务的集团。ICE 不只是单个期货交易所的名称，NYSE 交易所业务属于其市场网络；集团、具体交易所法人和对外服务产品需要分别识别。\n\n其交易所业务支持商品、利率、股票等市场的价格发现和风险转移，数据业务将市场产生的信息用于实时或历史行情、定价、参考数据及连接服务。2025 年报以集团口径说明 NYSE Pillar 技术与市场迁移，ICE 通过其 NYSE 业务提供平台接入。清算所处理成交之后的风险与履约机制，不能把电子撮合引擎、数据分发和清算混作同一软件或同一个链路步骤。\n\nICE 的 2025 年报明确讨论竞争的业务范围，例如美国股票及 ETF 上市业务与 Nasdaq 竞争。这些市场业务存在竞争，不表示所有产品可互换；ICE 作为基础设施运营集团也不等同于高频交易策略或做市商。\n\n## 参考\n\n- [ICE 交易所与清算业务](https://www.ice.com/about/exchanges-clearing)\n- [ICE 交易所行情与数据服务](https://www.ice.com/fixed-income-data-services/data-and-analytics/exchange-data)\n- [ICE 2025 年报中的业务与竞争范围](https://www.sec.gov/Archives/edgar/data/1571949/000157194926000004/ice-20251231.htm)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "ICE",
+  "official_site": "https://www.ice.com/"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "container-isolation",
+  "name": "Container Isolation",
+  "aliases": [
+    "容器隔离",
+    "容器隔离边界"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "namespace",
+      "context": "在常规 Linux 容器路径中分离 PID、网络和挂载等资源视图；共享宿主命名空间会改变隔离范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cgroup",
+      "context": "在已配置相应控制器的 Linux 容器中计量和限制 CPU、内存、进程数等资源消耗。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux-capabilities",
+      "context": "为 Linux 工作负载缩减实际可执行的特权操作，保留业务所需权能。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "seccomp",
+      "context": "在启用系统调用策略的 Linux 容器中缩小工作负载可触及的内核调用面。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "apparmor",
+      "context": "在启用 AppArmor 的 Linux 宿主或后端上，把实际附着的 profile 作为附加任务访问约束。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "selinux",
+      "context": "在启用 SELinux 且运行时配置了对应标签与策略时，对容器进程和资源实施附加访问控制。"
+    }
+  ],
+  "summary": "组合资源视图、权限、资源预算与执行边界隔离容器。",
+  "description": "容器隔离描述工作负载之间以及工作负载与宿主之间的执行、可见性和访问边界。常规 Linux 容器使用 namespaces 隔离部分资源视图，以 cgroup 计量和限制资源，并收缩 capabilities；seccomp、AppArmor 或 SELinux 等机制可继续约束允许的调用和访问。各机制针对的对象不同，实际启用组合与配置决定最终边界。\n\n常规 Linux 容器共享其运行宿主的内核，内核接口、特权管理进程及显式共享资源仍属于威胁模型。绑定目录、设备、宿主命名空间和运行时管理套接字可跨越部分限制，rootless 也不能自动消除这些路径。cgroup 缓解资源耗尽，不能直接充当数据访问控制；chroot、单个 namespace 或单份 syscall 过滤器也不能单独代表完整沙箱。\n\n增强运行时可以改变应用接触宿主接口的路径：gVisor 在用户态应用内核中处理调用，Kata 使用轻量虚拟机形成客体边界，Firecracker 提供可用于这些系统的 microVM 管理能力。这些方案需要按兼容性、性能、共享接口及可信组件比较，不是所有容器的固定依赖。Windows 上的 Linux 容器后端使用 Linux 内核环境，Windows 原生容器另有进程隔离与 Hyper-V 隔离模式，不能把各层内核和边界混为一体。\n\n## 参考\n\n- [Docker：内核机制、管理面与共享资源](https://docs.docker.com/engine/security/)\n- [gVisor：应用内核与安全架构](https://gvisor.dev/docs/architecture_guide/intro/)\n- [Docker Desktop：Windows 的 WSL 2 后端](https://docs.docker.com/desktop/features/wsl/)\n- [Microsoft：Windows 原生容器隔离模式](https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

@@ -1,0 +1,34 @@
+{
+  "id": "tool-poisoning",
+  "name": "Tool Poisoning",
+  "aliases": [
+    "工具投毒",
+    "工具描述投毒"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "indirect-prompt-injection",
+      "context": "以工具描述或元数据承载恶意行为指令的投毒方式，将攻击者控制内容作为间接注入路径送入模型上下文。"
+    }
+  ],
+  "summary": "通过恶意工具元数据影响模型选用工具或构造后续操作。",
+  "description": "工具投毒在智能体发现工具时提供恶意描述或元数据，把操纵指令混入看似说明功能的内容。例如描述要求额外读取秘密或向另一个工具传递敏感参数，这种内容可能在工具尚未被执行前就影响模型。这里聚焦智能体工具元数据攻击，与编译产物或依赖包本身被篡改有不同范围。\n\n以恶意描述承载指令的投毒属于间接提示注入的具体路径，可由受控工具服务、被替换的元数据或更新后的描述进入上下文。发现工具和实际执行工具需分别建立信任，不能因为某个工具声称只读或无害就跳过校验。MCP 当前规范要求未受信服务器的 annotations 被当作不可信信息。\n\n防护关注可信服务标识、已审核的工具集合和元数据变化，并在真正调用时检查参数及资源范围。工具名称相同不表示来源相同，批准过的工具更新也不自动获得新的权限。OWASP 的讨论提供攻击形态与案例线索，节点不把个别报告推广为所有 MCP 服务都存在投毒漏洞。\n\n## 参考\n\n- [OWASP Gen AI：2025 Q2 攻击事件与工具投毒讨论](https://genai.owasp.org/2025/07/14/owasp-gen-ai-incident-exploit-round-up-q225/)\n- [MCP 2026-07-28：Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)\n- [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,39 @@
+{
+  "id": "delegated-authorization",
+  "name": "Delegated Authorization",
+  "aliases": [
+    "委托授权",
+    "代理授权"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "cloud-infrastructure"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "iam-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "authorization",
+      "context": "建立委托和处理下游资源请求时，检查委托者可授予的权限与实际执行者可使用的动作、对象范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scoped-credentials",
+      "context": "以受限资源和动作的凭据承载具体委托时，凭据范围不应超出已批准的委托权限。"
+    }
+  ],
+  "summary": "明确主体代谁执行何种操作，并限制委托对象、范围与期限。",
+  "description": "委托授权允许一个执行主体代表另一个主体访问资源，同时明确谁发起委托、谁实际执行、哪些动作与对象被允许。代理身份和原始主体可以同时保留，以便资源服务判断权限并追踪责任。它与身份冒用有不同语义，复制用户凭据也不足以表达受控的委托关系。\n\nOAuth 2.0 用授权授予客户端有限资源访问，RFC 8693 的令牌交换进一步提供表达 subject、actor 和目标 audience 的机制。部署仍需决定信任发行者、允许的委托关系及下游范围；交换令牌不自动保证权限收窄。代理调用应使用面向实际资源、符合策略的凭据，并由下游再次检查对象级权限。\n\n智能体工具链应区分操作员、用户、运行实例和第三方服务身份，避免把代理自身的广泛权限当作每位请求者的权限。MCP 当前安全指南明确禁止未经正确受众验证的 token passthrough；这类原样透传不是安全委托。委托链、撤销和日志是具体部署问题，NIST 2026 年身份概念草案也将这些列为研究与实践议题。\n\n## 参考\n\n- [IETF RFC 8693：OAuth 2.0 Token Exchange](https://www.rfc-editor.org/rfc/rfc8693.html)\n- [IETF RFC 6749：OAuth 2.0 Authorization Framework](https://www.rfc-editor.org/rfc/rfc6749.html)\n- [MCP 2026-07-28：Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)\n- [NIST NCCoE：软件与 AI 智能体身份、授权概念草案（2026-02）](https://www.nccoe.nist.gov/sites/default/files/2026-02/accelerating-the-adoption-of-software-and-ai-agent-identity-and-authorization-concept-paper.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

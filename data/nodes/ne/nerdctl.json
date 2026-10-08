@@ -1,0 +1,43 @@
+{
+  "id": "nerdctl",
+  "name": "nerdctl",
+  "aliases": [
+    "contaiNERD CTL",
+    "containerd CLI nerdctl"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "containerd",
+      "context": "nerdctl 源码直接使用 containerd 项目的库构建，容器及本地镜像管理还调用其服务；不推导 manifest inspect 等仓库操作都要求运行中的 containerd daemon。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "buildkit",
+      "context": "执行 nerdctl build 或 compose build 时使用已运行的 BuildKit builder；其它容器管理命令不因此全局硬依赖 BuildKit。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cni",
+      "context": "在 nerdctl 配置的容器网络路径中调用 CNI 插件；host/none 等网络选项应按具体部署核对。"
+    }
+  ],
+  "summary": "面向 containerd 的 Docker 风格容器命令行",
+  "description": "nerdctl 是 containerd 的 Docker 风格 CLI，可用熟悉的 run、build、compose 等入口操作 containerd 管理的容器与镜像。官方定位为 containerd 的非核心子项目；它直接面向 containerd 服务，不是把 Docker daemon 包在另一层命令名之后。\n\n功能按路径引入不同组件：普通默认网络使用 CNI 插件，nerdctl build 使用已运行的 BuildKit 服务，rootless 则需要相应 rootless 环境。仅包含 CLI 的发行包与完整组件包不同，因此安装 nerdctl 不表示所有可选构建、网络和 rootless 功能已经准备好。\n\ncontainerd namespace 决定所查看的资源范围，调试 Kubernetes 工作负载时需要选择对应范围。Docker 风格界面不表示容器状态与 Docker 或其他 namespace 自动共享；BuildKit 的 OCI worker 和 containerd worker 对本地基础镜像访问也存在差异，应按构建后端、地址与 namespace 配置判断行为。\n\n## 参考\n\n- [nerdctl 官方 README](https://github.com/containerd/nerdctl/blob/main/README.md)\n- [nerdctl build 的 BuildKit 配置](https://github.com/containerd/nerdctl/blob/main/docs/build.md)\n- [nerdctl 的 CNI 网络配置](https://github.com/containerd/nerdctl/blob/main/docs/cni.md)\n- [nerdctl manifest inspect 的官方实现](https://github.com/containerd/nerdctl/blob/main/pkg/cmd/manifest/inspect.go)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool"
+}

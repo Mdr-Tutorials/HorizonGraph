@@ -1,0 +1,38 @@
+{
+  "id": "lighting-model",
+  "name": "Lighting Model",
+  "aliases": [
+    "光照模型",
+    "照明模型"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "brdf",
+      "context": "在基于物理的表面反射计算中使用 BRDF 描述入射与出射方向的反射关系。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-transform",
+      "context": "把表面法线、光源和观察方向置于一致坐标系后进行光照计算。"
+    }
+  ],
+  "summary": "结合光源、表面方向和反射规则计算外观。",
+  "description": "光照模型规定已知光源和表面条件下如何估计观察到的颜色或出射辐射。常见实现组合光源位置或方向、表面法线、观察方向和材质参数；无光照颜色、Lambert 漫反射、经验高光与基于物理的模型具有不同假设和成本。\n\n在物理反射路径中，BRDF 描述同一点上入射方向到出射方向的反射分布，光照计算还需要光源辐射和可见性等信息。阴影、间接照明及环境光表示是另外的处理问题：有反射模型并不自动得到阴影或完整全局光照。\n\n实时渲染常在有限时间内使用近似、预计算或有限数量光源。选择模型要匹配材质、单位、颜色空间和目标表现，不能把灯光数量或经验高光参数直接等同于物理测量；二维图形也可完全不采用受光模型。\n\n## 参考\n\n- [Three.js Lights](https://threejs.org/manual/pages/lights.html)\n- [Three.js Materials](https://threejs.org/manual/pages/materials.html)\n- [PBRT Surface Reflection](https://pbr-book.org/4ed/Radiometry,_Spectra,_and_Color/Surface_Reflection)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

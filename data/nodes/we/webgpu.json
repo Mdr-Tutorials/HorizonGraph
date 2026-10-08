@@ -10,25 +10,46 @@
   ],
   "domains": [
     "graphics",
-    "web-development"
+    "web-development",
+    "interactive-graphics"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "api-specification"
     },
     {
       "relation_type": "stewarded_by",
       "target_id": "w3c",
       "context": "相关规范由 W3C 对应工作组按其标准流程推进。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "graphics-pipeline"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wgsl",
+      "context": "创建着色模块时，用 WGSL 表达渲染或计算阶段执行的程序。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "render-pass",
+      "context": "通过渲染 pass 编码附件、管线、绑定和绘制命令。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "compute-shader",
+      "context": "在计算管线与 compute pass 中执行通用数据处理程序。"
     }
   ],
-  "summary": "浏览器里的现代 GPU API，对标 Vulkan 的 Web 入口。",
+  "summary": "以资源、管线与命令提交组织 GPU 渲染和计算的 Web API。",
   "importance": 4,
   "popular": 55,
   "official_site": "https://www.w3.org/TR/webgpu/",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-07",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "WebGPU 是为现代 GPU 能力设计的 Web API，同时提供渲染与通用计算管线。应用请求 adapter 和 device，建立 buffer、texture、绑定及管线，用 command encoder 记录命令，再经 queue 提交；显示输出可配置 GPUCanvasContext 接入画布。\n\n渲染与计算使用不同的 pass 和管线，着色代码采用 WGSL。API 显式描述资源用途、绑定布局和许多执行状态，不能直接运行 WebGL 的 GLSL 程序或把 WebGL 代码原样替换为 WebGPU 调用。\n\n可用 feature、limit 和设备行为取决于浏览器与硬件，应检查请求结果、验证错误及 device.lost。设备丢失后需要重建相关资源；GPU 能力更广不保证所有任务更快，上传、同步和读回仍有代价。此节点是 API 规范，不是传输协议，也不硬依赖 Vulkan 这一种原生后端。\n\n## 参考\n\n- [W3C：WebGPU 规范](https://www.w3.org/TR/webgpu/)\n- [W3C：WGSL 着色语言规范](https://www.w3.org/TR/WGSL/)\n- [Chrome：GPU 计算与命令提交](https://developer.chrome.com/docs/capabilities/web-apis/gpu-compute)"
 }

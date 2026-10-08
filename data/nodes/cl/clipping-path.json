@@ -1,0 +1,39 @@
+{
+  "id": "clipping-path",
+  "name": "Clipping Path",
+  "aliases": [
+    "裁剪路径",
+    "Clip Path"
+  ],
+  "type": "concept",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interactive-graphics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "drawing-path",
+      "context": "用几何路径界定允许保留内容的区域边界。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fill-rule",
+      "context": "对复合或自交路径建立裁剪区域时，用内部判定规则确定孔洞及保留区域。"
+    }
+  ],
+  "summary": "以几何内部区域限定后续绘制可见范围的机制。",
+  "description": "裁剪路径用路径内部定义可绘制区域，区域之外的内容不会出现在结果中。它不会删除源几何；以灰度或 alpha 连续调节可见度的遮罩是另一种机制，不能把裁剪路径等同于完整图像蒙版。\n\nCanvas clip 会把新区域与已有裁剪区域取交集，重复调用只会继续限制。局部绘制可用 save/restore 恢复之前的裁剪；CSS/SVG 的裁剪还需解释所用坐标系、引用单位与填充规则，画出的轮廓线本身并不是裁剪区域。\n\n## 参考\n\n- [W3C：裁剪路径与遮罩](https://www.w3.org/TR/css-masking-1/)\n- [MDN：Canvas clip 的交集语义](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clip)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

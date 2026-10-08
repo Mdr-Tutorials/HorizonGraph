@@ -13,7 +13,8 @@
     "cybersecurity-ecosystem"
   ],
   "domains": [
-    "security"
+    "security",
+    "agent-development"
   ],
   "relations": [
     {
@@ -29,12 +30,22 @@
       "relation_type": "uses",
       "target_id": "abac",
       "context": "需要根据资源、主体或环境属性授权时可采用 ABAC 策略。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "policy-decision-point",
+      "context": "采用决策与执行分离的访问控制设计时，授权流程把主体、资源、动作和上下文交给决策角色求取结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "policy-enforcement-point",
+      "context": "在 API、代理或工具执行路径实施授权的设计中，由执行角色实际落实拒绝或受限允许，避免绕过。"
     }
   ],
-  "summary": "判断主体是否可以对某个资源执行指定操作。",
+  "summary": "判断主体能否对指定资源执行操作，并在访问处落实决定。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-10-01",
+  "last_reviewed": "2026-10-08",
   "importance": 5,
-  "description": "## 机制\n\n授权以主体、资源、动作与环境为输入，依据策略决定访问。RBAC 或 ABAC 提供不同组织方式，应用仍须在服务端对对象和操作执行检查。\n\n## 边界与应用\n\n身份认证只确认身份或凭据，不自动授予对象访问权。权限需考虑租户边界、继承和变化，并尽可能默认拒绝；复杂或随机对象 ID 不能替代检查。\n\n## 参考\n\n- [OWASP：授权](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)"
+  "description": "授权以主体、资源、动作和上下文为输入，根据可信策略判断访问是否允许。身份认证确认调用者或凭据，授权再判断它可做什么。RBAC 和 ABAC 是组织策略的不同方法，具体业务仍需在服务端检查对象、操作与租户边界。不可猜测的对象 ID 或成功登录都不能代替授权。\n\n设计可分为求取策略决定与实际执行两类角色：决策点依据身份及资源属性评价规则，执行点在访问路径落实结果。每次请求要覆盖可绕过的接口，并处理策略变化、缓存与撤销。允许调用客户端工具不代表下游 API 同样允许请求，文件或网络层限制也不能替代业务对象检查。\n\n智能体及代理调用还需区分原始用户、工具运行主体与代理服务身份，按明确委托范围获得目标凭据。当前 MCP 按请求授权处理工具和资源，已认证服务的状态句柄也必须逐次授权，不能因持有句柄或复用连接就取得权限。审批界面只在其主体和范围成立时提供相应决定。\n\n## 参考\n\n- [OWASP：Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)\n- [MCP 2026-07-28：Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)\n- [MCP 2026-07-28：Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)"
 }

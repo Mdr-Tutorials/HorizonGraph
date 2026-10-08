@@ -1,0 +1,57 @@
+{
+  "id": "wsl-containers",
+  "name": "WSL Containers",
+  "aliases": [
+    "WSL Container",
+    "WSL 容器功能"
+  ],
+  "type": "product",
+  "domains": [
+    "containerization",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "containers"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "wsl"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "host-compute-service",
+      "context": "WSL Containers 的 Windows 侧 VM 创建路径经 WSL 服务调用 HCS，后续会话管理在用户身份进程中完成。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "containerd",
+      "context": "WSL 3.0.1 的 Session BringUp 先启动内部 containerd，作为该会话 dockerd 的执行后端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker-engine",
+      "context": "WSL 3.0.1 会话 VM 内启动 dockerd 并通过内部 Docker 客户端管理容器；不据此承诺通用外部 Docker API endpoint。"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    }
+  ],
+  "summary": "让 Windows 应用与终端管理 Linux 容器的 WSL 功能",
+  "description": "WSL Containers 是 WSL 提供的 Windows 容器功能，可由内置 CLI 使用，也可嵌入 Windows 应用逻辑。这里运行的是 Linux 容器，不能因此把它等同于 Windows 容器。功能在 2026 年 9 月 29 日随 WSL 3.0.1 宣布 GA；较早版本中的预览入口不代表相同发布状态。\n\n运行环境以 Session 为管理单位。3.0.1 源码在每个会话运行时中创建和维护其 VM，并为会话处理存储、网络、容器及进程资源；这与普通 WSL 2 发行版的共享 VM 使用方式需要区分。官方架构把特权 VM 创建交给 WSL 服务与 HCS，后续操作由用户身份下的 wslcsession.exe 管理。\n\n3.0.1 的启动路径先启动 containerd，再启动使用该 containerd socket 的 dockerd，内部 Docker HTTP 客户端参与状态和生命周期操作。因此它确实采用 Docker Engine 组件，而公开产品入口仍是 WSL CLI/API；内部实现不构成任意外部 Docker endpoint 的兼容承诺。文件挂载、端口与持久化行为应按会话设置和已实现接口评估。\n\n## 参考\n\n- [WSL Containers GA 公告](https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/)\n- [WSL 3.0.1 发布记录](https://github.com/microsoft/WSL/releases/tag/3.0.1)\n- [微软：WSLc 架构详解](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)\n- [WSL 3.0.1：Session 启动 containerd 与 dockerd](https://github.com/microsoft/WSL/blob/3.0.1/src/windows/wslcsession/WSLCSession.cpp#L396)\n- [WSL 3.0.1：Session 的虚拟机创建与销毁](https://github.com/microsoft/WSL/blob/3.0.1/src/windows/wslcsession/WSLCSessionRuntime.cpp#L331)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm"
+}

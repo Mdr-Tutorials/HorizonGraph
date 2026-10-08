@@ -1,0 +1,34 @@
+{
+  "id": "policy-decision-point",
+  "name": "Policy Decision Point",
+  "aliases": [
+    "策略决策点"
+  ],
+  "type": "concept",
+  "domains": [
+    "security"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "iam-ecosystem",
+    "zero-trust-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "abac",
+      "context": "采用属性策略的授权设计中，决策点基于主体、资源、操作和环境属性评价访问规则。"
+    }
+  ],
+  "summary": "根据主体、资源、动作与上下文求取访问策略决定。",
+  "description": "策略决策点是求取访问控制决定的逻辑角色，接收主体、目标资源、动作和环境等输入，按策略输出允许、拒绝以及必要的附加约束。它可以位于独立服务或应用内部，节点描述的是安全设计角色，而不是某个必须独立部署的软件产品。\n\n决策点可采用角色、属性等权限模型，并读取可信身份与资源属性。采用 ABAC 时，它依据主体、对象、操作和环境属性评价规则；数据来源、策略版本和缺失属性的处理都会影响结论。策略决策完成不等于请求已被阻止，执行点还需实际落实结果。\n\n在智能体执行链中，可在工具派发或下游资源访问处进行决策，而不把模型对权限的解释当作最终判定。NIST 零信任架构描述的决策与执行角色说明这种分工，但具体产品可以合并组件。缓存决策还需考虑权限撤销和上下文变化，不能将某次允许结果无限复用于后续对象。\n\n## 参考\n\n- [NIST CSRC：Policy decision point](https://csrc.nist.gov/glossary/term/policy_decision_point)\n- [NIST SP 800-207：Zero Trust Architecture](https://csrc.nist.gov/pubs/sp/800/207/final)\n- [OWASP：Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "PDP"
+}

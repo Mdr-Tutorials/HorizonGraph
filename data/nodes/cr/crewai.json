@@ -2,7 +2,7 @@
   "id": "crewai",
   "name": "CrewAI",
   "display_primary": "CrewAI",
-  "display_secondary": "多智能体角色协同编排框架",
+  "display_secondary": "代理任务与有状态流程编排框架",
   "aliases": [
     "CrewAI 框架"
   ],
@@ -12,7 +12,8 @@
     "python-ecosystem"
   ],
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "agent-development"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -22,17 +23,50 @@
     },
     {
       "relation_type": "depends_on",
-      "target_id": "python"
+      "target_id": "python",
+      "context": "运行 CrewAI 的 Python 软件包与项目代码需要 Python 运行环境。"
     },
     {
       "relation_type": "implements",
       "target_id": "ai-agent",
       "context": "提供构建基于大模型的智能体及工具协作流程的能力。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "multi-agent-systems",
+      "context": "Crew 按任务与协作配置组织多个代理承担不同工作。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agentic-workflow",
+      "context": "Flows 的状态、监听函数与路由可组合普通代码和代理或 Crew 步骤。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "sequential-agent-orchestration",
+      "context": "Crew 采用 sequential process 时，按任务顺序执行相应代理阶段。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-lifecycle-hooks",
+      "context": "提供步骤、任务以及 kickoff 前后等执行边界回调。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "structured-output",
+      "context": "任务及 Crew 输出可返回配置的 JSON 字典或 Pydantic 结构。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "agent-checkpointing",
+      "context": "启用 Crew 的 checkpoint 配置后，在任务完成等边界保存恢复记录。"
     }
   ],
-  "summary": "基于角色扮演与任务委派的多智能体协同框架，赋能自主团队工作流编排。",
+  "summary": "以 Crews 组织代理任务，并用 Flows 编排有状态流程。",
   "status": "active",
-  "origin": "curated",
-  "last_reviewed": "2026-09-07",
-  "importance": 3
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "description": "CrewAI 是组织智能体、任务和协作流程的 Python 框架。Crew 表达由若干代理共同完成的一组任务，代理可以具有角色、目标与工具；实际任务分配和控制方式由 process 等配置决定，角色描述本身不等于独立权限或可信执行结果。\n\nCrews 支持顺序或层级任务组织，Flows 则用状态、监听函数和路由描述更明确的应用控制流程，流程中可以调用 Crew。两类组件可以组合，流程步骤也可以是普通代码；消息、状态、任务结果与持久配置应根据所用组件分别理解。\n\n框架提供结构化任务结果和步骤、任务及启动前后回调；启用检查点配置时，可在任务边界保存恢复所需记录。模型供应商、记忆与工具能力属于按需配置的组件，继续执行仍需处理输出校验、取消与外部动作的重复副作用。\n\n## 参考\n\n- [CrewAI crews](https://docs.crewai.com/en/concepts/crews)\n- [CrewAI flows](https://docs.crewai.com/en/concepts/flows)",
+  "official_site": "https://docs.crewai.com/"
 }

@@ -1,0 +1,40 @@
+{
+  "id": "wsl",
+  "name": "Windows Subsystem for Linux",
+  "aliases": [
+    "适用于 Linux 的 Windows 子系统",
+    "WSL"
+  ],
+  "type": "architecture",
+  "domains": [
+    "developer-environments",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wsl-configuration",
+      "context": "在发行版与 WSL 2 受管理虚拟机启动时读取相应作用域配置，设置启动、互操作及资源参数。"
+    }
+  ],
+  "summary": "在 Windows 上运行 Linux 用户空间的子系统与受管理执行环境。",
+  "description": "Windows Subsystem for Linux（WSL）让 Windows 用户直接使用 Linux 发行版的命令行工具、脚本和开发依赖。WSL 提供发行版注册、启动、进程输入输出转接及 Windows/Linux 互操作；发行版提供自己的软件包、用户和根文件系统。Ubuntu、Bash 与 WSL 分别属于发行版、Shell 和承载环境，安装其中一项并不使三者成为同一个产品。\n\nWSL 1 与 WSL 2 是两种可并存的执行架构。WSL 1 通过 Windows 内核组件实现 Linux 系统调用兼容层；WSL 2 则在轻量受管理虚拟机中运行真正的 Linux 内核。一个发行版登记使用哪种架构，与 WSL 软件包自身的发布版本是两个维度；Microsoft Store 的独立更新渠道也不是“WSL 2”的同义词。项目可按内核功能需求与跨文件系统访问方式选择架构，而不能用一个性能数字代表所有工作负载。\n\n常规 WSL 2 发行版工作流中，同一 Windows 用户的多个发行版共享受管理虚拟机和 Linux 内核，各自保留隔离的用户空间；WSLg 的系统发行版也在这一环境内。2026 年正式发布的 WSL Containers 则采用不同的会话管理模型，由会话进程管理会话虚拟机和容器资源。不能把普通发行版的共享虚拟机结论推广到所有 WSLc 会话，也不能把 WSL 的发行版安装等同于运行任意 OCI 容器。\n\n## 参考\n\n- [Microsoft：What is WSL?](https://learn.microsoft.com/en-us/windows/wsl/about)\n- [Microsoft：Comparing WSL Versions](https://learn.microsoft.com/en-us/windows/wsl/compare-versions)\n- [Microsoft：WSLg 架构](https://github.com/microsoft/wslg#user-distro)\n- [Microsoft：WSLc 架构与会话模型](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "abstraction_level": "kernel_os",
+  "abbreviation": "WSL",
+  "official_site": "https://learn.microsoft.com/en-us/windows/wsl/"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "ai-code-generation",
+  "name": "AI Code Generation",
+  "aliases": [
+    "AI 源码生成",
+    "人工智能代码生成",
+    "生成式代码编写"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-assisted-software-engineering",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-engineering",
+      "context": "生成候选源码时提供任务要求、邻近代码与项目可用接口等上下文。"
+    }
+  ],
+  "summary": "根据自然语言与项目上下文生成候选源代码。",
+  "description": "AI 源码生成使用生成模型，根据自然语言要求、邻近代码、接口和示例产生源代码片段或文件。它可以用于补全、测试草稿、功能实现和改写候选；这里的生成对象是开发者使用的源码，不是编译器把中间表示降低为机器码的代码生成阶段。\n\n生成可以作为光标处的一次建议，也可以嵌入编码代理的多步执行。上下文决定可见接口、命名习惯和需求边界，模型输出随后由编辑器或文件工具插入工作区；模型生成文本与宿主实际执行修改属于不同步骤。\n\n输出可能包含错误接口、遗漏约束或与项目行为不一致的实现。生成结果需要通过类型检查、适当测试和差异审查确认用途；模型输出并不证明语义正确。若出现与公开代码匹配的提示，还应按实际来源和许可核对，不能假定每段生成代码都会附带完整来源。\n\n## 参考\n\n- [GitHub：IDE 中的补全、编辑建议与代理能力](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides)\n- [GitHub：云端编码代理与审查流程](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

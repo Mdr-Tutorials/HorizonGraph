@@ -1,0 +1,35 @@
+{
+  "id": "mid-price",
+  "name": "Mid-Price",
+  "aliases": [
+    "中间价",
+    "买卖报价中点",
+    "报价中点"
+  ],
+  "type": "metric",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "best-bid-and-offer",
+      "context": "以同一口径的最优买卖报价对计算算术平均；缺少有效双侧报价时不强行生成中点。"
+    }
+  ],
+  "summary": "有效最优买卖报价的算术平均价格。",
+  "description": "中间价是有效买价 b 与卖价 a 的算术平均 m=(b+a)/2，常用于描述某个时点的报价中心。它不依赖该时点已有成交，因而与最近成交价、结算价和盘口数量加权价格分别定义；价格单位应与所用报价一致。\n\n交易分析可以用中间价作为价格变化和成本的参考，也有场所规定特定 midpoint 定价路径。是否能按中点成交取决于相应订单机制、交易对手和可用数量；中点可能不落在普通限价单允许的价格网格上，不能把观测值直接当成无条件可成交价格。\n\n使用时必须说明报价来自单场所还是规定的跨场所范围，并检查双侧有效性、时序和交叉状态。它是简洁参考量而非真实价值的保证；盘口失衡和信息变化可能使条件未来价格偏离当前中点，历史回放中也不能默认所有策略都以中点成交。\n\n## 参考\n\n- [Nasdaq：加拿大交易功能指南中的 midpoint 定价](https://www.nasdaq.com/docs/nasdaq-canada-functionality-guide)\n- [CME：部分产品历史结算方法中的报价中点](https://www.cmegroup.com/tools-information/lookups/advisories/market-regulation/SER-5914.html)\n- [Stoikov：Micro-price 的条件中间价极限定义](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2970694)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

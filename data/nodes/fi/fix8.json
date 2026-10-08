@@ -1,0 +1,55 @@
+{
+  "id": "fix8",
+  "name": "Fix8",
+  "aliases": [
+    "FIX8",
+    "Fix8 Community Edition"
+  ],
+  "type": "framework",
+  "domains": [
+    "electronic-trading",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cpp"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fix-protocol",
+      "context": "根据 FIX XML schema 生成并校验业务消息。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "fix-session-protocol",
+      "context": "提供 FIX/FIXT 客户端与服务端会话、序号与重发处理。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "quickfix",
+      "context": "比较 C++ FIX 引擎的 schema 生成、配置和运行设计。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lock-free-programming",
+      "context": "部分运行路径采用原子操作与无锁队列；不表示所有功能或后端无锁。"
+    }
+  ],
+  "summary": "通过 schema 编译和 C++ 运行库构建 FIX 应用的框架。",
+  "description": "Fix8 是 C++ FIX 框架，由 schema 编译器、生成的消息类型与运行库协作。开发者把 FIX XML schema 编译为应用代码，修改自定义消息或字段后重新生成，而会话与连接类负责协议运行。它实现经典 FIX 业务消息和 FIX/FIXT 会话功能，业务处理仍由应用定义。\n\n框架支持重复组、组件、字段校验、重传、日志和消息持久化等能力。并发队列、消息复用与静态元数据用于降低运行时开销，但具体后端依构建和配置选择。官方资料的商业 Fix8Pro/UFE 与开源 Community Edition 有不同功能范围，不能把商业版的语言绑定或高可用特性直接写成社区版保证。\n\n这类框架可供 C++ FIX 接入程序选型，与 QuickFIX 属于可比较的实现路线。官方公布的编码解码测试有特定硬件、消息和版本条件，不能推出普遍最快或完整链路的微秒承诺。交易所认证、应用风控、故障恢复和真实负载测试仍需在使用框架的系统中完成。\n\n## 参考\n\n- [Fix8 官方项目](https://github.com/fix8/fix8)\n- [Fix8：框架和版本范围](https://fix8.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://fix8.org/"
+}

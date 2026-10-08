@@ -17,12 +17,23 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "policy-decision-point",
+      "context": "采用资源访问策略分离的零信任设计中，决策角色按身份、资源和环境信号求取访问决定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "policy-enforcement-point",
+      "context": "零信任访问路径中的执行角色落实策略决定，控制资源连接或具体请求而不只展示结果。"
     }
   ],
-  "summary": "默认不信任网络位置，每次请求都要认证、授权与加密。",
+  "summary": "以资源与动态策略决定访问，不因网络位置给予隐含信任。",
   "importance": 4,
   "popular": 58,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "零信任是一组以资源和访问判断为中心的安全原则，不因位于内部网络或由某个组织拥有就给予隐含信任。NIST SP 800-207 描述主体、设备及环境信号参与访问策略，关注具体资源而不是仅用传统网络边界划分可信与不可信。采用零信任并不意味着没有任何可信组件或所有请求都必须重新显示登录界面。\n\n架构可把策略决策与实际访问执行分开，并按请求或会话的策略评价身份、权限和风险变化。认证、授权、通信保护与设备状态各有职责，部署还需明确访问有效期及重新评价条件。某个网关、加密协议或账号系统是实现中的组件，单独部署它不能证明整个系统已符合所有原则。\n\n智能体和代理也不应因运行在本机或可信工作区内就获得全部下游访问权。操作主体、用户委托、具体资源和工具请求都需要在其访问路径验证，范围受限凭据可以缩小暴露面。当前 MCP 的逐请求授权与令牌受众校验提供具体边界例子，但协议支持这些机制不等于每个客户端自动正确实施。\n\n## 参考\n\n- [NIST SP 800-207：Zero Trust Architecture](https://csrc.nist.gov/pubs/sp/800/207/final)\n- [OWASP：Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)\n- [MCP 2026-07-28：Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)"
 }

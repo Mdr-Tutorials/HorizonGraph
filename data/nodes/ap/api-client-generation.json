@@ -1,0 +1,34 @@
+{
+  "id": "api-client-generation",
+  "name": "API Client Generation",
+  "aliases": [
+    "API 客户端生成",
+    "SDK 生成"
+  ],
+  "type": "concept",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "在基于 OpenAPI 的 HTTP API 工具链中读取操作、参数、响应和认证描述。"
+    }
+  ],
+  "summary": "从接口描述生成调用函数、数据模型与客户端基础代码。",
+  "description": "API 客户端生成把机器可读的接口描述转成目标语言的调用代码。输入通常包含操作、参数、请求与响应结构、认证信息和服务地址；生成器据此产出数据模型、请求序列化、调用函数及相应的工程文件。OpenAPI 是 HTTP API 的常见输入，其他接口定义语言也可经各自的生成器产出客户端。只有类型声明的生成属于这条工具链的一环，并不自动包含实际发送网络请求的实现。\n\n生成结果的能力由输入描述、目标语言、模板和配置共同决定。模型中的字段类型不能保证服务端实际响应始终符合约定；认证凭据、超时、重试、错误分类与运行时校验也需按生成器能力配置或补充。将规范与生成器版本固定、把自定义逻辑放在可保留的扩展位置，并在接口变化后重新生成和验证，有助于使客户端与契约一起演进。\n\n## 参考\n\n- [OpenAPI Generator：使用与生成配置](https://openapi-generator.tech/docs/usage/)\n- [OpenAPI Generator：定制模板与模型映射](https://openapi-generator.tech/docs/customization/)\n- [openapi-typescript：类型声明的产物范围](https://openapi-ts.dev/introduction)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

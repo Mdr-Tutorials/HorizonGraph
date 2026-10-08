@@ -1,0 +1,39 @@
+{
+  "id": "ai-assisted-code-editing",
+  "name": "AI-assisted Code Editing",
+  "aliases": [
+    "AI 辅助代码编辑",
+    "AI Code Editing",
+    "AI 编辑建议"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-assisted-software-engineering",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ai-code-generation",
+      "context": "根据需求与目标源码生成替换片段或新的源文件内容。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "通过差异与验证信息核对修改是否符合需求及现有项目行为。"
+    }
+  ],
+  "summary": "让模型根据任务与已有代码提出插入、替换或删除。",
+  "description": "AI 辅助代码编辑根据自然语言任务和现有源码提出插入、替换或删除，可作用于选区、整份文件或多个相关文件。它包括直接要求改写与预测下一处编辑，不限于光标处补全，也不必具备完整代理执行循环。\n\n编辑工具需要定位目标、保持文档版本一致，并把生成内容转成实际文件修改。Antigravity Tab 文档区分区域建议、文件内联动修改和光标跳转；Copilot 的下一处编辑建议也同时预测修改位置与内容。这些能力必须按实际产品范围描述，不能视为编译器的语义重命名保证。\n\n修改可以在差异视图中接受、撤销或继续讨论，审查状态与落盘时机依宿主实现不同。即使改动看起来像重构，也应验证对外行为和所有调用者；临时检查点与撤销机制的范围不等于任意终端命令副作用都能回滚。\n\n## 参考\n\n- [Google Antigravity：Tab 补全与跨位置编辑建议](https://antigravity.google/docs/ide/tab)\n- [GitHub：IDE 中的补全、编辑建议与代理能力](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-in-ides)\n- [VS Code：审查代理修改、检查点与 worktree 集成](https://code.visualstudio.com/docs/agents/run/review-code-edits)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

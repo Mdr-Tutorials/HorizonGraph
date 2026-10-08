@@ -1,0 +1,34 @@
+{
+  "id": "tool-output-validation",
+  "name": "Tool Output Validation",
+  "aliases": [
+    "工具返回校验",
+    "工具结果校验"
+  ],
+  "type": "concept",
+  "domains": [
+    "security",
+    "agent-development"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "工具声明 outputSchema 的结构化返回场景中，消费方按 JSON Schema 验证字段形状和约束；不以此证明内容真实或授权成立。"
+    }
+  ],
+  "summary": "在消费工具结果前检查结构、来源及后续使用约束。",
+  "description": "工具返回校验由消费结果的客户端或执行器负责，检查返回结构、字段类型、内容大小以及应用需要的来源和使用约束。传输成功与结果可信是不同判断，远端工具返回仍可能包含错误数据、恶意文本或危险链接。进入模型上下文前的校验，不应让返回内容改写可信权限配置。\n\nMCP 2026-07-28 允许工具声明 outputSchema：声明后服务器必须返回符合模式的 structuredContent，客户端应校验。该字段是服务器产生的数据，规范明确它不同于约束模型生成的 structured outputs。JSON Schema 可以验证数据形状和字段约束，但不能单独证明内容真实、已获用户同意或适合交给下一工具执行。\n\n校验还应结合结果去向：URL 在导航时需要访问策略，文件路径在打开时需要资源授权，命令或查询在执行时需要对应输入处理。对工具返回的检查与对模型生成代码的输出处理并非同一环节，二者可以连续出现。外部结果中的指令应保留数据来源身份，必要时限制返回量或隐藏秘密，避免把通过模式校验误当作安全认证。\n\n## 参考\n\n- [MCP 2026-07-28：Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)\n- [OWASP：LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)\n- [OWASP LLM05:2025：Improper Output Handling](https://genai.owasp.org/llmrisk/llm052025-improper-output-handling/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

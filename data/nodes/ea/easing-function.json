@@ -1,0 +1,35 @@
+{
+  "id": "easing-function",
+  "name": "Easing Function",
+  "aliases": [
+    "缓动函数",
+    "时间缓动",
+    "Easing"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bezier-curve",
+      "context": "采用 cubic-bezier 缓动时，以三次贝塞尔曲线的横坐标作为输入进度、纵坐标作为输出进度。"
+    }
+  ],
+  "summary": "把时间进度映射为属性变化进度的函数。",
+  "description": "缓动函数把输入进度转换为输出进度，供动画插值使用。线性映射保持匀速进度，缓入、缓出以及阶梯变化可以呈现不同节奏；它改变的是时间分布，目标属性的具体插值仍由动画系统定义。\n\nCSS 使用线性、三次贝塞尔和阶梯等函数；动画库还提供更多曲线族。某些曲线可能使输出超出起止区间，链式映射时输入也可能超界，因此不应把所有缓动都假定为严格限制在零到一的映射。\n\n## 参考\n\n- [W3C：CSS Easing Functions 定义](https://www.w3.org/TR/css-easing-1/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

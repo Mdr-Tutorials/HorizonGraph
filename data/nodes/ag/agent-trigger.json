@@ -1,0 +1,32 @@
+{
+  "id": "agent-trigger",
+  "name": "Agent Trigger",
+  "aliases": [
+    "智能体触发器",
+    "代理事件触发器"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-session",
+      "context": "在活动会话型实现中，把后台通知递交至会话连接，供之后的模型调用读取。"
+    }
+  ],
+  "summary": "按时间或外部事件运行回调，并向智能体运行环境递交通知。",
+  "description": "智能体触发器监听时间条件或外部事件，运行相应处理逻辑，并可向代理递交通知或启动应用定义的工作。事件可以来自定时轮询、文件变化或 webhook；触发条件、重复规则和通知内容由运行时与应用共同定义。\n\nAntigravity SDK 提供周期辅助函数和自定义异步触发器。官方示例的后台回调用 TriggerContext.send 将通知加入活动会话，后续 chat 调用再读取；这种通知路径不能被概括为每次触发都自动发起新的模型执行回合。\n\nSDK 示例中的触发器只在活动 Agent 会话生命周期内运行，退出会话后停止。跨进程守护、错过事件后的补偿、去重和持久调度需要额外服务或应用实现；收到外部事件也不自动授予执行写入或其他操作的权限。\n\n## 参考\n\n- [Antigravity SDK lifecycle](https://www.antigravity.google/docs/sdk/lifecycle/)\n- [Antigravity SDK triggers example](https://github.com/google-antigravity/antigravity-sdk-python/blob/main/examples/getting_started/triggers.py)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

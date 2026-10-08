@@ -1,0 +1,46 @@
+{
+  "id": "swagger-ui",
+  "name": "Swagger UI",
+  "aliases": [
+    "Swagger 交互文档",
+    "Swagger UI 文档组件"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-documentation-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "读取接口描述并渲染操作、模型、认证信息和请求示例。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "在启用 Try it out 时向文档配置的服务地址发出实际 HTTP 请求。"
+    }
+  ],
+  "summary": "将 OpenAPI 描述渲染成可浏览和试调用的接口参考界面。",
+  "description": "Swagger UI 是消费 OpenAPI 描述的浏览器文档组件，将操作、参数、数据模型、认证方式与示例组织成交互参考界面。项目提供可由打包工具消费的模块、预构建静态资源和 React 组件，也可以在独立站点或容器中部署。应用可以向组件传入描述对象或文档 URL，因此不必将某一种 Web 框架或服务实现方式作为它的前提。\n\n“Try it out” 功能根据文档构造并发出 HTTP 请求，是否可调用还取决于实际地址、凭据、浏览器跨域规则与组件配置。展示描述、校验描述格式、发出示例请求和验证服务契约属于不同能力；页面能够加载不代表服务端响应已被系统性校验。Swagger UI 不生成业务处理器或完整客户端 SDK，也不与 OpenAPI 规范本体、Swagger Codegen 生成工具或商业托管服务合并。\n\n## 参考\n\n- [Swagger UI：安装和分发](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/)\n- [Swagger UI：配置和交互请求](https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/)\n- [Swagger UI：源码项目](https://github.com/swagger-api/swagger-ui)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://swagger.io/tools/swagger-ui/"
+}

@@ -13,17 +13,24 @@
   ],
   "domains": [
     "machine-learning",
-    "natural-language-processing"
+    "natural-language-processing",
+    "agent-development"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "deep-learning"
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tool-schema",
+      "context": "向模型声明可用函数时，以名称、描述和参数模式限定可提出的结构化调用。"
     }
   ],
-  "summary": "模型按 schema 输出结构化调用，连接外部工具。",
+  "summary": "让模型提出工具名称与参数，由应用校验并执行函数。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "description": "大模型函数调用让模型根据已声明工具提出名称与结构化参数，应用随后决定是否执行相应函数。模型生成调用描述，不代表模型自身已运行程序；工具执行器需要把结果或错误回填，供后续模型调用继续判断。\n\n工具声明通常包含用途说明和参数模式，Gemini API 支持函数声明及不同调用控制方式；框架可把普通函数包装成工具并自动处理部分调用循环。并行工具调用、连续组合调用与多个代理协作是不同机制，不能从出现多个调用推导多智能体系统。\n\n执行前仍需验证参数、资源权限和业务约束，并按操作风险处理副作用。函数调用用于请求行动，结构化输出通常用于返回可解析结果；模式支持范围、拒绝或错误路径以及流式片段如何组装，应按实际模型和接口处理。\n\n## 参考\n\n- [Gemini API function calling](https://ai.google.dev/gemini-api/docs/function-calling)\n- [Antigravity SDK tools](https://www.antigravity.google/docs/sdk/tools/)\n- [LangChain agents](https://docs.langchain.com/oss/python/langchain/agents)"
 }

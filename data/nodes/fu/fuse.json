@@ -1,0 +1,36 @@
+{
+  "id": "fuse",
+  "name": "FUSE",
+  "aliases": [
+    "Filesystem in Userspace",
+    "用户态文件系统接口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "systems-programming",
+    "virtualization"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "virtualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    }
+  ],
+  "summary": "连接 Linux 文件系统内核接口与用户态服务的协议。",
+  "description": "FUSE 让 Linux 内核的文件系统访问通过请求和响应交给用户态服务处理。典型路线由内核模块、/dev/fuse 通道和用户态文件系统进程组成：应用执行常规文件操作，内核转发对应请求，服务端返回结果。此节点描述内核与用户态之间的接口，不把一个特定用户态库视为整个接口的身份。\n\nlibfuse 提供常见开发与挂载辅助能力，但用户态实现可以使用其他语言绑定或自行处理协议。文件系统如何保存数据、远端服务是否可靠、权限检查和缓存策略由实现及挂载配置决定。把逻辑放到用户态并不自动赋予任意进程挂载权限，也不意味着所有文件操作都具备相同语义。\n\nvirtiofs 以 FUSE 请求为基础，把通常的内核到用户态通道换为宿主与客户机之间的 VIRTIO 文件系统设备接口。因此 FUSE、virtiofs、具体 daemon 和 libfuse 应分别理解；某个实现支持读取和写入，也不足以证明它能传递所有跨宿主文件变更通知。\n\n## 参考\n\n- [Linux Kernel：FUSE Overview](https://docs.kernel.org/filesystems/fuse/fuse.html)\n- [OASIS：VIRTIO 设备接口规范](https://docs.oasis-open.org/virtio/virtio/v1.3/virtio-v1.3.html)\n- [Linux Kernel：virtiofs](https://docs.kernel.org/filesystems/virtiofs.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "abbreviation": "FUSE",
+  "official_site": "https://docs.kernel.org/filesystems/fuse/fuse.html"
+}

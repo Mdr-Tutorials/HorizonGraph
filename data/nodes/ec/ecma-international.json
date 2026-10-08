@@ -1,0 +1,29 @@
+{
+  "id": "ecma-international",
+  "name": "Ecma International",
+  "aliases": [
+    "Ecma 国际",
+    "欧洲计算机制造商协会"
+  ],
+  "type": "organization",
+  "domains": [
+    "edge-computing",
+    "web-services"
+  ],
+  "ecosystems": [
+    "edge-serverless-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    }
+  ],
+  "summary": "制定信息与通信技术标准的国际行业组织。",
+  "description": "Ecma International 是总部位于日内瓦的非营利标准组织，通过成员参与的技术委员会制定信息与通信技术及相关领域的标准。它成立于 1961 年，后来采用现名；其工作包含语言、数据交换和运行时互操作等技术议题，具体范围由各委员会的章程确定。\n\nEcma 的标准编号与版本标识规范文本，技术委员会负责形成技术成果，标准的正式批准则属于组织的治理流程。例如 TC55 开展 WinterTC 的服务器运行时互操作工作，ECMA-429 是这一工作的标准成果。组织发布标准不等同于组织提供某个可执行运行时，也不能据此推断所有采用相关 API 的产品都已完整符合标准。\n\n## 参考\n\n- [Ecma：Mission](https://ecma-international.org/mission/)\n- [Ecma：History](https://ecma-international.org/history/)\n- [Ecma：TC55](https://ecma-international.org/technical-committees/tc55/)\n- [Ecma：2025 年新标准批准公告](https://ecma-international.org/news/ecma-international-approves-new-standards-12/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "official_site": "https://ecma-international.org/"
+}

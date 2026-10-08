@@ -1,0 +1,35 @@
+{
+  "id": "interaction-brushing",
+  "name": "Brushing",
+  "aliases": [
+    "刷选",
+    "框选数据",
+    "交互式范围选择",
+    "Brush Selection"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-scale",
+      "context": "在支持反向映射的尺度上将屏幕选择区间转换为数据区间。"
+    }
+  ],
+  "summary": "通过拖动区域选择数据范围并驱动筛选或高亮。",
+  "description": "刷选是通过在图表上拖动或调整一维、二维区域来表达数据选择范围的交互方式。可见的选择框位于屏幕空间，应用通常依据尺度把边界转换为数据空间的区间，再将结果用于高亮、过滤、统计或细节视图。D3 提供独立的 brush 模块，Vega-Lite 的区间选择参数可以声明类似行为。\n\n刷选范围、当前缩放范围与实际选中的记录是不同的状态，应明确空选择含义、边界包含规则、选择结束事件和范围变更策略。多视图联动可以复用同一选择谓词，概览与细节视图则可让选择范围驱动另一视图的尺度。框选也可用来移动编辑器对象，但此词条聚焦数据分析中的范围选择。\n\n## 参考\n\n- [D3 Brushing](https://d3js.org/d3-brush)\n- [Vega-Lite Selection Parameters](https://vega.github.io/vega-lite/docs/parameter.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

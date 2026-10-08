@@ -1,0 +1,43 @@
+{
+  "id": "integrated-development-environment",
+  "name": "Integrated Development Environment",
+  "aliases": [
+    "IDE",
+    "集成开发环境"
+  ],
+  "type": "concept",
+  "domains": [
+    "developer-environments",
+    "programming-languages"
+  ],
+  "ecosystems": [
+    "editor-ide-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-editor",
+      "context": "以源码编辑组件组织文件、选区与工作区文本修改。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "source-level-debugging",
+      "context": "接入相应语言的调试后端时，在源码位置检查运行状态与单步执行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-refactoring",
+      "context": "接入支持的语言服务时提供符号重命名、方法提取等结构变换。"
+    }
+  ],
+  "summary": "把编辑、代码智能、运行调试等开发工具集成在工作区。",
+  "description": "集成开发环境把源码编辑、项目组织、代码智能、构建运行和调试等能力结合到一致的开发工作区。它描述一种工具形态，而不是某个品牌；具体 IDE 对语言、构建系统、数据库和远程环境的支持各有范围。\n\n代码编辑器提供文件与文本操作，语言服务补充导航、补全和重构，调试器接入运行状态，构建与版本控制工具处理项目产出和变更。集成可以来自内置组件、外部进程或插件，不要求所有功能由单个程序实现，也不保证安装 IDE 后自动获得项目全部依赖。\n\nIDE 与可扩展代码编辑器之间存在功能重叠，应按具体产品能力描述。AI 对话和代理可以成为 IDE 工作方式的一部分，但不会取代构建环境、语言规则与调试后端。项目配置、目标平台和扩展能力决定实际可执行的工作流程。\n\n## 参考\n\n- [JetBrains：IDE 的代码智能、构建与调试集成](https://www.jetbrains.com/help/idea/discover-intellij-idea.html)\n- [VS Code：代码编辑器的工作台与文件视图](https://code.visualstudio.com/docs/editing/getting-started/userinterface)\n- [Google Antigravity：IDE 的编辑器、终端与浏览器](https://antigravity.google/docs/ide/overview/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

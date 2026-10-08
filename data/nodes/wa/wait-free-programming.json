@@ -1,0 +1,35 @@
+{
+  "id": "wait-free-programming",
+  "name": "Wait-Free Programming",
+  "aliases": [
+    "无等待编程",
+    "Wait-Freedom",
+    "等待自由"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "memory-model",
+      "context": "根据所选语言与硬件支持建立无等待算法中共享状态发布和读取的正确顺序。"
+    }
+  ],
+  "summary": "保证每个操作在有界自身步骤内完成，仍需区分实际墙钟期限。",
+  "description": "无等待编程为每个并发操作提供进度保证：在算法所规定的条件下，操作在有界数量的自身步骤内完成，而不是仅保证系统里有某个线程完成。步骤上界可以依参与线程数、容量和具体操作变化。无等待比无锁更强，但不能把任意不阻塞的API或一次CAS操作直接推广为整个程序的保证。\n\n单生产者单消费者的有界队列可以利用明确的所有权分工，减少更新共享位置时的竞争重试。更一般的算法可能采用帮助完成其他线程操作等协议，需要同时验证原子性、发布顺序与回收策略。复制元素、调用用户构造函数或扩容的成本也要包含在所声称的操作边界内。\n\n有界算法步骤不是固定墙钟耗时：线程仍可能被调度暂停，访问的页面可能缺页，缓存和设备也存在变化。对实时期限还需结合环境和最坏执行成本分析。选用具体库时，应核对哪些操作具有该保证、对象类型的限制以及容量耗尽时返回失败还是进入额外工作路径。\n\n## 参考\n\n- [Boost.Lockfree：进度保证及阻塞来源](https://www.boost.org/latest/doc/html/lockfree.html)\n- [Boost：单生产者单消费者队列约束](https://www.boost.org/latest/doc/html/doxygen/classboost_1_1lockfree_1_1spsc__queue.html)\n- [原始研究：无锁与无等待算法的进度区别](https://arxiv.org/abs/1311.3200)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

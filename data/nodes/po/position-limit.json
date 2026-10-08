@@ -1,0 +1,34 @@
+{
+  "id": "position-limit",
+  "name": "Position Limit",
+  "aliases": [
+    "持仓限额",
+    "头寸上限",
+    "库存仓位上限"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "market-making",
+      "context": "在设有库存边界的做市模型或实际持仓限额适用的账户中，约束报价可继续增加的仓位方向和规模；不将某产品限额推广到所有做市交易。"
+    }
+  ],
+  "summary": "按账户、合约、期间或策略约束可持有的仓位。",
+  "description": "持仓限额限制指定主体在特定合约、相关产品或期间可持有或控制的仓位，也可以是机构为账户和策略设置的内部风险预算。限额可能按净多、净空、总持仓、月份或关联主体聚合计算，不能用单笔订单最大数量替代持仓约束。\n\n美国CFTC的联邦投机持仓限额在17 CFR 150.2按指定参考合约、现货月及其他月份规定范围；CME另区分Position Limits、Position Accountability和Reportable Levels。达到可报告水平不等于达到硬限仓线，责任水平也不等于同一形式的禁止持仓上限。套期保值认可、豁免和聚合例外均须满足具体规则，不能仅由交易者自行贴“对冲”标签取得。\n\n内部实时控制还需考虑已成交仓位和仍可能成交的有效委托，明确订单被拒绝、撤销或部分成交后的预算释放方式。做市模型中的库存边界可以限制继续增仓方向或数量，但不保证账户不会因在途成交、跨市场不一致或价格变化而承担风险；监管限额与内部策略预算需要分别解释。\n\n## 参考\n\n- [CME：Position Limits、Accountability和Reportable Levels](https://www.cmegroup.com/market-regulation/position-limits.html)\n- [eCFR：17 CFR 150.2 Federal speculative position limits](https://www.ecfr.gov/current/title-17/chapter-I/part-150/section-150.2)\n- [Guéant、Lehalle与Fernandez-Tapia：Dealing with the Inventory Risk](https://arxiv.org/abs/1105.3115)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

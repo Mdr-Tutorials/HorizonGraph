@@ -7,7 +7,8 @@
   ],
   "type": "product",
   "ecosystems": [
-    "graphics_gaming"
+    "graphics_gaming",
+    "game-runtime-ecosystem"
   ],
   "domains": [
     "game-development"
@@ -21,12 +22,35 @@
     {
       "relation_type": "competes_with",
       "target_id": "unity"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-engine"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-scene"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-loop"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "在 Cocos Creator 的组件脚本开发路径中使用 TypeScript；此关系不把该语言归给 Cocos2d-x 的 C++ API。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpp",
+      "context": "在采用 Cocos2d-x 的原生游戏开发路径中使用 C++，不表示 Cocos Creator 的所有脚本项目都要求开发者编写 C++。"
     }
   ],
-  "summary": "国产游戏引擎代表，小程序与手游生态强势。",
+  "summary": "涵盖 Creator 编辑器与 Cocos2d-x 引擎的游戏开发工具体系。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 3,
-  "official_site": "https://www.cocos.com"
+  "official_site": "https://www.cocos.com",
+  "description": "Cocos Creator 与 Cocos2d-x 均用于游戏开发，但具有不同的工程组织和 API。Cocos Creator 提供编辑器与场景工作流，通过向场景节点挂载组件脚本定义对象行为；脚本可使用 JavaScript 或 TypeScript，并通过编辑器暴露属性配置。\n\nCreator 调度 onLoad、onEnable、start、update、lateUpdate 以及禁用和销毁回调。初始化回调与逐帧回调承担不同阶段的工作，启用状态和对象销毁影响回调是否执行；组件生命周期不能直接套用于 Cocos2d-x 的类和运行接口。\n\nCocos2d-x 是 C++ 跨平台游戏引擎，以 Director 管理场景切换，以 Scene 和 Node 等对象构建场景图，并组织绘制与运行行为。两套产品虽同属 Cocos 工具体系，脚本语言、扩展方法、资源和发布步骤仍应按所用产品及版本确认，不能把一个产品的能力泛化为全部 Cocos 项目的必备依赖。\n\n## 参考\n\n- [Cocos Creator：Scripting](https://docs.cocos.com/creator/3.8/manual/en/scripting/)\n- [Cocos Creator：Life Cycle Callbacks](https://docs.cocos.com/creator/3.8/manual/en/scripting/life-cycle-callbacks.html)\n- [Cocos Creator：Introduction](https://docs.cocos.com/creator/3.8/manual/en/getting-started/introduction/index.html)\n- [Cocos2d-x：Basic Concepts](https://docs.cocos.com/cocos2d-x/v4/manual/en/basic_concepts/)"
 }

@@ -1,0 +1,33 @@
+{
+  "id": "llm-as-judge",
+  "name": "LLM-as-a-Judge",
+  "aliases": [
+    "大模型裁判",
+    "LLM-as-Judge"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rubric-based-evaluation",
+      "context": "在按维度打分的模型裁判设置中提供评价准则、分档描述及必要参照，使评分指向指定内容要求。"
+    }
+  ],
+  "summary": "让语言模型按明确准则评价答案或运行证据。",
+  "description": "LLM-as-a-Judge 使用语言模型作为评估器，对候选答案或运行证据给出评分、比较或反馈。原研究区分单答案打分、成对比较及参照答案辅助判定。被评估模型与裁判模型的身份、提示及版本需要分别记录。\n\n模型裁判适合程序规则难以覆盖的开放内容，仍需要明确评分维度和可核对证据。评分量规描述每档含义，参照答案提供内容依据；针对具体领域，可以用人工标注的正确与错误例子校准裁判，并检查判定变化而不是只看评语是否流畅。\n\n裁判会出现位置、篇幅或自身风格偏好，也可能把错误答案判断为正确。交换答案顺序、提供参照和人工复核只能在各自条件下缓解问题，不能保证无偏或普遍可靠。对可以精确执行验证的条件，不应把模型主观判断当作唯一验收证据。\n\n## 参考\n\n- [LLM-as-a-Judge：原论文中的判定模式与偏差](https://arxiv.org/html/2306.05685v4)\n- [Prometheus 原论文：评分准则、等级描述与参照答案](https://arxiv.org/html/2310.08491v1)\n- [Prometheus 官方评估实现](https://github.com/prometheus-eval/prometheus-eval)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

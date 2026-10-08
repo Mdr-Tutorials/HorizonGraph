@@ -1,0 +1,54 @@
+{
+  "id": "hono-client",
+  "name": "Hono Client",
+  "aliases": [
+    "Hono hc 客户端",
+    "hono/client"
+  ],
+  "type": "library",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "hono"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-client"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fetch-api",
+      "context": "通过 Fetch 发送生成的 HTTP 请求，接收兼容 Response 的返回对象。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "type-inference",
+      "context": "使用保留的服务端路由 AppType 在静态阶段推导调用参数与响应类型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "abort-signal",
+      "context": "应用需要取消客户端请求时，经 RequestInit.signal 传入取消信号。"
+    }
+  ],
+  "summary": "以路由类型推导 HTTP 调用输入与响应类型。",
+  "description": "Hono Client 是 Hono 包中通过 hono/client 导出的客户端模块，hc 创建面向服务 URL 的调用对象，并通过 Fetch 发出 HTTP 请求。调用路径和方法可由导出的服务端路由类型推导，结果仍是兼容 Fetch Response 的对象，需要按状态和响应格式读取正文。这里的 hc 是客户端函数名，与招聘语境的 HC 概念无关。\n\nRPC 推导依赖实际保留下来的路由类型，包括校验器描述的输入和处理函数返回的输出；类型组合和客户端、服务端的 TypeScript 配置会影响结果。全局错误处理器或中间件响应不会自动全部进入路由推导，当前文档提供 ApplyGlobalResponse 等方式明确补充类型。\n\n这些类型在开发和编译阶段帮助发现调用不匹配，不能保证运行时服务、外部客户端或网络响应遵守约定。hc 可配置请求头、凭据、Fetch 选项及取消信号，服务端仍需独立进行输入校验和授权；共享类型也不要求客户端加载或执行整个服务端应用。\n\n## 参考\n\n- [Hono RPC 与 Client](https://hono.dev/docs/guides/rpc)\n- [Hono App](https://hono.dev/docs/api/hono)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "abbreviation": "hc",
+  "official_site": "https://hono.dev/docs/guides/rpc"
+}

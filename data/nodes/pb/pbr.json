@@ -9,20 +9,33 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "rendering-ecosystem"
+    "rendering-ecosystem",
+    "real-time-rendering-ecosystem"
   ],
   "domains": [
-    "graphics"
+    "graphics",
+    "real-time-rendering"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "brdf",
+      "context": "描述受物理约束的表面方向反射，并结合照明和可见性计算出射贡献。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "color-management",
+      "context": "使颜色输入、线性空间中的照明计算和最终显示转换保持一致。"
     }
   ],
-  "summary": "以物理量描述材质与光照的渲染方法论。",
+  "summary": "以物理反射规则和一致材质参数构建渲染外观。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "description": "基于物理的渲染以光传输和材质反射等物理模型组织外观计算，强调能量、方向响应及输入单位的一致性。实时材质常用金属度与粗糙度等参数表达反射行为，但 PBR 是建模方法，不是单一着色器、资产格式或光追算法。\n\nBRDF 描述同一点的方向反射关系，完整图像还需要光源、几何、可见性和相应积分或近似。PBR 可在光栅或光追路径中实现，实时版本常使用预计算和有限采样；正确的模型并不消除有限精度、缺失光照或错误纹理造成的偏差。\n\n工程中需正确解释颜色与数值纹理、法线、环境照明和输出转换。Three.js 的 MeshStandardMaterial 是金属度与粗糙度材质的具体例子，参数约定与模型实现应配套使用；同一套参数跨任意渲染器不必逐像素一致。\n\n## 参考\n\n- [PBRT Surface Reflection](https://pbr-book.org/4ed/Radiometry,_Spectra,_and_Color/Surface_Reflection)\n- [Three.js MeshStandardMaterial](https://threejs.org/docs/pages/MeshStandardMaterial.html)\n- [Three.js Color Management](https://threejs.org/manual/pages/color-management.html)"
 }

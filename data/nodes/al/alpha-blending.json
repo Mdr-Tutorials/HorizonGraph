@@ -1,0 +1,39 @@
+{
+  "id": "alpha-blending",
+  "name": "GPU Alpha Blending",
+  "aliases": [
+    "GPU Alpha 混合",
+    "透明度混合",
+    "GPU 混合方程"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "premultiplied-alpha",
+      "context": "处理预乘输入时按已乘 Alpha 的颜色表示选择混合因子，避免重复乘法。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "alpha-compositing",
+      "context": "需要 source-over 等覆盖合成时用适当 GPU 混合方程与因子实现可支持的操作。"
+    }
+  ],
+  "summary": "用 GPU 混合方程组合片元输出与目标颜色。",
+  "description": "GPU Alpha 混合是在颜色附件写入时，用指定方程和源、目标因子组合片元着色输出与目标已有值的机制。API 可分别设置 RGB 与 Alpha 的运算及因子，例如加法、源 Alpha 或一减源 Alpha；这是图形管线的状态，不是图像加载格式。\n\n源覆盖目标的 source-over 可以由合适混合因子实现，但因子要与直通或预乘 Alpha 的数据表示匹配。预乘输入已把颜色乘以 Alpha，若再次使用源 Alpha 因子会重复缩暗。GPU 混合方程可表达若干常用合成操作，一般 Porter–Duff 覆盖合成理论及其他颜色混合模式的范围更广。\n\n透明对象的绘制顺序、深度写入和颜色空间都会影响结果。通常的混合不替代透明排序，也不等于 Alpha 阈值裁切；目标格式和设备能力可能限制混合配置。调试时应同时检查数据表示、混合因子、目标初值和深度状态。\n\n## 参考\n\n- [WebGPU GPUBlendComponent](https://www.w3.org/TR/webgpu/#dictdef-gpublendcomponent)\n- [Vulkan Fragment Operations](https://docs.vulkan.org/spec/latest/chapters/fragops.html)\n- [Three.js Material](https://threejs.org/docs/pages/Material.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

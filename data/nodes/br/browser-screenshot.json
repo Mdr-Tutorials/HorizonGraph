@@ -1,0 +1,34 @@
+{
+  "id": "browser-screenshot",
+  "name": "Browser Screenshot",
+  "aliases": [
+    "浏览器截图",
+    "网页截图",
+    "Page Screenshot"
+  ],
+  "type": "concept",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-session",
+      "context": "在当前受控浏览器会话的页面、视口或元素范围内捕获渲染结果。"
+    }
+  ],
+  "summary": "将网页视口、页面或元素渲染结果捕获为像素工件。",
+  "description": "浏览器截图捕获网页渲染结果，常见范围包括当前视口、完整可滚动页面和某个元素。完整页面截图相当于扩展捕获区域，并不等于拍摄整个桌面或同时证明滚动过程中每一状态；截图记录的是指定捕获条件下的像素结果。\n\n自动化库可以将截图写入文件或内存，供视觉观察、失败报告和回归比较使用。复核时应同时保留页面位置、视口、缩放、浏览器版本与捕获时间等上下文，动态内容和加载状态会改变像素。截图中的元素坐标也需与动作接口使用的坐标系和比例对应。\n\n截图能够展示用户可见状态，却不能直接透露服务端数据是否正确、隐藏路径是否可用或事件是否全部执行。Antigravity IDE 的公开浏览器能力包括截图和操作录像，这些工件便于审阅；可见页面证据仍需要与明确的业务断言或任务结果对应。\n\n## 参考\n\n- [Playwright：Screenshots](https://playwright.dev/docs/screenshots)\n- [W3C：WebDriver Recommendation 2018](https://www.w3.org/TR/2018/REC-webdriver1-20180605/)\n- [Antigravity IDE：Browser](https://antigravity.google/docs/ide/browser)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

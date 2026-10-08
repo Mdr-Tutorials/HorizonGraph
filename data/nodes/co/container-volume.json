@@ -1,0 +1,46 @@
+{
+  "id": "container-volume",
+  "name": "Container Volume",
+  "aliases": [
+    "容器卷",
+    "持久化卷",
+    "Named Volume"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "wsl-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "filesystem-mount",
+      "context": "把平台管理的存储内容呈现在容器目标路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vhdx",
+      "context": "在采用 VHDX 虚拟磁盘支撑卷的实现中，以虚拟磁盘文件承载块存储。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ext4",
+      "context": "WSLc 架构文档中的 VHD 卷示例使用原生 ext4 文件系统。"
+    }
+  ],
+  "summary": "由容器平台管理并可独立于容器写层存续的存储。",
+  "description": "容器卷是容器平台管理的存储对象，可被挂载到一个或多个容器路径，用于保存不应随容器可写层一起丢弃的数据。卷的名称、驱动、挂载点与生命周期由平台组织；卷不是磁盘格式，也不能把命名卷直接等同于某个 Windows 文件夹。绑定挂载则以已有宿主路径为明确来源。\n\nDocker 的卷通常独立于使用它的容器存在，但显式删除、清理和匿名卷相关选项仍会影响保留行为。新建空卷挂到已有数据目录时，平台可能默认复制初始内容，不能把此行为推广到每种存储实现。多个容器共享同一卷，也不自动解决应用层并发与数据格式兼容问题。\n\nWSLc 同时提供 Windows 路径共享和 VHD 支撑的卷路线；后者为需要原生 Linux 文件系统或容量约束的场景提供不同选择。应记录卷实际后端、持久状态位置与挂载方式，区分容器删除、卷删除和会话存储管理，不能把持久化解释成平台永不回收数据。\n\n## 参考\n\n- [Docker：Volumes](https://docs.docker.com/engine/storage/volumes/)\n- [Docker：Bind Mounts](https://docs.docker.com/engine/storage/bind-mounts/)\n- [Microsoft：WSLc Architecture Deep Dive](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

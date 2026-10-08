@@ -1,0 +1,31 @@
+{
+  "id": "virtio",
+  "name": "VIRTIO",
+  "aliases": [
+    "Virtio",
+    "半虚拟化 I/O 接口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "virtualization",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "virtualization-ecosystem",
+    "wsl-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    }
+  ],
+  "summary": "规定虚拟设备、队列和驱动协作的半虚拟化 I/O 接口。",
+  "description": "VIRTIO 规定虚拟设备与客户机驱动如何发现能力、协商特性、初始化设备并传递 I/O 工作。virtqueue 组织待处理缓冲区及完成结果，使客户机与虚拟设备通过统一接口协作。这里的身份是设备接口规范，具体驱动、后端进程与虚拟机管理器分别承担实现工作。\n\n规范包括网络、块设备及文件系统等设备类型，也规定 PCI、MMIO 等不同传输形式。设备类型描述操作语义，传输描述设备如何暴露给客户机，两者应分别理解；网络设备交换帧与块设备读写扇区不是同一个服务。使用 VIRTIO 名称也不能推断所有实现支持全部可选特性。\n\nvirtiofs 通过文件系统设备接口传递 FUSE 消息，Consommé 路线则通过虚拟网络设备取得客户机以太网帧。两者共用虚拟 I/O 的基础思路，但文件共享与网络转发具有不同数据格式、生命周期和权限语义。规范文本的版本与发布阶段应按引用文档核对，不将某份草案中的特性推断为所有宿主的现有能力。\n\n## 参考\n\n- [OASIS：VIRTIO 设备接口规范](https://docs.oasis-open.org/virtio/virtio/v1.3/virtio-v1.3.html)\n- [Linux Kernel：virtiofs](https://docs.kernel.org/filesystems/virtiofs.html)\n- [WSL：NAT、Mirrored 与 Consomme](https://wsl.dev/technical-documentation/localhost/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "hardware",
+  "official_site": "https://docs.oasis-open.org/virtio/virtio/v1.3/virtio-v1.3.html"
+}

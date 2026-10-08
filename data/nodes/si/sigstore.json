@@ -1,0 +1,51 @@
+{
+  "id": "sigstore",
+  "name": "Sigstore",
+  "aliases": [
+    "Sigstore",
+    "软件签名与透明度框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "security",
+    "devops",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "software-supply-chain-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "image-signing",
+      "context": "为镜像提供内容与签署身份验证流程；不同客户端和部署选择决定具体签名及存储路径。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "artifact-attestation",
+      "context": "通过客户端及验证材料支持认证并验证关于软件工件的结构化声明。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fulcio",
+      "context": "典型身份签名路径通过 Fulcio 将 OIDC 身份绑定到短期代码签名证书。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rekor",
+      "context": "采用签名透明度路径时，将工件签名与声明材料登记到 Rekor 并验证相关日志证据。"
+    }
+  ],
+  "summary": "组合签名、身份认证与透明日志的软件供应链框架。",
+  "description": "Sigstore 是提供软件签名、验证与透明度基础设施的开源项目及软件框架，包含可组合的工具、服务端组件和客户端实现。它支持对镜像、二进制、发布文件和声明材料签名。项目提供公共服务部署，也允许按需求配置或部署组件；框架身份与某个公共服务地址的运营实例应当区分。\n\n典型身份签名流程由客户端生成临时密钥，取得 OIDC 身份令牌，再向 Fulcio 申请绑定该身份与公钥的短期证书；客户端使用私钥签署工件，并提交签名材料供 Rekor 记录。Cosign 提供常用交互工具。所谓 keyless 减少长期私钥分发与管理，过程仍使用密码学密钥，临时私钥由客户端持有，并不是服务端代替所有用户直接签署工件。\n\n验证方需要信任对应根材料，并检查预期身份、issuer、工件绑定和日志或时间证据。证书透明度帮助审计签发，签名透明度帮助审计工件签署；两者的记录对象不同。Sigstore 能增加身份与过程的可验证证据，但身份提供方、证书服务或构建身份被攻陷仍需要监控和响应，有效签名也不能证明软件无漏洞或自动授予任意发布者部署权限。\n\n## 参考\n\n- [Sigstore：项目与框架概览](https://docs.sigstore.dev/about/overview/)\n- [Sigstore：组件与工具](https://docs.sigstore.dev/about/tooling/)\n- [Sigstore：安全模型与保证边界](https://docs.sigstore.dev/about/security/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://www.sigstore.dev/"
+}

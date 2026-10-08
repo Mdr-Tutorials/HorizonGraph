@@ -1,0 +1,40 @@
+{
+  "id": "animation-retargeting",
+  "name": "Animation Retargeting",
+  "aliases": [
+    "动画重定向",
+    "动作重定向",
+    "Motion Retargeting"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "skeletal-animation",
+      "context": "复用角色动作时，重映射源骨架的动画轨道到目标骨架。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rigging",
+      "context": "建立源和目标骨骼对应关系时，核对层级、默认姿势及各骨骼方向。"
+    }
+  ],
+  "summary": "把已有动作映射到骨骼结构或比例不同的角色。",
+  "description": "动画重定向把一个骨架上的动作转移到另一个骨架，依靠骨骼映射与姿势校正复用动作资源。骨骼名称相同并不足以保证结果一致，因为层级、默认姿势、方向以及角色比例都可能不同。\n\n导入阶段可设置骨骼映射和统一配置，再校正默认姿势及不适用的轨道；运行时方案还可动态调整姿势。重定向后应检查手脚接触、旋转和位移轨道，必要时加入约束修正，确保动作在目标角色上符合制作意图。\n\n## 参考\n\n- [Godot：三维骨架重定向与 BoneMap](https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/retargeting_3d_skeletons.html)\n- [Godot：动画重定向设计](https://godotengine.org/article/animation-retargeting-in-godot-4-0/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

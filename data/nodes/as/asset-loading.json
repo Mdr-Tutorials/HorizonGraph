@@ -1,0 +1,32 @@
+{
+  "id": "asset-loading",
+  "name": "Runtime Asset Loading",
+  "aliases": [
+    "运行时资源加载",
+    "游戏资源加载"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resource-lifecycle",
+      "context": "在使用共享资源缓存的运行时中，加载后登记资源及其持有关系，再按实际引用和使用情况保留或释放。"
+    }
+  ],
+  "summary": "把文件或打包资源转换为运行系统可使用对象的过程。",
+  "description": "资源加载解析标识或路径，获取数据并按类型解码、解析或上传，最后向使用者提供图片、音频或其他资源对象。加载队列、进度及失败事件可用于场景准备；后台加载与主线程使用之间仍需同步。\n\n下载完成、解码完成与可供渲染或播放属于不同阶段。异步接口不表示每个后续步骤都无阻塞；键名、缓存、共享与重试策略影响一致性，不能把加载成功直接当成资源内容正确。\n\n## 参考\n\n- [Phaser：资源加载与缓存](https://docs.phaser.io/phaser/concepts/loader)\n- [Godot：后台资源加载](https://docs.godotengine.org/en/stable/tutorials/io/background_loading.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

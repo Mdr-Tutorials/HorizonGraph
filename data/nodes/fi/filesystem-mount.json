@@ -1,0 +1,34 @@
+{
+  "id": "filesystem-mount",
+  "name": "Filesystem Mount",
+  "aliases": [
+    "文件系统挂载",
+    "挂载点"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming",
+    "containerization"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mount-namespace",
+      "context": "Linux 环境中通过挂载命名空间组织进程可见挂载视图及传播关系。"
+    }
+  ],
+  "summary": "把文件系统或文件树接入进程可见目录层级的机制。",
+  "description": "文件系统挂载把一个文件系统实例或已有文件树接入目录层级的指定位置。Linux 的挂载调用根据来源、目标、文件系统类型与选项建立关系，使路径查找可以进入对应树。挂载不等同于复制文件，也不限定数据必须来自物理磁盘：块设备、远端文件系统和共享接口可以提供不同来源。\n\n挂载命名空间决定进程看到哪组挂载，shared、private、slave 等传播属性决定后续挂载事件如何跨相关视图传播。只读、设备访问与其他选项约束具体访问路径，权限和底层文件系统行为仍需分别处理。在已有非空目录上挂载会遮蔽原内容，但并不是删除这些内容。\n\n容器与虚拟机结合时存在多层挂载：先附加虚拟磁盘并挂载内部 ext4，或通过 virtiofs 接入宿主目录，再把已有路径绑定到容器视图。应区分块设备、文件系统、挂载点和容器卷管理对象，避免把一个路径看作底层存储的唯一身份。\n\n## 参考\n\n- [Linux man-pages：mount(2)](https://man7.org/linux/man-pages/man2/mount.2.html)\n- [Docker：Bind Mounts](https://docs.docker.com/engine/storage/bind-mounts/)\n- [Microsoft：WSLc Architecture Deep Dive](https://devblogs.microsoft.com/commandline/wslc-architecture-deep-dive/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

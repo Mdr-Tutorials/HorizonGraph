@@ -1,0 +1,38 @@
+{
+  "id": "compute-shader",
+  "name": "Compute Shader",
+  "aliases": [
+    "计算着色器",
+    "计算着色程序"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gpu-buffer",
+      "context": "当计算输入或结果通过存储缓冲传递时，计算程序读取或写入绑定的 GPU 缓冲范围。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "texture",
+      "context": "当计算任务采用存储图像资源时，通过相应纹理访问操作读取输入或写入结果。"
+    }
+  ],
+  "summary": "以工作组调度并行任务，通过绑定资源读取输入和写入结果。",
+  "description": "## 机制\n\n计算着色器通过 dispatch 调度工作组及组内调用，用 GPU 执行并行计算。输入与输出通过绑定缓冲或图像资源传递，可以进行数据处理，也可以为后续渲染生成或整理数据。\n\n它采用计算管线，不依赖顶点输入、三角形组装和光栅化来触发执行。WGSL 使用 @compute 与 @workgroup_size 声明入口及工作组大小，调用可根据内建工作组和调用编号定位处理的数据。\n\n## 边界与应用\n\n共享内存、屏障与原子操作用于协调符合其作用范围的调用，不能把组内屏障当成所有工作组的全局同步。后续读写还需要遵守接口的资源及执行顺序规则；任务能并行执行也不保证总耗时更低。\n\n## 参考\n\n- [Microsoft：计算着色器与调度](https://learn.microsoft.com/en-us/windows/win32/direct3d11/direct3d-11-advanced-stages-compute-shader)\n- [W3C WGSL：计算阶段与工作组](https://www.w3.org/TR/WGSL/#compute-shaders)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

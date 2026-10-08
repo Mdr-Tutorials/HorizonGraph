@@ -1,0 +1,46 @@
+{
+  "id": "webdriver-bidi",
+  "name": "WebDriver BiDi",
+  "aliases": [
+    "WebDriver 双向协议",
+    "WebDriver Bidirectional Protocol",
+    "BiDi"
+  ],
+  "type": "protocol",
+  "domains": [
+    "browser-automation",
+    "web-development"
+  ],
+  "ecosystems": [
+    "browser-automation-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "websocket",
+      "context": "双向连接在同一消息通道中传送命令响应及浏览器事件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "协议消息以 JSON 表示命令、成功或错误响应以及事件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "browser-session",
+      "context": "与经典控制流程衔接时，将双向连接关联到协商后的浏览器会话。"
+    }
+  ],
+  "summary": "通过双向消息和事件订阅扩展浏览器自动化能力。",
+  "description": "WebDriver BiDi 是 W3C 的双向浏览器自动化协议，允许客户端发送命令，并接收浏览器主动推送的日志、网络和浏览上下文事件。它解决经典请求响应控制难以持续观察异步活动的问题，规范目标是跨浏览器互操作，实际支持仍取决于浏览器、客户端和具体模块。\n\n连接使用 WebSocket 交换 JSON 消息，以请求标识关联响应，并以订阅机制接收相关事件。它可以借助经典 WebDriver 的会话能力取得连接信息，二者具有互操作路径；不能仅因功能相近就认为 CDP 的所有域与命令可以直接搬到 BiDi。\n\n截至本次核对，W3C 当前发布页面仍标为 Working Draft。Selenium 和 Puppeteer 等项目逐步提供实现与高层接口，使用者需要确认日志、网络拦截或输入等具体能力的版本。收到某个浏览器事件也不自动证明业务完成；判定、超时和订阅清理仍由控制流程负责。\n\n## 参考\n\n- [W3C：WebDriver BiDi](https://www.w3.org/TR/webdriver-bidi/)\n- [Selenium：WebDriver BiDi](https://www.selenium.dev/documentation/webdriver/bidi/)\n- [Puppeteer：官方介绍](https://pptr.dev/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://www.w3.org/TR/webdriver-bidi/"
+}

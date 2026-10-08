@@ -1,0 +1,34 @@
+{
+  "id": "visualization-dataflow",
+  "name": "Visualization Dataflow",
+  "aliases": [
+    "可视化数据流",
+    "Reactive Visualization Dataflow",
+    "反应式图表数据流"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "visual-encoding",
+      "context": "数据流在数据变换和尺度计算后求值图元的视觉属性。"
+    }
+  ],
+  "summary": "按依赖关系传播数据和交互变化并更新图表。",
+  "description": "可视化数据流将数据加载、过滤、聚合、尺度计算、图元编码和渲染组织为具有依赖关系的计算过程。数据或交互信号变化时，受影响的下游运算重新求值，得到新的视觉状态。Vega 的规范会被解析为运行时数据流描述，View 实例负责执行数据流并呈现场景图。\n\n这种组织方式允许图表声明数据与视觉结果之间的关系，而由运行时安排更新。应用层仍需管理异步输入、更新时序、事件监听和实例销毁：更新数据或信号不一定立即触发完整渲染，应按运行时 API 执行求值并等待完成。增量数据更新与渲染更新也应区分，避免重复计算或在未完成的更新中读取中间状态。\n\n## 参考\n\n- [Vega Runtime Documentation](https://vega.github.io/vega/docs/)\n- [Vega View API](https://vega.github.io/vega/docs/api/view/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

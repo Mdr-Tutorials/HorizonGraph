@@ -1,0 +1,40 @@
+{
+  "id": "latency-budget",
+  "name": "Latency Budget",
+  "aliases": [
+    "延迟预算",
+    "时延预算",
+    "时间预算分配"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "end-to-end-latency",
+      "context": "以明确输入到最终输出的时间边界设定总预算，按同一口径验证。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tail-latency",
+      "context": "当目标以分位数规定时，检查总链路分布而非累加各段分位数。"
+    }
+  ],
+  "summary": "把端到端时限分配到处理阶段，并为排队与异常路径留出余量。",
+  "description": "延迟预算是把一次业务动作允许消耗的时间分配到处理链路的设计方法。预算应先确定起止事件、计入的等待和目标统计口径，再为接收、排队、计算、线程交接和输出等阶段安排份额。它是设计约束，不是某段代码已经达到的实测指标。\n\n串行阶段的实际耗时可以沿同一次请求累加，并行阶段则要按依赖关系识别关键路径。各阶段P99通常来自不同请求，不能简单相加后声称得到整条链路的P99。排队、重试和取消处理也应纳入目标，避免把每次尝试的独立超时误当成总时间上限。\n\n跨服务调用可以传播剩余时间，已耗用的预算应扣除，超期后的工作还需按实现处理取消与资源释放。预算要在预期流量和过载场景验证，并区分统计目标与严格最坏情况保证。预留余量可以应对波动，但不能替代对阻塞和容量瓶颈的识别。\n\n## 参考\n\n- [gRPC：期限与剩余时间传播](https://grpc.io/docs/guides/deadlines/)\n- [Google SRE：过载、排队与期限](https://sre.google/sre-book/handling-overload/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

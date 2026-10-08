@@ -1,0 +1,34 @@
+{
+  "id": "web-audio-api",
+  "name": "Web Audio API",
+  "aliases": [
+    "网页音频接口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "game-development",
+    "web-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "w3c",
+      "context": "W3C 音频工作组制定并发布 Web Audio API 的音频节点和处理接口规范。"
+    }
+  ],
+  "summary": "以音频节点图处理、合成并调度 Web 音频的接口规范。",
+  "description": "Web Audio 以 AudioContext 和相连 AudioNode 表达音源、增益、滤波及输出等处理链。音频按音频上下文的时间调度，还可从媒体元素或缓冲创建输入；处理能力超出普通播放按钮。\n\n节点图是音频处理模型，不能等同于图形场景图。浏览器可能要求用户交互后启动或恢复音频上下文，节点与缓冲需要按生命周期管理；接口规范也不保证任意解码格式和端到端延迟。\n\n## 参考\n\n- [W3C：Web Audio API](https://www.w3.org/TR/webaudio/)\n- [MDN：音源、处理节点和播放](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://www.w3.org/TR/webaudio/"
+}

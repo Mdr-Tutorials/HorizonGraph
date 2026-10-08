@@ -1,0 +1,35 @@
+{
+  "id": "data-scale",
+  "name": "Visualization Scale",
+  "aliases": [
+    "可视化尺度",
+    "数据比例尺",
+    "Scale",
+    "Domain and Range"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-visualization",
+    "web-development"
+  ],
+  "ecosystems": [
+    "data-visualization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "visualization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "线性尺度采用数据区间与输出区间之间的仿射映射；其他尺度可采用不同函数。"
+    }
+  ],
+  "summary": "把数据定义域映射到图形位置、颜色或大小的函数。",
+  "description": "可视化尺度将数据的定义域（domain）转换为视觉输出范围（range）。连续尺度可采用线性、对数或时间映射；离散尺度可以把类别映射到颜色或带宽位置；分位数、阈值等尺度用于按规则分组。尺度本身是函数，可以独立用于 SVG、Canvas 或其他渲染器，不等于一条画出的坐标轴。\n\n选择尺度时需检查零点、负值、缺失值、定义域边界及截断规则。例如对数尺度不能直接跨越零，柱状图的基线会影响长度比较，时间尺度还涉及日历刻度。支持反向映射的连续尺度可以把鼠标位置还原为数据范围，为刷选、提示框和缩放交互提供基础。\n\n## 参考\n\n- [D3 Scales](https://d3js.org/d3-scale)\n- [Vega Scales](https://vega.github.io/vega/docs/scales/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

@@ -1,14 +1,18 @@
 {
   "id": "echarts",
   "name": "ECharts",
-  "aliases": [],
+  "aliases": [
+    "Apache ECharts"
+  ],
   "type": "library",
   "ecosystems": [
-    "web_frontend"
+    "web_frontend",
+    "data-visualization-ecosystem"
   ],
   "domains": [
     "web-development",
-    "graphics"
+    "graphics",
+    "data-visualization"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -19,12 +23,33 @@
     {
       "relation_type": "depends_on",
       "target_id": "javascript"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "canvas-2d",
+      "context": "选择 Canvas renderer 时由底层绘图组件呈现图表。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "svg",
+      "context": "选择 SVG renderer 时生成矢量图表。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "visual-encoding",
+      "context": "visualMap 等组件把数据维度映射为颜色、大小等视觉变量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "chart-axis",
+      "context": "坐标轴显示数据位置尺度的刻度与标签。"
     }
   ],
-  "summary": "百度开源、Apache 顶级的可视化图表库，国内事实标准。",
+  "summary": "通过系列、坐标系和交互组件构建声明式图表。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 4,
-  "official_site": "https://echarts.apache.org"
+  "official_site": "https://echarts.apache.org",
+  "description": "Apache ECharts 是声明式 JavaScript 数据可视化库，以配置对象组织数据系列、坐标系统、坐标轴、图例和交互组件。它提供常见业务与统计图表，也支持关系和地理相关表达，适合仪表盘和嵌入式分析界面。项目身份与具体图表实例应分别理解，采用库也不代表某种业务图表已成为通用标准。\n\nECharts 使用底层 ZRender 抽象绘制，初始化时可选择 Canvas 或 SVG 渲染器。visualMap 等组件把数据维度映射为颜色、大小等视觉属性，轴和尺度负责位置表达。应依据图元数量、设备和功能选择后端，而不把 SVG 或 Canvas 绝对归类为在所有场景都更快。\n\n事件监听和 dispatchAction 连接用户操作与应用行为，可以实现下钻、范围缩放和多图联动。工程接入需要管理容器尺寸、数据更新和图表销毁，并让筛选或高亮状态与业务数据保持一致。\n\n## 参考\n\n- [ECharts Get Started](https://echarts.apache.org/handbook/en/get-started/)\n- [ECharts Renderers](https://echarts.apache.org/handbook/en/best-practices/canvas-vs-svg/)\n- [ECharts Visual Mapping](https://echarts.apache.org/handbook/en/concepts/visual-map/)\n- [ECharts Events and Actions](https://echarts.apache.org/handbook/en/concepts/event/)"
 }

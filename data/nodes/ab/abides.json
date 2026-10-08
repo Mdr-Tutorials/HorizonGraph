@@ -1,0 +1,42 @@
+{
+  "id": "abides",
+  "name": "ABIDES",
+  "aliases": [
+    "Agent-Based Interactive Discrete Event Simulation",
+    "ABIDES 市场仿真框架"
+  ],
+  "type": "framework",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "exchange-simulator",
+      "context": "交易所代理在仿真中处理交易代理订单并产生市场事件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "latency",
+      "context": "代理之间的消息和各代理计算可配置延迟，影响订单实际到达与市场可见时间。"
+    }
+  ],
+  "summary": "让交易代理与模拟交易所在离散事件环境中交互的研究框架。",
+  "description": "ABIDES（Agent-Based Interactive Discrete Event Simulation）是面向市场代理研究的开源离散事件仿真框架。原始系统以消息调度连接交易代理和交易所代理，使订单与交易在模拟市场中交互产生；它的基本身份不同于只向策略投喂固定历史路径的回测播放器。\n\n框架允许设置代理间网络延迟、代理计算延迟与行为配置，以研究订单反馈、价格形成和市场冲击。事件队列与各组件随机状态参与实验调度，复现实验要记录代码、配置与随机条件。原始消息设计借鉴 NASDAQ ITCH / OUCH，并不意味着软件默认就是所有真实协议细节的兼容实现。\n\n内生市场反应仍来自设定的代理和撮合模型，不能把模拟中的响应当成已观察到的真实反事实。校准应检查成交、价差、队列和流量等统计，并区分原始 abides-sim 仓库与后续模块化分支的接口、版本和能力。大量代理或高保真目标是研究设计，不能自动保证适用任意市场的执行准确度。\n\n## 参考\n\n- [ABIDES 官方仓库与研究配置说明](https://github.com/abides-sim/abides)\n- [Byrd、Hybinette、Balch：ABIDES 原始框架论文](https://arxiv.org/abs/1904.12066)\n- [ABIDES 官方 Kernel.py：事件队列与随机状态](https://github.com/abides-sim/abides/blob/master/Kernel.py)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "abbreviation": "ABIDES",
+  "official_site": "https://github.com/abides-sim/abides"
+}

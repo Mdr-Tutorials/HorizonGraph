@@ -1,0 +1,45 @@
+{
+  "id": "microprice",
+  "name": "Microprice",
+  "aliases": [
+    "微价格",
+    "微观价格",
+    "Micro-Price"
+  ],
+  "type": "metric",
+  "domains": [
+    "market-microstructure",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "market-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mid-price",
+      "context": "Stoikov 状态模型以当前中点及条件未来中点为基准估计价格调整。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-book-imbalance",
+      "context": "采用盘口状态模型或简化数量加权形式时，以明确价位范围的买卖数量不平衡作为输入。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bid-ask-spread",
+      "context": "采用 Stoikov 价差与失衡状态估计时，以有效双侧价差参与状态定义。"
+    }
+  ],
+  "summary": "利用订单簿状态估计短期条件价格的指标与模型。",
+  "description": "微价格利用买卖报价及盘口状态估计短期条件价格。实践中的简化数量加权中点常写为 (a×Q_b+b×Q_a)/(Q_b+Q_a)，其中 Q_b、Q_a 为最优买卖档数量；买侧数量较大时，结果偏向卖价。该静态量常被称作 microprice，但不是所有同名模型的完整定义。\n\nStoikov 的原始论文把 micro-price 定义为一系列条件期望中间价的极限，通过盘口失衡、价差和状态转移估计相对当前中点的调整。论文明确与普通中点和数量加权中点比较，因此不能把简单加权公式当成该状态模型的一一等价替代。\n\n它可作为短期报价或预测研究的参考量，模型成立条件、分箱和估计窗口会影响输出。预测方向优势不等于扣除价差、排队与延迟后的利润，也不提供无条件可成交价格；缺少有效双侧报价或数量时，应定义缺失处理而不是用不明数据强行算值。\n\n## 参考\n\n- [Stoikov：Micro-price 的条件中间价极限定义](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2970694)\n- [Stoikov：论文估计示例、数据与 notebook](https://github.com/sstoikov/microprice)\n- [Gould 与 Bonart：队列失衡预测下一次中间价变化](https://arxiv.org/abs/1512.03492)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

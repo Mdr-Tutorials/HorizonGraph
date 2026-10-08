@@ -1,0 +1,37 @@
+{
+  "id": "mcp-tool",
+  "name": "MCP Tool",
+  "aliases": [
+    "MCP 工具原语",
+    "MCP 工具接口"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 定义的工具发现与调用原语。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-schema",
+      "context": "工具 inputSchema 和可选 outputSchema 使用 JSON Schema 描述输入与结构化输出。"
+    }
+  ],
+  "summary": "MCP 中带输入模式和结果结构的可调用操作接口。",
+  "description": "MCP 工具是服务器提供的命名操作接口，可查询数据、执行计算或调用外部 API。它带有输入模式及说明，客户端通过 tools/list 发现并通过 tools/call 调用。工具原语描述协议接口，区别于模型的 function calling 和实现某项操作的软件程序。\n\n输入用 JSON Schema 描述，结果可以含文本、图像、资源链接和 structuredContent；声明 outputSchema 时结构化结果应符合对应模式。协议层错误与结果中的 isError 表达不同失败类别，成功收到消息不保证业务操作成功。工具名称唯一性限定在服务器范围，多源聚合需要消歧。\n\n工具的 model-controlled 交互说明不是强制 UI，更不意味着模型可以越过宿主权限。annotations 只是描述，不能视为安全认证。当前核心允许工具结果要求 MRTR 输入；Apps 或 Tasks 等扩展行为需要单独支持。服务端必须落实业务校验，宿主决定结果如何进入模型上下文。\n\n## 参考\n\n- [MCP：工具规范](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)\n- [MCP：客户端实际调用示例](https://modelcontextprotocol.io/docs/2026-07-28/develop/build-client)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

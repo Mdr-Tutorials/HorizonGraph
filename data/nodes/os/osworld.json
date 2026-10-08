@@ -1,0 +1,44 @@
+{
+  "id": "osworld",
+  "name": "OSWorld",
+  "aliases": [
+    "桌面计算机操作基准"
+  ],
+  "type": "product",
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "dataset"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "execution-based-evaluation",
+      "context": "原始 OSWorld 根据具体桌面任务的文件、应用或系统状态运行任务专用判定函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reproducible-evaluation-environment",
+      "context": "原始评估环境使用虚拟机快照及任务初始化配置恢复桌面初态，后续版本需按各自设置运行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "task-success-rate",
+      "context": "报告严格任务完成时采用满足全部指定验收条件的比例，并与 OSWorld 2.0 的部分进度分数分开。"
+    }
+  ],
+  "summary": "用真实桌面环境和任务状态检查评估计算机操作智能体。",
+  "description": "OSWorld 提供计算机使用任务、可执行环境及任务判定代码。2024 原论文的主要基准包含 369 个 Ubuntu 桌面任务，另有 Windows 分析任务；任务涉及办公文件、浏览器及跨应用操作。这些任务属于评估数据制品，配套环境并不使数据集本身变成一个通用指标。\n\n原始环境通过虚拟机和任务配置准备文件、应用及界面状态，并在运行结束后取回文件或读取应用状态进行功能性检查。虚拟机快照支持恢复初始条件；界面上看起来完成与文件实际保存、内容正确或应用配置符合要求，需要分别验证。\n\nOSWorld-Verified 在 2025 年修订任务和评估实现；2026 年 OSWorld 2.0 另发布 108 个长流程任务，使用细粒度检查点进度并报告严格完成情况。两个任务数不能相加后当作同一测试集，也不能直接比较未注明版本的分数。2.0 的部分模型判定亦有其限定协议，不应概括成全部任务只凭截图打分。\n\n## 参考\n\n- [OSWorld 原论文：桌面任务、虚拟机与状态判定](https://arxiv.org/html/2404.07972v1)\n- [OSWorld 官方实现与 Verified 更新](https://github.com/xlang-ai/OSWorld)\n- [OSWorld 2.0：长流程任务与检查点评分](https://arxiv.org/html/2606.29537v1)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool"
+}

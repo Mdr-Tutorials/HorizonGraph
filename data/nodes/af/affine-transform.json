@@ -1,0 +1,34 @@
+{
+  "id": "affine-transform",
+  "name": "Affine Transformation",
+  "aliases": [
+    "仿射变换",
+    "Affine Transform"
+  ],
+  "type": "concept",
+  "domains": [
+    "interactive-graphics",
+    "graphics",
+    "web-development"
+  ],
+  "ecosystems": [
+    "interactive-graphics-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interactive-graphics-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linear-algebra",
+      "context": "用矩阵乘法组合坐标映射，并在矩阵可逆时计算局部与显示坐标的逆转换。"
+    }
+  ],
+  "summary": "用线性映射与平移组合改变坐标的几何变换。",
+  "description": "仿射变换可写为 x′=Ax+b，用齐次矩阵把二维平移、缩放、旋转、倾斜及其组合统一表示。它保持直线和仿射组合，平行线仍平行；一般不保持角度、长度或面积，透视投影则是不同的变换。\n\n组合顺序会改变结果，先旋转后平移通常不同于先平移后旋转。Canvas 的当前变换、SVG 的变换和图形编辑器的局部坐标都采用这类映射；逆向换算指针位置时必须检查矩阵是否可逆，零尺度映射不能直接求逆。\n\n## 参考\n\n- [W3C：二维变换与矩阵](https://www.w3.org/TR/css-transforms-1/)\n- [W3C：DOMMatrix 与几何接口](https://www.w3.org/TR/geometry-1/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

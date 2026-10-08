@@ -1,0 +1,34 @@
+{
+  "id": "container-image-digest",
+  "name": "Container Image Digest",
+  "aliases": [
+    "镜像内容摘要",
+    "镜像摘要",
+    "Image Digest"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-image-spec",
+      "context": "OCI 镜像相关对象使用规范中的 descriptor digest 进行具体字节内容寻址，层 DiffID 与配置 ImageID 按各自定义计算。"
+    }
+  ],
+  "summary": "以具体内容字节的密码学哈希标识镜像相关对象",
+  "description": "## 机制与边界\n\n镜像内容摘要是对具体内容字节计算密码学哈希得到的标识，常见写法为 sha256 加冒号和编码后的哈希值。OCI 描述符用 digest 引用目标对象，并结合媒体类型和字节长度说明预期内容；消费者可以重新计算收到字节的摘要，验证它是否与目标标识一致。\n\n“镜像摘要”必须说明所指对象：索引、清单、配置及层 blob 都可以有各自的摘要。分发引用中的摘要常指清单或索引，OCI ImageID 则由配置 JSON 的 SHA-256 得到。压缩层 blob 的摘要针对传输的压缩字节，配置中的 DiffID 针对未压缩 tar 字节，两者不能混用，也不能统一解释成最终展开文件目录的哈希。\n\n使用 repository@sha256:… 这样的引用可固定目标内容，避免后续标签移动改变所拉取的对象。固定摘要有利于记录部署输入，但更新镜像需要显式更新该引用。摘要校验说明内容与预期字节一致；它本身没有表达发布者身份、授权关系或软件质量，这些信息需要其他机制提供。\n\n## 参考\n\n- [OCI：Content Descriptor 与 Digest](https://raw.githubusercontent.com/opencontainers/image-spec/main/descriptor.md)\n- [OCI：DiffID 与 ImageID](https://raw.githubusercontent.com/opencontainers/image-spec/main/config.md)\n- [Docker：按摘要拉取镜像](https://docs.docker.com/reference/cli/docker/image/pull/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

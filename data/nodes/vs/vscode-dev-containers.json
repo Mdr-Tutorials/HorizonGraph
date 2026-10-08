@@ -1,0 +1,54 @@
+{
+  "id": "vscode-dev-containers",
+  "name": "VS Code Dev Containers",
+  "aliases": [
+    "VS Code 开发容器扩展",
+    "Remote - Containers",
+    "Dev Containers extension"
+  ],
+  "type": "tool",
+  "domains": [
+    "developer-environments",
+    "containerization"
+  ],
+  "ecosystems": [
+    "dev-container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "vscode"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dev-container-spec"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "vscode-remote-wsl",
+      "context": "从 WSL 工作区进入开发容器时组合两项远程扩展，普通 WSL 连接不要求该组合。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dev-container-cli",
+      "context": "创建与配置开发容器时复用参考 CLI 的规范解析和环境配置能力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wslc",
+      "context": "在 Windows 上选择支持 WSLc 的驱动配置时，以 WSLc 创建和连接开发容器。"
+    }
+  ],
+  "summary": "在 VS Code 中创建或附加容器开发工作区的扩展。",
+  "description": "VS Code Dev Containers 是编辑器扩展，可把目录在容器中打开，或者附加到已运行的容器。编辑器界面与容器内执行环境分开：工作区文件可以挂载、复制或克隆，终端、调试器和多数工作区扩展在容器侧访问工具与文件。\n\n扩展依据开发容器规范配置镜像、Features、用户和生命周期步骤，支持 Dockerfile 与 Compose 场景。创建配置的变动通常需要重建；直接在容器里手工安装的包，若没有写入构建或初始化定义，重建后可能丢失。转发端口与容器对宿主发布端口也有不同的网络路径。\n\n本地 Docker、远程 Docker 主机和受支持的 WSLc 路径都可承载工作区。远程 SSH 或隧道宿主场景可把 Docker 放在远端，不要求本机 Docker Desktop。WSLc 驱动的出现不意味着原生 Compose 已落地；原生依赖扩展的 Linux ABI 与权限要求仍应按所选客体确认。\n\n## 参考\n\n- [VS Code：容器架构、本地与远程宿主](https://code.visualstudio.com/docs/devcontainers/containers/)\n- [VS Code：创建、重建与 Compose 开发容器](https://code.visualstudio.com/docs/devcontainers/create-dev-container)\n- [VS Code：独立参考 CLI](https://code.visualstudio.com/docs/devcontainers/devcontainer-cli)\n- [Microsoft：VS Code WSLc 开发容器支持](https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://code.visualstudio.com/docs/devcontainers/containers/"
+}

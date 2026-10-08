@@ -1,0 +1,40 @@
+{
+  "id": "glb",
+  "name": "GLB",
+  "aliases": [
+    "二进制 glTF",
+    "Binary glTF",
+    "glTF Binary"
+  ],
+  "type": "protocol",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "graphics-asset-format"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "gltf"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json",
+      "context": "容器中的 JSON 块承载 glTF 资产描述。"
+    }
+  ],
+  "summary": "将 glTF 描述与二进制数据组织为块的容器格式。",
+  "description": "GLB 是 glTF 定义的二进制容器格式，文件使用 .glb 后缀。容器包含头部以及 JSON、二进制数据等块，可以把 glTF 资产的描述与缓冲区数据放到同一个文件，减少分散资源交付的组织开销。\n\nGLB 仍然遵循 glTF 的场景、材质和动画语义，容器内的 JSON 也可以引用外部资源，因此不能仅凭 .glb 后缀断言文件完全自包含。它不是另一个渲染引擎，也与网络负载均衡协议 GLBP 没有身份关系。\n\n## 参考\n\n- [glTF 规范：GLB 容器](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#glb-file-format-specification)\n- [Khronos glTF 2.0 规范](https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "official_site": "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html#glb-file-format-specification"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "chronicle-queue",
+  "name": "Chronicle Queue",
+  "aliases": [
+    "OpenHFT Chronicle Queue",
+    "Chronicle 持久消息队列"
+  ],
+  "type": "library",
+  "domains": [
+    "low-latency-systems",
+    "systems-programming",
+    "databases"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "jvm"
+    }
+  ],
+  "summary": "使用内存映射文件记录与回放消息的 Java IPC 库。",
+  "description": "Chronicle Queue 是无 broker 的 Java 持久消息库，以本机内存映射文件作为堆外消息存储。appender 追加记录，tailer 根据位置读取或回放；多个 JVM 可共享本地队列文件进行 IPC。其记录历史与按索引定位的设计，和只在进程内保留有限槽位的环形工作队列不同。\n\n队列支持多个读取者；多个写入者协调涉及锁，不能把整个系统概括为无锁。滚动周期管理日志文件，消费者可从已知位置恢复。映射文件写入和操作系统页缓存并不自动等价于每条消息同步刷入稳定介质，应根据同步设置、存储及故障模型判断持久性边界。\n\n在电子交易中可以记录输入输出供审计、诊断和确定性测试，也适用于其他事件系统。项目明确不支持通过网络文件系统共享队列；跨主机复制属于相应 Enterprise 功能范围，不能写成开源同机队列自动提供的能力。吞吐、尾延迟和恢复语义仍取决于部署与应用对记录的解释。\n\n## 参考\n\n- [Chronicle Queue 官方项目与使用限制](https://github.com/OpenHFT/Chronicle-Queue)\n- [Chronicle Queue FAQ](https://github.com/OpenHFT/Chronicle-Queue/blob/ea/docs/FAQ.adoc)\n- [Chronicle Queue：同步设置实现](https://github.com/OpenHFT/Chronicle-Queue/blob/ea/src/main/java/net/openhft/chronicle/queue/impl/single/SingleChronicleQueueBuilder.java)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://github.com/OpenHFT/Chronicle-Queue"
+}

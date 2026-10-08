@@ -1,0 +1,26 @@
+{
+  "id": "agent-session-persistence",
+  "name": "Agent Session Persistence",
+  "aliases": [
+    "智能体会话持久化"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "保存会话历史与状态，使后续交互可继续加载。",
+  "description": "智能体会话持久化把会话历史、状态及必要引用保存到能供后续读取的后端。应用通过会话标识重新加载数据后，可以继续多轮交互；内存型服务则通常只在当前进程内保存这些内容，是否跨重启保留取决于后端与配置。\n\nAntigravity SDK 提供保存目录及 conversation_id 等会话配置，ADK 使用 SessionService 管理会话和追加事件。实现需要明确保存位置、用户与应用归属、序列化方式和写入时点；仅设置一个会话 ID 并不能替代持久服务。\n\n保存对话与恢复正在运行的工作流具有不同信息需求。执行检查点可能还要记录待处理消息、调度位置与尚未得到响应的请求；会话持久化也不负责撤销外部工具已经造成的修改，恢复后再次调用工具是否安全需要另行处理。\n\n## 参考\n\n- [Antigravity SDK lifecycle](https://www.antigravity.google/docs/sdk/lifecycle/)\n- [Antigravity SDK persistence example](https://github.com/google-antigravity/antigravity-sdk-python/blob/main/examples/getting_started/persistence.py)\n- [ADK sessions and SessionService](https://adk.dev/sessions/session/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,34 @@
+{
+  "id": "order-layering",
+  "name": "Order Layering",
+  "aliases": [
+    "分层虚假报单",
+    "分层报单操纵",
+    "交易分层操纵"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-market-regulation",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order",
+      "context": "在分层虚假报单模式中，滥用同侧多个价格档位的限价委托制造不真实供需图景；不将正常多档报价、拆单或撤改本身记为违规。"
+    }
+  ],
+  "summary": "借多档非真实委托制造虚假供需信号的操纵模式。",
+  "description": "分层操纵是通过同侧多个价位的非真实委托制造供需或价格压力的误导性图景，并结合其他交易行为获利的滥用模式。该术语在美国证券执法中常与spoofing并列或重叠，但不是所有辖区独立、完全一致的法定罪名。这里强调非真实交易目的和误导性行为，而不是一般订单拆分或多档做市。\n\nSEC公布的Lek/Avalon案上诉结果确认了陪审团关于分层/spoofing操纵的判定；Hold Brothers案件材料也描述了非真实订单与真实交易之间的关联。案例说明订单显示与撤销需要结合完整行为判断，不能只因订单簿里存在多个价位、批量撤单或双边挂单就认定layering。\n\n监控应重建订单、撤改、成交和账户联系，分析异常信号是否与其他交易相互配合，并保留可复核证据。CME Rule 575同样区分真实交易与误导行为，明确冰山单本身不违规。交易所、监管机关和法院的具体要件、举证与管辖不同，术语相近不能替代事实调查或法律适用。\n\n## 参考\n\n- [SEC：Lek/Avalon分层操纵案判决上诉维持公告](https://www.sec.gov/enforcement-litigation/litigation-releases/lr-25427)\n- [SEC：Hold Brothers分层操纵案件事实与处理](https://www.sec.gov/newsroom/press-releases/2012-2012-197htm)\n- [CME Rule 575：RA2608-5，2026年7月30日](https://www.cmegroup.com/rulebook/files/cme-group-Rule-575.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

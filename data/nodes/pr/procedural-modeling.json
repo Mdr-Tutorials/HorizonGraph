@@ -1,0 +1,33 @@
+{
+  "id": "procedural-modeling",
+  "name": "Procedural Modeling",
+  "aliases": [
+    "程序化建模",
+    "过程式建模"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "polygon-modeling",
+      "context": "通过程序化操作生成或修改多边形网格。"
+    }
+  ],
+  "summary": "用参数与可复用操作生成或修改几何的建模方法。",
+  "description": "程序化建模以参数、规则和操作网络描述几何生成过程。改变输入尺寸、数量、种子或其他参数后，系统重新求值并产生相应模型，适合需要多次迭代或批量变化的道具与环境。\n\nHoudini 的节点网络可以封装为数字资产，暴露参数供其他作者使用。流程生成的结果仍需验证拓扑、材质和运行时成本；编辑器中的生成网络可保留为制作源，而交付给引擎的结果可以是普通网格或经过插件处理的资产。\n\n## 参考\n\n- [Houdini 程序化建模](https://www.sidefx.com/products/houdini/modeling/)\n- [Houdini 数字资产机制](https://www.sidefx.com/docs/houdini/assets/intro.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3
+}

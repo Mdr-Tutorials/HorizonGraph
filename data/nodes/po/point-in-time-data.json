@@ -1,0 +1,36 @@
+{
+  "id": "point-in-time-data",
+  "name": "Point-in-time Data",
+  "aliases": [
+    "时点数据",
+    "时点可用数据",
+    "Point in Time Data",
+    "PIT Data"
+  ],
+  "type": "concept",
+  "domains": [
+    "quantitative-finance",
+    "statistics",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "quantitative-research-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "quantitative-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "market-data",
+      "context": "恢复交易策略的历史信息集合时，保留行情记录及其可见时间、版本和标识映射。"
+    }
+  ],
+  "summary": "保存历史时点当时可得的记录、成员和修订版本。",
+  "description": "时点数据表示在一个历史决策时刻实际能够获得的数据内容，而非今日数据库对那段历史的最新描述。它要区分事件所属时间、首次发布、后续修订与系统接收时间；例如财报季度结束早于公告，宏观数据初值和修订值也在不同日期进入可用信息集合。\n\n恢复历史视图需要保存版本和可用区间，并按决策截止点检索；证券集合、代码映射、公司行动和成员变化也需依时间处理。ALFRED 的历史实时区间展示了经济数据版本查询，但日期级公开版本并不自动提供某个交易系统微秒级的接收时间，研究仍须说明自身的信息可见规则。\n\n时点正确不等于来源完整、数值准确或完全无偏。缺失退出对象会留下幸存者偏差，用全部样本拟合标准化仍可能泄露，最终修订数据或后见复权处理也须按用途核查。若只能设置近似发布滞后，应明确这是估计而非已恢复的真实历史可用时间。\n\n## 参考\n\n- [圣路易斯联储：FRED / ALFRED Real-Time Periods](https://fred.stlouisfed.org/docs/api/fred/realtime_period.html)\n- [QuantConnect：研究流程、前视与幸存者偏差](https://www.quantconnect.com/docs/v2/writing-algorithms/key-concepts/research-guide)\n- [QuantConnect：回测与实盘的对照及前视风险](https://www.quantconnect.com/docs/v2/writing-algorithms/live-trading/reconciliation)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

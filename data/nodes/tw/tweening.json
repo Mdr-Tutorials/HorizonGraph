@@ -1,0 +1,35 @@
+{
+  "id": "tweening",
+  "name": "Tweening",
+  "aliases": [
+    "补间动画",
+    "Tween",
+    "Inbetweening"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "creative-coding",
+    "computer-animation"
+  ],
+  "ecosystems": [
+    "creative-coding-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "animation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "easing-function",
+      "context": "在端点插值前映射时间进度，以产生加速、减速或弹性等节奏。"
+    }
+  ],
+  "summary": "在给定端点之间按时间插值生成中间属性值。",
+  "description": "补间动画用起点、终点和持续时间描述变化，由运行系统根据当前进度生成中间值。一个补间可以同时驱动位置、透明度或普通数值属性，延迟、循环和回调则控制它何时启动以及如何结束。\n\n缓动函数决定进度变化的节奏，目标属性的插值决定数值如何过渡。多个补间可通过时间线编排，适合界面过渡与平面动效；补间更新数据后仍需对应 DOM、Canvas 或场景渲染系统呈现画面。\n\n## 参考\n\n- [GSAP：Tween 目标和播放控制](https://gsap.com/docs/v3/GSAP/Tween/)\n- [Anime.js：动画和补间参数](https://animejs.com/documentation/animation/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

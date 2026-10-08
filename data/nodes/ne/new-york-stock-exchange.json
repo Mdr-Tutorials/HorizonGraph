@@ -1,0 +1,36 @@
+{
+  "id": "new-york-stock-exchange",
+  "name": "New York Stock Exchange",
+  "aliases": [
+    "NYSE",
+    "纽约证券交易所",
+    "纽交所"
+  ],
+  "type": "organization",
+  "domains": [
+    "industry-landscape",
+    "electronic-trading",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "organization"
+    },
+    {
+      "relation_type": "provides",
+      "target_id": "nyse-pillar"
+    }
+  ],
+  "summary": "提供股票上市、交易与市场接入的交易所组织。",
+  "description": "New York Stock Exchange 指纽约证券交易所这一交易所组织及其核心股票市场；它属于 ICE 的交易所业务网络。NYSE Group 下的多个股票、期权市场各有运营主体和规则，核心 NYSE、NYSE Arca 等场所以及 Pillar 技术平台不能仅因同一品牌而合并为同一个实体。\n\n核心 NYSE 结合电子交易、交易大厅和指定做市商制度，开盘、收盘拍卖及持续交易有相应的市场安排。其 parity/priority 分配模型与简单的价格时间优先不同；指定做市商承担特定证券的维持公平有序市场义务，交易所组织本身也不等同于提供流动性的交易商。\n\nNYSE 向成员提供 Pillar 接入，而 Pillar 是多个 NYSE 市场共用的技术平台。共同接口便于客户端集成，却不会消除不同市场的分配模型、订单类型和监管规则差异；组织间的集团归属在正文说明，不跳过法律中间主体制造直接母子公司关系。\n\n## 参考\n\n- [NYSE 股票市场与市场模型](https://www.nyse.com/trade/equities)\n- [NYSE parity/priority 撮合模型](https://www.nyse.com/trade/parity-priority-explainer)\n- [NYSE Pillar 平台、规范与延迟口径](https://www.nyse.com/trade/pillar)\n- [ICE 交易所与清算业务](https://www.ice.com/about/exchanges-clearing)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "NYSE",
+  "official_site": "https://www.nyse.com/"
+}

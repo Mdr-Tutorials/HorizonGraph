@@ -1,0 +1,44 @@
+{
+  "id": "digital-content-creation",
+  "name": "Digital Content Creation",
+  "aliases": [
+    "数字内容制作",
+    "DCC",
+    "数字内容创作"
+  ],
+  "type": "concept",
+  "domains": [
+    "digital-content-creation",
+    "graphics"
+  ],
+  "ecosystems": [
+    "digital-content-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-content-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "polygon-modeling",
+      "context": "为角色、道具和场景创建几何模型。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rigging",
+      "context": "为需要动画控制的角色配置骨架、约束与蒙皮。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asset-pipeline",
+      "context": "将制作成果转换并交付给实时应用。"
+    }
+  ],
+  "summary": "制作模型、材质、动画等数字资产的创作过程。",
+  "description": "数字内容制作涵盖建模、绘制、材质制作、绑定、动画与场景组织等创作活动。用于交互应用的模型除了视觉效果，还要满足实时渲染对几何复杂度、纹理、动画数据和资源组织的要求；Blender、Maya 与 Houdini 提供不同的制作环境。\n\n制作工程保存修改历史、控制器、节点网络等创作信息，运行时交付则通常经过导出、转换与验证。资产管线负责把可编辑源文件转换为目标引擎能够加载的内容，通用交换格式不保证保留每个工具的全部制作功能。\n\n## 参考\n\n- [Blender 官方手册导览](https://docs.blender.org/manual/en/latest/)\n- [Maya 官方产品说明](https://www.autodesk.com/products/maya/overview.htm)\n- [Godot 资产导入流程](https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/import_process.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

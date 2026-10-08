@@ -1,0 +1,45 @@
+{
+  "id": "vwap-execution",
+  "name": "VWAP Execution",
+  "aliases": [
+    "VWAP 执行",
+    "成交量加权均价执行",
+    "VWAP 算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "volume-weighted-average-price",
+      "context": "按预先定义的交易区间与成交样本计算 VWAP，作为计划跟踪和事后执行评价的价格基准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-lifecycle",
+      "context": "落实分时计划时，根据子单确认与实际成交累计更新剩余量，避免重复提交已经执行的数量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "limit-order",
+      "context": "配置价格边界的 VWAP 实现中，子单采用限价；限价可能使完成率与基准跟踪出现偏差。"
+    }
+  ],
+  "summary": "按成交量分布组织交易以接近 VWAP 基准的方法",
+  "description": "VWAP 执行以某一明确区间的成交量加权平均价格为目标基准，常按预测的市场成交量分布安排母单数量，再通过子单落实计划。执行策略与事后计算的 VWAP 价格指标分别建模，选择该基准不等于已经取得该价格。\n\n成交量轨迹可以来自历史模式，也可以在执行过程中更新；开收盘集中量、突发事件和停牌会使预测与实际量不同。计划还可叠加限价、最大参与率和是否主动吃单等条件，具体参数由券商或实现定义，不是 VWAP 名称自带的统一接口。\n\nBest-efforts VWAP 可能偏离基准或未全部成交，避免吃单也可能降低完成率。评价时须固定交易区间、市场与成交数据口径，并计入费用与剩余数量；不能把全日市场 VWAP、执行区间 VWAP 和自己订单的成交均价混作同一数值。\n\n## 参考\n\n- [IBKR：VWAP Best-Efforts 算法](https://www.interactivebrokers.com/campus/glossary-terms/vwap-algo-best-efforts/)\n- [IBKR：订单与算法功能边界](https://www.interactivebrokers.com/en/trading/ordertypes.php?menu=B)\n- [Nasdaq：执行算法与历史成交量轨迹](https://www.nasdaq.com/docs/execution-algos-member-presentation-december-2015.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

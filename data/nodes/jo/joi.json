@@ -1,0 +1,50 @@
+{
+  "id": "joi",
+  "name": "Joi",
+  "aliases": [
+    "Joi 校验库",
+    "@hapi/joi"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-services",
+    "web-development"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "schema-validation"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "standard-schema",
+      "context": "支持该规范的版本暴露标准化的校验结果接口。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "standard-json-schema",
+      "context": "支持导出接口的模式可分别生成转换前后对应的 JSON Schema；目标范围按实现文档核对。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "执行定义好的字段、引用、条件和转换规则，产出 value 与错误信息。"
+    }
+  ],
+  "summary": "通过组合模式校验 JavaScript 数据并返回规范化结果的库。",
+  "description": "## 机制与应用\n\nJoi 使用对象、字段、引用和条件规则构造模式，validate 返回 value 与可能的 error，validateAsync 以 Promise 返回结果或拒绝。规则可描述必填项、格式和字段间条件，错误可定位具体原因。当前支持的接口还可通过 ~standard 与通用校验工具互操作，并提供输入输出的 JSON Schema 导出能力。\n\n默认 convert 会尝试把值转换到所需类型，可关闭转换来按原值检查；未知字段、缺省值和条件规则也应明确配置。调用方需要使用返回的规范化结果，而不是假定原始输入已经改变。Standard Schema 校验接口与 Standard JSON Schema 导出接口分别承担职责，导出目标和具体规则的可表示性须按 Joi 文档核对。\n\n## 参考\n\n- [Joi：官方项目与包名](https://github.com/hapijs/joi)\n- [Joi：验证、转换与 standard 接口](https://raw.githubusercontent.com/hapijs/joi/master/API.md)\n- [Joi：类型声明与标准接口](https://github.com/hapijs/joi/blob/master/lib/index.d.ts)\n- [Standard Schema：Joi 兼容实现](https://standardschema.dev/schema)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://joi.dev/"
+}

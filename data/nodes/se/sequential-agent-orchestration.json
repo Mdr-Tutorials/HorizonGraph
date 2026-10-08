@@ -1,0 +1,27 @@
+{
+  "id": "sequential-agent-orchestration",
+  "name": "Sequential Agent Orchestration",
+  "aliases": [
+    "顺序代理编排",
+    "顺序智能体编排"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "按明确顺序运行代理步骤，把前序结果交给后续步骤。",
+  "description": "顺序代理编排把若干代理或执行步骤按预定顺序连接，前一阶段结束后再开始后续阶段。典型流程是收集资料、形成草稿再进行审核；整体顺序由编排程序控制，每个步骤内部仍可包含模型决策和工具循环。\n\nADK 的 SequentialAgent 依子代理列表顺序执行，可利用输出字段与共享状态传递结果；Microsoft Agent Framework 也提供顺序编排。传递信息需要明确字段、格式和是否保留原始证据，不能只假设后续代理自动看到先前所有内部活动。\n\n顺序执行适合有依赖关系的任务，整体耗时通常累积各阶段的等待。上游失败、输出不合要求或用户取消时，编排应规定停止、修复或跳过的规则；顺序运行并不自动提高内容正确性，也不等于只有一个代理。\n\n## 参考\n\n- [ADK SequentialAgent](https://adk.dev/agents/workflow-agents/sequential-agents/)\n- [Microsoft Agent Framework official repository](https://github.com/microsoft/agent-framework)\n- [ADK workflow patterns](https://adk.dev/workflows/patterns/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

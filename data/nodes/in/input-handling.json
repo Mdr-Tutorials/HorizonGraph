@@ -1,0 +1,32 @@
+{
+  "id": "input-handling",
+  "name": "Game Input Handling",
+  "aliases": [
+    "游戏输入处理",
+    "输入映射"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gamepad-api",
+      "context": "浏览器游戏读取手柄按钮及轴状态时，可通过 Gamepad API 获取连接设备的状态快照。"
+    }
+  ],
+  "summary": "将设备事件或当前状态转换为游戏动作与交互的过程。",
+  "description": "输入处理接收键盘、指针、触摸或控制器的信息，将具体按键映射为跳跃、移动等动作。事件回调与状态查询承担不同任务，界面可先消费输入，剩余事件再交给游戏逻辑。\n\n按下事件、持续按住状态和模拟轴值不能混为一种信号。重映射、焦点、控制器断连、死区及多设备优先级影响行为；不能把浏览器指针事件直接当成所有平台的通用输入模型。\n\n## 参考\n\n- [Godot：输入事件与动作映射](https://docs.godotengine.org/en/stable/tutorials/inputs/inputevent.html)\n- [Phaser：输入管理](https://docs.phaser.io/phaser/concepts/input)\n- [W3C：Gamepad API](https://www.w3.org/TR/gamepad/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

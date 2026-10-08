@@ -11,7 +11,9 @@
   ],
   "domains": [
     "web-development",
-    "graphics"
+    "graphics",
+    "digital-content-creation",
+    "real-time-rendering"
   ],
   "abstraction_level": "framework_library",
   "relations": [
@@ -25,13 +27,54 @@
     },
     {
       "relation_type": "implements",
-      "target_id": "webgl"
+      "target_id": "scene-graph"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgl",
+      "context": "WebGLRenderer 后端使用 WebGL 绘制场景。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webgpu",
+      "context": "WebGPURenderer 在环境支持且选用该后端时通过 WebGPU 渲染。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gltf",
+      "context": "显式导入的 GLTFLoader 附加组件加载 glTF 资产。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-geometry",
+      "context": "用几何对象保存用于场景绘制的顶点与索引。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-material",
+      "context": "用材质对象组织表面参数与着色方式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "level-of-detail",
+      "context": "使用 LOD 对象按相机距离选择不同细节的表示。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "draco",
+      "context": "在 GLTFLoader 读取含 Draco 压缩扩展的资源时配置 DRACOLoader 解码器；普通 glTF 资源不需要该解码器。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "resource-lifecycle",
+      "context": "移除场景内容时按所用资源类型释放几何、材质、纹理及 ImageBitmap 等资源。"
     }
   ],
-  "summary": "最流行的 Web 3D 库，把 WebGL 封装成场景对象。",
+  "summary": "组织场景、材质与图形后端的 JavaScript 三维库。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 3,
-  "official_site": "https://threejs.org"
+  "official_site": "https://threejs.org",
+  "description": "Three.js 是在 JavaScript 应用中组织和呈现三维内容的库。场景对象连接几何、材质、纹理、灯光与相机，渲染器把这些对象转换为图形 API 调用；应用仍需负责内容加载、循环调度与交互逻辑。\n\nWebGLRenderer 使用 WebGL 后端，WebGPURenderer 可以采用 WebGPU，并按其实现与环境选择 WebGL 2 后端。Three.js 使用浏览器图形接口完成渲染，不是 WebGL 规范本身的实现者，后端能力也不能代表所有浏览器都相同。\n\nGLTFLoader 是需要显式导入的附加组件，加载场景、材质与动画等交付内容。采用 Draco、Meshopt 或 KTX2 等压缩资源时需要相应解码器或加载器配置，导入完成后还需管理 CPU 与 GPU 资源的生命周期。\n\n## 参考\n\n- [Three.js 场景与渲染基础](https://threejs.org/manual/pages/fundamentals.html)\n- [Three.js WebGPURenderer](https://threejs.org/docs/pages/WebGPURenderer.html)\n- [Three.js GLTFLoader](https://threejs.org/docs/pages/GLTFLoader.html)\n- [Three.js 资源释放说明](https://threejs.org/manual/pages/cleanup.html)"
 }

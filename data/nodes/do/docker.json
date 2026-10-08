@@ -5,11 +5,13 @@
   "aliases": [],
   "type": "tool",
   "ecosystems": [
-    "cloud_native"
+    "cloud_native",
+    "container-ecosystem"
   ],
   "domains": [
     "cloud-infrastructure",
-    "devops"
+    "devops",
+    "containerization"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -18,35 +20,55 @@
       "target_id": "tool"
     },
     {
-      "relation_type": "implements",
-      "target_id": "oci"
-    },
-    {
-      "relation_type": "depends_on",
-      "target_id": "linux"
-    },
-    {
-      "relation_type": "depends_on",
-      "target_id": "cgroup"
-    },
-    {
-      "relation_type": "depends_on",
-      "target_id": "namespace"
-    },
-    {
       "relation_type": "developed_by",
       "target_id": "docker-inc"
     },
     {
       "relation_type": "implements",
       "target_id": "containers"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker-engine",
+      "context": "docker 客户端通过本机或远程 Engine API 请求容器与镜像操作；客户端平台和容器后端平台可以不同。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci-image-spec",
+      "context": "Docker 工具链在支持 OCI exporter 的 Buildx 驱动下输出 OCI image layout，并处理支持的 OCI 镜像媒体类型；不代表每种驱动默认都导出同一格式。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci-distribution-spec",
+      "context": "在镜像拉取与推送路径中实现仓库客户端的 manifest/blob 交互；此边限定分发接入面，不宣称覆盖规范全部可选扩展。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux",
+      "context": "在 Linux 容器执行后端中采用 Linux 内核能力；Windows 或 macOS 客户端可连接远程或虚拟机中的后端。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "namespace",
+      "context": "Linux 容器执行路径通过内核 namespace 配置进程、挂载和网络等隔离视图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cgroup",
+      "context": "Linux 容器执行路径通过内核 cgroup 统计和限制进程组资源，具体控制取决于后端配置。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "windows-containers",
+      "context": "在支持 Windows 容器的宿主及安装配置下管理 Windows 镜像与容器，按进程或 Hyper-V 隔离路径运行。"
     }
   ],
-  "summary": "把进程、文件系统与网络打成容器的开发者工具。",
+  "summary": "构建、分发和运行容器应用的工具，通过客户端连接具体执行后端。",
   "importance": 5,
   "popular": 94,
   "official_site": "https://www.docker.com",
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Docker 提供构建、分发和运行容器应用的开发工具。本词条作为 Docker 工具入口：docker 命令行客户端通过 Docker Engine API 向本机或远程 dockerd 发起操作，Engine 管理镜像、容器、网络和存储卷；Docker Desktop 则把客户端、引擎和桌面集成组合为单独产品。客户端所在系统与实际执行容器的后端可以不同。\n\nDocker 工具链支持容器镜像及仓库的互操作格式。例如 Buildx 的 OCI exporter 在支持该 exporter 的驱动下输出 OCI image layout，仓库操作使用 manifest 与 blob 接口。镜像格式、仓库分发 API、Engine 控制 API 和 CLI 参数是不同接入面；支持某一种 OCI 产物并不保证实现所有规范扩展或所有 Docker 工作流。Engine 的常规容器生命周期经 containerd 管理，再由所配置的执行器运行，默认路径使用 runc，也允许替换执行后端。\n\n在 Linux 容器后端中，Docker 使用 Linux 内核的 namespace 和 cgroup 建立资源视图及资源约束。Windows 上的 Desktop 可用 WSL 2 等 Linux 虚拟化后端承载 Linux 容器，也在适合的安装与系统配置下支持 Windows 容器；Windows 容器的进程隔离与 Hyper-V 隔离有各自内核边界。因此 Linux、cgroup 和 namespace 应按执行路径理解，不能写成所有 Docker 客户端或 Windows 容器的无条件依赖。\n\n## 参考\n\n- [Docker：客户端、Engine 与 Desktop 分工](https://docs.docker.com/get-started/docker-overview/)\n- [Docker：OCI 与 Docker exporters](https://docs.docker.com/build/exporters/oci-docker/)\n- [Docker：Registry API 与 OCI 范围](https://docs.docker.com/reference/api/registry/latest/)\n- [Docker：Engine API 与版本协商](https://docs.docker.com/reference/api/engine/)\n- [Docker：可替换的执行后端](https://docs.docker.com/engine/daemon/alternative-runtimes/)\n- [Docker：Linux 内核安全机制](https://docs.docker.com/engine/security/)\n- [Docker：Windows 安装与后端边界](https://docs.docker.com/desktop/setup/install/windows-install/)\n- [Microsoft：Windows 容器隔离模式](https://learn.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/hyperv-container)"
 }

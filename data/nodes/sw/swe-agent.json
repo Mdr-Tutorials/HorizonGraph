@@ -1,0 +1,43 @@
+{
+  "id": "swe-agent",
+  "name": "SWE-agent",
+  "aliases": [
+    "SWE Agent"
+  ],
+  "type": "tool",
+  "domains": [
+    "ai-assisted-software-engineering"
+  ],
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-harness",
+      "context": "sweagent 初始化 Agent 与 SWEEnv，通过动作解析、shell 执行和观察反馈形成仓库修复循环。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-compaction",
+      "context": "使用 HistoryProcessor 处理模型输入历史，在特定配置下压缩历史并控制上下文占用。"
+    }
+  ],
+  "summary": "面向仓库问题修复研究、现处维护模式的编码代理工具。",
+  "description": "SWE-agent 是围绕软件仓库问题修复构建的研究型编码代理工具。它将问题描述、仓库和工具交互交给模型，通过观察、操作和反馈的循环生成修改。项目重点包含 agent-computer interface，即让模型在适合代码工作的小型工具接口中查找、编辑和执行；它是一套代理实现，而不是 SWE-bench 基准本身或软件工程职位名称。\n\n官方 1.0 架构以 sweagent 命令初始化环境与 Agent。SWEEnv 包装 SWE-ReX 部署，后者在本地或远端启动执行容器和 shell 会话；Agent 读取配置，将模型输出解析为动作，并把环境结果加入历史。HistoryProcessor 处理历史以适应上下文预算。这里描述的是该工具已公布的执行路径，不应把特定容器后端推广为所有编码代理的共同要求。\n\n截至核对日期，官方文档明确 SWE-agent 已被 mini-swe-agent 取代，当前仅维护而非继续主线功能演进。保留它有助于理解研究结果、已有配置和历史轨迹；新的项目选择应核对当前维护说明及后继工具接口。工具能运行命令或生成补丁不证明修复符合需求，评价还须考察测试、隐藏行为与任务边界，不能将某项基准成绩直接当作任意仓库的成功率。\n\n## 参考\n\n- [SWE-agent：执行环境、Agent 与历史处理架构](https://swe-agent.com/latest/background/architecture/)\n- [SWE-agent：维护模式与后继项目](https://swe-agent.com/latest/usage/whats_next/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "application_tool",
+  "official_site": "https://swe-agent.com/latest/"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "container-runtime",
+  "name": "Container Runtime",
+  "aliases": [
+    "容器运行时",
+    "容器执行运行时"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "oci-runtime-spec",
+      "context": "在 OCI 兼容的低层执行路径中，以 Runtime Spec 的配置和生命周期作为 bundle 与执行器之间的约定；不泛化为所有容器运行时都只接受该接口。"
+    }
+  ],
+  "summary": "负责创建、执行与管理容器生命周期的软件角色",
+  "description": "容器运行时是把容器执行要求落实到操作系统或隔离环境的软件角色，涉及创建、启动、停止、退出状态及资源清理。这个术语既可指低层执行器，也常用于包含镜像管理、监控和守护进程服务的较高层组件；讨论依赖或接口时需要先说明采用哪一层含义。\n\n在典型 OCI Linux 路径中，低层 runc/crun 接收 bundle 并建立执行环境，containerd 等较高层服务管理镜像、快照和任务；CRI-O 则把 Kubernetes 的 CRI 请求映射到 OCI 执行器。CRI 与 OCI Runtime Spec 服务于不同调用边界，支持其中一种接口并不意味着自动支持另一种。\n\n本机 Linux 进程隔离、Windows 容器和以 VM 为边界的执行方式具有不同平台要求。运行时的调度整合、网络与存储插件、rootless 条件及安全机制应按实现配置说明；容器运行时这个类别本身不承诺必须使用 Docker，不保证任意镜像可跨内核运行，也不等同于完整编排平台。\n\n## 参考\n\n- [Kubernetes：容器运行时配置](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)\n- [runc 官方 README](https://github.com/opencontainers/runc/blob/main/README.md)\n- [CRI-O 官方项目说明与范围](https://github.com/cri-o/cri-o/blob/main/README.md)\n- [OCI Runtime Specification](https://github.com/opencontainers/runtime-spec/blob/main/spec.md)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

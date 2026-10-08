@@ -1,0 +1,37 @@
+{
+  "id": "agent-execution-loop",
+  "name": "Agent Execution Loop",
+  "aliases": [
+    "智能体执行循环",
+    "智能体运行循环"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "function-calling",
+      "context": "在模型工具型循环中解析结构化调用，交由执行器运行后回填结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "agent-lifecycle-hooks",
+      "context": "运行时开放步骤前后或工具异常回调时，用钩子执行审计、拦截或结果处理。"
+    }
+  ],
+  "summary": "重复决策、执行动作并消费反馈，直到达到停止条件。",
+  "description": "智能体执行循环将当前输入与状态交给决策组件，处理生成的动作，取得环境或工具反馈，再决定是否继续。大模型工具型实现通常交替进行模型调用与工具调用；执行循环也可以包含确定性的分支、校验和错误处理。\n\n运行时负责把一次执行拆成可观察的步骤，并把工具结果与状态更新送回后续决策。ADK 的 Runner 消费代理产生的事件、协调服务更新，然后恢复执行；事件产生、持久化和向界面转发是可区分的阶段，不能假设每个流式片段都已存盘。\n\n结束条件可以是最终回答、显式退出、步数或时间上限、调用者取消以及无法继续的错误。单个代理的模型与工具循环不同于工作流反复运行一组代理；后者还需要定义整轮顺序、共享结果及跨轮终止规则。\n\n## 参考\n\n- [ADK runtime event loop](https://adk.dev/runtime/event-loop/)\n- [LangChain agents](https://docs.langchain.com/oss/python/langchain/agents)\n- [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

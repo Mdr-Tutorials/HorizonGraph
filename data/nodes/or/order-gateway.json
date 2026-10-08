@@ -1,0 +1,44 @@
+{
+  "id": "order-gateway",
+  "name": "Order Gateway",
+  "aliases": [
+    "订单网关",
+    "交易订单网关"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "market-microstructure",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fix-protocol",
+      "context": "在采用 FIX 订单入口的接入路径中，用 FIX 消息和相应会话约定传递请求与执行回报；原生二进制路径另有规则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "order-lifecycle",
+      "context": "转发异步确认、成交和拒绝回报时，关联订单身份与未决操作，避免把传输成功当作业务成功。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pre-trade-risk-control",
+      "context": "在部署于订单出口的风险检查路径中，先检查允许的账户、数量或风险条件再放行请求；具体检查位置与能力取决于系统配置。"
+    }
+  ],
+  "summary": "连接交易客户端与场所订单入口的接入角色",
+  "description": "订单网关是交易请求通往交易场所或券商订单入口的接入角色，处理连接、会话身份、请求编码及确认回报。这里是通用机制概念，不指网络路由器，也不把某交易所的专用网关视为所有电子交易都必需的具体产品。\n\n场所入口可以采用 FIX 或原生二进制协议。CME iLink 区分 Convenience Gateway 与 Market Segment Gateway 接入，Nasdaq OUCH 则定义订单输入及异步事件；网关负责接入和消息路径，撮合引擎负责依场所规则执行订单，两个职责不能互换。\n\n接入认证、请求限流、序列恢复和连接中断处理依接口定义，部署也可在网关路径中接入交易前风险检查。网络写入成功不代表订单被接受，断线不自动取消所有订单；恢复时须依据确认和状态信息处理未决请求，而非把重发当成天然安全的重复操作。\n\n## 参考\n\n- [CME：iLink 网关与生产接入认证](https://www.cmegroup.com/solutions/market-access/globex/develop-to-globex.html)\n- [CME：创建 iLink Order Entry Session](https://www.cmegroup.com/tools-information/webhelp/cme-customer-center/Content/order-entry-create.html)\n- [Nasdaq：OUCH 5.0 订单入口规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/TradingProducts/OUCH5.0.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

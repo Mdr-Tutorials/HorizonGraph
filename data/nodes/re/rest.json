@@ -11,18 +11,25 @@
   ],
   "domains": [
     "web-development",
-    "networking"
+    "networking",
+    "web-services"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "以 HTTP 实施 REST 时，资源交互采用 HTTP 方法、表示元数据、内容协商和缓存语义；REST 架构风格本身并不限定 HTTP。"
     }
   ],
-  "summary": "以资源为中心的 API 架构风格，HTTP 动词语义化。",
+  "summary": "以无状态交互、统一接口和可缓存表示约束分布式超媒体系统的架构风格。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-07",
   "importance": 5,
-  "official_site": "https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+  "official_site": "https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm",
+  "description": "REST 是 Fielding 为分布式超媒体系统归纳的架构风格，包含客户端服务器、无状态、缓存、统一接口、分层系统以及可选的按需代码约束。它规定组件如何协作与演化，不是一种消息编码，也不能只用路径名、JSON 或增删改查方法来判断是否符合。\n\n统一接口包含四项约束：识别资源、通过表示操纵资源、自描述消息，以及以超媒体驱动应用状态。资源标识与资源当前表示有区别，消息需要携带接收方解释所需的语义，客户端从表示中的控制信息获知后续交互，而非仅依赖预先写死的调用流程。\n\n无状态约束要求每次请求带齐服务理解它所需的信息，服务不依赖先前请求留下的客户端会话上下文；服务器仍可保存订单等资源状态，客户端仍可维护应用交互状态。REST 常通过 HTTP 方法、表示和缓存语义实现，但架构风格本身并不等于所有使用 HTTP 的 API。\n\n## 参考\n\n- [Fielding 博士论文第 5 章：REST 约束与组成](https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)\n- [RFC 9110：HTTP 资源、表示与方法语义](https://www.rfc-editor.org/rfc/rfc9110.html)"
 }

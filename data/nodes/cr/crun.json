@@ -1,0 +1,44 @@
+{
+  "id": "crun",
+  "name": "crun",
+  "aliases": [
+    "OCI 运行时 crun",
+    "libcrun"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "oci-runtime-spec"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "container-runtime"
+    },
+    {
+      "relation_type": "runs_on",
+      "target_id": "linux"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "runc"
+    }
+  ],
+  "summary": "以 C 实现的 OCI 容器执行器及可嵌入库",
+  "description": "crun 是以 C 编写的 OCI 容器运行时，提供低层执行器，也可构建 libcrun 供其他程序嵌入。它按 OCI Runtime Spec 处理 bundle 和容器执行配置，因此与主要承担镜像拉取、编排或用户体验的高层引擎处于不同层。\n\nPodman 可配置使用 crun 或 runc 作为 OCI 执行器。crun 项目把自身与 runc 进行实现和资源开销比较，但具体选择还取决于发行版打包、功能需求、内核支持及部署配置；项目给出的特定机器测量不能推导所有工作负载都获得固定比例的性能改善。\n\n命令行执行器与可嵌入共享库有不同使用方式：官方构建说明要求显式启用 shared 才生成可用的 libcrun 共享库。Linux 资源隔离和安全功能同样依赖实际主机与配置，不应从实现语言或 OCI 兼容身份推出跨操作系统通用执行或更强的安全保证。\n\n## 参考\n\n- [crun 官方 README](https://github.com/containers/crun/blob/main/README.md)\n- [Podman 安装与 OCI 运行时要求](https://podman.io/docs/installation)\n- [Podman CLI 与运行时选项](https://docs.podman.io/en/latest/markdown/podman.1.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm"
+}

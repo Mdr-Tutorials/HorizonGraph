@@ -14,7 +14,8 @@
   ],
   "domains": [
     "devops",
-    "distributed-systems"
+    "distributed-systems",
+    "web-services"
   ],
   "relations": [
     {
@@ -27,11 +28,11 @@
       "context": "采用缓冲队列的实现可依据队列容量和消费者需求限制上游生产。"
     }
   ],
-  "summary": "下游通过反馈限制上游发送速度，避免缓冲与任务持续堆积。",
-  "description": "当消费者处理速度不足时，背压通过需求信号、暂停读取或受控缓冲等机制将压力传回生产者。它关注上下游速率协调，与固定配额限流有所区别。Reactive Streams 使用需求驱动的协议约束异步数据流。\n\n参考：[权威资料](https://www.reactive-streams.org/)；[Flink 背压监控](https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/monitoring/back_pressure/)。",
+  "summary": "由消费需求或缓冲状态反馈限制上游生产的流量协调机制。",
+  "description": "背压在下游处理跟不上生产时，把消费需求或缓冲状态反馈到上游，使上游暂停或减少继续生产。它协调生产者与消费者的速率，和固定配额限流有不同目的；Reactive Streams 以需求信号组织异步流，缓冲队列是常见实现部件。\n\nNode 流在 write() 返回 false 时要求生产者等待 drain；Web Streams 根据队列策略、期望容量及管道读写推进反馈需求。消费者慢时等待这些信号有助于控制积压，但高水位标记不是所有外部缓冲的硬内存上限，生产者绕过反馈仍会继续积累。\n\n把接口包装成流不自动获得源端流控。标准 WebSocket 事件源不能像可拉取数据源一样按消费需求停止接收；应用可能还需协议层确认、丢弃策略或缓冲限制。取消和错误传播也需要接到实际资源与生产任务，背压本身不保证可靠交付或任务完成。\n\n## 参考\n\n- [Reactive Streams：异步流与非阻塞背压](https://www.reactive-streams.org/)\n- [Node.js：write、drain 与流背压](https://nodejs.org/en/learn/modules/backpressuring-in-streams)\n- [WHATWG Streams：队列、背压与 WebSocket 包装边界](https://streams.spec.whatwg.org/)",
   "importance": 4,
   "official_site": "https://www.reactive-streams.org/",
-  "last_reviewed": "2026-09-12",
+  "last_reviewed": "2026-10-07",
   "origin": "ai_draft",
   "status": "active"
 }

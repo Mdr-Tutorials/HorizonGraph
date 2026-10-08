@@ -11,7 +11,8 @@
     "windows-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "virtualization"
   ],
   "abstraction_level": "kernel_os",
   "relations": [
@@ -22,12 +23,28 @@
     {
       "relation_type": "developed_by",
       "target_id": "microsoft"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "windows",
+      "context": "本节点描述现代 NT 系 Windows 所用内核体系，不覆盖历史所有 Windows 产品架构。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "scheduler",
+      "context": "核心内核提供线程调度机制，具体策略与实现属于 Windows 内核职责。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "virtual-memory",
+      "context": "NT 内存管理体系维护进程地址空间及访问保护；不把虚拟内存等同于交换文件。"
     }
   ],
-  "summary": "Windows 的现代内核，与 Linux 对照的另一套调度与 I/O 模型。",
+  "summary": "现代 Windows 的 NT 内核体系，管理线程、内存与系统 I/O。",
   "importance": 3,
   "popular": 85,
-  "last_reviewed": "2026-08-30",
-  "origin": "curated",
-  "status": "active"
+  "last_reviewed": "2026-10-08",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "Windows NT Kernel 指现代 Windows 的内核体系，本节点保持执行架构身份，与 Windows 操作系统产品家族分开。微软将核心 Kernel、Executive、HAL 和驱动支持组件分别描述：核心内核处理低层线程调度与中断等工作，Executive 提供对象、内存、进程线程、I/O 和安全等管理能力。讨论“NT 内核”时常会覆盖相关内核态体系，但不能把所有用户态 API 与服务都归入狭义核心 Kernel。\n\nWindows 区分用户态与内核态：一般应用运行在独立的虚拟地址空间中，通过系统接口请求内核能力；内核态组件与驱动处于更高权限的系统执行环境，错误可能影响整个操作系统。HAL 封装低层硬件差异，驱动和内核库通过规定接口协作。这些边界解释了为什么内核功能、驱动 API、应用接口和完整操作系统需要不同层次的节点。\n\nWSL 1 在 NT 上承载 Pico 进程，由专门兼容层处理 Linux ELF 程序的系统调用；NT 因而不是直接运行了一份 Linux 内核，也不能仅凭类似名称认定两者系统调用一一对应。WSL 2 改为在受管理虚拟机内运行 Linux 内核，Windows 仍管理宿主环境及相关 I/O。比较 NT 与 Linux 时，应分别考察调度、地址空间、驱动和调用接口，而不是用一个“内核类型”标签推导全部实现行为。\n\n## 参考\n\n- [Microsoft：Overview of Windows components](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/overview-of-windows-components)\n- [Microsoft：Kernel library](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/windows-kernel-mode-kernel-library)\n- [Microsoft：Executive support library](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/windows-kernel-mode-executive-support-library)\n- [Microsoft：User mode and kernel mode](https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode)\n- [Microsoft：Windows kernel-mode HAL](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/windows-kernel-mode-hal-library)\n- [Microsoft：WSL 1 的 NT 系统调用兼容路径](https://learn.microsoft.com/en-us/archive/blogs/wsl/windows-subsystem-for-linux-overview)"
 }

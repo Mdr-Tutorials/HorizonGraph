@@ -1,0 +1,27 @@
+{
+  "id": "prefab",
+  "name": "Prefab",
+  "aliases": [
+    "预制体",
+    "预制件"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    }
+  ],
+  "summary": "保存对象组成和配置、用于重复创建实例的模板资产。",
+  "description": "Unity Prefab 保存 GameObject、组件属性及子对象配置，作为可复用资产生成场景实例。模板修改、实例覆盖和变体帮助管理一组相似对象，使编辑内容与运行时实例之间建立可追踪关系。\n\n实例具有自己的状态，不是共享同一运行对象；共享资产引用又可能由多个实例共同使用。其他引擎的可实例化场景具有相近用途，但文件格式、覆盖规则和嵌套语义不因此完全相同。\n\n## 参考\n\n- [Unity：Prefab 模板与实例](https://docs.unity3d.com/6000.0/Documentation/Manual/Prefabs.html)\n- [Godot：节点和场景](https://docs.godotengine.org/en/stable/getting_started/step_by_step/nodes_and_scenes.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

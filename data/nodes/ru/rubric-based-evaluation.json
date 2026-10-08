@@ -1,0 +1,29 @@
+{
+  "id": "rubric-based-evaluation",
+  "name": "Rubric-based Evaluation",
+  "aliases": [
+    "评分量规评估",
+    "量规评估",
+    "Rubric Evaluation"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "用明确的评价维度和分档描述约束开放内容评分。",
+  "description": "评分量规评估把目标质量分解为可解释的准则，并描述各评分等级对应的表现。它可由人工或模型执行；准则应指向任务真正要求的内容、行为或证据，而不是仅以回答长度、措辞风格或笼统印象代替质量。\n\n在大模型评估中，量规可以连同任务、候选结果和参照材料传给判定器。Prometheus 的原研究明确区分评价准则与各等级描述，并使用参照答案支持评分。给出一个总体分数与分别检查事实、完整性或政策遵守，是不同的评分设计。\n\n量规仍需要通过样例校准，说明无法观察、要求冲突与边界案例如何处理。改变分档、权重或参照材料会改变指标含义，应保留版本。文字准则不自动带来一致判断，也不应把同一答案风格强加给有多种有效解法的任务。\n\n## 参考\n\n- [Prometheus 原论文：评分准则、等级描述与参照答案](https://arxiv.org/html/2310.08491v1)\n- [Prometheus 官方评估实现](https://github.com/prometheus-eval/prometheus-eval)\n- [LLM-as-a-Judge：原论文中的判定模式与偏差](https://arxiv.org/html/2306.05685v4)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

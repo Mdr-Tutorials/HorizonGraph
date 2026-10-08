@@ -1,0 +1,29 @@
+{
+  "id": "fat-finger-check",
+  "name": "Fat-finger Check",
+  "aliases": [
+    "错单检查",
+    "误输入订单检查",
+    "胖手指检查"
+  ],
+  "type": "concept",
+  "domains": [
+    "financial-risk-management",
+    "electronic-trading"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-risk-concept"
+    }
+  ],
+  "summary": "在发送前识别异常价格、数量、金额或重复订单。",
+  "description": "错单检查针对订单价格、数量、金额或重复输入偏离预定参数的情况，在订单进入市场前拒绝或阻断异常委托。“Fat finger”虽源自人为误键，实际控制同样适用于程序计算错误、重复提交或单位换算错误；正常通过检查并不能证明策略有经济合理性。\n\n检查通常需要与参考价格、允许偏离、产品最小价格变动、单笔数量和订单金额等规则一致。Nasdaq Nordic PRM Guide 3.5分别描述价格偏离、最大数量、最大金额及重复订单控制，说明不同交易阶段和订单类别可以有不同参数与处理。不得把某场所特定价格带或历史配置值直接用于所有产品。\n\nSEC市场接入规则将防止异常价格、数量及重复订单列为相关券商的金融风险控制要求。检查只覆盖其定义的异常条件：符合单笔参数的多笔订单仍可能累积超限，高频低量循环也可能造成问题。因此错单检查应与累计授信、持仓预算和消息控制配合，阈值变更和例外放行需要留痕。\n\n## 参考\n\n- [Nasdaq Nordic：Pre-Trade Risk Management Service Guide 3.5](https://www.nasdaq.com/docs/2024/05/29/Nasdaq-Nordic-PRM-Service-Guide-3.5.pdf)\n- [SEC：市场接入风险控制最终规则](https://www.sec.gov/rules/final/2010/34-63241.pdf)\n- [SEC工作人员：Rule 15c3-5常见问题与适用范围](https://www.sec.gov/rules-regulations/staff-guidance/trading-markets-frequently-asked-questions/divisionsmarketregfaq-0)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

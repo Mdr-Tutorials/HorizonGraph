@@ -1,23 +1,23 @@
 {
   "id": "directx",
   "name": "DirectX",
-  "aliases": [
-    "Direct3D"
-  ],
+  "aliases": [],
   "type": "protocol",
   "ecosystems": [
     "graphics-api-ecosystem",
-    "rendering-ecosystem"
+    "rendering-ecosystem",
+    "real-time-rendering-ecosystem"
   ],
   "domains": [
     "graphics",
-    "game-development"
+    "game-development",
+    "real-time-rendering"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "api-specification"
     },
     {
       "relation_type": "implements",
@@ -30,11 +30,22 @@
     {
       "relation_type": "developed_by",
       "target_id": "microsoft"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hlsl",
+      "context": "在采用 Direct3D 的可编程着色路径中，通过适配版本的 HLSL 编译工具链准备着色程序。"
+    },
+    {
+      "relation_type": "composed_of",
+      "target_id": "direct3d",
+      "context": "Direct3D 是 DirectX 接口家族中的图形与计算接口组件，不代表整个家族。"
     }
   ],
-  "summary": "微软的多媒体与图形 API 家族，Windows 游戏的地基。",
+  "summary": "微软图形与多媒体 API 家族，含 Direct3D 等接口。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 4
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "description": "DirectX 是微软图形和多媒体 API 家族名称，Direct3D 是其中的三维图形接口，Direct2D、DirectWrite 等解决二维绘制和文本等职责。家族名与某个接口不应视为完全同义；讨论 GPU 图形管线时通常实际指向 Direct3D 的相应版本。\n\nDirect3D 11 的管线涵盖输入、可编程几何和像素阶段、光栅及输出合并等逻辑职责。Direct3D 12 进一步让应用通过命令列表、管线状态和资源同步组织工作；不同代接口的对象、提交和资源管理规则需要分别学习，不能用单一版本的流程概括全部 DirectX。\n\n图形应用常通过 HLSL 工具链准备着色程序，并配置几何、目标和相关状态。功能可用性取决于接口版本、设备能力及平台，DirectX 品牌本身不保证支持任意特性；已有节点保留家族入口，正文把具体图形职责限定到 Direct3D。\n\n## 参考\n\n- [Microsoft Getting Started with DirectX Graphics](https://learn.microsoft.com/en-us/windows/win32/getting-started-with-directx-graphics)\n- [Direct3D 11 Graphics Pipeline](https://learn.microsoft.com/en-us/windows/win32/direct3d11/overviews-direct3d-11-graphics-pipeline)\n- [Direct3D 12 Command Lists](https://learn.microsoft.com/en-us/windows/win32/direct3d12/recording-command-lists-and-bundles)"
 }

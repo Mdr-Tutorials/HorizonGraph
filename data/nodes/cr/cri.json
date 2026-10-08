@@ -1,0 +1,38 @@
+{
+  "id": "cri",
+  "name": "Container Runtime Interface",
+  "aliases": [
+    "CRI",
+    "Kubernetes 容器运行时接口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "containerization"
+  ],
+  "ecosystems": [
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-specification"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "kubernetes"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "grpc",
+      "context": "CRI 以 gRPC 服务和消息约定连接 kubelet 客户端与节点运行时及镜像服务端点。"
+    }
+  ],
+  "summary": "kubelet 与节点容器服务之间的 gRPC 接口",
+  "description": "Container Runtime Interface（CRI）是 Kubernetes 的插件接口，使 kubelet 可以连接不同容器运行时，而不必把每种实现直接编译进节点组件。它规定 kubelet 与运行时服务之间的通信约定；这是 Kubernetes 节点管理边界，与 OCI 的低层 bundle 执行约定不同。\n\nCRI 使用 gRPC 定义 RuntimeService 和 ImageService 等接口，kubelet 作为客户端连接配置的服务端点。运行时服务承担 Pod sandbox、容器生命周期和所需状态操作，镜像服务处理镜像相关调用；实现可以分别配置端点，具体行为由协议和受支持功能共同决定。\n\nKubernetes 1.26 起要求节点运行时支持 CRI v1，否则 kubelet 无法注册节点。containerd 的 CRI 插件和 CRI-O 是实际适配路径；Docker Engine 的 Docker API 或一个独立 runc 二进制不自动成为 CRI 服务。升级时应核对协议支持、服务端点和版本兼容，而不是只检查能否手动启动容器。\n\n## 参考\n\n- [Kubernetes：Container Runtime Interface](https://kubernetes.io/docs/concepts/containers/cri/)\n- [Kubernetes：容器运行时配置](https://kubernetes.io/docs/setup/production-environment/container-runtimes/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "framework_library",
+  "abbreviation": "CRI"
+}

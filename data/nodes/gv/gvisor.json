@@ -1,0 +1,52 @@
+{
+  "id": "gvisor",
+  "name": "gVisor",
+  "aliases": [
+    "runsc",
+    "gVisor 容器沙箱"
+  ],
+  "type": "tool",
+  "domains": [
+    "containerization",
+    "virtualization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "container-ecosystem",
+    "virtualization-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "container-isolation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "seccomp",
+      "context": "约束 Sentry 等沙箱宿主进程可发起的系统调用；应用调用的处理仍由应用内核承担。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kvm",
+      "context": "仅在选择 KVM 平台时使用其地址空间隔离与执行控制能力，默认 systrap 路径不要求 KVM。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "kata-containers"
+    }
+  ],
+  "summary": "以用户态应用内核处理 Linux 调用的容器沙箱运行时。",
+  "description": "gVisor 是 Linux 工作负载的沙箱项目，Sentry 在用户态实现应用所需的系统调用接口和内核机制，runsc 提供 OCI 容器运行时接入。应用的调用先由 Sentry 处理，再由受限制的宿主接口访问实际资源。它具有自己的进程、内存和网络等实现，因此不能把它简化为只筛选系统调用编号的 seccomp profile。\n\n当前默认平台 systrap 用于捕获与管理应用执行；KVM 是可选择的平台，在地址空间隔离和执行控制上使用硬件虚拟化能力。KVM 路径仍采用应用进程模型，没有传统虚拟机那样的完整虚拟硬件层。平台、网络和文件访问配置各有兼容性与性能影响；Sentry 实现 Linux ABI 的子集，需要对具体程序验证支持范围。\n\ngVisor 的隔离设计缩小应用直接触及宿主内核的范围，同时对 Sentry 等宿主进程施加 seccomp 和权限约束。宿主 Linux 内核、CPU、显式共享接口和沙箱自身仍属于安全分析范围；它不保证所有漏洞或侧信道被消除。降权后的沙箱与整个执行链 rootless 也要分别确认，不能因存在低权限进程就把所有部署归为 rootless。\n\n## 参考\n\n- [gVisor：Sentry 与安全架构](https://gvisor.dev/docs/architecture_guide/intro/)\n- [gVisor：systrap 与可选 KVM 平台](https://gvisor.dev/docs/architecture_guide/platforms/)\n- [gVisor：rootless 路径与条件](https://gvisor.dev/docs/user_guide/rootless/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "application_tool",
+  "official_site": "https://gvisor.dev/"
+}

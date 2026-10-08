@@ -1,0 +1,37 @@
+{
+  "id": "mcp-host",
+  "name": "MCP Host",
+  "aliases": [
+    "MCP 宿主",
+    "MCP 宿主应用"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mcp",
+      "context": "MCP 架构中协调模型、多个客户端与用户权限的宿主角色。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-client",
+      "context": "宿主创建并管理客户端实例，经客户端向所连接服务器发送协议操作。"
+    }
+  ],
+  "summary": "管理 MCP 客户端、模型上下文和授权决策的应用角色。",
+  "description": "MCP 宿主是承载模型交互并协调外部能力的应用角色，例如代理开发工具或聊天应用。它创建客户端、控制连接和用户同意，并组织模型能够看到的上下文；宿主不等于模型，也不等于每个服务器对应的客户端实例。\n\n一个宿主可以管理多个 MCP 客户端，各客户端与相应服务器交互。宿主负责把模型提出的调用映射到实际协议操作，并按需要读取资源或提供提示模板。工具结果加入对话的方式及显示界面属于应用策略，协议不强制采用某种特定模型或 UI。\n\n服务器通常只获得处理操作所需的输入，而完整对话和跨服务器的上下文组合由宿主控制。MCP 2026-07-28 的协议请求自包含，应用仍可保存自己的对话与审批状态；不能将协议无会话误解为宿主不得维护状态，也不能把服务器描述当成用户授权。\n\n## 参考\n\n- [MCP：架构与角色](https://modelcontextprotocol.io/specification/2026-07-28/architecture)\n- [MCP：客户端开发与模型交互示例](https://modelcontextprotocol.io/docs/2026-07-28/develop/build-client)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

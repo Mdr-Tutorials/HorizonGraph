@@ -1,0 +1,36 @@
+{
+  "id": "veth",
+  "name": "veth",
+  "aliases": [
+    "Virtual Ethernet Device",
+    "虚拟以太网对",
+    "veth pair"
+  ],
+  "type": "concept",
+  "domains": [
+    "systems-programming",
+    "networking",
+    "containerization"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "network-namespace",
+      "context": "跨隔离域连接时，将成对接口两端分别放入不同网络命名空间。"
+    }
+  ],
+  "summary": "用成对虚拟以太网接口连接网络域的 Linux 机制。",
+  "description": "veth 是 Linux 的虚拟以太网设备机制，总是以互连的一对接口创建。一端发出的帧由另一端接收，任何一端关闭都会影响这对接口的链路状态。它提供的是一段虚拟连接，创建接口本身不会自动分配 IP、安装路由或发布应用端口。\n\n两端可以处于同一网络命名空间，也可以分别放入不同命名空间，从而为隔离网络域建立受配置控制的通路。常见容器桥接布局把一端放进容器，另一端留在宿主并接入网桥。命名空间提供隔离，veth 提供连接，两者不是互相替代的机制。\n\n桥接插件还需组织地址、网关、转发和可选地址转换，应用才可能访问其他网络。虚拟机的 virtio-net 设备与 veth 的成对接口身份不同；一条跨 Windows 与 Linux 的完整路径可以包含多个不同接口，不能把 veth 写成所有容器或虚拟机的普遍硬依赖。\n\n## 参考\n\n- [Linux man-pages：veth(4)](https://man7.org/linux/man-pages/man4/veth.4.html)\n- [CNI：Bridge Plugin](https://www.cni.dev/plugins/current/main/bridge/)\n- [WSL：NAT、Mirrored 与 Consomme](https://wsl.dev/technical-documentation/localhost/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

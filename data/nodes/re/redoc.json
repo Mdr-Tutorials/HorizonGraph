@@ -1,0 +1,47 @@
+{
+  "id": "redoc",
+  "name": "Redoc CE",
+  "aliases": [
+    "Redoc",
+    "ReDoc",
+    "Redoc 社区版",
+    "Redoc API 文档组件"
+  ],
+  "type": "library",
+  "domains": [
+    "api-engineering",
+    "web-development",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "api-documentation-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "将已有 OpenAPI 描述中的操作、模型和示例转换为参考文档页面。"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "swagger-ui"
+    }
+  ],
+  "summary": "把 OpenAPI 描述呈现为可嵌入或静态发布的 API 参考文档。",
+  "description": "Redoc CE 是开源的 API 参考文档组件，消费 OpenAPI 或 Swagger 描述，以导航、详细说明和请求响应示例组织页面。它可以作为 HTML 标签或 React 组件嵌入应用，也可以经 Redocly CLI 构建为独立 HTML 文件。组件负责将已有接口描述转成可阅读的参考文档，规范中的说明、schema 和示例决定页面的主要内容。\n\n社区版渲染组件与 Redocly 的商业文档产品、托管平台和其他 CLI 功能需要分别识别。使用 React 组件是一种集成方式，不能由此推断所有部署都要求应用使用 React；预构建资源和独立文档也有自己的部署路径。输出文档不会自动生成 SDK、服务端实现或完成契约测试；页面主题、搜索及示例配置主要影响文档阅读和发布体验。\n\n## 参考\n\n- [Redoc CE：使用、构建与配置](https://redocly.com/docs/redoc)\n- [Redoc：开源项目](https://github.com/Redocly/redoc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 3,
+  "abstraction_level": "framework_library",
+  "official_site": "https://redocly.com/docs/redoc"
+}

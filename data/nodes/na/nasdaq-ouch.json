@@ -1,0 +1,42 @@
+{
+  "id": "nasdaq-ouch",
+  "name": "Nasdaq OUCH",
+  "aliases": [
+    "OUCH",
+    "Nasdaq 原生订单入口"
+  ],
+  "type": "protocol",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "electronic-trading-ecosystem",
+    "fintech-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "trading-specification"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "nasdaq",
+      "context": "Nasdaq 发布并维护 OUCH 原生订单入口及相关技术规范。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "soupbintcp",
+      "context": "使用规范列出的典型 SoupBinTCP 路线时，为服务端订单回报提供封装、序列与恢复通路。"
+    }
+  ],
+  "summary": "规定 Nasdaq 原生报单、撤改与订单回报消息的规范。",
+  "description": "Nasdaq OUCH 是参与者向 Nasdaq 提交订单并接收对应状态和执行回报的原生消息协议。它支持报单、替换、取消及规范定义的其他控制消息，关注参与者自己的订单交互。它不是公开订单簿行情流；需要了解其他可发布订单时，应使用相应 ITCH 行情接口。\n\n请求、接受、执行与取消回报代表不同业务阶段，发出请求不能直接视为已经成交或撤单完成。5.0 规范给出订单用户引用号及可选流程分路规则，重发与替换需要遵循这些标识约定。应按实际协议版本解释报文和可选字段，不能把不同版本的布局或语义混接。\n\n服务端返回消息需要下层提供排序与交付，SoupBinTCP 是规范列出的典型路线。客户端到服务端请求仍需要业务层恢复设计，不能仅由 TCP 可靠字节流推出报单已经被应用或不会重复。实现应分别管理连接恢复、已知订单状态和业务标识，而不是重连后无条件重发全部订单。\n\n## 参考\n\n- [Nasdaq：OUCH 5.0 Order Entry Specification](https://www.nasdaqtrader.com/content/technicalsupport/specifications/TradingProducts/OUCH5.0.pdf)\n- [Nasdaq：OUCH 订单接口与支持版本](https://www.nasdaqtrader.com/Trader.aspx?id=OUCH)\n- [Nasdaq：SoupBinTCP 规范](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/soupbintcp.pdf)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://www.nasdaqtrader.com/Trader.aspx?id=OUCH"
+}

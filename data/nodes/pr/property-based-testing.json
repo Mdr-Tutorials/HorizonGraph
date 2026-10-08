@@ -1,0 +1,31 @@
+{
+  "id": "property-based-testing",
+  "name": "Property-Based Testing",
+  "aliases": [
+    "性质测试",
+    "基于性质的测试",
+    "属性测试"
+  ],
+  "type": "concept",
+  "domains": [
+    "programming-languages",
+    "devops"
+  ],
+  "ecosystems": [
+    "typed-api-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-contract-concept"
+    }
+  ],
+  "summary": "定义普遍应成立的性质，生成输入并缩减失败样例。",
+  "description": "性质测试先描述一类输入上应成立的行为，再由生成器产生许多样例并执行断言。例如序列化再反序列化应保留对象信息，排序应保持元素且结果有序，某个操作应满足幂等性。开发者需要定义输入域、前置条件和可检验的性质；性质不是编程语言的对象属性，也不要求每个测试都手写一个准确的输出值。\n\n生成器通常会结合随机选择、典型边界及结构约束探索输入空间。失败后，缩减器尝试移除无关元素或简化数值，得到更容易理解、仍能触发失败的反例；缩减结果未必是数学意义上的全局最小值。记录随机种子、生成路径或保存失败样例有助于复现，关键反例还可以转为固定的回归测试。自定义数据的不变量应同时约束生成与缩减过程。\n\n性质测试可用于函数、接口与状态操作序列，与测试金字塔的层级维度不同，也可与模糊测试结合。有限次通过只表明已生成样例未推翻指定性质，并不构成全输入空间的形式证明；生成器漏掉输入类别或断言过弱仍会漏检。它补充基于示例的测试，也不以代码覆盖率指标自动替代行为断言。\n\n## 参考\n\n- [fast-check：性质测试的目标、缩减与复现](https://fast-check.dev/docs/introduction/why-property-based/)\n- [fast-check：生成器与性质断言](https://fast-check.dev/docs/core-blocks/properties/)\n- [Hypothesis：输入域与性质测试](https://hypothesis.readthedocs.io/en/latest/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4,
+  "abbreviation": "PBT"
+}

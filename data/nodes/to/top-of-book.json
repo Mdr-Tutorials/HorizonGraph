@@ -1,0 +1,36 @@
+{
+  "id": "top-of-book",
+  "name": "Top of Book",
+  "aliases": [
+    "盘口顶部",
+    "最优档行情",
+    "L1 行情层级"
+  ],
+  "type": "concept",
+  "domains": [
+    "electronic-trading",
+    "networking",
+    "quantitative-finance"
+  ],
+  "ecosystems": [
+    "market-data-ecosystem",
+    "electronic-trading-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "electronic-trading-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "best-bid-and-offer",
+      "context": "最优档记录以指定范围和时点下的最优买卖报价对作为价格字段，并可附数量与来源。"
+    }
+  ],
+  "summary": "只呈现盘口两侧最优价位及相应字段的数据层级。",
+  "description": "Top of Book 是行情数据的盘口层级或表示方式，通常只包含每一侧最优可见价位，并附数量、来源或事件时间等字段。它与最优买卖报价对这个度量相联系，但表示层级还规定保留哪些字段和如何更新。买卖一侧没有合格报价时，空值或状态也需按数据规范处理。\n\n数据可以逐事件发布、按间隔采样，或与成交同步提供最优档；这些发布时点不同，不能把所有顶部记录当作连续无遗漏更新。更深价位的订单量与逐单组成不在这个层级中，仅凭一条最优档记录无法重建完整深度或真实排队。\n\n单场所盘口顶部对应其自身观察范围，美国股票 SIP 的 NBBO 则受合并范围与报价规则约束。两者不能因为都含 bid/ask 就合并身份。使用最优档进行指标计算时，应同时明确数据来源、时点、数量单位和合格报价条件，避免把数据层级名称当作监管报价定义。\n\n## 参考\n\n- [Databento：MBP-1 最优价位数据模式](https://databento.com/docs/schemas-and-data-formats/mbp-1)\n- [UTP Plan：处理器职能与行情服务](https://utpplan.com/PageParts/Technical.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 4
+}

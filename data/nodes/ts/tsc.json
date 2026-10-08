@@ -1,0 +1,30 @@
+{
+  "id": "tsc",
+  "name": "Time Stamp Counter",
+  "aliases": [
+    "TSC",
+    "时间戳计数器"
+  ],
+  "type": "concept",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "low-latency-systems-concept"
+    }
+  ],
+  "summary": "x86 体系中的硬件计数设施，需校准后用于时间测量。",
+  "description": "TSC 是 x86 的硬件时间戳计数设施，可供系统读取并构造计时来源。其读数不是 UTC，也不能一概解释为处理器当前工作频率下执行了多少指令周期；计数值必须结合适用的速率与起点才能换算时间。\n\n恒定速率或不中断计数等能力需要按处理器和平台核验，稳定速率并不自动说明不同处理器之间已具有相同偏移。跨插槽、休眠、处理器迁移和虚拟化均可能影响可比较性，操作系统会评估并处理不稳定计时来源。\n\n直接读取计数器做短区间测量，还需考虑读取顺序、编译优化、线程迁移以及读数和换算的开销。Linux 的 clock source 和 sched_clock 具有不同约束，不能把任意 TSC 差值当成精确全局时间，或把快速读取与可追溯时间同步混为一谈。\n\n## 参考\n\n- [Linux KVM x86 TSC 与虚拟化计时](https://docs.kernel.org/virt/kvm/x86/timekeeping.html)\n- [Linux clock source、clock event 与 sched_clock](https://docs.kernel.org/timers/timekeeping.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abbreviation": "TSC"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "af-xdp",
+  "name": "AF_XDP",
+  "aliases": [
+    "Address Family XDP",
+    "XDP Socket"
+  ],
+  "type": "protocol",
+  "domains": [
+    "low-latency-systems",
+    "networking",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "low-latency-systems-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "xdp",
+      "context": "在接收重定向路径中，通过 XDP 程序与 XSKMAP 将指定设备、队列的帧导向 AF_XDP socket。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "zero-copy",
+      "context": "仅在网卡驱动支持 AF_XDP 零拷贝并实际采用该模式时，让设备与 UMEM 交换数据，复制模式不具备此属性。"
+    }
+  ],
+  "summary": "以 socket、UMEM 和共享环连接 XDP 与用户态收发。",
+  "description": "AF_XDP 是 Linux 地址族及其 socket 接口。应用注册 UMEM 数据区，以 RX、TX、FILL、COMPLETION 环交换描述符和缓冲区所有权；通常按网卡设备与队列绑定。共享 UMEM 场景仍必须遵守相应环的生产者与消费者约束。\n\n接收程序通常通过 XDP_REDIRECT 和 XSKMAP 将匹配设备、队列的数据包送入 socket。XDP native 模式不等于 AF_XDP 零拷贝：驱动可能采用复制模式，显式要求 XDP_ZEROCOPY 而能力不足时绑定会失败，不能把自动回退写成无条件零拷贝。\n\n应用必须补充空闲缓冲区并回收完成项，必要时按 need_wakeup 等接口规则唤醒内核。发送 COMPLETION 环表示缓冲区可重新使用，不保证对应包已经在链路上发出；协议处理、拥塞行为和测量打点仍需应用或上层栈明确。\n\n## 参考\n\n- [Linux AF_XDP socket、UMEM 与环所有权](https://docs.kernel.org/networking/af_xdp.html)\n- [DPDK AF_XDP PMD](https://doc.dpdk.org/guides/nics/af_xdp.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "kernel_os",
+  "official_site": "https://docs.kernel.org/networking/af_xdp.html"
+}

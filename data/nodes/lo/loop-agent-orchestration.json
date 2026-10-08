@@ -1,0 +1,27 @@
+{
+  "id": "loop-agent-orchestration",
+  "name": "Loop Agent Orchestration",
+  "aliases": [
+    "循环代理编排",
+    "循环智能体编排"
+  ],
+  "type": "concept",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    }
+  ],
+  "summary": "重复执行一组代理步骤，按条件或迭代上限结束。",
+  "description": "循环代理编排把一组步骤作为一轮反复执行，例如生成草稿、审核、按反馈修改，再检查是否满足目标。它关注跨步骤或跨代理的迭代控制，区别于单个代理内部反复进行模型决策和工具调用的执行循环。\n\nADK 的 LoopAgent 按每轮的子代理顺序运行，并可结合最大迭代次数及退出信号结束。状态中的草稿、评审意见和终止标记用于跨轮传递结果；每轮应明确哪些字段更新、哪些证据保留，避免旧反馈误被当作新结果。\n\n循环需要可判定的停止规则与资源上限，模型不断自我修改并不保证单调提升或收敛。失败、取消、权限约束和外部副作用也应在每轮继续前检查；无法达到目标时，需要返回可用结果或明确的未完成状态。\n\n## 参考\n\n- [ADK LoopAgent](https://adk.dev/agents/workflow-agents/loop-agents/)\n- [ADK workflow patterns](https://adk.dev/workflows/patterns/)\n- [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

@@ -1,0 +1,32 @@
+{
+  "id": "capability-based-security",
+  "name": "Capability-Based Security",
+  "aliases": [
+    "基于能力的安全",
+    "对象能力安全"
+  ],
+  "type": "concept",
+  "domains": [
+    "security"
+  ],
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "delegated-authorization",
+      "context": "允许能力持有者向另一个主体转交受限对象权利的设计中，采用明确的委托范围和再委托约束。"
+    }
+  ],
+  "summary": "用不可伪造、受限且可受控委托的能力引用表达访问权。",
+  "description": "基于能力的安全以不可伪造的引用或令牌同时表达对象与允许操作，持有受限能力是发起相应访问的依据。它减少对进程环境中隐含的全局权限的依赖。是否能复制、收窄、转交或撤销能力，取决于对象模型、发行者和运行时的具体机制。\n\nFreeBSD Capsicum 提供具体例子：能力模式收紧全局命名空间访问，并用文件描述符及其权利集合限制已持有对象的操作。把能力交给另一个执行主体时，可以在支持的机制中缩减权利。智能体执行器也可只交付针对任务对象的受限引用，但需有执行层强制验证，文本中写出能力名称并不会产生安全边界。\n\n安全能力不等同于 Linux CAP_* 特权拆分，也不等同于 MCP 的功能协商 capabilities。当前 MCP 对已认证服务的状态句柄明确要求逐次授权，句柄名称本身不是访问能力。具备可转移访问权的令牌还要考虑泄露、再委托和失效，因此不能仅凭存在 token 字段就宣称采用了完整能力安全模型。\n\n## 参考\n\n- [FreeBSD：capsicum(4)](https://man.freebsd.org/cgi/man.cgi?query=capsicum&sektion=4)\n- [MCP 2026-07-28：Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools)\n- [IETF RFC 8693：OAuth 2.0 Token Exchange](https://www.rfc-editor.org/rfc/rfc8693.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}

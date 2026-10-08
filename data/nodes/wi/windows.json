@@ -1,0 +1,38 @@
+{
+  "id": "windows",
+  "name": "Microsoft Windows",
+  "aliases": [
+    "微软 Windows",
+    "Windows 操作系统"
+  ],
+  "type": "product",
+  "domains": [
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "windows-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "windows-nt",
+      "context": "现代 Windows 客户端与服务器系统以 NT 内核体系提供进程调度、内存和 I/O 等基础能力，非覆盖历史所有 Windows 架构。"
+    }
+  ],
+  "summary": "微软提供的操作系统家族，现代版本以 NT 内核体系为基础。",
+  "description": "Microsoft Windows 是微软提供的操作系统产品家族，包含面向客户端和服务器等使用场景的发行版本。本节点以现代 Windows 系统为主，覆盖应用执行、设备驱动、桌面与系统管理的共同基础；具体版本的生命周期、功能许可和支持条件仍由各版本文档决定。Windows 产品身份不能与 Windows NT 内核、Windows Terminal 或某个图形 API 合并，历史 Windows 版本也不能一律套用现代 NT 架构。\n\n现代 Windows 将用户态应用与内核态系统组件区分开来。进程具有自己的地址空间和句柄环境，内核组件与驱动承担调度、内存、I/O 和硬件交互；这些能力与应用 API、系统服务一起构成可使用的操作系统。把 NT 内核当成整个 Windows 产品，会遗漏用户态服务、应用接口及管理能力；把一个 Win32 应用窗口当成操作系统“Windows”也属于同名歧义。\n\nWSL 与 Windows 容器是 Windows 上不同的扩展执行路径。WSL 面向 Linux 用户空间及跨系统开发，Windows 容器面向使用 Windows 用户空间和内核接口的容器镜像；在支持且启用相应功能时，虚拟化技术可提供额外隔离。Windows Terminal 和 PowerShell 则为命令行交互与管理提供工具层入口，它们不会自行替代操作系统或产生 Linux 内核。\n\n## 参考\n\n- [Microsoft：Windows 文档](https://learn.microsoft.com/en-us/windows/)\n- [Microsoft：Overview of Windows components](https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/overview-of-windows-components)\n- [Microsoft：User mode and kernel mode](https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/user-mode-and-kernel-mode)\n- [Microsoft：Windows containers overview](https://learn.microsoft.com/en-us/virtualization/windowscontainers/about/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 5,
+  "abstraction_level": "kernel_os",
+  "official_site": "https://learn.microsoft.com/en-us/windows/"
+}

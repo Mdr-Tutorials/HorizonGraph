@@ -1,0 +1,39 @@
+{
+  "id": "mcp-tasks-extension",
+  "name": "MCP Tasks Extension",
+  "aliases": [
+    "MCP Tasks",
+    "MCP 异步任务扩展"
+  ],
+  "type": "protocol",
+  "domains": [
+    "agent-development"
+  ],
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mcp-extensions",
+      "context": "通过 io.modelcontextprotocol/tasks 标识和双方能力声明启用异步结果。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "json-rpc",
+      "context": "扩展定义 tasks/get、tasks/update 和 tasks/cancel 等 JSON-RPC 操作管理任务交互。"
+    }
+  ],
+  "summary": "为长时 MCP 操作定义任务句柄、状态和后续查询。",
+  "description": "MCP Tasks 为长时间运行的操作定义异步任务交互，服务器返回任务句柄而不是一直阻塞原请求。2026-07-28 已将旧实验性 Tasks 移出核心，当前应依据官方扩展规范和能力声明使用。它不是通用队列实现，也不等于宿主中的代理待办清单。\n\n双方支持扩展后，服务器可对支持的请求返回 resultType 为 task 的结果，提供 taskId、状态、保留期限和建议轮询间隔。客户端使用 tasks/get 查询，input_required 时通过 tasks/update 提供响应；支持通知时还可订阅任务状态，而轮询是基础路径。\n\n任务在返回句柄前应已持久创建，并可在断线后按有效期限继续查询，但这不保证无限保存、业务幂等或底层服务无故障。tasks/cancel 表达协作式取消，服务器可能仍完成工作。客户端和服务器必须明确支持此扩展，不能向未声明能力的调用方返回它无法处理的任务结果。\n\n## 参考\n\n- [MCP：Tasks 扩展概览](https://modelcontextprotocol.io/extensions/tasks/overview)\n- [MCP Tasks：正式仓库](https://github.com/modelcontextprotocol/ext-tasks)\n- [MCP：Tasks 移出核心](https://modelcontextprotocol.io/specification/2026-07-28/changelog)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3,
+  "abstraction_level": "runtime_vm",
+  "official_site": "https://modelcontextprotocol.io/extensions/tasks/overview"
+}

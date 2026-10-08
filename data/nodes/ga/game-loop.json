@@ -1,0 +1,36 @@
+{
+  "id": "game-loop",
+  "name": "Game Loop",
+  "aliases": [
+    "游戏循环"
+  ],
+  "type": "concept",
+  "domains": [
+    "game-development"
+  ],
+  "ecosystems": [
+    "game-runtime-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "game-runtime-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fixed-timestep",
+      "context": "在采用固定步长物理更新的循环中，将模拟步与可变显示帧率分开调度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "request-animation-frame",
+      "context": "浏览器实现可通过 requestAnimationFrame 安排重绘前回调，并在回调中更新或呈现。"
+    }
+  ],
+  "summary": "反复处理输入、更新世界并安排画面呈现的运行机制。",
+  "description": "游戏循环持续推进逻辑状态，再把可显示状态交给渲染系统。输入事件、物理更新、动画和显示可能以不同频率执行；Godot 区分逐帧处理与物理处理，浏览器则可利用动画帧回调安排呈现。\n\n循环并不要求整个引擎只有一个线程，也不意味着每次显示都只执行一次物理步。时间差、积压和暂停策略影响行为，不能把目标帧率视为稳定的实际调度频率。\n\n## 参考\n\n- [Godot：逐帧与物理处理](https://docs.godotengine.org/en/stable/tutorials/scripting/idle_and_physics_processing.html)\n- [MDN：requestAnimationFrame 调度语义](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 5
+}

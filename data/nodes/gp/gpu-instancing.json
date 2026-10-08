@@ -1,0 +1,45 @@
+{
+  "id": "gpu-instancing",
+  "name": "GPU Instancing",
+  "aliases": [
+    "GPU 实例化",
+    "实例化渲染",
+    "Instanced Rendering"
+  ],
+  "type": "concept",
+  "domains": [
+    "graphics",
+    "real-time-rendering",
+    "game-development"
+  ],
+  "ecosystems": [
+    "real-time-rendering-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "real-time-rendering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shader",
+      "context": "实例化绘制的着色器读取逐实例变换或颜色，使共享几何的实例具有不同外观"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rendering-geometry",
+      "context": "重复绘制同一几何体，按逐实例参数改变各副本的变换或外观"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "gpu-buffer",
+      "context": "在使用逐实例缓冲区的实现中存储变换矩阵或颜色，供 GPU 绘制多个共享几何的实例"
+    }
+  ],
+  "summary": "共享几何与材质，按实例数据绘制多个对象以减少提交",
+  "description": "GPU 实例化在一次或少量绘制提交中绘制同一几何体的多个实例。实例共享几何和兼容的材质、着色器状态，差异由逐实例的变换矩阵、颜色或其他参数提供。它适合树木、建筑、重复道具等大量相似对象；Three.js 的 InstancedMesh 是一种具体工程实现。\n\n实例化主要减少重复对象的绘制提交和状态管理开销，并不自动减少可见像素、顶点处理或复杂着色器的工作量。实例数据更新、透明排序、剔除边界以及材质兼容性仍影响结果。它与把不同网格合并为大网格的批处理做法有所区别；在 Unity 中是否采用实例化还取决于渲染管线及其他优化机制，不能写成所有对象的固定渲染路径。\n\n## 参考\n\n- [Three.js：InstancedMesh](https://threejs.org/docs/pages/InstancedMesh.html)\n- [Unity：GPU 实例化的适用条件与兼容性](https://docs.unity3d.com/cn/2023.2/Manual/GPUInstancing.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-07",
+  "importance": 4
+}

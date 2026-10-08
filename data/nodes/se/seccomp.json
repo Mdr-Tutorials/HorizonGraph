@@ -1,0 +1,40 @@
+{
+  "id": "seccomp",
+  "name": "seccomp",
+  "aliases": [
+    "Secure Computing",
+    "Linux 系统调用过滤",
+    "安全计算模式"
+  ],
+  "type": "concept",
+  "domains": [
+    "containerization",
+    "systems-programming",
+    "security"
+  ],
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "container-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "linux-kernel"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "syscall",
+      "context": "过滤进程发起的 Linux 系统调用编号及可检查的参数，限制暴露的内核接口。"
+    }
+  ],
+  "summary": "限制 Linux 进程可发起的系统调用与部分参数组合。",
+  "description": "seccomp 是 Linux 约束进程系统调用的机制，包含严格模式和可编程过滤模式。过滤器读取系统调用编号、架构和参数等信息，并决定允许、返回错误、终止或采用其他支持的处理动作。过滤模式使用经典 BPF 表达规则；它不等同于任意 eBPF 程序，也不会在过滤器里直接解引用用户提供的指针来理解路径字符串。\n\n容器运行时可在启动工作负载前加载 seccomp 策略，缩小应用能够触及的内核接口面。过滤器安装具有权限或 no_new_privs 等前置条件，通常可由后代继承，并能继续叠加更严格的限制。规则需要匹配执行架构、实际系统调用和应用需求；允许某个调用编号，并不意味着其业务含义或所访问对象已经被授权。\n\n内核文档明确区分系统调用过滤与完整沙箱。文件访问、信息流、共享资源及管理接口仍需其他策略控制；过宽过滤器削弱限制，过窄过滤器则可能阻止正常工作负载。Docker 的默认策略是运行时集成的一种选择，可以在明确场景下替换或禁用，不能把某一工具的默认列表写成所有 Linux 容器必须采用的标准。\n\n## 参考\n\n- [Linux 内核：seccomp BPF 与沙箱边界](https://docs.kernel.org/userspace-api/seccomp_filter.html)\n- [Linux：seccomp 动作与安装条件](https://man7.org/linux/man-pages/man2/seccomp.2.html)\n- [Docker：默认 seccomp 策略与配置](https://docs.docker.com/engine/security/seccomp/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-08",
+  "importance": 3
+}
