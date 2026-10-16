@@ -1,0 +1,37 @@
+{
+  "id": "branch-prediction",
+  "name": "Branch Prediction",
+  "display_primary": "分支预测",
+  "display_secondary": "Branch Prediction",
+  "aliases": [
+    "分支预测",
+    "分支预测器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "digital-design",
+    "low-latency-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "out-of-order-execution"
+    }
+  ],
+  "summary": "处理器在条件分支计算完成前猜测其跳转方向与目标地址的技术。",
+  "importance": 5,
+  "popular": 60,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "分支预测是现代流水线处理器在条件跳转指令（如 if-else、循环判定）尚未计算出实际比较结果之前，依据历史执行模式猜测分支走向与目标跳转地址的机制。没有分支预测，流水线必须停顿十几个乃至几十个时钟周期等待分支结果计算完毕；高精度的分支预测能使取指与译码单元无缝沿预测路径继续抓取指令，维持流水线满载运转。\n\n预测技术经历了从简单的静态预测（如向前跳转不跳、向后循环跳转总是跳）、1 位与 2 位饱和计数器（Bimodal），发展到捕捉全局与局部跳转历史关联的两级自适应预测器、融合神经网络思想的 Perceptron 预测器，以及现代工业级高性能处理器广泛采用的 TAGE（Tagged Geometric History Length）预测器。分支预测失败（Misprediction）会导致已投机发射的指令被全部撤销，造成严重的流水线气泡与时钟周期浪费。\n\n## 参考\n\n- [Patterson & Hennessy：《计算机组成与设计：硬件/软件接口》第 4 章](https://www.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6)\n- [André Seznec：The TAGE Branch Predictor](https://jilp.org/cbp-2016/paper/seznec.pdf)\n- [Stack Overflow：Why is processing a sorted array faster than processing an unsorted array?](https://stackoverflow.com/questions/11227809)"
+}

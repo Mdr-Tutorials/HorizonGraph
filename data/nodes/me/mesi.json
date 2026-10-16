@@ -1,0 +1,39 @@
+{
+  "id": "mesi",
+  "name": "MESI Protocol",
+  "display_primary": "MESI 协议",
+  "display_secondary": "MESI",
+  "aliases": [
+    "MESI 协议",
+    "MESI 一致性协议",
+    "伊利诺斯协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "hardware_iot",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "low-latency-systems"
+  ],
+  "abstraction_level": "hardware",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cache-coherence",
+      "context": "在写失效型多核缓存层次中定义四种缓存行状态与迁移总线消息。"
+    }
+  ],
+  "summary": "通过已修改、独占、共享与无效四种状态维护缓存一致性的硬件协议。",
+  "importance": 4,
+  "popular": 55,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "MESI 协议（又称伊利诺斯协议）是多处理器对称多处理（SMP）系统中最经典也是最广泛应用的基于写失效（Write-Invalidate）机制的硬件缓存一致性协议。协议为每个私有缓存中的缓存行定义了四种离散状态：已修改（Modified，数据已被本核修改且为全系统唯一有效副本）、独占（Exclusive，数据与主存一致且仅缓存在本核）、共享（Shared，数据与主存一致且可能被多个核心同时缓存）以及无效（Invalid，该缓存行不含有效数据）。\n\n当某个核心试图写入处于 Shared 或 Invalid 状态的缓存行时，它必须通过互连总线向其他所有核心广播写使无效（Read With Intent to Modify，RFO）请求；其他核心通过窥探（Snooping）总线监听到该请求后，立即将本地对应的缓存行置为 Invalid 并回复确认，发起写入的核心由此将状态晋升为 Modified。MESI 协议保证了在任何给定时刻，至多只有一个核心持有某缓存行的写权限，或多个核心共享无冲突的只读权限。在此基础上，现代硬件还衍生出增加 Owner 状态的 MOESI 协议以减少主存回写开销。\n\n## 参考\n\n- [Nagarajan, Sorin, Hill, Wood：A Primer on Memory Consistency and Cache Coherence (2nd Edition, 2020)](https://link.springer.com/book/10.1007/978-3-031-01764-3)\n- [M. S. Papamarcos, J. H. Patel：A low-overhead coherence solution for multiprocessors with private cache memories (ISCA 1984)](https://dl.acm.org/doi/10.1145/800015.808204)\n- [Bryant & O'Hallaron：《深入理解计算机系统（原书第 3 版）》第 6 章](https://csapp.cs.cmu.edu/)"
+}

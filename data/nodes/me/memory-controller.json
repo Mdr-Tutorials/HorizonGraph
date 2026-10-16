@@ -1,0 +1,38 @@
+{
+  "id": "memory-controller",
+  "name": "Memory Controller",
+  "display_primary": "内存控制器",
+  "display_secondary": "Memory Controller",
+  "aliases": [
+    "内存控制器",
+    "MCU",
+    "集成内存控制器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "digital-design",
+    "low-latency-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "dram"
+    }
+  ],
+  "summary": "管理处理器与物理 DRAM 之间数据交互、总线时序与访问调度的硬件中枢。",
+  "importance": 4,
+  "popular": 55,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "内存控制器（Memory Controller，在现代 CPU 中通常作为集成内存控制器 IMC）是连接 CPU 末级缓存（LLC）与外部物理动态随机存取存储器（DRAM）的专用数字逻辑中枢。当末级缓存发生未命中或写回（Writeback）脏缓存行时，内存控制器接收物理地址，将其映射至物理内存条的通道（Channel）、内存插槽（DIMM）、Rank、Bank、行（Row）与列（Column）地址，并生成符合 JEDEC DDR 规范的精确电平命令序列。\n\n由于直接访问外部 DRAM 的延迟高达数十至上百纳秒，内存控制器的核心设计是请求调度器。调度器通常采用先就绪先服务（First-Ready First-Come-First-Serve，FR-FCFS）算法，优先响应命中当前已激活行缓冲（Row Hit）的读请求，并将非阻塞的写回请求积攒成批次集中执行，以最大限度减少总线转向（Bus Turnaround）与预充电（Precharge）开销；此外，它还严格负责定时向内存颗粒发出全行刷新（Refresh）命令以补偿电容漏电。\n\n## 参考\n\n- [Bruce Jacob, Spencer Ng, David Wang：《Memory Systems: Cache, DRAM, Disk》第 10 章](https://www.sciencedirect.com/book/9780123797513/memory-systems)\n- [JEDEC Standard JESD79-5: DDR5 SDRAM Standard](https://www.jedec.org/standards-documents/docs/jesd79-5b)\n- [Onur Mutlu：DRAM Controllers and Architectures (ETH Zürich Lectures)](https://safari.ethz.ch/architecture/)"
+}

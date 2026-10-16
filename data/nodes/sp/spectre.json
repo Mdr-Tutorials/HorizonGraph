@@ -1,0 +1,39 @@
+{
+  "id": "spectre",
+  "name": "Spectre",
+  "display_primary": "幽灵漏洞",
+  "display_secondary": "Spectre",
+  "aliases": [
+    "幽灵",
+    "Spectre 漏洞",
+    "推测执行攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "hardware_iot",
+    "operating_systems"
+  ],
+  "domains": [
+    "security",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "speculative-execution",
+      "context": "通过训练分支预测器诱使处理器投机执行恶意路径并通过微架构缓存痕迹泄漏数据。"
+    }
+  ],
+  "summary": "利用分支预测与推测执行在微架构缓存中遗留痕迹以绕过软件隔离的硬件侧信道漏洞。",
+  "importance": 4,
+  "popular": 75,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "幽灵（Spectre，涵盖 CVE-2017-5753 边界检查绕过与 CVE-2017-5715 分支目标注入）是一类深刻动摇现代计算体系安全假设的瞬态执行硬件攻击技术。与 Meltdown 依赖特定芯片实现特权检查漏洞不同，Spectre 直指现代处理器通用且不可或缺的分支预测与推测执行机制本身：只要处理器支持推测执行与缓存层次，几乎无一例外受其影响，覆盖几乎所有主流 x86、ARM 与 RISC-V 高性能处理器。\n\n在 Spectre 攻击中，恶意代码首先通过反复训练处理器的分支方向预测器（PHT）或分支目标缓冲器（BTB），使其坚信某个条件分支必然成立；随后传入一个超出合法边界的恶意索引。当 CPU 遇到分支指令时，投机执行机制立即沿误导路径提前执行数组越界读取，并将读取到的目标进程敏感内存作为第二级数组的索引继续推测加载；当真实边界检查完成并发现越界时，微架构虽然撤销了架构寄存器变更，但第二级数组的特定缓存行已被常驻在 L1 缓存中。攻击者借助时间侧信道分析即可还原被保护数据。这使得浏览器沙箱内部的不可信 JavaScript 代码能够轻而易举读取同一渲染进程内的跨站点密钥与用户密码，促使各主流浏览器全面引入站点隔离（Site Isolation）并将精度计时器大幅降级。\n\n## 参考\n\n- [Paul Kocher et al.：Spectre Attacks: Exploiting Speculative Execution (IEEE S&P 2019)](https://spectreattack.com/spectre.pdf)\n- [Google Chromium Project：Site Isolation](https://www.chromium.org/Home/chromium-security/site-isolation/)\n- [Intel：Introduction to Speculative Execution Side Channel Methods](https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/technical-documentation/cpuid-enumeration-and-architectural-msrs.html)"
+}

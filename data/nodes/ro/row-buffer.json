@@ -1,0 +1,39 @@
+{
+  "id": "row-buffer",
+  "name": "Row Buffer",
+  "display_primary": "行缓冲",
+  "display_secondary": "Row Buffer",
+  "aliases": [
+    "行缓冲",
+    "行缓冲区",
+    "DRAM Row Buffer"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "digital-design",
+    "low-latency-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dram",
+      "context": "在 DRAM Bank 内部充当被激活存储行的临时数据感测与暂存介质。"
+    }
+  ],
+  "summary": "DRAM Bank 内部暂存被激活整行数据以支持高速列读写感测的放大器阵列。",
+  "importance": 4,
+  "popular": 45,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "行缓冲（Row Buffer）是物理 DRAM 芯片中每个独立 Bank 内部由感测放大器（Sense Amplifiers）阵列构成的暂存电路。DRAM 存储阵列按二维网格排布，当要读取某一个物理地址时，内存控制器必须首先发送激活命令（ACT），选通字线（Wordline），将目标整行（通常包含 1KB 至 8KB）的所有微小电容中的电荷一次性读出并锁存在该 Bank 的行缓冲中；随后发送读/写命令（RD/WR）直接以极快速度对行缓冲内的特定列进行寻址传输。\n\n由于行缓冲的存在，连续访问同一行的内存操作被称为行命中（Row Hit，只需发送列读写命令，延迟仅为 tCAS），而访问不同行则被称为行冲突或行未命中（Row Conflict/Miss），必须先发送预充电命令（PRE，耗时 tRP）将位线电压恢复至中间参考电平并关闭当前行，再重新激活新行（耗时 tRCD），导致访问延迟翻倍。内存控制器的交错与调度策略深度依赖于维持行缓冲的局部性命中。\n\n## 参考\n\n- [Bruce Jacob, Spencer Ng, David Wang：《Memory Systems: Cache, DRAM, Disk》第 8 章](https://www.sciencedirect.com/book/9780123797513/memory-systems)\n- [Ulrich Drepper：What Every Programmer Should Know About Memory (第 2 节：Commodity Hardware Today)](https://www.akkadia.org/drepper/cpumemory.pdf)\n- [Harris & Harris：《数字设计和计算机体系结构 RISC-V 版》第 8 章](https://www.elsevier.com/books/digital-design-and-computer-architecture/harris/978-0-12-820064-3)"
+}

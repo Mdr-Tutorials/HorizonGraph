@@ -1,0 +1,39 @@
+{
+  "id": "out-of-order-execution",
+  "name": "Out-of-Order Execution",
+  "display_primary": "乱序执行",
+  "display_secondary": "OoO",
+  "aliases": [
+    "乱序执行",
+    "动态执行",
+    "Out-of-Order Execution"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "digital-design",
+    "low-latency-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "instruction-pipeline",
+      "context": "在指令流水线中解耦指令的顺序派发、乱序执行与顺序退休。"
+    }
+  ],
+  "summary": "当操作数就绪即可动态执行指令、最终按程序顺序提交的微架构技术。",
+  "importance": 5,
+  "popular": 65,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "乱序执行（Out-of-Order Execution，OoO）是现代超标量处理器突破顺序执行限制、最大化发掘指令级并行度（ILP）的核心微架构技术。处理器按程序顺序取指和译码，但在发射阶段将指令置于保留站（Reservation Stations）或统一发射队列中；一旦某条指令所需的操作数全部就绪且执行单元空闲，即可无视其在原始程序中的前后顺序立即投入执行。\n\n为保证乱序执行不破坏程序逻辑，处理器依赖两大机制：一是寄存器重命名（Register Renaming），通过庞大的物理寄存器堆消除由于寄存器数量有限而产生的读后写（WAR）和写后写（WAW）伪数据依赖；二是重排序缓冲区（ROB），指令执行完成后将其计算结果暂存于内部，直到该指令之前的所有指令均无异常且顺序完成，才按程序顺序正式“退休”（Retire）并写回架构状态，从而确保精确异常和确定性状态交付。\n\n## 参考\n\n- [Hennessy & Patterson：《计算机体系结构：量化研究方法》第 3 章：指令级并行及其利用](https://www.elsevier.com/books/computer-architecture/hennessy/978-0-12-811905-1)\n- [Shen & Lipasti：《现代处理器设计：超标量处理器基础》](https://www.waveland.com/browse.php?t=625)\n- [姚永斌：《超标量处理器设计》（清华大学出版社，2014）](https://www.tup.com.cn)"
+}

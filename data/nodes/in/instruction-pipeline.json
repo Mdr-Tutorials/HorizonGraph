@@ -1,0 +1,39 @@
+{
+  "id": "instruction-pipeline",
+  "name": "Instruction Pipeline",
+  "display_primary": "指令流水线",
+  "display_secondary": "Pipeline",
+  "aliases": [
+    "指令流水线",
+    "处理器流水线",
+    "CPU 流水线"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "digital-design",
+    "high-performance-computing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "instruction-set-architecture",
+      "context": "将指令集所定义的指令分解为取指、译码、执行、访存和写回等重叠流水级。"
+    }
+  ],
+  "summary": "将指令执行划分为多个时钟周期重叠运行的处理器并行机制。",
+  "importance": 5,
+  "popular": 70,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "指令流水线是一种通过在时间上重叠执行多条指令来提升处理器吞吐量（IPC）的微架构并行技术。经典流水线将一条指令的执行生命周期切分为取指（IF）、译码（ID）、执行（EX）、访存（MEM）与写回（WB）五个阶段；每个阶段由专用的硬件电路独立完成，并在每个时钟周期同时推进不同指令的各个阶段，从而使理想吞吐量接近每个周期完成一条指令。\n\n流水线的实际吞吐受制于结构冲突（资源争用）、数据冲突（操作数依赖）与控制冲突（分支跳转）。为避免流水线停顿（Stall），现代微架构广泛引入操作数旁路转发（Forwarding）、分支预测和超标量多发射。流水线级数加深（如深流水超流水线）虽能提高时钟主频，但也会成倍增加预测失败时的清空惩罚与动态功耗，设计需要在深度与能效之间取得平衡。\n\n## 参考\n\n- [Bryant & O'Hallaron：《深入理解计算机系统（原书第 3 版）》第 4 章](https://csapp.cs.cmu.edu/)\n- [Patterson & Hennessy：《计算机体系结构：量化研究方法》第 C 篇：流水线基础与高级技术](https://www.elsevier.com/books/computer-architecture/hennessy/978-0-12-811905-1)"
+}

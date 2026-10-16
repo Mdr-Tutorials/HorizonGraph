@@ -1,0 +1,39 @@
+{
+  "id": "speculative-execution",
+  "name": "Speculative Execution",
+  "display_primary": "推测执行",
+  "display_secondary": "Speculative Execution",
+  "aliases": [
+    "推测执行",
+    "投机执行"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "cybersecurity-ecosystem",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "security",
+    "digital-design"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "branch-prediction",
+      "context": "依赖分支预测和预测结果提前投机执行后续指令路径。"
+    }
+  ],
+  "summary": "处理器在未确认指令是否必然执行前提前计算其结果的技术。",
+  "importance": 5,
+  "popular": 65,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "推测执行（Speculative Execution，亦称投机执行）是乱序超标量处理器利用预测结果，在未最终确认某条指令是否处于真实程序执行路径之前，便提前调度功能单元执行该指令并准备好计算结果的技术。如果最终预测正确，指令便毫无延迟地直接提交，从而彻底隐藏了分支判断或长延迟访存的等待开销；如果预测错误，硬件则通过清空重排序缓冲区回滚所有投机架构状态。\n\n尽管架构状态（如通用寄存器、内存值）在投机失败时会被干净地丢弃，但推测执行期间所触发的微架构状态改变（尤其是缓存行加载、TLB 记录与分支历史表更新）并不会被硬件自动恢复。这一“架构不可见但微架构可度量”的隐蔽通道构成了 2018 年被披露的 Spectre、Meltdown 等瞬态执行侧信道攻击的物理根源，迫使软件生态与 CPU 厂商对推测屏障和地址空间隔离进行全面重构。\n\n## 参考\n\n- [Hennessy & Patterson：《计算机体系结构：量化研究方法》第 3 章](https://www.elsevier.com/books/computer-architecture/hennessy/978-0-12-811905-1)\n- [Kocher et al.：Spectre Attacks: Exploiting Speculative Execution (IEEE S&P 2019)](https://spectreattack.com/spectre.pdf)\n- [Intel：Refined Speculative Execution Guidelines](https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/best-practices/speculative-execution-side-channel-mitigations.html)"
+}

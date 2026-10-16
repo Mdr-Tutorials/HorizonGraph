@@ -1,0 +1,39 @@
+{
+  "id": "reorder-buffer",
+  "name": "Reorder Buffer",
+  "display_primary": "重排序缓冲区",
+  "display_secondary": "ROB",
+  "aliases": [
+    "ROB",
+    "重排序缓冲",
+    "指令重排序缓冲区"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "digital-design",
+    "low-latency-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "out-of-order-execution",
+      "context": "维护乱序执行处理器的指令进入次序并支持精确异常处理。"
+    }
+  ],
+  "summary": "追踪乱序执行指令并在其就绪后按程序顺序提交的环形缓冲区。",
+  "importance": 4,
+  "popular": 40,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "重排序缓冲区（Reorder Buffer，简称 ROB）是乱序超标量微架构中用于实现“乱序执行、顺序退休”的专用硬件环形 FIFO 队列。指令在译码/分派阶段按照严格的原始程序顺序分配 ROB 表项，并获取一个唯一的序列标识符。此后，指令及其生成的微操作（uops）被乱序分派到各个执行单元完成计算，计算完成的状态和推测结果记录在各自的 ROB 表项中，但不对机器的架构寄存器或内存造成不可逆变更。\n\nROB 只有在其头部（最早进入队列）的指令无异常、分支预测被验证正确且已完成计算时，才允许将其从队列头部弹出并将结果正式“退休”（Retire/Commit）到架构寄存器堆或释放给 Store Buffer 写回。如果某条指令发生缺页、除零等异常，或者前序分支预测错误，处理器立即清空该指令及其之后的所有 ROB 表项，使 CPU 恢复到发生异常或分支点时的干净架构状态，从而保证精确异常（Precise Interrupts/Exceptions）。\n\n## 参考\n\n- [Shen & Lipasti：《现代处理器设计：超标量处理器基础》第 5 章](https://www.waveland.com/browse.php?t=625)\n- [Henry Wong：Measuring Reorder Buffer Capacity](https://blog.stuffedcow.net/2013/05/measuring-rob-capacity/)\n- [Hennessy & Patterson：《计算机体系结构：量化研究方法》第 3 章](https://www.elsevier.com/books/computer-architecture/hennessy/978-0-12-811905-1)"
+}

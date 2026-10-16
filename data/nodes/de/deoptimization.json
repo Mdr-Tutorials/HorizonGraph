@@ -1,0 +1,40 @@
+{
+  "id": "deoptimization",
+  "name": "Deoptimization",
+  "display_primary": "去优化",
+  "display_secondary": "Deopt",
+  "aliases": [
+    "去优化",
+    "Deopt",
+    "动态反优化",
+    "去优化退回"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes",
+    "node-js-ecosystem",
+    "browser-engine-ecosystem"
+  ],
+  "domains": [
+    "compilers",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "compiler-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "jit",
+      "context": "在激进投机优化的机器代码遇到假设破裂时将执行上下文重构并安全退回解释器或低级编译器。"
+    }
+  ],
+  "summary": "JIT 编译器在类型或分支推测假设失效时将执行栈安全回退至解释器的运行时机制。",
+  "importance": 4,
+  "popular": 50,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "去优化（Deoptimization，常简称 Deopt）是现代多层即时编译器（如 Java HotSpot、V8 TurboFan、JavaScriptCore FTL）使动态语言能够跑出接近 C/C++ 极限性能的核心兜底机制。为了生成高度优化的机器代码，高级 JIT 编译器必须基于运行时的热点反馈做出大量激进的投机假设（如“循环变量始终为 Smi 整数”、“某对象形状 Shape 永远不变”），进而消除类型检查与虚函数派发，直接内联生成高效机器指令。\n\n然而，动态语言允许程序在任何时刻改变变量类型或向原型链挂载新属性。JIT 编译器在机器代码的关键节点插入保护守卫（Bailout Guards）；一旦守卫检查发现假设不成立（例如将原本为整数的计数器 count 赋成了字符串），优化的机器码无法再安全继续执行，运行时必须立即触发去优化：暂停当前执行流，根据编译时记录的去优化元数据（Deopt Metadata / Safepoints）将当前的 CPU 寄存器与机器栈帧逐一反向解析，重建出解释器所需的字节码程序计数器（Bytecode PC）、虚拟操作数栈与本地变量表，并无缝切回解释器（如 Ignition）继续执行，同时丢弃或降级失效的优化机器码。\n\n## 参考\n\n- [Urs Hölzle, Craig Chambers, David Ungar：Debugging Optimized Code with Dynamic Deoptimization (PLDI 1992)](https://dl.acm.org/doi/10.1145/143095.143114)\n- [V8 Dev Blog：Launching Ignition and TurboFan (2017)](https://v8.dev/blog/launching-ignition-and-turbofan)\n- [Benedikt Meurer：An Introduction to Speculative Optimization in V8](https://benediktmeurer.de/2017/12/13/an-introduction-to-speculative-optimization-in-v8/)"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "memory-management-unit",
+  "name": "Memory Management Unit",
+  "display_primary": "内存管理单元",
+  "display_secondary": "MMU",
+  "aliases": [
+    "MMU",
+    "内存管理单元"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "operating_systems",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "digital-design"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "virtual-memory"
+    }
+  ],
+  "summary": "负责虚拟地址到物理地址转换、内存保护与页表漫游的硬件部件。",
+  "importance": 5,
+  "popular": 65,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "内存管理单元（Memory Management Unit，MMU）是 CPU 内部负责将程序发出的虚拟地址转换为内存总线物理地址、并执行硬件级内存访问控制与保护的关键电路。它使得操作系统能够向每个用户进程提供独立、连续且受隔离的虚拟内存空间，同时阻断非特权代码对物理硬件和操作系统内核地址空间的越权访问。\n\nMMU 的核心组成包括转换后备缓冲区（TLB）和硬件页表漫游器（Page Table Walker）。当虚拟地址访问发生时，MMU 首先并发检索 TLB；若命中则瞬时完成翻译并校验读写与执行权限；若 TLB 未命中，硬件漫游器沿着基址寄存器（如 x86 CR3）层层索引多级物理页表并回填 TLB；若页表项指示目标页不存在、权限不符或试图写入只读页，MMU 则立即产生硬件异常（Page Fault），交由操作系统内核缺页中断服务程序介入处理。\n\n## 参考\n\n- [Bryant & O'Hallaron：《深入理解计算机系统（原书第 3 版）》第 9 章：虚拟内存](https://csapp.cs.cmu.edu/)\n- [Intel 64 and IA-32 Architectures Software Developer's Manual Volume 3A: Paging](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)\n- [ARM Architecture Reference Manual: The Virtual Memory System Architecture (VMSA)](https://developer.arm.com/documentation/ddi0487/latest/)"
+}

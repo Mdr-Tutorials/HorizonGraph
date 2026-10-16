@@ -1,0 +1,35 @@
+{
+  "id": "limited-direct-execution",
+  "name": "Limited Direct Execution",
+  "display_primary": "受限直接执行",
+  "display_secondary": "LDE",
+  "aliases": [
+    "受限直接执行",
+    "LDE 机制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "operating_systems",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "syscall"
+    }
+  ],
+  "summary": "操作系统让程序直接在 CPU 上原生运行、仅通过受限硬件机制保持控制权的设计范式。",
+  "importance": 5,
+  "popular": 60,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "受限直接执行（Limited Direct Execution，简称 LDE）是经典操作系统（如 UNIX、Linux 与 Windows）用于解决 CPU 虚拟化核心矛盾的基石设计模式。操作系统面临的根本权衡是：既要保证应用程序以近乎纯裸机的极致原生性能全速运行，又必须防止用户程序独占 CPU、破坏系统内存或随意篡改外设。若操作系统像模拟器一样逐条解释用户指令，速度将慢上百倍；LDE 的策略是直接让用户代码在物理 CPU 上执行，但通过硬件特权机制施加严格限制。\n\nLDE 的运转依赖三大硬件支柱：首先是处理器特权分级（用户态与内核态，如 x86 Ring 3 与 Ring 0），非特权态禁止直接执行特权指令或直连 I/O，必须通过软中断/陷阱（Trap）陷入内核预先设定的系统调用（System Call）分发向量表；其次是硬件定时器中断（Timer Interrupt），操作系统设置定时时钟中断，确保即便用户程序陷入死循环，CPU 控制权也会在固定时间片后被操作系统强行收回以执行进程调度；最后是通过硬件 MMU 强制实行地址空间隔离，任何越界非法访存都会立即触发陷阱将控制权交还内核。\n\n## 参考\n\n- [Remzi H. Arpaci-Dusseau, Andrea C. Arpaci-Dusseau：《Operating Systems: Three Easy Pieces》第 6 章：Mechanism: Limited Direct Execution](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf)\n- [Bryant & O'Hallaron：《深入理解计算机系统（原书第 3 版）》第 8 章：异常控制流](https://csapp.cs.cmu.edu/)\n- [MIT 6.1810：Operating System Engineering (xv6 Traps & System Calls)](https://pdos.csail.mit.edu/6.1810/)"
+}

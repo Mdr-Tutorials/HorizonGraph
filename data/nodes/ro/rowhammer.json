@@ -1,0 +1,40 @@
+{
+  "id": "rowhammer",
+  "name": "Rowhammer",
+  "display_primary": "行锤击",
+  "display_secondary": "Rowhammer",
+  "aliases": [
+    "行锤击",
+    "行锤漏洞",
+    "DRAM 扰动错误"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "cybersecurity-ecosystem",
+    "operating_systems"
+  ],
+  "domains": [
+    "security",
+    "semiconductor-engineering",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "row-buffer",
+      "context": "通过极高频率反复激活相邻物理行诱发邻近存储单元电荷泄漏。"
+    }
+  ],
+  "summary": "利用反复激活相邻 DRAM 行导致电荷泄漏并翻转物理内存位的硬件缺陷与攻击技术。",
+  "importance": 4,
+  "popular": 60,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "行锤击（Rowhammer）是现代高密度 DRAM 芯片中由于单元间距微缩带来的严重物理电磁耦合缺陷与硬件安全漏洞。在 20 纳米及以下先进制程中，相距极近的字线电容在经历反复快速的充放电激活时，交变电场会导致电磁串扰和寄生漏电加速；攻击者在普通用户态通过连续执行 CLFLUSH 指令绕过 CPU 缓存，以百万次/秒的极高频率交替激活某一行或多行（如双面行锤击 Double-sided Hammering），可在芯片常规 64ms 刷新周期到来之前，诱使相邻物理行中的电容失去足够电荷，引发无视逻辑保护的比特翻转（Bit Flip）。\n\nRowhammer 的破坏性在于它彻底击穿了基于操作系统虚拟内存页表与硬件 MMU 权限的经典软件沙箱模型。安全研究者通过精密构造喷射内存，可精确翻转只读物理页表项（PTE）中的写保护位或内核特权位，从而将普通非特权进程直接提升为具有任意物理内存读写能力的根特权（Root/Kernel Privileges）。硬件厂商随后推出了目标行刷新（TRR）等缓解机制，但在更为精密的攻击模式（如黑头锤击 Blacksmith）面前仍不断暴露出防御缺口。\n\n## 参考\n\n- [Yoongu Kim et al.：Flipping Bits in Memory Without Accessing Them: An Experimental Study of DRAM Disturbance Errors (ISCA 2014)](https://users.ece.cmu.edu/~yoonguk/papers/kim-isca14.pdf)\n- [Mark Seaborn, Thomas Dullien (Project Zero)：Exploiting the DRAM Rowhammer Bug to Gain Kernel Privileges (2015)](https://googleprojectzero.blogspot.com/2015/03/exploiting-dram-rowhammer-bug-to-gain.html)\n- [Patrick Jattke et al.：BLACKSMITH: Scalable Rowhammering in the Frequency Domain (IEEE S&P 2022)](https://comsec.ethz.ch/research/sub-microarchitectural/blacksmith/)"
+}

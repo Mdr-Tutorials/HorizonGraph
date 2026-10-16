@@ -1,0 +1,41 @@
+{
+  "id": "tagged-pointer",
+  "name": "Tagged Pointer",
+  "display_primary": "标记指针",
+  "display_secondary": "Tagged Pointer",
+  "aliases": [
+    "标记指针",
+    "指针标记",
+    "Smi",
+    "小整数编码"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes",
+    "node-js-ecosystem",
+    "browser-engine-ecosystem"
+  ],
+  "domains": [
+    "compilers",
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "compiler-mechanism"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "virtual-memory",
+      "context": "利用内存对齐所带来的低位零比特或 64 位虚拟地址的高位未用空间编码类型与小整数。"
+    }
+  ],
+  "summary": "利用指针空闲位嵌入类型标记或立即数值以减少堆分配与内存占用的编码技术。",
+  "importance": 4,
+  "popular": 50,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "标记指针（Tagged Pointer）是高级动态语言运行时（如 JavaScript V8、JSC、CRuby、OCaml 与 LuaJIT）广泛采用的内存编码与表示优化技术。在动态弱类型语言中，变量可以随时存储任意类型（如数字、字符串或任意对象引用）。若将每个基础数值都包装为堆上的分配对象，不仅会引发极其庞大的内存膨胀，还会给垃圾回收器（GC）施加不可承受的追踪与回收压力。\n\n标记指针巧妙利用了底层硬件内存对齐规则与虚拟地址空间的稀疏性：由于堆对象通常按 4 字节或 8 字节边界对齐，其指向的物理指针最低 2 到 3 位在硬件层面永远为 0；运行时约定如果最低位为 0，则该字直接代表一个带符号的立即数小整数（如 V8 中的 Smi，Small Integer），进行算术计算时仅需简单的算术右移即可还原数值；若最低位为 1，则将其视作真正的堆对象指针。在 64 位架构下，该技术进一步衍生为利用 IEEE 754 双精度浮点数未使用的非数（NaN）高位尾数区编码所有数据类型的 NaN Boxing，以及通过 32 位基地址偏移将指针空间减半的指针压缩（Pointer Compression）方案。\n\n## 参考\n\n- [V8 Dev Blog：Pointer Compression in V8 (2020)](https://v8.dev/blog/pointer-compression)\n- [Robert Nystrom：《Crafting Interpreters》第 3 部分：Values and Types](https://craftinginterpreters.com/a-virtual-machine.html)\n- [David Gudeman：Representing Type Information in Dynamically Typed Languages (IEEE Software 1993)](https://dl.acm.org/doi/10.1109/52.219614)"
+}

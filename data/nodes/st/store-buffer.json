@@ -1,0 +1,39 @@
+{
+  "id": "store-buffer",
+  "name": "Store Buffer",
+  "display_primary": "写缓冲",
+  "display_secondary": "Store Buffer",
+  "aliases": [
+    "写缓冲",
+    "Store Buffer",
+    "写缓冲区"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "low-latency-systems-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "low-latency-systems",
+    "digital-design"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "memory-barrier"
+    }
+  ],
+  "summary": "暂存处理器写操作数据以避免流水线停顿的微架构内部缓冲队列。",
+  "importance": 4,
+  "popular": 45,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "写缓冲（Store Buffer）是位于 CPU 执行核心与 L1 数据缓存之间的硬件 FIFO 队列。在多核系统中，处理器执行一条写内存指令时，若目标缓存行未在本地处于独占（Exclusive/Modified）状态，核心必须向总线发起所有权请求并等待其他核的失效确认（Invalidate Acknowledge）；为防止计算流水线停顿数十至上百个周期，CPU 将待写数据和物理地址暂存进写缓冲后立即推进后续无关指令。\n\n为了保证单线程程序语义的一致性，CPU 实现了写转发（Store Forwarding）机制，使同一核心后续的读指令能够直接从写缓冲中旁路读取尚未写入缓存的最新值。然而对于其他 CPU 核心而言，写缓冲中的数据在真正刷入 L1 缓存前完全不可见。这一微架构缓冲的存在是导致跨核多线程场景下出现写-读重排序（Store-Load Reordering）的物理根源，也是必须在关键并发路径插入写屏障指令（如 MFENCE）的根本原因。\n\n## 参考\n\n- [Paul E. McKenney：Memory Barriers: a Hardware View for Software Hackers (2010)](https://www.rdrop.com/users/paulmck/scalability/paper/whymb.2010.07.23a.pdf)\n- [Jeff Preshing：Memory Reordering Caught in the Act](https://preshing.com/20120515/memory-reordering-caught-in-the-act/)\n- [Intel 64 and IA-32 Architectures Software Developer's Manual Volume 3A: Memory Ordering](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)"
+}

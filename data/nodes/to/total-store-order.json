@@ -1,0 +1,39 @@
+{
+  "id": "total-store-order",
+  "name": "Total Store Order",
+  "display_primary": "完全存储定序",
+  "display_secondary": "TSO",
+  "aliases": [
+    "TSO",
+    "完全存储定序",
+    "x86-TSO"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "native-cpp-ecosystem",
+    "low-latency-systems-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "low-latency-systems",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "memory-model"
+    }
+  ],
+  "summary": "保证写写与读读保序、仅允许写读重排序的硬件内存一致性模型。",
+  "importance": 4,
+  "popular": 50,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "完全存储定序（Total Store Order，简称 TSO）是 SPARC 规范定义并被现代 x86/x86-64 体系结构全面采用的经典硬件多核内存一致性模型。在 TSO 模型下，系统保证所有处理核观察到的写操作（Store）具有唯一且完全一致的全局顺序，并且同一核心发起的读-读（Load-Load）、读-写（Load-Store）以及写-写（Store-Store）访问顺序绝不会发生重排序。\n\nTSO 模型唯一允许的内存重排序是写-读重排序（Store-Load Reordering）：由于每个处理器核心拥有本地私有的 FIFO 写缓冲（Store Buffer），核心在将写请求放入写缓冲后可继续执行后续的读指令，此时其他处理器核心尚未在缓存中看到该写变更。TSO 的强定序语义使得 x86 平台在执行大量无锁并发算法时自然具备获取-释放（Acquire-Release）语义，但在实现顺序一致性（如 Dekker 互斥算法）时仍必须通过锁总线指令或 MFENCE 强制排空写缓冲。\n\n## 参考\n\n- [Sewell et al.：x86-TSO: A Rigorous and Usable Programmer's Model for x86 Multiprocessors (CACM 2010)](https://www.cl.cam.ac.uk/~pes20/weakmemory/cacm.pdf)\n- [Russ Cox：Hardware Memory Models](https://research.swtch.com/hwmm)\n- [SPARC International：The SPARC Architecture Manual Version 9 (Memory Models)](https://sparc.org/technical-documents/)"
+}

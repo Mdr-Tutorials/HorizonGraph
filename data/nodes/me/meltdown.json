@@ -1,0 +1,39 @@
+{
+  "id": "meltdown",
+  "name": "Meltdown",
+  "display_primary": "熔断漏洞",
+  "display_secondary": "Meltdown",
+  "aliases": [
+    "熔断",
+    "Meltdown 漏洞",
+    "CVE-2017-5754"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "hardware_iot",
+    "operating_systems"
+  ],
+  "domains": [
+    "security",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "out-of-order-execution",
+      "context": "利用异常指令被退休拦截前的乱序执行窗口越权读取内核内存并经由缓存侧信道渗出。"
+    }
+  ],
+  "summary": "利用 CPU 乱序执行中越权访问内核内存并借缓存侧信道泄漏数据的严重硬件漏洞。",
+  "importance": 4,
+  "popular": 75,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "熔断（Meltdown，CVE-2017-5754）是 2018 年披露的一项针对现代高性能微架构（特别是大量 Intel 处理器）的重大硬件安全漏洞。该漏洞的根本原因在于微架构在乱序执行内存加载指令时，由于追求极致吞吐，将数据从 L1 数据缓存加载到物理寄存器的过程与权限检查（检查用户态是否允许访问内核页）并行发生；在权限异常被指令退休阶段正式捕获之前，未经授权的内核机密数据已经被后续处于推测窗口内的指令作为数组索引使用，进而间接触发了可被感知的 L1 缓存行加载。\n\n尽管异常随后触发使得非法指令未能修改架构寄存器，但攻击者在异常被捕获后，利用微架构侧信道技术（如 Flush+Reload）逐一探测用户态可控数组中各个缓存行的访问延迟，凡是在推测期间被内核字节选中的缓存行其加载速度将快一个数量级（1ns vs 100ns），从而以数十 KB/s 的惊人速度在普通用户态完整窃取内核全部物理内存、密钥与其他进程数据。操作系统界随后紧急部署了内核页表隔离（KPTI/KAISER），将用户态运行时的内核页表映射彻底剔除，以沉重系统调用上下文切换性能为代价封堵了此漏洞。\n\n## 参考\n\n- [Moritz Lipp et al.：Meltdown: Reading Kernel Memory from User Space (USENIX Security 2018)](https://meltdownattack.com/meltdown.pdf)\n- [Google Project Zero：Reading privileged memory with a side-channel (2018)](https://googleprojectzero.blogspot.com/2018/01/reading-privileged-memory-with-side.html)\n- [Linux Kernel Documentation：Kernel Page Table Isolation (KPTI)](https://docs.kernel.org/arch/x86/pti.html)"
+}

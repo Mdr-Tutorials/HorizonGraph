@@ -1,0 +1,39 @@
+{
+  "id": "instruction-set-architecture",
+  "name": "Instruction Set Architecture",
+  "display_primary": "指令集架构",
+  "display_secondary": "ISA",
+  "aliases": [
+    "ISA",
+    "指令系统",
+    "指令集体系结构"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "hardware_iot",
+    "low-latency-systems-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "digital-design",
+    "low-latency-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "digital-design-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "x86-64"
+    }
+  ],
+  "summary": "软硬件之间的抽象接口规范，定义机器指令、寄存器与内存行为。",
+  "importance": 5,
+  "popular": 85,
+  "last_reviewed": "2026-10-16",
+  "origin": "ai_draft",
+  "status": "active",
+  "description": "指令集架构（ISA）是计算机软件与硬件之间的形式化契约与抽象接口。它规定了程序可见的架构状态，包括支持的指令格式与操作码、通用与特权寄存器集合、寻址模式、数据类型表示、异常与中断机制以及多核内存访问次序模型。编译器和操作系统以此抽象为目标生成和调度二进制机器码，而底层处理器硅片则保证实际物理执行结果完全符合该规范定义。\n\nISA 的核心价值在于将软件兼容性与硬件微架构实现彻底解耦。同一套指令集既可以由五级顺序流水线处理器实现，也可以由拥有复杂分支预测和重命名机制的高性能乱序超标量核执行。规范本身并不绑定具体执行周期数、芯片主频或晶体管工艺；但随着计算范式演进，CISC（复杂指令集）与 RISC（精简指令集）、模块化扩展以及向量/矩阵加速指令的设计权衡持续塑造着系统生态。\n\n## 参考\n\n- [Patterson & Hennessy：《计算机组成与设计：硬件/软件接口 RISC-V 版》第 2 章](https://www.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6)\n- [RISC-V International：非特权 ISA 规范与基础标准](https://riscv.org/technical/specifications/)\n- [Intel 64 and IA-32 Architectures Software Developer's Manual Volume 1](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)"
+}
