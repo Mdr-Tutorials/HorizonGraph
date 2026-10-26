@@ -1,0 +1,50 @@
+{
+  "id": "ggml",
+  "name": "GGML",
+  "display_primary": "GGML",
+  "aliases": [
+    "GGML 张量库",
+    "ggml"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "systems-programming"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "georgi-gerganov"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "llamacpp"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "whispercpp"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpp",
+      "context": "提供无外部依赖的纯 C/C++ 张量算子实现与低精度整型量化计算。"
+    }
+  ],
+  "summary": "轻量纯 C/C++ 张量计算库，专为大模型边缘与本地推理优化。",
+  "importance": 4,
+  "popular": 70,
+  "official_site": "https://github.com/ggml-org/ggml",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nGGML 是 Georgi Gerganov 开发的极简张量计算库。库本身以纯 C/C++ 实现，无任何第三方依赖。其核心设计目标是面向大模型推理的高效内存管理与低精度整数权重量化计算（如 Q4_0、Q4_K、Q8_0 等）。\n\nGGML 采用基于计算图（Computation Graph）的前向求值模式，支持内存池预分配以消除推理过程中的动态内存申请碎片；底层通过手写 SIMD 汇编（AVX2、AVX-512、ARM NEON 等）以及针对 Apple Metal、CUDA 等后端的专用算子调度加速大矩阵与向量乘法（GEMM/GEMV）。\n\n## 边界与应用\n\nGGML 主要针对离线推理与资源受限的边缘环境优化，不追求支持复杂的深度学习反向传播自动求导生态。它是 llama.cpp 与 whisper.cpp 等开源本地推理工具的底层计算基石。\n\n## 参考\n\n- [GGML 官方代码仓库](https://github.com/ggml-org/ggml)\n- [GGML 张量与计算图架构说明](https://github.com/ggml-org/ggml/blob/master/include/ggml/ggml.h)"
+}

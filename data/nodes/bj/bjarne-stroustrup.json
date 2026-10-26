@@ -1,0 +1,32 @@
+{
+  "id": "bjarne-stroustrup",
+  "name": "Bjarne Stroustrup",
+  "display_primary": "Bjarne Stroustrup",
+  "display_secondary": "本贾尼·斯特劳斯特卢普",
+  "aliases": [
+    "本贾尼·斯特劳斯特卢普",
+    "Stroustrup"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "C++ 之父，以『零开销抽象』奠定现代工业级系统软件的母语底座。",
+  "importance": 5,
+  "popular": 88,
+  "official_site": "https://www.stroustrup.com",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n本贾尼·斯特劳斯特卢普（Bjarne Stroustrup，1950年出生于丹麦奥胡斯）是享誉全球的计算机科学家，通用系统级编程语言 C++ 的发明人与首席架构师，美国国家工程院院士。\n\n1979 年他在贝尔实验室工作期间，受 Simula 面向对象组织机制与 C 语言直接操作底层内存硬件能力的启发，开创了「带类的 C」（C with Classes），并在 1983 年将其正式定名为 C++。Stroustrup 确立了名垂青史的「零开销原则」（Zero-overhead Principle）——未使用的特性不产生任何运行时开销；所使用的特性手动编写也无法比编译器生成得更好。C++ 引入了 RAII（资源获取即初始化）、虚函数表、模板元编程等范式，成为全球操作系统、高性能计算、自动驾驶、金融低延迟撮合与现代图形引擎的首选基石语言。\n\n## 代表作品\n\n- **C++ 语言**：ISO 国际标准化的通用系统级编程语言，支撑起全人类底层基础设施的关键支柱。\n- **《C++ 程序设计语言》**：该语言的权威经典著作，全球计算机科学核心教学指南之一。\n\n## 参考\n\n- [Bjarne Stroustrup 个人主页与技术论文](https://www.stroustrup.com)\n- [ISO C++ 国际委员会官方主页](https://isocpp.org)"
+}

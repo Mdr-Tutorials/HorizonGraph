@@ -1,0 +1,34 @@
+{
+  "id": "georgi-gerganov",
+  "name": "Georgi Gerganov",
+  "display_primary": "Georgi Gerganov",
+  "display_secondary": "格奥尔基·格尔加诺夫",
+  "aliases": [
+    "格奥尔基·格尔加诺夫",
+    "Gerganov",
+    "ggerganov"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "开源 AI 本地推理先驱，llama.cpp、whisper.cpp 与 GGML 创造者。",
+  "importance": 4,
+  "popular": 75,
+  "official_site": "https://github.com/ggerganov",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n格奥尔基·格尔加诺夫（Georgi Gerganov）是保加利亚知名开源软件工程师与独立开发者，以在端侧与本地设备上实现极致轻量、高效的开源 AI 推理基础设施而闻名。\n\n在 2023 年开源大语言模型浪潮兴起时，Gerganov 开创性地构建了基于纯 C/C++ 的模型量化推理体系，打破了此前大模型推理对重型 Python 运行时与昂贵高显存 GPU 集群的强依赖，推动了全球范围内开源模型在消费级硬件与边缘设备上的普及。\n\n## 代表作品\n\n- **llama.cpp**：针对 Meta LLaMA 及其衍生架构的极速 C/C++ 推理引擎，支持从 1.5-bit 到 8-bit 的多种整型量化方案，适配 CPU（AVX/NEON）与 Apple Silicon、CUDA、Vulkan 等全平台硬件加速。\n- **whisper.cpp**：OpenAI Whisper 自动语音识别模型的纯 C/C++ 高性能移植版本，以极小体积和极低内存占用实现端侧实时语音转录。\n- **GGML**：为大模型本地推理定制的轻量级底层张量运算库，成为后续本地轻量推理体系的核心算子底座。\n- **GGUF**：专为本地与端侧推理设计的单文件二进制模型存储格式，支持快速内存映射（`mmap`）与丰富的超参数元数据扩展。\n\n## 参考\n\n- [Georgi Gerganov GitHub 主页](https://github.com/ggerganov)\n- [llama.cpp 官方项目仓库](https://github.com/ggml-org/llama.cpp)\n- [whisper.cpp 官方项目仓库](https://github.com/ggml-org/whisper.cpp)"
+}

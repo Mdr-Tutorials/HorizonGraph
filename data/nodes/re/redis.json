@@ -18,6 +18,10 @@
     },
     {
       "relation_type": "developed_by",
+      "target_id": "salvatore-sanfilippo"
+    },
+    {
+      "relation_type": "developed_by",
       "target_id": "redis-ltd"
     },
     {
@@ -40,7 +44,7 @@
   "summary": "内存数据结构服务器，缓存、锁与流的默认组件。",
   "importance": 4,
   "official_site": "https://redis.io",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-10-26",
   "origin": "curated",
   "status": "active"
 }

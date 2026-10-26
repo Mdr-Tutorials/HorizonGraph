@@ -1,0 +1,47 @@
+{
+  "id": "quickjs",
+  "name": "QuickJS",
+  "display_primary": "QuickJS",
+  "aliases": [
+    "QuickJS 引擎",
+    "QuickJS JavaScript Engine"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "languages_runtimes",
+    "web_frontend"
+  ],
+  "domains": [
+    "programming-languages",
+    "compilers",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtual-machine"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "fabrice-bellard"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "garbage-collection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "c",
+      "context": "引擎整体使用纯 C99 实现，便于无缝嵌入宿主 C/C++ 程序。"
+    }
+  ],
+  "summary": "轻量、可嵌入且完整支持 ES2020 规范的 JavaScript 引擎。",
+  "importance": 4,
+  "popular": 55,
+  "official_site": "https://bellard.org/quickjs/",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nQuickJS 是一个小巧且可嵌入的 JavaScript 引擎，完整支持 ES2020 规范（包括模块、异步生成器、Proxy、BigInt 等）。它包含一个轻量级字节码编译器与虚拟机运行时，采用基于引用计数的垃圾回收机制（结合循环引用检测周期性清理环状垃圾），无需 JIT 即可保持极低的内存占用与极快的启动速度。\n\n此外，QuickJS 提供了命令行解释器 `qjs` 以及能够将 JavaScript 源码编译为原生 C 代码文件的编译器 `qjsc`，可直接链接构建独立宿主二进制。\n\n## 边界与应用\n\nQuickJS 注重规范合规性与嵌入轻量性，主要面向嵌入式设备、桌面应用插件系统及资源受限环境。它不包含多层 JIT 投机优化器，在纯密集计算场景下的吞吐速度慢于 V8 或 JavaScriptCore，但内存占用远小且无冷启动延迟。\n\n## 参考\n\n- [QuickJS 官方主页](https://bellard.org/quickjs/)\n- [QuickJS 技术文档与规范实现说明](https://bellard.org/quickjs/quickjs.html)"
+}

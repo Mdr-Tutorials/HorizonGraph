@@ -1,0 +1,41 @@
+{
+  "id": "vim",
+  "name": "Vim",
+  "display_primary": "Vim",
+  "aliases": [
+    "Vim 编辑器",
+    "Vi IMproved"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "editor-ide-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools",
+    "developer-environments"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "bram-moolenaar"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-editor"
+    }
+  ],
+  "summary": "基于 vi 深度增强的模态文本与代码编辑器，终端开发利器。",
+  "importance": 5,
+  "popular": 85,
+  "official_site": "https://www.vim.org",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nVim（Vi IMproved）是 Bram Moolenaar 于 1991 年发布并长期维护的跨平台文本编辑器。它继承并拓展了 Unix vi 编辑器的核心哲学，以清晰的高效键盘操作模式划分（普通模式、插入模式、可视模式、命令行模式）为核心交互特征。\n\nVim 提供内置的多层级撤销/重做树、强大正则表达式文本对象检索与替换、宏录制执行、多标签与垂直/水平窗口分割视图，并内置专门的脚本配置语言 Vim script 与完整插件生态，被广泛预装在绝大多数 Linux、Unix 与 macOS 服务器及桌面系统中。\n\n## 边界与应用\n\nVim 专精于纯键盘轻量化极速编辑与运维调试，启动极快且资源占用极小。它与现代全重型 IDE（如 VS Code、IntelliJ）定位互补，各大主流现代编辑器均提供模拟 Vim 键位绑定的扩展插件。\n\n## 参考\n\n- [Vim 官方主页与文档](https://www.vim.org)\n- [Vim 开源源码仓库](https://github.com/vim/vim)"
+}

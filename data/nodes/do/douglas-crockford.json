@@ -1,0 +1,33 @@
+{
+  "id": "douglas-crockford",
+  "name": "Douglas Crockford",
+  "display_primary": "Douglas Crockford",
+  "display_secondary": "道格拉斯·克罗克福德",
+  "aliases": [
+    "道格拉斯·克罗克福德",
+    "Crockford"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "web_frontend",
+    "w3c-standards-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "programming-languages"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "JSON 格式确立者，JavaScript 语言标准推动者与 JSLint 创造者。",
+  "importance": 4,
+  "popular": 78,
+  "official_site": "https://www.crockford.com",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n道格拉斯·克罗克福德（Douglas Crockford，1955年出生）是美国知名软件架构师与 Web 技术布道师，曾长期在雅虎与 PayPal 担任首席架构师，因发现并标准化了轻量级数据交换格式 JSON（JavaScript Object Notation）而载入互联网史册。\n\n在 2000 年代初期复杂臃肿的 XML 与 SOAP 肆虐企业网络时，Crockford 敏锐地提炼了基于 JavaScript 对象字面量的极简纯文本语法结构。他购买了 json.org 域名并在不申请任何专利保护的前提下，将 JSON 规范无私贡献给开源世界与 ECMA/IETF 国际标准组织（RFC 4627/8259）。JSON 凭借极其直观的人类可读性与天然的语言无关解析能力，彻底淘汰了 XML，成为当今全球移动互联网、微服务 API 与配置存储的绝对通用数据载荷标准。此外，他还开发了第一个 JavaScript 静态代码分析工具 JSLint，并撰写了对整个前端行业产生深远思想启蒙的经典著作《JavaScript: The Good Parts》（JavaScript 语言精粹）。\n\n## 代表作品\n\n- **JSON 规范**：全人类互联网数据交换的事实标准格式。\n- **JSLint**：现代代码静态分析与 Lint 工具的鼻祖。\n- **《JavaScript 语言精粹》**：重塑全球前端程序员对 JavaScript 原型链与函数式编程认知的核心经典。\n\n## 参考\n\n- [Douglas Crockford 个人主页与技术文集](https://www.crockford.com)\n- [JSON 官方主页规范与历史](https://www.json.org)"
+}

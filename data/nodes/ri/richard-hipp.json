@@ -1,0 +1,33 @@
+{
+  "id": "richard-hipp",
+  "name": "D. Richard Hipp",
+  "display_primary": "D. Richard Hipp",
+  "display_secondary": "理查德·希普",
+  "aliases": [
+    "理查德·希普",
+    "Richard Hipp"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "database-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "SQLite 创造者，以 100% 分支测试覆盖率铸就全球最广泛嵌入式数据库。",
+  "importance": 5,
+  "popular": 80,
+  "official_site": "https://www.sqlite.org",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\nD. 理查德·希普（D. Richard Hipp）是美国著名软件架构师与数据库工程师，因主导设计并独立开创嵌入式关系型数据库引擎 SQLite 而闻名于世。\n\n2000 年，Hipp 在为美国海军通用动力驱逐舰项目编写程序时构思了无需独立服务器进程、零配置即可直接嵌入宿主应用的数据库引擎。SQLite 将全功能 SQL 引擎、B 树存储与事务日志浓缩为极小体积的单一纯 C 源码文件（amalgamation），并贯彻了业内公认最为严苛的自动化测试标准（100% 分支测试覆盖率，测试代码量是功能代码的数百倍），使其成为全人类部署数量最多、可靠性最高的软件库之一。\n\n## 代表作品\n\n- **SQLite**：世界上部署规模最大的嵌入式关系型数据库引擎，运行在数十亿台手机、电脑、车载电脑与航空电子系统中。\n- **Fossil SCM**：轻量级分布式版本控制系统，将代码版本管理、Bug 跟踪、Wiki 与 Web 界面全部打包进单一静态可执行文件。\n\n## 参考\n\n- [SQLite 官方架构与历史](https://www.sqlite.org/about.html)\n- [SQLite 自动化测试纪律说明](https://www.sqlite.org/testing.html)"
+}

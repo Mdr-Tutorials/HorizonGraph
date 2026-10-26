@@ -12,7 +12,7 @@
   "abstraction_level": "runtime_vm",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-26",
   "ecosystems": [
     "ios-ecosystem"
   ],
@@ -24,6 +24,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "apple"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "chris-lattner"
     }
   ],
   "summary": "Apple 平台主语言，用协议与值类型替代 Objective-C。",

@@ -1,0 +1,40 @@
+{
+  "id": "qemacs",
+  "name": "QEmacs",
+  "display_primary": "QEmacs",
+  "aliases": [
+    "Quick Emacs"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "editor-ide-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools",
+    "developer-environments"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "fabrice-bellard"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-editor"
+    }
+  ],
+  "summary": "轻量小巧的 Emacs 克隆编辑器，支持 UTF-8 与大文件 mmap 编辑。",
+  "importance": 2,
+  "popular": 35,
+  "official_site": "https://bellard.org/qemacs/",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nQEmacs（Quick Emacs）是 Fabrice Bellard 开发的小巧全功能文本编辑器。它保持了类 GNU Emacs 的快捷键风格与操作逻辑，但体积极小且启动迅速。\n\nQEmacs 具有出色的文本渲染引擎，完整支持 Unicode/UTF-8 字符集与双向排版，支持 C、XML、HTML 等语法高亮；提供直接的十六进制/二进制编辑模式、所见即所得 HTML 预览，并通过内存映射（`mmap`）技术实现了无需将整个文件载入内存即可秒级打开并编辑数 GB 超大文件的能力。\n\n## 边界与应用\n\nQEmacs 追求极低资源开销与快速响应，不包含 GNU Emacs 庞大的 Elisp 解释器与复杂扩展生态。它主要作为终端与轻量级环境下的快速查看与应急编辑工具。\n\n## 参考\n\n- [QEmacs 官方主页](https://bellard.org/qemacs/)\n- [QEmacs 使用手册](https://bellard.org/qemacs/qe-doc.html)"
+}

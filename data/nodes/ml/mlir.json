@@ -1,0 +1,45 @@
+{
+  "id": "mlir",
+  "name": "MLIR",
+  "display_primary": "MLIR",
+  "display_secondary": "Multi-Level Intermediate Representation",
+  "aliases": [
+    "Multi-Level Intermediate Representation",
+    "多层中间表示"
+  ],
+  "abbreviation": "MLIR",
+  "type": "tool",
+  "ecosystems": [
+    "llvm-ecosystem"
+  ],
+  "domains": [
+    "compilers"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "chris-lattner"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "llvm"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ir"
+    }
+  ],
+  "summary": "多层中间表示基础设施，为领域专用编译与异构计算提供可扩展方言。",
+  "importance": 4,
+  "popular": 65,
+  "official_site": "https://mlir.llvm.org",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nMLIR（Multi-Level Intermediate Representation）是 LLVM 核心子项目之一，由 Chris Lattner 和 Google Brain 团队于 2019 年发起构建。其核心宗旨是解决传统编译器 IR（如 LLVM IR）过于底层、无法有效表达领域特定高层语法与异构硬件算力图结构的问题。\n\nMLIR 提出了「方言」（Dialects）的概念机制。每种方言可以定义自有的类型系统、操作符（Operations）与属性（Attributes）。不同层次的方言（如 Tensor、Linalg、Affine、SCF 到 LLVM Dialect）可以通过可插拔的降低（Lowering）管线逐步转换并逐层优化，极大降低了为新型 AI 加速芯片、多面体计算或特定领域语言（DSL）编写编译器的工程壁垒。\n\n## 边界与应用\n\nMLIR 并非最终执行的硬件二进制指令集，而是一套通用的模块化中间表示元编译器框架。它广泛服务于 TensorFlow (XLA)、PyTorch (Torch-MLIR)、Mojo、ONNX 运行时以及各大主流芯片厂商的神经网络编译器后端。\n\n## 参考\n\n- [MLIR 官方文档与设计理念](https://mlir.llvm.org)\n- [MLIR：方言与降低管线原理](https://mlir.llvm.org/docs/Dialects/)"
+}

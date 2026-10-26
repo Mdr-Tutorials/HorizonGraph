@@ -1,0 +1,33 @@
+{
+  "id": "salvatore-sanfilippo",
+  "name": "Salvatore Sanfilippo",
+  "display_primary": "Salvatore Sanfilippo",
+  "display_secondary": "萨尔瓦托雷·桑菲利波",
+  "aliases": [
+    "萨尔瓦托雷·桑菲利波",
+    "antirez"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "database-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Redis 之父（网名 antirez），以单兵纯 C 代码支撑全球互联网缓存。",
+  "importance": 5,
+  "popular": 80,
+  "official_site": "http://antirez.com",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n萨尔瓦托雷·桑菲利波（Salvatore Sanfilippo，网络代号 antirez）是意大利著名开源程序员，以独立单兵开发高性能高并发内存数据库 Redis 享誉全球技术社区。\n\n2009 年他在为其实时 Web 分析网站寻找更高吞吐量的数据存储时，选择以 ANSI C 语言从零开发了键值存储系统 Redis。Sanfilippo 坚持极简代码美学与单线程非阻塞事件驱动模型，使 Redis 兼具亚毫秒级低延迟响应与丰富内置数据结构（字符串、哈希、跳表实现的有序集合、位图等），成为现代互联网架构中最核心的通用缓存与分布式协调事实底座。\n\n## 代表作品\n\n- **Redis**：全球最流行的开源内存数据结构存储，广泛用作数据库、缓存和流消息代理。\n- **hping**：网络安全与渗透测试领域经典的 TCP/IP 数据包组装与分析工具。\n- **Kilo**：不到 1000 行纯 C 代码构建的无依赖轻量级终端文本编辑器，成为无数开发者学习底层终端与编辑器实现的经典教材。\n\n## 参考\n\n- [antirez 个人主页与技术博客](http://antirez.com)\n- [Redis 官方项目历史](https://redis.io)"
+}

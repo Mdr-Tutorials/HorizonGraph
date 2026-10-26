@@ -1,0 +1,50 @@
+{
+  "id": "leveldb",
+  "name": "LevelDB",
+  "display_primary": "LevelDB",
+  "aliases": [
+    "LevelDB 存储引擎",
+    "leveldb"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "database-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "systems-programming"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "jeff-dean"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "sanjay-ghemawat"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "lsm-tree"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpp",
+      "context": "提供无外部重度依赖的高性能 C++ 嵌入式有序键值存储接口。"
+    }
+  ],
+  "summary": "Google 开源的高性能 LSM 树单机有序键值存储引擎库。",
+  "importance": 4,
+  "popular": 75,
+  "official_site": "https://github.com/google/leveldb",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nLevelDB 是由 Jeff Dean 和 Sanjay Ghemawat 于 2011 年编写并开源的高性能嵌入式有序键值数据库库。其设计理念基于 Google 内部 BigTable 系统的底层单机存储实现。\n\nLevelDB 完整工程化了日志结构合并树（LSM-tree，Log-Structured Merge-tree）算法。写入首先顺序追加至 WAL（预写日志），并缓存在内存跳表（MemTable）中；当内存写满时异步刷新（Flush）到磁盘生成不可变只读的 SSTable（Sorted String Table）分层文件（Level 0 到 Level N），随后通过后台多路归并压缩（Compaction）消除重复历史版本并维持全局顺序。这一设计将离散随机写入转换为高效的顺序追加，实现了极高的写入吞吐量与空间利用率。\n\n## 边界与应用\n\nLevelDB 是单机进程内嵌入式库，本身不提供网络服务层、多进程共享并发写入或复杂 SQL 查询。它被广泛用作区块链（比特币/以太坊客户端状态库）、浏览器端 IndexedDB 底层存储引擎，并直接衍生了 Meta 的 RocksDB 等现代分布式数据库存储内核。\n\n## 参考\n\n- [LevelDB 官方项目仓库](https://github.com/google/leveldb)\n- [LevelDB 实现机制与架构规范](https://github.com/google/leveldb/blob/main/doc/impl.md)"
+}

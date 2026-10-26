@@ -1,0 +1,33 @@
+{
+  "id": "bram-moolenaar",
+  "name": "Bram Moolenaar",
+  "display_primary": "Bram Moolenaar",
+  "display_secondary": "布拉姆·莫勒纳尔",
+  "aliases": [
+    "布拉姆·莫勒纳尔",
+    "Bram"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "editor-ide-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools",
+    "developer-environments"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Vim 编辑器创造者与三十年守护人，模态编辑与慈善软件的先锋。",
+  "importance": 5,
+  "popular": 80,
+  "official_site": "https://www.vim.org",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n布拉姆·莫勒纳尔（Bram Moolenaar，1961–2023）是荷兰著名自由开源软件程序员，全球广泛使用的终端文本与代码编辑器 Vim 的创造者与终身主要维护者。\n\n1988 年 Moolenaar 在 Amiga 电脑上基于早期 Stevie 编辑器着手改进，于 1991 年正式发布了 Vim（最初意为 Vi IMitation，后更名为 Vi IMproved）。在随后的三十余年间，他持续主持 Vim 核心架构演进，加入了语法高亮、分屏、多级撤销撤销树、插件生态及脚本运行时 Vim script，奠定了全行业键盘模态编辑的事实标杆。Moolenaar 还创立了慈善软件（Charityware）分发模式，通过 Vim 项目长期资助乌干达南部孤儿救助事业（ICCF Holland）。\n\n## 代表作品\n\n- **Vim**：世界上最著名的高效键盘模态文本编辑器之一，深刻塑造了现代开发者的代码编辑习惯与命令键绑定传统。\n- **A-A-P**：一个旨在简化构建、分发与维护开源软件的分布式工程管理系统。\n\n## 参考\n\n- [Vim 官方主页与纪念讣告](https://www.vim.org)\n- [ICCF Holland 乌干达儿童慈善计划](https://iccf-holland.org)"
+}

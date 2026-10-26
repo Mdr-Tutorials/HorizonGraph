@@ -1,0 +1,41 @@
+{
+  "id": "doom",
+  "name": "Doom",
+  "display_primary": "Doom",
+  "aliases": [
+    "毁灭战士",
+    "DOOM"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "graphics_gaming",
+    "game-runtime-ecosystem"
+  ],
+  "domains": [
+    "game-development",
+    "graphics"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "john-carmack"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "game-engine"
+    }
+  ],
+  "summary": "开创 3D 第一人称射击游戏与实时二叉空间分割渲染的里程碑作品。",
+  "importance": 5,
+  "popular": 90,
+  "official_site": "https://idsoftware.com",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nDoom（毁灭战士）是 id Software 于 1993 年发布、由 John Carmack 担纲主架构与核心算法编程的划时代第一人称射击游戏（FPS）。\n\nDoom 引擎在当时受限的 386/486 PC 硬件上，通过引入二叉空间分割树（BSP，Binary Space Partitioning）、非欧几里得扇区高度图、光照衰减表（Colormap）以及快速纹理映射投影算法，首次在个人计算机上实现了每秒数十帧的流畅伪三维场景实时渲染。此外，Carmack 创新性地设计了 WAD 资源包结构，奠定了游戏引擎代码与游戏资产分离、支持社区自制关卡与 Mod 的现代工业规范。\n\n## 边界与应用\n\nDoom 不仅奠定了第一人称射击游戏作为全球最核心游戏品类的地位，也是整个现代实时计算机图形渲染、多玩家局域网联机对战（Deathmatch）与游戏引擎架构的历史基石。\n\n## 参考\n\n- [Doom 经典引擎开源代码（id-Software）](https://github.com/id-Software/DOOM)\n- [Fabien Sanglard：Doom 引擎代码架构解析](https://fabiensanglard.net/doomIphone/doomClassicRenderer.php)"
+}

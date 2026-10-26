@@ -1,0 +1,48 @@
+{
+  "id": "bpg",
+  "name": "BPG",
+  "display_primary": "BPG",
+  "display_secondary": "Better Portable Graphics",
+  "aliases": [
+    "Better Portable Graphics",
+    "BPG 图像格式"
+  ],
+  "abbreviation": "BPG",
+  "type": "protocol",
+  "ecosystems": [
+    "signal-processing-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "graphics",
+    "signal-processing"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "fabrice-bellard"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "jpeg"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ffmpeg",
+      "context": "编码器参考实现依赖 FFmpeg 的 libavcodec 实施 HEVC 帧内压缩。"
+    }
+  ],
+  "summary": "基于 HEVC 帧内编码算法的高压缩率开源图像文件格式。",
+  "importance": 2,
+  "popular": 40,
+  "official_site": "https://bellard.org/bpg/",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nBPG（Better Portable Graphics）是 Fabrice Bellard 于 2014 年发布的高性能图像文件格式。其核心压缩算法直接复用了 HEVC (H.265) 视频编码标准的帧内编码（Intra-frame coding）技术，相比传统 JPEG 可在相同主观视觉质量下减少近一半文件体积。\n\nBPG 支持 8 至 14 位色彩深度、RGB/YCbCr 色彩空间、Alpha 透明通道及无损压缩模式；格式本身也支持动画序列与元数据（EXIF、ICC 配置文件、XMP）。\n\n## 边界与应用\n\nBPG 具备优异的压缩效率与画质表现，但因 HEVC 标准相关的专利授权问题，未被主流网页浏览器原生集成支持。在 Web 端通常需要配合轻量级 JavaScript / WebAssembly 解码器使用，后来部分场景逐渐被无专利顾虑的 AVIF 格式承接。\n\n## 参考\n\n- [BPG 图像格式官方规范与对比演示](https://bellard.org/bpg/)\n- [BPG 规范细节](https://bellard.org/bpg/bpg_spec.txt)"
+}

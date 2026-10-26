@@ -1,0 +1,33 @@
+{
+  "id": "jeff-dean",
+  "name": "Jeff Dean",
+  "display_primary": "Jeff Dean",
+  "display_secondary": "杰夫·迪恩",
+  "aliases": [
+    "杰夫·迪恩",
+    "Jeff Dean"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "dl-framework-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "machine-learning"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Google 首席科学家，MapReduce、BigTable 与 TensorFlow 奠基人。",
+  "importance": 5,
+  "popular": 88,
+  "official_site": "https://research.google/people/jeff/",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n杰夫·迪恩（Jeff Dean，1968年出生）是 Google 首席科学家、Google Research 与 DeepMind 领军人物，美国工程院院士，被誉为现代大规模分布式系统与人工智能计算基础设施的工程宗师。\n\n自 1999 年加入 Google 以来，Dean 与黄金搭档 Sanjay Ghemawat 共同主导研发了一系列彻底定义全球现代互联网架构的基础设施：从海量分布式文件系统 GFS、分布式数据批处理范式 MapReduce，到非关系型列存数据库 BigTable 与全球分布式事务数据库 Spanner。在深度学习时代，他联合开创了大型深度学习系统 DistBelief 以及后续主导全球开源生态的著名深度学习框架 TensorFlow，为现代工业级大模型训练与超大规模集群调度奠定了技术底座。\n\n## 代表作品\n\n- **MapReduce**：奠定现代大数据分布式批处理与并行计算核心范式。\n- **LevelDB**：经典高性能 LSM-tree 键值存储引擎。\n- **TensorFlow**：工业级端到端开源机器学习平台。\n\n## 参考\n\n- [Jeff Dean 在 Google Research 的个人主页](https://research.google/people/jeff/)\n- [ACM 软件系统奖：MapReduce 与分布式系统贡献](https://awards.acm.org)"
+}

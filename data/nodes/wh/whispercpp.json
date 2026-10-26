@@ -1,0 +1,46 @@
+{
+  "id": "whispercpp",
+  "name": "whisper.cpp",
+  "display_primary": "whisper.cpp",
+  "aliases": [
+    "whisper.cpp",
+    "whisper-cpp",
+    "Whisper.cpp"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "systems-programming"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "georgi-gerganov"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cpp"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ggml"
+    }
+  ],
+  "summary": "纯 C/C++ 实现的高性能 Whisper 语音识别本地推理引擎。",
+  "importance": 3,
+  "popular": 65,
+  "official_site": "https://github.com/ggml-org/whisper.cpp",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nwhisper.cpp 是 OpenAI Whisper 自动语音识别（ASR）模型的 C/C++ 高性能纯净移植版本，由 Georgi Gerganov 开发。项目不依赖 Python 运行时或 PyTorch 等大型框架，具备毫秒级冷启动与极低常驻内存消耗。\n\n系统基于 GGML 张量库执行 Transformer 语音编码器与文本解码器前向推理，支持从 tiny 到 large 各尺寸模型以及整型权重量化；针对 Apple Silicon 的 Core ML、ARM NEON 以及 NVIDIA GPU 提供硬件加速后端，支持麦克风流式实时转录、多语言识别与音素对齐。\n\n## 边界与应用\n\nwhisper.cpp 专精于离线语音识别推断，不提供模型训练与微调管道。广泛应用于嵌入式硬件、桌面离线输入法、视频字幕生成工具及个人隐私本地语音助手。\n\n## 参考\n\n- [whisper.cpp 官方项目仓库](https://github.com/ggml-org/whisper.cpp)\n- [OpenAI Whisper 官方论文与规范](https://github.com/openai/whisper)"
+}

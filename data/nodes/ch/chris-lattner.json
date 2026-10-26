@@ -1,0 +1,35 @@
+{
+  "id": "chris-lattner",
+  "name": "Chris Lattner",
+  "display_primary": "Chris Lattner",
+  "display_secondary": "克里斯·拉特纳",
+  "aliases": [
+    "克里斯·拉特纳",
+    "Lattner",
+    "拉特纳"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "llvm-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "compilers",
+    "programming-languages",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "当代编译器大师，LLVM、Clang、Swift、MLIR 与 Mojo 创造者。",
+  "importance": 5,
+  "popular": 85,
+  "official_site": "https://www.nondot.org/sabre/",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n克里斯·拉特纳（Chris Lattner，1978年出生）是当代计算机软件与编译器工程领域最具影响力的领军人物之一。他在现代编译器架构、程序设计语言设计与异构算力基础设施方面做出了划时代的技术突破与工程创新。\n\n拉特纳在伊利诺伊大学厄巴纳-香槟分校（UIUC）攻读硕士和博士期间，与导师 Vikram Adve 共同开创了 LLVM 基础设施项目，获得了 2012 年 ACM 软件系统奖。随后他在 Apple 公司长期担任编译器架构总监，主导开发了 Clang 编译器与 Swift 编程语言，深刻重构了苹果软硬件生态的底层工具链。此后，他曾在 Google Brain 主导设计了面向机器学习与异构硬件的多层中间表示 MLIR，在 SiFive 推动 RISC-V 编译生态，并联合创立了 Modular 公司推出高性能 AI 语言 Mojo。\n\n## 代表作品\n\n- **LLVM**：现代可复用编译器架构基石，以三段式设计与规范化中间表示（LLVM IR）统一了前端语言与底层多样化硬件后端的连接纽带。\n- **Clang**：基于 LLVM 的现代化 C/C++/Objective-C 编译器前端，以清晰架构、极快编译速度与友好的诊断报错著称。\n- **Swift**：苹果公司新一代安全、快速且交互友好的通用编程语言，全面替代 Objective-C 并确立了现代值类型与协议导向编程范式。\n- **MLIR**：多层级中间表示编译器框架，以可嵌套方言（Dialects）架构解决了跨通用 CPU、GPU、TPU 及 AI 专用加速器的图优化与降维编译难题。\n- **Mojo**：融合 Python 易用性与 C/Rust 原生系统性能的 AI 硬件原生编程语言，深度依托 MLIR 释放底层硬件算力。\n\n## 参考\n\n- [Chris Lattner 个人主页与论文索引](https://www.nondot.org/sabre/)\n- [LLVM 项目官方架构与历史](https://llvm.org)\n- [Swift 语言官方站点](https://www.swift.org)"
+}

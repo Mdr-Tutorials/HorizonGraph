@@ -21,6 +21,10 @@
       "target_id": "language"
     },
     {
+      "relation_type": "developed_by",
+      "target_id": "bjarne-stroustrup"
+    },
+    {
       "relation_type": "competes_with",
       "target_id": "rust"
     },
@@ -32,7 +36,7 @@
   "summary": "系统级静态编译语言，兼顾性能抽象与底层控制。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-10-26",
   "importance": 5,
   "popular": 97,
   "official_site": "https://isocpp.org/"

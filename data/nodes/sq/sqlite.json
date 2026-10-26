@@ -14,12 +14,16 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "richard-hipp"
     }
   ],
   "summary": "内嵌式关系数据库，零配置单文件，部署量最大的库。",
   "status": "active",
-  "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
   "importance": 4,
   "official_site": "https://www.sqlite.org"
 }

@@ -1,0 +1,53 @@
+{
+  "id": "tinycc",
+  "name": "TinyCC",
+  "display_primary": "TinyCC",
+  "display_secondary": "微型 C 语言编译器",
+  "aliases": [
+    "TCC",
+    "Tiny C Compiler",
+    "微型 C 语言编译器"
+  ],
+  "abbreviation": "TCC",
+  "type": "tool",
+  "ecosystems": [
+    "native-cpp-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "compilers",
+    "systems-programming"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "fabrice-bellard"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "compiler"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "code-generation"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "c",
+      "context": "支持 ANSI C 及大多数 C99 标准，并支持直接读取 C 源码执行。"
+    }
+  ],
+  "summary": "极速轻量的微型 C 编译器，支持即时编译与脚本式直接运行。",
+  "importance": 4,
+  "popular": 60,
+  "official_site": "https://bellard.org/tcc/",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nTinyCC（简称 TCC）是极小的 x86/x86_64/ARM 架构 C 语言编译器。它具有超快编译速度，通常生成机器代码的速度比 GCC 快一个数量级。TCC 包含完整的预处理器、单遍编译器、汇编器与链接器，生成标准 ELF/PE 可执行文件。\n\nTCC 具有独特的脚本化执行模式（通过 `-run` 参数或 `#!` 解释器行），能够将 C 语言源文件如同 Python/Shell 脚本一样直接加载到内存中即时编译并立即执行，无需中间落盘步骤；它还内嵌了 `libtcc` 库，供其他 C 程序作为 JIT 编译器在运行时动态编译执行 C 逻辑。\n\n## 边界与应用\n\nTCC 追求极简代码体积与极速编译，不进行深度全局优化与向量化循环变换，生成的二进制代码运行效率低于 GCC 或 Clang 的 `-O2`/`-O3` 产物。它主要用于快速开发调试、应急救灾环境、极小型引导器（如嵌入式 Linux 内核引导）及运行时脚本动态代码生成。\n\n## 参考\n\n- [TinyCC 官方主页](https://bellard.org/tcc/)\n- [TinyCC 文档与手册](https://bellard.org/tcc/tcc-doc.html)"
+}

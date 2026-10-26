@@ -18,12 +18,16 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "leslie-lamport"
     }
   ],
   "summary": "学术排版的标记语言，公式与论文的行业标准。",
   "status": "active",
-  "origin": "ai_draft",
-  "last_reviewed": "2026-09-06",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
   "importance": 4,
   "official_site": "https://www.latex-project.org"
 }

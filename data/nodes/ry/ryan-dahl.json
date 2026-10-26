@@ -1,0 +1,33 @@
+{
+  "id": "ryan-dahl",
+  "name": "Ryan Dahl",
+  "display_primary": "Ryan Dahl",
+  "display_secondary": "瑞安·达尔",
+  "aliases": [
+    "瑞安·达尔",
+    "Ryan Dahl"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Node.js 与 Deno 创造者，将 JS 带入现代服务端架构与系统开发。",
+  "importance": 5,
+  "popular": 82,
+  "official_site": "https://tinyclouds.org",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n瑞安·达尔（Ryan Dahl）是美国知名软件工程师与开源系统架构师，因开创了革命性的服务端 JavaScript 运行时 Node.js 以及新一代安全多语言运行时 Deno 而享誉全球。\n\n2009 年 Dahl 受到 Flickr 文件上传进度条实现的启发，构思了基于单线程非阻塞事件驱动 I/O 的网络服务器模型。他将 Google V8 引擎与底层 C 语言事件循环（后抽象为 libuv）结合打造出 Node.js，颠覆了传统多线程同步阻塞式的 Web 后端架构，掀起了前后端同构与全栈 JavaScript 的技术革命。2018 年在著名的《Design Mistakes in Node》反思演讲后，Dahl 再次从零主导开发了深度结合 Rust、TypeScript 与现代 Web 标准的原生安全运行时 Deno。\n\n## 代表作品\n\n- **Node.js**：全球应用最广泛的服务端 JavaScript 执行环境与 NPM 庞大生态基石。\n- **Deno**：采用 Rust 与 V8 构建的现代安全运行时，原生支持 TypeScript、ES 模块与 Web 标准 API。\n\n## 参考\n\n- [Ryan Dahl 个人主页与技术文集](https://tinyclouds.org)\n- [Deno 官方项目](https://deno.com)"
+}

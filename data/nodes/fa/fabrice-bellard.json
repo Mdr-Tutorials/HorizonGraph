@@ -1,0 +1,35 @@
+{
+  "id": "fabrice-bellard",
+  "name": "Fabrice Bellard",
+  "display_primary": "Fabrice Bellard",
+  "display_secondary": "法布里斯·贝拉",
+  "aliases": [
+    "法布里斯·贝拉",
+    "Bellard"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "linux-gnu-ecosystem",
+    "virtualization-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "compilers",
+    "virtualization",
+    "signal-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "全能传奇计算机科学家，FFmpeg、QEMU、TinyCC 与 QuickJS 创造者。",
+  "importance": 5,
+  "popular": 82,
+  "official_site": "https://bellard.org",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与成就\n\n法布里斯·贝拉（Fabrice Bellard）是当代计算机科学界公认最具创造力与工程效率的高产独立程序员与计算机科学家。他在系统虚拟化、音视频编解码、极简编译器设计与高精度数学计算等多个高难度领域均做出了奠基性的卓越贡献。\n\n## 核心作品与贡献\n\n- **多媒体处理基石 FFmpeg**：2000 年创立 FFmpeg 项目，奠定了现代多媒体解复用、音视频转码与流媒体处理的工业级标准与开源事实底座。\n- **系统仿真与虚拟化 QEMU**：2003 年独立设计并开源了硬件级模拟器 QEMU，开创性地实现了 TCG 动态二进制指令翻译，为 Linux KVM 硬件虚拟化乃至全球云计算底层虚拟机基础设施提供了关键支撑。\n- **微型极速编译器 TinyCC (TCC)**：构建了极致小巧且编译极速的 C 语言编译器，支持即时自举与作为类脚本直接执行 C 源文件，并提供运行时 JIT 代码生成能力。\n- **轻量 JavaScript 引擎 QuickJS**：2019 年发布单人独立开发的紧凑型完整 ES2020 规范兼容引擎，具备极低内存占用与极高规范符合度，被广泛用于嵌入式系统与跨语言宿主扩展。\n- **先锋概念探索 JSLinux 与 BPG**：在 Web 前端率先实现纯 JavaScript/Wasm 运行完整 Linux 与 PC 模拟器（JSLinux）；基于 HEVC 帧内编码技术设计了高压缩比开源图像格式 BPG。\n- **数学与圆周率算法**：1997 年提出著名的 Bellard 圆周率算法（基于 BBP 公式改进，单步速度提升约 43%）；2009 年使用单台台式计算机刷新了圆周率计算的世界纪录（2.7 万亿位）。\n\n## 参考\n\n- [Fabrice Bellard 官方主页与项目列表](https://bellard.org)\n- [FFmpeg 项目历史与介绍](https://ffmpeg.org/about.html)\n- [QEMU 官方系统架构](https://www.qemu.org)"
+}

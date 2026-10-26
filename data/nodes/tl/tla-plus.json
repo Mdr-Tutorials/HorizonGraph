@@ -17,12 +17,16 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "leslie-lamport"
     }
   ],
   "summary": "Lamport 的规格说明语言，数学化描述并发系统。",
   "status": "active",
-  "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
   "importance": 3,
   "official_site": "https://lamport.azurewebsites.net/tla/tla.html"
 }

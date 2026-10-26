@@ -1,0 +1,48 @@
+{
+  "id": "mojo",
+  "name": "Mojo",
+  "display_primary": "Mojo",
+  "aliases": [
+    "Mojo 语言",
+    "Mojo Programming Language"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "python-ecosystem",
+    "llvm-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "compilers",
+    "machine-learning"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "chris-lattner"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mlir",
+      "context": "利用 MLIR 多层方言基础设施进行异构硬件向量化与并行代码生成。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "与 Python 生态全面互操作并提供类似 Python 的现代化语法体验。"
+    }
+  ],
+  "summary": "专为 AI 算力与异构系统设计的高性能语言，兼具 Python 语法与 C 性能。",
+  "importance": 3,
+  "popular": 65,
+  "official_site": "https://www.modular.com/mojo",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nMojo 是 Modular 公司由 Chris Lattner 和 Tim Davis 领导设计的新一代系统级编程语言。其目标是在保留 Python 极其简洁优雅的动态语法体验与庞大生态互操作性的同时，达到媲美 C/C++ 与 Rust 的底层硬件执行性能与内存安全。\n\nMojo 深度建立在 MLIR 与 LLVM 基础设施之上，内置强静态类型检查、仿射所有权模型（Ownership/Borrowing）、参数化元编程以及针对现代 CPU/GPU 向量指令集（SIMD）的原生硬件并行抽象，允许开发者在无需手写 C 扩展或 CUDA 内核的情况下榨干 AI 芯片硬件算力。\n\n## 边界与应用\n\nMojo 致力于解决 AI 工程领域「模型原型用 Python 编写，生产部署需用 C++/CUDA 重写」的两难双语言困境。目前语言与工具链仍处于活跃迭代演进中，在 Modular 的 MAX 推理引擎及高性能计算领域获得快速应用。\n\n## 参考\n\n- [Mojo 官方主页与开发者指南](https://www.modular.com/mojo)\n- [Modular 文档与 Mojo 语言特性](https://docs.modular.com/mojo/)"
+}

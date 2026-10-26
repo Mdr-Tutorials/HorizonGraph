@@ -25,6 +25,14 @@
       "target_id": "google"
     },
     {
+      "relation_type": "developed_by",
+      "target_id": "jeff-dean"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "sanjay-ghemawat"
+    },
+    {
       "relation_type": "depends_on",
       "target_id": "cuda"
     }
@@ -32,7 +40,7 @@
   "summary": "谷歌出品的深度学习框架，生产部署生态完整。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-26",
   "importance": 3,
   "official_site": "https://www.tensorflow.org"
 }

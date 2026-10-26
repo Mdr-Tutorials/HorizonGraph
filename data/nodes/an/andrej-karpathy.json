@@ -1,0 +1,33 @@
+{
+  "id": "andrej-karpathy",
+  "name": "Andrej Karpathy",
+  "display_primary": "Andrej Karpathy",
+  "display_secondary": "安德烈·卡帕西",
+  "aliases": [
+    "安德烈·卡帕西",
+    "Karpathy"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "dl-framework-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "computer-vision"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "AI 极简纯净代码布道大师，nanoGPT、micrograd 创造者，Tesla 前 AI 总监。",
+  "importance": 4,
+  "popular": 85,
+  "official_site": "https://karpathy.ai",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n安德烈·卡帕西（Andrej Karpathy，1986年出生于捷克斯洛伐克）是当代全球人工智能与深度学习领域最具号召力与影响力的技术布道者、研究科学家与顶尖工程师。\n\n卡帕西在斯坦福大学师从李飞飞攻读博士学位期间，设计并主讲了享誉全球的计算机视觉深度学习公开课 CS231n，深刻启发了整整一代深度学习从业者。他是 OpenAI 的早期联合创始研究员之一，后受埃隆·马斯克邀请出任特斯拉人工智能与自动驾驶视觉总监（Director of AI），领导研发了基于占用网络（Occupancy Network）与纯视觉端到端自动驾驶（FSD）系统。重返开源社区后，卡帕西以崇尚「剥离复杂黑盒、追求极致通透」的教学理念，单人编写了 micrograd（100行纯 Python 自动微分引擎）、nanoGPT、llama2.c 等纯净优雅的开源教学级工程实现，成为全球 AI 开发者深入大模型底层原理的标杆教科书。\n\n## 代表作品\n\n- **nanoGPT**：极简、快速且优雅的中型 GPT 模型训练与微调基线实现。\n- **micrograd**：仅百余行纯 Python 实现的反向传播自动求导微引擎。\n- **CS231n**：斯坦福大学卷积神经网络与视觉识别公开课经典。\n\n## 参考\n\n- [Andrej Karpathy 个人官方站点](https://karpathy.ai)\n- [Karpathy GitHub 开源项目](https://github.com/karpathy)"
+}

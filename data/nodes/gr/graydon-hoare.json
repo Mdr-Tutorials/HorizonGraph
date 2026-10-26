@@ -1,0 +1,32 @@
+{
+  "id": "graydon-hoare",
+  "name": "Graydon Hoare",
+  "display_primary": "Graydon Hoare",
+  "display_secondary": "格雷登·霍尔",
+  "aliases": [
+    "格雷登·霍尔",
+    "Graydon Hoare"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "rust-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "compilers"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Rust 编程语言最初设计者，开创所有权与内存安全系统编程新时代。",
+  "importance": 4,
+  "popular": 78,
+  "official_site": "https://graydon2.dreamwidth.org",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n格雷登·霍尔（Graydon Hoare）是加拿大知名编译器工程师与程序设计语言理论家，以最初构想并设计了划时代的安全系统编程语言 Rust 而闻名于计算机界。\n\n2006 年由于住处公寓电梯控制系统的软件 Bug 导致频繁停梯爬楼梯，时任 Mozilla 工程师的 Hoare 决心设计一种兼具 C/C++ 裸机性能、同时能够在编译期完全消除野指针、数据竞争与缓冲区溢出等内存安全隐患的新语言。该语言最初命名为 Rust（取名于具强大生命力的锈菌）。2009 年 Mozilla 正式立项资助该项目以重写下一代 Servo 浏览器引擎。Hoare 设计的所有权机制、无垃圾回收运行时与静态借用检查器（Borrow Checker），彻底重塑了二十一世纪系统软件与基础设施的安全标杆。\n\n## 代表作品\n\n- **Rust 编程语言**：首个被 Linux 内核与各大工业巨头纳为一级基础设施系统开发语言的现代内存安全编译语言。\n- **Monotone**：一个先于 Git 的早期分布式版本控制系统，开创性地采用了基于 SHA-1 哈希的历史有向无环图（DAG）结构。\n\n## 参考\n\n- [Graydon Hoare 个人博客与思考录](https://graydon2.dreamwidth.org)\n- [Rust 语言发展史回顾](https://www.rust-lang.org)"
+}

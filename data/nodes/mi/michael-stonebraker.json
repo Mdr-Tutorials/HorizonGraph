@@ -1,0 +1,31 @@
+{
+  "id": "michael-stonebraker",
+  "name": "Michael Stonebraker",
+  "display_primary": "Michael Stonebraker",
+  "display_secondary": "迈克尔·斯通布雷克",
+  "aliases": [
+    "迈克尔·斯通布雷克",
+    "Stonebraker"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "图灵奖得主，现代数据库教父，PostgreSQL 与 Ingres 开创者。",
+  "importance": 5,
+  "popular": 82,
+  "official_site": "https://people.csail.mit.edu/stonebraker/",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n迈克尔·斯通布雷克（Michael Stonebraker，1943年出生）是美国顶尖计算机科学家、MIT 教授、2014 年图灵奖得主，因对现代关系型数据库系统与实践概念的开创性贡献而被公认为「数据库领域的宗师教父」。\n\n在加州大学伯克利分校任教期间，Stonebraker 领导开发了 Ingres，开创了查询重写、完整性约束与多级存储结构，证明了关系型模型在工程上的高性能可行性。随后他又主导了后继项目 Postgres（取意为 Post-Ingres），首创了面向对象关系扩展、多版本并发控制（MVCC）与自定义数据类型/运算符系统，发展成为今天被全球开发者誉为「世界上最先进开源关系数据库」的 PostgreSQL。进入 21 世纪，他又提出「One Size Does Not Fit All」理论，开创了列式数据库 C-Store（商业化为 Vertica）与内存事务数据库 H-Store（VoltDB）。\n\n## 代表作品\n\n- **PostgreSQL**：开源对象-关系型数据库系统的世界级典范。\n- **Ingres**：早期关系型数据库先驱，与 IBM System R 齐名。\n- **Vertica / C-Store**：开创现代分析型列式存储数据库先河。\n\n## 参考\n\n- [Michael Stonebraker 在 MIT CSAIL 主页](https://people.csail.mit.edu/stonebraker/)\n- [图灵奖获奖引文与采访](https://amturing.acm.org/award_winners/stonebraker_1172121.cfm)"
+}

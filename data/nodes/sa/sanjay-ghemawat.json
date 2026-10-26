@@ -1,0 +1,33 @@
+{
+  "id": "sanjay-ghemawat",
+  "name": "Sanjay Ghemawat",
+  "display_primary": "Sanjay Ghemawat",
+  "display_secondary": "桑杰·格马瓦特",
+  "aliases": [
+    "桑杰·格马瓦特",
+    "Sanjay Ghemawat"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "dl-framework-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "systems-programming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "Google 传奇系统架构大师，GFS、MapReduce 与 LevelDB 共同设计者。",
+  "importance": 5,
+  "popular": 82,
+  "official_site": "https://research.google/people/sanjay/",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n桑杰·格马瓦特（Sanjay Ghemawat，1966年出生于印度普纳）是 Google 顶级系统软件工程师、Google Fellow、美国工程院院士，也是计算机科学界最受推崇的低调系统代码巨匠之一。\n\nGhemawat 以极致清晰、严密且高效的系统软件架构设计著称。他与 Jeff Dean 合作二十余年，作为第一作者或核心架构师主导了 GFS（Google File System）、MapReduce 与 BigTable 这著名的「Google 基础设施老三驾马车」的架构与核心代码编写，并独立或主导实现了开源键值存储引擎 LevelDB 与内存分配器 TCMalloc，为分布式海量计算与高吞吐网络系统树立了工业级标杆。\n\n## 代表作品\n\n- **GFS / MapReduce / BigTable**：开启现代大数据云计算时代的分布式三座灯塔。\n- **LevelDB**：优雅高效的 LSM 树存储引擎实现，成为后续 RocksDB 等大量现代存储引擎的直接祖先。\n- **TensorFlow**：机器学习系统核心计算运行时设计。\n\n## 参考\n\n- [Sanjay Ghemawat 在 Google Research 档案](https://research.google/people/sanjay/)\n- [ACM 软件系统奖记录](https://awards.acm.org)"
+}

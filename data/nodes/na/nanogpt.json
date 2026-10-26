@@ -1,0 +1,45 @@
+{
+  "id": "nanogpt",
+  "name": "nanoGPT",
+  "display_primary": "nanoGPT",
+  "aliases": [
+    "nanoGPT",
+    "nanogpt"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "dl-framework-ecosystem"
+  ],
+  "domains": [
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "andrej-karpathy"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "python",
+      "context": "基于纯 PyTorch 与 Python 实现清晰透明的 GPT 结构与训练循环。"
+    }
+  ],
+  "summary": "极简纯净的中型 GPT 语言模型训练与微调基线实现代码库。",
+  "importance": 3,
+  "popular": 75,
+  "official_site": "https://github.com/karpathy/nanoGPT",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nnanoGPT 是由著名人工智能科学家 Andrej Karpathy 开源的极简主义生成式预训练语言模型（GPT）实现仓库。其核心代码仅由两个简短的 Python 文件组成（`model.py` 定义简洁的 Transformer 架构，`train.py` 处理完整的多卡分布式训练循环）。\n\nnanoGPT 在完全剥离冗余依赖与框架包装的同时，高度集成了现代 PyTorch 2.0 的核心编译与算子加速特性（如 `torch.compile`、FlashAttention、混合精度 `bfloat16` 等），能够以近乎最高的硬件利用率（MFU）在单台机器或消费级显卡上快速复现 GPT-2 级预训练与微调。\n\n## 边界与应用\n\nnanoGPT 专为教学、算法探索与轻量级实验设计，代码结构极致透彻，被学术界与工业界视为深入理解自回归大语言模型底层矩阵计算与训练管道的终极极简参考实现。\n\n## 参考\n\n- [nanoGPT 官方开源代码仓库](https://github.com/karpathy/nanoGPT)\n- [Karpathy：从零构建 GPT 的视频教程](https://karpathy.ai)"
+}

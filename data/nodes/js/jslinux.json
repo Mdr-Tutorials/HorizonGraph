@@ -1,0 +1,48 @@
+{
+  "id": "jslinux",
+  "name": "JSLinux",
+  "display_primary": "JSLinux",
+  "aliases": [
+    "JSLinux 虚拟机",
+    "JavaScript PC Emulator"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "virtualization-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "virtualization",
+    "systems-programming",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "fabrice-bellard"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "system-virtual-machine",
+      "context": "在浏览器端纯软件模拟完整的 x86/RISC-V PC 体系结构并引导客体内核。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wasm",
+      "context": "使用 WebAssembly 实现 x86 与 RISC-V 虚拟 CPU 及外设模拟。"
+    }
+  ],
+  "summary": "纯浏览器端运行的完整 PC 与 Linux 虚拟机模拟器。",
+  "importance": 3,
+  "popular": 55,
+  "official_site": "https://bellard.org/jslinux/",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nJSLinux 是 Fabrice Bellard 于 2011 年推出的首个在浏览器中运行完整 Linux 系统的模拟器。它以 JavaScript / WebAssembly 仿真 PC 硬件、x86、RISC-V 32/64 与 armv5te 架构 CPU、可编程中断控制器、时钟、串口以及虚拟磁盘。\n\n客体操作系统可以直接启动真实的 Linux 或 FreeBSD 内核镜像，并在浏览器中提供虚拟 VT100 终端或图形桌面（X Window），还支持虚拟网络互联与文件导入导出。\n\n## 边界与应用\n\nJSLinux 证明了纯前端语言仿真完整计算机硬件体系的可行性，被广泛用于在线操作系统教学、跨平台固件体验与隔离沙箱验证。由于在浏览器沙箱内通过纯软件解释与动态模拟执行客体代码，其性能受制于浏览器环境与单线程开销，不适用于重载生产虚拟化。\n\n## 参考\n\n- [JSLinux 在线运行环境与主页](https://bellard.org/jslinux/)\n- [JSLinux 技术说明与架构概述](https://bellard.org/jslinux/tech.html)"
+}

@@ -16,6 +16,10 @@
       "target_id": "distributed-systems"
     },
     {
+      "relation_type": "developed_by",
+      "target_id": "leslie-lamport"
+    },
+    {
       "relation_type": "part_of",
       "target_id": "consensus"
     },
@@ -27,6 +31,6 @@
   "summary": "Leslie Lamport 的共识算法，工程可实现的版本是 Raft。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-26",
   "importance": 5
 }

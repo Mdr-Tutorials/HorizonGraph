@@ -1,0 +1,32 @@
+{
+  "id": "leslie-lamport",
+  "name": "Leslie Lamport",
+  "display_primary": "Leslie Lamport",
+  "display_secondary": "莱斯利·兰伯特",
+  "aliases": [
+    "莱斯利·兰伯特",
+    "Lamport"
+  ],
+  "type": "person",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "distributed-systems",
+    "formal-methods"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "person"
+    }
+  ],
+  "summary": "图灵奖得主，分布式共识 Paxos、逻辑时钟与 LaTeX 排版系统开创者。",
+  "importance": 5,
+  "popular": 85,
+  "official_site": "https://lamport.azurewebsites.net",
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 人物生平与贡献\n\n莱斯利·兰伯特（Leslie Lamport，1941年出生于纽约）是美国著名计算机科学家、数学家，2013 年图灵奖得主，被公认为现代分布式计算与形式化方法理论的绝对宗师。\n\nLamport 首次在分布式系统中给出了因果一致性与事件偏序的数学严谨定义，提出了革命性的「逻辑时钟」（Lamport Timestamps）概念与拜占庭将军问题。他在 1998 年发表的 Paxos 算法，成为了解决不可靠网络环境中多节点分布式共识状态机的黄金公理与现代分布式数据库系统的立论之本。此外，为了方便自己撰写数学公式与科技出版物，他在 Donald Knuth 的 TeX 基础上独立设计并实现了宏排版系统 LaTeX，成为全球学术与科研界的标配工具。\n\n## 代表作品\n\n- **Paxos 算法**：分布式系统共识协议鼻祖与行业基石。\n- **LaTeX 排版系统**：全球科技论文、学术著作与数学公式排版的绝对标准。\n- **TLA+ 规格语言**：用于高并发与复杂分布式系统精确建模与模型检验（Model Checking）的形式化语言。\n\n## 参考\n\n- [Leslie Lamport 个人主页与全部论文手稿](https://lamport.azurewebsites.net)\n- [图灵奖获奖词与引文](https://amturing.acm.org/award_winners/lamport_1205376.cfm)"
+}

@@ -1,7 +1,10 @@
 {
   "id": "gguf",
   "name": "GGUF",
-  "aliases": [],
+  "aliases": [
+    "GGUF 格式",
+    "GGML Universal Format"
+  ],
   "type": "protocol",
   "ecosystems": [
     "open-source-ai-ecosystem"
@@ -14,11 +17,15 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "application-protocol"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "georgi-gerganov"
     }
   ],
   "summary": "llama.cpp 的单文件量化模型格式，本地部署标配。",
   "status": "active",
-  "origin": "ai_draft",
-  "last_reviewed": "2026-09-06",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
   "importance": 3
 }

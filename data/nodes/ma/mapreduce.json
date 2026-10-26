@@ -1,0 +1,35 @@
+{
+  "id": "mapreduce",
+  "name": "MapReduce",
+  "display_primary": "MapReduce",
+  "aliases": [
+    "MapReduce 计算模型",
+    "Map/Reduce"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "jeff-dean"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "sanjay-ghemawat"
+    }
+  ],
+  "summary": "Google 开创的大规模分布式集群并行批处理编程模型与计算范式。",
+  "importance": 5,
+  "popular": 85,
+  "status": "active",
+  "origin": "curated",
+  "last_reviewed": "2026-10-26",
+  "description": "## 机制\n\nMapReduce 是由 Jeffrey Dean 和 Sanjay Ghemawat 于 2004 年发表并确立的超大规模数据集分布式并行计算与批处理抽象模型。\n\n该模型从函数式编程的 `map` 和 `reduce` 原语中汲取灵感：计算流程分为 Map（映射切分、并行提取键值对中间产物）、Shuffle（系统自动分区、排序、聚合混洗）以及 Reduce（分组归并、并行写出最终统计结果）三个阶段。MapReduce 框架完全接管了海量商用廉价机器集群中的网络通信、数据局部性调度（计算向数据靠拢）、节点宕机容错重启与推测执行（Straggler 减速节点规避），允许普通程序员无需理解底层复杂并发即可编写出运行在数万台服务器上的分布式计算程序。\n\n## 边界与应用\n\nMapReduce 开创了人类工业界处理 PB 级海量大数据的先河，直接启发了 Apache Hadoop 生态的诞生，彻底定义了现代云计算与大数据基础设施的时代面貌。尽管后续逐步被以 Spark 为代表的内存批流一体计算引擎演进替代，其分而治之的分布式并行哲学仍是分布式系统的核心支柱。\n\n## 参考\n\n- [Dean 与 Ghemawat：MapReduce 原作论文（OSDI 2004）](https://research.google/pubs/pub62/)\n- [Google Research 论文精要](https://static.googleusercontent.com/media/research.google.com/zh-CN//archive/mapreduce-osdi04.pdf)"
+}
