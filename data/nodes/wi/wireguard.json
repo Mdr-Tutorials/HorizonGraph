@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "security-protocol"
     }
   ],
   "summary": "极简高性能的内核级 VPN 协议，只用现代加密套件。",

@@ -2,7 +2,9 @@
   "id": "saml",
   "name": "SAML",
   "aliases": [
-    "Security Assertion Markup Language"
+    "Security Assertion Markup Language",
+    "SAML 2.0",
+    "安全断言标记语言"
   ],
   "type": "protocol",
   "ecosystems": [
@@ -15,16 +17,18 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "security-protocol"
     },
     {
       "relation_type": "implements",
       "target_id": "authentication"
     }
   ],
-  "summary": "企业 SSO 的 XML 断言协议，政企场景常青。",
+  "summary": "在身份提供商与服务提供商之间交换 XML 认证与授权断言的标准。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 3
+  "importance": 4,
+  "popular": 76,
+  "description": "SAML 2.0（Security Assertion Markup Language 2.0）由 OASIS 制订，是企业级身份联邦与单点登录的核心标准。它使用基于 XML 的断言机制，在身份提供商（IdP）与服务提供商（SP）之间安全传递用户身份凭据与属性，在政企、金融与传统企业 SaaS 中广泛部署。"
 }

@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "network-architecture"
     }
   ],
   "summary": "控制面与转发面分离，网络变成可编程的。",

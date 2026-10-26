@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "application-protocol"
     }
   ],
   "summary": "IETF标准网络管理协议，基于SSH/TLS使用XML编码RPC对网络设备进行配置下发与状态监控。",

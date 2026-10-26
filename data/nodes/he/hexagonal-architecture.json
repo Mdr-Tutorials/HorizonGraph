@@ -1,0 +1,33 @@
+{
+  "id": "hexagonal-architecture",
+  "name": "Hexagonal Architecture",
+  "abbreviation": "Ports and Adapters",
+  "aliases": [
+    "六边形架构",
+    "端口与适配器架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "languages_runtimes",
+    "cloud_native"
+  ],
+  "domains": [
+    "systems-programming",
+    "distributed-systems"
+  ],
+  "abstraction_level": "theoretical",
+  "importance": 4,
+  "popular": 72,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2005-09-04",
+  "last_reviewed": "2026-10-27",
+  "summary": "通过输入输出端口与具体适配器隔离核心业务领域与外部依赖的架构。",
+  "description": "六边形架构（Hexagonal Architecture），又称端口与适配器模式（Ports and Adapters），由 Alistair Cockburn 于 2005 年提出。该架构将应用划分为内部业务领域与外部驱动世界。应用程序通过明确定义的『端口』（输入接口或驱动接口）对外暴露或请求能力，外部的具体基础设施（如 REST API、消息队列、SQL 数据库）则作为『适配器』插入对应端口，实现高可测性与松耦合。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-architecture"
+    }
+  ]
+}

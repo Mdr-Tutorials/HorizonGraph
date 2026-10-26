@@ -1,0 +1,32 @@
+{
+  "id": "lambda-architecture",
+  "name": "Lambda Architecture",
+  "aliases": [
+    "Lambda架构",
+    "批流双轨大数据架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cloud_native",
+    "ai_data_science"
+  ],
+  "domains": [
+    "data-engineering",
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "importance": 4,
+  "popular": 76,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2011-01-01",
+  "last_reviewed": "2026-10-27",
+  "summary": "同时维护全量批处理层与低延迟流处理层以平衡数据精度与时效的大数据架构。",
+  "description": "Lambda 架构由 Nathan Marz 提出，用于解决海量大数据处理中『高吞吐批处理精度』与『低延迟流式响应』难以兼得的矛盾。系统分为三层：批处理层（Batch Layer）存储不可变主数据集并周期性计算精准全局视图；速度层（Speed Layer）处理最新增量事件提供亚秒级实时结果；服务层（Serving Layer）对外统一合并两层视图响应查询。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    }
+  ]
+}

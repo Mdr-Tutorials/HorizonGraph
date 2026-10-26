@@ -23,7 +23,7 @@
     },
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "封装压缩数据、元信息与校验值的格式，可用于文件及 HTTP 内容编码。",

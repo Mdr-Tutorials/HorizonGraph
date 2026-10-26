@@ -1,0 +1,34 @@
+{
+  "id": "roce",
+  "name": "RDMA over Converged Ethernet",
+  "abbreviation": "RoCE",
+  "aliases": [
+    "基于以太网的RDMA",
+    "RoCE协议",
+    "RoCEv2"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "networking_security",
+    "ai_data_science"
+  ],
+  "domains": [
+    "networking",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "kernel_os",
+  "importance": 5,
+  "popular": 78,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2010-04-01",
+  "last_reviewed": "2026-10-27",
+  "summary": "在标准以太网与 UDP 承载上实现零拷贝直接内存访问的高性能集群通信协议。",
+  "description": "RoCE（RDMA over Converged Ethernet）是由 InfiniBand 行业协会（IBTA）制订的工业网络标准。它允许在通用标准以太网基础设施之上运行远程直接内存访问（RDMA）。主流的 RoCEv2 采用 UDP/IP 封装，依托无损以太网技术（PFC 优先级流控与 ECN 拥塞通告），实现绕过宿主机操作系统内核的纳秒级延迟与零拷贝网络内存读写，是当前大规模 GPU 智算中心与大模型并行训练集群的关键通信基础设施。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "transport-protocol"
+    }
+  ]
+}

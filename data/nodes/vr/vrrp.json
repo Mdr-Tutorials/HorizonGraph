@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "公有标准的网关冗余容错协议，将多台物理路由器虚拟为单一默认网关并在主故障时自动接管。",

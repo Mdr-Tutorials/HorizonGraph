@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "supply-chain-specification"
     }
   ],
   "summary": "以标准名称和匹配规则描述软硬件平台及版本。",

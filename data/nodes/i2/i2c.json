@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "hardware-specification"
     }
   ],
   "summary": "两线制板级总线，传感器挂载的标配。",

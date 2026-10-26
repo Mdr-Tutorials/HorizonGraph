@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "以文件表示虚拟块设备内容与元数据的磁盘格式。",

@@ -1,0 +1,36 @@
+{
+  "id": "clean-architecture",
+  "name": "Clean Architecture",
+  "aliases": [
+    "整洁架构",
+    "核心业务优先架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "languages_runtimes",
+    "cloud_native"
+  ],
+  "domains": [
+    "systems-programming",
+    "web-development"
+  ],
+  "abstraction_level": "theoretical",
+  "importance": 4,
+  "popular": 78,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2012-08-13",
+  "last_reviewed": "2026-10-27",
+  "summary": "以依赖反转为核心使业务用例独立于框架、UI与数据库的架构模式。",
+  "description": "整洁架构（Clean Architecture）由 Robert C. Martin（Uncle Bob）于 2012 年提出。该架构将系统组织为同心圆，核心为企业实体与应用用例，外围为接口适配器与外部框架。通过依赖倒置原则（Dependency Inversion Principle），所有内部代码均不依赖任何外部工具、框架、UI或数据库细节，确保业务核心具备高内聚性、可测试性与持久生命力。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "layered-architecture"
+    }
+  ]
+}

@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "supply-chain-specification"
     }
   ],
   "summary": "按生态、名称和版本统一表示软件包身份的标识规范。",

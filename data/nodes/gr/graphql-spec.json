@@ -1,0 +1,37 @@
+{
+  "id": "graphql-spec",
+  "name": "GraphQL Specification",
+  "aliases": [
+    "GraphQL 规范",
+    "GraphQL 语言标准"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "cloud_native"
+  ],
+  "domains": [
+    "api-engineering",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "importance": 5,
+  "popular": 86,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2015-07-01",
+  "last_reviewed": "2026-10-27",
+  "official_site": "https://spec.graphql.org/",
+  "summary": "定义类型化数据查询语言与基于类型系统的服务端执行机制的形式化接口规范。",
+  "description": "GraphQL Specification 由 GraphQL 基金会维护，正式定义了用于 API 的查询语言规范与支持该语言的强类型系统执行模型。与 REST 预定义固定数据端点不同，GraphQL 规范客户端在单个请求中以声明方式精确索取所需的对象字段树，服务端根据严格的 Schema 与解析器（Resolver）高效执行查询或变更，彻底消除了传统移动与 Web 接口的过量拉取（Over-fetching）与多次往返请求（Under-fetching）问题。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tooling-agent-specification"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "openapi-spec"
+    }
+  ]
+}

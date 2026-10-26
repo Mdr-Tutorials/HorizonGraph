@@ -1,0 +1,32 @@
+{
+  "id": "data-mesh",
+  "name": "Data Mesh",
+  "aliases": [
+    "数据网格",
+    "去中心化数据架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cloud_native",
+    "ai_data_science"
+  ],
+  "domains": [
+    "data-engineering",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "framework_library",
+  "importance": 4,
+  "popular": 72,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2019-05-20",
+  "last_reviewed": "2026-10-27",
+  "summary": "按业务领域自治划分数据所有权并把数据作为产品向外交付的去中心化架构。",
+  "description": "Data Mesh（数据网格）由 Zhamak Dehghani 于 2019 年提出，是一种颠覆传统集中式数据仓库与数据湖的现代化去中心化数据架构范式。Data Mesh 遵循四大核心支柱：面向业务领域的分布式数据所有权、将数据作为产品（Data as a Product）、自服务数据基础设施平台以及联合计算治理体系，从根本上解决集中式数据团队由于领域认知脱节而产生的组织交付瓶颈。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    }
+  ]
+}

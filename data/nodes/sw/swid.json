@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "supply-chain-specification"
     }
   ],
   "summary": "以标准标签记录软件身份、载荷和生命周期信息。",

@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "基于Dijkstra最短路径树算法的大规模企业级内部网关链路状态路由协议。",

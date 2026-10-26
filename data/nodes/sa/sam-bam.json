@@ -10,7 +10,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "bioinformatics-format"
     }
   ],
   "summary": "以文本或二进制编码保存序列比对记录的格式。",

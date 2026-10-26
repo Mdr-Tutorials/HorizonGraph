@@ -14,7 +14,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "computer-architecture"
     },
     {
       "relation_type": "alternative_to",

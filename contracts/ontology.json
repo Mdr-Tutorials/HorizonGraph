@@ -1,113 +1,1689 @@
 {
-  "version": "0.17.0",
+  "version": "0.18.0",
   "note": "分类骨架：全部非叶子节点在此，数据平面不出现。层级用 parents 数组（多亲 DAG，一个分类可属多个上级）；锚点间元叙事为普通关系边。生效 entity_type 沿 parent 祖先解析。",
   "nodes": [
-    { "id": "meta-concept", "name": "Theory, Concept & Metric", "aliases": ["理论概念", "理论与度量"], "summary": "理论、范式与度量概念的顶层骨架。", "relations": [{ "relation_type": "governs", "target_id": "meta-architecture" }], "entity_type": ["concept", "metric"], "importance": 5 },
-    { "id": "meta-architecture", "name": "Architecture", "aliases": ["系统架构", "物理与逻辑组织"], "summary": "软硬件系统物理与逻辑组织方式的顶层骨架。", "relations": [{ "relation_type": "depends_on", "target_id": "meta-protocol" }], "entity_type": ["architecture"], "importance": 5 },
-    { "id": "meta-protocol", "name": "Protocol & Specification", "aliases": ["协议与规范"], "summary": "通信、交互与数据交换标准约定的顶层骨架。", "relations": [], "entity_type": ["protocol"], "importance": 5 },
-    { "id": "meta-organization", "name": "Organization & Person", "aliases": ["产业主体", "机构与人物"], "summary": "研发与推动技术的企业、实验室与基金会的顶层骨架。", "relations": [], "entity_type": ["organization", "person"], "importance": 5 },
-    { "id": "meta-artifact", "name": "Artifact & Product", "aliases": ["产品与实体", "工件"], "summary": "可运行软件、硬件、模型与工具的顶层骨架。", "relations": [{ "relation_type": "developed_by", "target_id": "meta-organization" }, { "relation_type": "implements", "target_id": "meta-protocol" }, { "relation_type": "implements", "target_id": "meta-architecture" }], "entity_type": ["language", "framework", "library", "tool", "model_family", "product"], "importance": 5 },
-    { "id": "theory", "name": "Theory & Paradigm", "aliases": ["理论", "理论与范式"], "summary": "理论、定理、范式与方法论概念的分类根。", "parents": ["meta-concept"], "relations": [], "entity_type": "concept", "importance": 5 },
-    { "id": "protocol", "name": "Protocol", "aliases": ["协议", "通信协议"], "summary": "通信、数据格式与接口规范的分类根。", "parents": ["meta-protocol"], "relations": [], "entity_type": "protocol", "importance": 5 },
-    { "id": "language", "name": "Programming Language", "aliases": ["编程语言", "语言"], "summary": "编程语言与 DSL 的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "language", "importance": 5 },
-    { "id": "framework", "name": "Framework", "aliases": ["框架", "应用框架"], "summary": "应用与系统框架的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "framework", "importance": 5 },
-    { "id": "library", "name": "Library", "aliases": ["库", "类库", "组件库"], "summary": "工具库、SDK 与组件的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "library", "importance": 5 },
-    { "id": "tool", "name": "Tool", "aliases": ["工具", "工具链"], "summary": "开发、内容创作、分析与运维工具的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "tool", "importance": 5 },
-    { "id": "platform", "name": "Platform & Architecture", "aliases": ["平台与体系结构", "体系结构", "执行环境"], "summary": "执行环境、虚拟机与硬件体系结构的分类根。", "parents": ["meta-architecture"], "relations": [], "entity_type": "architecture", "importance": 5 },
-    { "id": "metric", "name": "Metric", "aliases": ["度量", "指标", "性能指标"], "summary": "量化与性能指标的分类根。", "parents": ["meta-concept"], "relations": [], "entity_type": "metric", "importance": 4 },
-    { "id": "model-family", "name": "Model Family", "aliases": ["大模型", "模型族", "算法族"], "summary": "AI 大模型与算法族的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "model_family", "importance": 5 },
-    { "id": "product", "name": "Product", "aliases": ["产品", "商业产品"], "summary": "可交付软硬件、服务与资料制品的分类根。", "parents": ["meta-artifact"], "relations": [], "entity_type": "product", "importance": 4 },
-    { "id": "hardware-product", "name": "Hardware Product", "aliases": ["硬件产品"], "summary": "芯片、整机与加速卡等可采购硬件。", "parents": ["product"], "relations": [] },
-    { "id": "saas", "name": "SaaS", "aliases": ["软件即服务"], "summary": "面向终端用户的完整在线应用，按订阅交付。", "parents": ["product"], "relations": [] },
-    { "id": "maas", "name": "MaaS", "aliases": ["模型即服务", "Model as a Service"], "summary": "以 API 出售模型推理或微调，产品即模型调用本身。", "parents": ["product"], "relations": [] },
-    { "id": "textbook", "name": "Textbook", "aliases": ["教材", "教科书"], "summary": "有稳定版次、被课程广泛采用的技术书籍。", "parents": ["product"], "relations": [] },
-    { "id": "tutorial", "name": "Tutorial", "aliases": ["教程"], "summary": "官方入门或长篇系列教程，有稳定入口。", "parents": ["product"], "relations": [] },
-    { "id": "course", "name": "Course", "aliases": ["课程"], "summary": "有课时结构的系统课程。", "parents": ["product"], "relations": [] },
-    { "id": "documentation", "name": "Documentation", "aliases": ["文档", "手册"], "summary": "语言或系统的权威参考手册。", "parents": ["product"], "relations": [] },
-    { "id": "organization", "name": "Organization", "aliases": ["组织", "机构", "公司"], "summary": "公司、基金会与标准组织的分类根。", "parents": ["meta-organization"], "relations": [], "entity_type": "organization", "importance": 4 },
-    { "id": "person", "name": "Person", "aliases": ["人物"], "summary": "产业与技术人物的分类根。", "parents": ["meta-organization"], "relations": [], "entity_type": "person", "importance": 3 },
-    { "id": "transport-protocol", "name": "Transport Protocol", "aliases": ["传输协议", "传输层协议"], "summary": "传输层与端到端传输协议。", "parents": ["protocol"], "relations": [] },
-    { "id": "application-protocol", "name": "Application Protocol", "aliases": ["应用层协议"], "summary": "应用层协议与会话协议。", "parents": ["protocol"], "relations": [] },
-    { "id": "license", "name": "License", "aliases": ["许可证", "开源协议"], "summary": "软件与数据的许可文本标准，约束使用、修改与再分发。", "parents": ["protocol"], "relations": [], "importance": 3 },
-    { "id": "distributed-systems", "name": "Distributed Systems", "aliases": ["分布式系统"], "summary": "分布式系统的理论与设计域，governs 边的典型目标。", "parents": ["theory"], "relations": [] },
-    { "id": "concurrency-theory", "name": "Concurrency Theory", "aliases": ["并发理论", "并发"], "summary": "并发与并行计算理论。", "parents": ["theory"], "relations": [] },
-    { "id": "programming-paradigm", "name": "Programming Paradigm", "aliases": ["编程范式", "范式"], "summary": "编程范式与方法论。", "parents": ["theory"], "relations": [] },
-    { "id": "type-system", "name": "Type System", "aliases": ["类型系统", "类型论"], "summary": "类型系统与类型理论。", "parents": ["theory"], "relations": [] },
-    { "id": "deep-learning", "name": "Deep Learning", "aliases": ["深度学习"], "summary": "深度学习理论与方法。", "parents": ["theory"], "relations": [] },
-    { "id": "algorithm", "name": "Algorithm", "aliases": ["算法"], "summary": "解决计算问题的有限步骤与复杂度分析方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "data-structure", "name": "Data Structure", "aliases": ["数据结构"], "summary": "组织与存储数据的方式，算法效率的物质基础。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "quantitative-method", "name": "Quantitative Research Concepts", "aliases": ["量化研究概念"], "summary": "量化研究中的信号、历史模拟、验证方法与执行假设。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "quantitative-metric", "name": "Quantitative Performance Metrics", "aliases": ["量化绩效指标"], "summary": "衡量投资或交易策略表现与风险的指标。", "parents": ["metric"], "relations": [], "importance": 4 },
-    { "id": "career-concept", "name": "Career & Recruitment Concepts", "aliases": ["职业与招聘"], "summary": "职业角色、招聘流程、申请材料、录用条件与职业发展的导航入口。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "career-progression", "name": "Career Progression", "aliases": ["职业发展"], "summary": "入职适应、内部流动、绩效、晋升与职业发展路径。", "parents": ["career-concept"], "relations": [], "importance": 4 },
-    { "id": "career-role", "name": "Career Role", "aliases": ["职业岗位"], "summary": "按职责与能力分工定义的职业角色。", "parents": ["career-concept"], "relations": [], "importance": 4 },
-    { "id": "recruitment-process", "name": "Recruitment Processes & Methods", "aliases": ["招聘流程与方法"], "summary": "招聘与求职中的渠道、评估、审批及沟通方法。", "parents": ["career-concept"], "relations": [], "importance": 4 },
-    { "id": "career-material", "name": "Recruitment Materials & Evidence", "aliases": ["招聘材料与经历"], "summary": "岗位文书、候选记录及展示职业能力的材料与经历。", "parents": ["career-concept"], "relations": [], "importance": 4 },
-    { "id": "employment-terms", "name": "Employment Terms & Staffing", "aliases": ["录用条件与编制"], "summary": "招聘与任职中的人员编制、职级及薪酬概念。", "parents": ["career-concept"], "relations": [], "importance": 3 },
-    { "id": "recruitment-platform", "name": "Recruitment Platform", "aliases": ["招聘平台"], "summary": "连接求职者与招聘方、提供职位或招聘服务的产品。", "parents": ["product"], "relations": [], "importance": 4 },
-    { "id": "llm", "name": "Large Language Model", "aliases": ["大语言模型", "LLM"], "summary": "大语言模型族。", "parents": ["model-family"], "relations": [], "importance": 5 },
-    { "id": "gpu", "name": "GPU", "aliases": ["图形处理器", "GPU 硬件"], "summary": "GPU 硬件产品线，实例为 product 类型。", "parents": ["platform"], "relations": [], "entity_type": "product", "importance": 5 },
-    { "id": "virtual-machine", "name": "Virtual Machine & Runtime", "aliases": ["虚拟机", "运行时"], "summary": "虚拟机与语言运行时环境。", "parents": ["platform"], "relations": [], "importance": 4 },
-    { "id": "mathematical-foundations", "name": "Mathematical Foundations", "aliases": ["数学基础"], "summary": "线性代数、概率与数学运算的基础概念。", "parents": ["theory"], "relations": [], "importance": 5 },
-    { "id": "statistical-method", "name": "Statistical Methods", "aliases": ["统计方法"], "summary": "概率建模、参数估计与统计推断方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "machine-learning-method", "name": "Machine Learning Methods", "aliases": ["机器学习方法"], "summary": "监督、无监督学习与模型选择的具体方法。", "parents": ["theory"], "relations": [], "importance": 5 },
-    { "id": "ml-evaluation-metric", "name": "Machine Learning Evaluation Metrics", "aliases": ["机器学习评估指标"], "summary": "衡量分类、排序和视觉预测结果的指标。", "parents": ["metric"], "relations": [], "importance": 4 },
-    { "id": "os-mechanism", "name": "Operating System Mechanisms", "aliases": ["操作系统机制"], "summary": "内存、进程、调度与同步的操作系统机制。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "compiler-mechanism", "name": "Compiler & Runtime Mechanisms", "aliases": ["编译与运行时机制"], "summary": "语言分析、代码变换、链接与内存管理机制。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "data-engineering-concept", "name": "Data Engineering Concepts", "aliases": ["数据工程概念"], "summary": "数据处理时序、模式演进与质量约定。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "application-security-concept", "name": "Application Security Concepts", "aliases": ["应用安全概念"], "summary": "威胁、弱点、验证与密钥管理的应用安全概念。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "robotics-method", "name": "Robotics & Control Methods", "aliases": ["机器人与控制方法"], "summary": "机器人感知、估计、规划与反馈控制方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "digital-design-concept", "name": "Digital Circuit Design Concepts", "aliases": ["数字电路设计概念"], "summary": "器件逻辑、RTL、实现与时序分析概念。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "interaction-design-concept", "name": "Interaction Design Concepts", "aliases": ["交互设计概念"], "summary": "用户研究、交互规律、易用性与无障碍概念。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "dataset", "name": "Dataset", "aliases": ["数据集"], "summary": "发布为数据制品、用于训练或评估的数据集合。", "parents": ["product"], "relations": [], "importance": 4 },
-    { "id": "geospatial-concept", "name": "Geospatial Concepts", "aliases": ["地理空间概念"], "summary": "空间数据、坐标、分析与地球观测概念。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "medical-informatics-concept", "name": "Medical Informatics Concepts", "aliases": ["医疗信息学概念"], "summary": "临床数据、系统互操作与医学影像概念。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "bioinformatics-concept", "name": "Bioinformatics & Computational Biology Concepts", "aliases": ["生物计算概念"], "summary": "生命序列、组学数据与生物计算方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "power-energy-concept", "name": "Power & Energy Systems Concepts", "aliases": ["电力能源概念"], "summary": "电网、能量转换、储能与运行分析概念。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "analog-electronics-concept", "name": "Analog & RF Electronics Concepts", "aliases": ["模拟与射频概念"], "summary": "电路分析、模拟信号与射频设计概念。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "industrial-automation-concept", "name": "Industrial Automation Concepts", "aliases": ["工业自动化概念"], "summary": "现场控制、监控与生产信息系统概念。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "optimization-concept", "name": "Optimization & Operations Research Concepts", "aliases": ["优化与运筹概念"], "summary": "目标约束建模、最优性与求解方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "scientific-computing-concept", "name": "Scientific Computing & Engineering Concepts", "aliases": ["科学计算与工程概念"], "summary": "数值近似、几何建模与工程仿真方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "signal-processing-concept", "name": "Signal Processing Concepts", "aliases": ["信号处理概念"], "summary": "信号表示、采样、滤波与处理方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "information-theory-concept", "name": "Information & Coding Theory Concepts", "aliases": ["信息与编码理论概念"], "summary": "信息度量、编码极限与可靠传输方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "materials-chemistry-concept", "name": "Materials & Computational Chemistry Concepts", "aliases": ["材料与计算化学概念"], "summary": "材料结构性质、分子表示与物质计算方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "knowledge-representation-concept", "name": "Knowledge Representation & Reasoning Concepts", "aliases": ["知识表示与推理概念"], "summary": "知识模型、本体、逻辑与查询推理方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "interactive-graphics-concept", "name": "Interactive Graphics Concepts", "aliases": ["交互图形概念"], "summary": "二维路径、画布状态、矢量变换与图像合成。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "real-time-rendering-concept", "name": "Real-Time Rendering Concepts", "aliases": ["实时渲染概念"], "summary": "场景组织、GPU 数据、着色与逐帧绘制机制。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "game-runtime-concept", "name": "Game & Interactive Runtime Concepts", "aliases": ["游戏与交互运行时概念"], "summary": "逐帧更新、场景、输入、物理、声音与资源管理。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "animation-concept", "name": "Animation & Creative Coding Concepts", "aliases": ["动画与创意编程概念"], "summary": "动作表达、时间插值、动画组合与创意编程方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "digital-content-concept", "name": "Digital Content Production Concepts", "aliases": ["数字内容制作概念"], "summary": "建模、纹理、绑定、资产交换、优化与验证方法。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "visualization-concept", "name": "Interactive Visualization Concepts", "aliases": ["交互可视化概念"], "summary": "数据编码、图表变换、交互视图与地图图层组织。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "api-specification", "name": "API Specification", "aliases": ["API 接口规范"], "summary": "规定可调用接口、数据对象与行为语义的规范。", "parents": ["protocol"], "relations": [], "importance": 4 },
-    { "id": "graphics-asset-format", "name": "Graphics Asset Format", "aliases": ["图形资产格式"], "summary": "图形、场景、纹理与动画资产的存储交换规范。", "parents": ["protocol"], "relations": [], "importance": 4 },
-    { "id": "web-service-concept", "name": "Web Service & HTTP Application Concepts", "aliases": ["Web 服务与 HTTP 应用概念"], "summary": "路由、中间件、消息语义、表示、状态与请求防护。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "edge-runtime-concept", "name": "Edge & Serverless Runtime Concepts", "aliases": ["边缘与无服务器运行时概念"], "summary": "跨运行时互操作、请求存续、配置绑定与部署边界。", "parents": ["theory"], "relations": [], "importance": 4 },
-    { "id": "api-contract-concept", "name": "API Contract & Validation Concepts", "aliases": ["API 契约与校验概念"], "summary": "接口描述、类型共享、运行校验、客户端生成与契约测试。", "parents": ["theory"], "relations": [], "importance": 4 },
-    {"id":"container-concept","name":"Container Engineering Concepts","aliases":["容器工程概念"],"summary":"容器生命周期、镜像、隔离、存储、网络与交付机制。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"virtualization-concept","name":"System Virtualization Concepts","aliases":["系统虚拟化概念"],"summary":"系统虚拟机、虚拟机监控器、硬件辅助与宿主互操作机制。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"developer-environment-concept","name":"Developer Environment Concepts","aliases":["开发环境概念"],"summary":"开发工具、代码工作区、语言服务、调试与跨宿主可重复开发环境。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"software-supply-chain-concept","name":"Software Supply Chain Concepts","aliases":["软件供应链概念"],"summary":"制品来源、组成、签名、证明与验证边界。","parents":["application-security-concept"],"relations":[],"importance":4},
-    {"id":"container-specification","name":"Container & Development Environment Specifications","aliases":["容器与开发环境规范"],"summary":"容器运行、镜像分发、编排与开发环境配置规范。","parents":["protocol"],"relations":[],"importance":4},
-    {"id":"market-microstructure-concept","name":"Market Microstructure Concepts","aliases":["市场微观结构概念"],"summary":"订单簿、撮合、价格形成、流动性与交易机制。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"electronic-trading-concept","name":"Electronic Trading Concepts","aliases":["电子交易概念"],"summary":"自动化交易、订单生命周期、路由、执行与行情处理。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"low-latency-systems-concept","name":"Low-Latency Systems Concepts","aliases":["低延迟系统概念"],"summary":"关键路径、并发、内存、网络与时间测量的系统机制。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"trading-risk-concept","name":"Trading Risk & Market Governance Concepts","aliases":["交易风险与市场治理概念"],"summary":"交易准入、风险控制、市场行为、记录与监管要求。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"trading-specification","name":"Electronic Trading & Market Data Specifications","aliases":["电子交易与行情规范"],"summary":"交易消息、会话、行情数据与金融交换格式规范。","parents":["protocol"],"relations":[],"importance":4},
-    {"id":"market-metric","name":"Market & Execution Metrics","aliases":["市场与执行指标"],"summary":"衡量价格、盘口、成交执行、持仓与交易风险的指标。","parents":["metric"],"relations":[],"importance":4},
-    {"id":"agent-systems-concept","name":"Agent Systems Concepts","aliases":["智能体系统概念"],"summary":"智能体运行、上下文、状态、工具协作与执行恢复的概念。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"ai-software-engineering-concept","name":"AI-assisted Software Engineering Concepts","aliases":["AI 辅助软件工程概念"],"summary":"AI 辅助代码生成、编辑、审查与软件工程工作流的概念。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"browser-automation-concept","name":"Browser Automation Concepts","aliases":["浏览器自动化概念"],"summary":"浏览器观察、定位、动作、等待、会话与验证的机制。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"terminal-concept","name":"Terminal Engineering Concepts","aliases":["终端工程概念"],"summary":"终端仿真、TTY 与 PTY、输入输出状态及能力协商。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"command-line-concept","name":"Command-line and TUI Concepts","aliases":["命令行与文本界面概念"],"summary":"Shell 解释、命令组合、对象管道与文本交互界面。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"language-tooling-concept","name":"Language Tooling Concepts","aliases":["语言工具链概念"],"summary":"程序分析、增量处理、符号导航及编辑器语言智能。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"text-layout-concept","name":"Unicode and Text Layout Concepts","aliases":["Unicode 与文本布局概念"],"summary":"字符编码、字素边界、字形塑形、字体回退与栅格化。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"terminal-specification","name":"Terminal Specifications","aliases":["终端协议与规范"],"summary":"终端控制序列、键盘编码、图像及应用交互规范。","parents":["protocol"],"relations":[],"importance":4},
-    {"id":"desktop-interface-concept","name":"Desktop Interface and Windowing Concepts","aliases":["桌面界面与窗口系统概念"],"summary":"窗口服务、管理、合成与平台原生桌面界面的机制。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"software-measurement-concept","name":"Software Measurement Concepts","aliases":["软件度量概念"],"summary":"软件规模、测量口径、估算模型与度量解释方法。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"software-engineering-metric","name":"Software Engineering Metrics","aliases":["软件工程指标"],"summary":"软件结构、质量、测试、交付与团队过程的量化指标。","parents":["metric"],"relations":[],"importance":4},
-    {"id":"repository-analysis-concept","name":"Repository Analysis Concepts","aliases":["仓库分析概念"],"summary":"源码识别、版本历史、变更、贡献与演化分析方法。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"software-quality-concept","name":"Software Quality Concepts","aliases":["软件质量概念"],"summary":"可维护性、缺陷、重复、技术债与质量控制方法。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"software-testing-concept","name":"Software Testing Concepts","aliases":["软件测试概念"],"summary":"测试覆盖、判定、输入生成与有效性验证方法。","parents":["theory"],"relations":[],"importance":4},
-    {"id":"empirical-software-engineering-concept","name":"Empirical Software Engineering Concepts","aliases":["实证软件工程概念"],"summary":"软件工程的观察研究、实验、验证与度量解释。","parents":["theory"],"relations":[],"importance":4}
+    {
+      "id": "meta-concept",
+      "name": "Theory, Concept & Metric",
+      "aliases": [
+        "理论概念",
+        "理论与度量"
+      ],
+      "summary": "理论、范式与度量概念的顶层骨架。",
+      "relations": [
+        {
+          "relation_type": "governs",
+          "target_id": "meta-architecture"
+        }
+      ],
+      "entity_type": [
+        "concept",
+        "metric"
+      ],
+      "importance": 5
+    },
+    {
+      "id": "meta-architecture",
+      "name": "Architecture",
+      "aliases": [
+        "系统架构",
+        "物理与逻辑组织"
+      ],
+      "summary": "软硬件系统物理与逻辑组织方式的顶层骨架。",
+      "relations": [
+        {
+          "relation_type": "depends_on",
+          "target_id": "meta-protocol"
+        }
+      ],
+      "entity_type": [
+        "architecture"
+      ],
+      "importance": 5
+    },
+    {
+      "id": "meta-protocol",
+      "name": "Protocol & Specification",
+      "aliases": [
+        "协议与规范"
+      ],
+      "summary": "通信、交互与数据交换标准约定的顶层骨架。",
+      "relations": [],
+      "entity_type": [
+        "protocol"
+      ],
+      "importance": 5
+    },
+    {
+      "id": "meta-organization",
+      "name": "Organization & Person",
+      "aliases": [
+        "产业主体",
+        "机构与人物"
+      ],
+      "summary": "研发与推动技术的企业、实验室与基金会的顶层骨架。",
+      "relations": [],
+      "entity_type": [
+        "organization",
+        "person"
+      ],
+      "importance": 5
+    },
+    {
+      "id": "meta-artifact",
+      "name": "Artifact & Product",
+      "aliases": [
+        "产品与实体",
+        "工件"
+      ],
+      "summary": "可运行软件、硬件、模型与工具的顶层骨架。",
+      "relations": [
+        {
+          "relation_type": "developed_by",
+          "target_id": "meta-organization"
+        },
+        {
+          "relation_type": "implements",
+          "target_id": "meta-protocol"
+        },
+        {
+          "relation_type": "implements",
+          "target_id": "meta-architecture"
+        }
+      ],
+      "entity_type": [
+        "language",
+        "framework",
+        "library",
+        "tool",
+        "model_family",
+        "product"
+      ],
+      "importance": 5
+    },
+    {
+      "id": "theory",
+      "name": "Theory & Paradigm",
+      "aliases": [
+        "理论",
+        "理论与范式"
+      ],
+      "summary": "理论、定理、范式与方法论概念的分类根。",
+      "parents": [
+        "meta-concept"
+      ],
+      "relations": [],
+      "entity_type": "concept",
+      "importance": 5
+    },
+    {
+      "id": "protocol",
+      "name": "Communication Protocol",
+      "aliases": [
+        "通信与互联协议",
+        "通信协议",
+        "网络通信栈"
+      ],
+      "summary": "跨物理与逻辑节点的数据传输、信令路由与网络通信协议栈。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "relations": [],
+      "entity_type": "protocol",
+      "importance": 5
+    },
+    {
+      "id": "language",
+      "name": "Programming Language",
+      "aliases": [
+        "编程语言",
+        "语言"
+      ],
+      "summary": "编程语言与 DSL 的分类根。",
+      "parents": [
+        "meta-artifact"
+      ],
+      "relations": [],
+      "entity_type": "language",
+      "importance": 5
+    },
+    {
+      "id": "framework",
+      "name": "Framework",
+      "aliases": [
+        "框架",
+        "应用框架"
+      ],
+      "summary": "应用与系统框架的分类根。",
+      "parents": [
+        "meta-artifact"
+      ],
+      "relations": [],
+      "entity_type": "framework",
+      "importance": 5
+    },
+    {
+      "id": "library",
+      "name": "Library",
+      "aliases": [
+        "库",
+        "类库",
+        "组件库"
+      ],
+      "summary": "工具库、SDK 与组件的分类根。",
+      "parents": [
+        "meta-artifact"
+      ],
+      "relations": [],
+      "entity_type": "library",
+      "importance": 5
+    },
+    {
+      "id": "tool",
+      "name": "Tool",
+      "aliases": [
+        "工具",
+        "工具链"
+      ],
+      "summary": "开发、内容创作、分析与运维工具的分类根。",
+      "parents": [
+        "meta-artifact"
+      ],
+      "relations": [],
+      "entity_type": "tool",
+      "importance": 5
+    },
+    {
+      "id": "platform",
+      "name": "Platform & Architecture",
+      "aliases": [
+        "平台与体系结构",
+        "体系结构",
+        "执行环境"
+      ],
+      "summary": "执行环境、虚拟机与硬件体系结构的分类根。",
+      "parents": [
+        "meta-architecture"
+      ],
+      "relations": [],
+      "entity_type": "architecture",
+      "importance": 5
+    },
+    {
+      "id": "metric",
+      "name": "Metric",
+      "aliases": [
+        "度量",
+        "指标",
+        "性能指标"
+      ],
+      "summary": "量化与性能指标的分类根。",
+      "parents": [
+        "meta-concept"
+      ],
+      "relations": [],
+      "entity_type": "metric",
+      "importance": 4
+    },
+    {
+      "id": "model-family",
+      "name": "Model Family",
+      "aliases": [
+        "大模型",
+        "模型族",
+        "算法族"
+      ],
+      "summary": "AI 大模型与算法族的分类根。",
+      "parents": [
+        "meta-artifact"
+      ],
+      "relations": [],
+      "entity_type": "model_family",
+      "importance": 5
+    },
+    {
+      "id": "product",
+      "name": "Product",
+      "aliases": [
+        "产品",
+        "商业产品"
+      ],
+      "summary": "可交付软硬件、服务与资料制品的分类根。",
+      "parents": [
+        "meta-artifact"
+      ],
+      "relations": [],
+      "entity_type": "product",
+      "importance": 4
+    },
+    {
+      "id": "hardware-product",
+      "name": "Hardware Product",
+      "aliases": [
+        "硬件产品"
+      ],
+      "summary": "芯片、整机与加速卡等可采购硬件。",
+      "parents": [
+        "product"
+      ],
+      "relations": []
+    },
+    {
+      "id": "saas",
+      "name": "SaaS",
+      "aliases": [
+        "软件即服务"
+      ],
+      "summary": "面向终端用户的完整在线应用，按订阅交付。",
+      "parents": [
+        "product"
+      ],
+      "relations": []
+    },
+    {
+      "id": "maas",
+      "name": "MaaS",
+      "aliases": [
+        "模型即服务",
+        "Model as a Service"
+      ],
+      "summary": "以 API 出售模型推理或微调，产品即模型调用本身。",
+      "parents": [
+        "product"
+      ],
+      "relations": []
+    },
+    {
+      "id": "textbook",
+      "name": "Textbook",
+      "aliases": [
+        "教材",
+        "教科书"
+      ],
+      "summary": "有稳定版次、被课程广泛采用的技术书籍。",
+      "parents": [
+        "product"
+      ],
+      "relations": []
+    },
+    {
+      "id": "tutorial",
+      "name": "Tutorial",
+      "aliases": [
+        "教程"
+      ],
+      "summary": "官方入门或长篇系列教程，有稳定入口。",
+      "parents": [
+        "product"
+      ],
+      "relations": []
+    },
+    {
+      "id": "course",
+      "name": "Course",
+      "aliases": [
+        "课程"
+      ],
+      "summary": "有课时结构的系统课程。",
+      "parents": [
+        "product"
+      ],
+      "relations": []
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation",
+      "aliases": [
+        "文档",
+        "手册"
+      ],
+      "summary": "语言或系统的权威参考手册。",
+      "parents": [
+        "product"
+      ],
+      "relations": []
+    },
+    {
+      "id": "organization",
+      "name": "Organization",
+      "aliases": [
+        "组织",
+        "机构",
+        "公司"
+      ],
+      "summary": "公司、基金会与标准组织的分类根。",
+      "parents": [
+        "meta-organization"
+      ],
+      "relations": [],
+      "entity_type": "organization",
+      "importance": 4
+    },
+    {
+      "id": "person",
+      "name": "Person",
+      "aliases": [
+        "人物"
+      ],
+      "summary": "产业与技术人物的分类根。",
+      "parents": [
+        "meta-organization"
+      ],
+      "relations": [],
+      "entity_type": "person",
+      "importance": 3
+    },
+    {
+      "id": "transport-protocol",
+      "name": "Transport Protocol",
+      "aliases": [
+        "传输协议",
+        "传输层协议"
+      ],
+      "summary": "传输层与端到端传输协议。",
+      "parents": [
+        "protocol"
+      ],
+      "relations": []
+    },
+    {
+      "id": "application-protocol",
+      "name": "Application Protocol",
+      "aliases": [
+        "应用层协议"
+      ],
+      "summary": "应用层协议与会话协议。",
+      "parents": [
+        "protocol"
+      ],
+      "relations": []
+    },
+    {
+      "id": "license",
+      "name": "License",
+      "aliases": [
+        "许可证",
+        "开源协议"
+      ],
+      "summary": "软件与数据的许可文本标准，约束使用、修改与再分发。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "relations": [],
+      "importance": 3
+    },
+    {
+      "id": "distributed-systems",
+      "name": "Distributed Systems",
+      "aliases": [
+        "分布式系统"
+      ],
+      "summary": "分布式系统的理论与设计域，governs 边的典型目标。",
+      "parents": [
+        "theory"
+      ],
+      "relations": []
+    },
+    {
+      "id": "concurrency-theory",
+      "name": "Concurrency Theory",
+      "aliases": [
+        "并发理论",
+        "并发"
+      ],
+      "summary": "并发与并行计算理论。",
+      "parents": [
+        "theory"
+      ],
+      "relations": []
+    },
+    {
+      "id": "programming-paradigm",
+      "name": "Programming Paradigm",
+      "aliases": [
+        "编程范式",
+        "范式"
+      ],
+      "summary": "编程范式与方法论。",
+      "parents": [
+        "theory"
+      ],
+      "relations": []
+    },
+    {
+      "id": "type-system",
+      "name": "Type System",
+      "aliases": [
+        "类型系统",
+        "类型论"
+      ],
+      "summary": "类型系统与类型理论。",
+      "parents": [
+        "theory"
+      ],
+      "relations": []
+    },
+    {
+      "id": "deep-learning",
+      "name": "Deep Learning",
+      "aliases": [
+        "深度学习"
+      ],
+      "summary": "深度学习理论与方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": []
+    },
+    {
+      "id": "algorithm",
+      "name": "Algorithm",
+      "aliases": [
+        "算法"
+      ],
+      "summary": "解决计算问题的有限步骤与复杂度分析方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "data-structure",
+      "name": "Data Structure",
+      "aliases": [
+        "数据结构"
+      ],
+      "summary": "组织与存储数据的方式，算法效率的物质基础。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "quantitative-method",
+      "name": "Quantitative Research Concepts",
+      "aliases": [
+        "量化研究概念"
+      ],
+      "summary": "量化研究中的信号、历史模拟、验证方法与执行假设。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "quantitative-metric",
+      "name": "Quantitative Performance Metrics",
+      "aliases": [
+        "量化绩效指标"
+      ],
+      "summary": "衡量投资或交易策略表现与风险的指标。",
+      "parents": [
+        "metric"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "career-concept",
+      "name": "Career & Recruitment Concepts",
+      "aliases": [
+        "职业与招聘"
+      ],
+      "summary": "职业角色、招聘流程、申请材料、录用条件与职业发展的导航入口。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "career-progression",
+      "name": "Career Progression",
+      "aliases": [
+        "职业发展"
+      ],
+      "summary": "入职适应、内部流动、绩效、晋升与职业发展路径。",
+      "parents": [
+        "career-concept"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "career-role",
+      "name": "Career Role",
+      "aliases": [
+        "职业岗位"
+      ],
+      "summary": "按职责与能力分工定义的职业角色。",
+      "parents": [
+        "career-concept"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "recruitment-process",
+      "name": "Recruitment Processes & Methods",
+      "aliases": [
+        "招聘流程与方法"
+      ],
+      "summary": "招聘与求职中的渠道、评估、审批及沟通方法。",
+      "parents": [
+        "career-concept"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "career-material",
+      "name": "Recruitment Materials & Evidence",
+      "aliases": [
+        "招聘材料与经历"
+      ],
+      "summary": "岗位文书、候选记录及展示职业能力的材料与经历。",
+      "parents": [
+        "career-concept"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "employment-terms",
+      "name": "Employment Terms & Staffing",
+      "aliases": [
+        "录用条件与编制"
+      ],
+      "summary": "招聘与任职中的人员编制、职级及薪酬概念。",
+      "parents": [
+        "career-concept"
+      ],
+      "relations": [],
+      "importance": 3
+    },
+    {
+      "id": "recruitment-platform",
+      "name": "Recruitment Platform",
+      "aliases": [
+        "招聘平台"
+      ],
+      "summary": "连接求职者与招聘方、提供职位或招聘服务的产品。",
+      "parents": [
+        "product"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "llm",
+      "name": "Large Language Model",
+      "aliases": [
+        "大语言模型",
+        "LLM"
+      ],
+      "summary": "大语言模型族。",
+      "parents": [
+        "model-family"
+      ],
+      "relations": [],
+      "importance": 5
+    },
+    {
+      "id": "gpu",
+      "name": "GPU",
+      "aliases": [
+        "图形处理器",
+        "GPU 硬件"
+      ],
+      "summary": "GPU 硬件产品线，实例为 product 类型。",
+      "parents": [
+        "platform"
+      ],
+      "relations": [],
+      "entity_type": "product",
+      "importance": 5
+    },
+    {
+      "id": "virtual-machine",
+      "name": "Virtual Machine & Runtime",
+      "aliases": [
+        "虚拟机",
+        "运行时"
+      ],
+      "summary": "虚拟机与语言运行时环境。",
+      "parents": [
+        "platform"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "mathematical-foundations",
+      "name": "Mathematical Foundations",
+      "aliases": [
+        "数学基础"
+      ],
+      "summary": "线性代数、概率与数学运算的基础概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 5
+    },
+    {
+      "id": "statistical-method",
+      "name": "Statistical Methods",
+      "aliases": [
+        "统计方法"
+      ],
+      "summary": "概率建模、参数估计与统计推断方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "machine-learning-method",
+      "name": "Machine Learning Methods",
+      "aliases": [
+        "机器学习方法"
+      ],
+      "summary": "监督、无监督学习与模型选择的具体方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 5
+    },
+    {
+      "id": "ml-evaluation-metric",
+      "name": "Machine Learning Evaluation Metrics",
+      "aliases": [
+        "机器学习评估指标"
+      ],
+      "summary": "衡量分类、排序和视觉预测结果的指标。",
+      "parents": [
+        "metric"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "os-mechanism",
+      "name": "Operating System Mechanisms",
+      "aliases": [
+        "操作系统机制"
+      ],
+      "summary": "内存、进程、调度与同步的操作系统机制。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "compiler-mechanism",
+      "name": "Compiler & Runtime Mechanisms",
+      "aliases": [
+        "编译与运行时机制"
+      ],
+      "summary": "语言分析、代码变换、链接与内存管理机制。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "data-engineering-concept",
+      "name": "Data Engineering Concepts",
+      "aliases": [
+        "数据工程概念"
+      ],
+      "summary": "数据处理时序、模式演进与质量约定。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "application-security-concept",
+      "name": "Application Security Concepts",
+      "aliases": [
+        "应用安全概念"
+      ],
+      "summary": "威胁、弱点、验证与密钥管理的应用安全概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "robotics-method",
+      "name": "Robotics & Control Methods",
+      "aliases": [
+        "机器人与控制方法"
+      ],
+      "summary": "机器人感知、估计、规划与反馈控制方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "digital-design-concept",
+      "name": "Digital Circuit Design Concepts",
+      "aliases": [
+        "数字电路设计概念"
+      ],
+      "summary": "器件逻辑、RTL、实现与时序分析概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "interaction-design-concept",
+      "name": "Interaction Design Concepts",
+      "aliases": [
+        "交互设计概念"
+      ],
+      "summary": "用户研究、交互规律、易用性与无障碍概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "dataset",
+      "name": "Dataset",
+      "aliases": [
+        "数据集"
+      ],
+      "summary": "发布为数据制品、用于训练或评估的数据集合。",
+      "parents": [
+        "product"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "geospatial-concept",
+      "name": "Geospatial Concepts",
+      "aliases": [
+        "地理空间概念"
+      ],
+      "summary": "空间数据、坐标、分析与地球观测概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "medical-informatics-concept",
+      "name": "Medical Informatics Concepts",
+      "aliases": [
+        "医疗信息学概念"
+      ],
+      "summary": "临床数据、系统互操作与医学影像概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "bioinformatics-concept",
+      "name": "Bioinformatics & Computational Biology Concepts",
+      "aliases": [
+        "生物计算概念"
+      ],
+      "summary": "生命序列、组学数据与生物计算方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "power-energy-concept",
+      "name": "Power & Energy Systems Concepts",
+      "aliases": [
+        "电力能源概念"
+      ],
+      "summary": "电网、能量转换、储能与运行分析概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "analog-electronics-concept",
+      "name": "Analog & RF Electronics Concepts",
+      "aliases": [
+        "模拟与射频概念"
+      ],
+      "summary": "电路分析、模拟信号与射频设计概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "industrial-automation-concept",
+      "name": "Industrial Automation Concepts",
+      "aliases": [
+        "工业自动化概念"
+      ],
+      "summary": "现场控制、监控与生产信息系统概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "optimization-concept",
+      "name": "Optimization & Operations Research Concepts",
+      "aliases": [
+        "优化与运筹概念"
+      ],
+      "summary": "目标约束建模、最优性与求解方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "scientific-computing-concept",
+      "name": "Scientific Computing & Engineering Concepts",
+      "aliases": [
+        "科学计算与工程概念"
+      ],
+      "summary": "数值近似、几何建模与工程仿真方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "signal-processing-concept",
+      "name": "Signal Processing Concepts",
+      "aliases": [
+        "信号处理概念"
+      ],
+      "summary": "信号表示、采样、滤波与处理方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "information-theory-concept",
+      "name": "Information & Coding Theory Concepts",
+      "aliases": [
+        "信息与编码理论概念"
+      ],
+      "summary": "信息度量、编码极限与可靠传输方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "materials-chemistry-concept",
+      "name": "Materials & Computational Chemistry Concepts",
+      "aliases": [
+        "材料与计算化学概念"
+      ],
+      "summary": "材料结构性质、分子表示与物质计算方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "knowledge-representation-concept",
+      "name": "Knowledge Representation & Reasoning Concepts",
+      "aliases": [
+        "知识表示与推理概念"
+      ],
+      "summary": "知识模型、本体、逻辑与查询推理方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "interactive-graphics-concept",
+      "name": "Interactive Graphics Concepts",
+      "aliases": [
+        "交互图形概念"
+      ],
+      "summary": "二维路径、画布状态、矢量变换与图像合成。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "real-time-rendering-concept",
+      "name": "Real-Time Rendering Concepts",
+      "aliases": [
+        "实时渲染概念"
+      ],
+      "summary": "场景组织、GPU 数据、着色与逐帧绘制机制。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "game-runtime-concept",
+      "name": "Game & Interactive Runtime Concepts",
+      "aliases": [
+        "游戏与交互运行时概念"
+      ],
+      "summary": "逐帧更新、场景、输入、物理、声音与资源管理。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "animation-concept",
+      "name": "Animation & Creative Coding Concepts",
+      "aliases": [
+        "动画与创意编程概念"
+      ],
+      "summary": "动作表达、时间插值、动画组合与创意编程方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "digital-content-concept",
+      "name": "Digital Content Production Concepts",
+      "aliases": [
+        "数字内容制作概念"
+      ],
+      "summary": "建模、纹理、绑定、资产交换、优化与验证方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "visualization-concept",
+      "name": "Interactive Visualization Concepts",
+      "aliases": [
+        "交互可视化概念"
+      ],
+      "summary": "数据编码、图表变换、交互视图与地图图层组织。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "api-specification",
+      "name": "API Specification",
+      "aliases": [
+        "API 接口规范"
+      ],
+      "summary": "规定可调用接口、数据对象与行为语义的规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "graphics-asset-format",
+      "name": "Graphics Asset Format",
+      "aliases": [
+        "图形资产格式"
+      ],
+      "summary": "图形、场景、纹理与动画资产的存储交换规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "web-service-concept",
+      "name": "Web Service & HTTP Application Concepts",
+      "aliases": [
+        "Web 服务与 HTTP 应用概念"
+      ],
+      "summary": "路由、中间件、消息语义、表示、状态与请求防护。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "edge-runtime-concept",
+      "name": "Edge & Serverless Runtime Concepts",
+      "aliases": [
+        "边缘与无服务器运行时概念"
+      ],
+      "summary": "跨运行时互操作、请求存续、配置绑定与部署边界。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "api-contract-concept",
+      "name": "API Contract & Validation Concepts",
+      "aliases": [
+        "API 契约与校验概念"
+      ],
+      "summary": "接口描述、类型共享、运行校验、客户端生成与契约测试。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "container-concept",
+      "name": "Container Engineering Concepts",
+      "aliases": [
+        "容器工程概念"
+      ],
+      "summary": "容器生命周期、镜像、隔离、存储、网络与交付机制。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "virtualization-concept",
+      "name": "System Virtualization Concepts",
+      "aliases": [
+        "系统虚拟化概念"
+      ],
+      "summary": "系统虚拟机、虚拟机监控器、硬件辅助与宿主互操作机制。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "developer-environment-concept",
+      "name": "Developer Environment Concepts",
+      "aliases": [
+        "开发环境概念"
+      ],
+      "summary": "开发工具、代码工作区、语言服务、调试与跨宿主可重复开发环境。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "software-supply-chain-concept",
+      "name": "Software Supply Chain Concepts",
+      "aliases": [
+        "软件供应链概念"
+      ],
+      "summary": "制品来源、组成、签名、证明与验证边界。",
+      "parents": [
+        "application-security-concept"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "container-specification",
+      "name": "Container & Development Environment Specifications",
+      "aliases": [
+        "容器与开发环境规范"
+      ],
+      "summary": "容器运行、镜像分发、编排与开发环境配置规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "market-microstructure-concept",
+      "name": "Market Microstructure Concepts",
+      "aliases": [
+        "市场微观结构概念"
+      ],
+      "summary": "订单簿、撮合、价格形成、流动性与交易机制。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "electronic-trading-concept",
+      "name": "Electronic Trading Concepts",
+      "aliases": [
+        "电子交易概念"
+      ],
+      "summary": "自动化交易、订单生命周期、路由、执行与行情处理。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "low-latency-systems-concept",
+      "name": "Low-Latency Systems Concepts",
+      "aliases": [
+        "低延迟系统概念"
+      ],
+      "summary": "关键路径、并发、内存、网络与时间测量的系统机制。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "trading-risk-concept",
+      "name": "Trading Risk & Market Governance Concepts",
+      "aliases": [
+        "交易风险与市场治理概念"
+      ],
+      "summary": "交易准入、风险控制、市场行为、记录与监管要求。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "trading-specification",
+      "name": "Electronic Trading & Market Data Specifications",
+      "aliases": [
+        "电子交易与行情规范"
+      ],
+      "summary": "交易消息、会话、行情数据与金融交换格式规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "market-metric",
+      "name": "Market & Execution Metrics",
+      "aliases": [
+        "市场与执行指标"
+      ],
+      "summary": "衡量价格、盘口、成交执行、持仓与交易风险的指标。",
+      "parents": [
+        "metric"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "agent-systems-concept",
+      "name": "Agent Systems Concepts",
+      "aliases": [
+        "智能体系统概念"
+      ],
+      "summary": "智能体运行、上下文、状态、工具协作与执行恢复的概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "ai-software-engineering-concept",
+      "name": "AI-assisted Software Engineering Concepts",
+      "aliases": [
+        "AI 辅助软件工程概念"
+      ],
+      "summary": "AI 辅助代码生成、编辑、审查与软件工程工作流的概念。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "browser-automation-concept",
+      "name": "Browser Automation Concepts",
+      "aliases": [
+        "浏览器自动化概念"
+      ],
+      "summary": "浏览器观察、定位、动作、等待、会话与验证的机制。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "terminal-concept",
+      "name": "Terminal Engineering Concepts",
+      "aliases": [
+        "终端工程概念"
+      ],
+      "summary": "终端仿真、TTY 与 PTY、输入输出状态及能力协商。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "command-line-concept",
+      "name": "Command-line and TUI Concepts",
+      "aliases": [
+        "命令行与文本界面概念"
+      ],
+      "summary": "Shell 解释、命令组合、对象管道与文本交互界面。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "language-tooling-concept",
+      "name": "Language Tooling Concepts",
+      "aliases": [
+        "语言工具链概念"
+      ],
+      "summary": "程序分析、增量处理、符号导航及编辑器语言智能。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "text-layout-concept",
+      "name": "Unicode and Text Layout Concepts",
+      "aliases": [
+        "Unicode 与文本布局概念"
+      ],
+      "summary": "字符编码、字素边界、字形塑形、字体回退与栅格化。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "terminal-specification",
+      "name": "Terminal Specifications",
+      "aliases": [
+        "终端协议与规范"
+      ],
+      "summary": "终端控制序列、键盘编码、图像及应用交互规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "desktop-interface-concept",
+      "name": "Desktop Interface and Windowing Concepts",
+      "aliases": [
+        "桌面界面与窗口系统概念"
+      ],
+      "summary": "窗口服务、管理、合成与平台原生桌面界面的机制。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "software-measurement-concept",
+      "name": "Software Measurement Concepts",
+      "aliases": [
+        "软件度量概念"
+      ],
+      "summary": "软件规模、测量口径、估算模型与度量解释方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "software-engineering-metric",
+      "name": "Software Engineering Metrics",
+      "aliases": [
+        "软件工程指标"
+      ],
+      "summary": "软件结构、质量、测试、交付与团队过程的量化指标。",
+      "parents": [
+        "metric"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "repository-analysis-concept",
+      "name": "Repository Analysis Concepts",
+      "aliases": [
+        "仓库分析概念"
+      ],
+      "summary": "源码识别、版本历史、变更、贡献与演化分析方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "software-quality-concept",
+      "name": "Software Quality Concepts",
+      "aliases": [
+        "软件质量概念"
+      ],
+      "summary": "可维护性、缺陷、重复、技术债与质量控制方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "software-testing-concept",
+      "name": "Software Testing Concepts",
+      "aliases": [
+        "软件测试概念"
+      ],
+      "summary": "测试覆盖、判定、输入生成与有效性验证方法。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "empirical-software-engineering-concept",
+      "name": "Empirical Software Engineering Concepts",
+      "aliases": [
+        "实证软件工程概念"
+      ],
+      "summary": "软件工程的观察研究、实验、验证与度量解释。",
+      "parents": [
+        "theory"
+      ],
+      "relations": [],
+      "importance": 4
+    },
+    {
+      "id": "software-architecture",
+      "name": "Software Architecture",
+      "aliases": [
+        "软件架构",
+        "软件架构模式",
+        "应用架构"
+      ],
+      "summary": "软件系统的顶层组织模式、分层原则与代码组织结构规范。",
+      "parents": [
+        "meta-architecture"
+      ],
+      "entity_type": [
+        "architecture",
+        "concept"
+      ],
+      "importance": 5
+    },
+    {
+      "id": "distributed-architecture",
+      "name": "Distributed & Cloud Architecture",
+      "aliases": [
+        "分布式与云原生架构",
+        "分布式系统架构",
+        "云架构"
+      ],
+      "summary": "分布式节点协同、高可用、弹性扩缩与存算组织拓扑模式。",
+      "parents": [
+        "meta-architecture"
+      ],
+      "entity_type": [
+        "architecture",
+        "concept"
+      ],
+      "importance": 5
+    },
+    {
+      "id": "computer-architecture",
+      "name": "Computer Architecture",
+      "aliases": [
+        "计算机体系结构",
+        "硬件体系结构",
+        "微架构"
+      ],
+      "summary": "计算机硬件子系统、处理器微架构、内存层次与指令集执行范式。",
+      "parents": [
+        "meta-architecture"
+      ],
+      "entity_type": [
+        "architecture",
+        "concept"
+      ],
+      "importance": 5
+    },
+    {
+      "id": "network-architecture",
+      "name": "Network Architecture",
+      "aliases": [
+        "网络与系统拓扑架构",
+        "网络架构",
+        "网络拓扑"
+      ],
+      "summary": "数据中心、局域网与通信网络的物理拓扑、控制面与数据面架构。",
+      "parents": [
+        "meta-architecture"
+      ],
+      "entity_type": [
+        "architecture",
+        "concept"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "network-protocol",
+      "name": "Network & Routing Protocol",
+      "aliases": [
+        "网络与路由协议",
+        "互联网络协议",
+        "网络层协议"
+      ],
+      "summary": "网络层寻址、路由选择、分组转发与多路复用协议规范。",
+      "parents": [
+        "protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 5
+    },
+    {
+      "id": "serialization-format",
+      "name": "Serialization & Data Format",
+      "aliases": [
+        "数据交换与序列化规范",
+        "序列化格式",
+        "数据交换格式"
+      ],
+      "summary": "跨语言数据结构编码、二进制与文本序列化及数据交换模式规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 5
+    },
+    {
+      "id": "security-protocol",
+      "name": "Security & Authentication Protocol",
+      "aliases": [
+        "安全认证与密码协议",
+        "安全协议",
+        "身份认证规范"
+      ],
+      "summary": "身份凭证交换、通信加密、访问授权与密码学安全协议标准。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 5
+    },
+    {
+      "id": "hardware-specification",
+      "name": "Hardware & Bus Specification",
+      "aliases": [
+        "硬件总线与物理接口规范",
+        "硬件规范",
+        "总线协议"
+      ],
+      "summary": "芯片引脚、主机板卡总线、外设互联与高速通信物理标准规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 4
+    },
+    {
+      "id": "tooling-agent-specification",
+      "name": "Tooling & Agent Specification",
+      "aliases": [
+        "开发工具与智能体协议",
+        "智能体规范",
+        "工具交互协议"
+      ],
+      "summary": "编辑器、调试器、容器运行时及 AI 智能体上下文互联协议规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 5
+    },
+    {
+      "id": "blockchain-protocol",
+      "name": "Blockchain & Decentralized Protocol",
+      "aliases": [
+        "区块链与去中心化协议",
+        "共识与加密账本协议"
+      ],
+      "summary": "分布式点对点账本、共识机制、智能合约执行与代币交互协议。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 4
+    },
+    {
+      "id": "supply-chain-specification",
+      "name": "Software Supply Chain Specification",
+      "aliases": [
+        "软件供应链与安全规范",
+        "SBOM与安全元数据规范"
+      ],
+      "summary": "软件物料清单（SBOM）、安全通告、防篡改证明与漏洞标识规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 4
+    },
+    {
+      "id": "health-data-specification",
+      "name": "Health Informatics Specification",
+      "aliases": [
+        "医疗与健康信息规范",
+        "医学数据交换标准"
+      ],
+      "summary": "电子病历、医学影像与临床试验互操作性数据标准与服务接口。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 3
+    },
+    {
+      "id": "bioinformatics-format",
+      "name": "Bioinformatics Data Format",
+      "aliases": [
+        "生物信息数据格式",
+        "组学序列与比对规范"
+      ],
+      "summary": "基因测序读段、比对产物与变异检测数据的紧凑编码与存储规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 3
+    },
+    {
+      "id": "geospatial-specification",
+      "name": "Geospatial Specification",
+      "aliases": [
+        "地理信息与地图服务规范",
+        "地理空间数据格式"
+      ],
+      "summary": "栅格矢量瓦片、时空资产目录与空间地理要素交换标准规范。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 4
+    },
+    {
+      "id": "industrial-specification",
+      "name": "Industrial Automation Specification",
+      "aliases": [
+        "工业自动化与工控安全规范",
+        "工业制造控制标准"
+      ],
+      "summary": "工业自动化控制、现场总线通讯、功能安全与工控安全国际标准。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "entity_type": "protocol",
+      "importance": 4
+    }
   ]
 }

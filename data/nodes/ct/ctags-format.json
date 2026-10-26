@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "tooling-agent-specification"
     },
     {
       "relation_type": "uses",

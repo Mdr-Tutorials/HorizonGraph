@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "用文件头、上下文和增删行块表示文本差异。",

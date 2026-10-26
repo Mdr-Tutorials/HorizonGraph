@@ -1,0 +1,36 @@
+{
+  "id": "mptcp",
+  "name": "Multipath TCP",
+  "abbreviation": "MPTCP",
+  "aliases": [
+    "多路径TCP",
+    "MPTCP协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "networking_security"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "importance": 4,
+  "popular": 62,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2013-01-01",
+  "last_reviewed": "2026-10-27",
+  "official_site": "https://datatracker.ietf.org/doc/html/rfc8684",
+  "summary": "允许单个 TCP 连接同时跨越多个物理网络接口并行收发数据的传输层扩展协议。",
+  "description": "MPTCP（Multipath TCP，多路径传输控制协议，RFC 8684）是对标准 TCP 协议的核心扩展。它允许通信节点在单个常规 TCP 连接之下绑定并管理多条独立的底层子数据流（Subflows），充分汇聚多个不同网络接口（如智能手机同时开启的 Wi-Fi 与蜂窝数据连接）的网络带宽，并在某个链路突发中断或信号恶化时实现无缝透明切换，彻底避免常规 TCP 连接断开重连的昂贵开销。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "transport-protocol"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "tcp"
+    }
+  ]
+}

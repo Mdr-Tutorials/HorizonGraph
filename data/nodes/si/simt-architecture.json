@@ -1,0 +1,34 @@
+{
+  "id": "simt-architecture",
+  "name": "Single Instruction Multiple Threads Architecture",
+  "abbreviation": "SIMT",
+  "aliases": [
+    "SIMT架构",
+    "单指令多线程架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "graphics_gaming",
+    "ai_data_science"
+  ],
+  "domains": [
+    "digital-design",
+    "high-performance-computing",
+    "graphics"
+  ],
+  "abstraction_level": "hardware",
+  "importance": 5,
+  "popular": 80,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2006-11-08",
+  "last_reviewed": "2026-10-27",
+  "summary": "现代通用 GPU 采用的以 Warp 为单位并行调度同构指令的大规模多线程微架构。",
+  "description": "SIMT（Single Instruction Multiple Threads，单指令多线程）是 NVIDIA 为现代 GPU 计算（CUDA）提出的微架构执行范式。与传统 CPU SIMD 向量编程要求开发者手动打包向量寄存器不同，SIMT 允许程序员编写单一标量线程代码，底层硬件调度器自动将 32 个逻辑线程打包成一个 Warp（线程束），并在宽位算术核心上锁步并发执行该指令，具备极高硬件吞吐量与弹性分支处理能力。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "computer-architecture"
+    }
+  ]
+}

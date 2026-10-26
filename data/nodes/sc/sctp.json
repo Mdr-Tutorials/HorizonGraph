@@ -1,0 +1,36 @@
+{
+  "id": "sctp",
+  "name": "Stream Control Transmission Protocol",
+  "abbreviation": "SCTP",
+  "aliases": [
+    "流控制传输协议",
+    "SCTP协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "networking_security"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "importance": 4,
+  "popular": 65,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2000-10-01",
+  "last_reviewed": "2026-10-27",
+  "official_site": "https://datatracker.ietf.org/doc/html/rfc4960",
+  "summary": "提供多宿主支持与多独立有序数据流并发传输的面向连接四层传输协议。",
+  "description": "SCTP（Stream Control Transmission Protocol，流控制传输协议，RFC 4960）是 IETF 标准化的可靠面向消息传输层协议。它融合了 TCP 的端到端可靠性与 UDP 的无队头阻塞消息报文特性，原生支持多宿主绑定（Multi-homing，通信对端拥有多个 IP 地址自动容灾）以及多流独立传输（Multi-streaming，单连接内多流独立顺序交付不受彼此丢包影响），在电信通信信令（SIGTRAN/Diameter）与 WebRTC 数据通道（RTCDataChannel）中作为底座协议。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "transport-protocol"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "tcp"
+    }
+  ]
+}

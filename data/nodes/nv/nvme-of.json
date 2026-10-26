@@ -1,0 +1,38 @@
+{
+  "id": "nvme-of",
+  "name": "NVMe over Fabrics",
+  "abbreviation": "NVMe-oF",
+  "aliases": [
+    "网络结构上的非易失性内存规范",
+    "NVMe-oF协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cloud_native",
+    "hardware_iot"
+  ],
+  "domains": [
+    "databases",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "kernel_os",
+  "importance": 4,
+  "popular": 74,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2016-06-05",
+  "last_reviewed": "2026-10-27",
+  "official_site": "https://nvmexpress.org/specifications/",
+  "summary": "将 NVMe 低延迟存储指令集通过 RDMA、光纤通道或 TCP 网络直接延伸到远端存储池的规范。",
+  "description": "NVMe-oF（NVMe over Fabrics）由 NVM Express 组织制定，是将超高速 NVMe 存储协议扩展至分布式存储网络的工业标准。它允许客户端直接跨越 RoCE、InfiniBand、光纤通道或标准 TCP/IP 网络，以接近本地 PCIe 挂载的微秒级延迟执行 NVMe 读写队列与并行并发指令，使云端存算分离架构下的远端块存储能够具备比拟本地物理 SSD 的极端 I/O 吞吐能力。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-specification"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "nvme"
+    }
+  ]
+}

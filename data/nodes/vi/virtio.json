@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "hardware-specification"
     }
   ],
   "summary": "规定虚拟设备、队列和驱动协作的半虚拟化 I/O 接口。",

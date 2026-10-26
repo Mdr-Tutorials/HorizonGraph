@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "尽最大努力转发分组的网络层，不保证顺序与到达。",

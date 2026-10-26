@@ -1,0 +1,31 @@
+{
+  "id": "pipe-and-filter-architecture",
+  "name": "Pipe-and-Filter Architecture",
+  "aliases": [
+    "管道-过滤器架构",
+    "管道与过滤器"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "data-engineering"
+  ],
+  "abstraction_level": "theoretical",
+  "importance": 4,
+  "popular": 70,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "1972-01-01",
+  "last_reviewed": "2026-10-27",
+  "summary": "将数据处理分解为独立过滤器组件并通过通用管道单向流转的架构。",
+  "description": "管道-过滤器架构（Pipe-and-Filter Architecture）是一种经典的数据流处理架构风格。系统由负责数据转换处理的独立『过滤器』（Filter）和负责连接传输流的缓冲『管道』（Pipe）串联组成。每个过滤器不依赖前后组件的内部状态，仅通过标准输入输出接口处理数据流，Unix Shell 管道、音视频转码管线（FFmpeg）与编译流水线均深度采用本模式。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-architecture"
+    }
+  ]
+}

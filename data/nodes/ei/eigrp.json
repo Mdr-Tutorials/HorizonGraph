@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "思科开发的高级距离矢量路由协议，基于DUAL弥散更新算法实现无环路超快速网络收敛。",

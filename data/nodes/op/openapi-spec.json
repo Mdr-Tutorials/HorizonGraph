@@ -1,0 +1,35 @@
+{
+  "id": "openapi-spec",
+  "name": "OpenAPI Specification",
+  "abbreviation": "OAS",
+  "aliases": [
+    "OpenAPI 规范",
+    "Swagger 规范",
+    "REST API 契约规范"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "web_frontend",
+    "cloud_native"
+  ],
+  "domains": [
+    "api-engineering",
+    "web-services"
+  ],
+  "abstraction_level": "runtime_vm",
+  "importance": 5,
+  "popular": 90,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2011-08-01",
+  "last_reviewed": "2026-10-27",
+  "official_site": "https://www.openapis.org/",
+  "summary": "描述 RESTful 接口路径、参数模型、认证方式与响应 Schema 的与语言无关形式化规范。",
+  "description": "OpenAPI Specification（OAS，前身为 Swagger 规范）由 Linux 基金会旗下的 OpenAPI 倡议组织维护，是现代 Web 服务与 RESTful API 契约描述的绝对事实标准。OAS 采用 JSON 或 YAML 格式，以与编程语言无关的方式精确形式化描述服务端点、HTTP 方法、请求参数模型、响应状态码、认证策略以及基于 JSON Schema 的数据载荷结构，支撑全自动客户端 SDK 生成、API 文档交互式渲染与契约化接口自动化测试。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tooling-agent-specification"
+    }
+  ]
+}

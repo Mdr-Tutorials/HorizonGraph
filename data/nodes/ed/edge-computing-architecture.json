@@ -1,0 +1,32 @@
+{
+  "id": "edge-computing-architecture",
+  "name": "Edge Computing Architecture",
+  "aliases": [
+    "边缘计算架构",
+    "云边协同架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cloud_native",
+    "hardware_iot"
+  ],
+  "domains": [
+    "edge-computing",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "runtime_vm",
+  "importance": 4,
+  "popular": 78,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2016-01-01",
+  "last_reviewed": "2026-10-27",
+  "summary": "将计算、存储与 AI 推理能力下沉至靠近数据源头终端物理边缘的系统拓扑。",
+  "description": "边缘计算架构（Edge Computing Architecture）是一种在靠近物或数据源头的物理近端部署计算和存储资源的分布式系统架构。与将所有数据远距离回传至中心化公有云不同，边缘计算在基站、边缘网关或本地分支机构直接处理高频、敏感或低延迟请求，中心云则负责长周期大模型训练、全局策略协同与冷数据沉淀，形成『云-边-端』协同计算拓扑。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    }
+  ]
+}

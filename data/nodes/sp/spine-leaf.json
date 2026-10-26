@@ -19,7 +19,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "platform"
+      "target_id": "network-architecture"
     }
   ],
   "summary": "现代数据中心扁平两层交换架构，所有Leaf节点均连接到全部Spine节点，东西向延迟恒定。",

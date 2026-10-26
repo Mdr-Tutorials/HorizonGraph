@@ -1,0 +1,32 @@
+{
+  "id": "actor-architecture",
+  "name": "Actor Model Architecture",
+  "aliases": [
+    "Actor模型架构",
+    "Actor并发系统架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "languages_runtimes",
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems",
+    "systems-programming"
+  ],
+  "abstraction_level": "runtime_vm",
+  "importance": 4,
+  "popular": 70,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "1973-01-01",
+  "last_reviewed": "2026-10-27",
+  "summary": "以独立 Actor 为计算与状态隔离单元并通过异步消息驱动的高并发分布式架构。",
+  "description": "Actor 模型架构由 Carl Hewitt 等人于 1973 年提出，在 Erlang/OTP、Akka 及 Ray 框架中得到广泛工业实践。在 Actor 架构中，系统由成千上万个轻量级 Actor 组成。每个 Actor 独占私有内部状态，彼此之间不共享任何内存，完全通过异步消息传递进行交互。当 Actor 收到消息时，它可以改变私有状态、发送有限数量消息或动态衍生新 Actor，是构建具备极强容错韧性与水平扩展能力的分布式高并发系统基石。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    }
+  ]
+}

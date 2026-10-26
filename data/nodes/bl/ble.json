@@ -19,7 +19,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "蓝牙低功耗模式，穿戴与传感设备的主力连接。",

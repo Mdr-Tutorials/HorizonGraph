@@ -1,0 +1,38 @@
+{
+  "id": "layered-architecture",
+  "name": "Layered Architecture",
+  "abbreviation": "N-Tier",
+  "aliases": [
+    "分层架构",
+    "多层架构",
+    "N层架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cloud_native",
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "web-development"
+  ],
+  "abstraction_level": "theoretical",
+  "importance": 5,
+  "popular": 88,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "1980-01-01",
+  "last_reviewed": "2026-10-27",
+  "summary": "按职责水平划分表示层、业务逻辑层与数据持久层的软件组织模式。",
+  "description": "分层架构（Layered Architecture / N-Tier）是企业级软件系统中最通用的架构模式。该模式将系统水平划分为若干职责清晰的层级（经典如展现层 Presentation、业务逻辑层 Business Logic、持久层 Persistence 和数据库层 Database）。各层仅能向下单向调用或解耦交互，各层关注点分离，极大地提升了系统的可维护性与模块可替换性。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "monolithic-architecture"
+    }
+  ]
+}

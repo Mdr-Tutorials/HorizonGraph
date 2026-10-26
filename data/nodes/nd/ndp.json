@@ -1,0 +1,36 @@
+{
+  "id": "ndp",
+  "name": "Neighbor Discovery Protocol",
+  "abbreviation": "NDP",
+  "aliases": [
+    "邻居发现协议",
+    "NDP协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "networking_security"
+  ],
+  "domains": [
+    "networking"
+  ],
+  "abstraction_level": "kernel_os",
+  "importance": 4,
+  "popular": 64,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "1998-12-01",
+  "last_reviewed": "2026-10-27",
+  "official_site": "https://datatracker.ietf.org/doc/html/rfc4861",
+  "summary": "IPv6 节点用于确定同链路邻居链路层地址、路由重定向及无状态配置的协议。",
+  "description": "NDP（Neighbor Discovery Protocol，邻居发现协议，RFC 4861）是 IPv6 协议栈的底层核心互联协议。它通过运行于 ICMPv6 之上的邻居请求与通告报文，完全取代了 IPv4 时代基于广播广播风暴的 ARP 协议。此外，NDP 还承担了路由器发现、网络前缀发现、重复地址检测（DAD）以及无状态地址自动配置（SLAAC）等核心基础网络职能。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "network-protocol"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ipv6"
+    }
+  ]
+}

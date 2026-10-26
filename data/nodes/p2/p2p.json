@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "distributed-architecture"
     }
   ],
   "summary": "无中心分布式网络架构，网络中每个对等节点同时具备客户端与服务端的通信能力。",

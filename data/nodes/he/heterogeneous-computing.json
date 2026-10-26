@@ -14,7 +14,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "computer-architecture"
     }
   ],
   "summary": "统筹 CPU、GPU、NPU 等多种架构计算单元协同完成计算密集任务的范式。",

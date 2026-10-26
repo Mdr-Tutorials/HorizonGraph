@@ -1,0 +1,36 @@
+{
+  "id": "shared-nothing-architecture",
+  "name": "Shared-Nothing Architecture",
+  "abbreviation": "SN Architecture",
+  "aliases": [
+    "无共享架构",
+    "非共享架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "importance": 5,
+  "popular": 72,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "1986-01-01",
+  "last_reviewed": "2026-10-27",
+  "summary": "各计算节点独立拥有私有内存与存储并通过网络消息协调的无单点瓶颈架构。",
+  "description": "无共享架构（Shared-Nothing Architecture / SN）由 Michael Stonebraker 于 1986 年正式提出。在此架构中，集群中的每个独立节点拥有私有的 CPU、主内存与本地硬盘，节点间不存在任何共享硬件资源，仅通过高速网络发送消息进行协调与数据分发。该模式消除了集中式总线与共享存储的锁竞争瓶颈，是大规模并行分析型数据库（MPP）如 ClickHouse、Greenplum、Cassandra 等系统的核心基石。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "storage-compute-disaggregation"
+    }
+  ]
+}

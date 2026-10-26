@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "hardware-specification"
     }
   ],
   "summary": "从鼠标到显卡的外设统一接口标准。",

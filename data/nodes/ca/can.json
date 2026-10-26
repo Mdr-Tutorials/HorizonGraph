@@ -19,7 +19,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "hardware-specification"
     }
   ],
   "summary": "以优先级仲裁和错误检测支持控制设备交换消息的总线协议家族。",

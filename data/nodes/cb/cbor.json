@@ -1,0 +1,34 @@
+{
+  "id": "cbor",
+  "name": "Concise Binary Object Representation",
+  "abbreviation": "CBOR",
+  "aliases": [
+    "简明二进制对象表示",
+    "CBOR标准"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "networking_security",
+    "hardware_iot"
+  ],
+  "domains": [
+    "systems-programming",
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "importance": 4,
+  "popular": 70,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2013-10-01",
+  "last_reviewed": "2026-10-27",
+  "official_site": "https://cbor.io/",
+  "summary": "IETF RFC 8949 标准化、专为受限物联网设备与密码学凭证设计的紧凑二进制数据格式。",
+  "description": "CBOR（Concise Binary Object Representation，RFC 8949）是由 IETF 制订的工业级二进制序列化标准。CBOR 在设计上借鉴了 MessagePack 的优点，但更加严格地规范了规范化排序（Canonical Sorting）、极简编码开销与无模式可解析性。它被广泛选定为受限物联网环境（CoAP 协议）、现代密码安全凭证（COSE 规范）、FIDO2/WebAuthn 客户端身份断言及硬件安全令牌的核心序列化载荷格式。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "serialization-format"
+    }
+  ]
+}

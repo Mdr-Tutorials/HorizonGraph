@@ -21,7 +21,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "edge-runtime-concept"
+      "target_id": "distributed-architecture"
     }
   ],
   "summary": "由平台管理基础设施供给与弹性的应用执行和服务模型。",

@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "配合DNS64工作，允许纯IPv6网络主机透明访问公网IPv4服务器的有状态网络地址转换协议。",

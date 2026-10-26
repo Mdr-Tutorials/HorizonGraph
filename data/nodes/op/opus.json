@@ -14,7 +14,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "graphics-asset-format"
     }
   ],
   "summary": "WebRTC 默认音频编解码，低延迟与高质量兼得。",

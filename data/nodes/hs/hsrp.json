@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "思科专有的网关冗余协议，在局域网多台路由器间选举活跃与备份网关以实现网关热备切换。",

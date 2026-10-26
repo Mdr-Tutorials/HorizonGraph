@@ -19,12 +19,16 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     },
     {
       "relation_type": "implements",
       "target_id": "rdma",
       "context": "其传输体系原生提供远程直接内存访问能力。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "roce"
     }
   ],
   "summary": "面向高性能计算的低延迟交换互联，原生支持 RDMA。",

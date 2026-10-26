@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "思科开发的网络遥测协议，用于对IP会话流五元组及流量吞吐数据进行高效采集与导出分析。",

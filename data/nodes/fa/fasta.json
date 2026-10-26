@@ -8,7 +8,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "bioinformatics-format"
     }
   ],
   "summary": "以标识行和序列文本交换生物序列的格式。",

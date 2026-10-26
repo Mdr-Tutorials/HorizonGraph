@@ -22,7 +22,7 @@
     },
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "security-protocol"
     }
   ],
   "summary": "以 JSON 声明集传递信息的令牌格式，可使用签名、MAC 或加密保护。",

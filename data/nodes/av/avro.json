@@ -25,6 +25,10 @@
     {
       "relation_type": "implements",
       "target_id": "schema-evolution"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "serialization-format"
     }
   ],
   "summary": "以明确模式序列化数据，并规定读写模式解析规则。",

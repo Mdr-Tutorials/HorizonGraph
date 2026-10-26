@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "hardware-specification"
     }
   ],
   "summary": "四线制高速板级总线，屏幕与闪存常用。",

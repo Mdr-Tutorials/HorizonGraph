@@ -20,7 +20,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "web-service-concept"
+      "target_id": "software-architecture"
     },
     {
       "relation_type": "uses",

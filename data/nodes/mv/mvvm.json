@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "software-architecture"
     }
   ],
   "summary": "以视图模型绑定视图与数据，前端框架的常见骨架。",

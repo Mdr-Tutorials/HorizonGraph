@@ -3,7 +3,9 @@
   "name": "OAuth",
   "display_primary": "OAuth",
   "aliases": [
-    "OAuth 2.0"
+    "OAuth 2.0",
+    "OAuth 2.1",
+    "开放授权"
   ],
   "type": "protocol",
   "ecosystems": [
@@ -16,18 +18,19 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "security-protocol"
     },
     {
       "relation_type": "implements",
       "target_id": "authorization"
     }
   ],
-  "summary": "让应用在不拿到密码的情况下获得有限授权。",
+  "summary": "互联网通用的受限资源委托访问与令牌授权框架标准。",
   "importance": 5,
   "popular": 82,
   "official_site": "https://oauth.net/2/",
   "last_reviewed": "2026-08-30",
   "origin": "curated",
-  "status": "active"
+  "status": "active",
+  "description": "OAuth 2.0（RFC 6749）是业界通用的授权框架标准。它允许第三方应用在无须获取用户账户凭据（如密码）的前提下，通过授权服务器签发的 Access Token 获取对受保护资源的有限访问权限。OAuth 2.1 进一步整合了最佳安全实践，废弃了隐式授权（Implicit Grant）与密码模式，普及 PKCE（Proof Key for Code Exchange）。"
 }

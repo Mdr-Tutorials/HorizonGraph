@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "IEEE 802.3ad定义的控制协议，用于动态自动协商与维护两台网络设备间的端口聚合链路。",

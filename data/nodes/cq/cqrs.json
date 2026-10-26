@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "distributed-systems"
+      "target_id": "distributed-architecture"
     }
   ],
   "summary": "读写模型分离各自优化，常与事件溯源搭配使用。",

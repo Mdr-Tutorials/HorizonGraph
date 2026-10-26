@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "security-protocol"
     },
     {
       "relation_type": "part_of",

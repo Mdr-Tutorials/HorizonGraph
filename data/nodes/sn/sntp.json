@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "简化版网络时间同步协议，适用于不需要完整NTP复杂统计滤波算法的嵌入式终端时钟校准。",

@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "security-protocol"
     },
     {
       "relation_type": "extends",
@@ -30,10 +30,12 @@
       "target_id": "saml"
     }
   ],
-  "summary": "OAuth 2.0 之上的身份层，现代登录的事实标准。",
+  "summary": "基于 OAuth 2.0 构建的跨域身份认证与单点登录协议标准。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 4,
-  "official_site": "https://openid.net/developers/how-connect-works/"
+  "importance": 5,
+  "official_site": "https://openid.net/developers/how-connect-works/",
+  "popular": 88,
+  "description": "OpenID Connect（OIDC）是建立在 OAuth 2.0 授权框架之上的身份认证层协议标准。它引入了经过加密签名的 JSON Web Token（ID Token），标准化了 UserInfo 端点与客户端身份验证流程，成为现代 Web 应用、移动端 App 以及企业单点登录（SSO）的事实标准。"
 }

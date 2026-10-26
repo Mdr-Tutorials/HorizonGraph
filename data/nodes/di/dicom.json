@@ -8,7 +8,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "health-data-specification"
     }
   ],
   "summary": "规定医疗影像对象、存储与交换服务的标准。",

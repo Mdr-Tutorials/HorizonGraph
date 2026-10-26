@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "IEEE 802.1D网络协议，通过阻塞冗余交换机端口消除二层物理环路并提供链路备份。",

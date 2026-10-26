@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "software-architecture"
     }
   ],
   "summary": "集中式网络架构模式，客户端主动向具备特定服务能力的服务端发起请求并获得响应。",

@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "RFC 7348网络虚拟化叠加协议，将二层以太网帧封装在三层UDP报文中跨物理网络透传。",

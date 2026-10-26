@@ -19,7 +19,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "工作在2.4GHz ISM频段的短距离经典无线电通信标准，广泛用于移动设备间音频与数据传输。",

@@ -22,7 +22,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "digital-design-concept"
+      "target_id": "computer-architecture"
     },
     {
       "relation_type": "governs",

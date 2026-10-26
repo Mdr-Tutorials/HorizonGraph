@@ -20,7 +20,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "serialization-format"
     },
     {
       "relation_type": "developed_by",
@@ -34,6 +34,10 @@
       "relation_type": "uses",
       "target_id": "schema-evolution",
       "context": "按字段编号、保留字段及格式兼容规则管理消息 schema 的演进。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "thrift"
     }
   ],
   "summary": "描述结构化消息并生成多语言编码解析代码的格式体系。",

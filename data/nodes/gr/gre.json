@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "RFC 2784无状态点对点隧道协议，可将任意三层网络协议数据报文封装在IP报文中跨网络透传。",

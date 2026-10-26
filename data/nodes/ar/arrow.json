@@ -22,6 +22,10 @@
       "relation_type": "stewarded_by",
       "target_id": "apache-software-foundation",
       "context": "项目在 Apache 基金会框架下由对应社区与项目管理委员会治理。"
+    },
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "serialization-format"
     }
   ],
   "summary": "内存列式数据标准，零拷贝跨系统交换。",

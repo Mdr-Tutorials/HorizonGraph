@@ -21,7 +21,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "hardware-specification"
     }
   ],
   "summary": "连接处理器、GPU、网卡和存储设备的高速串行互联标准。",

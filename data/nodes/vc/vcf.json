@@ -8,7 +8,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "bioinformatics-format"
     }
   ],
   "summary": "记录参考坐标下变异、等位基因与样本信息的格式。",

@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "platform"
+      "target_id": "network-architecture"
     }
   ],
   "summary": "经典层次化园区网络设计，自顶向下分为高速核心层、策略汇聚层与终端接入层。",

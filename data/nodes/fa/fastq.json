@@ -8,7 +8,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "bioinformatics-format"
     }
   ],
   "summary": "同时存放序列和逐碱基质量信息的文本格式。",

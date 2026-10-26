@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "在二层帧头与三层包头间插入固定简短标签进行快速硬件标签交换转发的高性能承载技术。",

@@ -19,7 +19,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "security-protocol"
     }
   ],
   "summary": "基于标准TLS/SSL应用层安全协议，允许远程用户通过浏览器或轻量客户端安全访问企业内网。",

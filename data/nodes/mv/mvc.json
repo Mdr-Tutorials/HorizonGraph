@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "software-architecture"
     }
   ],
   "summary": "把数据、展示与输入控制分层的老牌 UI 架构。",

@@ -1,0 +1,34 @@
+{
+  "id": "storage-compute-disaggregation",
+  "name": "Storage-Compute Disaggregation",
+  "aliases": [
+    "存算分离架构",
+    "计算存储分离",
+    "存算解耦架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cloud_native",
+    "ai_data_science"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "databases",
+    "distributed-systems"
+  ],
+  "abstraction_level": "runtime_vm",
+  "importance": 5,
+  "popular": 80,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2014-11-12",
+  "last_reviewed": "2026-10-27",
+  "summary": "计算集群与持久化存储层独立扩缩并通过高速网络互联的云原生系统架构。",
+  "description": "存算分离架构（Storage-Compute Disaggregation）是现代云原生系统与数据基础设施的核心演进范式。传统存算一体架构下计算资源与本地磁盘强绑定，导致扩容成本高昂、资源利用率失衡。存算分离将有状态的存储底座（如对象存储 S3、分布式文件系统 JuiceFS）与无状态的计算节点完全剥离，借助 NVMe-oF 与 RDMA 高速网络互联，计算与存储层均可实现毫秒级独立弹性伸缩。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    }
+  ]
+}

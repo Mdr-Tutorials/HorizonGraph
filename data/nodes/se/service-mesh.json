@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "distributed-systems"
+      "target_id": "distributed-architecture"
     }
   ],
   "summary": "把服务间流量、重试与 mTLS 下沉到边车或 eBPF 数据面。",

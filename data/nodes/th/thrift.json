@@ -15,16 +15,18 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     },
     {
       "relation_type": "developed_by",
       "target_id": "meta"
     }
   ],
-  "summary": "Facebook 出品的跨语言 RPC 与序列化框架。",
+  "summary": "跨语言 RPC 与紧凑二进制数据序列化契约规范。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 2
+  "importance": 4,
+  "popular": 75,
+  "description": "Apache Thrift 是由 Facebook 开发并捐赠给 Apache 基金会的跨语言 RPC 通信与二进制序列化协议框架。它通过统一的接口定义语言（IDL）描述服务接口与数据结构，自动编译生成 C++、Java、Python、Go 等数十种语言的客户端与服务端代码，在微服务通信与大数据底层生态中具有广泛应用。"
 }

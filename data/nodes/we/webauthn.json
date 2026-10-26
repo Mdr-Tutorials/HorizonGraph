@@ -17,17 +17,19 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "security-protocol"
     },
     {
       "relation_type": "implements",
       "target_id": "authentication"
     }
   ],
-  "summary": "通行密钥标准，基于公钥的免密登录。",
+  "summary": "W3C 推荐的利用非对称公私钥对实现无密码与生物认证的标准。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 3,
-  "official_site": "https://www.w3.org/TR/webauthn/"
+  "importance": 5,
+  "official_site": "https://www.w3.org/TR/webauthn/",
+  "popular": 84,
+  "description": "WebAuthn（Web Authentication API）是 W3C 推荐标准，也是 FIDO2 体系的核心组件。它允许 Web 应用程序调用操作系统底层生物识别（如 Touch ID、Face ID、Windows Hello）或硬件安全密钥（如 YubiKey），利用非对称公钥密码学实现抵御钓鱼攻击的高安全免密登录（Passkeys）。"
 }

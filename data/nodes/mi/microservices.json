@@ -18,7 +18,11 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "distributed-systems"
+      "target_id": "distributed-architecture"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "monolithic-architecture"
     }
   ],
   "summary": "按业务边界拆分服务独立部署，代价是分布式复杂性。",

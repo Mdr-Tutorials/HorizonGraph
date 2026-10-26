@@ -19,7 +19,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "network-protocol"
     }
   ],
   "summary": "专为智能家居控制设计的Sub-GHz低功耗抗干扰无线Mesh网状网络通信协议标准。",

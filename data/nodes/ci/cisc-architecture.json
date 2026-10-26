@@ -1,0 +1,37 @@
+{
+  "id": "cisc-architecture",
+  "name": "Complex Instruction Set Computer Architecture",
+  "abbreviation": "CISC",
+  "aliases": [
+    "CISC架构",
+    "复杂指令集架构"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "hardware_iot",
+    "languages_runtimes"
+  ],
+  "domains": [
+    "digital-design",
+    "systems-programming"
+  ],
+  "abstraction_level": "hardware",
+  "importance": 5,
+  "popular": 85,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "1978-06-08",
+  "last_reviewed": "2026-10-27",
+  "summary": "单条指令可执行复杂内存与算术操作、追求极高代码密度的处理器设计范式。",
+  "description": "CISC（Complex Instruction Set Computer，复杂指令集计算机）架构是处理器微架构两大经典设计流派之一。在早期内存极其昂贵的时代，CISC 强调通过丰富的指令格式与多寻址模式在单条变长指令内直接完成内存加载、运算与写回，追求极高的代码密度（典型代表为 Intel x86 体系）。现代 CISC 处理器前端内部会将复杂 CISC 指令实时译码为类 RISC 的微操作（µops）并发执行。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "computer-architecture"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "risc-architecture"
+    }
+  ]
+}

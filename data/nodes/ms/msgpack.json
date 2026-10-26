@@ -1,0 +1,34 @@
+{
+  "id": "msgpack",
+  "name": "MessagePack",
+  "abbreviation": "MsgPack",
+  "aliases": [
+    "MessagePack 协议",
+    "二进制JSON协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "languages_runtimes",
+    "web_frontend"
+  ],
+  "domains": [
+    "systems-programming",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "importance": 4,
+  "popular": 72,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2008-01-01",
+  "last_reviewed": "2026-10-27",
+  "official_site": "https://msgpack.org/",
+  "summary": "保持类似 JSON 灵活表现力同时显著减小网络传输体积的紧凑型二进制序列化格式。",
+  "description": "MessagePack 是一种高效率的跨语言二进制对象序列化标准。它拥有像 JSON 一样灵活的动态键值映射与数组表达能力，但将类型标记、字符串长度和整型数值紧凑编码为变长二进制字节。无需预先编译 IDL 模式即可实现比普通 JSON 文本体积减小数倍、解析速度提升数倍的优化，在 Redis 内部缓存通信、Fluentd 日志聚合及跨语言 RPC 中广泛部署。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "serialization-format"
+    }
+  ]
+}

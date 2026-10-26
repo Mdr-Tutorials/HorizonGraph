@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "distributed-architecture"
     }
   ],
   "summary": "湖上建仓，开放表格式统一分析与 AI 负载。",

@@ -1,0 +1,38 @@
+{
+  "id": "cxl",
+  "name": "Compute Express Link",
+  "abbreviation": "CXL",
+  "aliases": [
+    "CXL 总线规范",
+    "计算快速互联"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "hardware_iot",
+    "ai_data_science"
+  ],
+  "domains": [
+    "digital-design",
+    "high-performance-computing"
+  ],
+  "abstraction_level": "hardware",
+  "importance": 5,
+  "popular": 82,
+  "status": "active",
+  "origin": "ai_draft",
+  "first_released": "2019-03-11",
+  "last_reviewed": "2026-10-27",
+  "official_site": "https://computeexpresslink.org/",
+  "summary": "构建在 PCIe 物理层之上为 CPU 与异构加速器提供缓存一致性与内存池化互联的行业规范。",
+  "description": "CXL（Compute Express Link）是由 Intel、AMD、Arm、NVIDIA 及主流云厂商联合推动的高速互连总线行业标准。CXL 复用成熟的 PCIe 物理电气特性，并在其上定义了三大动态协议复用子集：CXL.io（基础设备发现与配置）、CXL.cache（加速器无冲突低延迟访问主机 CPU 缓存）与 CXL.mem（将远端外挂扩展内存作为主机物理地址空间直接访问）。CXL 彻底打破了传统单机内存墙瓶颈，成为数据中心异构算力与内存池化（Memory Pooling）的核心互连标准。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "hardware-specification"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pcie"
+    }
+  ]
+}
