@@ -1,0 +1,50 @@
+{
+  "id": "microsoft-edge",
+  "name": "Microsoft Edge",
+  "display_primary": "Edge",
+  "display_secondary": "Microsoft Edge",
+  "aliases": [
+    "Edge 浏览器",
+    "Edge"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "web_frontend",
+    "windows-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "blink"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "v8"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "safari"
+    }
+  ],
+  "summary": "微软开发的跨平台 Web 浏览器，基于 Chromium 开源底座构建。",
+  "description": "## 演进历史与机制\n\nMicrosoft Edge 是微软开发的现代网页浏览器，于 2015 年作为 Windows 10 的默认浏览器首次亮相。早期 Edge（EdgeHTML 版本）采用从 Trident 内核分支开发的 EdgeHTML 排版引擎与 Chakra JavaScript 引擎。\n\n2018 年底，微软宣布放弃自研排版引擎，将 Edge 彻底迁移至 Chromium 开源底座。2020 年正式推出的新版 Edge 全面嵌入 Blink 渲染引擎与 V8 虚拟机，重用 Chromium 的多进程架构与扩展生态，同时融入了微软账户同步、IE 兼容模式（调用 MSHTML/Trident）与系统深度集成功能。\n\n## 参考\n\n- [Microsoft Edge 官方主页](https://www.microsoft.com/edge)\n- [Microsoft Learn：Edge 架构与开发指南](https://learn.microsoft.com/microsoft-edge/)",
+  "importance": 4,
+  "popular": 80,
+  "official_site": "https://www.microsoft.com/edge",
+  "last_reviewed": "2026-10-27",
+  "origin": "curated",
+  "status": "active"
+}

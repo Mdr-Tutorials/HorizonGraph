@@ -1,0 +1,43 @@
+{
+  "id": "gecko",
+  "name": "Gecko",
+  "display_primary": "Gecko",
+  "aliases": [
+    "Gecko 引擎"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mozilla"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dom"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "webkit"
+    }
+  ],
+  "summary": "Mozilla 开发的开源排版渲染引擎，Firefox 的核心底座。",
+  "description": "## 机制\n\nGecko 是由 Mozilla 基金会与 Mozilla 公司主导维护的开源 Web 浏览器排版引擎，最初脱胎于 Netscape Communicator 并使用 C++ 编写。Gecko 负责解析 HTML、XML、CSS 等 Web 标准内容，构建框架树（Frame Tree / Layout Engine），并通过图形后端（如 WebRender）完成图层合成与硬件加速绘制。\n\n在与 JavaScript 引擎的配合上，Gecko 深度整合 Mozilla 的 SpiderMonkey 引擎，支持即时编译（JIT）以及 WebAssembly 标准规范。\n\n## 边界与技术革新\n\nGecko 在演进过程中经历了重大架构重塑（Quantum 项目），引入了大量用 Rust 语言重写的核心组件，包括并行 CSS 样式计算引擎 Stylo 和基于 GPU 加速的渲染器 WebRender，大幅降低了主线程拥塞和内存安全风险。Gecko 坚持遵循 W3C 与 WHATWG 标准，是当今全球少数独立于 Chromium/WebKit 体系之外且保持活跃演进的独立浏览器内核之一。\n\n## 参考\n\n- [MDN：Gecko 术语与架构说明](https://developer.mozilla.org/en-US/docs/Glossary/Gecko)\n- [Mozilla Source Tree Documentation：Gecko 内部实现](https://firefox-source-docs.mozilla.org/)",
+  "importance": 5,
+  "popular": 80,
+  "official_site": "https://developer.mozilla.org/en-US/docs/Glossary/Gecko",
+  "last_reviewed": "2026-10-27",
+  "origin": "curated",
+  "status": "active"
+}

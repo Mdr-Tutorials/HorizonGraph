@@ -1,0 +1,64 @@
+{
+  "id": "chromium",
+  "name": "Chromium",
+  "display_primary": "Chromium",
+  "aliases": [
+    "Chromium 项目"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development",
+    "browser-automation"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "blink"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "v8"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "chrome",
+      "context": "Google Chrome 基于 Chromium 开源底座构建，并集成了专有功能与服务。"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "electron",
+      "context": "Electron 框架将 Chromium 渲染管线与 Node.js 运行时集成，作为跨平台桌面应用底座。"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "microsoft-edge",
+      "context": "Microsoft Edge 彻底切换至 Chromium 架构作为其底层平台。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "chrome-devtools-protocol",
+      "context": "Chromium 原生实现 CDP 协议以提供远程调试、页面检查与自动化观测能力。"
+    }
+  ],
+  "summary": "Google 主导的开源浏览器项目，现代 Web 平台与多款浏览器的通用底座。",
+  "description": "## 机制\n\nChromium 是由 Google 牵头发起的跨平台开源浏览器工程与平台项目，不仅是 Google Chrome 的上游开源代码库，也是 Microsoft Edge、Opera、Brave、Vivaldi 以及 Electron 等桌面应用框架的底层核心。\n\nChromium 的核心架构包含多进程隔离模型（主浏览器进程 Browser Process、渲染沙箱进程 Renderer Process、GPU 加速进程 GPU Process 及网络服务进程 Network Service）、自研网络栈、跨进程通信基础设施（Mojo IPC）、安全沙箱（Sandbox），以及标准调试协议 Chrome DevTools Protocol（CDP）。\n\n## 与渲染引擎和商业产品的边界\n\nChromium 不是单一的排版内核；它将排版引擎 Blink 与 JavaScript/WebAssembly 虚拟机 V8 作为子系统集成在 Renderer 进程中，并提供完整的窗口系统适配、历史记录、扩展机制与下载管理。Google Chrome 是基于 Chromium 代码附加专有编解码器、Google 服务同步、自动更新组件及 DRM（Widevine）后构建的商业发布版本。\n\n## 参考\n\n- [Chromium 官方开发者门户](https://www.chromium.org/developers/)\n- [Chromium 多进程架构设计](https://www.chromium.org/developers/design-documents/multi-process-architecture/)",
+  "importance": 5,
+  "popular": 92,
+  "official_site": "https://www.chromium.org",
+  "last_reviewed": "2026-10-27",
+  "origin": "curated",
+  "status": "active"
+}

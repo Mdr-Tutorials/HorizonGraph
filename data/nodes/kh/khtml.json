@@ -1,0 +1,46 @@
+{
+  "id": "khtml",
+  "name": "KHTML",
+  "display_primary": "KHTML",
+  "aliases": [
+    "KHTML 引擎"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "systems-programming"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dom"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "qt",
+      "context": "KHTML 基于 Qt 框架实现图形绘制、控件嵌入与事件处理。"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "webkit",
+      "context": "Apple 于 2001 年基于 KHTML 与 KJS 代码分支开发了 WebKit 引擎（WebCore 与 JavaScriptCore）。"
+    }
+  ],
+  "summary": "KDE 社区开发的开源 HTML 排版引擎，WebKit 与 Blink 的技术先祖。",
+  "description": "## 历史与血缘意义\n\nKHTML 是由开源社区 KDE 于 1998 年启动开发的 HTML 排版渲染引擎，最初用于 KDE 桌面环境自带的 Konqueror 网页浏览器与文件管理器。KHTML 采用 C++ 和 Qt 框架编写，以紧凑轻量的代码库完整支持了当时的 HTML 4.0、CSS 1/2 和 DOM 标准。\n\n2001 年，Apple 评估后选定 KHTML 和配套的 KJS（JavaScript 解释器）作为开发 Safari 浏览器的基础，由此派生出 WebCore 与 JavaScriptCore，即 WebKit 开源项目的前身。此后 Google 又从 WebKit 派生出 Blink，使得现代主流浏览器内核（WebKit、Blink）在技术血缘上均能追溯至 KHTML。\n\n## 参考\n\n- [KDE Invent：KHTML 源码归档](https://invent.kde.org/frameworks/khtml)\n- [WebKit 创立历史与 KHTML 派生说明](https://webkit.org/blog/118/webkit-open-source-project/)",
+  "importance": 3,
+  "popular": 55,
+  "official_site": "https://invent.kde.org/frameworks/khtml",
+  "last_reviewed": "2026-10-27",
+  "origin": "curated",
+  "status": "historical"
+}

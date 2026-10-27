@@ -47,6 +47,14 @@
     {
       "relation_type": "competes_with",
       "target_id": "firefox"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "microsoft-edge"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "safari"
     }
   ],
   "summary": "Google 的 Web 浏览器，提供页面运行、扩展和内置开发工具。",

@@ -1,0 +1,48 @@
+{
+  "id": "spidermonkey",
+  "name": "SpiderMonkey",
+  "display_primary": "SpiderMonkey",
+  "aliases": [
+    "SpiderMonkey 引擎"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "compilers",
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtual-machine"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mozilla"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "jit"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "garbage-collection"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "v8"
+    }
+  ],
+  "summary": "Mozilla 的 JS 与 WebAssembly 引擎，Firefox 核心。",
+  "description": "## 机制\n\nSpiderMonkey 是历史上首个 JavaScript 引擎，由 JavaScript 创造者 Brendan Eich 于 1995 年在 Netscape 通信公司开发，后由 Mozilla 基金会持续演进与维护。它是 Firefox 浏览器以及多种独立嵌入式环境的核心 JavaScript 与 WebAssembly 运行时。\n\nSpiderMonkey 采用多层 JIT 编译流水线：从解释器（Interpreter）出发，经过基准 JIT（Baseline JIT / Baseline Interpreter）快速生成代码，收集执行反馈，再由高级优化编译器（WarpMonkey / IonMonkey）进行基于类型推断和内联缓存（Inline Caches）的高性能机器码编译；若假设失效则支持反优化（Bailout）。同时支持多级垃圾收集（精确分代标记整理与并发增量 GC）。\n\n## 独立与嵌入应用\n\n除了作为 Gecko 内核的内置 JS 虚拟机外，SpiderMonkey 也被独立打包为 C++ 库供嵌入使用，如 GNOME 桌面环境的 GJS（GNOME JavaScript）和 Fastly 的 Compute@Edge 边缘无服务器计算平台。\n\n## 参考\n\n- [SpiderMonkey 官方文档站点](https://spidermonkey.dev)\n- [Mozilla Source Tree：SpiderMonkey 内部实现](https://firefox-source-docs.mozilla.org/js/index.html)",
+  "importance": 4,
+  "popular": 72,
+  "official_site": "https://spidermonkey.dev",
+  "last_reviewed": "2026-10-27",
+  "origin": "curated",
+  "status": "active"
+}

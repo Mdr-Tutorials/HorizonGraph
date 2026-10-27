@@ -1,0 +1,45 @@
+{
+  "id": "safari",
+  "name": "Safari",
+  "display_primary": "Safari",
+  "aliases": [
+    "苹果浏览器"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "web_frontend",
+    "macos-darwin-ecosystem",
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "webkit"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "javascriptcore"
+    }
+  ],
+  "summary": "Apple 官方跨平台图形界面 Web 浏览器，搭载 WebKit 内核。",
+  "description": "## 机制与特性\n\nSafari 是 Apple 公司为其 macOS、iOS、iPadOS 和 visionOS 等操作系统开发的默认网页浏览器，于 2003 年首次发布。Safari 基于 WebKit 渲染内核与 JavaScriptCore 虚拟机构建，深度适配 Apple 芯片的硬件加速（如 GPU 栅格化、低功耗硬件解码以及专用安全隔离分区）。\n\nSafari 注重隐私保护与能耗效率，原生集成了智能防跟踪（Intelligent Tracking Prevention, ITP）、隐私报告以及 iCloud 钥匙串与密码管理机制。\n\n## 平台生态边界\n\n在 iOS/iPadOS 平台上，历史上受限于苹果 App Store 审查政策，所有第三方浏览器应用（如 Chrome、Firefox）必须使用系统内建的 WebKit 框架进行页面渲染。Safari 具备与 Apple 硬件生态高度一致的手势动画、色彩管理（Display P3 广色域）和无障碍辅助能力。\n\n## 参考\n\n- [Apple 官方 Safari 介绍](https://www.apple.com/safari/)\n- [WebKit 博客与 Safari 新特性追踪](https://webkit.org/blog/)",
+  "importance": 4,
+  "popular": 85,
+  "official_site": "https://www.apple.com/safari/",
+  "last_reviewed": "2026-10-27",
+  "origin": "curated",
+  "status": "active"
+}

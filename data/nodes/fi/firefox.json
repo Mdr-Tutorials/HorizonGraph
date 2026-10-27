@@ -26,6 +26,22 @@
     {
       "relation_type": "depends_on",
       "target_id": "html"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "gecko"
+    },
+    {
+      "relation_type": "embeds",
+      "target_id": "spidermonkey"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "microsoft-edge"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "safari"
     }
   ],
   "summary": "Mozilla 的开源浏览器。",

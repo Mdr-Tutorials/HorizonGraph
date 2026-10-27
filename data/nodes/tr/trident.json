@@ -1,0 +1,41 @@
+{
+  "id": "trident",
+  "name": "Trident",
+  "display_primary": "Trident",
+  "aliases": [
+    "MSHTML",
+    "Trident 内核"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "windows-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "systems-programming"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dom"
+    }
+  ],
+  "summary": "微软经典的 Windows 浏览器排版引擎，Internet Explorer 的核心。",
+  "description": "## 历史与架构\n\nTrident（在 Windows 内部注册为 MSHTML.dll）是微软公司于 1997 年随 Internet Explorer 4.0 推出的专有 Web 排版与渲染引擎。它深度整合进 Windows 操作系统，通过 COM 组件接口向各类 Win32 应用程序提供网页解析与嵌入式展示服务。\n\nTrident 在 2000 年代初随 IE 占据了全球绝大部分浏览器市场份额，推动了 innerHTML、XMLHttpRequest 等创新的早期普及，但也因早期私有标准、怪异模式（Quirks Mode）及对 W3C 标准响应滞后等问题对 Web 兼容性带来长久影响。\n\n## 替代与现状\n\n随着 IE 浏览器的逐步退役，微软曾基于 Trident 分支开发出 EdgeHTML，并最终全面转向 Chromium/Blink 架构。现代 Windows 中 MSHTML 仍作为系统组件保留，用于向后兼容支持企业级旧版 Web 系统（如 Edge 中的 IE 模式）。\n\n## 参考\n\n- [Microsoft Learn：MSHTML 体系参考](https://learn.microsoft.com/previous-versions/windows/internet-explorer/)",
+  "importance": 4,
+  "popular": 75,
+  "official_site": "https://learn.microsoft.com/previous-versions/windows/internet-explorer/",
+  "last_reviewed": "2026-10-27",
+  "origin": "curated",
+  "status": "historical"
+}

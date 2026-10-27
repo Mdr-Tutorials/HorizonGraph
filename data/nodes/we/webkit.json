@@ -1,0 +1,46 @@
+{
+  "id": "webkit",
+  "name": "WebKit",
+  "display_primary": "WebKit",
+  "aliases": [
+    "WebKit 引擎"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "browser-engine-ecosystem",
+    "web_frontend",
+    "macos-darwin-ecosystem",
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "dom"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "blink",
+      "context": "Google 于 2013 年基于 WebKit 的 WebCore 代码分支孵化了 Blink 渲染引擎。"
+    }
+  ],
+  "summary": "Apple 主导的开源浏览器排版与渲染引擎，Safari 的核心底座。",
+  "description": "## 机制\n\nWebKit 是一套开源 Web 浏览器排版与渲染引擎，最初由 Apple 于 2001 年基于 KDE 项目的 KHTML 与 KJS 代码分支开发。WebKit 内部主要由处理 HTML/CSS 解析、文档对象模型（DOM）构建、布局计算与图形绘制的 WebCore，以及处理 JavaScript 执行的虚拟机引擎 JavaScriptCore（JSC）构成。\n\n在渲染管线中，WebKit 将 HTML 解析生成 DOM 树，将 CSS 解析生成样式规则并附加到渲染树（Render Tree），再通过布局（Layout）确定几何尺寸与位置，最终经由绘图与图层合成（Compositing）交付操作系统图形接口进行渲染输出。\n\n## 边界与演进\n\nWebKit 是 Apple 生态各平台（macOS、iOS、iPadOS、watchOS 等）所有浏览器和 Web 内容视图（WKWebView）的底层引擎。2013 年，Google 宣布基于 WebKit 的 WebCore 代码分支独立开发 Blink 引擎，自此 Chromium 体系脱离 WebKit 演进。\n\n## 参考\n\n- [WebKit 官方主页与架构文档](https://webkit.org)\n- [WebKit 源码架构与 WebCore 设计](https://github.com/WebKit/WebKit)",
+  "importance": 5,
+  "popular": 85,
+  "official_site": "https://webkit.org",
+  "last_reviewed": "2026-10-27",
+  "origin": "curated",
+  "status": "active"
+}
