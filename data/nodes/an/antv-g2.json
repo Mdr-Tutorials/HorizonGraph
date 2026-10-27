@@ -31,6 +31,10 @@
       "relation_type": "uses",
       "target_id": "data-scale",
       "context": "使用尺度计算视觉通道输出并支持自定义尺度。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "antv"
     }
   ],
   "summary": "以标记、尺度和组合语法构建交互式数据图表。",

@@ -21,10 +21,6 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "tooling-agent-specification"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "posix-shell"
     }
   ],
   "summary": "规定系统接口、Shell 与常用工具行为的可移植标准。",

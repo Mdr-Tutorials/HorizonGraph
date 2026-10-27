@@ -6,7 +6,7 @@
     "RISC架构",
     "精简指令集架构"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "hardware_iot",
     "languages_runtimes"
@@ -15,19 +15,22 @@
     "digital-design",
     "systems-programming"
   ],
-  "abstraction_level": "hardware",
   "importance": 5,
   "popular": 88,
   "status": "active",
   "origin": "ai_draft",
-  "first_released": "1980-01-01",
   "last_reviewed": "2026-10-27",
   "summary": "采用定长规整指令集、单周期执行与 Load-Store 内存访问的处理器架构范式。",
-  "description": "RISC（Reduced Instruction Set Computer，精简指令集计算机）架构由 David Patterson 与 John Hennessy 等人倡导。RISC 抛弃复杂低频指令，采用定长精简指令、规整的硬件译码逻辑、单一指令单周期执行以及纯粹的 Load-Store 内存访问架构，使指令能够高度充分地流水线化并大幅降低芯片功耗与面积。现代 ARM、RISC-V 及 MIPS 均遵循该体系结构范式。",
+  "description": "RISC（Reduced Instruction Set Computer，精简指令集计算机）架构由 David Patterson 与 John Hennessy 等人倡导。RISC 抛弃复杂低频指令，采用定长精简指令、规整的硬件译码逻辑、单一指令单周期执行以及纯粹的 Load-Store 内存访问架构，使指令能够高度充分地流水线化并大幅降低芯片功耗与面积。现代 ARM、RISC-V 及 MIPS 均遵循该体系结构范式。\n\n## 参考\n\n- [David A. Patterson, David R. Ditzel: The Case for the Reduced Instruction Set Computer](https://dl.acm.org/doi/10.1145/641914.641917)",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "computer-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "risc-v",
+      "context": "RISC-V 是现代开源精简指令集架构的代表实现。"
     }
   ]
 }

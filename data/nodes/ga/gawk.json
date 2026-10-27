@@ -27,6 +27,10 @@
       "relation_type": "uses",
       "target_id": "standard-streams",
       "context": "未指定输入文件时可以从标准输入读取，print 等输出可连接标准输出管道。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "awk"
     }
   ],
   "summary": "实现 Awk 语言并提供 GNU 扩展的记录处理工具。",

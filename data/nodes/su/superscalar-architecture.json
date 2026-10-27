@@ -6,7 +6,7 @@
     "超标量架构",
     "乱序执行架构"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "hardware_iot",
     "operating_systems"
@@ -15,19 +15,22 @@
     "digital-design",
     "systems-programming"
   ],
-  "abstraction_level": "hardware",
   "importance": 4,
   "popular": 76,
   "status": "active",
   "origin": "ai_draft",
-  "first_released": "1988-01-01",
   "last_reviewed": "2026-10-27",
   "summary": "通过多条独立执行流水线在单个时钟周期内发射并乱序并发执行多条指令的微架构。",
-  "description": "超标量架构（Superscalar Architecture）是高性能通用 CPU 的标志性微架构技术。通过在处理器内集成多条独立的并行指令流水线与多个执行单元（ALU、FPU、LSU），CPU 能够在同一个时钟周期内捕获、译码并发射多条机器指令。配合动态指令调度算法（如 Tomasulo 算法）与精确分支预测器，处理器能够打破代码静态先后顺序进行乱序执行（Out-of-Order Execution），最大化挖掘指令级并行度（ILP）。",
+  "description": "超标量架构（Superscalar Architecture）是高性能通用 CPU 的标志性微架构技术。通过在处理器内集成多条独立的并行指令流水线与多个执行单元（ALU、FPU、LSU），CPU 能够在同一个时钟周期内捕获、译码并发射多条机器指令。配合动态指令调度算法（如 Tomasulo 算法）与精确分支预测器，处理器能够打破代码静态先后顺序进行乱序执行（Out-of-Order Execution），最大化挖掘指令级并行度（ILP）。\n\n## 参考\n\n- [John L. Hennessy, David A. Patterson: Computer Architecture: A Quantitative Approach](https://www.elsevier.com/books/computer-architecture/hennessy/978-0-12-811905-1)",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "computer-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "instruction-pipeline",
+      "context": "超标量处理机通过并行的多条指令流水线提升单周期指令吞吐率。"
     }
   ]
 }

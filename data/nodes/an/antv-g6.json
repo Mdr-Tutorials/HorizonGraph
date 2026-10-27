@@ -26,6 +26,10 @@
       "relation_type": "uses",
       "target_id": "visual-encoding",
       "context": "通过节点、边与组合对象的形状、颜色等属性表达关系数据。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "antv"
     }
   ],
   "summary": "面向关系数据的图布局、绘制和交互可视化框架。",

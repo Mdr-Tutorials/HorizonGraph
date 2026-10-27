@@ -5,7 +5,9 @@
   "display_primary": "MCP",
   "display_secondary": "Model Context Protocol",
   "aliases": [
-    "MCP"
+    "MCP",
+    "模型上下文协议",
+    "MCP 协议规范"
   ],
   "type": "protocol",
   "ecosystems": [
@@ -19,7 +21,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "tooling-agent-specification"
     },
     {
       "relation_type": "developed_by",

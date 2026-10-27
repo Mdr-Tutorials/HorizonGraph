@@ -5,7 +5,7 @@
     "Kappa架构",
     "全流式大数据架构"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "cloud_native",
     "ai_data_science"
@@ -14,15 +14,13 @@
     "data-engineering",
     "distributed-systems"
   ],
-  "abstraction_level": "framework_library",
   "importance": 4,
   "popular": 70,
   "status": "active",
   "origin": "ai_draft",
-  "first_released": "2014-07-02",
   "last_reviewed": "2026-10-27",
   "summary": "以不可变事件日志与唯一定义的流计算引擎统一实时与历史重放的数据架构。",
-  "description": "Kappa 架构由 Jay Kreps（Kafka 作者之一）提出，旨在淘汰 Lambda 架构中必须维护两套独立批流代码库的高昂维护成本。Kappa 架构主张将不可变的追加写入事件日志（如 Apache Kafka）作为唯一事实源，统一采用单一的流计算引擎（如 Apache Flink）。历史数据的重新计算仅需从日志的指定 Offset 重新回放流作业，极大简化了大数据系统架构。",
+  "description": "Kappa 架构由 Jay Kreps（Kafka 作者之一）提出，旨在淘汰 Lambda 架构中必须维护两套独立批流代码库的高昂维护成本。Kappa 架构主张将不可变的追加写入事件日志（如 Apache Kafka）作为唯一事实源，统一采用单一的流计算引擎（如 Apache Flink）。历史数据的重新计算仅需从日志的指定 Offset 重新回放流作业，极大简化了大数据系统架构。\n\n## 参考\n\n- [Jay Kreps: Questioning the Lambda Architecture](https://www.oreilly.com/radar/questioning-the-lambda-architecture/)",
   "relations": [
     {
       "relation_type": "is_instance_of",
@@ -31,6 +29,11 @@
     {
       "relation_type": "alternative_to",
       "target_id": "lambda-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kafka",
+      "context": "以不可变追加写入的事件流日志作为唯一事实源，统一历史回放与实时处理。"
     }
   ]
 }

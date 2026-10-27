@@ -23,6 +23,10 @@
       "relation_type": "uses",
       "target_id": "equity-vesting",
       "context": "RSU 计划以归属条件确定何时取得奖励权益；实际交付时间另按计划规定。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "total-compensation"
     }
   ],
   "summary": "满足归属等条件后按计划交付股票或现金等价物的权益奖励单位。",

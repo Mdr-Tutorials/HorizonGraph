@@ -19,31 +19,6 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "employment-terms"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "stock-option",
-      "context": "采用员工期权激励的方案中，期权可作为权益组成；其价值和实现条件与现金工资不同。"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "base-salary",
-      "context": "包含该项目的薪酬方案中，它属于总包的一部分；是否提供、估值口径与支付条件以具体方案为准。"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "compensation-bonus",
-      "context": "包含该项目的薪酬方案中，它属于总包的一部分；是否提供、估值口径与支付条件以具体方案为准。"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "sign-on-bonus",
-      "context": "包含该项目的薪酬方案中，它属于总包的一部分；是否提供、估值口径与支付条件以具体方案为准。"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "restricted-stock-unit",
-      "context": "包含该项目的薪酬方案中，它属于总包的一部分；是否提供、估值口径与支付条件以具体方案为准。"
     }
   ],
   "summary": "对岗位现金、可变薪酬及权益等报酬组成的合称，具体口径需明确。",

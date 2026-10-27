@@ -5,26 +5,28 @@
     "洋葱架构",
     "同心圆架构"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "languages_runtimes"
   ],
   "domains": [
     "systems-programming"
   ],
-  "abstraction_level": "theoretical",
   "importance": 4,
   "popular": 65,
   "status": "active",
   "origin": "ai_draft",
-  "first_released": "2008-07-29",
   "last_reviewed": "2026-10-27",
   "summary": "基于领域模型居中、所有外层向内单向依赖的同心圆分层架构模式。",
-  "description": "洋葱架构（Onion Architecture）由 Jeffrey Palermo 于 2008 年提出，与领域驱动设计（DDD）深度契合。洋葱架构将领域模型置于绝对中心，向外依次为领域服务层、应用服务层与基础设施适配层。其核心铁律是外层必须依赖内层、内层绝对禁止依赖外层，彻底改变了传统分层架构中业务逻辑层依赖数据库数据访问层的耦合缺陷。",
+  "description": "洋葱架构（Onion Architecture）由 Jeffrey Palermo 于 2008 年提出，与领域驱动设计（DDD）深度契合。洋葱架构将领域模型置于绝对中心，向外依次为领域服务层、应用服务层与基础设施适配层。其核心铁律是外层必须依赖内层、内层绝对禁止依赖外层，彻底改变了传统分层架构中业务逻辑层依赖数据库数据访问层的耦合缺陷。\n\n## 参考\n\n- [Jeffrey Palermo: The Onion Architecture](https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/)",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "hexagonal-architecture"
     }
   ]
 }

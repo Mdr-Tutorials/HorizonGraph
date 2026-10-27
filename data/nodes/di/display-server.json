@@ -16,6 +16,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "desktop-interface-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "window-system"
     }
   ],
   "summary": "为图形客户端协调显示呈现和输入分发的系统服务职责。",

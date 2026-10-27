@@ -7,7 +7,7 @@
     "DSA架构",
     "专用加速器架构"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "hardware_iot",
     "ai_data_science"
@@ -16,19 +16,22 @@
     "digital-design",
     "high-performance-computing"
   ],
-  "abstraction_level": "hardware",
   "importance": 5,
   "popular": 78,
   "status": "active",
   "origin": "ai_draft",
-  "first_released": "2017-06-01",
   "last_reviewed": "2026-10-27",
   "summary": "放弃通用计算冗余逻辑、针对特定算法模式进行深度硬件定制的微架构范式。",
-  "description": "领域专用架构（Domain-Specific Architecture / DSA）由图灵奖得主 John Hennessy 与 David Patterson 提出，被视为后摩尔时代与登纳德缩放定律失效后的处理器核心突破路径。DSA 摒弃通用 CPU 中庞大的分支预测、乱序多发射等控制开销，将晶体管全力投入特定领域算法（如 Google TPU 张量阵列、网络 DPU 数据流处理）的定制流水线与片上暂存器（SRAM），实现数量级的能效比提升。",
+  "description": "领域专用架构（Domain-Specific Architecture / DSA）由图灵奖得主 John Hennessy 与 David Patterson 提出，被视为后摩尔时代与登纳德缩放定律失效后的处理器核心突破路径。DSA 摒弃通用 CPU 中庞大的分支预测、乱序多发射等控制开销，将晶体管全力投入特定领域算法（如 Google TPU 张量阵列、网络 DPU 数据流处理）的定制流水线与片上暂存器（SRAM），实现数量级的能效比提升。\n\n## 参考\n\n- [John Hennessy, David Patterson: A New Golden Age for Computer Architecture (Turing Lecture)](https://dl.acm.org/doi/10.1145/3282307)",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "computer-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "risc-v",
+      "context": "许多专用加速架构采用精简的开源 RISC-V 核心作为控制流与协同处理器。"
     }
   ]
 }

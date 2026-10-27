@@ -22,10 +22,6 @@
       "target_id": "python"
     },
     {
-      "relation_type": "depends_on",
-      "target_id": "cuda"
-    },
-    {
       "relation_type": "integrates_with",
       "target_id": "cuda"
     },

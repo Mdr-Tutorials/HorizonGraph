@@ -23,7 +23,7 @@
   "last_reviewed": "2026-10-27",
   "official_site": "https://www.asyncapi.com/",
   "summary": "专为事件驱动架构设计、形式化定义消息代理通道、载荷模式与发布订阅语义的接口规范。",
-  "description": "AsyncAPI 是 Linux 基金会旗下致力于事件驱动架构（EDA）和异步消息通信的开放接口规范。与专门面向同步请求-响应 HTTP 协议的 OpenAPI 不同，AsyncAPI 专为 Kafka、RabbitMQ、MQTT、WebSocket 及各类消息中间件量身定制。它使用类似 OpenAPI 的语法形式化定义消息通道（Channels）、发布订阅操作契约及消息载荷 Schema，为事件驱动微服务提供了统一的文档化、代码生成与契约校验能力。",
+  "description": "AsyncAPI 是 Linux 基金会旗下致力于事件驱动架构（EDA）和异步消息通信的开放接口规范。与专门面向同步请求-响应 HTTP 协议的 OpenAPI 不同，AsyncAPI 专为 Kafka、RabbitMQ、MQTT、WebSocket 及各类消息中间件量身定制。它使用类似 OpenAPI 的语法形式化定义消息通道（Channels）、发布订阅操作契约及消息载荷 Schema，为事件驱动微服务提供了统一的文档化、代码生成与契约校验能力。\n\n## 参考\n\n- [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)",
   "relations": [
     {
       "relation_type": "is_instance_of",
@@ -31,7 +31,7 @@
     },
     {
       "relation_type": "alternative_to",
-      "target_id": "openapi-spec"
+      "target_id": "openapi"
     }
   ]
 }

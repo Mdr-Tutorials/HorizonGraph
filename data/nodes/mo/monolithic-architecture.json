@@ -6,7 +6,7 @@
     "单体应用架构",
     "巨石架构"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "cloud_native",
     "languages_runtimes"
@@ -16,19 +16,22 @@
     "distributed-systems",
     "web-development"
   ],
-  "abstraction_level": "theoretical",
   "importance": 5,
   "popular": 85,
   "status": "active",
   "origin": "ai_draft",
-  "first_released": "1970-01-01",
   "last_reviewed": "2026-10-27",
   "summary": "单一可部署单元组织全部业务组件与执行逻辑的软件架构模式。",
-  "description": "单体架构（Monolithic Architecture）是软件工程最经典且应用最广泛的架构风格。系统的用户界面、业务逻辑、数据访问等所有模块均编译打包在同一个可执行单元或部署包中，运行于单个进程空间内。单体架构具备部署简单、端到端测试方便、本地函数调用性能极高、无跨网络事务等优势，常作为系统早期开发与中小规模项目的首选架构范式。",
+  "description": "单体架构（Monolithic Architecture）是软件工程最经典且应用最广泛的架构风格。系统的用户界面、业务逻辑、数据访问等所有模块均编译打包在同一个可执行单元或部署包中，运行于单个进程空间内。单体架构具备部署简单、端到端测试方便、本地函数调用性能极高、无跨网络事务等优势，常作为系统早期开发与中小规模项目的首选架构范式。\n\n## 参考\n\n- [Martin Fowler: MonolithFirst](https://martinfowler.com/bliki/MonolithFirst.html)\n- [Sam Newman: Monolith to Microservices](https://samnewman.io/books/monolith-to-microservices/)",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "client-server",
+      "context": "单体应用通常以经典客户端-服务器模式或单体 Web 服务向外部提供交互。"
     }
   ]
 }

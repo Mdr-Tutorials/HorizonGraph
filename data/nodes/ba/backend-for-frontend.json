@@ -6,7 +6,7 @@
     "BFF架构",
     "多端适配后端网关"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "web_frontend",
     "cloud_native"
@@ -15,19 +15,22 @@
     "web-services",
     "web-development"
   ],
-  "abstraction_level": "framework_library",
   "importance": 4,
   "popular": 74,
   "status": "active",
   "origin": "ai_draft",
-  "first_released": "2015-11-18",
   "last_reviewed": "2026-10-27",
   "summary": "针对特定客户端形态定制数据聚合、权限与协议转换的专属后端网关架构。",
-  "description": "BFF（Backend For Frontend）架构模式由 Sam Newman 总结并在微服务生态中普及。在多终端（如 Web 浏览器、iOS、Android、IoT 设备）并存的复杂系统中，不同端对数据字段、吞吐量和交互协议的需求各异。BFF 模式提倡为每种前端类型构建专门的边缘适配层或轻量服务端，负责聚合下游通用微服务接口、剪裁数据载荷并提供最适宜该端特性的 API 契约。",
+  "description": "BFF（Backend For Frontend）架构模式由 Sam Newman 总结并在微服务生态中普及。在多终端（如 Web 浏览器、iOS、Android、IoT 设备）并存的复杂系统中，不同端对数据字段、吞吐量和交互协议的需求各异。BFF 模式提倡为每种前端类型构建专门的边缘适配层或轻量服务端，负责聚合下游通用微服务接口、剪裁数据载荷并提供最适宜该端特性的 API 契约。\n\n## 参考\n\n- [Sam Newman: Pattern: Backends For Frontends](https://samnewman.io/patterns/architectural/bff/)",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "BFF 服务端使用 OpenAPI 描述针对特定客户端定制的裁剪聚合接口。"
     }
   ]
 }

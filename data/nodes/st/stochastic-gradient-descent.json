@@ -25,13 +25,12 @@
     },
     {
       "relation_type": "uses",
-      "target_id": "gradient-descent",
-      "context": "把完整梯度替换为随机样本或小批量的梯度估计后执行更新。"
-    },
-    {
-      "relation_type": "uses",
       "target_id": "feature-scaling",
       "context": "在线性模型训练中标准化尺度以改善随机梯度更新的数值行为。"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "gradient-descent"
     }
   ],
   "summary": "用随机样本或小批量梯度估计更新参数。",

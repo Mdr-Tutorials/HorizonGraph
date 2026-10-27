@@ -22,7 +22,7 @@
   "first_released": "1984-01-01",
   "last_reviewed": "2026-10-27",
   "summary": "定义独立于机器架构的数据结构形式化标记语言，电信与数字证书体系基础标准。",
-  "description": "ASN.1（Abstract Syntax Notation One）是由 ITU-T 和 ISO 联合制订的形式化接口与数据结构描述标记语言。ASN.1 与底层机器的字节序、字长完全解耦，并搭配多种严格的编码规则（如 BER、DER、PER）。它是整个现代密码学 PKI 体系中 X.509 数字证书定义、LDAP 目录服务以及电信蜂窝核心网（3G/4G/5G RRC 与 NAS 协议）数据结构的底层描述基石。",
+  "description": "ASN.1（Abstract Syntax Notation One）是由 ITU-T 和 ISO 联合制订的形式化接口与数据结构描述标记语言。ASN.1 与底层机器的字节序、字长完全解耦，并搭配多种严格的编码规则（如 BER、DER、PER）。它是整个现代密码学 PKI 体系中 X.509 数字证书定义、LDAP 目录服务以及电信蜂窝核心网（3G/4G/5G RRC 与 NAS 协议）数据结构的底层描述基石。\n\n## 参考\n\n- [ITU-T Recommendation X.680: Abstract Syntax Notation One (ASN.1)](https://www.itu.int/rec/T-REC-X.680)",
   "relations": [
     {
       "relation_type": "is_instance_of",

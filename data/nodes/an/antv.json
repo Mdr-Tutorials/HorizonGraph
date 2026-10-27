@@ -30,18 +30,6 @@
       "relation_type": "uses",
       "target_id": "visual-encoding",
       "context": "G2 与 L7 等具体项目用视觉通道和属性映射表达数据。"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "antv-g2"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "antv-g6"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "antv-l7"
     }
   ],
   "summary": "覆盖统计图表、关系网络和地理空间的可视化项目体系。",

@@ -5,278 +5,797 @@
     "self_loops": "全部禁止；自举属叙事，写入 description；试点批次后复核",
     "duplicate_edges": "同一节点内 (relation_type, target_id) 重复即 CI 失败",
     "mirror_check": "对称关系仅存一份，镜像双存即 CI 失败",
-    "classification_edges": ["is_instance_of"],
+    "classification_edges": [
+      "is_instance_of"
+    ],
     "merge_review": "关系全量入表；试点后依据录入分歧做合并评审，重点评审 depends_on 与 bases_for、competes_with 与 alternative_to、uses 与 implements 的边界"
   },
   "display": {
-    "is_instance_of": { "zh": "属于", "en": "instance of" },
-    "governs": { "zh": "约束", "en": "governs" },
-    "implements": { "zh": "实现", "en": "implements" },
-    "depends_on": { "zh": "依赖", "en": "depends on" },
-    "uses": { "zh": "使用", "en": "uses" },
-    "assesses": { "zh": "考察", "en": "assesses" },
-    "prepares_for": { "zh": "用于准备", "en": "prepares for" },
-    "describes": { "zh": "描述", "en": "describes" },
-    "discusses": { "zh": "沟通内容", "en": "discusses" },
-    "refers_to": { "zh": "指代", "en": "refers to" },
-    "subsidiary_of": { "zh": "母公司", "en": "subsidiary of" },
-    "can_bias": { "zh": "可能引入偏差", "en": "can bias" },
-    "stewarded_by": { "zh": "治理方", "en": "stewarded by" },
-    "competes_with": { "zh": "竞争", "en": "competes with" },
-    "alternative_to": { "zh": "替代方案", "en": "alternative to" },
-    "extends": { "zh": "扩展", "en": "extends" },
-    "bases_for": { "zh": "基座", "en": "base for" },
-    "embeds": { "zh": "内嵌", "en": "embeds" },
-    "part_of": { "zh": "组成", "en": "part of" },
-    "version_of": { "zh": "版本", "en": "version of" },
-    "deprecated_by": { "zh": "被替代", "en": "deprecated by" },
-    "developed_by": { "zh": "开发者", "en": "developed by" },
-    "founded_by": { "zh": "创始人", "en": "founded by" },
-    "powers": { "zh": "驱动", "en": "powers" },
-    "implemented_by": { "zh": "实现者", "en": "implemented by" },
-    "runs_on": { "zh": "运行于", "en": "runs on" },
-    "integrates_with": { "zh": "集成", "en": "integrates with" },
-    "provides": { "zh": "提供", "en": "provides" },
-    "composed_of": { "zh": "组成", "en": "composed of" }
+    "is_instance_of": {
+      "zh": "属于",
+      "en": "instance of"
+    },
+    "governs": {
+      "zh": "约束",
+      "en": "governs"
+    },
+    "implements": {
+      "zh": "实现",
+      "en": "implements"
+    },
+    "depends_on": {
+      "zh": "依赖",
+      "en": "depends on"
+    },
+    "uses": {
+      "zh": "使用",
+      "en": "uses"
+    },
+    "assesses": {
+      "zh": "考察",
+      "en": "assesses"
+    },
+    "prepares_for": {
+      "zh": "用于准备",
+      "en": "prepares for"
+    },
+    "describes": {
+      "zh": "描述",
+      "en": "describes"
+    },
+    "discusses": {
+      "zh": "沟通内容",
+      "en": "discusses"
+    },
+    "refers_to": {
+      "zh": "指代",
+      "en": "refers to"
+    },
+    "subsidiary_of": {
+      "zh": "母公司",
+      "en": "subsidiary of"
+    },
+    "can_bias": {
+      "zh": "可能引入偏差",
+      "en": "can bias"
+    },
+    "stewarded_by": {
+      "zh": "治理方",
+      "en": "stewarded by"
+    },
+    "competes_with": {
+      "zh": "竞争",
+      "en": "competes with"
+    },
+    "alternative_to": {
+      "zh": "替代方案",
+      "en": "alternative to"
+    },
+    "extends": {
+      "zh": "扩展",
+      "en": "extends"
+    },
+    "bases_for": {
+      "zh": "基座",
+      "en": "base for"
+    },
+    "embeds": {
+      "zh": "内嵌",
+      "en": "embeds"
+    },
+    "part_of": {
+      "zh": "组成",
+      "en": "part of"
+    },
+    "version_of": {
+      "zh": "版本",
+      "en": "version of"
+    },
+    "deprecated_by": {
+      "zh": "被替代",
+      "en": "deprecated by"
+    },
+    "developed_by": {
+      "zh": "开发者",
+      "en": "developed by"
+    },
+    "founded_by": {
+      "zh": "创始人",
+      "en": "founded by"
+    },
+    "powers": {
+      "zh": "驱动",
+      "en": "powers"
+    },
+    "runs_on": {
+      "zh": "运行于",
+      "en": "runs on"
+    },
+    "integrates_with": {
+      "zh": "集成",
+      "en": "integrates with"
+    },
+    "provides": {
+      "zh": "提供",
+      "en": "provides"
+    },
+    "specializes": {
+      "zh": "特化",
+      "en": "specializes"
+    }
   },
   "relations": {
     "subsidiary_of": {
       "requires_context": true,
       "canonical_owner": "子公司持有边，指向其直接母公司",
       "symmetric": false,
-      "inverse_display": { "zh": "子公司", "en": "subsidiaries" },
-      "domain": ["organization"],
-      "range": ["organization"],
+      "inverse_display": {
+        "zh": "子公司",
+        "en": "subsidiaries"
+      },
+      "domain": [
+        "organization"
+      ],
+      "range": [
+        "organization"
+      ],
       "decision": "具有来源依据的直接母子公司关系。context 说明法律主体、关系时间或重组背景；不传递存储间接控股关系。公司更名走同一节点的显示名与 aliases，产品归属走 provides，项目治理走 stewarded_by，企业合称走 refers_to。"
     },
     "can_bias": {
       "requires_context": true,
       "canonical_owner": "偏差机制持有边，指向可能受影响的评估方法或指标",
       "symmetric": false,
-      "inverse_display": { "zh": "偏差来源", "en": "potential bias from" },
-      "domain": ["concept"],
-      "range": ["concept", "metric"],
+      "inverse_display": {
+        "zh": "偏差来源",
+        "en": "potential bias from"
+      },
+      "domain": [
+        "concept"
+      ],
+      "range": [
+        "concept",
+        "metric"
+      ],
       "decision": "有具体因果机制的评估偏差，如前视偏差使历史回测使用当时不可获得的信息。context 必须指出机制与受影响的评估结果；不表示问题必然发生，不用于泛化相关、方法使用或理论约束。"
     },
     "is_instance_of": {
       "classification": true,
       "canonical_owner": "实例方（叶子节点持有边，指向上级分类）",
       "symmetric": false,
-      "inverse_display": { "zh": "实例", "en": "instances" },
-      "domain": ["concept", "protocol", "language", "framework", "library", "tool", "architecture", "metric", "model_family", "product", "organization", "person"],
-      "range": ["meta_concept"],
+      "inverse_display": {
+        "zh": "实例",
+        "en": "instances"
+      },
+      "domain": [
+        "concept",
+        "protocol",
+        "language",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "metric",
+        "model_family",
+        "product",
+        "organization",
+        "person"
+      ],
+      "range": [
+        "meta_concept"
+      ],
       "target_source": "contracts/ontology.json",
       "decision": "分类挂载：节点属于某分类（HTTP/3 → Transport Protocol）。与 implements 的分界：is_instance_of 表“属于”，implements 表“把某个概念或规范工程化做出来”。目标必须是本体节点（类型根或中间分类），且源节点 type 属于目标分类生效的 entity_type 集合。锚点为纯叙事超根，词条直接挂锚点时 CI 报错并指向对应类型根。"
     },
     "governs": {
       "canonical_owner": "理论方（约束者持有边）",
       "symmetric": false,
-      "inverse_display": { "zh": "受约束于", "en": "governed_by" },
-      "domain": ["concept", "metric"],
-      "range": ["meta_concept", "concept", "architecture"],
+      "inverse_display": {
+        "zh": "受约束于",
+        "en": "governed_by"
+      },
+      "domain": [
+        "concept",
+        "metric"
+      ],
+      "range": [
+        "meta_concept",
+        "concept",
+        "architecture"
+      ],
       "decision": "理论对设计域的约束指导（CAP Theorem governs Distributed Systems）。源是概念或度量，目标是被约束的领域分类、具象概念或具体架构。"
     },
     "implements": {
       "canonical_owner": "实现方（工程工件持有边）",
       "symmetric": false,
-      "inverse_display": { "zh": "被实现", "en": "implemented_by" },
-      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["concept", "meta_concept", "protocol", "architecture"],
+      "inverse_display": {
+        "zh": "被实现",
+        "en": "implemented_by"
+      },
+      "domain": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "concept",
+        "meta_concept",
+        "protocol",
+        "architecture",
+        "language"
+      ],
       "decision": "把概念、规范或架构形态落地为具体工件（QUIC implements 某传输规范语义；JuiceFS implements POSIX）。与 extends 分界：implements 的目标是概念性存在，extends 的目标是可独立运行的实体。"
     },
     "depends_on": {
       "canonical_owner": "使用方（依赖者持有边）",
       "symmetric": false,
-      "inverse_display": { "zh": "依赖方", "en": "dependents" },
-      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "inverse_display": {
+        "zh": "依赖方",
+        "en": "dependents"
+      },
+      "domain": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
       "decision": "直接硬依赖：移除目标后源无法构建或运行（Tokio depends_on Rust）。四重近邻判定的锚点：depends_on 表直接调用/链接关系，由使用方自上而下声明。"
     },
     "uses": {
       "requires_context": true,
       "canonical_owner": "使用方持有边，指向采用的方法、指标或技术",
       "symmetric": false,
-      "inverse_display": { "zh": "使用方", "en": "used by" },
-      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "inverse_display": {
+        "zh": "使用方",
+        "en": "used by"
+      },
+      "domain": [
+        "concept",
+        "metric",
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "concept",
+        "metric",
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
       "decision": "有具体应用依据的方法或能力使用（BFS uses Queue；SLO uses SLI）。context 必须说明使用场景，不能仅因主题相近而连边。硬软件依赖走 depends_on，把概念或规范工程化走 implements，官方组件互操作走 integrates_with；不得为同一事实重复存边。可选实现必须在 context 中限定，不表示所有部署都需要目标。"
     },
     "stewarded_by": {
       "requires_context": true,
       "canonical_owner": "项目、标准或组织持有边，指向正式治理或托管机构",
       "symmetric": false,
-      "inverse_display": { "zh": "治理项目", "en": "stewards" },
-      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product", "organization"],
-      "range": ["organization"],
+      "inverse_display": {
+        "zh": "治理项目",
+        "en": "stewards"
+      },
+      "domain": [
+        "concept",
+        "metric",
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product",
+        "organization"
+      ],
+      "range": [
+        "organization"
+      ],
       "decision": "标准制修订、项目社区治理或基金会正式托管归属（CSS stewarded_by W3C；Apache Spark stewarded_by ASF；CNCF stewarded_by Linux Foundation）。context 必须写明职责；不表示该机构亲自编写代码、拥有全部版权或发明技术。原始研发归属用 developed_by，普通会员、赞助与资金支持不足以建立本关系。"
     },
     "assesses": {
       "canonical_owner": "评估活动持有边，指向被考察的知识、方法或能力",
       "symmetric": false,
       "requires_context": true,
-      "inverse_display": { "zh": "考察场景", "en": "assessed in" },
-      "domain": ["concept"],
-      "range": ["concept", "metric"],
+      "inverse_display": {
+        "zh": "考察场景",
+        "en": "assessed in"
+      },
+      "domain": [
+        "concept"
+      ],
+      "range": [
+        "concept",
+        "metric"
+      ],
       "decision": "评估活动考察候选人对目标知识或方法的理解和运用（编程面试 assesses 大 O 记号）。必须用 context 限定题型、岗位或评估目标；不表示每家公司都考察此项，也不评价具体个人。目标限数据词条；实际工作中采用技术走 uses。"
     },
     "prepares_for": {
       "canonical_owner": "准备资源或方法持有边，指向准备参加的评估活动",
       "symmetric": false,
       "requires_context": true,
-      "inverse_display": { "zh": "准备资源", "en": "preparation resources" },
-      "domain": ["concept", "product", "tool"],
-      "range": ["concept"],
+      "inverse_display": {
+        "zh": "准备资源",
+        "en": "preparation resources"
+      },
+      "domain": [
+        "concept",
+        "product",
+        "tool"
+      ],
+      "range": [
+        "concept"
+      ],
       "decision": "资源或方法可用于准备某种评估活动（LeetCode prepares_for 编程面试）。context 写明具体练习能力或材料，不保证通过，不表示招聘方使用此平台，也不等同于面试考察内容。"
     },
     "describes": {
       "canonical_owner": "文书、材料或记录持有边，指向其描述的内容",
       "symmetric": false,
       "requires_context": true,
-      "inverse_display": { "zh": "描述于", "en": "described in" },
-      "domain": ["concept", "product"],
-      "range": ["concept", "metric"],
+      "inverse_display": {
+        "zh": "描述于",
+        "en": "described in"
+      },
+      "domain": [
+        "concept",
+        "product"
+      ],
+      "range": [
+        "concept",
+        "metric"
+      ],
       "decision": "文书或记录承载目标的说明（简历 describes 项目经历；职位描述 describes 岗位角色）。context 说明记录的内容与适用情况；不推导已验证、被录用或必然包含。文件所写的对象不因此成为文件的组成部分。"
     },
     "discusses": {
       "canonical_owner": "沟通活动持有边，指向讨论的内容",
       "symmetric": false,
       "requires_context": true,
-      "inverse_display": { "zh": "沟通场景", "en": "discussed in" },
-      "domain": ["concept"],
-      "range": ["concept", "metric"],
+      "inverse_display": {
+        "zh": "沟通场景",
+        "en": "discussed in"
+      },
+      "domain": [
+        "concept"
+      ],
+      "range": [
+        "concept",
+        "metric"
+      ],
       "decision": "沟通活动涉及目标议题（OC discusses 薪酬包）。context 必须限定沟通内容；不推导流程先后、审批完成或双方已达成一致。考察能力用 assesses，书面记载用 describes。"
     },
     "refers_to": {
       "canonical_owner": "称谓持有边，指向该释义中所指的组织",
       "symmetric": false,
       "requires_context": true,
-      "inverse_display": { "zh": "相关称谓", "en": "referred to as" },
-      "domain": ["concept"],
-      "range": ["organization"],
+      "inverse_display": {
+        "zh": "相关称谓",
+        "en": "referred to as"
+      },
+      "domain": [
+        "concept"
+      ],
+      "range": [
+        "organization"
+      ],
       "decision": "企业合称等称谓在特定释义中指代组织（BAT 的 ByteDance 释义 refers_to 字节跳动）。context 必须明确释义及所指对象；多义缩写以限定 id 分开建模，不把不同释义的成员混为同一集合。本关系不表示所有权、隶属、治理、研发、当前招聘或合作关系。单一组织的同义名仍使用 aliases；不得仅因主题相近而连边。"
     },
     "competes_with": {
       "canonical_owner": "对称关系，存于 id 字典序较小一侧",
       "symmetric": true,
-      "inverse_display": { "zh": "竞争", "en": "competes_with" },
-      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "inverse_display": {
+        "zh": "竞争",
+        "en": "competes_with"
+      },
+      "domain": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
       "decision": "同生态位的替代关系（Bun competes_with Node.js）。仅存一份，双向可遍历。"
     },
     "alternative_to": {
       "canonical_owner": "对称关系，存于 id 字典序较小一侧",
       "symmetric": true,
-      "inverse_display": { "zh": "替代方案", "en": "alternatives" },
-      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product", "organization", "person"],
-      "range": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product", "organization", "person"],
+      "inverse_display": {
+        "zh": "替代方案",
+        "en": "alternatives"
+      },
+      "domain": [
+        "concept",
+        "metric",
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product",
+        "organization",
+        "person"
+      ],
+      "range": [
+        "concept",
+        "metric",
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product",
+        "organization",
+        "person"
+      ],
       "decision": "同类可选、社区惯于对比的『替代方案』关系，补足 competes_with 覆盖不到的两侧：概念/度量/组织/人物之间的对比（Paxos 对 Raft、GitHub 对 GitLab），以及跨类型对比（架构风格 REST 对 GraphQL）。与 competes_with 的分界：competes_with 表工程工件之间同生态位的市场竞争；alternative_to 表认知层面的可比选；同一对节点两者不得并存（CI 强制）。对称关系存字典序较小侧，禁止镜像双存。"
     },
     "extends": {
       "canonical_owner": "扩展方（超集持有边）",
       "symmetric": false,
-      "inverse_display": { "zh": "被扩展", "en": "extended_by" },
-      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "inverse_display": {
+        "zh": "被扩展",
+        "en": "extended_by"
+      },
+      "domain": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
       "decision": "超集扩展：目标可独立存在，源向后兼容地扩展其能力（TypeScript extends JavaScript）。"
     },
     "bases_for": {
       "canonical_owner": "基座方（支撑者持有边）",
       "symmetric": false,
-      "inverse_display": { "zh": "基于", "en": "based_on" },
-      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "inverse_display": {
+        "zh": "基于",
+        "en": "based_on"
+      },
+      "domain": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
       "decision": "底座支撑叙事：目标因源获得存在理由或性能特征，但无直接调用链（DPDK bases_for HFT Trading Engine）。自底向上声明；与 depends_on 的分界在“是否存在直接 API 依赖”。试点重点评审对象。"
     },
     "embeds": {
       "canonical_owner": "封装方（容器持有边）",
       "symmetric": false,
-      "inverse_display": { "zh": "内嵌于", "en": "embedded_in" },
-      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["architecture", "library", "language"],
+      "inverse_display": {
+        "zh": "内嵌于",
+        "en": "embedded_in"
+      },
+      "domain": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "architecture",
+        "library",
+        "language"
+      ],
       "decision": "分发物物理内置完整第三方组件（Node.js embeds V8 Engine）。双方独立存在，一方打包另一方。"
     },
     "part_of": {
       "canonical_owner": "成员方（组成部分持有边）",
       "symmetric": false,
-      "inverse_display": { "zh": "包含", "en": "has_part" },
-      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "inverse_display": {
+        "zh": "包含",
+        "en": "has_part"
+      },
+      "domain": [
+        "concept",
+        "metric",
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "concept",
+        "metric",
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
       "decision": "同一体系内的组成关系（C++ Concepts part_of C++20 Standard）。判定锚点：成员离开整体即失去定义语境。与 embeds 分界：part_of 双方属同一体系，embeds 是跨体系的物理封装。生态归属走 ecosystems 字段。"
     },
     "version_of": {
       "canonical_owner": "切片方（版本节点持有边，指向母体）",
       "symmetric": false,
-      "inverse_display": { "zh": "版本", "en": "versions" },
-      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "inverse_display": {
+        "zh": "版本",
+        "en": "versions"
+      },
+      "domain": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
       "decision": "时间与版本维度的切分（C++23 version_of C++；GLM-4.5 version_of GLM）。判定：源与目标同 type，目标是家族或母体，源是其某个版本，且源已通过独立生态位判定。与 part_of 分界：part_of 是空间组成，version_of 是时间切片。与 extends 分界：extends 是超集扩展，version_of 是母体在时间轴上的投影。版本页渲染为母体差异视图，时间线由 first_released 排序，版本先后不另设后继边；搜索中版本折叠于母体名下。"
     },
     "deprecated_by": {
       "canonical_owner": "被废弃方（旧者持有边）",
       "symmetric": false,
-      "inverse_display": { "zh": "替代", "en": "deprecates" },
-      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "inverse_display": {
+        "zh": "替代",
+        "en": "deprecates"
+      },
+      "domain": [
+        "concept",
+        "metric",
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "concept",
+        "metric",
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
       "decision": "演进替代（Bower deprecated_by npm）。由被替代者持有；源节点 status 应为 deprecated 且 deprecated_at 必填。标准版本序列走 version_of 加 first_released 排序，旧标准通常保持 active 或 historical，不挂 deprecated_by。"
     },
     "developed_by": {
       "canonical_owner": "作品方（被研发者持有边）",
       "symmetric": false,
-      "inverse_display": { "zh": "开发了", "en": "developed" },
-      "domain": ["concept", "metric", "language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["organization", "person"],
+      "inverse_display": {
+        "zh": "开发了",
+        "en": "developed"
+      },
+      "domain": [
+        "concept",
+        "metric",
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "organization",
+        "person"
+      ],
       "decision": "研发归属（GLM-4 developed_by 智谱 AI）。目标限于组织与人物。"
     },
     "founded_by": {
       "canonical_owner": "公司方（组织持有边，指向创始人）",
       "symmetric": false,
-      "inverse_display": { "zh": "创立", "en": "founded" },
-      "domain": ["organization"],
-      "range": ["person"],
+      "inverse_display": {
+        "zh": "创立",
+        "en": "founded"
+      },
+      "domain": [
+        "organization"
+      ],
+      "range": [
+        "person"
+      ],
       "decision": "创始归属（腾讯 founded_by 马化腾）。由组织持有边指向创始人个人；与 developed_by 的分界：developed_by 表作品的亲手研发归属，founded_by 表组织的创立归属——创始人不因其身份自动成为产品研发者。"
     },
-    "implemented_by": {
-      "canonical_owner": "抽象方（语言或规范持有边）", "symmetric": false,
-      "inverse_display": { "zh": "实现", "en": "implements" },
-      "domain": ["language", "protocol", "architecture", "concept"],
-      "range": ["language", "framework", "library", "tool", "architecture", "product"],
-      "decision": "抽象语言、协议或概念由具体实现承载。"
-    },
     "runs_on": {
-      "canonical_owner": "运行方（软件持有边）", "symmetric": false,
-      "inverse_display": { "zh": "承载", "en": "hosts" },
-      "domain": ["language", "framework", "library", "tool", "product"],
-      "range": ["architecture", "product"],
+      "canonical_owner": "运行方（软件持有边）",
+      "symmetric": false,
+      "inverse_display": {
+        "zh": "承载",
+        "en": "hosts"
+      },
+      "domain": [
+        "language",
+        "framework",
+        "library",
+        "tool",
+        "product"
+      ],
+      "range": [
+        "architecture",
+        "product"
+      ],
       "decision": "软件或服务运行于操作系统、运行时或硬件平台。"
     },
     "integrates_with": {
-      "canonical_owner": "集成方持有边", "symmetric": true,
-      "inverse_display": { "zh": "集成", "en": "integrates with" },
-      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
+      "canonical_owner": "集成方持有边",
+      "symmetric": true,
+      "inverse_display": {
+        "zh": "集成",
+        "en": "integrates with"
+      },
+      "domain": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
       "decision": "存在官方或稳定生态集成，但不是硬依赖。仅存字典序较小一侧。"
     },
     "provides": {
-      "canonical_owner": "提供方（组织持有边）", "symmetric": false,
-      "inverse_display": { "zh": "提供者", "en": "provided by" },
-      "domain": ["organization"],
-      "range": ["product", "framework", "library", "tool", "architecture", "model_family"],
+      "canonical_owner": "提供方（组织持有边）",
+      "symmetric": false,
+      "inverse_display": {
+        "zh": "提供者",
+        "en": "provided by"
+      },
+      "domain": [
+        "organization"
+      ],
+      "range": [
+        "product",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family"
+      ],
       "decision": "组织提供产品、服务或开源项目。"
-    },
-    "composed_of": {
-      "canonical_owner": "整体持有边", "symmetric": false,
-      "inverse_display": { "zh": "属于组成", "en": "part of" },
-      "domain": ["concept", "protocol", "framework", "library", "architecture", "product"],
-      "range": ["concept", "protocol", "framework", "library", "architecture", "product"],
-      "decision": "整体由若干独立组件或概念组成。"
     },
     "powers": {
       "canonical_owner": "赋能方（底层技术持有边）",
       "symmetric": false,
-      "inverse_display": { "zh": "驱动", "en": "powered_by" },
-      "domain": ["language", "protocol", "framework", "library", "tool", "architecture", "model_family", "product"],
-      "range": ["product", "organization"],
+      "inverse_display": {
+        "zh": "驱动",
+        "en": "powered_by"
+      },
+      "domain": [
+        "language",
+        "protocol",
+        "framework",
+        "library",
+        "tool",
+        "architecture",
+        "model_family",
+        "product"
+      ],
+      "range": [
+        "product",
+        "organization"
+      ],
       "decision": "底层技术对商业实体的赋能（JuiceFS powers MetaBit Platform）。自底向上；与 bases_for 分界：powers 的目标必须是商业产品或组织。"
+    },
+    "specializes": {
+      "canonical_owner": "特化方（子概念持有边，指向更泛化的概念）",
+      "symmetric": false,
+      "inverse_display": {
+        "zh": "特化变体",
+        "en": "specialized_by"
+      },
+      "domain": [
+        "concept",
+        "architecture"
+      ],
+      "range": [
+        "concept",
+        "architecture"
+      ],
+      "decision": "概念或架构的特化/细分变体关系（如 Stochastic Gradient Descent specializes Gradient Descent；Clean Architecture specializes Hexagonal Architecture）。源是目标的具体变体或特定场景特化，目标是更通用的抽象范式。"
     }
   }
 }

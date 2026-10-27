@@ -20,10 +20,6 @@
       "relation_type": "stewarded_by",
       "target_id": "iec",
       "context": "IEC 发布并制修订 IEC 61131 系列，可编程控制器语言由第 3 部分规定。"
-    },
-    {
-      "relation_type": "implemented_by",
-      "target_id": "codesys"
     }
   ],
   "summary": "规定可编程控制器语言语法、语义和程序组织的标准。",

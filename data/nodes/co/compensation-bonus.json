@@ -20,6 +20,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "employment-terms"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "total-compensation"
     }
   ],
   "summary": "固定工资之外按合同、计划或绩效等条件安排的奖励性报酬。",

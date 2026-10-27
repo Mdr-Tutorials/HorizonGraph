@@ -20,11 +20,6 @@
       "target_id": "digital-design-concept"
     },
     {
-      "relation_type": "composed_of",
-      "target_id": "dram",
-      "context": "HBM 存储堆栈由多层 DRAM 芯片构成。"
-    },
-    {
       "relation_type": "uses",
       "target_id": "through-silicon-via",
       "context": "通过 TSV 在堆叠 DRAM 芯片层间建立垂直电气互连。"

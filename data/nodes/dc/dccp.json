@@ -22,7 +22,7 @@
   "last_reviewed": "2026-10-27",
   "official_site": "https://datatracker.ietf.org/doc/html/rfc4340",
   "summary": "在不可靠数据报流中提供建立连接与显式拥塞控制机制的四层传输协议。",
-  "description": "DCCP（Datagram Congestion Control Protocol，RFC 4340）是一种提供面向连接、不可靠数据报投递与显式拥塞通知的传输层协议。专为对传输时延极度敏感、宁可丢弃过时数据也不愿引入重传延迟的流式场景（如实时音频、在线多人竞技网游）设计。DCCP 弥补了 UDP 缺乏拥塞协商容易冲垮骨干网、而 TCP 强制顺序重传引发严重卡顿的结构性鸿沟。",
+  "description": "DCCP（Datagram Congestion Control Protocol，RFC 4340）是一种提供面向连接、不可靠数据报投递与显式拥塞通知的传输层协议。专为对传输时延极度敏感、宁可丢弃过时数据也不愿引入重传延迟的流式场景（如实时音频、在线多人竞技网游）设计。DCCP 弥补了 UDP 缺乏拥塞协商容易冲垮骨干网、而 TCP 强制顺序重传引发严重卡顿的结构性鸿沟。\n\n## 参考\n\n- [IETF RFC 4340: Datagram Congestion Control Protocol](https://datatracker.ietf.org/doc/html/rfc4340)",
   "relations": [
     {
       "relation_type": "is_instance_of",
@@ -31,6 +31,11 @@
     {
       "relation_type": "alternative_to",
       "target_id": "udp"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ip",
+      "context": "面向数据报流在网络层 IP 基础上传输拥塞控制信令。"
     }
   ]
 }

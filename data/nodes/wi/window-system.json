@@ -16,16 +16,6 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "desktop-interface-concept"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "display-server",
-      "context": "这里按显示服务职责分解，不要求独立进程。"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "window-manager",
-      "context": "窗口系统可含窗口布局与焦点管理职责，部署中可与显示服务整合。"
     }
   ],
   "summary": "组织应用表面、显示服务与输入交互的系统机制。",

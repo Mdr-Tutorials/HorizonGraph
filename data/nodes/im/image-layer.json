@@ -28,6 +28,10 @@
       "relation_type": "uses",
       "target_id": "copy-on-write",
       "context": "在采用写时复制的运行时层存储实现中，镜像底层内容共享读取，修改时复制到可写层；这是可选存储策略，不是所有 OCI 层的格式要求。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "container-image"
     }
   ],
   "summary": "按顺序应用的文件系统变更集，可跨镜像复用",

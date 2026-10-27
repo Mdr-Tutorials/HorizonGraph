@@ -27,11 +27,6 @@
       "target_id": "kx"
     },
     {
-      "relation_type": "implemented_by",
-      "target_id": "kdb-plus",
-      "context": "kdb+ 分发并执行 q 语言。"
-    },
-    {
       "relation_type": "uses",
       "target_id": "k-array-language",
       "context": "KX k4 实现层和 q.k 以 k 表达式定义部分 q 关键词；另有原生 C 功能。"

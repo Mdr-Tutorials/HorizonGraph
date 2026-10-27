@@ -7,7 +7,7 @@
     "插件架构",
     "微核心架构"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "languages_runtimes",
     "operating_systems"
@@ -16,19 +16,22 @@
     "systems-programming",
     "devops"
   ],
-  "abstraction_level": "theoretical",
   "importance": 4,
   "popular": 75,
   "status": "active",
   "origin": "ai_draft",
-  "first_released": "1980-01-01",
   "last_reviewed": "2026-10-27",
   "summary": "以极简核心系统承载主生命周期并通过可插拔扩展实现业务的架构模式。",
-  "description": "微内核架构（Microkernel Architecture），又称为插件化架构（Plugin Architecture），由核心系统（Core System）与插件模块（Plugin Components）两部分构成。核心系统仅包含维持系统运行所需的最小生命周期与注册调度机制，而具体业务功能、驱动程序或扩展能力则作为独立组件在运行时动态插拔加载，在 VS Code、Eclipse、微内核操作系统（如 Mach、QNX）及工作流引擎中大量应用。",
+  "description": "微内核架构（Microkernel Architecture），又称为插件化架构（Plugin Architecture），由核心系统（Core System）与插件模块（Plugin Components）两部分构成。核心系统仅包含维持系统运行所需的最小生命周期与注册调度机制，而具体业务功能、驱动程序或扩展能力则作为独立组件在运行时动态插拔加载，在 VS Code、Eclipse、微内核操作系统（如 Mach、QNX）及工作流引擎中大量应用。\n\n## 参考\n\n- [Mark Richards: Software Architecture Patterns (Microkernel Architecture)](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch03.html)",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux-kernel",
+      "context": "微内核与单体内核在操作系统内核架构设计上形成鲜明取舍对照。"
     }
   ]
 }

@@ -23,6 +23,10 @@
       "relation_type": "uses",
       "target_id": "x11",
       "context": "在 X11 实现路径中，窗口管理器以客户端身份使用窗口重定向及属性通信；并非所有窗口管理器都使用 X11。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "window-system"
     }
   ],
   "summary": "决定窗口布局、焦点和交互策略的桌面系统职责。",

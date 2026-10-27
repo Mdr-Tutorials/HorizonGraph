@@ -19,6 +19,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "employment-terms"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "total-compensation"
     }
   ],
   "summary": "为接受录用或加入公司而安排的特定激励，通常不作为持续性年薪。",

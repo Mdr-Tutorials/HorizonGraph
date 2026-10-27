@@ -7,14 +7,13 @@
     "核心-汇聚-接入架构",
     "园区网三层架构"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "tcp-ip-ecosystem"
   ],
   "domains": [
     "networking"
   ],
-  "abstraction_level": "hardware",
   "relations": [
     {
       "relation_type": "is_instance_of",

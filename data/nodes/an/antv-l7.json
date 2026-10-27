@@ -42,6 +42,10 @@
       "relation_type": "uses",
       "target_id": "visual-encoding",
       "context": "以颜色、大小、形状等图层属性映射位置数据。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "antv"
     }
   ],
   "summary": "用数据驱动图层呈现地理空间信息的可视化引擎。",

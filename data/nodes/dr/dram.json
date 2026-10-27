@@ -22,6 +22,10 @@
       "relation_type": "uses",
       "target_id": "transistor",
       "context": "典型 1T1C DRAM 单元用访问晶体管连接电容与位线。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "hbm"
     }
   ],
   "summary": "以电容电荷保存数据并需要周期刷新的易失存储技术。",

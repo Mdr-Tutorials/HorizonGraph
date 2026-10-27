@@ -7,7 +7,7 @@
     "单指令多数据架构",
     "向量计算架构"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "hardware_iot",
     "languages_runtimes"
@@ -16,15 +16,13 @@
     "digital-design",
     "high-performance-computing"
   ],
-  "abstraction_level": "hardware",
   "importance": 5,
   "popular": 82,
   "status": "active",
   "origin": "ai_draft",
-  "first_released": "1966-01-01",
   "last_reviewed": "2026-10-27",
   "summary": "通过单个控制部件将同一操作码并行广播到多个数据执行单元的向量计算体系。",
-  "description": "SIMD（Single Instruction Multiple Data，单指令多数据流）是 Flynn 分类法中并行体系结构的核心流派。在 SIMD 体系中，单个指令控制单元广播一条操作码，多个算术逻辑单元（ALU）对不同的向量数据分量同步并发执行相同计算。现代 CPU 向量扩展（如 Intel AVX-512、ARM Neon）与数字信号处理器均深度基于该微架构加速图形渲染与机器学习张量运算。",
+  "description": "SIMD（Single Instruction Multiple Data，单指令多数据流）是 Flynn 分类法中并行体系结构的核心流派。在 SIMD 体系中，单个指令控制单元广播一条操作码，多个算术逻辑单元（ALU）对不同的向量数据分量同步并发执行相同计算。现代 CPU 向量扩展（如 Intel AVX-512、ARM Neon）与数字信号处理器均深度基于该微架构加速图形渲染与机器学习张量运算。\n\n## 参考\n\n- [Michael J. Flynn: Very High-Speed Computing Systems](https://ieeexplore.ieee.org/document/1449944)",
   "relations": [
     {
       "relation_type": "is_instance_of",
@@ -33,6 +31,11 @@
     {
       "relation_type": "alternative_to",
       "target_id": "simt-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x86-64",
+      "context": "x86-64 的 SSE 与 AVX 扩展指令集是桌面与服务器最典型的 SIMD 向量微架构。"
     }
   ]
 }

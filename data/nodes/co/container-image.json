@@ -27,11 +27,6 @@
       "relation_type": "uses",
       "target_id": "image-manifest",
       "context": "单个平台的镜像使用清单把配置对象和有序文件系统层关联起来。"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "image-layer",
-      "context": "容器镜像的根文件系统内容通常由有序文件系统层组成；OCI 清单允许层列表为空，因此不把至少一层视为所有镜像的硬约束。"
     }
   ],
   "summary": "封装容器文件系统内容与启动配置的可分发制品",

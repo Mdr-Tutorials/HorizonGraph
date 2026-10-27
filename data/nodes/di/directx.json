@@ -35,11 +35,6 @@
       "relation_type": "uses",
       "target_id": "hlsl",
       "context": "在采用 Direct3D 的可编程着色路径中，通过适配版本的 HLSL 编译工具链准备着色程序。"
-    },
-    {
-      "relation_type": "composed_of",
-      "target_id": "direct3d",
-      "context": "Direct3D 是 DirectX 接口家族中的图形与计算接口组件，不代表整个家族。"
     }
   ],
   "summary": "微软图形与多媒体 API 家族，含 Direct3D 等接口。",

@@ -26,6 +26,10 @@
       "relation_type": "uses",
       "target_id": "schema-validation",
       "context": "按 GraphQL 自身 schema 校验查询文档并转换变量输入；此处不表示采用 JSON Schema。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "openapi"
     }
   ],
   "summary": "客户端按需描述数据的 API 查询语言与运行时规范。",

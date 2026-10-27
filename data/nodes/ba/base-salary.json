@@ -18,6 +18,10 @@
     {
       "relation_type": "is_instance_of",
       "target_id": "employment-terms"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "total-compensation"
     }
   ],
   "summary": "按约定周期支付的固定薪资部分，区别于奖金及权益激励。",

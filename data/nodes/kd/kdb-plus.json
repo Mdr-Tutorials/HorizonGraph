@@ -28,6 +28,10 @@
       "relation_type": "uses",
       "target_id": "k-lang",
       "context": "产品提供 q 查询与程序执行接口，用于向量分析和数据库操作。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "k-lang"
     }
   ],
   "summary": "结合列式时序数据库、内存计算与流式处理的 KX 产品。",

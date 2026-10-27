@@ -4,7 +4,8 @@
   "aliases": [
     "OpenAPI",
     "Swagger 规范",
-    "OAS"
+    "OAS",
+    "REST API 契约规范"
   ],
   "type": "protocol",
   "ecosystems": [
@@ -21,7 +22,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "api-specification"
+      "target_id": "tooling-agent-specification"
     },
     {
       "relation_type": "uses",

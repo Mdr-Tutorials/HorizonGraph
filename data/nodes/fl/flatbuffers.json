@@ -24,7 +24,7 @@
   "last_reviewed": "2026-10-27",
   "official_site": "https://flatbuffers.dev/",
   "summary": "支持内存映射无需解包直接访问结构化数据的跨平台极致性能二进制序列化格式。",
-  "description": "FlatBuffers 是 Google 开发的跨平台、高性能二进制序列化格式。与 Protocol Buffers 或 JSON 需要在接收端遍历字节流解码为内存对象树不同，FlatBuffers 在生成二进制载荷时直接按内存对其布局构建内部偏移指针。消费者只需将字节缓冲区通过 mmap 载入内存，即可通过指针直接读取任何嵌套字段，实现真正的零反序列化时间开销与零额外堆内存分配，在游戏引擎、自动驾驶与端侧 AI 推理（TensorFlow Lite）中广泛采用。",
+  "description": "FlatBuffers 是 Google 开发的跨平台、高性能二进制序列化格式。与 Protocol Buffers 或 JSON 需要在接收端遍历字节流解码为内存对象树不同，FlatBuffers 在生成二进制载荷时直接按内存对其布局构建内部偏移指针。消费者只需将字节缓冲区通过 mmap 载入内存，即可通过指针直接读取任何嵌套字段，实现真正的零反序列化时间开销与零额外堆内存分配，在游戏引擎、自动驾驶与端侧 AI 推理（TensorFlow Lite）中广泛采用。\n\n## 参考\n\n- [Google FlatBuffers Documentation](https://flatbuffers.dev/)",
   "relations": [
     {
       "relation_type": "is_instance_of",
@@ -33,6 +33,11 @@
     {
       "relation_type": "alternative_to",
       "target_id": "protocol-buffers"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpp",
+      "context": "通过轻量级 C++ 头文件直接解析内存映射数据缓冲区。"
     }
   ]
 }

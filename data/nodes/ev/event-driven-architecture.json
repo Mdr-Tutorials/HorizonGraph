@@ -7,7 +7,7 @@
     "事件架构",
     "响应式系统架构"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "cloud_native",
     "enterprise_industry"
@@ -16,19 +16,22 @@
     "distributed-systems",
     "cloud-infrastructure"
   ],
-  "abstraction_level": "theoretical",
   "importance": 5,
   "popular": 82,
   "status": "active",
   "origin": "ai_draft",
-  "first_released": "1990-01-01",
   "last_reviewed": "2026-10-27",
   "summary": "以事件状态变更为核心驱动异步解耦通信与业务响应的系统架构。",
-  "description": "事件驱动架构（Event-Driven Architecture / EDA）是一种围绕状态变化（事件 Event）的产生、路由、消费与响应而组织的分布式系统架构风格。在 EDA 中，事件生产者在事件发生时将其发布至消息总线或事件代理，无需关心消费者的存在；多个消费者基于发布-订阅机制异步独立处理事件，具备极高的解耦度、伸缩性与容灾能力。",
+  "description": "事件驱动架构（Event-Driven Architecture / EDA）是一种围绕状态变化（事件 Event）的产生、路由、消费与响应而组织的分布式系统架构风格。在 EDA 中，事件生产者在事件发生时将其发布至消息总线或事件代理，无需关心消费者的存在；多个消费者基于发布-订阅机制异步独立处理事件，具备极高的解耦度、伸缩性与容灾能力。\n\n## 参考\n\n- [Martin Fowler: What do you mean by “Event-Driven”?](https://martinfowler.com/articles/201701-event-driven.html)\n- [AWS: What is an Event-Driven Architecture?](https://aws.amazon.com/event-driven-architecture/)",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asyncapi",
+      "context": "事件驱动架构使用 AsyncAPI 形式化定义消息通道与发布订阅数据契约。"
     }
   ]
 }

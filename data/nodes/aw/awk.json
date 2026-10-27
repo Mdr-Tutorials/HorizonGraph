@@ -19,10 +19,6 @@
       "target_id": "language"
     },
     {
-      "relation_type": "implemented_by",
-      "target_id": "gawk"
-    },
-    {
       "relation_type": "uses",
       "target_id": "regex",
       "context": "模式选择与记录、字段相关操作采用正则表达式；具体支持范围由规范和实现限定。"

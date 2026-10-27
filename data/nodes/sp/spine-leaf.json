@@ -7,7 +7,7 @@
     "Spine-Leaf架构",
     "二层扁平Fabric"
   ],
-  "type": "architecture",
+  "type": "concept",
   "ecosystems": [
     "tcp-ip-ecosystem"
   ],
@@ -15,7 +15,6 @@
     "networking",
     "cloud-infrastructure"
   ],
-  "abstraction_level": "hardware",
   "relations": [
     {
       "relation_type": "is_instance_of",

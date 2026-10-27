@@ -23,6 +23,10 @@
       "relation_type": "uses",
       "target_id": "equity-vesting",
       "context": "采用归属安排的员工期权计划，通过任职或其他条件确定可取得的期权权益；行权另受计划约束。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "total-compensation"
     }
   ],
   "summary": "按计划条件以约定行权价购买公司股票的员工激励权利。",

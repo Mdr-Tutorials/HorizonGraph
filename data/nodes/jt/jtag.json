@@ -22,7 +22,7 @@
   "first_released": "1990-05-01",
   "last_reviewed": "2026-10-27",
   "summary": "用于集成电路引脚边界扫描测试、芯片在线系统级调试与固件烧录的国际硬件接口标准。",
-  "description": "JTAG（由 Joint Test Action Group 制订，正式编号 IEEE 1149.1）是芯片硬件测试与在线调试的国际标准通信接口。它通过 4 到 5 根专有测试信号引脚（TCK、TMS、TDI、TDO 以及可选的 TRST），控制芯片内部的测试访问端口（TAP）状态机与边界扫描寄存器链，允许工程师在无需拔下芯片的情况下进行引脚连通性测试、CPU 内部寄存器在线单步调试及板载 Flash 固件烧写。",
+  "description": "JTAG（由 Joint Test Action Group 制订，正式编号 IEEE 1149.1）是芯片硬件测试与在线调试的国际标准通信接口。它通过 4 到 5 根专有测试信号引脚（TCK、TMS、TDI、TDO 以及可选的 TRST），控制芯片内部的测试访问端口（TAP）状态机与边界扫描寄存器链，允许工程师在无需拔下芯片的情况下进行引脚连通性测试、CPU 内部寄存器在线单步调试及板载 Flash 固件烧写。\n\n## 参考\n\n- [IEEE Standard 1149.1-2013 - IEEE Standard for Test Access Port and Boundary-Scan Architecture](https://standards.ieee.org/ieee/1149.1/4364/)",
   "relations": [
     {
       "relation_type": "is_instance_of",
