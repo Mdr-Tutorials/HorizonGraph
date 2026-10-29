@@ -1,0 +1,35 @@
+{
+  "id": "social-engineering",
+  "name": "Social Engineering",
+  "display_primary": "社会工程学",
+  "display_secondary": "Social Engineering",
+  "aliases": [
+    "社会工程学",
+    "Social Engineering",
+    "社工攻击",
+    "社工欺诈"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "操纵和欺骗人员心理以突破安全防线获取未授权访问或保密信息的手段。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "phishing",
+      "context": "网络钓鱼、假冒身份与话术诱导都是社会工程学攻击在数字空间中的具体运用。"
+    }
+  ]
+}

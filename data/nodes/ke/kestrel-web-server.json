@@ -1,0 +1,36 @@
+{
+  "id": "kestrel-web-server",
+  "name": "Kestrel",
+  "display_primary": "Kestrel 跨平台 Web 服务器",
+  "display_secondary": "Kestrel Web Server",
+  "aliases": [
+    "Kestrel 跨平台 Web 服务器",
+    "Kestrel",
+    "Kestrel Web Server"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "dotnet-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-services",
+    "networking"
+  ],
+  "summary": "ASP.NET Core 默认内置的轻量级、跨平台、事件驱动的高并发 Web 服务器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

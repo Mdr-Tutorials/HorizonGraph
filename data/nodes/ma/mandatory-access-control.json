@@ -1,0 +1,36 @@
+{
+  "id": "mandatory-access-control",
+  "name": "Mandatory Access Control",
+  "display_primary": "强制访问控制",
+  "display_secondary": "Mandatory Access Control",
+  "aliases": [
+    "强制访问控制",
+    "Mandatory Access Control",
+    "MAC",
+    "强制存取控制"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "systems-programming"
+  ],
+  "summary": "由操作系统中心安全策略依据主体密级与客体安全标签强行判定访问权限的机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux",
+      "context": "SELinux 在 Linux 内核中实现了基于安全标签的强制访问控制模型。"
+    }
+  ]
+}

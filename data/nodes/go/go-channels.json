@@ -1,0 +1,34 @@
+{
+  "id": "go-channels",
+  "name": "Go Channel",
+  "display_primary": "Go 通道通信机制",
+  "display_secondary": "Go Channels",
+  "aliases": [
+    "Go 通道通信机制",
+    "Go Channel",
+    "Go通道"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "go-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "programming-languages"
+  ],
+  "summary": "Go 语言中基于 CSP 模型实现协程间安全同步与数据传递的管道原生机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "go"
+    }
+  ]
+}

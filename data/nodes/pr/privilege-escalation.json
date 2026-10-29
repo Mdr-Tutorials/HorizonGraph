@@ -1,0 +1,35 @@
+{
+  "id": "privilege-escalation",
+  "name": "Privilege Escalation",
+  "display_primary": "权限提升",
+  "display_secondary": "Privilege Escalation",
+  "aliases": [
+    "权限提升",
+    "Privilege Escalation",
+    "提权",
+    "垂直提权"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "利用系统设计缺陷或配置漏洞获取超越原分配权限的操作能力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux",
+      "context": "攻击者利用 Linux 内核漏洞或 SUID 二进制文件配置缺陷获取 root 超级用户权限。"
+    }
+  ]
+}

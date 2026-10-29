@@ -4,7 +4,8 @@
   "display_primary": "GitOps",
   "display_secondary": "GitOps",
   "aliases": [
-    "GitOps"
+    "GitOps",
+    "GitOps声明式持续交付"
   ],
   "type": "concept",
   "ecosystems": [
@@ -27,6 +28,6 @@
   "summary": "以 Git 为唯一事实源，拉式同步集群期望状态。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-29",
   "importance": 3
 }

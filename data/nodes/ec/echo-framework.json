@@ -1,0 +1,37 @@
+{
+  "id": "echo-framework",
+  "name": "Echo",
+  "display_primary": "Echo Web 框架",
+  "display_secondary": "Echo",
+  "aliases": [
+    "Echo Web 框架",
+    "Echo Framework",
+    "Echo"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "go-ecosystem",
+    "modern-web-frameworks-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "summary": "高性能、极简主义的 Go Web 框架，提供快速路由与中间件机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

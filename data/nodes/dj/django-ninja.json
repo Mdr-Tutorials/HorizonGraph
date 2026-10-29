@@ -1,0 +1,39 @@
+{
+  "id": "django-ninja",
+  "name": "Django Ninja",
+  "display_primary": "Django Ninja 快速 API 框架",
+  "display_secondary": "Django Ninja",
+  "aliases": [
+    "Django Ninja 快速 API 框架",
+    "Django Ninja"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "python-ecosystem",
+    "typed-api-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "api-engineering"
+  ],
+  "summary": "基于类型注解与 Pydantic、类似 FastAPI 风格的高效 Django API 框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "django"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pydantic"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

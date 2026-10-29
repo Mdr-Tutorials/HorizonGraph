@@ -1,0 +1,36 @@
+{
+  "id": "implementation-semantics-review",
+  "name": "Implementation Semantics Review",
+  "display_primary": "实现语义审查",
+  "display_secondary": "Implementation Semantics Review",
+  "aliases": [
+    "实现语义审查",
+    "逻辑实现审查",
+    "Implementation Semantics Review"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-quality-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "software-quality",
+    "software-testing"
+  ],
+  "summary": "审查代码实现的逻辑正确性、并发安全、异常健壮性与依赖合规性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "排查实现细节中的死锁、资源泄漏及未处理异常等深层缺陷。"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "bamboo",
+  "name": "Bamboo",
+  "display_primary": "Bamboo",
+  "display_secondary": "Bamboo",
+  "aliases": [
+    "Bamboo",
+    "Atlassian Bamboo"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cicd-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "Atlassian 旗下的自动化构建、测试与端到端发布持续集成工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "在自动化流水线阶段触发单元测试执行并记录失败用例。"
+    }
+  ]
+}

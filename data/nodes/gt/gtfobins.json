@@ -1,0 +1,36 @@
+{
+  "id": "gtfobins",
+  "name": "GTFOBins",
+  "display_primary": "GTFOBins",
+  "display_secondary": "GTFOBins",
+  "aliases": [
+    "GTFOBins",
+    "Unix二进制提权知识库",
+    "Linux提权速查表"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "收集可被攻击者利用以绕过安全限制、提权或逃逸沙箱的Unix合法二进制程序清单。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "privilege-escalation",
+      "context": "渗透测试人员参考 GTFOBins 寻找具有 SUID 权限或 sudo 免密配置的程序实施提权。"
+    }
+  ]
+}

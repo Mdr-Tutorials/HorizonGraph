@@ -1,0 +1,35 @@
+{
+  "id": "spring-aop",
+  "name": "Spring AOP",
+  "display_primary": "Spring AOP 切面编程机制",
+  "display_secondary": "Spring AOP",
+  "aliases": [
+    "Spring AOP 切面编程机制",
+    "Spring AOP",
+    "Spring面向切面编程"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "software-quality"
+  ],
+  "summary": "基于动态代理在运行期实现事务管理与安全日志等横切关注点解耦的 AOP 模块。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

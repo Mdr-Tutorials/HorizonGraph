@@ -1,0 +1,39 @@
+{
+  "id": "shadow-dom",
+  "name": "Shadow DOM",
+  "display_primary": "影子 DOM",
+  "display_secondary": "Shadow DOM",
+  "aliases": [
+    "影子 DOM",
+    "Shadow DOM",
+    "阴影 DOM"
+  ],
+  "type": "protocol",
+  "abstraction_level": "runtime_vm",
+  "domains": [
+    "web-development",
+    "browser-automation"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "browser-engine-ecosystem",
+    "w3c-standards-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "为特定宿主元素附加私有 DOM 作用域树以防止外部样式与脚本泄漏穿透。"
+    }
+  ],
+  "summary": "将独立隐藏的 DOM 树附加到常规元素以实现样式与行为隔离封装的规范。",
+  "description": "Shadow DOM 是 Web Components 标准的核心支柱之一。它允许浏览器为特定的普通 DOM 元素挂载一个独立的作用域子 DOM 树（称为 shadow root）。\n\n在 shadow root 内部声明的 CSS 样式不会渗透污染外部页面，外部页面的全局 CSS 选择器默认也无法命中内部节点；通过 <slot> 元素可以实现插槽内容分发，从底层为真正可靠的组件级封装提供了硬件和引擎级的防护边界。\n\n## 参考\n\n- [MDN Web Docs: Using shadow DOM](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM)\n- [W3C DOM Specification: Shadow Trees](https://dom.spec.whatwg.org/#shadow-trees)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

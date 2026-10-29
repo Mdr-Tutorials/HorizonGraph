@@ -1,0 +1,39 @@
+{
+  "id": "beego",
+  "name": "Beego",
+  "display_primary": "Beego 全栈框架",
+  "display_secondary": "Beego",
+  "aliases": [
+    "Beego 全栈框架",
+    "Beego Framework",
+    "Beego"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "go-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "summary": "Go 语言的企业级全栈 MVC Web 框架，内置 ORM 与自动化工具链。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mvc"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "django-rest-framework",
+  "name": "Django REST Framework",
+  "display_primary": "Django REST Framework 接口框架",
+  "display_secondary": "DRF",
+  "aliases": [
+    "Django REST Framework 接口框架",
+    "Django REST Framework",
+    "DRF"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "python-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "api-engineering"
+  ],
+  "summary": "功能强大且灵活的 Django 扩展工具包，用于构建 Web API，支持强大的序列化与认证系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "django"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

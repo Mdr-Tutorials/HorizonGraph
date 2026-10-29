@@ -1,0 +1,41 @@
+{
+  "id": "flutter-engine",
+  "name": "Flutter Engine",
+  "display_primary": "Flutter 引擎",
+  "display_secondary": "Flutter Engine",
+  "aliases": [
+    "Flutter 引擎",
+    "Flutter Engine"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "android-ecosystem",
+    "ios-ecosystem",
+    "rendering-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "interactive-graphics"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "flutter"
+    }
+  ],
+  "summary": "基于 C++ 编写的 Flutter 运行时核心引擎，负责文本排版与渲染管线调度。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "official_site": "https://github.com/flutter/flutter/tree/master/engine"
+}

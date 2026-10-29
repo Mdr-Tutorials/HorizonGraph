@@ -1,0 +1,52 @@
+{
+  "id": "haystack-framework",
+  "name": "Haystack",
+  "display_primary": "Haystack",
+  "display_secondary": "deepset Haystack",
+  "aliases": [
+    "Haystack",
+    "deepset Haystack",
+    "Haystack框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem",
+    "open-source-ai-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "natural-language-processing",
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "rag"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "langchain"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "llamaindex"
+    }
+  ],
+  "summary": "deepset 开源的端到端大模型应用与模块化 RAG 管道编排 Python 框架。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://haystack.deepset.ai",
+  "description": "Haystack 是由 deepset 主导开发的开源端到端 LLM 应用框架，专为在生产环境中构建高度可靠、类型安全且高性能的语义搜索、问答及 RAG 管道而设计。Haystack 2.0 经历了完全基于现代 Python 组件化哲学的重构。\n\n在 Haystack 中，流水线（Pipeline）由纯净的松耦合组件节点（如 DocumentJoiner、PromptBuilder、OpenAIGenerator、Embedder）通过显式有向无环图（DAG）连接构成，杜绝了隐式全局状态。框架提供卓越的向量数据库适配能力、模块化智能体抽象以及可序列化的管道部署方案，深受企业级严肃生产系统青睐。\n\n## 参考\n\n- [Haystack 2.0 官方文档](https://docs.haystack.deepset.ai/docs)\n- [deepset Haystack GitHub](https://github.com/deepset-ai/haystack)"
+}

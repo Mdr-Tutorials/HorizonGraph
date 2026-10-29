@@ -1,0 +1,43 @@
+{
+  "id": "slowly-changing-dimension",
+  "name": "Slowly Changing Dimension",
+  "abbreviation": "SCD",
+  "display_primary": "渐变维",
+  "display_secondary": "Slowly Changing Dimension",
+  "aliases": [
+    "渐变维",
+    "缓慢变化维",
+    "SCD",
+    "Slowly Changing Dimensions"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "dimensional-modeling"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dimension-table",
+      "context": "在维度表中通过覆写、新增行或新增列等方式维护属性变更历史。"
+    }
+  ],
+  "summary": "管理数据仓库维度表中随时间缓慢变化属性的追踪方法。",
+  "description": "渐变维（SCD）是在数据仓库中处理维度实体属性缓慢变化的标准模式。常见策略包括 SCD 1（直接覆盖旧值，不保留历史）、SCD 2（新增版本记录行，配合有效起止时间或代理键维护完整生命周期历史）以及 SCD 3（新增字段保留前值），确保历史事实分析的准确性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

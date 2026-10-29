@@ -1,0 +1,36 @@
+{
+  "id": "gunicorn",
+  "name": "Gunicorn",
+  "display_primary": "Gunicorn WSGI 服务器",
+  "display_secondary": "Green Unicorn",
+  "aliases": [
+    "Gunicorn WSGI 服务器",
+    "Gunicorn",
+    "Green Unicorn"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "python-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-services",
+    "systems-programming"
+  ],
+  "summary": "基于 pre-fork 模型的 Python WSGI 服务器，广泛用于生产部署。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

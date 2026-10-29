@@ -1,0 +1,42 @@
+{
+  "id": "black-box-testing",
+  "name": "Black-Box Testing",
+  "display_primary": "黑盒测试",
+  "display_secondary": "Black-Box Testing",
+  "aliases": [
+    "黑盒测试",
+    "不透明盒测试",
+    "Black-Box Testing",
+    "Black Box Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "在不了解内部实现细节的前提下根据规格说明验证功能与行为。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "functional-testing",
+      "context": "通过输入输出验证系统功能是否符合规格说明。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-case",
+      "context": "基于需求规格与边界值分析设计黑盒测试用例。"
+    }
+  ]
+}

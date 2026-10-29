@@ -1,0 +1,46 @@
+{
+  "id": "a-b-testing",
+  "name": "A/B Testing",
+  "display_primary": "A/B 测试",
+  "display_secondary": "A/B Testing · Split Testing",
+  "aliases": [
+    "A/B 测试",
+    "分流测试",
+    "对照实验",
+    "在线对照实验",
+    "AB Testing",
+    "Split Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-measurement-ecosystem",
+    "empirical-software-engineering-ecosystem"
+  ],
+  "domains": [
+    "empirical-software-engineering",
+    "statistics",
+    "software-measurement"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "product-manager",
+      "context": "产品经理利用 A/B 测试科学验证新功能或交互改进对核心转化率与用户留存的因果影响。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "north-star-metric",
+      "context": "对照实验通常选取北极星指标或其核心驱动因子作为关键实验观测目标。"
+    }
+  ],
+  "summary": "通过将流量随机分配至对照组与实验组，评估功能策略因果效应的实证方法。",
+  "description": "A/B 测试（A/B Testing，又称分流测试或在线对照实验）是一种基于统计假设检验的实证科学方法。通过将真实用户流量随机均匀分配至包含基线功能的对照组（Control）与包含新特性的实验组（Treatment），在控制外部变量干扰的前提下度量各组的核心业务指标表现。\n\n借助假设检验与统计显著性（p-value、置信区间）计算，产品团队能够科学验证因果关系，驱动真正数据驱动的产品决策。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

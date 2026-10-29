@@ -1,0 +1,44 @@
+{
+  "id": "incident-management",
+  "name": "Incident Management",
+  "display_primary": "线上事故管理",
+  "display_secondary": "Incident Management",
+  "aliases": [
+    "线上事故管理",
+    "事故管理流程",
+    "IT 事故应急响应",
+    "线上故障管理",
+    "Incident Response"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "devops_tooling",
+    "cloud_native"
+  ],
+  "domains": [
+    "devops",
+    "software-quality"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sla",
+      "context": "根据服务中断对业务 SLA 的影响程度划分事故等级并触发相应响应预案。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "blameless-postmortem",
+      "context": "在线上事故应急止血恢复之后，组织跨职能团队开展无指责复盘以沉淀预防改进措施。"
+    }
+  ],
+  "summary": "对生产服务中断进行检测、定级、应急响应、止血排障与复盘改进的流程。",
+  "description": "线上事故管理（Incident Management）是保障生产系统高可用性与业务连续性的标准化应急管理体系。它涵盖事故监测与告警、严重度分级、事故指挥官（Incident Commander）调度、战情室（War Room）协同、快速止血排障及对外状态通报。\n\n完备的事故管理流程不仅能够最小化停机时间与业务损失，还能确保每次突发事件后均有迹可循，形成闭环的改进追踪机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

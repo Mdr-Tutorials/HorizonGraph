@@ -1,0 +1,37 @@
+{
+  "id": "zephyr",
+  "name": "Zephyr",
+  "display_primary": "Zephyr",
+  "display_secondary": "Zephyr",
+  "aliases": [
+    "Zephyr",
+    "Zephyr for Jira",
+    "Jira 测试管理插件"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "深度嵌入 Jira 的企业级测试管理解决方案，支持敏捷测试与质量双向追溯。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-case",
+      "context": "在 Jira 事务中编排测试循环并直接关联缺陷与用户故事。"
+    }
+  ]
+}

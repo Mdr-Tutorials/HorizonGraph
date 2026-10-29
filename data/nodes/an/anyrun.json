@@ -1,0 +1,35 @@
+{
+  "id": "anyrun",
+  "name": "ANY.RUN",
+  "display_primary": "ANY.RUN",
+  "display_secondary": "ANY.RUN Interactive Sandbox",
+  "aliases": [
+    "ANY.RUN",
+    "AnyRun",
+    "交互式恶意软件分析沙箱"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "允许用户在云端虚拟机中实时观察和交互操作可疑样本行为的动态沙箱分析平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "incident-response",
+      "context": "分析师在 ANY.RUN 中动态运行勒索病毒或钓鱼附件，实时记录网络外联与进程行为。"
+    }
+  ]
+}

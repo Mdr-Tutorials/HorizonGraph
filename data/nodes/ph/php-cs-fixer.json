@@ -1,0 +1,35 @@
+{
+  "id": "php-cs-fixer",
+  "name": "PHP CS Fixer",
+  "display_primary": "PHP CS Fixer 代码风格修复器",
+  "display_secondary": "PHP Coding Standards Fixer",
+  "aliases": [
+    "PHP CS Fixer 代码风格修复器",
+    "PHP CS Fixer",
+    "php-cs-fixer"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "php-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "language-tooling"
+  ],
+  "summary": "自动规范化并修复 PHP 代码使其遵循 PSR-12 等编码规范的自动化工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "php"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

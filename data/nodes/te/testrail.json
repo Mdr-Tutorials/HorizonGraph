@@ -1,0 +1,36 @@
+{
+  "id": "testrail",
+  "name": "TestRail",
+  "display_primary": "TestRail",
+  "display_secondary": "TestRail",
+  "aliases": [
+    "TestRail",
+    "测试管理工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "集中化管理测试用例、跟踪执行进度并提供实时质量洞察的测试管理平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-case",
+      "context": "记录手工与自动化测试用例执行进度并生成实时覆盖率报表。"
+    }
+  ]
+}

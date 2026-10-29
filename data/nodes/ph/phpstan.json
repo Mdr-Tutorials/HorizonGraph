@@ -1,0 +1,35 @@
+{
+  "id": "phpstan",
+  "name": "PHPStan",
+  "display_primary": "PHPStan 静态分析工具",
+  "display_secondary": "PHPStan",
+  "aliases": [
+    "PHPStan 静态分析工具",
+    "PHPStan"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "php-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "language-tooling"
+  ],
+  "summary": "专注于在未实际运行代码前发现潜在 bug 与类型不匹配的 PHP 核心静态分析器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "php"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

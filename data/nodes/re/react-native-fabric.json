@@ -1,0 +1,42 @@
+{
+  "id": "react-native-fabric",
+  "name": "Fabric Renderer",
+  "display_primary": "Fabric 渲染系统",
+  "display_secondary": "React Native Fabric",
+  "aliases": [
+    "Fabric 渲染系统",
+    "Fabric",
+    "React Native Fabric"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "android-ecosystem",
+    "ios-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "interactive-graphics"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "react-native"
+    }
+  ],
+  "summary": "React Native 新架构核心渲染系统，提供 C++ 跨平台渲染与并发更新能力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://reactnative.dev/docs/fabric-renderer"
+}

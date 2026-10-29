@@ -1,0 +1,43 @@
+{
+  "id": "accessibility-testing",
+  "name": "Accessibility Testing",
+  "display_primary": "无障碍测试",
+  "display_secondary": "Accessibility Testing",
+  "aliases": [
+    "无障碍测试",
+    "可访问性测试",
+    "Accessibility Testing",
+    "a11y Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "software-testing",
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "summary": "验证软件应用是否满足各类残障人士无障碍使用标准及合规要求。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "axe-core",
+      "context": "利用可访问性规则引擎自动检测 DOM 节点的对比度与 ARIA 标记。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "usability-testing",
+      "context": "结合辅助技术对屏幕朗读器与纯键盘操作进行可用性评估。"
+    }
+  ]
+}

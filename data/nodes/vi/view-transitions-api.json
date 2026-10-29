@@ -1,0 +1,40 @@
+{
+  "id": "view-transitions-api",
+  "name": "View Transitions API",
+  "display_primary": "视图过渡 API",
+  "display_secondary": "View Transitions API",
+  "aliases": [
+    "视图过渡 API",
+    "View Transitions API",
+    "View Transitions",
+    "视图转换 API"
+  ],
+  "type": "protocol",
+  "abstraction_level": "runtime_vm",
+  "domains": [
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "browser-engine-ecosystem",
+    "w3c-standards-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "自动捕获新旧 DOM 状态快照并生成伪元素动画树实现无缝视图转场。"
+    }
+  ],
+  "summary": "在 DOM 状态变化或页面导航时提供平滑快照交叉淡入淡出动画的原生 API。",
+  "description": "View Transitions API 是 W3C 与 Chrome 团队主导的原生浏览器转场动画标准。过去在单页应用（SPA）或多页网站（MPA）中实现平滑且高性能的元素共享转场（如列表卡片展开为详情大图）需要极复杂的 JavaScript 坐标计算与 DOM 临时克隆。\n\n调用 document.startViewTransition() 后，浏览器底层引擎自动截取变化前后的快照并构建特定的伪元素树（::view-transition），结合 CSS 动画即可实现 GPU 硬件加速的电影级丝滑转场体验。\n\n## 参考\n\n- [MDN Web Docs: View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API)\n- [W3C View Transitions Level 1](https://www.w3.org/TR/css-view-transitions-1/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

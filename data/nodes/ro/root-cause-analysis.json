@@ -1,0 +1,36 @@
+{
+  "id": "root-cause-analysis",
+  "name": "Root Cause Analysis",
+  "display_primary": "根因分析",
+  "display_secondary": "Root Cause Analysis",
+  "aliases": [
+    "根因分析",
+    "RCA",
+    "Root Cause Analysis"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-quality-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "software-quality",
+    "devops"
+  ],
+  "summary": "追溯缺陷与系统故障的最根本成因以制定预防性改进措施的系统方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "通过审查记录与事故报告复盘导致缺陷产生的逻辑遗漏。"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "tcpdump",
+  "name": "tcpdump",
+  "display_primary": "tcpdump",
+  "display_secondary": "tcpdump",
+  "aliases": [
+    "tcpdump",
+    "命令行网络抓包工具",
+    "tcpdump抓包器"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "基于libpcap在命令行运行的强大网络数据包捕获与协议分析工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wireshark",
+      "context": "服务器上使用 tcpdump 抓取的 pcap 数据包常转存至 Wireshark 进行图形化分析。"
+    }
+  ]
+}

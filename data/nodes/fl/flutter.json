@@ -4,9 +4,12 @@
   "aliases": [],
   "type": "framework",
   "ecosystems": [
+    "android-ecosystem",
+    "ios-ecosystem",
     "web_frontend"
   ],
   "domains": [
+    "mobile-app-development",
     "web-development"
   ],
   "abstraction_level": "framework_library",

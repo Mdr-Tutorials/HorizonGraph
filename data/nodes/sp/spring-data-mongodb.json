@@ -1,0 +1,35 @@
+{
+  "id": "spring-data-mongodb",
+  "name": "Spring Data MongoDB",
+  "display_primary": "Spring Data MongoDB 数据访问框架",
+  "display_secondary": "Spring Data MongoDB",
+  "aliases": [
+    "Spring Data MongoDB 数据访问框架",
+    "Spring Data MongoDB"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "summary": "为 MongoDB 文档数据库提供映射支持、仓储抽象与聚合查询的 Spring 框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "spring-boot"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

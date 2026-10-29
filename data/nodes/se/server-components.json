@@ -1,0 +1,45 @@
+{
+  "id": "server-components",
+  "name": "Server Components",
+  "display_primary": "服务端组件",
+  "display_secondary": "React Server Components",
+  "aliases": [
+    "服务端组件",
+    "Server Components",
+    "RSC",
+    "React Server Components"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "web-services",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "react",
+      "context": "作为 React 官方现代组件范式，在构建时或请求时仅在服务端执行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssr",
+      "context": "以紧凑流式序列化协议传输组件树并在客户端无缝合并客户端组件。"
+    }
+  ],
+  "summary": "仅在服务端执行且不向客户端发送运行时代发生代码的零打包体积组件架构。",
+  "description": "服务端组件（React Server Components，简称 RSC）是现代 Web 框架的一项深层架构革新。不同于常规 SSR 组件仍需向浏览器发送全量客户端 JavaScript 代码进行注水，RSC 仅在服务端运行，其依赖项与业务逻辑完全留在后端，下发至浏览器的仅是组件树的流式序列化 JSON 结构。\n\n这使得开发者可以直接在组件内部访问数据库或文件系统，免去冗余 API 胶水层，且大型第三方依赖不会增加前端客户端打包体积。客户端组件（Client Components）通过明确的指令嵌套嵌入，在浏览器端完成状态保持与事件响应。\n\n## 参考\n\n- [React 官方规范：Server Components](https://react.dev/reference/rsc/server-components)\n- [Next.js App Router 文档：Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

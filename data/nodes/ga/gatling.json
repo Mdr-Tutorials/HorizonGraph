@@ -1,0 +1,34 @@
+{
+  "id": "gatling",
+  "name": "Gatling",
+  "display_primary": "Gatling",
+  "display_secondary": "Gatling",
+  "aliases": [
+    "Gatling",
+    "Gatling 压测工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "基于异步非阻塞 Akka 架构的高性能代码级负载与性能压测工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "load-testing"
+    }
+  ]
+}

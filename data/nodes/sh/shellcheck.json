@@ -1,0 +1,37 @@
+{
+  "id": "shellcheck",
+  "name": "ShellCheck",
+  "display_primary": "ShellCheck",
+  "display_secondary": "ShellCheck",
+  "aliases": [
+    "ShellCheck",
+    "Shell脚本静态分析工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "shell-cli-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "command-line-tools",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "针对sh和bash等Shell脚本提供语法警告、常见陷阱诊断与代码建议的静态分析工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://www.shellcheck.net",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bash",
+      "context": "解析 Bash 脚本 AST 并提供常见语法陷阱与安全性建议。"
+    }
+  ]
+}

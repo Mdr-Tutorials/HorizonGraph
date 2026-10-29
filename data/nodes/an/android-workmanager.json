@@ -1,0 +1,39 @@
+{
+  "id": "android-workmanager",
+  "name": "WorkManager",
+  "display_primary": "WorkManager 后台任务库",
+  "display_secondary": "WorkManager",
+  "aliases": [
+    "WorkManager 后台任务库",
+    "WorkManager",
+    "Jetpack WorkManager"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "android-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "android"
+    }
+  ],
+  "summary": "Jetpack 推荐的可靠可延迟和周期性后台任务管理与调度库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://developer.android.com/topic/libraries/architecture/workmanager"
+}

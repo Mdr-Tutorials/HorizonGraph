@@ -1,0 +1,35 @@
+{
+  "id": "capybara",
+  "name": "Capybara",
+  "display_primary": "Capybara 验收测试工具",
+  "display_secondary": "Capybara",
+  "aliases": [
+    "Capybara 验收测试工具",
+    "Capybara"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "ruby-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "web-development"
+  ],
+  "summary": "通过模拟真实用户与浏览器的交互行为来测试 Web 应用功能的集成测试工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ruby"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

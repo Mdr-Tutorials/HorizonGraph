@@ -1,0 +1,39 @@
+{
+  "id": "scalajs",
+  "name": "Scala.js",
+  "display_primary": "Scala.js 编译器",
+  "display_secondary": "Scala.js",
+  "aliases": [
+    "Scala.js 编译器",
+    "Scala.js"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "compilers",
+    "web-development"
+  ],
+  "summary": "将类型安全的 Scala 源码编译为优化的高性能 JavaScript 代码的前端编译器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "scala"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "javascript"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

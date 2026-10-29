@@ -1,0 +1,36 @@
+{
+  "id": "xunit",
+  "name": "xUnit.net",
+  "display_primary": "xUnit.net 单元测试框架",
+  "display_secondary": "xUnit.net",
+  "aliases": [
+    "xUnit.net 单元测试框架",
+    "xUnit.net",
+    "xUnit"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "dotnet-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": ".NET 开源社区应用最广的现代单元测试驱动工具，由 NUnit 创始人重构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

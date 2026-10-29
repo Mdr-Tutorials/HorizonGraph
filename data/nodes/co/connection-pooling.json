@@ -1,0 +1,37 @@
+{
+  "id": "connection-pooling",
+  "name": "Connection Pooling",
+  "display_primary": "连接池",
+  "display_secondary": "Connection Pooling",
+  "aliases": [
+    "连接池",
+    "数据库连接池",
+    "Connection Pool",
+    "Connection Pooling"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "systems-programming"
+  ],
+  "summary": "复用物理网络连接以降低频繁创建销毁开销的数据库连接管理机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tcp",
+      "context": "维护与后端数据库建立的长连接会话以避免重复 TCP 三次握手开销。"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "jmeter",
+  "name": "Apache JMeter",
+  "display_primary": "JMeter",
+  "display_secondary": "Apache JMeter",
+  "aliases": [
+    "JMeter",
+    "Apache JMeter"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "Apache 旗下的纯 Java 开源负载测试与系统性能度量测试工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "load-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "performance-testing"
+    }
+  ]
+}

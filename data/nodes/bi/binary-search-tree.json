@@ -1,0 +1,39 @@
+{
+  "id": "binary-search-tree",
+  "name": "Binary Search Tree",
+  "display_primary": "二叉搜索树",
+  "display_secondary": "Binary Search Tree",
+  "aliases": [
+    "二叉搜索树",
+    "二叉查找树",
+    "二叉排序树",
+    "BST"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "左子树键值均小于根且右子树均大于根的有序二叉树，支持动态查找与插入。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "binary-tree"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "binary-search",
+      "context": "利用左右子树有序性质每次比较排除一半分支实现对数级别均摊查找。"
+    }
+  ]
+}

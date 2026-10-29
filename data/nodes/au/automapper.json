@@ -1,0 +1,33 @@
+{
+  "id": "automapper",
+  "name": "AutoMapper",
+  "display_primary": "AutoMapper 对象映射库",
+  "display_secondary": "AutoMapper",
+  "aliases": [
+    "AutoMapper 对象映射库",
+    "AutoMapper"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "dotnet-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "summary": "基于约定消除 DTO 与实体间繁琐属性赋值样板代码的 .NET 经典映射库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

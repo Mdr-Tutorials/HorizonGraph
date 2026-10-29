@@ -1,0 +1,43 @@
+{
+  "id": "jetpack-compose",
+  "name": "Jetpack Compose",
+  "display_primary": "Jetpack Compose",
+  "display_secondary": "Jetpack Compose",
+  "aliases": [
+    "Jetpack Compose",
+    "Compose"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "android-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kotlin"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "android"
+    }
+  ],
+  "summary": "Android 官方用于构建原生界面的新一代声明式 UI 框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "official_site": "https://developer.android.com/jetpack/compose"
+}

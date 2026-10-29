@@ -1,0 +1,36 @@
+{
+  "id": "agent-reflection",
+  "name": "Agent Reflection",
+  "display_primary": "智能体反思",
+  "display_secondary": "Reflection Pattern",
+  "aliases": [
+    "智能体反思",
+    "Agent Reflection",
+    "自反思机制",
+    "Self-Reflection"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ai-agent"
+    }
+  ],
+  "summary": "智能体评估执行结果与环境反馈、识别错误并生成修正计划的双重推理认知模式。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "description": "智能体反思（Agent Reflection，亦称为自反思或自修正机制，如 Reflexion 与 Self-Refine）是提升复杂任务解决成功率的关键智能体设计模式。在自主执行过程中，单向贪心的前向推理一旦遇到工具调用失败、代码编译报错或生成逻辑缺陷，极易陷入死循环或幻觉崩溃。\n\n反思机制引入了双重认知评估循环：智能体在获取环境执行的观察结果（Observation）后，显式启动一个评判阶段（Critique），自主审视中间输出是否达成既定目标、分析失误根因，并将提炼出的经验性反思转化为短期工作记忆或动态提示词调整，进而指导后续步骤的行动重试与轨迹修正。\n\n## 参考\n\n- [Noah Shinn et al.：Reflexion: Language Agents with Verbal Reinforcement Learning (NeurIPS 2023)](https://arxiv.org/abs/2303.11366)\n- [Aman Madaan et al.：Self-Refine: Iterative Refinement with Self-Feedback (NeurIPS 2023)](https://arxiv.org/abs/2303.17651)"
+}

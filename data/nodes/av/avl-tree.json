@@ -1,0 +1,37 @@
+{
+  "id": "avl-tree",
+  "name": "AVL Tree",
+  "display_primary": "AVL 树",
+  "display_secondary": "AVL Tree",
+  "aliases": [
+    "AVL 树",
+    "自平衡二叉查找树",
+    "AVL 自平衡树"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "任意节点左右子树高度差绝对值不超过 1 的严格自平衡二叉搜索树。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "binary-search-tree"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "red-black-tree"
+    }
+  ]
+}

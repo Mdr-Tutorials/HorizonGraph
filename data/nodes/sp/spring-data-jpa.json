@@ -1,0 +1,39 @@
+{
+  "id": "spring-data-jpa",
+  "name": "Spring Data JPA",
+  "display_primary": "Spring Data JPA 数据访问框架",
+  "display_secondary": "Spring Data JPA",
+  "aliases": [
+    "Spring Data JPA 数据访问框架",
+    "Spring Data JPA"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "summary": "基于 JPA 规范的数据访问框架，通过接口定义与声明式查询大幅减少样板代码。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "spring-boot"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "hibernate"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

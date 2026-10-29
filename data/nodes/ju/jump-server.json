@@ -1,0 +1,39 @@
+{
+  "id": "jump-server",
+  "name": "Jump Server",
+  "display_primary": "跳板机与堡垒机",
+  "display_secondary": "Jump Server",
+  "aliases": [
+    "跳板机与堡垒机",
+    "Jump Server",
+    "Bastion Host",
+    "堡垒机",
+    "跳板机"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "zero-trust-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "作为访问隔离内网或生产环境的唯一集中化跳板与会话审计网关的主机架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "zero-trust",
+      "context": "堡垒机对运维访问实施强制双因素鉴权与全程命令录屏，符合零信任原则。"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "alembic-migrations",
+  "name": "Alembic",
+  "display_primary": "Alembic 数据库迁移工具",
+  "display_secondary": "Alembic",
+  "aliases": [
+    "Alembic 数据库迁移工具",
+    "Alembic",
+    "SQLAlchemy Alembic"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "python-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "devops"
+  ],
+  "summary": "由 SQLAlchemy 作者开发的轻量级数据库迁移工具，支持版本演进与分支合并。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

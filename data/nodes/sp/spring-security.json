@@ -1,0 +1,34 @@
+{
+  "id": "spring-security",
+  "name": "Spring Security",
+  "display_primary": "Spring Security 安全框架",
+  "display_secondary": "Spring Security",
+  "aliases": [
+    "Spring Security 安全框架",
+    "Spring Security"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "summary": "针对 Java 企业级应用提供身份认证、权限授予与常见安全防护的标准框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "spring-boot"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

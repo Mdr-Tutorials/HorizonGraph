@@ -1,0 +1,33 @@
+{
+  "id": "suffix-tree",
+  "name": "Suffix Tree",
+  "display_primary": "后缀树",
+  "display_secondary": "Suffix Tree",
+  "aliases": [
+    "后缀树",
+    "紧凑后缀树"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "包含字符串所有后缀的压缩前缀树，能在 O(m) 时间内完成任意子串与模式匹配。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "trie",
+      "context": "对字符串所有后缀构建前缀树并压缩单一分支路径以节省节点空间。"
+    }
+  ]
+}

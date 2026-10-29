@@ -1,0 +1,37 @@
+{
+  "id": "dnssec",
+  "name": "Domain Name System Security Extensions",
+  "display_primary": "域名系统安全扩展",
+  "display_secondary": "DNSSEC",
+  "aliases": [
+    "域名系统安全扩展",
+    "DNSSEC",
+    "DNS安全扩展"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "summary": "通过数字签名验证DNS响应真实性与完整性，防止缓存中毒的协议扩展。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "security-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dns",
+      "context": "DNSSEC 为标准 DNS 记录添加数字签名（RRSIG）验证响应数据未被篡改。"
+    }
+  ]
+}

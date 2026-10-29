@@ -1,0 +1,38 @@
+{
+  "id": "sidekiq-queue",
+  "name": "Sidekiq",
+  "display_primary": "Sidekiq 异步任务队列",
+  "display_secondary": "Sidekiq",
+  "aliases": [
+    "Sidekiq 异步任务队列",
+    "Sidekiq"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "ruby-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "web-services"
+  ],
+  "summary": "基于 Redis 与多线程运行的高性能、低内存消耗的 Ruby 异步任务后台调度系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ruby"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "redis"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "locust",
+  "name": "Locust",
+  "display_primary": "Locust",
+  "display_secondary": "Locust",
+  "aliases": [
+    "Locust",
+    "分布式压测工具"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "基于 Python 协程与代码定义用户交互行为的易用分布式负载测试框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "load-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "stress-testing"
+    }
+  ]
+}

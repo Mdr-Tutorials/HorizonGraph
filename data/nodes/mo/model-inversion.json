@@ -1,0 +1,36 @@
+{
+  "id": "model-inversion",
+  "name": "Model Inversion Attack",
+  "display_primary": "模型反演攻击",
+  "display_secondary": "Model Inversion Attack",
+  "aliases": [
+    "模型反演攻击",
+    "Model Inversion Attack",
+    "模型逆向重建攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "machine-learning"
+  ],
+  "summary": "仅凭已部署模型的预测输出概率，通过反向优化推导重建出模型训练集中的敏感私有数据。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backpropagation",
+      "context": "模型反演利用基于梯度的反向传播优化算法从输出概率中逆向推导训练集特征。"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "ragflow",
+  "name": "RAGFlow",
+  "display_primary": "RAGFlow",
+  "display_secondary": "RAGFlow",
+  "aliases": [
+    "RAGFlow",
+    "深度文档理解RAG引擎"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "open-source-ai-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "rag"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "langchain"
+    }
+  ],
+  "summary": "基于深度文档理解的开源检索增强生成（RAG）引擎与可视化流水线系统。",
+  "importance": 3,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://ragflow.io",
+  "description": "RAGFlow 是一套由 InfiniFlow 发起开源的以深度文档理解（Deep Document Understanding）为核心特色的企业级 RAG 引擎与应用编排框架。传统的 RAG 流水线往往采用简单的固定字符长度暴力分块，导致复杂表格、多栏排版与图表信息彻底失真。\n\nRAGFlow 采用视觉识别与自然语言处理相结合的深度学习模型，精准识别 PDF、Word、PPT 和扫描件中的标题层级、段落、多行表格及图像，进行高质量语义切分（OCR & Chunking）。配合可视化管道拖拽编排和清晰可溯源的召回片段标注，极大降低了知识库幻觉率。\n\n## 参考\n\n- [RAGFlow Documentation](https://ragflow.io/docs/dev/)\n- [InfiniFlow RAGFlow GitHub](https://github.com/infiniflow/ragflow)"
+}

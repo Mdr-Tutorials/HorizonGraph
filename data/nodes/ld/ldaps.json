@@ -1,0 +1,37 @@
+{
+  "id": "ldaps",
+  "name": "LDAP over TLS",
+  "display_primary": "轻量目录访问协议安全版",
+  "display_secondary": "LDAPS",
+  "aliases": [
+    "轻量目录访问协议安全版",
+    "LDAPS",
+    "Secure LDAP"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "iam-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "summary": "在TLS加密通道中传输LDAP目录查询与身份认证请求的安全协议。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "security-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tls",
+      "context": "LDAPS 建立在 TLS 连接上以防在传输明文凭据时被内网嗅探截获。"
+    }
+  ]
+}

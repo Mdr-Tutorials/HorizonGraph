@@ -1,0 +1,33 @@
+{
+  "id": "undirected-graph",
+  "name": "Undirected Graph",
+  "display_primary": "无向图",
+  "display_secondary": "Undirected Graph",
+  "aliases": [
+    "无向图",
+    "无向网络"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "mathematics"
+  ],
+  "summary": "顶点间的边为对称双向无序对的图结构，常用于社交网络与无向连通性分析。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph"
+    }
+  ]
+}

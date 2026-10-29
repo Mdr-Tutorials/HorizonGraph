@@ -1,0 +1,40 @@
+{
+  "id": "tanstack-query",
+  "name": "TanStack Query",
+  "display_primary": "TanStack Query",
+  "display_secondary": "Asynchronous State Management",
+  "aliases": [
+    "TanStack Query",
+    "React Query",
+    "异步状态管理库"
+  ],
+  "type": "library",
+  "abstraction_level": "framework_library",
+  "domains": [
+    "web-development"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "react"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "vue"
+    }
+  ],
+  "summary": "用于 Web 应用的数据获取、智能缓存、同步与服务端状态更新的高性能状态库。",
+  "description": "TanStack Query（最初名为 React Query，后扩展支持 Vue、Svelte、Solid 与 Angular）彻底重塑了前端关于状态管理的认知。它明确将应用状态划分为“客户端本地 UI 状态”与“服务端异步缓存状态”，并专门为后者提供终极解决方案。\n\nTanStack Query 开箱即用支持自动去重、后台重新验证、窗口聚焦自动刷新、网络重连重试、分页与无限滚动加载，以及乐观更新（Optimistic Updates），极大地简化了现代前端异步数据交互的复杂度。\n\n## 参考\n\n- [TanStack Query 官方网站](https://tanstack.com/query/latest)\n- [TanStack Query GitHub 仓库](https://github.com/TanStack/query)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

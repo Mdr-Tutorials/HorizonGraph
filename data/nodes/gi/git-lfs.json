@@ -1,0 +1,37 @@
+{
+  "id": "git-lfs",
+  "name": "Git Large File Storage",
+  "display_primary": "Git 大文件存储",
+  "display_secondary": "Git Large File Storage",
+  "aliases": [
+    "Git 大文件存储",
+    "Git LFS",
+    "git-lfs"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "git-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "software-supply-chain"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "开源Git扩展，用文本指针代替大二进制对象，将实际文件存储于远程服务器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://git-lfs.com",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "extends",
+      "target_id": "git"
+    }
+  ]
+}

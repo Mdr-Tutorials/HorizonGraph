@@ -1,0 +1,36 @@
+{
+  "id": "net-aspire",
+  "name": ".NET Aspire",
+  "display_primary": ".NET Aspire 云原生集成栈",
+  "display_secondary": ".NET Aspire",
+  "aliases": [
+    ".NET Aspire 云原生集成栈",
+    ".NET Aspire",
+    "NET Aspire"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dotnet-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "summary": "为构建可观测、易编排且生产就绪的分布式微服务应用而量身定制的官方云原生全家桶。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "aspnet-core"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "pekko",
+  "name": "Apache Pekko",
+  "display_primary": "Apache Pekko 分布式框架",
+  "display_secondary": "Apache Pekko",
+  "aliases": [
+    "Apache Pekko 分布式框架",
+    "Apache Pekko",
+    "Pekko"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "systems-programming"
+  ],
+  "summary": "Apache 基金会基于 Akka 2.6 开源分支维护的高可用、分布式 Actor 运行时框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "scala"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

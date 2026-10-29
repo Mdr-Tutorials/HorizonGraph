@@ -1,0 +1,35 @@
+{
+  "id": "spring-cloud-gateway",
+  "name": "Spring Cloud Gateway",
+  "display_primary": "Spring Cloud Gateway 微服务网关",
+  "display_secondary": "Spring Cloud Gateway",
+  "aliases": [
+    "Spring Cloud Gateway 微服务网关",
+    "Spring Cloud Gateway"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems",
+    "networking"
+  ],
+  "summary": "基于 Project Reactor 与 WebFlux 构建的高性能响应式微服务 API 网关。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "spring-cloud"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

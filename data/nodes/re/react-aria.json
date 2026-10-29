@@ -1,0 +1,42 @@
+{
+  "id": "react-aria",
+  "name": "React Aria",
+  "display_primary": "React Aria",
+  "display_secondary": "Adobe React Aria Primitives",
+  "aliases": [
+    "React Aria",
+    "Adobe React Aria",
+    "无样式无障碍 UI 库"
+  ],
+  "type": "library",
+  "abstraction_level": "framework_library",
+  "domains": [
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "react"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "封装焦点陷阱、键盘事件导航、国际化与 WAI-ARIA 无障碍无缝集成。"
+    }
+  ],
+  "summary": "Adobe 开源的无样式 React Hook 库，提供生产级无障碍访问与交互行为原语。",
+  "description": "React Aria 是 Adobe 设计系统团队开源的一套极其专业的无头 React Hook 库集合。它专注于提供符合国际标准的可访问交互原语，覆盖从复杂的日期选择器、虚拟化列表、组合框到弹窗和菜单等数十种常见组件。\n\nReact Aria 深度解决了屏幕阅读器差异性、自适应触屏与鼠标指针交互、焦点捕获管理以及从右到左（RTL）多语言国际化排版适配等极其繁琐的交互细节。\n\n## 参考\n\n- [Adobe React Aria 官方文档](https://react-spectrum.adobe.com/react-aria/)\n- [React Aria GitHub 仓库](https://github.com/adobe/react-spectrum)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

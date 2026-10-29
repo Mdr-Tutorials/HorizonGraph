@@ -1,0 +1,41 @@
+{
+  "id": "kustomize",
+  "name": "Kustomize",
+  "display_primary": "Kustomize",
+  "display_secondary": "Kustomize",
+  "aliases": [
+    "Kustomize",
+    "Kubernetes声明式配置管理工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "无模板Kubernetes原生声明式配置定制与补丁覆盖管理工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://kustomize.io",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "kubernetes"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cncf",
+      "context": "由 Kubernetes SIG CLI 子项目维护并内置集成于 kubectl。"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "mill",
+  "name": "Mill",
+  "display_primary": "Mill 极速构建工具",
+  "display_secondary": "Mill Build Tool",
+  "aliases": [
+    "Mill 极速构建工具",
+    "Mill",
+    "Mill Build Tool"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "language-tooling",
+    "devops"
+  ],
+  "summary": "旨在简化构建逻辑、拥有极佳执行速度与直观多任务 DAG 缓存的现代 Scala 构建器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "scala"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

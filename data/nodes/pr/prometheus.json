@@ -2,7 +2,11 @@
   "id": "prometheus",
   "name": "Prometheus",
   "display_primary": "Prometheus",
-  "aliases": [],
+  "aliases": [
+    "Prometheus",
+    "prometheus-monitoring",
+    "普罗米修斯监控"
+  ],
   "type": "product",
   "ecosystems": [
     "cloud_native",
@@ -36,7 +40,7 @@
   "summary": "拉模型的指标监控系统，云原生可观测性的默认选择。",
   "importance": 4,
   "official_site": "https://prometheus.io",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-10-29",
   "origin": "curated",
   "status": "active"
 }

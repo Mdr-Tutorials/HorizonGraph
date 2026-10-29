@@ -1,0 +1,33 @@
+{
+  "id": "cyclic-sort",
+  "name": "Cyclic Sort",
+  "display_primary": "循环排序",
+  "display_secondary": "Cyclic Sort",
+  "aliases": [
+    "循环排序",
+    "原位置换排序"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "利用数值与索引一一对应关系在连续区间内以 O(n) 原位交换查找缺失或重复项。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "将范围在 1 到 n 的数值交换到对应的目标索引位置以定位不匹配项。"
+    }
+  ]
+}

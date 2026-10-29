@@ -1,0 +1,38 @@
+{
+  "id": "android-app-bundle",
+  "name": "Android App Bundle",
+  "display_primary": "Android App Bundle",
+  "display_secondary": "Android App Bundle",
+  "aliases": [
+    "Android App Bundle",
+    "AAB"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "android-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "protocol"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "android"
+    }
+  ],
+  "summary": "Google Play 官方应用发布格式与动态按需拆分交付规范。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://developer.android.com/guide/app-bundle"
+}

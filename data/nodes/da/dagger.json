@@ -1,0 +1,37 @@
+{
+  "id": "dagger",
+  "name": "Dagger",
+  "display_primary": "Dagger 依赖注入框架",
+  "display_secondary": "Dagger",
+  "aliases": [
+    "Dagger 依赖注入框架",
+    "Dagger 2",
+    "Dagger"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "android-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "systems-programming"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "Google 维护的针对 Java、Kotlin 与 Android 的静态编译期依赖注入框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://dagger.dev"
+}

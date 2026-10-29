@@ -1,0 +1,37 @@
+{
+  "id": "sql-injection",
+  "name": "SQL Injection",
+  "display_primary": "SQL注入",
+  "display_secondary": "SQL Injection",
+  "aliases": [
+    "SQL注入",
+    "SQL Injection",
+    "SQLi"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "databases",
+    "web-development"
+  ],
+  "summary": "将恶意SQL语句注入不可信输入并在数据库解释执行的攻击。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sql",
+      "context": "通过拼接不可信参数篡改 SQL 语法树结构以越权访问或破坏数据。"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "webpage-test",
+  "name": "WebPageTest",
+  "display_primary": "WebPageTest",
+  "display_secondary": "WebPageTest",
+  "aliases": [
+    "WebPageTest",
+    "网页性能测试工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "software-testing",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "在真实网络与浏览器环境下评测网页加载性能与核心体验指标的测试工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "performance-testing"
+    }
+  ]
+}

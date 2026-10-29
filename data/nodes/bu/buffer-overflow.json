@@ -1,0 +1,37 @@
+{
+  "id": "buffer-overflow",
+  "name": "Buffer Overflow",
+  "display_primary": "缓冲区溢出",
+  "display_secondary": "Buffer Overflow",
+  "aliases": [
+    "缓冲区溢出",
+    "Buffer Overflow",
+    "栈溢出",
+    "堆溢出"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "native-cpp-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "systems-programming"
+  ],
+  "summary": "程序向缓冲区写入超出分配边界的数据，破坏内存控制结构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "c",
+      "context": "C/C++ 中缺少内存边界自动检查是指针与缓冲区溢出漏洞频发的根源。"
+    }
+  ]
+}

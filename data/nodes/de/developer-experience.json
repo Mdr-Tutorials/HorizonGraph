@@ -1,0 +1,46 @@
+{
+  "id": "developer-experience",
+  "name": "Developer Experience",
+  "display_primary": "开发者体验",
+  "display_secondary": "Developer Experience · DevEx · DX",
+  "aliases": [
+    "开发者体验",
+    "DX",
+    "DevEx",
+    "开发者工程效能",
+    "Developer Experience",
+    "dx-engineering"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "devops_tooling",
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "empirical-software-engineering",
+    "software-measurement",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "engineering-manager",
+      "context": "工程经理持续监测工程摩擦点并投资开发环境与工具链优化以提升团队开发者体验。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "developer-journey",
+      "context": "系统性优化开发者从环境搭建、代码构建到发布全旅程中的认知负荷与等待延迟。"
+    }
+  ],
+  "summary": "开发者在与工具链、代码库、基础设施和研发流程交互中的效率与体验。",
+  "description": "开发者体验（Developer Experience，简称 DX 或 DevEx）关注软件工程师在日常工作中使用工具、系统和流程的整体感知与效率。它涵盖开发环境就绪速度、构建与测试反馈时长、API 设计易用性、文档完备度以及心流状态（Flow State）的保护。\n\n实证软件工程研究表明，出色的开发者体验不仅直接提升工程生产力与交付速度，还能显著提高代码质量并减少技术人员离职率。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

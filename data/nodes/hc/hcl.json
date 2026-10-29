@@ -1,0 +1,41 @@
+{
+  "id": "hcl",
+  "name": "HashiCorp Configuration Language",
+  "display_primary": "HCL",
+  "display_secondary": "HashiCorp Configuration Language",
+  "aliases": [
+    "HCL",
+    "HashiCorp配置语言",
+    "HashiCorp Configuration Language"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "iac-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "由HashiCorp设计的结构化声明式配置语言，作为Terraform等工具的描述DSL。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://github.com/hashicorp/hcl",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "hashicorp"
+    },
+    {
+      "relation_type": "bases_for",
+      "target_id": "terraform"
+    }
+  ]
+}

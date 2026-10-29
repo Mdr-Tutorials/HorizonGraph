@@ -1,0 +1,40 @@
+{
+  "id": "pgbouncer",
+  "name": "PgBouncer",
+  "display_primary": "PgBouncer",
+  "display_secondary": "PgBouncer",
+  "aliases": [
+    "PgBouncer",
+    "pgbouncer"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "devops"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "针对 PostgreSQL 设计的轻量级低内存开销连接池代理中间件。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "connection-pooling"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "postgresql",
+      "context": "为 PostgreSQL 提供会话、事务和语句级别的连接复用代理。"
+    }
+  ]
+}

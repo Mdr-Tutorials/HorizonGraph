@@ -1,0 +1,37 @@
+{
+  "id": "multi-agent-swarm",
+  "name": "Multi-Agent Swarm",
+  "display_primary": "多智能体集群",
+  "display_secondary": "Agent Swarm",
+  "aliases": [
+    "多智能体集群",
+    "Agent Swarm",
+    "多Agent协同架构",
+    "Swarm架构"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "ai-agent"
+    }
+  ],
+  "summary": "通过轻量角色分工、动态会话交接与去中心化协调解决复合任务的多智能体协作模式。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "description": "多智能体集群（Multi-Agent Swarm，以 OpenAI Swarm 探索性框架及群体智能为代表）是一种面向复杂业务场景的分布式智能体协作架构模式。相比于单个全能智能体面临的提示词臃肿、工具过多导致选择退化等局限，Swarm 架构将任务解构给具备单一职责与精简指令集的专门智能体集群。\n\n在 Swarm 模式下，智能体间的核心协调机制通常依赖函数交接（Handoffs）与共享上下文状态变量。当某一智能体（如客户接待 Agent）完成前置信息收集后，可直接通过调用交接工具将当前会话控制权无缝移交给业务专家智能体（如退款 Agent 或技术支持 Agent），实现高度模块化、易测试且高可扩展的多智能体编排。\n\n## 参考\n\n- [OpenAI：Swarm Experimental Framework](https://github.com/openai/swarm)\n- [Wu et al.：AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation](https://arxiv.org/abs/2308.08155)"
+}

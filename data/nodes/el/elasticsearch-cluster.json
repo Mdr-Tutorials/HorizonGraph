@@ -1,0 +1,46 @@
+{
+  "id": "elasticsearch-cluster",
+  "name": "Elasticsearch Cluster",
+  "display_primary": "Elasticsearch 集群",
+  "display_secondary": "Elasticsearch Cluster",
+  "aliases": [
+    "Elasticsearch 集群",
+    "ES 集群",
+    "Elasticsearch Cluster"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "summary": "基于主副分片模型与节点角色分离构建的近实时分布式搜索与分析集群架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "elasticsearch",
+      "context": "各节点协同运行 Elasticsearch 实例并分摊索引写入与查询聚合计算。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sharding",
+      "context": "将每个索引拆分为多个主分片并跨节点分布以实现横向读写扩展。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "replication",
+      "context": "为每个主分片配置副本分片以提供数据冗余与并行读取吞吐。"
+    }
+  ]
+}

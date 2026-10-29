@@ -1,0 +1,37 @@
+{
+  "id": "designops",
+  "name": "DesignOps",
+  "display_primary": "设计工程运营",
+  "display_secondary": "Design Operations",
+  "aliases": [
+    "设计工程运营",
+    "DesignOps",
+    "设计协同运维",
+    "设计工程化"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "design-tokens",
+      "context": "通过设计令牌体系打通设计资产到代码实现的自动化协同流水线。"
+    }
+  ],
+  "summary": "优化跨职能设计研发协同流程、设计系统规模化交付与工具链的工程运维机制。",
+  "description": "设计工程运营（DesignOps，Design Operations）是将 DevOps 与工程化思维引入产品设计与界面研发领域的管理与协同实践机制。随着企业数字化产品规模的急剧扩大，设计团队与工程团队之间的协作摩擦、设计资产碎片化与交付质量参差不齐成为核心瓶颈。\n\nDesignOps 聚焦于优化三大支柱：团队运作机制（How We Work Together）、设计工具链与设计系统标准（How We Get Work Done），以及设计产出对业务与工程效率的影响度量（How Our Work Creates Impact）。\n\n## 参考\n\n- [Nielsen Norman Group: DesignOps 101](https://www.nngroup.com/articles/design-ops-101/)\n- [DesignOps Assembly 行业指南](https://www.designopsassembly.com/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

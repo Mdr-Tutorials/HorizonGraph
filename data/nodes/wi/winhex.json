@@ -1,0 +1,36 @@
+{
+  "id": "winhex",
+  "name": "WinHex",
+  "display_primary": "WinHex",
+  "display_secondary": "WinHex Hex Editor",
+  "aliases": [
+    "WinHex",
+    "WinHex十六进制编辑器",
+    "十六进制磁盘编辑工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "windows-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "用于低级数据检查与恢复、文件头分析及计算机取证的通用十六进制编辑器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "autopsy",
+      "context": "取证分析员在 Autopsy 等高层取证工具之外使用 WinHex 直接解析损坏扇区与文件头特征。"
+    }
+  ]
+}

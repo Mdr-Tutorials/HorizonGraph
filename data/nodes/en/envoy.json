@@ -1,7 +1,11 @@
 {
   "id": "envoy",
   "name": "Envoy",
-  "aliases": [],
+  "aliases": [
+    "Envoy",
+    "envoy-proxy",
+    "Envoy代理"
+  ],
   "type": "tool",
   "ecosystems": [
     "kubernetes-ecosystem",
@@ -25,7 +29,7 @@
   "summary": "云原生边缘与服务代理，Istio 数据面的底座。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-29",
   "importance": 3,
   "official_site": "https://www.envoyproxy.io"
 }

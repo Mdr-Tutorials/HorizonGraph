@@ -1,0 +1,51 @@
+{
+  "id": "openllmetry",
+  "name": "OpenLLMetry",
+  "display_primary": "OpenLLMetry",
+  "display_secondary": "OpenLLMetry",
+  "aliases": [
+    "OpenLLMetry",
+    "LLM应用遥测库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "agent-development",
+    "devops",
+    "software-quality"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "opentelemetry"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "langfuse"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "langchain"
+    }
+  ],
+  "summary": "基于 OpenTelemetry 标准构建的 LLM 应用与 Agent 行为遥测插桩开源库。",
+  "importance": 3,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://traceloop.com/openllmetry",
+  "description": "OpenLLMetry 是由 Traceloop 开源的一组专为大模型应用与智能体设计的自动化插桩（Instrumentation）标准库。它完全建立在云原生可观测性事实标准 OpenTelemetry 规范之上，旨在避免厂商绑定。\n\n只需在应用启动时调用一行初始化代码，OpenLLMetry 即可自动拦截并监测 OpenAI、Anthropic、LangChain、LlamaIndex、Chroma、Pinecone 等主流模型提供商、框架与向量数据库的调用链路，捕获调用入参、模型响应、令牌用量与延迟，并将遥测 Span 数据导出至任意兼容 OTel 的后端（如 Datadog、Dynatrace、Langfuse 等）。\n\n## 参考\n\n- [Traceloop OpenLLMetry GitHub](https://github.com/traceloop/openllmetry)\n- [OpenLLMetry Documentation](https://www.traceloop.com/docs/openllmetry/introduction)"
+}

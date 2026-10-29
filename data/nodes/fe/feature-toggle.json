@@ -1,0 +1,44 @@
+{
+  "id": "feature-toggle",
+  "name": "Feature Toggle",
+  "display_primary": "特性开关",
+  "display_secondary": "Feature Toggle · Feature Flag",
+  "aliases": [
+    "特性开关",
+    "Feature Flag",
+    "功能开关",
+    "特性旗标",
+    "Feature Toggle"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "devops_tooling",
+    "cicd-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "software-quality"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "a-b-testing",
+      "context": "特性开关系统支持按用户分组分流执行对照实验，为 A/B 测试提供运行时开关能力。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cicd",
+      "context": "解耦代码部署与功能发布，使团队可以在持续集成主干上安全集成未完成功能。"
+    }
+  ],
+  "summary": "在不重新部署代码前提下于运行时动态控制功能开启、关闭或分流的工程机制。",
+  "description": "特性开关（Feature Toggle，又称 Feature Flag）是一种高级软件工程技术，允许团队在无需重新部署代码或重启服务的情况下，通过配置在运行时动态控制某项特性的可见性与行为。\n\n特性开关广泛应用于主干开发（Trunk-Based Development）、金丝雀灰度发布、A/B 测试实验以及线上紧急降级。它将代码的物理部署（Deployment）与功能的逻辑发布（Release）彻底解耦，极大提升了持续交付的灵活性与韧性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

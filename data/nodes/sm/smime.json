@@ -1,0 +1,37 @@
+{
+  "id": "smime",
+  "name": "Secure/Multipurpose Internet Mail Extensions",
+  "display_primary": "安全多用途互联网邮件扩展",
+  "display_secondary": "S/MIME",
+  "aliases": [
+    "安全多用途互联网邮件扩展",
+    "S/MIME",
+    "SMIME",
+    "邮件加密标准"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "cryptography-pki-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "runtime_vm",
+  "summary": "基于非对称加密与数字证书提供电子邮件端到端加密与防篡改签名的国际标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "security-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x509",
+      "context": "S/MIME 依赖用户的 X.509 数字证书实施邮件内容的公钥加密和防伪签名。"
+    }
+  ]
+}

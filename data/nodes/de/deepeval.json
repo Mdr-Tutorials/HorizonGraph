@@ -1,0 +1,53 @@
+{
+  "id": "deepeval",
+  "name": "DeepEval",
+  "display_primary": "DeepEval",
+  "display_secondary": "DeepEval",
+  "aliases": [
+    "DeepEval",
+    "LLM单元测试框架",
+    "大模型评测框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rag",
+      "context": "提供针对 RAG 检索召回率、幻觉率及答案相关性的量化评测指标集。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "langchain"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "ragas"
+    }
+  ],
+  "summary": "开源大语言模型与 Agent 应用单元测试、持续集成及自动化评估框架。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://confident-ai.com",
+  "description": "DeepEval 是由 Confident AI 开源的生产级 LLM 应用评估与单元测试框架。它借鉴传统软件工程中 Pytest 的测试设计哲学，使开发者能够针对大模型生成质量、多轮对话智能体行为和 RAG 系统编写确定性或基于模型的断言测试用例。\n\nDeepEval 内置了丰富的评估指标集合，包括答案相关性（Answer Relevancy）、幻觉程度（Hallucination）、忠实度（Faithfulness）、毒性检测（Toxicity）、偏见评估（Bias）以及 G-Eval 自定义指标。框架深度集成主流 CI/CD 流程，可在代码合并或模型提示词调整时自动化回归运行评测套件，防止模型输出质量退化。\n\n## 参考\n\n- [DeepEval 官方文档与架构指南](https://docs.confident-ai.com/)\n- [Confident AI：Unit Testing for LLMs with DeepEval](https://github.com/confident-ai/deepeval)"
+}

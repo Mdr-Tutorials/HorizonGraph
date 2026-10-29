@@ -1,0 +1,37 @@
+{
+  "id": "safety-filter-bypasses",
+  "name": "Safety Filter Bypass",
+  "display_primary": "安全护栏绕过",
+  "display_secondary": "Safety Filter Bypass",
+  "aliases": [
+    "安全护栏绕过",
+    "Safety Filter Bypass",
+    "内容过滤器绕过",
+    "护栏逃逸"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "natural-language-processing"
+  ],
+  "summary": "采用编码转换、词形替换或语言切换绕过大模型输入输出层违规敏感词审查的技巧。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "jailbreaking",
+      "context": "攻击者常结合 Base64 编码、外语提示与隐喻表达躲避外置护栏拦截以实现越狱。"
+    }
+  ]
+}

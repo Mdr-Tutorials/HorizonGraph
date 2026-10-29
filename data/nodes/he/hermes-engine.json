@@ -1,0 +1,42 @@
+{
+  "id": "hermes-engine",
+  "name": "Hermes",
+  "display_primary": "Hermes 引擎",
+  "display_secondary": "Hermes JavaScript Engine",
+  "aliases": [
+    "Hermes 引擎",
+    "Hermes",
+    "hermes-engine"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "android-ecosystem",
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "compilers"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "virtual-machine"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "react-native"
+    }
+  ],
+  "summary": "Meta 专为移动端 React Native 优化的轻量级预编译 JavaScript 引擎。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://hermesengine.dev"
+}

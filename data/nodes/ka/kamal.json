@@ -1,0 +1,35 @@
+{
+  "id": "kamal",
+  "name": "Kamal",
+  "display_primary": "Kamal 零停机容器部署工具",
+  "display_secondary": "Kamal",
+  "aliases": [
+    "Kamal 零停机容器部署工具",
+    "Kamal"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "ruby-ecosystem",
+    "container-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "summary": "由 Basecamp 开源的使用 Docker 进行无停机滚动的轻量化 Web 应用容器部署工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "docker"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

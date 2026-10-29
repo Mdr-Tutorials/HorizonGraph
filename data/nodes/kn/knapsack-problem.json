@@ -1,0 +1,36 @@
+{
+  "id": "knapsack-problem",
+  "name": "Knapsack Problem",
+  "display_primary": "背包问题",
+  "display_secondary": "Knapsack Problem",
+  "aliases": [
+    "背包问题",
+    "0-1背包",
+    "完全背包",
+    "多重背包"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "summary": "在容量约束下求物品组合价值最大化的经典组合优化模型与动态规划范式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "optimization-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dynamic-programming",
+      "context": "以状态定义当前容量下的最大价值并按物品选与不选转移递推求最优解。"
+    }
+  ]
+}

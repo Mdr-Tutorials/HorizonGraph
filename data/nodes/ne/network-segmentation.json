@@ -1,0 +1,38 @@
+{
+  "id": "network-segmentation",
+  "name": "Network Segmentation",
+  "display_primary": "网络分段",
+  "display_secondary": "Network Segmentation",
+  "aliases": [
+    "网络分段",
+    "Network Segmentation",
+    "网络隔离",
+    "微隔离"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "将网络切分为更小的子网或逻辑单元，限制横向移动与控制攻击爆炸半径的架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vlan",
+      "context": "网络分段结合 VLAN 与子网 ACL 阻断非必要通信，限制勒索病毒横向扩散。"
+    }
+  ]
+}

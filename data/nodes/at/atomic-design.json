@@ -1,0 +1,37 @@
+{
+  "id": "atomic-design",
+  "name": "Atomic Design",
+  "display_primary": "原子化设计",
+  "display_secondary": "Atomic Design Methodology",
+  "aliases": [
+    "原子化设计",
+    "Atomic Design",
+    "原子设计方法论",
+    "原子化设计系统"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "基于 HTML 基础元素层级组合构建高内聚低耦合的组件化设计系统。"
+    }
+  ],
+  "summary": "将用户界面拆解为原子、分子、有机体、模板和页面五层级的组件构建理论。",
+  "description": "原子化设计（Atomic Design）是由设计大师 Brad Frost 提出的开创性设计系统方法论。该方法借鉴了化学物质的构成原理，将用户界面自底向上层级化拆解为五个清晰阶段：原子（Atoms，如标签、输入框）、分子（Molecules，如搜索输入组合）、有机体（Organisms，如页面头部导航栏）、模板（Templates，布局骨架）与页面（Pages，填充真实数据的完整视图）。\n\n原子化设计为设计团队与前端工程团队建立起清晰共同语言，是构建高扩展性与一致性现代设计系统的主流理论基础。\n\n## 参考\n\n- [Brad Frost: Atomic Design 电子书](https://atomicdesign.bradfrost.com/)\n- [Pattern Lab 官方指南](https://patternlab.io/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

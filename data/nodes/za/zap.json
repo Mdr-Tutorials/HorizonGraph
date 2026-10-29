@@ -1,0 +1,35 @@
+{
+  "id": "zap",
+  "name": "Zap",
+  "display_primary": "Zap 结构化日志库",
+  "display_secondary": "Uber Zap",
+  "aliases": [
+    "Zap 结构化日志库",
+    "Zap",
+    "Uber Zap"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "go-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "software-quality"
+  ],
+  "summary": "Uber 开源的高性能、极低内存分配的 Go 结构化日志记录库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

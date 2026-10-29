@@ -1,0 +1,38 @@
+{
+  "id": "react-native-async-storage",
+  "name": "AsyncStorage",
+  "display_primary": "AsyncStorage 存储库",
+  "display_secondary": "React Native AsyncStorage",
+  "aliases": [
+    "AsyncStorage 存储库",
+    "AsyncStorage",
+    "async-storage"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "android-ecosystem",
+    "ios-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "databases"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "react-native"
+    }
+  ],
+  "summary": "React Native 社区标准维护的跨平台非加密、异步键值数据持久化存储模块。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://react-native-async-storage.github.io/async-storage/"
+}

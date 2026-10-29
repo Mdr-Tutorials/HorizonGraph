@@ -1,0 +1,35 @@
+{
+  "id": "cats",
+  "name": "Cats",
+  "display_primary": "Cats 函数式编程基础库",
+  "display_secondary": "Typelevel Cats",
+  "aliases": [
+    "Cats 函数式编程基础库",
+    "Cats",
+    "Typelevel Cats"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "mathematics"
+  ],
+  "summary": "为 Scala 提供核心代数类型类（Monad、Functor 等）的现代纯函数式编程基石库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "scala"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

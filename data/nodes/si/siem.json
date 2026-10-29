@@ -1,0 +1,36 @@
+{
+  "id": "siem",
+  "name": "Security Information and Event Management",
+  "display_primary": "安全信息与事件管理",
+  "display_secondary": "SIEM",
+  "aliases": [
+    "安全信息与事件管理",
+    "SIEM",
+    "日志审计与安全管理"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "集中汇聚、关联分析来自主机与网络设备的安全事件与日志的系统架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "firewall",
+      "context": "SIEM 系统实时拉取防火墙、主机和交换机的 Syslog 开展入侵行为多源关联分析。"
+    }
+  ]
+}

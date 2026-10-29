@@ -1,0 +1,34 @@
+{
+  "id": "longest-common-subsequence",
+  "name": "Longest Common Subsequence",
+  "display_primary": "最长公共子序列",
+  "display_secondary": "Longest Common Subsequence",
+  "aliases": [
+    "最长公共子序列",
+    "LCS"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "mathematics",
+    "systems-programming"
+  ],
+  "summary": "求两个序列在不改变相对顺序情况下出现的最长公共子序列，diff 工具的核心。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dynamic-programming",
+      "context": "在二维网格中依据字符是否相等建立状态转移方程自底向上求解公共长度。"
+    }
+  ]
+}

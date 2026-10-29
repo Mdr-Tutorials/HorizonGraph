@@ -1,0 +1,43 @@
+{
+  "id": "headless-ui",
+  "name": "Headless UI",
+  "display_primary": "无头 UI",
+  "display_secondary": "Headless UI Pattern",
+  "aliases": [
+    "无头 UI",
+    "Headless UI",
+    "无样式组件范式",
+    "Headless Components"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "react",
+      "context": "通过 Hook 与插槽模式完全解耦组件交互状态控制与视觉样式表现。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "自动管理键盘交互焦点漫游、事件侦听与 WAI-ARIA 属性绑定。"
+    }
+  ],
+  "summary": "仅封装复杂交互逻辑、状态控制与无障碍语义而不提供默认样式的设计范式。",
+  "description": "无头 UI（Headless UI）是现代组件库工程中极为重要的一种架构范式。传统的 UI 组件库（如 Bootstrap、Ant Design）通常将行为交互、HTML 结构与 CSS 外观强绑定，使得深度定制或跨产品线适配异常痛苦且极易产生样式冲突。\n\n无头 UI 彻底解耦职责：它仅处理最复杂的键盘导航、焦点转移、WAI-ARIA 辅助属性映射、屏幕阅读器支持与内部状态机，而将所有的 CSS 样式、排版和视觉呈现完全交由业务开发者掌控。\n\n## 参考\n\n- [Tailwind Labs: Headless UI](https://headlessui.com/)\n- [Robin Malfait: Headless User Interfaces](https://www.merrickchristensen.com/articles/headless-user-interface-components/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

@@ -1,0 +1,42 @@
+{
+  "id": "verification-and-validation",
+  "name": "Verification and Validation",
+  "display_primary": "验证与确认",
+  "display_secondary": "Verification and Validation",
+  "aliases": [
+    "验证与确认",
+    "V&V",
+    "软件验证与确认",
+    "Verification and Validation"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-quality-ecosystem",
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "software-testing"
+  ],
+  "summary": "确认软件满足设计规格（验证）并契合用户真实业务期望（确认）。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "以单元测试验证代码逻辑实现是否精确契合技术设计规格。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uat",
+      "context": "以用户验收测试确认交付物是否真正达成客户业务目标。"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "whaling",
+  "name": "Whaling Attack",
+  "display_primary": "捕鲸攻击",
+  "display_secondary": "Whaling Attack",
+  "aliases": [
+    "捕鲸攻击",
+    "Whaling Attack",
+    "捕鲸钓鱼",
+    "高管针对性钓鱼"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "针对企业高管或核心关键人员定制的高度针对性鱼叉式钓鱼攻击。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "phishing",
+      "context": "捕鲸攻击是针对企业董事或财务高管深度定制的鱼叉式网络钓鱼。"
+    }
+  ]
+}

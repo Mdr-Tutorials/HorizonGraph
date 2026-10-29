@@ -1,0 +1,40 @@
+{
+  "id": "performance-testing",
+  "name": "Performance Testing",
+  "display_primary": "性能测试",
+  "display_secondary": "Performance Testing",
+  "aliases": [
+    "性能测试",
+    "Performance Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-measurement-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-measurement"
+  ],
+  "summary": "度量和评估系统在特定工作负载下的响应时间、吞吐量和资源利用率。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "load-testing",
+      "context": "模拟预期并发负载评估系统响应时间与服务吞吐量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "stress-testing",
+      "context": "施加超极限负载以定位系统性能瓶颈与脆弱组件。"
+    }
+  ]
+}

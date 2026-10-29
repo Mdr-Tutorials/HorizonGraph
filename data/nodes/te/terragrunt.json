@@ -1,0 +1,36 @@
+{
+  "id": "terragrunt",
+  "name": "Terragrunt",
+  "display_primary": "Terragrunt",
+  "display_secondary": "Terragrunt",
+  "aliases": [
+    "Terragrunt",
+    "Terraform代码编排工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "iac-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "为Terraform提供DRY配置保持、多模块编排与多环境后端管理的薄包装工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://terragrunt.gruntwork.io",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "terraform"
+    }
+  ]
+}

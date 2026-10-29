@@ -1,0 +1,42 @@
+{
+  "id": "one-on-one-meeting",
+  "name": "One-on-One Meeting",
+  "display_primary": "1对1例会",
+  "display_secondary": "One-on-One Meeting · 1:1",
+  "aliases": [
+    "1对1例会",
+    "1:1 例会",
+    "一对一面谈",
+    "双向沟通例会",
+    "One-on-One"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-progression"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "engineering-manager",
+      "context": "工程经理通过定期 1:1 例会为团队成员提供工作辅导、倾听反馈并协助排除个人与团队协作障碍。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "performance-review",
+      "context": "1对1例会中的持续沟通记录与目标进展为周期性绩效评审提供动态上下文依据。"
+    }
+  ],
+  "summary": "管理者与成员之间定期举行的双向沟通、目标对齐与职业成长辅导机制。",
+  "description": "1对1例会（One-on-One Meeting，简称 1:1）是工程管理与团队协作中最基础的管理机制之一。不同于工作进度汇报会，1:1 是以下属为中心的定期沟通机制，聚焦于职业发展、工作阻碍、心理安全感、组织动向以及双向反馈。\n\n通过建立高频且高质量的 1:1 沟通，工程经理能够及早发现团队潜在风险，辅导工程师解决非技术卡点，维护健康的团队组织文化。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

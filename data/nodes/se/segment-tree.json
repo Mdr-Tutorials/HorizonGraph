@@ -1,0 +1,34 @@
+{
+  "id": "segment-tree",
+  "name": "Segment Tree",
+  "display_primary": "线段树",
+  "display_secondary": "Segment Tree",
+  "aliases": [
+    "线段树",
+    "区间树"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "mathematics"
+  ],
+  "summary": "将区间递归二分存储的高级树结构，支持 O(log n) 的区间修改与聚合查询。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "binary-tree",
+      "context": "利用满二叉树节点编号映射区间段，并配合延迟标记实现区间高效更新。"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "doobie",
+  "name": "Doobie",
+  "display_primary": "Doobie 函数式数据库访问层",
+  "display_secondary": "Doobie",
+  "aliases": [
+    "Doobie 函数式数据库访问层",
+    "Doobie"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-services"
+  ],
+  "summary": "为 Scala 提供类型安全、无副作用且直接表达原生 SQL 的纯函数式 JDBC 访问层。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cats-effect"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

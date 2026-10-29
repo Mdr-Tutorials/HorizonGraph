@@ -1,0 +1,45 @@
+{
+  "id": "dax-language",
+  "name": "Data Analysis Expressions",
+  "abbreviation": "DAX",
+  "display_primary": "DAX 语言",
+  "display_secondary": "Data Analysis Expressions",
+  "aliases": [
+    "DAX 语言",
+    "DAX",
+    "数据分析表达式",
+    "Data Analysis Expressions"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "database-ecosystem",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "databases",
+    "data-engineering"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "star-schema",
+      "context": "利用行上下文与筛选上下文在星型模型上执行动态聚合与时间智能计算。"
+    }
+  ],
+  "summary": "用于 Power BI 与表格模型的数据分析与度量计算公式语言。",
+  "description": "DAX 是微软为其 Analysis Services、Power BI 和 Excel Power Pivot 打造的公式语言。DAX 融合了函数式计算与关系代数概念，核心机制包括行上下文（Row Context）、筛选上下文（Filter Context）及其相互转换（Context Transition），能够高效定义动态业务度量与复杂时间智能分析。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

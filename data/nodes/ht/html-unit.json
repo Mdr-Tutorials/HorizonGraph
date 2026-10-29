@@ -1,0 +1,34 @@
+{
+  "id": "html-unit",
+  "name": "HtmlUnit",
+  "display_primary": "HtmlUnit",
+  "display_secondary": "HtmlUnit",
+  "aliases": [
+    "HtmlUnit",
+    "HTML Unit"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "专为 Java 编写的无界面轻量级模拟浏览器，常用于页面抓取与自动化测试。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "headless-testing"
+    }
+  ]
+}

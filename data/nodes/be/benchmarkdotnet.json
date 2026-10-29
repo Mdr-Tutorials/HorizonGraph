@@ -1,0 +1,34 @@
+{
+  "id": "benchmarkdotnet",
+  "name": "BenchmarkDotNet",
+  "display_primary": "BenchmarkDotNet 基准测试工具",
+  "display_secondary": "BenchmarkDotNet",
+  "aliases": [
+    "BenchmarkDotNet 基准测试工具",
+    "BenchmarkDotNet"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "dotnet-ecosystem"
+  ],
+  "domains": [
+    "high-performance-computing",
+    "software-testing"
+  ],
+  "summary": "受到 .NET 官方与主流开源库采纳的基准性能分析与微基准测量标准库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

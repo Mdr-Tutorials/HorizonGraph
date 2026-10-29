@@ -1,0 +1,40 @@
+{
+  "id": "detox",
+  "name": "Detox",
+  "display_primary": "Detox",
+  "display_secondary": "Detox",
+  "aliases": [
+    "Detox",
+    "React Native 灰盒测试"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "node-js-ecosystem",
+    "android-ecosystem",
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "专为 React Native 与原生移动应用设计的灰盒自动化端到端测试框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "e2e-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "gray-box-testing"
+    }
+  ]
+}

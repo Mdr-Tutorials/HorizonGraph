@@ -1,0 +1,34 @@
+{
+  "id": "directed-graph",
+  "name": "Directed Graph",
+  "display_primary": "有向图",
+  "display_secondary": "Directed Graph",
+  "aliases": [
+    "有向图",
+    "有向网络",
+    "Digraph"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "mathematics"
+  ],
+  "summary": "顶点间的边具有明确方向性（从源点指向终点）的图结构，常用于依赖和流程建模。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph"
+    }
+  ]
+}

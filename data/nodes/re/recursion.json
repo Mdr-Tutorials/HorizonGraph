@@ -1,0 +1,35 @@
+{
+  "id": "recursion",
+  "name": "Recursion",
+  "display_primary": "递归",
+  "display_secondary": "Recursion",
+  "aliases": [
+    "递归",
+    "递归调用",
+    "递归算法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "programming-languages",
+    "systems-programming"
+  ],
+  "summary": "函数或算法直接或间接调用自身以将大问题分解为同结构小问题的计算求解范式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "stack",
+      "context": "利用程序运行时调用栈依序压入各层局部变量并在达到基线条件后逐层弹栈回溯。"
+    }
+  ]
+}

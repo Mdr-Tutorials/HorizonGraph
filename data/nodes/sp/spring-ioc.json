@@ -1,0 +1,35 @@
+{
+  "id": "spring-ioc",
+  "name": "Spring IoC",
+  "display_primary": "Spring IoC 控制反转容器",
+  "display_secondary": "Spring IoC Container",
+  "aliases": [
+    "Spring IoC 控制反转容器",
+    "Spring IoC",
+    "Spring依赖注入容器"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "software-quality"
+  ],
+  "summary": "通过依赖注入（DI）解耦对象生命周期与依赖装配关系的 Spring 核心引擎容器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "directory-traversal",
+  "name": "Directory Traversal",
+  "display_primary": "路径遍历",
+  "display_secondary": "Directory Traversal",
+  "aliases": [
+    "路径遍历",
+    "目录遍历",
+    "Path Traversal",
+    "Dot-Dot-Slash"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "summary": "通过构造包含跳出符的文件路径越权访问受限服务器文件。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "攻击者在 HTTP 请求的文件路径参数中注入点点斜杠序列以越权读取文件。"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "php-fpm",
+  "name": "PHP-FPM",
+  "display_primary": "PHP-FPM 进程管理器",
+  "display_secondary": "PHP FastCGI Process Manager",
+  "aliases": [
+    "PHP-FPM 进程管理器",
+    "PHP-FPM",
+    "php-fpm"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "php-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-services",
+    "systems-programming"
+  ],
+  "summary": "专为高负载网站设计的 PHP FastCGI 实现，提供进程自适应伸缩与平滑重载。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "php"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

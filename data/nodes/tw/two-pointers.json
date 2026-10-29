@@ -1,0 +1,36 @@
+{
+  "id": "two-pointers",
+  "name": "Two Pointers",
+  "display_primary": "双指针",
+  "display_secondary": "Two Pointers",
+  "aliases": [
+    "双指针",
+    "双指针技术",
+    "对撞指针",
+    "左右指针"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "operations-research"
+  ],
+  "summary": "利用两个索引在有序或连续序列上协同移动以降低时间复杂度。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "在连续数组或有序序列中双向对撞或同向快慢推进指针检索目标区间。"
+    }
+  ]
+}

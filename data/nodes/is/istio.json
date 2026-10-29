@@ -1,7 +1,11 @@
 {
   "id": "istio",
   "name": "Istio",
-  "aliases": [],
+  "aliases": [
+    "Istio",
+    "istio-service-mesh",
+    "服务网格控制面"
+  ],
   "type": "tool",
   "ecosystems": [
     "kubernetes-ecosystem",
@@ -30,7 +34,7 @@
   "summary": "服务网格控制面，流量治理、mTLS 与可观测性。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-29",
   "importance": 3,
   "official_site": "https://istio.io"
 }

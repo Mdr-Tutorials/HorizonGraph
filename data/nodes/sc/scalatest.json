@@ -1,0 +1,35 @@
+{
+  "id": "scalatest",
+  "name": "ScalaTest",
+  "display_primary": "ScalaTest 测试框架",
+  "display_secondary": "ScalaTest",
+  "aliases": [
+    "ScalaTest 测试框架",
+    "ScalaTest"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "Scala 社区最灵活且最广泛采用的测试框架，原生适配并支持多种测试风格。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "scala"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "barman",
+  "name": "Barman",
+  "display_primary": "Barman",
+  "display_secondary": "Barman",
+  "aliases": [
+    "Barman",
+    "barman",
+    "Backup and Recovery Manager"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "由 EnterpriseDB 维护的 PostgreSQL 灾难恢复与远程物理备份管理工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "pgbackrest"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "postgresql",
+      "context": "通过流复制或 SSH 远程备份 PostgreSQL 实例并管理归档日志。"
+    }
+  ]
+}

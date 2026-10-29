@@ -1,0 +1,41 @@
+{
+  "id": "dimension-table",
+  "name": "Dimension Table",
+  "display_primary": "维度表",
+  "display_secondary": "Dimension Table",
+  "aliases": [
+    "维度表",
+    "维表",
+    "Lookup Table"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "star-schema"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slowly-changing-dimension",
+      "context": "采用渐变维技术管理维度属性随时间发生变更时的历史状态追溯。"
+    }
+  ],
+  "summary": "存储业务事件上下文属性与层级结构以支持筛选分组的表。",
+  "description": "维度表是数据仓库中为事实表度量提供上下文背景的辅助表。它包含丰富的文本型与离散型描述字段（如客户姓名、商品品类、地理位置、时间层级），作为数据分析与报表展现中的过滤（WHERE）、分组（GROUP BY）和切片切块基准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

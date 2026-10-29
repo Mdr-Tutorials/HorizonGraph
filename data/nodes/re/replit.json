@@ -1,0 +1,35 @@
+{
+  "id": "replit",
+  "name": "Replit",
+  "display_primary": "Replit",
+  "display_secondary": "Replit",
+  "aliases": [
+    "Replit",
+    "在线集成开发环境",
+    "云端代码开发平台"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "editor-ide-ecosystem",
+    "cloud_native",
+    "ai-software-engineering-ecosystem"
+  ],
+  "domains": [
+    "developer-environments",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    }
+  ],
+  "summary": "基于浏览器的协同式在线开发环境、即时运行沙箱与云端部署平台。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://replit.com",
+  "description": "Replit 是一款广受欢迎的基于浏览器的全功能云端在线集成开发环境（Cloud IDE）。它支持超过 50 种主流编程语言与框架，为用户提供开箱即用且免除本地环境配置困扰的独立容器运行沙箱与即时托管服务。\n\nReplit 集成了多人实时协同编辑、包依赖管理、内置数据库与域名部署能力，并全面拥抱生成式 AI 浪潮，发展出强大的智能代码辅助与自主 Replit Agent 研发环境，使全球开发者能够随时随地快速实验、教学与发布完整的网络应用程序。\n\n## 参考\n\n- [Replit 官方文档](https://docs.replit.com/)\n- [Replit Blog：Building the Future of Software Creation](https://blog.replit.com/)"
+}

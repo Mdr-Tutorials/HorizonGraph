@@ -1,0 +1,35 @@
+{
+  "id": "autopsy",
+  "name": "Autopsy",
+  "display_primary": "Autopsy",
+  "display_secondary": "Autopsy Digital Forensics",
+  "aliases": [
+    "Autopsy",
+    "Autopsy电子取证",
+    "数字取证平台"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "开源的图形化数字取证平台，基于Sleuth Kit提供硬盘镜像与活动痕迹深度分析。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "incident-response",
+      "context": "取证调查人员使用 Autopsy 挂载磁盘镜像恢复已删除文件并提取用户行为时间线。"
+    }
+  ]
+}

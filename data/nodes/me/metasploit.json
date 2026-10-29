@@ -1,0 +1,36 @@
+{
+  "id": "metasploit",
+  "name": "Metasploit Framework",
+  "display_primary": "Metasploit",
+  "display_secondary": "Metasploit Framework",
+  "aliases": [
+    "Metasploit",
+    "Metasploit Framework",
+    "MSF",
+    "漏洞利用框架"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "开源的计算机安全漏洞利用与渗透测试框架，包含大量现成漏洞利用模块与载荷。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "buffer-overflow",
+      "context": "Metasploit 包含大量针对远程服务缓冲区溢出缺陷的自动化利用模块与 Shellcode。"
+    }
+  ]
+}

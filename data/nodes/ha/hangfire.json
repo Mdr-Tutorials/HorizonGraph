@@ -1,0 +1,34 @@
+{
+  "id": "hangfire",
+  "name": "Hangfire",
+  "display_primary": "Hangfire 后台任务调度框架",
+  "display_secondary": "Hangfire",
+  "aliases": [
+    "Hangfire 后台任务调度框架",
+    "Hangfire"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dotnet-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "web-services"
+  ],
+  "summary": "在 ASP.NET Core 应用中以持久化方式执行延迟、周期性后台作业的框架与仪表盘。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

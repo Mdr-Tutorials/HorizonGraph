@@ -1,0 +1,42 @@
+{
+  "id": "miniflare",
+  "name": "Miniflare",
+  "display_primary": "Miniflare",
+  "display_secondary": "Miniflare Workers Simulator",
+  "aliases": [
+    "Miniflare",
+    "Cloudflare Workers本地模拟器"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "edge-serverless-ecosystem",
+    "web_frontend",
+    "devops_tooling"
+  ],
+  "domains": [
+    "developer-environments",
+    "edge-computing"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "完全由JS实现的快速、轻量且逼真的Cloudflare Workers本地开发模拟环境。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://miniflare.dev",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "cloudflare"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cloudflare-workers",
+      "context": "在本地模拟 Workers 运行时 API、KV 与 Durable Objects。"
+    }
+  ]
+}

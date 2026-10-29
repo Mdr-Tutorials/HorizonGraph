@@ -1,0 +1,35 @@
+{
+  "id": "vishing",
+  "name": "Voice Phishing",
+  "display_primary": "语音钓鱼",
+  "display_secondary": "Voice Phishing",
+  "aliases": [
+    "语音钓鱼",
+    "Voice Phishing",
+    "Vishing",
+    "电话诈骗"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "通过电话语音通信伪造权威身份套取受害者敏感信息的社会工程学攻击。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "phishing",
+      "context": "语音钓鱼通过 VoIP 伪造来电显示结合话术实施社会工程学钓鱼诈骗。"
+    }
+  ]
+}

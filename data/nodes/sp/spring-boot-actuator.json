@@ -1,0 +1,36 @@
+{
+  "id": "spring-boot-actuator",
+  "name": "Spring Boot Actuator",
+  "display_primary": "Spring Boot Actuator 监控端点框架",
+  "display_secondary": "Spring Boot Actuator",
+  "aliases": [
+    "Spring Boot Actuator 监控端点框架",
+    "Spring Boot Actuator",
+    "Actuator"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "web-services"
+  ],
+  "summary": "为 Spring Boot 应用提供生产就绪型健康检查、度量收集与运维监控端点。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "spring-boot"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

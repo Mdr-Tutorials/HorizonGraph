@@ -1,0 +1,47 @@
+{
+  "id": "flux-cd",
+  "name": "Flux CD",
+  "display_primary": "Flux CD",
+  "display_secondary": "Flux CD",
+  "aliases": [
+    "Flux CD",
+    "Flux",
+    "FluxCD"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cicd-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "CNCF毕业的Kubernetes声明式渐进式交付与GitOps自动化工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://fluxcd.io",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "gitops"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kubernetes"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cncf",
+      "context": "CNCF 正式毕业托管的 GitOps 与渐进式交付工具包。"
+    }
+  ]
+}

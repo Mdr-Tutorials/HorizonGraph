@@ -1,0 +1,35 @@
+{
+  "id": "deauth-attack",
+  "name": "Deauthentication Attack",
+  "display_primary": "解除认证攻击",
+  "display_secondary": "Deauthentication Attack",
+  "aliases": [
+    "解除认证攻击",
+    "Deauth Attack",
+    "Wi-Fi解除认证攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "summary": "伪造Wi-Fi解除认证管理帧，强制客户端与接入点断开连接。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wireshark",
+      "context": "安全分析人员可通过 Wireshark 捕获无线网络中密集的 Deauth 管理帧定位攻击。"
+    }
+  ]
+}

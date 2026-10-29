@@ -1,0 +1,34 @@
+{
+  "id": "linq-csharp",
+  "name": "LINQ",
+  "display_primary": "LINQ 语言集成查询",
+  "display_secondary": "Language Integrated Query",
+  "aliases": [
+    "LINQ 语言集成查询",
+    "LINQ",
+    "Language Integrated Query"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "dotnet-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "databases"
+  ],
+  "summary": "为 C# 引入统一强类型查询语法的语言集成特性，支持内存集合与数据库查询。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "programming-paradigm"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "csharp"
+    }
+  ]
+}

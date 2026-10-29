@@ -1,0 +1,44 @@
+{
+  "id": "developer-journey",
+  "name": "Developer Journey",
+  "display_primary": "开发者旅程",
+  "display_secondary": "Developer Journey · Developer Funnel",
+  "aliases": [
+    "开发者旅程",
+    "开发者转化漏斗",
+    "开发者生命周期",
+    "开发者体验旅程",
+    "Developer Journey"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "collaboration-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "human-computer-interaction",
+    "empirical-software-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "empirical-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "developer-experience",
+      "context": "在开发者旅程的关键转化节点消除认知与工具摩擦，提升开发者的持续留存率。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "diataxis-framework",
+      "context": "在上手教程到架构理解的不同旅程阶段匹配适宜的技术文档内容架构。"
+    }
+  ],
+  "summary": "开发者从了解技术、快速上手、深度集成到成为社区倡导者的全链路生命周期。",
+  "description": "开发者旅程（Developer Journey）是开发者关系（DevRel）与平台工程中的核心分析模型。它描述了外部或内部开发者与技术产品交互的渐进生命周期：从发现感知（Discover）、快速评估（Evaluate）、首个应用上手（Get Started）、生产级集成（Integrate）到规模化使用与社区贡献（Advocate）。\n\n通过对各阶段的关键接触点与转化漏斗进行数据追踪，团队能够针对性优化 SDK、API 示例与开发者门户，缩短达成首个价值（Time to First Hello World）的时间。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

@@ -1,0 +1,52 @@
+{
+  "id": "island-architecture",
+  "name": "Island Architecture",
+  "display_primary": "群岛架构",
+  "display_secondary": "Island Architecture",
+  "aliases": [
+    "群岛架构",
+    "islands-architecture",
+    "Islands Architecture",
+    "孤岛架构",
+    "交互孤岛",
+    "岛屿架构"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "human-computer-interaction",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hydration",
+      "context": "在预渲染静态页面中按需对局部交互岛屿组件进行独立水合。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssg",
+      "context": "以静态构建生成的 HTML 为基础页面外壳并在其上嵌入交互岛。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ssr",
+      "context": "支持服务端动态流式下发页面外壳与部分岛屿内容。"
+    }
+  ],
+  "summary": "在静态 HTML 中按区域与条件独立启用客户端交互组件的现代前端架构。",
+  "description": "群岛架构把大部分页面保持为无需客户端运行时的纯静态 HTML，仅为需要动态交互的区域加载和执行组件代码。页面上的搜索框、购物车或图表可以各自成为独立的交互岛，组件的加载时机与执行范围不必扩展到整页。\n\nAstro 和 Fresh 等现代框架提供了典型实现：组件默认只输出 HTML 与 CSS，通过显式指令（如 client:load、client:idle、client:visible）在特定条件触发局部水合。这种模式大幅削减了首屏发送至浏览器的 JavaScript 体积并显著降低 TTI 与 INP。\n\n## 参考\n\n- [Astro：Islands Architecture](https://docs.astro.build/en/concepts/islands/)\n- [Jason Miller: Islands Architecture](https://jasonformat.com/islands-architecture/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

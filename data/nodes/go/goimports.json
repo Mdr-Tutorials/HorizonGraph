@@ -1,0 +1,33 @@
+{
+  "id": "goimports",
+  "name": "goimports",
+  "display_primary": "goimports 导包格式化工具",
+  "display_secondary": "goimports",
+  "aliases": [
+    "goimports 导包格式化工具",
+    "goimports"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "go-ecosystem"
+  ],
+  "domains": [
+    "language-tooling"
+  ],
+  "summary": "在 gofmt 基础上自动管理与修正 Go 源码中 import 语句的官方工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

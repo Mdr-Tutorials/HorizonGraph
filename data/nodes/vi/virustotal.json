@@ -1,0 +1,35 @@
+{
+  "id": "virustotal",
+  "name": "VirusTotal",
+  "display_primary": "VirusTotal",
+  "display_secondary": "VirusTotal",
+  "aliases": [
+    "VirusTotal",
+    "VT",
+    "多引擎恶意代码分析平台"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "聚合数十款主流杀毒引擎与动态沙箱，分析可疑文件和URL的在线安全服务平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "incident-response",
+      "context": "安全分析员在调查恶意事件时将样本哈希提交至 VirusTotal 核验行业检测结果。"
+    }
+  ]
+}

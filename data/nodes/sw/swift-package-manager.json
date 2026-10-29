@@ -1,0 +1,41 @@
+{
+  "id": "swift-package-manager",
+  "name": "Swift Package Manager",
+  "display_primary": "Swift 包管理器",
+  "display_secondary": "Swift Package Manager",
+  "aliases": [
+    "Swift 包管理器",
+    "SPM",
+    "Swift Package Manager"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "ios-ecosystem",
+    "macos-darwin-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "software-supply-chain"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "swift"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    }
+  ],
+  "summary": "Apple 官方用于管理 Swift 代码模块分发、编译与依赖关系的工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://www.swift.org/documentation/package-manager/"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "context-caching",
+  "name": "Context Caching",
+  "display_primary": "上下文缓存",
+  "display_secondary": "Prompt Caching",
+  "aliases": [
+    "上下文缓存",
+    "Prompt Caching",
+    "提示词缓存",
+    "前缀KV缓存"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "ai_data_science"
+  ],
+  "domains": [
+    "agent-development",
+    "high-performance-computing",
+    "natural-language-processing"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "agent-systems-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ai-agent"
+    }
+  ],
+  "summary": "跨会话复用大模型公共长文本前缀的 KV 状态以降低推理时延与成本的机制。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "description": "上下文缓存（Context Caching，亦常称 Prompt Caching 或前缀键值缓存复用）是现代大模型服务架构针对长上下文（Long Context）场景的重要性能优化机制。在智能体开发、代码库全仓对话或复杂知识库问答中，每次请求往往伴随数十万 Token 的固定系统提示词、工具定义或核心文档。\n\n传统自注意力计算每次都需从头对所有前置 Token 计算 Key-Value（KV）张量，带来高昂的首字时延（TTFT）与计算资源浪费。上下文缓存机制在推理服务端对确定性命中相同前缀的 Token 序列持久化其 KV Cache 状态，后续调用只需直接加载缓存并对新增后缀计算注意力，从而实现降低高达 80% 到 90% 的请求延迟与调用资费。\n\n## 参考\n\n- [Anthropic：Prompt Caching Documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)\n- [Google Cloud：Gemini Context Caching Overview](https://cloud.google.com/vertex-ai/generative-ai/docs/context-cache/context-cache-overview)"
+}

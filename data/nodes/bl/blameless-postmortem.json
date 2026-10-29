@@ -1,0 +1,44 @@
+{
+  "id": "blameless-postmortem",
+  "name": "Blameless Postmortem",
+  "display_primary": "无指责复盘",
+  "display_secondary": "Blameless Postmortem",
+  "aliases": [
+    "无指责复盘",
+    "无指责事后分析",
+    "无责复盘机制",
+    "免责复盘",
+    "Blameless Post-mortem"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-quality-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "software-quality",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "engineering-manager",
+      "context": "工程经理维护心理安全复盘环境，引导团队深入挖掘流程与工具漏洞而非问责个人。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sla",
+      "context": "在线上服务违反服务等级承诺后触发无指责复盘以分析根本原因并制定改进计划。"
+    }
+  ],
+  "summary": "假定员工行为出于良好意图、聚焦系统设计与流程缺陷的事故调查机制。",
+  "description": "无指责复盘（Blameless Postmortem）是现代站点可靠性工程（SRE）与 DevOps 文化中的关键实践。其核心原则假设：每个工程师在面对复杂系统异常时，均基于当时所掌握的最佳信息作出了合理决策。事故的根本原因是系统防护脆弱、自动化不足或流程缺陷，而非个人过失。\n\n通过消除对惩罚与指责的恐惧，复盘能够还原完整的事发时间线、真实认知偏差及防御死角，从而沉淀出高价值的工程加固与组织改进方案。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

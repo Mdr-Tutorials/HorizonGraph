@@ -1,0 +1,42 @@
+{
+  "id": "nomad",
+  "name": "Nomad",
+  "display_primary": "Nomad",
+  "display_secondary": "HashiCorp Nomad",
+  "aliases": [
+    "Nomad",
+    "HashiCorp Nomad"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cloud_native",
+    "iac-ecosystem",
+    "container-ecosystem"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "containerization"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "HashiCorp开发的简单灵活集群编排器，跨公有云与裸机部署容器及传统应用。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://www.nomadproject.io",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "hashicorp"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker",
+      "context": "原生支持通过 Docker 驱动调度和运行容器化任务。"
+    }
+  ]
+}

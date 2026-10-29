@@ -1,0 +1,40 @@
+{
+  "id": "soap-ui",
+  "name": "SoapUI",
+  "display_primary": "SoapUI",
+  "display_secondary": "SoapUI",
+  "aliases": [
+    "SoapUI",
+    "Soap UI",
+    "API 测试工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "api-engineering"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "面向 SOAP 与 REST Web 服务的接口功能验证、模拟与安全自动化测试工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "functional-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "security-testing"
+    }
+  ]
+}

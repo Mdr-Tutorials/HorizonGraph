@@ -1,0 +1,38 @@
+{
+  "id": "dmz",
+  "name": "Demilitarized Zone",
+  "display_primary": "非军事化隔离区",
+  "display_secondary": "DMZ",
+  "aliases": [
+    "非军事化隔离区",
+    "DMZ",
+    "隔离区",
+    "网络隔离区"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "位于不受信任的外部网络与受信任内部网络之间的物理或逻辑子网隔离区。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "firewall",
+      "context": "双宿主防火墙在内外部网络交界处划定 DMZ，部署面向公众的 Web 与邮件服务器。"
+    }
+  ]
+}

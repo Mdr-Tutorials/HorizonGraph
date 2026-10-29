@@ -1,0 +1,36 @@
+{
+  "id": "ipam",
+  "name": "IP Address Management",
+  "display_primary": "IP地址管理",
+  "display_secondary": "IPAM",
+  "aliases": [
+    "IP地址管理",
+    "IPAM",
+    "IP网段规划与管理"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "summary": "规划、跟踪和管理企业网络中IP地址分配、DNS记录和DHCP服务的综合机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ip",
+      "context": "IPAM 系统维护全网 IP 地址池与子网边界映射，防止 IP 冲突与未授权接入。"
+    }
+  ]
+}

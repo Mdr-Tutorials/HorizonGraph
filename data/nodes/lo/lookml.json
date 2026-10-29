@@ -1,0 +1,46 @@
+{
+  "id": "lookml",
+  "name": "LookML",
+  "display_primary": "LookML",
+  "display_secondary": "Looker Modeling Language",
+  "aliases": [
+    "LookML",
+    "Looker 建模语言"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "database-ecosystem",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "data-engineering",
+    "databases"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "looker-platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sql",
+      "context": "声明式定义数据模型并将其动态编译为针对底层数据库的高效 SQL 查询。"
+    }
+  ],
+  "summary": "在 Looker 中集中定义维度、聚合与 SQL 查询关系的语义建模语言。",
+  "description": "LookML 是 Looker 平台的声明式数据建模语言。它允许数据团队集中定义业务维度、度量、关联关系和访问控制规则，并自动将其编译为针对底层 SQL 数据库的精准优化查询。LookML 将数据语义层与物理存储解耦，消除重复 SQL 逻辑并保障全企业指标一致性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

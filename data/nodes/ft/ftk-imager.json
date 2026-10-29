@@ -1,0 +1,36 @@
+{
+  "id": "ftk-imager",
+  "name": "FTK Imager",
+  "display_primary": "FTK Imager",
+  "display_secondary": "FTK Imager",
+  "aliases": [
+    "FTK Imager",
+    "FTK镜像取证工具",
+    "取证镜像制作工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "windows-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "用于只读方式采集磁盘物理镜像、内存转储并计算哈希校验值的电子取证工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "autopsy",
+      "context": "FTK Imager 制作的原始 E01 或 DD 格式磁盘镜像常导入 Autopsy 展开取证解析。"
+    }
+  ]
+}

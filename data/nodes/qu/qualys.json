@@ -1,0 +1,37 @@
+{
+  "id": "qualys",
+  "name": "Qualys Cloud Platform",
+  "display_primary": "Qualys",
+  "display_secondary": "Qualys VMDR",
+  "aliases": [
+    "Qualys",
+    "Qualys云平台",
+    "Qualys漏洞管理"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "public-cloud-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "提供云原生资产发现、弱点管理、合规评估与威胁检测的企业级安全SaaS套件。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "attack-surface-mapping",
+      "context": "Qualys 云代理常驻企业各操作系统端点持续上报软件漏洞与配置违规。"
+    }
+  ]
+}

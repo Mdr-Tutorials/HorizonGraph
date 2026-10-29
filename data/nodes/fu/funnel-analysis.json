@@ -1,0 +1,43 @@
+{
+  "id": "funnel-analysis",
+  "name": "Funnel Analysis",
+  "display_primary": "漏斗转化分析",
+  "display_secondary": "Funnel Analysis",
+  "aliases": [
+    "漏斗转化分析",
+    "漏斗分析",
+    "Conversion Funnel Analysis",
+    "Funnel Chart Analysis"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "statistics",
+    "data-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "statistical-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "customer-acquisition-cost",
+      "context": "通过定位各转化步长阻碍点降低转化阻力以压缩单位获客成本。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "churn-rate",
+      "context": "量化各关键环节用户未到达下一状态的即时流失比率。"
+    }
+  ],
+  "summary": "跟踪用户在业务流程中各阶段转化率与流失节点以优化链路的分析法。",
+  "description": "漏斗转化分析用于衡量用户在完成特定目标（如注册激活、商品购买、开通会员）过程中各连续步骤的留存与流失情况。通过量化每一环节的转化率与流失比率，数据分析人员可以快速定位业务链路中的摩擦点与瓶颈，进而针对性地优化产品体验与运营策略。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

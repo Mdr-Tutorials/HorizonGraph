@@ -1,0 +1,37 @@
+{
+  "id": "mitm",
+  "name": "Man-in-the-Middle Attack",
+  "display_primary": "中间人攻击",
+  "display_secondary": "Man-in-the-Middle Attack",
+  "aliases": [
+    "中间人攻击",
+    "Man-in-the-Middle Attack",
+    "MITM",
+    "中间人拦截"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "summary": "攻击者暗中介入并篡改通信双方连接会话的截获与伪造攻击。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tls",
+      "context": "TLS 证书强校验与证书透明度机制用于防御中间人攻击中的证书欺骗。"
+    }
+  ]
+}

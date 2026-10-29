@@ -1,0 +1,38 @@
+{
+  "id": "churn-rate",
+  "name": "Churn Rate",
+  "display_primary": "用户流失率",
+  "display_secondary": "Churn Rate",
+  "aliases": [
+    "用户流失率",
+    "流失率",
+    "Customer Churn Rate",
+    "Attrition Rate"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "enterprise-apps-ecosystem",
+    "ai_data_science"
+  ],
+  "domains": [
+    "statistics",
+    "data-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "customer-lifetime-value",
+      "context": "流失率的变化直接决定客户预期平均存续时间及累计商业贡献价值。"
+    }
+  ],
+  "summary": "在特定统计时间周期内停止使用产品或服务的订阅客户所占的百分比。",
+  "description": "用户流失率（Churn Rate）是衡量订阅制与客户保留型商业模式健康度的关键指标。它表示在给定时间区间内流失的客户数与期初客户总数的百分比比率。流失率与留存率互补，直接影响企业持续增长能力与净收入留存率（NDR）。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

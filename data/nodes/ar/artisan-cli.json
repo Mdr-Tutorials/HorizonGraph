@@ -1,0 +1,35 @@
+{
+  "id": "artisan-cli",
+  "name": "Artisan",
+  "display_primary": "Artisan 命令行工具",
+  "display_secondary": "Artisan CLI",
+  "aliases": [
+    "Artisan 命令行工具",
+    "Artisan CLI",
+    "Artisan"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "php-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "command-line-tools"
+  ],
+  "summary": "Laravel 自带的命令行接口，提供代码生成、数据库迁移与任务调度等管理指令。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "laravel"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

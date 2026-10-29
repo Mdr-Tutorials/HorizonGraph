@@ -1,0 +1,35 @@
+{
+  "id": "akka",
+  "name": "Akka",
+  "display_primary": "Akka 并发与分布式工具包",
+  "display_secondary": "Akka",
+  "aliases": [
+    "Akka 并发与分布式工具包",
+    "Akka",
+    "Akka Toolkit"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "systems-programming"
+  ],
+  "summary": "基于 Actor 模型构建高并发、分布式且具备弹性质的事件驱动应用的经典框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "scala"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

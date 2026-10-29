@@ -1,0 +1,44 @@
+{
+  "id": "helicone",
+  "name": "Helicone",
+  "display_primary": "Helicone",
+  "display_secondary": "Helicone",
+  "aliases": [
+    "Helicone",
+    "LLM代理网关",
+    "大模型成本时延监控"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "agent-development",
+    "devops",
+    "api-engineering"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "context-caching",
+      "context": "在代理网关层提供语义缓存与精确匹配缓存，降低重复模型调用开销。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "langchain"
+    }
+  ],
+  "summary": "面向大模型应用的开源智能代理网关，提供成本分析、请求缓存与时延监控。",
+  "importance": 3,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://helicone.ai",
+  "description": "Helicone 是一款开源的 LLM 开发监控与智能代理网关工具。开发者只需将模型客户端的基础 URL 重定向至 Helicone 代理端点，即可实现零业务入侵的调用拦截、数据指标统计与安全治理。\n\nHelicone 具备实时的请求时延测量、令牌成本核算、异常请求报警和速率限制控制功能。为了优化高并发与常见问答场景下的开销，Helicone 网关内置了精确缓存与基于向量相似度的语义缓存（Semantic Caching），可跳过昂贵的远程模型推理直接命中历史响应，显著提升服务响应速度并削减 API 开支。\n\n## 参考\n\n- [Helicone Documentation](https://docs.helicone.ai/)\n- [Helicone GitHub Repository](https://github.com/Helicone/helicone)"
+}

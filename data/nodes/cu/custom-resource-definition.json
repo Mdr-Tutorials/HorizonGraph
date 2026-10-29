@@ -1,0 +1,36 @@
+{
+  "id": "custom-resource-definition",
+  "name": "Custom Resource Definition",
+  "display_primary": "自定义资源定义",
+  "display_secondary": "Custom Resource Definition",
+  "aliases": [
+    "自定义资源定义",
+    "CRD",
+    "CustomResourceDefinition"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "summary": "允许用户在不修改K8s核心源码的前提下声明扩展自定义API资源的元机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "kubernetes"
+    }
+  ]
+}

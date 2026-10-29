@@ -1,0 +1,35 @@
+{
+  "id": "stride-threat-model",
+  "name": "STRIDE Threat Model",
+  "display_primary": "STRIDE 威胁建模",
+  "display_secondary": "STRIDE",
+  "aliases": [
+    "STRIDE 威胁建模",
+    "STRIDE",
+    "STRIDE 模型"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "微软提出的分类假冒、篡改、抵赖、信息泄露、拒绝服务与特权提升的威胁建模方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "threat-modeling",
+      "context": "STRIDE 广泛应用于软件系统设计阶段的数据流图与攻击面威胁建模分析。"
+    }
+  ]
+}

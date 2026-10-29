@@ -1,0 +1,35 @@
+{
+  "id": "getx",
+  "name": "GetX",
+  "display_primary": "GetX 微框架",
+  "display_secondary": "GetX",
+  "aliases": [
+    "GetX 微框架",
+    "GetX"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "android-ecosystem",
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "flutter"
+    }
+  ],
+  "summary": "集成了高性能响应式状态管理、路由导航与依赖注入的 Flutter 微型框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://pub.dev/packages/get"
+}

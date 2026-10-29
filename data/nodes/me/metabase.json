@@ -1,0 +1,42 @@
+{
+  "id": "metabase",
+  "name": "Metabase",
+  "display_primary": "Metabase",
+  "display_secondary": "Metabase BI",
+  "aliases": [
+    "Metabase",
+    "元基商业智能"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "database-ecosystem",
+    "data-visualization-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "data-visualization"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "superset"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sql",
+      "context": "为业务人员提供可视化查询构建器同时支持数据专家编写原生 SQL。"
+    }
+  ],
+  "summary": "轻量开源、具备直观图形化问答与 SQL 控制台的数据探索与看板工具。",
+  "description": "Metabase 是一款广受欢迎的开源商业智能与仪表盘工具。它以极低的学习门槛和极速安装部署著称，允许非技术人员通过直观的可视化查询编辑器提出数据问题，同时为分析师提供原生 SQL 编写、图表交互与嵌入式报表分享能力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://www.metabase.com"
+}

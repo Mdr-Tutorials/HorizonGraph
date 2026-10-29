@@ -1,0 +1,35 @@
+{
+  "id": "rubocop",
+  "name": "RuboCop",
+  "display_primary": "RuboCop 代码风格检查工具",
+  "display_secondary": "RuboCop",
+  "aliases": [
+    "RuboCop 代码风格检查工具",
+    "RuboCop"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "ruby-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "language-tooling"
+  ],
+  "summary": "基于社区 Ruby 风格指南的静态代码分析器与代码格式化利器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ruby"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

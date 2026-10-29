@@ -1,0 +1,36 @@
+{
+  "id": "teamcity",
+  "name": "TeamCity",
+  "display_primary": "TeamCity",
+  "display_secondary": "TeamCity",
+  "aliases": [
+    "TeamCity",
+    "JetBrains TeamCity"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cicd-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "JetBrains 推出的功能强大、支持智能测试分析的企业级 CI/CD 服务器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "支持测试实时反馈、不稳定测试识别与并行测试分发。"
+    }
+  ]
+}

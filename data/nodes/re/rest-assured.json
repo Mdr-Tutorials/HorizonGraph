@@ -1,0 +1,40 @@
+{
+  "id": "rest-assured",
+  "name": "REST Assured",
+  "display_primary": "REST Assured",
+  "display_secondary": "REST Assured",
+  "aliases": [
+    "REST Assured",
+    "REST-assured"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "api-engineering"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "Java 生态中用于简化 RESTful API 功能验证与 JSON/XML 断言的测试库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "functional-testing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "junit",
+      "context": "在 JUnit 测试生命周期中发起 HTTP 动作并流式断言响应体。"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "ingress-controller",
+  "name": "Ingress Controller",
+  "display_primary": "Ingress 控制器",
+  "display_secondary": "Ingress Controller",
+  "aliases": [
+    "Ingress 控制器",
+    "Ingress Controller",
+    "入口控制器"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "networking"
+  ],
+  "summary": "监听集群Ingress资源并动态配置反向代理以承载七层外部流量路由的架构组件。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kubernetes",
+      "context": "持续同步 Kubernetes API Server 的 Ingress 规则与 Endpoint 变化。"
+    }
+  ]
+}

@@ -1,7 +1,11 @@
 {
   "id": "helm",
   "name": "Helm",
-  "aliases": [],
+  "aliases": [
+    "Helm",
+    "Kubernetes包管理器",
+    "helm-package-manager"
+  ],
   "type": "tool",
   "ecosystems": [
     "kubernetes-ecosystem",
@@ -25,7 +29,7 @@
   "summary": "Kubernetes 包管理器，chart 模板化应用编排。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-29",
   "importance": 4,
   "official_site": "https://helm.sh"
 }

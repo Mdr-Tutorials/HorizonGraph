@@ -1,0 +1,35 @@
+{
+  "id": "hackthebox",
+  "name": "Hack The Box",
+  "display_primary": "Hack The Box",
+  "display_secondary": "Hack The Box",
+  "aliases": [
+    "Hack The Box",
+    "HTB",
+    "网络安全实战靶场"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "提供大量逼真易受攻击系统与虚拟实验室的网络安全攻防实战与技能演练平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "metasploit",
+      "context": "演练者在 Hack The Box 靶机环境中利用漏洞利用框架与渗透工具攻防攻坚。"
+    }
+  ]
+}

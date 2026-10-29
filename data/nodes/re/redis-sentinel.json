@@ -1,0 +1,43 @@
+{
+  "id": "redis-sentinel",
+  "name": "Redis Sentinel",
+  "display_primary": "Redis 哨兵",
+  "display_secondary": "Redis Sentinel",
+  "aliases": [
+    "Redis 哨兵",
+    "Redis Sentinel",
+    "Sentinel"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "为 Redis 主从拓扑提供监控、通知、自动故障转移与配置广播的高可用系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "redis",
+      "context": "持续监控 Redis 节点健康并在主节点下线时自动选举提升从节点。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "raft",
+      "context": "多个哨兵节点通过类 Raft 选举协议投票选举领头哨兵执行故障转移。"
+    }
+  ]
+}

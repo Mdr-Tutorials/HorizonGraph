@@ -1,0 +1,35 @@
+{
+  "id": "staticcheck",
+  "name": "Staticcheck",
+  "display_primary": "Staticcheck 静态分析工具",
+  "display_secondary": "Staticcheck",
+  "aliases": [
+    "Staticcheck 静态分析工具",
+    "Staticcheck"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "go-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "language-tooling"
+  ],
+  "summary": "功能先进的 Go 静态分析工具，专注于检测错误、简化代码与性能优化。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

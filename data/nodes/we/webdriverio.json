@@ -1,0 +1,42 @@
+{
+  "id": "webdriverio",
+  "name": "WebdriverIO",
+  "display_primary": "WebdriverIO",
+  "display_secondary": "WebdriverIO",
+  "aliases": [
+    "WebdriverIO",
+    "WDIO",
+    "Webdriver.io"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "browser-automation-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "基于 WebDriver 与 CDP 协议的 Node.js 端到端与浏览器自动化测试框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "e2e-testing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "selenium",
+      "context": "基于 WebDriver 协议驱动现代桌面与移动端浏览器会话。"
+    }
+  ]
+}

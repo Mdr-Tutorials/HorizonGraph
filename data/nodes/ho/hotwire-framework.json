@@ -1,0 +1,36 @@
+{
+  "id": "hotwire-framework",
+  "name": "Hotwire",
+  "display_primary": "Hotwire 响应式前端框架",
+  "display_secondary": "Hotwire (HTML Over The Wire)",
+  "aliases": [
+    "Hotwire 响应式前端框架",
+    "Hotwire",
+    "Hotwire Framework"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "ruby-ecosystem",
+    "modern-web-frameworks-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "summary": "通过服务端渲染 HTML 并经由长连接快速更新页面的现代响应式栈。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ruby-on-rails-framework"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

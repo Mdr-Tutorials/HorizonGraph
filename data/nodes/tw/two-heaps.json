@@ -1,0 +1,34 @@
+{
+  "id": "two-heaps",
+  "name": "Two Heaps",
+  "display_primary": "双堆模式",
+  "display_secondary": "Two Heaps Pattern",
+  "aliases": [
+    "双堆模式",
+    "双对顶堆",
+    "对顶堆"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "维护大顶堆与小顶堆动态平衡分割数据流两半，以常数时间获取中位数或分位数。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "分别利用大顶堆与小顶堆维护较小半段与较大半段数据并在插入时调整平衡。"
+    }
+  ]
+}

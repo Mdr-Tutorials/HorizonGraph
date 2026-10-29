@@ -1,0 +1,38 @@
+{
+  "id": "fast-and-slow-pointers",
+  "name": "Fast and Slow Pointers",
+  "display_primary": "快慢指针",
+  "display_secondary": "Fast and Slow Pointers",
+  "aliases": [
+    "快慢指针",
+    "龟兔赛跑算法",
+    "弗洛伊德判圈算法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "以不同步长推进两指针，常用于链表环检测、找中点或序列循环节判定。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "two-pointers"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linked-list",
+      "context": "通过步长为二的快指针与步长为一的慢指针以 O(1) 空间判断链表是否有环。"
+    }
+  ]
+}

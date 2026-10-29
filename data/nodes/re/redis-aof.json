@@ -1,0 +1,44 @@
+{
+  "id": "redis-aof",
+  "name": "Redis AOF",
+  "display_primary": "AOF 持久化",
+  "display_secondary": "Append-Only File",
+  "aliases": [
+    "AOF 持久化",
+    "AOF",
+    "Append Only File",
+    "Redis AOF"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "summary": "以追加写方式逐条记录写命令并在后台自动重写压缩的 Redis 持久化机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "redis-rdb"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "redis",
+      "context": "记录 Redis 内存变更命令并在重启时顺序回放恢复数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wal",
+      "context": "借鉴预写日志思想保证故障发生时数据只丢失极短同步窗口。"
+    }
+  ]
+}

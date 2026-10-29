@@ -1,0 +1,37 @@
+{
+  "id": "model-extraction-attack",
+  "name": "Model Extraction Attack",
+  "display_primary": "模型逆向提取攻击",
+  "display_secondary": "Model Extraction Attack",
+  "aliases": [
+    "模型逆向提取攻击",
+    "Model Extraction Attack",
+    "模型窃取攻击",
+    "Model Stealing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "machine-learning"
+  ],
+  "summary": "通过黑盒发送大量测试输入并分析模型输出响应，窃取或复制目标专有模型的知识与参数。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transformer",
+      "context": "攻击者通过向黑盒 Transformer 模型发送大量查询提示词以蒸馏训练替代模型。"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "semantic-router",
+  "name": "Semantic Router",
+  "display_primary": "语义路由",
+  "display_secondary": "Semantic Router",
+  "aliases": [
+    "语义路由",
+    "Semantic Router",
+    "向量语义路由"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "function-calling",
+      "context": "作为极速轻量路由前置于函数调用流程，显著削减意图识别的大模型令牌消耗。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "fastapi"
+    }
+  ],
+  "summary": "利用向量嵌入相似度快速分流用户意图与工具调用的极速决策层 Python 库。",
+  "importance": 3,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://github.com/aurelio-labs/semantic-router",
+  "description": "Semantic Router 是由 Aurelio AI 开发的超快速决策路由 Python 库。在传统复杂智能体架构中，系统往往需要依赖昂贵且耗时数百毫秒的大模型推理来识别用户意图并选择分支路径；Semantic Router 则将路由决策转化为向量空间的嵌入相似度计算。\n\n开发者通过定义包含少量示例短语的语义路由（Route），系统在运行时将用户查询通过轻量级编码器（如 Hugging Face 或 Cohere 嵌入模型）向量化，并在纳秒至毫秒级别计算与路由质心的余弦相似度，快速选定目的地。这种模式不仅极大降低了智能体系统的决策延迟，还大幅节省了 Token 成本。\n\n## 参考\n\n- [Aurelio AI：Semantic Router GitHub Repository](https://github.com/aurelio-labs/semantic-router)\n- [James Briggs：Supercharging Agent Routing with Semantic Router](https://www.aurelio.ai/blog/semantic-router)"
+}

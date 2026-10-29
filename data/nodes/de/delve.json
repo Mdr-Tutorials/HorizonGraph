@@ -1,0 +1,36 @@
+{
+  "id": "delve",
+  "name": "Delve",
+  "display_primary": "Delve 调试器",
+  "display_secondary": "Delve (dlv)",
+  "aliases": [
+    "Delve 调试器",
+    "Delve",
+    "dlv"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "go-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "language-tooling",
+    "systems-programming"
+  ],
+  "summary": "专为 Go 语言设计的源码级交互式调试工具，完美支持协程与运行时内部机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

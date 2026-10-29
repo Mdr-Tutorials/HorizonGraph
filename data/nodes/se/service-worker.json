@@ -1,0 +1,45 @@
+{
+  "id": "service-worker",
+  "name": "Service Worker",
+  "display_primary": "服务工作线程",
+  "display_secondary": "Service Worker API",
+  "aliases": [
+    "服务工作线程",
+    "Service Worker",
+    "Service Workers",
+    "Web 服务工作线程"
+  ],
+  "type": "protocol",
+  "abstraction_level": "runtime_vm",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "browser-engine-ecosystem",
+    "pwa-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pwa",
+      "context": "作为渐进式 Web 应用实现离线访问、资源缓存拦截与后台推送的核心引擎。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "在独立后台线程异步执行请求代理与缓存策略匹配逻辑。"
+    }
+  ],
+  "summary": "在浏览器后台独立运行、拦截网络请求并管理离线资源缓存的可编程代理协议。",
+  "description": "Service Worker 是现代 PWA（渐进式 Web 应用）技术架构的绝对基石。它是一段运行在浏览器主执行线程之外的事件驱动型 Worker 脚本，完全脱离任何具体的网页 DOM 上下文。\n\nService Worker 充当浏览器与网络之间的可编程客户端网络代理，能够细粒度拦截客户端发出的每一个 HTTP 请求，并结合 Cache Storage API 灵活实现网络优先、缓存优先或陈旧优先重新验证等高级离线策略，同时支持后台同步（Background Sync）与推送通知（Push Notifications）。\n\n## 参考\n\n- [MDN Web Docs: Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)\n- [W3C Service Workers 规范](https://www.w3.org/TR/service-workers/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

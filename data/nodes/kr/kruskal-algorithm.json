@@ -1,0 +1,40 @@
+{
+  "id": "kruskal-algorithm",
+  "name": "Kruskal's Algorithm",
+  "display_primary": "Kruskal 算法",
+  "display_secondary": "Kruskal's Algorithm",
+  "aliases": [
+    "Kruskal 算法",
+    "克鲁斯卡尔算法",
+    "kruskals-algorithm"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes",
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "systems-programming"
+  ],
+  "summary": "按边权升序贪心选边并通过并查集判环构建加权无向图最小生成树的算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "minimum-spanning-tree"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "union-find",
+      "context": "在加入候选边前查询两端点是否在同一连通分量以避免回路。"
+    }
+  ]
+}

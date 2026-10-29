@@ -1,0 +1,37 @@
+{
+  "id": "parrotos",
+  "name": "Parrot OS",
+  "display_primary": "Parrot OS",
+  "display_secondary": "Parrot Security OS",
+  "aliases": [
+    "Parrot OS",
+    "Parrot Security OS",
+    "ParrotOS",
+    "鹦鹉安全操作系统"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "linux-gnu-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "基于Debian定制、面向渗透测试、数字取证和隐私保护的轻量级安全Linux发行版。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux",
+      "context": "Parrot OS 在标准 Linux 基础上预装了数百款渗透测试、密码破解与逆向分析工具。"
+    }
+  ]
+}

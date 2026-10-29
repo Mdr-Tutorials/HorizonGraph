@@ -5,7 +5,9 @@
   "display_secondary": "Union-Find",
   "aliases": [
     "并查集",
-    "不相交集合"
+    "不相交集合",
+    "disjoint-set-union",
+    "DSU"
   ],
   "type": "concept",
   "domains": [

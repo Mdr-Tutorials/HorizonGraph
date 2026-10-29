@@ -1,0 +1,37 @@
+{
+  "id": "cspm",
+  "name": "Cloud Security Posture Management",
+  "display_primary": "云安全姿态管理",
+  "display_secondary": "CSPM",
+  "aliases": [
+    "云安全姿态管理",
+    "CSPM",
+    "云配置与安全合规态势管理"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "security",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "自动化检测云端基础设施配置漂移、权限过大与合规违规的云安全管理工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "zero-trust",
+      "context": "CSPM 持续审计多云租户资源配置，确保云上基础设施满足零信任基线要求。"
+    }
+  ]
+}

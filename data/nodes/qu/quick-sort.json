@@ -1,0 +1,33 @@
+{
+  "id": "quick-sort",
+  "name": "Quick Sort",
+  "display_primary": "快速排序",
+  "display_secondary": "Quick Sort",
+  "aliases": [
+    "快速排序",
+    "快排"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "基于分治策略与基准划分的原位排序算法，平均时间复杂度为 O(n log n)。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "divide-and-conquer",
+      "context": "选取基准值将数组划分为左右两个子段并递归执行分区排序。"
+    }
+  ]
+}

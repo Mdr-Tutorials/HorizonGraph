@@ -1,0 +1,41 @@
+{
+  "id": "durable-objects",
+  "name": "Cloudflare Durable Objects",
+  "display_primary": "Durable Objects",
+  "display_secondary": "Cloudflare Durable Objects",
+  "aliases": [
+    "Durable Objects",
+    "Cloudflare 持久化对象",
+    "持久化对象"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "edge-serverless-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "edge-computing",
+    "distributed-systems"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "在边缘无服务器架构中提供强一致性协调、内存状态与持久存储的有状态计算系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://developers.cloudflare.com/durable-objects/",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "cloudflare"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cloudflare-workers"
+    }
+  ]
+}

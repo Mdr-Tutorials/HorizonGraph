@@ -1,0 +1,37 @@
+{
+  "id": "read-replicas",
+  "name": "Read Replicas",
+  "display_primary": "只读副本",
+  "display_secondary": "Read Replicas",
+  "aliases": [
+    "只读副本",
+    "读写分离",
+    "Read Replica",
+    "Read-Write Splitting"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "summary": "将只读流量路由至数据副本以分担主库压力并横向扩展读取吞吐的架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "replication",
+      "context": "通过异步或半同步复制日志将主节点数据变更流式同步给多个只读节点。"
+    }
+  ]
+}

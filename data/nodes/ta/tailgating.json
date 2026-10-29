@@ -1,0 +1,35 @@
+{
+  "id": "tailgating",
+  "name": "Tailgating",
+  "display_primary": "尾随进入",
+  "display_secondary": "Tailgating",
+  "aliases": [
+    "尾随进入",
+    "Tailgating",
+    "尾随攻击",
+    "搭便车进入"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "未经授权人员紧随授权员工进入受控物理设施的安全违规手段。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 2,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "social-engineering",
+      "context": "攻击者利用礼貌心理让员工帮忙拉门从而绕过门禁刷卡等物理安全控制。"
+    }
+  ]
+}

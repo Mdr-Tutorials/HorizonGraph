@@ -1,0 +1,35 @@
+{
+  "id": "attack-surface-mapping",
+  "name": "Attack Surface Mapping",
+  "display_primary": "攻击面测绘",
+  "display_secondary": "Attack Surface Mapping",
+  "aliases": [
+    "攻击面测绘",
+    "Attack Surface Mapping",
+    "攻击面管理",
+    "ASM"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "持续发现、分析并监控组织面向互联网暴露的所有数字资产与潜在漏洞风险。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nmap",
+      "context": "攻击面测绘系统使用自动化资产探测技术定期枚举全网暴露端口与运行服务。"
+    }
+  ]
+}

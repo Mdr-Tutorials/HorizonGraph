@@ -1,0 +1,36 @@
+{
+  "id": "eureka",
+  "name": "Eureka",
+  "display_primary": "Eureka 服务注册与发现中心",
+  "display_secondary": "Netflix Eureka",
+  "aliases": [
+    "Eureka 服务注册与发现中心",
+    "Eureka",
+    "Netflix Eureka"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems",
+    "cloud-infrastructure"
+  ],
+  "summary": "Netflix 开源的基于 REST 的分布式服务注册表与高可用服务发现中间件。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

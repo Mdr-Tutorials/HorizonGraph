@@ -1,0 +1,40 @@
+{
+  "id": "play-framework",
+  "name": "Play Framework",
+  "display_primary": "Play 响应式 Web 框架",
+  "display_secondary": "Play Framework",
+  "aliases": [
+    "Play 响应式 Web 框架",
+    "Play Framework",
+    "Play"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "distributed-systems"
+  ],
+  "summary": "轻量级、无状态、对开发者极其友好的 Scala 与 Java 高并发响应式 Web 框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "scala"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mvc"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

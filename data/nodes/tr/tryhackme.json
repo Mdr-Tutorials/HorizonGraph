@@ -1,0 +1,35 @@
+{
+  "id": "tryhackme",
+  "name": "TryHackMe",
+  "display_primary": "TryHackMe",
+  "display_secondary": "TryHackMe",
+  "aliases": [
+    "TryHackMe",
+    "THM",
+    "安全引导式实训平台"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "采用交互式短房间引导模式教授网络安全、防御运营与渗透测试技能的实训平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wireshark",
+      "context": "TryHackMe 实验室引导初学者在浏览器虚拟机中使用 Wireshark 完成流量分析任务。"
+    }
+  ]
+}

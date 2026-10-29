@@ -1,0 +1,41 @@
+{
+  "id": "dimensional-modeling",
+  "name": "Dimensional Modeling",
+  "display_primary": "维度建模",
+  "display_secondary": "Dimensional Modeling",
+  "aliases": [
+    "维度建模",
+    "多维建模",
+    "Kimball 建模法",
+    "Dimensional Model"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "data-warehouse"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "star-schema"
+    }
+  ],
+  "summary": "面向分析查询以事实与维度表组织数据仓库的建模方法。",
+  "description": "维度建模由 Ralph Kimball 等人倡导，是构建分析型数据仓库的核心范式。与强调消除冗余的第三范式（3NF）事务建模不同，维度建模以业务过程为核心，将数据划分为记录量化指标的“事实”和提供业务切片上下文的“维度”，从而显著提升分析查询效率和业务易理解性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

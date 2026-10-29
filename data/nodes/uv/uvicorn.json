@@ -1,0 +1,35 @@
+{
+  "id": "uvicorn",
+  "name": "Uvicorn",
+  "display_primary": "Uvicorn ASGI 服务器",
+  "display_secondary": "Uvicorn",
+  "aliases": [
+    "Uvicorn ASGI 服务器",
+    "Uvicorn"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "python-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-services",
+    "high-performance-computing"
+  ],
+  "summary": "基于 uvloop 与 httptools 构建的极速、轻量级异步 ASGI 服务器实现。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

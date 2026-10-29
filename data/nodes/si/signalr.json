@@ -1,0 +1,40 @@
+{
+  "id": "signalr",
+  "name": "SignalR",
+  "display_primary": "SignalR 实时通信库",
+  "display_secondary": "ASP.NET Core SignalR",
+  "aliases": [
+    "SignalR 实时通信库",
+    "SignalR",
+    "ASP.NET Core SignalR"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "dotnet-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "distributed-systems"
+  ],
+  "summary": "为 ASP.NET Core 应用轻松添加全双工实时 Web 通信能力的开源库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "aspnet-core"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "websocket"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

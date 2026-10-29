@@ -1,0 +1,36 @@
+{
+  "id": "testlink",
+  "name": "TestLink",
+  "display_primary": "TestLink",
+  "display_secondary": "TestLink",
+  "aliases": [
+    "TestLink",
+    "开源测试管理平台"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "基于 Web 的开源测试用例管理、测试计划制定与执行状态跟踪系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-case",
+      "context": "集中管理测试套件并跟踪各轮次构建的测试用例执行结果。"
+    }
+  ]
+}

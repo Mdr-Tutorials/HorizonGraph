@@ -1,0 +1,35 @@
+{
+  "id": "joe-sandbox",
+  "name": "Joe Sandbox",
+  "display_primary": "Joe Sandbox",
+  "display_secondary": "Joe Sandbox",
+  "aliases": [
+    "Joe Sandbox",
+    "JoeSandbox",
+    "深度自动化恶意分析沙箱"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "提供多平台深层动态行为监控、内存检测与MITRE ATT&CK战术映射的恶意分析沙箱。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mitre-attck",
+      "context": "Joe Sandbox 在生成深度沙箱分析报告时将检测到的恶意行为自动映射至 ATT&CK 矩阵。"
+    }
+  ]
+}

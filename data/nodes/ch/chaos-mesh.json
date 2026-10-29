@@ -1,0 +1,41 @@
+{
+  "id": "chaos-mesh",
+  "name": "Chaos Mesh",
+  "display_primary": "Chaos Mesh",
+  "display_secondary": "Chaos Mesh",
+  "aliases": [
+    "Chaos Mesh",
+    "云原生混沌工程平台"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "基于Kubernetes CRD驱动的全生命周期云原生混沌工程与故障注入实验平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://chaos-mesh.org",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "kubernetes"
+    },
+    {
+      "relation_type": "stewarded_by",
+      "target_id": "cncf",
+      "context": "CNCF 孵化级混沌工程与系统弹性验证项目。"
+    }
+  ]
+}

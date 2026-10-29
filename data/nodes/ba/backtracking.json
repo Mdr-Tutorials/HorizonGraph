@@ -1,0 +1,36 @@
+{
+  "id": "backtracking",
+  "name": "Backtracking",
+  "display_primary": "回溯算法",
+  "display_secondary": "Backtracking Algorithm",
+  "aliases": [
+    "回溯算法",
+    "回溯搜索",
+    "深度优先回溯"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes",
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "systems-programming"
+  ],
+  "summary": "在解空间树上深度优先搜索候选解，遇到不满足约束分支时撤销选择回退剪枝。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dfs",
+      "context": "在状态空间中递归深入试探可能路径，并在递归返回时恢复现场状态。"
+    }
+  ]
+}

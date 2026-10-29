@@ -1,0 +1,38 @@
+{
+  "id": "masstransit",
+  "name": "MassTransit",
+  "display_primary": "MassTransit 分布式消息总线",
+  "display_secondary": "MassTransit",
+  "aliases": [
+    "MassTransit 分布式消息总线",
+    "MassTransit"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dotnet-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "web-services"
+  ],
+  "summary": "为 .NET 应用提供一致抽象以简化 RabbitMQ 与 Azure 消息处理的轻量级总线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "rabbitmq"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

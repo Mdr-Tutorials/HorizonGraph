@@ -1,0 +1,37 @@
+{
+  "id": "suffix-array",
+  "name": "Suffix Array",
+  "display_primary": "后缀数组",
+  "display_secondary": "Suffix Array",
+  "aliases": [
+    "后缀数组",
+    "SA"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "将字符串所有后缀按字典序排列表达为整数下标数组，空间占用远小于后缀树。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "suffix-tree"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "存储后缀排名的起始下标，配合最长公共前缀数组高效求解复杂字符串匹配问题。"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "heap-sort",
+  "name": "Heap Sort",
+  "display_primary": "堆排序",
+  "display_secondary": "Heap Sort",
+  "aliases": [
+    "堆排序"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "利用二叉堆性质在 O(n log n) 时间与 O(1) 辅助空间内完成的原位选择排序。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "将连续数组隐式视为完全二叉树构建大顶堆并逐个交换提取最大元素。"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "single-file-components",
+  "name": "Single File Components",
+  "display_primary": "单文件组件",
+  "display_secondary": "Vue Single-File Components (SFC)",
+  "aliases": [
+    "单文件组件",
+    "Vue SFC",
+    "Single File Components",
+    ".vue 组件"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vue",
+      "context": "Vue 框架用于高内聚组织组件模板、逻辑与局部作用域样式的核心范式。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "使用类 HTML 标记结构封装 template、script 及 style 顶层代码块。"
+    }
+  ],
+  "summary": "将组件视图模板、业务逻辑与样式内聚在单一 .vue 文件中的文件规范范式。",
+  "description": "单文件组件（Single-File Components，简称 SFC，扩展名为 .vue）是 Vue 框架的标志性设计范式。一个 .vue 文件封装了组件的三个独立关注点：<template>（视图结构）、<script>（业务逻辑与响应式状态）以及 <style scoped>（经过自动作用域隔离的组件外观样式）。\n\n配合 Vite / @vitejs/plugin-vue 构建转换器，SFC 可以在编译时进行静态节点提升、预字符串化与块树优化，同时提供近乎完美的开箱即用 TypeScript 智能提示与语法高亮体验。\n\n## 参考\n\n- [Vue 官方文档：单文件组件规范](https://vuejs.org/guide/scaling-up/sfc.html)\n- [Vue SFC 编译器规范](https://github.com/vuejs/core/tree/main/packages/compiler-sfc)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

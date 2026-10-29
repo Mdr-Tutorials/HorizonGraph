@@ -1,0 +1,42 @@
+{
+  "id": "cohort-analysis",
+  "name": "Cohort Analysis",
+  "display_primary": "同期群分析",
+  "display_secondary": "Cohort Analysis",
+  "aliases": [
+    "同期群分析",
+    "群组分析",
+    "队列分析"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "statistics",
+    "data-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "statistical-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "churn-rate",
+      "context": "按同期时间窗口持续对比各群组的用户留存率与流失率趋势。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "customer-lifetime-value",
+      "context": "评估不同获客周期群组对企业累计生命周期价值的长期贡献差异。"
+    }
+  ],
+  "summary": "按时间或共同行为特征分组跟踪用户留存与生命周期变化的分析方法。",
+  "description": "同期群分析是商业智能与用户行为分析的核心方法。它将用户按共同起始事件（如首单时间、注册月份）划分为不同队列，并持续跟踪其在后续时间周期内的留存、购买频率或活跃度变化。这种分析能够剔除用户生命周期不同阶段对整体指标的掩盖，准确评估产品改版与运营效果。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

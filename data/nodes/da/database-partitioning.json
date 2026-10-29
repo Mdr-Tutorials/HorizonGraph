@@ -1,0 +1,39 @@
+{
+  "id": "database-partitioning",
+  "name": "Database Partitioning",
+  "display_primary": "表分区",
+  "display_secondary": "Table Partitioning",
+  "aliases": [
+    "表分区",
+    "数据分区",
+    "Table Partitioning",
+    "Data Partitioning"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "summary": "在单实例内按范围、列表或哈希规则将逻辑大表拆分为多个物理子表的机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "sharding"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "postgresql",
+      "context": "利用声明式分区与分区裁剪提升大表范围扫描效率并降低维护开销。"
+    }
+  ]
+}

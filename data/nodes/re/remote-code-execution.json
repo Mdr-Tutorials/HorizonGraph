@@ -1,0 +1,36 @@
+{
+  "id": "remote-code-execution",
+  "name": "Remote Code Execution",
+  "display_primary": "远程代码执行",
+  "display_secondary": "Remote Code Execution",
+  "aliases": [
+    "远程代码执行",
+    "Remote Code Execution",
+    "RCE",
+    "远程执行"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "systems-programming"
+  ],
+  "summary": "攻击者跨越网络在受害系统上执行任意计算机指令的严重安全漏洞。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "command-injection",
+      "context": "命令注入和反序列化漏洞是 Web 应用与后端服务中最容易导致 RCE 的常见诱因。"
+    }
+  ]
+}

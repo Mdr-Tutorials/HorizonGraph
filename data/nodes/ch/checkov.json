@@ -1,0 +1,38 @@
+{
+  "id": "checkov",
+  "name": "Checkov",
+  "display_primary": "Checkov",
+  "display_secondary": "Checkov",
+  "aliases": [
+    "Checkov",
+    "IaC安全静态扫描工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "iac-ecosystem",
+    "devops_tooling",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "用于Terraform、K8s等基础设施即代码(IaC)的静态安全与合规分析扫描器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://www.checkov.io",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terraform",
+      "context": "在 CI/CD 流水线中扫描 Terraform 代码与执行计划中的安全合规漏洞。"
+    }
+  ]
+}

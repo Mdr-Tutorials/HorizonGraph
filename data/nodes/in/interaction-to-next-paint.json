@@ -1,0 +1,39 @@
+{
+  "id": "interaction-to-next-paint",
+  "name": "Interaction to Next Paint",
+  "display_primary": "交互到下一次绘制",
+  "display_secondary": "Interaction to Next Paint (INP)",
+  "aliases": [
+    "交互到下一次绘制",
+    "INP",
+    "Interaction to Next Paint",
+    "交互延迟核心指标"
+  ],
+  "type": "metric",
+  "domains": [
+    "web-development",
+    "human-computer-interaction",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "browser-engine-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "度量从用户点击、轻触或按键输入到浏览器完成主线程执行并绘制下一帧的延迟。"
+    }
+  ],
+  "summary": "度量用户在整个页面生命周期内所有交互响应延迟的 Core Web Vitals 核心指标。",
+  "description": "Interaction to Next Paint（INP）是 Google 于 2024 年 3 月正式纳入 Core Web Vitals 的核心响应性能指标，全面替代了原有的首次输入延迟（FID）。FID 仅测量用户的第一次交互且只衡量输入延迟，而 INP 持续监测用户在整个页面访问期间几乎所有的点击、轻触与按键交互。\n\nINP 完整度量三段延迟：输入延迟（Input Delay，主线程空闲前排队耗时）、处理时间（Processing Time，运行事件回调的耗时）与呈现延迟（Presentation Delay，浏览器计算样式、重新布局并完成像素绘制的耗时）。低于 200 毫秒被视为响应良好。\n\n## 参考\n\n- [web.dev: Interaction to Next Paint (INP)](https://web.dev/articles/inp)\n- [Chrome 团队：Core Web Vitals 指南](https://developer.chrome.com/docs/crux/methodology)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

@@ -1,0 +1,44 @@
+{
+  "id": "power-query-m",
+  "name": "Power Query M Formula Language",
+  "abbreviation": "M",
+  "display_primary": "Power Query M 语言",
+  "display_secondary": "Power Query M Formula Language",
+  "aliases": [
+    "Power Query M 语言",
+    "M 语言",
+    "Power Query M",
+    "M Language"
+  ],
+  "type": "language",
+  "ecosystems": [
+    "database-ecosystem",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "data-engineering"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "language"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "microsoft"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "etl",
+      "context": "以步骤驱动的不可变表达式转换表格数据并向模型提供清洗结果。"
+    }
+  ],
+  "summary": "用于 Power Query 提取、转换与加载数据的函数式查询语言。",
+  "description": "Power Query M 语言是微软在 Power BI、Excel 和 Fabric 中用于数据清洗与数据准备的函数式、大小写敏感的公式语言。M 采用 let...in 结构表达一系列有序的数据转换步骤，支持查询折叠（Query Folding）将清洗操作下推至源端数据库执行以优化吞吐性能。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

@@ -1,0 +1,35 @@
+{
+  "id": "pasta",
+  "name": "PASTA Threat Modeling Framework",
+  "display_primary": "PASTA 威胁建模",
+  "display_secondary": "PASTA",
+  "aliases": [
+    "PASTA 威胁建模",
+    "PASTA",
+    "攻击模拟与威胁分析过程"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "以攻击者视角和业务目标为中心、分七步实施的基于风险的威胁建模框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "threat-modeling",
+      "context": "PASTA 框架将应用安全技术风险直接关联到企业业务影响与合规目标评估。"
+    }
+  ]
+}

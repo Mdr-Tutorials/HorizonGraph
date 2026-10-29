@@ -1,0 +1,43 @@
+{
+  "id": "aws-ecr",
+  "name": "Amazon Elastic Container Registry",
+  "display_primary": "Amazon ECR",
+  "display_secondary": "Amazon Elastic Container Registry",
+  "aliases": [
+    "Amazon ECR",
+    "ECR",
+    "Elastic Container Registry"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "public-cloud-ecosystem",
+    "container-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "containerization"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "AWS全托管的OCI兼容容器镜像仓库服务，支持镜像加密与漏洞扫描。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://aws.amazon.com/ecr/",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "aws"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docker",
+      "context": "支持标准 Docker CLI 推送和拉取容器镜像制品。"
+    }
+  ]
+}

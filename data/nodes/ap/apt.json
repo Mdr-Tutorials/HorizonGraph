@@ -1,0 +1,35 @@
+{
+  "id": "apt",
+  "name": "Advanced Persistent Threat",
+  "display_primary": "高级持续性威胁",
+  "display_secondary": "Advanced Persistent Threat",
+  "aliases": [
+    "高级持续性威胁",
+    "Advanced Persistent Threat",
+    "APT",
+    "APT攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "拥有雄厚资源与技术实力，针对特定目标开展长期隐蔽入侵的攻击行为。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "phishing",
+      "context": "APT 组织常使用鱼叉式网络钓鱼作为突破目标机构边界防线的第一阶段手段。"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "newman",
+  "name": "Newman",
+  "display_primary": "Newman",
+  "display_secondary": "Newman",
+  "aliases": [
+    "Newman",
+    "Postman Newman",
+    "Newman 运行器"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "node-js-ecosystem",
+    "cicd-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "api-engineering"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "专为 Postman 集合设计的命令行测试运行器，可无缝集成至 CI/CD 流水线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "postman",
+      "context": "以无头命令行方式加载与执行导出自 Postman 的接口测试集合。"
+    }
+  ]
+}

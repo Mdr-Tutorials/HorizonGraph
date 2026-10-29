@@ -1,0 +1,40 @@
+{
+  "id": "combine-framework",
+  "name": "Combine",
+  "display_primary": "Combine 框架",
+  "display_secondary": "Combine Framework",
+  "aliases": [
+    "Combine 框架",
+    "Combine",
+    "combine-framework"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "ios-ecosystem",
+    "macos-darwin-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "swift"
+    }
+  ],
+  "summary": "Apple 原生声明式响应式事件流与异步值传递处理框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://developer.apple.com/documentation/combine"
+}

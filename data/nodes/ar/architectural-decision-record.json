@@ -1,0 +1,45 @@
+{
+  "id": "architectural-decision-record",
+  "name": "Architectural Decision Record",
+  "display_primary": "架构决策记录",
+  "display_secondary": "Architectural Decision Record · ADR",
+  "aliases": [
+    "架构决策记录",
+    "ADR",
+    "架构决策日志",
+    "ADR 框架",
+    "Architectural Decision Records",
+    "adr-framework"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "devops_tooling",
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "software-quality"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "trade-off",
+      "context": "在记录中清晰记录架构方案选择背后的技术权衡、取舍原因与制约条件。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "engineering-manager",
+      "context": "技术管理层借助 ADR 机制沉淀团队关键架构演进历史，保证技术决策的连贯性与透明度。"
+    }
+  ],
+  "summary": "捕获软件架构重大决策背景、备选方案权衡及长期技术后果的轻量化文档。",
+  "description": "架构决策记录（Architectural Decision Record，简称 ADR）是一种在软件工程中记录关键架构决策的轻量级文档格式。一份标准的 ADR 通常包含标题、状态（提议、已接受、已废弃等）、背景上下文、所做决策及其技术权衡与预期后果。\n\nADR 通常以 Markdown 格式与源代码一同存放在版本控制系统中，使团队成员能够追溯历史决策背后的动机与取舍，有效降低人员交接与认知负担。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

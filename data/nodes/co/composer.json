@@ -1,0 +1,36 @@
+{
+  "id": "composer",
+  "name": "Composer",
+  "display_primary": "Composer 依赖管理工具",
+  "display_secondary": "Composer",
+  "aliases": [
+    "Composer 依赖管理工具",
+    "Composer",
+    "PHP Composer"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "php-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "software-supply-chain",
+    "devops"
+  ],
+  "summary": "PHP 生态事实标准的应用程序包与依赖管理器，基于 packagist 管理语义化版本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "php"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

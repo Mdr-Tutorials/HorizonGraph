@@ -1,0 +1,37 @@
+{
+  "id": "allure",
+  "name": "Allure Report",
+  "display_primary": "Allure",
+  "display_secondary": "Allure Report",
+  "aliases": [
+    "Allure",
+    "Allure Report",
+    "测试报告框架"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-measurement-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-measurement"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "轻量多语言的自动化测试执行报告与缺陷可视化分析工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "收集多框架测试执行元数据并渲染清晰交互式测试度量报告。"
+    }
+  ]
+}

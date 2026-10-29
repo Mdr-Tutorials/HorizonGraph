@@ -1,0 +1,44 @@
+{
+  "id": "diataxis-framework",
+  "name": "Diátaxis Documentation Framework",
+  "display_primary": "Diátaxis 技术文档框架",
+  "display_secondary": "Diátaxis Documentation Framework",
+  "aliases": [
+    "Diátaxis 技术文档框架",
+    "Diataxis 框架",
+    "Diátaxis 四象限文档架构",
+    "Diataxis 文档架构体系",
+    "Diátaxis Framework"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "collaboration-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "human-computer-interaction",
+    "empirical-software-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "developer-experience",
+      "context": "通过清晰区分面向学习与面向工作的文档形态，显著降低开发者的信息检索与认知负担。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "docs-as-code",
+      "context": "在 Docs-as-Code 的目录结构与内容体系设计中常采用 Diátaxis 的四分法作为标准骨架。"
+    }
+  ],
+  "summary": "将技术文档按学习与工作需求划分为教程、操作指南、参考和解释四大象限的架构。",
+  "description": "Diátaxis 是由 Daniele Procida 提出的系统性技术文档架构体系。它基于两根正交的认知坐标轴：面向学习（Learning-oriented）与面向工作（Work-oriented），以及实践操作（Practical step）与理论认知（Theoretical understanding），将所有技术文档清晰划分为四大象限：\n1. 教程（Tutorials）：面向学习的新手引导；\n2. 操作指南（How-to Guides）：面向实际任务的步骤指引；\n3. 参考资料（Reference）：面向工作的准确技术描述；\n4. 概念解释（Explanation）：面向理解的设计原理与背景探讨。\n\n该框架被 Python、NumPy、Ubuntu 等主流开源项目广泛采纳。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

@@ -1,0 +1,35 @@
+{
+  "id": "defense-in-depth",
+  "name": "Defense in Depth",
+  "display_primary": "纵深防御",
+  "display_secondary": "Defense in Depth",
+  "aliases": [
+    "纵深防御",
+    "Defense in Depth",
+    "多层防御",
+    "分层设防"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "在网络、主机与应用等多层协同部署防御机制，避免单点失效的防御策略。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "firewall",
+      "context": "纵深防御策略结合周边防火墙、网络隔离与主机端控制避免单点防线崩溃。"
+    }
+  ]
+}

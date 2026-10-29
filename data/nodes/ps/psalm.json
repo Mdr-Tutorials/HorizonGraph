@@ -1,0 +1,35 @@
+{
+  "id": "psalm",
+  "name": "Psalm",
+  "display_primary": "Psalm 静态分析工具",
+  "display_secondary": "Psalm",
+  "aliases": [
+    "Psalm 静态分析工具",
+    "Psalm"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "php-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "language-tooling"
+  ],
+  "summary": "Vimeo 出品的 PHP 静态分析工具，提供极高严格度的类型检查与代码安全问题排查。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "php"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

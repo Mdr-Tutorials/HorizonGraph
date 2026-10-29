@@ -1,0 +1,35 @@
+{
+  "id": "replay-attack",
+  "name": "Replay Attack",
+  "display_primary": "重放攻击",
+  "display_secondary": "Replay Attack",
+  "aliases": [
+    "重放攻击",
+    "Replay Attack",
+    "重放拦截"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "summary": "恶意拦截并重复发送合法网络数据包以欺骗接收端执行操作。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tls",
+      "context": "通信协议通过引入时间戳、Nonce 随机数或会话密钥抵御报文重放攻击。"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "redis-cluster",
+  "name": "Redis Cluster",
+  "display_primary": "Redis 集群",
+  "display_secondary": "Redis Cluster",
+  "aliases": [
+    "Redis 集群",
+    "Redis 分布式集群",
+    "Redis Cluster"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "summary": "采用 16384 个哈希槽无中心对等架构实现自动分片与高可用的 Redis 分布式集群规范。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "redis",
+      "context": "各主从节点运行 Redis 实例并通过集群总线 Gossip 协议交换拓扑与槽位信息。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sharding",
+      "context": "使用 CRC16 哈希将键空间均分到 16384 个槽位并指派给各主节点。"
+    }
+  ]
+}

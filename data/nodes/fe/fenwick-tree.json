@@ -1,0 +1,36 @@
+{
+  "id": "fenwick-tree",
+  "name": "Fenwick Tree",
+  "display_primary": "树状数组",
+  "display_secondary": "Fenwick Tree",
+  "aliases": [
+    "树状数组",
+    "二叉索引树",
+    "Binary Indexed Tree",
+    "BIT"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "mathematics"
+  ],
+  "summary": "利用 lowbit 二进制最低位管理前缀和，以极小常数实现 O(log n) 单点更新与前缀查询。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "在紧凑线性数组内依据下标二进制分解关系直接累加前缀和。"
+    }
+  ]
+}

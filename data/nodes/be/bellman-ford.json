@@ -1,0 +1,36 @@
+{
+  "id": "bellman-ford",
+  "name": "Bellman-Ford Algorithm",
+  "display_primary": "Bellman-Ford 算法",
+  "display_secondary": "Bellman-Ford Algorithm",
+  "aliases": [
+    "Bellman-Ford 算法",
+    "Bellman 算法",
+    "单源负权最短路算法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes",
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "systems-programming"
+  ],
+  "summary": "支持负权边并可检测负权回路的单源最短路径动态规划算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dynamic-programming",
+      "context": "对全图所有边迭代松弛 V-1 轮以逐步扩散最优路径并验证负权环。"
+    }
+  ]
+}

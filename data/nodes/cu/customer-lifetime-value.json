@@ -1,0 +1,45 @@
+{
+  "id": "customer-lifetime-value",
+  "name": "Customer Lifetime Value",
+  "abbreviation": "LTV",
+  "display_primary": "客户生命周期价值",
+  "display_secondary": "Customer Lifetime Value",
+  "aliases": [
+    "客户生命周期价值",
+    "LTV",
+    "CLV",
+    "CLTV",
+    "Customer Lifetime Value"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "enterprise-apps-ecosystem",
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "statistics",
+    "data-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "churn-rate",
+      "context": "客户留存期与流失率成反比，低流失率直接延长客户存续并放大 LTV。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "customer-acquisition-cost",
+      "context": "结合获客成本计算 LTV 与 CAC 的比值以评估商业模式单位经济模型的健康度。"
+    }
+  ],
+  "summary": "预测单个客户在与企业建立合作的全部存续周期内所贡献的总商业收益。",
+  "description": "客户生命周期价值（LTV/CLV）是商业智能与企业度量体系中的核心财务指标，指一名普通客户在其与企业保持业务关系的整个生命周期中所带来的净利润或毛利预测总和。它通常与 CAC 一起构成单位经济学（Unit Economics）的基石，指导营销预算分配与定价决策。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

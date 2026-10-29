@@ -1,0 +1,42 @@
+{
+  "id": "user-story-mapping",
+  "name": "User Story Mapping",
+  "display_primary": "用户故事地图",
+  "display_secondary": "User Story Mapping",
+  "aliases": [
+    "用户故事地图",
+    "用户旅程故事地图",
+    "故事地图分析法",
+    "User Story Mapping"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "career-development",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "product-manager",
+      "context": "产品经理借助故事地图从整体视角审视用户全旅程，避免孤立开发零碎功能。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "product-requirements-document",
+      "context": "用户故事地图梳理出的骨干活动与用户切片常作为 PRD 功能规划与版本发布的基础。"
+    }
+  ],
+  "summary": "按用户旅程时间线二维可视化组织需求故事、规划发布切片的分析方法。",
+  "description": "用户故事地图（User Story Mapping）由 Jeff Patton 提出，是一种以用户旅程为主线、二维可视化管理需求积压（Backlog）的敏捷分析方法。水平轴从左至右呈现用户使用产品的核心活动与步骤时间线；垂直轴自上而下按重要程度陈列支持各活动的用户故事。\n\n通过水平划分子集，团队能够非常清晰地定义出首个最小可行产品（MVP）及后续迭代发布的范围，兼顾整体体验与渐进交付。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

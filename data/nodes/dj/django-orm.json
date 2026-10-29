@@ -1,0 +1,35 @@
+{
+  "id": "django-orm",
+  "name": "Django ORM",
+  "display_primary": "Django 对象关系映射器",
+  "display_secondary": "Django ORM",
+  "aliases": [
+    "Django 对象关系映射器",
+    "Django ORM"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "python-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "summary": "Django 内置的高集成度对象关系映射器，通过 Python 模型类声明数据库表结构与查询。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "django"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

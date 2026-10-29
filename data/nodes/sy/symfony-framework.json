@@ -1,0 +1,40 @@
+{
+  "id": "symfony-framework",
+  "name": "Symfony",
+  "display_primary": "Symfony 企业级 PHP 框架",
+  "display_secondary": "Symfony",
+  "aliases": [
+    "Symfony 企业级 PHP 框架",
+    "Symfony",
+    "Symfony Framework"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "php-ecosystem",
+    "modern-web-frameworks-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "summary": "工业级高标准 PHP Web 框架与组件库，为众多现代系统提供基础架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "php"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mvc"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

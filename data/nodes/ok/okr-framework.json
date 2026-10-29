@@ -1,0 +1,43 @@
+{
+  "id": "okr-framework",
+  "name": "Objectives and Key Results Framework",
+  "display_primary": "目标与关键结果框架",
+  "display_secondary": "Objectives and Key Results Framework · OKR",
+  "aliases": [
+    "目标与关键结果框架",
+    "OKR 框架",
+    "OKR 目标管理法",
+    "目标与关键结果",
+    "Objectives and Key Results"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "career-development",
+    "software-measurement"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "engineering-manager",
+      "context": "工程经理借助 OKR 引导团队聚焦高价值技术基础设施改进与工程效能目标。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "product-manager",
+      "context": "产品经理利用 OKR 将产品路线图与中长期业务战略拆解为具体的里程碑衡量结果。"
+    }
+  ],
+  "summary": "聚焦战略重点、通过可衡量成果推动团队对齐与敏捷执行的目标管理框架。",
+  "description": "目标与关键结果（Objectives and Key Results，简称 OKR）是一种旨在明确战略方向、促进团队目标对齐并衡量执行成果的管理框架。一个典型的 OKR 由鼓舞人心且明确方向的定性目标（Objective）与 3-5 个量化、可验证的关键结果（Key Results）组成。\n\n在现代软硬件研发组织中，OKR 被广泛用于平衡业务需求交付与底层工程架构演进，打破跨部门信息壁垒，鼓励团队设定具有挑战性的成长目标。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

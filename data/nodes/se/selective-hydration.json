@@ -1,0 +1,44 @@
+{
+  "id": "selective-hydration",
+  "name": "Selective Hydration",
+  "display_primary": "选择性水合",
+  "display_secondary": "Selective Hydration",
+  "aliases": [
+    "选择性水合",
+    "Selective Hydration",
+    "渐进式水合",
+    "选择性客户端注水"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "web-services",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hydration",
+      "context": "基于 Suspense 边界将页面拆分成独立子树并分别异步水合。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "react",
+      "context": "React 18 并发渲染器根据用户真实交互动态提升目标区块水合优先级。"
+    }
+  ],
+  "summary": "结合 Suspense 与用户交互优先级对页面独立区块渐进注水复用的机制。",
+  "description": "选择性水合是 React 18 并发渲染与流式 SSR 的关键支撑机制。传统 SSR 要求整个页面的 HTML 全部生成后才一次性发送，客户端也必须等待整个组件树的代码就绪后统一水合，任何慢组件都会阻塞全局可交互时间。\n\n在选择性水合架构下，开发者通过 <Suspense> 标签将页面解耦为多个独立区块。服务端先流式下发外壳 HTML，较慢的区块后续流式注入；客户端按组件包就绪情况分别水合。若用户在水合完成前点击了某个未水合的区块，React 18 会即时调整优先级优先水合该交互区域。\n\n## 参考\n\n- [React 18：New Suspense SSR Architecture](https://github.com/reactwg/react-18/discussions/37)\n- [React 官方文档：hydrateRoot](https://react.dev/reference/react-dom/client/hydrateRoot)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

@@ -1,0 +1,35 @@
+{
+  "id": "dlp",
+  "name": "Data Loss Prevention",
+  "display_primary": "数据防泄漏",
+  "display_secondary": "Data Loss Prevention",
+  "aliases": [
+    "数据防泄漏",
+    "DLP",
+    "数据丢失防护",
+    "数据泄露防护"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "通过内容识别与策略审计检测并防止敏感数据在传输、使用和存储中被未授权外泄。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "https",
+      "context": "网络 DLP 方案通过代理机制解密检查 HTTPS 出站流量以防机密数据被上传外传。"
+    }
+  ]
+}

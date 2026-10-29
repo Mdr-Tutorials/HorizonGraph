@@ -1,0 +1,35 @@
+{
+  "id": "exploratory-testing",
+  "name": "Exploratory Testing",
+  "display_primary": "探索性测试",
+  "display_secondary": "Exploratory Testing",
+  "aliases": [
+    "探索性测试",
+    "Exploratory Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "测试人员边学习应用边设计用例并执行测试的自由探索式测试方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-case",
+      "context": "在探索测试中通过直觉与启发式推理动态发现新边界测试用例。"
+    }
+  ]
+}

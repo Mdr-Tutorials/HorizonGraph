@@ -4,7 +4,9 @@
   "display_primary": "测试金字塔",
   "display_secondary": "Test Pyramid",
   "aliases": [
-    "测试金字塔"
+    "测试金字塔",
+    "Test Pyramid",
+    "test-pyramid"
   ],
   "type": "concept",
   "ecosystems": [

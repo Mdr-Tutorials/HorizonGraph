@@ -173,7 +173,7 @@
 - [Hono JSX](../data/nodes/ho/hono-jsx.json) — hono-jsx
 - [htmx](../data/nodes/ht/htmx.json) — htmx
 - [客户端水合](../data/nodes/hy/hydration.json) — hydration
-- [交互孤岛](../data/nodes/is/islands-architecture.json) — islands-architecture
+- [交互孤岛](../data/nodes/is/island-architecture.json) — island-architecture
 - [JSX 语法](../data/nodes/js/jsx.json) — jsx
 - [Preact](../data/nodes/pr/preact.json) — preact
 - [渐进式增强](../data/nodes/pr/progressive-enhancement.json) — progressive-enhancement

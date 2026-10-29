@@ -3,7 +3,8 @@
   "name": "BGP",
   "aliases": [
     "Border Gateway Protocol",
-    "边界网关协议"
+    "边界网关协议",
+    "bgp-protocol"
   ],
   "type": "protocol",
   "ecosystems": [
@@ -26,6 +27,6 @@
   "summary": "自治域间交换路由的协议，互联网骨干的粘合剂。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-29",
   "importance": 4
 }

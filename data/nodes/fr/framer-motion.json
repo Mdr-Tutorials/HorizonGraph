@@ -1,0 +1,43 @@
+{
+  "id": "framer-motion",
+  "name": "Framer Motion",
+  "display_primary": "Framer Motion",
+  "display_secondary": "Motion Library for React",
+  "aliases": [
+    "Framer Motion",
+    "Motion for React",
+    "React 动效库"
+  ],
+  "type": "library",
+  "abstraction_level": "framework_library",
+  "domains": [
+    "web-development",
+    "interactive-graphics",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "react"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "通过硬件加速矩阵变换与声明式属性驱动高性能丝滑组件交互动效。"
+    }
+  ],
+  "summary": "专为 React 设计的生产就绪型声明式动画与物理弹簧手势交互组件库。",
+  "description": "Framer Motion 是 React 生态中最流行且功能最强劲的声明式动画库。它提供简洁易懂的 motion 组件 API，支持物理弹簧力学模拟（Spring Physics）、布局动画过渡（Layout Animations）、拖拽手势交互与元素进入退出（AnimatePresence）过渡效果。\n\nFramer Motion 底层优化极其深入，能够在主线程与合成器线程之间智能协调，确保即使在复杂数据交互与频繁页面转场下依然保持稳定 60/120 帧高流畅度。\n\n## 参考\n\n- [Framer Motion 官方文档](https://www.framer.com/motion/)\n- [Motion GitHub 仓库](https://github.com/motiondivision/motion)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

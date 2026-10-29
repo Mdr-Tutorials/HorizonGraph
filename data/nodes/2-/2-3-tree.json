@@ -1,0 +1,31 @@
+{
+  "id": "2-3-tree",
+  "name": "2-3 Tree",
+  "display_primary": "2-3 树",
+  "display_secondary": "2-3 Tree",
+  "aliases": [
+    "2-3 树"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "内部节点拥有 2 个或 3 个子节点的绝对高度平衡搜索树，红黑树的等价理论模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "b-tree"
+    }
+  ]
+}

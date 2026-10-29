@@ -1,0 +1,47 @@
+{
+  "id": "cursor-composer",
+  "name": "Cursor Composer",
+  "display_primary": "Cursor Composer",
+  "display_secondary": "Composer",
+  "aliases": [
+    "Cursor Composer",
+    "Composer",
+    "Cursor多文件协同编辑"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "editor-ide-ecosystem",
+    "ai-software-engineering-ecosystem"
+  ],
+  "domains": [
+    "ai-assisted-software-engineering",
+    "developer-environments"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cursor"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vibe-coding",
+      "context": "作为 Cursor 中支持自然语言极速多文件迭代与氛围编码的核心工作台。"
+    }
+  ],
+  "summary": "Cursor 编辑器内置的多文件协同生成、跨项目架构重构与执行验证交互式代理工具。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://cursor.com/docs/composer",
+  "description": "Cursor Composer 是智能代码编辑器 Cursor 中用于多文件协同创建与复杂重构的旗舰级智能体交互环境。相比传统的行级补全或单文件对话，Composer 允许开发者在全局项目视野下通过自然语言描述需求，同时规划并修改分布在多个文件中的代码段。\n\nComposer 结合了代码库索引定位（Semantic Search）、交互式差异高亮（Diff Review）、全仓符号分析与本地检查点（Checkpoints）能力。开发者可以在侧边栏或悬浮浮窗中即时接受或驳回修改方案，并能指示智能体自动运行终端命令和测试套件以完成迭代验证。\n\n## 参考\n\n- [Cursor Composer Official Guide](https://cursor.com/docs/composer)\n- [Cursor Forum & Release Notes](https://forum.cursor.com/)"
+}

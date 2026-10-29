@@ -1,0 +1,37 @@
+{
+  "id": "monotonic-queue",
+  "name": "Monotonic Queue",
+  "display_primary": "单调队列",
+  "display_secondary": "Monotonic Queue",
+  "aliases": [
+    "单调队列",
+    "单调双端队列"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "双端队列内保持元素单调性，支持在滑动窗口中以常数均摊时间获取极值。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "queue"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sliding-window",
+      "context": "在滑动窗口移动过程中自队尾淘汰次优元素并在队头剔除过期下标。"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "horizontal-pod-autoscaler",
+  "name": "Horizontal Pod Autoscaler",
+  "display_primary": "Pod 水平自动扩缩器",
+  "display_secondary": "Horizontal Pod Autoscaler",
+  "aliases": [
+    "Pod 水平自动扩缩器",
+    "HPA",
+    "HorizontalPodAutoscaler"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "summary": "根据CPU、内存利用率或自定义指标自动调整工作负载Pod副本数的K8s扩缩机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "kubernetes"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "eap",
+  "name": "Extensible Authentication Protocol",
+  "display_primary": "可扩展身份验证协议",
+  "display_secondary": "EAP",
+  "aliases": [
+    "可扩展身份验证协议",
+    "EAP",
+    "EAP认证"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "summary": "支持在无线局域网与点对点链路中协商多种身份验证机制的可扩展认证框架协议。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "security-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "radius",
+      "context": "无线企业接入网中 IEEE 802.1X 将 EAP 认证载荷通过 RADIUS 服务器传输。"
+    }
+  ]
+}

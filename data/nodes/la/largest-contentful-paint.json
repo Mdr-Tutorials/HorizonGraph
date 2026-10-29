@@ -1,0 +1,39 @@
+{
+  "id": "largest-contentful-paint",
+  "name": "Largest Contentful Paint",
+  "display_primary": "最大内容绘制",
+  "display_secondary": "Largest Contentful Paint (LCP)",
+  "aliases": [
+    "最大内容绘制",
+    "LCP",
+    "Largest Contentful Paint",
+    "首屏最大内容渲染指标"
+  ],
+  "type": "metric",
+  "domains": [
+    "web-development",
+    "human-computer-interaction",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "browser-engine-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "监控可视视口内面积最大的文字块或图片元素完全绘制渲染的时间点。"
+    }
+  ],
+  "summary": "度量视口内最大图像或文本块完成渲染呈现用时的 Core Web Vitals 加载指标。",
+  "description": "Largest Contentful Paint（LCP）是 Google Core Web Vitals 中度量感知加载速度的核心指标。相比于历史上的 DOMContentLoaded 或 load 事件，LCP 更忠实反映真实用户眼中主要内容何时可用。\n\nLCP 记录视口可见区域中面积最大的图像元素（<img>、<image> 内嵌或带有 background-image 的元素）或块级文本节点完全渲染到屏幕上的时间。为了提供良好的用户体验，LCP 应控制在 2.5 秒以内。\n\n## 参考\n\n- [web.dev: Largest Contentful Paint (LCP)](https://web.dev/articles/lcp)\n- [W3C Largest Contentful Paint 规范](https://www.w3.org/TR/largest-contentful-paint/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

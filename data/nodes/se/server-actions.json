@@ -1,0 +1,43 @@
+{
+  "id": "server-actions",
+  "name": "Server Actions",
+  "display_primary": "服务端操作",
+  "display_secondary": "React Server Actions",
+  "aliases": [
+    "服务端操作",
+    "Server Actions",
+    "服务端函数",
+    "React Server Actions"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "react",
+      "context": "与 React 19 并发特性结合，支持客户端无缝调用后端异步突变函数。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nextjs",
+      "context": "在 Next.js App Router 中处理表单操作、安全数据变更与路由级自动重校验。"
+    }
+  ],
+  "summary": "允许在客户端界面直接异步调用服务端函数并自动处理状态同步与重校验的机制。",
+  "description": "服务端操作（Server Actions）是 React 19 与 Next.js App Router 深度融合的核心数据突变特性。开发者只需在函数顶部添加 'use server' 指令，该函数即可作为异步 RPC 服务端终端在后端安全执行。\n\n当客户端表单提交或按钮事件触发该动作时，浏览器通过底层的渐进增强 POST 请求执行服务端逻辑，并在执行完成后自动使相关缓存失效并重校验渲染页面数据，彻底消除了手写冗余 API 路由与客户端状态手动同步的代码开销。\n\n## 参考\n\n- [React 官方文档：Server Actions](https://react.dev/reference/rsc/server-actions)\n- [Next.js App Router 文档：Server Actions and Mutations](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

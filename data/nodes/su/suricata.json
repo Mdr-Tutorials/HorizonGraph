@@ -1,0 +1,36 @@
+{
+  "id": "suricata",
+  "name": "Suricata",
+  "display_primary": "Suricata",
+  "display_secondary": "Suricata",
+  "aliases": [
+    "Suricata",
+    "Suricata IDS/IPS",
+    "高性能入侵检测引擎"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "开源的高性能多线程网络入侵检测、防御与网络安全监控（NSM）引擎。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nids",
+      "context": "Suricata 作为高性能多线程 NIDS/NIPS 引擎分析实时网络数据流识别攻击特征。"
+    }
+  ]
+}

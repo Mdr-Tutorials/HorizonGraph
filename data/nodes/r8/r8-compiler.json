@@ -1,0 +1,41 @@
+{
+  "id": "r8-compiler",
+  "name": "R8 Compiler",
+  "display_primary": "R8 编译器",
+  "display_secondary": "R8 Compiler",
+  "aliases": [
+    "R8 编译器",
+    "R8",
+    "r8"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "android-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "compilers",
+    "mobile-app-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "android"
+    }
+  ],
+  "summary": "Google 官方 Android 编译器，完成代码收缩、混淆优化与 DEX 转换。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://r8.googlesource.com/r8"
+}

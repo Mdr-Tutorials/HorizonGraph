@@ -1,0 +1,36 @@
+{
+  "id": "chaos-engineering",
+  "name": "Chaos Engineering",
+  "display_primary": "混沌工程",
+  "display_secondary": "Chaos Engineering",
+  "aliases": [
+    "混沌工程",
+    "Chaos Engineering"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "software-testing",
+    "cloud-infrastructure",
+    "distributed-systems"
+  ],
+  "summary": "在分布式系统中主动注入受控故障以实验并验证系统的弹性容错能力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "stress-testing",
+      "context": "在极限负载与网络故障等扰动下检验系统自愈与降级能力。"
+    }
+  ]
+}

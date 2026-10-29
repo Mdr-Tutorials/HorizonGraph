@@ -1,0 +1,48 @@
+{
+  "id": "replit-agent",
+  "name": "Replit Agent",
+  "display_primary": "Replit Agent",
+  "display_secondary": "Replit Agent",
+  "aliases": [
+    "Replit Agent",
+    "Replit智能体"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "cloud_native",
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "ai-assisted-software-engineering",
+    "developer-environments",
+    "agent-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "replit"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "coding-agent"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vibe-coding",
+      "context": "支持用户通过纯自然语言意图引导应用全流程自主构建。"
+    }
+  ],
+  "summary": "集成于 Replit 的自主软件研发智能体，可端到端构建、调试全栈应用并完成云端发布。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://replit.com/agent",
+  "description": "Replit Agent 是内置于 Replit 云端环境的自主 AI 软件工程智能体。与仅能进行单文件补全的代码助手不同，Replit Agent 能够从用户的一句话产品设想出发，自主规划技术选型、创建项目结构、编写全栈前后端代码、安装运行依赖并排查调试运行异常。\n\n由于其与 Replit 原生底层容器执行环境深度捆绑，Agent 可以直接读取真实控制台报错、检查网络请求状态并执行自我反思与自动重试，直至将无 Bug 的完整 Web 应用一键部署到公网。它被视为自主编码智能体从辅助走向端到端创造的关键标杆。\n\n## 参考\n\n- [Replit：Meet Replit Agent](https://blog.replit.com/replit-agent)\n- [Replit Agent Documentation](https://docs.replit.com/replit-ai/agent)"
+}

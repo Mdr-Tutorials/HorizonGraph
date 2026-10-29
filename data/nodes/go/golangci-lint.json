@@ -1,0 +1,36 @@
+{
+  "id": "golangci-lint",
+  "name": "GolangCI-Lint",
+  "display_primary": "GolangCI-Lint 代码检查器",
+  "display_secondary": "GolangCI-Lint",
+  "aliases": [
+    "GolangCI-Lint 代码检查器",
+    "golangci-lint",
+    "GolangCI Lint"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "go-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "language-tooling"
+  ],
+  "summary": "Go 语言主流的快速代码检查聚合器，并行运行数十个静态检查器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

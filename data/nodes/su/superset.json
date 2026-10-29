@@ -1,0 +1,48 @@
+{
+  "id": "superset",
+  "name": "Apache Superset",
+  "display_primary": "Apache Superset",
+  "display_secondary": "Apache Superset Data Platform",
+  "aliases": [
+    "Apache Superset",
+    "Superset"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem",
+    "data-visualization-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "data-visualization",
+    "databases"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apache-software-foundation"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "tableau-desktop"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sql",
+      "context": "提供交互式 SQL Lab 与语义层以对接各类大数据计算引擎与关系数据库。"
+    }
+  ],
+  "summary": "面向企业级大规模数据探索、交互式仪表盘构建与 SQL 分析的开源平台。",
+  "description": "Apache Superset 是由 Airbnb 发起并孵化自 Apache 软件基金会的现代云原生企业级商业智能与数据探索平台。它支持通过 SQLAlchemy 对接绝大多数 SQL 数据库，内置交互式 SQL Lab 工作区、极其丰富的无代码图表可视化插件以及精细的企业级权限管理。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://superset.apache.org"
+}

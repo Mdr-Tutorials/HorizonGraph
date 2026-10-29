@@ -1,0 +1,43 @@
+{
+  "id": "custom-elements",
+  "name": "Custom Elements",
+  "display_primary": "自定义元素",
+  "display_secondary": "Custom Elements API",
+  "aliases": [
+    "自定义元素",
+    "Custom Elements",
+    "HTML 自定义标签 API"
+  ],
+  "type": "protocol",
+  "abstraction_level": "runtime_vm",
+  "domains": [
+    "web-development"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "browser-engine-ecosystem",
+    "w3c-standards-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "api-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "允许开发者注册自定义继承类并绑定属性变化与挂载生命周期回调。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "在 HTML 解析器中注册自定义元素名称以声明式创建组件实例。"
+    }
+  ],
+  "summary": "允许开发者定义全新自定义 HTML 标签及其完整生命周期行为的 Web 原生规范。",
+  "description": "Custom Elements 规范允许前端工程师通过 JavaScript 类扩展 HTMLElement 并使用 customElements.define() 向浏览器注册全新的自定义 HTML 标签。\n\n该规范定义了完整的标准生命周期回调（connectedCallback、disconnectedCallback、adoptedCallback 与 attributeChangedCallback），使得自定义标签在被 DOM 树插入、移除或属性更新时能够自动执行相应业务逻辑，实现与原生 HTML 标签完全一致的交互体验。\n\n## 参考\n\n- [MDN Web Docs: Using custom elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)\n- [WHATWG HTML Specification: Custom Elements](https://html.spec.whatwg.org/multipage/custom-elements.html)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

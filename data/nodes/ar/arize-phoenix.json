@@ -1,0 +1,50 @@
+{
+  "id": "arize-phoenix",
+  "name": "Arize Phoenix",
+  "display_primary": "Arize Phoenix",
+  "display_secondary": "Phoenix",
+  "aliases": [
+    "Arize Phoenix",
+    "Phoenix",
+    "Phoenix Eval",
+    "大模型评测与追踪平台"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "machine-learning",
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "opentelemetry",
+      "context": "遵循 OpenInference 语义约定通过 OpenTelemetry 追踪采集智能体跨度数据。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "llamaindex"
+    }
+  ],
+  "summary": "开源 AI 可观测性与评估分析工具，专注于 LLM 链路追踪、评测与向量检索诊断。",
+  "importance": 3,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://phoenix.arize.com",
+  "description": "Arize Phoenix 是由 Arize AI 开发并开源的专为 AI 工程师设计的可观测性与评测诊断工具。它以轻量级 Python 包和本地 Web UI 的形式运行，支持在本地笔记本环境或私有集群中一键启动，零数据外流。\n\nPhoenix 遵循 OpenInference 规范与 OpenTelemetry 遥测标准，深度支持 RAG 与多步骤智能体调用的可视化剖析。其特色功能包括高维向量嵌入投影聚类与漂移分析（Embedding Visualizer）、检索相关性调试、自动化评估基准以及测试集标注管理，使团队能够快速定位幻觉与召回失败根因。\n\n## 参考\n\n- [Arize Phoenix Documentation](https://docs.arize.com/phoenix)\n- [Arize AI Phoenix GitHub](https://github.com/Arize-ai/phoenix)"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "module-federation",
+  "name": "Module Federation",
+  "display_primary": "模块联邦",
+  "display_secondary": "Module Federation",
+  "aliases": [
+    "模块联邦",
+    "Module Federation",
+    "Webpack Module Federation"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "webpack",
+      "context": "作为构建器底层协议支持跨应用在运行时按需加载远端构建容器模块。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "在浏览器运行期间去中心化共享公共依赖单例与动态模块。"
+    }
+  ],
+  "summary": "允许多个独立构建在运行时动态共享与消费代码模块的去中心化技术体系。",
+  "description": "模块联邦（Module Federation）最初由 Zack Jackson 提出并由 Webpack 5 正式引入，它彻底打破了传统前端项目必须在构建时将所有代码打包成单一部署包的局限。\n\n模块联邦允许多个独立的应用程序在运行时动态暴露自身模块或拉取并执行远端应用的组件与逻辑，无需发布到 npm 仓库即可实现跨系统代码复用，并提供强大的依赖版本协商与单例共享机制，是现代微前端架构的底层基础设施之一。\n\n## 参考\n\n- [Webpack 官方概念：Module Federation](https://webpack.js.org/concepts/module-federation/)\n- [Module Federation 官方项目](https://module-federation.io/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

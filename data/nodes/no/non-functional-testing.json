@@ -1,0 +1,36 @@
+{
+  "id": "non-functional-testing",
+  "name": "Non-Functional Testing",
+  "display_primary": "非功能测试",
+  "display_secondary": "Non-Functional Testing",
+  "aliases": [
+    "非功能测试",
+    "非功能性测试",
+    "Non-Functional Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "评估软件系统的性能、可靠性、可用性、安全性等非功能质量属性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "performance-testing",
+      "context": "在基准与峰值负载下测试系统响应时间与资源开销。"
+    }
+  ]
+}

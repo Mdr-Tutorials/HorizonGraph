@@ -1,0 +1,46 @@
+{
+  "id": "star-schema",
+  "name": "Star Schema",
+  "display_primary": "星型模型",
+  "display_secondary": "Star Schema",
+  "aliases": [
+    "星型模型",
+    "星型架构",
+    "Star Join Schema"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "dimensional-modeling"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fact-table",
+      "context": "以事实表作为星型拓扑的度量中心记录业务事件数值。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dimension-table",
+      "context": "围绕事实表连接扁平化的单层维度表提供分析切片维度。"
+    }
+  ],
+  "summary": "由中心事实表与非规范化维度表构成的经典维度模型。",
+  "description": "星型模型是维度建模中最广泛应用的物理与逻辑模式。其结构以一张包含大量度量数据与外键的中心事实表为核心，直接连接若干张非规范化（反范式化）的单层维度表，图形如放射状星型。这种设计最大限度减少了多表关联（JOIN）跳数，优化了 OLAP 引擎的读取速度。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

@@ -1,0 +1,35 @@
+{
+  "id": "shoulder-surfing",
+  "name": "Shoulder Surfing",
+  "display_primary": "窥视密码",
+  "display_secondary": "Shoulder Surfing",
+  "aliases": [
+    "窥视密码",
+    "Shoulder Surfing",
+    "肩窥攻击",
+    "屏幕窥视"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "通过在目标身后物理观察其屏幕或键盘操作窃取密码与敏感数据的行为。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 2,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "social-engineering",
+      "context": "肩窥是一种直接观察键盘输入或屏幕信息获取登录凭据的物理安全威胁。"
+    }
+  ]
+}

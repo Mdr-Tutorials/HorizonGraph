@@ -1,0 +1,36 @@
+{
+  "id": "security-testing",
+  "name": "Security Testing",
+  "display_primary": "安全测试",
+  "display_secondary": "Security Testing",
+  "aliases": [
+    "安全测试",
+    "软件安全测试",
+    "Security Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "security"
+  ],
+  "summary": "评估软件对抗恶意攻击、未授权访问及数据泄露漏洞的能力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "static-analysis",
+      "context": "使用静态分析工具扫描代码中的注入漏洞与危险配置。"
+    }
+  ]
+}

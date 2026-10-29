@@ -1,0 +1,44 @@
+{
+  "id": "biome",
+  "name": "Biome",
+  "display_primary": "Biome",
+  "display_secondary": "Biome Web Toolchain",
+  "aliases": [
+    "Biome",
+    "BiomeJS",
+    "Rome Tools"
+  ],
+  "type": "tool",
+  "abstraction_level": "application_tool",
+  "domains": [
+    "web-development",
+    "developer-environments",
+    "language-tooling"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "提供毫秒级极速 JavaScript 语法解析、代码格式化与代码规约检查。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "typescript",
+      "context": "原生支持 TypeScript 语法树解析与类型感知诊断。"
+    }
+  ],
+  "summary": "基于 Rust 编写的高性能现代化 Web 代码格式化与静态代码检查一体化工具。",
+  "description": "Biome 是由前 Rome 核心团队成员重组发起的现代化极速前端工具链。它完全使用 Rust 重写，旨在单挑并替代 ESLint 与 Prettier 繁重的组合依赖。\n\nBiome 拥有极佳的 Prettier 语法兼容性（超过 97%），同时在性能测试中表现出比传统 Node.js 工具链快数十倍的格式化与 Lint 速度，能够在几毫秒内处理数十万行代码并提供开箱即用的大量静态分析与快速修复建议。\n\n## 参考\n\n- [Biome 官方站点](https://biomejs.dev/)\n- [Biome GitHub 仓库](https://github.com/biomejs/biome)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

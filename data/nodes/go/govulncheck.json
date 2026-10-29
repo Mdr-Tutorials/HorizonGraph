@@ -1,0 +1,35 @@
+{
+  "id": "govulncheck",
+  "name": "govulncheck",
+  "display_primary": "govulncheck 漏洞检测工具",
+  "display_secondary": "govulncheck",
+  "aliases": [
+    "govulncheck 漏洞检测工具",
+    "govulncheck"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "go-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "software-supply-chain"
+  ],
+  "summary": "Go 官方漏洞检测工具，基于调用图精准识别代码直接与间接调用的已知脆弱性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

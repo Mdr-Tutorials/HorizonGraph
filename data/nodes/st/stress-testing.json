@@ -1,0 +1,36 @@
+{
+  "id": "stress-testing",
+  "name": "Stress Testing",
+  "display_primary": "压力测试",
+  "display_secondary": "Stress Testing",
+  "aliases": [
+    "压力测试",
+    "压测",
+    "Stress Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-measurement-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-measurement"
+  ],
+  "summary": "施加超出正常规格的极端负荷以检验系统的稳健性与崩溃恢复表现。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "performance-testing",
+      "context": "通过超饱和请求探测性能临界点及异常错误率。"
+    }
+  ]
+}

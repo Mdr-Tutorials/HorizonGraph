@@ -1,0 +1,37 @@
+{
+  "id": "dns-poisoning",
+  "name": "DNS Cache Poisoning",
+  "display_primary": "DNS缓存投毒",
+  "display_secondary": "DNS Cache Poisoning",
+  "aliases": [
+    "DNS缓存投毒",
+    "DNS污染",
+    "DNS欺骗",
+    "DNS Spoofing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "summary": "向递归DNS解析器注入虚假解析记录，重定向用户网络流量。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dns",
+      "context": "攻击者伪造 UDP 响应包利用事务 ID 预测污染 DNS 递归服务器缓存。"
+    }
+  ]
+}

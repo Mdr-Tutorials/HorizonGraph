@@ -5,7 +5,8 @@
   "display_secondary": "KMP 算法",
   "aliases": [
     "KMP 算法",
-    "字符串匹配"
+    "字符串匹配",
+    "kmp-algorithm"
   ],
   "type": "concept",
   "domains": [

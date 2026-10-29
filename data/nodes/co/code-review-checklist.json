@@ -1,0 +1,36 @@
+{
+  "id": "code-review-checklist",
+  "name": "Code Review Checklist",
+  "display_primary": "代码审查清单",
+  "display_secondary": "Code Review Checklist",
+  "aliases": [
+    "代码审查清单",
+    "Code Review Checklist",
+    "审查检查清单"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-quality-ecosystem",
+    "editor-ide-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "developer-environments"
+  ],
+  "summary": "规范代码审查覆盖范围的标准化核查项清单以保障代码质量与规范。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "在审查拉取请求时依据清单核验正确性、风格与测试覆盖。"
+    }
+  ]
+}

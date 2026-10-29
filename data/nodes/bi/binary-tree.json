@@ -1,0 +1,32 @@
+{
+  "id": "binary-tree",
+  "name": "Binary Tree",
+  "display_primary": "二叉树",
+  "display_secondary": "Binary Tree",
+  "aliases": [
+    "二叉树"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "每个节点至多拥有左孩子与右孩子两个子节点的经典分层树形数据结构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linked-list",
+      "context": "节点通过左右引用指针组织自顶向下的分叉层次拓扑结构。"
+    }
+  ]
+}

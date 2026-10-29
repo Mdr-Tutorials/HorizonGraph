@@ -1,0 +1,45 @@
+{
+  "id": "capacity-planning",
+  "name": "Capacity Planning",
+  "display_primary": "容量规划",
+  "display_secondary": "Capacity Planning",
+  "aliases": [
+    "容量规划",
+    "系统容量规划",
+    "容量预测与管理",
+    "基础设施容量管理",
+    "Capacity Management"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cloud_native",
+    "devops_tooling"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slo",
+      "context": "依据服务等级目标规定的峰值延迟与吞吐量约束，推算满足可靠性底线所需的冗余容量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "engineering-manager",
+      "context": "工程经理统筹业务流量增长预期与云成本预算，协调跨系统容量扩容与弹性调度方案。"
+    }
+  ],
+  "summary": "预测业务流量增长与资源瓶颈，合理规划计算存储网络扩展与成本预算。",
+  "description": "容量规划（Capacity Planning）是分布式系统与云基础设施工程中保障系统弹性、可伸缩性与成本效益的核心实践。通过压力测试、历史用量时序分析及业务促销预期建模，容量规划评估计算实例、存储带宽及数据库连接数等资源在未来高并发场景下的瓶颈点。\n\n有效的容量规划能够避免因突发流量造成的系统雪崩，同时防止资源过度配置带来的云成本浪费。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

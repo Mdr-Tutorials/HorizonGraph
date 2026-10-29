@@ -1,0 +1,35 @@
+{
+  "id": "tarjan-algorithm",
+  "name": "Tarjan's Algorithm",
+  "display_primary": "Tarjan 算法",
+  "display_secondary": "Tarjan's Algorithm",
+  "aliases": [
+    "Tarjan 算法",
+    "强连通分量算法",
+    "割点割边算法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "mathematics"
+  ],
+  "summary": "单次 DFS 遍历中利用时间戳与追溯值线性求解有向图强连通分量与双连通分量的算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dfs",
+      "context": "在深度优先遍历树上维护 DFN 与 LOW 值以及辅助访问栈判定强连通子图根。"
+    }
+  ]
+}

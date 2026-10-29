@@ -1,0 +1,35 @@
+{
+  "id": "swift-testing",
+  "name": "Swift Testing",
+  "display_primary": "Swift Testing",
+  "display_secondary": "Swift Testing",
+  "aliases": [
+    "Swift Testing",
+    "swift-testing",
+    "Swift 官方测试框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "Apple 推出的利用宏与现代并发语法表达测试意图的 Swift 官方测试框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "unit-testing"
+    }
+  ]
+}

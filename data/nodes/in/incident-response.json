@@ -1,0 +1,35 @@
+{
+  "id": "incident-response",
+  "name": "Incident Response",
+  "display_primary": "事件响应",
+  "display_secondary": "Incident Response",
+  "aliases": [
+    "事件响应",
+    "Incident Response",
+    "网络安全事件响应",
+    "IR"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "组织识别、控制、遏制和从网络攻击安全事件中恢复的标准结构化方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "siem",
+      "context": "应急响应团队根据 SIEM 告警和日志线索开展证据固化、抑制与根因分析。"
+    }
+  ]
+}

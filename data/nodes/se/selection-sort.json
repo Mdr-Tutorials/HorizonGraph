@@ -1,0 +1,32 @@
+{
+  "id": "selection-sort",
+  "name": "Selection Sort",
+  "display_primary": "选择排序",
+  "display_secondary": "Selection Sort",
+  "aliases": [
+    "选择排序"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "每趟从未排序部分选出极小值元素与该部分首位交换，交换次数严格不超过 n 次。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "在线性未排区间中单向扫描记录最小元素下标并在扫描后交换。"
+    }
+  ]
+}

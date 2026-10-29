@@ -1,0 +1,36 @@
+{
+  "id": "api-semantics-review",
+  "name": "API Semantics Review",
+  "display_primary": "API 语义审查",
+  "display_secondary": "API Semantics Review",
+  "aliases": [
+    "API 语义审查",
+    "接口语义审查",
+    "API Semantics Review"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-quality-ecosystem",
+    "typed-api-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "api-engineering"
+  ],
+  "summary": "审查 API 的命名一致性、最小暴露、契约向下兼容与语义合理性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "在代码审查中核查接口设计是否避免破坏性变更并保持语义清晰。"
+    }
+  ]
+}

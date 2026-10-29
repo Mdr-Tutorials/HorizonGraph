@@ -1,0 +1,35 @@
+{
+  "id": "dumpster-diving",
+  "name": "Dumpster Diving",
+  "display_primary": "搜寻垃圾窃密",
+  "display_secondary": "Dumpster Diving",
+  "aliases": [
+    "搜寻垃圾窃密",
+    "Dumpster Diving",
+    "垃圾搜寻",
+    "物理信息刺探"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "翻查弃置垃圾搜寻纸质文件、密码条或硬件介质的物理社会工程学技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 2,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "social-engineering",
+      "context": "垃圾搜寻是攻击者前期侦察与物理社会工程学攻击中收集组织情报的低技术手段。"
+    }
+  ]
+}

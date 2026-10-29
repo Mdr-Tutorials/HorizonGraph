@@ -1,0 +1,40 @@
+{
+  "id": "data-vault",
+  "name": "Data Vault",
+  "display_primary": "Data Vault",
+  "display_secondary": "Data Vault Modeling",
+  "aliases": [
+    "Data Vault",
+    "数据保险库建模",
+    "Data Vault 2.0"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "data-warehouse"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "dimensional-modeling"
+    }
+  ],
+  "summary": "通过中心表、链接表与卫星表构建高可扩展历史数仓的建模法。",
+  "description": "Data Vault 由 Dan Linstedt 提出，是一种专为企业级数据仓库核心层设计的细节数据建模规范。它将数据解构为中心表（Hubs，记录核心业务主键）、链接表（Links，记录业务关系与交易）和卫星表（Satellites，记录随时间变化的上下文属性），实现高韧性、历史完全可追溯和高度并行摄取能力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

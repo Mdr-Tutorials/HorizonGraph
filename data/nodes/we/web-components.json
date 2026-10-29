@@ -1,0 +1,43 @@
+{
+  "id": "web-components",
+  "name": "Web Components",
+  "display_primary": "Web 组件",
+  "display_secondary": "Web Components Standard",
+  "aliases": [
+    "Web 组件",
+    "Web Components",
+    "Web 组件标准",
+    "自定义组件标准"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "w3c-standards-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "基于浏览器内置 Custom Elements 与 Shadow DOM 实现原生组件封装。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "html",
+      "context": "利用 template 和 slot 标签在原生 HTML 中组织组件复用结构。"
+    }
+  ],
+  "summary": "通过原生规范创建可重用、跨框架且样式严格隔离的自定义 HTML 标签套件。",
+  "description": "Web Components 是由 W3C 与 WHATWG 共同制定的浏览器原生组件化技术体系。它由三项核心 Web 标准组成：用于声明自定义标签行为的 Custom Elements、用于封装内部样式与节点树的 Shadow DOM，以及用于声明惰性模板的 HTML <template> 和 <slot>。\n\nWeb Components 完全独立于具体前端应用框架（React、Vue、Angular 等），任何框架均可无缝消费并渲染 Web Components，是跨技术栈企业设计系统与微前端底座的理想封装标准。\n\n## 参考\n\n- [MDN Web Docs: Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)\n- [webcomponents.org 社区规范](https://www.webcomponents.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

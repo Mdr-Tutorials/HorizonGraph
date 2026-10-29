@@ -1,12 +1,18 @@
 {
   "id": "mvcc",
   "name": "MVCC",
-  "display_primary": "MVCC",
-  "display_secondary": "多版本并发控制",
+  "display_primary": "多版本并发控制",
+  "display_secondary": "MVCC",
   "aliases": [
-    "多版本并发控制"
+    "多版本并发控制",
+    "MVCC",
+    "Multi-Version Concurrency Control",
+    "multi-version-concurrency-control"
   ],
   "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
   "domains": [
     "databases"
   ],

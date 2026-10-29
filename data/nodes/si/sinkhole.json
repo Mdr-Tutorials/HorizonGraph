@@ -1,0 +1,38 @@
+{
+  "id": "sinkhole",
+  "name": "DNS Sinkhole",
+  "display_primary": "网络天坑防御",
+  "display_secondary": "DNS Sinkhole",
+  "aliases": [
+    "网络天坑防御",
+    "DNS Sinkhole",
+    "DNS天坑",
+    "流量天坑"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "将已知恶意域名的DNS解析重定向至受控黑洞服务器以阻断并监控僵尸网络流量。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dns",
+      "context": "DNS 天坑拦截恶意 C2 域名解析请求，阻断受害机器与外部僵尸网络控制端的通信。"
+    }
+  ]
+}

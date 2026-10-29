@@ -1,0 +1,38 @@
+{
+  "id": "lovable-platform",
+  "name": "Lovable",
+  "display_primary": "Lovable",
+  "display_secondary": "Lovable Platform",
+  "aliases": [
+    "Lovable",
+    "Lovable Platform",
+    "Lovable AI"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "ai-assisted-software-engineering",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vibe-coding"
+    }
+  ],
+  "summary": "基于自然语言提示词极速生成现代全栈 Web 应用原型并实时部署的 AI 开发平台。",
+  "importance": 3,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://lovable.dev",
+  "description": "Lovable 是专注于极速全栈 Web 应用构建的现代 AI 原型开发平台。它结合了先进的大语言模型编码能力与现代前端技术栈（如 React、Tailwind CSS、Vite 与 Supabase），使用户只需用日常自然语言描述需求即可端到端搭建出高保真、可交互的生产级应用。\n\nLovable 提供即时热重载沙箱预览、可视化页面组件调整、多轮自然语言精准局部重构以及与 GitHub 仓库的无缝双向同步。无论是产品经理快速验证商业想法，还是全栈工程师加速 MVP 构建，Lovable 均大幅缩短了从想法到上线产品的开发周期。\n\n## 参考\n\n- [Lovable 官方产品主页与文档](https://lovable.dev)\n- [Lovable Docs：Building Full-Stack Apps with AI](https://docs.lovable.dev)"
+}

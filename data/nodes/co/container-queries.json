@@ -1,0 +1,38 @@
+{
+  "id": "container-queries",
+  "name": "Container Queries",
+  "display_primary": "容器查询",
+  "display_secondary": "CSS Container Queries",
+  "aliases": [
+    "容器查询",
+    "Container Queries",
+    "CSS Container Queries",
+    "@container"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "w3c-standards-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "css",
+      "context": "通过 @container 语法根据父容器尺寸而非全局视口动态调整元素样式。"
+    }
+  ],
+  "summary": "根据父级容器尺寸或内联样式而非全局视口大小动态调整子元素样式的机制。",
+  "description": "容器查询（CSS Container Queries）是现代响应式 Web 设计领域自媒体查询引入以来最重大的规范进化。传统媒体查询（@media）只能依据整个浏览器视口的宽度或高度适配样式，导致模块化组件在狭窄侧边栏与宽阔主内容区复用时难以自适应。\n\n通过 container-type 与 @container 规则，组件开发者可以定义元素直接响应其直接或祖先容器的尺寸边界，实现真正高内聚、即插即用且上下文自适应的现代设计系统组件。\n\n## 参考\n\n- [MDN Web Docs: CSS Container Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries)\n- [W3C CSS Containment Module Level 3](https://www.w3.org/TR/css-contain-3/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

@@ -1,0 +1,33 @@
+{
+  "id": "boyer-moore",
+  "name": "Boyer-Moore Algorithm",
+  "display_primary": "Boyer-Moore 算法",
+  "display_secondary": "Boyer-Moore Algorithm",
+  "aliases": [
+    "Boyer-Moore 算法",
+    "BM 字符串匹配算法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "基于坏字符规则与好后缀规则在从右向左比对失配时实现大步长跳跃的高效匹配算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "预处理模式串生成坏字符表与好后缀移动表以在大文本中跳跃扫描。"
+    }
+  ]
+}

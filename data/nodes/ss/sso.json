@@ -1,0 +1,36 @@
+{
+  "id": "sso",
+  "name": "Single Sign-On",
+  "display_primary": "单点登录",
+  "display_secondary": "Single Sign-On",
+  "aliases": [
+    "单点登录",
+    "Single Sign-On",
+    "SSO"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "iam-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-services"
+  ],
+  "summary": "用户只需进行一次身份凭证认证即可访问多个相互信任的应用系统的机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "saml",
+      "context": "企业级单点登录系统常用 SAML 协议在身份提供商与服务提供商之间安全传递断言。"
+    }
+  ]
+}

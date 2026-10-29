@@ -1,0 +1,41 @@
+{
+  "id": "fact-table",
+  "name": "Fact Table",
+  "display_primary": "事实表",
+  "display_secondary": "Fact Table",
+  "aliases": [
+    "事实表",
+    "度量表",
+    "Fact Data"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "big-data-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "data-engineering",
+    "databases"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-engineering-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "star-schema"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dimension-table",
+      "context": "通过外键与各维度表主键关联以提供业务事件的多维分析上下文。"
+    }
+  ],
+  "summary": "记录业务事件可度量数值及关联维度键的数据仓库核心表。",
+  "description": "事实表是维度建模的核心载体，通常位于星型或雪花拓扑的中心。事实表中的每行代表特定业务过程的原子发生事件（如一笔订单、一次点击）。字段主要包含指向各个维度表的外键以及可加、半可加或不可加的数值型度量指标（如金额、数量、时长）。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

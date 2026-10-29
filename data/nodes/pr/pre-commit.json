@@ -1,0 +1,37 @@
+{
+  "id": "pre-commit",
+  "name": "pre-commit",
+  "display_primary": "pre-commit",
+  "display_secondary": "pre-commit framework",
+  "aliases": [
+    "pre-commit",
+    "Git pre-commit框架"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "git-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "developer-environments"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "用于管理和维护跨语言多工具Git提交前检查钩子的标准化配置与运行框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://pre-commit.com",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "在本地 git commit 触发时拦截变更并执行静态分析工具检查。"
+    }
+  ]
+}

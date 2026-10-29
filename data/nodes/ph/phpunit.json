@@ -1,0 +1,35 @@
+{
+  "id": "phpunit",
+  "name": "PHPUnit",
+  "display_primary": "PHPUnit 单元测试框架",
+  "display_secondary": "PHPUnit",
+  "aliases": [
+    "PHPUnit 单元测试框架",
+    "PHPUnit"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "php-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "面向程序员且在 PHP 生态中应用最为广泛的 xUnit 体系单元测试框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "php"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

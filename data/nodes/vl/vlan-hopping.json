@@ -1,0 +1,37 @@
+{
+  "id": "vlan-hopping",
+  "name": "VLAN Hopping",
+  "display_primary": "VLAN跳跃攻击",
+  "display_secondary": "VLAN Hopping",
+  "aliases": [
+    "VLAN跳跃攻击",
+    "VLAN Hopping",
+    "跨VLAN攻击",
+    "双双标签攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "summary": "利用交换机Trunk配置缺陷跨越不同VLAN网络隔离边界的攻击方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vlan",
+      "context": "攻击者利用双 802.1Q 标签或 DTP 协商漏洞使数据包跨越原 VLAN 隔离边界。"
+    }
+  ]
+}

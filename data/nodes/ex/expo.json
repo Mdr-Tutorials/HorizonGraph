@@ -1,0 +1,38 @@
+{
+  "id": "expo",
+  "name": "Expo",
+  "display_primary": "Expo 平台与框架",
+  "display_secondary": "Expo",
+  "aliases": [
+    "Expo 平台与框架",
+    "Expo",
+    "expo"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "android-ecosystem",
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "react-native"
+    }
+  ],
+  "summary": "基于 React Native 构建的跨平台应用开源生态框架、SDK 与云端构建服务。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://expo.dev"
+}

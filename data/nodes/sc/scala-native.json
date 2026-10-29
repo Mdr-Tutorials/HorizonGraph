@@ -1,0 +1,35 @@
+{
+  "id": "scala-native",
+  "name": "Scala Native",
+  "display_primary": "Scala Native 编译器",
+  "display_secondary": "Scala Native",
+  "aliases": [
+    "Scala Native 编译器",
+    "Scala Native"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "llvm-ecosystem"
+  ],
+  "domains": [
+    "compilers",
+    "systems-programming"
+  ],
+  "summary": "基于 LLVM 工具链将 Scala 源码直接静态编译为原生可执行机器码的 AOT 编译器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "scala"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

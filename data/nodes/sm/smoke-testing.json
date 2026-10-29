@@ -1,0 +1,42 @@
+{
+  "id": "smoke-testing",
+  "name": "Smoke Testing",
+  "display_primary": "冒烟测试",
+  "display_secondary": "Smoke Testing",
+  "aliases": [
+    "冒烟测试",
+    "构建验证测试",
+    "BVT",
+    "Smoke Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "software-testing",
+    "devops"
+  ],
+  "summary": "快速验证新构建的核心功能是否正常以决定能否进行后续测试。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "e2e-testing",
+      "context": "执行关键业务路径端到端用例快速检验构建健康度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "在提交或构建流水线中先行执行最小快速测试集合。"
+    }
+  ]
+}

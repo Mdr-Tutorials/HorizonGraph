@@ -1,0 +1,36 @@
+{
+  "id": "snort",
+  "name": "Snort",
+  "display_primary": "Snort",
+  "display_secondary": "Snort",
+  "aliases": [
+    "Snort",
+    "Snort IDS",
+    "经典入侵检测系统"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "思科支持的经典开源轻量级网络入侵检测与防御系统，定义了事实上的检测规则标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nids",
+      "context": "Snort 通过其基于文本的签名规则语法对网络流量执行深层模式匹配检测。"
+    }
+  ]
+}

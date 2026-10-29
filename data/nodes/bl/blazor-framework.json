@@ -1,0 +1,36 @@
+{
+  "id": "blazor-framework",
+  "name": "Blazor",
+  "display_primary": "Blazor 交互式 Web 框架",
+  "display_secondary": "ASP.NET Core Blazor",
+  "aliases": [
+    "Blazor 交互式 Web 框架",
+    "Blazor",
+    "ASP.NET Core Blazor"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dotnet-ecosystem",
+    "modern-web-frameworks-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "summary": "使用 C# 与 Razor 组件替代 JS 构建丰富交互式界面的 Web 框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "aspnet-core"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

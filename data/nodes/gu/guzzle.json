@@ -1,0 +1,40 @@
+{
+  "id": "guzzle",
+  "name": "Guzzle",
+  "display_primary": "Guzzle HTTP 客户端",
+  "display_secondary": "Guzzle",
+  "aliases": [
+    "Guzzle HTTP 客户端",
+    "Guzzle",
+    "GuzzleHttp"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "php-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-services",
+    "api-engineering"
+  ],
+  "summary": "用于发送 HTTP 请求并与 Web 服务轻松集成的 PHP 事实标准客户端库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "php"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "http"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

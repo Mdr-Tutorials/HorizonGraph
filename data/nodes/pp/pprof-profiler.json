@@ -1,0 +1,35 @@
+{
+  "id": "pprof-profiler",
+  "name": "pprof",
+  "display_primary": "pprof 性能分析工具",
+  "display_secondary": "pprof",
+  "aliases": [
+    "pprof 性能分析工具",
+    "pprof",
+    "Go pprof"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "go-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "high-performance-computing"
+  ],
+  "summary": "用于分析 Go 程序 CPU、内存分配与阻塞调优的可视化性能分析采样工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

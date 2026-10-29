@@ -1,0 +1,40 @@
+{
+  "id": "sliding-window",
+  "name": "Sliding Window",
+  "display_primary": "滑动窗口算法",
+  "display_secondary": "Sliding Window Algorithm",
+  "aliases": [
+    "滑动窗口算法",
+    "滑动窗口",
+    "定长窗口",
+    "变长窗口"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "mathematics"
+  ],
+  "summary": "维护两端由指针界定的连续活动区间，避免重复扫描以求最值或满足条件子串。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "two-pointers"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "在数组或字符串上通过右指针扩展与左指针收缩维护区间动态统计量。"
+    }
+  ]
+}

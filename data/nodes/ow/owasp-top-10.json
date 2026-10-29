@@ -1,0 +1,36 @@
+{
+  "id": "owasp-top-10",
+  "name": "OWASP Top 10",
+  "display_primary": "OWASP Top 10",
+  "display_secondary": "OWASP Top 10",
+  "aliases": [
+    "OWASP Top 10",
+    "OWASP十大安全风险",
+    "OWASP Top Ten"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "开放式Web应用程序安全项目发布的关于Web应用程序十大最关键安全风险的共识清单。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sql-injection",
+      "context": "注入缺陷长期位列 OWASP Top 10 核心关注的安全威胁之一。"
+    }
+  ]
+}

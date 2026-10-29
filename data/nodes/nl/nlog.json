@@ -1,0 +1,33 @@
+{
+  "id": "nlog",
+  "name": "NLog",
+  "display_primary": "NLog 灵活日志框架",
+  "display_secondary": "NLog",
+  "aliases": [
+    "NLog 灵活日志框架",
+    "NLog"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "dotnet-ecosystem"
+  ],
+  "domains": [
+    "software-quality"
+  ],
+  "summary": "配置丰富、性能极高且支持多目标的 .NET 经典免费日志记录平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

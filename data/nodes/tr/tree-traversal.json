@@ -1,0 +1,34 @@
+{
+  "id": "tree-traversal",
+  "name": "Tree Traversal",
+  "display_primary": "树的遍历",
+  "display_secondary": "Tree Traversal",
+  "aliases": [
+    "树的遍历",
+    "二叉树遍历",
+    "前序中序后序遍历"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "按照前序、中序、后序或层序对树中所有节点进行不重不漏系统访问的算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "binary-tree",
+      "context": "通过递归或辅助显式栈队列按拓扑拓扑关系系统访问每个节点的数据。"
+    }
+  ]
+}

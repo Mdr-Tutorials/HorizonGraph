@@ -1,0 +1,46 @@
+{
+  "id": "mongodb-sharded-cluster",
+  "name": "MongoDB Sharded Cluster",
+  "display_primary": "MongoDB 分片集群",
+  "display_secondary": "MongoDB Sharded Cluster",
+  "aliases": [
+    "MongoDB 分片集群",
+    "分片集群",
+    "MongoDB Sharded Cluster"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "summary": "由路由层 mongos、配置副本集与多个数据分片副本集组成的水平扩展架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mongodb-database",
+      "context": "实现海量文档数据在多个独立分片副本集间的范围或哈希分布。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mongodb-replica-set",
+      "context": "每个数据分片与配置节点自身均部署为副本集以保证单片高可用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sharding",
+      "context": "根据片键策略将集合自动切分为数据块并在分片间迁移均衡。"
+    }
+  ]
+}

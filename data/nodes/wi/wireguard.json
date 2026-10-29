@@ -1,7 +1,10 @@
 {
   "id": "wireguard",
   "name": "WireGuard",
-  "aliases": [],
+  "aliases": [
+    "WireGuard",
+    "wireguard-protocol"
+  ],
   "type": "protocol",
   "ecosystems": [
     "tcp-ip-ecosystem",
@@ -21,7 +24,7 @@
   "summary": "极简高性能的内核级 VPN 协议，只用现代加密套件。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-29",
   "importance": 3,
   "official_site": "https://www.wireguard.com"
 }

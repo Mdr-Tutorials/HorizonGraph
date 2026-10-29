@@ -1,0 +1,35 @@
+{
+  "id": "bit-manipulation",
+  "name": "Bit Manipulation",
+  "display_primary": "位运算",
+  "display_secondary": "Bit Manipulation",
+  "aliases": [
+    "位运算",
+    "按位操作",
+    "位操作技术"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "mathematics"
+  ],
+  "summary": "直接在整数的二进制位级别应用与、或、非、异或与移位操作实现极低耗计算的技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "在位图索引与状态压缩中利用整型标量高效表达高维布尔状态集合。"
+    }
+  ]
+}

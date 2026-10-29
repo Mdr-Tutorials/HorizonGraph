@@ -1,0 +1,37 @@
+{
+  "id": "adversarial-perturbation",
+  "name": "Adversarial Perturbation",
+  "display_primary": "对抗性扰动",
+  "display_secondary": "Adversarial Perturbation",
+  "aliases": [
+    "对抗性扰动",
+    "Adversarial Perturbation",
+    "对抗样本",
+    "Adversarial Examples"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "machine-learning"
+  ],
+  "summary": "在输入数据中添加微小且人眼难以察觉的噪声，误导机器学习模型产生严重错误分类。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backpropagation",
+      "context": "FGSM 等白盒对抗扰动生成算法依赖反向传播计算损失函数关于输入特征的梯度。"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "uat",
+  "name": "User Acceptance Testing",
+  "display_primary": "用户验收测试",
+  "display_secondary": "User Acceptance Testing",
+  "aliases": [
+    "用户验收测试",
+    "UAT",
+    "验收测试"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "enterprise_industry"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "最终用户或客户在上线前验证系统是否满足真实业务需求与验收准则。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "e2e-testing",
+      "context": "通过端到端典型业务操作流程验证业务流与数据完整性。"
+    }
+  ]
+}

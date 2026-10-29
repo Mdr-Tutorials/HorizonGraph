@@ -1,0 +1,40 @@
+{
+  "id": "prim-algorithm",
+  "name": "Prim's Algorithm",
+  "display_primary": "Prim 算法",
+  "display_secondary": "Prim's Algorithm",
+  "aliases": [
+    "Prim 算法",
+    "普里姆算法",
+    "prims-algorithm"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes",
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "systems-programming"
+  ],
+  "summary": "从单节点出发贪心扩展连接生成树顶点集与外部点权值最小边的加权图算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "minimum-spanning-tree"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "greedy",
+      "context": "利用优先队列维护与已生成树相邻的最短横切边进行贪心扩张。"
+    }
+  ]
+}

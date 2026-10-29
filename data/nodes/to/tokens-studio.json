@@ -1,0 +1,38 @@
+{
+  "id": "tokens-studio",
+  "name": "Tokens Studio",
+  "display_primary": "Tokens Studio",
+  "display_secondary": "Tokens Studio for Figma",
+  "aliases": [
+    "Tokens Studio",
+    "Figma Tokens",
+    "figma-tokens",
+    "Tokens Studio for Figma"
+  ],
+  "type": "tool",
+  "abstraction_level": "application_tool",
+  "domains": [
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "design-tokens",
+      "context": "在 Figma 内跨主题结构化维护设计令牌并双向同步至代码仓库。"
+    }
+  ],
+  "summary": "在 Figma 中定义与管理多主题设计令牌并实现代码协同的工程化工具。",
+  "description": "Tokens Studio for Figma（前身为 Figma Tokens）是设计与工程领域连接最紧密的设计令牌协同工具。它允许设计师直接在 Figma 画布内创建、组织和应用结构化的设计令牌（支持数学公式计算、令牌别名与多主题切换）。\n\n更关键的是，Tokens Studio 支持将设计令牌直接双向同步至 GitHub、GitLab 或 npm 仓库，配合 Style Dictionary 等自动化 CI/CD 流水线，真正实现了设计决策到生产代码的无缝自动化流转。\n\n## 参考\n\n- [Tokens Studio 官方网站](https://tokens.studio/)\n- [Tokens Studio GitHub 仓库](https://github.com/tokens-studio/figma-plugin)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

@@ -1,0 +1,34 @@
+{
+  "id": "fastlane",
+  "name": "Fastlane",
+  "display_primary": "Fastlane 自动化工具",
+  "display_secondary": "Fastlane",
+  "aliases": [
+    "Fastlane 自动化工具",
+    "Fastlane",
+    "fastlane"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "ios-ecosystem",
+    "android-ecosystem",
+    "cicd-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "用于自动化 iOS 与 Android 应用构建、签名、测试与发布部署的开源工具链。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://fastlane.tools"
+}

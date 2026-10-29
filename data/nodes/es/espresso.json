@@ -1,0 +1,39 @@
+{
+  "id": "espresso",
+  "name": "Espresso",
+  "display_primary": "Espresso",
+  "display_secondary": "Espresso",
+  "aliases": [
+    "Espresso",
+    "Android Espresso",
+    "Espresso UI 测试"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "android-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "Google 推出的原生 Android 应用 UI 自动化测试框架，支持自动线程同步。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "unit-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "e2e-testing"
+    }
+  ]
+}

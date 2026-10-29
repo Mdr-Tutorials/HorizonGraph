@@ -1,0 +1,37 @@
+{
+  "id": "grand-central-dispatch",
+  "name": "Grand Central Dispatch",
+  "display_primary": "Grand Central Dispatch",
+  "display_secondary": "Grand Central Dispatch",
+  "aliases": [
+    "Grand Central Dispatch",
+    "GCD",
+    "libdispatch"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "ios-ecosystem",
+    "macos-darwin-ecosystem"
+  ],
+  "domains": [
+    "systems-programming",
+    "mobile-app-development"
+  ],
+  "abstraction_level": "kernel_os",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    }
+  ],
+  "summary": "Apple 操作系统多核并发任务调度、线程池管理与分发队列基础设施。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "official_site": "https://developer.apple.com/documentation/dispatch"
+}

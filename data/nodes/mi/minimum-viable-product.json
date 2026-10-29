@@ -1,0 +1,43 @@
+{
+  "id": "minimum-viable-product",
+  "name": "Minimum Viable Product",
+  "display_primary": "最小可行产品",
+  "display_secondary": "Minimum Viable Product · MVP",
+  "aliases": [
+    "最小可行产品",
+    "MVP",
+    "最小可行性产品",
+    "最小可用产品",
+    "Minimum Viable Product"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "career-development",
+    "empirical-software-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "product-manager",
+      "context": "产品经理定义 MVP 的功能边界以低成本快速验证产品与市场契合度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "user-story-mapping",
+      "context": "在用户故事地图中划定顶层最小功能切片用于快速发布 MVP。"
+    }
+  ],
+  "summary": "具备满足早期用户核心诉求的最小功能集合、用于快速验证市场假设的产品形态。",
+  "description": "最小可行产品（Minimum Viable Product，简称 MVP）是精益创业（Lean Startup）方法论的核心基石概念。它是指能以最小代价向早期种子用户交付核心价值，并让团队能够最大限度收集经过验证的客户反馈的最简产品版本。\n\nMVP 的目标不是交付简陋或半成品，而是在最小的功能闭环中完成“构建-衡量-学习（Build-Measure-Learn）”的正向反馈循环，避免在未经市场验证的设想上耗费昂贵的工程开发成本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

@@ -1,0 +1,32 @@
+{
+  "id": "cocoapods",
+  "name": "CocoaPods",
+  "display_primary": "CocoaPods 包管理器",
+  "display_secondary": "CocoaPods",
+  "aliases": [
+    "CocoaPods 包管理器",
+    "CocoaPods"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "ios-ecosystem",
+    "macos-darwin-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "software-supply-chain"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    }
+  ],
+  "summary": "用于 Swift 和 Objective-C Cocoa 项目的集中式第三方依赖包管理器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://cocoapods.org"
+}

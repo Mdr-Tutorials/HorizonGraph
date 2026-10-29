@@ -1,0 +1,37 @@
+{
+  "id": "nips",
+  "name": "Network Intrusion Prevention System",
+  "display_primary": "网络入侵防御系统",
+  "display_secondary": "NIPS",
+  "aliases": [
+    "网络入侵防御系统",
+    "NIPS",
+    "网络入侵防御"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "串联在网络主干路径中，能够在检测到恶意数据包时立即主动丢弃阻断的系统架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "firewall",
+      "context": "NIPS 串接部署在防火墙后方提供深层数据包检测与恶意流量主动实时丢弃能力。"
+    }
+  ]
+}

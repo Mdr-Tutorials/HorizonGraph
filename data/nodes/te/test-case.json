@@ -1,0 +1,37 @@
+{
+  "id": "test-case",
+  "name": "Test Case",
+  "display_primary": "测试用例",
+  "display_secondary": "Test Case",
+  "aliases": [
+    "测试用例",
+    "Test Case",
+    "Test Cases",
+    "测试场景"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "包含前置条件、输入数据、执行步骤与预期结果的最小测试验证单元。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "test-oracle",
+      "context": "以断言形式判定测试执行结果与预期规格是否相符。"
+    }
+  ]
+}

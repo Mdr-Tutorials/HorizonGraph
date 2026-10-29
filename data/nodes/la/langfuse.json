@@ -1,0 +1,53 @@
+{
+  "id": "langfuse",
+  "name": "Langfuse",
+  "display_primary": "Langfuse",
+  "display_secondary": "Langfuse",
+  "aliases": [
+    "Langfuse",
+    "LLM可观测性平台",
+    "大模型追踪系统"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "devops_tooling",
+    "ai-software-engineering-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "devops",
+    "software-quality"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "langsmith"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "opentelemetry",
+      "context": "基于 OpenTelemetry 规范采集并导出 LLM 调用、Agent 步骤与工具执行追踪数据。"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "langchain"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "llamaindex"
+    }
+  ],
+  "summary": "开源大模型应用可观测性平台，提供端到端调用链追踪、评估与提示词管理。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://langfuse.com",
+  "description": "Langfuse 是一套面向生产环境的开源 LLM 工程可观测性与分析系统。它提供详细的执行链路追踪（Tracing），捕获多步 Agent 循环、工具调用（Tool Calling）、模型输入输出令牌数（Tokens）以及每次推理的时延与成本。\n\n除了基础追踪，Langfuse 还支持在系统内部集中版本化管理提示词（Prompt Management）、记录用户对生成内容的显式与隐式反馈评分、进行生产环境运行回放，并支持基于模型或规则的评测（Evals）。系统提供可自托管的 Docker 部署架构以及轻量 SDK，全面兼容主流框架与 OpenTelemetry 追踪标准。\n\n## 参考\n\n- [Langfuse Documentation](https://langfuse.com/docs)\n- [Langfuse GitHub Repository](https://github.com/langfuse/langfuse)"
+}

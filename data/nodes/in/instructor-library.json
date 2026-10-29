@@ -1,0 +1,48 @@
+{
+  "id": "instructor-library",
+  "name": "Instructor",
+  "display_primary": "Instructor",
+  "display_secondary": "Instructor Library",
+  "aliases": [
+    "Instructor",
+    "Instructor Library",
+    "结构化输出抽取库"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "programming-languages",
+    "api-engineering"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "pydantic"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "function-calling",
+      "context": "利用模型底层函数调用与响应格式化接口实现数据模式注入与模式校验。"
+    }
+  ],
+  "summary": "基于 Pydantic 的轻量 Python 库，用于让大语言模型稳定可靠地输出类型化结构数据。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://python.useinstructor.com",
+  "description": "Instructor 是由 Jason Liu 发起构建的轻量级 Python 工具库，旨在让从大语言模型中提取结构化数据（Structured Outputs）变得如调用普通函数般简单严谨。它通过对官方模型 SDK（如 OpenAI、Anthropic、Gemini、Ollama）进行薄包装，将 Pydantic 模式直接无缝映射为模型参数。\n\nInstructor 巧妙利用各厂商提供的底层 Function Calling 或 JSON Schema 输出特性，在模型返回非法结构或未通过验证逻辑（Validators）时，自动将校验异常信息回灌至模型上下文中触发内置自我重试修正。它极大简化了从非结构化文本中精准提取复杂知识图谱与强类型对象的工程复杂度。\n\n## 参考\n\n- [Instructor Python Documentation](https://python.useinstructor.com/)\n- [Jason Liu：Instructor GitHub Repository](https://github.com/jxnl/instructor)"
+}

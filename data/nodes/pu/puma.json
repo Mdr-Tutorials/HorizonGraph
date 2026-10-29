@@ -1,0 +1,36 @@
+{
+  "id": "puma",
+  "name": "Puma",
+  "display_primary": "Puma 并发应用服务器",
+  "display_secondary": "Puma Web Server",
+  "aliases": [
+    "Puma 并发应用服务器",
+    "Puma",
+    "Puma Web Server"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "ruby-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-services",
+    "systems-programming"
+  ],
+  "summary": "专为速度与并发而构建的简单、快速、多线程及多进程 Ruby/Rack Web 应用服务器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ruby"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

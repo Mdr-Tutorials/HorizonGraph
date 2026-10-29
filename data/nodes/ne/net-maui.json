@@ -1,0 +1,35 @@
+{
+  "id": "net-maui",
+  "name": ".NET MAUI",
+  "display_primary": ".NET MAUI 跨平台应用 UI 框架",
+  "display_secondary": ".NET Multi-platform App UI",
+  "aliases": [
+    ".NET MAUI 跨平台应用 UI 框架",
+    ".NET MAUI",
+    "MAUI"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dotnet-ecosystem"
+  ],
+  "domains": [
+    "desktop-application-development",
+    "human-computer-interaction"
+  ],
+  "summary": "用单一代码库将应用部署至移动端与桌面的 .NET 跨平台 UI 框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

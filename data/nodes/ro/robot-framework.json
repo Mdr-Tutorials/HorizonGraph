@@ -1,0 +1,39 @@
+{
+  "id": "robot-framework",
+  "name": "Robot Framework",
+  "display_primary": "Robot Framework",
+  "display_secondary": "Robot Framework",
+  "aliases": [
+    "Robot Framework",
+    "Robot",
+    "关键字驱动测试框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "采用关键字驱动语法的通用开源测试自动化与机器人流程自动化框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "atdd"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "e2e-testing"
+    }
+  ]
+}

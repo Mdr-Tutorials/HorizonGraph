@@ -1,0 +1,35 @@
+{
+  "id": "edr",
+  "name": "Endpoint Detection and Response",
+  "display_primary": "端点检测与响应",
+  "display_secondary": "EDR",
+  "aliases": [
+    "端点检测与响应",
+    "EDR",
+    "终端威胁检测与响应"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "持续监测终端行为、实时阻断威胁并为安全分析提供取证追溯能力的端点防护工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "linux",
+      "context": "EDR 探针通过 Linux eBPF 或内核模块实时捕获异常进程派生与文件修改行为。"
+    }
+  ]
+}

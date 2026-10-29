@@ -1,0 +1,41 @@
+{
+  "id": "rolldown",
+  "name": "Rolldown",
+  "display_primary": "Rolldown",
+  "display_secondary": "Rust-based Bundler for Vite",
+  "aliases": [
+    "Rolldown",
+    "Rolldown 打包器"
+  ],
+  "type": "tool",
+  "abstraction_level": "application_tool",
+  "domains": [
+    "web-development",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "vite"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rollup",
+      "context": "基于 Rust 重写并全面兼容 Rollup 插件规范与打包行为。"
+    }
+  ],
+  "summary": "基于 Rust 编写并旨在为 Vite 提供极速生产构建的下一代代码打包器。",
+  "description": "Rolldown 是由 Vite 团队主导开发的基于 Rust 的高性能 JavaScript/TypeScript 打包器。其核心目标是完全兼容 Rollup 丰富的插件生态系统与配置接口，同时借助 Rust 的多线程并行与低开销运行时获得数量级的速度提升。\n\nRolldown 致力于终结当前 Vite 开发环境下使用 esbuild 进行依赖预构建、生产环境下却切换至 Rollup 的环境行为不一致痛点，提供开发与生产统一且极速的打包体验。\n\n## 参考\n\n- [Rolldown 官方网站](https://rolldown.rs/)\n- [Rolldown GitHub 仓库](https://github.com/rolldown/rolldown)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

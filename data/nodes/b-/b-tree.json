@@ -6,9 +6,15 @@
   "aliases": [
     "B 树",
     "B+树",
-    "B-Tree"
+    "B 树索引",
+    "B-Tree",
+    "B-Tree Indexing",
+    "b-tree-indexing"
   ],
   "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
   "domains": [
     "databases"
   ],

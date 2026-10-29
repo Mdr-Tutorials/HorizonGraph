@@ -1,0 +1,36 @@
+{
+  "id": "interval-scheduling",
+  "name": "Interval Scheduling",
+  "display_primary": "区间调度算法",
+  "display_secondary": "Interval Scheduling",
+  "aliases": [
+    "区间调度算法",
+    "区间调度",
+    "区间合并",
+    "区间贪心"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "mathematical-optimization"
+  ],
+  "summary": "按端点排序后贪心选择互不冲突的最大区间集合或合并重叠区间的经典范式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "greedy",
+      "context": "依据结束时间或开始时间排序后贪心选取互斥区间最大化任务数。"
+    }
+  ]
+}

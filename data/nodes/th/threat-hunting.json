@@ -1,0 +1,34 @@
+{
+  "id": "threat-hunting",
+  "name": "Threat Hunting",
+  "display_primary": "威胁狩猎",
+  "display_secondary": "Threat Hunting",
+  "aliases": [
+    "威胁狩猎",
+    "Threat Hunting",
+    "网络威胁搜寻"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "假定攻击者已潜伏在内网，防御者主动、迭代搜寻隐蔽未触发告警威胁的过程。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "edr",
+      "context": "威胁狩猎团队使用 EDR 遥测数据运行假说驱动的查询语句检索横向移动行为。"
+    }
+  ]
+}

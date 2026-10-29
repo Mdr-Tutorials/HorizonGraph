@@ -1,0 +1,37 @@
+{
+  "id": "image-scanning",
+  "name": "Container Image Scanning",
+  "display_primary": "容器镜像安全扫描",
+  "display_secondary": "Container Image Scanning",
+  "aliases": [
+    "容器镜像安全扫描",
+    "Container Image Scanning",
+    "镜像扫描",
+    "镜像漏洞扫描"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "container-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "devops"
+  ],
+  "summary": "自动化解析容器镜像文件系统层，检测其中所含开源组件CVE漏洞和恶意配置的过程。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sbom",
+      "context": "镜像扫描器通过解包镜像层提取 SBOM 清单并比对已知漏洞库识别潜在威胁。"
+    }
+  ]
+}

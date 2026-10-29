@@ -1,0 +1,43 @@
+{
+  "id": "micro-frontends",
+  "name": "Micro Frontends",
+  "display_primary": "微前端",
+  "display_secondary": "Micro Frontends",
+  "aliases": [
+    "微前端",
+    "Micro Frontends",
+    "微前端架构",
+    "MFE"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "在浏览器端协调独立团队构建的多技术栈子应用的生命周期与通信。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "在统一宿主容器中实现不同子应用视图的动态挂载与样式隔离。"
+    }
+  ],
+  "summary": "将大型前端应用拆解为由独立自治团队开发部署并协同运行的架构风格。",
+  "description": "微前端架构将微服务概念延伸至前端应用层，把原本庞大单一的单体前端拆解为多个小型、独立自治且低耦合的子应用。各个子应用可以由不同的敏捷团队独立维护、独立测试与独立持续交付，甚至各自选用不同的技术栈。\n\n常见微前端集成策略包括基于 iframe 容器硬隔离、基于 Web Components 封装、基于 Single-SPA/qiankun 的 JavaScript 运行时沙箱路由调度，以及基于 Webpack 模块联邦的去中心化共享集成。\n\n## 参考\n\n- [Martin Fowler: Micro Frontends](https://martinfowler.com/articles/micro-frontends.html)\n- [qiankun 微前端架构方案](https://qiankun.umijs.org/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

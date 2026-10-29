@@ -1,0 +1,36 @@
+{
+  "id": "eloquent-orm",
+  "name": "Eloquent ORM",
+  "display_primary": "Eloquent 对象关系映射器",
+  "display_secondary": "Eloquent ORM",
+  "aliases": [
+    "Eloquent 对象关系映射器",
+    "Eloquent ORM",
+    "Eloquent"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "php-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "summary": "Laravel 优雅的 Active Record 模式实现，提供链式关联与属性访问机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "laravel"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

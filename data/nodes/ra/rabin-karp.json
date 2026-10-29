@@ -1,0 +1,34 @@
+{
+  "id": "rabin-karp",
+  "name": "Rabin-Karp Algorithm",
+  "display_primary": "Rabin-Karp 算法",
+  "display_secondary": "Rabin-Karp Algorithm",
+  "aliases": [
+    "Rabin-Karp 算法",
+    "滚动哈希算法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "mathematics"
+  ],
+  "summary": "利用滚动哈希在滑动窗口上以 O(1) 递推计算子串哈希以高效匹配模式串的算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sliding-window",
+      "context": "在滑动窗口右移时以常数时间减去离开字符贡献并加入新字符贡献完成哈希递推。"
+    }
+  ]
+}

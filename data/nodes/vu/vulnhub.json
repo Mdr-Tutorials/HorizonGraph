@@ -1,0 +1,35 @@
+{
+  "id": "vulnhub",
+  "name": "VulnHub",
+  "display_primary": "VulnHub",
+  "display_secondary": "VulnHub",
+  "aliases": [
+    "VulnHub",
+    "靶机镜像分享平台",
+    "开源安全靶场"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "提供可本地下载导入虚拟化环境并进行攻防实战练习的易受攻击虚拟机镜像库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "nmap",
+      "context": "玩家下载 VulnHub 靶机并在本地虚拟网络中使用 Nmap 探索目标端口与脆弱服务。"
+    }
+  ]
+}

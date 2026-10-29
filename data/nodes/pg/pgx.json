@@ -1,0 +1,40 @@
+{
+  "id": "pgx",
+  "name": "pgx",
+  "display_primary": "pgx 驱动库",
+  "display_secondary": "pgx",
+  "aliases": [
+    "pgx 驱动库",
+    "pgx",
+    "Jackc pgx"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "go-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-services"
+  ],
+  "summary": "专为 PostgreSQL 设计的高性能纯 Go 数据库驱动与工具套件。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "postgresql"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

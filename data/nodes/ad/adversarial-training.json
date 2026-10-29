@@ -1,0 +1,36 @@
+{
+  "id": "adversarial-training",
+  "name": "Adversarial Training",
+  "display_primary": "对抗训练",
+  "display_secondary": "Adversarial Training",
+  "aliases": [
+    "对抗训练",
+    "Adversarial Training",
+    "鲁棒性训练"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "machine-learning"
+  ],
+  "summary": "在训练集主动混入对抗样本重新迭代训练模型，以提高模型防御对抗扰动的鲁棒性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "adversarial-perturbation",
+      "context": "对抗训练在每次反向传播中生成对抗扰动样本加入损失函数最小化最坏情况误差。"
+    }
+  ]
+}

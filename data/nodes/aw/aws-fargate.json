@@ -1,0 +1,43 @@
+{
+  "id": "aws-fargate",
+  "name": "AWS Fargate",
+  "display_primary": "AWS Fargate",
+  "display_secondary": "AWS Fargate Serverless Compute",
+  "aliases": [
+    "AWS Fargate",
+    "Fargate",
+    "AWS 无服务器容器计算"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "public-cloud-ecosystem",
+    "container-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "containerization"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "无服务器容器计算引擎，用户无需管理底层EC2实例即可运行ECS和EKS容器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://aws.amazon.com/fargate/",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "aws"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kubernetes",
+      "context": "作为 Amazon EKS 节点的无服务器无虚拟机实例按需执行环境。"
+    }
+  ]
+}

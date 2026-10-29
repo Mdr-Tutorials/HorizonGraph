@@ -1,0 +1,34 @@
+{
+  "id": "xdebug",
+  "name": "Xdebug",
+  "display_primary": "Xdebug 调试与分析扩展",
+  "display_secondary": "Xdebug",
+  "aliases": [
+    "Xdebug 调试与分析扩展",
+    "Xdebug"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "php-ecosystem"
+  ],
+  "domains": [
+    "language-tooling",
+    "software-quality"
+  ],
+  "summary": "为 PHP 提供断点单步调试、代码覆盖率分析及调用跟踪的 C 语言内核扩展模块。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "php"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

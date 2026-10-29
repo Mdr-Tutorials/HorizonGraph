@@ -1,0 +1,42 @@
+{
+  "id": "impeller-rendering-engine",
+  "name": "Impeller",
+  "display_primary": "Impeller 渲染引擎",
+  "display_secondary": "Impeller Rendering Engine",
+  "aliases": [
+    "Impeller 渲染引擎",
+    "Impeller"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "rendering-ecosystem",
+    "ios-ecosystem",
+    "android-ecosystem"
+  ],
+  "domains": [
+    "real-time-rendering",
+    "interactive-graphics",
+    "mobile-app-development"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "flutter"
+    }
+  ],
+  "summary": "Flutter 新一代 2D 硬件加速渲染引擎，通过预编译着色器消除运行时着色卡顿。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://docs.flutter.dev/perf/impeller"
+}

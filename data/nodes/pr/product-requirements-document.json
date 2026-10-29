@@ -1,0 +1,44 @@
+{
+  "id": "product-requirements-document",
+  "name": "Product Requirements Document",
+  "display_primary": "产品需求文档",
+  "display_secondary": "Product Requirements Document · PRD",
+  "aliases": [
+    "产品需求文档",
+    "PRD",
+    "需求规格说明书",
+    "产品功能文档",
+    "Product Requirements Document",
+    "prd-document"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "career-development",
+    "web-services"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-material"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "product-manager",
+      "context": "产品经理撰写 PRD 以定义功能边界、对齐跨职能团队理解并指导设计与工程落地。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "user-research",
+      "context": "将用户调研、客户访谈与数据分析发现作为 PRD 需求合理性与问题定义的输入支撑。"
+    }
+  ],
+  "summary": "详述产品功能目标、用户场景、业务逻辑、原型界面及验收标准的规范文档。",
+  "description": "产品需求文档（Product Requirements Document，简称 PRD）是产品经理用于阐述产品或功能价值、范围和规格说明的核心交付物。PRD 阐释了产品的业务目标、目标用户画像、使用场景、功能细则、交互流程、非功能性需求以及上线验收指标。\n\n作为产研协作的契约载体，PRD 帮助设计师、工程师和测试人员在开发启动前就预期达成一致，减少返工与认知偏差。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

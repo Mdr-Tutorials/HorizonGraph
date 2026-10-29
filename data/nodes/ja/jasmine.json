@@ -1,0 +1,40 @@
+{
+  "id": "jasmine",
+  "name": "Jasmine",
+  "display_primary": "Jasmine",
+  "display_secondary": "Jasmine",
+  "aliases": [
+    "Jasmine",
+    "Jasmine 测试框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "node-js-ecosystem",
+    "web_frontend"
+  ],
+  "domains": [
+    "software-testing",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "无外部 DOM 与框架依赖的经典 JavaScript 行为驱动单元测试框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "bdd"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "unit-testing"
+    }
+  ]
+}

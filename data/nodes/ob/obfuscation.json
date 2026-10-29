@@ -1,0 +1,36 @@
+{
+  "id": "obfuscation",
+  "name": "Code Obfuscation",
+  "display_primary": "代码与载荷混淆",
+  "display_secondary": "Code Obfuscation",
+  "aliases": [
+    "代码与载荷混淆",
+    "Code Obfuscation",
+    "代码混淆",
+    "载荷混淆"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "compilers"
+  ],
+  "summary": "将程序代码或攻击载荷转换为难以阅读和分析但功能等价的形式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ghidra",
+      "context": "逆向工程人员使用 Ghidra 分析混淆二进制程序中的控制流平坦化与死代码。"
+    }
+  ]
+}

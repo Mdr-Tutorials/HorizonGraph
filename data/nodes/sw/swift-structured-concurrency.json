@@ -1,0 +1,36 @@
+{
+  "id": "swift-structured-concurrency",
+  "name": "Swift Structured Concurrency",
+  "display_primary": "Swift 结构化并发",
+  "display_secondary": "Swift Structured Concurrency",
+  "aliases": [
+    "Swift 结构化并发",
+    "Swift 并发模型"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ios-ecosystem",
+    "macos-darwin-ecosystem"
+  ],
+  "domains": [
+    "programming-languages",
+    "mobile-app-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "concurrency-theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "swift",
+      "context": "Swift 语言内建的 async/await、Task 与 Actor 结构化并发模型。"
+    }
+  ],
+  "summary": "基于 async/await、Task 树与 Actor 的 Swift 语言原生结构化并发体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/"
+}

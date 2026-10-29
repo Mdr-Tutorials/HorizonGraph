@@ -1,0 +1,42 @@
+{
+  "id": "radix-ui",
+  "name": "Radix UI",
+  "display_primary": "Radix UI",
+  "display_secondary": "Radix Primitives",
+  "aliases": [
+    "Radix UI",
+    "Radix Primitives",
+    "Radix 原语库"
+  ],
+  "type": "library",
+  "abstraction_level": "framework_library",
+  "domains": [
+    "web-development",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "react"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "封装弹窗、菜单等复合组件的焦点捕获、快捷键与 WAI-ARIA 规范。"
+    }
+  ],
+  "summary": "提供无样式、高可访问性与遵循 WAI-ARIA 规范的开源 React 原语库。",
+  "description": "Radix Primitives 是由 WorkOS 开发维护的无头底层 UI 原语库。它专注于解决高质量设计系统中最棘手的问题：无障碍访问性（A11y）、键盘导航行为、复合组件状态管理与边界错误处理。\n\n每个 Radix 原语组件均严格遵循 W3C WAI-ARIA 设计模式规范，支持完整的键盘控制与屏幕阅读器无缝兼容，且不预设任何样式，是 shadcn/ui 等众多现代知名设计系统的底层核心构建块。\n\n## 参考\n\n- [Radix UI 官方文档](https://www.radix-ui.com/)\n- [Radix Primitives 仓库](https://github.com/radix-ui/primitives)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

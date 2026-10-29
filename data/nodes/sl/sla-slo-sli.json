@@ -1,0 +1,51 @@
+{
+  "id": "sla-slo-sli",
+  "name": "SLA/SLO/SLI Reliability Framework",
+  "display_primary": "服务等级目标体系",
+  "display_secondary": "SLA/SLO/SLI Framework",
+  "aliases": [
+    "服务等级目标体系",
+    "SLA/SLO/SLI 体系",
+    "SLI/SLO/SLA 框架",
+    "服务可靠性度量体系",
+    "SLA SLO SLI"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-measurement-ecosystem",
+    "devops_tooling",
+    "cloud_native"
+  ],
+  "domains": [
+    "software-measurement",
+    "devops",
+    "distributed-systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-measurement-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sli",
+      "context": "以服务等级指标（SLI）采集量化用户真实体验的关键性能与正确性数据。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "slo",
+      "context": "设定服务等级目标（SLO）作为内部工程团队衡量系统稳定度与错误预算的标准。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sla",
+      "context": "将内部目标转化为对外服务等级协议（SLA），约定未达标时的商业或法律补偿责任。"
+    }
+  ],
+  "summary": "由底层指标、内部目标与对外契约构成的分层系统可靠性度量与管控体系。",
+  "description": "SLA/SLO/SLI 体系是现代可观测性与站点可靠性工程（SRE）的核心量化框架。SLI（服务等级指标）回答当前系统的实际表现；SLO（服务等级目标）设定内部追求的目标阈值，并引出错误预算（Error Budget）以平衡创新速度与稳定性；SLA（服务等级协议）则是向客户公开的底线承诺。\n\n三者各司其职又紧密联动，构建起工程团队与业务管理层关于可用性、发布频率与技术投资的统一沟通语言。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

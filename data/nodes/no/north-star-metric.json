@@ -1,0 +1,43 @@
+{
+  "id": "north-star-metric",
+  "name": "North Star Metric",
+  "display_primary": "北极星指标",
+  "display_secondary": "North Star Metric · NSM",
+  "aliases": [
+    "北极星指标",
+    "唯一关键指标",
+    "第一关键指标",
+    "OMTM",
+    "North Star Metric"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "software-measurement-ecosystem"
+  ],
+  "domains": [
+    "software-measurement",
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "product-manager",
+      "context": "产品经理定义并追踪北极星指标以对齐团队精力、指导产品战略方向与优先级。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "okr-framework",
+      "context": "北极星指标的核心驱动因子通常被拆解为各业务周期 OKR 中的关键结果。"
+    }
+  ],
+  "summary": "统一衡量产品带给客户的核心价值与业务长期增长动力的单一指引指标。",
+  "description": "北极星指标（North Star Metric，简称 NSM）是产品驱动增长（Product-Led Growth）理论中的核心度量概念。它是一个最能反映产品为用户创造的核心价值，同时能直接驱动业务长期健康盈利的单一关键指标。\n\n一个良好的北极星指标应当兼顾用户价值感知与商业变现逻辑（例如 Spotify 的聆听时长、Airbnb 的预订间夜数），指导产研团队聚焦长期价值而非短期局部优化。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

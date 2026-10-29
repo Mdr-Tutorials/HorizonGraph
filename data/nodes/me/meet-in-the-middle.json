@@ -1,0 +1,35 @@
+{
+  "id": "meet-in-the-middle",
+  "name": "Meet in the Middle",
+  "display_primary": "双向折半搜索",
+  "display_secondary": "Meet in the Middle",
+  "aliases": [
+    "双向折半搜索",
+    "中途相遇法",
+    "折半搜索"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "mathematics",
+    "systems-programming"
+  ],
+  "summary": "将规模为 n 的搜索空间划分为两个 n/2 子集分别求解，再二分或哈希合并答案。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "binary-search",
+      "context": "将搜索拆为两半生成中间状态列表，排序后通过二分查找匹配最优组合。"
+    }
+  ]
+}

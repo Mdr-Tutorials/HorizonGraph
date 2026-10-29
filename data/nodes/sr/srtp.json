@@ -1,0 +1,37 @@
+{
+  "id": "srtp",
+  "name": "Secure Real-time Transport Protocol",
+  "display_primary": "安全实时传输协议",
+  "display_secondary": "SRTP",
+  "aliases": [
+    "安全实时传输协议",
+    "SRTP",
+    "安全实时音视频协议"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "tcp-ip-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "runtime_vm",
+  "summary": "为实时音视频与流媒体数据通信提供加密、消息认证和重放保护的传输协议。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "security-protocol"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "aes",
+      "context": "SRTP 默认使用 AES 分组密码算法对语音和视频载荷进行实时流加密保护。"
+    }
+  ]
+}

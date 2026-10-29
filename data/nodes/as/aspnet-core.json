@@ -1,0 +1,41 @@
+{
+  "id": "aspnet-core",
+  "name": "ASP.NET Core",
+  "display_primary": "ASP.NET Core 跨平台 Web 框架",
+  "display_secondary": "ASP.NET Core",
+  "aliases": [
+    "ASP.NET Core 跨平台 Web 框架",
+    "ASP.NET Core",
+    "aspnetcore"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dotnet-ecosystem",
+    "modern-web-frameworks-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "summary": "微软推出的跨平台、高性能、现代模块化开源 Web 开发与云服务框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mvc"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

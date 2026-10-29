@@ -1,0 +1,40 @@
+{
+  "id": "streaming-replication",
+  "name": "Streaming Replication",
+  "display_primary": "流复制",
+  "display_secondary": "Streaming Replication",
+  "aliases": [
+    "流复制",
+    "物理流复制",
+    "Streaming Replication"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "summary": "主库将 WAL 日志记录以流式 TCP 网络连接实时发送给从库回放的物理复制机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "postgresql",
+      "context": "PostgreSQL 主从高可用架构采用物理流复制保持从节点实时热备。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wal",
+      "context": "直接传输并重放物理 WAL 日志记录，无需经过 SQL 解析层。"
+    }
+  ]
+}

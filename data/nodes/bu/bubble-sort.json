@@ -1,0 +1,32 @@
+{
+  "id": "bubble-sort",
+  "name": "Bubble Sort",
+  "display_primary": "冒泡排序",
+  "display_secondary": "Bubble Sort",
+  "aliases": [
+    "冒泡排序"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "反复遍历待排序列并比较相邻元素，逆序则交换，使大数如气泡般浮至序列顶端。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "通过相邻元素两两比较并在失序时交换，单趟将最大元素移至末尾。"
+    }
+  ]
+}

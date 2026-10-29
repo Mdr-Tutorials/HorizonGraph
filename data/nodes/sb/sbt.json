@@ -1,0 +1,36 @@
+{
+  "id": "sbt",
+  "name": "sbt",
+  "display_primary": "sbt 交互式构建工具",
+  "display_secondary": "Simple Build Tool",
+  "aliases": [
+    "sbt 交互式构建工具",
+    "sbt",
+    "Simple Build Tool"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "language-tooling",
+    "software-supply-chain"
+  ],
+  "summary": "Scala 生态事实标准的构建工具，支持增量编译、多项目任务与高度自定义 DSL。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "scala"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

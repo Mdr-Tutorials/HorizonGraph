@@ -1,0 +1,36 @@
+{
+  "id": "mitre-attck",
+  "name": "MITRE ATT&CK Framework",
+  "display_primary": "MITRE ATT&CK 框架",
+  "display_secondary": "MITRE ATT&CK",
+  "aliases": [
+    "MITRE ATT&CK 框架",
+    "MITRE ATT&CK",
+    "ATT&CK",
+    "ATT&CK 矩阵"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "全球公认的基于真实攻击战术、技术和常见知识的攻防行为知识库矩阵。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cyber-kill-chain",
+      "context": "ATT&CK 提供了比传统杀伤链更粒度化、可实操的战术技术（TTPs）映射矩阵。"
+    }
+  ]
+}

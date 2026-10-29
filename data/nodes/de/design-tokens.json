@@ -1,0 +1,37 @@
+{
+  "id": "design-tokens",
+  "name": "Design Tokens",
+  "display_primary": "设计令牌",
+  "display_secondary": "Design Tokens",
+  "aliases": [
+    "设计令牌",
+    "Design Tokens",
+    "设计变量",
+    "Design Token"
+  ],
+  "type": "concept",
+  "domains": [
+    "human-computer-interaction",
+    "web-development"
+  ],
+  "ecosystems": [
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "interaction-design-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "css",
+      "context": "通过 CSS 自定义属性将设计令牌值转换为多主题运行时样式。"
+    }
+  ],
+  "summary": "存储颜色、排版与间距等设计系统核心视觉属性且跨平台消费的最小原子值。",
+  "description": "设计令牌（Design Tokens）是跨平台设计系统的不可分割基石，最初由 Salesforce 团队在构建 Lightning Design System 时提出。它将颜色、字体、字重、间距、圆角与阴影等设计决策抽象为平台中立的名称/值键值对（通常以 JSON 格式存储）。\n\n通过 Style Dictionary 等编译工具链，设计令牌可自动编译转换为 CSS 变量、Sass/Less 变量、iOS Swift 常量及 Android XML，确保从设计工具（如 Figma）到各终端代码库的视觉规范绝对一致。\n\n## 参考\n\n- [W3C Design Tokens Community Group](https://design-tokens.github.io/community-group/format/)\n- [Salesforce Design Tokens 规范指南](https://www.lightningdesignsystem.com/design-tokens/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

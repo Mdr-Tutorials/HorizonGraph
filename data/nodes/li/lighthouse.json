@@ -1,0 +1,38 @@
+{
+  "id": "lighthouse",
+  "name": "Lighthouse",
+  "display_primary": "Lighthouse",
+  "display_secondary": "Google Lighthouse Web Auditing Tool",
+  "aliases": [
+    "Lighthouse",
+    "Google Lighthouse",
+    "Web 性能审计工具"
+  ],
+  "type": "tool",
+  "abstraction_level": "application_tool",
+  "domains": [
+    "web-development",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "browser-engine-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "chrome",
+      "context": "利用 Chrome DevTools 协议自动化收集网页运行指标与 Core Web Vitals 数据。"
+    }
+  ],
+  "summary": "Google 开源的用于评估和改进网页性能、无障碍访问、SEO 与最佳实践的审计工具。",
+  "description": "Lighthouse 是 Google 开发并内置于 Chrome 开发者工具中的开源自动化网页质量审计平台。它也可以作为 CLI 命令行工具或 Node 模块无缝嵌入 CI/CD 流水线中。\n\n开发者向 Lighthouse 提供任意公开或经过认证的 URL，工具会自动模拟移动设备和网络限速环境，对页面的加载性能（包含 LCP、INP、CLS 等核心指标）、无障碍适配（Accessibility）、最佳实践遵循、SEO 搜索友好度及 PWA 完备性进行全面评分并输出可操作的优化建议报告。\n\n## 参考\n\n- [Google Chrome Lighthouse 官方文档](https://developer.chrome.com/docs/lighthouse/overview/)\n- [Lighthouse GitHub 仓库](https://github.com/GoogleChrome/lighthouse)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

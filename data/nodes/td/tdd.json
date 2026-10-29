@@ -1,0 +1,35 @@
+{
+  "id": "tdd",
+  "name": "Test-Driven Development",
+  "display_primary": "测试驱动开发",
+  "display_secondary": "Test-Driven Development",
+  "aliases": [
+    "测试驱动开发",
+    "TDD"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "software-testing",
+    "programming-languages"
+  ],
+  "summary": "先编写失败自动化测试再编写生产代码以驱动软件设计的敏捷实践。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "以快速执行的单元测试作为红绿重构循环的反馈基石。"
+    }
+  ]
+}

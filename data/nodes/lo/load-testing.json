@@ -1,0 +1,35 @@
+{
+  "id": "load-testing",
+  "name": "Load Testing",
+  "display_primary": "负载测试",
+  "display_secondary": "Load Testing",
+  "aliases": [
+    "负载测试",
+    "Load Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-measurement-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-measurement"
+  ],
+  "summary": "在逐步增加并发用户和业务请求的负载下测试系统响应与稳定性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "performance-testing",
+      "context": "持续采集梯度施压过程中的响应时间与吞吐量度量指标。"
+    }
+  ]
+}

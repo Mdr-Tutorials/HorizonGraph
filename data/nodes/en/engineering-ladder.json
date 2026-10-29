@@ -1,0 +1,43 @@
+{
+  "id": "engineering-ladder",
+  "name": "Engineering Career Ladder",
+  "display_primary": "工程师职业阶梯",
+  "display_secondary": "Engineering Career Ladder",
+  "aliases": [
+    "工程师职业阶梯",
+    "工程能力模型",
+    "技术能力矩阵",
+    "技术职级体系",
+    "Engineering Ladder"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "collaboration-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-progression"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "career-dual-ladder",
+      "context": "工程师职业阶梯常作为组织双通道职业发展中专业技术通道的具体能力矩阵与职级细则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "engineering-manager",
+      "context": "工程经理依据职业阶梯能力维度对团队工程师进行能力评估、期望对齐与晋升辅导。"
+    }
+  ],
+  "summary": "定义工程师职级、技术能力维度、行为期望与晋升标准的阶梯体系。",
+  "description": "工程师职业阶梯（Engineering Career Ladder）是科技组织中定义软件工程师职业发展路径、职级梯度、核心胜任力维度及行为期望的结构化体系。它通常涵盖技术广度与深度、系统设计、项目交付、跨团队协作及技术影响力等评估维度。\n\n职业阶梯帮助工程师明确成长预期与晋升路径，为工程管理者提供客观公正的绩效评价与能力发展指导框架，是现代技术组织规模化协作与人才发展的核心基础设施。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

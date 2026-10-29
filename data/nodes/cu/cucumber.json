@@ -1,0 +1,35 @@
+{
+  "id": "cucumber",
+  "name": "Cucumber",
+  "display_primary": "Cucumber",
+  "display_secondary": "Cucumber",
+  "aliases": [
+    "Cucumber",
+    "BDD 自动化测试框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "jvm-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "使用 Gherkin 语法以自然语言描述场景并自动化验证的可执行规范 BDD 框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "bdd"
+    }
+  ]
+}

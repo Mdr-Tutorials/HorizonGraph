@@ -1,0 +1,39 @@
+{
+  "id": "http4s",
+  "name": "http4s",
+  "display_primary": "http4s 函数式 HTTP 服务库",
+  "display_secondary": "http4s",
+  "aliases": [
+    "http4s 函数式 HTTP 服务库",
+    "http4s"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-services",
+    "api-engineering"
+  ],
+  "summary": "基于 Typelevel 生态构建的极简、类型安全且高度可组合的纯函数式 HTTP 服务接口。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cats-effect"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "fs2"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

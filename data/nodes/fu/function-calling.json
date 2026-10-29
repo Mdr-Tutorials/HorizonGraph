@@ -2,19 +2,22 @@
   "id": "function-calling",
   "name": "Function Calling",
   "display_primary": "函数调用",
-  "display_secondary": "Function Calling",
+  "display_secondary": "Tool Calling",
   "aliases": [
+    "函数调用",
+    "Tool Calling",
     "工具调用",
-    "函数调用"
+    "大模型函数调用"
   ],
   "type": "concept",
   "ecosystems": [
-    "llm-agent-ecosystem"
+    "llm-agent-ecosystem",
+    "ai-software-engineering-ecosystem"
   ],
   "domains": [
-    "machine-learning",
+    "agent-development",
     "natural-language-processing",
-    "agent-development"
+    "api-engineering"
   ],
   "relations": [
     {
@@ -25,12 +28,21 @@
       "relation_type": "uses",
       "target_id": "tool-schema",
       "context": "向模型声明可用函数时，以名称、描述和参数模式限定可提出的结构化调用。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pydantic",
+      "context": "开发者常用 Pydantic 模型生成模式定义并校验大模型返回的参数结构。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ai-agent"
     }
   ],
-  "summary": "让模型提出工具名称与参数，由应用校验并执行函数。",
+  "summary": "大模型理解结构化工具描述并自主生成标准 JSON 参数调用的核心机制。",
+  "importance": 5,
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-10-08",
-  "importance": 4,
-  "description": "大模型函数调用让模型根据已声明工具提出名称与结构化参数，应用随后决定是否执行相应函数。模型生成调用描述，不代表模型自身已运行程序；工具执行器需要把结果或错误回填，供后续模型调用继续判断。\n\n工具声明通常包含用途说明和参数模式，Gemini API 支持函数声明及不同调用控制方式；框架可把普通函数包装成工具并自动处理部分调用循环。并行工具调用、连续组合调用与多个代理协作是不同机制，不能从出现多个调用推导多智能体系统。\n\n执行前仍需验证参数、资源权限和业务约束，并按操作风险处理副作用。函数调用用于请求行动，结构化输出通常用于返回可解析结果；模式支持范围、拒绝或错误路径以及流式片段如何组装，应按实际模型和接口处理。\n\n## 参考\n\n- [Gemini API function calling](https://ai.google.dev/gemini-api/docs/function-calling)\n- [Antigravity SDK tools](https://www.antigravity.google/docs/sdk/tools/)\n- [LangChain agents](https://docs.langchain.com/oss/python/langchain/agents)"
+  "last_reviewed": "2026-10-29",
+  "description": "函数调用（Function Calling，在更通用场景下亦被称为 Tool Calling）是现代大语言模型具备与外部现实世界、数据库、软件系统和 API 进行交互动作的核心桥梁能力。模型本身不直接执行外部函数，而是在输入上下文中解析开发者传入的工具名称、功能描述与 JSON Schema 参数规范。\n\n在推理生成阶段，模型根据用户意图判断是否需要触发某项工具；若需要，模型会挂起普通自然语言输出，转而生成格式严格合规的结构化函数名称与入参字典（如 JSON 载荷）。宿主应用程序执行真实函数或查询后，将调用结果回填进模型会话上下文，供模型组织最终答案，从而构成完整的 ReAct（推理-动作）自主闭环。\n\n## 参考\n\n- [OpenAI：Function Calling and Other API Capabilities](https://platform.openai.com/docs/guides/function-calling)\n- [Anthropic：Tool Use (Function Calling) with Claude](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)"
 }

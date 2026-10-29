@@ -1,0 +1,45 @@
+{
+  "id": "developer-portal",
+  "name": "Developer Portal",
+  "display_primary": "开发者门户",
+  "display_secondary": "Developer Portal · DevPortal",
+  "aliases": [
+    "开发者门户",
+    "API 开发者平台",
+    "内部开发者门户",
+    "IDP 门户",
+    "Developer Portal"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "devops_tooling",
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "web-services",
+    "api-engineering",
+    "devops"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "openapi",
+      "context": "开发者门户通常解析 OpenAPI 规范以自动渲染交互式 API 文档与在线沙箱调试环境。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "developer-experience",
+      "context": "作为技术生态的前台窗口，门户通过自服务设计极大缩短开发者上手与集成耗时。"
+    }
+  ],
+  "summary": "集中提供 API 文档、SDK、凭证管理与开发者支持的自服务综合平台。",
+  "description": "开发者门户（Developer Portal）是连接技术提供方（API/SDK/平台基础设施）与开发者用户的核心自服务平台。无论是面向公网的开放平台，还是面向组织内部的内部开发者门户（Internal Developer Portal，如 Spotify Backstage），它都集中聚合了交互式 API 参考、快速入门教程、SDK 下载、凭据发放以及服务健康状态。\n\n开发者门户是开发者体验（DX）与平台工程的物理呈现，旨在降低认知负荷，实现软硬件基础设施的全面自服务化。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

@@ -1,0 +1,34 @@
+{
+  "id": "soc",
+  "name": "Security Operations Center",
+  "display_primary": "安全运营中心",
+  "display_secondary": "Security Operations Center",
+  "aliases": [
+    "安全运营中心",
+    "SOC",
+    "安全指挥中心"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "整合人员、流程与技术，7x24小时全天候监控、检测与响应安全威胁的专门实体。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "siem",
+      "context": "SOC 分析师团队依赖 SIEM 平台监控告警队列并对潜在入侵事件开展初审分流。"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "core-animation",
+  "name": "Core Animation",
+  "display_primary": "Core Animation 框架",
+  "display_secondary": "Core Animation",
+  "aliases": [
+    "Core Animation 框架",
+    "Core Animation"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "ios-ecosystem",
+    "macos-darwin-ecosystem",
+    "rendering-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "interactive-graphics"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    }
+  ],
+  "summary": "Apple 平台基于 GPU 图层树的高性能图形渲染与矢量动画合成框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://developer.apple.com/documentation/quartzcore"
+}

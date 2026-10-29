@@ -1,0 +1,36 @@
+{
+  "id": "orleans",
+  "name": "Microsoft Orleans",
+  "display_primary": "Orleans 虚拟 Actor 分布式框架",
+  "display_secondary": "Microsoft Orleans",
+  "aliases": [
+    "Orleans 虚拟 Actor 分布式框架",
+    "Orleans",
+    "Microsoft Orleans"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dotnet-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems",
+    "high-performance-computing"
+  ],
+  "summary": "开创虚拟 Actor 模型的跨平台分布式框架，将大规模并发状态管理透明化。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

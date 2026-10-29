@@ -1,0 +1,35 @@
+{
+  "id": "nessus",
+  "name": "Nessus",
+  "display_primary": "Nessus",
+  "display_secondary": "Nessus Vulnerability Scanner",
+  "aliases": [
+    "Nessus",
+    "Nessus漏洞扫描器",
+    "Tenable Nessus"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "由Tenable开发的业界主流商用漏洞扫描与合规审计工具，包含海量漏洞插件。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "attack-surface-mapping",
+      "context": "Nessus 自动扫描目标主机操作系统与应用版本，比对 CVE 数据库生成漏洞风险报告。"
+    }
+  ]
+}

@@ -27,6 +27,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "react"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "radix-ui"
     }
   ],
   "summary": "通过代码直接复制粘贴至项目中的现代化 UI 组件库模式，彻底重构组件复用方式。",

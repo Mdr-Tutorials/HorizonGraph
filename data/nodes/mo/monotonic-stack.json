@@ -1,0 +1,38 @@
+{
+  "id": "monotonic-stack",
+  "name": "Monotonic Stack",
+  "display_primary": "单调栈",
+  "display_secondary": "Monotonic Stack",
+  "aliases": [
+    "单调栈",
+    "单调递增栈",
+    "单调递减栈"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "栈内元素保持单调有序，用于以线性时间求解序列中下一个更大或更小元素。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "stack"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "stack",
+      "context": "入栈时弹出破坏单调性的元素以快速确定首个极值边界。"
+    }
+  ]
+}

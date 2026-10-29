@@ -1,0 +1,37 @@
+{
+  "id": "flutter-bloc",
+  "name": "Flutter BLoC",
+  "display_primary": "BLoC 状态管理库",
+  "display_secondary": "Flutter BLoC",
+  "aliases": [
+    "BLoC 状态管理库",
+    "flutter_bloc",
+    "BloC",
+    "BLoC"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "android-ecosystem",
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "flutter"
+    }
+  ],
+  "summary": "基于流（Streams）分离业务逻辑与 UI 呈现的 Flutter 状态管理库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://bloclibrary.dev"
+}

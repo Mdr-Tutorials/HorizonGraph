@@ -1,0 +1,35 @@
+{
+  "id": "spring-cloud-config",
+  "name": "Spring Cloud Config",
+  "display_primary": "Spring Cloud Config 分布式配置中心",
+  "display_secondary": "Spring Cloud Config",
+  "aliases": [
+    "Spring Cloud Config 分布式配置中心",
+    "Spring Cloud Config"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "distributed-systems",
+    "cloud-infrastructure"
+  ],
+  "summary": "为分布式微服务系统提供集中式、支持动态刷新的外部化配置管理服务。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "spring-cloud"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

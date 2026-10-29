@@ -1,0 +1,52 @@
+{
+  "id": "ragas",
+  "name": "Ragas",
+  "display_primary": "Ragas",
+  "display_secondary": "Ragas",
+  "aliases": [
+    "Ragas",
+    "RAG评估框架",
+    "检索增强生成评估框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "natural-language-processing",
+    "software-testing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "rag"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "langchain"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "llamaindex"
+    }
+  ],
+  "summary": "针对检索增强生成（RAG）流水线的自动化评估与指标度量开源框架。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://ragas.io",
+  "description": "Ragas（Retrieval Augmented Generation Assessment）是专注于端到端评估检索增强生成（RAG）应用系统性能的开源框架。Ragas 提出了一套基于 LLM 自动化评估无需大量人工金标准标签的基准方法，系统性解耦检索阶段与生成阶段的表现。\n\n其核心评估维度涵盖忠实度（Faithfulness，生成的回答是否来源于检索到的上下文）、答案相关性（Answer Relevance，回答是否精准切合提问）、上下文精准度（Context Precision，检索结果中相关信息的排序前缀性）和上下文召回率（Context Recall，是否检索到所需的全部支撑上下文）。Ragas 可直接与主流编排框架 LangChain 与 LlamaIndex 对接，实现数据评估管道的无缝嵌入。\n\n## 参考\n\n- [Shahul Es et al.：Ragas: Automated Evaluation of Retrieval Augmented Generation (arXiv:2309.15217)](https://arxiv.org/abs/2309.15217)\n- [Ragas Documentation](https://docs.ragas.io/)"
+}

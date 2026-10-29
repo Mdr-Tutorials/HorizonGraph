@@ -1,0 +1,40 @@
+{
+  "id": "ruby-on-rails-framework",
+  "name": "Ruby on Rails",
+  "display_primary": "Ruby on Rails 敏捷开发框架",
+  "display_secondary": "Ruby on Rails",
+  "aliases": [
+    "Ruby on Rails 敏捷开发框架",
+    "Ruby on Rails",
+    "Rails"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "ruby-ecosystem",
+    "modern-web-frameworks-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "summary": "倡导惯例优于配置与开箱即用的经典全栈 MVC Web 框架，深刻影响现代软件开发。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ruby"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mvc"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

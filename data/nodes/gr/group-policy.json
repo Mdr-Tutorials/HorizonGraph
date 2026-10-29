@@ -1,0 +1,36 @@
+{
+  "id": "group-policy",
+  "name": "Group Policy",
+  "display_primary": "组策略",
+  "display_secondary": "Group Policy",
+  "aliases": [
+    "组策略",
+    "Group Policy",
+    "GPO",
+    "组策略对象"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "windows-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "Windows活动目录中集中管理和配置用户及计算机操作系统与安全设置的基础功能。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "windows",
+      "context": "域管理员通过组策略下发密码复杂度、限制宏执行及禁用危险服务等安全基线。"
+    }
+  ]
+}

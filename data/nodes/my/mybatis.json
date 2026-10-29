@@ -1,0 +1,36 @@
+{
+  "id": "mybatis",
+  "name": "MyBatis",
+  "display_primary": "MyBatis 持久层框架",
+  "display_secondary": "MyBatis",
+  "aliases": [
+    "MyBatis 持久层框架",
+    "MyBatis",
+    "iBatis"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "summary": "支持定制化 SQL、存储过程及高级映射的优秀半自动 Java 持久层框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

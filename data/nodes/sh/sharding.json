@@ -5,9 +5,16 @@
   "display_secondary": "Sharding",
   "aliases": [
     "分库分表",
-    "分片"
+    "分片",
+    "水平分库分表",
+    "Sharding",
+    "database-sharding"
   ],
   "type": "concept",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
   "domains": [
     "databases",
     "distributed-systems"

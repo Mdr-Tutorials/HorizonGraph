@@ -1,0 +1,35 @@
+{
+  "id": "pass-the-hash",
+  "name": "Pass the Hash",
+  "display_primary": "哈希传递攻击",
+  "display_secondary": "Pass the Hash",
+  "aliases": [
+    "哈希传递攻击",
+    "Pass the Hash",
+    "PtH"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "windows-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "截获凭证哈希值直接用于向远程系统发起身份验证的横向移动技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "windows",
+      "context": "攻击者利用 Windows NTLM 协议特性无需破解明文密码直接重放哈希登录目标机器。"
+    }
+  ]
+}

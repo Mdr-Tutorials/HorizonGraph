@@ -1,0 +1,35 @@
+{
+  "id": "bdd",
+  "name": "Behavior-Driven Development",
+  "display_primary": "行为驱动开发",
+  "display_secondary": "Behavior-Driven Development",
+  "aliases": [
+    "行为驱动开发",
+    "BDD"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "使用业务与自然语言描述系统行为以促进跨角色协作的开发方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "tdd",
+      "context": "将高层业务行为规范转换为可执行测试并驱动下层实现。"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "asymptotic-notation",
+  "name": "Asymptotic Notation",
+  "display_primary": "渐近记号",
+  "display_secondary": "Asymptotic Notation",
+  "aliases": [
+    "渐近记号",
+    "渐近符号",
+    "渐近复杂度分析"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "mathematics",
+    "systems-programming"
+  ],
+  "summary": "以数学极限形式使用 O、Ω 与 Θ 符号刻画算法资源消耗随输入规模增长的阶数理论。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "big-o",
+      "context": "建立紧确界、渐近上界与渐近下界分析模型评估算法时间与空间渐近趋势。"
+    }
+  ]
+}

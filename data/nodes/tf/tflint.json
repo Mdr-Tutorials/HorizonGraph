@@ -1,0 +1,36 @@
+{
+  "id": "tflint",
+  "name": "TFLint",
+  "display_primary": "TFLint",
+  "display_secondary": "TFLint",
+  "aliases": [
+    "TFLint",
+    "Terraform Linter"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "iac-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "可插拔扩展的Terraform代码检查器与规范验证工具，捕获语法与云厂商规则错误。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://github.com/terraform-linters/tflint",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "terraform"
+    }
+  ]
+}

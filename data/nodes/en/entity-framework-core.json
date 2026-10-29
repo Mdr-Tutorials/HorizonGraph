@@ -1,0 +1,36 @@
+{
+  "id": "entity-framework-core",
+  "name": "Entity Framework Core",
+  "display_primary": "Entity Framework Core 映射框架",
+  "display_secondary": "EF Core",
+  "aliases": [
+    "Entity Framework Core 映射框架",
+    "EF Core",
+    "Entity Framework Core"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dotnet-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "summary": "现代 .NET 官方轻量化、可扩展、跨平台的对象关系映射（ORM）框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "csharp"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

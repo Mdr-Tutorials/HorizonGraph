@@ -1,0 +1,35 @@
+{
+  "id": "b-plus-tree",
+  "name": "B+ Tree",
+  "display_primary": "B+ 树",
+  "display_secondary": "B+ Tree",
+  "aliases": [
+    "B+ 树",
+    "B-Plus Tree",
+    "B+Tree"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem",
+    "languages_runtimes"
+  ],
+  "domains": [
+    "databases",
+    "systems-programming"
+  ],
+  "summary": "所有数据记录均存放在双向链接叶子节点的多路自平衡索引树，数据库存储引擎基石。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "b-tree"
+    }
+  ]
+}

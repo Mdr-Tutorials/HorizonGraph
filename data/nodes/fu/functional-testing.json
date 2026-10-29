@@ -1,0 +1,40 @@
+{
+  "id": "functional-testing",
+  "name": "Functional Testing",
+  "display_primary": "功能测试",
+  "display_secondary": "Functional Testing",
+  "aliases": [
+    "功能测试",
+    "Functional Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "验证软件系统的各个功能特性是否符合既定功能性规格与业务要求。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "通过针对方法或函数的断言检验代码功能单元行为。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "integration-testing",
+      "context": "验证各组件协同工作时跨接口业务逻辑的正确性。"
+    }
+  ]
+}

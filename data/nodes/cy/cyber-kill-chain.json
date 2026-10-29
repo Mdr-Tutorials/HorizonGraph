@@ -1,0 +1,35 @@
+{
+  "id": "cyber-kill-chain",
+  "name": "Cyber Kill Chain",
+  "display_primary": "网络杀伤链",
+  "display_secondary": "Cyber Kill Chain",
+  "aliases": [
+    "网络杀伤链",
+    "Cyber Kill Chain",
+    "网络攻击生命周期"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "洛克希德·马丁提出将网络攻击拆分为七个有序阶段的防御分析模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "apt",
+      "context": "杀伤链模型常用于拆解和识别 APT 攻击从侦察到目标达成的全过程行为。"
+    }
+  ]
+}

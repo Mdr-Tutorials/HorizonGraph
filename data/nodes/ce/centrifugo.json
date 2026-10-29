@@ -1,0 +1,35 @@
+{
+  "id": "centrifugo",
+  "name": "Centrifugo",
+  "display_primary": "Centrifugo 实时消息服务器",
+  "display_secondary": "Centrifugo",
+  "aliases": [
+    "Centrifugo 实时消息服务器",
+    "Centrifugo"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "go-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-services",
+    "distributed-systems"
+  ],
+  "summary": "可扩展的开源实时消息服务器，为 Web 与移动应用提供 WebSocket 广播。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "websocket"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

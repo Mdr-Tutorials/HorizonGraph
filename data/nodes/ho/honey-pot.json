@@ -1,0 +1,36 @@
+{
+  "id": "honey-pot",
+  "name": "Honeypot",
+  "display_primary": "蜜罐",
+  "display_secondary": "Honeypot",
+  "aliases": [
+    "蜜罐",
+    "Honeypot",
+    "欺骗防御",
+    "蜜网"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "故意设置安全缺陷以诱骗并监控攻击者攻击行为、捕获攻击手法的欺骗系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wireshark",
+      "context": "蜜罐部署后常配合流量捕获与监控工具实时记录攻击者的探测与利用指令。"
+    }
+  ]
+}

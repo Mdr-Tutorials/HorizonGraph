@@ -5,7 +5,8 @@
   "display_secondary": "A-Star",
   "aliases": [
     "A-Star",
-    "A 星算法"
+    "A 星算法",
+    "a-star-search"
   ],
   "type": "concept",
   "domains": [

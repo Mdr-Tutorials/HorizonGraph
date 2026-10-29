@@ -1,0 +1,33 @@
+{
+  "id": "linear-search",
+  "name": "Linear Search",
+  "display_primary": "线性查找",
+  "display_secondary": "Linear Search",
+  "aliases": [
+    "线性查找",
+    "顺序查找"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "从列表首项开始逐一比对目标值直至找到或到达末尾的最基础查找算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "无须数据预先排序即可单向线性扫描数组检索特定元素。"
+    }
+  ]
+}

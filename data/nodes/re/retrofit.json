@@ -1,0 +1,36 @@
+{
+  "id": "retrofit",
+  "name": "Retrofit",
+  "display_primary": "Retrofit 网络请求库",
+  "display_secondary": "Retrofit",
+  "aliases": [
+    "Retrofit 网络请求库",
+    "Retrofit"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "android-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "web-services"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "okhttp"
+    }
+  ],
+  "summary": "Square 出品的 Android 与 Java 类型安全声明式 HTTP 客户端库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://square.github.io/retrofit/"
+}

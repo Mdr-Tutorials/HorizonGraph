@@ -1,0 +1,36 @@
+{
+  "id": "gray-box-testing",
+  "name": "Gray-Box Testing",
+  "display_primary": "灰盒测试",
+  "display_secondary": "Gray-Box Testing",
+  "aliases": [
+    "灰盒测试",
+    "Gray-Box Testing",
+    "Gray Box Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "结合部分内部数据结构与实现机制设计外部测试用例。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "integration-testing",
+      "context": "结合模块交互与上下文状态验证跨服务接口行为。"
+    }
+  ]
+}

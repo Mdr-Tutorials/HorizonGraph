@@ -1,0 +1,35 @@
+{
+  "id": "spring-data-jdbc",
+  "name": "Spring Data JDBC",
+  "display_primary": "Spring Data JDBC 持久层框架",
+  "display_secondary": "Spring Data JDBC",
+  "aliases": [
+    "Spring Data JDBC 持久层框架",
+    "Spring Data JDBC"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "summary": "专注于领域驱动设计（DDD）聚合根、无缓存与脏检查机制的轻量级 JDBC 框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "spring-boot"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

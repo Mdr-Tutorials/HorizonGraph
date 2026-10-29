@@ -1,0 +1,44 @@
+{
+  "id": "langsmith",
+  "name": "LangSmith",
+  "display_primary": "LangSmith",
+  "display_secondary": "LangSmith",
+  "aliases": [
+    "LangSmith",
+    "LangChain可观测平台"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "devops_tooling",
+    "ai-software-engineering-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "devops",
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "langchain"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ai-agent",
+      "context": "记录多智能体复杂执行图与会话链路，支持单步回放、调试与人工标注。"
+    }
+  ],
+  "summary": "LangChain 官方推出的大模型与 Agent 全生命周期追踪、测试、评测与微调平台。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://smith.langchain.com",
+  "description": "LangSmith 是 LangChain 官方推出的全托管企业级 LLM 工程平台，旨在帮助开发者完成从原型调试、测试评估到生产监控的完整开发周期。无论底层应用是否使用 LangChain 库构建，LangSmith 均能通过标准 API 捕获复杂的计算图与分布式智能体交互链路。\n\nLangSmith 提供交互式执行树可视化，支持检查每个中间节点的完整状态变量、提示词模板展开结果和模型原始响应。它还包含强大的黄金数据集管理、批量对比评测管道（LLM-as-a-Judge）、在线监控警报以及将优质生产轨迹导出用于模型微调（Fine-tuning）的数据飞轮能力。\n\n## 参考\n\n- [LangSmith Official Documentation](https://docs.smith.langchain.com/)\n- [Harrison Chase：Introduction to LangSmith (LangChain Blog)](https://blog.langchain.dev/announcing-langsmith/)"
+}

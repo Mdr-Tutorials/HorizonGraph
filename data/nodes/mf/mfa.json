@@ -1,0 +1,37 @@
+{
+  "id": "mfa",
+  "name": "Multi-Factor Authentication",
+  "display_primary": "多因素认证",
+  "display_secondary": "Multi-Factor Authentication",
+  "aliases": [
+    "多因素认证",
+    "Multi-Factor Authentication",
+    "MFA",
+    "双因素认证",
+    "2FA"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "iam-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "要求用户提供知识、持有物与生物特征中两种或以上独立凭证的身份验证方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "application-security-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "zero-trust",
+      "context": "零信任网络访问在每次资源请求时强制执行多因素认证以消除密码失窃风险。"
+    }
+  ]
+}

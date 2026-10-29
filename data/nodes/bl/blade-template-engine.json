@@ -1,0 +1,35 @@
+{
+  "id": "blade-template-engine",
+  "name": "Blade",
+  "display_primary": "Blade 模板引擎",
+  "display_secondary": "Blade Template Engine",
+  "aliases": [
+    "Blade 模板引擎",
+    "Blade",
+    "Blade Template Engine"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "php-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "summary": "Laravel 简洁强大的轻量级模板引擎，编译为纯 PHP 并支持组件与插槽继承。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "laravel"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

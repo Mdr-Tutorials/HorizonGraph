@@ -1,0 +1,35 @@
+{
+  "id": "slog",
+  "name": "slog",
+  "display_primary": "slog 结构化日志包",
+  "display_secondary": "log/slog",
+  "aliases": [
+    "slog 结构化日志包",
+    "slog",
+    "log/slog"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "go-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "web-services"
+  ],
+  "summary": "Go 1.21 引入的官方结构化日志标准库，提供键值对格式与可插拔 Handler。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

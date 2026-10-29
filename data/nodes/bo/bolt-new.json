@@ -1,0 +1,43 @@
+{
+  "id": "bolt-new",
+  "name": "Bolt.new",
+  "display_primary": "Bolt.new",
+  "display_secondary": "Bolt",
+  "aliases": [
+    "Bolt.new",
+    "Bolt",
+    "StackBlitz Bolt"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "web_frontend",
+    "browser-engine-ecosystem"
+  ],
+  "domains": [
+    "ai-assisted-software-engineering",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "lovable-platform"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "vibe-coding"
+    }
+  ],
+  "summary": "基于 WebContainers 在浏览器沙箱中即时生成、安装依赖与运行全栈应用的 AI 开发平台。",
+  "importance": 3,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://bolt.new",
+  "description": "Bolt.new 是由 StackBlitz 推出的基于 WebContainers 技术的前沿 AI 全栈应用原型开发平台。传统 AI 代码生成工具通常需要在远程服务端运行容器，而 Bolt.new 则直接在用户的浏览器客户端内运行完整的 Node.js 环境与操作系统级沙箱。\n\n用户通过自然语言输入需求后，内置的 AI 编码智能体可以自主安装 npm 依赖包、启动 Vite 开发服务器、编写组件与后端 API 代码，并在几秒钟内呈现带有真实网络与本地存储的完整应用。所有代码均可一键导出或直连部署到 Netlify 等平台。\n\n## 参考\n\n- [StackBlitz：Introducing Bolt.new (2024)](https://blog.stackblitz.com/posts/introducing-bolt-new/)\n- [Bolt.new Documentation](https://bolt.new/)"
+}

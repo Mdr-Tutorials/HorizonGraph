@@ -1,0 +1,35 @@
+{
+  "id": "openvas",
+  "name": "OpenVAS",
+  "display_primary": "OpenVAS",
+  "display_secondary": "OpenVAS Vulnerability Scanner",
+  "aliases": [
+    "OpenVAS",
+    "Greenbone OpenVAS",
+    "开源漏洞扫描器"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "由Greenbone维护的功能齐全的开源漏洞扫描器与漏洞管理解决方案。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "attack-surface-mapping",
+      "context": "OpenVAS 采用 NVT 网络漏洞测试脚本库全面扫描资产缺陷，是 Nessus 的开源替代品。"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "uikit-framework",
+  "name": "UIKit",
+  "display_primary": "UIKit 框架",
+  "display_secondary": "UIKit",
+  "aliases": [
+    "UIKit 框架",
+    "UIKit",
+    "uikit"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ios"
+    }
+  ],
+  "summary": "Apple 原生 Cocoa Touch 基础命令式界面、触控交互与事件驱动框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "official_site": "https://developer.apple.com/documentation/uikit"
+}

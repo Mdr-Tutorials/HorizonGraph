@@ -1,0 +1,37 @@
+{
+  "id": "kubernetes-operator",
+  "name": "Kubernetes Operator",
+  "display_primary": "Kubernetes Operator",
+  "display_secondary": "Kubernetes Operator Pattern",
+  "aliases": [
+    "Kubernetes Operator",
+    "Operator模式",
+    "Operator"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "summary": "结合CRD与自定义控制器封装有状态应用领域运维知识的扩展架构范式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://kubernetes.io/docs/concepts/extend-kubernetes/operator/",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kubernetes",
+      "context": "通过 Kubernetes API 监听自定义资源事件并驱动控制循环达到期望状态。"
+    }
+  ]
+}

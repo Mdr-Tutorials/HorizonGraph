@@ -1,0 +1,36 @@
+{
+  "id": "urlscan",
+  "name": "urlscan.io",
+  "display_primary": "urlscan.io",
+  "display_secondary": "urlscan.io",
+  "aliases": [
+    "urlscan.io",
+    "urlscan",
+    "网页安全分析扫描器"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "在沙箱浏览器中渲染并分析网站，记录DOM、网络请求与证书信息的URL分析工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "phishing",
+      "context": "安全人员通过 urlscan 模拟浏览器访问可疑钓鱼网址，截获目标渲染页面和重定向链。"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "rspec",
+  "name": "RSpec",
+  "display_primary": "RSpec 行为驱动测试框架",
+  "display_secondary": "RSpec",
+  "aliases": [
+    "RSpec 行为驱动测试框架",
+    "RSpec"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "ruby-ecosystem",
+    "static-analysis-testing-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "Ruby 社区事实标准的行为驱动开发（BDD）测试框架，拥有富有表现力的自然 DSL。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "ruby"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

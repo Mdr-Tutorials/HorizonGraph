@@ -5,9 +5,15 @@
   "display_secondary": "WAL",
   "aliases": [
     "预写日志",
-    "Write-Ahead Logging"
+    "预写式日志",
+    "WAL",
+    "Write-Ahead Logging",
+    "write-ahead-logging"
   ],
   "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
   "domains": [
     "databases"
   ],

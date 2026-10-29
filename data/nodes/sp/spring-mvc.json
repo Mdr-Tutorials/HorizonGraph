@@ -1,0 +1,38 @@
+{
+  "id": "spring-mvc",
+  "name": "Spring MVC",
+  "display_primary": "Spring MVC 表现层框架",
+  "display_secondary": "Spring MVC",
+  "aliases": [
+    "Spring MVC 表现层框架",
+    "Spring MVC"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "summary": "基于 Servlet API 构建的经典模型-视图-控制器模式 Java Web 应用框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "mvc"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

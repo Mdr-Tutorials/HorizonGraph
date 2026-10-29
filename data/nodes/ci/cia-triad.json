@@ -1,0 +1,35 @@
+{
+  "id": "cia-triad",
+  "name": "CIA Triad",
+  "display_primary": "CIA 三要素",
+  "display_secondary": "CIA Triad",
+  "aliases": [
+    "CIA 三要素",
+    "CIA Triad",
+    "信息安全三要素",
+    "机密性完整性可用性"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "指导信息安全政策制定的三大基石：机密性、完整性与可用性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "zero-trust",
+      "context": "零信任架构的原则与策略执行全面围绕维持数据的 CIA 三要素展开。"
+    }
+  ]
+}

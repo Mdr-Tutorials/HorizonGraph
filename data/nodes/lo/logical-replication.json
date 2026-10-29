@@ -1,0 +1,44 @@
+{
+  "id": "logical-replication",
+  "name": "Logical Replication",
+  "display_primary": "逻辑复制",
+  "display_secondary": "Logical Replication",
+  "aliases": [
+    "逻辑复制",
+    "基于行的复制",
+    "Logical Replication"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "summary": "基于数据对象变更事件与行级解码进行跨版本或跨数据库选择性同步的复制机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "streaming-replication"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "postgresql",
+      "context": "采用发布-订阅模型在 PostgreSQL 实例间同步特定表的数据变更。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wal",
+      "context": "通过逻辑解码从 WAL 日志流中提取行变更事件。"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "karate",
+  "name": "Karate Framework",
+  "display_primary": "Karate",
+  "display_secondary": "Karate Framework",
+  "aliases": [
+    "Karate",
+    "Karate Framework",
+    "Karate 自动化测试框架"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "api-engineering"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "将 API 测试、Mock 服务和性能压测无缝统一的开箱即用开源测试框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "bdd"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "functional-testing"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "test-review",
+  "name": "Test Review",
+  "display_primary": "测试审查",
+  "display_secondary": "Test Review",
+  "aliases": [
+    "测试审查",
+    "测试用例审查",
+    "Test Review"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-quality-ecosystem",
+    "software-testing-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "software-testing"
+  ],
+  "summary": "核验提交变更是否附带足够有效的单元、集成测试及边界断言。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-review",
+      "context": "在代码审查中核实测试能否有效阻断回归并覆盖边缘分支。"
+    }
+  ]
+}

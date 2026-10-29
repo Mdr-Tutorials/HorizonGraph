@@ -1,0 +1,40 @@
+{
+  "id": "state-compression-dp",
+  "name": "State Compression Dynamic Programming",
+  "display_primary": "状态压缩动态规划",
+  "display_secondary": "State Compression DP",
+  "aliases": [
+    "状态压缩动态规划",
+    "状压 DP",
+    "位运算动态规划"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes",
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "systems-programming"
+  ],
+  "summary": "用二进制整数位掩码表示离散集合子集状态，在高维小集合问题中递推求最优解。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "dynamic-programming"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dynamic-programming",
+      "context": "利用位运算快速枚举子集并更新压缩后状态表格求解旅行商等 NP 难问题。"
+    }
+  ]
+}

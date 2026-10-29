@@ -1,0 +1,47 @@
+{
+  "id": "patroni",
+  "name": "Patroni",
+  "display_primary": "Patroni",
+  "display_secondary": "Patroni",
+  "aliases": [
+    "Patroni",
+    "patroni"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "devops",
+    "distributed-systems"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "基于 etcd 等分布式共识系统编排 PostgreSQL 高可用自动故障转移的模板工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "etcd",
+      "context": "利用分布式一致性键值存储维护集群拓扑元数据与主节点租约锁。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "postgresql",
+      "context": "自动管理 PostgreSQL 流复制拓扑并在主节点宕机时触发安全切换。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "raft",
+      "context": "依赖后端 DCS 提供的 Raft 分布式共识机制保障领导者选举一致性。"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "okhttp",
+  "name": "OkHttp",
+  "display_primary": "OkHttp 网络库",
+  "display_secondary": "OkHttp",
+  "aliases": [
+    "OkHttp 网络库",
+    "OkHttp"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "android-ecosystem",
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "networking"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    }
+  ],
+  "summary": "Square 出品的高性能 HTTP/HTTP2 客户端连接池与网络传输库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://square.github.io/okhttp/"
+}

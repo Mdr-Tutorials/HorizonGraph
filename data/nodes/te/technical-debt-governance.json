@@ -1,0 +1,48 @@
+{
+  "id": "technical-debt-governance",
+  "name": "Technical Debt Governance",
+  "display_primary": "技术债务治理",
+  "display_secondary": "Technical Debt Governance",
+  "aliases": [
+    "技术债务治理",
+    "技术债治理机制",
+    "技术债制度化治理",
+    "Technical Debt Governance"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-quality-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "software-quality",
+    "empirical-software-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-quality-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "technical-debt-management",
+      "context": "技术债务治理制定组织层面的偿还预算与决策准则，指导团队的具体技术债务记录与清偿活动。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "technical-debt",
+      "context": "通过评估技术债务对系统演进与维护成本的长期影响，建立系统性的控制与治理策略。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "engineering-manager",
+      "context": "工程经理在技术债务治理机制中权衡业务需求交付与重构投入，保障系统长期可维护性。"
+    }
+  ],
+  "summary": "在组织层面制度化度量、预算分配与持续偿还技术债务的管理机制。",
+  "description": "技术债务治理（Technical Debt Governance）指软件研发组织为管理和控制技术债务而制定的制度化策略、评估指标、资源预算与执行流程。不同于个别工程师自发的临时重构，治理机制将技术债纳入常规研发周期与决策预算之中。\n\n有效的技术债务治理通常包括定义债务等级分类、建立技术债账本（Register）、在各迭代中预留固定工程预算（如 20% 规则），并依托架构评审定期审视核心资产的健康状况。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

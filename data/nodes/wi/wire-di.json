@@ -1,0 +1,35 @@
+{
+  "id": "wire-di",
+  "name": "Wire",
+  "display_primary": "Wire 依赖注入工具",
+  "display_secondary": "Google Wire",
+  "aliases": [
+    "Wire 依赖注入工具",
+    "Google Wire",
+    "Wire DI"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "go-ecosystem"
+  ],
+  "domains": [
+    "language-tooling",
+    "software-quality"
+  ],
+  "summary": "Google 开发的 Go 编译期自动化依赖注入代码生成工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

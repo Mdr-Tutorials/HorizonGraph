@@ -1,0 +1,42 @@
+{
+  "id": "mongodb-replica-set",
+  "name": "MongoDB Replica Set",
+  "display_primary": "MongoDB 副本集",
+  "display_secondary": "MongoDB Replica Set",
+  "aliases": [
+    "MongoDB 副本集",
+    "副本集",
+    "MongoDB Replica Set",
+    "Replica Set"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "distributed-systems"
+  ],
+  "summary": "由单主多从节点组成并通过操作日志同步实现自动故障倒换的文档数据库高可用架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mongodb-database",
+      "context": "通过 oplog 机制将主节点的增删改操作流式复制到从节点。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "raft",
+      "context": "成员节点使用类似 Raft 的共识选举协议在主节点失效时自动选举新主节点。"
+    }
+  ]
+}

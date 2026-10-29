@@ -1,0 +1,36 @@
+{
+  "id": "headless-testing",
+  "name": "Headless Testing",
+  "display_primary": "无头测试",
+  "display_secondary": "Headless Testing",
+  "aliases": [
+    "无头测试",
+    "无头浏览器测试",
+    "Headless Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "browser-automation-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "browser-automation"
+  ],
+  "summary": "在无图形用户界面环境下运行浏览器引擎执行高速端到端渲染测试。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "browser-automation-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "e2e-testing",
+      "context": "在无桌面环境的持续集成流水线中高效执行 UI 交互用例。"
+    }
+  ]
+}

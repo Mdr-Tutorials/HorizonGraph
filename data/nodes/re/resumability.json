@@ -1,0 +1,49 @@
+{
+  "id": "resumability",
+  "name": "Resumability",
+  "display_primary": "可恢复性",
+  "display_secondary": "Resumability",
+  "aliases": [
+    "可恢复性",
+    "Resumability",
+    "可恢复渲染",
+    "零水合恢复机制"
+  ],
+  "type": "concept",
+  "domains": [
+    "web-development",
+    "web-services",
+    "human-computer-interaction"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "web-service-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hydration",
+      "context": "通过序列化执行状态与事件符号替代传统客户端全量水合执行。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "javascript",
+      "context": "在用户发生首次交互时按需懒加载并执行对应细粒度事件处理符号。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "直接在服务端渲染生成的 HTML 属性中持久化恢复应用所需上下文。"
+    }
+  ],
+  "summary": "无需在客户端重建组件树与重新执行代码即恢复交互的无水合渲染范式。",
+  "description": "可恢复性是由 Qwik 框架首创的核心渲染范式。不同于传统 SSR 在客户端必须经历完整代码下载、解析执行、构建组件树与绑定事件监听器的水合注水过程，可恢复性将服务端运行时的完整应用状态与事件处理器精确序列化并内嵌在生成的 HTML 中。\n\n当页面在浏览器呈现时，客户端无需执行任何初始化 JavaScript，交互恢复耗时趋近于零。仅在用户真实触发特定交互（如点击按钮）时，运行时才按需下载极其精简的代码分块并立即执行。\n\n## 参考\n\n- [Qwik：Resumable vs Replay](https://qwik.dev/docs/concepts/resumable/)\n- [Miško Hevery: Resumability, A New Paradigm for Web Frameworks](https://www.builder.io/blog/resumability-from-ground-up)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

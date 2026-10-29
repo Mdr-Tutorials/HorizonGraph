@@ -1,0 +1,36 @@
+{
+  "id": "yarp",
+  "name": "YARP",
+  "display_primary": "YARP 反向代理工具包",
+  "display_secondary": "Yet Another Reverse Proxy",
+  "aliases": [
+    "YARP 反向代理工具包",
+    "YARP",
+    "Yet Another Reverse Proxy"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "dotnet-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "networking",
+    "web-services"
+  ],
+  "summary": "微软官方出品的基于 ASP.NET Core 基础设施定制开发高性能反向代理网关的库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "aspnet-core"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

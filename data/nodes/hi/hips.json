@@ -1,0 +1,35 @@
+{
+  "id": "hips",
+  "name": "Host Intrusion Prevention System",
+  "display_primary": "主机入侵防御系统",
+  "display_secondary": "HIPS",
+  "aliases": [
+    "主机入侵防御系统",
+    "HIPS",
+    "主机入侵防护"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "驻留于操作系统端点，监控系统调用、文件改写并主动拦截违规操作的主机防护工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "windows",
+      "context": "HIPS 驱动拦截未经授权的 Windows 注册表写入与敏感系统 API 钩取动作。"
+    }
+  ]
+}

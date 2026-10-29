@@ -1,0 +1,39 @@
+{
+  "id": "cumulative-layout-shift",
+  "name": "Cumulative Layout Shift",
+  "display_primary": "累积布局偏移",
+  "display_secondary": "Cumulative Layout Shift (CLS)",
+  "aliases": [
+    "累积布局偏移",
+    "CLS",
+    "Cumulative Layout Shift",
+    "视觉稳定性指标"
+  ],
+  "type": "metric",
+  "domains": [
+    "web-development",
+    "human-computer-interaction",
+    "software-measurement"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "browser-engine-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dom",
+      "context": "累计计算非用户主动交互触发的可视元素意外位移分数。"
+    }
+  ],
+  "summary": "度量页面整个生命周期中所有突发布局抖动位移总和的视觉稳定性核心指标。",
+  "description": "Cumulative Layout Shift（CLS）是衡量页面视觉稳定性的 Core Web Vitals 核心指标。它度量用户在浏览过程中，由于异步资源（如未声明尺寸的图片/视频、动态注入的广告或晚加载的 Web 字体）突然插入导致的页面现有元素意外跳动与位移。\n\nCLS 分数由不稳定元素所影响的视口面积比例（Impact Fraction）与移动距离比例（Distance Fraction）乘积累加计算得出。优秀的页面应将 CLS 控制在 0.1 以下，以避免用户误触或阅读中断。\n\n## 参考\n\n- [web.dev: Cumulative Layout Shift (CLS)](https://web.dev/articles/cls)\n- [W3C Layout Instability API 规范](https://wicg.github.io/layout-instability/)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

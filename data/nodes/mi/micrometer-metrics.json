@@ -1,0 +1,35 @@
+{
+  "id": "micrometer-metrics",
+  "name": "Micrometer",
+  "display_primary": "Micrometer 应用度量门面",
+  "display_secondary": "Micrometer Metrics",
+  "aliases": [
+    "Micrometer 应用度量门面",
+    "Micrometer",
+    "Micrometer Metrics"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "software-quality",
+    "devops"
+  ],
+  "summary": "JVM 平台的度量指标监控门面库，类似 SLF4J 般适配 Prometheus 等多监控后端。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "java"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

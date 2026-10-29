@@ -1,0 +1,36 @@
+{
+  "id": "soar",
+  "name": "Security Orchestration, Automation, and Response",
+  "display_primary": "安全编排自动化与响应",
+  "display_secondary": "SOAR",
+  "aliases": [
+    "安全编排自动化与响应",
+    "SOAR",
+    "安全编排与自动化"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "通过自动化剧本编排跨异构安全工具完成威胁分流、调查与阻断响应的架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "siem",
+      "context": "SOAR 从 SIEM 接收高置信度告警并自动触发包含阻断与封禁动作的安全剧本。"
+    }
+  ]
+}

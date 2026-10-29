@@ -1,0 +1,32 @@
+{
+  "id": "insertion-sort",
+  "name": "Insertion Sort",
+  "display_primary": "插入排序",
+  "display_secondary": "Insertion Sort",
+  "aliases": [
+    "插入排序"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming"
+  ],
+  "summary": "逐个将未排序元素插入到前面已排序序列的合适位置，在小规模数据上表现优异。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "在已有序前缀段内向后平移大于待插入项的元素并安置新元素。"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "vegeta",
+  "name": "Vegeta",
+  "display_primary": "Vegeta",
+  "display_secondary": "Vegeta",
+  "aliases": [
+    "Vegeta",
+    "Vegeta 压测工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "go-ecosystem"
+  ],
+  "domains": [
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "用 Go 编写的高性能恒定请求速率 HTTP 负载压力测试命令行工具与库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "load-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "stress-testing"
+    }
+  ]
+}

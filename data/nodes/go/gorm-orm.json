@@ -1,0 +1,36 @@
+{
+  "id": "gorm-orm",
+  "name": "GORM",
+  "display_primary": "GORM 对象关系映射库",
+  "display_secondary": "GORM",
+  "aliases": [
+    "GORM 对象关系映射库",
+    "GORM",
+    "Go GORM"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "go-ecosystem",
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "web-development"
+  ],
+  "summary": "功能完善且开发者友好的 Go 语言 ORM 库，支持链式操作与丰富钩子。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

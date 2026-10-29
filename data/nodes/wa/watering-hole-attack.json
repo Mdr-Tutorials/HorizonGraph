@@ -1,0 +1,35 @@
+{
+  "id": "watering-hole-attack",
+  "name": "Watering Hole Attack",
+  "display_primary": "水坑攻击",
+  "display_secondary": "Watering Hole Attack",
+  "aliases": [
+    "水坑攻击",
+    "Watering Hole Attack",
+    "水坑式攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "summary": "在目标群体经常访问的合法网站植入恶意代码间接感染目标的攻击。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "drive-by-attack",
+      "context": "水坑攻击常通过受损行业网站配合路过式下载利用链感染特定受害者终端。"
+    }
+  ]
+}

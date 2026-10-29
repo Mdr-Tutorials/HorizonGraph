@@ -1,0 +1,39 @@
+{
+  "id": "customer-acquisition-cost",
+  "name": "Customer Acquisition Cost",
+  "abbreviation": "CAC",
+  "display_primary": "客户获取成本",
+  "display_secondary": "Customer Acquisition Cost",
+  "aliases": [
+    "客户获取成本",
+    "CAC",
+    "获客成本",
+    "Customer Acquisition Cost"
+  ],
+  "type": "metric",
+  "ecosystems": [
+    "enterprise-apps-ecosystem",
+    "fintech-ecosystem"
+  ],
+  "domains": [
+    "statistics",
+    "data-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "customer-lifetime-value",
+      "context": "作为单位经济学关键分母与 LTV 对比衡量获客投资回报与回收周期。"
+    }
+  ],
+  "summary": "企业为获取单个新增付费客户在营销与销售环节所投入的平均全部费用。",
+  "description": "客户获取成本（CAC）是指企业在特定周期内为获取新客户所花费的全部销售与营销成本（含广告支出、销售佣金、工具支持等）除以同期新增客户总数。健康的企业通常要求 LTV/CAC 比率保持在 3 倍以上，且获客成本回收期（CAC Payback Period）在合理可控范围内。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

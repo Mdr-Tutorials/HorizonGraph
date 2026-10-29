@@ -1,0 +1,50 @@
+{
+  "id": "looker-platform",
+  "name": "Looker",
+  "display_primary": "Looker 平台",
+  "display_secondary": "Looker Business Intelligence Platform",
+  "aliases": [
+    "Looker 平台",
+    "Looker",
+    "Google Looker",
+    "Looker BI"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "database-ecosystem",
+    "enterprise-apps-ecosystem",
+    "data-visualization-ecosystem"
+  ],
+  "domains": [
+    "databases",
+    "data-visualization",
+    "data-engineering"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "tableau-desktop"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sql",
+      "context": "依赖数据库在库计算能力将分析请求直接转化为高效 SQL 在数仓执行。"
+    }
+  ],
+  "summary": "基于 LookML 语义层进行实时数据探索、建模与可视化的商业智能平台。",
+  "description": "Looker 是 Google Cloud 旗下的现代云端企业级商业智能与数据应用平台。它倡导“在库计算”架构，无需预先抽取大量数据，而是通过统一语义建模层 LookML 动态生成针对数据仓库的最佳 SQL 查询，提供可靠敏捷的指标管理、自助式数据探索和嵌入式分析。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://cloud.google.com/looker"
+}

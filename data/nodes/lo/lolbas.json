@@ -1,0 +1,36 @@
+{
+  "id": "lolbas",
+  "name": "Living Off The Land Binaries and Scripts",
+  "display_primary": "LOLBAS",
+  "display_secondary": "LOLBAS",
+  "aliases": [
+    "LOLBAS",
+    "Windows原生程序恶意利用",
+    "免杀二进制与脚本项目"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "windows-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "记录Windows系统中可被利用来下载载荷、执行命令或绕过AppLocker的原生程序项目。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "privilege-escalation",
+      "context": "红队成员参考 LOLBAS 利用 certutil、bitsadmin 等微软原生白名单工具免杀下载载荷。"
+    }
+  ]
+}

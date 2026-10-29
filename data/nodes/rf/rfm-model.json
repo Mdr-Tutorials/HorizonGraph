@@ -1,0 +1,44 @@
+{
+  "id": "rfm-model",
+  "name": "RFM Model",
+  "abbreviation": "RFM",
+  "display_primary": "RFM 模型",
+  "display_secondary": "RFM Model",
+  "aliases": [
+    "RFM 模型",
+    "RFM 用户分群模型",
+    "RFM 客户价值模型",
+    "RFM Segmentation"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai_data_science",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "statistics",
+    "data-engineering"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "statistical-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "customer-lifetime-value",
+      "context": "通过近度、频次与消费金额三维特征识别高价值客群以预测客户终身价值。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "churn-rate",
+      "context": "根据近度得分下降识别流失风险客户并开展针对性促活运营。"
+    }
+  ],
+  "summary": "依据最近购买时间、消费频率与消费金额对客户群体分层的分析模型。",
+  "description": "RFM 模型是一种经典的数据分析与客户关系管理分群工具。通过量化客户的最近一次消费（Recency）、消费频率（Frequency）和消费金额（Monetary），将客户划分为重要价值客户、重要挽留客户等不同层级，帮助企业制定精细化的营销与客户生命周期管理策略。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

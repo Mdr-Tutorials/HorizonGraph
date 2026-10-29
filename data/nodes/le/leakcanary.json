@@ -1,0 +1,35 @@
+{
+  "id": "leakcanary",
+  "name": "LeakCanary",
+  "display_primary": "LeakCanary 内存泄漏检测器",
+  "display_secondary": "LeakCanary",
+  "aliases": [
+    "LeakCanary 内存泄漏检测器",
+    "LeakCanary"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "android-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "software-testing"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "android"
+    }
+  ],
+  "summary": "Square 开发的针对 Android 应用的自动化内存泄漏检测与分析工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://square.github.io/leakcanary/"
+}

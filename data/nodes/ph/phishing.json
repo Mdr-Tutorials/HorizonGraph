@@ -1,0 +1,35 @@
+{
+  "id": "phishing",
+  "name": "Phishing",
+  "display_primary": "网络钓鱼",
+  "display_secondary": "Phishing",
+  "aliases": [
+    "网络钓鱼",
+    "Phishing",
+    "钓鱼攻击",
+    "网络欺诈"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "伪装成可信实体诱导目标泄露凭据、敏感信息或执行恶意操作。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "https",
+      "context": "攻击者搭建高仿真的 HTTPS 钓鱼页面诱导受害者输入凭据与双因素验证码。"
+    }
+  ]
+}

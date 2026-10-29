@@ -1,0 +1,36 @@
+{
+  "id": "wazuh",
+  "name": "Wazuh",
+  "display_primary": "Wazuh",
+  "display_secondary": "Wazuh",
+  "aliases": [
+    "Wazuh",
+    "Wazuh XDR",
+    "开源SIEM与XDR平台"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "用于威胁预防、检测和响应的开源统一XDR与SIEM平台，涵盖文件完整性监控。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "siem",
+      "context": "Wazuh 充当开源轻量级 SIEM/EDR 架构，聚合各主机代理的系统日志与完整性告警。"
+    }
+  ]
+}

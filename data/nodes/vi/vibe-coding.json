@@ -1,0 +1,42 @@
+{
+  "id": "vibe-coding",
+  "name": "Vibe Coding",
+  "display_primary": "氛围编码",
+  "display_secondary": "Vibe Coding",
+  "aliases": [
+    "氛围编码",
+    "Vibe Coding",
+    "生成式直觉编程"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "ai-software-engineering-ecosystem",
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "ai-assisted-software-engineering",
+    "human-computer-interaction"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-software-engineering-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coding-agent",
+      "context": "由编码智能体负责多文件生成、错误排查、依赖安装与运行测试。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "频繁利用 Git 提交检查点进行版本归档并在生成失控时无损回退。"
+    }
+  ],
+  "summary": "开发者仅需提供高阶自然语言意图并由 AI 智能体主导代码编写与快速迭代的研发范式。",
+  "importance": 4,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "description": "氛围编码（Vibe Coding，由 Andrej Karpathy 等人推广）代表了由前沿大语言模型与自主编码智能体（如 Cursor Composer、Claude Code、Lovable、Replit Agent）驱动的新兴人机协同软件开发范式。在这一模式下，人类开发者主要负责清晰表达产品意图、架构品味与高阶交互约束，而非逐行手工敲击业务代码。\n\n开发者与智能体以高频迭代的形式并肩推进：提供草图、报错日志或功能需求，智能体自主完成文件搜索、跨多文件批量编辑、终端命令执行和浏览器回归验证。氛围编码高度依赖 Git 提交检查点与规范驱动开发（Spec-Driven Development），以保证在极速生成体验下工程代码的可追溯性与确定性。\n\n## 参考\n\n- [Andrej Karpathy on Vibe Coding (X / Twitter, 2025)](https://twitter.com/karpathy/status/1886192184808149383)\n- [Simon Willison：The Vibe Coding Paradigm Shift](https://simonwillison.net/)"
+}

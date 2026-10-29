@@ -1,0 +1,37 @@
+{
+  "id": "fiber-framework",
+  "name": "Fiber",
+  "display_primary": "Fiber Web 框架",
+  "display_secondary": "Fiber",
+  "aliases": [
+    "Fiber Web 框架",
+    "Fiber Framework",
+    "Fiber"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "go-ecosystem",
+    "modern-web-frameworks-ecosystem",
+    "web-service-ecosystem"
+  ],
+  "domains": [
+    "web-development",
+    "web-services"
+  ],
+  "summary": "基于 Fasthttp 构建的高性能、类 Express 风格的 Go Web 框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "go"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

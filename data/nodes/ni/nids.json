@@ -1,0 +1,37 @@
+{
+  "id": "nids",
+  "name": "Network Intrusion Detection System",
+  "display_primary": "网络入侵检测系统",
+  "display_secondary": "NIDS",
+  "aliases": [
+    "网络入侵检测系统",
+    "NIDS",
+    "网络入侵检测"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "旁路监听关键网络链路流量，基于特征签名与行为统计发现恶意活动的检测系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wireshark",
+      "context": "NIDS 产生入侵报警后常需调用网络报文抓取回溯分析具体攻击载荷。"
+    }
+  ]
+}

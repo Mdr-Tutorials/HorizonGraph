@@ -1,0 +1,37 @@
+{
+  "id": "hping",
+  "name": "hping",
+  "display_primary": "hping",
+  "display_secondary": "hping3",
+  "aliases": [
+    "hping",
+    "hping3",
+    "自定义数据包生成工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "networking_security"
+  ],
+  "domains": [
+    "security",
+    "networking"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "用于组装并发送自定义TCP/IP数据包，执行防火墙审计与端口扫描的命令行工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "firewall",
+      "context": "安全人员使用 hping 发送定制标志位的数据包测试防火墙状态检测与访问控制规则。"
+    }
+  ]
+}

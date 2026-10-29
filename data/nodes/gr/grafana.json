@@ -1,7 +1,11 @@
 {
   "id": "grafana",
   "name": "Grafana",
-  "aliases": [],
+  "aliases": [
+    "Grafana",
+    "grafana-dashboard",
+    "格拉法纳"
+  ],
   "type": "product",
   "ecosystems": [
     "cloud_native",
@@ -21,7 +25,7 @@
   "summary": "可视化与告警面板，指标、日志、追踪统一查看。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-29",
   "importance": 4,
   "official_site": "https://grafana.com"
 }

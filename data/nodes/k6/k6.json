@@ -1,0 +1,39 @@
+{
+  "id": "k6",
+  "name": "Grafana k6",
+  "display_primary": "k6",
+  "display_secondary": "Grafana k6",
+  "aliases": [
+    "k6",
+    "Grafana k6"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "go-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "由 Go 驱动、支持 JavaScript 编写测试场景的现代轻量级负载测试工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "load-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "performance-testing"
+    }
+  ]
+}

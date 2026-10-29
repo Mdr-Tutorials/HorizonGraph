@@ -1,0 +1,41 @@
+{
+  "id": "wal-g",
+  "name": "WAL-G",
+  "display_primary": "WAL-G",
+  "display_secondary": "WAL-G",
+  "aliases": [
+    "WAL-G",
+    "wal-g"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "基于 Go 语言构建的面向对象存储的云原生数据库物理备份与日志归档工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "postgresql",
+      "context": "将 PostgreSQL 基础物理备份与增量 WAL 压缩推送至 S3 等对象存储。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wal",
+      "context": "持续监控并并发归档数据库生成的 WAL 文件以实现快速恢复。"
+    }
+  ]
+}

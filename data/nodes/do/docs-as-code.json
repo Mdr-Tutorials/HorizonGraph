@@ -1,0 +1,44 @@
+{
+  "id": "docs-as-code",
+  "name": "Docs as Code",
+  "display_primary": "文档即代码",
+  "display_secondary": "Docs as Code · Docs-like-Code",
+  "aliases": [
+    "文档即代码",
+    "Docs as Code",
+    "Docs-as-Code",
+    "代码化文档体系",
+    "Docs-like-Code"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "devops_tooling",
+    "git-ecosystem"
+  ],
+  "domains": [
+    "devops",
+    "software-quality"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "developer-environment-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "git",
+      "context": "将技术文档作为代码仓库一部分使用 Git 进行版本管理、分支协作与 Pull Request 审查。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cicd",
+      "context": "利用自动化 CI/CD 流水线执行文档语法检查、死链扫描与静态站点自动发布。"
+    }
+  ],
+  "summary": "使用与代码相同的版本控制、纯文本标记、审查与 CI/CD 自动化构建发布文档。",
+  "description": "文档即代码（Docs as Code）是一种现代技术文档工程哲学。它倡导技术写作者和工程师使用与编写代码完全相同的工具链和流程来编写、管理与发布技术文档。\n\n核心实践包括使用纯文本标记语言（如 Markdown、AsciiDoc）、版本控制系统（如 Git）、自动化质量检测（格式检查、链接校验）以及持续集成流水线自动构建发布静态站点，使文档与工程代码保持紧密同步与高质量。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

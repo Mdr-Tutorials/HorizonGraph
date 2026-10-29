@@ -2,7 +2,9 @@
   "id": "argocd",
   "name": "Argo CD",
   "aliases": [
-    "ArgoCD"
+    "ArgoCD",
+    "Argo CD",
+    "Argo CD声明式持续交付"
   ],
   "type": "tool",
   "ecosystems": [
@@ -27,7 +29,7 @@
   "summary": "Kubernetes 的声明式 GitOps 持续交付工具。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
+  "last_reviewed": "2026-10-29",
   "importance": 3,
   "official_site": "https://argo-cd.readthedocs.io"
 }

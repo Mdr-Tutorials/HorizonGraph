@@ -1,0 +1,35 @@
+{
+  "id": "smishing",
+  "name": "SMS Phishing",
+  "display_primary": "短信钓鱼",
+  "display_secondary": "SMS Phishing",
+  "aliases": [
+    "短信钓鱼",
+    "Smishing",
+    "短信欺诈"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "mobile-network-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "summary": "利用欺诈性短消息诱导受害者点击恶意链接或拨打诈骗电话。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "phishing",
+      "context": "短信钓鱼是网络钓鱼攻击在移动蜂窝短信渠道上的衍生形式。"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "user-story",
+  "name": "User Story",
+  "display_primary": "用户故事",
+  "display_secondary": "User Story",
+  "aliases": [
+    "用户故事",
+    "敏捷用户故事",
+    "用户需求故事",
+    "User Story"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "collaboration-ecosystem"
+  ],
+  "domains": [
+    "career-development"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "career-material"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "story-points",
+      "context": "敏捷研发团队使用故事点估算单个用户故事的相对工作量与交付复杂度。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "product-manager",
+      "context": "产品经理将业务需求拆解为符合 INVEST 原则的用户故事，对齐团队交付共识。"
+    }
+  ],
+  "summary": "从最终用户视角以简明自然语言描述期望功能、用户诉求与验收标准的敏捷单元。",
+  "description": "用户故事（User Story）是敏捷软件开发中用于捕获软件功能要求的最基本格式。经典模式通常为：“作为一个<某种角色>，我想要<完成某种操作>，以便于<获得某种收益>”（As a... I want... So that...）。\n\n用户故事强调整体对话（Conversation）与确认条件（Confirmation，即验收准则），而不是繁冗冷冰的技术文档，致力于引导研发团队时刻以终端用户价值为中心开展协作。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4
+}

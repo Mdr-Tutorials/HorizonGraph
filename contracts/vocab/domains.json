@@ -81,6 +81,7 @@
     {"value":"language-tooling","en":"Language Tooling","zh":"语言工具链"},
     {"value":"text-rendering","en":"Unicode and Text Rendering","zh":"Unicode 与文本渲染"},
     {"value":"desktop-application-development","en":"Desktop Application Development","zh":"桌面应用开发"},
+    {"value":"mobile-app-development","en":"Mobile App Development","zh":"移动应用开发"},
     {"value":"software-measurement","en":"Software Measurement","zh":"软件度量"},
     {"value":"repository-analysis","en":"Repository Analysis","zh":"仓库分析"},
     {"value":"software-quality","en":"Software Quality","zh":"软件质量"},

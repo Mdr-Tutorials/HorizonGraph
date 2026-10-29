@@ -1,0 +1,36 @@
+{
+  "id": "wadcoms",
+  "name": "WADComs",
+  "display_primary": "WADComs",
+  "display_secondary": "WADComs AD Cheat Sheet",
+  "aliases": [
+    "WADComs",
+    "活动目录渗透速查库",
+    "AD渗透命令速查"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "windows-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "交互式收集Windows与活动目录（AD）环境渗透测试命令与利用技术的安全速查平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "pass-the-hash",
+      "context": "红队人员使用 WADComs 检索针对 Kerberos、NTLM 及各类特权凭据滥用的命令语法。"
+    }
+  ]
+}

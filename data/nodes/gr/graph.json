@@ -1,0 +1,35 @@
+{
+  "id": "graph",
+  "name": "Graph",
+  "display_primary": "图",
+  "display_secondary": "Graph Data Structure",
+  "aliases": [
+    "图",
+    "图结构",
+    "网络结构"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "domains": [
+    "systems-programming",
+    "mathematics"
+  ],
+  "summary": "由顶点集合及连接顶点的边集合构成的非线性数据结构，建模多对多复杂网络关联。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "常用邻接矩阵二维数组或邻接表链表数组表示顶点间的关联与权重。"
+    }
+  ]
+}

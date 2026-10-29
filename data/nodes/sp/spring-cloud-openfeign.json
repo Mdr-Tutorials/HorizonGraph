@@ -1,0 +1,35 @@
+{
+  "id": "spring-cloud-openfeign",
+  "name": "Spring Cloud OpenFeign",
+  "display_primary": "Spring Cloud OpenFeign 声明式客户端",
+  "display_secondary": "Spring Cloud OpenFeign",
+  "aliases": [
+    "Spring Cloud OpenFeign 声明式客户端",
+    "Spring Cloud OpenFeign",
+    "OpenFeign"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "web-services"
+  ],
+  "summary": "通过注解与接口契约简化微服务间 HTTP 调用的声明式 REST 客户端框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "spring-cloud"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

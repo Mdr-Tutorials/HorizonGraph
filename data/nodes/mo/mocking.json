@@ -1,0 +1,38 @@
+{
+  "id": "mocking",
+  "name": "Mocking",
+  "display_primary": "测试模拟",
+  "display_secondary": "Mocking",
+  "aliases": [
+    "测试模拟",
+    "Mock 机制",
+    "Mocking",
+    "Test Double",
+    "测试替身"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "通过模拟对象或假实现隔离外部依赖以确保测试执行的确定性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "在单元测试中拦截网络请求与数据库操作以隔离测试目标。"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "drive-by-attack",
+  "name": "Drive-by Download Attack",
+  "display_primary": "路过式下载攻击",
+  "display_secondary": "Drive-by Download Attack",
+  "aliases": [
+    "路过式下载攻击",
+    "Drive-by Attack",
+    "路过式下载",
+    "挂马攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "cybersecurity-ecosystem",
+    "browser-engine-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "summary": "用户访问受感染网站时在不知情下被自动下载并执行恶意程序。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "恶意的 HTTP 响应网页利用浏览器或插件内存漏洞触发未经授权的静默安装。"
+    }
+  ]
+}

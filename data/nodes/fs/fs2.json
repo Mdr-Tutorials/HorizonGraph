@@ -1,0 +1,35 @@
+{
+  "id": "fs2",
+  "name": "FS2",
+  "display_primary": "FS2 函数式流处理库",
+  "display_secondary": "Functional Streams for Scala",
+  "aliases": [
+    "FS2 函数式流处理库",
+    "FS2",
+    "Functional Streams for Scala"
+  ],
+  "type": "library",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "distributed-systems",
+    "data-engineering"
+  ],
+  "summary": "结合纯函数式编程与按需计算的高效、并发、受背压保护的 I/O 流处理库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "library"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "cats-effect"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

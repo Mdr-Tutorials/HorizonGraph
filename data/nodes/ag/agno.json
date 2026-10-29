@@ -1,0 +1,46 @@
+{
+  "id": "agno",
+  "name": "Agno",
+  "display_primary": "Agno",
+  "display_secondary": "Agno Framework",
+  "aliases": [
+    "Agno",
+    "Agno Framework",
+    "Phidata"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "python-ecosystem"
+  ],
+  "domains": [
+    "agent-development",
+    "machine-learning"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "python"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "ai-agent"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "fastapi"
+    }
+  ],
+  "summary": "用于构建多模态、带记忆与工具调用能力的轻量级自主 AI 智能体开发框架。",
+  "importance": 3,
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "official_site": "https://agno.com",
+  "description": "Agno（前身为 Phidata）是一个专注于轻量、高速与低延迟的开源自主 AI 智能体（Agent）开发框架。相比部分过于抽象沉重的传统 LLM 链式编排框架，Agno 坚持极简纯 Python 类设计，提供直观的 Agent 声明接口。\n\nAgno 原生支持多模态（文本、音频、图像与视频）交互，内置持久化会话记忆存储（Memory）、知识库 RAG 挂载与结构化工具执行循环。框架还提供配套的 Agent 监控界面与可供快速接入的 FastAPI 路由封装，便于开发者在微服务架构中快速落地高响应性智能体。\n\n## 参考\n\n- [Agno 官方开发文档](https://docs.agno.com)\n- [Agno GitHub Repository](https://github.com/agno-agi/agno)"
+}

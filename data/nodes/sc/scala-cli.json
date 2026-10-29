@@ -1,0 +1,34 @@
+{
+  "id": "scala-cli",
+  "name": "Scala CLI",
+  "display_primary": "Scala CLI 命令行工具",
+  "display_secondary": "Scala CLI",
+  "aliases": [
+    "Scala CLI 命令行工具",
+    "Scala CLI"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "jvm-ecosystem"
+  ],
+  "domains": [
+    "command-line-tools",
+    "language-tooling"
+  ],
+  "summary": "官方推荐的用于快速原型设计、单脚本运行与包依赖解析的现代 Scala 命令行工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "scala"
+    }
+  ],
+  "abstraction_level": "application_tool"
+}

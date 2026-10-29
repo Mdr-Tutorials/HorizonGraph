@@ -1,0 +1,37 @@
+{
+  "id": "jailbreaking",
+  "name": "LLM Jailbreaking",
+  "display_primary": "大模型越狱攻击",
+  "display_secondary": "LLM Jailbreaking",
+  "aliases": [
+    "大模型越狱攻击",
+    "LLM Jailbreaking",
+    "越狱攻击",
+    "Jailbreak"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "machine-learning"
+  ],
+  "summary": "通过精心构造的对抗提示词绕过大语言模型内置安全对齐与护栏约束的攻击技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "prompt-injection",
+      "context": "越狱攻击通常利用角色扮演或假想场景构造提示词以突破大模型的安全审核限制。"
+    }
+  ]
+}

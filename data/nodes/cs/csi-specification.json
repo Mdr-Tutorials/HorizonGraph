@@ -1,0 +1,45 @@
+{
+  "id": "csi-specification",
+  "name": "Container Storage Interface",
+  "display_primary": "容器存储接口规范",
+  "display_secondary": "Container Storage Interface",
+  "aliases": [
+    "容器存储接口规范",
+    "CSI",
+    "csi",
+    "csi-specification"
+  ],
+  "type": "protocol",
+  "ecosystems": [
+    "container-ecosystem",
+    "cloud_native",
+    "kubernetes-ecosystem"
+  ],
+  "domains": [
+    "containerization",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "规定容器编排系统与外部存储插件间卷生命周期管理的行业通用接口规范。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://github.com/container-storage-interface/spec",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "grpc",
+      "context": "以 gRPC 远程调用定义 Node、Controller 与 Identity 存储服务接口。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kubernetes",
+      "context": "作为 Kubernetes 卷插件架构的外部化扩展标准。"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "atdd",
+  "name": "Acceptance Test-Driven Development",
+  "display_primary": "验收测试驱动开发",
+  "display_secondary": "Acceptance Test-Driven Development",
+  "aliases": [
+    "验收测试驱动开发",
+    "ATDD"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "在编码前由业务、开发和测试人员协同定义可自动化的验收测试。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "uat",
+      "context": "在迭代初期将业务验收准则转化为可执行的自动化验收用例。"
+    }
+  ]
+}

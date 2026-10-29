@@ -1,0 +1,36 @@
+{
+  "id": "floyd-warshall",
+  "name": "Floyd-Warshall Algorithm",
+  "display_primary": "Floyd-Warshall 算法",
+  "display_secondary": "Floyd-Warshall Algorithm",
+  "aliases": [
+    "Floyd-Warshall 算法",
+    "Floyd 算法",
+    "多源最短路径算法"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "languages_runtimes",
+    "optimization-ecosystem"
+  ],
+  "domains": [
+    "operations-research",
+    "systems-programming"
+  ],
+  "summary": "基于动态规划在 O(V³) 时间内求任意两顶点间最短路径的多源图算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dynamic-programming",
+      "context": "以三重循环枚举中间顶点 k 并松弛所有点对 (i, j) 之间的路径距离。"
+    }
+  ]
+}

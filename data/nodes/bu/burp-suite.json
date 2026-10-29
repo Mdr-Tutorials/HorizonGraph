@@ -1,0 +1,36 @@
+{
+  "id": "burp-suite",
+  "name": "Burp Suite",
+  "display_primary": "Burp Suite",
+  "display_secondary": "Burp Suite",
+  "aliases": [
+    "Burp Suite",
+    "BurpSuite",
+    "Burp 渗透测试工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "业界广泛使用的集成化Web应用安全测试与HTTP/S中间人代理分析平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "http",
+      "context": "Burp Suite 作为中间人拦截代理截获、修改并重放浏览器发出的 HTTP 请求。"
+    }
+  ]
+}

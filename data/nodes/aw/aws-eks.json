@@ -1,0 +1,43 @@
+{
+  "id": "aws-eks",
+  "name": "Amazon Elastic Kubernetes Service",
+  "display_primary": "Amazon EKS",
+  "display_secondary": "Amazon Elastic Kubernetes Service",
+  "aliases": [
+    "Amazon EKS",
+    "EKS",
+    "Elastic Kubernetes Service"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "public-cloud-ecosystem",
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "containerization"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "AWS提供的托管Kubernetes服务，提供高可用多可用区控制平面与自动化节点运维。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://aws.amazon.com/eks/",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "aws"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kubernetes",
+      "context": "在 AWS 基础设施上托管运行标准 Kubernetes 控制平面与工作节点池。"
+    }
+  ]
+}

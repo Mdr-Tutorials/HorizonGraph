@@ -1,0 +1,42 @@
+{
+  "id": "cloudflare-r2",
+  "name": "Cloudflare R2",
+  "display_primary": "Cloudflare R2",
+  "display_secondary": "Cloudflare R2 Storage",
+  "aliases": [
+    "Cloudflare R2",
+    "R2存储",
+    "Cloudflare R2 Storage"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "edge-serverless-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "edge-computing"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "Cloudflare提供的兼容S3协议且无出方向流量费用的全球分布式对象存储服务。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://www.cloudflare.com/developer-platform/r2/",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "product"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "cloudflare"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cloudflare-workers",
+      "context": "通过 Workers 原生绑定接口提供毫秒级对象读写与边缘存储能力。"
+    }
+  ]
+}

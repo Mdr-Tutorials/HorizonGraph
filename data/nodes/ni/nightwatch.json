@@ -1,0 +1,41 @@
+{
+  "id": "nightwatch",
+  "name": "Nightwatch.js",
+  "display_primary": "Nightwatch",
+  "display_secondary": "Nightwatch.js",
+  "aliases": [
+    "Nightwatch",
+    "Nightwatch.js"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "browser-automation-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "web-development"
+  ],
+  "abstraction_level": "framework_library",
+  "summary": "用于 Web 应用与网站自动化测试及端到端断言的 Node.js 测试框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "e2e-testing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "selenium",
+      "context": "利用 W3C WebDriver 协议控制浏览器执行用户操作与断言。"
+    }
+  ]
+}

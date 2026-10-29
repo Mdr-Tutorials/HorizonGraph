@@ -1,0 +1,37 @@
+{
+  "id": "infracost",
+  "name": "Infracost",
+  "display_primary": "Infracost",
+  "display_secondary": "Infracost",
+  "aliases": [
+    "Infracost",
+    "IaC成本估算工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "iac-ecosystem",
+    "devops_tooling"
+  ],
+  "domains": [
+    "devops",
+    "cloud-infrastructure"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "在代码拉取请求与CI流水线中为Terraform等IaC变更实时估算云成本的FinOps工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://www.infracost.io",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "terraform",
+      "context": "解析 Terraform 计划文件并匹配云服务商定价 API 计算增量成本。"
+    }
+  ]
+}

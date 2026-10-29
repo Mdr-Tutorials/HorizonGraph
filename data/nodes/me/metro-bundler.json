@@ -1,0 +1,38 @@
+{
+  "id": "metro-bundler",
+  "name": "Metro",
+  "display_primary": "Metro 打包器",
+  "display_secondary": "Metro Bundler",
+  "aliases": [
+    "Metro 打包器",
+    "Metro",
+    "metro-bundler"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "node-js-ecosystem",
+    "android-ecosystem",
+    "ios-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "web-development"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "专为 React Native 优化的 JavaScript 打包与热重载工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://metrobundler.dev"
+}

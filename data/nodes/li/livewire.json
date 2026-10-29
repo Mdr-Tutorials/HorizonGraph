@@ -1,0 +1,35 @@
+{
+  "id": "livewire",
+  "name": "Livewire",
+  "display_primary": "Livewire 动态前端框架",
+  "display_secondary": "Laravel Livewire",
+  "aliases": [
+    "Livewire 动态前端框架",
+    "Livewire",
+    "Laravel Livewire"
+  ],
+  "type": "framework",
+  "ecosystems": [
+    "php-ecosystem",
+    "modern-web-frameworks-ecosystem"
+  ],
+  "domains": [
+    "web-development"
+  ],
+  "summary": "无需编写客户端 JS 即可用纯 PHP 构建动态界面的全栈响应式库。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "framework"
+    },
+    {
+      "relation_type": "depends_on",
+      "target_id": "laravel"
+    }
+  ],
+  "abstraction_level": "framework_library"
+}

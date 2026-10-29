@@ -1,0 +1,41 @@
+{
+  "id": "pgbackrest",
+  "name": "pgBackRest",
+  "display_primary": "pgBackRest",
+  "display_secondary": "pgBackRest",
+  "aliases": [
+    "pgBackRest",
+    "pgbackrest"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "database-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "databases",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "专为 PostgreSQL 设计的高性能、高可靠并行物理备份与恢复管理工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "postgresql",
+      "context": "执行 PostgreSQL 全量、差异与增量物理备份及恢复校验。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "wal",
+      "context": "并行归档与拉取 WAL 段以支持精确时间点恢复 PITR。"
+    }
+  ]
+}

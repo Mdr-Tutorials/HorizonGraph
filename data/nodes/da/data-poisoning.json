@@ -1,0 +1,37 @@
+{
+  "id": "data-poisoning",
+  "name": "Data Poisoning",
+  "display_primary": "数据投毒攻击",
+  "display_secondary": "Data Poisoning",
+  "aliases": [
+    "数据投毒攻击",
+    "Data Poisoning",
+    "投毒攻击",
+    "训练集投毒"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "machine-learning"
+  ],
+  "summary": "在AI模型训练或微调数据集中掺入恶意样本或后门触发器，破坏模型正常表现或植入后门。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "machine-learning-method"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "backpropagation",
+      "context": "投毒样本在模型反向传播更新权重时引入恶意偏差或植入后门触发器。"
+    }
+  ]
+}

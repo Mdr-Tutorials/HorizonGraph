@@ -1,0 +1,37 @@
+{
+  "id": "pki",
+  "name": "Public Key Infrastructure",
+  "display_primary": "公钥基础设施",
+  "display_secondary": "Public Key Infrastructure",
+  "aliases": [
+    "公钥基础设施",
+    "Public Key Infrastructure",
+    "PKI",
+    "数字证书体系"
+  ],
+  "type": "architecture",
+  "ecosystems": [
+    "cryptography-pki-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security"
+  ],
+  "abstraction_level": "theoretical",
+  "summary": "创建、管理、分发、使用、存储和吊销数字证书与管理公钥加密的综合架构体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "platform"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "x509",
+      "context": "PKI 依赖 X.509 标准证书格式与证书颁发机构信任链维护全局公钥真实性。"
+    }
+  ]
+}

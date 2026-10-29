@@ -1,0 +1,39 @@
+{
+  "id": "artillery",
+  "name": "Artillery",
+  "display_primary": "Artillery",
+  "display_secondary": "Artillery",
+  "aliases": [
+    "Artillery",
+    "Artillery 负载测试工具"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "node-js-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "api-engineering"
+  ],
+  "abstraction_level": "application_tool",
+  "summary": "现代基于 YAML 脚本的高性能云原生 API 与微服务负载压测工具。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "load-testing"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "stress-testing"
+    }
+  ]
+}

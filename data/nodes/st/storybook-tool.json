@@ -1,0 +1,46 @@
+{
+  "id": "storybook-tool",
+  "name": "Storybook",
+  "display_primary": "Storybook",
+  "display_secondary": "Storybook Component Workshop",
+  "aliases": [
+    "Storybook",
+    "storybook-tool",
+    "Storybook 组件工坊"
+  ],
+  "type": "tool",
+  "abstraction_level": "application_tool",
+  "domains": [
+    "web-development",
+    "human-computer-interaction",
+    "developer-environments"
+  ],
+  "ecosystems": [
+    "web_frontend",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "react"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "vue"
+    },
+    {
+      "relation_type": "integrates_with",
+      "target_id": "vite"
+    }
+  ],
+  "summary": "用于在隔离环境中独立开发、测试、审查与文档化 UI 组件的标准工作台。",
+  "description": "Storybook 是前端工程领域事实上的组件驱动开发（CDD）与文档化平台标准。它允许开发者在一个完全脱离庞大业务应用与复杂后端 API 的独立环境中，渲染与测试每个 UI 组件的各种状态分支（如加载中、错误态、悬停态等）。\n\nStorybook 支持 React、Vue、Angular、Svelte 及 Web Components，内置丰富的插件生态（如可访问性检测 a11y、交互测试、视口响应式测试），极大加速了现代设计系统的标准化构建与跨职能团队评审流程。\n\n## 参考\n\n- [Storybook 官方站点](https://storybook.js.org/)\n- [Storybook 文档指南](https://storybook.js.org/docs)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5
+}

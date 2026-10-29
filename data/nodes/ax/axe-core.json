@@ -2,7 +2,9 @@
   "id": "axe-core",
   "name": "axe-core",
   "aliases": [
-    "无障碍自动测试引擎"
+    "无障碍自动测试引擎",
+    "Axe",
+    "axe"
   ],
   "type": "library",
   "ecosystems": [

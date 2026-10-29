@@ -1,0 +1,36 @@
+{
+  "id": "app-store-connect",
+  "name": "App Store Connect",
+  "display_primary": "App Store Connect",
+  "display_secondary": "App Store Connect",
+  "aliases": [
+    "App Store Connect",
+    "iTunes Connect"
+  ],
+  "type": "product",
+  "ecosystems": [
+    "ios-ecosystem",
+    "macos-darwin-ecosystem"
+  ],
+  "domains": [
+    "mobile-app-development",
+    "devops"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "saas"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "apple"
+    }
+  ],
+  "summary": "Apple 官方应用元数据管理、TestFlight 灰度测试与 App Store 分发平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "official_site": "https://appstoreconnect.apple.com"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "sanity-testing",
+  "name": "Sanity Testing",
+  "display_primary": "健全性测试",
+  "display_secondary": "Sanity Testing",
+  "aliases": [
+    "健全性测试",
+    "合理性测试",
+    "Sanity Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "在小幅修改或缺陷修复后快速验证特定功能是否如预期正常工作。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regression-testing",
+      "context": "作为定向回归验证以低成本核实缺陷已被正确修复。"
+    }
+  ]
+}

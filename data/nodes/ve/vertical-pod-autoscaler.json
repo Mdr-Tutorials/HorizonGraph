@@ -1,0 +1,36 @@
+{
+  "id": "vertical-pod-autoscaler",
+  "name": "Vertical Pod Autoscaler",
+  "display_primary": "Pod 垂直自动扩缩器",
+  "display_secondary": "Vertical Pod Autoscaler",
+  "aliases": [
+    "Pod 垂直自动扩缩器",
+    "VPA",
+    "VerticalPodAutoscaler"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "kubernetes-ecosystem",
+    "cloud_native"
+  ],
+  "domains": [
+    "cloud-infrastructure",
+    "devops"
+  ],
+  "summary": "根据实际历史负载自动计算并调整Pod容器CPU和内存请求量与上限的调度优化机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 3,
+  "official_site": "https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "container-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "kubernetes"
+    }
+  ]
+}

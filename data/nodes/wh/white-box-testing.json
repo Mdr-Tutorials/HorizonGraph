@@ -1,0 +1,43 @@
+{
+  "id": "white-box-testing",
+  "name": "White-Box Testing",
+  "display_primary": "白盒测试",
+  "display_secondary": "White-Box Testing",
+  "aliases": [
+    "白盒测试",
+    "结构测试",
+    "玻璃盒测试",
+    "White-Box Testing",
+    "White Box Testing"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "software-testing-ecosystem",
+    "software-quality-ecosystem"
+  ],
+  "domains": [
+    "software-testing",
+    "software-quality"
+  ],
+  "summary": "基于内部代码逻辑、控制流图与数据流设计并执行测试。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "software-testing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "unit-testing",
+      "context": "在源码级别设计断言以覆盖语句分支和执行路径。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "code-coverage",
+      "context": "以语句与分支覆盖度衡量白盒逻辑执行的充分性。"
+    }
+  ]
+}

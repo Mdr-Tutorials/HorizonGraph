@@ -1,0 +1,37 @@
+{
+  "id": "prompt-hacking",
+  "name": "Prompt Hacking",
+  "display_primary": "提示工程攻防",
+  "display_secondary": "Prompt Hacking",
+  "aliases": [
+    "提示工程攻防",
+    "Prompt Hacking",
+    "提示词黑客攻击",
+    "提示攻击"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "llm-agent-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "domains": [
+    "security",
+    "natural-language-processing"
+  ],
+  "summary": "针对生成式AI提示词接口实施输入操纵、提示泄露与指令劫持等攻防对抗技术的统称。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "prompt-injection",
+      "context": "提示工程黑客涵盖直接提示注入、间接提示注入以及系统提示词窃取等对抗技术。"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "redis-rdb",
+  "name": "Redis RDB",
+  "display_primary": "RDB 快照",
+  "display_secondary": "Redis Database",
+  "aliases": [
+    "RDB 快照",
+    "RDB",
+    "Redis RDB",
+    "Redis Database File"
+  ],
+  "type": "concept",
+  "ecosystems": [
+    "database-ecosystem"
+  ],
+  "domains": [
+    "databases"
+  ],
+  "summary": "在指定时间间隔通过写时复制子进程将内存数据转储为紧凑二进制快照的持久化机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 4,
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "redis",
+      "context": "生成 Redis 内存数据集的全量点状快照以支持快速冷启动与灾备。"
+    }
+  ]
+}

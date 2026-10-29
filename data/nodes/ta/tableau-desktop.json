@@ -1,0 +1,48 @@
+{
+  "id": "tableau-desktop",
+  "name": "Tableau Desktop",
+  "display_primary": "Tableau 桌面版",
+  "display_secondary": "Tableau Desktop",
+  "aliases": [
+    "Tableau 桌面版",
+    "Tableau",
+    "Tableau Desktop"
+  ],
+  "type": "tool",
+  "ecosystems": [
+    "data-visualization-ecosystem",
+    "enterprise-apps-ecosystem"
+  ],
+  "domains": [
+    "data-visualization",
+    "databases"
+  ],
+  "abstraction_level": "application_tool",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "salesforce"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sql",
+      "context": "通过 VizQL 引擎将用户拖拽视觉图表操作实时转译为底层数据库的 SQL 查询。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "star-schema",
+      "context": "通过多表关系模型直连星型和雪花模式数据仓库以实现灵活切片钻取。"
+    }
+  ],
+  "summary": "基于拖拽式视觉语言与内存引擎的高级数据分析与敏捷商业智能可视化工具。",
+  "description": "Tableau Desktop 是 Salesforce 旗下面向专业数据分析师的标志性桌面可视化分析工具。Tableau 凭借独创的 VizQL 技术，将直观的鼠标拖拽操作动态转译为数据库查询，支持极高速的多维数据交叉分析、地理信息映射与交互式管理仪表板设计。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-10-29",
+  "importance": 5,
+  "official_site": "https://www.tableau.com"
+}
