@@ -3,6 +3,7 @@ import { computed, onMounted, onUnmounted, ref } from "vue";
 import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-vue-next";
 import { getNode, getRelations, getEcoChains, type NodeView, type EcoLabel, type Row } from "../lib/graph";
 import { loadDesc } from "../lib/l2";
+import { renderMarkdown } from "../lib/markdown";
 import { TXT } from "../lib/ui";
 
 const B = import.meta.env.BASE_URL;
@@ -11,6 +12,7 @@ const node = ref<NodeView | null>(null);
 const rows = ref<Row[]>([]);
 const ecoChains = ref<EcoLabel[][]>([]);
 const desc = ref("");
+const renderedDesc = computed(() => desc.value ? renderMarkdown(desc.value) : "");
 const missing = ref(false);
 const loading = ref(true);
 const expanded = ref(false);
@@ -101,12 +103,24 @@ function onClick(e: MouseEvent) {
   if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
   const a = (e.target as HTMLElement).closest("a");
   if (!a) return;
-  const href = a.getAttribute("href");
-  if (!href) return;
-  const m = href.match(/\/term\/([^/?#]+)/);
-  if (!m) return;
+  if (!a.hasAttribute("href") || a.hasAttribute("download") || (a.target && a.target !== "_self")) return;
+  let url: URL;
+  try {
+    url = new URL(a.href, location.href);
+  } catch {
+    return;
+  }
+  const prefix = `${B}term/`;
+  if (url.origin !== location.origin || url.search || url.hash || !url.pathname.startsWith(prefix)) return;
+  const path = url.pathname.slice(prefix.length);
+  if (!/^[^/]+\/?$/.test(path)) return;
+  let tid: string;
+  try {
+    tid = decodeURIComponent(path.replace(/\/$/, ""));
+  } catch {
+    return;
+  }
   e.preventDefault();
-  const tid = decodeURIComponent(m[1]);
   navigate(tid, true);
 }
 
@@ -292,7 +306,7 @@ const popularBand = computed(() => {
       </button>
     </section>
 
-    <p v-if="desc" class="mt-10 pt-6 border-t border-line text-sm leading-7 text-ink-2 whitespace-pre-line">{{ desc }}</p>
+    <div v-if="desc" class="term-description mt-10 pt-6 border-t border-line text-sm leading-7 text-ink-2" v-html="renderedDesc"></div>
     <p v-else-if="descError" class="mt-10 text-sm text-ink-3">词条说明暂时无法加载。</p>
     </article>
   </div>

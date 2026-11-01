@@ -88,3 +88,43 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
   gap: 0 1.5rem;
 }
+
+/* 词条正文来自 Markdown，保持与页面主题一致并允许窄屏阅读。 */
+.term-description {
+  overflow-wrap: anywhere;
+}
+
+.term-description :where(p, ul, ol, blockquote, pre, table, hr) {
+  margin: 0.8em 0;
+}
+
+.term-description :where(h1, h2, h3, h4, h5, h6) {
+  margin: 1.4em 0 0.5em;
+  color: var(--c-ink);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.term-description :where(h1, h2) { font-size: 1.2em; }
+.term-description :where(h3, h4) { font-size: 1.1em; }
+.term-description :where(ul, ol) { padding-left: 1.6em; }
+.term-description ul { list-style: disc; }
+.term-description ol { list-style: decimal; }
+.term-description li > :where(ul, ol) { margin: 0.2em 0; }
+.term-description .contains-task-list { list-style: none; padding-left: 0; }
+.term-description input[type="checkbox"] { margin-right: 0.4em; }
+.term-description a { color: var(--c-accent); text-decoration: underline; text-underline-offset: 0.15em; }
+.term-description a:hover { color: var(--c-ink); }
+.term-description blockquote { border-left: 3px solid var(--c-line); padding-left: 1em; color: var(--c-ink-3); }
+.term-description :where(code, pre) { font-family: var(--font-mono); }
+.term-description :not(pre) > code { padding: 0.1em 0.3em; border-radius: 0.2em; background: color-mix(in srgb, var(--c-ink) 8%, transparent); }
+.term-description pre { overflow-x: auto; padding: 0.75em 1em; border: 1px solid var(--c-line); border-radius: 0.3em; overflow-wrap: normal; }
+.term-description pre code { white-space: pre; }
+.term-description table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+.term-description :where(th, td) { border: 1px solid var(--c-line); padding: 0.35em 0.7em; }
+.term-description :where(th, td):not([align]) { text-align: left; }
+.term-description th { color: var(--c-ink); font-weight: 600; }
+.term-description img { max-width: 100%; height: auto; }
+.term-description hr { border: 0; border-top: 1px solid var(--c-line); }
+.term-description > :first-child { margin-top: 0; }
+.term-description > :last-child { margin-bottom: 0; }

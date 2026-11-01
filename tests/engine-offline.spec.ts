@@ -116,6 +116,10 @@ test("complete snapshot supports fresh term navigation, search and category page
   await expect(page.locator("main")).toContainText("LangGraph");
   await expect(page.locator("main")).toContainText("状态");
   expect((await diagnostics(page)).backend).toBe("wasm");
+  await page.goto(`${base}term/trident`);
+  const description = page.locator(".term-description");
+  await expect(description.getByRole("heading", { name: "参考" })).toBeVisible();
+  await expect(description.getByRole("link", { name: "Microsoft Learn：MSHTML 体系参考" })).toBeVisible();
   await find(page, "Rust");
   await page.locator("button[data-search-result='term'][data-search-id='rust']").click();
   await expect(page.locator("main")).toContainText("Rust");
