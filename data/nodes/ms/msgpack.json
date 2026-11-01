@@ -3,10 +3,11 @@
   "name": "MessagePack",
   "abbreviation": "MsgPack",
   "aliases": [
+    "MessagePack 序列化格式",
     "MessagePack 协议",
     "二进制JSON协议"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "languages_runtimes",
     "web_frontend"

@@ -5,7 +5,7 @@
     "宽字符列宽接口",
     "POSIX wcwidth"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "text-rendering"
   ],

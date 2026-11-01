@@ -7,7 +7,7 @@
     "OAS",
     "REST API 契约规范"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "web_frontend",
     "cloud_native"

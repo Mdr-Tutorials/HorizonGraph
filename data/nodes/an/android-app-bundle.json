@@ -7,7 +7,7 @@
     "Android App Bundle",
     "AAB"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "android-ecosystem"
   ],
@@ -18,7 +18,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "protocol"
+      "target_id": "serialization-format"
     },
     {
       "relation_type": "developed_by",

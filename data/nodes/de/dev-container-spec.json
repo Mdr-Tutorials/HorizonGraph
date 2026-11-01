@@ -6,7 +6,7 @@
     "Dev Container Specification",
     "devcontainer.json"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "developer-environments"
   ],

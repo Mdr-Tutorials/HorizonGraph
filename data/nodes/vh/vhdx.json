@@ -5,7 +5,7 @@
     "Virtual Hard Disk v2",
     "虚拟硬盘 VHDX"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "virtualization",
     "systems-programming"

@@ -5,7 +5,7 @@
     "多部分表单数据",
     "Multipart 表单编码"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "web-services",
     "web-development",

@@ -2,7 +2,7 @@
   "id": "metal",
   "name": "Metal",
   "aliases": [],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "graphics-api-ecosystem",
     "rendering-ecosystem",

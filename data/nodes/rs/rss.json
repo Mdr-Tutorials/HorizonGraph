@@ -4,7 +4,7 @@
   "aliases": [
     "Really Simple Syndication"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "web_frontend"
   ],
@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "内容订阅的 XML 格式，开放分发时代的象征。",

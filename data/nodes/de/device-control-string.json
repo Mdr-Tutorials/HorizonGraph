@@ -4,7 +4,7 @@
   "aliases": [
     "设备控制字符串"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "terminal-ecosystem"
   ],

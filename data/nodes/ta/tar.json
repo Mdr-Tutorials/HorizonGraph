@@ -4,7 +4,7 @@
   "aliases": [
     "tape archive"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "devops_tooling",
     "linux-gnu-ecosystem"
@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "Unix 打包格式，把一堆文件卷成一个 tarball。",

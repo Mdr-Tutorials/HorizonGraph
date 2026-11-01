@@ -4,7 +4,7 @@
   "aliases": [
     "简单知识组织系统"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "knowledge-engineering",
     "semantic-web"

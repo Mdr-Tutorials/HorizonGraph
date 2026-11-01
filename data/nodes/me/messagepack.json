@@ -4,7 +4,7 @@
   "aliases": [
     "msgpack"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "web_frontend"
   ],
@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "二进制化的 JSON 替代，更小更快的序列化。",

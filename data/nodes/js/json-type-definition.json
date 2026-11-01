@@ -6,7 +6,7 @@
     "JTD",
     "RFC 8927"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "api-engineering",
     "data-engineering"

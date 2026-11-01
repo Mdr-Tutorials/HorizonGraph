@@ -6,7 +6,7 @@
     "FAST",
     "FIX 流式编码"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "electronic-trading",
     "networking",

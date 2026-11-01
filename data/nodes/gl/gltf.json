@@ -6,7 +6,7 @@
     "GL Transmission Format",
     "glTF 2.0"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "digital-content-creation",
     "graphics"

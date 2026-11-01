@@ -6,7 +6,7 @@
     "Cache",
     "CacheStorage"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-development",
     "web-services"

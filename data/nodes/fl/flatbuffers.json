@@ -2,10 +2,11 @@
   "id": "flatbuffers",
   "name": "FlatBuffers",
   "aliases": [
-    "FlatBuffers 序列化协议",
-    "FlatBuffers格式"
+    "FlatBuffers 序列化格式",
+    "FlatBuffers格式",
+    "FlatBuffers 序列化协议"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "languages_runtimes",
     "graphics_gaming"

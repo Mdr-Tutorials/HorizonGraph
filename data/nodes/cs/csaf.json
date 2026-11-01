@@ -5,7 +5,7 @@
     "通用安全公告框架",
     "CSAF"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "security",
     "devops",

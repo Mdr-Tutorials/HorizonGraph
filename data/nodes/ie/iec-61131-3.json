@@ -4,7 +4,7 @@
   "aliases": [
     "IEC 61131-3 编程语言标准"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "industrial-automation-ecosystem"
   ],

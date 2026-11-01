@@ -4,7 +4,7 @@
   "aliases": [
     "JPG"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "web_frontend"
   ],
@@ -15,12 +15,12 @@
   "abstraction_level": "runtime_vm",
   "relations": [
     {
-      "relation_type": "alternative_to",
-      "target_id": "webp"
+      "relation_type": "is_instance_of",
+      "target_id": "graphics-asset-format"
     },
     {
-      "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "relation_type": "alternative_to",
+      "target_id": "webp"
     }
   ],
   "summary": "有损图像压缩标准，照片三十年的默认格式。",

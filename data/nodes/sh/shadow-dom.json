@@ -8,7 +8,7 @@
     "Shadow DOM",
     "阴影 DOM"
   ],
-  "type": "protocol",
+  "type": "specification",
   "abstraction_level": "runtime_vm",
   "domains": [
     "web-development",

@@ -5,7 +5,7 @@
     "OpenVEX 格式",
     "开放 VEX"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "security",
     "devops",

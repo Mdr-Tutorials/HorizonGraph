@@ -6,7 +6,7 @@
     "pcap 保存格式",
     ".pcap"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "networking",
     "systems-programming"

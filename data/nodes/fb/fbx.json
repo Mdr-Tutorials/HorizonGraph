@@ -5,7 +5,7 @@
     "Filmbox",
     "FBX 资产格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "digital-content-creation",
     "graphics"

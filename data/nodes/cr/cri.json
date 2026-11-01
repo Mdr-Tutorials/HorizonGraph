@@ -6,7 +6,7 @@
     "Kubernetes 容器运行时接口",
     "cri-specification"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "containerization"
   ],

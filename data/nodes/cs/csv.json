@@ -4,7 +4,7 @@
   "aliases": [
     "逗号分隔值"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "big-data-ecosystem"
   ],
@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "最原始的表格交换格式，Excel 与 pandas 都认。",

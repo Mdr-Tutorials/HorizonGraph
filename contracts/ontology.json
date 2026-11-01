@@ -1,5 +1,5 @@
 {
-  "version": "0.19.0",
+  "version": "0.21.0",
   "note": "分类骨架：全部非叶子节点在此，数据平面不出现。层级用 parents 数组（多亲 DAG，一个分类可属多个上级）；锚点间元叙事为普通关系边。生效 entity_type 沿 parent 祖先解析。",
   "nodes": [
     {
@@ -51,7 +51,10 @@
       "summary": "通信、交互与数据交换标准约定的顶层骨架。",
       "relations": [],
       "entity_type": [
-        "protocol"
+        "protocol",
+        "specification",
+        "format",
+        "license"
       ],
       "importance": 5
     },
@@ -119,18 +122,51 @@
     },
     {
       "id": "protocol",
-      "name": "Communication Protocol",
+      "name": "Protocol",
       "aliases": [
+        "协议",
         "通信与互联协议",
         "通信协议",
         "网络通信栈"
       ],
-      "summary": "跨物理与逻辑节点的数据传输、信令路由与网络通信协议栈。",
+      "summary": "跨物理与逻辑节点的数据传输、信令路由、会话控制与安全交互协议的分类根。",
       "parents": [
         "meta-protocol"
       ],
       "relations": [],
       "entity_type": "protocol",
+      "importance": 5
+    },
+    {
+      "id": "specification",
+      "name": "Specification",
+      "aliases": [
+        "技术规范",
+        "规范",
+        "标准与规范"
+      ],
+      "summary": "接口契约、系统标准、硬件总线与行业互操作规范的分类根。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "relations": [],
+      "entity_type": "specification",
+      "importance": 5
+    },
+    {
+      "id": "format",
+      "name": "Data & Media Format",
+      "aliases": [
+        "数据与媒体格式",
+        "格式",
+        "文件与编码格式"
+      ],
+      "summary": "数据交换、序列化、文件容器、图形音视频与科学数据格式的分类根。",
+      "parents": [
+        "meta-protocol"
+      ],
+      "relations": [],
+      "entity_type": "format",
       "importance": 5
     },
     {
@@ -404,6 +440,7 @@
       "name": "License",
       "aliases": [
         "许可证",
+        "开源许可证",
         "开源协议"
       ],
       "summary": "软件与数据的许可文本标准，约束使用、修改与再分发。",
@@ -411,7 +448,8 @@
         "meta-protocol"
       ],
       "relations": [],
-      "importance": 3
+      "entity_type": "license",
+      "importance": 4
     },
     {
       "id": "distributed-systems",
@@ -1059,7 +1097,7 @@
       ],
       "summary": "规定可调用接口、数据对象与行为语义的规范。",
       "parents": [
-        "meta-protocol"
+        "specification"
       ],
       "relations": [],
       "importance": 4
@@ -1068,13 +1106,15 @@
       "id": "graphics-asset-format",
       "name": "Graphics Asset Format",
       "aliases": [
-        "图形资产格式"
+        "图形资产格式",
+        "图形与媒体格式"
       ],
-      "summary": "图形、场景、纹理与动画资产的存储交换规范。",
+      "summary": "图形、场景、图像、字体与音视频资产的存储交换格式。",
       "parents": [
-        "meta-protocol"
+        "format"
       ],
       "relations": [],
+      "entity_type": "format",
       "importance": 4
     },
     {
@@ -1176,7 +1216,7 @@
       ],
       "summary": "容器运行、镜像分发、编排与开发环境配置规范。",
       "parents": [
-        "meta-protocol"
+        "specification"
       ],
       "relations": [],
       "importance": 4
@@ -1241,7 +1281,7 @@
       ],
       "summary": "交易消息、会话、行情数据与金融交换格式规范。",
       "parents": [
-        "meta-protocol"
+        "specification"
       ],
       "relations": [],
       "importance": 4
@@ -1354,13 +1394,18 @@
       "id": "terminal-specification",
       "name": "Terminal Specifications",
       "aliases": [
+        "终端控制与交互规范",
         "终端协议与规范"
       ],
       "summary": "终端控制序列、键盘编码、图像及应用交互规范。",
       "parents": [
-        "meta-protocol"
+        "specification"
       ],
       "relations": [],
+      "entity_type": [
+        "specification",
+        "format"
+      ],
       "importance": 4
     },
     {
@@ -1522,7 +1567,7 @@
         "互联网络协议",
         "网络层协议"
       ],
-      "summary": "网络层寻址、路由选择、分组转发与多路复用协议规范。",
+      "summary": "网络层寻址、路由选择、分组转发与多路复用协议。",
       "parents": [
         "protocol"
       ],
@@ -1533,15 +1578,16 @@
       "id": "serialization-format",
       "name": "Serialization & Data Format",
       "aliases": [
+        "数据交换与序列化格式",
         "数据交换与序列化规范",
         "序列化格式",
         "数据交换格式"
       ],
-      "summary": "跨语言数据结构编码、二进制与文本序列化及数据交换模式规范。",
+      "summary": "跨语言数据结构编码、二进制与文本序列化及文件归档格式。",
       "parents": [
-        "meta-protocol"
+        "format"
       ],
-      "entity_type": "protocol",
+      "entity_type": "format",
       "importance": 5
     },
     {
@@ -1550,11 +1596,11 @@
       "aliases": [
         "安全认证与密码协议",
         "安全协议",
-        "身份认证规范"
+        "身份认证协议"
       ],
-      "summary": "身份凭证交换、通信加密、访问授权与密码学安全协议标准。",
+      "summary": "身份凭证交换、信道加密、访问授权与安全认证协议。",
       "parents": [
-        "meta-protocol"
+        "protocol"
       ],
       "entity_type": "protocol",
       "importance": 5
@@ -1565,28 +1611,31 @@
       "aliases": [
         "硬件总线与物理接口规范",
         "硬件规范",
-        "总线协议"
+        "总线规范"
       ],
       "summary": "芯片引脚、主机板卡总线、外设互联与高速通信物理标准规范。",
       "parents": [
-        "meta-protocol"
+        "specification"
       ],
-      "entity_type": "protocol",
+      "entity_type": "specification",
       "importance": 4
     },
     {
       "id": "tooling-agent-specification",
       "name": "Tooling & Agent Specification",
       "aliases": [
-        "开发工具与智能体协议",
+        "开发工具与智能体规范",
         "智能体规范",
-        "工具交互协议"
+        "开发工具与智能体协议"
       ],
-      "summary": "编辑器、调试器、容器运行时及 AI 智能体上下文互联协议规范。",
+      "summary": "开发环境、可移植系统接口、无障碍指南及 AI 智能体扩展规范。",
       "parents": [
-        "meta-protocol"
+        "specification"
       ],
-      "entity_type": "protocol",
+      "entity_type": [
+        "specification",
+        "format"
+      ],
       "importance": 5
     },
     {
@@ -1598,7 +1647,7 @@
       ],
       "summary": "分布式点对点账本、共识机制、智能合约执行与代币交互协议。",
       "parents": [
-        "meta-protocol"
+        "protocol"
       ],
       "entity_type": "protocol",
       "importance": 4
@@ -1610,11 +1659,14 @@
         "软件供应链与安全规范",
         "SBOM与安全元数据规范"
       ],
-      "summary": "软件物料清单（SBOM）、安全通告、防篡改证明与漏洞标识规范。",
+      "summary": "软件物料清单（SBOM）、安全通告、防篡改证明、漏洞标识与密码学标准规范。",
       "parents": [
-        "meta-protocol"
+        "specification"
       ],
-      "entity_type": "protocol",
+      "entity_type": [
+        "specification",
+        "format"
+      ],
       "importance": 4
     },
     {
@@ -1626,9 +1678,9 @@
       ],
       "summary": "电子病历、医学影像与临床试验互操作性数据标准与服务接口。",
       "parents": [
-        "meta-protocol"
+        "specification"
       ],
-      "entity_type": "protocol",
+      "entity_type": "specification",
       "importance": 3
     },
     {
@@ -1638,11 +1690,11 @@
         "生物信息数据格式",
         "组学序列与比对规范"
       ],
-      "summary": "基因测序读段、比对产物与变异检测数据的紧凑编码与存储规范。",
+      "summary": "基因测序读段、比对产物与变异检测数据的紧凑编码与存储格式。",
       "parents": [
-        "meta-protocol"
+        "format"
       ],
-      "entity_type": "protocol",
+      "entity_type": "format",
       "importance": 3
     },
     {
@@ -1654,9 +1706,12 @@
       ],
       "summary": "栅格矢量瓦片、时空资产目录与空间地理要素交换标准规范。",
       "parents": [
-        "meta-protocol"
+        "specification"
       ],
-      "entity_type": "protocol",
+      "entity_type": [
+        "specification",
+        "format"
+      ],
       "importance": 4
     },
     {
@@ -1666,11 +1721,11 @@
         "工业自动化与工控安全规范",
         "工业制造控制标准"
       ],
-      "summary": "工业自动化控制、现场总线通讯、功能安全与工控安全国际标准。",
+      "summary": "工业自动化控制、电力系统建模、功能安全与工控安全国际标准。",
       "parents": [
-        "meta-protocol"
+        "specification"
       ],
-      "entity_type": "protocol",
+      "entity_type": "specification",
       "importance": 4
     }
   ]

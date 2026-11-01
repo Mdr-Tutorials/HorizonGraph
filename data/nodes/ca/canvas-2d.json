@@ -7,7 +7,7 @@
     "Canvas 2D",
     "Canvas API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "interactive-graphics",
     "graphics",

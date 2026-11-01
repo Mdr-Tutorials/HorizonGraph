@@ -4,7 +4,7 @@
   "aliases": [
     "选择字符显示属性"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "terminal-ecosystem"
   ],

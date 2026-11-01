@@ -7,7 +7,7 @@
     "BSD-3-Clause",
     "新 BSD 协议"
   ],
-  "type": "protocol",
+  "type": "license",
   "ecosystems": [
     "devops_tooling"
   ],

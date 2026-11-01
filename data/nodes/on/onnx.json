@@ -4,7 +4,7 @@
   "aliases": [
     "Open Neural Network Exchange"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "open-source-ai-ecosystem"
   ],
@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "跨框架模型交换标准，推理部署的通用格式。",

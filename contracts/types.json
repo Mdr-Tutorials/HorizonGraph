@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.5.1",
+  "schema_version": "3.7.0",
   "source_of_truth": "TechTermSchema 唯一来源，tools/src/gen 从本文件生成 TS 类型与校验 schema。",
   "layers": {
     "L0": "首屏必载：搜索预览、悬浮卡片、邻域面板",
@@ -9,7 +9,10 @@
     "EntityType": {
       "meta_concept": "分类骨架节点，仅存在于 contracts/ontology.json，数据平面禁止出现",
       "concept": "具象理论/特性概念，如 Closure、CAP Theorem、注意力机制",
-      "protocol": "通信、数据格式与接口规范，如 HTTP/3、glTF、WebGPU",
+      "protocol": "通信、会话控制与互联协议，如 HTTP/3、QUIC、TLS、MCP",
+      "specification": "接口契约、系统标准与行业规范，如 WebGPU、DOM、POSIX、OpenAPI、OCI",
+      "format": "数据交换、文件容器与媒体资产格式，如 JSON、glTF、PNG、Parquet、ELF",
+      "license": "开源软件与内容许可条款标准，如 MIT、Apache-2.0、GPL、CC BY-NC-SA",
       "language": "编程语言与 DSL，如 Rust、C++、SQL",
       "framework": "应用/系统框架，如 Spring Boot、React",
       "library": "工具库/SDK/组件，如 Tokio、PyTorch",
@@ -23,7 +26,7 @@
     },
     "Realm": {
       "conceptual": "概念与度量：meta_concept / concept / metric",
-      "technical": "技术工件：language / protocol / framework / library / tool / architecture / model_family / product",
+      "technical": "技术工件：language / protocol / specification / format / license / framework / library / tool / architecture / model_family / product",
       "industrial": "产业主体：organization / person"
     },
     "AbstractionLevel": {
@@ -200,8 +203,44 @@
     },
     "protocol": {
       "realm": "technical",
-      "summary": "通信、数据格式与接口规范",
-      "examples": ["HTTP/3", "QUIC", "FIX"],
+      "summary": "通信、会话控制与互联协议",
+      "examples": ["HTTP/3", "QUIC", "TLS"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "specification": {
+      "realm": "technical",
+      "summary": "接口契约、系统标准与行业规范",
+      "examples": ["WebGPU", "DOM", "POSIX", "OpenAPI"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "format": {
+      "realm": "technical",
+      "summary": "数据交换、文件容器与媒体资产格式",
+      "examples": ["JSON", "glTF", "PNG", "Parquet"],
+      "applicability": {
+        "id": "required", "name": "required", "aliases": "required", "type": "required",
+        "summary": "required", "status": "required", "origin": "required",
+        "last_reviewed": "required", "importance": "required", "relations": "required",
+        "domains": "required", "ecosystems": "required",
+        "abstraction_level": "required"
+      }
+    },
+    "license": {
+      "realm": "technical",
+      "summary": "开源软件与内容许可条款标准",
+      "examples": ["MIT", "Apache-2.0", "GPL"],
       "applicability": {
         "id": "required", "name": "required", "aliases": "required", "type": "required",
         "summary": "required", "status": "required", "origin": "required",

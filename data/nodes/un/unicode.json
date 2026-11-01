@@ -5,7 +5,7 @@
     "统一码",
     "万国码"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "text-rendering"
   ],

@@ -2,7 +2,7 @@
   "id": "opus",
   "name": "Opus",
   "aliases": [],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "web_frontend"
   ],

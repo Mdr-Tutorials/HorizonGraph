@@ -4,7 +4,7 @@
   "aliases": [
     "FHIR 医疗数据交换标准"
   ],
-  "type": "protocol",
+  "type": "specification",
   "relations": [
     {
       "relation_type": "is_instance_of",

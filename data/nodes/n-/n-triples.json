@@ -4,7 +4,7 @@
   "aliases": [
     "N-Triples RDF 序列化"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "knowledge-engineering",
     "semantic-web"

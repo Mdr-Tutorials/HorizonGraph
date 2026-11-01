@@ -6,7 +6,7 @@
     "WHATWG Streams",
     "Streams API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-development",
     "web-services"

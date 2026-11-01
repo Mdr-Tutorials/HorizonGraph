@@ -4,7 +4,7 @@
   "aliases": [
     "地理 TIFF"
   ],
-  "type": "protocol",
+  "type": "format",
   "relations": [
     {
       "relation_type": "is_instance_of",

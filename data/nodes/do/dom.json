@@ -7,7 +7,7 @@
     "DOM Standard",
     "DOM 规范"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "web_frontend",
     "browser-automation-ecosystem"

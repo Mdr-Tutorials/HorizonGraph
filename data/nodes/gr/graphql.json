@@ -2,7 +2,7 @@
   "id": "graphql",
   "name": "GraphQL",
   "aliases": [],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "web_frontend",
     "modern-web-frameworks-ecosystem"

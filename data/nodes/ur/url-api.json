@@ -5,7 +5,7 @@
     "URL对象接口",
     "WHATWG URL API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-development",
     "web-services"

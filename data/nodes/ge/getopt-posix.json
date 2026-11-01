@@ -6,7 +6,7 @@
     "POSIX getopt",
     "getopt"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "command-line-tools"
   ],

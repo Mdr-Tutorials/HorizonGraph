@@ -5,7 +5,7 @@
     "软件识别标签",
     "SWID 标签"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "security",
     "devops",

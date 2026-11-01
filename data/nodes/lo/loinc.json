@@ -4,7 +4,7 @@
   "aliases": [
     "LOINC 检验与观察编码"
   ],
-  "type": "protocol",
+  "type": "specification",
   "relations": [
     {
       "relation_type": "is_instance_of",

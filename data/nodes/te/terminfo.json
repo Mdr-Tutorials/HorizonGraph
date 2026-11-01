@@ -4,7 +4,7 @@
   "aliases": [
     "终端能力描述格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "terminal-ecosystem"
   ],

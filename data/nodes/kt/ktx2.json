@@ -6,7 +6,7 @@
     "Khronos Texture 2",
     "KTX 2.0"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "digital-content-creation",
     "graphics"

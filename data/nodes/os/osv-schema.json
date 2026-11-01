@@ -5,7 +5,7 @@
     "OSV 格式",
     "OSV Schema"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "security",
     "devops",

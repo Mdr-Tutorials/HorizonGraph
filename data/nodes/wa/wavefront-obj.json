@@ -6,7 +6,7 @@
     "Wavefront .obj",
     "OBJ"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "digital-content-creation",
     "graphics"

@@ -4,7 +4,7 @@
   "aliases": [
     "IEC 61850 标准系列"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "power-energy-ecosystem"
   ],
@@ -14,7 +14,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "hardware-specification"
+      "target_id": "industrial-specification"
     },
     {
       "relation_type": "stewarded_by",

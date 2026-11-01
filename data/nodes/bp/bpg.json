@@ -8,7 +8,7 @@
     "BPG 图像格式"
   ],
   "abbreviation": "BPG",
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "signal-processing-ecosystem",
     "web_frontend"
@@ -21,7 +21,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "graphics-asset-format"
     },
     {
       "relation_type": "developed_by",

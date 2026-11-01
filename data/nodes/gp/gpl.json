@@ -8,7 +8,7 @@
     "GNU GPL",
     "通用公共许可证"
   ],
-  "type": "protocol",
+  "type": "license",
   "ecosystems": [
     "devops_tooling"
   ],

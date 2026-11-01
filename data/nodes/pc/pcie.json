@@ -8,7 +8,7 @@
     "高速外设组件互连",
     "PCI-E"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "hardware_iot",
     "gpu-computing"

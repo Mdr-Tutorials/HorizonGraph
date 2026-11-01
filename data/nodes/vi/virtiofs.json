@@ -5,7 +5,7 @@
     "virtio-fs",
     "虚拟机共享文件系统接口"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "virtualization",
     "systems-programming",

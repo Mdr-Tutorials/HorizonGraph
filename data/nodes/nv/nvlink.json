@@ -6,7 +6,7 @@
   "aliases": [
     "NVLink互联"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "gpu-computing"
   ],

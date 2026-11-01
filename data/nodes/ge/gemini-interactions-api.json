@@ -5,7 +5,7 @@
     "Interactions API",
     "Gemini 交互 API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "agent-development",
     "machine-learning"
@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "api-specification"
     },
     {
       "relation_type": "developed_by",

@@ -5,7 +5,7 @@
     "Agent Skills 格式规范",
     "SKILL.md 格式"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "agent-development"
   ],
@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "api-specification"
+      "target_id": "tooling-agent-specification"
     },
     {
       "relation_type": "uses",

@@ -9,7 +9,7 @@
     "Service Workers",
     "Web 服务工作线程"
   ],
-  "type": "protocol",
+  "type": "specification",
   "abstraction_level": "runtime_vm",
   "domains": [
     "web-development",

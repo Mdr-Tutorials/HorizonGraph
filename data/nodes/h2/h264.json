@@ -5,7 +5,7 @@
     "AVC",
     "Advanced Video Coding"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "web_frontend",
     "graphics_gaming"

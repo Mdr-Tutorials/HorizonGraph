@@ -6,7 +6,7 @@
     "MVT",
     "Mapbox Vector Tile"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "data-visualization",
     "geospatial-computing",

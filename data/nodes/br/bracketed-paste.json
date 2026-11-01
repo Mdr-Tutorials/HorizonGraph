@@ -5,7 +5,7 @@
     "括号粘贴模式",
     "Bracketed Paste"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "terminal-ecosystem"
   ],

@@ -5,7 +5,7 @@
     "OCI 分发规范",
     "OCI 仓库分发规范"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "containerization",
     "software-supply-chain"

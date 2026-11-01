@@ -4,7 +4,7 @@
   "aliases": [
     "国际疾病分类第十一次修订"
   ],
-  "type": "protocol",
+  "type": "specification",
   "relations": [
     {
       "relation_type": "is_instance_of",

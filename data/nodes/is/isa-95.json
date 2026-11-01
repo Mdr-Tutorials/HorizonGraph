@@ -4,7 +4,7 @@
   "aliases": [
     "ISA-95 企业控制集成标准"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "industrial-automation-ecosystem"
   ],

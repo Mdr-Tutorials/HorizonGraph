@@ -9,7 +9,7 @@
     "csi",
     "csi-specification"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "container-ecosystem",
     "cloud_native",

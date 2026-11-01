@@ -4,7 +4,7 @@
   "aliases": [
     "医学数字成像与通信"
   ],
-  "type": "protocol",
+  "type": "specification",
   "relations": [
     {
       "relation_type": "is_instance_of",

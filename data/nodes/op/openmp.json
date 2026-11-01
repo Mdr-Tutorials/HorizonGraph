@@ -2,7 +2,7 @@
   "id": "openmp",
   "name": "OpenMP",
   "aliases": [],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "ai_data_science"
   ],
@@ -13,7 +13,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "api-specification"
     }
   ],
   "summary": "共享内存并行的编译指令标准，一行 pragma 并行循环。",

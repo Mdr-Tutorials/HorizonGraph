@@ -6,7 +6,7 @@
     "PCAP Next Generation",
     ".pcapng"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "networking",
     "systems-programming"

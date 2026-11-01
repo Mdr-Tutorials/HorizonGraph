@@ -4,7 +4,7 @@
   "display_primary": "io_uring",
   "display_secondary": "io_uring",
   "aliases": [],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "linux-gnu-ecosystem",
     "low-latency-systems-ecosystem"

@@ -5,7 +5,7 @@
     "protobuf",
     "Protobuf"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "cloud_native",
     "tcp-ip-ecosystem"

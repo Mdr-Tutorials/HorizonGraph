@@ -4,7 +4,7 @@
   "aliases": [
     "VCF 变异格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "relations": [
     {
       "relation_type": "is_instance_of",

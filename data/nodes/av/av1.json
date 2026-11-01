@@ -2,7 +2,7 @@
   "id": "av1",
   "name": "AV1",
   "aliases": [],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "web_frontend",
     "graphics_gaming"

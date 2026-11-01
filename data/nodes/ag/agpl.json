@@ -7,7 +7,7 @@
     "AGPL 协议",
     "Affero GPL"
   ],
-  "type": "protocol",
+  "type": "license",
   "ecosystems": [
     "devops_tooling"
   ],

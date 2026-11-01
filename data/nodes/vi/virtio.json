@@ -5,7 +5,7 @@
     "Virtio",
     "半虚拟化 I/O 接口"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "virtualization",
     "systems-programming"

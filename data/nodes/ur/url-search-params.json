@@ -5,7 +5,7 @@
     "URL查询参数接口",
     "查询参数列表"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-development",
     "web-services"

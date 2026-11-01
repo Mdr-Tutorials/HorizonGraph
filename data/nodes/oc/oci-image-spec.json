@@ -5,7 +5,7 @@
     "OCI 镜像规范",
     "OCI Image Format Specification"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "containerization",
     "software-supply-chain"

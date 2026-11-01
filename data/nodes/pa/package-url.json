@@ -6,7 +6,7 @@
     "Package URL",
     "PURL"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "security",
     "devops",

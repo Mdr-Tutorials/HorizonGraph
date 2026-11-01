@@ -6,7 +6,7 @@
     "抽象语法标记一",
     "ASN.1 标准"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "networking_security"
   ],

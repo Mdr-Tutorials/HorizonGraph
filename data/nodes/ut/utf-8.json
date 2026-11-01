@@ -5,7 +5,7 @@
     "八位 Unicode 转换格式",
     "UTF8"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "text-rendering"
   ],

@@ -6,7 +6,7 @@
     "JTAG 测试与调试标准",
     "IEEE 1149.1"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "hardware_iot"
   ],

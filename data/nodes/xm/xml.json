@@ -5,7 +5,7 @@
     "Extensible Markup Language",
     "可扩展标记语言"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "web_frontend",
     "w3c-standards-ecosystem"
@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "带标签的标记数据格式，文档与 SOAP 时代的基石。",

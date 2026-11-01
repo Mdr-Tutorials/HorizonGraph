@@ -4,7 +4,7 @@
   "aliases": [
     "系统化医学临床术语"
   ],
-  "type": "protocol",
+  "type": "specification",
   "relations": [
     {
       "relation_type": "is_instance_of",

@@ -6,7 +6,7 @@
     "OCI 运行时规范",
     "runtime-spec"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "containerization"
   ],

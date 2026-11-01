@@ -4,7 +4,7 @@
   "aliases": [
     "GZIP"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "devops_tooling",
     "web_frontend"

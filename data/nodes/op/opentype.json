@@ -5,7 +5,7 @@
     "OpenType 字体格式",
     "开放字体格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "text-rendering"
   ],

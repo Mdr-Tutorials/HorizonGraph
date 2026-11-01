@@ -5,7 +5,7 @@
     "表单数据接口",
     "FormData API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-development",
     "web-services"

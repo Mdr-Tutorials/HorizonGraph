@@ -7,7 +7,7 @@
     "BSD-2-Clause",
     "简化 BSD 协议"
   ],
-  "type": "protocol",
+  "type": "license",
   "ecosystems": [
     "devops_tooling"
   ],

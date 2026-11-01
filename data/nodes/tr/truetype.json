@@ -4,7 +4,7 @@
   "aliases": [
     "TrueType 字体格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "text-rendering"
   ],

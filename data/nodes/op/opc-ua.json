@@ -4,7 +4,7 @@
   "aliases": [
     "OPC 统一架构"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "industrial-automation-ecosystem"
   ],

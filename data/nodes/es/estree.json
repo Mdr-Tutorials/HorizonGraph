@@ -5,7 +5,7 @@
     "ESTree AST 规范",
     "JavaScript AST 规范"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "language-tooling",
     "programming-languages"

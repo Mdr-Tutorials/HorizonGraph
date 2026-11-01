@@ -5,7 +5,7 @@
     "Workers ctx",
     "Worker 执行上下文接口"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "edge-computing",
     "web-services"

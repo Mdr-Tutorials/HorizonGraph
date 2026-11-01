@@ -4,7 +4,7 @@
   "aliases": [
     "时空资产目录"
   ],
-  "type": "protocol",
+  "type": "specification",
   "relations": [
     {
       "relation_type": "is_instance_of",

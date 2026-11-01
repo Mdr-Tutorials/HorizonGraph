@@ -5,7 +5,7 @@
     "Direct3D 图形接口",
     "Direct3D API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "graphics",
     "real-time-rendering",

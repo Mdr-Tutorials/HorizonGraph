@@ -5,7 +5,7 @@
     "Address Family XDP",
     "XDP Socket"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "low-latency-systems",
     "networking",

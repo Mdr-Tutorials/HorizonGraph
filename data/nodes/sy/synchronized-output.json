@@ -6,7 +6,7 @@
     "Synchronized Updates",
     "Batched Rendering"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "terminal-ecosystem"
   ],

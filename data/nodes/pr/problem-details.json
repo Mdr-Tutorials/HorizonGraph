@@ -6,7 +6,7 @@
     "Problem Details",
     "RFC 9457"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-services",
     "web-development",

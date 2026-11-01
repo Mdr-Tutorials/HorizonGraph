@@ -5,7 +5,7 @@
   "aliases": [
     "Financial Information eXchange"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "fintech-ecosystem",
     "market-data-ecosystem",

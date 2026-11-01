@@ -6,7 +6,7 @@
     "灵活数据速率CAN",
     "CAN FD 总线"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "hardware_iot"
   ],

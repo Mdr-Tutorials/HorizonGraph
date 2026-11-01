@@ -5,7 +5,7 @@
     "Lottie",
     "Lottie 动画格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "graphics",
     "creative-coding",

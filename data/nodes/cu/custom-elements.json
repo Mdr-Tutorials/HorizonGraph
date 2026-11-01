@@ -8,7 +8,7 @@
     "Custom Elements",
     "HTML 自定义标签 API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "abstraction_level": "runtime_vm",
   "domains": [
     "web-development"

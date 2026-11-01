@@ -5,7 +5,7 @@
     "Fetch请求对象",
     "Request API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-development",
     "web-services"

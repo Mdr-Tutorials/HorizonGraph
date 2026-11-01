@@ -4,7 +4,7 @@
   "aliases": [
     "Yet Another Markup Language"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "cloud_native",
     "devops_tooling"
@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "人类友好的配置序列化格式，K8s 与 CI 的事实标准。",

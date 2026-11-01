@@ -6,7 +6,7 @@
     "容器网络接口规范",
     "cni-specification"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "containerization",
     "networking"

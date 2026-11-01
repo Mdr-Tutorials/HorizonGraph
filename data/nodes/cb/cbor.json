@@ -6,7 +6,7 @@
     "简明二进制对象表示",
     "CBOR标准"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "networking_security",
     "hardware_iot"

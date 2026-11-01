@@ -9,7 +9,7 @@
     "View Transitions",
     "视图转换 API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "abstraction_level": "runtime_vm",
   "domains": [
     "web-development",

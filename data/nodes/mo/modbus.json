@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "industrial-specification"
+      "target_id": "application-protocol"
     }
   ],
   "summary": "以功能码和数据模型组织设备请求、响应的工业应用层协议。",

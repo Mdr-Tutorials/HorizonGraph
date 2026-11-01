@@ -4,7 +4,7 @@
   "aliases": [
     "Non-Volatile Memory Express"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "embedded-ecosystem",
     "hardware_iot"

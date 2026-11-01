@@ -62,8 +62,8 @@ const P: Record<string, number> = {
   transformer: 93, "attention-mechanism": 80, rag: 75, gc: 72, ci: 70, "event-loop": 65, "same-origin-policy": 62, "virtual-dom": 60, acid: 66, cap: 55, consensus: 60, "zero-trust": 58, "object-storage": 55, "service-mesh": 52, raft: 50, "idempotency": 55, "memory-model": 40, "cache-coherence": 35, numa: 35, "memory-hierarchy": 38, interrupt: 45, syscall: 55, scheduler: 50, process: 65, abi: 40, link: 55, dom: 70, "graphics-pipeline": 45, shader: 50, backpropagation: 60, "proof-of-work": 60, "proof-of-stake": 52, "merkle-tree": 45, "vector-database": 55, "git-object-model": 45, um: 0, ub: 35, poh: 25, "test-pyramid": 40, observability: 55, "vector-db": 55, "ownership": 45, "pow": 60, "pos": 52,
 };
 
-// ---- 本批只出:纯技术实体(概念/协议/架构/工具/库/框架/语言)+ 教材文档;产业实体(组织/产品/人物/模型族)留待人工 ----
-const TECH_TYPES = new Set(["concept", "protocol", "architecture", "tool", "library", "framework", "language"]);
+// ---- 本批只出:纯技术实体(概念/协议/规范/格式/许可证/架构/工具/库/框架/语言)+ 教材文档;产业实体(组织/产品/人物/模型族)留待人工 ----
+const TECH_TYPES = new Set(["concept", "protocol", "specification", "format", "license", "architecture", "tool", "library", "framework", "language"]);
 // 版本节点不参与 popular(跟随母体,不单独标定)
 const VERSION_RE = /-(?:98|03|11|14|17|20|23|26|90|99)$|^(?:c|cpp)-\d+$/;
 // 教材/文档类产品单独放行

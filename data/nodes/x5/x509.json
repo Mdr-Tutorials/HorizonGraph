@@ -2,7 +2,7 @@
   "id": "x509",
   "name": "X.509",
   "aliases": [],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "cryptography-pki-ecosystem"
   ],
@@ -13,7 +13,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "security-protocol"
+      "target_id": "serialization-format"
     },
     {
       "relation_type": "uses",

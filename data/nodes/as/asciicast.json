@@ -5,7 +5,7 @@
     "asciinema 终端录制格式",
     "cast 文件格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "terminal-engineering"
   ],

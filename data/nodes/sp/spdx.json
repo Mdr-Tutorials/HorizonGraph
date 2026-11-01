@@ -7,7 +7,7 @@
     "Software Package Data Exchange",
     "软件包数据交换规范"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "security",
     "devops",

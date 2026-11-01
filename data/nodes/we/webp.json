@@ -2,7 +2,7 @@
   "id": "webp",
   "name": "WebP",
   "aliases": [],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "web_frontend"
   ],
@@ -14,7 +14,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "graphics-asset-format"
     }
   ],
   "summary": "谷歌的现代图像格式，同质量体积更小。",

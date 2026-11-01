@@ -6,7 +6,7 @@
     "CME Market Data Platform 3.0",
     "CME 行情消息规范"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "electronic-trading",
     "networking",

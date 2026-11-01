@@ -6,7 +6,7 @@
     "OCI",
     "OCI 规范族"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "cloud_native",
     "container-ecosystem"

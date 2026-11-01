@@ -4,7 +4,7 @@
   "aliases": [
     "便携文档格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "w3c-standards-ecosystem"
   ],

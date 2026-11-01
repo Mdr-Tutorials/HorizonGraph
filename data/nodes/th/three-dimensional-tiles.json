@@ -5,7 +5,7 @@
     "三维瓦片",
     "OGC 3D Tiles"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "data-visualization",
     "geospatial-computing",

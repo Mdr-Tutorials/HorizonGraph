@@ -4,7 +4,7 @@
   "aliases": [
     "控制序列引入符"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "terminal-ecosystem"
   ],

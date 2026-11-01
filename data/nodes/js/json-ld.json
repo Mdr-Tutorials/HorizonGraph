@@ -4,7 +4,7 @@
   "aliases": [
     "关联数据 JSON 表示"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "knowledge-engineering",
     "semantic-web"

@@ -2,7 +2,7 @@
   "id": "directx",
   "name": "DirectX",
   "aliases": [],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "graphics-api-ecosystem",
     "rendering-ecosystem",

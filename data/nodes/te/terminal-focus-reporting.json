@@ -4,7 +4,7 @@
   "aliases": [
     "终端焦点事件报告"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "terminal-ecosystem"
   ],

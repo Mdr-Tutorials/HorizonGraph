@@ -5,7 +5,7 @@
     "通用平台枚举",
     "CPE"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "security",
     "devops",

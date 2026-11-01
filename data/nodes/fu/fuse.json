@@ -5,7 +5,7 @@
     "Filesystem in Userspace",
     "用户态文件系统接口"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "systems-programming",
     "virtualization"

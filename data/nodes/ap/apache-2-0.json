@@ -8,7 +8,7 @@
     "Apache 协议",
     "Apache 2.0"
   ],
-  "type": "protocol",
+  "type": "license",
   "ecosystems": [
     "devops_tooling"
   ],

@@ -4,7 +4,7 @@
   "aliases": [
     "OSC 52 剪贴板交互"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "terminal-ecosystem"
   ],

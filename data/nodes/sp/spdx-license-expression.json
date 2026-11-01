@@ -5,7 +5,7 @@
     "SPDX 许可表达式",
     "SPDX License Expressions"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "security",
     "devops",
@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "license"
+      "target_id": "supply-chain-specification"
     },
     {
       "relation_type": "uses",

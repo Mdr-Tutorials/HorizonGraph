@@ -6,7 +6,7 @@
     "Iceberg",
     "Iceberg表格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "big-data-ecosystem",
     "database-ecosystem"

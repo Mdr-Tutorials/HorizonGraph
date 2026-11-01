@@ -5,7 +5,7 @@
     "Mapbox 样式规范",
     "Mapbox Style Spec"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "data-visualization",
     "geospatial-computing",

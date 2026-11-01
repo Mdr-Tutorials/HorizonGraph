@@ -5,7 +5,7 @@
     "标准 JSON Schema 接口",
     "StandardJSONSchemaV1"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "api-engineering",
     "programming-languages"

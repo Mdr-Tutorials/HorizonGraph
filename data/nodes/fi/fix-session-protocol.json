@@ -6,7 +6,7 @@
     "FIXT",
     "FIX 会话协议"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "electronic-trading",
     "networking",

@@ -3,7 +3,7 @@
   "name": "Vulkan",
   "display_primary": "Vulkan",
   "aliases": [],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "graphics-api-ecosystem",
     "real-time-rendering-ecosystem"

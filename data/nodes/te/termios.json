@@ -4,7 +4,7 @@
   "aliases": [
     "终端输入输出接口"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "terminal-ecosystem",
     "linux-gnu-ecosystem"
@@ -17,7 +17,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "terminal-specification"
+      "target_id": "api-specification"
     },
     {
       "relation_type": "part_of",

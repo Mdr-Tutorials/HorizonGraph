@@ -5,7 +5,7 @@
     "GGUF 格式",
     "GGML Universal Format"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "open-source-ai-ecosystem"
   ],
@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     },
     {
       "relation_type": "developed_by",

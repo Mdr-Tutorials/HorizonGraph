@@ -5,7 +5,7 @@
     "MCP Apps 扩展",
     "MCP 交互界面规范"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "agent-development"
   ],
@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "api-specification"
+      "target_id": "tooling-agent-specification"
     },
     {
       "relation_type": "uses",

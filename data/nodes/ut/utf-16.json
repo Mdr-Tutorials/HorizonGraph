@@ -5,7 +5,7 @@
     "十六位 Unicode 转换格式",
     "UTF16"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "text-rendering"
   ],

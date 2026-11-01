@@ -5,7 +5,7 @@
     "Fetch 元数据请求头",
     "Fetch Metadata"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-services",
     "web-development",

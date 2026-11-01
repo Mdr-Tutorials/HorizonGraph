@@ -4,7 +4,7 @@
   "aliases": [
     "OSC 8 终端超链接"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "terminal-ecosystem"
   ],

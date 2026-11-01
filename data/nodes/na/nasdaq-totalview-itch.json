@@ -6,7 +6,7 @@
     "Nasdaq ITCH",
     "ITCH 5.0"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "electronic-trading",
     "networking",

@@ -6,7 +6,7 @@
     "统一补丁格式",
     "Unidiff"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "developer-environments",
     "programming-languages"

@@ -10,7 +10,7 @@
 - 缩写保留：`k8s`、`llm`
 - 中文进入 aliases，id 全 ASCII
 - id 发布后保持不变；改名场景在 `data/renames.json` 登记，redirects 由 build 派生
-- 保留 slug：五个锚点（meta-concept、meta-architecture、meta-protocol、meta-organization、meta-artifact）与十二个类型根（theory、protocol、language、framework、library、tool、platform、metric、model-family、product、organization、person）专用于本体
+- 保留 slug：五个锚点（meta-concept、meta-architecture、meta-protocol、meta-organization、meta-artifact）与十五个类型根（theory、protocol、specification、format、license、language、framework、library、tool、platform、metric、model-family、product、organization、person）专用于本体
 
 ## 2. importance 锚定标准
 
@@ -133,8 +133,8 @@
 
 ## 14. 图形接口、资产与运行时
 
-- API 接口规范按 protocol 建模，挂 api-specification；Canvas 2D、WebGPU、Web Audio 等接口不挂网络应用层协议分类。调用规范使用 uses；实际实现规范的工件才使用 implements。
-- 图形资产格式按 protocol 建模，挂 graphics-asset-format；glTF 与 GLB 分别表达场景资产规范与二进制封装，不能将 GLB 混作已有 GLBP 路由协议。编辑器、交换格式与运行库分别建模，允许共享品牌名检索。
+- API 接口规范按 specification 建模，挂 api-specification；Canvas 2D、WebGPU、Web Audio 等接口不挂网络应用层协议分类。调用规范使用 uses；实际实现规范的工件才使用 implements。
+- 图形资产格式按 format 建模，挂 graphics-asset-format；glTF 与 GLB 分别表达场景资产规范与二进制封装，不能将 GLB 混作已有 GLBP 路由协议。编辑器、交换格式与运行库分别建模，允许共享品牌名检索。
 - 游戏场景与渲染场景图分别表达生命周期管理与空间层级；图形合批与已有通用 batching 概念区分。可选渲染后端、加载器、物理系统和插件在 uses.context 中明确适用条件，不记录为所有部署的硬依赖。
 - 图形、动画、内容制作与可视化机制按对应概念分类；FPS 与帧耗时等指标按 metric 分类。概念、工具、语言和格式使用既有 EntityType，不为每个子领域新造类型。
 - 保持既有引擎、API 和工具 id。分支入口、完整清单、语义修正与验证见 ADR-0028 和对应内容批次记录。
@@ -150,7 +150,7 @@
 ## 16. WSL、容器与跨宿主开发
 
 - WSL 平台、WSL 1/2 架构切片、WSLc CLI、容器功能、原生 API 与 SDK 分别建档；同一品牌不代表同一工件。普通 WSL 发行版与 WSLc 会话的 VM、配置及安全边界分别说明。
-- OCI 组织、规范族、Runtime/Image/Distribution 规范分开。已有 oci 保留稳定 id 与 protocol 身份，明确为规范族入口；组织和具体规范各有身份，不把组织写成可实现的协议。Registry API 不等同 Engine 管理 API。
+- OCI 组织、规范族、Runtime/Image/Distribution 规范分开。已有 oci 保留稳定 id 与 specification 身份，明确为规范族入口；组织和具体规范各有身份，不把组织写成可实现的协议。Registry API 不等同 Engine 管理 API。
 - Linux Namespaces 与 cgroup 是内核机制；以 concept 挂 os-mechanism。平台、runtime 与工具采用机制用限定 uses，不把实现语言、常用后端或某条平台路径写成所有部署的硬依赖。
 - 镜像、运行容器、卷、bind mount、文件共享接口与网络模式分别记录。跨文件系统性能、变更通知与权限语义分别核验，不从其中一个属性推断其他属性。
 - 开发容器和 Compose 的声明规范与 CLI、插件、远程服务分别建档。社区工具不归为微软内置能力；GA 产品、历史预览、语言投影状态和路线图按当前一手资料明确限定。
@@ -161,7 +161,7 @@
 - HFT、一般算法交易及电子交易各有范围。法域认定条件、消息频率与典型行业特征分别说明；阈值注明市场、主体、计数口径和日期，不推广为全球定义。
 - 通用撮合引擎、OMS、EMS、网关及交易模拟机制使用 concept；具体软件和商业场所、行情产品使用各自实体类型。行情表示、价格或成本指标、编码、会话与业务规范分开，MBO 不保证完整排队信息。
 - 既有 k-lang 保留稳定 id，明确定义为 q；K 数组语言和 kdb+ 数据库分开。Citadel 与 Citadel Securities 分开，不因品牌相近推导组织隶属。RSS、Lean、服务熔断的既有含义保留，新网络或金融含义用限定 id 消歧。
-- io_uring、epoll 等具体 API 以 protocol 挂 api-specification，内核机制、API 与包装库分别说明。通用低延迟生态不继承金融根；实际金融成员可另行声明金融生态。
+- io_uring、epoll 等具体 API 以 specification 挂 api-specification，内核机制、API 与包装库分别说明。通用低延迟生态不继承金融根；实际金融成员可另行声明金融生态。
 - 指标采用关系从实际评估或执行主体出发，不由被评估的能力、状态或效应持有 uses。可选后端和场所特有行为在 context 中限定，不形成全部 HFT 的无条件软件或硬件依赖。
 - UTC 偏差、时间戳分辨率、采集精度与端到端时延不互相替代；法规概念不作可实现协议，草案不作已发布标准。完整范围、辖区边界与来源见 ADR-0031 和对应内容批次记录。
 

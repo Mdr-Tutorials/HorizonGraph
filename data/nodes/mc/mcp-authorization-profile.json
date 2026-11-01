@@ -5,7 +5,7 @@
     "MCP 授权配置规范",
     "MCP HTTP 授权"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "agent-development"
   ],
@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "api-specification"
+      "target_id": "tooling-agent-specification"
     },
     {
       "relation_type": "part_of",

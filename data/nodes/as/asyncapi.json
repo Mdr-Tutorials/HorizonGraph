@@ -6,7 +6,7 @@
     "AsyncAPI 规范",
     "异步事件驱动API规范"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "cloud_native"
   ],

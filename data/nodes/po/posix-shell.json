@@ -5,7 +5,7 @@
     "POSIX Shell 规范",
     "POSIX Shell 命令语言"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "command-line-tools"
   ],

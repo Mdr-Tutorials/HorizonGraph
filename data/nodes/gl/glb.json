@@ -6,7 +6,7 @@
     "Binary glTF",
     "glTF Binary"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "digital-content-creation",
     "graphics"

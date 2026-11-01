@@ -4,7 +4,7 @@
   "aliases": [
     "Message Passing Interface"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "ai_data_science"
   ],
@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "api-specification"
     }
   ],
   "summary": "超算集群的消息传递标准，HPC 并行的通用语。",

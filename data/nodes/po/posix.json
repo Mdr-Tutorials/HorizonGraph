@@ -6,7 +6,7 @@
     "可移植操作系统接口",
     "IEEE Std 1003"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "linux-gnu-ecosystem",
     "shell-cli-ecosystem"

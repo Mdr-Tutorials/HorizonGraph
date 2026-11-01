@@ -5,7 +5,7 @@
     "USDZ 资产包",
     "Universal Scene Description Zip"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "digital-content-creation",
     "graphics"

@@ -6,7 +6,7 @@
     "USD",
     "USD Scene Description"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "digital-content-creation",
     "graphics"

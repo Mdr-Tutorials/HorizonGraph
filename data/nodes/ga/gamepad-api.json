@@ -4,7 +4,7 @@
   "aliases": [
     "游戏手柄接口"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "game-development",
     "web-development"

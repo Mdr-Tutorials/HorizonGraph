@@ -4,7 +4,7 @@
   "aliases": [
     "Tom's Obvious Minimal Language"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "devops_tooling"
   ],
@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "语义清晰的配置文件格式，Rust 与 Python 项目常用。",

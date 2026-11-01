@@ -5,7 +5,7 @@
     "iLink 3",
     "iLink 3 Binary Order Entry"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "electronic-trading",
     "networking",

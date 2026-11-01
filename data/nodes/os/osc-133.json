@@ -5,7 +5,7 @@
     "OSC 133 命令标记",
     "FinalTerm Shell Integration"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "terminal-ecosystem"
   ],

@@ -5,7 +5,7 @@
     "动画帧请求接口",
     "rAF"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "game-development",
     "web-development"

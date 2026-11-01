@@ -6,7 +6,7 @@
     "Emacs TAGS 文件格式",
     "etags 格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "language-tooling",
     "programming-languages"

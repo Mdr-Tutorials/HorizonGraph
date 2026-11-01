@@ -3,7 +3,7 @@
   "name": "WebGPU",
   "display_primary": "WebGPU",
   "aliases": [],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "web_frontend",
     "graphics-api-ecosystem"

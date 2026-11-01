@@ -4,7 +4,7 @@
   "aliases": [
     "Portable Network Graphics"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "web_frontend"
   ],
@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "graphics-asset-format"
     }
   ],
   "summary": "无损图像格式，截图与透明通道的标准。",

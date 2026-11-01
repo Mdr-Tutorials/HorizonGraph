@@ -6,7 +6,7 @@
     "SAM 文本格式",
     "BAM 二进制格式"
   ],
-  "type": "protocol",
+  "type": "format",
   "relations": [
     {
       "relation_type": "is_instance_of",

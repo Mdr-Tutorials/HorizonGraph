@@ -5,7 +5,7 @@
     "ConPTY",
     "Windows 伪控制台接口"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "terminal-engineering"
   ],

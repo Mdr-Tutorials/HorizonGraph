@@ -6,7 +6,7 @@
     "fetch",
     "WHATWG Fetch"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-development",
     "web-services"

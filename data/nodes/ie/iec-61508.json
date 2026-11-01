@@ -4,7 +4,7 @@
   "aliases": [
     "IEC 61508 功能安全标准"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "industrial-automation-ecosystem"
   ],

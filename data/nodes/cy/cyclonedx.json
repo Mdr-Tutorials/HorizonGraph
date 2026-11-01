@@ -6,7 +6,7 @@
     "CycloneDX 物料清单规范",
     "OWASP CycloneDX"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "security",
     "devops",

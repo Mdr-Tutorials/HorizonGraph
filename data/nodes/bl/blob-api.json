@@ -5,7 +5,7 @@
     "二进制数据对象接口",
     "Blob API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-development",
     "web-services"

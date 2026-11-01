@@ -130,7 +130,7 @@ const fontCss = `@font-face{font-family:"HarmonyOS Sans SC";src:url(${B}fonts/ha
         try {
           const m = await assetJson<any>("graph/manifest.json");
           const c = m.counts ?? {};
-          const T: Record<string, string> = { concept: "概念", metric: "度量", language: "编程语言", protocol: "协议", framework: "框架", library: "库", tool: "工具", architecture: "架构", model_family: "模型族", product: "产品", organization: "组织", person: "人物" };
+          const T: Record<string, string> = { concept: "概念", metric: "度量", language: "编程语言", protocol: "协议", specification: "规范", format: "格式", license: "许可证", framework: "框架", library: "库", tool: "工具", architecture: "架构", model_family: "模型族", product: "产品", organization: "组织", person: "人物" };
           const row = (k: string, v: unknown) =>
             `<span class="whitespace-nowrap">${k} <b class="font-mono font-semibold text-ink">${v}</b></span>`;
           const el = document.getElementById("hg-stats");

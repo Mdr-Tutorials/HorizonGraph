@@ -6,7 +6,7 @@
     ".riv",
     "RIV"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "graphics",
     "creative-coding",

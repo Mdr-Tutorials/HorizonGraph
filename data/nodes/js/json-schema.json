@@ -5,7 +5,7 @@
     "JSON 模式",
     "JSON Schema 规范"
   ],
-  "type": "protocol",
+  "type": "format",
   "domains": [
     "api-engineering",
     "data-engineering"

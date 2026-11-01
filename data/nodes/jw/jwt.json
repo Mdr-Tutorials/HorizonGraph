@@ -4,7 +4,7 @@
   "aliases": [
     "JSON Web Token"
   ],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "iam-ecosystem",
     "cybersecurity-ecosystem"
@@ -16,13 +16,13 @@
   "abstraction_level": "runtime_vm",
   "relations": [
     {
+      "relation_type": "is_instance_of",
+      "target_id": "serialization-format"
+    },
+    {
       "relation_type": "uses",
       "target_id": "cryptography",
       "context": "需要令牌内保护时，JWT 通过 JWS 使用数字签名或 MAC，或通过 JWE 加密；具体算法和验证规则由应用配置限定。"
-    },
-    {
-      "relation_type": "is_instance_of",
-      "target_id": "security-protocol"
     }
   ],
   "summary": "以 JSON 声明集传递信息的令牌格式，可使用签名、MAC 或加密保护。",

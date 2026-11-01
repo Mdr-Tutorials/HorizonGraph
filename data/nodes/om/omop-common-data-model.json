@@ -5,7 +5,7 @@
     "OMOP 通用数据模型",
     "OMOP CDM"
   ],
-  "type": "protocol",
+  "type": "specification",
   "relations": [
     {
       "relation_type": "is_instance_of",

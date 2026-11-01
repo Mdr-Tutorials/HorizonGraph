@@ -5,7 +5,7 @@
     "Fetch响应对象",
     "Response API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "web-development",
     "web-services"

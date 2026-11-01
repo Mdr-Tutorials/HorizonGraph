@@ -4,7 +4,7 @@
   "aliases": [
     "Serial Peripheral Interface"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "embedded-ecosystem",
     "hardware_iot"

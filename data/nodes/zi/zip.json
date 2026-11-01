@@ -2,7 +2,7 @@
   "id": "zip",
   "name": "ZIP",
   "aliases": [],
-  "type": "protocol",
+  "type": "format",
   "ecosystems": [
     "devops_tooling"
   ],
@@ -13,7 +13,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "application-protocol"
+      "target_id": "serialization-format"
     }
   ],
   "summary": "最通用的压缩打包格式，跨平台的默认语言。",

@@ -7,7 +7,7 @@
     "最小公共 Web API",
     "Minimum Common Web Platform API"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "edge-computing",
     "web-services"

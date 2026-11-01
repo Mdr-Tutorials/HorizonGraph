@@ -5,7 +5,7 @@
     "SoupBinTCP Session Protocol",
     "Nasdaq TCP 会话封装"
   ],
-  "type": "protocol",
+  "type": "specification",
   "domains": [
     "electronic-trading",
     "networking",

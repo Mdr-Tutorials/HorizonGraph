@@ -5,7 +5,7 @@
     "Advanced Encryption Standard",
     "高级加密标准"
   ],
-  "type": "protocol",
+  "type": "specification",
   "ecosystems": [
     "cryptography-pki-ecosystem"
   ],
@@ -16,7 +16,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "security-protocol"
+      "target_id": "supply-chain-specification"
     },
     {
       "relation_type": "part_of",

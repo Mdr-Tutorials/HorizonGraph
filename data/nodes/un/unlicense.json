@@ -6,7 +6,7 @@
   "aliases": [
     "Unlicense 协议"
   ],
-  "type": "protocol",
+  "type": "license",
   "ecosystems": [
     "devops_tooling"
   ],
