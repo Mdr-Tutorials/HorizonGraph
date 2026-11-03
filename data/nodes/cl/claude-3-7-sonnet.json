@@ -1,0 +1,39 @@
+{
+  "id": "claude-3-7-sonnet",
+  "name": "Claude 3.7 Sonnet",
+  "display_primary": "Claude 3.7 Sonnet",
+  "display_secondary": "首款混合推理与扩展思考模型",
+  "aliases": [
+    "Claude 3.7 Sonnet",
+    "Claude 3.7 Sonnet"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "Anthropic 首款融合即时响应与扩展思考模式的混合推理模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://www.anthropic.com"
+}

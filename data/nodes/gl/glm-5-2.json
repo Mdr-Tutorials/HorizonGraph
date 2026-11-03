@@ -11,7 +11,6 @@
     "natural-language-processing"
   ],
   "abstraction_level": "framework_library",
-  "description": "1M 上下文版本：引入 IndexShare（1M 上下文下单 token FLOPs 降 2.9 倍）；Terminal-Bench 2.1 得 81.0（5.1 为 62.0）、SWE-bench Pro 62.1，时点最强开源模型，接近 Claude Opus 4.8 的 85.0。",
   "relations": [
     {
       "relation_type": "is_instance_of",

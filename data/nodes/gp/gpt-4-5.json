@@ -1,0 +1,39 @@
+{
+  "id": "gpt-4-5",
+  "name": "GPT-4.5",
+  "display_primary": "GPT-4.5",
+  "display_secondary": "前代稠密知识增强旗舰",
+  "aliases": [
+    "GPT-4.5",
+    "GPT-4.5"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "具备更强世界常识直觉与低幻觉率的过渡期前沿模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

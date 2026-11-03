@@ -1,0 +1,39 @@
+{
+  "id": "gemini-3-7-flash",
+  "name": "Gemini 3.7 Flash",
+  "display_primary": "Gemini 3.7 Flash",
+  "display_secondary": "高精度代码与深层文档推演版",
+  "aliases": [
+    "Gemini 3.7 Flash",
+    "Gemini 3.7 Flash"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "大幅压低调用失败重试率的高鲁棒性快速编码模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "llama-4-behemoth",
+  "name": "Llama 4 Behemoth",
+  "display_primary": "Llama 4 Behemoth",
+  "display_secondary": "超巨型 STEM 与知识蒸馏母体",
+  "aliases": [
+    "Llama 4 Behemoth",
+    "Llama 4 Behemoth"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "llama"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "Meta算力集群训练的288B激活超巨型开源模型，负责知识蒸馏与科研。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.llama.com"
+}

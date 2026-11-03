@@ -28,11 +28,12 @@
       "target_id": "transformer"
     }
   ],
-  "summary": "欧洲开源大模型族，Mixtral 采用 MoE 稀疏化。",
+  "summary": "欧洲Mistral AI研发的开源与商业模型家族，以高密度MoE架构见长。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-11-03",
   "importance": 4,
   "official_site": "https://mistral.ai",
-  "display_primary": "Mistral"
+  "display_primary": "Mistral",
+  "description": "Mistral 是法国人工智能实验室 Mistral AI 研发的大模型家族，以极致的数学工程优化、稀疏混合专家（MoE）架构与欧洲主权 AI 愿景为鲜明特色。\n\n该家族包含面向通用复杂任务的 Mistral Large 系列（自早期的 Mistral Large 2 演进至代号“Le Chonk”的万亿级 MoE 旗舰 Mistral Large 4）、专精代码与智能体编程的 Codestral、原生多模态视觉模型 Pixtral、以及高性价比边缘模型 Ministral 与 Mistral Small 系列。Mistral 坚持开源权重与商业 API 双轨运行，广泛采用 Apache-2.0 及 Mistral Ecosystem 等开源/生态授权，成为欧洲及全球企业本地化部署的关键选择。"
 }

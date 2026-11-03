@@ -1,0 +1,39 @@
+{
+  "id": "claude-3-sonnet",
+  "name": "Claude 3 Sonnet",
+  "display_primary": "Claude 3 Sonnet",
+  "display_secondary": "企业级高性价比通用模型",
+  "aliases": [
+    "Claude 3 Sonnet",
+    "Claude 3 Sonnet"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "初代 Sonnet 均衡型主力模型，兼备可观智能与经济吞吐。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 3,
+  "official_site": "https://www.anthropic.com"
+}

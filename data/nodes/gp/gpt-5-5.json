@@ -1,0 +1,39 @@
+{
+  "id": "gpt-5-5",
+  "name": "GPT-5.5",
+  "display_primary": "GPT-5.5",
+  "display_secondary": "长程软件工程与文档生成模型",
+  "aliases": [
+    "GPT-5.5",
+    "GPT-5.5"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "专为 Cursor 与 Codex 长程代码重构深度适配的高阶基模。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

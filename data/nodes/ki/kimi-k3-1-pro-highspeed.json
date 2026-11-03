@@ -1,0 +1,39 @@
+{
+  "id": "kimi-k3-1-pro-highspeed",
+  "name": "Kimi K3.1 Pro Highspeed",
+  "display_primary": "Kimi K3.1 Pro Highspeed",
+  "display_secondary": "3万亿参数极速高吞吐版本",
+  "aliases": [
+    "Kimi K3.1 Pro Highspeed",
+    "Kimi K3.1 Pro Highspeed"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "kimi"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "moonshot-ai"
+    }
+  ],
+  "summary": "月之暗面推出的输出速率提升2至3倍的高性能超大模型变体。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://kimi.ai"
+}

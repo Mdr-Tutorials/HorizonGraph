@@ -1,0 +1,39 @@
+{
+  "id": "mimo-v2-6-pro-ultraspeed",
+  "name": "Xiaomi MiMo-V2.6-Pro-Ultraspeed",
+  "display_primary": "MiMo-V2.6-Pro-Ultraspeed",
+  "display_secondary": "软硬协同千级TPS超高速推演模式",
+  "aliases": [
+    "Xiaomi MiMo-V2.6-Pro-Ultraspeed",
+    "MiMo-V2.6-Pro-Ultraspeed"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mimo"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "xiaomi"
+    }
+  ],
+  "summary": "兼备Pro旗舰性能与数倍极速响应的超低延迟衍生版本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://github.com/Xiaomi/MiMo"
+}

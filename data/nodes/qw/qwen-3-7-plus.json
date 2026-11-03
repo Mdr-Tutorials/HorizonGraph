@@ -1,0 +1,39 @@
+{
+  "id": "qwen-3-7-plus",
+  "name": "Qwen3.7-Plus",
+  "display_primary": "Qwen3.7-Plus",
+  "display_secondary": "百炼企业级主力通用模型",
+  "aliases": [
+    "Qwen3.7-Plus",
+    "Qwen3.7-Plus"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "qwen"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    }
+  ],
+  "summary": "在性能、速度与成本间取得最佳平衡的企业级高频调用模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://qwenlm.github.io"
+}

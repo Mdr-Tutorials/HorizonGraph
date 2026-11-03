@@ -1,0 +1,39 @@
+{
+  "id": "qwen-2-72b",
+  "name": "Qwen 2 72B",
+  "display_primary": "Qwen 2 72B",
+  "display_secondary": "全球开源前沿榜首作品",
+  "aliases": [
+    "Qwen 2 72B",
+    "Qwen 2 72B"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "qwen"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    }
+  ],
+  "summary": "在代码、数学与长文本（支持128K）上全面赶超主流开源的里程碑。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://qwenlm.github.io"
+}

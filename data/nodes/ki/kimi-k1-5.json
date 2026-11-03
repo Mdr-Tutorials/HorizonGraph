@@ -1,0 +1,39 @@
+{
+  "id": "kimi-k1-5",
+  "name": "Kimi k1.5",
+  "display_primary": "Kimi k1.5",
+  "display_secondary": "长上下文全模态强化学习模型",
+  "aliases": [
+    "Kimi k1.5",
+    "Kimi k1.5"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "kimi"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "moonshot-ai"
+    }
+  ],
+  "summary": "基于128K长上下文强化学习训练的具备自主反思能力的推理模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://kimi.ai"
+}

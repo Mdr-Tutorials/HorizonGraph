@@ -1,0 +1,39 @@
+{
+  "id": "mixtral-8x7b",
+  "name": "Mixtral 8x7B",
+  "display_primary": "Mixtral 8x7B",
+  "display_secondary": "开源 MoE 稀疏架构破局者",
+  "aliases": [
+    "Mixtral 8x7B",
+    "Mixtral 8x7B"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mistral"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mistral-ai"
+    }
+  ],
+  "summary": "采用稀疏混合专家（MoE）并在多项评测追平乃至超越 Llama 70B 的里程碑。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://mistral.ai"
+}

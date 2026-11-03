@@ -1,0 +1,39 @@
+{
+  "id": "gemini-3-8-flash",
+  "name": "Gemini 3.8 Flash",
+  "display_primary": "Gemini 3.8 Flash",
+  "display_secondary": "可调节思考深度高能主力",
+  "aliases": [
+    "Gemini 3.8 Flash",
+    "Gemini 3.8 Flash"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "支持灵活配置内部思考深度的第三代高人气主力多模态模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

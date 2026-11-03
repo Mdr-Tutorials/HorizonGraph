@@ -1,0 +1,39 @@
+{
+  "id": "qwen-2-5-coder-32b",
+  "name": "Qwen2.5-Coder-32B",
+  "display_primary": "Qwen2.5-Coder-32B",
+  "display_secondary": "媲美顶尖闭源的开源代码王者",
+  "aliases": [
+    "Qwen2.5-Coder-32B",
+    "Qwen2.5-Coder-32B"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "qwen"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    }
+  ],
+  "summary": "以5.5万亿代码Tokens训练的代码专精模型，在多项评测媲美GPT-4o。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://qwenlm.github.io"
+}

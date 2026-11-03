@@ -1,0 +1,39 @@
+{
+  "id": "gemini-2-0-pro",
+  "name": "Gemini 2.0 Pro",
+  "display_primary": "Gemini 2.0 Pro",
+  "display_secondary": "深度代码与长文本指令遵从模型",
+  "aliases": [
+    "Gemini 2.0 Pro",
+    "Gemini 2.0 Pro"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "Google 第二代面向严谨软件工程与复杂学术推导的高阶模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

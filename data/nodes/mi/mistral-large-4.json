@@ -1,0 +1,39 @@
+{
+  "id": "mistral-large-4",
+  "name": "Mistral Large 4",
+  "display_primary": "Mistral Large 4",
+  "display_secondary": "万亿级开源 MoE 旗舰 (Le Chonk)",
+  "aliases": [
+    "Mistral Large 4",
+    "Mistral Large 4"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mistral"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mistral-ai"
+    }
+  ],
+  "summary": "Mistral AI 研发的万亿级多模态 MoE 开源旗舰（代号 Le Chonk）。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://mistral.ai"
+}

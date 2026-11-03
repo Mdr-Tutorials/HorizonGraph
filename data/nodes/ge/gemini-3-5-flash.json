@@ -1,0 +1,39 @@
+{
+  "id": "gemini-3-5-flash",
+  "name": "Gemini 3.5 Flash",
+  "display_primary": "Gemini 3.5 Flash",
+  "display_secondary": "3.5 世代高吞吐多模态工马",
+  "aliases": [
+    "Gemini 3.5 Flash",
+    "Gemini 3.5 Flash"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "Google 2026年发布的兼具高速吞吐与前沿多模态智能的主力模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

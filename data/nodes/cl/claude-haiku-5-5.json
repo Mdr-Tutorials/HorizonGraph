@@ -1,0 +1,39 @@
+{
+  "id": "claude-haiku-5-5",
+  "name": "Claude Haiku 5.5",
+  "display_primary": "Claude Haiku 5.5",
+  "display_secondary": "极速低延迟浏览器与子智能体版",
+  "aliases": [
+    "Claude Haiku 5.5",
+    "Claude Haiku 5.5"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "Anthropic专为极速高并发和轻量浏览器控制设计的快速小模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.anthropic.com"
+}

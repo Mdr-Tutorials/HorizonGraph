@@ -16,7 +16,7 @@
     "natural-language-processing"
   ],
   "abstraction_level": "framework_library",
-  "description": "GLM 系列由智谱 AI 研发，开源许可 Apache-2.0。GLM-5 代达到 744B 总参 / 40B 激活（MoE），预训练语料 28.5T tokens，集成 DeepSeek Sparse Attention（DSA）稀疏注意力，使用自研 slime 异步强化学习框架做后训练。官方版本线为 GLM-4.5 → 4.7 → 5 → 5.1 → 5.2 → 5.3；GLM-4.6 虽存在但官方叙事已跳过。GLM-5.3-Flash（320B-A18B，混合稀疏+线性注意力）是独立基座而非尺寸变体。",
+  "description": "GLM（General Language Model）是由智谱 AI 研发并主导的通用大模型家族，长期采用自回归填空与双向注意力机制演进。\n\nGLM 拥有清晰的版本演进线：从 GLM-4/4.5 到 GLM-5 世代，全面拥抱稀疏 MoE 架构（744B 总参 / 40B 激活）并集成 DeepSeek Sparse Attention（DSA）与 slime 异步强化学习框架。最新旗舰为 GLM-5.3（具备 1M 超长上下文，在编程智能体与网络安全攻防漏洞挖掘方面位列开源 SOTA）以及轻量级高性价比原生多模态混合基座 GLM-5.3-Flash。GLM 模型以 Apache-2.0 / MIT 等极度开放的协议服务于开源社区、Z.ai 及各云端开放平台。",
   "relations": [
     {
       "relation_type": "is_instance_of",
@@ -56,10 +56,10 @@
     "training",
     "open-source"
   ],
-  "summary": "智谱 AI 研发的开源通用大模型家族，当前旗舰 GLM-5.3。",
+  "summary": "智谱AI研发的开源通用大模型家族，涵盖GLM-4与GLM-5.3旗舰系列。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-11-03",
   "importance": 5,
   "official_site": "https://open.bigmodel.cn"
 }

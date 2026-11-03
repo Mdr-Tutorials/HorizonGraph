@@ -27,12 +27,13 @@
       "target_id": "transformer"
     }
   ],
-  "summary": "xAI 的对话大模型族，实时接入 X 数据流。",
+  "summary": "xAI研发的追求极致推理与实时信息的大模型家族，旗舰为Grok 4.7。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-30",
+  "last_reviewed": "2026-11-03",
   "importance": 4,
   "official_site": "https://x.ai",
   "popular": 85,
-  "display_primary": "Grok"
+  "display_primary": "Grok",
+  "description": "Grok 是埃隆·马斯克旗下 xAI 研发的大语言模型家族，核心追求最大化探索真理、极致工程算力利用与实时网络信息检索洞察。\n\n从最初接入 X 实时推文数据流的 Grok 1/2，到依托十万卡规模“Colossus”超算集群训练并引入深度思考模式（Think Mode）与 DeepSearch 研究智能体的 Grok 3 世代，Grok 家族快速成长为世界级前沿基座。最新旗舰 Grok 4.7 原生具备 50 万 Token 上下文、极强的代码长程自验证能力以及对 Grok Bot 智能体框架的原生调度支持，广泛服务于 X 平台、Cursor 等开发者开发环境及企业级 API。"
 }

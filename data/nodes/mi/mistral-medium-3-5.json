@@ -1,0 +1,39 @@
+{
+  "id": "mistral-medium-3-5",
+  "name": "Mistral Medium 3.5",
+  "display_primary": "Mistral Medium 3.5",
+  "display_secondary": "中型紧凑密集智能体基座",
+  "aliases": [
+    "Mistral Medium 3.5",
+    "Mistral Medium 3.5"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mistral"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mistral-ai"
+    }
+  ],
+  "summary": "面向高频智能体工作流与复杂代码构建的高性价比前沿模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://mistral.ai"
+}

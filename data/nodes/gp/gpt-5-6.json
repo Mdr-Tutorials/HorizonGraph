@@ -1,0 +1,39 @@
+{
+  "id": "gpt-5-6",
+  "name": "GPT-5.6",
+  "display_primary": "GPT-5.6",
+  "display_secondary": "工具链与前端组件生成旗舰",
+  "aliases": [
+    "GPT-5.6",
+    "GPT-5.6"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "大幅压缩多步调用 Token 消耗并强化前端界面生成的成熟版本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

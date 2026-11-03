@@ -1,0 +1,39 @@
+{
+  "id": "llama-3-2-vision-11b",
+  "name": "Llama 3.2 11B Vision",
+  "display_primary": "Llama 3.2 11B Vision",
+  "display_secondary": "紧凑型开源多模态视觉模型",
+  "aliases": [
+    "Llama 3.2 11B Vision",
+    "Llama 3.2 11B Vision"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "llama"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "单卡轻松运行的原生图文理解多模态模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.llama.com"
+}

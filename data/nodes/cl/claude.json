@@ -47,14 +47,14 @@
       "target_id": "function-calling"
     }
   ],
-  "summary": "Anthropic 的语言模型家族，支持生成、视觉与工具使用。",
+  "summary": "Anthropic研发的安全对齐大语言模型家族，最新旗舰为Claude 5.5世代。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-10-08",
+  "last_reviewed": "2026-11-03",
   "importance": 5,
-  "official_site": "https://platform.claude.com/docs/en/models/overview",
+  "official_site": "https://www.anthropic.com/claude",
   "first_released": "2023-03-14",
   "popular": 98,
   "display_primary": "Claude",
-  "description": "Claude 是 Anthropic 开发的大语言模型家族，用于语言理解、生成、代码、视觉输入和工具使用等任务。家族内不同模型线及版本面向不同的能力、延迟和成本需求，当前型号、输入模态和生命周期应以官方 Models API 与型号文档为准。本节点保持模型家族身份，区别于同名对话应用和 Claude Code 编程代理产品，不将这些产品界面当成模型的组成部分。\n\n在工具使用过程中，应用提供工具定义与上下文，模型可生成结构化工具调用，随后由客户应用或平台所提供的工具服务执行。执行结果进入后续模型输入，形成更大的代理循环；模型生成调用并不等于它独立运行 shell、访问数据库或具备用户授权。客户端工具和平台服务端工具承担不同的执行责任，具体可用功能还取决于模型与所采用平台。\n\nMCP 连接的是宿主应用、客户端与工具服务器。官方架构明确宿主管理客户端，客户端与服务器通信，因此不能把 Claude 模型家族写为 MCP 协议实现者；Claude Code 等宿主可以使用 MCP，而模型处理被宿主提供的工具和结果。部署模型时应分别考察模型能力、上下文、执行环境及权限，模型支持工具使用不会自动提供完整代理运行时或安全保证。\n\n## 参考\n\n- [Anthropic：当前 Claude 模型家族与型号能力](https://platform.claude.com/docs/en/models/overview)\n- [Anthropic：客户端工具与平台工具执行边界](https://platform.claude.com/docs/en/agents-and-tools/tool-use/how-tool-use-works)\n- [MCP：宿主、客户端和服务器的架构](https://modelcontextprotocol.io/docs/learn/architecture)"
+  "description": "Claude 是 Anthropic 研发的大语言模型家族，以基于宪法式 AI（Constitutional AI）的安全对齐、卓越的代码编写能力和精细的工具调度著称。\n\nClaude 家族在命名上通常划分为三个梯队：顶配旗舰 Opus（负责极复杂逻辑与系统级长程任务）、均衡主力 Sonnet（日常开发与企业应用的核心工马）、以及极速轻量 Haiku（处理高并发与强延迟敏感场景）。历经 Claude 3、引领行业智能体编程与计算机使用（Computer Use）的 Claude 3.5 Sonnet，以及首创混合思考模式的 Claude 3.7 Sonnet，家族全面跃升至 Claude 5.5 世代（Opus 5.5 / Sonnet 5.5 / Haiku 5.5），具备 100 万 Token 原生上下文、自适应思维链预算与深度的多智能体协同闭环。"
 }

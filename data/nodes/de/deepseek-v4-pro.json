@@ -1,0 +1,39 @@
+{
+  "id": "deepseek-v4-pro",
+  "name": "DeepSeek-V4-Pro",
+  "display_primary": "DeepSeek-V4-Pro",
+  "display_secondary": "百万上下文全模态第四代旗舰",
+  "aliases": [
+    "DeepSeek-V4-Pro",
+    "DeepSeek-V4-Pro"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "deepseek-llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "deepseek"
+    }
+  ],
+  "summary": "深度求索第四代全模态长程智能体旗舰，标配100万Token上下文。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.deepseek.com"
+}

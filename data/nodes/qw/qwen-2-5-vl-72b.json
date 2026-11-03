@@ -1,0 +1,39 @@
+{
+  "id": "qwen-2-5-vl-72b",
+  "name": "Qwen2.5-VL-72B",
+  "display_primary": "Qwen2.5-VL-72B",
+  "display_secondary": "高分辨率动态视觉与视频理解旗舰",
+  "aliases": [
+    "Qwen2.5-VL-72B",
+    "Qwen2.5-VL-72B"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "qwen"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    }
+  ],
+  "summary": "阿里开源的具备超长视频理解、高精图表辨析与设备操控的多模态模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://qwenlm.github.io"
+}

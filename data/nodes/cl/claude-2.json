@@ -1,0 +1,39 @@
+{
+  "id": "claude-2",
+  "name": "Claude 2",
+  "display_primary": "Claude 2",
+  "display_secondary": "首度实现 100K 长上下文",
+  "aliases": [
+    "Claude 2",
+    "Claude 2"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "首个将上下文窗口拓展至 100K Token 并大幅提升编码能力的版本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.anthropic.com"
+}

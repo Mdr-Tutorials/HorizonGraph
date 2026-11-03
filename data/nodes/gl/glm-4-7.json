@@ -11,7 +11,6 @@
     "natural-language-processing"
   ],
   "abstraction_level": "framework_library",
-  "description": "GLM-4 系末期版本，GLM-5 发布前的学术基准对比对象；GLM-5 在前端开发、后端系统与长程任务上全面超过它。官方 5.x 文档已不再提供其详细页。",
   "relations": [
     {
       "relation_type": "is_instance_of",

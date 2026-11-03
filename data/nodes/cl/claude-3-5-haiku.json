@@ -1,0 +1,39 @@
+{
+  "id": "claude-3-5-haiku",
+  "name": "Claude 3.5 Haiku",
+  "display_primary": "Claude 3.5 Haiku",
+  "display_secondary": "新一代极速轻量编码小钢炮",
+  "aliases": [
+    "Claude 3.5 Haiku",
+    "Claude 3.5 Haiku"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "在极低延迟下达到媲美早期 Opus 编程成绩的高速轻量模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.anthropic.com"
+}

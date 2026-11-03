@@ -1,0 +1,39 @@
+{
+  "id": "claude-sonnet-5-5",
+  "name": "Claude Sonnet 5.5",
+  "display_primary": "Claude Sonnet 5.5",
+  "display_secondary": "企业级主力智能体编程工马",
+  "aliases": [
+    "Claude Sonnet 5.5",
+    "Claude Sonnet 5.5"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "Anthropic第5.5代中坚主力，吞吐提升30%以上的高效智能体模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://www.anthropic.com"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "claude-opus-4-7",
+  "name": "Claude Opus 4.7",
+  "display_primary": "Claude Opus 4.7",
+  "display_secondary": "长时域多步骤自治推理版本",
+  "aliases": [
+    "Claude Opus 4.7",
+    "Claude Opus 4.7"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "专为多小时级自主复杂任务构建的高鲁棒性推演模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.anthropic.com"
+}

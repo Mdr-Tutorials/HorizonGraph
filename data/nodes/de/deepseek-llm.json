@@ -29,13 +29,18 @@
     {
       "relation_type": "competes_with",
       "target_id": "glm"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "mimo"
     }
   ],
-  "summary": "深度求索的开源大模型族，以低价推理著称。",
+  "summary": "深度求索研发的高效开源大模型家族，涵盖V3/V4架构与R1推理模型。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-11-03",
   "importance": 5,
   "official_site": "https://www.deepseek.com",
-  "display_primary": "DeepSeek"
+  "display_primary": "DeepSeek",
+  "description": "DeepSeek（深度求索）大语言模型家族以突破性的模型架构创新、极致的软硬件协同训练以及颠覆性的算力性价比享誉全球开源界。\n\n该家族的技术里程碑包括：采用多头潜在注意力（MLA）与 DeepSeekMoE 细粒度专家路由的 DeepSeek-V3（671B 总参 / 37B 激活）；首创纯强化学习冷启动、激发模型长思维链自验证能力的开源推理旗舰 DeepSeek-R1；以及进一步引入超低显存开销压缩 KV Cache 与全模态理解的 DeepSeek-V4 系列（如 DeepSeek-V4.1-Flash）。所有核心模型均以极宽松的 MIT 许可证开源权重与训练报告，极大降低了全球开发者与科研机构运行前沿 AI 的门槛。"
 }

@@ -1,0 +1,47 @@
+{
+  "id": "here-document",
+  "name": "Here Document",
+  "display_primary": "Here Document",
+  "display_secondary": "Heredoc",
+  "aliases": [
+    "Heredoc",
+    "Here-Doc",
+    "嵌入文档",
+    "输入行重定向"
+  ],
+  "type": "concept",
+  "domains": [
+    "command-line-tools"
+  ],
+  "ecosystems": [
+    "shell-cli-ecosystem"
+  ],
+  "abstraction_level": "runtime_vm",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "command-line-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "shell-redirection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shell-quoting",
+      "context": "界定符是否被引号引用决定多行文档体内是否执行参数展开、命令替换与算术展开。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "standard-streams",
+      "context": "默认将内联文档的内容作为命令的标准输入（stdin）流供程序读取。"
+    }
+  ],
+  "summary": "Shell中将多行内联文本重定向作为命令输入的语法机制。",
+  "description": "Here Document（常简称为 Heredoc）是一种在命令行 Shell 与脚本中将多行内嵌文本重定向作为命令标准输入（stdin）或特定文件描述符的语法机制。它允许开发者直接在代码中组织多行文本、配置文件模板或内联脚本，而无需依赖外部临时文件或多重 echo/printf 管道。\n\n在 POSIX Shell、Bash 及类 Unix 环境中，标准语法使用 `<<Delimiter` 引导输入流，解释器持续读取后续文本行直至遇到单独成行的终止界定符。若界定符未加引号（如 `<<EOF`），Shell 会对文档体内的内容依次进行参数展开、命令替换与算术展开；若界定符任一部分包含单引号或双引号（如 `<<'EOF'` 或 `<<\"EOF\"`），所有展开均被抑制，内容将作为纯字面量原样传入。此外，制表符剥离语法 `<<-Delimiter` 可以自动忽略每行前缀的制表符（Tab），便于在分支流程中保持代码缩进对齐。\n\nHere Document 属于 Shell 输入重定向能力的组成部分，发生在命令执行前的流连接与参数装配阶段。与 Here String（`<<<`，单行字符串输入）相比，Heredoc 更适用于大段结构化输入；与管道相比，它避免了派生管道子进程并在脚本内部提供了明确的作用域边界。该机制随后也被 Perl、PHP、Ruby、Python 以及现代声明式配置语言（如 HCL/Terraform）广泛采纳与借鉴。\n\n## 参考\n\n- [GNU：Here Documents](https://www.gnu.org/software/bash/manual/html_node/Here-Documents.html)\n- [The Open Group：Shell & Utilities - Here-Document (IEEE Std 1003.1)](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_07_04)",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.gnu.org/software/bash/manual/html_node/Here-Documents.html"
+}

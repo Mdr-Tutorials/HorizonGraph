@@ -1,0 +1,39 @@
+{
+  "id": "llama-3-1-70b",
+  "name": "Llama 3.1 70B",
+  "display_primary": "Llama 3.1 70B",
+  "display_secondary": "全功能长上下文开源主力",
+  "aliases": [
+    "Llama 3.1 70B",
+    "Llama 3.1 70B"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "llama"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "兼备 128K 长文本与强大函数调用能力的企业级开源基座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.llama.com"
+}

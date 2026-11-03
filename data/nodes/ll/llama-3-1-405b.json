@@ -1,0 +1,39 @@
+{
+  "id": "llama-3-1-405b",
+  "name": "Llama 3.1 405B",
+  "display_primary": "Llama 3.1 405B",
+  "display_secondary": "全球首个400B级开源密集型基座",
+  "aliases": [
+    "Llama 3.1 405B",
+    "Llama 3.1 405B"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "llama"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "4050亿参数密集型开源巨擘，标配128K上下文与前沿多语言能力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://www.llama.com"
+}

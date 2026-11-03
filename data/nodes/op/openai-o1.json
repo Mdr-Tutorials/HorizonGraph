@@ -1,0 +1,39 @@
+{
+  "id": "openai-o1",
+  "name": "OpenAI o1",
+  "display_primary": "o1",
+  "display_secondary": "首款纯测试期思维链推理模型",
+  "aliases": [
+    "OpenAI o1",
+    "o1"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "以纯强化学习慢思考树立推理大模型范式的破局之作。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://openai.com"
+}

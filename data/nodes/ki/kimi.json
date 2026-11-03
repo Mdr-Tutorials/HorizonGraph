@@ -28,10 +28,11 @@
       "target_id": "transformer"
     }
   ],
-  "summary": "月之暗面的长上下文大模型族。",
+  "summary": "月之暗面研发的长上下文与深度推理大模型家族，最新旗舰为Kimi K3.1 Pro。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-11-03",
   "importance": 4,
-  "official_site": "https://kimi.moonshot.cn"
+  "official_site": "https://kimi.ai",
+  "description": "Kimi 是月之暗面（Moonshot AI）研发的大语言与全模态模型家族。自早期以 20 万至 200 万字无损长上下文（Moonshot v1）突破行业标准后，Kimi 家族将核心重心升级至“长上下文强化学习”与“自主智能体深度推理”。\n\n家族里程碑包括在长上下文中实现多模态自反思推理的 Kimi k1.5、万亿级 MoE 架构的 Kimi K2 系列、以及进入 3 万亿参数规模且标配 100 万 Token 上下文的 Kimi K3 / K3.1 Pro 旗舰。Kimi 专注于复杂跨文档金融研报分析、长程自动化编程（Terminal-Bench 表现优异）以及跨 Unity/Blender 等 3D 资产建模创作，支撑 Kimi 助手、Kimi Work 及开放平台 API。"
 }

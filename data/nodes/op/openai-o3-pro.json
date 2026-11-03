@@ -1,0 +1,39 @@
+{
+  "id": "openai-o3-pro",
+  "name": "OpenAI o3-pro",
+  "display_primary": "o3-pro",
+  "display_secondary": "超长算力极限推理版本",
+  "aliases": [
+    "OpenAI o3-pro",
+    "o3-pro"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "OpenAI为极限STEM攻坚与数学猜想证明设计的顶级思考算力版本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

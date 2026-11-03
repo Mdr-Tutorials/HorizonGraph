@@ -1,0 +1,39 @@
+{
+  "id": "kimi-k3",
+  "name": "Kimi K3",
+  "display_primary": "Kimi K3",
+  "display_secondary": "2.8万亿开源基座新范式",
+  "aliases": [
+    "Kimi K3",
+    "Kimi K3"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "kimi"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "moonshot-ai"
+    }
+  ],
+  "summary": "采用Delta Attention与Stable LatentMoE的2.8万亿参数模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://kimi.ai"
+}

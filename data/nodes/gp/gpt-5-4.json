@@ -1,0 +1,39 @@
+{
+  "id": "gpt-5-4",
+  "name": "GPT-5.4",
+  "display_primary": "GPT-5.4",
+  "display_secondary": "智能体自律执行整合模型",
+  "aliases": [
+    "GPT-5.4",
+    "GPT-5.4"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "将代码编程、工具调用与慢思考融为一体的知识工作模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

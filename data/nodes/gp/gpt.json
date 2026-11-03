@@ -3,20 +3,35 @@
   "name": "GPT",
   "display_primary": "GPT",
   "display_secondary": "生成式预训练变换器",
-  "aliases": ["生成式预训练变换器", "Generative Pre-trained Transformer", "ChatGPT 系列"],
-  "type": "model_family",
-  "ecosystems": ["llm-agent-ecosystem"],
-  "domains": ["machine-learning", "natural-language-processing"],
-  "abstraction_level": "framework_library",
-  "description": "OpenAI 的大模型家族。注：ChatGPT 是其驱动的对话产品，独立实体（后续试点建节点）。",
-  "relations": [
-    { "relation_type": "is_instance_of", "target_id": "llm" },
-    { "relation_type": "developed_by", "target_id": "openai" }
+  "aliases": [
+    "生成式预训练变换器",
+    "Generative Pre-trained Transformer",
+    "ChatGPT 系列"
   ],
-  "summary": "OpenAI 的大模型家族，GPT 系列驱动 ChatGPT 等产品。",
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "description": "GPT（Generative Pre-trained Transformer）是 OpenAI 研发的生成式预训练语言模型家族。自 GPT-1、GPT-2、GPT-3 及引发全球生成式 AI 浪潮的 GPT-4 以来，该家族持续引领大模型前沿能力。\n\n在演进历程中，OpenAI 形成了两条关键产品线：一条是以通用低延迟、全模态为代表的即时交互基座（如 GPT-4o 及最新的第六代旗舰 GPT-6 系列，包括 GPT-6 Astra、GPT-6.1 Sol/Terra 和科研专用模型 GPT-6 Rosalind）；另一条是以测试期计算扩展与自反思强化学习为核心的深度推理线（o 系列，如开创性的 o1 与具备视觉自洽思考、复杂工具自主调用的 o3 系列）。\n\n该模型家族深度支撑 ChatGPT、OpenAI API 开发者生态以及微软 Copilot 等一系列关键产品，全面覆盖长文本理解、智能体自组织、复杂代码工程与科学研究。",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "OpenAI研发的通用大语言模型家族，涵盖旗舰GPT-6与o系列推理模型。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-11-03",
   "importance": 5,
-  "official_site": "https://openai.com"
+  "official_site": "https://openai.com/index/models/"
 }

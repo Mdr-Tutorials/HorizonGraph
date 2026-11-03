@@ -1,0 +1,39 @@
+{
+  "id": "mistral-large-3",
+  "name": "Mistral Large 3",
+  "display_primary": "Mistral Large 3",
+  "display_secondary": "第三代开源通用商业旗舰",
+  "aliases": [
+    "Mistral Large 3",
+    "Mistral Large 3"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mistral"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mistral-ai"
+    }
+  ],
+  "summary": "Mistral AI 面向企业级复杂推理与多语言处理打造的第三代主力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://mistral.ai"
+}

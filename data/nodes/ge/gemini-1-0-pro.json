@@ -1,0 +1,39 @@
+{
+  "id": "gemini-1-0-pro",
+  "name": "Gemini 1.0 Pro",
+  "display_primary": "Gemini 1.0 Pro",
+  "display_secondary": "Google 首代全模态通用基座",
+  "aliases": [
+    "Gemini 1.0 Pro",
+    "Gemini 1.0 Pro"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "Google DeepMind 2023年底推出的初代全模态大模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "mimo-v2-6-pro",
+  "name": "Xiaomi MiMo-V2.6-Pro",
+  "display_primary": "MiMo-V2.6-Pro",
+  "display_secondary": "登顶全球开源榜单的全模态旗舰",
+  "aliases": [
+    "Xiaomi MiMo-V2.6-Pro",
+    "MiMo-V2.6-Pro"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mimo"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "xiaomi"
+    }
+  ],
+  "summary": "小米1.02万亿参数全模态推理旗舰，登顶全球开源榜单。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://github.com/Xiaomi/MiMo"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "gpt-5",
+  "name": "GPT-5",
+  "display_primary": "GPT-5",
+  "display_secondary": "Fast+Thinking 动态路由架构",
+  "aliases": [
+    "GPT-5",
+    "GPT-5"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "2025年夏季发布的第五代旗舰，引入实时思考路由与代码跃迁。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://openai.com"
+}

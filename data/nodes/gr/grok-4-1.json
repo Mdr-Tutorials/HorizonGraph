@@ -1,0 +1,39 @@
+{
+  "id": "grok-4-1",
+  "name": "Grok 4.1",
+  "display_primary": "Grok 4.1",
+  "display_secondary": "低幻觉率代码增强版本",
+  "aliases": [
+    "Grok 4.1",
+    "Grok 4.1"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "grok"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "xai"
+    }
+  ],
+  "summary": "针对长程任务幻觉抑制与企业代码库分析深度优化的版本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://x.ai"
+}

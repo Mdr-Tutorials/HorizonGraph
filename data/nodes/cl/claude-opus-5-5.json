@@ -1,0 +1,39 @@
+{
+  "id": "claude-opus-5-5",
+  "name": "Claude Opus 5.5",
+  "display_primary": "Claude Opus 5.5",
+  "display_secondary": "5.5 世代长程编程与知识旗舰",
+  "aliases": [
+    "Claude Opus 5.5",
+    "Claude Opus 5.5"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "Anthropic最新顶配旗舰，配备1M上下文与自主长程智能体闭环。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://www.anthropic.com"
+}

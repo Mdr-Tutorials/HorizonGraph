@@ -1,0 +1,39 @@
+{
+  "id": "gemini-2-0-flash",
+  "name": "Gemini 2.0 Flash",
+  "display_primary": "Gemini 2.0 Flash",
+  "display_secondary": "智能体时代低延迟多模态标准",
+  "aliases": [
+    "Gemini 2.0 Flash",
+    "Gemini 2.0 Flash"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "面向实时全双工多模态语音与低延迟智能体调度的主力工马。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

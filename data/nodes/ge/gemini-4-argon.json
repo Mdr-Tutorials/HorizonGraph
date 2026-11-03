@@ -1,0 +1,39 @@
+{
+  "id": "gemini-4-argon",
+  "name": "Gemini 4 Argon",
+  "display_primary": "Gemini 4 Argon",
+  "display_secondary": "第四代前导高效推理基座",
+  "aliases": [
+    "Gemini 4 Argon",
+    "Gemini 4 Argon"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "Google DeepMind第四代高性价比先导版本，支持高效多模态计算。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

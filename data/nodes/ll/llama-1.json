@@ -1,0 +1,39 @@
+{
+  "id": "llama-1",
+  "name": "LLaMA 1",
+  "display_primary": "LLaMA 1",
+  "display_secondary": "开源大模型研究奠基者",
+  "aliases": [
+    "LLaMA 1",
+    "LLaMA 1"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "llama"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "Meta 2023年初推出的激发全球开源大模型繁荣的奠基之作。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.llama.com"
+}

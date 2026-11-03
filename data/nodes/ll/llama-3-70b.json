@@ -1,0 +1,39 @@
+{
+  "id": "llama-3-70b",
+  "name": "Llama 3 70B",
+  "display_primary": "Llama 3 70B",
+  "display_secondary": "第三代开源通用主力",
+  "aliases": [
+    "Llama 3 70B",
+    "Llama 3 70B"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "llama"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "性能比肩闭源顶尖水平的 700 亿参数开源密集型旗舰。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.llama.com"
+}

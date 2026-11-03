@@ -1,0 +1,39 @@
+{
+  "id": "gemini-3-5-flash-lite",
+  "name": "Gemini 3.5 Flash-Lite",
+  "display_primary": "Gemini 3.5 Flash-Lite",
+  "display_secondary": "超高性价比轻量多模态模型",
+  "aliases": [
+    "Gemini 3.5 Flash-Lite",
+    "Gemini 3.5 Flash-Lite"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "专为极高并发、超低成本与边缘快速响应优化的超轻量多模态基模。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 3,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

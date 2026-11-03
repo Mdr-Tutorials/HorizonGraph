@@ -1,0 +1,39 @@
+{
+  "id": "claude-mythos-5-1",
+  "name": "Claude Mythos 5.1",
+  "display_primary": "Claude Mythos 5.1",
+  "display_secondary": "高敏领域特种安全模型",
+  "aliases": [
+    "Claude Mythos 5.1",
+    "Claude Mythos 5.1"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "面向生物、网安高敏领域的特种信任授权模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.anthropic.com"
+}

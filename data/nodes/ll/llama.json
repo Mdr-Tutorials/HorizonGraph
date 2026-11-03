@@ -26,10 +26,12 @@
       "target_id": "transformer"
     }
   ],
-  "summary": "Meta 的开源 LLM 族，开源生态的基座。",
+  "summary": "Meta开源的全球主流大模型家族，涵盖Llama 3系列与Llama 4 MoE世代。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-11-03",
   "importance": 5,
-  "first_released": "2023-02-24"
+  "first_released": "2023-02-24",
+  "description": "Llama（Large Language Model Meta AI）是 Meta 推出的开源权重（Open-weights）大模型家族，是全球开源 AI 生态与自建模型体系最核心的基座之一。\n\nLlama 家族推动了密集参数模型从 Llama 1/2 到 Llama 3 世代的跨越：Llama 3.1 首次将开源权重模型规模拓展至 405B 并标配 128K 上下文；Llama 3.2 带来了边缘 1B/3B 与原生视觉 11B/90B；Llama 3.3 70B 则以极致性价比比肩 405B 计算效能。随后推出的 Llama 4 世代全面拥抱稀疏混合专家（MoE）架构（包括单卡可跑的多模态 Scout 16x17B、企业级通用推理 Maverick 128x17B 以及 STEM 旗舰 Behemoth 16x288B），进一步重塑了开源社区的算力利用率与模型扩展范式。",
+  "official_site": "https://www.llama.com"
 }

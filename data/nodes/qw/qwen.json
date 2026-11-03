@@ -28,10 +28,11 @@
       "target_id": "transformer"
     }
   ],
-  "summary": "阿里巴巴的通义千问开源大模型族。",
+  "summary": "阿里巴巴通义千问大模型家族，涵盖Qwen2.5/3系列与旗舰Qwen3.8-Max。",
   "status": "active",
   "origin": "curated",
-  "last_reviewed": "2026-08-29",
+  "last_reviewed": "2026-11-03",
   "importance": 5,
-  "official_site": "https://qwen.ai"
+  "official_site": "https://qwenlm.github.io",
+  "description": "Qwen（通义千问）是阿里巴巴开源与商业化并举的大语言模型家族，覆盖从 0.5B 到数千亿参数的全尺寸谱系。\n\n该家族在开源领域树立了高标准：Qwen2.5 在 18 万亿 Token 语料上训练，其衍生版本 Qwen2.5-Coder（尤其是 32B-Instruct）在代码修复与补全评测中媲美国际顶尖闭源模型；QwQ 系列则专注于慢思考与测试期强化学习推理。在企业与超大规模云端服务上，最新推出的 2.4 万亿参数 MoE 旗舰 Qwen3.8-Max 在自主编程、长文本多模态理解与办公协作方面实现了全面突破，并深度集成至 Apple 智能等跨平台生态中。"
 }

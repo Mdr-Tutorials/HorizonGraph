@@ -1,0 +1,39 @@
+{
+  "id": "claude-3-haiku",
+  "name": "Claude 3 Haiku",
+  "display_primary": "Claude 3 Haiku",
+  "display_secondary": "超高响应速度轻量模型",
+  "aliases": [
+    "Claude 3 Haiku",
+    "Claude 3 Haiku"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "初代具备强劲视觉解析能力的紧凑型高吞吐模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 3,
+  "official_site": "https://www.anthropic.com"
+}

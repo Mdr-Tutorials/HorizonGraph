@@ -1,0 +1,39 @@
+{
+  "id": "gpt-6-rosalind",
+  "name": "GPT-6 Rosalind",
+  "display_primary": "GPT-6 Rosalind",
+  "display_secondary": "生命科学与生物计算专用模型",
+  "aliases": [
+    "GPT-6 Rosalind",
+    "GPT-6 Rosalind"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "OpenAI专为生命科学、生物化学与分子模拟定制的前沿多模态大模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

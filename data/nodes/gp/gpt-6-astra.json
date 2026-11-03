@@ -1,0 +1,39 @@
+{
+  "id": "gpt-6-astra",
+  "name": "GPT-6 Astra",
+  "display_primary": "GPT-6 Astra",
+  "display_secondary": "第六代前沿最高智能旗舰",
+  "aliases": [
+    "GPT-6 Astra",
+    "GPT-6 Astra"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "OpenAI第六代最高智能旗舰模型，面向高难度推理与长程系统工程。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://openai.com"
+}

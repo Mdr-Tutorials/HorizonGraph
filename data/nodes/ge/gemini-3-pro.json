@@ -1,0 +1,39 @@
+{
+  "id": "gemini-3-pro",
+  "name": "Gemini 3 Pro",
+  "display_primary": "Gemini 3 Pro",
+  "display_secondary": "第三代长时域规划旗舰",
+  "aliases": [
+    "Gemini 3 Pro",
+    "Gemini 3 Pro"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "2025年底发布的具备长时域自主规划与深度推理的第三代模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

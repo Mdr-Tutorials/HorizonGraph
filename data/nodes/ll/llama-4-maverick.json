@@ -1,0 +1,39 @@
+{
+  "id": "llama-4-maverick",
+  "name": "Llama 4 Maverick",
+  "display_primary": "Llama 4 Maverick",
+  "display_secondary": "企业级通用推理 MoE 主力",
+  "aliases": [
+    "Llama 4 Maverick",
+    "Llama 4 Maverick"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "llama"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "Meta第四代通用推理主力，128专家/17B激活，企业私有化部署标杆。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://www.llama.com"
+}

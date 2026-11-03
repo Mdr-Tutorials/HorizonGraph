@@ -11,7 +11,6 @@
     "natural-language-processing"
   ],
   "abstraction_level": "framework_library",
-  "description": "GLM-5 代的首个迭代版：智能体工程旗舰，SWE-Bench Pro 时点 SOTA，可维持数百轮、数千次工具调用的长程迭代。",
   "relations": [
     {
       "relation_type": "is_instance_of",

@@ -1,0 +1,39 @@
+{
+  "id": "codestral",
+  "name": "Codestral",
+  "display_primary": "Codestral",
+  "display_secondary": "代码生成与补全专家模型",
+  "aliases": [
+    "Codestral",
+    "Codestral"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mistral"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mistral-ai"
+    }
+  ],
+  "summary": "Mistral AI 专为高质量代码补全与软件开发设计的专业模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://mistral.ai"
+}

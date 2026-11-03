@@ -1,0 +1,39 @@
+{
+  "id": "llama-4-scout",
+  "name": "Llama 4 Scout",
+  "display_primary": "Llama 4 Scout",
+  "display_secondary": "单卡原生多模态 MoE 模型",
+  "aliases": [
+    "Llama 4 Scout",
+    "Llama 4 Scout"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "llama"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "meta"
+    }
+  ],
+  "summary": "Meta第四代开源多模态模型，16专家/17B激活，可单卡本地部署。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://www.llama.com"
+}

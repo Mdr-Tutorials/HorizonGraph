@@ -1,0 +1,39 @@
+{
+  "id": "mimo-v2-6-flash",
+  "name": "Xiaomi MiMo-V2.6-Flash",
+  "display_primary": "MiMo-V2.6-Flash",
+  "display_secondary": "办公高频调用高效推理模型",
+  "aliases": [
+    "Xiaomi MiMo-V2.6-Flash",
+    "MiMo-V2.6-Flash"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mimo"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "xiaomi"
+    }
+  ],
+  "summary": "小米309B总参/15B激活高效模型，面向日常企业办公与低成本推理。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://github.com/Xiaomi/MiMo"
+}

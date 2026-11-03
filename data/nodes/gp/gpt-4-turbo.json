@@ -1,0 +1,39 @@
+{
+  "id": "gpt-4-turbo",
+  "name": "GPT-4 Turbo",
+  "display_primary": "GPT-4 Turbo",
+  "display_secondary": "128K 上下文开发者核心",
+  "aliases": [
+    "GPT-4 Turbo",
+    "GPT-4 Turbo"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "首度支持 128K 上下文与多模态视觉处理的成熟开发者基模。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

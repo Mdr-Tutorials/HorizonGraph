@@ -29,11 +29,11 @@
       "target_id": "google"
     }
   ],
-  "summary": "Google DeepMind 的模型家族，具体多模态与推理能力因型号而异。",
+  "summary": "Google DeepMind研发的原生全模态大模型家族，最新旗舰为Gemini 4 Carbon。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-10-08",
+  "last_reviewed": "2026-11-03",
   "importance": 4,
-  "official_site": "https://deepmind.google/models/gemini/",
-  "description": "Gemini 是 Google DeepMind 开发的模型家族，覆盖不同计算成本、响应速度和多模态任务取向的型号。本节点承载模型族身份；面向日常用户的 Gemini 应用、Gemini Developer API、Google Cloud 模型服务和含 Gemini 名称的编码辅助产品具有各自界面、账号与运行方式。服务品牌相同并不意味着部署或认证边界相同。\n\n模型族提供文本与代码理解、推理、工具调用和多模态能力，实际输入输出模态、上下文长度、结构化结果、实时音频等支持项取决于具体型号与接口。模型列表同时区分稳定版、预览版及此前代际，因此不能把某款演示模型的图像、音频或长上下文能力当作整个家族的统一保证。模型调用中的工具建议也需要宿主实际执行并反馈结果。\n\n开发者可通过 Developer API 与 Google Cloud 的相应服务访问可用模型，官方 SDK 为这些服务提供客户端封装，ADK 则负责应用中的代理控制与编排。API 服务的生命周期、云平台改名和某种消费账号的迁移不会自动改变模型族本身的身份。选择型号时需同时核对能力、支持状态与接口约束，不能仅凭 Gemini 名称推断兼容性。\n\n## 参考\n\n- [Google DeepMind：Gemini 模型家族](https://deepmind.google/models/gemini/)\n- [Google AI：各型号和支持状态](https://ai.google.dev/gemini-api/docs/models)\n- [Google AI：模型访问与接口层](https://ai.google.dev/gemini-api/docs)"
+  "official_site": "https://deepmind.google/technologies/gemini/",
+  "description": "Gemini 是 Google DeepMind 研发的原生全模态大模型家族，自立项起即原生支持文本、代码、图像、音频和视频的跨模态联合理解与推理。\n\n家族沿阶梯式演进：Gemini 1.5 系列首创 100 万至 200 万 Token 超长上下文窗口；Gemini 2.0 系列（Flash / Flash Thinking / Pro）确立了低延迟、实时流式多模态交互（Multimodal Live API）与智能体基础设施基准；至最新的第四代旗舰 Gemini 4 Carbon（及先导版本 Gemini 4 Argon），模型全面面向长程自主软件工程与网络攻防防御，在 Artificial Analysis 综合智能指数中位列前茅。该家族全面驱动 Google AI Studio、Vertex AI 以及 Android 系统级智能。"
 }

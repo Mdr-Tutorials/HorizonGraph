@@ -1,0 +1,39 @@
+{
+  "id": "gemini-4-carbon",
+  "name": "Gemini 4 Carbon",
+  "display_primary": "Gemini 4 Carbon",
+  "display_secondary": "登顶全球AI指数的自主防御旗舰",
+  "aliases": [
+    "Gemini 4 Carbon",
+    "Gemini 4 Carbon"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "Google DeepMind第四代顶级旗舰，专攻长程系统工程与网络防御。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

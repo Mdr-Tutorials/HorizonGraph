@@ -1,0 +1,39 @@
+{
+  "id": "gpt-6-luna",
+  "name": "GPT-6 Luna",
+  "display_primary": "GPT-6 Luna",
+  "display_secondary": "低延迟超轻量级第六代模型",
+  "aliases": [
+    "GPT-6 Luna",
+    "GPT-6 Luna"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "专注于极度敏感成本和高频子智能体任务的轻量化模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

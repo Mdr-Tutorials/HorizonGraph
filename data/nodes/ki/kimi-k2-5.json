@@ -1,0 +1,39 @@
+{
+  "id": "kimi-k2-5",
+  "name": "Kimi K2.5",
+  "display_primary": "Kimi K2.5",
+  "display_secondary": "支持百级子智能体集群协同模型",
+  "aliases": [
+    "Kimi K2.5",
+    "Kimi K2.5"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "kimi"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "moonshot-ai"
+    }
+  ],
+  "summary": "原生融入三维视觉感知与Agent Swarm多智能体集群协同模式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://kimi.ai"
+}

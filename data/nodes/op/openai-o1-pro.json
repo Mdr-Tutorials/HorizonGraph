@@ -1,0 +1,39 @@
+{
+  "id": "openai-o1-pro",
+  "name": "OpenAI o1-pro",
+  "display_primary": "o1-pro",
+  "display_secondary": "深度思维链满血推理版本",
+  "aliases": [
+    "OpenAI o1-pro",
+    "o1-pro"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "提供最大化思考预算的奥赛与高难度数理科研版本。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "grok-4-7",
+  "name": "Grok 4.7",
+  "display_primary": "Grok 4.7",
+  "display_secondary": "500K 上下文 Grok Bot 旗舰",
+  "aliases": [
+    "Grok 4.7",
+    "Grok 4.7"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "grok"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "xai"
+    }
+  ],
+  "summary": "xAI 发布的旗舰推理大模型，原生适配 Grok Bot 与长程自主代码。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://x.ai"
+}

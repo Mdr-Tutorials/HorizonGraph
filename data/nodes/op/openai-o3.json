@@ -1,0 +1,39 @@
+{
+  "id": "openai-o3",
+  "name": "OpenAI o3",
+  "display_primary": "o3",
+  "display_secondary": "视觉思考与工具调用推理旗舰",
+  "aliases": [
+    "OpenAI o3",
+    "o3"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "具备视觉思考与自主工具调用的高级强化学习推理模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://openai.com"
+}

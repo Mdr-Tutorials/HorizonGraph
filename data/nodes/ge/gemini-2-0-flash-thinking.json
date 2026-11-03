@@ -1,0 +1,39 @@
+{
+  "id": "gemini-2-0-flash-thinking",
+  "name": "Gemini 2.0 Flash Thinking",
+  "display_primary": "Gemini 2.0 Flash Thinking",
+  "display_secondary": "链式思考速度平衡推理版本",
+  "aliases": [
+    "Gemini 2.0 Flash Thinking",
+    "Gemini 2.0 Flash Thinking"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "结合显式思考步骤与Flash高吞吐特性的快速逻辑推理模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

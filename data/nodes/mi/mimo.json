@@ -1,0 +1,43 @@
+{
+  "id": "mimo",
+  "name": "Xiaomi MiMo",
+  "display_primary": "MiMo",
+  "display_secondary": "小米 MiMo 大模型",
+  "aliases": [
+    "小米 MiMo",
+    "Xiaomi MiMo",
+    "MiMo 大模型",
+    "小米大模型"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "xiaomi"
+    },
+    {
+      "relation_type": "competes_with",
+      "target_id": "qwen"
+    }
+  ],
+  "summary": "小米自研的推理优先型全模态大模型家族，支撑人车家全生态。",
+  "description": "Xiaomi MiMo 是小米集团大模型核心团队自主研发的“推理优先（Reasoning-first）”全模态大语言模型家族，是小米“人车家全生态”战略的关键 AI 基础底座。\n\nMiMo 秉持“从微小出发，探索无限智慧”的理念，强调通过预训练与后训练协同机制，在基座阶段即注入强大的逻辑、数学与编程推理能力，并原生支持文本、图像、视频、音频全模态感知与长程交互。家族历经早期的轻量开源模型，发展至万亿级参数 MoE 架构的 MiMo-V2.5，以及最新的 MiMo-V2.6 旗舰系列（包括在 Artificial Analysis 综合智能指数登顶全球开源榜单的 MiMo-V2.6-Pro、兼顾极致性价比的 MiMo-V2.6-Flash，以及超高速推演模式 Ultraspeed）。模型以宽松的 MIT 协议全面开源，并深度打通 MiMo Desktop、办公 Agent 与车机智能生态。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "popular": 88,
+  "official_site": "https://github.com/Xiaomi/MiMo"
+}

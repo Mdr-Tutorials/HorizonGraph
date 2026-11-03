@@ -1,0 +1,39 @@
+{
+  "id": "moonshot-v1-128k",
+  "name": "Moonshot v1 128K",
+  "display_primary": "Moonshot v1 128K",
+  "display_secondary": "经典长文本问答突破基座",
+  "aliases": [
+    "Moonshot v1 128K",
+    "Moonshot v1 128K"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "kimi"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "moonshot-ai"
+    }
+  ],
+  "summary": "国内率先实现数十万字无损长文本分析的标志性大语言模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://kimi.ai"
+}

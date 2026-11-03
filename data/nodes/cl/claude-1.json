@@ -1,0 +1,39 @@
+{
+  "id": "claude-1",
+  "name": "Claude 1",
+  "display_primary": "Claude 1",
+  "display_secondary": "宪法式 AI 初代安全基座",
+  "aliases": [
+    "Claude 1",
+    "Claude 1"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "claude"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "Anthropic 首次公开的基于 Constitutional AI 对齐的安全大模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 3,
+  "official_site": "https://www.anthropic.com"
+}

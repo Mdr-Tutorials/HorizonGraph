@@ -1,0 +1,39 @@
+{
+  "id": "mimo-v2-5",
+  "name": "Xiaomi MiMo-V2.5",
+  "display_primary": "MiMo-V2.5",
+  "display_secondary": "万亿 MoE 智能体基座",
+  "aliases": [
+    "Xiaomi MiMo-V2.5",
+    "MiMo-V2.5"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mimo"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "xiaomi"
+    }
+  ],
+  "summary": "小米首款万亿参数 MoE 智能体架构大模型，具备1M上下文。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://github.com/Xiaomi/MiMo"
+}

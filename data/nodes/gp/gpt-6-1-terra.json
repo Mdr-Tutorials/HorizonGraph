@@ -1,0 +1,39 @@
+{
+  "id": "gpt-6-1-terra",
+  "name": "GPT-6.1 Terra",
+  "display_primary": "GPT-6.1 Terra",
+  "display_secondary": "极速吞吐大规模自动化基座",
+  "aliases": [
+    "GPT-6.1 Terra",
+    "GPT-6.1 Terra"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "OpenAI第六代高吞吐低延迟模型，专为海量并发与边缘工作流打造。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

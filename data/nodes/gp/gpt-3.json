@@ -1,0 +1,39 @@
+{
+  "id": "gpt-3",
+  "name": "GPT-3",
+  "display_primary": "GPT-3",
+  "display_secondary": "1750亿参数大模型先驱",
+  "aliases": [
+    "GPT-3",
+    "GPT-3"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "OpenAI 2020年推出的1750亿参数标志性预训练大模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://openai.com"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "gemini-1-5-pro",
+  "name": "Gemini 1.5 Pro",
+  "display_primary": "Gemini 1.5 Pro",
+  "display_secondary": "200万超长上下文突破性模型",
+  "aliases": [
+    "Gemini 1.5 Pro",
+    "Gemini 1.5 Pro"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gemini"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "google"
+    }
+  ],
+  "summary": "首度实现高达200万Token无损长上下文理解的跨模态模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://deepmind.google/technologies/gemini/"
+}

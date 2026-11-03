@@ -1,0 +1,39 @@
+{
+  "id": "qwen-1-5-72b",
+  "name": "Qwen 1.5 72B",
+  "display_primary": "Qwen 1.5 72B",
+  "display_secondary": "开源多语言能力跃升版",
+  "aliases": [
+    "Qwen 1.5 72B",
+    "Qwen 1.5 72B"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "qwen"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    }
+  ],
+  "summary": "通义千问早期奠定优秀中英文与代码综合表现的开源主力模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://qwenlm.github.io"
+}

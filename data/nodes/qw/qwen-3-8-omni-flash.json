@@ -1,0 +1,39 @@
+{
+  "id": "qwen-3-8-omni-flash",
+  "name": "Qwen3.8-Omni-Flash",
+  "display_primary": "Qwen3.8-Omni-Flash",
+  "display_secondary": "实时音视频交互全模态模型",
+  "aliases": [
+    "Qwen3.8-Omni-Flash",
+    "Qwen3.8-Omni-Flash"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "qwen"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    }
+  ],
+  "summary": "原生融合文本、图片、音频与视频的实时全双工多模态模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://qwenlm.github.io"
+}

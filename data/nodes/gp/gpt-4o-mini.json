@@ -1,0 +1,39 @@
+{
+  "id": "gpt-4o-mini",
+  "name": "GPT-4o mini",
+  "display_primary": "GPT-4o mini",
+  "display_secondary": "轻量化极低成本全模态模型",
+  "aliases": [
+    "GPT-4o mini",
+    "GPT-4o mini"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "兼具全模态与极高性价比的紧凑型生产级基座。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

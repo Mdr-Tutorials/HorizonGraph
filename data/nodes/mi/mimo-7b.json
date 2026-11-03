@@ -1,0 +1,39 @@
+{
+  "id": "mimo-7b",
+  "name": "Xiaomi MiMo-7B",
+  "display_primary": "MiMo-7B",
+  "display_secondary": "小米早期开源数理推理基模",
+  "aliases": [
+    "Xiaomi MiMo-7B",
+    "MiMo-7B"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mimo"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "xiaomi"
+    }
+  ],
+  "summary": "小米早期以小参数规模在MATH和代码榜单展现高推理能力的开源模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 3,
+  "official_site": "https://github.com/Xiaomi/MiMo"
+}

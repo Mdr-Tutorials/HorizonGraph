@@ -1,0 +1,39 @@
+{
+  "id": "openai-o1-mini",
+  "name": "OpenAI o1-mini",
+  "display_primary": "o1-mini",
+  "display_secondary": "高效代码与数理推理模型",
+  "aliases": [
+    "OpenAI o1-mini",
+    "o1-mini"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "gpt"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "openai"
+    }
+  ],
+  "summary": "专注编程与理科题目快速解答的高性价比轻量化推理模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://openai.com"
+}

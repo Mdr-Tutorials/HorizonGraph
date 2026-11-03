@@ -1,0 +1,39 @@
+{
+  "id": "qwen-3-8-max",
+  "name": "Qwen3.8-Max",
+  "display_primary": "Qwen3.8-Max",
+  "display_secondary": "2.4万亿 MoE 云端超大旗舰",
+  "aliases": [
+    "Qwen3.8-Max",
+    "Qwen3.8-Max"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "qwen"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "alibaba"
+    }
+  ],
+  "summary": "阿里通义千问2.4万亿参数旗舰，全面融入自主编程与办公协作。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 5,
+  "official_site": "https://qwenlm.github.io"
+}

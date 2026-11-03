@@ -1,0 +1,39 @@
+{
+  "id": "pixtral-large",
+  "name": "Pixtral Large",
+  "display_primary": "Pixtral Large",
+  "display_secondary": "原生高分辨率多模态视觉模型",
+  "aliases": [
+    "Pixtral Large",
+    "Pixtral Large"
+  ],
+  "type": "model_family",
+  "ecosystems": [
+    "llm-agent-ecosystem"
+  ],
+  "domains": [
+    "machine-learning",
+    "natural-language-processing"
+  ],
+  "abstraction_level": "framework_library",
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "llm"
+    },
+    {
+      "relation_type": "version_of",
+      "target_id": "mistral"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "mistral-ai"
+    }
+  ],
+  "summary": "Mistral原生多模态视觉旗舰，擅长复杂图表理解与超长图文交织。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-03",
+  "importance": 4,
+  "official_site": "https://mistral.ai"
+}
