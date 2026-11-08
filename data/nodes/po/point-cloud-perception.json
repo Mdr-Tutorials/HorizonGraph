@@ -1,0 +1,43 @@
+{
+  "id": "point-cloud-perception",
+  "name": "Point Cloud Perception",
+  "display_primary": "点云感知",
+  "display_secondary": "Point Cloud Perception",
+  "aliases": [
+    "点云感知",
+    "三维点云目标检测",
+    "LiDAR Perception"
+  ],
+  "type": "concept",
+  "domains": [
+    "autonomous-driving",
+    "computer-vision",
+    "robotics"
+  ],
+  "ecosystems": [
+    "autonomous-vehicles-ecosystem",
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "autonomous-driving-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "sensor-fusion"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lidar",
+      "context": "基于PointNet、VoxelNet或BEV柱状体特征提取网络对稀疏无序的三维激光雷达反射点集执行目标检测与分割。"
+    }
+  ],
+  "summary": "利用深度学习对三维空间激光雷达反射点云进行目标检测与几何分割的视觉算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://paperswithcode.com/task/3d-object-detection",
+  "description": "## 机制\n\n点云感知直接处理激光雷达扫描产出的非结构化、稀疏且无序的三维坐标点集 \\((x, y, z, r)\\)。传统二维卷积无法直接应用于三维无序点集。主流网络范式包括：基于原始点集的特征聚合（PointNet/PointNet++）、三维空间网格体素化（VoxelNet，利用稀疏三维卷积加速特征提取），以及柱状体投影（PointPillars，将垂直柱体投影到鸟瞰图BEV后采用高效标准2D CNN处理）。\n\n## 几何保真与稀疏开销\n\n点云感知的显著优势在于直接具备绝对物理尺度与精确深度，完全免疫阴影幻觉。主要挑战在于数据随着距离增加呈现平方级稀疏，远处小目标（如远距行人与锥桶）仅由数个反射点构成，通常需结合多帧点云时序拼接（Multi-Frame Accumulation）以增强特征密度。\n\n## 参考\n\n- [Qi et al.: PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation (CVPR 2017)](https://arxiv.org/abs/1612.00593)\n- [Lang et al.: PointPillars: Fast Encoders for Object Detection from Point Clouds (CVPR 2019)](https://arxiv.org/abs/1812.05784)"
+}

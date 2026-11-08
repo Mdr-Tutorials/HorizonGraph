@@ -1,0 +1,42 @@
+{
+  "id": "time-complexity",
+  "name": "Time Complexity",
+  "display_primary": "时间复杂度",
+  "display_secondary": "Time Complexity",
+  "aliases": [
+    "时间复杂度",
+    "运行时间复杂度",
+    "渐近时间复杂度"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "computational-complexity"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "big-o",
+      "context": "采用大O、大Omega与大Theta渐近记号形式化描述算法输入规模与执行步数的关系。"
+    }
+  ],
+  "summary": "使用渐近数学符号量化度量算法运行所需基本计算步数随输入规模增长的函数关系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/Time_complexity",
+  "description": "## 机制\n\n时间复杂度量化了算法执行所需的基本机器指令步数与输入数据规模 $n$ 之间的渐近数学关系。它抽离了具体物理硬件主频、编译器优化等级与编程语言实现的微观物理时间差异，聚焦于随着 $n \\to \\infty$ 时算法资源消耗的本质增长阶次。\n\n根据分析视角分为三种界：\n- **最坏情况时间复杂度（Worst-Case）**：衡量对于规模为 $n$ 的任意合法输入，算法消耗步数的上界保证，通常采用大 $O$ 符号界定；\n- **最佳情况时间复杂度（Best-Case）**：算法遇到最具优势输入时的下界开销（采用 $\\Omega$ 记号）；\n- **平均情况时间复杂度（Average-Case）**：在对输入所有可能形态假设特定先验概率分布（如离散均匀分布）下的期望执行步数。\n\n## 常见复杂度阶次阶梯\n\n经典算法时间复杂度沿常数阶到指数阶排布：\n$$O(1) < O(\\log n) < O(\\sqrt{n}) < O(n) < O(n \\log n) < O(n^2) < O(2^n) < O(n!)$$\n当问题复杂度进入 $O(2^n)$ 等非多项式阶时，问题在较大输入规模下通常被视为计算不可行的。\n\n## 参考\n\n- [Knuth: The Art of Computer Programming, Vol. 1: Fundamental Algorithms (Addison-Wesley)](https://www-cs-faculty.stanford.edu/~knuth/taocp.html)\n- [Cormen et al.: Introduction to Algorithms (CLRS, Chapter 3)](https://mitpress.mit.edu)"
+}

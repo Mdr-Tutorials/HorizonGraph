@@ -1,0 +1,38 @@
+{
+  "id": "octree",
+  "name": "Octree",
+  "display_primary": "八叉树",
+  "display_secondary": "Octree",
+  "aliases": [
+    "八叉树",
+    "八元树",
+    "Oct-Tree"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "graphics"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "graphics_gaming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "quadtree",
+      "context": "将四叉树的二维平面正交递归四等分原理推广至三维物理空间的正交八等分。"
+    }
+  ],
+  "summary": "将三维立体空间递归正交划分为八个八分体卦限的三维空间划分层次数据结构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Octree",
+  "description": "## 机制\n\n八叉树（Octree）是四叉树在三维欧几里得立体空间中的自然几何推广，由唐纳德·梅格（Donald Meagher）于 1980 年独立提出。八叉树将三维立体包围盒（AABB, Axis-Aligned Bounding Box）沿着 $X, Y, Z$ 三个坐标轴的中心平分面进行正交剖分，每个非叶节点分裂生成八个子立方体象限（Octants）。\n\n树的递归划分通常在以下条件终止：\n1. 子立方体空间内包含的三维几何基元（点云、三角面片或刚体碰撞体）数量低于预设阈值；\n2. 树达到最大预设深度；\n3. 子立方体空间内体积介质完全均一（例如在三维体素 Voxel 渲染中，该八分体全部为空空气或完全由同材质实心体填充）。\n\n## 渲染管线与光线追踪加速\n\n在实时 3D 渲染与物理引擎中，八叉树用于视锥剔除（Frustum Culling，快速跳过视线后方整块立方体空间的渲染计算）；在光线追踪（Ray Tracing）中，光线穿过八叉树层级可通过快速光线步进算法跳过空旷体素，大幅加速求交测试；激光雷达点云与三维重建（如稀疏体素八叉树 SVO）依赖紧凑线性八叉树（Morton 码排序）降低显存带宽开销。\n\n## 参考\n\n- [Meagher: Octree Encoding: A New Technique for the High-Speed Display of Large Complex 3-D Objects (RPI IPL-TR-80-111, 1980)](https://ntrs.nasa.gov)\n- [Pharr, Jakob, Humphreys: Physically Based Rendering: From Theory to Implementation (MIT Press)](https://www.pbr-book.org)"
+}

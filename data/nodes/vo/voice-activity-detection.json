@@ -1,0 +1,42 @@
+{
+  "id": "voice-activity-detection",
+  "name": "Voice Activity Detection",
+  "display_primary": "语音活动检测",
+  "display_secondary": "Voice Activity Detection",
+  "aliases": [
+    "语音活动检测",
+    "VAD",
+    "Speech Activity Detection"
+  ],
+  "type": "concept",
+  "domains": [
+    "audio-and-speech-processing",
+    "signal-processing"
+  ],
+  "ecosystems": [
+    "audio-speech-ecosystem",
+    "signal-processing-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "audio-speech-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "speech-recognition"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "digital-filter",
+      "context": "在频域与时域利用能量阈值、过零率或轻量分类模型分离连续音频流中的人声与静音背景。"
+    }
+  ],
+  "summary": "实时判断连续音频流中是否存在人类有效语音信号的前端信号处理技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://github.com/snakers4/silero-vad",
+  "description": "## 机制\n\n语音活动检测（VAD）是实时语音交互（如智能音箱、车载语音助手、呼叫中心）的首要前置组件。传统VAD通过短时能量（Short-Time Energy）、短时过零率（ZCR）与谱熵判断音段特征；现代高性能VAD（如 WebRTC VAD 与基于轻量循环网络的 Silero VAD）利用统计高斯混合模型（GMM）或轻量RNN对背景环境噪与有效人声进行毫秒级切分。\n\n## 节能与断句边界\n\nVAD通过静音剔除避免昂贵的云端大模型ASR引擎空耗算力，并将网络流量削减40%以上；在交互智能体中，VAD负责判定用户何时说完一句话（Endpointing），对用户打断（Barge-in）响应延迟与自然多轮对话节奏至关重要。\n\n## 参考\n\n- [ITU-T Recommendation G.729 Annex B: A silence compression scheme for G.729](https://www.itu.int/rec/T-REC-G.729)\n- [Silero VAD: Pre-trained enterprise-grade Voice Activity Detector](https://github.com/snakers4/silero-vad)"
+}

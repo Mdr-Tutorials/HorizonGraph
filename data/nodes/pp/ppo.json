@@ -12,12 +12,18 @@
     "llm-agent-ecosystem"
   ],
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "reinforcement-learning"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "algorithm"
+      "target_id": "reinforcement-learning-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "actor-critic",
+      "context": "PPO网络架构普遍由Actor策略网络与Critic优势估计网络双网络结构实现。"
     }
   ],
   "summary": "OpenAI 提出的强化学习策略梯度算法，大模型 RLHF 阶段核心算法。",

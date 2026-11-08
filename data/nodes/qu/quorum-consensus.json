@@ -1,0 +1,38 @@
+{
+  "id": "quorum-consensus",
+  "name": "Quorum Consensus",
+  "display_primary": "Quorum法定人数机制",
+  "display_secondary": "Quorum Consensus",
+  "aliases": [
+    "Quorum机制",
+    "法定人数共识",
+    "多数派投票机制",
+    "Quorum"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "cloud_native"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "raft",
+      "context": "通过读写节点集合交集重叠保证强一致性的法定多数派投票机制。"
+    }
+  ],
+  "summary": "基于抽屉原理要求读集合与写集合必有交集以保证去中心化数据强一致性的共识机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Quorum_(distributed_computing)",
+  "description": "## 机制\n\nQuorum（法定人数）机制由戴维·吉福德（David Gifford）于 1979 年提出，是分布式存储系统在无中心协调者节点下保证强一致性（Linearizability）的核心协议范式。假设分布式集群共有 $N$ 个副本节点，系统为每次数据写入设定必须成功响应的节点数 $W$（Write Quorum），为每次读取设定必须成功查询的节点数 $R$（Read Quorum）。\n\n根据鸽巢原理（Pigeonhole Principle），只要配置满足著名的核心不等式：\n$$R + W > N$$\n**任意被成功写入的 $W$ 个节点集合，与任意被读取的 $R$ 个节点集合，在数学上必然存在至少一个重叠节点（Intersection）**。该重叠节点必定持有该记录的最新的有效版本号（Version / Timestamp）。客户端在收集到 $R$ 个节点的响应后，仅需比对版本号并采信最高版本数据，即可确保绝不会读取到陈旧的历史脏数据。\n\n## 读写延迟与可用性灵活权衡\n\n通过调整 $R$ 与 $W$ 的配比，系统可在读性能与写性能之间实现精细的工程权衡：\n- **读多写少场景**：设置 $W = N, R = 1$。写入需要全部节点确认（代价最高），但本地任意单节点即可实现极低延迟无锁读取；\n- **写多读少场景**：设置 $W = 1, R = N$；\n- **均衡多数派（Majority Quorum）**：设置 $W = \\lfloor N/2 \\rfloor + 1, R = \\lfloor N/2 \\rfloor + 1$。集群能够容忍至多 $\\lfloor (N-1)/2 \\rfloor$ 个节点同时宕机。\n\nAmazon Dynamo、Apache Cassandra 以及 Paxos/Raft 领导者选举与日志提交均建立在 Quorum 交集原理之上。\n\n## 参考\n\n- [Gifford: Weighted voting for replicated data (SOSP 1979)](https://dl.acm.org/doi/10.1145/800215.806583)\n- [DeCandia et al.: Dynamo: amazon's highly available key-value store (SOSP 2007)](https://dl.acm.org/doi/10.1145/1294261.1294281)"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "v2x-communication",
+  "name": "Vehicle-to-Everything",
+  "display_primary": "车联万物通信",
+  "display_secondary": "Vehicle-to-Everything",
+  "aliases": [
+    "车联万物",
+    "V2X",
+    "C-V2X",
+    "车路协同"
+  ],
+  "type": "specification",
+  "abstraction_level": "kernel_os",
+  "domains": [
+    "autonomous-driving",
+    "networking"
+  ],
+  "ecosystems": [
+    "autonomous-vehicles-ecosystem",
+    "networking_security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "automotive-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cellular-network",
+      "context": "依托C-V2X与5G-NR车联网直连通信协议实现超视距车辆协同驾驶与智能路侧交通灯实时状态感知。"
+    }
+  ],
+  "summary": "支持车辆与周围车辆、基础设施、行人和网络之间实时双向通信的信息交互标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.3gpp.org/technologies/v2x",
+  "description": "## 机制\n\nV2X（Vehicle-to-Everything）构建智能网联车与交通要素的互联网络，细分为车车互通（V2V）、车路互通（V2I）、车人互通（V2P）与车云通信（V2N）。两大标准技术路线包括：基于IEEE 802.11p的专用短程通信（DSRC）与3GPP主导的蜂窝车联网（C-V2X）。C-V2X支持两种通信模式：基于PC5接口的短距无基站直连侧链（Sidelink，端到端延迟低至毫秒级）与基于Uu蜂窝基站广域长距接入。\n\n## 超视距感知与协同控制\n\n单车智能传感器无法突破物理遮挡障碍物造成的视线盲区。V2X通过路侧单元（RSU）广播盲区盲弯预警、紧急刹车透传、绿波车速引导（GLOSA）与协同换道意图共享，将自动驾驶感知范围从百米视距扩展至公里级全局协同。\n\n## 参考\n\n- [3GPP Release 16: 5G NR V2X Specifications](https://www.3gpp.org/technologies/v2x)\n- [SAE J2735: Dedicated Short Range Communications (DSRC) Message Set Dictionary](https://www.sae.org/standards/content/j2735_202007/)"
+}

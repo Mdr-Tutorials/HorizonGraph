@@ -1,0 +1,37 @@
+{
+  "id": "graph-algorithm",
+  "name": "Graph Algorithm",
+  "display_primary": "图算法",
+  "display_secondary": "Graph Algorithm",
+  "aliases": [
+    "图算法",
+    "图论算法",
+    "Graph Algorithms"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "networking"
+  ],
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-complexity",
+      "context": "依顶点数与边数刻画图遍历、最短路径与最小生成树算法的渐进计算效率。"
+    }
+  ],
+  "summary": "在图拓扑结构上求解连通性、最短路径与网络流的算法体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://xlinux.nist.gov/dads/HTML/graph.html",
+  "description": "## 机制\n\n图算法在由顶点与边构成的拓扑结构上执行搜索、遍历与属性优化。基础算法包括广度优先搜索（BFS）与深度优先搜索（DFS），演进出拓扑排序、强连通分量（Tarjan/Kosaraju）、单源最短路径（Dijkstra、Bellman-Ford）、全源最短路径（Floyd-Warshall）以及最小生成树（Kruskal、Prim）。\n\n## 边界与工程约束\n\n算法性能高度依赖图的物理表示：邻接矩阵适合稠密图与常数级邻接查询，而邻接表对稀疏图节省内存空间但随机访存容易诱发缓存未命中。含负权边、负权回路或动态图拓扑时需引入特定松弛条件与重平衡更新策略。\n\n## 参考\n\n- [NIST DADS: Graph](https://xlinux.nist.gov/dads/HTML/graph.html)\n- [Sedgewick & Wayne: Algorithms (4th Edition), Graph Algorithms](https://algs4.cs.princeton.edu/40graphs/)"
+}

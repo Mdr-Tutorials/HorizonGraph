@@ -7,11 +7,13 @@
   "ecosystems": [
     "dl-framework-ecosystem",
     "python-ecosystem",
-    "devops_tooling"
+    "devops_tooling",
+    "mlops-ecosystem"
   ],
   "domains": [
     "machine-learning",
-    "devops"
+    "devops",
+    "mlops"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -58,6 +60,10 @@
       "relation_type": "uses",
       "target_id": "mean-squared-error",
       "context": "scikit-learn autolog 在受支持的回归训练场景记录 MSE 等误差指标。"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "model-registry"
     }
   ],
   "summary": "追踪机器学习实验、指标与模型制品的工具。",

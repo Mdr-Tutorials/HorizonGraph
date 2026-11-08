@@ -1,0 +1,42 @@
+{
+  "id": "bipartite-matching",
+  "name": "Bipartite Matching",
+  "display_primary": "二分图匹配",
+  "display_secondary": "Bipartite Matching",
+  "aliases": [
+    "二分图匹配",
+    "二部图匹配",
+    "二分图最大匹配"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "graph-algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "graph-algorithm",
+      "context": "在二分图二分结构上基于增广交替路径定理求解最大不共用顶点边集。"
+    }
+  ],
+  "summary": "在顶点集划分为两互斥子集的二分图上寻找边两两不共用顶点的最大边子集。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Matching_(graph_theory)",
+  "description": "## 机制\n\n二分图（Bipartite Graph）是指顶点集可划分为两个互斥子集 $U$ 和 $V$、且所有边均跨接在两集合之间（不存在集合内部连边）的无向图。图的一个“匹配”（Matching）是指边的子集 $M \\subseteq E$，其中任意两条边均不共用公共顶点。二分图最大匹配问题要求找出包含边数最多的匹配 $M$。\n\n核心理论由克劳德·伯吉（Claude Berge）于 1957 年确立（伯吉引理 Berge's Lemma）：匹配 $M$ 是最大匹配，当且仅当图中**不存在任何关于 $M$ 的增广交替路径**（Augmenting Path，一条起点与终点均为未匹配点、且匹配边与未匹配边在路径上交替出现的简单路径）。若找到一条增广路，只需将路径上所有边的状态取反（未匹配边变匹配边，原匹配边变未匹配边），匹配边总数即可严格增加 1。\n\n## 霍尔婚配定理与网络流转化\n\n霍尔定理（Hall's Marriage Theorem）给出了完全匹配的充要条件：二分图存在饱和 $U$ 中所有顶点的匹配，当且仅当对于 $U$ 的任意子集 $S$，其所有邻居集合满足 $|N(S)| \\ge |S|$。二分图最大匹配可天然转化为网络流问题：建立超级源点 $s$ 向 $U$ 中各点连容量为 1 的边，$V$ 中各点向超级汇点 $t$ 连容量为 1 的边，原二分图所有边容量设为 1，求解最大流即可在整数解上直接对应最大匹配。\n\n## 参考\n\n- [Berge: Two theorems in graph theory (Proc. Natl. Acad. Sci. USA, 1957)](https://www.pnas.org/doi/10.1073/pnas.43.9.842)\n- [Hall: On Representatives of Subsets (J. London Math. Soc., 1935)](https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/jlms/s1-10.37.26)"
+}

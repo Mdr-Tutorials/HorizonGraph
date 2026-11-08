@@ -1,0 +1,43 @@
+{
+  "id": "intellectual-property",
+  "name": "Intellectual Property & Open Source Compliance",
+  "display_primary": "知识产权与开源合规",
+  "display_secondary": "Intellectual Property & Open Source Compliance",
+  "aliases": [
+    "开源合规",
+    "软件知识产权",
+    "IP Compliance"
+  ],
+  "type": "concept",
+  "domains": [
+    "privacy-and-compliance",
+    "software-supply-chain"
+  ],
+  "ecosystems": [
+    "privacy-compliance-ecosystem",
+    "enterprise_industry"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "privacy-compliance-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "data-protection",
+      "context": "在数据资产入表与跨境数据传输过程中同步保护企业核心商业秘密与知识产权。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regulatory-compliance",
+      "context": "企业通过专利审查、软件著作权登记与开源许可证合规扫描规避知识产权侵权纠纷。"
+    }
+  ],
+  "summary": "管理软件著作权、专利权及开源许可证传染性义务防范侵权风险的治理体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.openchainproject.org/",
+  "description": "## 机制\n\n软件工程中的知识产权治理聚焦于软件著作权、商业秘密、专利授权以及开源许可证（Open Source License）合规。核心风险在于开源组件许可证的“强传染性”（如GPL系列要求衍生作品完全开源）与商业闭源诉求之间的法律冲突。现代企业通过引入OpenChain（ISO/IEC 5230）国际标准规范开源合规流程。\n\n## 软件物料清单与风险审计\n\n借助软件物料清单（SBOM，如SPDX与CycloneDX标准）与自动化合规扫描器（如FOSSology与ScanCode），企业在构建交付阶段自动提取所有直接与传递依赖组件的许可证声明，检测许可证不兼容冲突，并在商业发布物中合规附带版权声明文本。\n\n## 参考\n\n- [OpenChain Project: ISO/IEC 5230:2020 Open Source Compliance](https://www.openchainproject.org/)\n- [SPDX Specification: System Package Data Exchange](https://spdx.dev/)"
+}

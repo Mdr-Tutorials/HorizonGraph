@@ -7,11 +7,13 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "robotics-ecosystem"
+    "robotics-ecosystem",
+    "autonomous-vehicles-ecosystem"
   ],
   "domains": [
     "robotics",
-    "embedded-systems"
+    "embedded-systems",
+    "autonomous-driving"
   ],
   "relations": [
     {

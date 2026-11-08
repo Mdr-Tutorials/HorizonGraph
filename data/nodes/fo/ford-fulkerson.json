@@ -1,0 +1,41 @@
+{
+  "id": "ford-fulkerson",
+  "name": "Ford-Fulkerson Algorithm",
+  "display_primary": "Ford-Fulkerson算法",
+  "display_secondary": "Ford-Fulkerson Algorithm",
+  "aliases": [
+    "Ford-Fulkerson算法",
+    "增广路方法",
+    "FF算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dfs",
+      "context": "在流网络的残余图中通过深度优先搜索寻找任意可行增广路径并递增总流量。"
+    }
+  ],
+  "summary": "通过在残余网络中持续迭代寻找增广路径以求解网络最大流的经典方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm",
+  "description": "## 机制\n\nFord-Fulkerson 方法通过在残余网络（Residual Network）中不断寻找增广路径（Augmenting Path）来逐步递增流量，直至不存在增广路为止。初始时所有边流量置零：\n1. 构建残余图 $G_f$：对于每条正向边 $(u, v)$，残余容量为 $c_f(u, v) = c(u, v) - f(u, v)$；同时维护反向边 $c_f(v, u) = f(u, v)$（反向边允许算法后续具有“反悔”撤销此前不优分配的能力）；\n2. 运行 DFS 寻找一条从源点 $s$ 到汇点 $t$ 的残余路径 $p$；\n3. 计算该路径上的瓶颈容量 $\\Delta = \\min_{(u, v) \\in p} c_f(u, v)$，并沿路径将所有正向边流量增加 $\\Delta$、反向边残余容量更新；\n4. 重复上述步骤，直至 $s$ 与 $t$ 在残余图中不再连通。\n\n## 复杂度与无理数病态情形\n\n在边容量均为整数且最大流值为 $|f^*|$ 时，算法在 $O(E |f^*|)$ 时间内停机。若容量为无理数，原始任意 DFS 路径选择策略可能导致无限迭代且收敛于错误的非最大流极限，这促使了 Edmonds-Karp 等保证多项式时间界算法的诞生。\n\n## 参考\n\n- [Ford & Fulkerson: Flows in Networks (Princeton University Press, 1962)](https://press.princeton.edu/books/paperback/9780691146676/flows-in-networks)\n- [Cormen et al.: Introduction to Algorithms (CLRS 4th Edition, Chapter 26)](https://mitpress.mit.edu)"
+}

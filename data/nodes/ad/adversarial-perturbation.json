@@ -12,11 +12,13 @@
   "type": "concept",
   "ecosystems": [
     "open-source-ai-ecosystem",
-    "cybersecurity-ecosystem"
+    "cybersecurity-ecosystem",
+    "ai-safety-ecosystem"
   ],
   "domains": [
     "security",
-    "machine-learning"
+    "machine-learning",
+    "ai-safety"
   ],
   "summary": "在输入数据中添加微小且人眼难以察觉的噪声，误导机器学习模型产生严重错误分类。",
   "status": "active",

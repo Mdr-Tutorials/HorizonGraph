@@ -1,0 +1,38 @@
+{
+  "id": "iso-27001",
+  "name": "ISO/IEC 27001",
+  "display_primary": "ISO/IEC 27001",
+  "display_secondary": "ISO/IEC 27001",
+  "aliases": [
+    "ISO 27001",
+    "ISO27001",
+    "ISMS Standard"
+  ],
+  "type": "specification",
+  "abstraction_level": "application_tool",
+  "domains": [
+    "privacy-and-compliance",
+    "security"
+  ],
+  "ecosystems": [
+    "privacy-compliance-ecosystem",
+    "enterprise_industry"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "specification"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "regulatory-compliance"
+    }
+  ],
+  "summary": "国际标准化组织发布的建立、实施与持续改进信息安全管理体系的国际标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.iso.org/standard/27001",
+  "description": "## 机制\n\nISO/IEC 27001 是全球采纳度最广的信息安全管理体系（ISMS）国际规范。最新 2022 版将安全控制措施凝练为四大主题：组织控制、人员控制、物理控制与技术控制。该标准强调基于风险的动态管理思想，要求组织建立涵盖资产分类、威胁建模、风险评估、控制措施落地与PDCA（计划-执行-检查-处理）持续改进闭环。\n\n## 认证范围与供应链信任\n\nISO 27001 认证由受认可的第三方认证机构进行严格现场审核。获得认证不仅证明企业具备保护核心数字资产与客户数据的成熟能力，亦是跨国B2B业务投标、合规审计免除与网络安全保险投保的核心准入凭证。\n\n## 参考\n\n- [ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection](https://www.iso.org/standard/27001)\n- [ISO/IEC 27002:2022 Information security controls](https://www.iso.org/standard/75652.html)"
+}

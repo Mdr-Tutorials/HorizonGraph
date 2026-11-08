@@ -1,0 +1,37 @@
+{
+  "id": "nondeterministic-finite-automaton",
+  "name": "Nondeterministic Finite Automaton",
+  "display_primary": "非确定有限状态自动机",
+  "display_secondary": "Nondeterministic Finite Automaton",
+  "aliases": [
+    "非确定有限状态自动机",
+    "NFA",
+    "非确定有限自动机"
+  ],
+  "type": "concept",
+  "domains": [
+    "theoretical-computer-science",
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "chomsky-hierarchy"
+    }
+  ],
+  "summary": "具有多重可选转移状态分支并在概念上并行探索所有可能执行路径的有限状态机。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton",
+  "description": "## 机制\n\n非确定有限状态自动机（NFA）将状态转移函数拓宽为 $\\delta: Q \\times (\\Sigma \\cup \\{\\epsilon\\}) \\to \\mathcal{P}(Q)$。在当前状态输入一个字符后，系统可以转移至多个可能的下一状态集合；且允许存在无需消耗任何字符输入的 $\\epsilon$ 自动跳转分支。输入字符串被 NFA 接受，当且仅当存在至少一条状态转移路径能够使机器终止于接受状态。\n\n尽管具备非确定性分支特性，迈克尔·拉宾与达纳·斯科特证明了有限自动机等价定理（Rabin-Scott 幂集构造法）：任何包含 $n$ 个状态的 NFA 均可等价转化为识别完全相同语言的确定性 DFA，虽然在极端最坏情况下转换后的 DFA 状态数可能达到 $2^n$ 指数级。\n\n## 汤普森构造法与正则匹配\n\n肯·汤普森（Ken Thompson）提出的构造算法能够在 $O(m)$ 时间内将任意正则表达式直接编译为结构简洁的 NFA。现代正则执行引擎可以在运行时动态追踪当前活跃状态集合（Bitset 并行转移），实现无需完全物化膨胀 DFA 的高吞吐匹配。\n\n## 参考\n\n- [Rabin & Scott: Finite Automata and Their Decision Problems (IBM J. Res. Dev., 1959)](https://ieeexplore.ieee.org/document/5392601)\n- [Thompson: Programming Techniques: Regular expression search algorithm (CACM 1968)](https://dl.acm.org/doi/10.1145/363347.363387)"
+}

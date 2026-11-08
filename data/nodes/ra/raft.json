@@ -10,10 +10,12 @@
   "type": "concept",
   "ecosystems": [
     "kubernetes-ecosystem",
-    "cloud_native"
+    "cloud_native",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
-    "distributed-systems"
+    "distributed-systems",
+    "theoretical-computer-science"
   ],
   "relations": [
     {

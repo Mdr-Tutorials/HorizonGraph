@@ -1,0 +1,43 @@
+{
+  "id": "polynomial-time-reduction",
+  "name": "Polynomial-Time Reduction",
+  "display_primary": "多项式时间归约",
+  "display_secondary": "Polynomial-Time Reduction",
+  "aliases": [
+    "多项式时间归约",
+    "多项式规约",
+    "Karp归约",
+    "Karp Reduction"
+  ],
+  "type": "concept",
+  "domains": [
+    "theoretical-computer-science",
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "computational-complexity"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "halting-problem",
+      "context": "以停机问题的不可判定性作为归约始祖证明波斯特对应问题与莱斯定理的不可判定性。"
+    }
+  ],
+  "summary": "将一个计算问题实例在多项式时间内转换为另一问题实例以证明其复杂度的关键方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Polynomial-time_reduction",
+  "description": "## 机制\n\n多项式时间归约是复杂性理论中连接不同计算问题相对难度的核心数学工具。最常见的卡普归约（Karp Reduction / Many-One Reduction）定义如下：设 $A$ 和 $B$ 是两个语言，若存在一个在多项式时间内可计算的函数 $f$，使得对于任意输入字符串 $x$：\n$$x \\in A \\iff f(x) \\in B$$\n则称语言 $A$ 多项式时间归约到语言 $B$，记作 $A \\le_P B$。\n\n该关系具有自反性与传递性（若 $A \\le_P B$ 且 $B \\le_P C$，则 $A \\le_P C$）。归约的深远涵义在于：问题 $B$ 的内在计算难度至少不低于问题 $A$；任何求解 $B$ 的高效算法通过前置调用转换函数 $f$，均可转化为求解 $A$ 的高效算法。\n\n## 构造 NP 完全性网络\n\n理查德·卡普（Richard Karp）在 1972 年正是利用库克证明的第一个 NP 完全问题 SAT（布尔可满足性），通过一系列巧妙的组合图论与集合构造归约链，证明了包括 3-SAT、团问题（Clique）、顶点覆盖（Vertex Cover）和背包问题（Knapsack）在内的 21 个经典问题全部为 NP 完全。\n\n## 参考\n\n- [Karp: Reducibility among Combinatorial Problems (Complexity of Computer Computations, 1972)](https://link.springer.com/chapter/10.1007/978-1-4684-2001-2_9)\n- [Cormen, Leiserson, Rivest, Stein: Introduction to Algorithms (CLRS, MIT Press)](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)"
+}

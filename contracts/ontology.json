@@ -1,5 +1,5 @@
 {
-  "version": "0.21.0",
+  "version": "0.23.0",
   "note": "分类骨架：全部非叶子节点在此，数据平面不出现。层级用 parents 数组（多亲 DAG，一个分类可属多个上级）；锚点间元叙事为普通关系边。生效 entity_type 沿 parent 祖先解析。",
   "nodes": [
     {
@@ -1726,6 +1726,174 @@
         "specification"
       ],
       "entity_type": "specification",
+      "importance": 4
+    },
+    {
+      "id": "recommender-system-concept",
+      "name": "Recommender Systems Concepts",
+      "aliases": [
+        "推荐系统概念"
+      ],
+      "summary": "推荐系统召回、粗排、精排、重排与多目标排序概念。",
+      "parents": [
+        "theory"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "reinforcement-learning-concept",
+      "name": "Reinforcement Learning Concepts",
+      "aliases": [
+        "强化学习概念"
+      ],
+      "summary": "强化学习马尔可夫决策过程、价值学习、策略优化与奖励建模概念。",
+      "parents": [
+        "machine-learning-method"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "mlops-concept",
+      "name": "MLOps Concepts",
+      "aliases": [
+        "MLOps与模型服务概念"
+      ],
+      "summary": "机器学习生命周期管理、特征工程、模型注册、服务部署与漂移监控概念。",
+      "parents": [
+        "theory"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "ai-safety-concept",
+      "name": "AI Safety & Alignment Concepts",
+      "aliases": [
+        "AI安全与对齐概念"
+      ],
+      "summary": "大模型安全性、对齐理论、红队测试、机理可解释性与价值引导概念。",
+      "parents": [
+        "theory"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "privacy-compliance-concept",
+      "name": "Privacy & Compliance Concepts",
+      "aliases": [
+        "数据隐私与合规概念"
+      ],
+      "summary": "差分隐私、隐私保护计算、数据合规标准与治理审计概念。",
+      "parents": [
+        "application-security-concept"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "audio-speech-concept",
+      "name": "Audio & Speech Processing Concepts",
+      "aliases": [
+        "音频与语音处理概念"
+      ],
+      "summary": "语音识别、声学建模、语音合成、音频编码与空间声场概念。",
+      "parents": [
+        "signal-processing-concept"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "autonomous-driving-concept",
+      "name": "Autonomous Driving Concepts",
+      "aliases": [
+        "自动驾驶概念"
+      ],
+      "summary": "自动驾驶感知、多传感器融合、车辆控制协议、定位与网联协同概念。",
+      "parents": [
+        "robotics-method"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "spatial-computing-concept",
+      "name": "Spatial Computing Concepts",
+      "aliases": [
+        "空间计算概念"
+      ],
+      "summary": "虚拟现实、增强现实、空间定位建图、渲染透视与沉浸交互概念。",
+      "parents": [
+        "interactive-graphics-concept"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "cryptography-concept",
+      "name": "Cryptography Concepts",
+      "aliases": [
+        "密码学理论与机制"
+      ],
+      "summary": "对称与公钥加密、哈希摘要、数字签名、密钥交换与抗量子密码学理论。",
+      "parents": [
+        "theory"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "automotive-specification",
+      "name": "Automotive Specifications",
+      "aliases": [
+        "汽车与车载电子规范"
+      ],
+      "summary": "车载通信网络、基础软件架构与车载互联接口工业规范。",
+      "parents": [
+        "specification"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "xr-specification",
+      "name": "Spatial Computing & XR Specifications",
+      "aliases": [
+        "XR与空间计算规范"
+      ],
+      "summary": "跨平台沉浸式设备访问、空间交互与运行环境技术规范。",
+      "parents": [
+        "specification"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "recommender-metric",
+      "name": "Recommender System Metrics",
+      "aliases": [
+        "推荐系统指标"
+      ],
+      "summary": "衡量推荐系统排序质量、相关性、多样性与命中率的量化指标。",
+      "parents": [
+        "metric"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "ai-safety-metric",
+      "name": "AI Safety Metrics",
+      "aliases": [
+        "AI安全与对齐指标"
+      ],
+      "summary": "衡量大模型拒答率、幻觉率、越狱鲁棒性与对齐程度的评测指标。",
+      "parents": [
+        "metric"
+      ],
+      "importance": 4
+    },
+    {
+      "id": "theoretical-computer-science-concept",
+      "name": "Theoretical Computer Science Concepts",
+      "aliases": [
+        "理论计算机科学概念"
+      ],
+      "summary": "可计算性、形式语言、自动机与计算复杂性理论的核心概念与论题。",
+      "parents": [
+        "theory"
+      ],
       "importance": 4
     }
   ]

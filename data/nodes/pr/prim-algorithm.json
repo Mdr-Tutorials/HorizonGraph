@@ -11,11 +11,13 @@
   "type": "concept",
   "ecosystems": [
     "languages_runtimes",
-    "optimization-ecosystem"
+    "optimization-ecosystem",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
     "operations-research",
-    "systems-programming"
+    "systems-programming",
+    "data-structures-and-algorithms"
   ],
   "summary": "从单节点出发贪心扩展连接生成树顶点集与外部点权值最小边的加权图算法。",
   "status": "active",
@@ -35,6 +37,10 @@
       "relation_type": "uses",
       "target_id": "greedy",
       "context": "利用优先队列维护与已生成树相邻的最短横切边进行贪心扩张。"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
     }
   ]
 }

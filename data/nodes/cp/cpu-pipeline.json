@@ -1,0 +1,42 @@
+{
+  "id": "cpu-pipeline",
+  "name": "CPU Pipeline",
+  "display_primary": "指令流水线",
+  "display_secondary": "CPU Pipeline",
+  "aliases": [
+    "指令流水线",
+    "流水线",
+    "Instruction Pipeline"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-architecture",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "computer-architecture-ecosystem",
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "computer-architecture"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cpu-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "branch-prediction",
+      "context": "流水线前端借助动态分支预测器预判跳转走向，避免因控制相关引发流水线气泡或清空冲刷。"
+    }
+  ],
+  "summary": "将指令处理过程分解为多个重叠执行子步骤以提高时钟周期吞吐的技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/Classic_RISC_pipeline",
+  "description": "## 机制\n\n指令流水线将单条指令的完整生命周期划分为若干离散硬件阶段（经典五级流水线包含：取指 IF、译码 ID、执行 EX、访存 MEM 与写回 WB）。在理想状态下，时钟周期由最慢的单阶段延迟决定，每个时钟周期均可提交一条已完成指令，从而实现指令吞吐率的倍增。\n\n## 相关冒险与抑制\n\n流水线性能受到三大冒险（Hazards）的直接威胁：结构冒险（硬件资源冲突）、数据冒险（RAW写后读、WAR读后写）与控制冒险（条件分支跳转）。现代处理器通过操作数前递旁路（Forwarding）、硬件暂停气泡插值、投机执行与深流水线分支预测器尽可能压低气泡损耗。\n\n## 参考\n\n- [Patterson & Hennessy: Computer Organization and Design: The Hardware/Software Interface](https://www.elsevier.com)\n- [NIST DADS: Pipeline Architecture](https://xlinux.nist.gov/dads/)"
+}

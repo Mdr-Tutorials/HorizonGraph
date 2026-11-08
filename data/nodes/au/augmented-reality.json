@@ -1,0 +1,41 @@
+{
+  "id": "augmented-reality",
+  "name": "Augmented Reality",
+  "display_primary": "增强现实",
+  "display_secondary": "Augmented Reality",
+  "aliases": [
+    "增强现实",
+    "AR",
+    "透视现实"
+  ],
+  "type": "concept",
+  "domains": [
+    "spatial-computing",
+    "interactive-graphics"
+  ],
+  "ecosystems": [
+    "spatial-computing-ecosystem",
+    "graphics_gaming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "spatial-computing-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "spatial-computing"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "virtual-reality"
+    }
+  ],
+  "summary": "在用户观察到的真实物理环境视野上实时精确叠加数字化虚拟信息的技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://developer.apple.com/augmented-reality/",
+  "description": "## 机制\n\n增强现实（AR）不切断用户与物理现实世界的视觉联系，而是将虚拟文字、三维模型或动画几何锚定在物理实体之上。实现载体分为两大路径：移动设备AR（利用智能手机相机透视，如ARKit与ARCore），以及光学透视型AR眼镜（Optical See-Through，利用衍射光波导或几何阵列光波导镜片将光机微显示图像反射进人眼瞳孔并与真实光线叠加）。\n\n## 空间锚点与对齐\n\nAR的核心难点在于空间几何的一致性维持。系统通过平面检测（Plane Detection）识别桌面与地面，提取并持久化“空间锚点”（Spatial Anchors）。当用户移动视线或暂时离开房间后返回时，虚拟对象必须保持在原本物理空间坐标处纹丝不动，无漂移感。\n\n## 参考\n\n- [Azuma: A Survey of Augmented Reality (Presence: Teleoperators & Virtual Environments, 1997)](https://www.cs.unc.edu/~azuma/ARpresence.pdf)\n- [Apple ARKit Documentation](https://developer.apple.com/documentation/arkit)"
+}

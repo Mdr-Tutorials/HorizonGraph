@@ -1,0 +1,38 @@
+{
+  "id": "lamport-timestamp",
+  "name": "Lamport Timestamp",
+  "display_primary": "Lamport时间戳",
+  "display_secondary": "Lamport Timestamp",
+  "aliases": [
+    "Lamport时间戳",
+    "逻辑时钟",
+    "Lamport Logical Clock"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "cloud_native"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cap-theorem",
+      "context": "为分布式网络中的所有并发事件提供全序化偏序关系保证一致性排序。"
+    }
+  ],
+  "summary": "基于偏序事件发生先于关系为分布式系统中全部事件分配全局单调递增逻辑序号的机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/Lamport_timestamp",
+  "description": "## 机制\n\nLamport 逻辑时钟由图灵奖得主莱斯利·兰伯特于 1978 年发表的经典论文提出（计算机科学史上引用最高的论文之一）。在分布式系统中，不同物理机器上的硬件石英晶体振荡器存在不可消除的物理时钟漂移（Clock Drift），无法依靠物理绝对时间判定事件的真实因果先后。\n\n兰伯特定义了著名的“发生先于”严格偏序关系（Happens-Before, 记作 $\\to$）：\n1. 在同一个进程内部，若事件 $a$ 在事件 $b$ 之前发生，则 $a \\to b$；\n2. 若事件 $a$ 是某进程发送消息，事件 $b$ 是另一进程接收该消息，则 $a \\to b$；\n3. 若 $a \\to b$ 且 $b \\to c$，则满足传递性 $a \\to c$。\n\n算法为每个节点维护一个单调递增的标量计数器 $C$：\n- 本地发生内部事件时，时钟自增：$C \\leftarrow C + 1$；\n- 发送消息时，将当前时钟值附加在消息体中；\n- 接收附带时钟 $t_{\\text{msg}}$ 的消息时，节点同步调整自身时钟：\n$$C_{\\text{local}} \\leftarrow \\max(C_{\\text{local}}, t_{\\text{msg}}) + 1$$\n\n## 单向因果与全序化\n\n该机制严格满足**时钟一致性条件**：$a \\to b \\implies C(a) < C(b)$。通过结合进程唯一 ID 破坏平局（Tie-Breaking），可将局部偏序直接扩展为全系统一致认可的全局全序关系（Total Order）。由于标量时钟无法反向推导因果（$C(a) < C(b)$ 无法证明 $a \\to b$，事件可能并发），后续由此进一步演化出了向量时钟（Vector Clock）。\n\n## 参考\n\n- [Lamport: Time, Clocks, and the Ordering of Events in a Distributed System (CACM, 1978)](https://dl.acm.org/doi/10.1145/359545.359563)\n- [Fidge: Timestamps in message-passing systems that preserve the partial ordering (Australian CS Conf., 1988)](https://dl.acm.org)"
+}

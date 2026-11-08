@@ -11,12 +11,17 @@
   "type": "concept",
   "domains": [
     "game-development",
-    "programming-languages"
+    "programming-languages",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
     }
   ],
   "summary": "按路径代价与启发式估计引导图上路径搜索的算法。",

@@ -1,0 +1,41 @@
+{
+  "id": "splay-tree",
+  "name": "Splay Tree",
+  "display_primary": "伸展树",
+  "display_secondary": "Splay Tree",
+  "aliases": [
+    "伸展树",
+    "自调整二叉查找树",
+    "Splay-Tree"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "binary-search-tree"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "amortized-analysis",
+      "context": "通过单旋、一字旋与之字旋将访问节点旋转至根节点，实现操作的平摊对数复杂度。"
+    }
+  ],
+  "summary": "通过双旋转将最近被访问的节点调整移动至根节点的自平衡二叉搜索树。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Splay_tree",
+  "description": "## 机制\n\n伸展树（Splay Tree）由丹尼尔·斯莱托（Daniel Sleator）和罗伯特·塔扬（Robert Tarjan）于 1985 年提出。与 AVL 树或红黑树在每个节点中显式保存平衡因子或颜色标记不同，伸展树不需要在节点内存储任何辅助元数据平衡信息。它的核心思想基于“伸展”（Splaying）自调整机制：每当一个节点被访问（查询、插入或删除）后，通过一系列树旋转操作将其逐层提升至整棵树的根部。\n\n旋转依据节点、父节点与祖父节点的相对空间几何分为三种情况：\n1. **单旋（Zig）**：当父节点即为根节点时，执行单次左旋或右旋；\n2. **一字旋（Zig-Zig）**：节点与其父节点均为同向左子或右子，**必须先旋转父节点与祖父节点**，再旋转当前节点与父节点（这一顺序至关重要，它能使整条长链树高减半）；\n3. **之字旋（Zig-Zag）**：节点与其父节点方向相反（一左一右），执行标准的双旋转。\n\n## 理论性质与动态树应用\n\n通过势能法平摊分析，伸展树在最坏输入序列下单次操作的平摊时间严格保证为 $O(\\log n)$。由于其天然维护时间局部性（频繁访问的热点数据始终停留在靠近根部的层级），它满足“工作集定理”（Working Set Property），是构建动态树（Link-Cut Trees）以及网络协议栈中高效 IP 路由表缓存的底座。\n\n## 参考\n\n- [Sleator & Tarjan: Self-Adjusting Binary Search Trees (JACM, 1985)](https://dl.acm.org/doi/10.1145/3828.3835)\n- [Tarjan: Data Structures and Network Algorithms (SIAM, 1983)](https://epubs.siam.org/doi/book/10.1137/1.9781611970265)"
+}

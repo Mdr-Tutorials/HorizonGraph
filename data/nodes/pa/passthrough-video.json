@@ -1,0 +1,42 @@
+{
+  "id": "passthrough-video",
+  "name": "Video Passthrough",
+  "display_primary": "视频透视",
+  "display_secondary": "Video Passthrough",
+  "aliases": [
+    "视频透视",
+    "VST",
+    "Camera Passthrough"
+  ],
+  "type": "concept",
+  "domains": [
+    "spatial-computing",
+    "interactive-graphics"
+  ],
+  "ecosystems": [
+    "spatial-computing-ecosystem",
+    "graphics_gaming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "spatial-computing-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mixed-reality"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "shader",
+      "context": "依托专用着色器执行双目立体图像的实时畸变矫正与颜色色调映射。"
+    }
+  ],
+  "summary": "利用外置摄像头采集物理世界画面并经过视差矫正重投影至近眼屏的透视技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.apple.com/apple-vision-pro/",
+  "description": "## 机制\n\n视频透视（Video See-Through, VST）是现代混合现实头显的核心成像范式。与光学透视（OST，透过半透明镜片直视现实）相比，VST通过机载高分辨率RGB立体摄像头采集现实画面，利用硬件图像信号处理器（ISP）执行自动曝光与双目色彩校正，结合深度传感器实时进行三维立体几何反畸变投影至用户眼前的双目微显示屏上，使得虚拟对象可以实现物理真实的完全不透明遮挡与黑度呈现。\n\n## 视差校准与光子延迟挑战\n\n由于摄像头物理安装位置通常在头显外壳外表面（距离人眼真实瞳孔位置向前偏移数厘米），直接投屏会导致严重的手眼视差与空间深度错觉。系统必须依托光流算法（Optical Flow）与实时网格扭曲，重构出严格等价于人眼裸眼真实视角的虚拟相机视图，并将整条摄录渲染链路的延迟压低至12毫秒以内。\n\n## 参考\n\n- [Apple Vision Pro Technology: Dedicated R1 Chip Real-time Processing](https://www.apple.com/apple-vision-pro/)\n- [Rolland & Fuchs: Optical versus video see-through head-mounted displays in medical visualization (Presence 2000)](https://direct.mit.edu/prec/article/9/3/287/1865/Optical-Versus-Video-See-Through-Head-Mounted)"
+}

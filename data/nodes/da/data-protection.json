@@ -1,0 +1,38 @@
+{
+  "id": "data-protection",
+  "name": "Data Protection",
+  "display_primary": "数据保护",
+  "display_secondary": "Data Protection",
+  "aliases": [
+    "数据保护",
+    "数据安全与隐私保护",
+    "Data Privacy"
+  ],
+  "type": "concept",
+  "domains": [
+    "privacy-and-compliance",
+    "security"
+  ],
+  "ecosystems": [
+    "privacy-compliance-ecosystem",
+    "enterprise_industry"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "privacy-compliance-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "regulatory-compliance",
+      "context": "企业依据网络安全与个人信息保护法律法规要求建立数据分级分类、加密存储与销毁机制。"
+    }
+  ],
+  "summary": "保护敏感与个人身份信息防范未授权访问、泄露、篡改与滥用的管理实践。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://ico.org.uk/for-organisations/guide-to-data-protection/",
+  "description": "## 机制\n\n数据保护关注数据在全生命周期（采集、传输、存储、处理、共享、销毁）内的保密性、完整性与可用性。技术控制措施包括静态存储加密（Encryption at Rest）、传输信道加密（TLS）、数据脱敏与去标识化（Pseudonymization）、基于属性的细粒度访问控制（ABAC），以及数据防泄露（DLP）监测。\n\n## 权利框架与合规基准\n\n现代数据保护法确立了以自然人权利为中心的基本原则，赋予数据主体知情同意权、访问复制权、更正权、删除权（被遗忘权）以及数据可携权，强制要求企业履行最小必要原则并定期开展个人信息保护影响评估（PIA/DPIA）。\n\n## 参考\n\n- [UK Information Commissioner's Office (ICO): Guide to Data Protection](https://ico.org.uk/for-organisations/guide-to-data-protection/)\n- [ISO/IEC 27701:2019 Privacy Information Management System](https://www.iso.org/standard/71670.html)"
+}

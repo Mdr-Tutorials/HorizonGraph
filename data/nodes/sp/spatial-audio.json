@@ -1,0 +1,39 @@
+{
+  "id": "spatial-audio",
+  "name": "Spatial Audio",
+  "display_primary": "空间音频",
+  "display_secondary": "Spatial Audio",
+  "aliases": [
+    "空间音频",
+    "三维声场",
+    "Binaural Audio",
+    "3D Audio"
+  ],
+  "type": "concept",
+  "domains": [
+    "audio-and-speech-processing",
+    "spatial-computing"
+  ],
+  "ecosystems": [
+    "audio-speech-ecosystem",
+    "spatial-computing-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "audio-speech-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "audio-codec",
+      "context": "通过头部相关传输函数HRTF卷积滤波与空间声场三维声能衰减渲染真实立体方位感。"
+    }
+  ],
+  "summary": "利用双耳滤波与声学物理建模模拟具有三维方位感与空间包围感的音频技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.apple.com/apple-vision-pro/",
+  "description": "## 机制\n\n空间音频使佩戴普通双声道耳机的用户获得声音源于三维物理空间特定位置的真实感知。核心技术建立在双耳声学测量之上：双耳时间差（ITD，声音到达左右耳的时间微差）、双耳声级差（ILD，头部物理遮挡造成的声压差），以及由外耳廓特定褶皱滤波效应决定的头部相关传输函数（HRTF，用于分辨上下前后声源高度角）。\n\n## 动态头部追踪与空间声场\n\n在XR设备与智能耳机中，空间音频引擎结合内置IMU姿态传感器以毫秒级延迟实时更新头部转动补偿，确保环境音源在物理空间中位置恒定；同时依托射线追踪（Ray Tracing）实时计算房间几何边界带来的真实混响与反射声吸收。\n\n## 参考\n\n- [Blauert: Spatial Hearing: The Psychophysics of Human Sound Localization (MIT Press)](https://mitpress.mit.edu)\n- [ITU-R Recommendation BS.1534: Method for the subjective assessment of intermediate quality level of audio systems](https://www.itu.int/rec/R-REC-BS.1534)"
+}

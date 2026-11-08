@@ -15,7 +15,8 @@
   "domains": [
     "systems-programming",
     "digital-design",
-    "low-latency-systems"
+    "low-latency-systems",
+    "computer-architecture"
   ],
   "relations": [
     {
@@ -25,6 +26,10 @@
     {
       "relation_type": "governs",
       "target_id": "out-of-order-execution"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cpu-pipeline"
     }
   ],
   "summary": "处理器在条件分支计算完成前猜测其跳转方向与目标地址的技术。",

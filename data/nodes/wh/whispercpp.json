@@ -10,11 +10,13 @@
   "type": "tool",
   "ecosystems": [
     "open-source-ai-ecosystem",
-    "native-cpp-ecosystem"
+    "native-cpp-ecosystem",
+    "audio-speech-ecosystem"
   ],
   "domains": [
     "machine-learning",
-    "systems-programming"
+    "systems-programming",
+    "audio-and-speech-processing"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -33,6 +35,10 @@
     {
       "relation_type": "depends_on",
       "target_id": "ggml"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "speech-recognition"
     }
   ],
   "summary": "纯 C/C++ 实现的高性能 Whisper 语音识别本地推理引擎。",

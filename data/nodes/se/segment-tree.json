@@ -9,11 +9,13 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
     "systems-programming",
-    "mathematics"
+    "mathematics",
+    "data-structures-and-algorithms"
   ],
   "summary": "将区间递归二分存储的高级树结构，支持 O(log n) 的区间修改与聚合查询。",
   "status": "active",

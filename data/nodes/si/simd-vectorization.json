@@ -1,0 +1,42 @@
+{
+  "id": "simd-vectorization",
+  "name": "SIMD Vectorization",
+  "display_primary": "SIMD向量化",
+  "display_secondary": "SIMD Vectorization",
+  "aliases": [
+    "SIMD",
+    "单指令多数据",
+    "向量化计算"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-architecture",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "computer-architecture-ecosystem",
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "computer-architecture"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cpu-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "instruction-set-architecture",
+      "context": "利用AVX-512、ARM Neon或RISC-V Vector向量扩展寄存器在单条指令周期内并行操作多个数据通道。"
+    }
+  ],
+  "summary": "在单条处理器机器指令内并发对多个离散数据分量执行相同运算的技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html",
+  "description": "## 机制\n\n单指令多数据流（SIMD）是数据级并行的经典形式。CPU引入加宽的专用向量寄存器（如 128位的SSE/Neon、256位的AVX2或512位的AVX-512），一条向量加法指令即可在单周期内同时完成16个单精度浮点数或64个8位整数的独立加法，使图像处理、深度学习推理与音视频解码的理论峰值FLOPS成倍攀升。\n\n## 限制与编译优化\n\n向量化加速取决于内存对齐（Aligned Load/Store）、连续线性数据布局（SOA而非AOS结构）以及循环体内无循环携带的数据相关（Loop-Carried Dependencies）。编译器自动向量化能力受限时，工程师常手写架构专用的内部函数（Intrinsics）精细控制寄存器调度。\n\n## 参考\n\n- [Intel Intrinsics Guide](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html)\n- [Arm Neon Programmer's Guide](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon)"
+}

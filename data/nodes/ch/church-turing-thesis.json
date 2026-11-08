@@ -1,0 +1,38 @@
+{
+  "id": "church-turing-thesis",
+  "name": "Church-Turing Thesis",
+  "display_primary": "丘奇-图灵论题",
+  "display_secondary": "Church-Turing Thesis",
+  "aliases": [
+    "丘奇-图灵论题",
+    "丘奇论题",
+    "Church's Thesis"
+  ],
+  "type": "concept",
+  "domains": [
+    "theoretical-computer-science",
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "turing-machine",
+      "context": "将直观有效可计算性概念在数学上等价形式化为图灵机可执行函数。"
+    }
+  ],
+  "summary": "关于直观可计算函数与图灵机可计算函数在数学计算能力上严格等价的根本假说。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://plato.stanford.edu/entries/church-turing/",
+  "description": "## 机制\n\n丘奇-图灵论题（Church-Turing Thesis）奠定了现代计算机科学的定义基石。该论题指出：任何人类直观上可借助纸笔、有限规则并按步操作机械化执行的“有效计算过程”（Algorithm），都可以被图灵机（Turing Machine）、阿隆佐·丘奇的 $\\lambda$ 演算（Lambda Calculus）或哥德尔的一般递归函数精确形式化表达。\n\n由于“直观可计算”是哲学与直觉概念而非形式化数学定义，该论题无法通过纯数学证明，但百年来所有提出的独立计算模型（如后置机 Post Machine、马尔可夫算法、细胞自动机、量子计算及任意现代编程语言）在可计算能力边界上均与图灵机等价，未曾出现反例。\n\n## 延伸与扩展论题\n\n强丘奇-图灵论题（Extended Church-Turing Thesis）进一步猜想：任何物理现实世界中能够合理实现的计算设备，都可以在多项式时间内被确定性图灵机模拟。量子计算（如 Shor 大数质因数分解算法）对强论题提出了潜在挑战，推动了量子复杂性理论（BQP）的发展。\n\n## 参考\n\n- [Church: An Unsolvable Problem of Elementary Number Theory (Amer. J. Math., 1936)](https://www.jstor.org/stable/2371045)\n- [Kleene: Introduction to Metamathematics (North-Holland, 1952)](https://store.doverpublications.com)"
+}

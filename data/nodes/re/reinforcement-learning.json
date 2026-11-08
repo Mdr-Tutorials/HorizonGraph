@@ -8,16 +8,22 @@
   ],
   "type": "concept",
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "reinforcement-learning"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "reinforcement-learning-concept"
     },
     {
       "relation_type": "part_of",
       "target_id": "machine-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "markov-decision-process",
+      "context": "基于马尔可夫决策过程数学形式化构建状态、动作与转移奖励反馈回路。"
     }
   ],
   "summary": "智能体靠试错与奖励信号学出最优策略。",

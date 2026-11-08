@@ -1,0 +1,42 @@
+{
+  "id": "multi-armed-bandit",
+  "name": "Multi-Armed Bandit",
+  "display_primary": "多臂老虎机",
+  "display_secondary": "Multi-Armed Bandit",
+  "aliases": [
+    "多臂老虎机",
+    "MAB",
+    "Bandit Problem"
+  ],
+  "type": "concept",
+  "domains": [
+    "reinforcement-learning",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "reinforcement-learning-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "reinforcement-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "markov-decision-process",
+      "context": "作为无状态转移的简化马尔可夫决策过程，集中研究探索与利用权衡机制。"
+    }
+  ],
+  "summary": "在不确定收益奖励下权衡当前最优利用与未知探索的无状态序贯决策框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://tor-lattimore.com/downloads/book/book.pdf",
+  "description": "## 机制\n\n多臂老虎机是强化学习中研究探索与利用（Exploration vs. Exploitation）困境的经典形式化抽象。决策者面对 \\(K\\) 个拉杆，每根拉杆的回报服从未知概率分布。经典求解算法包括：\\(\\epsilon\\)-贪心策略（以小概率随机探索未知臂）、置信区间上界（UCB，基于乐观原则选择经验均值加不确定性置信上界最高的臂）以及汤普森采样（Thompson Sampling，基于贝叶斯后验概率分布采样）。\n\n## 上下文扩展与工程应用\n\n在推荐冷启动与在线展示广告中，引入用户与物品特征向量扩展为“上下文老虎机”（Contextual Bandits，如LinUCB算法），根据当前上下文动态预测拉杆期望收益并平衡探索成本，有效缓解新内容曝光不足与点击流马太效应。\n\n## 参考\n\n- [Lattimore & Szepesvári: Bandit Algorithms (Cambridge University Press, 2020)](https://tor-lattimore.com/downloads/book/book.pdf)\n- [Li et al.: A Contextual-Bandit Approach to Personalized News Article Recommendation (WWW 2010)](https://dl.acm.org/doi/10.1145/1772690.1772758)"
+}

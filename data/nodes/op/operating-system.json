@@ -1,0 +1,48 @@
+{
+  "id": "operating-system",
+  "name": "Operating System",
+  "display_primary": "操作系统",
+  "display_secondary": "Operating System",
+  "aliases": [
+    "操作系统",
+    "OS",
+    "System Software"
+  ],
+  "type": "concept",
+  "domains": [
+    "operating-systems",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "os-kernel-ecosystem",
+    "operating_systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "virtual-memory",
+      "context": "操作系统通过虚拟内存机制为各进程提供独立平坦的虚拟地址空间与内存保护隔离。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "process-scheduling",
+      "context": "内核调度器依据多任务调度算法分配处理器计算时间片与处理优先级抢占。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "system-call",
+      "context": "操作系统通过特权级切换与系统调用接口向用户态应用程序暴露底层硬件与文件资源访问能力。"
+    }
+  ],
+  "summary": "管理计算机硬件与软件资源，为应用程序提供抽象接口的核心系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+  "description": "## 机制\n\n操作系统是介于裸机硬件与应用软件之间的核心系统层，负责硬件抽象与资源复用。其经典三大支柱为：虚拟化（Virtualization，将物理CPU与物理内存虚拟为并发进程与虚存空间）、并发（Concurrency，通过锁、信号量与条件变量保证多线程数据一致性）与持久化（Persistence，依托文件系统与I/O栈实现掉电可靠存储）。\n\n## 架构形态与边界\n\n宏内核（Monolithic Kernel）将调度、虚拟内存、驱动与网络栈集中于单一高特权内核态，追求极端零拷贝性能；微内核（Microkernel）仅保留地址空间管理、进程间通信（IPC）与基础调度，将驱动和文件系统移至用户态服务以换取高可靠性与隔离性。\n\n## 参考\n\n- [Arpaci-Dusseau: Operating Systems: Three Easy Pieces (OSTEP)](https://pages.cs.wisc.edu/~remzi/OSTEP/)\n- [Silberschatz, Galvin & Gagne: Operating System Concepts](https://os-book.com/)"
+}

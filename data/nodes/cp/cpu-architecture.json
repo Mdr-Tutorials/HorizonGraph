@@ -1,0 +1,48 @@
+{
+  "id": "cpu-architecture",
+  "name": "CPU Architecture",
+  "display_primary": "CPU微架构",
+  "display_secondary": "CPU Architecture",
+  "aliases": [
+    "CPU架构",
+    "微架构",
+    "Microarchitecture"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-architecture",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "computer-architecture-ecosystem",
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "computer-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "instruction-set-architecture",
+      "context": "微架构硬件流水线与寄存器重命名执行引擎实现具体指令集规范定义的架构状态与机器语义。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpu-pipeline",
+      "context": "微架构通过多级流水线重叠执行取指、译码、发射、执行与写回阶段以提升指令吞吐率。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cache-hierarchy",
+      "context": "芯片内部构建L1、L2、L3逐级容量增大但延迟增加的多级缓存体系缓解访存墙瓶颈。"
+    }
+  ],
+  "summary": "中央处理器在硬件电路层面的物理组织结构与超标量乱序执行逻辑实现。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.sciencedirect.com/book/9780128119051/computer-architecture",
+  "description": "## 机制\n\n微架构是指令集体系结构（ISA）在半导体硬件电路中的具体物理实现。现代高性能微架构普遍采用超标量超流水线与乱序执行（Out-of-Order Execution）设计：前端负责取指并利用动态分支预测与指令缓存提高命中率；重命名阶段利用物理寄存器堆消除反相关与输出相关；保留站（Reservation Station）动态调度已就绪指令分派至多端口算术逻辑单元（ALU）并行运算，最终按重排序缓冲区（ROB）严格按序提交结果。\n\n## 物理与能效约束\n\n微架构设计长期受制于“功耗墙”（Power Wall，单核频率停滞在5GHz区间）、“内存墙”（Memory Wall，处理器计算吞吐远快于DRAM总线访存带宽）与“指令级并行度极限”（ILP Wall），促使现代芯片走向多核同构与异构混合大小核架构。\n\n## 参考\n\n- [Hennessy & Patterson: Computer Architecture: A Quantitative Approach](https://www.sciencedirect.com/book/9780128119051/computer-architecture)\n- [Intel 64 and IA-32 Architectures Software Developer's Manual](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)"
+}

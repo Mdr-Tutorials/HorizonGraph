@@ -1,0 +1,47 @@
+{
+  "id": "red-teaming",
+  "name": "AI Red Teaming",
+  "display_primary": "AI红队测试",
+  "display_secondary": "AI Red Teaming",
+  "aliases": [
+    "AI红队",
+    "红蓝对抗",
+    "Adversarial Red Teaming"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-safety",
+    "security"
+  ],
+  "ecosystems": [
+    "ai-safety-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-safety-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ai-safety"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "jailbreaking",
+      "context": "构造多轮越狱攻击提示词测试大模型安全护栏在诱导、越权与恶意输出场景下的防御鲁棒性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "guardrails-ai",
+      "context": "在系统输入端与输出端串联规则校验器以阻断红队测试发现的高危恶意提示。"
+    }
+  ],
+  "summary": "模拟真实攻击者对AI系统进行对抗性攻击以发现安全脆弱性与缺陷的测试方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.microsoft.com/en-us/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/",
+  "description": "## 机制\n\nAI红队测试借鉴网络安全对抗演练思想，由安全专家或自动化对抗智能体扮演攻击者角色，系统化探查AI模型与应用系统的攻击面。测试维度覆盖：提示词注入、多语言混淆越狱、系统提示泄露、敏感个人信息窃取、恶意代码生成诱导，以及自主智能体在沙箱外的越权网络探测。\n\n## 自动化对抗演练与持续评测\n\n人工红队虽然针对性强但受限于测试带宽与领域专长覆盖率。现代工程实践广泛结合自动化红队算法（如AutoDAN、PAIR、TAP），利用辅助大模型自动化生成成千上万种变体攻击向量，并将成功击穿防御的对抗样本反哺至SFT与DPO对抗训练管线，实现攻防闭环迭代。\n\n## 参考\n\n- [Microsoft AI Red Team: Building the future of safer AI](https://www.microsoft.com/en-us/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/)\n- [Perez et al.: Red Teaming Language Models with Language Models (DeepMind, 2022)](https://arxiv.org/abs/2202.03286)"
+}

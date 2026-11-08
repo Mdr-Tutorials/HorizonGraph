@@ -1,5 +1,5 @@
 {
-  "version": "0.11.0",
+  "version": "0.13.0",
   "policy": "登记制：新词随数据 PR 同步登记。CI 双向校验：数据出现未登记 value 即失败；登记项连续多个周期未被引用则告警。节点字段存储 value，en/zh 供展示。",
   "entries": [
     { "value": "systems-programming", "en": "Systems Programming", "zh": "系统编程" },
@@ -86,6 +86,19 @@
     {"value":"repository-analysis","en":"Repository Analysis","zh":"仓库分析"},
     {"value":"software-quality","en":"Software Quality","zh":"软件质量"},
     {"value":"software-testing","en":"Software Testing","zh":"软件测试"},
-    {"value":"empirical-software-engineering","en":"Empirical Software Engineering","zh":"实证软件工程"}
+    {"value":"empirical-software-engineering","en":"Empirical Software Engineering","zh":"实证软件工程"},
+    {"value":"data-structures-and-algorithms","en":"Data Structures & Algorithms","zh":"数据结构与算法"},
+    {"value":"operating-systems","en":"Operating Systems","zh":"操作系统"},
+    {"value":"computer-architecture","en":"Computer Architecture","zh":"计算机体系结构"},
+    {"value":"cryptography","en":"Cryptography","zh":"密码学"},
+    {"value":"recommender-systems","en":"Recommender Systems","zh":"推荐系统"},
+    {"value":"reinforcement-learning","en":"Reinforcement Learning","zh":"强化学习"},
+    {"value":"mlops","en":"MLOps","zh":"机器学习工程化"},
+    {"value":"ai-safety","en":"AI Safety & Alignment","zh":"AI 安全与对齐"},
+    {"value":"privacy-and-compliance","en":"Privacy & Compliance","zh":"数据隐私与合规"},
+    {"value":"audio-and-speech-processing","en":"Audio & Speech Processing","zh":"音频与语音处理"},
+    {"value":"autonomous-driving","en":"Autonomous Driving","zh":"自动驾驶与车载软件"},
+    {"value":"spatial-computing","en":"Spatial Computing","zh":"空间计算与扩展现实"},
+    {"value":"theoretical-computer-science","en":"Theoretical Computer Science","zh":"理论计算机科学"}
   ]
 }

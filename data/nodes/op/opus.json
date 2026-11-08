@@ -4,17 +4,23 @@
   "aliases": [],
   "type": "format",
   "ecosystems": [
-    "web_frontend"
+    "web_frontend",
+    "audio-speech-ecosystem"
   ],
   "domains": [
     "web-development",
-    "graphics"
+    "graphics",
+    "audio-and-speech-processing"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "graphics-asset-format"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "audio-codec"
     }
   ],
   "summary": "WebRTC 默认音频编解码，低延迟与高质量兼得。",

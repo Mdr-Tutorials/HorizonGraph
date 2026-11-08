@@ -1,0 +1,41 @@
+{
+  "id": "kosaraju-algorithm",
+  "name": "Kosaraju's Algorithm",
+  "display_primary": "Kosaraju算法",
+  "display_secondary": "Kosaraju's Algorithm",
+  "aliases": [
+    "Kosaraju算法",
+    "Kosaraju-Sharir算法",
+    "双DFS强连通分量算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dfs",
+      "context": "对原图执行后序DFS遍历记录出栈顺序，再对反向转置图按出栈逆序执行DFS提取强连通分量。"
+    }
+  ],
+  "summary": "基于两次反向深度优先搜索在线性时间内分解有向图全部强连通分量的图算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm",
+  "description": "## 机制\n\nKosaraju 算法由 S. Rao Kosaraju 于 1978 年提出（Micha Sharir 于 1981 年独立发表），是一种逻辑极为纯粹、直观对称的有向图强连通分量（SCC）线性时间分解算法。算法通过两次 DFS 完成：\n1. **第一遍 DFS（前向遍历）**：在原图 $G$ 上执行深度优先搜索，并在顶点回溯结束时将其压入全局栈中，记录顶点的“完成时间”（Finish Time）。完成后，栈顶顶点对应缩点 DAG 中拓扑排序最靠前的宿主分量；\n2. **构建转置图**：将图 $G$ 中所有有向边方向全部反转，得到转置图 $G^T$（注意：原图与转置图包含完全相同的强连通分量集合）；\n3. **第二遍 DFS（反向收集）**：依次弹出栈顶顶点。若该顶点在 $G^T$ 中未被访问，则从该点出发在转置图上运行 DFS，本次遍历所能到达的所有未标记顶点集合，恰好构成一个完整的强连通分量。\n\n## 理论正确性与复杂度\n\n两次 DFS 均在严格 $O(V + E)$ 线性时间内完成。其正确性核心在于：第二遍在转置图上沿拓扑序逆向搜索，阻断了向其他分量的外溢扩散，确保每次遍历只封闭地约束在当前极大强连通分量内部。与 Tarjan 算法相比，Kosaraju 思想更直观、无需维护追溯栈，是复杂网络连通性分析的标准算法之一。\n\n## 参考\n\n- [Sharir: A strong-connectivity algorithm and its applications in data flow analysis (Comput. Math. Appl., 1981)](https://www.sciencedirect.com/science/article/pii/0898122181900080)\n- [Aho, Hopcroft, Ullman: Data Structures and Algorithms (Addison-Wesley, 1983)](https://www.pearson.com)"
+}

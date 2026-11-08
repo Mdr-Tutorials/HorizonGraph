@@ -1,0 +1,43 @@
+{
+  "id": "eulerian-path",
+  "name": "Eulerian Path and Circuit",
+  "display_primary": "欧拉通路与欧拉回路",
+  "display_secondary": "Eulerian Path and Circuit",
+  "aliases": [
+    "欧拉通路与欧拉回路",
+    "欧拉回路",
+    "欧拉图",
+    "Eulerian Circuit"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "graph-algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dfs",
+      "context": "通过Hierholzer算法在满足奇数度数顶点条件的图上利用递归DFS拼接欧拉环路。"
+    }
+  ],
+  "summary": "在图论中恰好无重复遍历图中每一条边的连续行走轨迹或闭合环路。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Eulerian_path",
+  "description": "## 机制\n\n欧拉通路（Eulerian Path）是图论历史上最负盛名的经典问题，源于莱昂哈德·欧拉（Leonhard Euler）在 1736 年对“哥尼斯堡七桥问题”的数学求解，标志着现代图论与拓扑学的诞生。在图 $G$ 中：\n- **欧拉通路**：一条恰好遍历图中每一条边且每条边仅访问一次的连续路径；\n- **欧拉回路（Eulerian Circuit）**：起点与终点重合的封闭欧拉通路；包含欧拉回路的图称为欧拉图。\n\n## 欧拉定理充要条件\n\n欧拉证明了连通图存在欧拉路径的充要代数条件：\n1. **无向图**：存在欧拉回路 $\\iff$ 所有顶点的度数均为偶数（度数为奇数的顶点数为 0）；存在欧拉通路 $\\iff$ 奇数度数顶点的数量恰好为 0 或 2（若为 2，路径必以两奇度点分别为起点和终点）；\n2. **有向图**：强连通且所有顶点的入度严格等于出度 $\\iff$ 存在欧拉回路；至多有一个顶点出度比入度大 1（起点）、一个顶点入度比出度大 1（终点），其余点出度入度相等 $\\iff$ 存在欧拉通路。\n\n## Hierholzer 线性构造算法\n\n卡尔·希尔霍尔策（Carl Hierholzer）于 1873 年提出 $O(V + E)$ 线性时间求解算法：从起点出发沿未访问边进行深度遍历，直到无法继续形成一个闭合简单环；随后回溯寻找环上尚有未访问邻边的顶点，递归寻找子环并拼接缝合进主环，直接输出完整的欧拉序列。广泛应用于基因测序 de Bruijn 图组装与扫地机器人全覆盖路径规划。\n\n## 参考\n\n- [Euler: Solutio problematis ad geometriam situs pertinentis (Comment. Acad. Sci. U. Petrop., 1736)](https://scholarlycommons.pacific.edu/euler-works/53/)\n- [Hierholzer: Ueber die Möglichkeit, einen Linienzug ohne Wiederholung und ohne Unterbrechung zu umfahren (Math. Ann., 1873)](https://link.springer.com/article/10.1007/BF01442866)"
+}

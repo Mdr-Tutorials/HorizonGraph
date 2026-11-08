@@ -1,0 +1,45 @@
+{
+  "id": "privacy-preserving-computation",
+  "name": "Privacy-Preserving Computation",
+  "display_primary": "隐私计算",
+  "display_secondary": "Privacy-Preserving Computation",
+  "aliases": [
+    "隐私计算",
+    "隐私保护计算",
+    "PPC",
+    "PETs"
+  ],
+  "type": "concept",
+  "domains": [
+    "privacy-and-compliance",
+    "cryptography",
+    "security"
+  ],
+  "ecosystems": [
+    "privacy-compliance-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "privacy-compliance-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "homomorphic-encryption",
+      "context": "在全密文无解密环境下直接执行加法与乘法数学运算，实现数据可用而不可见。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "zkp",
+      "context": "在完全不向验证者透露底层敏感明文的前提下证明特定计算命题与合规约束的真实性。"
+    }
+  ],
+  "summary": "在保护数据全部隐私状态下实现多方联合计算与协同分析的技术体系统称。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://csrc.nist.gov/publications/detail/sp/800-226/final",
+  "description": "## 机制\n\n隐私保护计算（Privacy-Enhancing Technologies, PETs）是解决“数据孤岛”与“数据合规流通”矛盾的关键基础设施。三大主流技术支柱包括：多方安全计算（MPC，利用秘密共享与混淆电路实现各方在不泄露各自私有输入前提下共同计算约定函数）、同态加密（HE，支持密文状态直接运算），以及基于可信执行环境（TEE，依托Intel SGX或ARM TrustZone硬件飞地隔离内存明文计算）。\n\n## 联邦学习与性能权衡\n\n在人工智能领域，隐私计算与分布式训练结合催生了联邦学习（Federated Learning）：数据不出域，仅在各参与方本地训练模型并上传聚合加密梯度。纯密码学方案通信与计算开销通常比明文计算高出数倍至数百倍，系统设计需在安全性假设与工程吞吐率间审慎权衡。\n\n## 参考\n\n- [NIST Special Publication 800-226: Guidelines for Evaluating PETs](https://csrc.nist.gov/publications/detail/sp/800-226/final)\n- [Yang et al.: Federated Machine Learning: Concept and Applications (ACM TIST 2019)](https://dl.acm.org/doi/10.1145/3308560)"
+}

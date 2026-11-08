@@ -1,0 +1,42 @@
+{
+  "id": "model-registry",
+  "name": "Model Registry",
+  "display_primary": "模型注册中心",
+  "display_secondary": "Model Registry",
+  "aliases": [
+    "模型注册中心",
+    "模型仓库",
+    "ML Model Hub"
+  ],
+  "type": "concept",
+  "domains": [
+    "mlops",
+    "devops"
+  ],
+  "ecosystems": [
+    "mlops-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mlops-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mlops"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mlflow",
+      "context": "依托MLflow元数据与模型构件版本仓库实现模型阶段变更（Staging/Production/Archived）与审计归档。"
+    }
+  ],
+  "summary": "集中管理机器学习模型工件版本、评估指标与发布审批流的中心枢纽。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://mlflow.org/docs/latest/model-registry.html",
+  "description": "## 机制\n\n模型注册中心是连接数据科学实验与生产运维交付的唯一可信源。它提供模型工件（权重参数、序列化计算图、依赖环境清单）的不变性存储、语义化版本管理、输入输出Schema契约定义、训练超参数与评估指标关联记录，以及严格的审批晋级工作流（开发、测试预发、生产与归档下线）。\n\n## 治理与可溯源性\n\n现代监管法规（如EU AI Act）对模型血缘提出严格合规要求。模型注册中心提供全链路双向溯源：不仅可根据生产在线运行的模型实例追溯到生成它的具体Git提交、训练数据集版本与超参数，亦可在发现底层训练数据污染时即刻定位全部受影响的下游衍生模型版本。\n\n## 参考\n\n- [MLflow Model Registry Documentation](https://mlflow.org/docs/latest/model-registry.html)\n- [Kubeflow Model Registry SIG](https://www.kubeflow.org/docs/components/model-registry/)"
+}

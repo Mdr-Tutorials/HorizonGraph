@@ -1,0 +1,40 @@
+{
+  "id": "autosar",
+  "name": "AUTOSAR",
+  "display_primary": "AUTOSAR",
+  "display_secondary": "Automotive Open System Architecture",
+  "aliases": [
+    "AUTOSAR",
+    "汽车开放系统架构",
+    "Classic AUTOSAR",
+    "Adaptive AUTOSAR"
+  ],
+  "type": "specification",
+  "abstraction_level": "kernel_os",
+  "domains": [
+    "autonomous-driving",
+    "embedded-systems"
+  ],
+  "ecosystems": [
+    "autonomous-vehicles-ecosystem",
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "automotive-specification"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "can",
+      "context": "汽车开放系统架构定义了底层通信抽象层与微控制器抽象层以标准化访问车载CAN网络。"
+    }
+  ],
+  "summary": "全球汽车制造商与供应商共同制定的汽车电子控制单元开放系统软件架构标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.autosar.org/",
+  "description": "## 机制\n\nAUTOSAR 标准解耦了汽车应用软件组件（SWC）与底层硬件微控制器（MCU）。Classic 平台运行在资源受限的硬实时车控MCU上，由微控制器抽象层（MCAL）、ECU抽象层、服务层以及运行时环境（RTE）构成分层架构，强制推行ISO 26262 ASIL-D功能安全认证；Adaptive 平台针对高算力自动驾驶域控制器（SoC），基于POSIX操作系统（如QNX/Linux）与面向服务架构（SOME/IP）设计。\n\n## 软件定义汽车与整车电子电气架构\n\n随着整车电子电气架构由“分布式ECU”向“跨域集中”与“中央计算平台”演进，AUTOSAR 提供了标准化的Arxml配置文件模型、全生命周期工具链以及诊断协议（UDS）支撑，是现代汽车供应链工程协作的底座规范。\n\n## 参考\n\n- [AUTOSAR Classic Platform Specifications](https://www.autosar.org/standards/classic-platform)\n- [AUTOSAR Adaptive Platform Specifications](https://www.autosar.org/standards/adaptive-platform)"
+}

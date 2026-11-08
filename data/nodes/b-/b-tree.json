@@ -13,10 +13,12 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "database-ecosystem"
+    "database-ecosystem",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
-    "databases"
+    "databases",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {

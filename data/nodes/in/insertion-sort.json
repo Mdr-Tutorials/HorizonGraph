@@ -8,10 +8,12 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "data-structures-and-algorithms"
   ],
   "summary": "逐个将未排序元素插入到前面已排序序列的合适位置，在小规模数据上表现优异。",
   "status": "active",
@@ -27,6 +29,10 @@
       "relation_type": "uses",
       "target_id": "array",
       "context": "在已有序前缀段内向后平移大于待插入项的元素并安置新元素。"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "sorting-algorithm"
     }
   ]
 }

@@ -1,0 +1,37 @@
+{
+  "id": "lzw",
+  "name": "LZW Compression",
+  "display_primary": "LZW算法",
+  "display_secondary": "LZW Compression",
+  "aliases": [
+    "LZW",
+    "LZW压缩算法",
+    "Lempel-Ziv-Welch"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "information-theory"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "lz77"
+    }
+  ],
+  "summary": "通过动态构建字符串模式字典将变长字符序列映射为定长编码的高效无损压缩算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch",
+  "description": "## 机制\n\nLZW（Lempel-Ziv-Welch）由特里·韦尔奇（Terry Welch）于 1984 年在 LZ78 理论基础上改进发表。与 LZ77 依赖滑动窗口距离偏移量不同，LZW 抛弃了滑动窗口概念，转而在编码过程中在内存中自适应地动态构建并扩展“字符串到数值代号”的自学习词典（Dictionary）。\n\n算法初始时将单字节的所有 256 个基本字符预置进词典（索引 $0 \\sim 255$）：\n1. 维护当前匹配前缀字符串 $P$；\n2. 读取下一个输入字符 $C$。若字符串 $P+C$ 已存在于词典中，则更新 $P \\leftarrow P+C$ 并继续读取下一字符；\n3. 若 $P+C$ 不在词典中：\n   - 输出 $P$ 在词典中对应的整数编码值；\n   - 将新模式串 $P+C$ 作为下一个可用编号存入词典；\n   - 重置前缀 $P \\leftarrow C$。\n\n## 零元数据传输与解压自同步\n\nLZW 极其惊艳之处在于：压缩文件内**完全不需要携带任何词典数据**！解压器在读取流式整数编码的同时，利用完全对称的上下文推导逻辑在自己内存中同步还原出一模一样的词典树。\n\nLZW 在 1980 至 1990 年代成为全球最流行的压缩技术，被直接写入早期 UNIX 的 `compress` 命令、GIF 动图规范以及 PDF 文档嵌入流压缩格式。\n\n## 参考\n\n- [Welch: A Technique for High-Performance Data Compression (IEEE Computer, 1984)](https://ieeexplore.ieee.org/document/1659158)\n- [Ziv & Lempel: Compression of individual sequences via variable-rate coding (IEEE Trans. Info. Theory, 1978)](https://ieeexplore.ieee.org/document/1055934)"
+}

@@ -11,7 +11,8 @@
   "domains": [
     "programming-languages",
     "operations-research",
-    "mathematical-optimization"
+    "mathematical-optimization",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {
@@ -22,6 +23,10 @@
       "relation_type": "uses",
       "target_id": "optimization-problem",
       "context": "在具备适当最优子结构的阶段决策模型中，以价值递推求解目标最优值和策略。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "greedy-algorithm"
     }
   ],
   "summary": "把重叠子问题的解存表复用，状态转移方程是核心。",

@@ -8,10 +8,12 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "data-structures-and-algorithms"
   ],
   "summary": "利用二叉堆性质在 O(n log n) 时间与 O(1) 辅助空间内完成的原位选择排序。",
   "status": "active",
@@ -27,6 +29,10 @@
       "relation_type": "uses",
       "target_id": "array",
       "context": "将连续数组隐式视为完全二叉树构建大顶堆并逐个交换提取最大元素。"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "sorting-algorithm"
     }
   ]
 }

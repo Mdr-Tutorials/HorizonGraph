@@ -8,17 +8,25 @@
   ],
   "type": "concept",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
     }
   ],
   "summary": "给 DAG 排线性序，构建系统与任务调度的依赖基础。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 3
+  "importance": 3,
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem"
+  ]
 }

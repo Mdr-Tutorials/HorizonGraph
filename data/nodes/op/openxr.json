@@ -1,0 +1,42 @@
+{
+  "id": "openxr",
+  "name": "OpenXR",
+  "display_primary": "OpenXR",
+  "display_secondary": "OpenXR Specification",
+  "aliases": [
+    "OpenXR",
+    "OpenXR标准",
+    "Khronos OpenXR"
+  ],
+  "type": "specification",
+  "abstraction_level": "runtime_vm",
+  "domains": [
+    "spatial-computing",
+    "graphics"
+  ],
+  "ecosystems": [
+    "spatial-computing-ecosystem",
+    "graphics_gaming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "xr-specification"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "spatial-computing"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "webxr"
+    }
+  ],
+  "summary": "Khronos组织制定的消除XR硬件平台碎片化的开放免版税跨平台API标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.khronos.org/openxr/",
+  "description": "## 机制\n\n在 OpenXR 标准确立前，VR/AR生态面临极度碎片化：开发者若要跨平台支持 Oculus、HTC Vive、Valve Index 与 Windows MR，必须分别对接厂商专有闭源SDK。Khronos Group 联合业界制定了免版税的统一开放标准。架构由两层接口解耦：应用程序接口（API，为游戏引擎和应用提供统一的头部追踪、空间渲染与输入动作绑定），以及设备运行时驱动接口（Device Runtime Interface）。\n\n## 引擎集成与生态一统\n\nOpenXR 已成为虚幻引擎（Unreal Engine）、Unity、Godot 以及各主流硬件厂商（Meta、Valve、Microsoft、Qualcomm）唯一通用的底层XR驱动标准，使编写一次沉浸式图形逻辑即可无缝在不同硬件上原生运行。\n\n## 参考\n\n- [Khronos Group: OpenXR 1.0 Specification](https://www.khronos.org/openxr/)\n- [GitHub: KhronosGroup/OpenXR-SDK](https://github.com/KhronosGroup/OpenXR-SDK)"
+}

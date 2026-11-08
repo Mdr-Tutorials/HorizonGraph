@@ -1,0 +1,43 @@
+{
+  "id": "adversarial-robustness",
+  "name": "Adversarial Robustness",
+  "display_primary": "对抗鲁棒性",
+  "display_secondary": "Adversarial Robustness",
+  "aliases": [
+    "对抗鲁棒性",
+    "对抗防御",
+    "Model Robustness"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-safety",
+    "machine-learning",
+    "security"
+  ],
+  "ecosystems": [
+    "ai-safety-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-safety-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ai-safety"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "adversarial-training",
+      "context": "通过在训练循环中主动引入梯度对抗扰动提高神经网络对输入微小扰动的防御抗性。"
+    }
+  ],
+  "summary": "衡量与提升模型抵御对抗样本扰动与恶意诱导攻击稳定性的安全能力。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://csrc.nist.gov/pubs/ai/100/2/e2023/final",
+  "description": "## 机制\n\n对抗鲁棒性（Adversarial Robustness）衡量机器学习模型在面临对抗性扰动（Adversarial Perturbation）时的预测稳定性。在白盒或黑盒攻击下，攻击者通过在输入图像中添加微不可见的高频噪声（如FGSM或PGD攻击），或在文本提示词中插入混淆字符，诱导深度神经网络产生置信度极高的严重错误输出。\n\n## 形式化验证与经验防御\n\n防御策略分为经验防御（如对抗训练 Adversarial Training，将对抗样本动态加入训练集重新迭代）与形式化可验证防御（Certified Robustness，基于随机平滑 Randomized Smoothing 给出数学保证的鲁棒半径）。提高对抗鲁棒性往往需要付出标准测试集泛化精度轻微下降（Robustness-Accuracy Tradeoff）的工程代价。\n\n## 参考\n\n- [NIST AI 100-2e2023: Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations](https://csrc.nist.gov/pubs/ai/100/2/e2023/final)\n- [Madry et al.: Towards Deep Learning Models Resistant to Adversarial Attacks (ICLR 2018)](https://arxiv.org/abs/1706.06083)"
+}

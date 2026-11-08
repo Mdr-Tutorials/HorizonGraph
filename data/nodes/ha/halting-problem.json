@@ -1,0 +1,42 @@
+{
+  "id": "halting-problem",
+  "name": "Halting Problem",
+  "display_primary": "停机问题",
+  "display_secondary": "Halting Problem",
+  "aliases": [
+    "停机问题",
+    "判定终止问题",
+    "Undecidability of Halting"
+  ],
+  "type": "concept",
+  "domains": [
+    "theoretical-computer-science",
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "computational-complexity"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "turing-machine",
+      "context": "基于图灵机对角线反证法严格证明不存在能够判定任意程序是否停机的通用算法。"
+    }
+  ],
+  "summary": "图灵证明的不存在通用算法判定任意程序在给定输入下是否会终止的经典命题。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.turingarchive.org/",
+  "description": "## 机制\n\n停机问题是理论计算机科学与数理逻辑的基石定理。阿兰·图灵在 1936 年发表的开创性论文中证明：不存在这样一个通用图灵机 $H$，它能对任意给定的程序描述 $\\langle M \\rangle$ 和输入 $w$，在有限步内准确判定图灵机 $M$ 在输入 $w$ 上是否会最终停机。\n\n证明采用康托尔对角线法构造反例：假设存在停机判决器 $H(\\langle M \\rangle, w)$，构造一个新机器 $D$：输入任意程序 $\\langle M \\rangle$，若 $H(\\langle M \\rangle, \\langle M \\rangle)$ 判定停机，则 $D$ 故意陷入无限死循环；若判定不停机，则 $D$ 立即停机。当将 $D$ 自身代码作为输入传入 $D(\\langle D \\rangle)$ 时，将推导出“停机当且仅当不停机”的绝对逻辑悖论。\n\n## 理论与工程影响\n\n停机问题的不可判定性（Undecidability）从根本上划定了机械化计算的边界。它直接推导出了莱斯定理（Rice's Theorem）：关于程序运行期非平凡语义性质（如是否存在死锁、变量是否越界、是否内存泄漏）的任何自动静态分析判定都是不可判定的。因此，现代代码静态分析器与编译器优化只能在“报假警（Over-approximation）”与“漏报（Under-approximation）”之间寻求实用工程折衷。\n\n## 参考\n\n- [Turing: On Computable Numbers, with an Application to the Entscheidungsproblem (Proc. London Math. Soc., 1936)](https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/plms/s2-42.1.230)\n- [Sipser: Introduction to the Theory of Computation (Cengage Learning)](https://www.cengage.com)"
+}

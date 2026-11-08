@@ -1,0 +1,41 @@
+{
+  "id": "treap",
+  "name": "Treap",
+  "display_primary": "树堆",
+  "display_secondary": "Treap",
+  "aliases": [
+    "树堆",
+    "笛卡尔平衡树",
+    "Treap数据结构"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "binary-search-tree"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "heap",
+      "context": "为每个二叉树节点分配独立的随机优先权并强制维持二叉堆的序属性。"
+    }
+  ],
+  "summary": "结合二叉搜索树的键值顺序与堆的随机优先级以维持统计平衡的树形结构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Treap",
+  "description": "## 机制\n\n树堆（Treap = Tree + Heap）是由雷蒙德·塞德尔（Raimund Seidel）和塞西莉亚·阿拉贡（Cecilia Aragon）于 1989 年提出的自平衡二叉搜索树。每个节点包含两个属性：用户存储的主键 $(Key)$ 与系统随机生成的优先级 $(Priority)$。Treap 强制满足双重拓扑不变量：\n1. **二叉搜索树性质**：左子树所有节点的 Key 小于根节点 Key，右子树节点的 Key 大于根节点 Key；\n2. **二叉堆性质**：父节点的 Priority 严格高于（或低于）其所有子节点的 Priority。\n\n当插入新节点时，先按普通 BST 规则落入叶子位置并分配随机优先级，若破坏堆序，则沿父节点路径执行单次树旋转（左旋或右旋）向上调整。由于优先级完全随机且独立于输入键值的先后顺序，整棵树的拓扑形态数学等价于将这组键以随机打乱顺序插入普通 BST 所得形态。\n\n## 分裂与合并操作\n\n无旋 Treap（FHQ-Treap）彻底摆脱了传统指针旋转：通过核心的原语 $\\text{Split}(T, k)$（将树分裂为键 $\\le k$ 与 $> k$ 的两棵树）与 $\\text{Merge}(T_1, T_2)$，不仅能够在期望 $O(\\log n)$ 时间内完成增删查改，而且极易支持区间翻转、持久化（可持久化线段树替代品）等高级操作。\n\n## 参考\n\n- [Aragon & Seidel: Randomized Search Trees (Algorithmica, 1996)](https://link.springer.com/article/10.1007/BF01940876)\n- [Cormen et al.: Introduction to Algorithms (CLRS, Problems 13-4)](https://mitpress.mit.edu)"
+}

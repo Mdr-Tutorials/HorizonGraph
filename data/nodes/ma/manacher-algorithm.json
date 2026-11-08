@@ -1,0 +1,37 @@
+{
+  "id": "manacher-algorithm",
+  "name": "Manacher's Algorithm",
+  "display_primary": "Manacher算法",
+  "display_secondary": "Manacher's Algorithm",
+  "aliases": [
+    "Manacher算法",
+    "马拉车算法",
+    "最长回文子串算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kmp",
+      "context": "借鉴KMP最长前缀对称信息维护最大右边界以避免重复暴力字符比对。"
+    }
+  ],
+  "summary": "利用回文对称性与最大右边界将字符串最长回文子串搜索压至线性时间的算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Longest_palindromic_substring#Manacher's_algorithm",
+  "description": "## 机制\n\nManacher 算法由格伦·马拉车（Glenn Manacher）于 1975 年提出，用于在严格 $O(n)$ 线性时间内求解任意字符串中的最长回文子串（Longest Palindromic Substring）。传统朴素中心扩散法受制于偶数长度回文串（双中心）与奇数长度回文串（单中心）的分裂处理，且最坏时间复杂度为 $O(n^2)$。\n\nManacher 的核心精妙设计包括两步：\n1. **虚拟分隔符插值**：在原字符串首尾及所有字符之间统一插入未在原串出现过的特殊符号（如 `#`），并将开头和结尾分别加上边界哨兵（如 `^` 与 `$`）。无论原串长为奇为偶，变换后的字符串长度必为奇数，统一退化为以单字符为中心的对称回文；\n2. **回文半径与对称映射利用**：维护一个数组 $R[i]$ 表示以字符 $i$ 为中心的最大回文半径，并动态跟踪当前所有已探测回文串中所能触及的最远右端边界 $R_{\\max}$ 及其对称中心 $C$。\n\n当计算当前位置 $i$ 的回文半径时：\n- 若 $i < R_{\\max}$，根据关于中心 $C$ 的对称点 $i' = 2C - i$，由于两区间在对称范围内完全镜像，直接利用 $R[i] \\ge \\min(R[i'], R_{\\max} - i)$ 跳过已匹配区域；\n- 仅当回文突破了当前已知最远右边界 $R_{\\max}$ 时，才真正启动字符对比并向外暴力扩散，并随即更新 $R_{\\max}$ 和 $C$。\n\n## 线性证明\n\n由于每一次向外字符比对成功都会直接导致全局右边界 $R_{\\max}$ 向右推进一步，而 $R_{\\max}$ 最大只能递增至字符串总长度 $2n+1$，因此暴力比对的总步数被严格约束在 $O(n)$ 内，达成优雅的线性算法。\n\n## 参考\n\n- [Manacher: A new linear-time \"on-line\" algorithm for finding the smallest initial palindrome of a string (JACM, 1975)](https://dl.acm.org/doi/10.1145/321892.321896)\n- [Crochemore & Rytter: Jewels of Stringology (World Scientific)](https://www.worldscientific.com)"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "flp-impossibility",
+  "name": "FLP Impossibility Theorem",
+  "display_primary": "FLP不可能定理",
+  "display_secondary": "FLP Impossibility",
+  "aliases": [
+    "FLP不可能定理",
+    "FLP定理",
+    "Fischer-Lynch-Paterson"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "cloud_native"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cap-theorem"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "paxos",
+      "context": "在纯异步网络无法保证完全确定性终止的理论边界下引导Paxos等工程算法通过部分同步假设落地。"
+    }
+  ],
+  "summary": "纯异步分布式网络中即使只有一个节点崩溃也不存在确定性共识算法的否定性定理。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/Fischer%E2%80%93Lynch%E2%80%93Paterson_impossibility_result",
+  "description": "## 机制\n\nFLP 不可能定理由迈克尔·菲舍尔（Michael J. Fischer）、南希·林奇（Nancy A. Lynch）与迈克尔·帕特森（Michael S. Paterson）于 1985 年提出（荣获 Dijkstra 奖），是分布式系统理论中最具颠覆性的否定性定理。\n\n定理明确界定：**在完全异步（Asynchronous）的分布式通信网络中，即便通信信道完全可靠（无丢包、无重复）且不存在任何拜占庭恶意节点，只要允许有哪怕仅仅一个节点发生崩溃宕机（Fail-Stop），就不存在任何确定性的算法能够保证系统始终达成共识（Consensus）**。\n\n其证明通过二价状态（Bivalent State）推导：系统初始存在结果未定的二价配置，证明者总能通过精心构造特定消息的投递顺序延迟，迫使系统在多个潜在决定之间无限徘徊震荡，无法在有限时间内确定性跃迁至单价决定状态（Decided）。\n\n## 工程现实破局路径\n\nFLP 定理粉碎了工程师试图在不可靠纯异步网络中构建“绝对完美、绝对实时且永不死锁的确定性共识”的幻觉。为了在工程实际中打破 FLP 禁锢，工业界走出了三条破局路径：\n1. **弱化异步假设（部分同步 Partial Synchrony）**：引入心跳超时机制（如 Paxos 与 Raft 假定网络在有限周期内存在延迟上界 $\\Delta$），虽然在网络极端分区时可能暂时失去可用性停滞，但保证绝对安全（Safety）；\n2. **引入随机化（Randomized Consensus）**：如 Ben-Or 随机共识算法，以概率 1 在多项式期望步数内终止；\n3. **故障检测器（Failure Detectors）**：引入 Chandra-Toueg 不完美故障检测器模型。\n\n## 参考\n\n- [Fischer, Lynch, Paterson: Impossibility of Distributed Consensus with One Unreliable Process (JACM, 1985)](https://dl.acm.org/doi/10.1145/3149.214121)\n- [Chandra & Toueg: Unreliable failure detectors for reliable distributed systems (JACM, 1996)](https://dl.acm.org/doi/10.1145/226643.226647)"
+}

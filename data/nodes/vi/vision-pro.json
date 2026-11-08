@@ -8,10 +8,12 @@
   ],
   "type": "product",
   "ecosystems": [
-    "graphics_gaming"
+    "graphics_gaming",
+    "spatial-computing-ecosystem"
   ],
   "domains": [
-    "human-computer-interaction"
+    "human-computer-interaction",
+    "spatial-computing"
   ],
   "abstraction_level": "application_tool",
   "relations": [

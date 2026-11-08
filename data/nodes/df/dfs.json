@@ -9,7 +9,8 @@
   ],
   "type": "concept",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {
@@ -20,11 +21,18 @@
       "relation_type": "uses",
       "target_id": "stack",
       "context": "迭代式深度优先遍历用显式栈保存后续访问状态。"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
     }
   ],
   "summary": "一条路走到底的图遍历，连通性与拓扑排序的基础。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 4
+  "importance": 4,
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem"
+  ]
 }

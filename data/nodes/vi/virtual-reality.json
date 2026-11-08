@@ -1,0 +1,37 @@
+{
+  "id": "virtual-reality",
+  "name": "Virtual Reality",
+  "display_primary": "虚拟现实",
+  "display_secondary": "Virtual Reality",
+  "aliases": [
+    "虚拟现实",
+    "VR",
+    "沉浸式虚拟环境"
+  ],
+  "type": "concept",
+  "domains": [
+    "spatial-computing",
+    "interactive-graphics"
+  ],
+  "ecosystems": [
+    "spatial-computing-ecosystem",
+    "graphics_gaming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "spatial-computing-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "spatial-computing"
+    }
+  ],
+  "summary": "利用头戴式显示器完全隔绝外部视觉并生成纯三维数字化拟真世界的沉浸技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.meta.com/quest/",
+  "description": "## 机制\n\n虚拟现实（VR）通过头戴式不透明近眼显示屏为用户提供完全封闭的视觉沉浸感。光学系统采用菲涅尔透镜或Pancake短焦折叠光路模组将小尺寸高PPI微显示屏画面放大至人眼超过100度的视场角（FOV）。渲染引擎针对左右眼各自独立渲染视角存在瞳距（IPD）视差的三维画面，配合空间音频营造深度知觉与身临其境的存在感（Presence）。\n\n## 六自由度追踪\n\n现代VR头显标配6DoF（包含3轴平移与3轴旋转）定位系统，通过头显外置广角鱼眼摄像头捕捉室内环境视觉特征点，配合高频微机电系统IMU运行视觉惯性里程计（VIO），实现无需外部基站的无约束自由行走与无线双手手柄空间交互。\n\n## 参考\n\n- [LaValle: Virtual Reality (Cambridge University Press, 2017)](http://vr.cs.uiuc.edu/)\n- [Khronos OpenXR Specification for Virtual Reality](https://www.khronos.org/openxr/)"
+}

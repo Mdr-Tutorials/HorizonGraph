@@ -1,0 +1,47 @@
+{
+  "id": "sensor-fusion",
+  "name": "Sensor Fusion",
+  "display_primary": "多传感器融合",
+  "display_secondary": "Sensor Fusion",
+  "aliases": [
+    "多传感器融合",
+    "传感器数据融合",
+    "Multi-Sensor Fusion"
+  ],
+  "type": "concept",
+  "domains": [
+    "autonomous-driving",
+    "robotics"
+  ],
+  "ecosystems": [
+    "autonomous-vehicles-ecosystem",
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "autonomous-driving-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "autonomous-driving"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "lidar",
+      "context": "将激光雷达的高精度空间三维几何点云与相机的高分辨率纹理语义在时间与空间坐标系上刚体对齐标定。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "point-cloud-perception",
+      "context": "提取三维空间点云反射强度与空间聚类几何特征，精确预测障碍物三维定向边界框。"
+    }
+  ],
+  "summary": "综合处理多种异构传感器观测数据以消除单一传感器感知盲区与测量误差的技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://ieeexplore.ieee.org/document/8569502",
+  "description": "## 机制\n\n单一车载传感器受限于物理探测原理无法胜任全天候全场景：摄像头在夜间逆光或恶劣雨雾天气下性能骤降；毫米波雷达测速准确但缺乏高度角分辨率且易产生静态金属杂波反射；激光雷达测距精度达厘米级但成本高昂且无颜色纹理信息。多传感器融合依据处理层级划分为：前融合（数据级直接点云与像素张量级拼接）、特征级融合（在BEV隐向量空间跨注意力交叉）与后融合（各传感器独立输出目标包围框后经扩展卡尔曼滤波EKF加权跟踪）。\n\n## 时空同步与外参标定\n\n传感器融合的前提是微秒级时钟同步（基于PTP IEEE 1588协议消除运动模糊带来的空间错位）以及毫米级刚体六自由度外参标定（Extrinsics Calibration）。动态行驶过程中的车身振动会引发标定漂移，需要在线自标定算法持续校准。\n\n## 参考\n\n- [LiDAR-Camera Fusion for Autonomous Driving: A Review (IEEE TIV, 2023)](https://ieeexplore.ieee.org/document/10107758)\n- [Bar-Shalom et al.: Estimation with Applications to Tracking and Navigation (Wiley)](https://www.wiley.com)"
+}

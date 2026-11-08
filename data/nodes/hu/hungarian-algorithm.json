@@ -1,0 +1,42 @@
+{
+  "id": "hungarian-algorithm",
+  "name": "Hungarian Algorithm",
+  "display_primary": "匈牙利算法",
+  "display_secondary": "Hungarian Algorithm",
+  "aliases": [
+    "匈牙利算法",
+    "Kuhn-Munkres算法",
+    "KM算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "mathematical-optimization"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dfs",
+      "context": "在二分图相等子图上通过交替树与交增路径递归寻找最大匹配。"
+    }
+  ],
+  "summary": "通过在二分图相等子图上持续搜索增广交替路径求解二分图最大匹配的多项式算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Hungarian_algorithm",
+  "description": "## 机制\n\n匈牙利算法由哈罗德·库恩（Harold Kuhn）于 1955 年提出，并以两位匈牙利数学家（Dénes Kőnig 与 Jenő Egerváry）的早期理论命名。在二分图无权最大匹配中，算法对左侧每个未匹配顶点出发，运行 DFS 或 BFS 寻找一条关于当前匹配的交替增广路径：\n1. 若找到一条未匹配顶点终点，则沿路径回溯执行增广，匹配数加 1；\n2. 若当前顶点所有可达交替路径均受阻，则跳过该顶点。针对每个顶点的增广耗时为 $O(E)$，因此在包含 $V$ 个顶点的二分图上总时间复杂度为 **$O(V E)$**。\n\n## 推广与带权最优匹配（KM算法）\n\n詹姆斯·芒克雷斯（James Munkres）在 1957 年将其拓展为求解**带权二分图最佳完美匹配**（即经典任务指派问题 Assignment Problem）的 Kuhn-Munkres（KM）算法。算法为左侧与右侧每个顶点分别引入顶标变量 $l(u)$ 与 $l(v)$，维持可行顶标不变量 $l(u) + l(v) \\ge w(u, v)$。通过在满足 $l(u) + l(v) = w(u, v)$ 的“相等子图”上反复寻找完备匹配，并根据松弛变量动态下调顶标差值，在 **$O(V^3)$** 矩阵时间内求出全局权值最大的最优指派方案。\n\n匈牙利算法是多目标跟踪（MOT，激光雷达检测框与历史轨迹对齐）、运筹调度与资源分配的核心基座。\n\n## 参考\n\n- [Kuhn: The Hungarian method for the assignment problem (Naval Research Logistics Quarterly, 1955)](https://onlinelibrary.wiley.com/doi/abs/10.1002/nav.3800020109)\n- [Munkres: Algorithms for the Assignment and Transportation Problems (J. SIAM, 1957)](https://epubs.siam.org/doi/10.1137/0105003)"
+}

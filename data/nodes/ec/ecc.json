@@ -10,7 +10,8 @@
     "cryptography-pki-ecosystem"
   ],
   "domains": [
-    "security"
+    "security",
+    "cryptography"
   ],
   "abstraction_level": "runtime_vm",
   "relations": [
@@ -25,6 +26,10 @@
     {
       "relation_type": "competes_with",
       "target_id": "rsa"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "elliptic-curve-cryptography"
     }
   ],
   "summary": "椭圆曲线上的非对称密码，同安全强度密钥更短。",

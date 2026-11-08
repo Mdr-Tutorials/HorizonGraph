@@ -1,0 +1,42 @@
+{
+  "id": "computational-complexity",
+  "name": "Computational Complexity",
+  "display_primary": "计算复杂度",
+  "display_secondary": "Computational Complexity",
+  "aliases": [
+    "计算复杂度",
+    "计算复杂性理论",
+    "Complexity Theory"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "formal-methods"
+  ],
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asymptotic-notation",
+      "context": "采用大O、大Omega与大Theta渐进符号形式化界定算法的时间与空间资源渐进消耗。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "turing-machine",
+      "context": "以确定性与非确定性图灵机作为衡量计算步数与空间方格占用开销的理论基础。"
+    }
+  ],
+  "summary": "研究计算问题固有求解难度与软硬件资源消耗边界的理论体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://plato.stanford.edu/entries/computational-complexity/",
+  "description": "## 机制\n\n计算复杂度理论关注判定性与最优化问题在通用计算模型（通常为图灵机）上的固有资源需求下界。核心分类维度包括运行时间复杂度（步骤数）与空间复杂度（工作内存带格数），进而导出经典复杂度类层级体系：P、NP、PSPACE、EXPTIME 以及非多项式难解类。\n\n## 理论与工程边界\n\n复杂度理论研究规模 \\(n \\to \\infty\\) 时的渐进增长率，不直接等价于实际固定输入规模下的微秒级运行时间。常数因子、处理器指令流水线局部性与现代硬件层级缓存在有限规模下常起主导作用；最坏情况复杂度亦不能直接代表工程平均表现或随机化算法的期望开销。\n\n## 参考\n\n- [Stanford Encyclopedia of Philosophy: Computational Complexity Theory](https://plato.stanford.edu/entries/computational-complexity/)\n- [Arora & Barak: Computational Complexity: A Modern Approach](https://theory.cs.princeton.edu/complexity/)"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "kd-tree",
+  "name": "k-d Tree",
+  "display_primary": "k-d树",
+  "display_secondary": "k-d Tree",
+  "aliases": [
+    "k-d树",
+    "k维树",
+    "k-Dimensional Tree"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "computer-vision"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "binary-search-tree"
+    }
+  ],
+  "summary": "对高维空间点集沿各坐标维度交替递归进行超平面划分的多维空间二叉检索树。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/K-d_tree",
+  "description": "## 机制\n\nk-d 树（k-Dimensional Tree）由乔恩·本特利（Jon Bentley）于 1975 年提出，是将经典一维二叉搜索树推广至多维欧几里得几何空间的标准空间索引数据结构。树中非叶节点代表一个与其对应坐标轴垂直的正交超平面，将空间一分为二。\n\n构建流程如下：\n1. 在树的深度 $d$ 处，选择分割维度 $axis = d \\bmod k$；\n2. 找出当前点集在该维度坐标上的中位数点（Median）作为根节点；\n3. 将该维度小于中位数的点分配进左子树，大于中位数的点分配进右子树，递归执行建树过程。平衡构建时间为 $O(k n \\log n)$，树深为严格 $O(\\log n)$。\n\n## 最近邻搜索与维度灾难\n\n在 k-d 树中检索距离查询点 $q$ 最近的点（KNN）：从根向下递归定位到包含 $q$ 的叶子节点，并将其作为当前最近候选（距离为 $R$）；在回溯向上回跳的过程中，检查查询点到当前节点分割超平面的垂直距离：若垂直距离小于当前最短半径 $R$，说明超平面的另一侧兄弟子空间可能存在更近的点，必须递归进入另一分支。\n\nk-d 树在低维几何空间（$k \\le 10$，如二维地图、三维雷达点云与光线追踪碰撞检测）中表现极佳；但在超高维空间（如千维大模型向量检索）中，由于几乎每个分支的超平面距离都小于当前最近距离，算法会退化为全表扫描，此时需转向近似最近邻结构（如 HNSW）。\n\n## 参考\n\n- [Bentley: Multidimensional binary search trees used for associative searching (CACM, 1975)](https://dl.acm.org/doi/10.1145/361002.361007)\n- [Friedman, Bentley, Finkel: An Algorithm for Finding Best Matches in Logarithmic Expected Time (ACM TOMS, 1977)](https://dl.acm.org/doi/10.1145/355744.355745)"
+}

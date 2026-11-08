@@ -1,0 +1,38 @@
+{
+  "id": "audio-codec",
+  "name": "Audio Codec",
+  "display_primary": "音频编解码",
+  "display_secondary": "Audio Codec",
+  "aliases": [
+    "音频编解码",
+    "音频压缩编码",
+    "Audio Compression"
+  ],
+  "type": "concept",
+  "domains": [
+    "audio-and-speech-processing",
+    "signal-processing"
+  ],
+  "ecosystems": [
+    "audio-speech-ecosystem",
+    "signal-processing-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "audio-speech-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "discrete-fourier-transform",
+      "context": "利用改性离散余弦变换MDCT将时域音频信号变换至频域，结合心理声学掩蔽模型去除感知冗余。"
+    }
+  ],
+  "summary": "在保真度与比特率权衡下对数字音频波形进行压缩编码与解压缩的技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.opus-codec.org/",
+  "description": "## 机制\n\n音频编解码分为无损压缩（如FLAC、ALAC，基于线性预测与熵编码保留全部信息）与有损压缩（如Opus、AAC、MP3）。现代有损音频编码深度融合心理声学掩蔽效应（Psychoacoustic Masking）：强音频信号会使邻近频段的微弱声音人耳不可感知，编码器通过时频变换（MDCT）丢弃不可闻信息并执行自适应量化。\n\n## 神经音频编解码\n\n针对实时通信（RTC）与语音生成大模型，基于残差矢量量化（RVQ）与对抗训练的端到端神经网络音频编码（如 EnCodec、SoundStream）实现了在极端超低码率（如 3kbps 下）仍能保持高可懂度音质并直接输出离散语音Token。\n\n## 参考\n\n- [RFC 6716: Definition of the Opus Audio Codec](https://datatracker.ietf.org/doc/html/rfc6716)\n- [Défossez et al.: High Fidelity Neural Audio Compression (EnCodec, IEEE Trans. Audio, 2023)](https://arxiv.org/abs/2210.13438)"
+}

@@ -8,7 +8,8 @@
   ],
   "type": "concept",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {

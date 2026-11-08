@@ -1,0 +1,39 @@
+{
+  "id": "simplex-algorithm",
+  "name": "Simplex Algorithm",
+  "display_primary": "单纯形法",
+  "display_secondary": "Simplex Algorithm",
+  "aliases": [
+    "单纯形法",
+    "单纯形算法",
+    "Simplex Method",
+    "线性规划单纯形法"
+  ],
+  "type": "concept",
+  "domains": [
+    "mathematical-optimization",
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "optimization-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-complexity",
+      "context": "最坏情况为指数复杂度但在工业实用多面体规划中表现出优异的多项式平均性能。"
+    }
+  ],
+  "summary": "求解线性规划标准型约束多面体并在相邻极点间沿边迭代寻优的最优化经典算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/Simplex_algorithm",
+  "description": "## 机制\n\n单纯形法（Simplex Algorithm）由乔治·丹齐格（George Dantzig）于 1947 年提出，是运筹学与数学规划史上最伟大的算法突破之一，用于求解形如以下标准型的线性规划（LP, Linear Programming）：\n$$\\text{minimize} \\quad c^T x \\quad \\text{subject to} \\quad A x = b, \\, x \\ge 0$$\n\n其几何与代数机制完美对应：线性不等式约束在 $n$ 维几何空间中界定出一个凸多面体（Polytope，可行域）。根据极值基本定理，若线性规划存在最优解，则必可在该可行域多面体的某个顶点（极点 Extreme Point / 基本可行解 Basic Feasible Solution）处取到。\n\n算法流程如下：\n1. **构建单纯形表（Simplex Tableau）**：将约束矩阵通过高斯消元转化为规范形式，区分基变量与非基变量；\n2. **进基与出基旋转（Pivot）**：计算各非基变量的检验数（Reduced Cost）。若存在能降低目标函数的变量，选择该非基变量作为“进基变量”；利用最小比值测试（Ratio Test）确定最先达到非负边界的基变量作为“出基变量”；\n3. 执行初等行变换更新单纯形表，在几何上等价于沿着多面体的一条边从当前顶点移动到目标值更优的相邻顶点；\n4. 重复上述旋转过程，直至所有检验数均非负（达到局部即全局最优）。\n\n## 复杂度悖论与工业求解器\n\n在理论最坏情况下，Klee-Minty 构造的变形超立方体反例证明单纯形法需要访问多面体全部 $2^n$ 个顶点，表现出指数级复杂度；但在真实工业世界海量运筹问题中，单纯形法平均迭代步数仅为约束行数的数倍（多项式表现），至今仍是商业求解器（Gurobi、CPLEX）及开源求解器（HiGHS）求解大规模 LP 的主力内核。\n\n## 参考\n\n- [Dantzig: Maximization of a linear function of variables subject to linear inequalities (Activity Analysis of Production and Allocation, 1951)](https://www.scirp.org)\n- [Klee & Minty: How good is the simplex algorithm? (Inequalities III, Academic Press, 1972)](https://www.sciencedirect.com)"
+}

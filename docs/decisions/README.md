@@ -45,3 +45,5 @@
 | [0032](0032-antigravity-and-agent-development.md) | Google Antigravity 与智能体开发 | 已接受 | 2026-10-08 |
 | [0033](0033-terminal-language-tooling-and-software-composition.md) | 终端、语言工具链与软件组成 | 已接受 | 2026-10-08 |
 | [0034](0034-software-measurement-and-repository-analysis.md) | 软件度量、仓库分析与质量验证 | 已接受 | 2026-10-08 |
+| [0035](0035-foundational-ai-compliance-industry-expansion.md) | 计算机基础、AI垂直扩展、安全合规与关键工业领域补全 | 已接受 | 2026-11-08 |
+| [0036](0036-cs-algorithms-and-theory-expansion.md) | 计算机科学算法与理论知识版图扩展 | 已接受 | 2026-11-08 |

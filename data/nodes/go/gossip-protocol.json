@@ -1,0 +1,39 @@
+{
+  "id": "gossip-protocol",
+  "name": "Gossip Protocol",
+  "display_primary": "Gossip协议",
+  "display_secondary": "Gossip Protocol",
+  "aliases": [
+    "Gossip协议",
+    "流言协议",
+    "流行病传播协议",
+    "Epidemic Protocol"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems",
+    "networking"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "cloud_native"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cap-theorem",
+      "context": "在CAP定理权衡下牺牲强一致性以追求极高的分区容忍性与高可用最终一致性。"
+    }
+  ],
+  "summary": "节点间随机周期性成对交换状态以指数级收敛达成去中心化最终一致性的流行病通信协议。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Gossip_protocol",
+  "description": "## 机制\n\nGossip 协议由艾伦·戴默斯（Alan Demers）等人在施乐帕洛阿尔托研究中心（Xerox PARC）于 1987 年提出，其灵感源于现实社会中流言蜚语的扩散传播过程（数学形式对应传染病 SIR 流行病学模型）。在去中心化的大规模分布式集群中，集中式广播（如点对点全网发送）会导致通信网络带宽产生 $O(N^2)$ 的灾难性风暴。Gossip 提供了去中心化、高容错、最终一致（Eventual Consistency）的轻量级状态同步手段。\n\n协议以固定周期间隔（如每秒一次）异步推进：\n1. 每个节点从集群成员列表中**随机挑选 $k$ 个邻居节点**（通常 $k=1$ 到 3）；\n2. 节点与选中的邻居成对建立通信并交换状态信息：\n   - **反熵（Anti-Entropy）模式**：全量比对双方状态，直接覆盖消除不一致；\n   - **谣言传播（Rumor-Mongering / Dissemination）模式**：仅传播最新的事件变更增量；\n3. 通信方式分为 Push（主动推送新数据）、Pull（主动拉取新数据）或双向 Push-Pull。\n\n## 指数级扩散与极端鲁棒性\n\n数学证明，在包含 $N$ 个节点的系统中，一条新消息通过 Gossip 传播扩散至全网所有节点所需的周期轮数仅为 **$O(\\log N)$**（呈现指数级对数增长）。由于节点完全对称、无任何特权中心，协议对网络瞬时丢包、任意节点随时静默宕机与新节点动态加入具有天然极强的抗毁性。\n\n工业界广泛应用于 Consul/Serf 集群成员发现与故障探测、Redis Cluster 节点握手与槽位变更广播、以及 Cassandra 数据副本修复。\n\n## 参考\n\n- [Demers et al.: Epidemic algorithms for replicated database maintenance (PODC 1987)](https://dl.acm.org/doi/10.1145/41840.41841)\n- [van Renesse et al.: Efficient reconciliation and flow control for anti-entropy protocols (LADIS 2008)](https://dl.acm.org)"
+}

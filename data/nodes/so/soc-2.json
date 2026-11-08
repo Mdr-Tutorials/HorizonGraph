@@ -1,0 +1,43 @@
+{
+  "id": "soc-2",
+  "name": "Service Organization Control 2",
+  "display_primary": "SOC 2",
+  "display_secondary": "Service Organization Control 2",
+  "aliases": [
+    "SOC 2",
+    "SOC2",
+    "AICPA SOC 2"
+  ],
+  "type": "specification",
+  "abstraction_level": "application_tool",
+  "domains": [
+    "privacy-and-compliance",
+    "cloud-infrastructure"
+  ],
+  "ecosystems": [
+    "privacy-compliance-ecosystem",
+    "enterprise_industry"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "specification"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "regulatory-compliance"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "audit-trail",
+      "context": "依据美国注册会计师协会信任服务原则对云服务安全性、可用性与机密性实施独立第三方内控审计。"
+    }
+  ],
+  "summary": "AICPA制定的针对云服务商安全性、可用性与机密性内控的独立审计认证标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2",
+  "description": "## 机制\n\nSOC 2 由美国注册会计师协会（AICPA）制定，是SaaS与云计算服务提供商进入跨国企业采购供应链的事实安全认证门槛。审计基于五大信任服务原则（Trust Services Criteria）：安全性（Security，必须项）、可用性（Availability）、处理完整性（Processing Integrity）、机密性（Confidentiality）与隐私性（Privacy）。\n\n## Type I 与 Type II 的区别\n\nSOC 2 报告分为两类：Type I 报告仅评估特定时间点上企业安全控制措施的设计合理性；Type II 报告则由独立注册会计师对企业控制措施在一段连续观察期内（通常为6至12个月）的实际执行有效性进行穿透式取样验证，具备极高的采购公信力。\n\n## 参考\n\n- [AICPA: SOC 2 - SOC for Service Organizations: Trust Services Criteria](https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2)\n- [Trust Services Criteria for Security, Availability, Processing Integrity, Confidentiality, and Privacy](https://www.aicpa.org/)"
+}

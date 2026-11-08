@@ -1,0 +1,38 @@
+{
+  "id": "policy-gradient",
+  "name": "Policy Gradient",
+  "display_primary": "策略梯度",
+  "display_secondary": "Policy Gradient",
+  "aliases": [
+    "策略梯度",
+    "策略搜索",
+    "REINFORCE"
+  ],
+  "type": "concept",
+  "domains": [
+    "reinforcement-learning",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "reinforcement-learning-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "markov-decision-process",
+      "context": "直接以参数化概率分布建模智能体策略网络，通过对期望累积回报求导完成梯度上升更新。"
+    }
+  ],
+  "summary": "直接对参数化策略函数沿期望回报梯度方向迭代优化策略的强化学习方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html",
+  "description": "## 机制\n\n不同于基于值函数的Q学习间接贪心导出策略，策略梯度定理证明了无需知道环境状态转移概率，即可直接对策略参数 \\(\\theta\\) 求解期望回报梯度的解析形式：\\(\\nabla_\\theta J(\\theta) = \\mathbb{E}_{\\tau \\sim \\pi_\\theta} [\\sum_{t=0}^T \\nabla_\\theta \\log \\pi_\\theta(a_t|s_t) G_t]\\)。基础实现为蒙特卡洛REINFORCE算法。\n\n## 方差挑战与基线项\n\n策略梯度的显著优势在于原生支持连续动作空间与随机性策略输出；主要缺陷在于蒙特卡洛轨迹回报具有极高方差，导致训练收敛极慢且脆弱。工程中普遍引入独立于动作的状态价值基线 \\(b(s_t)\\) 构造优势函数 \\(A(s_t, a_t) = Q - V\\) 以大幅减少梯度估计方差。\n\n## 参考\n\n- [Sutton et al.: Policy Gradient Methods for Reinforcement Learning with Function Approximation (NeurIPS 1999)](https://proceedings.neurips.cc/paper/1999/hash/464d828b85b0bed98e80ade0a5c43b0f-Abstract.html)\n- [Williams: Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning (REINFORCE, 1992)](https://link.springer.com/article/10.1007/BF00992696)"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "reward-model",
+  "name": "Reward Model",
+  "display_primary": "奖励模型",
+  "display_secondary": "Reward Model",
+  "aliases": [
+    "奖励模型",
+    "RM",
+    "Preference Model"
+  ],
+  "type": "concept",
+  "domains": [
+    "reinforcement-learning",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "reinforcement-learning-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reinforcement-learning",
+      "context": "利用人类或AI对齐偏好的成对比较数据训练打分模型，为策略优化输出稠密标量奖励。"
+    }
+  ],
+  "summary": "学习人类偏好数据输出标量分值作为强化学习策略对齐优化信号的模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://arxiv.org/abs/2203.02155",
+  "description": "## 机制\n\n奖励模型（RM）是大语言模型人类反馈强化学习（RLHF）的关键纽带。面对文本生成等难以设计精确显式奖励函数的复杂认知任务，标注人员对同一提示词生成的两个回复进行胜负排序。奖励模型基于Bradley-Terry偏好模型通过交叉熵损失优化，使胜出回复获得显著更高的标量预测分值：\\(L = -\\log \\sigma(r_\\psi(x, y_w) - r_\\psi(x, y_l))\\)。\n\n## 奖励作弊与模型漂移\n\n在PPO迭代微调过程中，策略生成网络容易利用奖励模型的泛化盲区或虚假关联，生成表面极其符合打分规则但实际冗长空洞的内容，即“奖励作弊”（Reward Hacking）。工程中通常在策略网络与冻结的初始SFT模型之间施加KL散度惩罚，防止策略参数偏离安全约束分布。\n\n## 参考\n\n- [Ouyang et al.: Training language models to follow instructions with human feedback (InstructGPT, NeurIPS 2022)](https://arxiv.org/abs/2203.02155)\n- [Christiano et al.: Deep reinforcement learning from human preferences (NeurIPS 2017)](https://arxiv.org/abs/1706.03741)"
+}

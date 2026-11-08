@@ -11,11 +11,13 @@
   "type": "concept",
   "ecosystems": [
     "languages_runtimes",
-    "optimization-ecosystem"
+    "optimization-ecosystem",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
     "operations-research",
-    "systems-programming"
+    "systems-programming",
+    "data-structures-and-algorithms"
   ],
   "summary": "按边权升序贪心选边并通过并查集判环构建加权无向图最小生成树的算法。",
   "status": "active",
@@ -35,6 +37,10 @@
       "relation_type": "uses",
       "target_id": "union-find",
       "context": "在加入候选边前查询两端点是否在同一连通分量以避免回路。"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
     }
   ]
 }

@@ -1,0 +1,37 @@
+{
+  "id": "lz77",
+  "name": "LZ77 Compression",
+  "display_primary": "LZ77算法",
+  "display_secondary": "LZ77 Compression",
+  "aliases": [
+    "LZ77",
+    "LZ77压缩算法",
+    "Lempel-Ziv 1977"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "information-theory"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "lzw"
+    }
+  ],
+  "summary": "利用滑动窗口内历史出现重复文本的偏移量与长度元组实现无损数据压缩的算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/LZ77_and_LZ78",
+  "description": "## 机制\n\nLZ77 由亚伯拉罕·伦佩尔（Abraham Lempel）与雅各布·齐夫（Jacob Ziv）于 1977 年发表，是现代通用无损压缩技术史上的绝对丰碑。它开创了基于字典匹配的自适应编码流派，彻底摆脱了此前需要针对特定语料预先统计字符出现概率的统计编码局限。\n\n其核心机制基于“滑动窗口”（Sliding Window），将当前输入数据分为两个视窗：\n1. **字典窗口（Search Buffer）**：保存刚刚编码完成的历史数据（通常为数 KB 到数十 KB 大小）；\n2. **前瞻缓冲区（Lookahead Buffer）**：保存等待编码的未来待输入字节流。\n\n编码器在字典窗口中搜索与前瞻缓冲区前缀相匹配的最长连续子串。若找到匹配，算法输出一个紧凑的三元组：\n$$\\langle \\text{Distance}, \\text{Length}, \\text{NextCharacter} \\rangle$$\n其中 $\\text{Distance}$ 表示匹配位置相对当前游标向左回退的距离，$\\text{Length}$ 表示匹配字符长度，$\\text{NextCharacter}$ 为紧随匹配后的第一个不匹配真实字符。随后窗口向右滑动 $\\text{Length} + 1$ 字节。\n\n## 工业统治地位\n\nLZ77 解压速度极快且完全无需在压缩包内显式附带码表，只需根据偏移距离回退拷贝内存即可。在此基础上演进出的 Deflate 算法（结合哈希链加速寻找最长匹配与后置霍夫曼编码）统治了整个现代计算基础设施，成为 Gzip、ZIP、PNG 图像格式以及 HTTP/2 传输压缩协议（RFC 1951）的标准底层。\n\n## 参考\n\n- [Ziv & Lempel: A Universal Algorithm for Sequential Data Compression (IEEE Trans. Information Theory, 1977)](https://ieeexplore.ieee.org/document/1055714)\n- [RFC 1951: DEFLATE Compressed Data Format Specification version 1.3](https://datatracker.ietf.org/doc/html/rfc1951)"
+}

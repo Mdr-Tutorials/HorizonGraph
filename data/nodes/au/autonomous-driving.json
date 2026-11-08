@@ -1,0 +1,50 @@
+{
+  "id": "autonomous-driving",
+  "name": "Autonomous Driving",
+  "display_primary": "自动驾驶",
+  "display_secondary": "Autonomous Driving",
+  "aliases": [
+    "自动驾驶",
+    "无人驾驶",
+    "Automated Driving",
+    "Self-Driving"
+  ],
+  "type": "concept",
+  "domains": [
+    "autonomous-driving",
+    "robotics",
+    "embedded-systems"
+  ],
+  "ecosystems": [
+    "autonomous-vehicles-ecosystem",
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "autonomous-driving-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sensor-fusion",
+      "context": "融合激光雷达三维点云、高动态摄像头RGB图像与毫米波雷达测距数据构建统一时空环境表征。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "adas",
+      "context": "由自适应巡航与车道保持辅助等L2级能力渐进演化至城市全场景高阶无人自动驾驶。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "autosar",
+      "context": "底盘域控制器与线控执行ECU基于AUTOSAR标准保证关键行车安全指令的微秒级实时响应。"
+    }
+  ],
+  "summary": "依托车载感知、高精定位与决策规划实现汽车无人自主安全通行的系统工程。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.sae.org/standards/content/j3016_202104/",
+  "description": "## 机制\n\n自动驾驶系统基于SAE J3016标准划分为L0至L5六个等级。系统架构分为三大经典模块：环境感知与定位（结合多模态传感器在BEV鸟瞰图空间检测动静态障碍物并依托高精地图/SLAM完成高精度自车位姿解算）、行为预测与运动规划（基于博弈论与时空轨迹优化搜索无碰撞最优轨迹），以及线控底盘控制（控制制动、转向与电机输出）。\n\n## 模块化 vs 端到端大模型\n\n传统模块化方案可解释性强、便于单元测试与责任溯源，但存在多模块级联误差放大与长尾场景（Corner Cases）泛化不足；现代以 UniAD 与端到端视觉大模型为主导的路线直接将多路传感器输入映射至自车控制轨迹点，在拥挤博弈与无保护左转等复杂交互场景中表现出更拟人的驾驶行为。\n\n## 参考\n\n- [SAE J3016: Taxonomy and Definitions for Terms Related to Driving Automation Systems](https://www.sae.org/standards/content/j3016_202104/)\n- [Hu et al.: Planning-oriented Autonomous Driving (UniAD, CVPR 2023 Best Paper)](https://arxiv.org/abs/2212.10156)"
+}

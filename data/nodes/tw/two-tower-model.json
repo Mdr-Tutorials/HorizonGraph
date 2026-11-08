@@ -1,0 +1,48 @@
+{
+  "id": "two-tower-model",
+  "name": "Two-Tower Model",
+  "display_primary": "双塔模型",
+  "display_secondary": "Two-Tower Model",
+  "aliases": [
+    "双塔模型",
+    "双塔召回",
+    "DSSM",
+    "Dual-Encoder"
+  ],
+  "type": "concept",
+  "domains": [
+    "recommender-systems",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "recommender-systems-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recommender-system-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "recommender-system"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "embeddings",
+      "context": "用户塔与物品塔分别将异构稀疏特征转化为固定长度的稠密表征嵌入向量。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hnsw",
+      "context": "离线预计算物品塔向量并导入分层可导航小世界图索引以支持在线低延迟向量近似检索。"
+    }
+  ],
+  "summary": "用户侧与物品侧独立编码并通过低维向量内积实现超低延迟召回的架构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://dl.acm.org/doi/10.1145/3394486.3403305",
+  "description": "## 机制\n\n双塔模型（Two-Tower / Dual-Encoder）是现代大规模工业推荐系统召回层的事实标准。架构解耦为两套独立的深度神经网络：用户塔（输入用户ID、画像、历史行为序列与上下文特征，输出用户向量 \\(u\\)）与物品塔（输入物品ID、类目、多模态特征，输出物品向量 \\(v\\)）。匹配分数为向量余弦相似度或内积 \\(\\langle u, v \\rangle\\)。\n\n## 架构优势与表达局限\n\n双塔架构的核心优势在于计算解耦：千万量级的物品向量可在离线阶段预计算并构建ANN向量索引（如HNSW或FAISS）；在线推理仅需计算一次用户塔向量，随后借助向量数据库实现毫秒级快速召回。局限性在于用户特征与物品特征在深层神经网络中缺乏交叉特征交互，表达能力弱于精排全交叉模型。\n\n## 参考\n\n- [Huang et al.: Learning Deep Structured Semantic Models for Web Search (DSSM, CIKM 2013)](https://dl.acm.org/doi/10.1145/2505515.2505665)\n- [Yi et al.: Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations (RecSys 2019)](https://dl.acm.org/doi/10.1145/3298689.3346996)"
+}

@@ -11,12 +11,13 @@
     "cryptography-pki-ecosystem"
   ],
   "domains": [
-    "security"
+    "security",
+    "cryptography"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "cryptography-concept"
     }
   ],
   "summary": "研究加密、签名与哈希的数学基础与工程构造。",

@@ -1,0 +1,42 @@
+{
+  "id": "acoustic-model",
+  "name": "Acoustic Model",
+  "display_primary": "声学模型",
+  "display_secondary": "Acoustic Model",
+  "aliases": [
+    "声学模型",
+    "AM",
+    "Acoustic Modeling"
+  ],
+  "type": "concept",
+  "domains": [
+    "audio-and-speech-processing",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "audio-speech-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "audio-speech-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "speech-recognition"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "transformer",
+      "context": "现代声学模型广泛基于Transformer自注意力机制建模语音频谱的时序依赖上下文。"
+    }
+  ],
+  "summary": "建立语音特征向量序列与语言基本发音单元之间概率映射关系的统计模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://arxiv.org/abs/2005.08100",
+  "description": "## 机制\n\n声学模型是语音信号处理中连接“物理声音震动”与“符号语言抽象”的核心纽带。输入通常为梅尔倒谱系数（MFCC）或Fbank梅尔滤波器组特征，输出对应时间步长上音素、字词或子词BPE词元的后验概率分布。架构从早期的深层前馈网络（DNN-HMM）演进为具备长程注意力与局部卷积感野结合的Conformer网络。\n\n## 训练目标与对齐\n\n传统声学模型依赖强制对齐（Forced Alignment）确定帧级别的音素标签；现代端到端声学模型通过连接时序分类损失（CTC Loss）自动边际化所有可能的对齐路径，在未对齐的长语音与转写文本上实现端到端梯度优化。\n\n## 参考\n\n- [Gulati et al.: Conformer: Convolution-augmented Transformer for Speech Recognition (Interspeech 2020)](https://arxiv.org/abs/2005.08100)\n- [Graves et al.: Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks (ICML 2006)](https://dl.acm.org/doi/10.1145/1143844.1143891)"
+}

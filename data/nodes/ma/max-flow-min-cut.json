@@ -1,0 +1,39 @@
+{
+  "id": "max-flow-min-cut",
+  "name": "Max-Flow Min-Cut Theorem",
+  "display_primary": "最大流最小割定理",
+  "display_secondary": "Max-Flow Min-Cut Theorem",
+  "aliases": [
+    "最大流最小割定理",
+    "最大流最小割",
+    "Max-Flow Min-Cut"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "theoretical-computer-science",
+    "mathematical-optimization"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-complexity",
+      "context": "基于线性规划强对偶性在多项式时间内严格证明最大流值等于最小割容量。"
+    }
+  ],
+  "summary": "网络流理论基石，断言流网络中从源点到汇点的最大流量等于最小割的容量。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem",
+  "description": "## 机制\n\n最大流最小割定理（Max-Flow Min-Cut Theorem）由小莱斯特·福特（L. R. Ford, Jr.）与德尔伯特·富尔克森（D. R. Fulkerson）于 1956 年提出。在有向流网络 $G=(V, E)$ 中，每个边具有非负容量限制 $c(u, v)$，存在指定源点 $s$ 和汇点 $t$。一个 $s-t$ 割 $(S, T)$ 将顶点划分为两个互斥集合（$s \\in S, t \\in T$），割的容量定义为从 $S$ 指向 $T$ 的所有正向边的容量之和：\n$$C(S, T) = \\sum_{u \\in S, v \\in T} c(u, v)$$\n\n定理指出：**网络中从源点 $s$ 到汇点 $t$ 所能传输的最大可行流流量，严格等于网络中所有可能 $s-t$ 割的最小容量**。其底层在数学上是线性规划对偶理论（Linear Programming Duality）在图论网络流中的具体体现。\n\n## 理论与工程扩展\n\n该定理不仅给出了最大流算法的正确性终止准则（残余网络中不存在任何 $s$ 到 $t$ 的增广路径时，当前流流量即达到上界），更将大量的工业瓶颈、图像分割（Graph Cuts）、分布式系统网络通信切分、二分图最大匹配以及项目选择优化问题，转化为对最小割的建模与求解。\n\n## 参考\n\n- [Ford & Fulkerson: Maximal flow through a network (Canadian J. Math., 1956)](https://www.cambridge.org/core/journals/canadian-journal-of-mathematics/article/maximal-flow-through-a-network/73979C1D1B78B45BD8D36D16F17BA657)\n- [Cormen et al.: Introduction to Algorithms (CLRS 4th Edition, Chapter 26)](https://mitpress.mit.edu)"
+}

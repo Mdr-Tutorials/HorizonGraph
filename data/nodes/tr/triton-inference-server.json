@@ -1,0 +1,43 @@
+{
+  "id": "triton-inference-server",
+  "name": "Triton Inference Server",
+  "display_primary": "Triton推理服务器",
+  "display_secondary": "Triton Inference Server",
+  "aliases": [
+    "Triton",
+    "NVIDIA Triton",
+    "Triton Server"
+  ],
+  "type": "tool",
+  "abstraction_level": "application_tool",
+  "domains": [
+    "mlops",
+    "high-performance-computing"
+  ],
+  "ecosystems": [
+    "mlops-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "tool"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "model-serving"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cuda",
+      "context": "利用NVIDIA CUDA底层流与TensorRT执行引擎并发调度深度学习推理任务。"
+    }
+  ],
+  "summary": "NVIDIA开源的多框架通用高性能生产级深度学习模型推理服务软件平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://github.com/triton-inference-server/server",
+  "description": "## 机制\n\nTriton Inference Server（原 TensorRT Inference Server）是NVIDIA推出的工业级推理服务中间件。它支持单机多GPU及CPU异构部署，统一部署运行基于TensorRT、PyTorch、ONNX Runtime、OpenVINO与TensorFlow等多种计算框架训练的模型。支持并发模型执行（Concurrent Model Execution）、跨模型管道串联（Ensemble Pipeline）与动态批处理。\n\n## 工业集成能力\n\nTriton遵循KServe v2数据面标准接口协议，提供完整的Prometheus指标暴露（推理延迟、排队时间、GPU显存与计算核利用率），与Kubernetes生态深度集成，是企业级私有化模型服务网格的重要基础设施。\n\n## 参考\n\n- [NVIDIA Triton Inference Server Official Documentation](https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/)\n- [GitHub: triton-inference-server/server](https://github.com/triton-inference-server/server)"
+}

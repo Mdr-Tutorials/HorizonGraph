@@ -1,0 +1,42 @@
+{
+  "id": "multi-task-ranking",
+  "name": "Multi-Task Ranking",
+  "display_primary": "多任务推荐排序",
+  "display_secondary": "Multi-Task Ranking",
+  "aliases": [
+    "多任务学习推荐",
+    "多目标排序",
+    "Multi-Task Learning"
+  ],
+  "type": "concept",
+  "domains": [
+    "recommender-systems",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "recommender-systems-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recommender-system-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "recommender-system"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "learning-to-rank",
+      "context": "依托MMoE或PLE等多门控专家架构联合优化点击率、转化率与时长等多维业务目标。"
+    }
+  ],
+  "summary": "在单一神经网络中联合学习点击率、转化率与停留时长等多目标的排序模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://dl.acm.org/doi/10.1145/3219819.3220007",
+  "description": "## 机制\n\n工业推荐系统往往需要同时满足多种异构甚至冲突的业务目标（如电商场景下的点击率CTR与成交转化率CVR；信息流场景下的点赞、转发、评论与有效播放时长）。多任务学习（MTL）通过共享底层表征并在上层设立分流塔联合训练，典型演进架构包括硬参数共享（Hard Parameter Sharing）、多门控混合专家网络（MMoE）以及渐进式分层抽取网络（PLE）。\n\n## 跷跷板现象与样本选择偏差\n\n多任务优化常面临“跷跷板现象”（负迁移导致某一目标提升伴随另一目标显著劣化）；电商转化率预估还面临严重的样本选择偏差（SSB，未曝光未点击商品无转化数据），ESMM等模型通过在全空间建立 \\(p(\\text{CTCVR}) = p(\\text{CTR}) \\times p(\\text{CVR})\\) 联合概率图有效规避偏差。\n\n## 参考\n\n- [Ma et al.: Modeling Task Relationships in Multi-task Learning with Multi-gate Mixture-of-Experts (MMoE, KDD 2018)](https://dl.acm.org/doi/10.1145/3219819.3220007)\n- [Tang et al.: Progressive Layered Extraction (PLE): A Novel Multi-Task Learning (RecSys 2020)](https://dl.acm.org/doi/10.1145/3383313.3412236)"
+}

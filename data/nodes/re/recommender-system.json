@@ -1,0 +1,48 @@
+{
+  "id": "recommender-system",
+  "name": "Recommender System",
+  "display_primary": "推荐系统",
+  "display_secondary": "Recommender System",
+  "aliases": [
+    "推荐系统",
+    "个性化推荐",
+    "Recommendation System"
+  ],
+  "type": "concept",
+  "domains": [
+    "recommender-systems",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "recommender-systems-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recommender-system-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "collaborative-filtering",
+      "context": "基于用户历史行为与物品协同交互矩阵生成候选召回集。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "learning-to-rank",
+      "context": "利用特征工程与点击率预估模型对粗排截断后的候选集做精细化打分重排。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "two-tower-model",
+      "context": "利用用户向量与物品向量在双塔内积结构下实现海量库毫秒级近邻召回。"
+    }
+  ],
+  "summary": "根据用户画像与上下文历史从海量物品中预测偏好的信息过滤系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://dl.acm.org/conference/recsys",
+  "description": "## 机制\n\n推荐系统通过建模用户潜在兴趣、物品属性及交互上下文，在海量候选库中实现精准个性化分发。工业级推荐架构通常遵循分层过滤管线（Funnel Architecture）：召回层（Retrieval，从百万/亿级库中多路并行筛选出数千候选）、粗排层（Pre-ranking）、精排层（Ranking，深度点击率与转化率预估）、重排与打散层（Reranking，兼顾多样性、新颖性与商业规则）。\n\n## 评价与冷启动挑战\n\n系统评价涵盖离线指标（AUC、NDCG、Hit Rate）与在线A/B测试业务指标（CTR、留存时长、GMV）。新用户与新物品因缺乏历史行为数据面临严重的冷启动（Cold Start）瓶颈，工业界常借助基于内容元数据匹配、跨域迁移学习与多臂老虎机探索利用策略应对。\n\n## 参考\n\n- [ACM RecSys: Conference on Recommender Systems](https://dl.acm.org/conference/recsys)\n- [Covington, Adams, Sargin: Deep Neural Networks for YouTube Recommendations (RecSys 2016)](https://dl.acm.org/doi/10.1145/2959100.2959190)"
+}

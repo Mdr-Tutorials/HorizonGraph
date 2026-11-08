@@ -1,0 +1,43 @@
+{
+  "id": "master-theorem",
+  "name": "Master Theorem",
+  "display_primary": "主定理",
+  "display_secondary": "Master Theorem",
+  "aliases": [
+    "主定理",
+    "分治主定理",
+    "Master Method"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "divide-and-conquer",
+      "context": "为分治递归式渐近复杂度求解提供固定渐近上界、下界分类判断准则。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "big-o",
+      "context": "以大O渐近符号形式化表达递归方程三个关键分支的紧确界复杂度。"
+    }
+  ],
+  "summary": "直接给出分治递归方程式渐近时间复杂度紧确界解的三分情况通用数学定理。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)",
+  "description": "## 机制\n\n主定理（Master Theorem）为分治算法产生的经典递归关系式提供了直接渐近解的代数判别法。针对将规模为 $n$ 的问题划分为 $a$ 个子问题、每个子问题规模为 $n/b$、并在合并阶段耗费 $f(n)$ 时间的经典分治方程：\n$$T(n) = a T(n/b) + f(n) \\quad (a \\ge 1, b > 1)$$\n定理通过比较驱动函数 $f(n)$ 与临界多项式 $n^{\\log_b a}$（递归树叶节点总开销）的增长速率，划分为三种互斥情形：\n\n1. **叶节点主导**：若存在常数 $\\epsilon > 0$，使得 $f(n) = O(n^{\\log_b a - \\epsilon})$，则 $T(n) = \\Theta(n^{\\log_b a})$。\n2. **各层平衡**：若存在 $k \\ge 0$，使得 $f(n) = \\Theta(n^{\\log_b a} \\log^k n)$，则 $T(n) = \\Theta(n^{\\log_b a} \\log^{k+1} n)$。\n3. **根节点主导**：若存在 $\\epsilon > 0$ 满足 $f(n) = \\Omega(n^{\\log_b a + \\epsilon})$，且满足正则性条件 $a f(n/b) \\le c f(n)$（$c < 1$），则 $T(n) = \\Theta(f(n))$。\n\n## 典型应用\n\n归并排序（Merge Sort）中 $a=2, b=2, f(n)=O(n)$，属于情形二（$k=0$），直接得出 $T(n) = \\Theta(n \\log n)$；Karatsuba 大整数乘法中 $a=3, b=2$，属于情形一，直接得出 $T(n) = \\Theta(n^{\\log_2 3}) \\approx \\Theta(n^{1.585})$。\n\n## 参考\n\n- [Bentley, Haken, Saxe: A general method for solving divide-and-conquer recurrences (ACM SIGACT News, 1980)](https://dl.acm.org/doi/10.1145/1008861.1008865)\n- [Cormen et al.: Introduction to Algorithms (CLRS 4th Edition, Chapter 4)](https://mitpress.mit.edu)"
+}

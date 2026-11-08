@@ -1,0 +1,38 @@
+{
+  "id": "symmetric-encryption",
+  "name": "Symmetric Encryption",
+  "display_primary": "对称加密",
+  "display_secondary": "Symmetric Encryption",
+  "aliases": [
+    "对称加密",
+    "对称密码体制",
+    "Shared Key Encryption"
+  ],
+  "type": "concept",
+  "domains": [
+    "cryptography",
+    "security"
+  ],
+  "ecosystems": [
+    "cryptography-pki-ecosystem",
+    "networking_security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "cryptography-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cryptography",
+      "context": "通信双方使用预先共享的同一密钥配合分组密码置换网络或流密码完成高效大吞吐量保密通信。"
+    }
+  ],
+  "summary": "数据加密与解密均使用相同的私密密钥的高吞吐密码学体制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://csrc.nist.gov/projects/cryptographic-standards-and-applications",
+  "description": "## 机制\n\n对称加密体制依靠加解密使用完全一致的密钥。分为两类物理实现：分组密码（Block Cipher，如AES、SM4），将明文切分为固定长度的数据块并通过代换-置换网络（SPN）多轮迭代混淆扩散；流密码（Stream Cipher，如ChaCha20），利用伪随机密钥流与明文进行逐比特异或运算。\n\n## 模式与完整性\n\n分组密码不可直接以电子密码本（ECB）模式运行以防模式泄露，现代安全传输标准强制要求采用带有关联数据的已认证加密模式（AEAD，如AES-GCM与ChaCha20-Poly1305），在单一密钥处理流程中同时完成机密性保密与防篡改消息认证码（MAC）校验。\n\n## 参考\n\n- [NIST Special Publication 800-38D: Recommendation for GCM Mode](https://csrc.nist.gov/publications/detail/sp/800-38d/final)\n- [Katz & Lindell: Introduction to Modern Cryptography](https://www.crcpress.com)"
+}

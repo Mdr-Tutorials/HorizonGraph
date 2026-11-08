@@ -8,11 +8,13 @@
   ],
   "type": "product",
   "ecosystems": [
-    "graphics_gaming"
+    "graphics_gaming",
+    "spatial-computing-ecosystem"
   ],
   "domains": [
     "human-computer-interaction",
-    "game-development"
+    "game-development",
+    "spatial-computing"
   ],
   "abstraction_level": "application_tool",
   "relations": [
@@ -27,6 +29,10 @@
     {
       "relation_type": "developed_by",
       "target_id": "meta"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "virtual-reality"
     }
   ],
   "summary": "卖得最好的 VR 头显家族，元宇宙战争的幸存者。",

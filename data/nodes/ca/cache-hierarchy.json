@@ -1,0 +1,48 @@
+{
+  "id": "cache-hierarchy",
+  "name": "Cache Hierarchy",
+  "display_primary": "多级缓存体系",
+  "display_secondary": "Cache Hierarchy",
+  "aliases": [
+    "多级缓存",
+    "高速缓存体系",
+    "Memory Hierarchy"
+  ],
+  "type": "concept",
+  "domains": [
+    "computer-architecture",
+    "systems-programming",
+    "low-latency-systems"
+  ],
+  "ecosystems": [
+    "computer-architecture-ecosystem",
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "computer-architecture"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cpu-architecture"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cache-coherence",
+      "context": "在多核多处理器共享内存环境下依托MESI或MOESI嗅探/目录协议维持私有缓存数据的一致性视图。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dram",
+      "context": "将频繁访问的指令与数据块缓存在SRAM中，大幅降低对纳秒级高延迟动态随机存取主存的直接访存频率。"
+    }
+  ],
+  "summary": "由逐级增大但访问延迟递增的SRAM缓存构成的金字塔形存储层级体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html",
+  "description": "## 机制\n\n缓存体系利用程序的“时间局部性”（最近访问过的数据短期内极大概率再次访问）与“空间局部性”（相邻地址的数据大概率被连续访问），在CPU执行核与主存之间构建多层SRAM缓冲。现代桌面与服务器处理器标准布局为：极低延迟私有L1缓存（区分L1I指令与L1D数据）、私有中等容量L2缓存，以及所有核心共享的大容量三级缓存（LLC/L3）。\n\n## 缓存行与伪共享\n\n缓存以固定大小的“缓存行”（Cache Line，现代x86/ARM普遍为64字节）为最小数据传输与一致性颗粒度。当并发多线程频繁修改位于同一缓存行内的不同独立变量时，将引发严重的“伪共享”（False Sharing），迫使缓存行在核心间反复无效化与总线广播，极度损伤并行计算性能。\n\n## 参考\n\n- [Drepper: What Every Programmer Should Know About Memory](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf)\n- [Intel 64 and IA-32 Optimization Reference Manual](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)"
+}

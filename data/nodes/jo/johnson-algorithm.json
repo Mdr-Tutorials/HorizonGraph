@@ -1,0 +1,46 @@
+{
+  "id": "johnson-algorithm",
+  "name": "Johnson's Algorithm",
+  "display_primary": "Johnson全源最短路算法",
+  "display_secondary": "Johnson's Algorithm",
+  "aliases": [
+    "Johnson算法",
+    "Johnson全源最短路径",
+    "势能重赋权算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bellman-ford",
+      "context": "先运行一次Bellman-Ford算法计算全局顶点势能以消除负权边。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dijkstra",
+      "context": "在重赋权后的非负权值图上对每个顶点分别调用一次Dijkstra算法求全源最短路。"
+    }
+  ],
+  "summary": "结合Bellman-Ford势能重赋权与Dijkstra求解稀疏图全源最短路径的高效算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Johnson%27s_algorithm",
+  "description": "## 机制\n\nJohnson 算法由唐纳德·约翰逊（Donald B. Johnson）于 1977 年提出，用于在允许包含负权边（但无负权回路）的加权有向图上求解全源最短路径（All-Pairs Shortest Paths, APSP）。传统 Floyd-Warshall 算法时间复杂度为 $O(V^3)$，在稀疏图（$E \\ll V^2$）上开销过高。Johnson 算法巧妙结合了 Bellman-Ford 与 Dijkstra：\n\n1. **增设超级源点**：向图中添加新顶点 $s$，并从 $s$ 向图上所有其他顶点连一条权值为 0 的有向边；\n2. **计算势能函数**：从 $s$ 出发运行一次 Bellman-Ford 算法，若检测到负权环则直接报错退出；否则计算出 $s$ 到各顶点的最短距离 $h(u)$ 作为势能标号；\n3. **边权非负化（Reweighting）**：将每条边的权值重新赋值为：\n$$\\hat{w}(u, v) = w(u, v) + h(u) - h(v)$$\n根据三角不等式 $h(v) \\le h(u) + w(u, v)$，重赋权后的新权值 $\\hat{w}(u, v) \\ge 0$ 恒非负，且任意路径总权值的增减仅取决于起点与终点的势能差，不改变任意两点间最短路径的拓扑形态；\n4. **多轮 Dijkstra 求解**：对原图中每一个顶点分别运行一次带堆优化的 Dijkstra 算法，最后还原真实距离 $d(u, v) = \\hat{d}(u, v) - h(u) + h(v)$。\n\n## 复杂度突破\n\n整体运行时间由单次 Bellman-Ford 的 $O(V E)$ 与 $|V|$ 次 Dijkstra 的 $O(V(V \\log V + E))$ 构成，总复杂度为 **$O(V^2 \\log V + V E)$**，在稀疏图上压倒性超越 Floyd-Warshall 的 $O(V^3)$。\n\n## 参考\n\n- [Johnson: Efficient algorithms for shortest paths in sparse networks (JACM, 1977)](https://dl.acm.org/doi/10.1145/321992.321993)\n- [Cormen et al.: Introduction to Algorithms (CLRS 4th Edition, Chapter 25)](https://mitpress.mit.edu)"
+}

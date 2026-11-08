@@ -11,11 +11,13 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
     "systems-programming",
-    "mathematics"
+    "mathematics",
+    "data-structures-and-algorithms"
   ],
   "summary": "利用 lowbit 二进制最低位管理前缀和，以极小常数实现 O(log n) 单点更新与前缀查询。",
   "status": "active",

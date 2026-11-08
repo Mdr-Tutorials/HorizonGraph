@@ -1,0 +1,42 @@
+{
+  "id": "space-complexity",
+  "name": "Space Complexity",
+  "display_primary": "空间复杂度",
+  "display_secondary": "Space Complexity",
+  "aliases": [
+    "空间复杂度",
+    "内存复杂度",
+    "渐近空间复杂度"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "computational-complexity"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "big-o",
+      "context": "衡量算法执行期间除输入本身外所消耗的最大辅助内存空间渐近增长趋势。"
+    }
+  ],
+  "summary": "量化度量算法在执行生命周期中所占用的动态临时辅助内存随输入规模增长的函数关系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/Space_complexity",
+  "description": "## 机制\n\n空间复杂度度量算法在执行完成全流程中所占用的内存存储单元峰值容量与输入规模 $n$ 之间的函数关系。在算法设计与分析标准中，空间复杂度通常指代“额外辅助空间复杂度”（Auxiliary Space），即排除了保存原始输入数据本身所需的空间，仅统计算法为支撑控制逻辑而分配的局部变量、动态堆内存、调用递归栈帧及辅助哈希索引。\n\n## 原址操作与内存权衡\n\n- **原址算法（In-Place Algorithm）**：除输入自身外，辅助空间消耗为严格 $O(1)$ 常数阶的算法（例如快速排序原地划分、堆排序以及冒泡排序）。\n- **空间换时间（Space-Time Tradeoff）**：计算机体系结构中最经典的优化权衡。例如动态规划通过消耗 $O(n)$ 或 $O(n^2)$ 的备忘录表格将原本指数级递归缩减至多项式时间；布隆过滤器通过微小位图空间换取高并发查重极低延迟。\n\n## 参考\n\n- [Papadimitriou: Computational Complexity (Addison-Wesley, 1994)](https://www.pearson.com)\n- [Cormen et al.: Introduction to Algorithms (CLRS, Chapter 3)](https://mitpress.mit.edu)"
+}

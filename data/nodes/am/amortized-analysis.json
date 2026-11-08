@@ -1,0 +1,38 @@
+{
+  "id": "amortized-analysis",
+  "name": "Amortized Analysis",
+  "display_primary": "平摊分析",
+  "display_secondary": "Amortized Analysis",
+  "aliases": [
+    "平摊分析",
+    "均摊复杂度分析",
+    "Amortized Complexity"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "big-o",
+      "context": "通过聚合分析、记账法与势能法衡量数据结构最坏操作序列的单步平均开销。"
+    }
+  ],
+  "summary": "通过聚合分析、记账法或势能函数衡量数据结构一系列最坏操作序列平均开销的方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Amortized_analysis",
+  "description": "## 机制\n\n平摊分析（Amortized Analysis）用于分析数据结构在执行一连串操作时的总体性能保证。与“平均复杂度”（依赖随机输入的概率分布假设）不同，平摊分析关注在最坏输入序列下，连续 $n$ 个操作的总时间除以 $n$ 所得的单步保证上界。它确保了偶发性的单次昂贵操作会被大量极度廉价的操作平摊稀释。\n\n罗伯特·塔扬（Robert Tarjan）形式化了三大核心平摊分析范式：\n1. **聚合分析（Aggregate Method）**：证明任意长度为 $n$ 的操作序列在最坏情况下总耗时为 $T(n)$，则平摊单步代价为 $T(n)/n$。\n2. **记账法（Accounting Method）**：为廉价操作预收多于实际成本的“平摊费用”（存款），将差额存入信用账户，用于抵扣后续昂贵操作的超额支出。\n3. **势能法（Potential Method）**：定义映射数据结构状态至非负实数的势能函数 $\\Phi(D)$，定义操作的平摊代价为实际代价加上势能变化量 $\\hat{c}_i = c_i + \\Phi(D_i) - \\Phi(D_{i-1})$。\n\n## 典型应用\n\n动态数组（如 C++ std::vector）扩容：单次 push_back 触发翻倍复制耗时 $O(n)$，但势能法严格保证连续插入的平摊时间仍为 $O(1)$；伸展树（Splay Tree）与斐波那契堆的低开销保证均严格依赖势能分析。\n\n## 参考\n\n- [Tarjan: Amortized Computational Complexity (SIAM J. Algebraic Discrete Methods, 1985)](https://epubs.siam.org/doi/10.1137/0606031)\n- [Cormen et al.: Introduction to Algorithms (CLRS 4th Edition, Chapter 17)](https://mitpress.mit.edu)"
+}

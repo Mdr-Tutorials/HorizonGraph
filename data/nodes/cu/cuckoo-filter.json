@@ -1,0 +1,38 @@
+{
+  "id": "cuckoo-filter",
+  "name": "Cuckoo Filter",
+  "display_primary": "布谷鸟过滤器",
+  "display_secondary": "Cuckoo Filter",
+  "aliases": [
+    "布谷鸟过滤器",
+    "Cuckoo-Filter",
+    "布谷鸟哈希过滤器"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "databases"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hash-table",
+      "context": "基于布谷鸟哈希算法通过踢出旧元素策略维护指纹桶集合，原生支持元素动态删除。"
+    }
+  ],
+  "summary": "基于布谷鸟哈希存储元素短指纹且支持高效动态删除操作的紧凑集合过滤器。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.cs.cmu.edu/~dga/papers/cuckoo-conext2014.pdf",
+  "description": "## 机制\n\n布谷鸟过滤器（Cuckoo Filter）由卡内基梅隆大学的 Bin Fan、Dave Andersen 等人于 2014 年提出。在经典布隆过滤器（Bloom Filter）中，由于多个键共享底层的位数组位（Bit），执行删除操作会导致其他存在元素的哈希位被错误擦除；计数布隆过滤器（Counting Bloom Filter）虽然支持删除但内存开销膨胀三到四倍。布谷鸟过滤器在维持极低假阳性率（False Positive Rate）的同时，**原生支持高并发动态删除操作**，且在空间利用率上优于传统 Bloom Filter。\n\n其底层基于半排序桶式布谷鸟哈希（Cuckoo Hashing）：\n1. 过滤器并不存储原始键，而是为每个元素 $x$ 提取长度极短的哈希指纹 $f = \\text{fingerprint}(x)$（如 8 到 16 比特）；\n2. 每个元素对应两个可选候选存储桶：\n$$i_1 = h(x), \\quad i_2 = i_1 \\oplus h(f)$$\n这一“部分键布谷鸟哈希”（Partial-Key Cuckoo Hashing）特性极其精妙：即便原始输入 $x$ 丢失，仅凭指纹 $f$ 和当前桶位置 $i_1$，即可直接通过异或运算精确计算出备选桶 $i_2$。\n\n## 踢出机制与删除原语\n\n当插入新元素时，若两个桶均已满载，系统随机选择其中一个已有指纹“踢出”，将新指纹放入；被踢出的旧指纹再利用异或公式寻找其备选桶，发生级联置换踢出。删除操作极其高效：只需检查 $i_1$ 或 $i_2$ 两个桶，若包含指纹 $f$ 则直接删除一份，不存在全局污染。\n\n## 参考\n\n- [Fan et al.: Cuckoo Filter: Practically Better Than Bloom (ACM CoNEXT 2014)](https://www.cs.cmu.edu/~dga/papers/cuckoo-conext2014.pdf)\n- [Pagh & Rodler: Cuckoo Hashing (J. Algorithms, 2004)](https://link.springer.com/chapter/10.1007/3-540-45465-9_11)"
+}

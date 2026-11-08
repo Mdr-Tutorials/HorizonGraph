@@ -1,0 +1,43 @@
+{
+  "id": "file-system",
+  "name": "File System",
+  "display_primary": "文件系统",
+  "display_secondary": "File System",
+  "aliases": [
+    "文件系统",
+    "FS",
+    "Storage File System"
+  ],
+  "type": "concept",
+  "domains": [
+    "operating-systems",
+    "systems-programming",
+    "databases"
+  ],
+  "ecosystems": [
+    "os-kernel-ecosystem",
+    "operating_systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "operating-system"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "b-tree",
+      "context": "现代文件系统广泛采用B树与B+树组织索引目录项元数据与磁盘块盘区分配映射。"
+    }
+  ],
+  "summary": "在持久化块设备上组织、索引、命名与安全访问数据的分层数据结构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://docs.kernel.org/filesystems/index.html",
+  "description": "## 机制\n\n文件系统将持久化块存储设备的线性扇区抽象为由树形目录与命名文件构成的层级结构。核心数据结构包括存储元数据（权限、大小、时间戳、块指针）的索引节点（inode）、目录项缓存（dentry）以及盘区（Extent）分配表。现代文件系统广泛采用预写日志（Journaling）或写时复制（CoW）来确保崩溃一致性。\n\n## 边界与演化\n\n传统基于原地覆盖的文件系统通过日志恢复元数据一致性，但容易受到部分写入破坏；Btrfs与ZFS等写时复制文件系统保证事务完整性并支持即时快照，但在高并发小随机写场景下会产生碎片化与写放大。分布式与网络文件系统进一步引入网络分区容忍与租约续期机制。\n\n## 参考\n\n- [Linux Kernel Documentation: Filesystems](https://docs.kernel.org/filesystems/index.html)\n- [OSTEP: File System Implementation](https://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf)"
+}

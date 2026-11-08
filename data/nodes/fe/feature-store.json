@@ -1,0 +1,42 @@
+{
+  "id": "feature-store",
+  "name": "Feature Store",
+  "display_primary": "特征存储",
+  "display_secondary": "Feature Store",
+  "aliases": [
+    "特征存储",
+    "特征库",
+    "Feast"
+  ],
+  "type": "concept",
+  "domains": [
+    "mlops",
+    "data-engineering"
+  ],
+  "ecosystems": [
+    "mlops-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mlops-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mlops"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "redis",
+      "context": "结合Redis类低延迟内存键值存储提供毫秒级在线特征点查服务。"
+    }
+  ],
+  "summary": "管理、计算并统一提供在线低延迟读取与离线批量训练的特征工程平台。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://feast.dev/",
+  "description": "## 机制\n\n特征存储（Feature Store）解决机器学习特征资产的复用与一致性问题。核心架构解耦为双层存储引擎：在线特征库（Online Store，通常为Redis或DynamoDB，提供毫秒级键值点查以满足模型实时推理）与离线特征库（Offline Store，如Parquet、Snowflake或BigQuery，提供高吞吐历史批处理以生成模型训练集）。\n\n## 时间旅行与数据一致性\n\n特征存储的核心机制在于提供“点时间正确（Point-in-Time Correctness）”的时空回溯查询，避免发生未来信息泄露（Data Leakage）；同时统一特征注册与计算逻辑，从根本上杜绝算法工程师在Python离线脚本与Java/C++在线服务中特征提取逻辑不一致产生的线上效果失真。\n\n## 参考\n\n- [Feast: The Open Source Feature Store for Machine Learning](https://feast.dev/)\n- [Hopsworks: The Feature Store for Machine Learning](https://www.hopsworks.ai/)"
+}

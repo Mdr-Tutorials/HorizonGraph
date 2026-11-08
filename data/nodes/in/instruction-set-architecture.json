@@ -12,12 +12,14 @@
   "ecosystems": [
     "hardware_iot",
     "low-latency-systems-ecosystem",
-    "native-cpp-ecosystem"
+    "native-cpp-ecosystem",
+    "computer-architecture-ecosystem"
   ],
   "domains": [
     "systems-programming",
     "digital-design",
-    "low-latency-systems"
+    "low-latency-systems",
+    "computer-architecture"
   ],
   "relations": [
     {

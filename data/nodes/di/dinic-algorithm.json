@@ -1,0 +1,41 @@
+{
+  "id": "dinic-algorithm",
+  "name": "Dinic's Algorithm",
+  "display_primary": "Dinic算法",
+  "display_secondary": "Dinic's Algorithm",
+  "aliases": [
+    "Dinic算法",
+    "Dinitz算法",
+    "阻塞流算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bfs",
+      "context": "通过BFS对残余网络构建分层图，并结合DFS当前弧优化在分层图上寻找多路阻塞流。"
+    }
+  ],
+  "summary": "结合广度优先构建分层网络与深度优先推进多路阻塞流的高效最大流算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Dinic%27s_algorithm",
+  "description": "## 机制\n\nDinic 算法由叶菲姆·迪尼茨（Yefim Dinitz）于 1970 年独立提出。与 Edmonds-Karp 每次单条增广不同，Dinic 引入了“分层图”（Level Graph）与“阻塞流”（Blocking Flow）概念，实现了阶段性的多路并行增广：\n1. **构建分层网络**：利用 BFS 计算源点 $s$ 到所有节点的最短跳数距离 $level[u]$。仅保留满足 $level[v] = level[u] + 1$ 的正向有效残余边；\n2. **多路阻塞流增广**：在分层网络上运行 DFS，一次性寻找多条增广路直至该分层网络中不存在任何可行增广路径（称为阻塞流）；\n3. 重复上述两个阶段，每次重建分层图时，源点到汇点的距离严格至少增加 1。因此外层重构阶段最多执行 $O(V)$ 次。\n\n## 当前弧优化与单位网络性能\n\n在 DFS 寻找阻塞流时，通过“当前弧优化”（Current-Arc Optimization）：记录每个节点当前已经尝试增广过的出边，避免重复遍历无残余容量的废边，使单阶段阻塞流求解时间控制在 $O(V E)$。整体时间复杂度达到 **$O(V^2 E)$**。\n\n更优异的是，在所有边容量均为单位容量 1 的网络中，Dinic 复杂度自动降至 **$O(E \\sqrt{V})$**；在二分图匹配中其效率等价于著名的 Hopcroft-Karp 算法，是 ACM-ICPC 与工业流网络库的标准首选实现。\n\n## 参考\n\n- [Dinitz: Algorithm for solution of a problem of maximum flow in networks with power estimation (Soviet Math. Doklady, 1970)](https://www.cs.bgu.ac.il/~dinitz/Papers/D70.pdf)\n- [Even & Tarjan: Network flow and testing graph connectivity (SIAM J. Comput., 1975)](https://epubs.siam.org/doi/10.1137/0204043)"
+}

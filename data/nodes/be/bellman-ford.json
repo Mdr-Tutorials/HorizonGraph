@@ -11,11 +11,13 @@
   "type": "concept",
   "ecosystems": [
     "languages_runtimes",
-    "optimization-ecosystem"
+    "optimization-ecosystem",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
     "operations-research",
-    "systems-programming"
+    "systems-programming",
+    "data-structures-and-algorithms"
   ],
   "summary": "支持负权边并可检测负权回路的单源最短路径动态规划算法。",
   "status": "active",
@@ -31,6 +33,10 @@
       "relation_type": "uses",
       "target_id": "dynamic-programming",
       "context": "对全图所有边迭代松弛 V-1 轮以逐步扩散最优路径并验证负权环。"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
     }
   ]
 }

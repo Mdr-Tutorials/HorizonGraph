@@ -9,7 +9,8 @@
   ],
   "type": "concept",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {
@@ -24,11 +25,18 @@
       "relation_type": "uses",
       "target_id": "queue",
       "context": "标准广度优先遍历用先进先出队列维护待访问顶点。"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
     }
   ],
   "summary": "逐层扩散的图遍历，无权图最短路的标准解。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 4
+  "importance": 4,
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem"
+  ]
 }

@@ -1,0 +1,38 @@
+{
+  "id": "markov-decision-process",
+  "name": "Markov Decision Process",
+  "display_primary": "马尔可夫决策过程",
+  "display_secondary": "Markov Decision Process",
+  "aliases": [
+    "马尔可夫决策过程",
+    "MDP",
+    "Markov Decision"
+  ],
+  "type": "concept",
+  "domains": [
+    "reinforcement-learning",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "reinforcement-learning-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reinforcement-learning",
+      "context": "为强化学习中状态空间、动作空间、状态转移概率与即时奖励函数建立严格形式化数学框架。"
+    }
+  ],
+  "summary": "描述具有马尔可夫性质的序贯决策与动态环境交互的离散数学框架。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://incompleteideas.net/book/the-book.html",
+  "description": "## 机制\n\n马尔可夫决策过程（MDP）由五元组 \\((S, A, P, R, \\gamma)\\) 严格定义：状态空间 \\(S\\)、动作空间 \\(A\\)、转移概率分布 \\(P(s'|s,a)\\)、即时奖励函数 \\(R(s,a)\\) 以及折现因子 \\(\\gamma \\in [0, 1)\\)。其核心为马尔可夫性质：给定当前状态与动作，下一状态的条件概率分布独立于过去的历史轨迹。\n\n## 贝尔曼方程与求解\n\nMDP的核心理论奠基在贝尔曼方程（Bellman Equation）之上。通过动态规划分解，状态价值函数 \\(V(s)\\) 与状态-动作价值函数 \\(Q(s,a)\\) 呈现自洽递归结构；当转移概率已知时可通过值迭代（Value Iteration）或策略迭代（Policy Iteration）求出最优策略。\n\n## 参考\n\n- [Sutton & Barto: Reinforcement Learning: An Introduction (2nd Edition)](https://incompleteideas.net/book/the-book.html)\n- [Bellman: Dynamic Programming (Princeton University Press, 1957)](https://press.princeton.edu)"
+}

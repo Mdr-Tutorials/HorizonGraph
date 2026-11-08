@@ -1,0 +1,43 @@
+{
+  "id": "post-quantum-cryptography",
+  "name": "Post-Quantum Cryptography",
+  "display_primary": "后量子密码学",
+  "display_secondary": "Post-Quantum Cryptography",
+  "aliases": [
+    "后量子密码",
+    "抗量子密码",
+    "PQC"
+  ],
+  "type": "concept",
+  "domains": [
+    "cryptography",
+    "security",
+    "quantum-computing"
+  ],
+  "ecosystems": [
+    "cryptography-pki-ecosystem",
+    "networking_security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "cryptography-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cryptography",
+      "context": "基于高维格困难问题、纠错编码或多变量多项式构建抵御Shor算法等量子计算破译威胁的新一代公钥密码体系。"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "rsa"
+    }
+  ],
+  "summary": "能抵御传统经典计算机与未来大规模量子计算机破译的新一代公钥体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://csrc.nist.gov/projects/post-quantum-cryptography",
+  "description": "## 机制\n\n量子计算机依托Shor算法能在多项式时间内高效破解基于大数分解（RSA）与离散对数（ECC）的全部主流公钥密码。后量子密码学（PQC）立足于经典密码学框架，探索量子计算机多项式时间无法破译的全新数学困难问题，主流技术路线涵盖：高维格密码（Lattice-based，如ML-KEM与ML-DSA）、基于哈希的状态签名（如SLH-DSA）、基于纠错码（Code-based）与同源密码。\n\n## 标准化与工程迁移\n\nNIST经过多轮全球竞赛已正式发布FIPS 203（ML-KEM/Kyber）、FIPS 204（ML-DSA/Dilithium）与FIPS 205（SLH-DSA/SPHINCS+）后量子首批标准。工程落地面临的主要挑战在于公钥与密文字节体积膨胀数倍甚至数十倍，对网络MTU拆包与嵌入式受限内存构成严峻架构挑战。\n\n## 参考\n\n- [NIST Post-Quantum Cryptography Standardization](https://csrc.nist.gov/projects/post-quantum-cryptography)\n- [NIST FIPS 203: Module-Lattice-Based Key-Encapsulation Mechanism Standard](https://csrc.nist.gov/pubs/fips/203/final)"
+}

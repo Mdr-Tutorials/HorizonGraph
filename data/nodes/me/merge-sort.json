@@ -8,17 +8,25 @@
   ],
   "type": "concept",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "sorting-algorithm"
     }
   ],
   "summary": "稳定的分治排序，外部排序与求逆序对的基础。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 3
+  "importance": 3,
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem"
+  ]
 }

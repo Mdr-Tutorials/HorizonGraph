@@ -1,0 +1,42 @@
+{
+  "id": "mechanistic-interpretability",
+  "name": "Mechanistic Interpretability",
+  "display_primary": "机制可解释性",
+  "display_secondary": "Mechanistic Interpretability",
+  "aliases": [
+    "机制可解释性",
+    "回路分析",
+    "Circuit Analysis"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-safety",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "ai-safety-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-safety-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ai-safety"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "attention-mechanism",
+      "context": "通过探针机制逆向工程解析大模型多头注意力机制与多层感知机权重回路内部表征。"
+    }
+  ],
+  "summary": "通过逆向工程神经网络权重内部特征回路来透视大模型决策推理机理的学科。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://transformer-circuits.pub/",
+  "description": "## 机制\n\n机制可解释性力图将深度神经网络从不可见黑盒转化为可读的计算机程序。研究者通过拆解Transformer残差流（Residual Stream）、探测注意力头的语义功能（如归纳头 Induction Heads 用于处理上下文复制学习），并利用稀疏自编码器（Sparse Autoencoders, SAE）解耦神经元多义性（Polysemanticity），将百万维激活向量投影至数万个具有明确可读概念的单义性特征方向。\n\n## 安全与模型白盒审计\n\n通过定位模型内部特定功能回路（如负责谎言生成、欺骗性对齐或越狱执行的激活子网络），安全团队能够在模型推理阶段实时监控危险概念的激活，甚至通过激活工程（Activation Steering）与直接权重编辑实现针对恶意行为的外科手术式消除。\n\n## 参考\n\n- [Elhage et al.: A Mathematical Framework for Transformer Circuits (Anthropic, 2021)](https://transformer-circuits.pub/2021/framework/index.html)\n- [Bricken et al.: Towards Monosemanticity: Decomposing Language Models With Dictionary Learning (Anthropic, 2023)](https://transformer-circuits.pub/2023/monosemantic-features/index.html)"
+}

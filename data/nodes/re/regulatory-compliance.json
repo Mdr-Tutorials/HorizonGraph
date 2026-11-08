@@ -1,0 +1,42 @@
+{
+  "id": "regulatory-compliance",
+  "name": "Regulatory Compliance",
+  "display_primary": "监管合规",
+  "display_secondary": "Regulatory Compliance",
+  "aliases": [
+    "监管合规",
+    "合规治理",
+    "IT Compliance"
+  ],
+  "type": "concept",
+  "domains": [
+    "privacy-and-compliance",
+    "security"
+  ],
+  "ecosystems": [
+    "privacy-compliance-ecosystem",
+    "enterprise_industry"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "privacy-compliance-concept"
+    },
+    {
+      "relation_type": "governs",
+      "target_id": "data-protection"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "audit-trail",
+      "context": "利用具备防篡改特性的全量访问审计日志证明企业信息系统满足监管审计要求。"
+    }
+  ],
+  "summary": "确保企业技术系统与业务运营符合国家法律法规与行业标准的安全治理流程。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.iso.org/standard/72577.html",
+  "description": "## 机制\n\n监管合规是企业技术治理不可或缺的核心基石。企业信息系统必须主动适应外部强制性法律法规（如GDPR、中国个保法与网络安全法）以及特定行业权威准则（如金融支付的PCI DSS、医疗健康领域的HIPAA、云安全领域的SOC 2）。合规机制包括定期内控风险审计、安全事件强制上报时效机制、多重审批流与操作留痕。\n\n## 合规即代码与自动化验证\n\n传统依赖纸质表格与离线抽检的静态合规方式已难以适应云原生快速迭代。现代DevSecOps推行“合规即代码”（Compliance-as-Code），将安全配置基线（如CIS Benchmarks）转化为自动化静态扫描规则，在CI/CD流水线中强制阻断不合规云资产配置上线。\n\n## 参考\n\n- [ISO 37301:2021 Compliance management systems](https://www.iso.org/standard/72577.html)\n- [NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)"
+}

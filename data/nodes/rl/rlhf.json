@@ -8,17 +8,27 @@
   ],
   "type": "concept",
   "domains": [
-    "machine-learning"
+    "machine-learning",
+    "reinforcement-learning",
+    "ai-safety"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "deep-learning"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "reward-model",
+      "context": "在PPO优化迭代阶段由预训练的奖励模型提供人类偏好标量奖励反馈信号。"
     }
   ],
   "summary": "用人类偏好训练奖励模型再强化学习，对齐三板斧之一。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 4
+  "importance": 4,
+  "ecosystems": [
+    "ai-safety-ecosystem"
+  ]
 }

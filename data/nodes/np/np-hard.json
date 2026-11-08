@@ -1,0 +1,42 @@
+{
+  "id": "np-hard",
+  "name": "NP-Hard",
+  "display_primary": "NP难",
+  "display_secondary": "NP-Hard",
+  "aliases": [
+    "NP难",
+    "NP-Hardness",
+    "NP困难"
+  ],
+  "type": "concept",
+  "domains": [
+    "theoretical-computer-science",
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "computational-complexity"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "polynomial-time-reduction",
+      "context": "所有NP类中的决策问题均可在此多项式时间内归约至目标NP难问题。"
+    }
+  ],
+  "summary": "至少与NP中最难问题一样困难且所有NP问题均可在多项式时间内规约至其的复杂性类。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/NP-hardness",
+  "description": "## 机制\n\n在计算复杂性理论中，一个问题 $H$ 被定义为“NP-Hard”（NP 难），当且仅当对于 NP 类中的任意决策问题 $L$，都存在从 $L$ 到 $H$ 的多项式时间卡普归约（$L \\le_P H$）。这意味着如果存在能够在多项式时间内求解 $H$ 的算法，那么整个 NP 类中的所有问题都将能在多项式时间内被彻底解决。\n\nNP-Hard 问题不要求自身必须属于 NP 类：\n1. 它甚至可以不是决策问题（例如旅行商问题 TSP 的最优化版本，要求输出最短路径数值）；\n2. 它甚至可以是不可判定的（例如停机问题 Halting Problem 就是 NP-Hard 的，因为任何 NP 决策问题都可以轻易归约为停机问题）。\n\n## NP-Hard 与 NP-Complete 的关系\n\n若一个问题既属于 NP 类，又同时满足 NP-Hard 条件，则该问题被称为“NP 完全”（NP-Complete）。NP-Hard 为计算机科学家面对工业复杂运筹、调度与排布难题时放弃暴力求解、转向多项式时间近似方案（PTAS）提供了坚实的理论依据。\n\n## 参考\n\n- [Garey & Johnson: Computers and Intractability: A Guide to the Theory of NP-Completeness (W. H. Freeman, 1979)](https://www.whfreeman.com)\n- [Karp: Reducibility among Combinatorial Problems (1972)](https://link.springer.com/chapter/10.1007/978-1-4684-2001-2_9)"
+}

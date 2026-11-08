@@ -1,0 +1,45 @@
+{
+  "id": "speech-recognition",
+  "name": "Automatic Speech Recognition",
+  "display_primary": "语音识别",
+  "display_secondary": "Automatic Speech Recognition",
+  "aliases": [
+    "语音识别",
+    "ASR",
+    "Speech-to-Text",
+    "STT"
+  ],
+  "type": "concept",
+  "domains": [
+    "audio-and-speech-processing",
+    "natural-language-processing",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "audio-speech-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "audio-speech-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "acoustic-model",
+      "context": "利用声学模型将输入音频梅尔频谱特征映射为音素或上下文子词文本的条件概率分布。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "voice-activity-detection",
+      "context": "在音频前端过滤环境背景噪音与静音段，仅将有效人声音频流送入深度神经网络推理。"
+    }
+  ],
+  "summary": "将人类连续语音声学时域信号自动转写为可读文本符号的AI技术体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.isca-speech.org/",
+  "description": "## 机制\n\n自动语音识别（ASR）是语音人机交互的入口技术。传统架构分为声学模型（隐马尔可夫模型 HMM/GMM）、发音词典（Lexicon）与语言模型（n-gram）；现代系统全面演进为端到端（End-to-End）深度学习架构，涵盖连接时序分类（CTC）、循环神经网络变换器（RNN-T）以及以 OpenAI Whisper 为代表的编码器-解码器 Transformer。\n\n## 鲁棒性与字错率评价\n\n识别质量通过字错率（WER/CER，涵盖替换、删除与插入错误率）评测。在近场清晰无噪音环境下识别率可达98%以上；但在远场混响、重叠多人语音（Cocktail Party Effect）、方言口音以及车载工厂高分贝噪声环境下，声学前端降噪增强与波束成形技术至关重要。\n\n## 参考\n\n- [Rabiner & Juang: Fundamentals of Speech Recognition (Prentice Hall)](https://www.pearson.com)\n- [Radford et al.: Robust Speech Recognition via Large-Scale Weak Supervision (Whisper, ICML 2023)](https://arxiv.org/abs/2212.04356)"
+}

@@ -9,16 +9,22 @@
   "type": "concept",
   "ecosystems": [
     "cybersecurity-ecosystem",
-    "iam-ecosystem"
+    "iam-ecosystem",
+    "privacy-compliance-ecosystem"
   ],
   "domains": [
     "security",
-    "industry-landscape"
+    "industry-landscape",
+    "privacy-and-compliance"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "data-protection"
     }
   ],
   "summary": "欧盟数据保护条例，全球隐私立法的模板。",

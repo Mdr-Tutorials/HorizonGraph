@@ -7,13 +7,15 @@
   ],
   "type": "architecture",
   "ecosystems": [
-    "risc-v-ecosystem"
+    "risc-v-ecosystem",
+    "computer-architecture-ecosystem"
   ],
   "domains": [
     "embedded-systems",
     "systems-programming",
     "digital-design",
-    "semiconductor-engineering"
+    "semiconductor-engineering",
+    "computer-architecture"
   ],
   "abstraction_level": "hardware",
   "relations": [

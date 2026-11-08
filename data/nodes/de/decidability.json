@@ -1,0 +1,43 @@
+{
+  "id": "decidability",
+  "name": "Decidability",
+  "display_primary": "可判定性",
+  "display_secondary": "Decidability",
+  "aliases": [
+    "可判定性",
+    "判定问题",
+    "判定性",
+    "Undecidability"
+  ],
+  "type": "concept",
+  "domains": [
+    "theoretical-computer-science",
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "computational-complexity"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "halting-problem",
+      "context": "以停机问题的不可判定性作为归约始祖证明波斯特对应问题与莱斯定理的不可判定性。"
+    }
+  ],
+  "summary": "形式逻辑与计算理论中判定问题是否存在能够在有限步内给出确定真假答案的性质。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://plato.stanford.edu/entries/computability/",
+  "description": "## 机制\n\n在可计算性理论中，一个形式语言或决策问题（Decision Problem）被称为“可判定的”（Decidable / Recursive），当且仅当存在一个图灵机能够在有限步内对所有可能输入停机，并在输入满足条件时输出“接受”，不满足时输出“拒绝”。若图灵机只能在肯定实例上停机而在否定实例上可能陷入无限循环，则该问题仅为“半可判定的”（Semidecidable / Recursively Enumerable）。\n\n当不存在任何算法能够在有限时间内对所有实例给出正确的是/否判断时，该问题即为“不可判定问题”（Undecidable Problem）。\n\n## 经典不可判定问题\n\n继阿兰·图灵证明停机问题不可判定之后，数学家们揭示了大量核心数学与计算问题的不可判定性：\n1. **希尔伯特第十问题**：判定任意整系数丢番图方程是否有整数解（Matiyasevich 定理证明不可判定）。\n2. **波斯特对应问题（PCP）**：判定多米诺骨牌式字符串块是否能拼出相同上下文本。\n3. **莱斯定理（Rice's Theorem）**：判定任何图灵机所接受语言的任何非平凡语义属性都是不可判定的。\n\n## 参考\n\n- [Matiyasevich: Enumerable sets are Diophantine (Doklady Akademii Nauk SSSR, 1970)](https://www.mathnet.ru)\n- [Sipser: Introduction to the Theory of Computation (Cengage Learning)](https://www.cengage.com)"
+}

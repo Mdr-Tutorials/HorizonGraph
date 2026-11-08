@@ -14,7 +14,8 @@
   "domains": [
     "systems-programming",
     "low-latency-systems",
-    "high-performance-computing"
+    "high-performance-computing",
+    "computer-architecture"
   ],
   "relations": [
     {
@@ -25,6 +26,10 @@
       "relation_type": "governs",
       "target_id": "false-sharing",
       "context": "以缓存行为单位维护一致性的规则约束独立字段的并发访问；至少一方写入时，同一行上的其他访问也可能承担失效与所有权转移成本。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "cache-hierarchy"
     }
   ],
   "summary": "维护共享缓存行的数据一致性，与跨地址访问顺序的内存模型不同。",

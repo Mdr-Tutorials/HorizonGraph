@@ -1,0 +1,38 @@
+{
+  "id": "elliptic-curve-cryptography",
+  "name": "Elliptic Curve Cryptography",
+  "display_primary": "椭圆曲线密码学",
+  "display_secondary": "Elliptic Curve Cryptography",
+  "aliases": [
+    "椭圆曲线密码",
+    "ECC",
+    "Elliptic Curve"
+  ],
+  "type": "concept",
+  "domains": [
+    "cryptography",
+    "security"
+  ],
+  "ecosystems": [
+    "cryptography-pki-ecosystem",
+    "networking_security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "cryptography-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asymmetric-encryption",
+      "context": "利用有限域上代数曲线有理点群的离散对数困难性提供高强度计算抗破解能力。"
+    }
+  ],
+  "summary": "利用有限域上代数椭圆曲线离散对数数学困难性构建的公钥体制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://csrc.nist.gov/publications/detail/fips/186-5/final",
+  "description": "## 机制\n\n椭圆曲线密码学（ECC）建立在定义于有限域 \\(\\mathbb{F}_p\\) 或 \\(\\mathbb{F}_{2^m}\\) 上的三次代数方程 \\(y^2 = x^3 + ax + b\\) 的点群结构上。群运算遵循弦切线加法规则。给定基点 \\(G\\) 与倍数标量 \\(k\\)，计算 \\(P = kG\\) 在计算上极其简便，但反向已知 \\(P\\) 与 \\(G\\) 求解 \\(k\\)（椭圆曲线离散对数难题 ECDLP）在经典计算机上极其困难。\n\n## 优势与工业曲线\n\n相较于RSA需要3072位模数以获得128位安全强度，ECC仅需256位曲线参数（如NIST P-256、Curve25519或比特币采用的secp256k1）即可提供同等级别的密码学安全强度，显著缩减传输带宽消耗与低功耗嵌入式设备的计算耗能。\n\n## 参考\n\n- [NIST FIPS 186-5: Digital Signature Standard (DSS), Curve Specifications](https://csrc.nist.gov/publications/detail/fips/186-5/final)\n- [RFC 7748: Elliptic Curves for Security (Curve25519 and Curve448)](https://datatracker.ietf.org/doc/html/rfc7748)"
+}

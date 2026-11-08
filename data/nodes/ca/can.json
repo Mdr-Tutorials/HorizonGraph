@@ -9,11 +9,13 @@
   "ecosystems": [
     "embedded-ecosystem",
     "hardware_iot",
-    "industrial-automation-ecosystem"
+    "industrial-automation-ecosystem",
+    "autonomous-vehicles-ecosystem"
   ],
   "domains": [
     "embedded-systems",
-    "industrial-automation"
+    "industrial-automation",
+    "autonomous-driving"
   ],
   "abstraction_level": "hardware",
   "relations": [

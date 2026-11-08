@@ -1,0 +1,38 @@
+{
+  "id": "chomsky-hierarchy",
+  "name": "Chomsky Hierarchy",
+  "display_primary": "乔姆斯基谱系",
+  "display_secondary": "Chomsky Hierarchy",
+  "aliases": [
+    "乔姆斯基文法层级",
+    "Chomsky谱系",
+    "形式文法分类"
+  ],
+  "type": "concept",
+  "domains": [
+    "theoretical-computer-science",
+    "language-tooling"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "languages_runtimes"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "turing-machine",
+      "context": "以0型无限制文法对应图灵机计算模型建立形式语言四层分类层级。"
+    }
+  ],
+  "summary": "将形式文法划分为0型至3型并与不同计算能力自动机模型严格对应的层级分类理论。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://web.mit.edu/",
+  "description": "## 机制\n\n诺姆·乔姆斯基于 1956 年提出了形式文法的四层层级结构，建立了生成文法产生式规则约束与抽象自动机计算能力的完美对偶映射：\n\n1. **3型文法（正规文法 Regular Grammar）**：产生式形如 $A \\to aB$ 或 $A \\to a$。对应的识别机器为有限状态自动机（DFA/NFA），是正则表达式与编译器词法分析（Lexer）的理论依据。\n2. **2型文法（上下文无关文法 Context-Free Grammar）**：产生式形如 $A \\to \\alpha$。对应识别机器为非确定下推自动机（PDA），能够表达嵌套匹配结构（如括号配对、begin-end），是绝大多数现代编程语言语法分析（Parser，如 AST 生成）的基础。\n3. **1型文法（上下文相关文法 Context-Sensitive Grammar）**：产生式形如 $\\alpha A \\beta \\to \\alpha \\gamma \\beta$。对应识别机器为线性有界非确定图灵机（LBA）。\n4. **0型文法（无限制文法 Unrestricted Grammar）**：产生式无任何限制。对应图灵机（Turing Machine），生成全部递归可枚举语言。\n\n## 严格包含关系\n\n四层语言类构成严格的真子集包含链：$L_3 \\subset L_2 \\subset L_1 \\subset L_0$。乔姆斯基谱系为编译原理、自然语言处理形式句法分析以及自动机理论提供了统一的形式化骨架。\n\n## 参考\n\n- [Chomsky: Three models for the description of language (IRE Trans. Information Theory, 1956)](https://ieeexplore.ieee.org/document/1056813)\n- [Hopcroft, Motwani, Ullman: Introduction to Automata Theory, Languages, and Computation (Addison-Wesley)](https://www.pearson.com)"
+}

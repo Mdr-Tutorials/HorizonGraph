@@ -11,7 +11,8 @@
     "linux-gnu-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "operating-systems"
   ],
   "relations": [
     {

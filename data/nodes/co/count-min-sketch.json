@@ -1,0 +1,38 @@
+{
+  "id": "count-min-sketch",
+  "name": "Count-Min Sketch",
+  "display_primary": "Count-Min Sketch",
+  "display_secondary": "Count-Min Sketch",
+  "aliases": [
+    "Count-Min Sketch",
+    "CMS",
+    "频数估计结构"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "data-engineering"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hash-table",
+      "context": "利用多重独立哈希函数将数据流映射至二维矩阵并取各行计数值的极小值。"
+    }
+  ],
+  "summary": "利用多重独立哈希函数将高并发流式数据映射至二维矩阵的频数估计概率结构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Count%E2%80%93min_sketch",
+  "description": "## 机制\n\nCount-Min Sketch（CMS）由格雷厄姆·科莫德（Graham Cormode）与 S. Muthukrishnan 于 2005 年提出，是一种用于连续无界高速数据流中实时估计元素出现频次（Frequency Estimation）的亚线性空间概率算法。\n\n其物理结构为一个由 $d$ 行、$w$ 列构成的二维整数计数器矩阵 $C[d][w]$，并配置 $d$ 个成对独立的高性能二维哈希函数 $h_1, h_2, \\dots, h_d$：\n1. **更新过程（Update）**：当事件流中到来元素 $x$（增量为 $c$）时，对每一行 $i \\in [1, d]$，计算列索引 $j = h_i(x)$，将对应计数器自增 $C[i][j] \\leftarrow C[i][j] + c$；\n2. **点查询（Point Query）**：查询元素 $x$ 的历史出现次数时，检索每一行对应的桶计数，返回所有行的最小值：\n$$\\hat{a}_x = \\min_{1 \\le i \\le d} C[i][h_i(x)]$$\n\n## 理论误差界与重象检测\n\n由于多个不同元素可能哈希碰撞到同一个桶中，计数器只会单调被其他元素抬高，绝不会被扣减，因此估计值 $\\hat{a}_x$ 具有单侧保证：它永远不会低于真实频次 $a_x$（无下溢），且超额上溢误差被严格控制。根据马尔可夫不等式，设置 $w = \\lceil e/\\epsilon \\rceil$ 且 $d = \\lceil \\ln(1/\\delta) \\rceil$，估计值保证以不小于 $1-\\delta$ 的概率满足 $\\hat{a}_x \\le a_x + \\epsilon ||a||_1$。\n\nCMS 在分布式网络流监控、DDoS 攻击流量检测、Top-K 热门重象（Heavy Hitters）发现以及大模型输入频次过滤中扮演着核心角色。\n\n## 参考\n\n- [Cormode & Muthukrishnan: An improved data stream summary: the count-min sketch and its applications (J. Algorithms, 2005)](https://dl.acm.org/doi/10.1016/j.jalgor.2003.12.001)\n- [Cormode & Hadjieleftheriou: Finding the frequent items in streams of data (VLDB 2008)](https://dl.acm.org/doi/10.1145/1454159.1454225)"
+}

@@ -8,10 +8,12 @@
   ],
   "type": "architecture",
   "ecosystems": [
-    "x86-ecosystem"
+    "x86-ecosystem",
+    "computer-architecture-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "computer-architecture"
   ],
   "abstraction_level": "hardware",
   "relations": [

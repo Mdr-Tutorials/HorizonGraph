@@ -4,21 +4,52 @@
   "display_primary": "空间计算",
   "display_secondary": "Spatial Computing",
   "aliases": [
-    "空间计算"
+    "空间计算",
+    "XR",
+    "扩展现实",
+    "沉浸式计算"
   ],
   "type": "concept",
   "domains": [
-    "human-computer-interaction"
+    "spatial-computing",
+    "human-computer-interaction",
+    "graphics"
+  ],
+  "ecosystems": [
+    "spatial-computing-ecosystem",
+    "graphics_gaming"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "theory"
+      "target_id": "spatial-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "virtual-reality",
+      "context": "通过近眼双目立体显示与低延迟头部追踪渲染完全沉浸式的数字化虚拟三维世界。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "augmented-reality",
+      "context": "利用光学透视或视频透视将高精度数字化虚拟物体无缝锚定叠加在物理现实环境中。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "mixed-reality",
+      "context": "建立虚拟三维图元与物理实体之间的双向空间遮挡、阴影投射与真实物理碰撞交互反馈。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "simultaneous-localization-and-mapping",
+      "context": "基于机载视觉传感器与IMU惯性单元实时解算头显在三维空间中的六自由度位姿并重建稠密网格。"
     }
   ],
-  "summary": "把数字内容放进三维空间，Vision Pro 的叙事。",
+  "summary": "融合三维物理现实与数字化内容无缝交互并具备环境感知能力的新一代人机交互范式。",
   "status": "active",
   "origin": "ai_draft",
-  "last_reviewed": "2026-09-05",
-  "importance": 3
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://developer.apple.com/visionos/",
+  "description": "## 机制\n\n空间计算将人机界面从传统二维平面显示屏幕解放至三维物理空间。技术底座涵盖：自内向外（Inside-Out）六自由度空间追踪定位、三维环境语义网格重建、眼动注视点追踪（Eye Tracking）、微手势识别（Hand Tracking）与双目光学/视频透视渲染。数字对象不仅悬浮于空间中，更与物理桌面、墙面形成真实的物理碰撞、遮挡关系与光影交互。\n\n## 实时性要求与渲染延迟\n\n空间计算面临极其严苛的感官动晕症（Motion Sickness）生理瓶颈。系统必须将“动作到光子延迟”（Motion-to-Photon Latency）压低至20毫秒以内。图形管线大量依赖异步时间扭曲（ATW）、异步空间扭曲（ASW）与注视点注视区高分辨率动态渲染（Foveated Rendering）以节省极端显卡算力开销。\n\n## 参考\n\n- [Apple visionOS Developer Documentation: Spatial Computing Concepts](https://developer.apple.com/visionos/)\n- [Milgram & Kishino: A Taxonomy of Mixed Reality Visual Displays (IEICE 1994)](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=2040bb0d97097f485dbab06d7e0d37e6f8a846c4)"
 }

@@ -1,0 +1,38 @@
+{
+  "id": "cryptographic-hash-function",
+  "name": "Cryptographic Hash Function",
+  "display_primary": "密码学哈希函数",
+  "display_secondary": "Cryptographic Hash Function",
+  "aliases": [
+    "密码学哈希",
+    "单向散列函数",
+    "Hash Function"
+  ],
+  "type": "concept",
+  "domains": [
+    "cryptography",
+    "security"
+  ],
+  "ecosystems": [
+    "cryptography-pki-ecosystem",
+    "networking_security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "cryptography-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cryptography",
+      "context": "作为现代密码协议的单向陷门函数基石，满足原像不可逆、次原像抗性与抗碰撞数学安全要求。"
+    }
+  ],
+  "summary": "将任意长度输入映射为定长摘要且具备高计算抗碰撞特性的单向函数。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://csrc.nist.gov/projects/hash-functions",
+  "description": "## 机制\n\n密码学哈希函数将任意有限长度的二进制消息映射为固定位宽的密文指纹摘要。其核心安全标准由三大不可逆特性界定：原像抗性（Preimage Resistance，由哈希值反推明文在计算上不可行）、第二原像抗性（弱抗碰撞，给定明文无法伪造相同哈希的另一明文）以及碰撞抗性（强抗碰撞，无法找到任意两个相异明文使其哈希值完全相等）。\n\n## 破译历程与标准演进\n\n早期MD5与SHA-1由于存在差分路径碰撞漏洞已被密码学界彻底废弃；当前工业界主流基准为SHA-2（如SHA-256）与基于海绵结构（Sponge Construction）Keccak算法的SHA-3标准；针对密码存储场景，则改用人为引入大量内存硬度与计算迭代的Argon2与bcrypt。\n\n## 参考\n\n- [NIST Policy on Hash Functions](https://csrc.nist.gov/projects/hash-functions)\n- [FIPS PUB 180-4: Secure Hash Standard (SHS)](https://csrc.nist.gov/publications/detail/fips/180-4/final)"
+}

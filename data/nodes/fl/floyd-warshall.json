@@ -11,11 +11,13 @@
   "type": "concept",
   "ecosystems": [
     "languages_runtimes",
-    "optimization-ecosystem"
+    "optimization-ecosystem",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
     "operations-research",
-    "systems-programming"
+    "systems-programming",
+    "data-structures-and-algorithms"
   ],
   "summary": "基于动态规划在 O(V³) 时间内求任意两顶点间最短路径的多源图算法。",
   "status": "active",
@@ -31,6 +33,10 @@
       "relation_type": "uses",
       "target_id": "dynamic-programming",
       "context": "以三重循环枚举中间顶点 k 并松弛所有点对 (i, j) 之间的路径距离。"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
     }
   ]
 }

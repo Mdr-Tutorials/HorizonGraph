@@ -1,0 +1,40 @@
+{
+  "id": "simultaneous-localization-and-mapping",
+  "name": "Simultaneous Localization and Mapping",
+  "display_primary": "SLAM算法",
+  "display_secondary": "Simultaneous Localization and Mapping",
+  "aliases": [
+    "SLAM",
+    "同步定位与建图",
+    "Visual SLAM",
+    "V-SLAM"
+  ],
+  "type": "concept",
+  "domains": [
+    "spatial-computing",
+    "robotics",
+    "computer-vision"
+  ],
+  "ecosystems": [
+    "spatial-computing-ecosystem",
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "spatial-computing-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "coordinate-transform",
+      "context": "在未知环境中持续计算传感器相机本体坐标系与全局惯性世界坐标系之间的刚体位姿变换。"
+    }
+  ],
+  "summary": "智能体在未知环境中实时估计自身位姿并构建周围环境三维地图的算法技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://ieeexplore.ieee.org/document/1638022",
+  "description": "## 机制\n\n同步定位与建图（SLAM）是移动机器人与空间计算头显无锚点自主导航的核心技术。分为视觉SLAM（V-SLAM，依托单目/双目/RGB-D摄像头）与激光SLAM（Lidar-SLAM）。核心流程包括：前端视觉里程计（VO，提取图像ORB特征点或直接光度对齐，快速推算相邻帧位姿变换）、后端优化（基于非线性图优化 Bundle Adjustment 最小化重投影误差）、回环检测（Loop Closure，识别曾游历历史场景以消除长期累积漂移），以及全局稠密点云/TSDF体素建图。\n\n## 实时性与边缘受限计算\n\n头显与扫地机器人边缘嵌入式芯片功耗受限，通常采用视觉惯性里程计（VIO，如VINS-Mono与ORB-SLAM3）：利用高频低延迟的IMU加速度计与陀螺仪积分短时推算高频位姿，并利用视觉相机帧进行卡尔曼滤波或滑动窗口因子图优化校准偏置。\n\n## 参考\n\n- [Durrant-Whyte & Bailey: Simultaneous Localization and Mapping: Part I (IEEE Robotics & Automation Magazine, 2006)](https://ieeexplore.ieee.org/document/1638022)\n- [Campos et al.: ORB-SLAM3: An Accurate Open-Source Library for Visual, Visual-Inertial, and Multimap SLAM (IEEE T-RO 2021)](https://arxiv.org/abs/2007.11898)"
+}

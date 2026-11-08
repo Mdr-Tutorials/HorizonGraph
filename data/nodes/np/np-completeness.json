@@ -1,0 +1,44 @@
+{
+  "id": "np-completeness",
+  "name": "NP-Completeness",
+  "display_primary": "NP完全性",
+  "display_secondary": "NP-Completeness",
+  "aliases": [
+    "NP完全",
+    "NP完全性",
+    "NP-Complete"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "formal-methods",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "languages_runtimes",
+    "algorithms-and-theory-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-complexity",
+      "context": "通过多项式时间多对一规约严格判定NP问题中最难子集的时间复杂度下界。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "turing-machine",
+      "context": "基于非确定性图灵机在多项式时间内可验证解的判定问题形式化分类。"
+    }
+  ],
+  "summary": "NP问题类中最难的判定问题子集，具备多项式时间可规约等价性。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.claymath.org/millennium/p-vs-np-problem/",
+  "description": "## 机制\n\n如果一个判定问题既属于非确定性多项式时间类（NP），且NP中的所有问题均能在多项式时间内规约（Polynomial-Time Reduction）至该问题，则称该问题为NP完全（NP-Complete）。库克-列文定理证明了布尔可满足性问题（SAT）是首个NP完全问题，由此展开了数千种组合优化难题的等价规约网。\n\n## 理论意义与实践应对\n\n若任意一个NP完全问题存在确定性多项式时间算法，则 \\(\\text{P} = \\text{NP}\\)。在工程实践中面对NP完全问题（如旅行商问题、顶点覆盖、子集和），通用做法是放弃寻求多项式时间精确解，转而采用固定参数算法、启发式搜索、伪多项式动态规划或有理论误差上界的近似算法。\n\n## 参考\n\n- [Clay Mathematics Institute: The P vs NP Problem](https://www.claymath.org/millennium/p-vs-np-problem/)\n- [Garey & Johnson: Computers and Intractability: A Guide to the Theory of NP-Completeness](https://www.whfreeman.com)"
+}

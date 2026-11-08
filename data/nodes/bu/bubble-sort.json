@@ -8,10 +8,12 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "data-structures-and-algorithms"
   ],
   "summary": "反复遍历待排序列并比较相邻元素，逆序则交换，使大数如气泡般浮至序列顶端。",
   "status": "active",
@@ -27,6 +29,10 @@
       "relation_type": "uses",
       "target_id": "array",
       "context": "通过相邻元素两两比较并在失序时交换，单趟将最大元素移至末尾。"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "sorting-algorithm"
     }
   ]
 }

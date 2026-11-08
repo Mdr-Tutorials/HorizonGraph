@@ -1,0 +1,42 @@
+{
+  "id": "ai-alignment",
+  "name": "AI Alignment",
+  "display_primary": "AI对齐",
+  "display_secondary": "AI Alignment",
+  "aliases": [
+    "AI对齐",
+    "价值对齐",
+    "Value Alignment"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-safety",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "ai-safety-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-safety-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ai-safety"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "rlhf",
+      "context": "依托人类反馈强化学习对基础大模型进行有用性、真实性与无害性（HHH准则）价值对齐微调。"
+    }
+  ],
+  "summary": "引导人工智能系统的行为目标与人类真实意图、伦理价值保持一致的技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://openai.com/safety-standards/",
+  "description": "## 机制\n\nAI对齐（AI Alignment）旨在解决“外在优化目标（损失函数）与内在真实人类意图之间的脱节”。未对齐的智能系统可能通过产生看似合理但脱离实际的虚假回答（幻觉）、迎合提问者偏见的谄媚言论（Sycophancy）或利用环境漏洞最大化奖励得分。当前对齐主流技术路线包括监督微调（SFT）、人类反馈强化学习（RLHF）、直接偏好优化（DPO）与宪法式AI（RLAIF）。\n\n## 扩展假说与超人类对齐\n\n随着模型能力超越人类专家水平，依赖人类进行输出打分与微调的传统对齐方案面临“可扩展监督”（Scalable Oversight）困境。前沿研究正在探索弱监督引导强模型（Weak-to-Strong Generalization）、自动化辩论验证（AI Debate）以及形式化可验证对齐。\n\n## 参考\n\n- [Burns et al.: Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision (OpenAI, 2023)](https://arxiv.org/abs/2312.09390)\n- [Russell: Human Compatible: Artificial Intelligence and the Problem of Control](https://humancompatible.ai/)"
+}

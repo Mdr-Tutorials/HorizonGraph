@@ -1,0 +1,42 @@
+{
+  "id": "model-monitoring",
+  "name": "Model Monitoring",
+  "display_primary": "模型监控",
+  "display_secondary": "Model Monitoring",
+  "aliases": [
+    "模型监控",
+    "漂移监控",
+    "ML Observability"
+  ],
+  "type": "concept",
+  "domains": [
+    "mlops",
+    "software-quality"
+  ],
+  "ecosystems": [
+    "mlops-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mlops-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mlops"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "arize-phoenix",
+      "context": "利用可观测性跟踪框架监控请求延迟、错误率、特征分布偏移（PSI）与嵌入聚类离群点。"
+    }
+  ],
+  "summary": "持续跟踪生产模型输入数据分布、预测输出质量与系统健康度的可观测体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://docs.evidentlyai.com/",
+  "description": "## 机制\n\n模型监控是保障生产AI系统可靠性的最后一道防线。涵盖三层监控维度：服务系统指标（请求QPS、P99延迟、OOM崩溃率与GPU利用率）、数据分布漂移（Data Drift，通过总体稳定性指数PSI或KS检验对比当前输入与基准训练集分布），以及概念漂移（Concept Drift，现实业务规律发生剧烈变迁导致原本的输入输出映射失效）。\n\n## 延迟反馈与无真实标签监测\n\n在大量真实生产业务中（如反欺诈或借贷违约），真实结果标签往往存在数天甚至数月的反馈滞后（Delayed Feedback）。因此，模型监控系统需依托无监督统计指标（如模型输出预测分布熵值、高维Embedding嵌入向量聚类密度偏移）在缺乏真实标签的情境下提前预警性能退化风险。\n\n## 参考\n\n- [Evidently AI Documentation: ML System Monitoring](https://docs.evidentlyai.com/)\n- [Klaise et al.: Monitoring and explainability of models in production (Alibi Detect, ICML 2020 Workshop)](https://arxiv.org/abs/2007.03362)"
+}

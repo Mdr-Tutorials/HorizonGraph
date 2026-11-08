@@ -1,0 +1,38 @@
+{
+  "id": "z-algorithm",
+  "name": "Z Algorithm",
+  "display_primary": "Z算法",
+  "display_secondary": "Z Algorithm",
+  "aliases": [
+    "Z算法",
+    "扩展KMP",
+    "Z-Algorithm",
+    "Extended KMP"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kmp",
+      "context": "与KMP算法同样基于已匹配前缀信息维护右边界以实现线性多项式加速。"
+    }
+  ],
+  "summary": "在线性时间内计算字符串所有后缀与主串的最长公共前缀长度的扩展匹配算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Z_algorithm",
+  "description": "## 机制\n\nZ 算法（在中文社区常被称为扩展 KMP / ExKMP）由丹·格斯菲尔德（Dan Gusfield）形式化整理，用于在 $O(n)$ 线性时间内计算长度为 $n$ 的字符串 $S$ 的 Z 数组（Z-Array）。$Z[i]$ 定义为以位置 $i$ 开头的后缀 $S[i..n-1]$ 与字符串整个前缀 $S[0..n-1]$ 的最长公共前缀（LCP, Longest Common Prefix）的长度。\n\n算法核心维护一个区间 $[l, r]$，表示在下标 $i$ 之前所有已计算的位置中，$i' + Z[i'] - 1$ 取到最大值的匹配区间（称为 Z-box）：\n1. 若当前处理的下标 $i > r$，说明位置 $i$ 落在当前已知的匹配区间之外，从 $i$ 开始与主串前缀进行朴素暴力比对，并相应更新 $l = i$ 与新的右边界 $r$；\n2. 若 $i \\le r$，根据区间 $[l, r]$ 与前缀 $[0, r-l]$ 严格相同的性质，令 $k = i - l$：\n   - 若 $Z[k] < r - i + 1$，说明由对称性可以直接确定 $Z[i] = Z[k]$，无需任何字符比对；\n   - 若 $Z[k] \\ge r - i + 1$，说明从 $r+1$ 开始可能还会继续匹配，直接从 $r+1$ 开始继续向前扫描对比，并扩展更新右边界 $r$。\n\n## 单模式串精确匹配\n\nZ 算法提供了一种比传统 KMP 更加直观对称的单模式匹配替代方案：将模式串 $P$ 与主文本 $T$ 用未出现字符拼接为 $S = P + \\$\\$ + T$，计算整个组合串的 Z 数组。只要在属于 $T$ 的区间内出现 $Z[i] = |P|$，即说明该处完整命中了模式串。\n\n## 参考\n\n- [Gusfield: Algorithms on Strings, Trees, and Sequences: Computer Science and Computational Biology (Cambridge, 1997)](https://www.cambridge.org)\n- [Main & Lorentz: An O(n log n) Algorithm for Finding All Repetitions in a String (J. Algorithms, 1984)](https://dl.acm.org)"
+}

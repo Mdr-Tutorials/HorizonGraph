@@ -1,0 +1,38 @@
+{
+  "id": "hyperloglog",
+  "name": "HyperLogLog",
+  "display_primary": "HyperLogLog",
+  "display_secondary": "HyperLogLog Cardinality Estimator",
+  "aliases": [
+    "HyperLogLog",
+    "HLL",
+    "基数估计算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "databases"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "hash-table",
+      "context": "基于均匀哈希函数将输入映射为二进制串并统计前导零的最大出现位置。"
+    }
+  ],
+  "summary": "利用极小内存消耗与哈希前导零概率统计估计超大规模数据集基数的算法结构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/HyperLogLog",
+  "description": "## 机制\n\nHyperLogLog（HLL）由菲利普·弗拉若莱（Philippe Flajolet）等人于 2007 年提出，是流式大数据处理中计算集合基数（不同元素个数 Count-Distinct / UV）的颠覆性概率数据结构。若要精确统计十亿独立用户访问量，传统哈希表需要耗费数十吉字节内存；而 HyperLogLog **仅需 1.5 KB 内存空间即可完成百亿基数统计，标准误差率控制在 1.04/\\sqrt{m} 左右（约 1%）**。\n\n核心数学依据建立在伯努利试验之上：将每个元素通过高质量 64 位哈希函数映射为均匀分布的随机二进制比特串。连续掷硬币出现连续 $k$ 个前导零的概率为 $(1/2)^k$；因此观察到的最大前导零个数 $\\rho_{\\max}$ 反映了试验总次数大约为 $2^{\\rho_{\\max}}$。\n\n## 分桶平均与调和平均数\n\n单次试验方差极大。HyperLogLog 采用“分桶随机化”（Stochastic Averaging）：取哈希值的前 $p$ 位作为桶索引（共有 $m = 2^p$ 个独立分桶，通常 $p=14$ 即 16384 个桶），每个桶仅需 6 个比特存储该桶内观察到的最大前导零长度。最后利用调和平均数（Harmonic Mean）聚合所有桶的估计值，有效消除极端极值扰动并施加偏差校准因子 $\\alpha_m$。\n\nHyperLogLog 原生支持常数时间的集合合并（并集运算只需对对应分桶取最大值），被 Redis（PFADD/PFCOUNT）、Presto、ClickHouse 等现代数据基础设施深度集成。\n\n## 参考\n\n- [Flajolet et al.: HyperLogLog: the analysis of a near-optimal cardinality estimation algorithm (AofA, 2007)](https://hal.science/hal-00406166v2)\n- [Heule et al.: HyperLogLog in Practice: Algorithmic Engineering of a State of The Art Cardinality Estimation Algorithm (Google, EDBT 2013)](https://research.google/pubs/pub40671/)"
+}

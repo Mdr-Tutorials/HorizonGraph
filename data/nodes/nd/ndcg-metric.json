@@ -1,0 +1,38 @@
+{
+  "id": "ndcg-metric",
+  "name": "Normalized Discounted Cumulative Gain",
+  "display_primary": "NDCG指标",
+  "display_secondary": "Normalized Discounted Cumulative Gain",
+  "aliases": [
+    "NDCG",
+    "折损累积增益",
+    "NDCG Metric"
+  ],
+  "type": "metric",
+  "domains": [
+    "recommender-systems",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "recommender-systems-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recommender-metric"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "learning-to-rank",
+      "context": "衡量推荐或搜索引擎返回有序列表在考虑位置权重衰减时的综合排序质量。"
+    }
+  ],
+  "summary": "考虑相关度等级与展示位序对数衰减的列表排序质量离线评测标准。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://dl.acm.org/doi/10.1145/582415.582418",
+  "description": "## 机制\n\n归一化折损累积增益（NDCG）广泛用于信息检索与推荐系统的排序评测。折损累积增益公式为：\\(\\text{DCG}@K = \\sum_{i=1}^K \\frac{2^{rel_i} - 1}{\\log_2(i + 1)}\\)，它对高相关度物品排在列表头部给予高分，随着排位后移引入对数衰减惩罚。随后用理想最佳排位下的最大增益（IDCG）进行归一化：\\(\\text{NDCG}@K = \\frac{\\text{DCG}@K}{\\text{IDCG}@K} \\in [0, 1]\\)。\n\n## 边界与局限\n\nNDCG是完全基于单条查询/用户视角的局部相关性指标。它假定各排位间相互独立且用户完全从上到下按序浏览，未能建模结果列表内部的品类多样性（Diversity）与信息冗余问题；因此在实际系统评估中需与覆盖率、基尼系数等指标综合考量。\n\n## 参考\n\n- [Järvelin & Kekäläinen: Cumulated Gain-based Evaluation of IR Techniques (TOIS 2002)](https://dl.acm.org/doi/10.1145/582415.582418)\n- [Manning, Raghavan, Schütze: Introduction to Information Retrieval, Evaluation in IR](https://nlp.stanford.edu/IR-book/)"
+}

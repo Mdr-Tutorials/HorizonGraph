@@ -1,0 +1,42 @@
+{
+  "id": "aho-corasick",
+  "name": "Aho-Corasick Algorithm",
+  "display_primary": "AC自动机",
+  "display_secondary": "Aho-Corasick Algorithm",
+  "aliases": [
+    "AC自动机",
+    "Aho-Corasick算法",
+    "多模式串匹配算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "trie",
+      "context": "将多个目标模式串预构建为字典树作为确定性有限自动机的状态拓扑基础。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "kmp",
+      "context": "借鉴KMP的失配指针原理在Trie各节点间建立失配fail指针实现模式串快速跳转。"
+    }
+  ],
+  "summary": "将字典树与KMP失配指针结合以在线性时间内同时匹配多模式串的自动机算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm",
+  "description": "## 机制\n\nAho-Corasick 算法由阿尔弗雷德·阿霍（Alfred Aho）与玛格丽特·科拉西克（Margaret Corasick）于 1975 年提出，是处理多模式字符串匹配（Multi-Pattern String Matching）的工业级标准算法。若要在长度为 $n$ 的主文本中同时搜索 $k$ 个总长度为 $m$ 的模式串，朴素匹配耗时高达 $O(n \\cdot m)$；AC 自动机能够将检索时间彻底压缩至 **$O(n + m + z)$**（$z$ 为命中总匹配次数）。\n\n构建包含三个步骤：\n1. **构建 Trie 字典树**：将所有待匹配模式串插入一棵前缀树中，树中每个节点代表一个可能的前缀状态；\n2. **构建失配指针（Fail Pointer）**：利用广度优先搜索（BFS），为每个节点 $u$ 计算失配指针 $\\text{fail}[u]$。$\\text{fail}[u]$ 指向代表“当前前缀的最长严格真后缀”所对应的 Trie 节点，本质等价于 KMP 算法 next 数组在树形拓扑上的扩展；\n3. **输出链字典图优化（Trie Graph）**：在 BFS 阶段将所有未定义的子节点转移直接回指到其 fail 节点的对应转移，将稀疏树转换为确定性有限自动机（DFA），使文本扫描阶段每个字符恰好触发一次状态转移。\n\n## 工业应用\n\nAC 自动机在网络安全入侵检测系统（IDS，如 Snort 对恶意数据包特征签名检测）、敏感词过滤防火墙以及生物信息学 DNA 序列靶标定位中无处不在。\n\n## 参考\n\n- [Aho & Corasick: Efficient string matching: an aid to bibliographic search (CACM, 1975)](https://dl.acm.org/doi/10.1145/360825.360855)\n- [Gusfield: Algorithms on Strings, Trees, and Sequences (Cambridge University Press)](https://www.cambridge.org)"
+}

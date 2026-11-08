@@ -1,0 +1,37 @@
+{
+  "id": "greedy-algorithm",
+  "name": "Greedy Algorithm",
+  "display_primary": "贪心算法",
+  "display_secondary": "Greedy Algorithm",
+  "aliases": [
+    "贪心算法",
+    "贪心法",
+    "Greedy Method"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "mathematical-optimization"
+  ],
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-complexity",
+      "context": "贪心算法通过局部最优选择换取较低的渐进计算复杂度与实时决策能力。"
+    }
+  ],
+  "summary": "在每个决策步均做出局部最优选择以逐步构造全局解的算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://xlinux.nist.gov/dads/HTML/greedyalgo.html",
+  "description": "## 机制\n\n贪心算法在求解组合优化问题时，自顶向下迭代做出当前状态下局部最优的贪心选择，并不再回溯撤销。该策略获得全局最优解的充分必要条件通常要求问题具备贪心选择性质（全局最优解可通过局部贪心选择达到）与最优子结构（原问题的最优解包含其子问题的最优解）。\n\n## 边界与适用性\n\n典型适用场景包括哈夫曼编码、最小生成树（Prim与Kruskal算法）和Dijkstra最短路径。若问题缺乏拟阵结构或不满足贪心选择性（如0-1背包问题或旅行商问题），盲目采用贪心法则只能收敛到局部次优近似解，需退化为动态规划或分支限界法求解。\n\n## 参考\n\n- [NIST DADS: Greedy Algorithm](https://xlinux.nist.gov/dads/HTML/greedyalgo.html)\n- [Cormen et al. (CLRS): Greedy Algorithms](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)"
+}

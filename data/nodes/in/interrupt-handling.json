@@ -1,0 +1,42 @@
+{
+  "id": "interrupt-handling",
+  "name": "Interrupt Handling",
+  "display_primary": "中断处理",
+  "display_secondary": "Interrupt Handling",
+  "aliases": [
+    "中断处理",
+    "中断服务例程",
+    "ISR"
+  ],
+  "type": "concept",
+  "domains": [
+    "operating-systems",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "os-kernel-ecosystem",
+    "operating_systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "operating-system"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cpu-architecture",
+      "context": "依托处理器提供的中断向量表、可编程中断控制器与硬件寄存器快照完成上下文切换。"
+    }
+  ],
+  "summary": "处理器响应外设事件或异常时挂起当前任务并执行异步服务例程的机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://docs.kernel.org/core-api/genericirq.html",
+  "description": "## 机制\n\n中断处理使CPU无需盲目轮询即可对外部硬件设备（网卡、磁盘、定时器）或内部异常（除零、缺页）做出即时响应。硬件中断信号经由可编程中断控制器（APIC/GIC）仲裁后触发CPU硬件流水线压栈保护上下文，并按中断号从中断描述符表（IDT）跳转至中断服务例程（ISR）。\n\n## 顶半部与底半部拆分\n\n为防止长时间关中断影响系统实时响应能力，现代操作系统将中断处理严格划分为顶半部（Top Half，快速确认硬件信号、清状态后退出）与底半部（Bottom Half，依托软中断 softirq、tasklet 或工作队列在开中断环境下异步处理繁重的数据包解析与I/O排队）。\n\n## 参考\n\n- [Linux Generic IRQ Handling Documentation](https://docs.kernel.org/core-api/genericirq.html)\n- [Bovet & Cesati: Understanding the Linux Kernel, Interrupts and Exceptions](https://www.oreilly.com/library/view/understanding-the-linux/0596005652/)"
+}

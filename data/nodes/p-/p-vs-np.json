@@ -1,0 +1,42 @@
+{
+  "id": "p-vs-np",
+  "name": "P versus NP Problem",
+  "display_primary": "P vs NP问题",
+  "display_secondary": "P versus NP Problem",
+  "aliases": [
+    "P vs NP",
+    "P与NP问题",
+    "P versus NP"
+  ],
+  "type": "concept",
+  "domains": [
+    "theoretical-computer-science",
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "computational-complexity"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "polynomial-time-reduction",
+      "context": "通过多项式时间归约技术在P与NP问题类之间建立复杂性等价性证明链条。"
+    }
+  ],
+  "summary": "探讨多项式时间内可验证解的问题是否一定能在多项式时间内求解的千禧数学难题。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.claymath.org/millennium-problems/p-vs-np-problem/",
+  "description": "## 机制\n\nP vs NP 问题是克雷数学研究所列出的七大“千禧年大奖难题”之一，由斯蒂芬·库克（Stephen Cook）于 1971 年形式化提出：\n- **P 类（Polynomial Time）**：所有能够由确定性图灵机在输入规模多项式时间 $O(n^k)$ 内求解的决策问题集合。\n- **NP 类（Nondeterministic Polynomial Time）**：所有给定候选解证据（Certificate）后，能够由确定性图灵机在多项式时间内验证证据正确性的决策问题集合。\n\n核心命题聚焦于：$P = NP$ 是否成立？即“能够快速被验证答案的问题，是否也必然能够被计算机快速从头求解？”\n\n## 学界共识与影响\n\n主流计算机科学界普遍猜想 $P \\neq NP$。如果 $P = NP$ 被证明成立，现行公钥加密体系（RSA、ECC）将瞬间崩溃，整个工业优化与AI探索将被彻底颠覆；若 $P \\neq NP$，则确立了大量组合优化问题（旅行商问题、图着色）不可避免具有内在固有计算难度，促使算法设计走向近似算法、启发式算法与参数化复杂度。\n\n## 参考\n\n- [Cook: The complexity of theorem-proving procedures (STOC 1971)](https://dl.acm.org/doi/10.1145/800157.805047)\n- [Karp: Reducibility among Combinatorial Problems (Complexity of Computer Computations, 1972)](https://link.springer.com/chapter/10.1007/978-1-4684-2001-2_9)"
+}

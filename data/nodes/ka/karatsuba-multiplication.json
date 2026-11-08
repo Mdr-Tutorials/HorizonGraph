@@ -1,0 +1,38 @@
+{
+  "id": "karatsuba-multiplication",
+  "name": "Karatsuba Multiplication",
+  "display_primary": "Karatsuba大整数乘法",
+  "display_secondary": "Karatsuba Multiplication",
+  "aliases": [
+    "Karatsuba大整数乘法",
+    "Karatsuba算法",
+    "快速乘法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "mathematics"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "divide-and-conquer",
+      "context": "将高位与低位拆解并通过三次递归乘法与线性加减法降低渐近复杂度。"
+    }
+  ],
+  "summary": "利用分治思想将高位低位乘法次数缩减为三次以加速大整数相乘的快速算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Karatsuba_algorithm",
+  "description": "## 机制\n\nKaratsuba 乘法由苏联数学家阿纳托利·卡拉楚巴（Anatoly Karatsuba）于 1960 年提出（打破了著名数学家柯尔莫哥洛夫关于乘法复杂度不可能低于 $O(n^2)$ 的长年猜想），是人类发现的第一个亚二次方时间大整数相乘分治算法。\n\n设有两个 $n$ 位大整数 $X$ 与 $Y$，以基数 $B^{m}$（$m = \\lceil n/2 \\rceil$）划分为高位与低位：\n$$X = x_1 B^m + x_0, \\quad Y = y_1 B^m + y_0$$\n传统展开式 $X Y = x_1 y_1 B^{2m} + (x_1 y_0 + x_0 y_1) B^m + x_0 y_0$ 需要计算 4 次半长数字的子乘法，分治递归式为 $T(n) = 4T(n/2) + O(n)$，由主定理可知其复杂度仍为 $O(n^2)$。\n\nKaratsuba 的代数突破在于构造中间项：\n令 $z_2 = x_1 y_1$，$z_0 = x_0 y_0$，关键交叉项可写为：\n$$x_1 y_0 + x_0 y_1 = (x_1 + x_0)(y_1 + y_0) - z_2 - z_0$$\n如此一来，中间项无需额外乘法，只需计算一次中间乘积 $z_1 = (x_1 + x_0)(y_1 + y_0)$，再扣减已算出的 $z_2$ 与 $z_0$。递归子乘法次数**由 4 次缩减为严格 3 次**。\n\n## 渐近复杂度与工程阈值\n\n根据主定理情形一，递归关系式变为：\n$$T(n) = 3T(n/2) + O(n) \\implies T(n) = O(n^{\\log_2 3}) \\approx O(n^{1.585})$$\n由于递归加减法存在常数开销，现代高性能数学库（如 GNU GMP、Python 内部大数运算）采用混合门槛策略：在低于一定位数（约 30 到 60 个字）时采用汇编优化的普通竖式乘法，超出阈值时自动切换至 Karatsuba，在千万位级别再切换至基于 FFT 的 Schönhage-Strassen 算法。\n\n## 参考\n\n- [Karatsuba & Ofman: Multiplication of Many-Digital Numbers by Automata (Doklady Akad. Nauk SSSR, 1962)](https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=dan&paperid=27190&option_lang=eng)\n- [Knuth: The Art of Computer Programming, Vol. 2: Seminumerical Algorithms](https://www-cs-faculty.stanford.edu/~knuth/taocp.html)"
+}

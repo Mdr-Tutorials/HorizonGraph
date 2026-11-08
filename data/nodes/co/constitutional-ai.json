@@ -1,0 +1,41 @@
+{
+  "id": "constitutional-ai",
+  "name": "Constitutional AI",
+  "display_primary": "宪法式AI",
+  "display_secondary": "Constitutional AI",
+  "aliases": [
+    "宪法式AI",
+    "CAI",
+    "RLAIF"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-safety",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "ai-safety-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-safety-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ai-alignment"
+    },
+    {
+      "relation_type": "developed_by",
+      "target_id": "anthropic"
+    }
+  ],
+  "summary": "基于明确原则性准则与AI自我批评反馈实现自动化无害对齐的方法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback",
+  "description": "## 机制\n\n宪法式AI（Constitutional AI, CAI）由Anthropic提出，旨在解决人工反馈微调对昂贵人类标注的依赖与主观不一致性。训练过程分为两阶段：监督学习阶段，模型根据预设的“宪法原则”（包含联合国人权宣言、苹果服务准则等）自我批评并重写有害回复，生成无害SFT数据集；强化学习阶段，利用AI模型依据宪法原则对成对回复评判胜负（RLAIF），替代人类标注训练奖励模型。\n\n## 透明性与对齐可解释性\n\n相比人类标注黑盒偏好，宪法式AI将模型的价值取向完全透明化为一套公开、可版本控制、可审查的文本准则列表。当监管要求或文化环境发生变更时，团队仅需修订宪法文本即可重新引导模型对齐边界，极大增强了系统治理的确定性。\n\n## 参考\n\n- [Bai et al.: Constitutional AI: Harmlessness from AI Feedback (Anthropic, 2022)](https://arxiv.org/abs/2212.08073)\n- [Anthropic: Claude's Constitution](https://www.anthropic.com/news/claudes-constitution)"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "digital-signature",
+  "name": "Digital Signature",
+  "display_primary": "数字签名",
+  "display_secondary": "Digital Signature",
+  "aliases": [
+    "数字签名",
+    "电子签名",
+    "Digital Signature Scheme"
+  ],
+  "type": "concept",
+  "domains": [
+    "cryptography",
+    "security"
+  ],
+  "ecosystems": [
+    "cryptography-pki-ecosystem",
+    "networking_security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "cryptography-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "asymmetric-encryption",
+      "context": "发送方使用私钥对消息哈希摘要执行加密运算生成数字签名，接收方通过对应公钥验证不可否认性与完整性。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cryptographic-hash-function",
+      "context": "对任意可变长度的消息预先执行确定性哈希计算生成固定长度摘要后再实施非对称签名。"
+    }
+  ],
+  "summary": "基于公钥密码体制实现数据来源真实性、完整性与不可否认性的数学机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://csrc.nist.gov/projects/digital-signatures",
+  "description": "## 机制\n\n数字签名是非对称加密在数据鉴权领域的经典应用。签名者使用私钥对原始消息的密码学哈希摘要进行数学变换生成签名串；任何持有对应公钥的第三方均可使用验证算法校验签名合法性。数学单向性确保：第三方无法在没有私钥的情况下伪造签名，且任何对原始消息的单比特篡改都将导致摘要不匹配而验证失败。\n\n## 信任链与公钥基础设施\n\n仅凭公钥无法直接证明其持有者物理身份。现代互联网通过X.509公钥基础设施（PKI）建立分层数字证书信任链：权威证书颁发机构（CA）使用其根私钥为各机构的公钥签发数字证书，操作系统与浏览器内置受信任根CA列表逐级鉴权校验。\n\n## 参考\n\n- [NIST FIPS PUB 186-5: Digital Signature Standard (DSS)](https://csrc.nist.gov/publications/detail/fips/186-5/final)\n- [RFC 5280: Internet X.509 Public Key Infrastructure Certificate Profile](https://datatracker.ietf.org/doc/html/rfc5280)"
+}

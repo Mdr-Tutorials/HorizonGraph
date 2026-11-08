@@ -1,0 +1,42 @@
+{
+  "id": "collaborative-filtering",
+  "name": "Collaborative Filtering",
+  "display_primary": "协同过滤",
+  "display_secondary": "Collaborative Filtering",
+  "aliases": [
+    "协同过滤",
+    "CF",
+    "User-Item Filtering"
+  ],
+  "type": "concept",
+  "domains": [
+    "recommender-systems",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "recommender-systems-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recommender-system-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "recommender-system"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "matrix-factorization",
+      "context": "利用矩阵奇异值分解或交替最小二乘法将稀疏共现矩阵映射为低维隐特征空间。"
+    }
+  ],
+  "summary": "利用群体历史行为相似性预测目标用户对物品偏好的推荐算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://grouplens.org/",
+  "description": "## 机制\n\n协同过滤（CF）的核心假设是“过去有相似偏好的用户未来大概率仍有相似偏好”。主要分支包括：基于内存的邻域方法，分为基于用户的协同过滤（User-CF，根据兴趣相近的用户群做推荐）与基于物品的协同过滤（Item-CF，根据用户历史喜好物品的同现关联度做推荐）；以及基于模型的矩阵分解与图神经网络协同表示。\n\n## 优缺点与稀疏性边界\n\n协同过滤的最大优势在于完全不依赖物品本身的文本或多媒体内容理解即可挖掘非显式关联。然而，当用户和物品规模极大时，行为交互矩阵极度稀疏（稀疏度常超99.9%），直接导致共现相似度计算失真并面临严重的马太效应（热门物品过度曝光）。\n\n## 参考\n\n- [Sarwar et al.: Item-based Collaborative Filtering Recommendation Algorithms (WWW 2001)](https://dl.acm.org/doi/10.1145/371920.372071)\n- [Resnick et al.: GroupLens: An Open Architecture for Collaborative Filtering of Netnews (CSCW 1994)](https://dl.acm.org/doi/10.1145/192844.192905)"
+}

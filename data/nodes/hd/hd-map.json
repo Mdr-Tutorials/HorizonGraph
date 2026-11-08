@@ -1,0 +1,38 @@
+{
+  "id": "hd-map",
+  "name": "High-Definition Map",
+  "display_primary": "高精地图",
+  "display_secondary": "High-Definition Map",
+  "aliases": [
+    "高精地图",
+    "HD Map",
+    "高精度电子地图"
+  ],
+  "type": "concept",
+  "domains": [
+    "autonomous-driving",
+    "geospatial-computing"
+  ],
+  "ecosystems": [
+    "autonomous-vehicles-ecosystem",
+    "geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "autonomous-driving-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "simultaneous-localization-and-mapping",
+      "context": "基于车载激光SLAM与视觉建图流水线实现车道线与路侧交通设施的厘米级点云配准。"
+    }
+  ],
+  "summary": "具备厘米级绝对精度与精细车道级拓扑语义的自动驾驶先验地图。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.iso.org/standard/79361.html",
+  "description": "## 机制\n\n高精地图（HD Map）为自动驾驶车辆提供超越传感器物理视距的先验环境几何与语义信息。数据精度达到厘米级别（通常绝对误差小于20cm），内容涵盖：高精度道路几何图层（车道中心线、道路坡度、曲率、超高）、车道属性图层（车道宽度、限速要求、变道虚实线）以及路侧交通设施图层（交通信号灯关联、停止线、路口转向导引）。\n\n## 无图化演进与轻地图方案\n\n传统高精地图依赖昂贵测绘车定期采集，面临采图资质受限、制作周期长以及“鲜度不足”（无法实时反映道路临时施工改道）等致命瓶颈。现代自动驾驶算法逐步推行“重感知、轻地图”（无图方案），利用在线时序局部建图（如 MapTR）实时从车机相机中动态预测生成当前行驶区域的车道级拓扑。\n\n## 参考\n\n- [ISO 22726-1:2020 Intelligent transport systems - Dynamic data and map database specification](https://www.iso.org/standard/79361.html)\n- [Liao et al.: MapTR: Structured Modeling and Efficient Online Vectorized HD Map Construction (ICLR 2023)](https://arxiv.org/abs/2208.14437)"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "cartesian-tree",
+  "name": "Cartesian Tree",
+  "display_primary": "笛卡尔树",
+  "display_secondary": "Cartesian Tree",
+  "aliases": [
+    "笛卡尔树",
+    "Cartesian-Tree",
+    "笛卡尔二叉树"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "binary-search-tree"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "heap",
+      "context": "节点按序列下标满足二叉搜索树顺序，同时按键值大小维持二叉堆性质。"
+    }
+  ],
+  "summary": "同时满足中序遍历下标严格递增与节点权值二叉堆偏序性质的树形数据结构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Cartesian_tree",
+  "description": "## 机制\n\n笛卡尔树（Cartesian Tree）由让·维耶曼（Jean Vuillemin）于 1980 年提出，是一种由一组不重复的键值对 $(k, v)$ 构建的二叉树。在数组序列处理中，键 $k$ 为元素在原始序列中的数组索引下标，值 $v$ 为该位置存储的数值权重。笛卡尔树严格遵循两条结构约束：\n1. **中序遍历性质（BST 序）**：整棵树的中序遍历结果完全等价于原始数组下标顺序（左子节点下标 < 父节点下标 < 右子节点下标）；\n2. **堆性质（Heap 序）**：每个节点的权重 $v$ 小于（小顶堆）或大于（大顶堆）其左子与右子节点的权重。\n\n对于任意元素互异的数值数组，其对应的笛卡尔树拓扑结构是唯一确定的。\n\n## 单调栈线性建树与 RMQ\n\n借助单调栈（Monotonic Stack），可在严格 $O(n)$ 线性时间内自左向右一次扫描完成笛卡尔树建树：栈内始终维持当前树右脊（Right Spine）上的节点链条，新节点插入时只需弹栈找到其最近较小节点。\n\n在理论应用中，数组区间 $[l, r]$ 内的最小值查询（Range Minimum Query, RMQ）在数学上完全等价于笛卡尔树中节点 $l$ 与节点 $r$ 的最近公共祖先（LCA, Lowest Common Ancestor）。结合 Bender-Farach-Colton 算法，可实现 $O(n)$ 预处理与 $O(1)$ 在线常数回答 RMQ 的理论极致。\n\n## 参考\n\n- [Vuillemin: A data structure for manipulating priority queues (CACM, 1980)](https://dl.acm.org/doi/10.1145/358886.358895)\n- [Bender & Farach-Colton: The LCA Problem Revisited (LATIN 2000)](https://link.springer.com/chapter/10.1007/10719839_9)"
+}

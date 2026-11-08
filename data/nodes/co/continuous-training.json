@@ -1,0 +1,42 @@
+{
+  "id": "continuous-training",
+  "name": "Continuous Training",
+  "display_primary": "持续训练",
+  "display_secondary": "Continuous Training",
+  "aliases": [
+    "持续训练",
+    "CT",
+    "Automated Retraining"
+  ],
+  "type": "concept",
+  "domains": [
+    "mlops",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "mlops-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mlops-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mlops"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "model-monitoring",
+      "context": "当监控组件捕捉到底层生产数据漂移或准确率指标显著劣变时自动触发再训练流水线。"
+    }
+  ],
+  "summary": "当环境变化或发生数据漂移时自动触发模型再训练与评估验证的流水线。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning",
+  "description": "## 机制\n\n持续训练（Continuous Training, CT）是高级MLOps成熟度模型的核心标志。传统模式下模型再训练依赖人工发现指标退化后离线操作；持续训练流水线通过预设触发器自动化全过程：定时周期触发、事件驱动触发（新标注数据达到阈值）或基于模型监控服务发出的数据分布漂移告警触发，自动拉取新数据重新训练并执行基准对抗测试。\n\n## 验证与金丝雀安全门\n\n自动重训的模型绝不能盲目直接全量上线。流水线需设置严密的质量验证门禁（Validation Gate）：将新旧候选模型在影子流量（Shadow Traffic）或隔离的金丝雀流量中运行，经过统计检验（A/B测试确认业务指标无损且无安全合规退化）后，方可由发布编排系统无缝切换路由。\n\n## 参考\n\n- [Google MLOps: Automated Retraining Pipelines](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning#mlops_level_2_cicd_pipeline_automation)\n- [Microsoft Azure Machine Learning: Continuous Training Pipeline Patterns](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/ai/mlops-python)"
+}

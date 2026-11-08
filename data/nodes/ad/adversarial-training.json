@@ -11,11 +11,13 @@
   "type": "concept",
   "ecosystems": [
     "open-source-ai-ecosystem",
-    "cybersecurity-ecosystem"
+    "cybersecurity-ecosystem",
+    "ai-safety-ecosystem"
   ],
   "domains": [
     "security",
-    "machine-learning"
+    "machine-learning",
+    "ai-safety"
   ],
   "summary": "在训练集主动混入对抗样本重新迭代训练模型，以提高模型防御对抗扰动的鲁棒性。",
   "status": "active",

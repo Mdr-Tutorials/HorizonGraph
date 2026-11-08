@@ -1,0 +1,42 @@
+{
+  "id": "system-call",
+  "name": "System Call",
+  "display_primary": "系统调用",
+  "display_secondary": "System Call",
+  "aliases": [
+    "系统调用",
+    "Syscall",
+    "Kernel Call"
+  ],
+  "type": "concept",
+  "domains": [
+    "operating-systems",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "os-kernel-ecosystem",
+    "operating_systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "operating-system"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "interrupt-handling",
+      "context": "用户空间程序通过陷入指令或软件中断引发特权级由Ring 3切换至Ring 0并进入内核派发例程。"
+    }
+  ],
+  "summary": "用户态程序请求操作系统内核提供特权服务与硬件交互的受控编程接口。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://man7.org/linux/man-pages/man2/syscalls.2.html",
+  "description": "## 机制\n\n系统调用是用户空间与内核特权空间之间的安全隔离边界。应用程序通过专用指令（如 x86-64 的 `syscall` 或 ARM 的 `svc`）触发特权级跃迁，CPU 保存用户态上下文并将执行权切换至内核预设的系统调用表（sys_call_table），由内核验证用户指针合法性并执行文件I/O、内存映射或进程派生。\n\n## 开销与优化\n\n每次系统调用伴随寄存器上下文压栈、特权级切换、用户态/内核态页表隔离（KPTI防熔断攻击）以及可能的TLB开销。为规避频繁微小系统调用开销，工业界演进出虚拟动态共享对象（vDSO，在用户态直接读取只读内核时间变量）与异步I/O环形缓冲区（io_uring）。\n\n## 参考\n\n- [Linux Programmer's Manual: syscalls(2)](https://man7.org/linux/man-pages/man2/syscalls.2.html)\n- [POSIX.1-2024 Base Specifications](https://pubs.opengroup.org/onlinepubs/9799919799/)"
+}

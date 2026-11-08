@@ -8,7 +8,8 @@
   ],
   "type": "concept",
   "domains": [
-    "distributed-systems"
+    "distributed-systems",
+    "theoretical-computer-science"
   ],
   "relations": [
     {
@@ -26,5 +27,8 @@
   "last_reviewed": "2026-08-30",
   "importance": 5,
   "popular": 55,
-  "official_site": "https://en.wikipedia.org/wiki/CAP_theorem"
+  "official_site": "https://en.wikipedia.org/wiki/CAP_theorem",
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem"
+  ]
 }

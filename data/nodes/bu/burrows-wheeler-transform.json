@@ -1,0 +1,38 @@
+{
+  "id": "burrows-wheeler-transform",
+  "name": "Burrows-Wheeler Transform",
+  "display_primary": "BWT变换",
+  "display_secondary": "Burrows-Wheeler Transform",
+  "aliases": [
+    "BWT变换",
+    "块排序压缩变换",
+    "Burrows-Wheeler变换"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "information-theory"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sorting-algorithm",
+      "context": "对字符串所有循环移位生成的方阵行按字典序执行全局排序。"
+    }
+  ],
+  "summary": "通过对字符串所有循环移位排序重排字符以大幅提升后续熵编码压缩率的可逆变换。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform",
+  "description": "## 机制\n\nBurrows-Wheeler 变换（BWT）由迈克尔·伯罗斯（Michael Burrows）与大卫·惠勒（David Wheeler）于 1994 年提出，是一种并不直接压缩数据、而是通过置换重排字符顺序以极大幅度降低数据信息熵的可逆无损前置变换算法。\n\n正向变换流程：\n1. 给定长度为 $n$ 的字符串 $S$，在末尾附加一个字典序最小的终止符 $\\$$；\n2. 构建一个 $n \\times n$ 的方阵，每一行对应原字符串的一个循环右移位（Cyclic Shift）；\n3. 将方阵中所有行按字典序进行升序排序；\n4. 提取排序后矩阵的**最后一列（L 列）**拼接为输出字符串 $L$，并记录原始字符串在排序矩阵中的行号索引。\n\n## 聚类效应与 LF 映射逆向还原\n\n由于排序基于整行的字典序，拥有相同上下文后缀的字符必然被聚集到相邻的行中，导致其对应的前驱字符（L 列）集中出现大段大段完全相同的连续字符（Run of Identical Characters）。这使得后续配合游程编码（RLE）或移动到前端变换（MTF）与霍夫曼编码时能达到逼近理论极限的高压缩比（经典工业压缩工具 bzip2 的核心内核）。\n\n逆向还原依托极其精妙的 **LF 映射性质（Last-to-First Mapping）**：对于任意字符，它在 L 列中出现的相对次序与它在第一列（F 列）中出现的相对次序严格保持一致。仅凭 L 列和字符频次表，无需保存矩阵中间内容即可在线性时间内完好无损地逆向重构出原始输入串。\n\n## 参考\n\n- [Burrows & Wheeler: A Block-sorting Lossless Data Compression Algorithm (SRC Research Report 124, 1994)](https://www.hpl.hp.com/techreports/Compaq-DEC/SRC-RR-124.pdf)\n- [Ferragina & Manzini: Opportunistic Data Structures with Applications (FOCS 2000, FM-index)](https://ieeexplore.ieee.org/document/892127)"
+}

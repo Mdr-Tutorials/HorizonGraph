@@ -1,0 +1,39 @@
+{
+  "id": "differential-privacy",
+  "name": "Differential Privacy",
+  "display_primary": "差分隐私",
+  "display_secondary": "Differential Privacy",
+  "aliases": [
+    "差分隐私",
+    "DP",
+    "Epsilon-Differential Privacy"
+  ],
+  "type": "concept",
+  "domains": [
+    "privacy-and-compliance",
+    "cryptography",
+    "statistics"
+  ],
+  "ecosystems": [
+    "privacy-compliance-ecosystem",
+    "cybersecurity-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "privacy-compliance-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "privacy-preserving-computation",
+      "context": "在统计分析或机器学习梯度下降更新中注入校准拉普拉斯/高斯噪声以提供数学严格的隐私保护保证。"
+    }
+  ],
+  "summary": "通过在数据输出中注入可控噪声以在数学上保证个体无法被推断的隐私技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.census.gov/programs-surveys/decennial-census/decade/2020/planning-management/process/disclosure-avoidance/differential-privacy.html",
+  "description": "## 机制\n\n差分隐私由Cynthia Dwork等学者提出，提供严格的信息论数学可证明性。若随机化算法 \\(\\mathcal{M}\\) 对任意相差单条记录的相邻数据集 \\(D_1, D_2\\) 与任意输出子集 \\(S\\)，均满足 \\(\\Pr[\\mathcal{M}(D_1) \\in S] \\le e^\\epsilon \\Pr[\\mathcal{M}(D_2) \\in S] + \\delta\\)，则称 \\(\\mathcal{M}\\) 满足 \\((\\epsilon, \\delta)\\)-差分隐私。隐私预算 \\(\\epsilon\\) 严格量化了攻击者能否分辨特定个体是否在数据集中。\n\n## 机制机制与差分隐私SGD\n\n基础加噪机制包括拉普拉斯机制与高斯机制。在机器学习领域，差分隐私随机梯度下降（DP-SGD）在反向传播计算单样本梯度时强制执行梯度裁剪（Gradient Clipping）并添加高斯噪声，在保护模型不记忆训练集敏感隐私数据的同时完成模型收敛。\n\n## 参考\n\n- [Dwork & Roth: The Algorithmic Foundations of Differential Privacy (Foundations and Trends in TCS, 2014)](https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf)\n- [Abadi et al.: Deep Learning with Differential Privacy (CCS 2016)](https://arxiv.org/abs/1607.00133)"
+}

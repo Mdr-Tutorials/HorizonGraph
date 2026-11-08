@@ -10,12 +10,14 @@
   "type": "concept",
   "ecosystems": [
     "llm-agent-ecosystem",
-    "cybersecurity-ecosystem"
+    "cybersecurity-ecosystem",
+    "ai-safety-ecosystem"
   ],
   "domains": [
     "security",
     "natural-language-processing",
-    "agent-development"
+    "agent-development",
+    "ai-safety"
   ],
   "relations": [
     {
@@ -26,6 +28,10 @@
       "relation_type": "uses",
       "target_id": "rag",
       "context": "间接注入可借 RAG 返回的不可信文档传入恶意指令；RAG 本身不等于提示注入。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "ai-safety"
     }
   ],
   "summary": "让模型将不可信输入当作行为指令，偏离原定任务。",

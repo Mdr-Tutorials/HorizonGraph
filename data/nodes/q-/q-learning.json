@@ -1,0 +1,38 @@
+{
+  "id": "q-learning",
+  "name": "Q-Learning",
+  "display_primary": "Q学习",
+  "display_secondary": "Q-Learning",
+  "aliases": [
+    "Q学习",
+    "Q-Learning",
+    "Off-Policy TD"
+  ],
+  "type": "concept",
+  "domains": [
+    "reinforcement-learning",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "open-source-ai-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "reinforcement-learning-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "markov-decision-process",
+      "context": "基于贝尔曼最优方程在离散状态动作空间中利用时序差分误差迭代收敛至最优动作价值函数。"
+    }
+  ],
+  "summary": "利用时序差分误差无模型学习最优动作价值Q函数的经典异策略强化学习。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://link.springer.com/article/10.1007/BF00992698",
+  "description": "## 机制\n\nQ-Learning 是无模型（Model-Free）时序差分学习的基石算法。其更新规则为：\\(Q(s, a) \\leftarrow Q(s, a) + \\alpha [r + \\gamma \\max_{a'} Q(s', a') - Q(s, a)]\\)。其关键特征在于属于异策略（Off-Policy）：行为策略（如 \\(\\epsilon\\)-贪心）负责探索环境收集样本，而目标更新直接采用贝尔曼最优算子 \\(\\max_{a'} Q(s', a')\\)。\n\n## 深度扩展与高估偏差\n\n在连续高维状态空间下，Q值表扩展为深度Q网络（DQN），引入经验回放（Experience Replay）与目标网络（Target Network）打破样本相关性。由于 \\(\\max\\) 算子容易受噪声扰动导致Q值严重高估，后续演化出Double DQN与Dueling DQN改进算法。\n\n## 参考\n\n- [Watkins & Dayan: Q-learning (Machine Learning, 1992)](https://link.springer.com/article/10.1007/BF00992698)\n- [Mnih et al.: Human-level control through deep reinforcement learning (Nature, 2015)](https://www.nature.com/articles/nature14236)"
+}

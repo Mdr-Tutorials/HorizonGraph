@@ -1,0 +1,41 @@
+{
+  "id": "deterministic-finite-automaton",
+  "name": "Deterministic Finite Automaton",
+  "display_primary": "确定有限状态自动机",
+  "display_secondary": "Deterministic Finite Automaton",
+  "aliases": [
+    "确定有限状态自动机",
+    "DFA",
+    "确定有限自动机"
+  ],
+  "type": "concept",
+  "domains": [
+    "theoretical-computer-science",
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "nondeterministic-finite-automaton"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "chomsky-hierarchy"
+    }
+  ],
+  "summary": "转移状态完全唯一确定的有限状态自动机，正规语言与词法分析的底层计算模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Deterministic_finite_automaton",
+  "description": "## 机制\n\n确定有限状态自动机（DFA）是一个形式化的五元组 $M = (Q, \\Sigma, \\delta, q_0, F)$：其中 $Q$ 为有限状态集合，$\\Sigma$ 为有限输入字母表，$\\delta: Q \\times \\Sigma \\to Q$ 为确定性状态转移函数，$q_0 \\in Q$ 为初始状态，$F \\subseteq Q$ 为接受状态集。\n\nDFA 的“确定性”体现在：对于任意状态 $q$ 和输入字符 $a$，转移函数 $\\delta(q, a)$ 产生且仅产生唯一的后继状态；且不存在无需消耗字符的 $\\epsilon$ 空转移。给定长度为 $n$ 的输入串，DFA 可以在严格 $O(n)$ 线性时间内一步不停顿地扫描并完成接受或拒绝判断。\n\n## 最小化与应用\n\n任何正规语言（Regular Language）都存在唯一的最小状态 DFA。通过霍普克罗夫特算法（Hopcroft's Algorithm）可在 $O(|\\Sigma| n \\log n)$ 时间内完成状态等价类划分与合并。在工业界，DFA 是正则表达式引擎（如 RE2、Rust regex）与词法生成器（Flex/Lex）的核心引擎，从数学原理上杜绝了非确定回溯导致的 ReDoS 安全灾难。\n\n## 参考\n\n- [Hopcroft: An n log n algorithm for minimizing states in a finite automaton (Theory of Machines and Computations, 1971)](https://dl.acm.org)\n- [Cox: Regular Expression Matching Can Be Simple And Fast (2007)](https://swtch.com/~rsc/regexp/regexp1.html)"
+}

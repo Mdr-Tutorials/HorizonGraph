@@ -1,0 +1,44 @@
+{
+  "id": "ai-safety",
+  "name": "AI Safety",
+  "display_primary": "AI安全",
+  "display_secondary": "AI Safety",
+  "aliases": [
+    "AI安全",
+    "人工智能安全",
+    "AI Safety & Alignment"
+  ],
+  "type": "concept",
+  "domains": [
+    "ai-safety",
+    "security",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "ai-safety-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "ai-safety-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ai-alignment",
+      "context": "确保人工智能系统的高级优化目标与人类价值观、意图及伦理道德边界保持协调一致。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "prompt-injection",
+      "context": "研究防范攻击者通过未过滤外部数据输入劫持大语言模型指令流的安全防御机制。"
+    }
+  ],
+  "summary": "预防人工智能系统产生意外危害、失控风险与恶意滥用的系统化工程学科。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.nist.gov/itl/ai-risk-management-framework",
+  "description": "## 机制\n\nAI安全覆盖技术安全与治理风险两个宏观层次。技术层面涵盖对抗鲁棒性（防范对抗样本与数据投毒）、模型安全护栏（过滤违法有害输出）、机制可解释性、防越狱对抗测试，以及失控风险缓解；治理层面涉及算法透明度、隐私保护合规、知识产权归属与高风险AI系统全生命周期风险管理（如NIST AI RMF标准框架）。\n\n## 能力与安全的权衡\n\n大模型能力的扩展（如自主代码执行、外部工具调用与多智能体自我演化）同时成倍放大了潜在攻击面。过强的安全拒绝机制可能损伤模型的正常问答推理能力（超反思过度拒答），如何在最大化有用性（Helpfulness）的同时严密守住无害性（Harmlessness）是AI安全工程的核心挑战。\n\n## 参考\n\n- [NIST AI Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/itl/ai-risk-management-framework)\n- [Amodei et al.: Concrete Problems in AI Safety (arXiv, 2016)](https://arxiv.org/abs/1606.06565)"
+}

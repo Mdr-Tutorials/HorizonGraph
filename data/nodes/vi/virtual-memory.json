@@ -11,7 +11,8 @@
     "linux-gnu-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "operating-systems"
   ],
   "relations": [
     {
@@ -32,6 +33,10 @@
       "relation_type": "uses",
       "target_id": "page-fault",
       "context": "按需映射和受保护页面通过页故障进入内核处理。"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "operating-system"
     }
   ],
   "summary": "以地址翻译和权限隔离组织进程地址空间的机制。",

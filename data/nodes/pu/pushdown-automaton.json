@@ -1,0 +1,37 @@
+{
+  "id": "pushdown-automaton",
+  "name": "Pushdown Automaton",
+  "display_primary": "下推自动机",
+  "display_secondary": "Pushdown Automaton",
+  "aliases": [
+    "下推自动机",
+    "PDA",
+    "栈式自动机"
+  ],
+  "type": "concept",
+  "domains": [
+    "theoretical-computer-science",
+    "language-tooling"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "languages_runtimes"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "chomsky-hierarchy"
+    }
+  ],
+  "summary": "配备后进先出栈式辅助存储以识别上下文无关语言并支撑语法分析的计算模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Pushdown_automaton",
+  "description": "## 机制\n\n下推自动机（PDA）是在有限状态自动机基础上引入无限容量“后进先出”（LIFO）栈存储的计算机器模型，形式化表述为七元组 $M = (Q, \\Sigma, \\Gamma, \\delta, q_0, Z_0, F)$，其中 $\\Gamma$ 为栈字母表，$Z_0$ 为初始栈底符号。状态转移函数不仅依赖当前状态与输入字符，还需弹出栈顶符号，并根据规则将新符号串压入栈中。\n\n栈结构的引入赋予了自动机对历史深度和对称嵌套的记忆能力，使其能够识别经典上下文无关语言（如配对括号语言 $\\{0^n 1^n \\mid n \\ge 0\\}$），而这类语言已被泵引理（Pumping Lemma）严格证明无法被普通有限状态机识别。\n\n## 确定性与语法解析器\n\n与有限状态机不同，确定性下推自动机（DPDA）的表达能力弱于非确定下推自动机（NPDA）。识别全部上下文无关语言必须依赖 NPDA；而 DPDA 所识别的语言类恰好对应确定性上下文无关语言（DCFL），这构成了现代编译器自顶向下 LL(k) 与自底向上 LR(k) 高效确定性语法分析算法的理论底层。\n\n## 参考\n\n- [Chomsky: Context-free grammars and pushdown storage (MIT RLE QPR, 1962)](https://dspace.mit.edu)\n- [Aho, Lam, Sethi, Ullman: Compilers: Principles, Techniques, and Tools (Dragon Book)](https://www.pearson.com)"
+}

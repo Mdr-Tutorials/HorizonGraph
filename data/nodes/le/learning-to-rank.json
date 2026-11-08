@@ -1,0 +1,42 @@
+{
+  "id": "learning-to-rank",
+  "name": "Learning to Rank",
+  "display_primary": "排序学习",
+  "display_secondary": "Learning to Rank",
+  "aliases": [
+    "排序学习",
+    "LTR",
+    "Machine Learned Ranking"
+  ],
+  "type": "concept",
+  "domains": [
+    "recommender-systems",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "recommender-systems-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recommender-system-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "recommender-system"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "ndcg-metric",
+      "context": "采用位置折损累积增益作为排序损失函数的评价目标与超参数调优基准。"
+    }
+  ],
+  "summary": "应用机器学习算法训练模型以优化文档或商品列表整体顺序的技术体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.microsoft.com/en-us/research/project/letor-learning-to-rank-for-information-retrieval/",
+  "description": "## 机制\n\n排序学习（LTR）是信息检索与推荐精排的核心技术体系。依据损失函数对排序位置的建模方式划分为三大流派：单文档法（Pointwise，将排序退化为回归或二分类预测单项相关度）、文档对法（Pairwise，如RankNet，建模成对偏序关系判断项A是否应排在项B之前）与列表法（Listwise，如LambdaMART与SoftRank，直接以整个结果列表的NDCG或MAP作为全局优化目标）。\n\n## 工业实现与树模型到深度学习\n\n工业界早年以GBDT树模型（如LambdaMART与LightGBM）主导，近年来在推荐精排场景全面转向Wide&Deep、DeepFM、DLRM等深度点击率预估模型，实现自动特征交叉与端到端高维稀疏特征嵌入。\n\n## 参考\n\n- [Liu: Learning to Rank for Information Retrieval (Foundations and Trends in IR, 2009)](https://www.nowpublishers.com/article/Details/INR-016)\n- [Burges: From RankNet to LambdaRank to LambdaMART: An Overview (Microsoft Research, 2010)](https://www.microsoft.com/en-us/research/publication/from-ranknet-to-lambdarank-to-lambdamart-an-overview/)"
+}

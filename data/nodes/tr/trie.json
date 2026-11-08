@@ -9,7 +9,8 @@
   ],
   "type": "concept",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {
@@ -21,5 +22,8 @@
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 3
+  "importance": 3,
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem"
+  ]
 }

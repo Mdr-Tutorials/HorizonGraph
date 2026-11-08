@@ -8,11 +8,13 @@
   ],
   "type": "specification",
   "ecosystems": [
-    "hardware_iot"
+    "hardware_iot",
+    "autonomous-vehicles-ecosystem"
   ],
   "domains": [
     "embedded-systems",
-    "industrial-automation"
+    "industrial-automation",
+    "autonomous-driving"
   ],
   "abstraction_level": "hardware",
   "importance": 4,

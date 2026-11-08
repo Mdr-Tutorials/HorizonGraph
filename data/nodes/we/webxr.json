@@ -1,0 +1,38 @@
+{
+  "id": "webxr",
+  "name": "WebXR Device API",
+  "display_primary": "WebXR设备API",
+  "display_secondary": "WebXR Device API",
+  "aliases": [
+    "WebXR",
+    "WebVR",
+    "WebXR Device API"
+  ],
+  "type": "specification",
+  "abstraction_level": "runtime_vm",
+  "domains": [
+    "spatial-computing",
+    "web-development"
+  ],
+  "ecosystems": [
+    "spatial-computing-ecosystem",
+    "web_frontend"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "xr-specification"
+    },
+    {
+      "relation_type": "implements",
+      "target_id": "spatial-computing"
+    }
+  ],
+  "summary": "W3C制定的允许在Web浏览器中直接访问与渲染VR和AR设备的标准API。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.w3.org/TR/webxr/",
+  "description": "## 机制\n\nWebXR Device API 是 W3C 沉浸式网络工作组制定的下一代 Web 标准（取代历史 WebVR）。它允许网页前端 JavaScript 应用程序直接枚举并连接用户的头戴显示设备与空间交互手柄。标准定义了专用的 `XRSession` 会话生命周期、双目视图姿态投影矩阵检索、空间参考坐标系（`XRReferenceSpace`）以及与 WebGL/WebGPU 深度集成的渲染帧循环回调。\n\n## 免安装分发优势\n\nWebXR 的最大价值在于消除了传统XR应用程序动辄数十吉字节客户端安装包的下载门槛。用户只需在头显浏览器中打开一个网址链接，点击“进入VR”按钮即可立即步入元宇宙展厅、三维数据可视化或多人互动空间。\n\n## 参考\n\n- [W3C WebXR Device API Specification](https://www.w3.org/TR/webxr/)\n- [MDN Web Docs: WebXR Device API](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API)"
+}

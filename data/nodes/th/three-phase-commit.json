@@ -1,0 +1,36 @@
+{
+  "id": "three-phase-commit",
+  "name": "Three-Phase Commit",
+  "display_primary": "三阶段提交",
+  "display_secondary": "Three-Phase Commit",
+  "aliases": [
+    "三阶段提交",
+    "3PC",
+    "Three-Phase Commit Protocol"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "cloud_native"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "distributed-systems"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "two-phase-commit"
+    }
+  ],
+  "summary": "在两阶段提交中引入预提交阶段与超时机制以缓解协调者单点阻塞的原子提交协议。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Three-phase_commit_protocol",
+  "description": "## 机制\n\n三阶段提交（3PC）由戴尔·斯金（Dale Skeen）于 1981 年提出，旨在解决经典两阶段提交（2PC）中协调者宕机时参与者陷入无限等待阻塞（Blocking）的致命缺陷。3PC 将事务提交过程解耦为三个严格按序推进的阶段，并在协调者与参与者两端均引入了完善的超时处理机制：\n\n1. **CanCommit 阶段（询问投票）**：协调者向所有参与者发送 CanCommit 请求。参与者评估自身资源后仅返回 Yes/No 意向，**此时并不锁定底层数据库真实业务资源**；\n2. **PreCommit 阶段（预提交准备）**：若全员同意，协调者广播 PreCommit。参与者正式执行事务操作、写入 Undo/Redo 日志但不最终提交，随后返回 Ack；\n3. **DoCommit 阶段（最终提交）**：协调者收到全部 Ack 后广播 DoCommit，各节点正式提交事务并释放资源。\n\n## 非阻塞性与网络分区代价\n\n3PC 的重大突破在于消除了单点故障阻塞：在 PreCommit 之后，若协调者发生崩溃或通信超时，参与者可以安全地推断“所有节点均已成功通过第一阶段”，从而能够自主在超时后决定推进最终 Commit，避免了资源被长久锁死。\n\n然而，3PC 在发生网络分区（Network Partition）脑裂时可能导致不同子网络一个 Commit、另一个 Abort 的数据不一致分裂，且引入三次网络往返导致延迟大幅增加。现代分布式数据库普遍转向基于 Paxos/Raft 多数派租约保证的提交协议。\n\n## 参考\n\n- [Skeen: Nonblocking commit protocols (ACM SIGMOD, 1981)](https://dl.acm.org/doi/10.1145/582318.582339)\n- [Bernstein, Hadzilacos, Goodman: Concurrency Control and Recovery in Database Systems (Addison-Wesley)](https://www.microsoft.com/en-us/research/publication/concurrency-control-and-recovery-in-database-systems/)"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "byzantine-generals-problem",
+  "name": "Byzantine Generals' Problem",
+  "display_primary": "拜占庭将军问题",
+  "display_secondary": "Byzantine Generals' Problem",
+  "aliases": [
+    "拜占庭将军问题",
+    "拜占庭容错问题",
+    "Byzantine Fault"
+  ],
+  "type": "concept",
+  "domains": [
+    "distributed-systems",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "cloud_native"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theory"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "digital-signature",
+      "context": "引入公钥数字签名以防止叛徒篡改历史消息，将容错阈值放宽至n >= m + 2。"
+    }
+  ],
+  "summary": "系统存在任意伪造与恶意对抗节点时达成分布式一致性的经典理论难题。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://en.wikipedia.org/wiki/Byzantine_fault",
+  "description": "## 机制\n\n拜占庭将军问题（Byzantine Generals' Problem）由莱斯利·兰伯特（Leslie Lamport）、罗伯特·肖斯塔克（Robert Shostak）与马歇尔·皮斯（Marshall Pease）于 1982 年提出，用于形式化描述分布式容错计算中最极端的错误模型——拜占庭故障（Byzantine Fault）。\n\n模型设定一组拜占庭军队将军围攻敌城，必须通过信使通信就“进攻”或“撤退”达成完全一致的行动决策。然而将军中可能存在背叛者（Traitor），他们可以故意向不同将军发送互相矛盾的消息、篡改转发信息、或者干脆保持沉默以诱骗忠诚将军陷入全军覆没的灾难。\n\n## 3m+1 容错定理与数字签名\n\n论文得出了里程碑式的数学结论：\n1. **口信传递（Oral Messages）**：在无加密防伪手段的纯口信模型下，若叛徒将军人数为 $m$，则系统总将军人数必须严格满足 $n \\ge 3m + 1$（即恶意节点比例必须小于 $1/3$），系统才可能达成一致性。当 $n \\le 3m$ 时，任何算法在数学上都不可能解决问题（如 3 个将军中只要有 1 个叛徒便无法达成一致）；\n2. **签名消息（Signed Messages）**：若引入不可伪造的非对称公钥密码学数字签名，叛徒无法篡改忠诚将军此前签署的历史指令，容错阈值大幅放宽至任意 $n \\ge m + 2$。\n\n拜占庭容错理论（BFT）催生了 PBFT 实用共识算法，并成为区块链与 Web3 去中心化账本（以太坊、比特币工作量证明 PoW 与权益证明 PoS）对抗双花攻击与恶意合谋的理论基石。\n\n## 参考\n\n- [Lamport, Shostak, Pease: The Byzantine Generals Problem (ACM TOPLAS, 1982)](https://dl.acm.org/doi/10.1145/357172.357176)\n- [Castro & Liskov: Practical Byzantine Fault Tolerance (OSDI 1999)](https://www.usenix.org/conference/osdi-99/practical-byzantine-fault-tolerance)"
+}

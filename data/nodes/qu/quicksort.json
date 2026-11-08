@@ -8,12 +8,17 @@
   ],
   "type": "concept",
   "domains": [
-    "programming-languages"
+    "programming-languages",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "sorting-algorithm"
     }
   ],
   "summary": "分治排序的事实标准，平均 O(n log n) 且常数小。",

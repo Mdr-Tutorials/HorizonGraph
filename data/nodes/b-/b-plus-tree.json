@@ -11,11 +11,13 @@
   "type": "concept",
   "ecosystems": [
     "database-ecosystem",
-    "languages_runtimes"
+    "languages_runtimes",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
     "databases",
-    "systems-programming"
+    "systems-programming",
+    "data-structures-and-algorithms"
   ],
   "summary": "所有数据记录均存放在双向链接叶子节点的多路自平衡索引树，数据库存储引擎基石。",
   "status": "active",

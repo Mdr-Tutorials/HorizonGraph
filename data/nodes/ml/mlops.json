@@ -1,0 +1,49 @@
+{
+  "id": "mlops",
+  "name": "MLOps",
+  "display_primary": "机器学习运维",
+  "display_secondary": "MLOps",
+  "aliases": [
+    "机器学习运维",
+    "MLOps",
+    "Machine Learning Operations"
+  ],
+  "type": "concept",
+  "domains": [
+    "mlops",
+    "machine-learning",
+    "devops"
+  ],
+  "ecosystems": [
+    "mlops-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mlops-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "model-serving",
+      "context": "将训练完毕的模型镜像与权重工件发布为具备高弹性、低延迟的在线推理RPC/HTTP服务。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "feature-store",
+      "context": "消除离线训练与在线实时推理特征计算逻辑不一致带来的训练服务偏移。"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "model-registry",
+      "context": "集中审计追踪模型全生命周期版本变迁、训练超参数指标与治理准入状态。"
+    }
+  ],
+  "summary": "标准化与自动化机器学习全生命周期开发、交付、监控与治理的工程实践。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://ml-ops.org/",
+  "description": "## 机制\n\nMLOps（Machine Learning Operations）是 DevOps 思想在人工智能系统工程中的系统化延伸。不同于传统软件工程仅关注代码与配置的版本管理，机器学习系统由代码、数据与模型三位一体共同决定。MLOps 覆盖从数据版本化（DVC）、特征存储、自动化分布式训练流水线、模型实验跟踪与注册，到持续部署、模型量化服务与在线漂移监控的闭环流程。\n\n## 核心挑战与技术债\n\n机器学习系统最大的工程隐患在于隐藏的技术债（Hidden Technical Debt），包括数据流水线缠结、反馈回路偏差、训练-服务偏差（Training-Serving Skew）以及模型静默失效。MLOps 通过设立CI/CD/CT（持续训练）流水线保证生产模型对环境变化的自适应韧性。\n\n## 参考\n\n- [Sculley et al.: Hidden Technical Debt in Machine Learning Systems (NeurIPS 2015)](https://papers.nips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html)\n- [Google Cloud Architecture Center: MLOps: Continuous delivery and automation pipelines in machine learning](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)"
+}

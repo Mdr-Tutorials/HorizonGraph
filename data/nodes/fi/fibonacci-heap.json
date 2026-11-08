@@ -1,0 +1,40 @@
+{
+  "id": "fibonacci-heap",
+  "name": "Fibonacci Heap",
+  "display_primary": "斐波那契堆",
+  "display_secondary": "Fibonacci Heap",
+  "aliases": [
+    "斐波那契堆",
+    "Fibonacci-Heap"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "heap"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "amortized-analysis",
+      "context": "通过惰性合并树根列表与级联剪切机制实现常数阶的平摊减键操作。"
+    }
+  ],
+  "summary": "由一组树构成的松散堆结构，支持常数平摊阶的合并与减键操作。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Fibonacci_heap",
+  "description": "## 机制\n\n斐波那契堆（Fibonacci Heap）由迈克尔·弗雷德曼（Michael Fredman）与罗伯特·塔扬（Robert Tarjan）于 1984 年提出。传统二叉堆执行减键操作（Decrease-Key）需要 $O(\\log n)$，而斐波那契堆的核心突破在于：除删除节点（Delete）与提取极值（Extract-Min）需要平摊 $O(\\log n)$ 外，插入（Insert）、查找极值（Find-Min）、合并两个堆（Union）以及**减小键值（Decrease-Key）全部在严格平摊 $O(1)$ 常数时间内完成**。\n\n其内部由一组满足最小堆序的树构成的双向循环链表（Root List）组成。结构核心采用“惰性合并”（Lazy Consolidation）哲学：插入和合并操作从不主动整理树结构，仅简单将树根挂接进根列表；真正的结构规整推迟至 Extract-Min 执行时集中进行（将度数相同的树两两配对合并）。\n\n## 级联剪切与图算法应用\n\n在执行 Decrease-Key 时，若节点新键值小于其父节点，立即将该子树从父节点剪切并直接挂入根列表；为防止树高度退化，引入“标记”（Mark）与级联剪切（Cascading Cut）：当非根节点第二次失去子节点时，它自身必须强制从父节点剪断并提升为根。这确保了大小为 $n$ 的堆中节点最大度数不超过 $O(\\log n)$，其树大小的下界由斐波那契数列严格界定。\n\n在理论计算机科学中，将斐波那契堆作为优先队列底层，可将单源最短路径 Dijkstra 算法的时间复杂度压低至理论最优极限 $O(E + V \\log V)$。\n\n## 参考\n\n- [Fredman & Tarjan: Fibonacci heaps and their uses in improved network optimization algorithms (JACM, 1987)](https://dl.acm.org/doi/10.1145/28869.28874)\n- [Cormen et al.: Introduction to Algorithms (CLRS 4th Edition, Chapter 19)](https://mitpress.mit.edu)"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "model-serving",
+  "name": "Model Serving",
+  "display_primary": "模型服务",
+  "display_secondary": "Model Serving",
+  "aliases": [
+    "模型服务化",
+    "模型推理部署",
+    "Model Inference Serving"
+  ],
+  "type": "concept",
+  "domains": [
+    "mlops",
+    "machine-learning",
+    "cloud-infrastructure"
+  ],
+  "ecosystems": [
+    "mlops-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "mlops-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "mlops"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "vllm",
+      "context": "在大语言模型服务化场景下利用KV缓存分页管理与连续批处理最大化GPU计算吞吐。"
+    }
+  ],
+  "summary": "将已训练模型封装托管为高可用、低延迟且可自动扩缩容推理接口的体系。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://kserve.github.io/website/",
+  "description": "## 机制\n\n模型服务（Model Serving）将离线保存的模型计算图与权重文件封装为对外暴露的高并发RPC（如gRPC）或RESTful API。核心关键技术包括：动态微批处理（Dynamic Batching，合并短时间窗口内的并发请求以提升GPU利用率）、多实例模型并发调度、模型轻量化运行时（TensorRT、ONNX Runtime）以及分层内存显存缓存调度。\n\n## LLM服务化变革\n\n大语言模型（LLM）的兴起对服务化引擎提出了革命性挑战。计算瓶颈由传统计算密集型转向自回归解码的显存带宽瓶颈（Memory-Bound）。vLLM等现代引擎引入类似操作系统虚拟内存思想的PagedAttention机制彻底消除显存碎片，配合连续批处理（Continuous Batching）大幅削减TTFT（首字延迟）并成倍提升吞吐量。\n\n## 参考\n\n- [KServe: Cloud Native Model Serving](https://kserve.github.io/website/)\n- [Kwon et al.: Efficient Memory Management for Large Language Model Serving with PagedAttention (vLLM, SOSP 2023)](https://arxiv.org/abs/2309.06180)"
+}

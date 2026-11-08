@@ -1,0 +1,38 @@
+{
+  "id": "reservoir-sampling",
+  "name": "Reservoir Sampling",
+  "display_primary": "蓄水池抽样",
+  "display_secondary": "Reservoir Sampling",
+  "aliases": [
+    "蓄水池抽样",
+    "蓄水池算法",
+    "水塘抽样"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "data-engineering"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "big-o",
+      "context": "在单次遍历中以O(k)常数辅助内存实现未知长度数据流等概率采样。"
+    }
+  ],
+  "summary": "在未知总体长度的流式单向数据中以恒定空间实现随机等概率抽样的经典算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Reservoir_sampling",
+  "description": "## 机制\n\n蓄水池抽样（Reservoir Sampling）由艾伦·G·沃特曼（Alan G. Waterman）于 1960 年代构思并由杰弗里·维特（Jeffrey Vitter）于 1985 年形式化系统分析，用于从容量极大、或者**总长度未知且无法回溯的单向流式数据（Data Stream）**中，一次遍历无偏抽取容量为 $k$ 的随机样本，保证整个流中每个元素被最终选入样本的概率严格相等且恒为 $k/N$。\n\n经典算法流程（算法 R）：\n1. 创建大小为 $k$ 的“蓄水池”数组，直接将输入流前 $k$ 个元素存入池中；\n2. 对于流中到来的第 $i$ 个后续元素（$i > k$）：\n   - 生成一个在 $[1, i]$ 范围内的离散均匀随机整数 $r$；\n   - 若 $r \\le k$，则用当前第 $i$ 个新元素替换蓄水池中位于下标 $r$ 的旧元素；\n   - 若 $r > k$，则直接丢弃当前新元素，蓄水池保持不变。\n\n## 数学归纳法证明\n\n利用数学归纳法易证其严格均匀性：对于第 $i$ 个元素，它进入蓄水池的概率为 $k/i$；对于此前已在池中的元素，它未被第 $i$ 步替换并存留下来的概率为 $1 - (k/i) \\cdot (1/k) = (i-1)/i$。将每一步存活条件概率连乘：\n$$P = \\frac{k}{k+1} \\times \\frac{k+1}{k+2} \\times \\dots \\times \\frac{N-1}{N} = \\frac{k}{N}$$\n所有元素入选最终样本的概率严格完全相等。在海量分布式日志采样、数据库查询规划器直方图评估及大模型预训练语料均匀清洗中极为普及。\n\n## 参考\n\n- [Vitter: Random sampling with a reservoir (ACM TOMS, 1985)](https://dl.acm.org/doi/10.1145/3147.3165)\n- [Knuth: The Art of Computer Programming, Vol. 2: Seminumerical Algorithms (3.4.2)](https://www-cs-faculty.stanford.edu/~knuth/taocp.html)"
+}

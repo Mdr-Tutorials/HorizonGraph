@@ -1,0 +1,47 @@
+{
+  "id": "process-scheduling",
+  "name": "Process Scheduling",
+  "display_primary": "进程调度",
+  "display_secondary": "Process Scheduling",
+  "aliases": [
+    "进程调度",
+    "CPU调度",
+    "CPU Scheduling"
+  ],
+  "type": "concept",
+  "domains": [
+    "operating-systems",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "os-kernel-ecosystem",
+    "operating_systems"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "os-mechanism"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "operating-system"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "scheduler",
+      "context": "调度器基于完全公平调度CFS、时间片轮转或多级反馈队列实现任务调度算法。"
+    },
+    {
+      "relation_type": "can_bias",
+      "target_id": "deadlock",
+      "context": "不当的资源持有等待与锁抢占时序可能诱发循环依赖进而导致调度死锁。"
+    }
+  ],
+  "summary": "操作系统内核在就绪任务间按既定策略分配CPU核心计算时间的控制机制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://docs.kernel.org/scheduler/index.html",
+  "description": "## 机制\n\n进程调度决定就绪队列中的哪一个执行实体（进程或线程）在何时获得CPU核心分配并运行多长时间。调度策略需权衡响应时间（Interactive Latency）、周转时间（Turnaround Time）、吞吐量与公平性。经典调度模型涵盖抢占式时间片轮转、优先级调度、多级反馈队列（MLFQ）与虚拟运行时间红黑树调度（CFS/EEVDF）。\n\n## 多核与实时扩展\n\n在多核对称多处理（SMP）架构中，调度器需综合考虑处理器缓存亲和性（Cache Affinity）与跨NUMA节点内存访问延迟，动态执行就绪队列负载均衡；硬实时系统（如RTOS）则依赖单调速率（RMS）或最早截止时间优先（EDF）算法提供确定性延迟上限保证。\n\n## 参考\n\n- [Linux Kernel Scheduler Documentation](https://docs.kernel.org/scheduler/index.html)\n- [OSTEP: Scheduling Basics & Multi-Level Feedback Queue](https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf)"
+}

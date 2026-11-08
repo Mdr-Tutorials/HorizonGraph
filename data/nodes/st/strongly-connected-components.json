@@ -1,0 +1,42 @@
+{
+  "id": "strongly-connected-components",
+  "name": "Strongly Connected Components",
+  "display_primary": "强连通分量",
+  "display_secondary": "Strongly Connected Components",
+  "aliases": [
+    "强连通分量",
+    "SCC",
+    "强连通分支"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "graph-algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dfs",
+      "context": "基于深度优先搜索树的时间戳回溯与有向环检测确定极大连通分支。"
+    }
+  ],
+  "summary": "有向图中任意两顶点均相互双向可达的最大极大连通子图等价类划分。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Strongly_connected_component",
+  "description": "## 机制\n\n在有向图 $G = (V, E)$ 中，若顶点 $u$ 与顶点 $v$ 之间同时存在从 $u$ 到 $v$ 以及从 $v$ 到 $u$ 的有向路径，则称 $u$ 与 $v$ 强连通。强连通关系满足自反性、对称性与传递性，构成顶点集 $V$ 上的严格等价关系。\n\n每一个等价类诱导的极大导出子图被称为一个“强连通分量”（Strongly Connected Component, SCC）。\n\n## 缩点与有向无环图（DAG）\n\n强连通分量具有根本性的图论拓扑化简价值：将有向图中的每个强连通分量收缩为一个宏观超级节点（缩点 Condensation），原图中有向边转化为宏观节点间的连接，所得缩点图必然是严格的**有向无环图（DAG, Directed Acyclic Graph）**。这一性质使复杂的通用环状有向网络可以转化为 DAG，进而应用拓扑排序与动态规划流水线分析。\n\n在编译器代码优化中，SCC 用于检测控制流图（CFG）中的循环体（Natural Loops）；在软件包管理工具（npm、Cargo）中，SCC 用于检测循环依赖死锁。\n\n## 参考\n\n- [Tarjan: Depth-First Search and Linear Graph Algorithms (SIAM J. Comput., 1972)](https://epubs.siam.org/doi/10.1137/0201010)\n- [Cormen et al.: Introduction to Algorithms (CLRS 4th Edition, Chapter 22)](https://mitpress.mit.edu)"
+}

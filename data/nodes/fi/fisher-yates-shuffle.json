@@ -1,0 +1,37 @@
+{
+  "id": "fisher-yates-shuffle",
+  "name": "Fisher-Yates Shuffle",
+  "display_primary": "Fisher-Yates洗牌算法",
+  "display_secondary": "Fisher-Yates Shuffle",
+  "aliases": [
+    "Fisher-Yates洗牌算法",
+    "Knuth洗牌算法",
+    "洗牌算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sorting-algorithm",
+      "context": "在原址线性时间内生成均匀无偏随机全排列以支持随机化算法与测试基准构建。"
+    }
+  ],
+  "summary": "在原址线性时间内生成有限序列所有可能全排列且完全无偏的离散随机洗牌算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
+  "description": "## 机制\n\nFisher-Yates 洗牌算法由罗纳德·费希尔（Ronald Fisher）与弗兰克·耶茨（Frank Yates）于 1938 年在统计学抽样中提出，后由高德纳（Donald Knuth）在《计算机程序设计艺术》中改进为计算机原地执行的高效算法（Knuth Shuffle）。算法用于将一个长度为 $n$ 的有限数组彻底打乱，确保 $n!$ 种可能的全排列中每一种出现的概率严格等同于 $1/n!$。\n\n现代原地算法流程（从末尾向前遍历）：\n1. 循环变量 $i$ 从数组末端 $n-1$ 递减推进至 1；\n2. 在闭区间 $[0, i]$ 内生成一个独立的真随机整数 $j$；\n3. 将元素 $array[i]$ 与 $array[j]$ 交换；\n4. 推进循环直至完成。整个过程执行严格 $n-1$ 次随机数生成与常数交换，时间复杂度为严格 **$O(n)$**，辅助空间为 **$O(1)$**。\n\n## 朴素实现的严重陷阱\n\n初学者常误写为每次在全局范围 $[0, n-1]$ 内随机生成 $j$ 并交换。这种错误逻辑产生的可能状态空间大小为 $n^n$；而全排列总数为 $n!$。由于 $n^n$ 通常无法被 $n!$ 整除（例如 $n=3$ 时 $3^3 = 27$ 无法被 $3! = 6$ 整除），鸽巢原理注定了某些排列出现的概率必然高于其他排列，引入了致命的统计偏差。Fisher-Yates 在每一步严格将候选范围缩减至当前未洗牌区域，彻底消除偏差。\n\n## 参考\n\n- [Fisher & Yates: Statistical tables for biological, agricultural and medical research (Oliver and Boyd, 1938)](https://digital.library.adelaide.edu.au/dspace/handle/2440/10701)\n- [Knuth: The Art of Computer Programming, Vol. 2 (Section 3.4.2, Algorithm P)](https://www-cs-faculty.stanford.edu/~knuth/taocp.html)"
+}

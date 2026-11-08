@@ -1,0 +1,42 @@
+{
+  "id": "adas",
+  "name": "Advanced Driver Assistance Systems",
+  "display_primary": "高级驾驶辅助系统",
+  "display_secondary": "Advanced Driver Assistance Systems",
+  "aliases": [
+    "高级驾驶辅助系统",
+    "ADAS",
+    "辅助驾驶"
+  ],
+  "type": "concept",
+  "domains": [
+    "autonomous-driving",
+    "embedded-systems"
+  ],
+  "ecosystems": [
+    "autonomous-vehicles-ecosystem",
+    "hardware_iot"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "autonomous-driving-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "autonomous-driving"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sensor-fusion",
+      "context": "结合前向单目/双目视觉与角毫米波雷达实现主动自动紧急制动（AEB）与盲区监测。"
+    }
+  ],
+  "summary": "利用车载感知与主动安全算法协助驾驶员操作以降低交通事故风险的控制系统。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://www.euroncap.com/en/vehicle-safety/the-ratings-explained/safety-assist/",
+  "description": "## 机制\n\n高级驾驶辅助系统（ADAS）对应 SAE L1 与 L2 级自动化功能，以提升行车主动安全与减轻驾驶员疲劳为宗旨。经典主动安全功能包括：前向碰撞预警（FCW）、自动紧急制动（AEB，欧洲E-NCAP强制评测准入项）、车道偏离预警（LDW）、车道居中辅助（LCC）、盲区监测（BSD）以及全速域自适应巡航（ACC）。\n\n## 人机共驾与脱手监测\n\n在L2辅助驾驶状态下，驾驶员是车辆安全的第一责任人。系统必须配备严格的驾驶员监控系统（DMS，基于红外摄像头监控眼动疲劳）与方向盘离手检测（HOD，电容感应），在识别到不可行风险时及时通过声光警报与安全降级策略（MRM）接管控制权。\n\n## 参考\n\n- [Euro NCAP Safety Assist Protocol](https://www.euroncap.com/en/vehicle-safety/the-ratings-explained/safety-assist/)\n- [ISO 22839:2013 Intelligent transport systems - Forward collision mitigation systems](https://www.iso.org/standard/53610.html)"
+}

@@ -10,12 +10,22 @@
   "type": "concept",
   "domains": [
     "networking",
-    "programming-languages"
+    "programming-languages",
+    "data-structures-and-algorithms"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "graph-algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "fibonacci-heap",
+      "context": "在理论极限下以斐波那契堆作为优先队列可将单源最短路复杂度降至O(E + V log V)。"
     }
   ],
   "summary": "非负权最短路的经典解，贪心加优先队列。",

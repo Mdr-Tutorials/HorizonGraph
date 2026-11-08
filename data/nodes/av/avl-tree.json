@@ -10,10 +10,12 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "languages_runtimes"
+    "languages_runtimes",
+    "algorithms-and-theory-ecosystem"
   ],
   "domains": [
-    "systems-programming"
+    "systems-programming",
+    "data-structures-and-algorithms"
   ],
   "summary": "任意节点左右子树高度差绝对值不超过 1 的严格自平衡二叉搜索树。",
   "status": "active",

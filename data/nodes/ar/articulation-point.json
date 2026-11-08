@@ -1,0 +1,45 @@
+{
+  "id": "articulation-point",
+  "name": "Articulation Point and Bridge",
+  "display_primary": "割点与割边",
+  "display_secondary": "Articulation Point and Bridge",
+  "aliases": [
+    "割点与割边",
+    "割点",
+    "割边",
+    "关节点",
+    "桥",
+    "Biconnected Component"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "theoretical-computer-science"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "graph-algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "dfs",
+      "context": "基于DFS时间戳dfn与能够回溯的最小时间戳low值判定割点与割边桥。"
+    }
+  ],
+  "summary": "在连通无向图中移除后会导致图不连通的割点以及对应断开连通分支的割边桥。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Biconnected_component",
+  "description": "## 机制\n\n在连通无向图 $G = (V, E)$ 中：\n- **割点（Articulation Point / Cut Vertex）**：若从图中删除顶点 $u$ 以及与 $u$ 相连的所有边后，图的连通分支数增加（图变得不再连通），则称 $u$ 为割点；\n- **割边 / 桥（Bridge / Cut Edge）**：若从图中删除某条边 $e$ 后，图的连通分支数增加，则称 $e$ 为桥。\n\n罗伯特·塔扬在 1972 年基于深度优先搜索树（DFS Spanning Tree）给出了在线性时间 $O(V + E)$ 内找出全部割点与桥的经典算法：\n1. 记录每个顶点的访问时间戳 $dfn[u]$（深度优先数）；\n2. 维护 $low[u]$：表示节点 $u$ 或以 $u$ 为根的 DFS 子树中的节点，通过至多一条非树边（返祖边 Back-Edge）所能到达的顶点的最小时间戳；\n3. **割点判定准则**：\n   - 若根节点在 DFS 树中拥有至少两个及以上的子分支，则根节点必为割点；\n   - 若非根节点 $u$ 存在一个子节点 $v$ 满足 $low[v] \\ge dfn[u]$，说明 $v$ 的子树无法绕过 $u$ 访问更早的祖先，则 $u$ 必为割点；\n4. **割边（桥）判定准则**：边 $(u, v)$ 为桥，当且仅当子节点满足 $low[v] > dfn[u]$（严格大于，说明不存在任何回溯连通）。\n\n## 双连通分量\n\n割点与桥分别导出了点双连通分量（BCC, 不存在割点）与边双连通分量（2-Edge-Connected Component）。在网络容灾规划与通信拓扑设计中，消除割点与桥是构建高可用双规冗余传输链路的核心要求。\n\n## 参考\n\n- [Tarjan: Depth-First Search and Linear Graph Algorithms (SIAM J. Comput., 1972)](https://epubs.siam.org/doi/10.1137/0201010)\n- [Hopcroft & Tarjan: Efficient algorithms for graph manipulation (CACM, 1973)](https://dl.acm.org/doi/10.1145/362248.362272)"
+}

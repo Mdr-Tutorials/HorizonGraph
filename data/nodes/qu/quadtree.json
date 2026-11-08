@@ -1,0 +1,39 @@
+{
+  "id": "quadtree",
+  "name": "Quadtree",
+  "display_primary": "四叉树",
+  "display_secondary": "Quadtree",
+  "aliases": [
+    "四叉树",
+    "四元树",
+    "Quad-Tree"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "computer-vision",
+    "geospatial-computing"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "geospatial-ecosystem"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "data-structure"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "array",
+      "context": "在内存紧凑存储中将四叉树节点编码为连续数组或Morton码。"
+    }
+  ],
+  "summary": "将二维平面空间递归正交分解为四个象限子区域以加速空间查询的树形结构。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Quadtree",
+  "description": "## 机制\n\n四叉树（Quadtree）由拉斐尔·芬克尔（Raphael Finkel）与乔恩·本特利（Jon Bentley）于 1974 年提出，是一种用于对二维几何空间进行递归空间分解的树形数据结构。在四叉树中，每个内部节点恰好拥有四个子节点，分别对应平面正交划分的四个象限：西北（NW）、东北（NE）、西南（SW）与东南（SE）。\n\n常见变体包括：\n- **区域四叉树（Region Quadtree）**：对固定网格空间（如灰度图像）递归四等分，用于图像压缩（叶子节点像素值全相同时停止划分）；\n- **点四叉树（Point Quadtree）**：类似于二维二叉搜索树，每次以新插入的数据点坐标作为象限原点进行划分；\n- **点区域四叉树（PR Quadtree）**：划分线始终在几何中心，叶节点保存数据点，当单个叶子内点数超过容量阈值时分裂。\n\n## 空间碰撞与天体模拟应用\n\n四叉树广泛用于二维物理引擎中的高效碰撞检测（广阶段剔除无需检查距离遥远的刚体对）、GIS 地图瓦片金字塔分层管理，以及天体物理中的 Barnes-Hut $N$-体引力模拟算法（将计算复杂度由全排列 $O(N^2)$ 压低至 $O(N \\log N)$）。\n\n## 参考\n\n- [Finkel & Bentley: Quad trees a data structure for retrieval on composite keys (Acta Informatica, 1974)](https://link.springer.com/article/10.1007/BF00288933)\n- [Samet: The Design and Analysis of Spatial Data Structures (Addison-Wesley)](https://www.cs.umd.edu/~hjs/pubs/TheDesignAndAnalysisOfSpatialDataStructures.pdf)"
+}

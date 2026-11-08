@@ -1,0 +1,39 @@
+{
+  "id": "convex-hull",
+  "name": "Convex Hull",
+  "display_primary": "凸包算法",
+  "display_secondary": "Convex Hull",
+  "aliases": [
+    "凸包算法",
+    "凸包",
+    "Graham扫描法",
+    "Andrew单调链算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "computer-vision"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "theoretical-computer-science-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "sorting-algorithm",
+      "context": "基于坐标极角或笛卡尔坐标排序对点集进行有序化以支持栈式扫描。"
+    }
+  ],
+  "summary": "计算二维平面点集中能够完全包络所有点的最小凸多边形顶点的计算几何问题。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Convex_hull",
+  "description": "## 机制\n\n在计算几何中，点集 $P$ 的凸包（Convex Hull）是指包含 $P$ 中所有点的最小凸多边形，直观上等价于用一根橡皮筋紧紧套住所有钉子后橡皮筋所绷紧呈现的外轮廓。凸包上的顶点按逆时针顺序排布，且多边形内任意两点的连线均完全落于凸包内部。\n\n主流求解算法均以向量叉积（Cross Product）作为核心几何原语（利用 $\\vec{u} \\times \\vec{v} > 0$ 判断转向为逆时针左转还是顺时针右转）：\n1. **Graham 扫描法（Graham Scan, 1972）**：先选出纵坐标最低点作为基准，将剩余所有点按相对于该基准的极角大小排序；随后利用单调栈自前向后遍历，若新加入点使栈顶三点构成顺时针右转，则持续弹栈，直至维持严格的凸折线。整体时间复杂度为 **$O(n \\log n)$**（主要耗于排序）；\n2. **Andrew 单调链算法（Monotone Chain）**：直接按点集的 $X$ 坐标（再按 $Y$ 坐标）双关键字升序排序，分别单调扫描求解下凸壳与上凸壳并拼接，数值稳定性优于极角排序。\n\n## 理论下界与应用\n\n已证明在代数决策树模型下，二维凸包问题的渐近时间复杂度下界为 $\\Omega(n \\log n)$（可直接由比较排序归约而来）。凸包在机器人路径避障规划、GIS 地理多边形简化以及三维物理引擎碰撞检测（GJK 算法外轮廓包围体）中是核心几何工具。\n\n## 参考\n\n- [Graham: An efficient algorithm for determining the convex hull of a finite planar set (Information Processing Letters, 1972)](https://www.sciencedirect.com/science/article/pii/0020019072900452)\n- [Andrew: Another efficient algorithm for convex hulls in two dimensions (Information Processing Letters, 1979)](https://www.sciencedirect.com/science/article/pii/0020019079900723)"
+}

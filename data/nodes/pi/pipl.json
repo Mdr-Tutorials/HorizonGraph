@@ -9,17 +9,25 @@
   "type": "concept",
   "domains": [
     "security",
-    "industry-landscape"
+    "industry-landscape",
+    "privacy-and-compliance"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
       "target_id": "theory"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "data-protection"
     }
   ],
   "summary": "中国个人信息保护的基石法律，2021 年施行。",
   "status": "active",
   "origin": "ai_draft",
   "last_reviewed": "2026-09-05",
-  "importance": 3
+  "importance": 3,
+  "ecosystems": [
+    "privacy-compliance-ecosystem"
+  ]
 }

@@ -1,0 +1,41 @@
+{
+  "id": "edmonds-karp",
+  "name": "Edmonds-Karp Algorithm",
+  "display_primary": "Edmonds-Karp算法",
+  "display_secondary": "Edmonds-Karp Algorithm",
+  "aliases": [
+    "Edmonds-Karp算法",
+    "EK算法",
+    "最短增广路算法"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms"
+  ],
+  "ecosystems": [
+    "algorithms-and-theory-ecosystem",
+    "devops_tooling"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "specializes",
+      "target_id": "ford-fulkerson"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "bfs",
+      "context": "强制采用广度优先搜索沿最短边数路径寻找增广路，保证多项式时间界复杂度。"
+    }
+  ],
+  "summary": "采用广度优先搜索寻找最短边数增广路径以保证多项式时间界的最大流算法。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm",
+  "description": "## 机制\n\nEdmonds-Karp 算法由杰克·埃德蒙兹（Jack Edmonds）与理查德·卡普（Richard Karp）于 1972 年提出，是对 Ford-Fulkerson 增广路方法的确定性多项式时间特化。它的核心改进在于：**在残余网络中寻找增广路径时，强制使用广度优先搜索（BFS）**，每次选择从源点 $s$ 到汇点 $t$ 边数最少（最短路径）的增广路。\n\n这一选择产生了根本性的理论保证：\n1. 在算法执行过程中，残余网络中任意节点 $v$ 到源点 $s$ 的最短路径距离 $d(s, v)$ 单调非递减；\n2. 任何一条边成为增广路径上的瓶颈边（Critical Edge）并被清零后，若要再次成为瓶颈边，该节点到源点的距离至少增加 2；\n3. 每条边作为瓶颈边的次数最多不超过 $|V|/2$ 次。\n\n由于网络中最多存在 $2|E|$ 条正反向残余边，增广总次数严格不超过 $O(V E)$。单次 BFS 寻找路径耗时 $O(E)$，因此整算法的总时间复杂度严格被约束在 **$O(V E^2)$**，完全摆脱了最大流数值本身的限制，且对无理数容量天然多项式停机。\n\n## 参考\n\n- [Edmonds & Karp: Theoretical improvements in algorithmic efficiency for network flow problems (JACM, 1972)](https://dl.acm.org/doi/10.1145/321694.321699)\n- [Cormen et al.: Introduction to Algorithms (CLRS 4th Edition, Chapter 26)](https://mitpress.mit.edu)"
+}

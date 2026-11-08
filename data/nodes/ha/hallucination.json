@@ -10,11 +10,13 @@
   ],
   "type": "concept",
   "ecosystems": [
-    "llm-agent-ecosystem"
+    "llm-agent-ecosystem",
+    "ai-safety-ecosystem"
   ],
   "domains": [
     "machine-learning",
-    "natural-language-processing"
+    "natural-language-processing",
+    "ai-safety"
   ],
   "relations": [
     {

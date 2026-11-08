@@ -1,0 +1,42 @@
+{
+  "id": "asymmetric-encryption",
+  "name": "Asymmetric Encryption",
+  "display_primary": "非对称加密",
+  "display_secondary": "Asymmetric Encryption",
+  "aliases": [
+    "非对称加密",
+    "公钥加密",
+    "Public Key Cryptography"
+  ],
+  "type": "concept",
+  "domains": [
+    "cryptography",
+    "security"
+  ],
+  "ecosystems": [
+    "cryptography-pki-ecosystem",
+    "networking_security"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "cryptography-concept"
+    },
+    {
+      "relation_type": "alternative_to",
+      "target_id": "symmetric-encryption"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "cryptography",
+      "context": "利用数论难题的单向陷门特性生成公开公钥与秘密私钥对，无需预共享信道即可实现安全端到端加密。"
+    }
+  ],
+  "summary": "利用数学单向陷门函数生成非对称公私钥对实现解耦加密的体制。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://csrc.nist.gov/projects/key-management",
+  "description": "## 机制\n\n非对称加密体制解耦了加密与解密能力。密钥生成算法派生出一对互为数学关联的密钥：公钥（Public Key）可公开广播用于数据加密或签名验证；私钥（Private Key）由属主安全保密用于数据解密或数字签名。其底层安全性建立在单向陷门函数数学难题之上：大整数分解难题（RSA）或离散对数难题（Diffie-Hellman与ECC）。\n\n## 性能开销与混合加密架构\n\n相比对称加密，非对称计算涉及高位宽大整数幂模运算或椭圆曲线标量点乘，计算延迟高出两到三个数量级。在现代工程实践中（如TLS握手与SSH通信），非对称算法仅用于身份双向认证与安全协商对称会话密钥，大批量数据传输载荷随后无缝切换至AES等对称加密处理。\n\n## 参考\n\n- [Diffie & Hellman: New Directions in Cryptography (IEEE, 1976)](https://ieeexplore.ieee.org/document/1055638)\n- [RFC 8017: PKCS #1: RSA Cryptography Specifications Version 2.2](https://datatracker.ietf.org/doc/html/rfc8017)"
+}

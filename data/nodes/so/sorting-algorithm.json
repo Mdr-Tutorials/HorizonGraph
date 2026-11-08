@@ -1,0 +1,37 @@
+{
+  "id": "sorting-algorithm",
+  "name": "Sorting Algorithm",
+  "display_primary": "排序算法",
+  "display_secondary": "Sorting Algorithm",
+  "aliases": [
+    "排序算法",
+    "内排序与外排序",
+    "Sorting"
+  ],
+  "type": "concept",
+  "domains": [
+    "data-structures-and-algorithms",
+    "systems-programming"
+  ],
+  "ecosystems": [
+    "languages_runtimes"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "algorithm"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "computational-complexity",
+      "context": "以最坏、平均与最好时间复杂度衡量各类比较排序与非比较排序算法的渐进执行代价。"
+    }
+  ],
+  "summary": "将无序数据序列按特定全序关系重新排列的基础算法范式。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://xlinux.nist.gov/dads/HTML/sort.html",
+  "description": "## 机制\n\n排序算法将元素集合按给定的比较偏序或键值全序重新排列。基于比较的排序（如快速排序、归并排序、堆排序）在理论上受 \\(\\Omega(n \\log n)\\) 比较下界约束；非比较排序（如计数排序、基数排序）利用元素的数位或离散范围可在特定约束下达到线性时间复杂度 \\(O(n)\\)。\n\n## 边界与选型\n\n算法评价需同时考察渐进时间复杂度、辅助空间开销（原地排序 vs 额外分配）、数据访问模式对处理器缓存局部性的影响，以及等值元素是否保持原有相对次序的稳定性。外排序进一步结合顺序读取与多路归并以适应超出物理内存容量的海量数据场景。\n\n## 参考\n\n- [NIST DADS: Sorting Algorithm](https://xlinux.nist.gov/dads/HTML/sort.html)\n- [Cormen et al. (CLRS): Introduction to Algorithms, Sorting and Order Statistics](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)"
+}

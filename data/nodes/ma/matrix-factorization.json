@@ -1,0 +1,43 @@
+{
+  "id": "matrix-factorization",
+  "name": "Matrix Factorization",
+  "display_primary": "矩阵分解",
+  "display_secondary": "Matrix Factorization",
+  "aliases": [
+    "矩阵分解",
+    "隐语义模型",
+    "LFM",
+    "SVD Recommendation"
+  ],
+  "type": "concept",
+  "domains": [
+    "recommender-systems",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "recommender-systems-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "recommender-system-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "recommender-system"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "collaborative-filtering",
+      "context": "作为基于模型的协同过滤经典解法，分解用户-物品评分矩阵并捕捉全局潜在偏好。"
+    }
+  ],
+  "summary": "将高维稀疏用户-物品评分矩阵投影至低维稠密隐特征向量空间的模型。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://ieeexplore.ieee.org/document/5197422",
+  "description": "## 机制\n\n矩阵分解（MF）在Netflix大奖赛中确立为推荐算法的主流基准。它将高维、稀疏的 \\(m \\times n\\) 用户-物品评分矩阵 \\(R\\) 近似分解为两个低维稠密矩阵的乘积：用户隐向量矩阵 \\(P \\in \\mathbb{R}^{m \\times k}\\) 与物品隐向量矩阵 \\(Q \\in \\mathbb{R}^{n \\times k}\\)（\\(k \\ll \\min(m, n)\\)）。预测评分由对应隐向量内积与用户/物品偏置项求和获得：\\(\\hat{r}_{ui} = \\mu + b_u + b_i + p_u^T q_i\\)。\n\n## 优化与隐式反馈\n\n显式评分数据通常采用正则化随机梯度下降（SGD）优化；面对点击、曝光等无负反馈的隐式交互数据，则引入加权交替最小二乘法（Weighted ALS）或基于成对排序的贝叶斯个性化排序（BPR）优化框架。\n\n## 参考\n\n- [Koren, Bell, Volinsky: Matrix Factorization Techniques for Recommender Systems (Computer, 2009)](https://ieeexplore.ieee.org/document/5197422)\n- [Rendle et al.: BPR: Bayesian Personalized Ranking from Implicit Feedback (UAI 2009)](https://arxiv.org/abs/1205.2618)"
+}

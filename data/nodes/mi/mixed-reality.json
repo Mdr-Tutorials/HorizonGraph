@@ -1,0 +1,42 @@
+{
+  "id": "mixed-reality",
+  "name": "Mixed Reality",
+  "display_primary": "混合现实",
+  "display_secondary": "Mixed Reality",
+  "aliases": [
+    "混合现实",
+    "MR",
+    "Merged Reality"
+  ],
+  "type": "concept",
+  "domains": [
+    "spatial-computing",
+    "interactive-graphics"
+  ],
+  "ecosystems": [
+    "spatial-computing-ecosystem",
+    "graphics_gaming"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "spatial-computing-concept"
+    },
+    {
+      "relation_type": "part_of",
+      "target_id": "spatial-computing"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "passthrough-video",
+      "context": "利用机载低延迟高动态范围立体摄像头采集现实画面并实时反畸变重投影至眼底屏幕。"
+    }
+  ],
+  "summary": "物理现实实体与虚拟数字图元共存且能够发生双向实时遮挡与交互的高级形态。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 4,
+  "official_site": "https://learn.microsoft.com/en-us/windows/mixed-reality/",
+  "description": "## 机制\n\n在保罗·米尔格拉姆的“现实-虚拟连续统”（Reality-Virtuality Continuum）中，混合现实（MR）指代物理环境与虚拟数字对象高度交融的广阔中间谱系。与初级AR仅将虚拟UI浮层展示在画面最顶层不同，MR要求深度几何感知：物理手掌伸出时能够自然遮挡虚拟小球，真实桌子能够阻挡虚拟光线投射阴影，虚拟弹性球跌落时会根据真实地毯与地板的材质碰撞反弹。\n\n## 视频透视驱动的演进\n\n现代MR旗舰设备（如Apple Vision Pro与Meta Quest 3）全面采用高动态范围视频透视（VST）方案取代传统光学波导，凭借每秒90帧以上的双目4K级超低延迟实时图像流，在数字屏幕上精确重构像素级真实光照匹配与双向物理遮挡。\n\n## 参考\n\n- [Milgram et al.: Augmented Reality: A class of displays on the reality-virtuality continuum (SPIE 1994)](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=2040bb0d97097f485dbab06d7e0d37e6f8a846c4)\n- [Microsoft Mixed Reality Documentation](https://learn.microsoft.com/en-us/windows/mixed-reality/)"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "text-to-speech",
+  "name": "Text-to-Speech",
+  "display_primary": "语音合成",
+  "display_secondary": "Text-to-Speech",
+  "aliases": [
+    "语音合成",
+    "TTS",
+    "Speech Synthesis"
+  ],
+  "type": "concept",
+  "domains": [
+    "audio-and-speech-processing",
+    "machine-learning"
+  ],
+  "ecosystems": [
+    "audio-speech-ecosystem",
+    "ai_data_science"
+  ],
+  "relations": [
+    {
+      "relation_type": "is_instance_of",
+      "target_id": "audio-speech-concept"
+    },
+    {
+      "relation_type": "uses",
+      "target_id": "acoustic-model",
+      "context": "利用声学模型将结构化文本或音素序列预测转化为中间声学特征（如梅尔频谱）。"
+    }
+  ],
+  "summary": "将任意文本字符转换为自然流畅且富有表现力的人声波形的声学技术。",
+  "status": "active",
+  "origin": "ai_draft",
+  "last_reviewed": "2026-11-08",
+  "importance": 5,
+  "official_site": "https://www.isca-speech.org/",
+  "description": "## 机制\n\n现代语音合成（TTS）流水线通常由两大模块解耦构成：文本前端负责文本规范化（TN，将数字、缩写展开）、字音转换（G2P，多音字注音与韵律停顿预测）；声学模型将音素序列转化为中间表征（如梅尔频谱图，代表模型包括 FastSpeech2、VITS）；神经声码器（Vocoder，如 HiFi-GAN）根据频谱图生成高采样率（24kHz/48kHz）的时域连续音频波形。\n\n## 零样本克隆与表现力\n\n生成式大模型架构（如 ChatTTS、CosyVoice 与 VALL-E）将离散神经音频编解码词元（Neural Audio Codec Tokens）融入自回归或流匹配（Flow Matching）架构，仅需数秒目标说话人音频提示即可实现高拟真度的零样本声音克隆与跨语种情感合成。\n\n## 参考\n\n- [Kong, Kim, Bae: HiFi-GAN: Generative Adversarial Networks for Efficient and High Fidelity Speech Synthesis (NeurIPS 2020)](https://arxiv.org/abs/2010.05646)\n- [Wang et al.: Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers (VALL-E, 2023)](https://arxiv.org/abs/2301.02111)"
+}
