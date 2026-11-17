@@ -4,7 +4,7 @@
   "aliases": [
     "条件数"
   ],
-  "type": "metric",
+  "type": "concept",
   "ecosystems": [
     "scientific-computing-ecosystem"
   ],
@@ -15,7 +15,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "metric"
+      "target_id": "scientific-computing-concept"
     },
     {
       "relation_type": "uses",

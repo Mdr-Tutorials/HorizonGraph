@@ -34,9 +34,8 @@
       "context": "支持导出接口的模式可分别生成转换前后对应的 JSON Schema；目标范围按实现文档核对。"
     },
     {
-      "relation_type": "uses",
-      "target_id": "javascript",
-      "context": "执行定义好的字段、引用、条件和转换规则，产出 value 与错误信息。"
+      "relation_type": "depends_on",
+      "target_id": "javascript"
     }
   ],
   "summary": "通过组合模式校验 JavaScript 数据并返回规范化结果的库。",

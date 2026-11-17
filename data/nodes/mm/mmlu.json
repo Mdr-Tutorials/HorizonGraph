@@ -4,14 +4,18 @@
   "display_primary": "MMLU",
   "display_secondary": "MMLU",
   "aliases": [],
-  "type": "metric",
+  "type": "product",
+  "ecosystems": [
+    "ai_data_science"
+  ],
   "domains": [
     "machine-learning"
   ],
+  "abstraction_level": "application_tool",
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "metric"
+      "target_id": "dataset"
     }
   ],
   "summary": "57 学科选择题基准，大模型知识面的通用标尺。",

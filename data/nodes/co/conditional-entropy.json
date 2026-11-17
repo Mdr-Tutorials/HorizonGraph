@@ -4,7 +4,7 @@
   "aliases": [
     "条件熵"
   ],
-  "type": "metric",
+  "type": "concept",
   "ecosystems": [],
   "domains": [
     "information-theory"
@@ -12,7 +12,7 @@
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "metric"
+      "target_id": "information-theory-concept"
     },
     {
       "relation_type": "uses",

@@ -7,14 +7,14 @@
     "温度",
     "采样温度"
   ],
-  "type": "metric",
+  "type": "concept",
   "domains": [
     "machine-learning"
   ],
   "relations": [
     {
       "relation_type": "is_instance_of",
-      "target_id": "metric"
+      "target_id": "deep-learning"
     }
   ],
   "summary": "控制采样随机性的参数，越高越发散、越低越确定。",

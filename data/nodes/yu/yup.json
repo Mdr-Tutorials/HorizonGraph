@@ -33,9 +33,8 @@
       "context": "通过 InferType 由模式提取 TypeScript 输出类型。"
     },
     {
-      "relation_type": "uses",
-      "target_id": "javascript",
-      "context": "在 JavaScript 运行时执行字段转换、条件模式和同步或异步约束测试。"
+      "relation_type": "depends_on",
+      "target_id": "javascript"
     }
   ],
   "summary": "组合数据转换和约束测试，并从模式推导静态类型的库。",

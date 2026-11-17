@@ -1,15 +1,16 @@
 {
-  "version": "0.23.0",
+  "version": "0.23.1",
   "note": "分类骨架：全部非叶子节点在此，数据平面不出现。层级用 parents 数组（多亲 DAG，一个分类可属多个上级）；锚点间元叙事为普通关系边。生效 entity_type 沿 parent 祖先解析。",
   "nodes": [
     {
       "id": "meta-concept",
       "name": "Theory, Concept & Metric",
       "aliases": [
+        "理论概念与度量",
         "理论概念",
         "理论与度量"
       ],
-      "summary": "理论、范式与度量概念的顶层骨架。",
+      "summary": "理论、概念与度量指标的顶层骨架。",
       "relations": [
         {
           "relation_type": "governs",
@@ -107,12 +108,13 @@
     },
     {
       "id": "theory",
-      "name": "Theory & Paradigm",
+      "name": "Theory & Concept",
       "aliases": [
+        "理论与概念",
         "理论",
         "理论与范式"
       ],
-      "summary": "理论、定理、范式与方法论概念的分类根。",
+      "summary": "理论、定理、范式、机制与抽象概念的分类根。",
       "parents": [
         "meta-concept"
       ],
@@ -254,7 +256,7 @@
         "指标",
         "性能指标"
       ],
-      "summary": "量化与性能指标的分类根。",
+      "summary": "系统性能、模型评测与业务质量等可观测及评估量化指标的分类根。",
       "parents": [
         "meta-concept"
       ],

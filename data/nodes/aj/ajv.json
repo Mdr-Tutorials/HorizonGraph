@@ -33,9 +33,8 @@
       "context": "JTD 模式可编译为校验器，并支持专用解析与序列化函数。"
     },
     {
-      "relation_type": "uses",
-      "target_id": "javascript",
-      "context": "把模式编译成 JavaScript 检查代码，并在运行时复用生成的函数。"
+      "relation_type": "depends_on",
+      "target_id": "javascript"
     }
   ],
   "summary": "将 JSON Schema 或 JTD 编译成可复用 JavaScript 校验函数。",

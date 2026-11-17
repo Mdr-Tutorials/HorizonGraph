@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.7.0",
+  "schema_version": "3.7.1",
   "source_of_truth": "TechTermSchema 唯一来源，tools/src/gen 从本文件生成 TS 类型与校验 schema。",
   "layers": {
     "L0": "首屏必载：搜索预览、悬浮卡片、邻域面板",
@@ -18,7 +18,7 @@
       "library": "工具库/SDK/组件，如 Tokio、PyTorch",
       "tool": "开发、内容创作、分析与运维工具，如 GCC、Blender、QGIS",
       "architecture": "执行环境/硬件体系/虚拟机架构，如 JVM、WebAssembly、RISC-V",
-      "metric": "量化与性能指标，如 FPS、Latency、TPS",
+      "metric": "系统、模型与业务的可观测及评估量化指标，如 FPS、Latency、TPS、F1-Score（纯数学泛函、理论极限、采样超参及基准数据集不入此类）",
       "model_family": "AI 大模型与算法族，如 GLM、Llama、GPT",
       "product": "可交付的软硬件、服务与资料制品，如 NVIDIA H100、AWS EC2、教材、数据集",
       "organization": "公司、基金会与标准组织，如 智谱 AI、CNCF、W3C",
@@ -179,8 +179,8 @@
     },
     "metric": {
       "realm": "conceptual",
-      "summary": "量化与性能指标",
-      "examples": ["FPS", "Latency", "TPS"],
+      "summary": "系统、模型与业务的可观测及评估量化指标",
+      "examples": ["FPS", "Latency", "TPS", "F1-Score"],
       "applicability": {
         "id": "required", "name": "required", "aliases": "required", "type": "required",
         "summary": "required", "status": "required", "origin": "required",
